@@ -221,7 +221,7 @@ header.global {
   background: #000 !important;
 
   .user>.primary:last-child>a.shopping-cart {
-    margin-right: none;
+    margin-right: 0 !important;
   }
 
   .course-header {
@@ -297,8 +297,9 @@ header.global.slim {
       margin-top: -19px;
     }
   }
+
   h2 {
     max-width: 65%;
-    width: none;
+    width: initial !important;
   }
 }
