@@ -219,6 +219,11 @@ $gray: #767676;
 
 header.global {
   background: #000 !important;
+
+  .user>.primary:last-child>a.shopping-cart {
+    margin-right: none;
+  }
+
   .course-header {
     color: $gray;
     text-shadow: none !important;
@@ -235,6 +240,7 @@ header.global {
   .user {
     background: #fff !important;
     border-radius: 3px !important;
+    margin-left: 16px;
 
     a.user-link {
       border-radius: 3px !important;
