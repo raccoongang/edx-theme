@@ -206,6 +206,7 @@
 //    margin: 0 !important;
 //    text-align: right;
 //}
+$gray: #767676;
 
 .home>header {
   background-image: url("/static/themes/default/images/Little_Darling_PS_06_Cropped.jpg") !important;
@@ -218,6 +219,10 @@
 
 header.global {
   background: #000 !important;
+  .course-header {
+    color: $gray;
+￼    text-shadow: none !important;
+  }
 
   .nav-global {
     li {
@@ -269,7 +274,7 @@ header.global {
       .nav-colophon {
         li {
           a {
-            color: #767676 !important;
+            color: $gray !important;
           }
           a:hover {
             color: #82bc00 !important;
