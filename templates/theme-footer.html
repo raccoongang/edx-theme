@@ -10,9 +10,10 @@
       <nav class="nav-colophon">
         <ol>
           <li><a href="${reverse('tos')}">Terms of Service</a></li>
-          <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
-          <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
-          <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
+          <li><a href="${reverse('privacy')}">Privacy Policy</a></li>
+          <li><a href="${reverse('about')}">About us</a></li>
+          ##<li><a href="${reverse('tos')}#honor">Honor Code</a></li>
+          ##<li><a href="${reverse('tos')}#copyright">Copyright</a></li>
           ##<li><a href="${reverse('about_edx')}#careers">Careers</a></li>
           ##<li><a href="${reverse('about_edx')}#contact">Contact</a></li>
           ##<li><a href="${marketing_link('JOBS')}#careers">Careers</a></li>
@@ -25,19 +26,19 @@
         <span> Camara Learning Limited is registered with the Charities Commission (1135540) in England</span><br>
         <span>Camara Education Limited is registered with the Revenue Commissioners (CHY 16922) in Ireland</span>
       </p>
-      <nav class="nav-legal" aria-label="Legal">
-        <ul>
-            <li class="nav-legal-01">
-              <a href="https://courses.goit.com.ua/privacy">Privacy Policy</a>
-            </li>
-            <li class="nav-legal-02">
-              <a href="https://courses.goit.com.ua/tos">Terms of Service</a>
-            </li>
-            <li class="nav-legal-03">
-              <a href="https://courses.goit.com.ua/honor">Honor Code</a>
-            </li>
-        </ul>
-      </nav>
+##      <nav class="nav-legal" aria-label="Legal">
+##        <ul>
+##            <li class="nav-legal-01">
+##              <a href="${reverse('tos')}#privacy">Privacy Policy</a>
+##            </li>
+##            <li class="nav-legal-02">
+##              <a href="${reverse('tos')}">Terms of Service</a>
+##            </li>
+##            <li class="nav-legal-03">
+##              <a href="${reverse('tos')}#about">About us</a>
+##            </li>
+##        </ul>
+##      </nav>
     </div>
     <div class="references">
 ##       <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
@@ -45,3 +46,4 @@
     </div>
   </footer>
 </div>
+
