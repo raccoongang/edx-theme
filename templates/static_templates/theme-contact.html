@@ -7,10 +7,12 @@
 <section class="register container">
   <section class="contact-container">
     <div class="dashboard-notifications" tabindex="-1" ${style}>
-      %if message:
+      %if messages:
+        %for message in messages:
           <section class="dashboard-banner">
-              ${message}
+            ${message}
           </section>
+        %endfor
       %endif
     </div>
     <h1>${_("Contact")}</h1>
