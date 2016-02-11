@@ -125,3 +125,11 @@ header.global.slim {
   display: inline-block;
   margin: 12px;
 }
+
+.courses-container {
+  .courses {
+    .course {
+      z-index: 0 !important;
+    }
+  }
+}
