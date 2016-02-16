@@ -2,9 +2,11 @@ $gray: #767676;
 
 .home>header {
   background-image: url("/static/themes/default/images/bbf-main.png") !important;
+  background-repeat-y: no-repeat;
+  background-position: center;
   height: 520px !important;
   .outer-wrapper {
-    padding: 392px 0 0 15px !important;
+    padding: 392px 0 0 20px !important;
     opacity: 0.7 !important;
   }
   .title>hgroup {
@@ -14,6 +16,8 @@ $gray: #767676;
     h1 {
       text-align: center !important;
       width: 100%;
+      padding-bottom: 0 !important;
+      padding-top: 15px !important;
     }
   }
 }
@@ -22,10 +26,12 @@ $gray: #767676;
   header.search {
     margin-top: 0 !important;
     height: 520px !important;
+    background-repeat-y: no-repeat;
+    background-position: center;
     background-image: url("/static/themes/default/images/bbf-main.png") !important;
 
     .inner-wrapper {
-      padding: 399px 0 0 15px !important;
+      padding: 392px 0 0 20px !important;
 
       hgroup {
         box-shadow: none !important;
