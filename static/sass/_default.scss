@@ -37,115 +37,118 @@ $gray: #767676;
         box-shadow: none !important;
       }
 
+    }
   }
 }
 
-  header.global {
-    background: #fff !important;
+header.global {
+  background: #fff !important;
 
-    .user>.primary:last-child>a.shopping-cart {
-      margin-right: 0 !important;
-    }
+  .user>.primary:last-child>a.shopping-cart {
+    margin-right: 0 !important;
+  }
 
-    .course-header {
-      color: $gray;
-      text-shadow: none !important;
-    }
+  .course-header {
+    color: $gray;
+    text-shadow: none !important;
+  }
 
-    .nav-global {
-      li {
-        a {
-          color: #ffc233 !important;
-        }
-      }
-    }
-
-    .user {
-      background: #fff !important;
-      border-radius: 3px !important;
-      margin-left: 16px;
-
-      a.user-link {
-        border-radius: 3px !important;
-      }
-    }
-    .primary>a {
-      box-shadow: none !important;
-    }
-    .primary>a:hover {
-      border-radius: 3px !important;
-    }
-
-    .nav-courseware {
-      li {
-        .cta {
-          background: #ffc233 !important;
-          box-shadow: none !important;
-        }
-        .cta:hover {
-          background: #FFE03B !important;
-        }
+  .nav-global {
+    li {
+      a {
+        color: #ffc233 !important;
       }
     }
   }
 
+  .user {
+    background: #fff !important;
+    border-radius: 3px !important;
+    margin-left: 16px;
 
-  .wrapper-footer {
-    background: #000 !important;
+    a.user-link {
+      border-radius: 3px !important;
+    }
+  }
+  .primary>a {
+    box-shadow: none !important;
+  }
+  .primary>a:hover {
+    border-radius: 3px !important;
+  }
 
-    footer#footer-openedx {
-      a {
-        color: #53abfd !important;
+  .nav-courseware {
+    li {
+      .cta {
+        background: #ffc233 !important;
+        box-shadow: none !important;
       }
-      a:hover {
-        border-bottom: #3fbcfd !important;
+      .cta:hover {
+        background: #FFE03B !important;
       }
-      .colophon {
-        .nav-colophon {
-          li {
-            a {
-              color: #53abfd !important;
-            }
-            a:hover {
-              color: #3FBCFD !important;
-            }
+    }
+  }
+}
+
+
+.wrapper-footer {
+  background: #fff !important;
+
+  footer#footer-openedx {
+    a {
+      color: #53abfd !important;
+    }
+    a:hover {
+      border-bottom: #3fbcfd !important;
+    }
+    .colophon {
+      .nav-colophon {
+        li {
+          a {
+            color: #53abfd !important;
+          }
+          a:hover {
+            color: #3FBCFD !important;
           }
         }
       }
     }
   }
+}
 
-  .login-register {
-    .form-type {
-      padding-bottom: 10px !important;
-    }
+.login-register {
+  .form-type {
+    padding-bottom: 10px !important;
   }
+}
 
-  .course-info {
-    header.course-profile {
-      padding-top: 50px !important;
-      height: initial !important;
+.course-info {
+  header.course-profile {
+    padding-top: 50px !important;
+    height: initial !important;
 
-      .intro-inner-wrapper {
-        margin-bottom: 20px !important;
-      }
-    }
-  }
-
-  header.global.slim {
-    h1.logo {
-      img {
-        margin-top: -4px;
-      }
-    }
-
-    h2 {
-      max-width: 65%;
-      width: initial !important;
+    .intro-inner-wrapper {
+      margin-bottom: 20px !important;
     }
   }
 }
 
-.no-underscore a:hover {
-  border-bottom: none;
+header.global.slim {
+  h1.logo {
+    img {
+      margin-top: -4px;
+    }
+  }
+
+  h2 {
+    max-width: 65%;
+    width: initial !important;
+  }
+}
+
+
+.no-underscore {
+  a:hover {
+    border-bottom: none !important;
+  }
 }
