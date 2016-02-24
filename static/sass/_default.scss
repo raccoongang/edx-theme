@@ -9,15 +9,20 @@ $gray: #767676;
     padding: 392px 0 0 20px !important;
     opacity: 0.7 !important;
   }
+  .title {
+    max-height: 120px !important;
+    padding: 36px 30px !important;
+  }
   .title>hgroup {
     text-align: center !important;
+    vertical-align: middle !important;
     width: 100%;
+    padding-bottom: 0 !important;
 
     h1 {
       text-align: center !important;
       width: 100%;
-      padding-bottom: 0 !important;
-      padding-top: 15px !important;
+      line-height: 0.9em !important;
     }
   }
 }
