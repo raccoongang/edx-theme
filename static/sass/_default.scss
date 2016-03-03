@@ -108,7 +108,7 @@ header.global {
     }
     .colophon {
       .nav-colophon {
-        margin: 5px 0 20px 0!important;
+        margin: 5px 0 10px 0!important;
         li {
           a {
             color: #53abfd !important;
@@ -159,9 +159,26 @@ header.global.slim {
   }
 }
 
-span.raccoongang {
+.raccoongang {
+  font-size: 10px;
+  color: #acaaab;
+  span {
     float: left;
-    img {
-        height: 32px;
+  }
+  img {
+    height: 16px;
+    vertical-align: baseline;
     }
 }
+//
+//.raccoongang-openedx {
+//  font-size: 10px;
+//  color: #acaaab;
+//  span {
+//    float: left;
+//  }
+//  img {
+//    height: 16px;
+//    vertical-align: baseline;
+//    }
+//}
