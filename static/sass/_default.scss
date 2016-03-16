@@ -1,16 +1,19 @@
 $gray: #767676;
 
 .home>header {
-  background-image: url("/static/themes/default/images/bg1_urban.jpg") !important;
+  background-image: url("/static/themes/default/images/background-image.jpg") !important;
   height: 550px !important;
   .outer-wrapper {
     padding: 380px 0 0 !important;
     opacity: 0.7 !important;
   }
+  .title {
+    text-align: center;
+  }
 }
 
 header.global {
-  background: #000 !important;
+  background: #dcdddd !important;
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
@@ -24,7 +27,10 @@ header.global {
   .nav-global {
     li {
       a {
-        color: #fff !important;
+        color: #888888 !important;
+      }
+      a:hover {
+        color: #ff6600 !important;
       }
     }
   }
@@ -48,10 +54,12 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #cdaa37 !important;
+        background: #ff6600 !important;
       }
       .cta:hover {
-        background: #d09b18 !important;
+        background: inherit !important;
+        border: none !important;
+        box-shadow: none !important;
       }
     }
   }
@@ -59,23 +67,23 @@ header.global {
 
 
 .wrapper-footer {
-  background: #000 !important;
+  background: #292929 !important;
 
   footer#footer-openedx {
     a {
-      color: #fff !important;
+      color: #888888 !important;
     }
     a:hover {
-      border-bottom: #fff !important;
+      border-bottom: #888888 !important;
     }
     .colophon {
       .nav-colophon {
         li {
           a {
-            color: #fff !important;
+            color: #888888 !important;
           }
           a:hover {
-            color: #fff !important;
+            color: #ff6600 !important;
           }
         }
       }
