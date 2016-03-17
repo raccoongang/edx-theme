@@ -1,8 +1,9 @@
 $gray: #767676;
 
 .home>header {
-  background-image: url("/static/themes/default/images/background-image.jpg") !important;
-  height: 550px !important;
+  background-image: url("/static/themes/default/images/Dean-Bragonier.png") !important;
+  height: 520px !important;
+  background-position: center !important;
   .outer-wrapper {
     padding: 380px 0 0 !important;
     opacity: 0.7 !important;
@@ -87,6 +88,11 @@ header.global {
           }
         }
       }
+      width: inherit !important;
+    }
+    .references {
+      width: inherit !important;
+      float: right !important;
     }
   }
 }
