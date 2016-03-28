@@ -8,12 +8,14 @@ $gray: #767676;
   border-bottom: none !important;
   box-shadow: none !important;
   .outer-wrapper {
-    padding: 392px 0 0 20px !important;
+    padding: 392px 0 0 0 !important;
     opacity: 0.7 !important;
   }
   .title {
-    max-height: 120px !important;
+    height: 120px !important;
     padding: 36px 30px !important;
+    float: none !important;
+    margin: 0 auto !important;
   }
   .title>hgroup {
     text-align: center !important;
@@ -31,6 +33,7 @@ $gray: #767676;
 
 .find-courses {
   padding-bottom: 0 !important;
+  background: #fff !important;
   header.search {
     margin-top: 0 !important;
     height: 520px !important;
@@ -41,15 +44,16 @@ $gray: #767676;
     box-shadow: none !important;
 
     .inner-wrapper {
-      padding: 392px 0 0 20px !important;
+      padding: 392px 0 0 0 !important;
 
       hgroup {
         text-align: center !important;
-        vertical-align: middle !important;
-        width: 65.88078% !important;
-        padding: 35px 0 55px !important;
+        width: 65% !important;
+        padding: 35px 0 0 !important;
         opacity: 0.75 !important;
-        line-height: 29px !important;
+        height: 83px;
+        display: block !important;
+        margin: 0 auto !important;
 
         h3 {
           font-family: 'Open Sans', sans-serif !important;
