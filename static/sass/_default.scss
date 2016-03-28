@@ -1,7 +1,7 @@
 $gray: #767676;
 
 .home>header {
-  background-image: url("../themes/default/images/bbf-main.png") !important;
+  background-image: url("/static/themes/default/images/back.jpg") !important;
   background-repeat-y: no-repeat;
   background-position: center;
   height: 520px !important;
@@ -33,7 +33,7 @@ $gray: #767676;
     height: 520px !important;
     background-repeat-y: no-repeat;
     background-position: center;
-    background-image: url("../themes/default/images/bbf-main.png") !important;
+    background-image: url("/static/themes/default/images/back.jpg") !important;
 
     .inner-wrapper {
       padding: 392px 0 0 20px !important;
@@ -48,7 +48,9 @@ $gray: #767676;
 
 header.global {
   background: #fff !important;
-
+  h1 {
+    margin: -7px 39px 0 0 !important;
+  }
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
   }
@@ -61,7 +63,7 @@ header.global {
   .nav-global {
     li {
       a {
-        color: #ffc233 !important;
+        color: #646464 !important;
       }
     }
   }
@@ -85,11 +87,11 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #ffc233 !important;
+        background: #299DCE !important;
         box-shadow: none !important;
       }
       .cta:hover {
-        background: #FFE03B !important;
+        background: #299DCE !important;
       }
     }
   }
@@ -101,20 +103,21 @@ header.global {
 
   footer#footer-openedx {
     a {
-      color: #53abfd !important;
+      color: #299DCE !important;
     }
     a:hover {
-      border-bottom: #3fbcfd !important;
+      border-bottom: #299DCE !important;
     }
     .colophon {
+      margin-top: 10px;
       .nav-colophon {
         margin: 5px 0 40px 0!important;
         li {
           a {
-            color: #53abfd !important;
+            color: #299DCE !important;
           }
           a:hover {
-            color: #3FBCFD !important;
+            color: #299DCE !important;
           }
         }
       }
@@ -169,4 +172,8 @@ header.global.slim {
     height: 16px;
     vertical-align: baseline;
     }
+}
+
+.content-wrapper {
+  background-color: #eee !important;
 }
