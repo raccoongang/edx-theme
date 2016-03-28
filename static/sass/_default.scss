@@ -5,6 +5,8 @@ $gray: #767676;
   background-repeat-y: no-repeat;
   background-position: center;
   height: 520px !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
   .outer-wrapper {
     padding: 392px 0 0 20px !important;
     opacity: 0.7 !important;
@@ -28,18 +30,32 @@ $gray: #767676;
 }
 
 .find-courses {
+  padding-bottom: 0 !important;
   header.search {
     margin-top: 0 !important;
     height: 520px !important;
-    background-repeat-y: no-repeat;
-    background-position: center;
+    background-repeat-y: no-repeat !important;
     background-image: url("../themes/default/images/bbf-main.png") !important;
+    background-size: cover !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 
     .inner-wrapper {
       padding: 392px 0 0 20px !important;
 
       hgroup {
-        box-shadow: none !important;
+        text-align: center !important;
+        vertical-align: middle !important;
+        width: 65.88078% !important;
+        padding: 35px 0 55px !important;
+        opacity: 0.75 !important;
+        line-height: 29px !important;
+
+        h3 {
+          font-family: 'Open Sans' !important;
+          font-size: 32px !important;
+          line-height: 0.9em !important;
+        }
       }
 
     }
@@ -48,6 +64,7 @@ $gray: #767676;
 
 header.global {
   background: #fff !important;
+  border-bottom: 0 !important;
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
@@ -169,4 +186,8 @@ header.global.slim {
     height: 16px;
     vertical-align: baseline;
     }
+}
+
+.content-wrapper {
+  padding-bottom: 0 !important;
 }
