@@ -16,6 +16,10 @@ $gray: #767676;
 header.global {
   background: #1F2E3E !important;
 
+  h1.logo {
+    margin: -9px 39px 0 0 !important;
+  }
+
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
   }
@@ -117,8 +121,13 @@ header.global {
 header.global.slim {
   h1.logo {
     img {
-      margin-top: -19px;
+      margin-top: 4px;
+      height: 50px !important;
     }
+  }
+
+  h1.logo:before {
+    height: 55px !important;
   }
 
   h2 {
