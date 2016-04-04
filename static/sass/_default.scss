@@ -1,7 +1,7 @@
 $gray: #767676;
 
 .home>header {
-  // background-image: url("/static/themes/default/images/Dean-Bragonier.png") !important;
+  // background-image: url("/static/themes/default/images/footer-birds.gif") !important;
   height: 520px !important;
   background-position: center !important;
   .outer-wrapper {
@@ -14,10 +14,11 @@ $gray: #767676;
 }
 
 header.global {
-  background: #ecebe3 !important;
+  height: 93px !important;
+  //background: #ecebe3 !important;
 
   h1.logo {
-    margin: -5px 39px 0 0 !important;
+    margin: -24px 39px 0 0 !important;
   }
 
   .user>.primary:last-child>a.shopping-cart {
@@ -44,6 +45,7 @@ header.global {
     background: #fff !important;
     border-radius: 3px !important;
     margin-left: 16px;
+    margin-top: 26px;
 
     a.user-link {
       border-radius: 3px !important;
@@ -69,11 +71,15 @@ header.global {
       }
     }
   }
+
+  .nav {
+    padding: 24px 10px 0 !important;
+  }
 }
 
 
 .wrapper-footer {
-  background: #ecebe3 !important;
+  //background: #ecebe3 !important;
   margin-top: 0 !important;
 
   footer#footer-openedx {
@@ -122,19 +128,21 @@ header.global {
 
 header.global.slim {
   h1.logo {
+    margin: 0 10px 0 0 !important;
     img {
       // margin-top: 4px;
-      height: 50px !important;
+      height: 90px !important;
     }
   }
 
   h1.logo:before {
-    height: 55px !important;
+    height: 95px !important;
   }
 
   h2 {
     max-width: 65%;
     width: initial !important;
+    margin-top: 30px !important;
   }
 }
 
@@ -152,6 +160,7 @@ header.global.slim {
 }
 
 .courses-container {
+  background-color: #fff !important;
   .courses {
     .course {
       z-index: 0 !important;
