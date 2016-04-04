@@ -1,7 +1,7 @@
 $gray: #767676;
 
 .home>header {
-  background-image: url("/static/themes/default/images/Dean-Bragonier.png") !important;
+  // background-image: url("/static/themes/default/images/Dean-Bragonier.png") !important;
   height: 520px !important;
   background-position: center !important;
   .outer-wrapper {
@@ -14,10 +14,10 @@ $gray: #767676;
 }
 
 header.global {
-  background: #1F2D3E !important;
+  background: #ecebe3 !important;
 
   h1.logo {
-    margin: -9px 39px 0 0 !important;
+    margin: -5px 39px 0 0 !important;
   }
 
   .user>.primary:last-child>a.shopping-cart {
@@ -35,7 +35,7 @@ header.global {
         color: #888888 !important;
       }
       a:hover {
-        color: #ff6600 !important;
+        color: #f89f1d !important;
       }
     }
   }
@@ -48,6 +48,10 @@ header.global {
     a.user-link {
       border-radius: 3px !important;
     }
+
+    //.dropdown {
+    //  padding: 4px 10px !important;
+    //}
   }
   .primary>a {
     box-shadow: none !important;
@@ -59,12 +63,12 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #ff6600 !important;
+        background: #777666 !important;
       }
       .cta:hover {
-        background: #888888 !important;
+        background: #f89f1d !important;
         border: none !important;
-        box-shadow: 0 2px 1px 0 #888888 !important;
+        box-shadow: 0 2px 1px 0 #f89f1d !important;
       }
     }
   }
@@ -72,7 +76,7 @@ header.global {
 
 
 .wrapper-footer {
-  background: #1F2D3E !important;
+  background: #ecebe3 !important;
   margin-top: 0 !important;
 
   footer#footer-openedx {
@@ -122,7 +126,7 @@ header.global {
 header.global.slim {
   h1.logo {
     img {
-      margin-top: 4px;
+      // margin-top: 4px;
       height: 50px !important;
     }
   }
@@ -164,4 +168,8 @@ header.global.slim {
   input, textarea {
     margin: 10px;
   }
+}
+
+.fa {
+  line-height: 1.9em !important;
 }
