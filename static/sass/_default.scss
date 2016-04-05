@@ -1,7 +1,7 @@
 $gray: #767676;
 
 .home>header {
-  // background-image: url("/static/themes/default/images/footer-birds.gif") !important;
+  background-image: url("/static/themes/default/images/background-img.jpg") !important;
   height: 520px !important;
   background-position: center !important;
   .outer-wrapper {
@@ -29,14 +29,14 @@ header.global {
     color: $gray;
     text-shadow: none !important;
   }
-
+// button "register"
   .nav-global {
     li {
       a {
-        color: #888888 !important;
+        color: #007eb9 !important;
       }
       a:hover {
-        color: #f89f1d !important;
+        color: #01a8d2 !important;
       }
     }
   }
@@ -58,16 +58,17 @@ header.global {
     border-radius: 3px !important;
   }
 
+  // button "Sign in"
   .nav-courseware {
     li {
       .cta {
-        background: #777666 !important;
+        background: #007eb9 !important;
         box-shadow: none !important;
       }
       .cta:hover {
-        background: #f89f1d !important;
+        background: #01a8d2 !important;
         border: none !important;
-        box-shadow: 0 2px 1px 0 #f89f1d !important;
+        box-shadow: 0 2px 1px 0 #007eb9 !important;
       }
     }
   }
@@ -81,6 +82,7 @@ header.global {
 .wrapper-footer {
   //background: #ecebe3 !important;
   margin-top: 0 !important;
+  position: relative !important;
 
   footer#footer-openedx {
     a {
@@ -89,21 +91,23 @@ header.global {
     a:hover {
       border-bottom: #888888 !important;
     }
+
+    // buttons footer
     .colophon {
       .nav-colophon {
         li {
           a {
-            color: #888888 !important;
+            color: #007eb9 !important;
           }
           a:hover {
-            color: #ff6600 !important;
+            color: #01a8d2 !important;
           }
         }
       }
-      width: inherit !important;
+      width: initial !important;
     }
     .references {
-      width: inherit !important;
+      width: initial !important;
       float: right !important;
     }
   }
@@ -178,4 +182,27 @@ header.global.slim {
 
 .fa {
   line-height: 1.9em !important;
+}
+
+.find-courses {
+  background-color: #fff !important;
+}
+
+.raccoon-block {
+  width: initial;
+  display: inline-block;
+  position: absolute;
+  margin-top: 4px;
+}
+
+.raccoongang {
+  font-size: 10px;
+  color: #acaaab;
+  span {
+    float: left;
+  }
+  img {
+    height: 16px;
+    vertical-align: baseline;
+    }
 }
