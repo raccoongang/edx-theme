@@ -1,16 +1,17 @@
 $gray: #767676;
-$link-color: #8C0707;
-$link-color-d1: #8C0707;
-$link-hover: #8C0707;
+$link-color: #989898;
+$link-color-d1: $link-color;
+$link-hover: $link-color;
 
 .home>header {
-  background-image: url("/static/themes/default/images/back.jpg") !important;
+  background-image: url("/static/themes/default/images/Microsoft_backgnd.jpg") !important;
   background-repeat-y: no-repeat;
   background-position: center;
   height: 520px !important;
   .outer-wrapper {
-    padding: 392px 0 0 20px !important;
+    padding: 250px 0 0 20px !important;
     opacity: 0.7 !important;
+    max-width: initial !important;
   }
   .title {
     max-height: 120px !important;
@@ -31,13 +32,13 @@ $link-hover: #8C0707;
 }
 
 .find-courses {
-  background: #e1dad2 !important;
+  background: #eeeeee !important;
   header.search {
     margin-top: 0 !important;
     height: 520px !important;
     background-repeat-y: no-repeat;
     background-position: center;
-    background-image: url("/static/themes/default/images/back.jpg") !important;
+    background-image: url("/static/themes/default/images/Microsoft_backgnd.jpg") !important;
 
     .inner-wrapper {
       padding: 392px 0 0 20px !important;
@@ -51,7 +52,7 @@ $link-hover: #8C0707;
 }
 // header
 header.global {
-  background: #5d422d !important;
+  background: #0078d7 !important;
   h1 {
     margin: -7px 39px 0 0 !important;
   }
@@ -88,14 +89,15 @@ header.global {
     border-radius: 3px !important;
   }
 
+  // button "Sign in"
   .nav-courseware {
     li {
       .cta {
-        background: #b6a48c !important;
+        background: #00adef !important;
         box-shadow: none !important;
       }
       .cta:hover {
-        background: #9b8974 !important;
+        background: #00cef2 !important;
       }
     }
   }
@@ -103,7 +105,7 @@ header.global {
 
 // footer
 .wrapper-footer {
-  background: #5d422d !important;
+  background: #dddddd !important;
   margin-top: 0!important;
 
   footer#footer-openedx {
@@ -162,6 +164,7 @@ header.global.slim {
   h2 {
     max-width: 65%;
     width: initial !important;
+    color: #fff !important;
   }
 }
 
@@ -173,19 +176,19 @@ header.global.slim {
 }
 
 .raccoongang {
-  font-size: 10px;
+  font-size: 20px;
   color: #acaaab;
   span {
     float: left;
   }
   img {
-    height: 16px;
-    vertical-align: middle;
+    height: 27px;
+    vertical-align: baseline;
     }
 }
 
 .content-wrapper {
-  background-color: #e1dad2 !important;
+  background-color: #eeeeee !important;
 }
 
 body.view-incourse {
@@ -195,5 +198,9 @@ body.view-incourse {
 }
 
 .wrapper-preview-menu {
-  background-color: #e1dad2 !important;
+  background-color: #eeeeee !important;
+}
+
+.fa {
+  line-height: 1.9em !important;
 }
