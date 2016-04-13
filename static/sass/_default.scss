@@ -11,7 +11,6 @@ $link-hover: $link-color;
   .outer-wrapper {
     padding: 250px 0 0 20px !important;
     opacity: 0.7 !important;
-    max-width: initial !important;
   }
   .title {
     max-height: 120px !important;
@@ -117,6 +116,7 @@ header.global {
     }
     .colophon {
       margin-top: 10px;
+      width: initial !important;
       .nav-colophon {
         margin: 5px 0 40px 0!important;
         li {
