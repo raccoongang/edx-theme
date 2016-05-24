@@ -1,7 +1,7 @@
 $gray: #767676;
 
 .home>header {
-  background-image: url("/static/themes/default/images/Little_Darling_PS_06_Cropped.jpg") !important;
+  // background-image: url("/static/themes/default/images/Little_Darling_PS_06_Cropped.jpg") !important;
   height: 520px !important;
   .outer-wrapper {
     padding: 230px 0 0 !important;
@@ -10,7 +10,7 @@ $gray: #767676;
 }
 
 header.global {
-  background: #000 !important;
+  background: #7cbe55 !important;
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
@@ -24,7 +24,7 @@ header.global {
   .nav-global {
     li {
       a {
-        color: #82bc00 !important;
+        color: #fff !important;
       }
     }
   }
@@ -48,10 +48,11 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #82bc00 !important;
+        background: #ce4a09 !important;
+        box-shadow: none !important;
       }
       .cta:hover {
-        background: #94D100 !important;
+        background: #dd4f0a !important;
       }
     }
   }
@@ -63,19 +64,19 @@ header.global {
 
   footer#footer-openedx {
     a {
-      color: #82bc00 !important;
+      color: #737373 !important;
     }
     a:hover {
-      border-bottom: #82bc00 !important;
+      border-bottom: #737373 !important;
     }
     .colophon {
       .nav-colophon {
         li {
           a {
-            color: $gray !important;
+            color: #737373 !important;
           }
           a:hover {
-            color: #82bc00 !important;
+            color: #737373 !important;
           }
         }
       }
