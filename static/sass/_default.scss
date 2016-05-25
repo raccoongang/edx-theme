@@ -5,8 +5,12 @@ $body-font-family: $sans-serif !default;
 $serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
 
 .home>header {
+  background-color: rgb(197,197,197) !important;
   background-image: url("/static/themes/default/images/gcsen-back.png") !important;
-  height: 520px !important;
+  height: 400px !important;
+  background-position: center !important;
+  background-size: 27% !important;
+  background-repeat: no-repeat !important;
   .outer-wrapper {
     padding: 230px 0 0 !important;
     opacity: 0.7 !important;
