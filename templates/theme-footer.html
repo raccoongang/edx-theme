@@ -1,5 +1,6 @@
 ## mako
 <%! from django.core.urlresolvers import reverse %>
+<%! from django.conf import settings %>
 <%namespace name='static' file='/static_content.html'/>
 <%! from datetime import datetime %>
 <%! from pytz import UTC %>
@@ -47,7 +48,7 @@
 ##       <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
        <span>
          <a href="#" target="_blank">
-           <img src="/static/themes/default/images/logo.jpg" alt="" height="75">
+           <img src="${'/static/' + settings.EDX_PLATFORM_REVISION + '/themes/default/images/logo.jpg'}" alt="" height="75">
          </a>
        </span>
     </div>
