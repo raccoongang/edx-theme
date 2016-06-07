@@ -4,12 +4,12 @@ $monospace: 'Arial', 'helvetica', 'Geneva';// Monaco, 'Bitstream Vera Sans Mono'
 $body-font-family: $sans-serif !default;
 $serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
 
+
 .home>header {
   background-color: #CFD4CD !important;
-  background-image: url("/static/themes/default/images/gcsen-back.png") !important;
+  background-image: url("/static/themes/default/images/Background_2.jpg") !important;
   height: 488px !important;
   background-position: center !important;
-  background-size: 27% !important;
   background-repeat: no-repeat !important;
   .outer-wrapper {
     padding: 230px 0 0 !important;
@@ -18,7 +18,7 @@ $serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
 }
 
 header.global {
-  background: #336633 !important;
+  background: #363636 !important;
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
@@ -56,36 +56,56 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #DD823E !important;
+        background: #fff !important;
         box-shadow: none !important;
+        border-radius: 4px !important;
+        color: #000 !important;
+        border: 1px solid #363636 !important;
       }
       .cta:hover {
-        background: #F2D474 !important;
+        background: #363636 !important;
+        color: #fff !important;
       }
     }
   }
+  h1.logo {
+    margin: -7px 39px 0 0 !important;
+  }
+}
+
+header.global:hover {
+  background-color: rgba(54,54,54,.8) !important;
 }
 
 
 .wrapper-footer {
-  background: #000 !important;
+  background: #363636 !important;
 
   footer#footer-openedx {
     a {
-      color: #737373 !important;
+      color: #f7f7f7 !important;
     }
     a:hover {
-      border-bottom: #737373 !important;
+      border-bottom: #f7f7f7 !important;
     }
     .colophon {
       .nav-colophon {
         li {
           a {
-            color: #737373 !important;
+            color: #f7f7f7 !important;
           }
           a:hover {
-            color: #737373 !important;
+            color: #f7f7f7 !important;
+            text-decoration: underline !important;
           }
+        }
+        li:after {
+          content: '\2022';
+          padding: 0 0 0 15px;
+          color: #fff;
+        }
+        li:last-child:after {
+          display: none;
         }
       }
     width: inherit !important;
@@ -117,8 +137,11 @@ header.global {
 header.global.slim {
   h1.logo {
     img {
-      margin-top: -19px;
+      margin-top: -5px;
     }
+  }
+  h1.logo:before {
+    top: 7px !important;
   }
 
   h2 {
@@ -178,4 +201,23 @@ header.global.slim {
 
 body {
   background: #fff !important;
+}
+
+.home {
+  .title {
+    background: #fbfbfb !important;
+    margin-left: 0 !important;
+    margin: 0 auto !important;
+    float: none !important;
+    width: 98.15254% !important;
+    text-align: center;
+
+    hgroup {
+      text-align: center !important;
+
+      h1 {
+        text-align: center !important;
+      }
+    }
+  }
 }
