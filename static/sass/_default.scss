@@ -1,13 +1,13 @@
-$gray: #767676;
-$sans-serif: 'Arial', 'helvetica', 'Geneva'; // 'Open Sans', $verdana, sans-serif !default;
-$monospace: 'Arial', 'helvetica', 'Geneva';// Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace !default;
-$body-font-family: $sans-serif !default;
-$serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
+//$gray: #767676;
+//$sans-serif: 'Arial', 'helvetica', 'Geneva'; // 'Open Sans', $verdana, sans-serif !default;
+//$monospace: 'Arial', 'helvetica', 'Geneva';// Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace !default;
+//$body-font-family: $sans-serif !default;
+//$serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
 
 
 .home>header {
   background-color: #CFD4CD !important;
-  background-image: url("/static/themes/default/images/Background_2.jpg") !important;
+  background-image: url("/static/themes/default/images/Background_z.jpg") !important;
   height: 488px !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -18,7 +18,7 @@ $serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
 }
 
 header.global {
-  background: #363636 !important;
+  background: #efe8ea !important;
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
@@ -32,7 +32,7 @@ header.global {
   .nav-global {
     li {
       a {
-        color: #fff !important;
+        color: #a8a6a7 !important;
       }
     }
   }
@@ -56,14 +56,14 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #fff !important;
+        background: #f87564 !important;
         box-shadow: none !important;
-        border-radius: 4px !important;
-        color: #000 !important;
-        border: 1px solid #363636 !important;
+        //border-radius: 4px !important;
+        color: #fff !important;
+        // border: 1px solid #363636 !important;
       }
       .cta:hover {
-        background: #363636 !important;
+        background: rgba(255, 142, 125, 0.97) !important;
         color: #fff !important;
       }
     }
@@ -73,13 +73,9 @@ header.global {
   }
 }
 
-header.global:hover {
-  background-color: rgba(54,54,54,.8) !important;
-}
-
 
 .wrapper-footer {
-  background: #363636 !important;
+  background: #f87564 !important;
 
   footer#footer-openedx {
     a {
@@ -90,6 +86,7 @@ header.global:hover {
     }
     .colophon {
       .nav-colophon {
+        font-size: 12px !important;
         li {
           a {
             color: #f7f7f7 !important;
@@ -98,14 +95,6 @@ header.global:hover {
             color: #f7f7f7 !important;
             text-decoration: underline !important;
           }
-        }
-        li:after {
-          content: '\2022';
-          padding: 0 0 0 15px;
-          color: #fff;
-        }
-        li:last-child:after {
-          display: none;
         }
       }
     width: inherit !important;
