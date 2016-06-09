@@ -76,6 +76,7 @@ header.global {
 
 .wrapper-footer {
   background: #f87564 !important;
+  padding-bottom: 37px !important;
 
   footer#footer-openedx {
     a {
@@ -83,6 +84,10 @@ header.global {
     }
     a:hover {
       border-bottom: #f7f7f7 !important;
+    }
+    a:focus {
+      border: none !important;
+      outline: none !important;
     }
     .colophon {
       .nav-colophon {
@@ -93,15 +98,15 @@ header.global {
           }
           a:hover {
             color: #f7f7f7 !important;
-            text-decoration: underline !important;
           }
         }
       }
     width: inherit !important;
     }
     .references {
-        width: inherit !important;
-        float: right !important;
+      width: inherit !important;
+      float: right !important;
+      margin: 10px 0 0 0 !important;
     }
   }
 }
@@ -216,6 +221,7 @@ body {
 
       h1 {
         text-align: center !important;
+        font-size: 2.7em !important;
       }
     }
   }
