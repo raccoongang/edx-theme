@@ -88,6 +88,9 @@ header.global:hover {
     a:hover {
       border-bottom: #f7f7f7 !important;
     }
+    a:focus {
+      border: none !important;
+    }
     .colophon {
       .nav-colophon {
         li {
@@ -96,7 +99,6 @@ header.global:hover {
           }
           a:hover {
             color: #f7f7f7 !important;
-            text-decoration: underline !important;
           }
         }
         li:after {
@@ -217,6 +219,7 @@ body {
 
       h1 {
         text-align: center !important;
+        font-size: 2.7em !important;
       }
     }
   }
