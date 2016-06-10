@@ -1,4 +1,7 @@
 $gray: #767676;
+$link-color: $gray;
+$link-color-d1: $gray;
+$link-hover: #ff9e16;
 
 .home>header {
   background-image: url("/static/themes/default/images/background-img.jpg") !important;
@@ -14,11 +17,11 @@ $gray: #767676;
 }
 
 header.global {
-  height: 93px !important;
+  // height: 93px !important;
   //background: #ecebe3 !important;
 
   h1.logo {
-    margin: -24px 39px 0 0 !important;
+    // margin: 0 39px 0 0 !important;
   }
 
   .user>.primary:last-child>a.shopping-cart {
@@ -33,24 +36,24 @@ header.global {
   .nav-global {
     li {
       a {
-        color: #007eb9 !important;
+        color: #ff9e16 !important;
       }
       a:hover {
-        color: #fa9f3e !important;
+        color: #fab65b !important;
       }
     }
   }
 
-  .user {
-    background: #fff !important;
-    border-radius: 3px !important;
-    margin-left: 16px;
-    margin-top: 26px;
-
-    a.user-link {
-      border-radius: 3px !important;
-    }
-  }
+  //.user {
+  //  background: #fff !important;
+  //  border-radius: 3px !important;
+  //  margin-left: 16px;
+  //  margin-top: 26px;
+  //
+  //  a.user-link {
+  //    border-radius: 3px !important;
+  //  }
+  //}
   .primary>a {
     box-shadow: none !important;
   }
@@ -62,11 +65,11 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #007eb9 !important;
+        background: #ff9e16 !important;
         box-shadow: none !important;
       }
       .cta:hover {
-        background: #fa9f3e !important;
+        background: #fab65b !important;
         border: none !important;
         box-shadow: none !important;
       }
@@ -96,12 +99,21 @@ header.global {
     .colophon {
       .nav-colophon {
         li {
+          margin-right: 10px !important;
           a {
-            color: #007eb9 !important;
+            color: #888888 !important;
           }
           a:hover {
-            color: #fa9f3e !important;
+            color: #717171 !important;
           }
+        }
+        li:after {
+          content: "|";
+          color: #888888;
+          padding-left: 10px !important;
+        }
+        li:last-child:after {
+          display: none;
         }
       }
       width: initial !important;
@@ -117,6 +129,30 @@ header.global {
   .form-type {
     padding-bottom: 10px !important;
   }
+  .action-primary {
+    background: #ff9e16 !important;
+    box-shadow: 0 2px 1px 0 #bf5800 !important;
+  }
+  .action-primary:hover {
+    background: #fab65b !important;
+  }
+  .nav-btn {
+    border: 1px solid #ff9e16 !important;
+    color: #ff9e16 !important;
+  }
+  .nav-btn:hover {
+    background: #fab65b !important;
+    box-shadow: 0 2px 1px 0 #bf5800 !important;
+    color: #fff !important;
+  }
+  .form-field {
+    .field-link {
+      color: #888888 !important;
+    }
+    .field-link:hover {
+      color: #ff9e16 !important;
+    }
+  }
 }
 
 .course-info {
@@ -126,28 +162,40 @@ header.global {
 
     .intro-inner-wrapper {
       margin-bottom: 20px !important;
+      .intro {
+        .main-cta {
+          a.register {
+            background-color: #ff9e16 !important;
+            background-image: none !important;
+            border: 1px solid #ff9e16 !important;
+            box-shadow: none !important;
+          }
+        }
+      }
     }
+  }
+  .course-date {
+    color: #ff9e16 !important;
   }
 }
 
 header.global.slim {
   h1.logo {
-    margin: 0 10px 0 0 !important;
+    margin: -5px 10px 0 0 !important;
     img {
       // margin-top: 4px;
-      height: 90px !important;
     }
   }
 
   h1.logo:before {
-    height: 95px !important;
+    margin-top: 7px !important;
   }
 
-  h2 {
-    max-width: 65%;
-    width: initial !important;
-    margin-top: 30px !important;
-  }
+  //h2 {
+  //  max-width: 65%;
+  //  width: initial !important;
+  //  margin-top: 30px !important;
+  //}
 }
 
 .filter_button {
@@ -168,6 +216,7 @@ header.global.slim {
   .courses {
     .course {
       z-index: 0 !important;
+      border-bottom: 1px solid #888888 !important;
     }
   }
 }
@@ -205,4 +254,153 @@ header.global.slim {
     height: 16px;
     vertical-align: baseline;
     }
+}
+
+.dashboard {
+  .my-courses {
+    .course {
+      .details {
+        .enter-course {
+          color: #fff !important;
+          border-color: #ff9e16 !important;
+          background-color: #ff9e16 !important;
+        }
+        .enter-course:hover {
+          background-color: #fab65b !important;
+        }
+        .enter-course:focus {
+          background-color: #ff9e16 !important;
+        }
+      }
+      .course-title {
+        a:hover {
+          color: #767676 !important;
+        }
+      }
+    }
+  }
+}
+
+.discussion-module {
+  .new-post-btn {
+    background-image: -webkit-linear-gradient(top, #fab65b,#ff9e16) !important;
+    background-image: linear-gradient(to bottom,#fab65b,#ff9e16) !important;
+    border: 1px solid #ff9e16 !important;
+    box-shadow: none !important;
+  }
+}
+
+.openassessment {
+  .openassessment__steps__step {
+    .step__actions {
+      .action--submit {
+        background: #ff9e16 !important;
+        border: 1px solid #ff9e16 !important;
+      }
+    }
+  }
+  .ui-toggle-visibility {
+    .ui-toggle-visibility__control {
+      .step__label {
+        color: #ff9e16 !important;
+      }
+    }
+  }
+}
+
+.home {
+  .title {
+    background: #fbfbfb !important;
+    margin-left: 0 !important;
+    margin: 0 auto !important;
+    float: none !important;
+    width: 98.15254% !important;
+    text-align: center;
+
+    hgroup {
+      text-align: center !important;
+
+      h1 {
+        text-align: center !important;
+        font-size: 2.7em !important;
+      }
+    }
+  }
+}
+
+.modal {
+  .inner-wrapper {
+    form {
+      .submit {
+        input[type="submit"] {
+          background-color: #ff9e16 !important;
+          background-image: none !important;
+          border: 1px solid #ff9e16 !important;
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+}
+
+.instructor-dashboard-wrapper-2 {
+  section.idash-section#membership {
+    .member-lists-management {
+      .auth-list-container {
+        .member-list-widget {
+          input[type="button"].add {
+            background-color: #ff9e16 !important;
+            background-image: none !important;
+            border: 1px solid #ff9e16 !important;
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+  }
+  section.idash-section#cohort_management {
+    .cohort-management {
+      .message .action-create {
+        background-color: #ff9e16 !important;
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+.instructor-dashboard-content-2 {
+  .instructor-nav {
+    .nav-item {
+      a:hover {
+        color: #ff9e16 !important;
+      }
+    }
+  }
+}
+
+body.discussion {
+  .course-tabs {
+    .right {
+      .new-post-btn {
+        background-color: #ff9e16 !important;
+        background-image: none !important;
+        border: 1px solid #ff9e16 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+input[type="button"] {
+  background-color: #ff9e16 !important;
+  background-image: none !important;
+  border: 1px solid #ff9e16 !important;
+  box-shadow: none !important;
+}
+
+input[type="submit"] {
+  background-color: #ff9e16 !important;
+  background-image: none !important;
+  border: 1px solid #ff9e16 !important;
+  box-shadow: none !important;
 }
