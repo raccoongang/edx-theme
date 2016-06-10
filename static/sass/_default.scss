@@ -15,6 +15,11 @@
     padding: 230px 0 0 !important;
     opacity: 0.7 !important;
   }
+  .title>hgroup {
+    h2 {
+      text-transform: inherit !important;
+    }
+  }
 }
 
 header.global {
@@ -101,10 +106,10 @@ header.global {
           }
         }
       }
-    width: inherit !important;
+    width: initial !important;
     }
     .references {
-      width: inherit !important;
+      width: initial !important;
       float: right !important;
       margin: 10px 0 0 0 !important;
     }
@@ -225,4 +230,14 @@ body {
       }
     }
   }
+}
+
+.custom-action {
+  background: #f87564 !important;
+  box-shadow: 0 2px 1px 0 #bf5648 !important;
+
+}
+
+.custom-list li {
+  margin-bottom: 5px;
 }
