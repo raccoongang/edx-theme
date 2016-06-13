@@ -242,8 +242,12 @@ body {
   margin-bottom: 5px;
 }
 
+input, textarea, select {
+  border: 1px solid #dedede !important;
+}
+
 input:focus, textarea:focus {
-  outline: 1px solid #dedede !important;
+  outline: 1px solid #c8c8c8 !important;
   border: none !important;
   box-shadow: none !important;
 }
