@@ -241,3 +241,13 @@ body {
 .custom-list li {
   margin-bottom: 5px;
 }
+
+input:focus, textarea:focus {
+  outline: 1px solid #dedede !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+select:focus {
+  outline: none !important;
+}
