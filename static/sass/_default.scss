@@ -2,7 +2,6 @@ $gray: #767676;
 $link-color: $gray;
 $link-color-d1: $gray;
 $link-hover: #ff9e16;
-$blue: #ff9e16;
 
 .home>header {
   background-image: url("/static/themes/default/images/background-img.jpg") !important;
@@ -133,6 +132,7 @@ header.global {
   .action-primary {
     background: #ff9e16 !important;
     box-shadow: 0 2px 1px 0 #bf5800 !important;
+    text-shadow: none !important;
   }
   .action-primary:hover {
     background: #fab65b !important;
@@ -165,11 +165,12 @@ header.global {
       margin-bottom: 20px !important;
       .intro {
         .main-cta {
-          a.register {
+          a.register, strong {
             background-color: #ff9e16 !important;
             background-image: none !important;
             border: 1px solid #ff9e16 !important;
             box-shadow: none !important;
+            text-shadow: none !important;
           }
         }
       }
@@ -334,74 +335,198 @@ input[type="button"] {
   text-shadow: none !important;
 }
 
-//.modal {
-//  .inner-wrapper {
-//    form {
-//      .submit {
-//        input[type="submit"] {
-//          background-color: #ff9e16 !important;
-//          background-image: none !important;
-//          border: 1px solid #ff9e16 !important;
-//          box-shadow: none !important;
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//.instructor-dashboard-wrapper-2 {
-//  section.idash-section#membership {
-//    .member-lists-management {
-//      .auth-list-container {
-//        .member-list-widget {
-//          input[type="button"].add {
-//            background-color: #ff9e16 !important;
-//            background-image: none !important;
-//            border: 1px solid #ff9e16 !important;
-//            box-shadow: none !important;
-//          }
-//        }
-//      }
-//    }
-//  }
-//  section.idash-section#cohort_management {
-//    .cohort-management {
-//      .message .action-create {
-//        background-color: #ff9e16 !important;
-//        background-image: none !important;
-//      }
-//    }
-//  }
-//}
-//
-//.instructor-dashboard-content-2 {
-//  .instructor-nav {
-//    .nav-item {
-//      a:hover {
-//        color: #ff9e16 !important;
-//      }
-//    }
-//  }
-//}
-//
-//body.discussion {
-//  .course-tabs {
-//    .right {
-//      .new-post-btn {
-//        background-color: #ff9e16 !important;
-//        background-image: none !important;
-//        border: 1px solid #ff9e16 !important;
-//        box-shadow: none !important;
-//      }
-//    }
-//  }
-//}
-//
-input[type="button"], .btn.btn-primary, input[type="submit"], strong, .add-article-btn {
+.modal {
+  .inner-wrapper {
+    form {
+      .submit {
+        input[type="submit"] {
+          background-color: #ff9e16 !important;
+          background-image: none !important;
+          border: 1px solid #ff9e16 !important;
+          box-shadow: none !important;
+          font-weight: normal !important;
+        }
+      }
+    }
+  }
+}
+
+.instructor-dashboard-wrapper-2 {
+  section.idash-section#membership {
+    .member-lists-management {
+      .auth-list-container {
+        .member-list-widget {
+          input[type="button"].add {
+            background-color: #ff9e16 !important;
+            background-image: none !important;
+            border: 1px solid #ff9e16 !important;
+            box-shadow: none !important;
+            font-weight: normal !important;
+          }
+        }
+      }
+    }
+  }
+  section.idash-section#cohort_management {
+    .cohort-management {
+      .message .action-create {
+        background-color: #ff9e16 !important;
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+.instructor-dashboard-content-2 {
+  .instructor-nav {
+    .nav-item {
+      a:hover {
+        color: #ff9e16 !important;
+      }
+    }
+  }
+}
+
+body.discussion {
+  .course-tabs {
+    .right {
+      .new-post-btn {
+        background-color: #ff9e16 !important;
+        background-image: none !important;
+        border: 1px solid #ff9e16 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        color: #fff !important;
+        font-weight: normal !important;
+      }
+    }
+  }
+}
+
+input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, button[type="submit"] {
   background-color: #ff9e16 !important;
   background-image: none !important;
   border: 1px solid #ff9e16 !important;
   box-shadow: none !important;
   text-shadow: none !important;
   color: #fff !important;
+  font-weight: normal !important;
 }
+
+.wrapper-msg.wrapper-auto-cert {
+  .auto-cert-message {
+    .has-actions {
+      .msg-actions {
+        .btn {
+            background-color: #ff9e16 !important;
+            background-image: none !important;
+            border: 1px solid #ff9e16 !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+            color: #fff !important;
+            font-weight: normal !important;
+        }
+      }
+    }
+  }
+}
+
+.wrapper-msg.wrapper-auto-cert {
+  .auto-cert-message {
+    border-left: 3px solid #ff9e16 !important;
+  }
+}
+
+.mce-widget {
+  .mce-btn {
+    .mce-menubtn {
+      .mce-fixed-width {
+        .mce-listbox {
+          .mce-first {
+            .mce-last {
+              background-color: #f0f0f0 !important;
+              background-image: none !important;
+              border: 1px solid #f0f0f0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.instructor-dashboard-wrapper-2 {
+  section.idash-section#cohort_management {
+    .cohort-management-nav {
+      .action-create {
+        background-color: #ff9e16 !important;
+        background-image: none !important;
+        border: 1px solid #ff9e16 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        color: #fff !important;
+        font-weight: normal !important;
+      }
+    }
+  }
+}
+
+.instructor-dashboard-wrapper-2 {
+  section.idash-section#certificates {
+    .btn-blue {
+      background-color: #ff9e16 !important;
+      background-image: none !important;
+      border: 1px solid #ff9e16 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      color: #fff !important;
+      font-weight: normal !important;
+    }
+  }
+}
+
+.customBrowseBtn {
+  .file-browse {
+    span.browse {
+      background-color: #ff9e16 !important;
+      background-image: none !important;
+      border: 1px solid #ff9e16 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      color: #fff !important;
+      font-weight: normal !important;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.dashboard {
+  .profile-sidebar {
+    border-top: 3px solid #ff9e16 !important;
+  }
+}
+
+.dashboard {
+  .my-courses {
+    .course {
+      .wrapper-messages-primary {
+        .message.message-status.course-status-certavailable {
+          .actions-primary {
+            .action-certificate {
+              .btn {
+                background-color: #ff9e16 !important;
+                background-image: none !important;
+                border: 1px solid #ff9e16 !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+                color: #fff !important;
+                font-weight: normal !important;
+              }
+            }  
+          }
+        }
+      }
+    }
+  }
+}
+
