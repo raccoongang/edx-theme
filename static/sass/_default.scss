@@ -2,6 +2,7 @@ $gray: #767676;
 $link-color: $gray;
 $link-color-d1: $gray;
 $link-hover: #ff9e16;
+$blue: #ff9e16;
 
 .home>header {
   background-image: url("/static/themes/default/images/background-img.jpg") !important;
@@ -328,79 +329,79 @@ header.global.slim {
   }
 }
 
-.modal {
-  .inner-wrapper {
-    form {
-      .submit {
-        input[type="submit"] {
-          background-color: #ff9e16 !important;
-          background-image: none !important;
-          border: 1px solid #ff9e16 !important;
-          box-shadow: none !important;
-        }
-      }
-    }
-  }
-}
-
-.instructor-dashboard-wrapper-2 {
-  section.idash-section#membership {
-    .member-lists-management {
-      .auth-list-container {
-        .member-list-widget {
-          input[type="button"].add {
-            background-color: #ff9e16 !important;
-            background-image: none !important;
-            border: 1px solid #ff9e16 !important;
-            box-shadow: none !important;
-          }
-        }
-      }
-    }
-  }
-  section.idash-section#cohort_management {
-    .cohort-management {
-      .message .action-create {
-        background-color: #ff9e16 !important;
-        background-image: none !important;
-      }
-    }
-  }
-}
-
-.instructor-dashboard-content-2 {
-  .instructor-nav {
-    .nav-item {
-      a:hover {
-        color: #ff9e16 !important;
-      }
-    }
-  }
-}
-
-body.discussion {
-  .course-tabs {
-    .right {
-      .new-post-btn {
-        background-color: #ff9e16 !important;
-        background-image: none !important;
-        border: 1px solid #ff9e16 !important;
-        box-shadow: none !important;
-      }
-    }
-  }
-}
-
 input[type="button"] {
-  background-color: #ff9e16 !important;
-  background-image: none !important;
-  border: 1px solid #ff9e16 !important;
-  box-shadow: none !important;
+  color: #fff !important;
+  text-shadow: none !important;
 }
 
-input[type="submit"] {
+//.modal {
+//  .inner-wrapper {
+//    form {
+//      .submit {
+//        input[type="submit"] {
+//          background-color: #ff9e16 !important;
+//          background-image: none !important;
+//          border: 1px solid #ff9e16 !important;
+//          box-shadow: none !important;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//.instructor-dashboard-wrapper-2 {
+//  section.idash-section#membership {
+//    .member-lists-management {
+//      .auth-list-container {
+//        .member-list-widget {
+//          input[type="button"].add {
+//            background-color: #ff9e16 !important;
+//            background-image: none !important;
+//            border: 1px solid #ff9e16 !important;
+//            box-shadow: none !important;
+//          }
+//        }
+//      }
+//    }
+//  }
+//  section.idash-section#cohort_management {
+//    .cohort-management {
+//      .message .action-create {
+//        background-color: #ff9e16 !important;
+//        background-image: none !important;
+//      }
+//    }
+//  }
+//}
+//
+//.instructor-dashboard-content-2 {
+//  .instructor-nav {
+//    .nav-item {
+//      a:hover {
+//        color: #ff9e16 !important;
+//      }
+//    }
+//  }
+//}
+//
+//body.discussion {
+//  .course-tabs {
+//    .right {
+//      .new-post-btn {
+//        background-color: #ff9e16 !important;
+//        background-image: none !important;
+//        border: 1px solid #ff9e16 !important;
+//        box-shadow: none !important;
+//      }
+//    }
+//  }
+//}
+//
+input[type="button"], .btn.btn-primary, input[type="submit"], strong, .add-article-btn {
   background-color: #ff9e16 !important;
   background-image: none !important;
   border: 1px solid #ff9e16 !important;
   box-shadow: none !important;
+  text-shadow: none !important;
+  color: #fff !important;
 }
