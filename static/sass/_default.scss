@@ -98,6 +98,7 @@ header.global {
       .nav-colophon {
         font-size: 14px !important;
         li {
+          margin-right: 15px !important;
           a {
             color: #f7f7f7 !important;
           }
@@ -110,7 +111,11 @@ header.global {
     }
     .references {
       width: initial !important;
-      float: right !important;
+      @if $bi-app-direction == rtl {
+        float: left !important;
+      } @else {
+        float: right !important;
+      }
       margin: 10px 0 0 0 !important;
     }
   }
@@ -189,7 +194,9 @@ header.global.slim {
   }
   img {
     height: 27px;
-    }
+    float: right;
+    margin-top: 10px;
+  }
 }
 
 .raccoongang-openedx {
@@ -255,3 +262,9 @@ input:focus, textarea:focus {
 select:focus {
   outline: none !important;
 }
+
+.cta-register {
+  margin-right: 30px;
+}
+
+
