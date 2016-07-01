@@ -2,9 +2,28 @@ $gray: #767676;
 $link-color: $gray;
 $link-color-d1: $gray;
 $link-hover: #ff9e16;
+// ----------------------------
+// #TYPOGRAPHY
+// ----------------------------
+$sans-serif: Helvetica Neue, sans-serif; // 'Open Sans', $verdana, sans-serif !default;
+$monospace: Helvetica Neue, sans-serif; // Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace !default;
+$body-font-family: Helvetica Neue, sans-serif; // $sans-serif !default;
+$serif: Helvetica Neue, sans-serif; // $georgia !default;
+
+// newer variables/standards
+$f-serif: Helvetica Neue, sans-serif; // 'Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif !default;
+$f-sans-serif: Helvetica Neue, sans-serif; // 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$f-monospace: Helvetica Neue, sans-serif; // 'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
+
+$font-light: 300 !default;
+$font-regular: 400 !default;
+$font-semibold: 600 !default;
+$font-bold: 700 !default;
+
+$m-base-font-size: em(15) !default;
 
 .home>header {
-  background-image: url("/static/themes/default/images/background-img.jpg") !important;
+  background-image: url("/static/themes/default/images/background.jpg") !important;
   height: 520px !important;
   background-position: left !important;
   .outer-wrapper {
