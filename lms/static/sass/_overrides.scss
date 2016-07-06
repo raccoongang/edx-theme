@@ -2,3 +2,14 @@
 
 $sans-serif: 'Helvetica';
 $button-color: rgb(178, 6, 16);
+
+.home {
+  > header {
+    @include linear-gradient($homepage__header--gradient__color--alpha, $homepage__header--gradient__color--bravo);
+    @include clearfix();
+    background-size: cover;
+    background-image: $homepage-bg-image;
+    }
+ }
+
+$homepage-bg-image: url('#{$static-path}/images/header-bg.jpg') !default;
