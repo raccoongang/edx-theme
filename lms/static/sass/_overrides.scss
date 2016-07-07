@@ -3,8 +3,11 @@
 $sans-serif: 'Helvetica';
 $homepage-bg-image: url('../images/flane-header-bg.jpg');
 
+.window-wrap {
+	    border-top: 15px solid #b00b23;
+}
 header.global {
-	height: 80px;
+	height: 80px !important;
     opacity: 0.6;
 }
 .home > header {
