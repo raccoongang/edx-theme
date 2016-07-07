@@ -1,6 +1,6 @@
 // Our overrides should go here
 
-$sans-serif: 'Helvetica';
+$sans-serif: 'Helvetica Neue', $verdana, sans-serif !default;
 $homepage-bg-image: url('../images/flane-header-bg.jpg');
 
 .window-wrap {
@@ -19,3 +19,7 @@ header.global {
 .home > header .outer-wrapper {
     padding: 160px 60px !important;
 }
+header.global .nav-courseware li .cta {
+    box-shadow: 0 2px 1px 0 #91091d;
+    background: #b00b23;
+    }
