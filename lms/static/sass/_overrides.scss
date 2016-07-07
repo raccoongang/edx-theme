@@ -1,4 +1,6 @@
 // Our overrides should go here
 
 $sans-serif: 'Helvetica';
-$homepage-bg-image: url('#{$static-path}/images/flane-header-bg.jpg');
+#content {
+    $homepage-bg-image: url('#{$static-path}/images/flane-header-bg.jpg');
+}
