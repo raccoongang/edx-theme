@@ -1,6 +1,13 @@
 // Our overrides should go here
 
-$sans-serif: 'Helvetica';
+$ci-color: #be121e;
+
+$link-color: $ci-color;
+$button-color: $ci-color;
+$courseware-border-bottom-color: rgb(190,18,30);
+
+$sans-serif: 'Helvetica Neue', $verdana, sans-serif;
+
 $homepage-bg-image: url('../images/flane-header-bg.jpg');
 
 .window-wrap {
