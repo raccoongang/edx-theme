@@ -39,3 +39,15 @@ header.global .nav-global li a {
 .home > header .title {
 	top: 110px;
 	}
+@media screen and (max-width: 540px) and (min-width: 321px) {
+	.home > header .title {
+		top: 0px;
+	}
+	.home > header .outer-wrapper {
+    padding: 60px 60px !important;
+	}
+	header.global {
+    height: auto !important;
+    opacity: none;
+	}
+}
