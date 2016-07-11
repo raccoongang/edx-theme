@@ -19,11 +19,12 @@
     <div class="colophon">
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
-            % for item_num, link in enumerate(footer['navigation_links'], start=1):
-            <li class="nav-colophon-0${item_num}">
-              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-            </li>
-            % endfor
+          <li class="nav-colophon-01">
+            <a id="about" href="/about">${_("About")}</a>
+          </li>
+          <li class="nav-colophon-01">
+            <a id="contact" href="/contact">${_("Contact")}</a>
+          </li>
         </ol>
       </nav>
 
