@@ -63,11 +63,17 @@ site_status_msg = get_site_status_msg(course_id)
     % if user.is_authenticated():
     <ol class="left nav-global authenticated">
       <%block name="navigation_global_links_authenticated">
+        <li class="nav-global-01">
+          <a href="${marketing_link('HOW_IT_WORKS')}">${_('How it works')}</a>
+        </li>
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-          <li class="nav-global-01">
+          <li class="nav-global-02">
             <a href="${marketing_link('COURSES')}">${_('Course Programs')}</a>
           </li>
         % endif
+        <li class="nav-global-03">
+          <a href="${marketing_link('ABOUT')}">${_('About')}</a>
+        </li>
         %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
           <li>
             ## Translators: This is short for "System administration".
