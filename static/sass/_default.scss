@@ -1,7 +1,7 @@
 $gray: #767676;
 $link-color: $gray;
 $link-color-d1: $gray;
-$link-hover: #ff9e16;
+$link-hover: #b162ed;
 // ----------------------------
 // #TYPOGRAPHY
 // ----------------------------
@@ -37,10 +37,10 @@ $m-base-font-size: em(15) !default;
 
 header.global {
   // height: 93px !important;
-  //background: #ecebe3 !important;
+  background: black !important;
 
   h1.logo {
-    // margin: 0 39px 0 0 !important;
+     margin: -15px 39px 0 0 !important;
   }
 
   .user>.primary:last-child>a.shopping-cart {
@@ -48,31 +48,31 @@ header.global {
   }
 
   .course-header {
-    color: $gray;
+    color: #9250f0;
     text-shadow: none !important;
   }
 // button "register"
   .nav-global {
     li {
       a {
-        color: #ff9e16 !important;
+        color: #9250f0 !important;
       }
       a:hover {
-        color: #fab65b !important;
+        color: #b162ed !important;
       }
     }
   }
 
-  //.user {
-  //  background: #fff !important;
-  //  border-radius: 3px !important;
-  //  margin-left: 16px;
-  //  margin-top: 26px;
-  //
-  //  a.user-link {
-  //    border-radius: 3px !important;
-  //  }
-  //}
+  .user {
+    background: #fff !important;
+    border-radius: 3px !important;
+    //margin-left: 16px;
+    //margin-top: 26px;
+
+    a.user-link {
+      border-radius: 3px !important;
+    }
+  }
   .primary>a {
     box-shadow: none !important;
   }
@@ -84,11 +84,11 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #ff9e16 !important;
+        background: #9250f0 !important;
         box-shadow: none !important;
       }
       .cta:hover {
-        background: #fab65b !important;
+        background: #b162ed !important;
         border: none !important;
         box-shadow: none !important;
       }
@@ -102,16 +102,16 @@ header.global {
 
 
 .wrapper-footer {
-  //background: #ecebe3 !important;
+  background: black !important;
   margin-top: 0 !important;
   position: relative !important;
 
   footer#footer-openedx {
     a {
-      color: #888888 !important;
+      color: #9250f0 !important;
     }
     a:hover {
-      border-bottom: #888888 !important;
+      border-bottom: #9250f0 !important;
     }
 
     // buttons footer
@@ -120,20 +120,20 @@ header.global {
         li {
           margin-right: 10px !important;
           a {
-            color: #888888 !important;
+            color: #9250f0 !important;
           }
           a:hover {
-            color: #717171 !important;
+            color: #b162ed !important;
           }
         }
-        li:after {
-          content: "|";
-          color: #888888;
-          padding-left: 10px !important;
-        }
-        li:last-child:after {
-          display: none;
-        }
+        //li:after {
+        //  content: "|";
+        //  color: #888888;
+        //  padding-left: 10px !important;
+        //}
+        //li:last-child:after {
+        //  display: none;
+        //}
       }
       width: initial !important;
     }
@@ -149,20 +149,20 @@ header.global {
     padding-bottom: 10px !important;
   }
   .action-primary {
-    background: #ff9e16 !important;
-    box-shadow: 0 2px 1px 0 #bf5800 !important;
+    background: #9250f0 !important;
+    box-shadow: 0 2px 1px 0 #9250f0 !important;
     text-shadow: none !important;
   }
   .action-primary:hover {
-    background: #fab65b !important;
+    background: #b162ed !important;
   }
   .nav-btn {
-    border: 1px solid #ff9e16 !important;
-    color: #ff9e16 !important;
+    border: 1px solid #9250f0 !important;
+    color: #9250f0 !important;
   }
   .nav-btn:hover {
-    background: #fab65b !important;
-    box-shadow: 0 2px 1px 0 #bf5800 !important;
+    background: #b162ed !important;
+    box-shadow: 0 2px 1px 0 #b162ed !important;
     color: #fff !important;
   }
   .form-field {
@@ -170,7 +170,7 @@ header.global {
       color: #888888 !important;
     }
     .field-link:hover {
-      color: #ff9e16 !important;
+      color: #b162ed !important;
     }
   }
 }
@@ -185,9 +185,9 @@ header.global {
       .intro {
         .main-cta {
           a.register, strong {
-            background-color: #ff9e16 !important;
+            background-color: #9250f0 !important;
             background-image: none !important;
-            border: 1px solid #ff9e16 !important;
+            border: 1px solid #9250f0 !important;
             box-shadow: none !important;
             text-shadow: none !important;
           }
@@ -196,7 +196,7 @@ header.global {
     }
   }
   .course-date {
-    color: #ff9e16 !important;
+    color: #9250f0 !important;
   }
 }
 
@@ -204,7 +204,7 @@ header.global.slim {
   h1.logo {
     margin: -5px 10px 0 0 !important;
     img {
-      // margin-top: 4px;
+      height: 51px !important;
     }
   }
 
@@ -283,14 +283,14 @@ header.global.slim {
       .details {
         .enter-course {
           color: #fff !important;
-          border-color: #ff9e16 !important;
-          background-color: #ff9e16 !important;
+          border-color: #9250f0 !important;
+          background-color: #9250f0 !important;
         }
         .enter-course:hover {
-          background-color: #fab65b !important;
+          background-color: #b162ed !important;
         }
         .enter-course:focus {
-          background-color: #ff9e16 !important;
+          background-color: #9250f0 !important;
         }
       }
       .course-title {
@@ -304,9 +304,9 @@ header.global.slim {
 
 .discussion-module {
   .new-post-btn {
-    background-image: -webkit-linear-gradient(top, #fab65b,#ff9e16) !important;
-    background-image: linear-gradient(to bottom,#fab65b,#ff9e16) !important;
-    border: 1px solid #ff9e16 !important;
+    background-image: -webkit-linear-gradient(top, #b162ed,#9250f0 ) !important;
+    background-image: linear-gradient(to bottom,#b162ed,#9250f0 ) !important;
+    border: 1px solid #9250f0 !important;
     box-shadow: none !important;
   }
 }
@@ -315,15 +315,15 @@ header.global.slim {
   .openassessment__steps__step {
     .step__actions {
       .action--submit {
-        background: #ff9e16 !important;
-        border: 1px solid #ff9e16 !important;
+        background: #9250f0 !important;
+        border: 1px solid #9250f0 !important;
       }
     }
   }
   .ui-toggle-visibility {
     .ui-toggle-visibility__control {
       .step__label {
-        color: #ff9e16 !important;
+        color: #9250f0 !important;
       }
     }
   }
@@ -359,9 +359,9 @@ input[type="button"] {
     form {
       .submit {
         input[type="submit"] {
-          background-color: #ff9e16 !important;
+          background-color: #9250f0 !important;
           background-image: none !important;
-          border: 1px solid #ff9e16 !important;
+          border: 1px solid #9250f0 !important;
           box-shadow: none !important;
           font-weight: normal !important;
         }
@@ -376,9 +376,9 @@ input[type="button"] {
       .auth-list-container {
         .member-list-widget {
           input[type="button"].add {
-            background-color: #ff9e16 !important;
+            background-color: #9250f0 !important;
             background-image: none !important;
-            border: 1px solid #ff9e16 !important;
+            border: 1px solid #9250f0 !important;
             box-shadow: none !important;
             font-weight: normal !important;
           }
@@ -389,7 +389,7 @@ input[type="button"] {
   section.idash-section#cohort_management {
     .cohort-management {
       .message .action-create {
-        background-color: #ff9e16 !important;
+        background-color: #9250f0 !important;
         background-image: none !important;
       }
     }
@@ -400,7 +400,7 @@ input[type="button"] {
   .instructor-nav {
     .nav-item {
       a:hover {
-        color: #ff9e16 !important;
+        color: #b162ed !important;
       }
     }
   }
@@ -410,9 +410,9 @@ body.discussion {
   .course-tabs {
     .right {
       .new-post-btn {
-        background-color: #ff9e16 !important;
+        background-color: #9250f0 !important;
         background-image: none !important;
-        border: 1px solid #ff9e16 !important;
+        border: 1px solid #9250f0 !important;
         box-shadow: none !important;
         text-shadow: none !important;
         color: #fff !important;
@@ -423,9 +423,9 @@ body.discussion {
 }
 
 input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, button[type="submit"] {
-  background-color: #ff9e16 !important;
+  background-color: #9250f0 !important;
   background-image: none !important;
-  border: 1px solid #ff9e16 !important;
+  border: 1px solid #9250f0 !important;
   box-shadow: none !important;
   text-shadow: none !important;
   color: #fff !important;
@@ -437,9 +437,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
     .has-actions {
       .msg-actions {
         .btn {
-            background-color: #ff9e16 !important;
+            background-color: #9250f0 !important;
             background-image: none !important;
-            border: 1px solid #ff9e16 !important;
+            border: 1px solid #9250f0 !important;
             box-shadow: none !important;
             text-shadow: none !important;
             color: #fff !important;
@@ -452,7 +452,7 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 
 .wrapper-msg.wrapper-auto-cert {
   .auto-cert-message {
-    border-left: 3px solid #ff9e16 !important;
+    border-left: 3px solid #9250f0 !important;
   }
 }
 
@@ -478,9 +478,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
   section.idash-section#cohort_management {
     .cohort-management-nav {
       .action-create {
-        background-color: #ff9e16 !important;
+        background-color: #9250f0 !important;
         background-image: none !important;
-        border: 1px solid #ff9e16 !important;
+        border: 1px solid #9250f0 !important;
         box-shadow: none !important;
         text-shadow: none !important;
         color: #fff !important;
@@ -493,9 +493,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .instructor-dashboard-wrapper-2 {
   section.idash-section#certificates {
     .btn-blue {
-      background-color: #ff9e16 !important;
+      background-color: #9250f0 !important;
       background-image: none !important;
-      border: 1px solid #ff9e16 !important;
+      border: 1px solid #9250f0 !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
@@ -507,9 +507,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .customBrowseBtn {
   .file-browse {
     span.browse {
-      background-color: #ff9e16 !important;
+      background-color: #9250f0 !important;
       background-image: none !important;
-      border: 1px solid #ff9e16 !important;
+      border: 1px solid #9250f0 !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
@@ -521,7 +521,7 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 
 .dashboard {
   .profile-sidebar {
-    border-top: 3px solid #ff9e16 !important;
+    border-top: 3px solid #9250f0 !important;
   }
 }
 
@@ -533,9 +533,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
           .actions-primary {
             .action-certificate {
               .btn {
-                background-color: #ff9e16 !important;
+                background-color: #9250f0 !important;
                 background-image: none !important;
-                border: 1px solid #ff9e16 !important;
+                border: 1px solid #9250f0 !important;
                 box-shadow: none !important;
                 text-shadow: none !important;
                 color: #fff !important;
@@ -552,9 +552,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .instructor-dashboard-wrapper-2 {
   section.idash-section#cohort_management {
     .form-submit {
-      background-color: #ff9e16 !important;
+      background-color: #9250f0 !important;
       background-image: none !important;
-      border: 1px solid #ff9e16 !important;
+      border: 1px solid #9250f0 !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
@@ -566,13 +566,17 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .container {
   .discussion-body {
     .discussion-submit-post {
-      background-color: #ff9e16 !important;
+      background-color: #9250f0 !important;
       background-image: none !important;
-      border: 1px solid #ff9e16 !important;
+      border: 1px solid #9250f0 !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
       font-weight: normal !important;
     }
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #9250f0 !important;
 }
