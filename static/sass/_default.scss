@@ -23,9 +23,9 @@ $font-bold: 700 !default;
 $m-base-font-size: em(15) !default;
 
 .home>header {
-  // background-image: url("/static/themes/default/images/") !important;
+  background-image: url("/static/themes/default/images/background.png") !important;
   height: 520px !important;
-  background-position: right !important;
+  background-position: center !important;
   .outer-wrapper {
     padding: 380px 0 0 !important;
     opacity: 0.7 !important;
@@ -36,6 +36,7 @@ $m-base-font-size: em(15) !default;
 }
 
 header.global {
+  border-bottom: none !important;
   // height: 93px !important;
   background: black !important;
 
@@ -344,6 +345,7 @@ header.global.slim {
       h1 {
         text-align: center !important;
         font-size: 2.7em !important;
+        color: black !important;
       }
     }
   }
