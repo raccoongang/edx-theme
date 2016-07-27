@@ -14,25 +14,28 @@
       <nav class="nav-colophon">
         <ol>
           <li><a href="${reverse('about')}">About</a></li>
-          <li><a href="${reverse('about')}#careers">Careers</a></li>
-          <li><a href="${reverse('about')}#contact">Contact</a></li>
+##          <li><a href="${reverse('about')}#careers">Careers</a></li>
+##          <li><a href="${reverse('about')}#contact">Contact</a></li>
           <li><a href="${reverse('tos')}">Terms of Service</a></li>
-          <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
-          <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
-          <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
+          <li><a href="${reverse('privacy')}#privacy">Privacy Policy</a></li>
+##          <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
+##          <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
         </ol>
       </nav>
     </div>
     <div class="references">
-      <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
+      <span><a href="http://code.edx.org">Built on <img src="${static.url('themes/default/images/openedx_logo.svg')}" /></a> by <a href="https://raccoongang.com">Raccoon Gang <img src="${static.url('themes/default/images/raccoongang_logo.svg')}" /></a></span>
     </div>
 
     <div class="copyright">
-        <p><span>
-            ${_('Copyright {year}. All rights reserved.').format(
-                year=date.today().year
-            )}
-        </span></p>
+##        <p><span>
+##            ${_('Copyright {year}. All rights reserved.').format(
+##                year=date.today().year
+##            )}
+##        </span></p>
     </div>
+
+<img src="${static.url('themes/default/images/mobileuni_logo.png')}" alt="Home Page" class="footer-logo" />
+
   </footer>
 </div>

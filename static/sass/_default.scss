@@ -10,18 +10,18 @@
 //-----------------
 
 //Main Color Variables
-$main-color: #f7691f;
-$dark-color: #ea281f; //Link Color
+$main-color: #B72667;
+$dark-color: #00A1DB; //Link Color
 $light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Main BG Color Variables
-$main-bg: #822537;
+$main-bg: #fff;
 $main-bg-60: lighten($main-bg, 18.5%); //Main Border/HR Color
 $main-bg-25: lighten($main-bg, 25%); 
 
 //Secondary Color Variables
-$secondary: #b5a4b7;
+$secondary: #aaa;
 $secondary-50: lighten($secondary, 9%);
 $secondary-25: lighten($secondary, 20%); //Important Heading BG Color 
 
@@ -57,15 +57,15 @@ $serif: $theme-serif-font, $serif;
 //  Theme Element Assignments
 //-----------------
 
-$body-bg: $gray-1;
+$body-bg: #fff;
 $container-bg: $gray-1;
 $login-register-bg: $gray-1;
-$content-wrapper-bg: $gray-1;
+$content-wrapper-bg: #fff;
 $header-image: none;
-$header-bg: transparentize(lighten($secondary, 18.5%), .25);
+$header-bg: transparentize(#fff, .25);
 $courseware-header-image: none;
 $courseware-header-bg: transparentize(lighten($secondary, 18.5%), .25);
-$footer-bg: $secondary-25;
+$footer-bg: #0093D0;
 $courseware-footer-border: 1px solid $main-bg-60;
 $courseware-footer-shadow: box-shadow(2px 1px 0 rgba(0, 0, 0, .1));
 $courseware-footer-margin: 50px;
@@ -100,7 +100,7 @@ $shadow-color: $gray;
 // actions
 $button-bg-image: none;
 $button-bg-color: $gray-3;
-$button-bg-hover-color: $gray-1;
+$button-bg-hover-color: #E62F81;
 
 // actions - primary
 $action-primary-bg: $main-color;
@@ -212,17 +212,46 @@ $video-thumb-url: '../themes/default/images/edx.png';
 // Override CSS
 //-----------------
 html {
-    background-color: $secondary-25 !important;
+    background-color: #fff !important;
 }
 
 //-----------------
 // Header Styling
 //-----------------
-.home>header {
-    height: 500px;
+header.slim {
+    background: #fff !important;
+}
 
+header.global, .home>header {
+    height: 256px;
     .outer-wrapper {
         padding: 120px 0 !important;
+        .title {
+            margin-left: 24%;
+            margin-top: -5%;
+            background: rgba(251, 251, 251, 0.6);
+            width: 620px;
+            text-align: center;
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+
+    .nav-wrapper {
+        ol.user {
+            button.dropdown {
+                background: #E9E9E9;
+                border-radius: 0;
+                height: 32px;
+            }
+            button.dropdown:hover, a.user-link:hover {
+                background: #E9E9E9 !important;
+            }
+        }
     }
 }
 
@@ -230,6 +259,7 @@ html {
 // Footer Styling
 //-----------------
 .wrapper-footer {
+    background: $footer-bg;
     box-shadow: none !important;
     
     footer {
@@ -239,18 +269,45 @@ html {
         .colophon {
             width: 80%;
             float: left;
+            margin-bottom: -35px;
 
             .nav-colophon li {
                 display: inline-block;
                 height: 35px;
                 float: left;
                 margin: 0 20px 20px 0;
+                a {
+                    color: #fff;
+                }
             }
+        }
+        img.footer-logo {
+            float: right;
+            margin-top: -80px;
+            height: 100px;
         }
 
         .references {
-            width: 15%;
-            float: right;
+            width: 50%;
+            float: left;
+            text-align: left;
+            color: #000;
+            font-size: 0.7em;
+            a {
+                color: #000;
+            }
+            span {
+                a:last-child {
+                    img {
+                        height: 32px;
+                    }
+                }
+                a {
+                    img {
+                        margin-top: -11px;
+                    }
+                }
+            }
         }
     }
 
@@ -269,4 +326,58 @@ section.tos {
     .print {
         margin: 50px 0;
     }
+}
+
+header.global .nav-courseware li .cta, 
+header.global .nav-courseware div .cta,
+.login .form-actions button[type="submit"],
+.register .form-actions button[type="submit"],
+.passwordreset .form-actions button[type="submit"],
+#forgot-password-modal #password-reset .form-actions button[type="submit"], 
+.view-survey .action-primary,
+button.login-button,
+button.register-button,
+button.blue,
+div[name="payment"] form button {
+    background: $button-color !important;
+}
+
+button.blue,
+div[name="payment"] form button {
+    box-shadow: 0 1px 0 0 $button-color inset!important;
+    border: 1px solid #000 !important;
+}
+
+button.form-toggle {
+    border-color: $button-color !important;
+}
+
+header.global .nav-courseware li .cta:hover, 
+header.global .nav-courseware div .cta:hover, 
+.login .form-actions button[type="submit"]:hover, 
+.register .form-actions button[type="submit"]:hover, 
+.passwordreset .form-actions button[type="submit"]:hover, 
+#forgot-password-modal #password-reset .form-actions button[type="submit"]:hover, 
+.view-survey .action-primary:hover,  
+button.login-button:hover,
+button.register-button:hover,
+button.form-toggle:hover,
+button.blue:hover,  
+div[name="payment"] form button:hover {
+    background: $button-bg-hover-color !important;
+}
+
+img.header-logo {
+    margin-top: -15px;
+}
+
+.content-wrapper {
+    padding-bottom: 9px;
+    section.course-info {
+        margin-top: 0px;
+    }
+}
+
+.find-courses, .university-profile {
+    background: #fff !important;
 }

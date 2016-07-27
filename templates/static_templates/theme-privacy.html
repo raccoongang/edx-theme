@@ -1,0 +1,25 @@
+## mako
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+%>
+<%namespace name='static' file='/static_content.html'/>
+
+<%inherit file="/main.html" />
+
+<%block name="title"><title>${_('Privacy')}</title></%block>
+
+<section class="container about" style="width: auto;">
+  <section class="vision">
+    <section class="message left" id="contact">
+      <article id="stanford-OpenEdX-contact">
+        <h2>${_('Privacy')}</h2>
+
+        <p>Your privacy information goes here!</p>
+
+        <p>&nbsp;</p>
+      </article>
+    </section>
+  </section>
+
+</section>
