@@ -220,10 +220,17 @@ html {
 //-----------------
 header.slim {
     background: #fff !important;
+    h2 {
+        width: 50% !important;
+    }
+}
+
+.home>header {
+    height: 256px !important;
 }
 
 header.global, .home>header {
-    height: 256px;
+    // height: 256px;
     .outer-wrapper {
         padding: 120px 0 !important;
         .title {
@@ -337,12 +344,16 @@ header.global .nav-courseware div .cta,
 .view-survey .action-primary,
 button.login-button,
 button.register-button,
-button.blue,
+.blue,
+//[role="button"],
+button[type="submit"],
 div[name="payment"] form button {
     background: $button-color !important;
 }
 
-button.blue,
+.blue,
+//[role="button"],
+button[type="submit"],
 div[name="payment"] form button {
     box-shadow: 0 1px 0 0 $button-color inset!important;
     border: 1px solid #000 !important;
@@ -362,7 +373,9 @@ header.global .nav-courseware div .cta:hover,
 button.login-button:hover,
 button.register-button:hover,
 button.form-toggle:hover,
-button.blue:hover,  
+.blue:hover,
+//[role="button"]:hover,
+button[type="submit"]:hover,
 div[name="payment"] form button:hover {
     background: $button-bg-hover-color !important;
 }
@@ -381,3 +394,8 @@ img.header-logo {
 .find-courses, .university-profile {
     background: #fff !important;
 }
+
+body {
+    background: $body-bg !important;
+}
+
