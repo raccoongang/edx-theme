@@ -1,19 +1,19 @@
 $gray: #767676;
 $link-color: $gray;
 $link-color-d1: $gray;
-$link-hover: #b162ed;
+
 // ----------------------------
 // #TYPOGRAPHY
 // ----------------------------
-$sans-serif: Helvetica Neue, sans-serif; // 'Open Sans', $verdana, sans-serif !default;
-$monospace: Helvetica Neue, sans-serif; // Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace !default;
-$body-font-family: Helvetica Neue, sans-serif; // $sans-serif !default;
-$serif: Helvetica Neue, sans-serif; // $georgia !default;
+//$sans-serif: Helvetica Neue, sans-serif; // 'Open Sans', $verdana, sans-serif !default;
+//$monospace: Helvetica Neue, sans-serif; // Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace !default;
+//$body-font-family: Helvetica Neue, sans-serif; // $sans-serif !default;
+//$serif: Helvetica Neue, sans-serif; // $georgia !default;
 
 // newer variables/standards
-$f-serif: Helvetica Neue, sans-serif; // 'Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif !default;
-$f-sans-serif: Helvetica Neue, sans-serif; // 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$f-monospace: Helvetica Neue, sans-serif; // 'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
+//$f-serif: Helvetica Neue, sans-serif; // 'Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif !default;
+//$f-sans-serif: Helvetica Neue, sans-serif; // 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
+//$f-monospace: Helvetica Neue, sans-serif; // 'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
 
 $font-light: 300 !default;
 $font-regular: 400 !default;
@@ -22,8 +22,13 @@ $font-bold: 700 !default;
 
 $m-base-font-size: em(15) !default;
 
+$button-color: #26a3db;
+$button-hover-color: #58c9fb;
+$link-hover: $button-hover-color;
+$background-color: #f8f8f8;
+
 .home>header {
-  background-image: url("/static/themes/default/images/background.png") !important;
+  background-image: url("/static/themes/default/images/background.jpg") !important;
   height: 420px !important;
   background-position: center !important;
   .outer-wrapper {
@@ -38,7 +43,7 @@ $m-base-font-size: em(15) !default;
 header.global {
   border-bottom: none !important;
   // height: 93px !important;
-  background: black !important;
+  background: white !important;
 
   h1.logo {
      margin: -15px 39px 0 0 !important;
@@ -56,10 +61,10 @@ header.global {
   .nav-global {
     li {
       a {
-        color: #9250f0 !important;
+        color: $button-color !important;
       }
       a:hover {
-        color: #b162ed !important;
+        color: $button-hover-color !important;
       }
     }
   }
@@ -85,11 +90,11 @@ header.global {
   .nav-courseware {
     li {
       .cta {
-        background: #9250f0 !important;
+        background: $button-color !important;
         box-shadow: none !important;
       }
       .cta:hover {
-        background: #b162ed !important;
+        background: $button-hover-color !important;
         border: none !important;
         box-shadow: none !important;
       }
@@ -103,16 +108,16 @@ header.global {
 
 
 .wrapper-footer {
-  background: black !important;
+  background: #006ea1 !important;
   margin-top: 0 !important;
   position: relative !important;
 
   footer#footer-openedx {
     a {
-      color: #9250f0 !important;
+      color: #3ae5f4 !important;
     }
     a:hover {
-      border-bottom: #9250f0 !important;
+      border-bottom: $button-hover-color !important;
     }
 
     // buttons footer
@@ -121,10 +126,10 @@ header.global {
         li {
           margin-right: 10px !important;
           a {
-            color: #9250f0 !important;
+            color: #3ae5f4 !important;
           }
           a:hover {
-            color: #b162ed !important;
+            color: $button-hover-color !important;
           }
         }
         //li:after {
@@ -145,25 +150,60 @@ header.global {
   }
 }
 
+.content-wrapper {
+  background: $background-color !important;
+}
+
+.wrapper-footer-ucdc {
+  font-family: Helvetica, Arial, sans-serif;
+  background: $background-color !important;
+  margin-top: 0 !important;
+  position: relative !important;
+
+  footer#footer-ucdc {
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: #a9a9a9;
+
+    p {
+      line-height: 1.3em;
+      font-size: 14px;
+    }
+
+    p+p {
+      margin-top: 1px !important;
+    }
+  }
+}
+
+html {
+  background: none !important;
+}
+
 .login-register {
+  background: $background-color !important;
   .form-type {
     padding-bottom: 10px !important;
   }
   .action-primary {
-    background: #9250f0 !important;
-    box-shadow: 0 2px 1px 0 #9250f0 !important;
+    background: $button-color !important;
+    box-shadow: 0 2px 1px 0 $button-color !important;
     text-shadow: none !important;
   }
   .action-primary:hover {
-    background: #b162ed !important;
+    background: $button-hover-color !important;
   }
   .nav-btn {
-    border: 1px solid #9250f0 !important;
-    color: #9250f0 !important;
+    border: 1px solid $button-color !important;
+    color: $button-color !important;
   }
   .nav-btn:hover {
-    background: #b162ed !important;
-    box-shadow: 0 2px 1px 0 #b162ed !important;
+    background: $button-hover-color !important;
+    box-shadow: 0 2px 1px 0 $button-hover-color !important;
     color: #fff !important;
   }
   .form-field {
@@ -171,7 +211,12 @@ header.global {
       color: #888888 !important;
     }
     .field-link:hover {
-      color: #b162ed !important;
+      color: $button-hover-color !important;
+    }
+  }
+  .section-title.lines {
+    .text {
+      background: $background-color !important;
     }
   }
 }
@@ -186,9 +231,9 @@ header.global {
       .intro {
         .main-cta {
           a.register, strong {
-            background-color: #9250f0 !important;
+            background-color: $button-color !important;
             background-image: none !important;
-            border: 1px solid #9250f0 !important;
+            border: 1px solid $button-color !important;
             box-shadow: none !important;
             text-shadow: none !important;
           }
@@ -196,9 +241,9 @@ header.global {
       }
     }
   }
-  .course-date {
-    color: #9250f0 !important;
-  }
+  //.course-date {
+  //  color: grey !important;
+  //}
 }
 
 header.global.slim {
@@ -234,8 +279,9 @@ header.global.slim {
 }
 
 .courses-container {
-  background-color: #fff !important;
+  //background-color: #fff !important;
   .courses {
+    background: $background-color !important;
     .course {
       z-index: 0 !important;
       border-bottom: 1px solid #888888 !important;
@@ -256,26 +302,37 @@ header.global.slim {
 }
 
 .find-courses {
-  background-color: #fff !important;
+  background-color: $background-color !important;
 }
 
 .raccoon-block {
   width: initial;
   display: inline-block;
-  position: absolute;
+  //position: absolute;
   margin-top: 4px;
+  float: right;
 }
 
 .raccoongang {
-  font-size: 10px;
-  color: #acaaab;
+  font-size: 12px;
+  color: white;
   span {
     float: left;
   }
-  img {
-    height: 16px;
+  //img {
+  //  height: 30px;
+  //  vertical-align: baseline;
+  //  }
+}
+
+.raccoon-img {
+  height: 25px;
+  vertical-align: middle;
+
+  &__edx {
+    height: 17px;
     vertical-align: baseline;
-    }
+  }
 }
 
 .dashboard {
@@ -284,14 +341,14 @@ header.global.slim {
       .details {
         .enter-course {
           color: #fff !important;
-          border-color: #9250f0 !important;
-          background-color: #9250f0 !important;
+          border-color: $button-color !important;
+          background-color: $button-color !important;
         }
         .enter-course:hover {
-          background-color: #b162ed !important;
+          background-color: $button-hover-color !important;
         }
         .enter-course:focus {
-          background-color: #9250f0 !important;
+          background-color: $button-color !important;
         }
       }
       .course-title {
@@ -300,14 +357,22 @@ header.global.slim {
         }
       }
     }
+    .listing-courses {
+      .course-item {
+        border-bottom: 4px solid $button-color !important;
+      }
+    }
+    .wrapper-header-courses {
+      border-bottom: 4px solid $button-color !important;
+    }
   }
 }
 
 .discussion-module {
   .new-post-btn {
-    background-image: -webkit-linear-gradient(top, #b162ed,#9250f0 ) !important;
-    background-image: linear-gradient(to bottom,#b162ed,#9250f0 ) !important;
-    border: 1px solid #9250f0 !important;
+    background-image: -webkit-linear-gradient(top, #00AEDB,$button-color ) !important;
+    background-image: linear-gradient(to bottom,#00AEDB,$button-color ) !important;
+    border: 1px solid $button-color !important;
     box-shadow: none !important;
   }
 }
@@ -316,15 +381,15 @@ header.global.slim {
   .openassessment__steps__step {
     .step__actions {
       .action--submit {
-        background: #9250f0 !important;
-        border: 1px solid #9250f0 !important;
+        background: $button-color !important;
+        border: 1px solid $button-color !important;
       }
     }
   }
   .ui-toggle-visibility {
     .ui-toggle-visibility__control {
       .step__label {
-        color: #9250f0 !important;
+        color: $button-color !important;
       }
     }
   }
@@ -361,9 +426,9 @@ input[type="button"] {
     form {
       .submit {
         input[type="submit"] {
-          background-color: #9250f0 !important;
+          background-color: $button-color !important;
           background-image: none !important;
-          border: 1px solid #9250f0 !important;
+          border: 1px solid $button-color !important;
           box-shadow: none !important;
           font-weight: normal !important;
         }
@@ -378,9 +443,9 @@ input[type="button"] {
       .auth-list-container {
         .member-list-widget {
           input[type="button"].add {
-            background-color: #9250f0 !important;
+            background-color: $button-color !important;
             background-image: none !important;
-            border: 1px solid #9250f0 !important;
+            border: 1px solid $button-color !important;
             box-shadow: none !important;
             font-weight: normal !important;
           }
@@ -391,7 +456,7 @@ input[type="button"] {
   section.idash-section#cohort_management {
     .cohort-management {
       .message .action-create {
-        background-color: #9250f0 !important;
+        background-color: $button-color !important;
         background-image: none !important;
       }
     }
@@ -402,7 +467,7 @@ input[type="button"] {
   .instructor-nav {
     .nav-item {
       a:hover {
-        color: #b162ed !important;
+        color: $button-hover-color !important;
       }
     }
   }
@@ -412,9 +477,9 @@ body.discussion {
   .course-tabs {
     .right {
       .new-post-btn {
-        background-color: #9250f0 !important;
+        background-color: $button-color !important;
         background-image: none !important;
-        border: 1px solid #9250f0 !important;
+        border: 1px solid $button-color !important;
         box-shadow: none !important;
         text-shadow: none !important;
         color: #fff !important;
@@ -425,9 +490,9 @@ body.discussion {
 }
 
 input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, button[type="submit"] {
-  background-color: #9250f0 !important;
+  background-color: $button-color !important;
   background-image: none !important;
-  border: 1px solid #9250f0 !important;
+  border: 1px solid $button-color !important;
   box-shadow: none !important;
   text-shadow: none !important;
   color: #fff !important;
@@ -439,9 +504,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
     .has-actions {
       .msg-actions {
         .btn {
-            background-color: #9250f0 !important;
+            background-color: $button-color !important;
             background-image: none !important;
-            border: 1px solid #9250f0 !important;
+            border: 1px solid $button-color !important;
             box-shadow: none !important;
             text-shadow: none !important;
             color: #fff !important;
@@ -454,7 +519,7 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 
 .wrapper-msg.wrapper-auto-cert {
   .auto-cert-message {
-    border-left: 3px solid #9250f0 !important;
+    border-left: 3px solid $button-color !important;
   }
 }
 
@@ -480,9 +545,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
   section.idash-section#cohort_management {
     .cohort-management-nav {
       .action-create {
-        background-color: #9250f0 !important;
+        background-color: $button-color !important;
         background-image: none !important;
-        border: 1px solid #9250f0 !important;
+        border: 1px solid $button-color !important;
         box-shadow: none !important;
         text-shadow: none !important;
         color: #fff !important;
@@ -495,9 +560,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .instructor-dashboard-wrapper-2 {
   section.idash-section#certificates {
     .btn-blue {
-      background-color: #9250f0 !important;
+      background-color: $button-color !important;
       background-image: none !important;
-      border: 1px solid #9250f0 !important;
+      border: 1px solid $button-color !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
@@ -509,9 +574,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .customBrowseBtn {
   .file-browse {
     span.browse {
-      background-color: #9250f0 !important;
+      background-color: $button-color !important;
       background-image: none !important;
-      border: 1px solid #9250f0 !important;
+      border: 1px solid $button-color !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
@@ -523,7 +588,7 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 
 .dashboard {
   .profile-sidebar {
-    border-top: 3px solid #9250f0 !important;
+    border-top: 3px solid $button-color !important;
   }
 }
 
@@ -535,9 +600,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
           .actions-primary {
             .action-certificate {
               .btn {
-                background-color: #9250f0 !important;
+                background-color: $button-color !important;
                 background-image: none !important;
-                border: 1px solid #9250f0 !important;
+                border: 1px solid $button-color !important;
                 box-shadow: none !important;
                 text-shadow: none !important;
                 color: #fff !important;
@@ -554,9 +619,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .instructor-dashboard-wrapper-2 {
   section.idash-section#cohort_management {
     .form-submit {
-      background-color: #9250f0 !important;
+      background-color: $button-color !important;
       background-image: none !important;
-      border: 1px solid #9250f0 !important;
+      border: 1px solid $button-color !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
@@ -568,9 +633,9 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .container {
   .discussion-body {
     .discussion-submit-post {
-      background-color: #9250f0 !important;
+      background-color: $button-color !important;
       background-image: none !important;
-      border: 1px solid #9250f0 !important;
+      border: 1px solid $button-color !important;
       box-shadow: none !important;
       text-shadow: none !important;
       color: #fff !important;
@@ -580,5 +645,5 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #9250f0 !important;
+  color: $button-color !important;
 }

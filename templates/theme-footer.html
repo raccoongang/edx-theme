@@ -3,11 +3,27 @@
 <%namespace name='static' file='/static_content.html'/>
 <%! from datetime import datetime %>
 <%! from pytz import UTC %>
+<%! from django.utils.translation import ugettext as _ %>
 
 <div class="wrapper wrapper-footer">
 
   <footer id="footer-openedx">
+    <div class="raccoon-block">
+          <a href="http://code.edx.org" target="_blank">
 
+        <span class="raccoongang">
+
+          Built on <img src="${static.url('themes/default/images/openedx_logo.png')}" class="raccoon-img__edx"/>
+        </span>
+      </a>
+      <a href="http://raccoongang.com" target="_blank">
+
+        <span class="raccoongang">
+
+           by RACCOONGANG <img src="${static.url('themes/default/images/RaccoonLogo.svg')}" class="raccoon-img" />
+        </span>
+      </a>
+    </div>
     <div class="colophon">
 
       <nav class="nav-colophon">
@@ -24,30 +40,21 @@
           ##<li><a href="${marketing_link('FAQ')}">Help</a></li>
         </ol>
       </nav>
-        <div class="raccoon-block">
-          <a href="http://code.edx.org" target="_blank">
 
-        <span class="raccoongang">
-
-    	  Built on <img src="${static.url('themes/default/images/openedx_logo.png')}" />
-        </span>
-      </a>
-      <a href="http://raccoongang.com" target="_blank">
-
-        <span class="raccoongang">
-
-    	   by Raccoon Gang <img src="${static.url('themes/default/images/RaccoonLogo.png')}" />
-        </span>
-      </a>
-  </div>
     </div>
     <div class="references">
        <span>
-         <a href="https://barwit.com/" target="_blank">
-           <img src="/static/themes/default/images/logo.svg" alt="" height="70">
+         <a href="http://ucdc.gov.ua/" target="_blank">
+##            <img src="/static/themes/default/images/logo.svg" alt="" height="70">
          </a>
        </span>
     </div>
   </footer>
+</div>
+<div class="wrapper-footer-ucdc">
+    <footer id="footer-ucdc">
+        <p>${_(u"2015 © ДУ «Український центр контролю за соцхворобами МОЗ України»")}</p>
+        <p>${_(u"In collaboration with [UCDC, the Alliance for Public Health or the All Ukrainian Network of People Living with HIV], the USG-GF Country Collaboration Initiative/Leadership, Management & Governance – Ukraine provided technical support for this website development. The U.S. President’s Emergency Plan for AIDS Relief (PEPFAR) provided funding through the U.S. Agency for International Development, under the terms of the Leadership, Management and Governance Program, award number AID-OAA-A-11-00015. The opinions expressed herein are those of the authors and do not necessarily reflect the views of PEPFAR, USAID or the Global Fund.")}</p>
+    </footer>
 </div>
 
