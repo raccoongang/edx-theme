@@ -28,8 +28,8 @@ $link-hover: $button-hover-color;
 $background-color: #f8f8f8;
 
 .home>header {
-  background-image: url("/static/themes/default/images/background.jpg") !important;
-  height: 520px !important;
+  background-image: url("/static/themes/default/images/background.png") !important;
+  height: 420px !important;
   background-position: center !important;
   .outer-wrapper {
     padding: 280px 0 0 !important;
@@ -237,6 +237,18 @@ html {
             box-shadow: none !important;
             text-shadow: none !important;
           }
+        }
+      }
+    }
+  }
+  .course-sidebar {
+    .important-dates {
+      li {
+        .important-dates-item-title {
+          margin-top: 12px !important;
+        }
+        .important-dates-item-text {
+          margin-top: 12px !important;
         }
       }
     }
