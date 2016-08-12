@@ -85,6 +85,28 @@ header.global {
   }
 }
 
+.wrapper-footer-before {
+  background-color: #7b1600;
+  top: -15px;
+  left: 50%;
+  position: absolute;
+  padding: 5px 20px;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.wrapper-bold {
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.3em;
+  font-size: 1.2em;
+}
+.wrapper-italic {
+  font-style: italic;
+  color: white;
+  margin: 0 6px;
+}
+
 
 .wrapper-footer {
   background: $background-color !important;
