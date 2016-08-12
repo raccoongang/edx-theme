@@ -1,38 +1,17 @@
-$gray: #767676;
-$link-color: $gray;
-$link-color-d1: $gray;
 
-// ----------------------------
-// #TYPOGRAPHY
-// ----------------------------
-//$sans-serif: Helvetica Neue, sans-serif; // 'Open Sans', $verdana, sans-serif !default;
-//$monospace: Helvetica Neue, sans-serif; // Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', monospace !default;
-//$body-font-family: Helvetica Neue, sans-serif; // $sans-serif !default;
-//$serif: Helvetica Neue, sans-serif; // $georgia !default;
 
-// newer variables/standards
-//$f-serif: Helvetica Neue, sans-serif; // 'Bree Serif', Georgia, Cambria, 'Times New Roman', Times, serif !default;
-//$f-sans-serif: Helvetica Neue, sans-serif; // 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
-//$f-monospace: Helvetica Neue, sans-serif; // 'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
 
-$font-light: 300 !default;
-$font-regular: 400 !default;
-$font-semibold: 600 !default;
-$font-bold: 700 !default;
-
-$m-base-font-size: em(15) !default;
-
-$button-color: #26a3db;
-$button-hover-color: #58c9fb;
+$button-color: #990300;
+$button-hover-color: #b11623;
 $link-hover: $button-hover-color;
 $background-color: #f8f8f8;
 
 .home>header {
-  background-image: url("/static/themes/default/images/background.png") !important;
+  background-image: url("/static/themes/default/images/background.jpg") !important;
   height: 420px !important;
   background-position: center !important;
   .outer-wrapper {
-    padding: 280px 0 0 !important;
+    padding: 193px 0 0 !important;
     opacity: 0.7 !important;
   }
   .title {
@@ -43,7 +22,7 @@ $background-color: #f8f8f8;
 header.global {
   border-bottom: none !important;
   // height: 93px !important;
-  background: white !important;
+  background: #7b1600 !important;
 
   h1.logo {
      margin: -15px 39px 0 0 !important;
@@ -53,18 +32,18 @@ header.global {
     margin-right: 0 !important;
   }
 
-  .course-header {
-    color: #9250f0;
-    text-shadow: none !important;
-  }
+  //.course-header {
+  //  color: #9250f0;
+  //  text-shadow: none !important;
+  //}
 // button "register"
   .nav-global {
     li {
       a {
-        color: black !important;
+        color: $background-color !important;
       }
       a:hover {
-        color: black !important;
+        color: $background-color !important;
       }
     }
   }
@@ -108,25 +87,26 @@ header.global {
 
 
 .wrapper-footer {
-  background: #006ea1 !important;
+  background: $background-color !important;
   margin-top: 0 !important;
   position: relative !important;
+  border-top: 3px solid #7b1600 !important;
 
   footer#footer-openedx {
     a {
-      color: #3ae5f4 !important;
+      color: white !important;
     }
     a:hover {
-      border-bottom: $button-hover-color !important;
+      border-bottom: white !important;
     }
 
     // buttons footer
     .colophon {
       .nav-colophon {
         li {
-          margin-right: 25px !important;
+          //margin-right: 25px !important;
           a {
-            color: #3ae5f4 !important;
+            color: $button-color !important;
           }
           a:hover {
             color: $button-hover-color !important;
@@ -145,44 +125,51 @@ header.global {
     }
     .references {
       width: initial !important;
-      float: right !important;
+      float: right;
+      margin-right: 30px !important;
     }
   }
 }
 
-.content-wrapper {
-  background: $background-color !important;
+.references-left {
+  width: initial !important;
+  float: left !important;
+  margin-right: 30px !important;
 }
 
-.wrapper-footer-ucdc {
-  font-family: Helvetica, Arial, sans-serif;
-  background: $background-color !important;
-  margin-top: 0 !important;
-  position: relative !important;
+//.content-wrapper {
+//  background: $background-color !important;
+//}
 
-  footer#footer-ucdc {
-    webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 0;
-    color: #a9a9a9;
+//.wrapper-footer-ucdc {
+//  font-family: Helvetica, Arial, sans-serif;
+//  background: $background-color !important;
+//  margin-top: 0 !important;
+//  position: relative !important;
+//
+//  footer#footer-ucdc {
+//    webkit-box-sizing: border-box;
+//    -moz-box-sizing: border-box;
+//    box-sizing: border-box;
+//    max-width: 1200px;
+//    margin: 0 auto;
+//    padding: 10px 0;
+//    color: #a9a9a9;
+//
+//    p {
+//      line-height: 1.3em;
+//      font-size: 14px;
+//    }
+//
+//    p+p {
+//      margin-top: 1px !important;
+//    }
+//  }
+//}
 
-    p {
-      line-height: 1.3em;
-      font-size: 14px;
-    }
-
-    p+p {
-      margin-top: 1px !important;
-    }
-  }
-}
-
-html {
-  background: none !important;
-}
+//html {
+//  background: none !important;
+//}
 
 .login-register {
   background: $background-color !important;
@@ -258,6 +245,15 @@ html {
   //}
 }
 
+.courses-container {
+  .courses {
+    .course {
+      border: 1px solid $button-color !important;
+      border-bottom: 3px solid $button-color !important;
+    }
+  }
+}
+
 header.global.slim {
   h1.logo {
     margin: -5px 10px 0 0 !important;
@@ -270,11 +266,12 @@ header.global.slim {
     margin-top: 7px !important;
   }
 
-  //h2 {
-  //  max-width: 65%;
-  //  width: initial !important;
-  //  margin-top: 30px !important;
-  //}
+  h2 {
+    color: $background-color !important;
+    //max-width: 65%;
+    //width: initial !important;
+    //margin-top: 30px !important;
+  }
 }
 
 .filter_button {
@@ -290,32 +287,32 @@ header.global.slim {
   margin: 12px;
 }
 
-.courses-container {
-  //background-color: #fff !important;
-  .courses {
-    background: $background-color !important;
-    .course {
-      z-index: 0 !important;
-      border-bottom: 1px solid #888888 !important;
-    }
-  }
-}
+//.courses-container {
+//  //background-color: #fff !important;
+//  .courses {
+//    background: $background-color !important;
+//    .course {
+//      z-index: 0 !important;
+//      border-bottom: 1px solid #888888 !important;
+//    }
+//  }
+//}
 
-.contact-form {
-  text-align: right;
-  margin-right: 33%;
-  input, textarea {
-    margin: 10px;
-  }
-}
+//.contact-form {
+//  text-align: right;
+//  margin-right: 33%;
+//  input, textarea {
+//    margin: 10px;
+//  }
+//}
 
-.fa {
-  line-height: 1.9em !important;
-}
+//.fa {
+//  line-height: 1.9em !important;
+//}
 
-.find-courses {
-  background-color: $background-color !important;
-}
+//.find-courses {
+//  background-color: $background-color !important;
+//}
 
 .raccoon-block {
   width: initial;
@@ -382,8 +379,8 @@ header.global.slim {
 
 .discussion-module {
   .new-post-btn {
-    background-image: -webkit-linear-gradient(top, #00AEDB,$button-color ) !important;
-    background-image: linear-gradient(to bottom,#00AEDB,$button-color ) !important;
+    background-image: -webkit-linear-gradient(top, $button-color,$button-color ) !important;
+    background-image: linear-gradient(to bottom,$button-color,$button-color ) !important;
     border: 1px solid $button-color !important;
     box-shadow: none !important;
   }
@@ -407,26 +404,26 @@ header.global.slim {
   }
 }
 
-.home {
-  .title {
-    background: #fbfbfb !important;
-    margin-left: 0 !important;
-    margin: 0 auto !important;
-    float: none !important;
-    width: 98.15254% !important;
-    text-align: center;
-
-    hgroup {
-      text-align: center !important;
-
-      h1 {
-        text-align: center !important;
-        font-size: 2.7em !important;
-        color: black !important;
-      }
-    }
-  }
-}
+//.home {
+//  .title {
+//    background: #fbfbfb !important;
+//    margin-left: 0 !important;
+//    margin: 0 auto !important;
+//    float: none !important;
+//    width: 98.15254% !important;
+//    text-align: center;
+//
+//    hgroup {
+//      text-align: center !important;
+//
+//      h1 {
+//        text-align: center !important;
+//        font-size: 2.7em !important;
+//        color: black !important;
+//      }
+//    }
+//  }
+//}
 
 input[type="button"] {
   color: #fff !important;
@@ -656,6 +653,6 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: $button-color !important;
-}
+//h1, h2, h3, h4, h5, h6 {
+//  color: $button-color !important;
+//}
