@@ -59,12 +59,19 @@ header.global {
   }
 // button "register"
   .nav-global {
+    float: right !important;
+    background-color: #FDB813;
+    margin: 5px !important;
+    padding: 5px;
+    border-radius: 2px;
     li {
       a {
-        color: black !important;
+        color: #fff !important;
+        text-transform: none;
+        font-size: 1em;
       }
       a:hover {
-        color: black !important;
+        color: #fff !important;
       }
     }
   }
