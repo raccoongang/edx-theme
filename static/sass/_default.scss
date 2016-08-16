@@ -76,6 +76,22 @@ header.global {
       }
     }
   }
+  ol.authenticated {
+    float: left !important;
+    background-color: transparent;
+    li {
+      a {
+        color: #777 !important;
+        text-transform: uppercase;
+        font-size: 0.875em;
+        padding: 5px !important;
+      }
+      a:hover {
+        color: #555 !important;
+        background-color: transparent;
+      }
+    }
+  }
 
   .user {
     background: #fff !important;
