@@ -15,24 +15,26 @@ $link-color-d1: $gray;
 //$f-sans-serif: Helvetica Neue, sans-serif; // 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif !default;
 //$f-monospace: Helvetica Neue, sans-serif; // 'Bitstream Vera Sans Mono', Consolas, Courier, monospace !default;
 
-$font-light: 300 !default;
-$font-regular: 400 !default;
-$font-semibold: 600 !default;
-$font-bold: 700 !default;
+//$font-light: 300 !default;
+//$font-regular: 400 !default;
+//$font-semibold: 600 !default;
+//$font-bold: 700 !default;
+//
+//$m-base-font-size: em(15) !default;
 
-$m-base-font-size: em(15) !default;
 
-$button-color: #26a3db;
-$button-hover-color: #58c9fb;
+$button-color: #9d9d9d;
+$button-hover-color: black;
 $link-hover: $button-hover-color;
 $background-color: #f8f8f8;
+$footer-background-color: black;
 
 .home>header {
-  background-image: url("/static/themes/default/images/background.png") !important;
+  background-image: url("/static/themes/default/images/background.jpg") !important;
   height: 420px !important;
   background-position: center !important;
   .outer-wrapper {
-    padding: 280px 0 0 !important;
+    padding: 231px 0 0 !important;
     opacity: 0.7 !important;
   }
   .title {
@@ -46,25 +48,25 @@ header.global {
   background: white !important;
 
   h1.logo {
-     margin: -15px 39px 0 0 !important;
+     margin: -10px 39px 0 0 !important;
   }
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
   }
 
-  .course-header {
-    color: #9250f0;
-    text-shadow: none !important;
-  }
+  //.course-header {
+  //  color: #9250f0;
+  //  text-shadow: none !important;
+  //}
 // button "register"
   .nav-global {
     li {
       a {
-        color: black !important;
+        color: $button-color !important;
       }
       a:hover {
-        color: black !important;
+        color: $button-hover-color !important;
       }
     }
   }
@@ -105,16 +107,37 @@ header.global {
     padding: 24px 10px 0 !important;
   }
 }
+//.wrapper-footer-before {
+//  background-color: $footer-background-color !important;
+//  top: -15px;
+//  left: 50%;
+//  position: absolute;
+//  padding: 5px 20px;
+//  text-align: center;
+//  transform: translate(-50%, 0);
+//}
+
+.wrapper-bold {
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.3em;
+  font-size: 1.2em;
+}
+.wrapper-italic {
+  font-style: italic;
+  color: white;
+  margin: 0 6px;
+}
 
 
 .wrapper-footer {
-  background: #006ea1 !important;
+  background: $footer-background-color !important;
   margin-top: 0 !important;
   position: relative !important;
 
   footer#footer-openedx {
     a {
-      color: #3ae5f4 !important;
+      color: $button-color !important;
     }
     a:hover {
       border-bottom: $button-hover-color !important;
@@ -126,10 +149,10 @@ header.global {
         li {
           margin-right: 25px !important;
           a {
-            color: #3ae5f4 !important;
+            color: #fff !important;
           }
           a:hover {
-            color: $button-hover-color !important;
+            color: #FFCB0C !important;
           }
         }
         //li:after {
@@ -191,7 +214,7 @@ html {
   }
   .action-primary {
     background: $button-color !important;
-    box-shadow: 0 2px 1px 0 $button-color !important;
+    box-shadow: none !important;
     text-shadow: none !important;
   }
   .action-primary:hover {
@@ -203,8 +226,9 @@ html {
   }
   .nav-btn:hover {
     background: $button-hover-color !important;
-    box-shadow: 0 2px 1px 0 $button-hover-color !important;
-    color: #fff !important;
+    box-shadow: none !important;
+    border: 1px solid $button-hover-color !important;
+    color: $button-color !important;
   }
   .form-field {
     .field-link {
@@ -320,26 +344,21 @@ header.global.slim {
 .raccoon-block {
   width: initial;
   display: inline-block;
-  //position: absolute;
-  margin-top: 4px;
-  float: right;
+  position: absolute;
+  margin-top: 40px;
 }
 
 .raccoongang {
   font-size: 12px;
-  color: white;
+  color: $button-color;
   span {
     float: left;
   }
-  //img {
-  //  height: 30px;
-  //  vertical-align: baseline;
-  //  }
 }
 
-.raccoon-img {
-  height: 25px;
-  vertical-align: middle;
+.raccoongang img {
+  height: 16px;
+  vertical-align: baseline;
 
   &__edx {
     height: 17px;
@@ -382,8 +401,8 @@ header.global.slim {
 
 .discussion-module {
   .new-post-btn {
-    background-image: -webkit-linear-gradient(top, #00AEDB,$button-color ) !important;
-    background-image: linear-gradient(to bottom,#00AEDB,$button-color ) !important;
+    background-image: -webkit-linear-gradient(top, $button-color,$button-color ) !important;
+    background-image: linear-gradient(to bottom,$button-color,$button-color ) !important;
     border: 1px solid $button-color !important;
     box-shadow: none !important;
   }
