@@ -69,9 +69,6 @@ header.global {
 
 
 .wrapper-footer {
-/*  background: #f87564 !important;
-  padding-bottom: 37px !important;*/
-
   footer#footer-openedx {
     a {
       color: #f7f7f7 !important;
@@ -100,16 +97,23 @@ header.global {
     width: initial !important;
     }
     .references {
-      width: 140px !important;
+      width: 500px !important;
       height: 35px !important;
       @if $bi-app-direction == rtl {
         float: left !important;
+        text-align: left !important;
       } @else {
         float: right !important;
+        text-align: right !important;
       }
       margin: 10px 0 0 0 !important;
     }
   }
+}
+
+div .references span a img {
+  display: inline-block !important;
+  padding: 15px !important;
 }
 
 .login-register {
@@ -180,28 +184,31 @@ header.global.slim {
 .raccoongang {
   font-weight: 600 !important;
   font-size: 10px;
-  color: #fff;
+  color: #353535;
   span {
     float: left;
-  }
-  img {
-    height: 27px;
-    float: right;
-    margin-top: 10px;
   }
 }
 
 .raccoongang-openedx {
   font-weight: 600 !important;
   font-size: 10px;
-  color: #fff;
+  color: #353535;
   span {
     float: left;
   }
-  img {
-    //height: 55px;
-    margin-top: -12px;
-    }
+}
+
+.raccoongang img {
+  margin-top: 18px;
+  height: 18px !important;
+  vertical-align: baseline !important;
+}
+
+.raccoongang-openedx img {
+  margin-top: 18px;
+  height: 18px !important;
+  vertical-align: baseline !important;
 }
 
 .find-courses {
@@ -276,15 +283,15 @@ select:focus {
 }
 
 header.global .nav-global li a {
-    color: #00495e !important;
+    color: #353535 !important;
 }
 
 header.global .nav-global li a:hover {
-    color: #55a7dd !important;
+    color: #e13a3a !important;
 }
 
 header.global .nav-courseware li .cta {
-    background: #00495e !important;
+    background: #353535 !important;
     box-shadow: none !important;
     color: #fff !important;
     font-weight: 600 !important;
@@ -292,16 +299,19 @@ header.global .nav-courseware li .cta {
 }
 
 header.global .nav-courseware li .cta:hover {
-    background: #55a7dd !important;
+    background: #e13a3a !important;
     box-shadow: none !important;
     color: #fff !important;
 }
 
 h1.logo a img{
-    width: 165.4px !important;
-    height: 41.3px !important;
+    width: 90px !important;
+    height: 60px !important;
 }
 
+header.global nav {
+      padding: 15px 10px 0 !important;
+}
 
 /*FOOTER*/
 
@@ -312,38 +322,38 @@ h1.logo a img{
 
 
 /*RELATIVE PAGES BUTTONS*/
-$button-color: #00495e;
-$button-hover-color: #55a7dd;
+$button-color: #353535;
+$button-hover-color: #e13a3a;
 
 .login-register .nav-btn {
   box-shadow: none !important;
-  border: 1px solid #00495e !important;
+  border: 1px solid $button-color !important;
   padding: 10px 20px !important;
   background: transparent !important;
-  color: #00495e !important;
+  color: $button-color !important;
 }
 
 .login-register .nav-btn:hover {
   box-shadow: none !important;
-  border: 1px solid #55a7dd !important;
+  border: 1px solid $button-hover-color !important;
   padding: 10px 20px !important;
-  background: #55a7dd !important;
+  background: $button-hover-color !important;
   color: #fff !important;
 }
 
 .login-register .action-primary:hover {
   box-shadow: none !important;
-  border: 1px solid #55a7dd !important;
-  background: #55a7dd !important;
+  border: 1px solid $button-hover-color !important;
+  background: $button-hover-color !important;
   color: #fff !important;
 }
 
 .login-register .form-field label a {
-  color: #55a7dd !important;
+  color: $button-hover-color !important;
 }
 
 .login-register .form-field .field-link {
-  color: #55a7dd !important;
+  color: $button-hover-color !important;
 }
 
 input[type="button"] {
