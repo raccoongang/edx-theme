@@ -31,7 +31,7 @@ $footer-background-color: black;
 
 .home>header {
   background-image: url("/static/themes/default/images/background.jpg") !important;
-  height: 420px !important;
+  height: 450px !important;
   background-position: center !important;
   .outer-wrapper {
     padding: 231px 0 0 !important;
@@ -46,6 +46,12 @@ header.global {
   border-bottom: none !important;
   // height: 93px !important;
   background: white !important;
+
+  .nav-wrapper {
+    h2.course-header {
+      width: 55% !important;
+    }
+  }
 
   h1.logo {
      margin: -10px 39px 0 0 !important;
