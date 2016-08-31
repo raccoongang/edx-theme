@@ -1,0 +1,11 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.conf import settings %>
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="/navigation.html"/>
+
+## TODO: this will eventually be moved to the Sass
+<%block name="navigation_logo">
+  <img src="/static/themes/eeca/images/eeca_logo.png"  alt="Home Page" />
+</%block>
+
