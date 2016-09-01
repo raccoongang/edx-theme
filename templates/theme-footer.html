@@ -1,4 +1,5 @@
 ## mako
+<%! from django.utils.translation import ugettext as _ %>
 <%! from django.core.urlresolvers import reverse %>
 <%! from django.conf import settings %>
 <%namespace name='static' file='/static_content.html'/>
@@ -30,9 +31,9 @@
   </div>
       <nav class="nav-colophon">
         <ol>
-          <li><a href="${reverse('tos')}">Terms of Service</a></li>
-          <li><a href="${reverse('privacy')}">Privacy Policy</a></li>
-          <li><a href="${reverse('about')}">About</a></li>
+          <li><a href="${reverse('tos')}">${_(u"Terms of Service")}</a></li>
+          <li><a href="${reverse('privacy')}">${_(u"Privacy Policy")}</a></li>
+          <li><a href="${reverse('about')}">${_(u"About")}</a></li>
         </ol>
       </nav>
     </div>
@@ -40,12 +41,12 @@
     <div class="references">
       <span>
          <a href="http://www.tshub.org/ru/news.htm" target="_blank">
-           <img id="first" src="/static/themes/eeca/images/tech_support.jpg" alt="" height="40">
+           <img id="first" src="/static/themes/eeca/images/${_(u"tech_support.png")}" alt="" height="40">
          </a>
       </span>
       <span>
          <a href="http://www.aph.org.ua" target="_blank">
-           <img id="second" src="/static/themes/eeca/images/public_health.jpg" alt="" height="40">
+           <img id="second" src="/static/themes/eeca/images/${_(u"public_health.png")}" alt="" height="40">
          </a>
       </span>
     </div>
