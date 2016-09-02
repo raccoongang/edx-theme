@@ -31,11 +31,13 @@ $footer-background-color: black;
 
 .home>header {
   background-image: url("/static/themes/default/images/background.jpg") !important;
-  height: 450px !important;
+/*  max-height: 450px !important; */
+  min-width: 400px;
   background-position: center !important;
   .outer-wrapper {
-    padding: 231px 0 0 !important;
+    padding: 15% 0 5% 0 !important;
     opacity: 0.7 !important;
+    min-width: 400px;
   }
   .title {
     text-align: center;
@@ -55,6 +57,14 @@ header.global {
 
   h1.logo {
      margin: -10px 39px 0 0 !important;
+     width: 37%;
+     max-width: 254px;
+     a {
+       img {
+         height: auto;
+         width: 100%;
+       }
+     }
   }
 
   .user>.primary:last-child>a.shopping-cart {
@@ -438,17 +448,17 @@ header.global.slim {
     margin-left: 0 !important;
     margin: 0 auto !important;
     float: none !important;
-    width: 98.15254% !important;
+    width: 89.15254% !important;
     text-align: center;
-    min-height: 105px !important;
-    padding: 10px 30px !important;
+    min-height: 85px !important;
+    padding: 10px 0px !important;
 
     hgroup {
       text-align: center !important;
       padding-bottom: 0px !important;
       h1 {
         text-align: center !important;
-        font-size: 2.7em !important;
+        font-size: 1.7em !important;
         color: black !important;
       }
       h2 {
