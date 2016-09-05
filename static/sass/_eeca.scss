@@ -13,7 +13,7 @@
 
 header.global {
   background: #fff !important;
-  height: 100px !important;
+  height: 73px !important;
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
@@ -325,11 +325,17 @@ header.global .nav-courseware li .cta:hover {
 
 h1.logo a img{
     width: auto !important;
-    height: 80px !important;
+    height: 64px !important;
 }
 
 header.global nav {
-      padding: 15px 10px 0 !important;
+    padding: 15px 10px 0 !important;
+    .nav-global {
+        margin-top: -5px;
+    }
+    .nav-courseware {
+        margin-top: -10px;
+    }
 }
 
 /*FOOTER*/
