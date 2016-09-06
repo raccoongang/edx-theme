@@ -4,6 +4,14 @@
 //$body-font-family: $sans-serif !default;
 //$serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
 
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Abel'), local('Abel-Regular'), url("/static/themes/do_school/fonts/Abel.ttf") format('truetype');
+}
+
+$sans-serif: 'Abel', 'helvetica', 'Geneva'; // 'Open Sans', $verdana, sans-serif !default;
 
 .title>hgroup {
     h2 {
@@ -214,7 +222,7 @@ body {
 
 .home {
   .title {
-    background: #fbfbfb !important;
+    background: #E94090 !important;
     margin-left: 0 !important;
     margin: 0 auto !important;
     float: none !important;
@@ -272,7 +280,7 @@ select:focus {
   .outer-wrapper {
     padding: 230px 0 0 !important;
     opacity: 0.7 !important;
-}
+  }
 }
 
 header.global .nav-global li a {
@@ -559,3 +567,6 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
   }
 }
 
+.wrapper-msg.urgency-high {
+  background: #00495E !important;
+}
