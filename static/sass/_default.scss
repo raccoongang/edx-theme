@@ -596,6 +596,14 @@ h1, h2, h3, h4, h5, h6 {
     .introduction {
         header {
             background-image: url("/static/themes/default/images/password_reset.png") !important;
+            margin-top: 2px;
+            background-size: cover;
+            .title {
+                .title-super {
+                    color: #fff !important;
+                    text-shadow: 0 0 3px #000, 0px 2px 5px #000;
+                }
+            }
         }
     }
 }
