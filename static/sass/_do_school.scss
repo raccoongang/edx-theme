@@ -5,17 +5,18 @@
 //$serif: 'Arial', 'helvetica', 'Geneva'; // $georgia !default;
 
 @font-face {
-  font-family: 'Abel';
+  font-family: 'DIN';
   font-style: normal;
   font-weight: 400;
-  src: local('Abel'), local('Abel-Regular'), url("/static/themes/do_school/fonts/Abel.ttf") format('truetype');
+  src: local('DIN'), url("/static/themes/do_school/fonts/DIN.ttf") format('truetype');
 }
 
-$sans-serif: 'Abel', 'helvetica', 'Geneva'; // 'Open Sans', $verdana, sans-serif !default;
+$sans-serif: 'DIN', 'helvetica', 'Geneva'; // 'Open Sans', $verdana, sans-serif !default;
 
 .title>hgroup {
     h2 {
       text-transform: inherit !important;
+      font-family: $sans-serif;
     }
   }
 
@@ -115,7 +116,7 @@ header.global {
       } @else {
         float: right !important;
       }
-      margin: 10px 0 0 0 !important;
+      margin: 13px 0 0 0 !important;
     }
   }
 }
@@ -298,6 +299,8 @@ header.global .nav-courseware li .cta {
     color: #fff !important;
     font-weight: 600 !important;
     font-size: 0.875em !important;
+    margin-top: -3px !important;
+    padding-top: 12px !important;
 }
 
 header.global .nav-courseware li .cta:hover {
