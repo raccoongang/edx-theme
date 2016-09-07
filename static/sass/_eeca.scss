@@ -351,9 +351,9 @@ header.global.slim {
     float: left;
   }
   img {
-    height: 27px;
-    float: right;
-    margin-top: 10px;
+    height: 22px;
+/*    float: right; */
+    margin-top: -10px;
   }
 }
 
@@ -365,8 +365,8 @@ header.global.slim {
     float: left;
   }
   img {
-    //height: 55px;
-    margin-top: -12px;
+    height: 48px;
+    margin-top: -8px;
     }
 }
 
@@ -701,6 +701,7 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
 .dashboard {
   .profile-sidebar {
     border-top: 3px solid $button-color !important;
+    display: none !important;
   }
 }
 .dashboard {
