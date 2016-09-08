@@ -152,7 +152,9 @@
 
 
 $sans-serif: 'Raleway', 'Open Sans';
-
+$body-font-family: $sans-serif !default;
+$header-sans-serif: $sans-serif;
+$f-sans-serif: $sans-serif;
 
 .title>hgroup {
     h2 {
@@ -219,6 +221,12 @@ header.global {
 
 
 .wrapper-footer {
+  background: #fff !important;
+  border-top: 20px solid #88DBF9 !important;
+  border-bottom: 20px solid #88DBF9;
+  height: 41px;
+  padding: 12px 10px 30px 10px !important;
+
   footer#footer-openedx {
     a {
       color: #f7f7f7 !important;
@@ -295,6 +303,9 @@ header.global {
     .intro-inner-wrapper {
       margin-bottom: 20px !important;
     }
+  }
+  .details {
+    font-family: $sans-serif !important;
   }
 }
 
@@ -500,7 +511,6 @@ header.global nav {
 /*FOOTER*/
 
 .wrapper-footer {
-  background: #a4daf8 !important;
   padding-bottom: 37px !important;
 }
 
@@ -754,3 +764,13 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
   }
 }
 
+html, 
+button, 
+input, 
+select, 
+option, 
+textarea, 
+form#wiki_revision 
+.CodeMirror {
+  font-family: $sans-serif !important;
+}
