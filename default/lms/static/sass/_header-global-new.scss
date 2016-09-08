@@ -1,0 +1,68 @@
+.header-global-new {
+    box-shadow: none;
+    border-color: transparent;
+    background: transparent;
+    padding: 27px 0;
+
+    .wrapper-header {
+        height: auto;
+    }
+
+    .user {
+        .primary {
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+
+            .dropdown {
+                background-color: transparent;
+                padding: 0;
+            }
+            a:hover,
+            a:focus {
+                background: none;
+            }
+            .user-image-frame {
+                border-radius: 50%;
+                width: 46px;
+                height: auto;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .user-link {
+            font-size: 17px;
+            line-height: 22px;
+            color: #333;
+
+            .label-username,
+            .user-image-frame,
+            .sr {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .label-username {
+                float: none;
+                margin-top: 0;
+                margin-bottom: 0;
+                font-family: bahij_thesansarabicsemibold;
+            }
+        }
+    }
+}
+.header-global.slim {
+    @include clearfix();
+
+    .wrapper-header {
+        .course-header {
+            display: none;
+        }
+        .logo img {
+            height: auto;
+        }
+    }
+
+    h1.logo:before {
+        visibility: hidden;
+    }
+}

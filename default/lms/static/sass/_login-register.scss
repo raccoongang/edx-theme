@@ -1,0 +1,40 @@
+.login-register {
+    background: transparent;
+
+    .form-wrapper form {
+        border-radius: 0;
+        background: #fff;
+        border: 1px solid #ececec;
+    }
+
+    .action-primary {
+        background: #ff6527;
+        border-radius: 0;
+        box-shadow: none;
+        text-shadow: none;
+
+        &:hover {
+            background: lighten(#ff6527, 10%);
+        }
+    }
+
+    .nav-btn {
+        color: #149a9a;
+        border-color: #149a9a;
+        border-radius: 0;
+        box-shadow: none;
+
+        &:hover {
+            background: #149a9a;
+            box-shadow: none;
+        }
+    }
+
+    .section-title.lines {
+        display: none;
+    }
+
+    .form-field .field-link {
+        color: #149a9a;
+    }
+}

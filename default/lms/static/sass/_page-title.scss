@@ -1,0 +1,16 @@
+.theme-page-title {
+    width: 100%;
+    background: #149a9a url("../images/page-title/bg-page-title.jpg") no-repeat 100% 0;
+
+    &_holder {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    &_text {
+        @include text-align(left);
+        font: 35px/26px bahij_thesansarabicextrabold;
+        color: #fff;
+        padding: 44px 0;
+        margin: 0;
+    }
+}

@@ -1,0 +1,22 @@
+.theme-page-title_holder .wrapper-course-material {
+    float: left;
+    width: auto;
+    position: relative;
+    bottom: -23px;
+
+    .course-tabs li a {
+        font-size: 20px;
+        line-height: 26px;
+        color: #fff !important;
+
+        &:hover {
+            border: none;
+            color: #fff;
+        }
+
+        &.active {
+            font-weight: bold;
+            border: none;
+        }
+    }
+}

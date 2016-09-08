@@ -1,0 +1,102 @@
+.dashboard {
+    .my-courses {
+        .listing-courses{
+            .course-item {
+                border-bottom: none;
+
+                .course-container {
+                    border-color: #ececec;
+                    background: #fff;
+                    border-radius: 0;
+                }
+            }
+        }
+        .course {
+            padding: 20px;
+            margin: 0;
+            position: relative;
+
+            .details {
+                .enter-course {
+                    font: 16px/21px bahij_thesansarabicextrabold;
+                    color: #fff;
+                    padding: 10px 24px;
+                    border: none;
+                    background: #149a9a;
+                    border-radius: 0;
+
+                    &:hover {
+                        border: none;
+                        background: lighten(#149a9a, 10%);
+                    }
+                }
+
+                .course-actions {
+                    @include float(left);
+
+                    .wrapper-action-more {
+                        float: none;
+                        position: absolute;
+                        top: 20px;
+                        right: -10px;
+
+                        .actions-dropdown {
+                            top: 30px;
+                        }
+                    }
+                    .action {
+                        border: 1px solid #ccc;
+                        border-radius: 0;
+                        min-width: 30px;
+                        padding: 5px 0;
+                    }
+                }
+
+                .wrapper-course-image{
+                    width: auto;
+
+                    .cover {
+                        border-color: #ececec;
+                        border-width: 1px;
+
+                        .course-image {
+                            width: 268px;
+                            height: auto;
+                        }
+                    }
+                }
+                .wrapper-course-details {
+                    width: auto;
+                    overflow: hidden;
+                    float: none;
+
+                    .course-title {
+                        margin: 0;
+
+                        a {
+                            color: #149a9a;
+                            font: 30px/53px bahij_thesansarabicextrabold;
+                            margin: 0;
+                        }
+                    }
+                }
+                .wrapper-course-actions {
+                    float: none;
+                    width: auto;
+                }
+                .course-info {
+                    float: none;
+                    width: auto;
+                    font: 22px/53px bahij_thesansarabicsemibold;
+                    margin: -15px 0 0;
+
+                    .info-date-block {
+                        font: 16px/30px bahij_thesansarabicsemibold;
+                        color: #4f4f4f;
+                        padding: 6px 0;
+                    }
+                }
+            }
+        }
+    }
+}

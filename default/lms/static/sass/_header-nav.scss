@@ -1,0 +1,18 @@
+.header-nav {
+    display: flex;
+    list-style: none;
+    flex-direction: row-reverse;
+    padding: 0;
+
+    &_item {
+        @include margin-left(30px)
+    }
+    &_link {
+        font: 15px/21px bahij_thesansarabicextrabold;
+        color: #7c7c7c;
+
+        &:hover {
+
+        }
+    }
+}
