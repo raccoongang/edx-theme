@@ -11,7 +11,21 @@
   src: local('DIN'), url("/static/themes/do_school/fonts/DIN.ttf") format('truetype');
 }
 
-$sans-serif: 'DIN', 'helvetica', 'Geneva'; // 'Open Sans', $verdana, sans-serif !default;
+$sans-serif: 'DIN', 'helvetica', 'Geneva';
+$body-font-family: $sans-serif !default;
+$header-sans-serif: $sans-serif;
+$f-sans-serif: $sans-serif;
+
+html,
+button,
+input,
+select,
+option,
+textarea,
+form#wiki_revision
+.CodeMirror {
+  font-family: $sans-serif !important;
+}
 
 .title>hgroup {
     h2 {
@@ -72,7 +86,7 @@ header.global {
     }
   }
   h1.logo {
-    margin: -7px 39px 0 0 !important;
+    margin: -7px 140px 0 0 !important;
   }
 }
 
@@ -236,7 +250,7 @@ body {
 
       h1 {
         text-align: center !important;
-        font-size: 2.7em !important;
+        font-size: 1.5em !important;
       }
     }
   }
