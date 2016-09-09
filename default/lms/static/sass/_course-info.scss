@@ -1,0 +1,111 @@
+.course-info {
+    header.course-profile {
+        background: #149a9a url(../images/header-bg.png) no-repeat 100% 100%;
+        margin-top: 0;
+        padding-top: 0;
+        height: auto;
+
+        .intro-inner-wrapper {
+            background: none;
+            box-shadow: none;
+            border: none;
+
+            .media .hero {
+                border: none;
+            }
+            .intro>.heading-group {
+                box-shadow: none;
+                border: none;
+
+                h1 {
+                    color: #fff;
+                    text-shadow: none;
+
+                    a {
+                        color: #fff;
+                        text-shadow: none;
+                    }
+                }
+            }
+            .intro .main-cta a.register {
+                width: auto;
+                background: #ff6527;
+                border: none;
+                text-shadow: none;
+                border-radius: 0;
+                box-shadow: none;
+                display: inline-block;
+                vertical-align: top;
+                padding: 10px 15px;
+                font-size: 24px;
+                line-height: 18px;
+                text-transform: none;
+
+                &:hover:not(:disabled) {
+                    background: lighten(#ff6527, 10%);
+                }
+            }
+            .intro {
+                width: auto;
+                min-width: 300px;
+
+                &_text {
+                    color: #fff;
+                    font-size: 16px;
+                    line-height: 28px;
+                    text-align: center;
+                }
+
+                .main-cta {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    &_box {
+        display: table-cell;
+        vertical-align: middle;
+        max-width: 430px;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: right;
+
+        &-heading {
+            color: #fff;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: right;
+
+            a {
+                color: #fff;
+
+                &:hover {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+            }
+        }
+        &-partners {
+            display: block;
+        }
+        &-link {
+            display: inline-block;
+            margin-right: 25px;
+        }
+    }
+
+    .details {
+        float: right;
+        margin-right: 0;
+        background: #fff;
+        border: 1px solid #f3f3f3;
+        padding: 30px;
+    }
+    .course-sidebar {
+        float: left;
+        padding: 22px;
+        background: #fff;
+        border: 1px solid #f3f3f3;
+    }
+}
