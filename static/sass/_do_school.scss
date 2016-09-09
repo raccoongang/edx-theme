@@ -15,6 +15,7 @@ $sans-serif: 'DIN', 'helvetica', 'Geneva';
 $body-font-family: $sans-serif !default;
 $header-sans-serif: $sans-serif;
 $f-sans-serif: $sans-serif;
+$f-serif: $sans-serif !important;
 
 html,
 button,
@@ -23,7 +24,8 @@ select,
 option,
 textarea,
 form#wiki_revision
-.CodeMirror {
+.CodeMirror,
+.course-info .details {
   font-family: $sans-serif !important;
 }
 
@@ -36,7 +38,7 @@ form#wiki_revision
 
 header.global {
   background: #fff !important;
-
+  
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
   }
@@ -47,6 +49,7 @@ header.global {
   }
 
   .nav-global {
+    margin-bottom: 6px !important;
     li {
       a {
         color: #a8a6a7 !important;
@@ -71,6 +74,7 @@ header.global {
   }
 
   .nav-courseware {
+    margin: 9px 2px 2px 2px !important;
     li {
       .cta {
         background: #f87564 !important;
@@ -86,7 +90,7 @@ header.global {
     }
   }
   h1.logo {
-    margin: -7px 140px 0 0 !important;
+    margin: -7px 140px 20px 0 !important;
   }
 }
 
@@ -130,7 +134,7 @@ header.global {
       } @else {
         float: right !important;
       }
-      margin: 13px 0 0 0 !important;
+      margin: 35px 20px 0 0 !important;
     }
   }
 }
