@@ -104,8 +104,31 @@
     }
     .course-sidebar {
         float: left;
-        padding: 22px;
-        background: #fff;
-        border: 1px solid #f3f3f3;
+        background: none;
+
+        .important-dates {
+            padding: 22px;
+            background: #fff;
+            border: 1px solid #f3f3f3;
+
+            li .icon {
+                float: right;
+                margin: 4px 0 0 10px;
+            }
+        }
+
+        header {
+            &:after {
+                display: none;
+            }
+            .social-sharing {
+                text-align: right;
+
+                 .share {
+                    margin-top: 0;
+                    margin-right: 9px;
+                }
+            }
+        }
     }
 }
