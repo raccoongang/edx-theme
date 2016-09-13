@@ -249,9 +249,14 @@ body {
     text-align: center;
     top: 80px;
 
+    .course-search {
+      form {
+        margin-top: -30px;
+      }
+    }
+
     hgroup {
       text-align: center !important;
-
       h1 {
         text-align: center !important;
         font-size: 1.5em !important;
@@ -593,3 +598,11 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
   background: #00495E !important;
 }
 
+
+.search-bar .search-button,
+.search-bar .cancel-button,
+.search-bar .search-button:hover,
+.search-bar .cancel-button:hover {
+  width: 35px;
+  right: 0 !important;
+}
