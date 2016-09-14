@@ -241,7 +241,7 @@ body {
 
 .home {
   .title {
-    background: #FFF !important;
+    background: rgba(255, 255, 255, 0.85) !important;
     margin-left: 0 !important;
     margin: 0 auto !important;
     float: none !important;
@@ -260,6 +260,12 @@ body {
       h1 {
         text-align: center !important;
         font-size: 1.5em !important;
+        color: #fff;
+        text-shadow: 0px 1px 3px #000, 0px 3px 10px #000 !important;
+      }
+      h2 {
+        color: #fff;
+        text-shadow: 0px 1px 3px #000, 0px 3px 10px #000 !important;
       }
     }
   }
@@ -297,14 +303,13 @@ select:focus {
 /*HEADER*/
 
 .home>header {
-  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, 1) !important;
   background-image: url("/static/themes/do_school/images/header_background.jpg") !important;
   height: 488px !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   .outer-wrapper {
     padding: 230px 0 0 !important;
-    opacity: 0.85 !important;
   }
 }
 
