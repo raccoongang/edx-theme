@@ -48,12 +48,34 @@ header.global {
     text-shadow: none !important;
   }
 
+  .nav-global.search {
+    float: right;
+    margin-left: 30px;
+  }
+
   .nav-global {
     margin-bottom: 6px !important;
     li {
+      margin: 0 0 0 0 !important;
+      .course-search {
+        i.fa {
+          line-height: 1.2em !important;
+        }
+        input, button {
+          margin: -2px 0 0 -10px;
+        }
+        button {
+          font: normal 1.2rem/1.4rem "DIN","helvetica","Geneva";
+          padding: 4px 10px;
+        }
+      }
       a {
         color: #a8a6a7 !important;
+        padding: 3px;
       }
+    }
+    .cta-register {
+      margin-right: 0;
     }
   }
 
@@ -90,7 +112,7 @@ header.global {
     }
   }
   h1.logo {
-    margin: -7px 140px 20px 0 !important;
+    margin: -7px 40px 20px 0 !important;
   }
 }
 
