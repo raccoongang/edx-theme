@@ -1,42 +1,34 @@
 ## mako
 <%!
+  from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
 
-## WARNING: These files are specific to edx.org and are not used in installations outside of that domain. Open edX users will want to use the file "footer.html" for any changes or overrides.
-<footer id="footer-edx-v3" role="contentinfo" aria-label="${_("Page Footer")}"
-  ## When rendering the footer through the branding API,
-  ## the direction may not be set on the parent element,
-  ## so we set it here.
-  % if bidi:
-    dir=${bidi}
-  % endif
->
-    <h2 class="sr footer-about-title">${_("About edX")}</h2>
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
     <div class="footer-content-wrapper">
       جميع الحقوق محفوظة ©
     </div>
-</footer>
+  </footer>
+</div>
 % if include_dependencies:
   <%static:js group='base_vendor'/>
   <%static:css group='style-vendor'/>
   <%include file="widgets/segment-io.html" />
   <%include file="widgets/segment-io-footer.html" />
 % endif
-% if bidi == 'rtl':
-<%static:css group='style-lms-footer-edx-rtl'/>
-% else:
-<%static:css group='style-lms-footer-edx'/>
-% endif
-
 % if footer_css_urls:
   % for url in footer_css_urls:
     <link rel="stylesheet" type="text/css" href="${url}"></link>
   % endfor
-% endif
-% if footer_js_url:
-  <script type="text/javascript" src="${footer_js_url}"></script>
 % endif

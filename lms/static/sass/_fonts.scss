@@ -1,23 +1,24 @@
 @font-face {
-    font-family: 'bahij_thesansarabicplain';
-    src: url('/static/default/fonts/bahij_thesansarabic-plain-webfont.woff2') format('woff2'),
-         url('/static/default/fonts/bahij_thesansarabic-plain-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'bahij_thesansarabicextrabold';
-    src: url('/static/default/fonts/bahij_thesansarabic-extrabold-webfont.woff2') format('woff2'),
-         url('/static/default/fonts/bahij_thesansarabic-extrabold-webfont.woff') format('woff');
+    font-family: "bahij_thesansarabicsemibold";
+    src: url("../fonts/Bahij_TheSansArabic-SemiBold.eot?") format("eot"),
+         url("../fonts/Bahij_TheSansArabic-SemiBold.woff") format("woff"),
+         url("../fonts/Bahij_TheSansArabic-SemiBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'bahij_thesansarabicsemibold';
-    src: url('/static/default/fonts/bahij_thesansarabic-semibold-webfont.woff2') format('woff2'),
-         url('/static/default/fonts/bahij_thesansarabic-semibold-webfont.woff') format('woff');
+    font-family: "bahij_thesansarabicplain";
+    src: url("../fonts/Bahij_TheSansArabic-Plain.eot?") format("eot"),
+         url("../fonts/Bahij_TheSansArabic-Plain.woff") format("woff"),
+         url("../fonts/Bahij_TheSansArabic-Plain.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-
+}
+@font-face {
+    font-family: "bahij_thesansarabicextrabold";
+    src: url("../fonts/Bahij_TheSansArabic-ExtraBold.eot?") format("eot"),
+         url("../fonts/Bahij_TheSansArabic-ExtraBold.woff") format("woff"),
+         url("../fonts/Bahij_TheSansArabic-ExtraBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }

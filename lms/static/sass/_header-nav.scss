@@ -1,8 +1,8 @@
-.header-nav {
+.nav-wrapper .header-nav {
     display: flex;
     list-style: none;
     flex-direction: row-reverse;
-    padding: 0;
+    padding: 6px 0 25px;
 
     &_item {
         @include margin-left(30px)
@@ -12,7 +12,7 @@
         color: #7c7c7c;
 
         &:hover {
-
+            color: #7c7c7c;
         }
     }
 }

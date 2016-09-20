@@ -1,14 +1,14 @@
-.header-global-new {
+header.global {
+    @include clearfix();
     box-shadow: none;
     border-color: transparent;
     background: transparent;
-    padding: 27px 0;
-
-    .wrapper-header {
-        height: auto;
-    }
+    padding: 11px 0 26px;
+    height: auto;
 
     .user {
+        padding-right: 32px;
+
         .primary {
             float: none;
             display: inline-block;
@@ -29,8 +29,14 @@
                 display: inline-block;
                 vertical-align: middle;
             }
+            .avatar {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
         }
-        .user-link {
+        a.user-link {
             font-size: 17px;
             line-height: 22px;
             color: #333;
@@ -49,8 +55,27 @@
             }
         }
     }
+    .nav {
+        padding-top: 0;
+    }
+    .nav-global {
+        float: left;
+
+        li {
+            
+            a {
+                font: 20px/26px bahij_thesansarabicplain;
+                color: #128f86;
+
+                &:hover {
+                    color: #128f86;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }
-.header-global.slim {
+.global.slim {
     @include clearfix();
 
     .wrapper-header {

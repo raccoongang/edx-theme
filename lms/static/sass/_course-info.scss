@@ -13,19 +13,8 @@
             .media .hero {
                 border: none;
             }
-            .intro>.heading-group {
-                box-shadow: none;
-                border: none;
-
-                h1 {
-                    color: #fff;
-                    text-shadow: none;
-
-                    a {
-                        color: #fff;
-                        text-shadow: none;
-                    }
-                }
+            .intro>hgroup {
+                display: none;
             }
             .intro .main-cta a.register {
                 width: auto;
@@ -48,16 +37,20 @@
             .intro {
                 width: auto;
                 min-width: 300px;
+                text-align: center;
 
                 &_text {
                     color: #fff;
-                    font-size: 16px;
-                    line-height: 28px;
                     text-align: center;
+                    font:16px/28px bahij_thesansarabicextrabold
                 }
 
                 .main-cta {
                     margin-bottom: 10px;
+                    display: inline-block;
+                    float: none;
+                    text-align: center;
+                    width: auto;
                 }
             }
         }
@@ -91,7 +84,7 @@
         }
         &-link {
             display: inline-block;
-            margin-right: 25px;
+            margin-left: 25px;
         }
     }
 
@@ -101,10 +94,34 @@
         background: #fff;
         border: 1px solid #f3f3f3;
         padding: 30px;
+        box-sizing: border-box;
+        width: 870px;
     }
     .course-sidebar {
         float: left;
         background: none;
+        width: 270px;
+
+        &>section {
+            border: none;
+            box-shadow: none;
+            
+            &.course-summary {
+                padding: 0;
+
+                .heading {
+                    font: 24px/31px bahij_thesansarabicextrabold;
+                    color: #555;
+                }
+                .text {
+                    font: 15px/31px bahij_thesansarabicplain;
+
+                    &__main {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
 
         .important-dates {
             padding: 22px;
@@ -131,4 +148,40 @@
             }
         }
     }
+    .container nav {
+        display: none;
+    }
+    .details {
+        h2 {
+            font: 24px/31px bahij_thesansarabicextrabold;
+            color: #555;
+        }
+        p {
+            font: 15px/31px bahij_thesansarabicplain;
+        }
+        .inner-wrapper .course-staff .teacher {
+            float: left;
+            width: 33%;
+            box-sizing: border-box;
+            padding: 0 30px;
+
+            .teacher-image {
+                width: 100%;
+                text-align: center;
+                float: none;
+                border: none;
+
+                img {
+                    max-width: 95px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            h3 {
+                font: 16px/31px bahij_thesansarabicextrabold;
+                color: #149a9a;
+                text-align: center;
+            }
+        }
+    } 
 }
