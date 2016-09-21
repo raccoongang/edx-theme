@@ -1,5 +1,8 @@
 // Our overrides for settings we want to change.
 @import 'overrides';
 
+// Import the original varialbes from edx-platform.
+@import 'lms/static/sass/base/_variables.scss';
+
 // Import the original styles from edx-platform.
 @import 'lms/static/sass/lms-main';
