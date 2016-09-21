@@ -12,43 +12,51 @@ $f-sans-serif: 'Arial', sans-serif !default;
 $homepage-bg-image: url('../images/flane-header-bg.jpg');
 
 .window-wrap {
-	    border-top: 15px solid #b00b23;
+    border-top: 15px solid #b00b23;
 }
+
 header.global {
-	height: 80px !important;
+    height: 80px !important;
     opacity: 0.6;
 }
+
 .home > header {
     position: relative;
     top: -80px;
     background-position: 0px;
-    }
+}
 
 .home > header .outer-wrapper {
     padding: 160px 60px !important;
 }
+
 header.global .nav-courseware li .cta {
-	    background: #b00b23 !important;
+    background: #b00b23 !important;
 }
+
 header.global .nav-global li a {
     color: #000 !important;
-    }
+}
+
 .courses-container .courses .course {
-	border-bottom-color: $ci-color !important;
-	}
+    border-bottom-color: $ci-color !important;
+}
 
 .home > header .title {
-	top: 110px;
-	}
+    top: 110px;
+}
+
 @media screen and (max-width: 540px) and (min-width: 321px) {
-	.home > header .title {
-		top: 0px;
-	}
-	.home > header .outer-wrapper {
-    padding: 60px 60px !important;
-	}
-	header.global {
-    height: auto !important;
-    opacity: none;
-	}
+    .home > header .title {
+        top: 0px;
+    }
+
+    .home > header .outer-wrapper {
+        padding: 60px 60px !important;
+    }
+
+    header.global {
+        height: auto !important;
+        opacity: none;
+    }
 }
