@@ -37,43 +37,16 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
 
-  <header id="global-navigation" class="global ${"slim" if course else ""}">
-      <!--nav id="cssmenu">
-        <div class="logo"><a href="index.html">Responsive </a></div>
-        <div id="head-mobile"></div>
-        <div class="button"></div>
-
-        <ul>
-          <li class='active'><a href='#'>HOME</a></li>
-          <li><a href='#'>ABOUT</a></li>
-          <li><a href='#'>PRODUCTS</a>
-           <ul>
-            <li><a href='#'>Product 1</a></li>
-          <li><a href='#'>Product 2</a>
-           <ul>
-            <li><a href='#'>Sub Product</a></li>
-            <li><a href='#'>Sub Product</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-
-  </ul>
-  </nav-->
-
-
+  <header id="global-navigation" class="global ${"slim" if course else ""}" >
     <nav id="cssmenu" class="nav-wrapper" aria-label="${_('Global')}">
-    <div class="logo">
-    <h1 class="">
+    <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
             <img src="${static.url(branding.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=platform_name())}"/>
         </%block>
       </a>
     </h1>
-    </div>
-    <div id="head-mobile"></div>
-    <div class="button"></div>
+
     % if course:
     <h2 class="course-header"><span class="provider">${course.display_org_with_default | h}:</span>
       <span class="course-number">${course.display_number_with_default | h}</span>
@@ -86,13 +59,30 @@ site_status_msg = get_site_status_msg(course_id)
       %>
       <span class="course-name">${display_name}</span></h2>
     % endif
-
+    <div id="head-mobile"></div>
+    <div class="button"></div>
     % if user.is_authenticated():
     <ol class="left nav-global authenticated">
       <%block name="navigation_global_links_authenticated">
         <li class="nav-global-01">
           <a href="${marketing_link('HOW_IT_WORKS')}">${_('How it works')}</a>
         </li>
+        <li><a href='#'>PRODUCTS</a>
+   <ul>
+      <li><a href='#'>Product 1</a>
+         <ul>
+            <li><a href='#'>Sub Product</a></li>
+            <li><a href='#'>Sub Product</a></li>
+         </ul>
+      </li>
+      <li><a href='#'>Product 2</a>
+         <ul>
+            <li><a href='#'>Sub Product</a></li>
+            <li><a href='#'>Sub Product</a></li>
+         </ul>
+      </li>
+   </ul>
+</li>
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <li class="nav-global-02">
             <a href="${marketing_link('COURSES')}">${_('Course Programs')}</a>
@@ -139,26 +129,28 @@ site_status_msg = get_site_status_msg(course_id)
           </li>
         </ol>
       % endif
-          <ol class="right nav-courseware">
-    <li class="nav-courseware-01">
-      % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-          <a class="cta cta-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
-          % else:
-          <a class="cta cta-login" href="/login${login_query()}">${_("Sign in")}</a>
-          % endif
-      % endif
-    </li>
-    </ol>
     % else:
-    <div>
-    <ul class="left nav-global">
+    <ol class="left nav-global">
       <%block name="navigation_global_links">
-
         <li class="nav-global-01">
           <a href="${marketing_link('HOW_IT_WORKS')}">${_('How it works')}</a>
         </li>
-
+        <li><a href='#'>PRODUCTS</a>
+   <ul>
+      <li><a href='#'>Product 1</a>
+         <ul>
+            <li><a href='#'>Sub Product</a></li>
+            <li><a href='#'>Sub Product</a></li>
+         </ul>
+      </li>
+      <li><a href='#'>Product 2</a>
+         <ul>
+            <li><a href='#'>Sub Product</a></li>
+            <li><a href='#'>Sub Product</a></li>
+         </ul>
+      </li>
+   </ul>
+</li>
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <li class="nav-global-02">
             <a href="${marketing_link('COURSES')}">${_('Course Programs')}</a>
@@ -167,13 +159,7 @@ site_status_msg = get_site_status_msg(course_id)
         <li class="nav-global-05">
           <a href="${marketing_link('ABOUT')}">${_('About')}</a>
         </li>
-        <li><a href='#'>Programs</a>
-           <ul>
-            <li><a href='#'>XSeries are designed to</a></li>
-            </ul>
-        </li>
       </%block>
-
       % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
           <li class="nav-global-05">
@@ -191,9 +177,19 @@ site_status_msg = get_site_status_msg(course_id)
           % endif
 
       % endif
-    </ul>
-    </div>
+    </ol>
 
+    <ol class="right nav-courseware">
+    <li class="nav-courseware-01">
+      % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+          <a class="cta cta-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+          % else:
+          <a class="cta cta-login" href="/login${login_query()}">${_("Sign in")}</a>
+          % endif
+      % endif
+    </li>
+    </ol>
     % endif
   </nav>
 </header>
