@@ -1,15 +1,23 @@
 header{position:relative;width:100%;background:#333;}
-.logo{position:relative;z-index:123;padding:10px;font:18px verdana;color:#6DDB07;float:left;width:15%}
-.logo a{color:#6DDB07;}
+.logo{position:relative;z-index:123;padding:10px;font:18px verdana;color:rgba(190,18,30,1.00);float:left;width:15%}
+.logo a{color:rgba(190,18,30,1.00);}
 nav{position:relative;width:980px;margin:0 auto;}
-#cssmenu,#cssmenu ul,#cssmenu ul li,#cssmenu ul li a,#cssmenu #head-mobile{border:0;list-style:none;line-height:1;display:block;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-#cssmenu:after,#cssmenu > ul:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #head-mobile
+{border:0;list-style:none;line-height:1;display:block;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+#cssmenu:after,
+#cssmenu > ul:after{
+content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0
+}
 #cssmenu #head-mobile{display:none}
 #cssmenu{font-family:sans-serif;background:#333}
 #cssmenu > ul > li{float:left}
 #cssmenu > ul > li > a{padding:17px;font-size:12px;letter-spacing:1px;text-decoration:none;color:#ddd;font-weight:700;}
 #cssmenu > ul > li:hover > a,#cssmenu ul li.active a{color:#fff}
-#cssmenu > ul > li:hover,#cssmenu ul li.active:hover,#cssmenu ul li.active,#cssmenu ul li.has-sub.active:hover{background:#448D00!important;-webkit-transition:background .3s ease;-ms-transition:background .3s ease;transition:background .3s ease;}
+#cssmenu > ul > li:hover,#cssmenu ul li.active:hover,#cssmenu ul li.active,#cssmenu ul li.has-sub.active:hover{background:rgba(190,18,30,1.00)!important;-webkit-transition:background .3s ease;-ms-transition:background .3s ease;transition:background .3s ease;}
 #cssmenu > ul > li.has-sub > a{padding-right:30px}
 #cssmenu > ul > li.has-sub > a:after{position:absolute;top:22px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
 #cssmenu > ul > li.has-sub > a:before{position:absolute;top:19px;right:14px;display:block;width:2px;height:8px;background:#ddd;content:'';-webkit-transition:all .25s ease;-ms-transition:all .25s ease;transition:all .25s ease}
@@ -20,7 +28,7 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu li:hover > ul{left:auto}
 #cssmenu li:hover > ul > li{height:35px}
 #cssmenu ul ul ul{margin-left:100%;top:0}
-#cssmenu ul ul li a{border-bottom:1px solid rgba(150,150,150,0.15);padding:11px 15px;width:170px;font-size:12px;text-decoration:none;color:#ddd;font-weight:400;}
+#cssmenu ul ul li a{border-bottom:1px solid rgba(150,150,150,0.15);padding:11px 15px;width:170px;font-size:12px;text-decoration:none;color:#111;font-weight:400;}
 #cssmenu ul ul li:last-child > a,#cssmenu ul ul li.last-item > a{border-bottom:0}
 #cssmenu ul ul li:hover > a,#cssmenu ul ul li a:hover{color:#fff}
 #cssmenu ul ul li.has-sub > a:after{position:absolute;top:16px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
@@ -45,11 +53,11 @@ nav{width:100%;}
 #cssmenu ul ul li{background:#333!important;}
 #cssmenu ul ul li:hover{background:#363636!important}
 #cssmenu ul ul ul li a{padding-left:35px}
-#cssmenu ul ul li a{color:#ddd;background:none}
+#cssmenu ul ul li a{color:#111;background:none}
 #cssmenu ul ul li:hover > a,#cssmenu ul ul li.active > a{color:#fff}
 #cssmenu ul ul,#cssmenu ul ul ul{position:relative;left:0;width:100%;margin:0;text-align:left}
 #cssmenu > ul > li.has-sub > a:after,#cssmenu > ul > li.has-sub > a:before,#cssmenu ul ul > li.has-sub > a:after,#cssmenu ul ul > li.has-sub > a:before{display:none}
-#cssmenu #head-mobile{display:block;padding:23px;color:#ddd;font-size:12px;font-weight:700}
+#cssmenu #head-mobile{display:block;padding:23px;color:#111;font-size:12px;font-weight:700}
 .button{width:55px;height:46px;position:absolute;right:0;top:0;cursor:pointer;z-index: 12399994;}
 .button:after{position:absolute;top:22px;right:20px;display:block;height:4px;width:20px;border-top:2px solid #dddddd;border-bottom:2px solid #dddddd;content:''}
 .button:before{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;top:16px;right:20px;display:block;height:2px;width:20px;background:#ddd;content:''}
