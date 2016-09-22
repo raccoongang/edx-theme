@@ -38,44 +38,38 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
 
   <header id="global-navigation" class="global ${"slim" if course else ""}" >
-
-  <nav class="globalnav nav-wrapper">
-    <h1 class="logo">
-      logo
-    </h1>
-  <label for="drop" class="toggle">Menu</label>
-  <input type="checkbox" id="drop" />
-  <ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li> 
-      <!-- First Tier Drop Down -->
-      <label for="drop-1" class="toggle">Service +</label>
-      <a href="#">Service</a>
-      <input type="checkbox" id="drop-1"/>
-      <ul>
-        <li><a href="#">Service 1</a></li>
-        <li><a href="#">Service 2</a></li>
-        <li><a href="#">Service 3</a></li>
+      <nav id='cssmenu'>
+        <div class="logo"><a href="index.html">Responsive </a></div>
+        <div id="head-mobile"></div>
+        <div class="button"></div>
+        <ul>
+          <li class='active'><a href='#'>HOME</a></li>
+          <li><a href='#'>ABOUT</a></li>
+          <li><a href='#'>PRODUCTS</a>
+           <ul>
+            <li><a href='#'>Product 1</a>
+             <ul>
+              <li><a href='#'>Sub Product</a></li>
+              <li><a href='#'>Sub Product</a></li>
+            </ul>
+          </li>
+          <li><a href='#'>Product 2</a>
+           <ul>
+            <li><a href='#'>Sub Product</a></li>
+            <li><a href='#'>Sub Product</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li> 
-      
-      <!-- First Tier Drop Down -->
-      <label for="drop-2" class="toggle">Portfolio +</label>
-      <a href="#">Portfolio</a>
-      <input type="checkbox" id="drop-2"/>
-      <ul>
-        <li><a href="#">Portfolio 1</a></li>
-        <li><a href="#">Portfolio 2</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href='#'>BIO</a></li>
+    <li><a href='#'>VIDEO</a></li>
+    <li><a href='#'>GALLERY</a></li>
+    <li><a href='#'>CONTACT</a></li>
   </ul>
-</nav>
+  </nav>
 
 
-    <nav class="nav-wrapper" aria-label="${_('Global')}">
+    <!--nav class="nav-wrapper" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
@@ -195,7 +189,7 @@ site_status_msg = get_site_status_msg(course_id)
     </li>
     </ol>
     % endif
-  </nav>
+  </nav-->
 </header>
 % if course:
 <!--[if lte IE 9]>
