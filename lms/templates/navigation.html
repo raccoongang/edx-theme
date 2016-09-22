@@ -39,13 +39,9 @@ site_status_msg = get_site_status_msg(course_id)
 
   <header id="global-navigation" class="global ${"slim" if course else ""}" >
 
-  <nav class="globalnav nav-wrapper" aria-label="${_('Global')}">
+  <nav class="globalnav nav-wrapper">
     <h1 class="logo">
-      <a href="${marketing_link('ROOT')}">
-        <%block name="navigation_logo">
-            <img src="${static.url(branding.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=platform_name())}"/>
-        </%block>
-      </a>
+      logo
     </h1>
   <label for="drop" class="toggle">Menu</label>
   <input type="checkbox" id="drop" />
