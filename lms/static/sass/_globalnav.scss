@@ -4,13 +4,6 @@ nav.globalnav {
   background-color: #fafafa;
 }
 
-#logo {
-  display: block;
-  padding: 0 30px;
-  float: left;
-  font-size: 20px;
-  line-height: 60px;
-}
 
 nav.globalnav:after {
   content: "";
@@ -19,7 +12,7 @@ nav.globalnav:after {
 }
 
 nav.globalnav ul {
-  float: right;
+  float: left;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -61,13 +54,8 @@ nav.globalnav ul ul li {
   position: relative;
 }
 
-nav.globalnav ul ul ul li {
-  position: relative;
-  top: -60px;
-  left: 170px;
-}
 
-li > a:after { content: ' +'; }
+.menu ul li > a:after { content: ' +'; }
 
 @media all and (max-width : 768px) {
 
@@ -107,13 +95,10 @@ nav.globalnav ul li {
 nav.globalnav ul ul .toggle,
  nav.globalnav ul ul a { padding: 0 40px; }
 
-nav.globalnav ul ul ul a { padding: 0 80px; }
-
-nav.globalnav a:hover,
- nav.globalnav ul ul ul a { background-color: #000000; }
+nav.globalnav a:hover { background-color: #000000; }
 
 nav.globalnav ul li ul li .toggle,
- nav.globalnav ul ul a { background-color: #fafafa; }
+nav.globalnav ul ul a { background-color: #fafafa; }
 
 nav.globalnav ul ul {
   float: none;
@@ -129,9 +114,6 @@ nav.globalnav ul ul li {
   width: 100%;
 }
 
-nav.globalnav ul ul ul li { position: static;
-
-}
 }
 
 @media all and (max-width : 330px) {
