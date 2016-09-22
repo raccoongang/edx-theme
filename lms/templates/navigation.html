@@ -38,7 +38,7 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
 
   <header id="global-navigation" class="global ${"slim" if course else ""}" >
-    <nav class="nav-wrapper navbar-header" aria-label="${_('Global')}">
+    <nav class="nav-wrapper" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
@@ -158,39 +158,7 @@ site_status_msg = get_site_status_msg(course_id)
     </li>
     </ol>
     % endif
-
-                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" style="margin-top:45px;">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
   </nav>
-
-              <div class="navbar-body">
-                <div class="collapse navbar-collapse navHeaderCollapse">
-                    
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="active"><a href="#">HOME<span class="sr-only">(current)</span></a></li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COMPANY<span class="caret"></span></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">ABOUT US</a></li>
-                          </ul>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICES<span class="caret"></span></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">COURSEWARE DESTRIBUTION</a></li>
-                            <li><a href="#">TRAINER</a></li>
-                            <li><a href="#">REMOTE LAB RENTAL</a></li>
-                            <li><a href="#">SEPERATED LINK</a></li>
-                            <li><a href="#">ONE MORE SEPERATED LINK</a></li>
-                          </ul>
-                        </li>
-                        <li class="active"><a href="#">NEWS<span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="#">CONTACT US<span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="#">SHOP<span class="sr-only">(current)</span></a></li>
-                      </li>
-                  </ul>
-                </div>
-            </div><!-- navbar body End-->
 </header>
 % if course:
 <!--[if lte IE 9]>
