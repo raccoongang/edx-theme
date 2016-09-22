@@ -39,8 +39,14 @@ site_status_msg = get_site_status_msg(course_id)
 
   <header id="global-navigation" class="global ${"slim" if course else ""}" >
 
-  <nav class="globalnav">
-  <div id="logo">Your Logo here</div>
+  <nav class="globalnav nav-wrapper" aria-label="${_('Global')}">
+    <h1 class="logo">
+      <a href="${marketing_link('ROOT')}">
+        <%block name="navigation_logo">
+            <img src="${static.url(branding.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=platform_name())}"/>
+        </%block>
+      </a>
+    </h1>
   <label for="drop" class="toggle">Menu</label>
   <input type="checkbox" id="drop" />
   <ul class="menu">
@@ -65,22 +71,8 @@ site_status_msg = get_site_status_msg(course_id)
       <ul>
         <li><a href="#">Portfolio 1</a></li>
         <li><a href="#">Portfolio 2</a></li>
-        <li> 
-          
-          <!-- Second Tier Drop Down -->
-          <label for="drop-3" class="toggle">Works +</label>
-          <a href="#">Works</a>
-          <input type="checkbox" id="drop-3"/>
-          <ul>
-            <li><a href="#">HTML/CSS</a></li>
-            <li><a href="#">jQuery</a></li>
-            <li><a href="#">Python</a></li>
-          </ul>
-        </li>
       </ul>
     </li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Submit</a></li>
     <li><a href="#">Contact</a></li>
     <li><a href="#">About</a></li>
   </ul>
