@@ -5,7 +5,7 @@ $.fn.menumaker = function(options) {
    sticky: false
  }, options);
  return this.each(function() {
-   $(this).find(".button").on('click', function(){
+   $(this).find(".button-mb").on('click', function(){
      $(this).toggleClass('menu-opened');
      var mainmenu = $(this).next('ol');
      if (mainmenu.hasClass('open')) { 
