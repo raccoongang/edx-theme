@@ -1,0 +1,144 @@
+nav.globalnav {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+#logo {
+  display: block;
+  padding: 0 30px;
+  float: left;
+  font-size: 20px;
+  line-height: 60px;
+}
+
+nav.globalnav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav.globalnav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav.globalnav ul li {
+  margin: 0px;
+  display: inline-block;
+  float: left;
+  background-color: #fafa;
+}
+
+nav.globalnav a {
+  display: block;
+  padding: 0 20px;
+  color: #000;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+nav.globalnav ul li ul li:hover { background: rgba(190,18,30,1.00); }
+
+nav.globalnav a:hover { background-color: #000000; }
+
+nav.globalnav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+}
+
+nav.globalnav ul li:hover > ul { display: inherit; }
+
+nav.globalnav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+nav.globalnav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 170px;
+}
+
+li > a:after { content: ' +'; }
+
+@media all and (max-width : 768px) {
+
+#logo {
+  display: block;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  float: none;
+}
+
+nav.globalnav { margin: 0; }
+
+.toggle + a,
+ .menu { display: none; }
+
+.toggle {
+  display: block;
+  background-color: rgba(190,18,30,1.00);
+  padding: 0 20px;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+  border: none;
+}
+
+.toggle:hover { background-color: #000000; }
+
+[id^=drop]:checked + ul { display: block; }
+
+nav.globalnav ul li {
+  display: block;
+  width: 100%;
+}
+
+nav.globalnav ul ul .toggle,
+ nav.globalnav ul ul a { padding: 0 40px; }
+
+nav.globalnav ul ul ul a { padding: 0 80px; }
+
+nav.globalnav a:hover,
+ nav.globalnav ul ul ul a { background-color: #000000; }
+
+nav.globalnav ul li ul li .toggle,
+ nav.globalnav ul ul a { background-color: #fafafa; }
+
+nav.globalnav ul ul {
+  float: none;
+  position: static;
+  color: #000;
+}
+
+nav.globalnav ul ul li:hover > ul,
+nav.globalnav ul li:hover > ul { display: none; }
+
+nav.globalnav ul ul li {
+  display: block;
+  width: 100%;
+}
+
+nav.globalnav ul ul ul li { position: static;
+
+}
+}
+
+@media all and (max-width : 330px) {
+
+nav.globalnav ul li {
+  display: block;
+  width: 94%;
+}
+
+}
