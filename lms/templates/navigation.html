@@ -38,7 +38,7 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
 
   <header id="global-navigation" class="global ${"slim" if course else ""}" >
-      <nav id="cssmenu">
+      <!--nav id="cssmenu">
         <div class="logo"><a href="index.html">Responsive </a></div>
         <div id="head-mobile"></div>
         <div class="button"></div>
@@ -59,7 +59,7 @@ site_status_msg = get_site_status_msg(course_id)
     </li>
 
   </ul>
-  </nav>
+  </nav-->
 
 
     <nav id="cssmenu" class="nav-wrapper" aria-label="${_('Global')}">
@@ -154,8 +154,14 @@ site_status_msg = get_site_status_msg(course_id)
     <div>
     <ul class="left nav-global">
       <%block name="navigation_global_links">
+
         <li class="nav-global-01">
           <a href="${marketing_link('HOW_IT_WORKS')}">${_('How it works')}</a>
+        </li>
+        <li><a href='#'>Programs</a>
+           <ul>
+            <li><a href='#'>XSeries are designed to</a></li>
+            </ul>
         </li>
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <li class="nav-global-02">
