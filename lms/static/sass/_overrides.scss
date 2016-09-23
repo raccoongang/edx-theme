@@ -13,9 +13,14 @@ $f-sans-serif: Arial, sans-serif !default;
 $homepage-bg-image: url('../images/flane-header-bg.jpg');
 
 .window-wrap {
-    border-top: 15px solid #b00b23;
+    border-top: 4px solid #b00b23;
 }
-
+header.global h1.logo {
+	margin-right:10px;
+}
+header.global .nav-global li {
+	margin-right:10px;
+}
 header.global {
     //height: 80px !important;
     //opacity: 0.6;
