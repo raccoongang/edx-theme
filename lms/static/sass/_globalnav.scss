@@ -14,11 +14,28 @@ content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0
 #cssmenu > ol > li:hover > a,#cssmenu ol li.active a{color:#fff}
 #cssmenu > ol > li:hover,#cssmenu ol li.active:hover,#cssmenu ol li.active,#cssmenu ol li.has-sub.active:hover{background:rgba(190,18,30,1.00)!important;-webkit-transition:background .3s ease;-ms-transition:background .3s ease;transition:background .3s ease;}
 #cssmenu > ol > li.has-sub > a{padding-right:30px}
-#cssmenu > ol > li.has-sub > a:after{position:absolute;top:22px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
-#cssmenu > ol > li.has-sub > a:before{position:absolute;top:19px;right:14px;display:block;width:2px;height:8px;background:#ddd;content:'';-webkit-transition:all .25s ease;-ms-transition:all .25s ease;transition:all .25s ease}
-#cssmenu > ol > li.has-sub:hover > a:before{top:23px;height:0}
-#cssmenu ol ol{position:absolute;left:-9999px}
-#cssmenu ol ol li{height:0;-webkit-transition:all .25s ease;-ms-transition:all .25s ease;background:#333;transition:all .25s ease}
+#cssmenu > ol > li.has-sub > a:after{position:absolute;top:22px;right:11px;width:8px;height:2px;display:block;background:#111;content:''}
+#cssmenu > ol > li.has-sub > a:before{position:absolute;top:19px;right:14px;display:block;width:2px;height:8px;background:#111;content:'';-webkit-transition:all .25s ease;-ms-transition:all .25s ease;transition:all .25s ease}
+#cssmenu > ol > li.has-sub:hover > a:before{
+	top:23px;height:0;
+}
+#cssmenu ol ol{
+	position:absolute;
+	left:-9999px;
+	width: 880px;
+    z-index: 1000;
+	}
+#cssmenu ol ol li{
+	height:0;
+	-webkit-transition:all .25s ease;
+	-ms-transition:all .25s ease;
+	background:#fff;
+	transition:all .25s ease;
+	border: 1px solid rgba(0, 0, 0, .15);
+	border-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
 #cssmenu ol ol li:hover{}
 #cssmenu li:hover > ol{left:auto}
 #cssmenu li:hover > ol > li{height:35px}
