@@ -35,19 +35,19 @@
 #cssmenu ol ol{
 	position:absolute;
 	left:-9999px;
-	width: 880px;
+	width: 700px;
     z-index: 1000;
-	}
-#cssmenu ol ol li{
-	height:0;
-	-webkit-transition:all .25s ease;
-	-ms-transition:all .25s ease;
-	background:#fff;
-	transition:all .25s ease;
-	border: 1px solid rgba(0, 0, 0, .15);
+    background:#fff;
+    border: 1px solid rgba(0, 0, 0, .15);
 	border-radius: 4px;
 	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	height: auto;
+	}
+#cssmenu ol ol li{
+	-webkit-transition:all .25s ease;
+	-ms-transition:all .25s ease;	
+	transition:all .25s ease;
 }
 #cssmenu ol ol li:hover{}
 #cssmenu li:hover > ol{left:auto}
@@ -93,7 +93,7 @@ nav{width:100%;}
 #cssmenu #head-mobile{display:block;padding:23px;color:#111;font-size:12px;font-weight:700}
 .button-mb{width:55px;height:46px;position:absolute;right:0;top:0;cursor:pointer;z-index: 12399994;}
 
-.button-mb:after{position:absolute;top:22px;right:20px;display:block;height:4px;width:20px;border-top:2px solid #dddddd;border-bottom:2px solid #be121e;content:''}
+.button-mb:after{position:absolute;top:22px;right:20px;display:block;height:4px;width:20px;border-top:2px solid #be121e;border-bottom:2px solid #be121e;content:''}
 
 .button-mb:before{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;top:16px;right:20px;display:block;height:2px;width:20px;background:#be121e;content:''}
 
