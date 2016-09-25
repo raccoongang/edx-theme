@@ -40,15 +40,14 @@
     background:#fff;
     border: 1px solid rgba(0, 0, 0, .15);
 	border-radius: 4px;
-	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-	height: auto;
+	min-height: 280px;
 	}
 #cssmenu ol ol li{
 	-webkit-transition:all .25s ease;
 	-ms-transition:all .25s ease;	
 	transition:all .25s ease;
 	text-transform: capitalize;
+	background:#fff;
 }
 #cssmenu ol ol li:hover{}
 #cssmenu li:hover > ol{left:auto}
