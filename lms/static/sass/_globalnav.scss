@@ -48,12 +48,13 @@
 	-webkit-transition:all .25s ease;
 	-ms-transition:all .25s ease;	
 	transition:all .25s ease;
+	text-transform: capitalize;
 }
 #cssmenu ol ol li:hover{}
 #cssmenu li:hover > ol{left:auto}
 #cssmenu li:hover > ol > li{height:35px}
 #cssmenu ol ol ol{margin-left:100%;top:0}
-#cssmenu ol ol li a{border-bottom:1px solid rgba(150,150,150,0.15);padding:11px 15px;width:170px;font-size:12px;text-decoration:none;color:#111;font-weight:400;}
+#cssmenu ol ol li a{border-bottom:1px solid rgba(150,150,150,0.15);padding:0;width:170px;font-size:12px;text-decoration:none;color:#111;font-weight:400;}
 #cssmenu ol ol li:last-child > a,#cssmenu ol ol li.last-item > a{border-bottom:0}
 #cssmenu ol ol li:hover > a,#cssmenu ol ol li a:hover{color:#fff}
 #cssmenu ol ol li.has-sub > a:after{position:absolute;top:16px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
@@ -82,8 +83,8 @@ nav{width:100%;}
 #cssmenu ol ol li,#cssmenu li:hover > ol > li{height:auto}
 #cssmenu ol li a,#cssmenu ol ol li a{width:100%;border-bottom:0}
 #cssmenu > ol > li{float:none}
-#cssmenu ol ol li a{padding-left:25px}
-#cssmenu ol ol li{background:#333!important;}
+#cssmenu ol ol li a{padding-left:0px}
+#cssmenu ol ol li{padding:17px}
 #cssmenu ol ol li:hover{background:#363636!important}
 #cssmenu ol ol ol li a{padding-left:35px}
 #cssmenu ol ol li a{color:#111;background:none}
