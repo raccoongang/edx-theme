@@ -12,6 +12,10 @@ $sans-serif: 'Open Sans', Arial, $verdana, sans-serif !default;
 $f-sans-serif: 'Open Sans', Arial, sans-serif !default;
 
 $homepage-bg-image: url('../images/flane-header-bg.jpg');
+.container {
+	max-width: inherit !important;
+    min-width: !important;
+} 
 
 h1 {
 	font-family: 'Rubik', Arial, sans-serif;
