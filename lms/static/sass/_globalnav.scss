@@ -93,51 +93,14 @@ nav{width:100%;}
 #cssmenu #head-mobile{display:block;padding:23px;color:#111;font-size:12px;font-weight:700}
 .button-mb{width:55px;height:46px;position:absolute;right:0;top:0;cursor:pointer;z-index: 12399994;}
 
-.button-mb:after{
-	position:absolute;
-	top:22px;
-	right:20px;
-	display:block;
-	height:4px;
-	width:20px;
-	border-top:2px solid #be121e;
-	border-bottom:2px solid #be121e;
-	content:'';
-	}
-.button-mb:before {
-	-45deg-webkit-transition: all .3s ease;
-	-ms-transition: all .3s ease;
-	transition: all .3s ease;
-	position:absolute;
-	top:16px;
-	right:20px;
-	display:block;
-	height:2px;
-	width:20px;
-	background:#be121e;
-	content:'';
-}
-.button-mb.menu-opened:after{
-	-webkit-transition:all .3s ease;
-	-ms-transition:all .3s ease;transition:all .3s ease;
-	top:23px;
-	border:0;
-	height:2px;
-	width:19px;
-	background:#2b3e42;
-	-webkit-transform:rotate(45deg);
-	-moz-transform:rotate(45deg);
-	-ms-transform:rotate(45deg);-o-transform:rotate(45deg);
-	transform:rotate(45deg);
-}
-.button-mb.menu-opened:before{
-	top:23px;
-	background:#2b3e42;
-	width:19px;
-	-webkit-transform:rotate(-45deg);
-	-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
-	-o-transform:rotate(-45deg);transform:rotate(-45deg);
-}
+.button-mb:after{position:absolute;top:22px;right:20px;display:block;height:4px;width:20px;border-top:2px solid #dddddd;border-bottom:2px solid #be121e;content:''}
+
+.button-mb:before{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;top:16px;right:20px;display:block;height:2px;width:20px;background:#be121e;content:''}
+
+.button-mb.menu-opened:after{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;top:23px;border:0;height:2px;width:19px;background:#2b3e42;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}
+
+.button-mb.menu-opened:before{top:23px;background:#2b3e42;width:19px;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}
+
 #cssmenu .submenu-button{
 	position:absolute;
 	z-index:99;
