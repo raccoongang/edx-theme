@@ -104,16 +104,18 @@ nav{width:100%;}
 	border-bottom:2px solid #be121e;
 	content:'';
 	}
-.button-mb:before{
-	-45deg-webkit-transition:all .3s ease;
-	-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;
+.button-mb:before {
+	-45deg-webkit-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;
+	position:absolute;
 	top:16px;
 	right:20px;
 	display:block;
 	height:2px;
 	width:20px;
 	background:#be121e;
-	content:''
+	content:'';
 }
 .button-mb.menu-opened:after{
 	-webkit-transition:all .3s ease;
@@ -126,7 +128,7 @@ nav{width:100%;}
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
 	-ms-transform:rotate(45deg);-o-transform:rotate(45deg);
-	transform:rotate(45deg)
+	transform:rotate(45deg);
 }
 .button-mb.menu-opened:before{
 	top:23px;
@@ -134,7 +136,7 @@ nav{width:100%;}
 	width:19px;
 	-webkit-transform:rotate(-45deg);
 	-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
-	-o-transform:rotate(-45deg);transform:rotate(-45deg)
+	-o-transform:rotate(-45deg);transform:rotate(-45deg);
 }
 #cssmenu .submenu-button{
 	position:absolute;
