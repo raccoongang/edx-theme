@@ -32,9 +32,9 @@ h2 {
 .container {
 	max-width:inherit !important;
     min-width:inherit !important;
-    font-family: 'Open Sans', Arial, $verdana, sans-serif;
+    font: 'Open Sans', Arial, $verdana, sans-serif !default;
     h2 {
-  		font: normal 1.2em/1.2em 'Rubik', Arial, sans-serif;
+  		font: normal 1.2em/1.2em 'Rubik', Arial, sans-serif !default;
 	}
 } 
 .window-wrap {
