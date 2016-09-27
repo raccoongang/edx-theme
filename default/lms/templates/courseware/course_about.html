@@ -99,6 +99,13 @@ from openedx.core.lib.courses import course_image_url
 
     %endif
 
+    $('#email_settings_form input#receive_emails').change(function () {
+        $form = $('#email_settings_form');
+        $.post($form.attr('action'), $form.serialize(), function () {
+            window.location = window.location;
+        });
+        return false;
+    });
   })(this)
   </script>
 
@@ -176,7 +183,26 @@ from openedx.core.lib.courses import course_image_url
           <div id="register_error"></div>
         %endif
         </div>
-        <p class="intro_text">أود الحصول على التحديثات</p>
+
+        <%
+            is_receive_emails = user.is_authenticated() and not user.optout_set.filter(course_id=course.id).exists() and 'checked' or ''
+        %>
+        %if user.is_authenticated():
+        <form id="email_settings_form" method="post" action="/change_email_settings">
+          <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
+          <input name="course_id" id="email_settings_course_id" type="hidden" value="${course.id.to_deprecated_string()}" />
+          <label>
+            <p class="intro_text">
+              ${_("Receive course emails")} 
+              <input type="checkbox" id="receive_emails" name="receive_emails" ${is_receive_emails} />
+            </p>
+          </label>
+          <!--div class="submit">
+            <input type="submit" id="submit" value="${_("Save Settings")}" />
+          </div-->
+        </form>
+        %endif
+
       </section>
       <div class="course-info_box">
         <h1 class="course-info_box-heading">
