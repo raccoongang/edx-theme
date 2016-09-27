@@ -64,23 +64,38 @@ site_status_msg = get_site_status_msg(course_id)
     % if user.is_authenticated():
     <ol class="left nav-global authenticated">
       <%block name="navigation_global_links_authenticated">
-        <li class="nav-global-01">
+        <!--li class="nav-global-01">
           <a href="${marketing_link('HOW_IT_WORKS')}">${_('How it works')}</a>
-        </li>
-        <li><a href='#'>Programs</a>
-   <ol>
-      <li><a href='#'>XSeries are designed to</a></li>
-
-   </ol>
-</li>
-        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-          <li class="nav-global-02">
-            <a href="${marketing_link('COURSES')}">${_('Course Programs')}</a>
-          </li>
-        % endif
+        </li-->
         <li class="nav-global-03">
           <a href="${marketing_link('ABOUT')}">${_('About')}</a>
         </li>
+        <li><a href='#'>Programs</a>
+         <ol>
+          <li>
+            <p class="menu-title">XSeries</p>
+            <p class="menu-content">XSeries are designed to provide a deep understanding of key subjects through a series of courses. Complete the series to earn a valuable XSeries Certificate that illustrates your achievement.</p>
+            <p><a href='#'>Explore XSeries</a></p>
+            <hr>
+            <p class="menu-title">Microsoft Data Science Curriculum</p>
+            <p class="menu-content">Accelerate your career in one of the hottest fields – data science. Learn data science fundamentals, key data science tools, and widely-used programming languages from industry and academic experts in this unique program created by Microsoft.</p>
+            <p><a href='#'>Explore Microsoft Data Science Curriculum</a></p>     
+         <!--ol>
+            <li><a href='#'>Sub Product</a></li>
+            <li><a href='#'>Sub Product</a></li>
+          </ol-->
+        </li>
+
+      </ol>
+        </li>
+        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+          <li class="nav-global-02">
+            <a href="${marketing_link('COURSES')}">${_('All Courses')}</a>
+          </li>
+        % endif
+        <!--li class="nav-global-03">
+          <a href="${marketing_link('ABOUT')}">${_('About')}</a>
+        </li-->
         %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
           <li>
             ## Translators: This is short for "System administration".
@@ -156,7 +171,7 @@ site_status_msg = get_site_status_msg(course_id)
       % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
           <li class="nav-global-05">
-            <a class="cta cta-discovery" href="/courses">${_("Course Programs")}</a>
+            <a class="cta cta-discovery" href="/courses">${_("All Courses")}</a>
           </li>
           %endif
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
