@@ -26,7 +26,6 @@ h1 {
 h2 {
   font: normal 1.2em/1.2em 'Rubik', Arial, sans-serif;
 }
-
 .container-mb {
 	max-width:inherit !important;
     min-width:inherit !important;
@@ -35,10 +34,11 @@ h2 {
   		font: normal 1.2em/1.2em 'Rubik', Arial, sans-serif;
 	}
 } 
+.inner-wrapper ul,
 .course-info .details .inner-wrapper .prerequisites ul li, 
 .course-info .details .inner-wrapper .syllabus ul li,
 .course-info .details {
-    font: normal 1em/1.6em 'Open Sans', Arial, $verdana, sans-serif;
+    font: normal 1em/1.6em 'Open Sans', Arial, $verdana, sans-serif !default;
 }
 .window-wrap {
     border-top: 4px solid #b00b23;
