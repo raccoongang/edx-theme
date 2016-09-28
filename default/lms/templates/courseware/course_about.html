@@ -237,6 +237,12 @@ from openedx.core.lib.courses import course_image_url
   </header>
 
   <div class="container">
+    <div class="breadcrumbs">
+        <a href="${marketing_link('COURSES')}">${_("Find Courses")}</a>
+        <span class="separator">></span>
+        ${course.display_name_with_default_escaped}
+    </div>
+    <br />
     <div class="details">
       % if staff_access and studio_url is not None:
         <div class="wrap-instructor-info studio-view">
