@@ -14,14 +14,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
+
 article,
 aside,
 details,
@@ -112,22 +105,22 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
-.container {
+.container-mb{
   margin-right: auto;
   margin-left: auto;
 }
 @media (min-width: 768px) {
-  .container {
+  .container-mb{
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container-mb{
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container-mb{
     width: 1170px;
   }
 }
