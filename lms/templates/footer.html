@@ -20,10 +20,16 @@
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
           <li class="nav-colophon-01">
-            <a id="about" href="/about">${_("About")}</a>
+            <a id="about" href="${marketing_link('ABOUT')}">${_("About")}</a>
           </li>
           <li class="nav-colophon-01">
-            <a id="contact" href="/contact">${_("Contact")}</a>
+            <a id="contact" href="${marketing_link('CONTACT')}">${_("Contact")}</a>
+          </li>
+          <li class="nav-colophon-01">
+            <a id="tos" href="${marketing_link('TOS')}">${_("Terms & Conditions")}</a>
+          </li>
+          <li class="nav-colophon-01">
+            <a id="imprint" href="${marketing_link('IMPRINT')}">${_("Imprint")}</a>
           </li>
         </ol>
       </nav>
