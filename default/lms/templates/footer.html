@@ -18,7 +18,25 @@
     <h2 class="sr footer-about-title">${_("About edX")}</h2>
     <div class="footer-content-wrapper">
       © جميع الحقوق محفوظة
+    <div class="raccoon-block">
+        <a href="http://code.edx.org" target="_blank">
+
+        <span class="raccoongang">
+
+          Built on <img src="${static.url('default/images/openedx_logo_small.png')}" />
+        </span>
+        </a>
+        <a href="http://raccoongang.com" target="_blank">
+
+          <span class="raccoongang">
+
+            by Raccoon Gang <img src="${static.url('default/images/RaccoonLogo_small.png')}" />
+          </span>
+        </a>
     </div>
+
+    </div>
+
 </footer>
 % if include_dependencies:
   <%static:js group='base_vendor'/>
