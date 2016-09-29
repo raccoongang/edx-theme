@@ -76,22 +76,25 @@ site_status_msg = get_site_status_msg(course_id)
 
     % if user.is_authenticated():
       % if not course or disable_courseware_header:
-        % if not nav_hidden or show_program_listing:
+##        % if not nav_hidden or show_program_listing:
           <nav aria-label="Main" class="nav-main">
             <ul class="left list-inline nav-global authenticated">
-              % if not nav_hidden:
+##              % if not nav_hidden:
                 <%block name="navigation_global_links_authenticated">
-                  <li class="item nav-global-01">
+                  <!--li class="item nav-global-01">
                     <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+                  </li-->
+                  <li class="item nav-global-01">
+                    <a href="http://kwn.education/">${_("Programs")}</a>
                   </li>
                   <li class="item nav-global-02">
                     <a href="${marketing_link('COURSES')}">${_("Find Courses")}</a>
                   </li>
-                  <li class="item nav-global-03">
+                  <!--li class="item nav-global-03">
                     <a href="${marketing_link('SCHOOLS')}">${_("Schools & Partners")}</a>
-                  </li>
+                  </li-->
                 </%block>
-              % endif
+##              % endif
               % if show_program_listing:
                 <li class="tab-nav-item">
                   <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
@@ -106,7 +109,7 @@ site_status_msg = get_site_status_msg(course_id)
               % endif
             </ul>
           </nav>
-        % endif
+##        % endif
       % endif
 
       <%include file="user_dropdown.html"/>
