@@ -112,15 +112,34 @@
         background: none;
         width: 270px;
 
+        h2 {
+            font: 22px/28px bahij_thesansarabicextrabold;
+            color: #555;
+        }
+        p {
+            color: #7c7c7c;
+        }
+
         .important-dates {
-            padding: 22px;
+            padding: 22px 22px 0;
             background: #fff;
             border: 1px solid #f3f3f3;
 
-            li .icon {
-                float: right;
-                margin: 4px 0 0 10px;
-            }
+            li {
+                &:last-child {
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+
+                .important-dates-item-title {
+                    font-family: bahij_thesansarabicplain;
+                    margin: 0 0 8px;
+                }
+                .icon {
+                    float: right;
+                    margin: 0 0 0 10px;
+                }
+            } 
         }
 
         header {
@@ -131,8 +150,12 @@
                 text-align: right;
 
                  .share {
-                    margin-top: 0;
-                    margin-right: 9px;
+                    margin: 0 0 0 9px;
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: .5;
+                    }
                 }
             }
         }
