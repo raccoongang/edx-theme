@@ -118,8 +118,36 @@ from openedx.core.lib.courses import course_image_url
   <header class="course-profile">
     <div class="intro-inner-wrapper">
       <div class="table">
+      % if get_course_about_section(request, course, "video"):
+      <a href="#video-modal" class="media" rel="leanModal">
+        <div class="hero">
+          <img src="${course_image_urls['large']}" alt="" />
+          <div class="play-intro"></div>
+        </div>
+      </a>
+      %else:
+      <div class="media">
+        <div class="hero">
+          <img src="${course_image_urls['large']}" alt="" />
+        </div>
+      </div>
+      % endif
+      <div class="course-info_box">
+        <h1 class="course-info_box-heading">
+            ${course.display_name_with_default_escaped}
+            <a href="#">${course.display_org_with_default | h}</a>
+        </h1>
+        <div class="course-info_box-partners">
+          <a href="#" class="course-info_box-link">
+            <img src="${static.url("default/images/partner-2.png")}" alt="">
+          </a>
+          <a href="#" class="course-info_box-link">
+            <img src="${static.url("default/images/partner-1.png")}" alt="">
+          </a>
+        </div>
+      </div>
       <section class="intro">
-        <p class="intro_text"><ابتداء من 2 نوفمبر</p>
+        <p class="intro_text intro_text__bold"><ابتداء من 2 نوفمبر</p>
         <div class="main-cta">
         %if user.is_authenticated() and registered:
           %if show_courseware_link:
@@ -204,34 +232,6 @@ from openedx.core.lib.courses import course_image_url
         %endif
 
       </section>
-      <div class="course-info_box">
-        <h1 class="course-info_box-heading">
-            ${course.display_name_with_default_escaped}
-            <a href="#">${course.display_org_with_default | h}</a>
-        </h1>
-        <div class="course-info_box-partners">
-          <a href="#" class="course-info_box-link">
-            <img src="${static.url("default/images/partner-1.png")}" alt="">
-          </a>
-          <a href="#" class="course-info_box-link">
-            <img src="${static.url("default/images/partner-2.png")}" alt="">
-          </a>
-        </div>
-      </div>
-      % if get_course_about_section(request, course, "video"):
-      <a href="#video-modal" class="media" rel="leanModal">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-          <div class="play-intro"></div>
-        </div>
-      </a>
-      %else:
-      <div class="media">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-        </div>
-      </div>
-      % endif
     </div>
       </div>
   </header>

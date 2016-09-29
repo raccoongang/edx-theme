@@ -8,6 +8,17 @@
         height: auto;
     }
 
+    .nav-courseware div a {
+        color: $link-color;
+        border: 1px solid $btn-neutral-color;
+        font-family: bahij_thesansarabicplain;
+
+        &:hover {
+            background: $btn-neutral-focus-background;
+            color: #fff;
+        }
+    }
+
     .user {
         .primary {
             float: none;

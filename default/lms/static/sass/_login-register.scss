@@ -34,7 +34,20 @@
         display: none;
     }
 
-    .form-field .field-link {
-        color: #149a9a;
+    .action-label {
+        margin: 1.25rem 0;
     }
+
+
+    .form-field {
+        font-weight: normal;
+
+        .field-link {color: #149a9a;}
+        .field-link,
+        .tip,
+        label {font-family: bahij_thesansarabicplain;}
+        label {color: #4f4f4f;}
+        .tip {color: #a3a3a3;}
+    }
+    h2 {font-family: bahij_thesansarabicplain;}
 }

@@ -28,7 +28,7 @@
                 }
             }
             .intro .main-cta a.register {
-                width: auto;
+                width: 100%;
                 background: #ff6527;
                 border: none;
                 text-shadow: none;
@@ -36,9 +36,8 @@
                 box-shadow: none;
                 display: inline-block;
                 vertical-align: top;
-                padding: 10px 15px;
-                font-size: 24px;
-                line-height: 18px;
+                padding: 24px 15px;
+                font: 24px/18px bahij_thesansarabicextrabold;
                 text-transform: none;
 
                 &:hover:not(:disabled) {
@@ -54,6 +53,11 @@
                     font-size: 16px;
                     line-height: 28px;
                     text-align: center;
+                    margin: 0 0 5px;
+
+                    &__bold {
+                        font-family: bahij_thesansarabicextrabold;
+                    }
                 }
 
                 .main-cta {
@@ -101,10 +105,12 @@
         background: #fff;
         border: 1px solid #f3f3f3;
         padding: 30px;
+        width: 868px;
     }
     .course-sidebar {
         float: left;
         background: none;
+        width: 270px;
 
         .important-dates {
             padding: 22px;
