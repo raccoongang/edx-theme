@@ -5,9 +5,20 @@
     background: #ff6634;
     display: inline-block;
     vertical-align: top;
+    white-space: nowrap;
 
     &:hover {
         color: #fff;
         background: lighten(#ff6634, 10%);
     }
-}
+
+    .dashboard-search-bar & {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+            background: lighten(#ff6634, 10%);
+        }
+    }
+} 

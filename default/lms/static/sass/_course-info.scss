@@ -28,7 +28,7 @@
                 }
             }
             .intro .main-cta a.register {
-                width: auto;
+                width: 100%;
                 background: #ff6527;
                 border: none;
                 text-shadow: none;
@@ -36,9 +36,8 @@
                 box-shadow: none;
                 display: inline-block;
                 vertical-align: top;
-                padding: 10px 15px;
-                font-size: 24px;
-                line-height: 18px;
+                padding: 24px 15px;
+                font: 24px/18px bahij_thesansarabicextrabold;
                 text-transform: none;
 
                 &:hover:not(:disabled) {
@@ -54,6 +53,11 @@
                     font-size: 16px;
                     line-height: 28px;
                     text-align: center;
+                    margin: 0 0 5px;
+
+                    &__bold {
+                        font-family: bahij_thesansarabicextrabold;
+                    }
                 }
 
                 .main-cta {
@@ -101,20 +105,41 @@
         background: #fff;
         border: 1px solid #f3f3f3;
         padding: 30px;
+        width: 868px;
     }
     .course-sidebar {
         float: left;
         background: none;
+        width: 270px;
+
+        h2 {
+            font: 22px/28px bahij_thesansarabicextrabold;
+            color: #555;
+        }
+        p {
+            color: #7c7c7c;
+        }
 
         .important-dates {
-            padding: 22px;
+            padding: 22px 22px 0;
             background: #fff;
             border: 1px solid #f3f3f3;
 
-            li .icon {
-                float: right;
-                margin: 4px 0 0 10px;
-            }
+            li {
+                &:last-child {
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+
+                .important-dates-item-title {
+                    font-family: bahij_thesansarabicplain;
+                    margin: 0 0 8px;
+                }
+                .icon {
+                    float: right;
+                    margin: 0 0 0 10px;
+                }
+            } 
         }
 
         header {
@@ -125,8 +150,12 @@
                 text-align: right;
 
                  .share {
-                    margin-top: 0;
-                    margin-right: 9px;
+                    margin: 0 0 0 9px;
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: .5;
+                    }
                 }
             }
         }
