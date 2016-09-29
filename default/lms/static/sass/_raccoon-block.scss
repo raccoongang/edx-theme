@@ -1,0 +1,26 @@
+.raccoon-block {
+    &_link {
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: middle;
+
+        &__edx:after {
+            content: '';
+            width: 59px;
+            height: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: -4px 7px 0 0;
+            background: url("../images/openedx_logo_small.png") no-repeat 0 0;
+        }
+        &__raccoon:after {
+            content: '';
+            width: 27px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url("../images/RaccoonLogo_small.png") no-repeat 0 0;
+            margin: -2px 5px 0 0;
+        }
+    }
+}

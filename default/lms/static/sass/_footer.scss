@@ -8,5 +8,12 @@
             font: 16px/29px bahij_thesansarabicplain;
             color: #b0b2b6;
         }
+        a {
+            color: $link-color;
+            &:hover,
+            &:focus {
+                color: $link-focus-color;
+            }
+        }
     }
 }

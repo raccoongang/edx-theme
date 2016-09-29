@@ -3,14 +3,18 @@ $btn-neutral-border-color: #149a9a;
 $btn-neutral-background: transparent;
 $btn-neutral-color: #149a9a;
 $link-color: #149a9a;
-$link-focus-color: #149a9a;
-$link-visited-color: darken(#149a9a, 10%);
+$link-focus-color: lighten($link-color, 10%);;
+$link-visited-color: darken($link-color, 10%);
 
 $btn-neutral-focus-background: #149a9a;
 $btn-neutral-focus-color: #fff;
 
 $font-family-sans-serif: bahij_thesansarabicplain;
 $btn-font-weight: normal;
+
+a { color: $link-color; }
+a:visited { color: $link-visited-color; }
+a:hover, a:focus { color: $link-focus-color; }
 
 // Import the original styles from edx-platform.
 @import "lms/static/sass/lms-main-v1-rtl";
@@ -34,3 +38,4 @@ $btn-font-weight: normal;
 @import "course-info";
 @import "icons";
 @import "home";
+@import "raccoon-block";
