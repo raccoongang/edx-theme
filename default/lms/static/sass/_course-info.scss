@@ -9,6 +9,7 @@
             background: none;
             box-shadow: none;
             border: none;
+            padding: 70px 0;
 
             .media .hero {
                 border: none;
@@ -160,4 +161,42 @@
             }
         }
     }
+    .details {
+        h2 {
+            font: 24px/31px bahij_thesansarabicextrabold;
+            color: #555;
+        }
+        p {
+            font: 15px/31px bahij_thesansarabicplain;
+        }
+        .inner-wrapper .course-staff .teacher {
+            float: left;
+            width: 33%;
+            box-sizing: border-box;
+            padding: 0 30px;
+
+            .teacher-image {
+                width: 100%;
+                text-align: center;
+                float: none;
+                border: none;
+                margin: 0;
+
+                img {
+                    max-width: 95px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    min-height: auto;
+                    display: block;
+                    float: none;
+                }
+            }
+            h3 {
+                font: 16px/31px bahij_thesansarabicextrabold;
+                color: #149a9a;
+                text-align: center;
+            }
+        }
+    } 
 }
