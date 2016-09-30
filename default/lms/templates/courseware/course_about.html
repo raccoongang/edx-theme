@@ -314,7 +314,7 @@ from openedx.core.lib.courses import course_image_url
           % endif
         </ol>
         <h2>المتطلبات الأساسية</h2>
-        <p>الجبر الثانوية العامة و الكفاءة معقولة للرياضيات . سيقوم الطلاب دون الخلفية البرمجة السابقة يجد أن هناك منحنى التعلم حاد ويمكن أن تضع في أكثر من جهد الوقت المقدر </p>
+        <p>${get_course_about_section(request, course, 'short_description')}</p>
         <p>مشاركة هذا بالطبع مع ​​صديق</p>
         <%include file="course_about_sidebar_header.html" />
     </div>
