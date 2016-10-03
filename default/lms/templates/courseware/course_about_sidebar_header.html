@@ -50,11 +50,14 @@ from django.conf import settings
       <a href="${facebook_link}" class="share">
         <span class="icons icons__facebook" aria-hidden="true"></span><span class="sr">${_("Post a Facebook message to say you've enrolled in this course")}</span>
       </a>
-      <a href="#" class="share">
-        <span class="icons icons__google"  aria-hidden="true"></span>
+      <a href="${settings.PLATFORM_YOUTUBE_ACCOUNT}" class="share">
+        <span class="icons icons__youtube"  aria-hidden="true"></span>
       </a>
-      <a href="#" class="share">
+      <a href="${settings.PLATFORM_LINKEDIN_ACCOUNT}" class="share">
         <span class="icons icons__in" aria-hidden="true"></span>
+      </a>
+      <a href="${settings.PLATFORM_INSTAGRAM_ACCOUNT}" class="share">
+        <span class="icons icons__instagram" aria-hidden="true"></span>
       </a>
   </div>
   % endif
