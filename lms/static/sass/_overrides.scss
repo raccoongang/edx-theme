@@ -84,6 +84,15 @@ header.global .nav-global li a {
     top: 100px;
     opacity:0.85;
 }
+@media screen and (max-width: 768px) {
+    .home > header .outer-wrapper {
+        padding:0 !important;
+    }
+    .home > header .title {
+        top:0;
+    }
+}
+
 
 @media screen and (max-width: 540px) and (min-width: 321px) {
     .home > header .title {
