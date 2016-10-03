@@ -12,6 +12,12 @@ $btn-neutral-focus-color: #fff;
 $font-family-sans-serif: bahij_thesansarabicplain;
 $btn-font-weight: normal;
 
+%success-message-colors {
+  background: $link-color !important;
+  border: 1px solid $link-color !important;
+  color: #fff !important;
+}
+
 a { color: $link-color; }
 a:visited { color: $link-visited-color; }
 a:hover, a:focus { color: $link-focus-color; }
@@ -40,3 +46,4 @@ a:hover, a:focus { color: $link-focus-color; }
 @import "home";
 @import "raccoon-block";
 @import "student-profile";
+@import "wiki";

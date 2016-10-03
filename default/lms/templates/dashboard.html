@@ -61,20 +61,6 @@ from openedx.core.djangolib.markup import HTML, Text
   % endif
 </%block>
 
-<div class="dashboard-notifications" tabindex="-1">
-    %if message:
-        <div class="dashboard-banner">
-            ${message | n, decode.utf8}
-        </div>
-    %endif
-
-    %if enrollment_message:
-        <div class="dashboard-banner">
-            ${enrollment_message | n,  decode.utf8}
-        </div>
-    %endif
-</div>
-
 <main id="main" aria-label="Content" tabindex="-1">
     <%include file="${static.get_template_path('page-title.html')}" />
     <div class="container dashboard" id="dashboard-main">

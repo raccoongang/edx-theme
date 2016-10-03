@@ -63,6 +63,27 @@
 
                 .main-cta {
                     margin-bottom: 10px;
+
+                    strong {
+                        width: 100%;
+                        background: #ff6527;
+                        border: none;
+                        text-shadow: none;
+                        border-radius: 0;
+                        box-shadow: none;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 24px 15px;
+                        font: 24px/18px bahij_thesansarabicextrabold;
+                        text-transform: none;
+
+                        &:hover:not(:disabled) {
+                            background: lighten(#ff6527, 10%);
+                        }
+                    }
+                    span.register {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -97,6 +118,11 @@
         &-link {
             display: inline-block;
             margin-right: 25px;
+
+            &__modify {
+                position: relative;
+                bottom: -6px;
+            }
         }
     }
 
