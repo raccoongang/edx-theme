@@ -106,8 +106,8 @@ hr {
   cursor: pointer;
 }
 .container-mb{
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 @media (min-width: 768px) {
   .container-mb{
@@ -117,6 +117,8 @@ hr {
 @media (min-width: 992px) {
   .container-mb{
     width: 970px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (min-width: 1200px) {
