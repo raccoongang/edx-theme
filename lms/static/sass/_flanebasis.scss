@@ -1,6 +1,28 @@
-.content-wrapper {
+// CONTAINER  Costum  
+.content-wrapper,
+.container-mb {
 	p {line-height:normal;}
 }
+
+.container-mb -col-xs-12 {
+	margin-bottom:2em;
+}
+.container h2,
+.Content h2 {
+	padding-top:15px;
+	font: normal 1.2em/1.2em 'Rubik', Arial, sans-serif;
+}
+.container p {
+	font: normal 1em/1.6em 'Open Sans', Arial, sans-serif;
+}
+.@media (min-width: 768px) {
+.container-mb {
+    margin-right: 30px;
+    margin-left: 30px;
+	}
+}
+
+// ICON
 .icon-home {
 	width:50%; 
 	display: block; 
@@ -29,17 +51,7 @@ h1.title {
 .flane-partners .col-xs-12 {
 	margin-top:15px;
 }
-.container-mb -col-xs-12 {
-	margin-bottom:2em;
-}
-.container h2,
-.Content h2 {
-	padding-top:15px;
-	font: normal 1.2em/1.2em 'Rubik', Arial, sans-serif;
-}
-.container p {
-	font: normal 1em/1.6em 'Open Sans', Arial, sans-serif;
-}
+
 .menu-title {
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size:2em;
@@ -56,4 +68,5 @@ h1.title {
      padding-left: 0;
      list-style: none;
      display: block;
+     line-height:normal;
 }
