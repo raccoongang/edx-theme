@@ -26,6 +26,9 @@ h1 {
 h2 {
   font: normal 1.2em/1.2em 'Rubik', Arial, sans-serif;
 }
+.home > header .title > hgroup h2 {
+    font-style:normal;
+}
 .container-mb {
 	max-width:inherit !important;
     min-width:inherit !important;
@@ -93,5 +96,11 @@ header.global .nav-global li a {
     header.global {
         height: auto !important;
         opacity: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    header.global {
+        border-bottom: none;
+        box-shadow: none;
     }
 }
