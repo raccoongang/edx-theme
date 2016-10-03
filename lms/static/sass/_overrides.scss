@@ -53,19 +53,19 @@ header.global .nav-global li {
 	margin-right:10px;
 }
 header.global {
-    //height: 80px !important;
+    height: 80px !important;
     //opacity: 0.6;
     nav ol {display:inline-block;}
 }
 
 .home > header {
     position: relative;
-    //top: -80px;
+    top: -80px;
     background-position: 0px;
 }
 
 .home > header .outer-wrapper {
-    padding: 160px 60px !important;
+    padding: 110px 0px !important;
 }
 
 header.global .nav-courseware li .cta {
@@ -81,7 +81,8 @@ header.global .nav-global li a {
 }
 
 .home > header .title {
-    top: 110px;
+    top: 100px;
+    opacity:0.85;
 }
 
 @media screen and (max-width: 540px) and (min-width: 321px) {
