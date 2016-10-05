@@ -6,7 +6,6 @@ from django.utils.http import urlquote_plus
 from django.utils.translation import ugettext as _
 from django.utils.translation import get_language_bidi
 from microsite_configuration import microsite
-from microsite_configuration import page_title_breadcrumbs
 from branding import api as branding_api
 %>
 <!DOCTYPE html>
@@ -41,7 +40,7 @@ from branding import api as branding_api
 <%def name="pagetitle()" />
   <%block name="title">
       <title>
-       ${page_title_breadcrumbs(self.pagetitle())}
+      ${static.get_page_title_breadcrumbs(self.pagetitle())}
       </title>
   </%block>
 
@@ -103,7 +102,7 @@ from branding import api as branding_api
   <script type="text/javascript" src="${static.url("../static/js/bootstrap.min.js")}"></script>
   <%block name="headextra"/>
 
-  <%static:optional_include_mako file="head-extra.html" with_microsite="True" />
+  <%static:optional_include_mako file="head-extra.html" is_theming_enabled="True" />
 
   <%include file="widgets/optimizely.html" />
   <%include file="widgets/segment-io.html" />
@@ -129,7 +128,7 @@ from branding import api as branding_api
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
-<%static:optional_include_mako file="body-initial.html" with_microsite="True" />
+<%static:optional_include_mako file="body-initial.html" is_theming_enabled="True" />
 <div id="page-prompt"></div>
 % if not disable_window_wrap:
   <div class="window-wrap" dir="${static.dir_rtl()}">
@@ -157,7 +156,7 @@ from branding import api as branding_api
   <%include file="widgets/segment-io-footer.html" />
   <script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
   <script type="text/javascript" src="${static.url('js/utils/navigation.js')}" charset="utf-8"></script>
-  <%static:optional_include_mako file="body-extra.html" with_microsite="True" />
+  <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
 </body>
 </html>
 
