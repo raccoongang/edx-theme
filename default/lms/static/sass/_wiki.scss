@@ -1,4 +1,31 @@
-.content-wrapper section.wiki .wiki-wrapper>header {
-    overflow: hidden;
-    height: auto;
-}
+.content-wrapper section.wiki {
+    a {
+        color: $link-color;
+    }
+    .wiki-wrapper>header {
+        overflow: hidden;
+        height: auto;
+    }
+    .breadcrumb li a {
+        color: $link-color;
+    }
+    .pull-left {
+        @include float(left);
+    }
+    .pull-right {
+        @include float(right);
+    }
+    .nav-tabs {
+        direction: rtl;
+
+        li.active a,
+        a {
+            color: $link-color;
+            text-align: right;
+
+            .icon {
+                float: right;
+            }
+        }
+    }
+} 

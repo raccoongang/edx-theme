@@ -3,7 +3,7 @@ $btn-neutral-border-color: #149a9a;
 $btn-neutral-background: transparent;
 $btn-neutral-color: #149a9a;
 $link-color: #149a9a;
-$link-focus-color: lighten($link-color, 10%);;
+$link-focus-color: lighten($link-color, 10%);
 $link-visited-color: darken($link-color, 10%);
 
 $btn-neutral-focus-background: #149a9a;
@@ -18,13 +18,17 @@ $btn-font-weight: normal;
   color: #fff !important;
 }
 
-a { color: $link-color; }
-a:visited { color: $link-visited-color; }
-a:hover, a:focus { color: $link-focus-color; }
-
 // Import the original styles from edx-platform.
 @import "lms/static/sass/lms-main-v1-rtl";
 @import "lms/static/sass/lms-main-v2-rtl";
+
+$link-color: #149a9a;
+$link-focus-color: lighten($link-color, 10%);
+$link-visited-color: darken($link-color, 10%);
+
+a { color: $link-color; }
+a:visited { color: $link-visited-color; }
+a:hover, a:focus { color: $link-focus-color; };
 
 @import "fonts";
 @import "header-global-new";
