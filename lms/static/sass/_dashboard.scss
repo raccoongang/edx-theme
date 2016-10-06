@@ -100,3 +100,13 @@
         }
     }
 }
+.empty-dashboard-message a {
+    background: #149a9a;
+    border-color: #149a9a;
+    color: #fff;
+
+    &:hover {
+        background: lighten(#149a9a, 10%);
+        color: #fff;
+    }
+}
