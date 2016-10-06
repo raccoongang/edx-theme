@@ -146,3 +146,13 @@ nav{width:100%;}
 #cssmenu ol ol ol li.active a{border-left:none}
 #cssmenu > ol > li.has-sub > ol > li.active > a,#cssmenu > ol ol > li.has-sub > ol > li.active > a{border-top:none}
 }
+#cssmenu > ol.user > li:nth-child(1):hover {
+	background: transparent;
+}
+#cssmenu > ol.user > li:nth-child(1) > a {
+	padding: 0;
+	color: #111010;
+	&:hover {
+		color: #53a4d1;
+	}
+}

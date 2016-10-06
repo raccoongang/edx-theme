@@ -87,6 +87,21 @@ site_status_msg = get_site_status_msg(course_id)
               <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
                 ${_("Programs")}
               </a>
+              <ol>
+                <li>
+                  <p class="menu-title">XSeries</p>
+                  <p class="menu-content">XSeries are designed to provide a deep understanding of key subjects through a series of courses. Complete the series to earn a valuable XSeries Certificate that illustrates your achievement.</p>
+                  <p class="menu-content"><a style="color:#be121e;" href='#'>Explore XSeries</a></p>
+                  <hr>
+                  <p class="menu-title">Microsoft Data Science Curriculum</p>
+                  <p class="menu-content">Accelerate your career in one of the hottest fields – data science. Learn data science fundamentals, key data science tools, and widely-used programming languages from industry and academic experts in this unique program created by Microsoft.</p>
+                  <p class="menu-content"><a href="${marketing_link('DATA-SCIENCE')}" style="color:#be121e;">Explore Microsoft Data Science Curriculum</a></p>
+               <!--ol>
+                  <li><a href='#'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+                </ol-->
+              </li>
+              </ol>
             </li>
           % endif
           %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
