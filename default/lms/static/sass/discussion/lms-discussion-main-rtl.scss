@@ -2,9 +2,6 @@ $component-border-radius: 0;
 $btn-neutral-border-color: #ff6634;
 $btn-neutral-background: #ff6634;
 $btn-neutral-color: #fff;
-$link-color: #149a9a;
-$link-focus-color: lighten($link-color, 10%);
-$link-visited-color: darken($link-color, 10%);
 
 $btn-neutral-focus-background: #149a9a;
 $btn-neutral-focus-color: #fff;
@@ -14,6 +11,10 @@ $btn-font-weight: normal;
 
 // Import the original styles from edx-platform.
 @import "lms/static/sass/discussion/lms-discussion-main-rtl";
+
+$link-color: #149a9a;
+$link-focus-color: lighten($link-color, 10%);
+$link-visited-color: darken($link-color, 10%);
 
 @import "../fonts";
 @import "../header-global-new";
