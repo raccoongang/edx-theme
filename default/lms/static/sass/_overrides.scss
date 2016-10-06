@@ -44,17 +44,17 @@ h2 {
     font: normal 1em/1.6em 'Open Sans', Arial, $verdana, sans-serif !important;
 }
 .window-wrap {
-    border-top: 4px solid #b00b23;
+    border-top: 15px solid #b00b23;
 }
-header.global h1.logo {
+.header-global h1.logo {
 	margin-right:10px;
 }
-header.global .nav-global li {
+.header-global .nav-global li {
 	margin-right:10px;
 }
-header.global {
+.header-global {
     height: 80px !important;
-    //opacity: 0.6;
+    opacity: 0.6;
     nav ol {display:inline-block;}
 }
 
@@ -68,11 +68,11 @@ header.global {
     padding: 110px 0px !important;
 }
 
-header.global .nav-courseware li .cta {
+.header-global .nav-courseware li .btn {
     background: #b00b23 !important;
 }
 
-header.global .nav-global li a {
+.header-global .nav-global li a {
     color: #000 !important;
 }
 
@@ -103,13 +103,13 @@ header.global .nav-global li a {
         padding: 60px 60px !important;
     }
 
-    header.global {
+    .header-global {
         height: auto !important;
         opacity: none;
     }
 }
 @media screen and (max-width: 1024px) {
-    header.global {
+    .header-global {
         border-bottom: none !important;
         box-shadow: none !important;
     }
