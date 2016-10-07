@@ -636,11 +636,16 @@ input[type="button"], .btn.btn-primary, input[type="submit"], .add-article-btn, 
   background: #00495E !important;
 }
 
-
 .search-bar .search-button,
 .search-bar .cancel-button,
 .search-bar .search-button:hover,
 .search-bar .cancel-button:hover {
   width: 35px;
   right: 0 !important;
+}
+
+.forum-nav-search {
+  .icon {
+    top: 33% !important;
+  }
 }
