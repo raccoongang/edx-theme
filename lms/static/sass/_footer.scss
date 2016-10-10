@@ -1,19 +1,22 @@
-.window-wrap {
-    footer#footer-edx-v3 {
-        border-top: 14px solid #15b2a6;
-        padding: 48px 0 44px;
-        background: #3c4651;
+footer#footer-edx-theme {
+    border-top: 14px solid #15b2a6;
+    padding: 48px 0 44px;
+    background: #3c4651;
 
-        .footer-content-wrapper {
-            font: 16px/29px bahij_thesansarabicplain;
-            color: #b0b2b6;
-        }
-        a {
-            color: $link-color;
-            &:hover,
-            &:focus {
-                color: $link-focus-color;
-            }
+    .footer-content-wrapper {
+        font: 16px/29px bahij_thesansarabicplain;
+        color: #b0b2b6;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        text-align: right;
+    }
+    a {
+        color: $link-color;
+        &:hover,
+        &:focus {
+            color: $link-focus-color;
         }
     }
 }
