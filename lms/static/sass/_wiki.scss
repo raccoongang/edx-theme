@@ -1,10 +1,25 @@
 .content-wrapper section.wiki {
+    h1, h2, h3, h4, h5, h6, p, label {
+        text-align: right;
+    }
     a {
         color: $link-color;
     }
     .wiki-wrapper>header {
         overflow: hidden;
         height: auto;
+    }
+    #div_id_confirm {
+        padding: 0 20px;
+    }
+    .lead {
+        padding: 0 20px;
+    }
+    .page-header {
+        padding: 0 20px;
+    }
+    .form-horizontal {
+        padding: 20px;
     }
     .breadcrumb li a {
         color: $link-color;
@@ -27,5 +42,8 @@
                 float: right;
             }
         }
+    }
+    .article-wrapper {
+        text-align: right;
     }
 } 
