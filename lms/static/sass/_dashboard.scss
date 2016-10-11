@@ -17,15 +17,18 @@
             position: relative;
 
             .details {
-                .enter-course {
+                .enter-course,
+                .enter-course.archived {
                     font: 16px/21px bahij_thesansarabicextrabold;
                     color: #fff;
                     padding: 10px 24px;
                     border: none;
                     background: #149a9a;
                     border-radius: 0;
-
+                    
+                    &:focus,
                     &:hover {
+                        border: none;
                         border: none;
                         background: lighten(#149a9a, 10%);
                     }
