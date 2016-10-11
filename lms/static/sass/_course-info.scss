@@ -10,10 +10,14 @@
             box-shadow: none;
             border: none;
             padding: 70px 0;
+            max-width: 1180px;
 
-            .media .hero {
-                border: none;
-            }
+            .media {
+                padding-right: 0;
+                .hero {
+                    border: none;
+                }
+            } 
             .intro>.heading-group {
                 box-shadow: none;
                 border: none;
@@ -48,6 +52,7 @@
             .intro {
                 width: auto;
                 min-width: 300px;
+                padding-left: 0;
 
                 &_text {
                     color: #fff;
