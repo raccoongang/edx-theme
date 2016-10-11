@@ -4,11 +4,13 @@
     position: relative;
     bottom: -23px;
 
-    .course-tabs li a {
+    .course-tabs li a,
+    .course-tabs li a:visited {
         font-size: 20px;
         line-height: 26px;
         color: #fff !important;
         font-family: bahij_thesansarabicplain;
+        border: none !important;
 
         &:hover {
             border: none !important;
@@ -20,7 +22,7 @@
 
         &.active {
             font-weight: bold;
-            border: none;
+            border: none !important;
         }
     }
 }
