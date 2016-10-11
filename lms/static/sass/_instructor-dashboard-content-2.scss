@@ -1,9 +1,36 @@
-.instructor-dashboard-content-2 {
+.container .instructor-dashboard-content-2 {
     a {
         color: $link-color !important;
 
         &:hover {
             color: $link-focus-color !important;
         }
+    }
+    .customBrowseBtn .file-browse span.browse,
+    section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
+    section.idash-section#certificates .btn-blue {
+        box-shadow: none;
+        background: $link-color;
+        border-radius: 0;
+        border: 1px solid $link-color;
+
+        &:hover {
+            color: $link-color;
+            background: transparent;
+        }
+    }
+    section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:hover:not(:disabled) {
+        color: $link-color;
+        background: transparent;
+    }
+    .customBrowseBtn .file-browse.btn,
+    .customBrowseBtn .file-browse span.browse:hover:not(:disabled),
+    .container .instructor-dashboard-content-2 .customBrowseBtn .file-browse span.browse {
+        border-color: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    .customBrowseBtn .file-browse span.browse:hover:not(:disabled) {
+        border-color: $link-color !important;
     }
 }
