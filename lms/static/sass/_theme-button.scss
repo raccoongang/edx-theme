@@ -6,7 +6,8 @@
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
-
+    
+    &:visited,
     &:hover {
         color: #fff;
         background: lighten(#ff6634, 10%);
@@ -14,7 +15,8 @@
 
     .dashboard-search-bar & {
         color: #fff;
-
+        
+        &:visited,
         &:hover {
             color: #fff;
             text-decoration: none;

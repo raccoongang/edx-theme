@@ -119,7 +119,7 @@ from openedx.core.djangolib.markup import HTML, Text
       % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
         <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
           <p class="search-bar_text">تصفح دورات أطلقت مؤخرا ونرى ما هو الجديد في المواضيع المفضلة لديك</p>
-          <a href="${marketing_link('COURSES')}?last_courses=true" class="theme-button" class="theme-button">استكشاف دورات جديدة <span class="icon fa fa-search"></span></a>
+          <a href="${marketing_link('COURSES')}?last_courses=true" class="theme-button" class="theme-button"><span class="icon fa fa-search"></span> استكشاف دورات جديدة</a>
         </div>
       % endif
 
@@ -130,7 +130,7 @@ from openedx.core.djangolib.markup import HTML, Text
       % if settings.FEATURES.get('IS_EDX_DOMAIN') and settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <div class="wrapper-find-courses search-bar">
           <p class="search-bar_text">تصفح دورات أطلقت مؤخرا ونرى ما هو الجديد في المواضيع المفضلة لديك</p>
-          <a href="${marketing_link('COURSES')}?last_courses=true" class="theme-button">استكشاف دورات جديدة <span class="icon fa fa-search"></span></a>
+          <a href="${marketing_link('COURSES')}?last_courses=true" class="theme-button"><span class="icon fa fa-search"></span> استكشاف دورات جديدة</a>
       </div>
       % endif
 

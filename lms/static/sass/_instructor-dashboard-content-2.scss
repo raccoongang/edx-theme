@@ -6,6 +6,7 @@
             color: $link-focus-color !important;
         }
     }
+    section.idash-section#cohort_management .cohort-management .message .action-create,
     .customBrowseBtn .file-browse span.browse,
     section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
     section.idash-section#certificates .btn-blue {
@@ -19,6 +20,7 @@
             background: transparent;
         }
     }
+    section.idash-section#cohort_management .cohort-management .message .action-create:hover:not(:disabled),
     section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:hover:not(:disabled) {
         color: $link-color;
         background: transparent;
@@ -27,10 +29,13 @@
     .customBrowseBtn .file-browse span.browse:hover:not(:disabled),
     .container .instructor-dashboard-content-2 .customBrowseBtn .file-browse span.browse {
         border-color: transparent !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
     }
     .customBrowseBtn .file-browse span.browse:hover:not(:disabled) {
         border-color: $link-color !important;
+    }
+    section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:hover:not(:disabled),
+    section.idash-section#cohort_management .cohort-management .message .action-create:hover:not(:disabled) {
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 }
