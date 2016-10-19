@@ -72,7 +72,7 @@ from openedx.core.djangolib.markup import HTML, Text
           % for dashboard_index, enrollment in enumerate(course_enrollments):
             <% show_courseware_link = (enrollment.course_id in show_courseware_links_for) %>
             <% cert_status = cert_statuses.get(enrollment.course_id) %>
-            <% can_unenroll = (not cert_status) or cert_status.get('can_unenroll') %>
+            <% can_unenroll = False and (not cert_status) or cert_status.get('can_unenroll') %>
             <% credit_status = credit_statuses.get(enrollment.course_id) %>
             <% show_email_settings = (enrollment.course_id in show_email_settings_for) %>
             <% course_mode_info = all_course_modes.get(enrollment.course_id) %>
