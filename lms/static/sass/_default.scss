@@ -16,21 +16,21 @@
   // height: 93px !important;
   background: white !important;
 
-  h1.logo {
-     margin: -15px 39px 0 0;
-  }
+}
+.header-global .user {
+  //:float: initial;
+}
 
-  .user>.primary:last-child>a.shopping-cart {
-    margin-right: 0 !important;
-  }
-
-  .course-header {
-    color: #9250f0;
-  }
+.header-global .user>.primary:last-child {
+  margin-top: 10px;
 }
 
 .header-global h1.logo a:hover {
   text-decoration: none;
+}
+
+.header-global h1.logo a {
+  float: left;
 }
 
 .wrapper-footer {
@@ -54,6 +54,7 @@
   display: inline-block;
   // position: absolute;
   margin-top: 4px;
+  margin-bottom: 10px;
   // float: right;
   a:hover {
     text-decoration: none;
@@ -93,4 +94,21 @@
 
 .header-global.slim h2 {
   width: initial !important;
+}
+
+.header-global .nav-courseware.custom-logo-right {
+  margin-top: -4px;
+}
+
+.header-global .user button.dropdown {
+  font: normal normal normal 14px/1.3 FontAwesome;
+}
+
+.home>header .title {
+  min-height: initial;
+}
+
+.home>header .outer-wrapper {
+  padding: 305px 0 0;
+  opacity: 0.6;
 }
