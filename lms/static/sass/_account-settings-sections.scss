@@ -8,10 +8,17 @@
     }
 }
 .wrapper-account-settings .wrapper-header {
-    height: 147px;
+    height: 178px;
 
     .account-nav .account-nav-item button:hover,
     .account-nav .account-nav-item button:focus {
         border-color: $link-color !important;
+    }
+    .header-title {
+        margin: 0 -999px 10px;
+        padding: 40px 999px;
+        background: #149a9a url("../images/page-title/bg-page-title.jpg") no-repeat 65% 0;
+        font: 35px/26px bahij_thesansarabicextrabold;
+        color: #fff;
     }
 }
