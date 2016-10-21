@@ -9,8 +9,9 @@
     
     &:visited,
     &:hover {
-        color: #fff;
+        color: #fff !important;
         background: lighten(#ff6634, 10%);
+        text-decoration: none !important;
     }
 
     .dashboard-search-bar & {
@@ -18,8 +19,8 @@
         
         &:visited,
         &:hover {
-            color: #fff;
-            text-decoration: none;
+            color: #fff !important;
+            text-decoration: none !important;
             background: lighten(#ff6634, 10%);
         }
     }
