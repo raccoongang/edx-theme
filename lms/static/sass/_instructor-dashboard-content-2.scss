@@ -42,3 +42,14 @@
 .instructor-dashboard-wrapper-2 section.idash-section#membership .enroll-option .hint {
     z-index: 2;
 }
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
+    box-shadow: none;
+    background: $link-color;
+    border-radius: 0;
+    border: 1px solid $link-color;
+
+    &:hover {
+        color: $link-color;
+        background: $link-focus-color;
+    }
+}

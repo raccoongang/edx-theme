@@ -1,0 +1,18 @@
+.discussion-module .discussion-show, 
+.discussion-user-threads .discussion-show {
+    color: $link-color;
+}
+
+.discussion-module .new-post-btn, 
+.discussion-user-threads .new-post-btn {
+    background: $link-color;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    &:hover {
+        background: #1ac7c7 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
