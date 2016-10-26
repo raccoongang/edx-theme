@@ -7,7 +7,7 @@ $btn-neutral-border-color:              #149a9a;
 $btn-neutral-background:                transparent;
 $btn-neutral-color:                     #149a9a;
 $link-color:                            #149a9a;
-$link-focus-color:                      lighten($link-color, 10%);;
+$link-focus-color:                      lighten($link-color, 10%);
 $link-visited-color:                    darken($link-color, 10%);
 
 $btn-neutral-focus-background:          #149a9a;
@@ -30,10 +30,28 @@ $btn-brand-active-background:           #149a9a;
 $btn-brand-disabled-background:         #149a9a;
 $btn-brand-disabled-color:              #149a9a;
 
+$action-primary-bg:                     #ff6634;
+$action-primary-bg-hover:               lighten($action-primary-bg, 10%);
+
 %success-message-colors {
   background: $link-color !important;
   border: 1px solid $link-color !important;
   color: #fff !important;
+}
+
+%btn-pl-default-base {
+  border-radius: 0;
+  background-color: $action-primary-bg;
+  color: #fff;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border: none;
+    background-color: lighten($action-primary-bg, 10%);
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 a { color: $link-color; }

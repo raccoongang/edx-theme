@@ -6,5 +6,9 @@
     background: #1aa8a9 url(../images/bg.png) no-repeat 0 100%;
 }
 .home .page-header-secondary {
-    
+    background-color: $action-primary-bg;
+
+    &:hover {
+        background-color: $action-primary-bg-hover;
+    }
 }
