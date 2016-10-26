@@ -232,5 +232,15 @@
                 text-align: center;
             }
         }
+    }
+    .container .wrap-instructor-info .instructor-info-action {
+        border-radius: 0;
+        background-color: #ff6527;
+        color: #fff;
+
+        &:hover {
+          background-color: lighten(#ff6527, 10%);
+          color: #fff;
+        }
     } 
 }
