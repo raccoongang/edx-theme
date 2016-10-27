@@ -2,7 +2,7 @@
 .theme-button:visited,
 .theme-button:focus, {
     font: 16px/21px bahij_thesansarabicextrabold;
-    color: #fff;
+    color: #fff !important;
     padding: 10px 24px;
     background: #ff6634;
     display: inline-block;
@@ -17,7 +17,7 @@
 
     .dashboard-search-bar & {
         color: #fff;
-        
+
         &:visited {
             color: #fff !important;
             text-decoration: none !important;
