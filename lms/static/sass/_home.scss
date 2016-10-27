@@ -5,10 +5,10 @@
 .home>header {
     background: #1aa8a9 url(../images/bg.png) no-repeat 0 100%;
 }
-.home .page-header-secondary {
-    background-color: $action-primary-bg;
+.container .home .page-header-secondary {
+    background-color: $link-color;
 
     &:hover {
-        background-color: lighten($action-primary-bg, 10%);
+        background-color: $link-focus-color;
     }
 }

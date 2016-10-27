@@ -1,4 +1,6 @@
-.theme-button {
+.theme-button,
+.theme-button:visited,
+.theme-button:focus, {
     font: 16px/21px bahij_thesansarabicextrabold;
     color: #fff;
     padding: 10px 24px;
@@ -7,7 +9,6 @@
     vertical-align: top;
     white-space: nowrap;
     
-    &:visited,
     &:hover {
         color: #fff !important;
         background: lighten(#ff6634, 10%);
@@ -17,7 +18,12 @@
     .dashboard-search-bar & {
         color: #fff;
         
-        &:visited,
+        &:visited {
+            color: #fff !important;
+            text-decoration: none !important;
+            background: #ff6634;;
+        }
+        
         &:hover {
             color: #fff !important;
             text-decoration: none !important;
