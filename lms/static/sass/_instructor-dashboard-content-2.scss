@@ -42,14 +42,17 @@
 .container .instructor-dashboard-wrapper-2 section.idash-section#membership .enroll-option .hint {
     z-index: 2;
 }
+.container .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:focus:not(:disabled),
+.container .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:focus,
 .container .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
-    box-shadow: none;
+    box-shadow: none !important;
     background: $link-color;
     border-radius: 0;
     border: 1px solid $link-color;
 
     &:hover {
-        color: $link-color;
-        background: $link-focus-color;
+        box-shadow: none !important;
+        color: #fff !important;
+        background: $link-focus-color !important;
     }
 }
