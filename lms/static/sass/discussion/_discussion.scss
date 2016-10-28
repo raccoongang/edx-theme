@@ -1,0 +1,51 @@
+
+der-global .wrapper-header .list-inline.nav-courseware {
+  margin-top: -4px;
+  margin-bottom: 0;
+}
+
+.grid-container {
+  max-width: 1200px;
+}
+
+body.discussion {
+  .course-tabs {
+    .right {
+      margin-left: 20%;
+    }
+  }
+}
+
+.raccoon-block {
+  width: initial;
+  display: inline-block;
+  // position: absolute;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  // float: right;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.raccoongang {
+  font-size: 12px;
+  color: #767676;
+  span {
+    float: left;
+  }
+  //img {
+  //  height: 30px;
+  //  vertical-align: baseline;
+  //  }
+}
+
+.raccoon-img {
+  height: 25px;
+  vertical-align: middle;
+
+  &__edx {
+    height: 17px;
+    vertical-align: baseline;
+  }
+}
