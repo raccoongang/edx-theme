@@ -314,9 +314,8 @@ from django.template.defaultfilters import truncatechars
             <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
           % endif
         </ol>
-        <h2>المتطلبات الأساسية</h2>
         <p>${get_course_about_section(request, course, 'short_description')}</p>
-        <p>مشاركة هذا بالطبع مع ​​صديق</p>
+        <p>شارك</p>
         <%include file="course_about_sidebar_header.html" />
     </div>
 
