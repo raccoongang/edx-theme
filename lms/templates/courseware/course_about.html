@@ -260,7 +260,6 @@ from django.template.defaultfilters import truncatechars
       <div class="course-summary">
 
         <ol class="important-dates">
-          <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${truncatechars(course.display_number_with_default, 9) | h}</span></li>
           % if not course.start_date_is_still_default:
             <li class="important-dates-item"><span class="icon fa fa-calendar" aria-hidden="true"></span><p class="important-dates-item-title">${_("Classes Start")}</p><span class="important-dates-item-text start-date">${course.start_datetime_text()}</span></li>
           % endif
