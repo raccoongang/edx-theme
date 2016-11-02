@@ -16,6 +16,10 @@
             margin: 0;
             position: relative;
 
+            .wrapper-messages-primary .message.message-status.course-status-certavailable .message-copy {
+                font-family: bahij_thesansarabicplain;
+            }
+
             .details {
                 .enter-course,
                 .enter-course.archived {
@@ -75,7 +79,8 @@
 
                     .course-title {
                         margin: 0;
-
+                        
+                        span,
                         a {
                             color: #149a9a;
                             font: 30px/53px bahij_thesansarabicextrabold;

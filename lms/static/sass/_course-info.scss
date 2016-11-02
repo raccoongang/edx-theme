@@ -17,7 +17,7 @@
                 .hero {
                     border: none;
                 }
-            } 
+            }
             .intro>.heading-group {
                 box-shadow: none;
                 border: none;
@@ -55,11 +55,11 @@
                 padding-left: 0;
 
                 &_text {
+                    direction: rtl;
                     color: #fff;
-                    font-size: 16px;
-                    line-height: 28px;
                     text-align: center;
                     margin: 0 0 5px;
+                    font: 16px/28px bahij_thesansarabicplain;
 
                     &__bold {
                         font-family: bahij_thesansarabicextrabold;
@@ -81,13 +81,22 @@
                         padding: 24px 15px;
                         font: 24px/18px bahij_thesansarabicextrabold;
                         text-transform: none;
-
+                        transition: background .2s;
+                        
+                        &:active,
+                        &:focus:not(:disabled),
                         &:hover:not(:disabled) {
-                            background: lighten(#ff6527, 10%);
+                            background: #9ab025;
+                            box-shadow: none !important;
                         }
                     }
                     span.register {
                         width: 100%;
+                        border-radius: 2px;
+                        background: #115b59;
+                        color: #fff;
+                        border: none;
+                        margin-bottom: 10px;
                     }
                 }
             }
@@ -104,9 +113,9 @@
 
         &-heading {
             color: #fff;
-            font-size: 40px;
-            line-height: 40px;
             text-align: right;
+            font: 40px/40px bahij_thesansarabicplain;
+            margin: 0 0 30px;
 
             a {
                 color: #fff;
@@ -173,6 +182,7 @@
                 }
                 .important-dates-item-text {
                     width: 75px;
+                    line-height: 1.3;
                 }
             } 
         }

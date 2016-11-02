@@ -1,0 +1,14 @@
+.theme-checkbox {
+    position: absolute;
+    top: -1000px;
+}
+.theme-checkbox_fake {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border: 1px solid #fb4e1f;
+    margin: 0 0 -4px 5px;
+}
+.theme-checkbox:checked + .theme-checkbox_fake {
+    background: #fb4e1f url(../images/chekbox.png) no-repeat 50%;
+}
