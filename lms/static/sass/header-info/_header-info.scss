@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    font-family: mulilight;
+    font-family: $default-font;
     @media all and (min-width: 450px){
         flex-wrap: nowrap;
     }
@@ -76,7 +76,4 @@
             margin: 0;
         }
     }
-}
-.theme-header {
-    background: #1f1d20;
 }

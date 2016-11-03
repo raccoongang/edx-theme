@@ -53,10 +53,9 @@ site_status_msg = get_site_status_msg(course_id)
         <div class="theme-header-info_contact">
             <span class="theme-header-info_text">Have any question?</span>
             <span class="theme-header-info_phone">+1 857 4533328</span>
-            <a class="theme-header-info_mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#097;&#099;&#099;&#111;&#111;&#110;&#103;&#097;&#110;&#103;&#046;&#099;&#111;&#109;">info@raccoongang.com</a>
+            <a class="theme-header-info_mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#101;&#103;&#097;&#114;&#105;&#116;&#097;&#115;&#046;&#099;&#111;&#109;">info@egaritas.com</a>
         </div>
         <div class="theme-header-info_social">
-            <span class="theme-header-info_text">Find us in social network</span>
             <ul class="social-list">
                 <li class="social-list_item"><a class="social-list_link" href="https://twitter.com/raccoongangcom"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li class="social-list_item"><a class="social-list_link" href="https://www.facebook.com/raccoongangco"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -68,7 +67,7 @@ site_status_msg = get_site_status_msg(course_id)
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
             <span class="theme-nav-wrapper_logo-holder">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo-racoon.png" alt="racoon logo"/>
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/egaritas-logo.png" alt="racoon logo"/>
             </span>
         </%block>
       </a>
@@ -213,10 +212,13 @@ site_status_msg = get_site_status_msg(course_id)
     </div>
     <nav class="theme-main-nav_holder">
         <ul class="theme-main-nav_list">
-            <li class="theme-main-nav_item"><a href="/about" class="theme-main-nav_link">About The University</a></li>
             <li class="theme-main-nav_item"><a href="/courses" class="theme-main-nav_link">Courses</a></li>
+            <li class="theme-main-nav_item"><a href="/about" class="theme-main-nav_link">Certification Centre</a></li>
+            <li class="theme-main-nav_item"><a href="/courses" class="theme-main-nav_link">Requested Courses</a></li>
+            <li class="theme-main-nav_item"><a href="/courses" class="theme-main-nav_link">Companies</a></li>
             <li class="theme-main-nav_item"><a href="/blog" class="theme-main-nav_link">Blog</a></li>
-            <li class="theme-main-nav_item"><a href="/contact" class="theme-main-nav_link">Contact Us</a></li>
+            <li class="theme-main-nav_item"><a href="/contact" class="theme-main-nav_link">About Us</a></li>
+            <li class="theme-main-nav_item"><a href="/login${login_query()}" class="theme-main-nav_link">Login</a></li>
         </ul>
     </nav>
 </div>

@@ -15,9 +15,8 @@ from openedx.core.djangolib.markup import HTML, Text
           <img class="promo-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box/promo-img.jpg" alt="promo img">
           <div class="promo-box_helper"></div>
           <div class="promo-box_holder">
-            <span class="promo-box_text">the best theme for education</span>
-            <h1 class="promo-box_heading">Welcome to University!</h1>
-            <a class="theme-btn theme-btn__invert" href="/courses">start learning now</a>
+            <span class="promo-box_text">egaritas</span>
+            <h1 class="promo-box_heading">learning never stops</h1>
           </div>
         </div>
       </section>
@@ -25,7 +24,46 @@ from openedx.core.djangolib.markup import HTML, Text
       <section class="theme-courses_wrapper">
         <h1 class="theme-courses_heading">Our Courses</h1>
           <section class="theme-courses">
-            <%include file="${courses_list}" />
+            <!-- #<%include file="${courses_list}" /> -->
+            <article class="theme-courses_course">
+                <div class="theme-courses_img-holder">
+                    <a class="theme-courses_img-link" href="/courses">
+                        <img class="theme-courses_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/main-img/img-1.jpg" alt="learn images">
+                    </a>
+                </div>
+                <div class="theme-courses_content">
+                    <span class="theme-courses_higlight">Egaritas</span>
+                    <h1 class="theme-courses_title">What would you like to learn?</h1>
+                    <p class="theme-courses_text">We are here to help you grow in any subject you wish to pursue. Have a look at our list of courses and start your journey!</p>
+                    <a class="theme-btn" href="/courses">view more</a>
+                </div>
+            </article>
+            <article class="theme-courses_course" id="course-v1:edX+DemoX+Demo_Course" role="region" aria-label="edX Demonstration Course">
+                <div class="theme-courses_img-holder">
+                    <a class="theme-courses_img-link" href="/courses">
+                        <img class="theme-courses_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/main-img/img-2.jpg" alt="courses images">
+                    </a>
+                </div>
+                <div class="theme-courses_content">
+                    <span class="theme-courses_higlight">Egaritas</span>
+                    <h1 class="theme-courses_title">Haven't found the subject that you were looking for? </h1>
+                    <p class="theme-courses_text">We can help with that. Let us know what course you wish for us to provide and we will endeavour to get the best teachers to create it for you.</p>
+                    <a class="theme-btn" href="/courses">view more</a>
+                </div>
+            </article>
+            <article class="theme-courses_course" id="course-v1:edX+DemoX+Demo_Course" role="region" aria-label="edX Demonstration Course">
+                <div class="theme-courses_img-holder">
+                    <a class="theme-courses_img-link" href="/courses">
+                        <img class="theme-courses_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/main-img/img-3.jpg" alt="teach images">
+                    </a>
+                </div>
+                <div class="theme-courses_content">
+                    <span class="theme-courses_higlight">Egaritas</span>
+                    <h1 class="theme-courses_title">Do you have something you would like to teach?</h1>
+                    <p class="theme-courses_text">Learning is a collaborative effort, and the best teachers don't simply teach; they inspire. Join us in creating the best courses for students everywhere!</p>
+                    <a class="theme-btn" href="/courses">view more</a>
+                </div>
+            </article>
           </section>
       </section>
     </section>
