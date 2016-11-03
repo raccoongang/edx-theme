@@ -37,6 +37,8 @@
   background: #f1f1f1 !important;
   margin-top: 0 !important;
   position: relative !important;
+  /*height: 140px;*/
+  padding: 0px 10px 0px 10px;
 
         //li:after {
         //  content: "|";
@@ -96,10 +98,6 @@
   width: initial !important;
 }
 
-.header-global .nav-courseware.custom-logo-right {
-  margin-top: -4px;
-}
-
 .header-global .user button.dropdown {
   font: normal normal normal 14px/1.3 FontAwesome;
 }
@@ -111,4 +109,61 @@
 .home>header .outer-wrapper {
   padding: 305px 0 0;
   opacity: 0.6;
+}
+
+/*ADDED*/
+
+.extra-block {
+  white-space: nowrap;
+  margin-top: 10px;
+}
+
+.extra-block img {
+  margin-left: 70px;
+}
+
+.wrapper-footer footer#footer-openedx .copyright {
+  margin: -2px 0 8px 70px;
+}
+
+.wrapper-footer footer#footer-openedx {
+  max-width: 1400px;
+}
+
+.raccoon-block {
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+img#first-img {
+  height: 55px;
+}
+
+img#second-img {
+  height: 55px;
+}
+
+img#third-img {
+  height: 90px;
+  padding-top: 5px;
+}
+
+img#fourth-img {
+  width: 300px;
+  height: 40.5px;
+  padding-top: 15px;
+}
+
+.header-global h1.logo a {
+  margin: 0 16px;
+}
+
+.course-info header.course-profile {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.raccoon-img-logo {
+  height: 25px;
+  vertical-align: baseline;
 }
