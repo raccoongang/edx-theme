@@ -2,7 +2,6 @@
     background: #fff;
 
     &_holder {
-        padding-top: 53px;
 
         &__color {
             background: #1a2230;
@@ -16,13 +15,10 @@
         text-transform: none;
     }
     &_section {
-        border-top: 1px solid #ececec;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         max-width: 1140px;
         margin: 0 auto;
         padding: 28px 15px;
+        overflow: hidden;
 
         .theme-footer_holder__color & {
             border-color: #2f343b;
