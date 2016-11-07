@@ -53,19 +53,19 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_logo">
             ## <img src="${static.url(branding_api.get_logo_url())}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
   <!-- <img src="${static.url('themes/default/images/usaid.png')}" height="50" alt="Home Page" /> -->
-            <img src="${static.url('/static/adpc/images/usaid.png')}" height="50" alt="usaid" />
+            <img src="${static.url('/static/default/images/usaid.png')}" height="50" alt="usaid" />
         </%block>
       </a>
       <a href="https://www.nasa.gov/" target="_blank">
         <%block name="navigation_logo1">
           <!-- <img src="${static.url('themes/default/images/nasa.png')}" height="50" alt="Home Page" /> -->
-          <img src="${static.url('/static/adpc/images/nasa.png')}" height="50" alt="nasa" />
+          <img src="${static.url('/static/default/images/nasa.png')}" height="50" alt="nasa" />
         </%block>
       </a>
       <a href="http://www.adpc.net/" target="_blank">
         <%block name="navigation_logo2">
           <!-- <img src="${static.url('themes/default/images/partner-adbc.png')}" height="50" alt="Home Page" /> -->
-          <img src="${static.url('/static/adpc/images/partner-adbc.png')}" height="50" alt="adpc.net" />
+          <img src="${static.url('/static/default/images/partner-adbc.png')}" height="50" alt="adpc.net" />
         </%block>
       </a>
     </h1>
@@ -114,7 +114,7 @@ site_status_msg = get_site_status_msg(course_id)
       <ol class="right nav-courseware list-inline custom-logo-right">
         <a href="${marketing_link('ROOT')}">
           <!-- <img src="${static.url('themes/default/images/servir-logo.png')}" height="50" alt="Home Page" /> -->
-          <img src="${static.url('/static/adpc/images/servir-logo.png')}" height="30" alt="Home Page" />
+          <img src="${static.url('/static/default/images/servir-logo.png')}" height="30" alt="Home Page" />
         </a>
       </ol>
 <%include file="user_dropdown.html"/>
@@ -180,7 +180,7 @@ site_status_msg = get_site_status_msg(course_id)
       <ol class="right nav-courseware list-inline custom-logo-right">
         <a href="${marketing_link('ROOT')}">
           <!-- <img src="${static.url('themes/default/images/servir-logo.png')}" height="50" alt="Home Page" /> -->
-          <img src="${static.url('/static/adpc/images/servir-logo.png')}" height="50" alt="Home Page" />
+          <img src="${static.url('/static/default/images/servir-logo.png')}" height="50" alt="Home Page" />
         </a>
       </ol>
     % endif
