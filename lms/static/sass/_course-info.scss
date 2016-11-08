@@ -45,9 +45,13 @@
                 font: 24px/18px bahij_thesansarabicextrabold;
                 text-transform: none;
 
+                &:active,
+                &:focus:not(:disabled),
                 &:hover:not(:disabled) {
-                    background: lighten(#ff6527, 10%);
+                    background: #9ab025;
+                    box-shadow: none !important;
                 }
+
             }
             .intro {
                 width: auto;
@@ -206,6 +210,9 @@
         }
     }
     .details {
+        * {
+            font-family: bahij_thesansarabicplain;
+        }
         h2 {
             font: 24px/31px bahij_thesansarabicextrabold;
             color: #555;
