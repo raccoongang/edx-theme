@@ -7,7 +7,18 @@
     opacity: 0.7;
   }
   .title {
+    padding: 15px 20px;
     text-align: center;
+    .heading-group {
+      padding-bottom: 0px;
+      h1 {
+        font-size: 1.4em;
+        line-height: 1em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
   }
 }
 
@@ -48,7 +59,11 @@
         //li:last-child:after {
         //  display: none;
         //}
-     
+  footer#footer-openedx {
+    .colophon {
+      width: 100%;
+    }
+  }
 }
 
 .raccoon-block {
@@ -114,25 +129,34 @@
 /*ADDED*/
 
 .extra-block {
-  white-space: nowrap;
+  white-space: normal;
   margin-top: 10px;
 }
 
-.extra-block img {
-  margin-left: 70px;
+.extra-block {
+  a {
+    img {
+      margin: 0 37px 20px 0;
+    }
+  }
+  a:last-child {
+    img {
+      margin-right: 0px;
+    }
+  }
 }
 
 .wrapper-footer footer#footer-openedx .copyright {
-  margin: -2px 0 8px 70px;
+  margin: -2px 0 8px 0px;
 }
 
 .wrapper-footer footer#footer-openedx {
-  max-width: 1400px;
+  max-width: 1200px;
 }
 
 .raccoon-block {
   margin-top: 10px;
-  margin-left: 70px;
+  margin-left: 0px;
 }
 
 img#first-img {
@@ -154,8 +178,48 @@ img#fourth-img {
   padding-top: 15px;
 }
 
-.header-global h1.logo a {
-  margin: 0 16px;
+.header-global {
+  .wrapper-header {
+    width: auto;
+  }
+  .nav-courseware {
+    width: 40%;
+    text-align: right;
+    margin-top: 10px;
+    a {
+      img {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+        margin: 4px 0 0 10px;
+      }
+    }
+  }
+  h1.logo {
+    a {
+      margin: 0 5px;
+      width: 15%;
+      img { 
+        width: 100%;
+        height: auto;
+        max-width: 57px;
+      }
+    }
+    a:first-child, a:last-child {
+      width: 45%;
+      img {
+        max-width: 160px;
+      }
+    }
+    a:last-child {
+      width: 25%;
+      img { 
+        max-width: 104px;
+      }
+    }
+  }
 }
 
 .course-info header.course-profile {
