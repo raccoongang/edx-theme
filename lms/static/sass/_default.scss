@@ -160,21 +160,21 @@
 }
 
 img#first-img {
-  height: 55px;
+  height: 42px;
 }
 
 img#second-img {
-  height: 55px;
+  height: 42px;
 }
 
 img#third-img {
-  height: 90px;
+  height: 70px;
   padding-top: 5px;
 }
 
 img#fourth-img {
-  width: 300px;
-  height: 40.5px;
+  width: 150px;
+  height: auto;
   padding-top: 15px;
 }
 
@@ -198,24 +198,28 @@ img#fourth-img {
     }
   }
   h1.logo {
+    margin: -2px 3% 0 0;
     a {
       margin: 0 5px;
-      width: 15%;
-      img { 
+      width: 12%;
+      img {
+        margin: -5px 5px 0 5px;
         width: 100%;
         height: auto;
         max-width: 57px;
       }
     }
     a:first-child, a:last-child {
-      width: 45%;
+      width: 55%;
       img {
-        max-width: 160px;
+        margin: -10px 5px 0 5px;
+        max-width: 220px;
       }
     }
     a:last-child {
-      width: 25%;
-      img { 
+      width: 20%;
+      img {
+        margin: 0  5px;
         max-width: 104px;
       }
     }
