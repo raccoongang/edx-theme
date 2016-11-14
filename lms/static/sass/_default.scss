@@ -109,8 +109,11 @@
   margin-top: -13px;
 }
 
-.header-global.slim h2 {
-  width: initial !important;
+.header-global.slim {
+  h2 {
+    width: auto !important;
+    width: initial !important;
+  }
 }
 
 .header-global .user button.dropdown {
@@ -183,7 +186,7 @@ img#fourth-img {
     width: auto;
   }
   .nav-courseware {
-    width: 40%;
+    width: 30%;
     text-align: right;
     margin-top: 10px;
     a {
