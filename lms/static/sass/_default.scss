@@ -110,6 +110,7 @@
 }
 
 .header-global.slim {
+  height: 65px !important;
   h2 {
     width: auto !important;
     width: initial !important;
@@ -181,13 +182,20 @@ img#fourth-img {
   padding-top: 15px;
 }
 
-.header-global {
+.header-global, .header-global.slim {
   z-index: 101;
   .wrapper-header {
     width: auto;
   }
+  .nav-global {
+    font-size: 0.9em;
+    margin-left: -10px;
+    li {
+      margin: 0;
+    }
+  }
   .nav-courseware {
-    width: 30%;
+    width: auto;
     text-align: right;
     margin-top: 10px;
     a {
@@ -197,7 +205,7 @@ img#fourth-img {
         width: 100%;
         height: auto;
         max-width: 150px;
-        margin: 4px 0 0 10px;
+        margin: 4px 0 0 0;
       }
     }
   }
@@ -209,7 +217,7 @@ img#fourth-img {
       img {
         margin: -5px 5px 0 5px;
         width: 100%;
-        height: auto;
+        height: auto !important;
         max-width: 57px;
       }
     }
