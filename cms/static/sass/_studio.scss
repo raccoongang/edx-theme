@@ -1,7 +1,17 @@
 .wrapper-notification, .wrapper-alert, .prompt { 
+  .alert {
+    background: #333;
+    border: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -khtml-box-shadow: none;
+  }
   .copy {
     .title {
-      color: #000;
+      color: #fff;
     }
   }
 }
