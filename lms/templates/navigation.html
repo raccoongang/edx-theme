@@ -48,6 +48,9 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
   <header id="global-navigation" class="header-global ${"slim" if course else ""}" >
     <nav class="wrapper-header" aria-label="${_('Global')}">
+    <div class="home-button-wrapper">
+      <a href="${marketing_link('ROOT')}" class="btn btn-blue home-button">${_("HOME")}</a>
+    </div>
     <h1 class="logo">
       <a href="https://www.usaid.gov/" target="_blank">
         <%block name="navigation_logo">
