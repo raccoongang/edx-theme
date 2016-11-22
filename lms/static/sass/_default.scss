@@ -114,6 +114,11 @@
     width: auto !important;
     width: initial !important;
   }
+  .wrapper-header {
+    .user, .wrapper-user-menu {
+      margin: 40px -253px 2px 0;
+    }
+  }
 }
 
 .header-global .user button.dropdown {
@@ -261,11 +266,19 @@ img#fourth-img {
 .home-button {
     color: #fff !important;
     font-size: 1em !important;
-    padding: 0;
+    padding: 0 !important;
     line-height: 2.2 !important;
     height: 35px;
     width: 65px;
     float: left;
     margin-top: 2px;
-    background: #004990;
+    background: #004990 !important;
+    text-align: center;
+    box-shadow: 0 2px 1px 0 #0a4a67;
+    -moz-box-shadow: 0 2px 1px 0 #0a4a67;
+    -webkit-box-shadow: 0 2px 1px 0 #0a4a67;
+    -o-box-shadow: 0 2px 1px 0 #0a4a67;
+    -ms-box-shadow: 0 2px 1px 0 #0a4a67;
+    -khtml-box-shadow: 0 2px 1px 0 #0a4a67;
+    font-weight: normal;
 }
