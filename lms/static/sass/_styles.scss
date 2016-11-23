@@ -19,8 +19,17 @@ h1.logo {
   margin: 0 0 0 50px;
 }
 
-.header-global.slim .wrapper-header .list-inline.nav-global {
-  margin: 0 0 0 50px;
+.header-global.slim {
+  .wrapper-header {
+    .list-inline.nav-global {
+      margin: 0 0 0 50px;
+    }
+    .logo {
+      img {
+        height: 50px;
+      }
+    }
+  }
 }
 
 .header-global .wrapper-header .list-inline.nav-courseware {

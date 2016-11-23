@@ -75,3 +75,18 @@ body {
 .wrapper-footer footer#footer-openedx {
   line-height: 100px;
 }
+
+.header-global.slim {
+  .wrapper-header {
+    height: auto;
+    .list-inline.nav-global {
+      margin: 0 0 0 50px;
+    }
+    .logo {
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
+
