@@ -1,0 +1,292 @@
+/*HEADER*/
+h1.logo {
+  font-size: 1.75rem !important;
+}
+
+.header-global .wrapper-header {
+  padding: 10px 10px;
+}
+
+.header-global .wrapper-header .logo {
+  float: left;
+  margin: 0;
+  padding: .2%;
+  position: relative;
+}
+
+.header-global .wrapper-header .list-inline.nav-global {
+  padding: 15px;
+  margin: 0 0 0 50px;
+}
+
+.header-global.slim .wrapper-header .list-inline.nav-global {
+  margin: 0 0 0 50px;
+}
+
+.header-global .wrapper-header .list-inline.nav-courseware {
+  padding: 10px;
+  margin: 0;
+}
+
+.header-global .nav-global li a {
+  font-size: 14px;
+  color: #109d59;
+}
+
+.header-global .nav-global li a:hover {
+  color: #109d59;
+  background: #fff;
+}
+
+.header-global .nav-global li a:active {
+  color: #109d59;
+  border-color: #fff;
+  background: #fff;
+}
+
+.header-global .nav-global li a:focus {
+  color: #109d59;
+  border-color: #fff;
+  background: #fff;
+}
+
+.header-global .nav-courseware li .btn {
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 600;
+  background: #109d59;
+}
+
+.header-global .nav-courseware li .btn:hover {
+  background: #109d59;
+  color: #fff;
+}
+
+.header-global .nav-courseware li .btn:focus {
+  background: #109d59;
+  color: #fff;
+  box-shadow: none;
+}
+
+.header-global .nav-courseware li .btn:active {
+  background: #109d59;
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn-neutral, .btn-group .btn {
+  border-style: none;
+}
+
+.btn-neutral:hover {
+  background: #1954a6;
+}
+
+.btn:hover {
+  border-color: #fff;
+}
+
+.header-global .user {
+  padding-top: 5px;
+}
+
+
+/*LAYOUT*/
+.home>header {
+  background-image: url("/static/google/images/google_layout.jpg");
+  height: 488px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home>header .outer-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 230px 0 0;
+  max-width: 1600px;
+  opacity: 0.7;
+}
+
+.home>header .title {
+  padding: 30px 30px;
+  min-height: 150px;
+  text-align: center;
+}
+
+.home>header .title>.heading-group {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.home>header .title>.heading-group h1 {
+  font-size: 1.75rem;
+}
+
+.content-wrapper {
+  padding: 0;
+  max-width: 100%;
+}
+
+
+/*FOOTER*/
+.wrapper-footer {
+  box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
+  border-top: 1px solid #e9e8e8;
+  padding: 10px 10px;
+  background: #109d59;
+}
+
+.footer-text {
+  color: #fff;
+}
+
+.footer-text img {
+  vertical-align: baseline;
+  width: 120px;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+  margin: 0 0 5px 0;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
+  color: #000;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {
+  color: #61a60e;
+}
+
+.wrapper-footer footer#footer-openedx .colophon {
+    height: 75px;
+}
+
+.wrapper-footer footer#footer-openedx .wrapper-logo {
+    font-size: 16px;
+    margin: 0px;
+    display: inline;
+}
+
+.wrapper-footer footer#footer-openedx .wrapper-logo a {
+  float: right;
+}
+
+#raccoon-logo {
+  width: 150px;
+  margin-left: 3px;
+  vertical-align: middle;
+  padding-bottom: 3px;
+}
+
+.wrapper-footer footer#footer-openedx a:hover {
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.wrapper-footer footer#footer-openedx a:active {
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.wrapper-footer footer#footer-openedx a:focus {
+  box-shadow: none;
+  border-bottom: none;
+  color: #000;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus {
+  color: #000;
+}
+
+.wrapper-footer footer#footer-openedx {
+  line-height: 100px;
+}
+
+
+/*REGISTER PAGE*/
+.login-register .action-primary {
+  box-shadow: none;
+  background: #109d59;
+  color: #fff;
+  text-shadow: none;
+}
+
+.login-register .action-primary:hover {
+  background: #109d59;
+  text-shadow: none;
+}
+
+.login-register .action-primary:active {
+  background: #109d59;
+  text-shadow: none;
+}
+
+.login-register .action-primary:focus {
+  background: #109d59;
+  text-shadow: none;
+}
+
+.login-register .nav-btn {
+  box-shadow: none;
+  border: 1px solid #109d59;
+  color: #109d59;
+  padding-bottom: 33px;
+}
+
+.login-register .nav-btn:hover {
+  border: 1px solid #109d59;
+  box-shadow: none;
+  background: #fff;
+  color: #109d59;
+}
+
+.login-register .nav-btn:active {
+  border: 1px solid #109d59;
+  box-shadow: none;
+  background: #fff;
+  color: #109d59;
+}
+
+.login-register .nav-btn:focus {
+  border: 1px solid #109d59;
+  box-shadow: none;
+  background: #fff;
+  color: #109d59;
+}
+
+
+/*Course About Page*/
+.course-info header.course-profile {
+  height: 550px;
+}
+
+.header-global.slim .wrapper-header .course-header {
+  margin-top: 17px;
+  width: 50%;
+}
+
+.header-global.slim h1.logo:before {
+  display: none !important;
+}
+
+
+/*Wiki page*/
+section.wiki .global-functions {
+  margin-top: -15px;
+}
+
+section.wiki .breadcrumb {
+  margin-top: -15px !important;
+}
+
+
+/*Course page*/
+.courseware-bookmarks-button .bookmarks-list-button {
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.course-content .bookmark-button {
+  font-weight: normal;
+}
