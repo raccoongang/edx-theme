@@ -18,15 +18,15 @@
     % endif
   >
     <div class="colophon">
-      <nav class="nav-colophon" aria-label="${_('About')}">
+     <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
-            <% about = footer['navigation_links'][0] %>
-            <li><a id="${about['name']}" href="${about['url']}">${_(about['title'])}</a></li>
-            <% contact = footer['navigation_links'][2] %>
-            <li><a id="${contact['name']}" href="${contact['url']}">${_(contact['title'])}</a></li>
+            % for item_num, link in enumerate(footer['navigation_links'], start=1):
+            <li class="nav-colophon-0${item_num}">
+              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+            </li>
+            % endfor
         </ol>
       </nav>
-
       <div class="wrapper-logo">
         <p>
           <a href="/">
