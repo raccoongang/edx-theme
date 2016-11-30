@@ -1,3 +1,21 @@
+$sans-serif: "robotoregular", "Open Sans", Verdana, Geneva, sans-serif;
+$body-font-family: $sans-serif !default;
+$header-sans-serif: $sans-serif;
+$f-sans-serif: $sans-serif;
+$f-serif: $sans-serif !important;
+
+html,
+button,
+input,
+select,
+option,
+textarea,
+form#wiki_revision
+.CodeMirror,
+.course-info .details {
+  font-family: $sans-serif !important;
+}
+
 /*HEADER*/
 h1.logo {
   font-size: 1.75rem !important;
