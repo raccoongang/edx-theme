@@ -8,3 +8,30 @@
     font-weight: normal;
     font-style: normal;
 }
+
+$sans-serif: "robotoregular", "Open Sans", Verdana, Geneva, sans-serif;
+$body-font-family: $sans-serif !default;
+$header-sans-serif: $sans-serif;
+$f-sans-serif: $sans-serif;
+$f-serif: $sans-serif !important;
+
+body,
+html,
+button,
+input,
+select,
+option,
+textarea,
+form#wiki_revision
+.CodeMirror,
+.course-info .details,
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p, 
+label {
+  font-family: $sans-serif !important;
+}
