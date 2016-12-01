@@ -1,6 +1,17 @@
 @import '../base/grid-settings';
 @import 'neat/neat'; // lib - Neat
 
+.courseware-bookmarks-button .bookmarks-list-button{
+  font-size: 13px;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.course-content .bookmark-button{
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
 .header-global {
   @extend %ui-depth1;
   border-bottom: 1px solid $gray-l1;
