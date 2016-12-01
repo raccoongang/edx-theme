@@ -144,8 +144,14 @@ body.view-in-course .header-global, body.view-in-course .header-global.slim {
   height: 76px;
 }
 
+.header-global.slim .wrapper-header .wrapper-user-menu {
+  display: flex;
+  align-items: center;
+}
+
 .dropdown-menu-container .menu-title {
   color: #fff;
+  margin-right: 10px;
 }
 
 .dropdown-menu-container .menu-title:hover {
