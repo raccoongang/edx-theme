@@ -4,6 +4,7 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
+  from edxmako.shortcuts import marketing_link
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -20,11 +21,27 @@
     <div class="colophon">
      <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
-            % for item_num, link in enumerate(footer['navigation_links'], start=1):
-            <li class="nav-colophon-0${item_num}">
-              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-            </li>
-            % endfor
+##            % for item_num, link in enumerate(footer['navigation_links'], start=1):
+##            <li class="nav-colophon-0${item_num}">
+##              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+##            </li>
+##            % endfor
+
+          <li class="nav-colophon-01">
+            <a id="about" href="${marketing_link("ABOUT")}">${_("About")}</a>
+          </li>
+          <li class="nav-colophon-02">
+            <a id="tos" href="${marketing_link("TOS")}">${_("Terms of Service")}</a>
+          </li>
+          <li class="nav-colophon-03">
+            <a id="honor" href="${marketing_link("HONOR")}">${_("Honor Code")}</a>
+          </li>
+          <li class="nav-colophon-04">
+            <a id="partners" href="#">${_("Parceiros")}</a>
+          </li>
+          <li class="nav-colophon-05">
+            <a id="contact" href="${marketing_link("CONTACT")}">${_("Contact")}</a>
+          </li>
         </ol>
       </nav>
       <div class="wrapper-logo">
@@ -45,15 +62,15 @@
       ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
       <!-- <p class="copyright">${footer['copyright']}</p> -->
 
-      <nav class="nav-legal" aria-label="${_('Legal')}">
-        <ul>
-          % for item_num, link in enumerate(footer['legal_links'], start=1):
-            <li class="nav-legal-0${item_num}">
-              <a href="${link['url']}">${link['title']}</a>
-            </li>
-          % endfor
-        </ul>
-      </nav>
+##      <nav class="nav-legal" aria-label="${_('Legal')}">
+##        <ul>
+##          % for item_num, link in enumerate(footer['legal_links'], start=1):
+##            <li class="nav-legal-0${item_num}">
+##              <a href="${link['url']}">${link['title']}</a>
+##            </li>
+##          % endfor
+##        </ul>
+##      </nav>
     </div>
 
     ## Please leave this link and use one of the logos provided
@@ -66,7 +83,7 @@
         <a href="${footer['openedx_link']['url']}" target="_blank">
           <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
         </a>
-        <a href="#">
+        <a href="http://futuro.usp.br/">
           <img id="second-img" src="/static/efx/images/escola_logo.png" width="160" />
         </a>
       </p>
