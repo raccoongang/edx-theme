@@ -27,7 +27,7 @@ ol.right.nav-courseware.list-inline.customize-nav-courseware-register{
 
 .header-global .wrapper-header .logo {
   float: left;
-  margin: 0;
+  margin: 0 0 12px 0;
   padding: .2%;
   position: relative;
 }
@@ -204,7 +204,15 @@ ol.right.nav-courseware.list-inline.customize-nav-courseware-register{
 }
 
 .wrapper-footer footer#footer-openedx .footer-about-openedx a {
-  margin-left: 40px;
+  margin-left: 0;
+  img {
+    width: 95px;
+    margin-left: 30px;
+  }
+  img#second-img {
+    width: 160px;
+    margin-left: 0;
+  }
 }
 
 .wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
