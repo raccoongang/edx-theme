@@ -13,7 +13,7 @@ h1.logo {
 
 .header-global .wrapper-header .logo {
   float: left;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: .2%;
   position: relative;
 }
@@ -205,7 +205,13 @@ h1.logo {
 }
 
 .wrapper-footer footer#footer-openedx {
-  line-height: 100px;
+  line-height: 2em;
+  height: 100px;
+  .wrapper-logo {
+    a {
+      margin: 30px 0;
+    }
+  }
 }
 
 
