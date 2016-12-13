@@ -13,7 +13,8 @@ body {
   box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
   border-top: 1px solid #e9e8e8;
   padding: 10px 10px;
-  background: #ddd;
+  background: #e1e5e3;
+  height: 111px;
 }
 
 .footer-text {
@@ -21,16 +22,17 @@ body {
 }
 
 .footer-text img {
-  vertical-align: baseline;
-  width: 120px;
+  width: 150px;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon {
-  margin: 0 0 5px 0;
+  margin: 0;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
   color: #000;
+  vertical-align: text-bottom;
+
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {
@@ -38,13 +40,16 @@ body {
 }
 
 .wrapper-footer footer#footer-openedx .colophon {
-    height: 75px;
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+  flex-grow: 2;
 }
 
 .wrapper-footer footer#footer-openedx .wrapper-logo {
-  font-size: 16px;
-  margin: 0px;
-  display: inline;
+    font-size: 16px;
+    margin: 0px;
+    display: inline;
 }
 
 #raccoon-logo {
@@ -72,10 +77,6 @@ body {
   color: #000;
 }
 
-.wrapper-footer footer#footer-openedx {
-  line-height: 100px;
-}
-
 .header-global.slim {
   .wrapper-header {
     height: auto;
@@ -90,3 +91,68 @@ body {
   }
 }
 
+#opus-logo-d {
+  height: 90px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
+  margin-bottom: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+[class^='wrapper']{
+  width: inherit;
+}
+
+.slash {
+  float: left;
+}
+
+.header-global {
+  height: 111px;
+}
+
+.header-global.slim .wrapper-header {
+  height: 111px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.header-global.slim .wrapper-header .course-header {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.9em;
+  width: 20%;
+}
+
+.dropdown-menu-container .menu-button {
+  margin-top: 0;
+}
+
+.header-global.slim .wrapper-header .wrapper-user-menu {
+  order: 1;
+  width: 20%;
+  text-align: center;
+}
+
+.header-global .wrapper-header .logo {
+  margin: auto;
+  order: 1;
+}
+
+.header-global.slim .wrapper-header .logo img {
+  margin: 0;
+  height: 90px;
+}
+
+.header-global.slim .wrapper-header .list-inline.nav-global {
+  margin: 0;
+}

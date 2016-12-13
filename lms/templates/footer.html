@@ -16,7 +16,12 @@
     % if bidi:
       dir=${bidi}
     % endif
-  >
+  > 
+
+  <div class="flex-center">
+    <div class="footer-logo">
+      <img id="opus-logo-d" src="/static/opusplace/images/Opusplace_D.png">
+    </div>
     <div class="colophon">
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
@@ -29,8 +34,10 @@
              -->
             <% privacy = footer['legal_links'][0] %>
             <li><a id="${privacy['name']}" href="${privacy['url']}">${privacy['title']}</a></li>
+            <span class="slash">|</span>
             <% tos = footer['legal_links'][1] %>
-            <li><a id="${tos['name']}" href="${tos['url']}">${tos['title']}</a></li>
+            <li><a id="${tos['name']}" href="${tos['url']}">Terms of Use</a></li>
+            <span class="slash">|</span>
             <% about = footer['navigation_links'][0] %>
             <li><a id="${about['name']}" href="${about['url']}">${about['title']}</a></li>
         </ol>
@@ -80,7 +87,7 @@
       </a>
     </div> -->
       <div class="wrapper-logo">
-        <a href="https://open.edx.org/" target="_blank"><span class="footer-text">Built on
+        <a href="https://open.edx.org/" target="_blank"><span class="footer-text">
           ## The default logo is a placeholder.
           ## You can either replace this link entirely or update
           ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
@@ -88,15 +95,16 @@
           ## can be included in the footer on other sites
           ## (e.g. a blog or marketing front-end) to provide a consistent
           ## user experience.  See the branding app for details.
-          <img alt="organization logo" src="/static/opusplace/images/logo_edx_grey.png"></span>
+          <img alt="organization logo" src="/static/opusplace/images/open_edx_logo.png"></span>
         </a>
-        <a href="https://raccoongang.com/" target="_blank"><span class="footer-text">by Raccoon Gang
+<!--         <a href="https://raccoongang.com/" target="_blank"><span class="footer-text">by Raccoon Gang
           <img id="raccoon-logo" src="/static/opusplace/images/logo_raccoon_grey.svg"></span>
-        </a>
+        </a> -->
       </div>
     % endif
   </footer>
 </div>
+    
 % if include_dependencies:
   <%static:js group='base_vendor'/>
   <%static:css group='style-vendor'/>
