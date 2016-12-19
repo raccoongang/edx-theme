@@ -112,7 +112,7 @@ h1.logo {
 }
 
 .header-global .user {
-  align-items: initial;
+  align-items: center;
   order: 1;
   display: flex;
   justify-content: center;
@@ -170,7 +170,8 @@ h1.logo {
 #layout-container {
   display: flex;
   justify-content: center;
-  margin-top: 170px;
+  margin-top: 115px;
+  line-height: 2em;
 }
 
 .courses-container .courses .courses-listing {
@@ -215,6 +216,14 @@ h1.logo {
   border-top: 1px solid #e9e8e8;
   padding: 10px 10px;
   background: #e1e5e3;
+  footer {
+    .flex-center {
+      flex-wrap: wrap;
+      div {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .footer-text {
