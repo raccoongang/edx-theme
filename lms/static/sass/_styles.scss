@@ -1,0 +1,500 @@
+/*HEADER*/
+h1.logo {
+  font-size: 1.75rem !important;
+}
+
+.header-global {
+  height: 76px;
+  background: #e00000;
+}
+
+.header-global .wrapper-header {
+  display: flex;
+  align-items: center;
+  padding:0;
+  height: 76px;
+  justify-content: space-between;
+}
+
+.header-global .wrapper-header .logo {
+  margin: 0;
+}
+
+.header-global .wrapper-header .list-inline.nav-global {
+  margin: 0;
+  order: 1;
+}
+
+.header-global.slim {
+  .wrapper-header {
+    h2 {
+      width: 60%;
+    }
+    .list-inline.nav-global {
+      margin: 0 0 0 50px;
+    }
+    .logo {
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+.header-global .wrapper-header .list-inline.nav-courseware {
+  margin: 0;
+  flex-grow: 1;
+  text-align: end;
+  margin-right: 10px;
+}
+
+.header-global .nav-global li a {
+  font-size: 16px;
+  color: #e00000;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  border-radius: 1px;
+}
+
+.header-global .nav-global li a:hover {
+  color: #fff;
+  background: #1c2a33;
+}
+
+.header-global .nav-global li a:active {
+  color: #fff;
+  border: none;
+  background: #1c2a33;
+}
+
+.header-global .nav-global li a:focus {
+  color: #fff;
+  border: none;
+  background: #1c2a33;
+}
+
+.header-global .nav-courseware li .btn {
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: #fff;
+  color: #e00000;
+  padding: 10px 20px;
+  width: 103px;
+  text-transform: capitalize;
+  border-radius: 1px;
+}
+
+.header-global .nav-courseware li .btn:hover {
+  background: #1c2a33;
+  color: #fff;
+}
+
+.header-global .nav-courseware li .btn:focus {
+  background: #1c2a33;
+  color: #fff;
+  box-shadow: none;
+}
+
+.header-global .nav-courseware li .btn:active {
+  background: #1c2a33;
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn-neutral, .btn-group .btn {
+  border-style: none;
+}
+
+.btn-neutral:hover {
+  background: #1954a6;
+}
+
+.btn:hover {
+  border-color: #fff;
+}
+
+.header-global .user {
+  align-items: initial;
+  order: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-global.slim .wrapper-header {
+  height: 76px;
+}
+
+#logo {
+  height: 20px;
+}
+
+.header-global h1.logo a {
+  display: flex;
+}
+
+#find-courses {
+  flex-grow: 1;
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10%;
+}
+
+#find-courses:hover {
+  text-decoration: none;
+}
+
+#find-courses:focus {
+  text-decoration: none;
+}
+
+/*LAYOUT*/
+.home>header {
+  background-image: url("/static/firebrand/images/layout_background.jpg");
+  height: 488px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home>header .outer-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 230px 0 0;
+  max-width: 1600px;
+  opacity: 0.7;
+}
+
+.home>header .title {
+  padding: 30px 30px;
+  min-height: 150px;
+  text-align: center;
+}
+
+.home>header .title>.heading-group {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.home>header .title>.heading-group h1 {
+  font-size: 1.75rem;
+}
+
+.content-wrapper {
+  padding: 0;
+  max-width: 100%;
+}
+
+.centered-button {
+  font-size: 16px !important;
+  color: #fff !important;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  border-radius: 1px;
+  background: #e00000;
+}
+
+.centered-button:hover {
+  color: #fff !important;
+  background: #1c2a33;
+}
+
+.centered-button:active {
+  color: #fff !important;
+  border: none;
+  background: #1c2a33;
+}
+
+.centered-button:focus {
+  color: #fff !important;
+  border: none;
+  background: #1c2a33;
+}
+
+#button-holder {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+/*FOOTER*/
+.wrapper-footer {
+  box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
+  border-top: 1px solid #e9e8e8;
+  padding: 10px 10px;
+  background: #1c2a33;
+}
+
+.footer-text {
+  color: #fff;
+}
+
+.footer-text img {
+  width: 150px;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+  margin: 0;
+  display: flex;
+  height: 111px;
+  align-items: center;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
+  color: #fff;
+  vertical-align: text-bottom;
+
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {
+  color: #e00000;
+}
+
+.wrapper-footer footer#footer-openedx .colophon {
+  margin: 0;
+  width: inherit;
+}
+
+.wrapper-footer footer#footer-openedx .wrapper-logo {
+    font-size: 16px;
+    margin: 0px;
+    display: inline;
+}
+
+#raccoon-logo {
+  width: 35px;
+  margin-left: 5px;
+}
+
+.wrapper-footer footer#footer-openedx {
+  height: 111px;
+}
+
+.wrapper-footer footer#footer-openedx a:hover {
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.wrapper-footer footer#footer-openedx a:active {
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.wrapper-footer footer#footer-openedx a:focus {
+  box-shadow: none;
+  border-bottom: none;
+  color: #000;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus {
+  color: #fff;
+}
+
+.wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 111px;
+}
+
+.wrapper-footer footer#footer-openedx .footer-about-openedx a {
+  display: flex;
+  align-items: center;
+  height: 111px;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
+  height: 22px;
+}
+
+#org-logo {
+  margin-bottom: 12px;
+  height: 80px;
+  margin-left: 5px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  height: 111px;
+  justify-content: space-between;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+[class^='wrapper']{
+  width: inherit;
+}
+
+.slash {
+  float: left;
+}
+
+.wrapper-msg.wrapper-auto-cert {
+  margin: auto;
+}
+
+
+/*REGISTER PAGE*/
+.login-register .action-primary {
+  box-shadow: none;
+  background: #e00000;
+  color: #fff;
+  text-shadow: none;
+}
+
+.login-register .action-primary:hover {
+  background: #1c2a33;
+  text-shadow: none;
+}
+
+.login-register .action-primary:active {
+  background: #1c2a33;
+  text-shadow: none;
+}
+
+.login-register .action-primary:focus {
+  background: #1c2a33;
+  text-shadow: none;
+}
+
+.login-register .nav-btn {
+  box-shadow: none;
+  border: 1px solid #e00000;
+  color: #e00000;
+  padding-bottom: 33px;
+}
+
+.login-register .nav-btn:hover {
+  border: 1px solid #1c2a33;
+  box-shadow: none;
+  background: #1c2a33;
+  color: #fff;
+}
+
+.login-register .nav-btn:active {
+  border: 1px solid #1c2a33;
+  box-shadow: none;
+  background: #1c2a33;
+  color: #fff;
+}
+
+.login-register .nav-btn:focus {
+  border: 1px solid #1c2a33;
+  box-shadow: none;
+  background: #1c2a33;
+  color: #fff;
+}
+
+
+/*Course About Page*/
+.course-info header.course-profile {
+  height: 550px;
+}
+
+.header-global.slim .wrapper-header .course-header {
+  margin: 0;
+  color: #fff;
+  text-shadow: none;
+  width: initial;
+  flex-grow: 2;
+}
+
+.header-global.slim h1.logo:before {
+  display: none !important;
+}
+
+.header-global.slim .wrapper-header .list-inline.nav-global {
+  margin: 0;
+}
+
+
+/*Course Info Page*/
+.header-global.slim {
+  padding: 0;
+}
+
+
+/*Wiki page*/
+section.wiki .global-functions {
+  margin-top: -15px;
+}
+
+section.wiki .breadcrumb {
+  margin-top: -15px !important;
+}
+
+
+/*Course page*/
+.courseware-bookmarks-button .bookmarks-list-button {
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.course-content .bookmark-button {
+  font-weight: normal;
+}
+
+.view-passwordreset {
+  .wrapper-footer, .header-global {
+    footer, nav {
+      width: auto;
+    }
+  }
+}
+
+.dashboard {
+  .my-courses {
+    .course {
+      .details {
+        .course-actions {
+          .wrapper-action-more {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*Learn More Page*/
+.header-global.slim .wrapper-header .logo img {
+  height: 76px;
+  margin: 0;
+}
+
+
+/*Dashboard page*/
+.header-global .primary>a {
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.header-global .primary>a:hover {
+  background: #e00000;
+  color: #000;
+}
+
+.header-global .primary>a:active {
+  background: #e00000;
+}
+
+.header-global .primary>a:focus {
+  background: #e00000;
+  color: #000;
+}
+
+.header-global .user .user-link .label-username {
+  color: #000;
+  margin: 15px 5px 10px 15px;
+}
+
+.header-global .user .dropdown {
+  background: #e00000;
+  color: #000;
+}
