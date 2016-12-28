@@ -220,8 +220,13 @@ h1.logo {
   margin: 70px 0 30px 0;
 }
 
-.courses-container .courses .course {
-  border-bottom-color: #e00000;
+.courses-container {
+  .courses {
+    margin-top: -25px;
+    .course {
+      border-bottom-color: #e00000;
+    }
+  }
 }
 
 /*FOOTER*/
@@ -515,5 +520,18 @@ section.wiki .breadcrumb {
   a:hover {
     background-color: #ff0000;
     color: #ffffff;
+  }
+}
+
+.find-courses {
+  .discovery-submit {
+    background-color: #e00000;
+    border: 2px solid #c00000;
+  }
+  .discovery-submit:hover {
+    background-color: #ff0000;
+  }
+  .search-facets.phone-menu {
+    margin-top: 30px;
   }
 }
