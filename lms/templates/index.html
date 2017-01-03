@@ -8,34 +8,15 @@ from django.core.urlresolvers import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
-<main id="main" aria-label="Content" class="theme-content" tabindex="-1">
-    <section class="home theme-content_section">
-      <header class="theme-content_header">
-        <div class="theme-content_helper"></div>
+<main id="main" aria-label="Content" tabindex="-1">
+    <section>
+      <header class="theme-promo">
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
-              % if homepage_overlay_html:
-                ${homepage_overlay_html | n, decode.utf8}
-              % else:
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>Welcome to LLPA MOOC Platform!</h1>
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <p>your first choice for latest technology training</p>
-              % endif
+              <h1>Bienvenue sur la plateforme de formation d’EMC2</h1>
+              <p>Découvrez en vidéo ce qu’est un MOOC</p>
             </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
 
           </div>
 
@@ -49,8 +30,55 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
 
       </header>
-      <h1 class="theme-content_heading">Featured courses</h1>
-      <%include file="${courses_list}" />
+      <div class="theme-categories">
+        <div class="theme-categories_holder">
+          <h2 class="theme-categories_title">
+            <span>classement par</span>
+            <strong>categories</strong>
+          </h2>
+          <ul class="theme-categories_list">
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="machinisme" class="theme-categories_img">
+              <span class="theme-categories_name">machinisme</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="approv" class="theme-categories_img">
+              <span class="theme-categories_name">approv</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="cereales" class="theme-categories_img">
+              <span class="theme-categories_name">cereales</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="elevage" class="theme-categories_img">
+              <span class="theme-categories_name">elevage</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="agronomie" class="theme-categories_img">
+              <span class="theme-categories_name">agronomie</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="soplan" class="theme-categories_img">
+              <span class="theme-categories_name">soplan</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="transport" class="theme-categories_img">
+              <span class="theme-categories_name">transport</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="npa" class="theme-categories_img">
+              <span class="theme-categories_name">npa</span>
+            </li>
+            <li class="theme-categories_item">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="fuel" class="theme-categories_img">
+              <span class="theme-categories_name">fuel</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="home">
+        <%include file="${courses_list}" />
+      </div>
 
     </section>
 </main>

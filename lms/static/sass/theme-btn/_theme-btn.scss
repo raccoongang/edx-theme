@@ -1,0 +1,17 @@
+a.theme-btn,
+.theme-btn {
+    background: #0d81c1;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 1.3;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 22px 9px;
+
+    &:hover {
+        background: lighten(#0d81c1, 10%);
+        color: #fff;
+        text-decoration: none;
+    }
+}
