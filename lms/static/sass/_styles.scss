@@ -135,7 +135,7 @@ h1.logo {
 .home>header .outer-wrapper {
   position: relative;
   margin: 0 auto;
-  padding: 230px 0 0;
+  padding: 0;
   max-width: 1600px;
   opacity: 0.7;
 }
@@ -160,18 +160,26 @@ h1.logo {
   max-width: 100%;
 }
 
-#layout-text {
+#layout-text-upper {
   color: #fff;
-  font-size: 40px;
-  margin: 0 10px;
+  font-size: 35px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+#layout-text-lower {
+  color: #fff;
+  font-size: 25px;
+  margin: 0 auto;
   font-weight: 600;
 }
 
 #layout-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 115px;
-  line-height: 2em;
+  margin-top: 100px;
+  line-height: 2.5em;
 }
 
 .courses-container .courses .courses-listing {
@@ -198,17 +206,27 @@ h1.logo {
 }
 
 .courses-container .courses .course {
-  border: none;
+  height: 100%;
+  border-bottom: 3px solid #61a60e;
 }
 
-.courses-container .courses .course .course-image .cover-image {
-  height: 360px;
+.highlighted-courses .courses .course:hover {
+  box-shadow: 0 1px 4px 0 #61a60e;
 }
 
-.courses-container .courses .course .course-image .cover-image img {
-  height: 360px;
+.highlighted-courses .courses .course:focus {
+  box-shadow: 0 1px 4px 0 #61a60e;
 }
 
+.underline {
+  padding: 6px;
+  background: #61a60e;
+}
+
+.courses-container .courses .course .course-info .course-title {
+  color: #000;
+  margin-top: 0;
+}
 
 /*FOOTER*/
 .wrapper-footer {
@@ -236,6 +254,10 @@ h1.logo {
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.7em;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
@@ -252,7 +274,8 @@ h1.logo {
   display: flex;
   justify-content: center;
   margin-right: 0;
-  flex-grow: 2;
+  width: 250px;
+  flex-wrap: wrap;
 }
 
 .wrapper-footer footer#footer-openedx .wrapper-logo {
@@ -266,9 +289,14 @@ h1.logo {
   margin-left: -3px;
 }
 
+.wrapper-footer footer#footer-openedx a {
+  color: #6b6969;
+}
+
 .wrapper-footer footer#footer-openedx a:hover {
   box-shadow: none;
   border-bottom: none;
+  color: #61a60e;
 }
 
 .wrapper-footer footer#footer-openedx a:active {
@@ -279,7 +307,7 @@ h1.logo {
 .wrapper-footer footer#footer-openedx a:focus {
   box-shadow: none;
   border-bottom: none;
-  color: #000;
+  color: #61a60e;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus {
@@ -424,6 +452,7 @@ section.wiki .breadcrumb {
 .flex-center {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
@@ -438,6 +467,8 @@ section.wiki .breadcrumb {
 
 .slash {
   float: left;
+  font-size: 10px;
+  margin: 0 12px 2px;
 }
 
 #logo {
@@ -470,4 +501,34 @@ button.button.button-primary.button-oa2-linkedin-oauth2.login-provider.login-oa2
 
 button.button.button-primary.button-oa2-linkedin-oauth2.login-provider.register-oa2-linkedin-oauth2{
   width: 28%;
+}
+
+.wrapper-footer footer .flex-center div {
+  margin-bottom: 0;
+}
+
+.markets {
+  margin-top: 25px;
+  height: 40px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#play-market {
+  margin-left: 5px;
+}
+
+#app-store {
+  margin-top: 2px;
+}
+
+#privacy_policy {
+  margin-left: 0;
+}
+
+.wrapper-footer footer#footer-openedx .copyright {
+  font-size: 0.7em;
+  margin: 0;
 }

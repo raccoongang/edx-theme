@@ -27,6 +27,10 @@ body {
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.7em;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
@@ -43,7 +47,8 @@ body {
   display: flex;
   justify-content: center;
   margin-right: 0;
-  flex-grow: 2;
+  width: 250px;
+  flex-wrap: wrap;
 }
 
 .wrapper-footer footer#footer-openedx .wrapper-logo {
@@ -55,6 +60,10 @@ body {
 #raccoon-logo {
   width: 28px;
   margin-left: -3px;
+}
+
+.wrapper-footer footer#footer-openedx a {
+  color: #6b6969;
 }
 
 .wrapper-footer footer#footer-openedx a:hover {
@@ -70,7 +79,7 @@ body {
 .wrapper-footer footer#footer-openedx a:focus {
   box-shadow: none;
   border-bottom: none;
-  color: #000;
+  color: #61a60e;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus {
@@ -98,6 +107,7 @@ body {
 .flex-center {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
@@ -112,6 +122,8 @@ body {
 
 .slash {
   float: left;
+  font-size: 10px;
+  margin: 0 12px 2px;
 }
 
 .header-global {
@@ -159,4 +171,50 @@ body {
 
 .header-global.slim .wrapper-header .list-inline.nav-global {
   margin: 0;
+}
+
+#logo {
+  height: 90px;
+}
+
+.wrapper-msg.wrapper-auto-cert {
+  margin: auto;
+}
+
+.wrapper-footer footer .flex-center div {
+  margin-bottom: 0;
+}
+
+.markets {
+  margin-top: 25px;
+  height: 40px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#play-market {
+  margin-left: 5px;
+}
+
+#app-store {
+  margin-top: 2px;
+}
+
+#privacy_policy {
+  margin-left: 0;
+}
+
+.wrapper-footer footer#footer-openedx .copyright {
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.wrapper-footer footer#footer-openedx a:hover {
+  color: #61a60e;
+}
+
+.wrapper-footer footer#footer-openedx a:focus {
+  color: #61a60e;
 }
