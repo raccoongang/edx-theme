@@ -1,0 +1,31 @@
+.theme-social-list {
+    display: flex;
+    margin: 0;
+    padding: 12px 0px 0 207px;
+    list-style: none;
+
+    &_item {
+        margin-right: 12px;
+    }
+    &_link {
+        text-indent: -9999px;
+        font-size: 0;
+        line-height: 0;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+
+        &:hover {
+            opacity: .7;
+        }
+        &__twitter {
+            background: url("../images/twitter.png") no-repeat;
+        }
+        &__facebook {
+            background: url("../images/facebook.png") no-repeat;
+        }
+        &__youtube {
+            background: url("../images/youtube.png") no-repeat;
+        }
+    }
+}

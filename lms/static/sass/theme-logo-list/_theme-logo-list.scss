@@ -1,0 +1,15 @@
+.theme-logo-list {
+    margin: 0;
+    padding: 7px 0 0 8px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+    &_item {
+        margin-right: 86px;
+
+        &:last-child {
+            margin-top: 12px;
+        }
+    }
+}
