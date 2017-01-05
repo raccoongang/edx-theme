@@ -178,7 +178,7 @@ h1.logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 175px;
   line-height: 2.5em;
 }
 
@@ -314,6 +314,11 @@ h1.logo {
   color: #000;
 }
 
+/*LOGIN PAGE*/
+
+/*.login-register .section-title.lines {
+  margin-bottom: 0;
+}*/
 
 /*REGISTER PAGE*/
 .login-register .action-primary {
@@ -366,6 +371,35 @@ h1.logo {
   color: #61a60e;
 }
 
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#oa2-facebook {
+  height: 55px;
+}
+
+#oa2-dummy {
+  height: 49px;
+}
+
+#oa2-twitter {
+  height: 50px;
+}
+
+#oa2-linkedin-oauth2 {
+  height: 50px;
+}
+
+#LINKEDIN {
+  order: 1;
+}
+
+.icon-holder {
+  margin: 18px; 
+}
 
 /*Course About Page*/
 .course-info header.course-profile {
@@ -446,7 +480,7 @@ section.wiki .breadcrumb {
 
 /*Footer*/
 #opus-logo-d {
-  height: 90px;
+  height: 75px;
 }
 
 .flex-center {
@@ -508,7 +542,7 @@ button.button.button-primary.button-oa2-linkedin-oauth2.login-provider.register-
 }
 
 .markets {
-  margin-top: 25px;
+  margin-top: 2px;
   height: 40px;
   width: 250px;
   display: flex;
