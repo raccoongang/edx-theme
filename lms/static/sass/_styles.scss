@@ -229,6 +229,10 @@ h1.logo {
   }
 }
 
+.courses-container .courses .course .course-info .course-title {
+  color: #e00000;
+}
+
 /*FOOTER*/
 .wrapper-footer {
   box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
@@ -402,6 +406,19 @@ h1.logo {
   color: #fff;
 }
 
+.login-register .form-field .field-link {
+  color: #e00000;
+}
+
+.login-register .form-field label a {
+  color: #e00000;
+}
+
+.login-register .form-field label a:hover {
+  color: #e00000;
+  text-decoration: none;
+} 
+
 
 /*Course About Page*/
 .course-info header.course-profile {
@@ -424,6 +441,49 @@ h1.logo {
   margin: 0;
 }
 
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a {
+  color: #e00000;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a:hover {
+  color: #e00000;
+  text-decoration: none;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a:focus {
+  color: #e00000;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+  background: #e00000;
+  border: 1px solid #e00000;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
+  background: #fff;
+  color: #e00000;
+  border: #e00000 1px solid;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
+  outline: none;
+  box-shadow: none;
+}
+
+p a, p a:visited {
+  color: #e00000;
+}
+
+p a, p a:hover {
+  color: #e00000;
+  text-decoration: none;
+}
+
+p a, p a:focus {
+  color: #e00000;
+}
 
 /*Course Info Page*/
 .header-global.slim {
