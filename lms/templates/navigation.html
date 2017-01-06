@@ -58,8 +58,7 @@ site_status_msg = get_site_status_msg(course_id)
     </h1>
 
     % if course:
-      <h2 class="course-header"><span class="provider">${truncatechars(course.display_org_with_default, 20)}:</span>
-        <span class="course-number">${truncatechars(course.display_number_with_default, 20)}</span>
+      <h2 class="course-header">
         <%
         display_name = course.display_name_with_default
         if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
@@ -67,7 +66,7 @@ site_status_msg = get_site_status_msg(course_id)
           if ccx:
             display_name = ccx.display_name
         %>
-        <span class="course-name">${truncatechars(display_name,20)}</span></h2>
+        <span class="course-name">${display_name}</span></h2>
       % endif
 
       % if user.is_authenticated():
