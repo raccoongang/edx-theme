@@ -2,6 +2,7 @@
 <%!
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
+  from datetime import date
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -17,7 +18,7 @@
 >
     <h2 class="sr footer-about-title">${_("About edX")}</h2>
     <div class="footer-content-wrapper">
-      كوِّن الرقمية 2016© جميع الحقوق محفوظة
+      ${"كوِّن الرقمية {}© جميع الحقوق محفوظة".format(date.today().year)}
     <div class="raccoon-block">
         <a class="raccoon-block_link raccoon-block_link__edx" href="https://www.edx.org" target="_blank">تم تطويره على<a>
     </div>
