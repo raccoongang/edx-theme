@@ -1,3 +1,18 @@
+<%!
+    def display_name_with_default_first(str):
+        try:
+            str_item_first = str.split(' - ',1)[0]
+            return str_item_first
+        except:
+            return str
+
+    def display_name_with_default_second(str):
+        try:
+            str_item_second = str.split(' - ',1)[1]
+            return str_item_second
+        except:
+            return ''
+%>
 <%def name="online_help_token()"><% return "course" %></%def>
 <%namespace name='static' file='static_content.html'/>
 <%!
@@ -18,7 +33,8 @@ from django.core.urlresolvers import reverse
       <h2 class="course-name">
         <span class="course-organization">${course.display_org_with_default}</span>
         <!-- <span class="course-code">${course.display_number_with_default}</span> -->
-        <span class="course-title">${course.display_name_with_default}</span>
+        <span class="course-title">${course.display_name_with_default|display_name_with_default_first}<br/>
+        ${course.display_name_with_default|display_name_with_default_second}</span>
       </h2>
       <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.start_datetime_text()}</div>
     </div>
