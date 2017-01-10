@@ -207,10 +207,85 @@ a#find-courses {
 
 .dropdown-menu-container .menu-title:hover {
   color: #000;
-  line-height: inherit;
+  line-height: 40px;
+}
+
+.dropdown-menu-container .menu-title:focus {
+  color: #000;
+}
+
+.dropdown-menu-container .menu-title:active {
+  color: #000;
 }
 
 .forum-nav-browse {
   display: block !important;
   width: 150px !important;
+}
+
+.btn-neutral {
+  background: #e00000;
+  border: 1px solid #e00000;
+  box-shadow: none;
+  text-shadow: none;
+  color: #fff;
+}
+
+.btn-neutral:hover {
+  background: #fff;
+  color: #e00000;
+  border: #e00000 1px solid;
+}
+
+.btn-neutral:focus {
+  background: #e00000;
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.btn-neutral:active {
+  background: #e00000;
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+}
+
+.tabs .tab a.active {
+  color: #e00000 !important;
+  border-bottom-color: #e00000 !important;
+}
+
+.tabs .tab a.active:hover {
+  color: #1c2a33 !important;
+  border-bottom-color: #1c2a33 !important;
+}
+
+.tabs .tab a.active:focus {
+  color: #e00000 !important;
+  border-bottom-color: #e00000 !important;
+}
+
+.tabs .tab a:hover {
+  color: #1c2a33 !important;
+  border-bottom-color: #1c2a33 !important;
+}
+
+.tabs .tab a:focus {
+  color: #1c2a33 !important;
+  border-bottom-color: #1c2a33 !important;
+}
+
+.dropdown-menu-container .dropdown-menu .dropdown-item a {
+  color: #e00000;
+}
+
+.dropdown-menu-container .dropdown-menu .dropdown-item a:hover {
+  color: #1c2a33;
+  text-decoration: none;
+}
+
+.dropdown-menu-container .dropdown-menu .dropdown-item a:focus {
+  color: #1c2a33;
+  text-decoration: none;
 }

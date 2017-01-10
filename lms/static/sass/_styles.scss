@@ -419,6 +419,9 @@ h1.logo {
   text-decoration: none;
 } 
 
+.login-register .form-field label a:focus {
+  text-decoration: none;
+}
 
 /*Course About Page*/
 .course-info header.course-profile {
@@ -485,11 +488,48 @@ p a, p a:focus {
   color: #e00000;
 }
 
+.course-info .container .wrap-instructor-info .instructor-info-action {
+  color: #e00000;
+}
+
+.course-info .container .wrap-instructor-info .instructor-info-action:hover {
+  color: #fff;
+  background: #e00000;
+  text-decoration: none;
+}
+
+.course-info .container .wrap-instructor-info .instructor-info-action:focus {
+  color: #fff;
+  background: #e00000;
+  text-decoration: none;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
+  background: #e00000;
+  border: 1px solid #e00000;
+  box-shadow: none;
+  text-shadow: none;  
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled) {
+  background: #fff;
+  color: #e00000;
+  border: #e00000 1px solid;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled) {
+  outline: none;
+  box-shadow: none;
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled) {
+  box-shadow: none;
+}
+
 /*Course Info Page*/
 .header-global.slim {
   padding: 0;
 }
-
 
 /*Wiki page*/
 section.wiki .global-functions {
@@ -500,16 +540,36 @@ section.wiki .breadcrumb {
   margin-top: -15px !important;
 }
 
-
 /*Course page*/
 .courseware-bookmarks-button .bookmarks-list-button {
   padding: 5px 10px;
   font-size: 13px;
   font-weight: normal;
+  color: #e00000;
+  border-color: #e00000;
+}
+
+.courseware-bookmarks-button .bookmarks-list-button:hover {
+  background: #e00000;
+}
+
+.courseware-bookmarks-button .bookmarks-list-button:focus {
+  background: #e00000;
 }
 
 .course-content .bookmark-button {
   font-weight: normal;
+  color: #e00000;
+  border-color: #e00000;
+}
+
+.course-content .bookmark-button:hover {
+  background: #e00000;
+}
+
+.course-content .bookmark-button:focus {
+  background: #e00000;
+  outline-color: none;
 }
 
 .view-passwordreset {
@@ -532,6 +592,84 @@ section.wiki .breadcrumb {
       }
     }
   }
+}
+
+.find-courses .discovery-input:focus {
+  border-color: #e00000;
+}
+
+.find-courses {
+  .discovery-submit {
+    background-color: #e00000;
+    border: 2px solid #e00000;
+  }
+  .discovery-submit:hover {
+    background-color: #e00000;
+  }
+  .discovery-submit:active {
+    box-shadow: none;
+  }
+  .discovery-submit:focus {
+    outline: none;
+    background-color: #e00000;
+    box-shadow: none;
+  }
+  .search-facets.phone-menu {
+    margin-top: 30px;
+  }
+}
+
+.discussion-module .discussion-show {
+  color: #e00000;
+}
+
+.discussion-module .discussion-show:hover {
+  color: #1c2a33;
+}
+
+.discussion-module .discussion-show:focus {
+  color: #1c2a33;
+}
+
+.discussion-module .new-post-btn {
+  background: #e00000;
+  box-shadow: none;
+  border: none;
+}
+
+.discussion-module .new-post-btn:hover {
+  background: #e00000;
+  box-shadow: none;
+  border: none;
+}
+
+.discussion-module .new-post-btn:focus {
+  background: #e00000;
+  box-shadow: none;
+  border: none;
+}
+
+.xmodule_display.xmodule_HtmlModule a:link {
+  color: #e00000;
+}
+
+.xmodule_display.xmodule_HtmlModule a:hover {
+  color: #1c2a33;
+  text-decoration: none;
+}
+
+/*/info*/
+
+div.info-wrapper section.updates>ol>li a {
+  color: #e00000;
+}
+
+div.info-wrapper section.updates>ol>li a:hover {
+  color: #e00000;
+}
+
+div.info-wrapper section.updates>ol>li a:focus {
+  color: #e00000;
 }
 
 
@@ -583,15 +721,111 @@ section.wiki .breadcrumb {
   }
 }
 
-.find-courses {
-  .discovery-submit {
-    background-color: #e00000;
-    border: 2px solid #c00000;
-  }
-  .discovery-submit:hover {
-    background-color: #ff0000;
-  }
-  .search-facets.phone-menu {
-    margin-top: 30px;
-  }
+/*/dashboard*/
+.dashboard .my-courses .course .details .course-title a,
+.dashboard .my-courses .course .details .course-title a:hover,
+.dashboard .my-courses .course .details .course-title a:focus {
+  color: #e00000;
+}
+
+.dashboard .my-courses .course .details .enter-course {
+  color: #e00000;
+  border-color: #e00000;
+}
+
+.dashboard .my-courses .course .details .enter-course:hover {
+  color: #fff;
+  background: #e00000;
+  border-color: transparent;
+}
+
+.dashboard .my-courses .course .details .enter-course:focus {
+  color: #fff;
+  background: #e00000;
+  border-color: transparent;
+}
+
+.header-global .user .dropdown-menu li>a {
+  color: #e00000;
+}
+
+.header-global .user .dropdown-menu li>a:focus {
+  color: #e00000;
+  outline: none;
+}
+
+.dashboard-search-bar .search-field {
+  outline-color: #e00000;
+}
+
+input[type="text"]:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+
+/*Registration error page*/
+.login-register .status .message-copy li a {
+  color: #e00000;
+}
+
+.login-register .status .message-copy li a:hover {
+  text-decoration: none;
+}
+
+.login-register .status .message-copy li a:focus {
+  text-decoration: none;
+}
+
+.login-register .form-field label.error {
+  color: #333;
+}
+
+/*Profile page*/
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy a {
+  color: #e00000;
+}
+
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy a:hover:focus:visited {
+  color: #e00000;
+}
+
+/*/account*/
+.wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active {
+  border-bottom-color: #e00000 !important;
+}
+
+.wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:hover {
+  border-bottom-color: #1c2a33 !important;
+}
+
+.wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:focus {
+  outline: none;
+  border-bottom-color: #1c2a33 !important;
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
+  border-color: #e00000;
+  color: #e00000;
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link:hover {
+  border-color: transparent;
+  color: #fff;
+  background: #e00000;
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link:focus {
+  border-color: transparent;
+  color: #fff;
+  background: #e00000;
+  outline: none;
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+  border-top-color: #e00000;
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field select:focus {
+  outline: none;
 }
