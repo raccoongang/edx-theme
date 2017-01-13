@@ -658,6 +658,26 @@ section.wiki .breadcrumb {
   text-decoration: none;
 }
 
+.find-courses .filters .flt-right {
+  color: #fff;
+  background: #e00000;
+}
+
+.find-courses .filters .flt-right:hover {
+  color: #fff;
+  background: #e00000;
+}
+
+.find-courses .filters .flt-right:active {
+  color: #fff;
+  background: #e00000;
+}
+
+.find-courses .filters .flt-right:focus {
+  color: #fff;
+  background: #e00000;
+}
+
 /*/info*/
 
 div.info-wrapper section.updates>ol>li a {
@@ -745,6 +765,23 @@ div.info-wrapper section.updates>ol>li a:focus {
   border-color: transparent;
 }
 
+.dashboard .my-courses .course .details .enter-course.archived {
+  color: #e00000;
+  border-color: #e00000;
+}
+
+.dashboard .my-courses .course .details .enter-course.archived:hover {
+  color: #fff;
+  background: #e00000;
+  border-color: transparent;
+}
+
+.dashboard .my-courses .course .details .enter-course.archived:focus {
+  color: #fff;
+  background: #e00000;
+  border-color: transparent;
+}
+
 .header-global .user .dropdown-menu li>a {
   color: #e00000;
 }
@@ -763,6 +800,74 @@ input[type="text"]:focus {
   border-color: transparent;
 }
 
+.modal .inner-wrapper form .submit input[type="submit"] {
+  background: red;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+}
+
+.modal .inner-wrapper form .submit input[type="submit"]:hover {
+  background: red;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+}
+
+.modal .inner-wrapper form .submit input[type="submit"]:focus {
+  background: red;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+}
+
+.dashboard-search-results .search-info a {
+  color: #e00000;
+}
+
+.dashboard-search-results .search-info a:hover {
+  color: #e00000;
+  text-decoration: none;
+}
+
+.dashboard-search-results .search-info a:focus {
+  color: #e00000;
+  text-decoration: none;
+}
+
+.search-results .search-results-item .result-link{
+  color: #e00000;
+}
+
+.search-results .search-results-item .result-link:hover{
+  color: #e00000;
+  text-decoration: none;
+}
+
+.search-results .search-results-item .result-link:focus{
+  color: #e00000;
+  text-decoration: none;
+}
+
+.search-results .search-load-next {
+  border-color: #e00000;
+}
+
+.search-results .search-load-next:hover {
+text-decoration: none;
+}
+
+.search-results .search-load-next:focus {
+text-decoration: none;
+}
+
+.date-summary-container .date-summary-todays-date {
+  border-left-color: #e00000;
+}
+
+.date-summary-container .date-summary-todays-date:hover {
+  border-left-color: #e00000;
+}
 
 /*Registration error page*/
 .login-register .status .message-copy li a {
@@ -828,4 +933,50 @@ input[type="text"]:focus {
 
 .account-settings-sections .section .account-settings-section-body .u-field .field select:focus {
   outline: none;
+}
+
+/*profile*/
+.view-profile .profile-image-field .image-wrapper .u-field-upload-button:hover {
+  border-color: #e00000;
+  background-color: rgba(224, 0, 0, 0.2);
+  color: #e00000;
+}
+
+.view-profile .profile-image-field .image-wrapper .u-field-upload-button:focus {
+  border-color: #e00000;
+  background-color: rgba(224, 0, 0, 0.2);
+  color: #e00000;
+}
+
+.view-profile .profile-section-one-fields .u-field-icon:hover {
+  color: #e00000;
+}
+
+.view-profile .profile-section-one-fields .u-field-icon:focus {
+  color: #e00000;
+}
+
+.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover {
+  border-color: #e00000;
+}
+
+.view-profile .profile-section-two-fields .u-field.mode-placeholder:focus {
+  color: #e00000;
+}
+
+.u-field.mode-placeholder:hover span {
+  color: #e00000;
+}
+
+.u-field.mode-placeholder:hover {
+  border-color: #e00000;
+}
+
+.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover .u-field-title {
+  color: #e00000;
+}
+
+/*Progress Page*/
+.wrapper-msg.wrapper-auto-cert .auto-cert-message {
+  border-left-color: #e00000;
 }
