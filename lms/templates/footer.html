@@ -20,21 +20,21 @@
     <div class="flex-center">
       <div class="colophon">
         <nav class="nav-colophon" aria-label="${_('About')}">
-          <ol>
-              <% about = footer['navigation_links'][0] %>
-              <li><a id="${about['name']}" href="${about['url']}">${_('About us')}</a></li>
-              <li><a id="why-link" href="http://www.firebrandnordic.com/en/training/why-Firebrand/">Why Firebrand</a></li>
-              <% contact = footer['navigation_links'][2] %>
-              <li><a id="${contact['name']}" href="${contact['url']}">${_('Contact us')}</a></li>
-          </ol>
+          <ul id="footer-links">
+            % for item_num, link in enumerate(footer['legal_links'], start=1):
+              <li class="nav-legal-0${item_num}">
+                <a href="${link['url']}">${link['title']}</a>
+              </li>
+            % endfor
+          </ul>
         </nav>
       </div>
       % if not hide_openedx_link:
           <a href="https://raccoongang.com/" target="_blank"><span class="footer-text">Powered by RACCOON GANG</span>
-            <img id="raccoon-logo" src="/static/firebrand/images/logo_raccoon.svg">
+            <img id="raccoon-logo" src="/static/demo/images/logo_raccoon.svg">
           </a>
           <a href="https://open.edx.org/" target="_blank"><span class="footer-text">Built on</span>
-            <img id="org-logo" alt="organization logo" src="/static/firebrand/images/logo_edx.svg">
+            <img id="org-logo" alt="organization logo" src="/static/demo/images/logo_edx.svg">
           </a>
       % endif
     </div>

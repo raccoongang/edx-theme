@@ -5,7 +5,7 @@ h1.logo {
 
 .header-global {
   height: 76px;
-  background: #e00000;
+  background: #0078d7;
 }
 
 .header-global .wrapper-header {
@@ -50,27 +50,28 @@ h1.logo {
 
 .header-global .nav-global li a {
   font-size: 16px;
-  color: #e00000;
+  color: #fff;
   padding: 10px 20px;
   text-transform: capitalize;
   border-radius: 1px;
+  background: #00adef;
 }
 
 .header-global .nav-global li a:hover {
-  color: #fff;
-  background: #1c2a33;
+  color: #00adef;
+  background: #fff;
 }
 
 .header-global .nav-global li a:active {
-  color: #fff;
+  color: #00adef;
   border: none;
-  background: #1c2a33;
+  background: #fff;
 }
 
 .header-global .nav-global li a:focus {
-  color: #fff;
+  color: #00adef;
   border: none;
-  background: #1c2a33;
+  background: #fff;
 }
 
 .header-global .nav-courseware li .btn {
@@ -78,28 +79,11 @@ h1.logo {
   font-size: 16px;
   font-weight: 600;
   background: #fff;
-  color: #e00000;
+  /*color: #e00000;*/
   padding: 10px 20px;
   width: 103px;
   text-transform: capitalize;
   border-radius: 1px;
-}
-
-.header-global .nav-courseware li .btn:hover {
-  background: #1c2a33;
-  color: #fff;
-}
-
-.header-global .nav-courseware li .btn:focus {
-  background: #1c2a33;
-  color: #fff;
-  box-shadow: none;
-}
-
-.header-global .nav-courseware li .btn:active {
-  background: #1c2a33;
-  color: #fff;
-  box-shadow: none;
 }
 
 .btn-neutral, .btn-group .btn {
@@ -128,10 +112,6 @@ h1.logo {
   height: 76px;
 }
 
-#logo {
-  height: 20px;
-}
-
 .header-global h1.logo a {
   display: flex;
 }
@@ -151,9 +131,25 @@ h1.logo {
   text-decoration: none;
 }
 
+.header-global .user>.primary>a {
+  background: none;
+}
+
+.header-global .user>.primary>a:hover {
+  background: none;
+}
+
+.header-global .user>.primary>a:focus {
+  background: none;
+}
+
+.header-global .user>.primary>a:active {
+  background: none;
+}
+
 /*LAYOUT*/
 .home>header {
-  background-image: url("/static/firebrand/images/layout_background.jpg");
+  background-image: url("/static/demo/images/layout_background.jpg");
   height: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -161,8 +157,7 @@ h1.logo {
 
 .home>header .outer-wrapper {
   position: relative;
-  margin: 0 auto;
-  padding: 230px 0 0;
+  margin: 100px auto;
   max-width: 1600px;
   opacity: 0.7;
 }
@@ -193,25 +188,6 @@ h1.logo {
   padding: 10px 20px;
   text-transform: capitalize;
   border-radius: 1px;
-  background: #e00000;
-  /*margin-top: 10%;*/
-}
-
-.centered-button:hover {
-  color: #fff !important;
-  background: #1c2a33;
-}
-
-.centered-button:active {
-  color: #fff !important;
-  border: none;
-  background: #1c2a33;
-}
-
-.centered-button:focus {
-  color: #fff !important;
-  border: none;
-  background: #1c2a33;
 }
 
 #button-holder {
@@ -223,26 +199,24 @@ h1.logo {
 .courses-container {
   .courses {
     margin-top: -25px;
-    .course {
-      border-bottom-color: #e00000;
-    }
   }
 }
 
-.courses-container .courses .course .course-info .course-title {
-  color: #e00000;
+.home>header .title .course-search {
+  display: none;
 }
+
 
 /*FOOTER*/
 .wrapper-footer {
   box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
   border-top: 1px solid #e9e8e8;
   padding: 10px 10px;
-  background: #1c2a33;
+  background: #ddd;
 }
 
 .footer-text {
-  color: #fff;
+  color: #787878;
 }
 
 .footer-text img {
@@ -257,13 +231,21 @@ h1.logo {
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
-  color: #fff;
+  color: #787878;
   vertical-align: text-bottom;
 
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {
-  color: #e00000;
+  color: #00adef;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus {
+  color: #00adef;
+}
+
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:active {
+  color: #00adef;
 }
 
 .wrapper-footer footer#footer-openedx .colophon {
@@ -286,6 +268,11 @@ h1.logo {
   height: 111px;
 }
 
+.wrapper-footer footer#footer-openedx a {
+  display: flex;
+  align-items: center;
+}
+
 .wrapper-footer footer#footer-openedx a:hover {
   box-shadow: none;
   border-bottom: none;
@@ -300,10 +287,6 @@ h1.logo {
   box-shadow: none;
   border-bottom: none;
   color: #000;
-}
-
-.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus {
-  color: #fff;
 }
 
 .wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
@@ -325,7 +308,7 @@ h1.logo {
 }
 
 #org-logo {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   height: 80px;
   margin-left: 5px;
 }
@@ -358,70 +341,58 @@ h1.logo {
 /*REGISTER PAGE*/
 .login-register .action-primary {
   box-shadow: none;
-  background: #e00000;
+  background: #0078d7;
   color: #fff;
   text-shadow: none;
 }
 
 .login-register .action-primary:hover {
-  background: #1c2a33;
+  background: #fff;
+  color: #0078d7; 
   text-shadow: none;
 }
 
 .login-register .action-primary:active {
-  background: #1c2a33;
+  background: #fff;
+  color: #0078d7;
   text-shadow: none;
 }
 
 .login-register .action-primary:focus {
-  background: #1c2a33;
+  background: #fff;
+  color: #0078d7; 
   text-shadow: none;
 }
 
 .login-register .nav-btn {
   box-shadow: none;
-  border: 1px solid #e00000;
-  color: #e00000;
+  border: 1px solid #0078d7;
+  color: #0078d7;
   padding-bottom: 33px;
 }
 
 .login-register .nav-btn:hover {
-  border: 1px solid #1c2a33;
+  border: 1px solid #0078d7;
   box-shadow: none;
-  background: #1c2a33;
+  background: #0078d7;
   color: #fff;
 }
 
 .login-register .nav-btn:active {
-  border: 1px solid #1c2a33;
+  border: 1px solid #0078d7;
   box-shadow: none;
-  background: #1c2a33;
+  background: #0078d7;
   color: #fff;
 }
 
 .login-register .nav-btn:focus {
-  border: 1px solid #1c2a33;
+  border: 1px solid #0078d7;
   box-shadow: none;
-  background: #1c2a33;
+  background: #0078d7;
   color: #fff;
 }
 
-.login-register .form-field .field-link {
-  color: #e00000;
-}
 
-.login-register .form-field label a {
-  color: #e00000;
-}
-
-.login-register .form-field label a:hover {
-  color: #e00000;
-  text-decoration: none;
-} 
-
-.login-register .form-field label a:focus {
-  text-decoration: none;
-}
 
 /*Course About Page*/
 .course-info header.course-profile {
@@ -444,92 +415,23 @@ h1.logo {
   margin: 0;
 }
 
-.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a {
-  color: #e00000;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a:hover {
-  color: #e00000;
-  text-decoration: none;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a:focus {
-  color: #e00000;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
-  background: #e00000;
-  border: 1px solid #e00000;
-  box-shadow: none;
-  text-shadow: none;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
-  background: #fff;
-  color: #e00000;
-  border: #e00000 1px solid;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
-  outline: none;
-  box-shadow: none;
-}
-
-p a, p a:visited {
-  color: #e00000;
-}
-
-p a, p a:hover {
-  color: #e00000;
-  text-decoration: none;
-}
-
-p a, p a:focus {
-  color: #e00000;
-}
-
-.course-info .container .wrap-instructor-info .instructor-info-action {
-  color: #e00000;
-}
-
 .course-info .container .wrap-instructor-info .instructor-info-action:hover {
   color: #fff;
-  background: #e00000;
   text-decoration: none;
 }
 
 .course-info .container .wrap-instructor-info .instructor-info-action:focus {
   color: #fff;
-  background: #e00000;
   text-decoration: none;
 }
 
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
-  background: #e00000;
-  border: 1px solid #e00000;
-  box-shadow: none;
-  text-shadow: none;  
-}
 
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled) {
-  background: #fff;
-  color: #e00000;
-  border: #e00000 1px solid;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled) {
-  outline: none;
-  box-shadow: none;
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled) {
-  box-shadow: none;
-}
 
 /*Course Info Page*/
 .header-global.slim {
   padding: 0;
 }
+
 
 /*Wiki page*/
 section.wiki .global-functions {
@@ -545,31 +447,10 @@ section.wiki .breadcrumb {
   padding: 5px 10px;
   font-size: 13px;
   font-weight: normal;
-  color: #e00000;
-  border-color: #e00000;
-}
-
-.courseware-bookmarks-button .bookmarks-list-button:hover {
-  background: #e00000;
-}
-
-.courseware-bookmarks-button .bookmarks-list-button:focus {
-  background: #e00000;
 }
 
 .course-content .bookmark-button {
   font-weight: normal;
-  color: #e00000;
-  border-color: #e00000;
-}
-
-.course-content .bookmark-button:hover {
-  background: #e00000;
-}
-
-.course-content .bookmark-button:focus {
-  background: #e00000;
-  outline-color: none;
 }
 
 .view-passwordreset {
@@ -594,108 +475,11 @@ section.wiki .breadcrumb {
   }
 }
 
-.find-courses .discovery-input:focus {
-  border-color: #e00000;
-}
-
-.find-courses {
-  .discovery-submit {
-    background-color: #e00000;
-    border: 2px solid #e00000;
-  }
-  .discovery-submit:hover {
-    background-color: #e00000;
-  }
-  .discovery-submit:active {
-    box-shadow: none;
-  }
-  .discovery-submit:focus {
-    outline: none;
-    background-color: #e00000;
-    box-shadow: none;
-  }
-  .search-facets.phone-menu {
-    margin-top: 30px;
-  }
-}
-
-.discussion-module .discussion-show {
-  color: #e00000;
-}
-
-.discussion-module .discussion-show:hover {
-  color: #1c2a33;
-}
-
-.discussion-module .discussion-show:focus {
-  color: #1c2a33;
-}
-
-.discussion-module .new-post-btn {
-  background: #e00000;
-  box-shadow: none;
-  border: none;
-}
-
-.discussion-module .new-post-btn:hover {
-  background: #e00000;
-  box-shadow: none;
-  border: none;
-}
-
-.discussion-module .new-post-btn:focus {
-  background: #e00000;
-  box-shadow: none;
-  border: none;
-}
-
-.xmodule_display.xmodule_HtmlModule a:link {
-  color: #e00000;
-}
-
-.xmodule_display.xmodule_HtmlModule a:hover {
-  color: #1c2a33;
-  text-decoration: none;
-}
-
-.find-courses .filters .flt-right {
-  color: #fff;
-  background: #e00000;
-}
-
-.find-courses .filters .flt-right:hover {
-  color: #fff;
-  background: #e00000;
-}
-
-.find-courses .filters .flt-right:active {
-  color: #fff;
-  background: #e00000;
-}
-
-.find-courses .filters .flt-right:focus {
-  color: #fff;
-  background: #e00000;
-}
-
-/*/info*/
-
-div.info-wrapper section.updates>ol>li a {
-  color: #e00000;
-}
-
-div.info-wrapper section.updates>ol>li a:hover {
-  color: #e00000;
-}
-
-div.info-wrapper section.updates>ol>li a:focus {
-  color: #e00000;
-}
 
 
 /*Learn More Page*/
 .header-global.slim .wrapper-header .logo img {
-  height: 76px;
+  height: inherit;
   margin: 0;
 }
 
@@ -706,93 +490,23 @@ div.info-wrapper section.updates>ol>li a:focus {
   box-shadow: none;
 }
 
-.header-global .primary>a:hover {
-  background: #e00000;
-  color: #000;
-}
-
-.header-global .primary>a:active {
-  background: #e00000;
-}
-
-.header-global .primary>a:focus {
-  background: #e00000;
-  color: #000;
-}
-
 .header-global .user .user-link .label-username {
   color: #000;
   margin: 15px 5px 10px 15px;
 }
 
 .header-global .user .dropdown {
-  background: #e00000;
   color: #000;
 }
 
 .empty-dashboard-message {
   a {
-    background-color: #e00000;
     border: none;
   }
   a:hover {
     background-color: #ff0000;
     color: #ffffff;
   }
-}
-
-/*/dashboard*/
-.dashboard .my-courses .course .details .course-title a,
-.dashboard .my-courses .course .details .course-title a:hover,
-.dashboard .my-courses .course .details .course-title a:focus {
-  color: #e00000;
-}
-
-.dashboard .my-courses .course .details .enter-course {
-  color: #e00000;
-  border-color: #e00000;
-}
-
-.dashboard .my-courses .course .details .enter-course:hover {
-  color: #fff;
-  background: #e00000;
-  border-color: transparent;
-}
-
-.dashboard .my-courses .course .details .enter-course:focus {
-  color: #fff;
-  background: #e00000;
-  border-color: transparent;
-}
-
-.dashboard .my-courses .course .details .enter-course.archived {
-  color: #e00000;
-  border-color: #e00000;
-}
-
-.dashboard .my-courses .course .details .enter-course.archived:hover {
-  color: #fff;
-  background: #e00000;
-  border-color: transparent;
-}
-
-.dashboard .my-courses .course .details .enter-course.archived:focus {
-  color: #fff;
-  background: #e00000;
-  border-color: transparent;
-}
-
-.header-global .user .dropdown-menu li>a {
-  color: #e00000;
-}
-
-.header-global .user .dropdown-menu li>a:focus {
-  color: #e00000;
-  outline: none;
-}
-
-.dashboard-search-bar .search-field {
-  outline-color: #e00000;
 }
 
 input[type="text"]:focus {
@@ -821,38 +535,6 @@ input[type="text"]:focus {
   border: none;
 }
 
-.dashboard-search-results .search-info a {
-  color: #e00000;
-}
-
-.dashboard-search-results .search-info a:hover {
-  color: #e00000;
-  text-decoration: none;
-}
-
-.dashboard-search-results .search-info a:focus {
-  color: #e00000;
-  text-decoration: none;
-}
-
-.search-results .search-results-item .result-link{
-  color: #e00000;
-}
-
-.search-results .search-results-item .result-link:hover{
-  color: #e00000;
-  text-decoration: none;
-}
-
-.search-results .search-results-item .result-link:focus{
-  color: #e00000;
-  text-decoration: none;
-}
-
-.search-results .search-load-next {
-  border-color: #e00000;
-}
-
 .search-results .search-load-next:hover {
 text-decoration: none;
 }
@@ -861,122 +543,4 @@ text-decoration: none;
 text-decoration: none;
 }
 
-.date-summary-container .date-summary-todays-date {
-  border-left-color: #e00000;
-}
 
-.date-summary-container .date-summary-todays-date:hover {
-  border-left-color: #e00000;
-}
-
-/*Registration error page*/
-.login-register .status .message-copy li a {
-  color: #e00000;
-}
-
-.login-register .status .message-copy li a:hover {
-  text-decoration: none;
-}
-
-.login-register .status .message-copy li a:focus {
-  text-decoration: none;
-}
-
-.login-register .form-field label.error {
-  color: #333;
-}
-
-/*Profile page*/
-.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy a {
-  color: #e00000;
-}
-
-.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy a:hover:focus:visited {
-  color: #e00000;
-}
-
-/*/account*/
-.wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active {
-  border-bottom-color: #e00000 !important;
-}
-
-.wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:hover {
-  border-bottom-color: #1c2a33 !important;
-}
-
-.wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:focus {
-  outline: none;
-  border-bottom-color: #1c2a33 !important;
-}
-
-.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
-  border-color: #e00000;
-  color: #e00000;
-}
-
-.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link:hover {
-  border-color: transparent;
-  color: #fff;
-  background: #e00000;
-}
-
-.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link:focus {
-  border-color: transparent;
-  color: #fff;
-  background: #e00000;
-  outline: none;
-}
-
-.account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
-  border-top-color: #e00000;
-}
-
-.account-settings-sections .section .account-settings-section-body .u-field .field select:focus {
-  outline: none;
-}
-
-/*profile*/
-.view-profile .profile-image-field .image-wrapper .u-field-upload-button:hover {
-  border-color: #e00000;
-  background-color: rgba(224, 0, 0, 0.2);
-  color: #e00000;
-}
-
-.view-profile .profile-image-field .image-wrapper .u-field-upload-button:focus {
-  border-color: #e00000;
-  background-color: rgba(224, 0, 0, 0.2);
-  color: #e00000;
-}
-
-.view-profile .profile-section-one-fields .u-field-icon:hover {
-  color: #e00000;
-}
-
-.view-profile .profile-section-one-fields .u-field-icon:focus {
-  color: #e00000;
-}
-
-.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover {
-  border-color: #e00000;
-}
-
-.view-profile .profile-section-two-fields .u-field.mode-placeholder:focus {
-  color: #e00000;
-}
-
-.u-field.mode-placeholder:hover span {
-  color: #e00000;
-}
-
-.u-field.mode-placeholder:hover {
-  border-color: #e00000;
-}
-
-.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover .u-field-title {
-  color: #e00000;
-}
-
-/*Progress Page*/
-.wrapper-msg.wrapper-auto-cert .auto-cert-message {
-  border-left-color: #e00000;
-}
