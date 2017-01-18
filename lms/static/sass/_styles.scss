@@ -78,12 +78,29 @@ h1.logo {
   box-shadow: none;
   font-size: 16px;
   font-weight: 600;
-  background: #fff;
-  /*color: #e00000;*/
+  background: #00adef;
   padding: 10px 20px;
   width: 103px;
   text-transform: capitalize;
   border-radius: 1px;
+  color: #fff;
+}
+
+.header-global .nav-courseware li .btn:hover {
+  color: #00adef;
+  background: #fff;
+}
+
+.header-global .nav-courseware li .btn:focus {
+  color: #00adef;
+  border: none;
+  background: #fff;
+}
+
+.header-global .nav-courseware li .btn:active {
+  color: #00adef;
+  border: none;
+  background: #fff;
 }
 
 .btn-neutral, .btn-group .btn {
