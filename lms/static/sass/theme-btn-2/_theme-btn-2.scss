@@ -1,0 +1,23 @@
+a.theme-btn-2,
+.theme-btn-2 {
+    display: inline-block;
+    background: #89c541;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 15px 16px;
+    box-sizing: border-box;
+
+    .course-sidebar & {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    &:hover {
+        background: lighten(#89c541, 10%);
+        color: #fff;
+        text-decoration: none;
+    }
+}

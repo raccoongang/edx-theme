@@ -1,0 +1,58 @@
+.login-form {
+    position: relative;
+    background: rgba(255, 255, 255, .95);
+    max-width: 484px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.login-register .form-field label,
+.login-register .form-field .tip,
+.login-register .toggle-form {
+    display: none;
+}
+.login-register .section-title.lines .text {
+    color: #0d81c1;
+    text-transform: uppercase;
+}
+.login-register .form-field label.login-remember {
+    display: block;
+}
+.login-register .form-type {
+    position: relative;
+}
+.login-register .form-wrapper form {
+    background: rgba(255, 255, 255, .95);
+    border: none;
+    border-radius: 0;
+}
+.login-register .form-field .field-link {
+    text-align: center;
+}
+.login-register .checkbox-remember {
+    text-align: center;
+}
+.login-register .form-wrapper form {
+    padding: 13px 43px 60px;
+}
+.login-register .section-title.lines {
+    margin-bottom: 64px;
+}
+.login-register .form-field input {
+    height: 48px;
+    border-width: 2px;
+    text-align: center;
+}
+.login-register .form-field {
+    padding: 0 0 9px;
+}
+.login-register .form-field.checkbox-remember {
+    padding: 19px 0 12px;
+}
+.login-register .action-primary {
+    box-shadow: none;
+    text-shadow: none;
+    background: #0d81c1;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+}

@@ -46,13 +46,12 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
-  <header id="global-navigation" class="theme-header">
+  <header id="global-navigation" class="header-global theme-header">
     <nav class="theme-header_wrapper" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(
-            platform_name=static.get_platform_name())}"/>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>

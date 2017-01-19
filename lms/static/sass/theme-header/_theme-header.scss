@@ -1,11 +1,21 @@
-.theme-header {
-    &_wrapper {
-        max-width: $base-width;
-        margin: 0 auto;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        padding: 10px 0;
+.header-global.theme-header {
+    border-bottom: none;
+    box-shadow: none;
+    background: #fff;
+    position: relative;
+    height: auto;
+
+    .theme-header {
+        
+        &_wrapper {
+            max-width: $base-width;
+            margin: 0 auto;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            height: auto;
+        }
     }
     .nav-global {
         margin: 0 0 0 auto;
@@ -13,7 +23,7 @@
 
         a {
             color: #0d81c1;
-            font-size: 10px;
+            font-size: 14px;
             text-transform: uppercase;
             
             &:hover {
@@ -35,5 +45,9 @@
     }
     .course-header {
         display: none;
+    }
+    .nav-courseware,
+    .nav-global {
+        margin-top: 0;
     }
 }
