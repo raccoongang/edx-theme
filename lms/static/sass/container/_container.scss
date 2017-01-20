@@ -1,0 +1,49 @@
+.container.about {
+    background: #fff;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+
+    .heading {
+        background: url(../images/login.jpg) no-repeat 50% 30%;
+        background-size: cover;
+        margin: 0 0 36px;
+
+        &_holder {
+            max-width: 1189px;
+            margin: auto;
+            padding: 67px 0 79px;
+
+            h1 {
+                color: #fff;
+                font-weight: bold;
+                display: inline-block;
+                margin: 0;
+                letter-spacing: 0px;
+                text-align: left;
+                text-shadow: 0px 1px 1.65px rgba(0,0,0,0.33);
+                font-size: 38px;
+            }
+        }
+    }
+    .wrapper {
+        max-width: 1189px;
+        margin: auto;
+
+        h2 {
+            font-size: 28px;
+            color: #0099ff;
+            font-weight: normal;
+            text-transform: none;
+            padding: 44px 0 30px;
+            font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+        }
+        p {
+            margin-bottom: 30px;
+            line-height: 24px;
+            font-size: 16px;
+            color: #404040;
+            font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+        }
+    }
+}

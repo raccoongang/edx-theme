@@ -1,0 +1,30 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <div class="heading">
+            <div class="heading_holder">
+                <h1>${_("About")}</h1>
+            </div>
+        </div>
+        <div class="wrapper">
+            <h2>Objectifs du MOOC</h2>
+            <p>Nam non congue dui, in ullamcorper ligula. Duis arcu dui, porta sed posuere a, consectetur sed odio. Sed augue mi, porttitor in ornare nec, pretium pellentesque odio. Proin feugiat odio in luctus gravida. Suspendisse hendrerit neque varius massa mattis tristique. Pellentesque ante enim, feugiat sed odio et, feugiat blandit metus. In maximus sapien non sem tincidunt, eu tincidunt dolor dapibus.</p>
+            <p>Etiam id porttitor odio. Aliquam tincidunt arcu sed eros suscipit, sit amet volutpat erat laoreet. Ut eleifend placerat convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel cursus leo. Suspendisse ac consectetur augue. Vestibulum bibendum consequat consectetur. Sed fermentum, dui nec facilisis molestie, metus nibh tincidunt est, ac facilisis dolor dolor vitae felis. Cras faucibus efficitur vehicula.</p>
+            <h2>EMC2 en bref</h2>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/about-img.jpg" alt="about img"/>
+            <p>EMC2 est née en 1988 de la fusion de deux coopératives : la Coopérative Agricole de la Meuse créée en 1928 et la Coopérative Lorraine Nord créée en 1985 (fusion de la Coopérative de l'Arrondissement du Bassin de Briey en Meurthe et Moselle et la Coopérative Thionvilloise de Céréales). La CLN s'étend alors de Jarny, Thionville, Briey à Essey. La fusion CAM/CLN et le rachat d'une partie de la CAMO (Coopérative Agricole Meuse Ornain), a permis à la nouvelle structure EMC2 de devenir la principale coopérative céréalière sur le territoire lorrain (Meuse, Meurthe et Moselle et Moselle)</p>
+            <p>En 1987, le groupe se dote d'une filiale négoce, Houpiez, indépendante de la coopérative, dont l'aire géographique s'étale de Bar-Le-Duc à Gondrecourt-Le-Château.</p>
+            <p>En 1996, la fusion avec la coopérative haut-marnaise CADAC (Coopérative Agricole Départementale d'Approvisionnement et de Céréales), la reprise partielle de la SCAVC (Société Coopérative Agricole de la Vallée de la Chiers) place EMC2 parmi les vingt premières coopératives agricoles françaises.</p>
+            <p>En décembre 2007, EMC2 fusionne avec Alotis, une organisation de producteurs bovins, ovins et porcins réunissant trois départements, Meuse, Haute-Marne et Vosges, née de la fusion du GPBM (Groupement de Producteurs Bovins de la Meuse), de la SICABEV 52 et de la CPVV (Coopérative de Producteurs de Viande des Vosges).</p>
+            <p>En juin 2011, Capéval, coopérative de collecte de bovins, rejoint EMC2. Alotis et Capéval deviennent EMC2 Elevage.</p>
+            <p>En décembre 2012, EMC2 créée une union de commercialisation des grains avec la Coopérative Agricole Lorraine (CAL). Cette union, baptisée «CEREST», est le fruit d’une volonté partagée d’optimiser et de sécuriser la mise en marché de la collecte de leurs adhérents.</p>
+            <p>En janvier 2014, EMC2 a repris les établissements LOEB UNEGO dont le siège social se situe à Faulquemont en Moselle. La société collecte 50 000 tonnes de céréales et dispose de sites de collecte et d’approvisionnement (Faulquemont et Delme).</p>
+            <p>En mars 2015, SEVE 2000, négoce de collecte de bovins, rejoint EMC2.</p>
+        </div>
+    </section>
+</main>

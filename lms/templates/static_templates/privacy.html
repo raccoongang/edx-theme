@@ -1,0 +1,43 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Privacy Policy")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+    <div class="heading">
+        <div class="heading_holder">
+            <h1>${_("Privacy Policy")}</h1>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h2>Description du site</h2>
+        <p>EMC2 Formation est une plateforme d’hébergement de formations en ligne mise à disposition des salariés d’EMC2.</p>
+
+        <h2>Éditeur du site</h2>
+        <p>EMC2</p>
+        <p>Espace Agricole Nid de Cygne, D964</p>
+        <p>55100 Bras-sur-Meuse</p>
+
+        <h2>Directeur de la publication</h2>
+        <p>Julien Didry</p>
+        <p>Directeur de la communication du groupe EMC2</p>
+
+        <h2>Hébergement</h2>
+        <p>Amazon Web Services</p>
+        <p>P.O. Box 81226</p>
+        <p>Seattle, WA 98108-1226</p>
+        <p>http://aws.amazon.com</p>
+
+        <h2>Crédits</h2>
+        <p>Contenu et formations : EMC2.</p>
+        <p>Charte graphique, intégration et développement : Evensis – www.evensis.com</p>
+        <p>Technologie : Open EdX.</p>
+        <br>
+        <p>Mise à jour : 20 janvier 2017</p>
+        <br>
+    </div>
+    </section>
+</main>
