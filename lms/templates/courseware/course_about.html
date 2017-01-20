@@ -138,6 +138,30 @@ from django.template.defaultfilters import truncatechars
 
       <div class="inner-wrapper">
         ${get_course_about_section(request, course, "overview")}
+        <section class="plan">
+          <h2>Plan du cours</h2>
+          <div class="plan-box">
+            <h2 class="plan-box_heading">SEMAINE 1</h2>
+            <ul class="plan-box_list">
+              <li class="plan-box_list-item">Étape 1 - Lorem Ipsum</li>
+              <li class="plan-box_list-item">Étape 2 - Lorem Ipsum</li>
+              <li class="plan-box_list-item">Discussions</li>
+            </ul>
+            <div class="plan-box_footer">Questionnaire d’évaluation</div>
+          </div>
+        </section>
+        <section class="plan">
+          <h2>Plan du cours</h2>
+          <div class="plan-box">
+            <h2 class="plan-box_heading">SEMAINE 1</h2>
+            <ul class="plan-box_list">
+              <li class="plan-box_list-item">Étape 1 - Lorem Ipsum</li>
+              <li class="plan-box_list-item">Étape 2 - Lorem Ipsum</li>
+              <li class="plan-box_list-item">Discussions</li>
+            </ul>
+            <div class="plan-box_footer">Questionnaire d’évaluation</div>
+          </div>
+        </section>
       </div>
   </div>
 
@@ -217,7 +241,7 @@ from django.template.defaultfilters import truncatechars
               href_class = "register"
           %>
           <a href="${reg_href}" class="theme-btn-2 ${href_class}">
-            ${_("Enroll in {course_name}").format(course_name=truncatechars(course.display_number_with_default, 20)) | h}
+            ${_("Enroll")}
           </a>
           <div id="register_error"></div>
         %endif
