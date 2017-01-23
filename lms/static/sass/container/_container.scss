@@ -2,7 +2,7 @@
     background: #fff;
     width: 100%;
     max-width: none;
-    padding: 0;
+    padding: 0 0 100px;
 
     .heading {
         background: url(../images/login.jpg) no-repeat 50% 30%;
@@ -44,6 +44,24 @@
             font-size: 16px;
             color: #404040;
             font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+        }
+        b {
+            display: block;
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 30px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 4px;
+                border: 4px solid transparent;
+                border-left-color: #000;
+            }
+        }
+        img {
+            margin-bottom: 16px;
         }
     }
 }

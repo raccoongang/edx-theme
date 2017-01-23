@@ -16,6 +16,23 @@
             padding: 10px 0;
             height: auto;
         }
+
+        &_home-link {
+            font-size: 14px;
+            text-transform: uppercase;
+            position: relative;
+            color: #9c9c9c;
+            margin-left: 150px;
+
+            &:after {
+                content: '';
+                border: 8px solid transparent;
+                border-left-color: #9c9c9c;
+                position: absolute;
+                right: -20px;
+                top: 0;
+            }
+        }
     }
     .nav-global {
         margin: 0 0 0 auto;
