@@ -75,38 +75,25 @@ site_status_msg = get_site_status_msg(course_id)
       % if user.is_authenticated():
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
-          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
-              <li class="item nav-global-01 nav-global-01-xseries-style">
-                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">My courses</a>
-              </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
-                  ${_("Courses")}
-                </a>
-              </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
-                </a>
-              </li>
-          % else:
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing and context.get('threads') == None:
-              <li class="item nav-global-01">
-                <a href="${marketing_link('COURSES')}">My courses</a>
-              </li>
-            % endif
-            % if show_program_listing:
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
-                  ${_("Courses")}
-                </a>
-              </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
-                </a>
-              </li>
-            % endif
+            <li class="item nav-global-01">
+              <a href="${reverse('course_category_list')}">${_('Course catalog')}</a>
+            </li>
+          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing and context.get('threads') == None:
+            <li class="item nav-global-01">
+              <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+            </li>
+          % endif
+          % if show_program_listing:
+            <li class="tab-nav-item">
+              <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
+                ${_("Courses")}
+              </a>
+            </li>
+            <li class="tab-nav-item">
+              <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
+                ${_("Programs")}
+              </a>
+            </li>
           % endif
           %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
             <li class="item">
@@ -118,6 +105,7 @@ site_status_msg = get_site_status_msg(course_id)
       </ol>
 
       <%include file="user_dropdown.html"/>
+      
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
           <li class="primary">
@@ -147,15 +135,21 @@ site_status_msg = get_site_status_msg(course_id)
 
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+              <li class="item nav-global-01">
+                <a href="${reverse('course_category_list')}">${_('Course catalog')}</a>
+              </li>
+            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+              <li class="item nav-global-05">
+                <a class="btn" href="/courses">${_("Explore Courses")}</a>
+              </li>
+            %endif
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
               <li class="item nav-global-04">
-                <!-- <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a> -->
-                <a class="btn-neutral" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">Log in</a>
+                <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
               </li>
             % else:
               <li class="item nav-global-04">
-                <!-- <a class="btn-neutral" href="/register${login_query()}">${_("Register")}</a> -->
-                <a class="btn-neutral" href="/login${login_query()}">Log in</a>
+                <a class="btn-neutral" href="/register${login_query()}">${_("Register")}</a>
               </li>
             % endif
           % endif
