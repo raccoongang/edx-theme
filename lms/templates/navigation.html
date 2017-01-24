@@ -75,9 +75,6 @@ site_status_msg = get_site_status_msg(course_id)
       % if user.is_authenticated():
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
-            <li class="item nav-global-01">
-              <a href="${reverse('course_category_list')}">${_('Course catalog')}</a>
-            </li>
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing and context.get('threads') == None:
             <li class="item nav-global-01">
               <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
@@ -135,9 +132,6 @@ site_status_msg = get_site_status_msg(course_id)
 
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-              <li class="item nav-global-01">
-                <a href="${reverse('course_category_list')}">${_('Course catalog')}</a>
-              </li>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <li class="item nav-global-05">
                 <a class="btn" href="/courses">${_("Explore Courses")}</a>
