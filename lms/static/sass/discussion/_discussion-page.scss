@@ -1,0 +1,188 @@
+@import "../layout";
+@import "../const";
+@import "../theme-header/theme-header";
+@import "../theme-footer/theme-footer";
+@import "../theme-nav/theme-nav";
+@import "../theme-logo-list/theme-logo-list";
+
+
+body {
+    -webkit-font-smoothing: auto;
+}
+
+.dropdown-menu-container {
+    width: inherit;
+}
+
+.header-global.theme-header .theme-header_home-link {
+    font-family: Verdana;
+}
+
+.dropdown-menu-container .menu-title {
+    font-family: Verdana;
+}
+
+nav ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+a.theme-nav_link {
+    font-family: Verdana;
+}
+
+.theme-nav_item {
+    margin-bottom: 0;
+}
+
+#forum-faq {
+    color: #0079bc;
+    text-decoration: none;
+    transition: all 0.1s linear 0s;
+}
+
+#forum-faq:hover {
+    color: #3394c9;
+    text-decoration: none;
+    transition: all 0.1s linear 0s;
+}
+
+.theme-footer_heading {
+    font-family: Verdana;
+}
+
+dl {
+    font-family: Verdana;
+}
+
+dt {
+    font-size: 14px;
+}
+
+dd {
+    font-size: 11px;
+    color: #9b9b9b;
+    margin: 0 0 13px;
+    line-height: 16px;
+}
+
+dt:not(:first-of-type), .list-definition-term:not(:first-of-type) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+dd.theme-contact-list_definition p {
+    margin-bottom: 0;
+}
+
+dt.theme-contact-list_term__address:after {
+    background: url(../../images/ico-1.png) no-repeat;
+    width: 15px;
+    height: 22px;
+    top: 11px;
+}
+
+dt.theme-contact-list_term:after {
+    content: '';
+    position: absolute;
+    left: -42px;
+}
+
+dt.theme-contact-list_term__phone:after {
+    background: url(../../images/ico-2.png) no-repeat;
+    width: 21px;
+    height: 21px;
+    top: 0;
+}
+dt.theme-contact-list_term:after {
+    content: '';
+    position: absolute;
+    left: -42px;
+}
+
+dt.theme-contact-list_term__email:after {
+    background: url(../../images/ico-3.png) no-repeat;
+    width: 36px;
+    height: 36px;
+    top: 5px;
+}
+dt.theme-contact-list_term:after {
+    content: '';
+    position: absolute;
+    left: -42px;
+}
+
+dt {
+    line-height: 16px;
+    position: relative;
+}
+
+dt.theme-contact-list_term theme-contact-list_term__address {
+    margin-bottom: 0;
+}
+
+dl.theme-contact-list {
+    margin: 0 0 0 auto;
+    padding: 24px 0 0;
+}
+
+ul.theme-social-list {
+    display: flex;
+    margin: 0;
+    padding: 26px 0px 0 207px;
+    list-style: none;
+}
+
+.theme-logo-list_item {
+    margin-bottom: 0;
+}
+
+.theme-social-list_link__twitter {
+    background: url(../../images/twitter.png) no-repeat;
+}
+
+.theme-social-list_link__facebook {
+    background: url(../../images/facebook.png) no-repeat;
+}
+
+.theme-social-list_link__instagram {
+    background: url(../../images/instagram.png) no-repeat;
+}
+
+li.theme-social-list_item {
+    margin-bottom: 0;
+}
+
+.theme-social-list_item {
+    margin-right: 12px;
+}
+
+.theme-social-list_link {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+}
+
+.theme-footer_power-link {
+    background: url(../../images/logo-evensis.png) no-repeat;
+}
+
+dd.theme-contact-list_definition a {
+    color: #0079bc;
+    line-height: 16px;
+}
+
+.theme-footer_row {
+    line-height: 16px;
+}
+
+dd.theme-contact-list_definition p {
+    line-height: 16px;
+}
+
+dt {
+    margin-bottom: auto;
+}
