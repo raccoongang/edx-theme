@@ -32,3 +32,19 @@
         </div>
     </section>
 </main>
+
+<script type="text/javascript">
+    $('div.wrapper > b').click(function(event) {
+        var $b = $(event.target);
+
+        if ($b.hasClass('show')) {
+            $b.next('p').hide(300);
+            $b.removeClass('show');
+        }
+        else {
+            $b.next('p').show(300);
+            $b.addClass('show');
+        }
+    });
+</script>
+
