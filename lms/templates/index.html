@@ -24,6 +24,7 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
 
       </header>
+      % if settings.FEATURES.get('CATEGORY_FILTER', False) and show_category_filter:
       <div class="theme-categories">
         <div class="theme-categories_holder">
           <h2 class="theme-categories_title">
@@ -31,45 +32,18 @@ from openedx.core.djangolib.markup import HTML, Text
             <strong>categories</strong>
           </h2>
           <ul class="theme-categories_list">
+           % for category in settings.FEATURES.get('CATEGORY_FILTER', []):
             <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="machinisme" class="theme-categories_img">
-              <span class="theme-categories_name">machinisme</span>
+              <a href="?category=${category['id']}">
+                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/${category.get('icon', 'list-item-1.png')}" alt="machinisme" class="theme-categories_img">
+                <span class="theme-categories_name">${category['name']}</span>
+              </a>
             </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="approv" class="theme-categories_img">
-              <span class="theme-categories_name">approv</span>
-            </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="cereales" class="theme-categories_img">
-              <span class="theme-categories_name">cereales</span>
-            </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="elevage" class="theme-categories_img">
-              <span class="theme-categories_name">elevage</span>
-            </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="agronomie" class="theme-categories_img">
-              <span class="theme-categories_name">agronomie</span>
-            </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="soplan" class="theme-categories_img">
-              <span class="theme-categories_name">soplan</span>
-            </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="transport" class="theme-categories_img">
-              <span class="theme-categories_name">transport</span>
-            </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="npa" class="theme-categories_img">
-              <span class="theme-categories_name">npa</span>
-            </li>
-            <li class="theme-categories_item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/list-item-1.png" alt="fuel" class="theme-categories_img">
-              <span class="theme-categories_name">fuel</span>
-            </li>
+           % endfor
           </ul>
         </div>
       </div>
+      % endif
       <div class="home">
         <%include file="${courses_list}" />
       </div>
