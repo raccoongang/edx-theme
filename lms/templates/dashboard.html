@@ -6,6 +6,7 @@
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.template import RequestContext
+from django.conf import settings
 import third_party_auth
 from third_party_auth import pipeline
 from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_string
@@ -87,7 +88,9 @@ from openedx.core.djangolib.markup import HTML, Text
           </ul>
         % else:
           <div class="empty-dashboard-message">
-            <p>${_("You are not enrolled in any courses yet.")}</p>
+            <p>${_(("Thank you for registering on the {platform_name}. "
+                    "You have not been enrolled to any course yet. "
+                    "Please click on the Explore Courses button to see the courses.")).format(platform_name=settings.PLATFORM_NAME)}</p>
 
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
               <a href="${marketing_link('COURSES')}">
