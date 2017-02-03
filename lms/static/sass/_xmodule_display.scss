@@ -5,6 +5,30 @@
             box-shadow: none;
             background: #e4e4e4;
             border: none;
+            width: 70px !important;
+
+            &.button-next {
+                .icon {
+                    display: none;
+                }
+                &:after {
+                    content: 'next';
+                }
+            }
+            &.button-previous {
+                .icon {
+                    display: none;
+                }
+                &:after {
+                    content: 'previous';
+                }
+            }
+        }
+        .sequence-nav .sequence-list-wrapper {
+            margin: 0 70px !important;
+        }
+        nav.sequence-bottom {
+            width: 140px !important;
         }
     }
 }
