@@ -40,6 +40,7 @@
         color: #128f86 !important;
         font-family: bahij_thesansarabicplain;
 
+        &:focus,
         &:hover {
             color: #ff6634 !important;
             text-decoration: none !important;
@@ -99,13 +100,14 @@
     }
     .item a.btn-login {
         font-family: bahij_thesansarabicsemibold;
-        color: #ff6634 !important;
+        color: #128f86 !important;
         font-size: 16px;
         line-height: 21px;
         padding: 8px;
-
+        
+        &:focus,
         &:hover {
-            color: #ff895a !important;
+            color: #ff6634 !important;
             border-color: transparent;
         }
     }
