@@ -3,16 +3,19 @@
     list-style: none;
     flex-direction: row-reverse;
     padding: 0;
+    margin: 0;
 
     &_item {
-        @include margin-left(30px)
+        margin: 0 5px 0 0;
+        padding: 8px !important;
     }
     &_link {
-        font: 15px/21px bahij_thesansarabicextrabold;
-        color: #7c7c7c !important;
+        font: 16px/21px bahij_thesansarabicplain;
+        color: #128f86 !important;
 
         &:hover {
-            color: #149a9a !important;
+            color: #ff6634 !important;
+            text-decoration: none !important;
         }
     }
 }

@@ -47,16 +47,9 @@ site_status_msg = get_site_status_msg(course_id)
 % if uses_pattern_library:
 <header class="header-global ${"slim" if course and not disable_courseware_header else ""}" aria-label="Main" role="banner">
 % else:
-<header class="${"header-global slim" if course and not disable_courseware_header else "header-global-new"}" aria-label="Main" role="banner">
+<header class="${"header-global slim" if course and not disable_courseware_header else ""}" aria-label="Main" role="banner">
 % endif
   <div class="${"rwd" if responsive else ""} wrapper-header nav-container">
-    <h1 class="logo" itemscope="" itemtype="http://schema.org/Organization">
-      <a href="${marketing_link('ROOT')}" itemprop="url">
-        <%block name="navigation_logo">
-            <img src="${static.url("edx-theme/images/header/logo.png")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
-        </%block>
-      </a>
-    </h1>
 
     % if course and not disable_courseware_header:
     <h2 class="course-header">
@@ -65,16 +58,9 @@ site_status_msg = get_site_status_msg(course_id)
       <span class="course-name">${course.display_name_with_default}</span>
     </h2>
     % endif
-    <ul class="header-nav">
-      <li class="header-nav_item">
-        <a href="http://kwn.education/contact-us/" target="_blank" class="header-nav_link">تواصل معنا</a>
-      </li>
-      <li class="header-nav_item">
-        <a href="http://kwn.education/about-us/" target="_blank" class="header-nav_link">نبذة عنا</a>
-      </li>
-    </ul>
+    <div class="big-navigation">
 
-    % if user.is_authenticated():
+        % if user.is_authenticated():
 
       <%include file="user_dropdown.html"/>
 
@@ -87,7 +73,7 @@ site_status_msg = get_site_status_msg(course_id)
           </li>
         </ul>
       % endif
-            % if not course or disable_courseware_header:
+      % if not course or disable_courseware_header:
 ##        % if not nav_hidden or show_program_listing:
           <nav aria-label="Main" class="nav-main">
             <ul class="left list-inline nav-global authenticated">
@@ -96,12 +82,12 @@ site_status_msg = get_site_status_msg(course_id)
                   <!--li class="item nav-global-01">
                     <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
                   </li-->
-                  <li class="item nav-global-01">
+                  <!-- <li class="item nav-global-01">
                     <a href="http://kwn.education/" target="_blank">${_("Programs")}</a>
-                  </li>
-                  <li class="item nav-global-02">
+                  </li> -->
+                  <!-- <li class="item nav-global-02">
                     <a href="${marketing_link('COURSES')}">${_("Find Courses")}</a>
-                  </li>
+                  </li> -->
                   <!--li class="item nav-global-03">
                     <a href="${marketing_link('SCHOOLS')}">${_("Schools & Partners")}</a>
                   </li-->
@@ -109,7 +95,7 @@ site_status_msg = get_site_status_msg(course_id)
 ##              % endif
               % if show_program_listing:
                 <li class="tab-nav-item">
-                  <a href="${reverse('dashboard')}">
+                  <a class="dashboard" href="${reverse('dashboard')}">
                     ${_("Courses")}
                   </a>
                 </li>
@@ -150,6 +136,41 @@ site_status_msg = get_site_status_msg(course_id)
         </div>
       </nav>
     % endif
+
+    % if not course: 
+    <ul class="header-nav">
+      <li class="header-nav_item">
+        <a href="http://kwn.education/contact-us/" target="_blank" class="header-nav_link">تواصل معنا</a>
+      </li>
+      <li class="header-nav_item">
+        <a href="/" target="_blank" class="header-nav_link">الرسوم</a>
+      </li>
+      <li class="header-nav_item">
+        <a href="/" target="_blank" class="header-nav_link">خطوات الإلتحاق</a>
+      </li>
+      <li class="header-nav_item">
+        <a href="/" target="_blank" class="header-nav_link">لماذا كوِّن؟</a>
+      </li>
+      <li class="header-nav_item">
+        <a href="${marketing_link('COURSES')}" class="header-nav_link">المواد</a>
+      </li>
+      <li class="header-nav_item">
+        <a href="http://kwn.education/" target="_blank" class="header-nav_link">البرامج</a>
+      </li>
+      <!-- <li class="header-nav_item">
+        <a href="http://kwn.education/about-us/" target="_blank" class="header-nav_link">نبذة عنا</a>
+      </li> -->
+    </ul>
+    % endif
+
+    </div>
+    <h1 class="logo" itemscope="" itemtype="http://schema.org/Organization">
+      <a href="${marketing_link('ROOT')}" itemprop="url">
+        <%block name="navigation_logo">
+            <img src="${static.url("edx-theme/images/header/logo.png")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" itemprop="logo" />
+        </%block>
+      </a>
+    </h1>
   </div>
 </header>
 % if course:

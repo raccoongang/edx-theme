@@ -1,0 +1,147 @@
+.big-navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .header-nav {
+        margin: 0;
+    }
+    .dropdown {
+        display: none;
+    }
+    .user {
+        list-style: none;
+        margin: 0;
+        display: flex;
+
+        .primary:first-child {
+            display: none;
+        }
+    }
+    .dropdown-menu {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .item {
+            margin: 0 5px 0 0;
+            padding: 8px;
+        }
+    }
+    .nav-main {
+        margin: 0;
+    }
+    .item a {
+        font-size: 16px;
+        line-height: 21px;
+        color: #128f86 !important;
+        font-family: bahij_thesansarabicplain;
+
+        &:hover {
+            color: #ff6634 !important;
+            text-decoration: none !important;
+        }
+    }
+    .dropdown-item.item {
+        margin: 0;
+        padding: 0;
+
+        a{
+            display: none !important;
+        }
+    }
+
+    .dropdown-item:first-child {
+        margin: 0 5px 0 0;
+        padding: 0;
+
+        a {
+            display: inline-block !important;
+            background-color: #ff6634;
+            border-color: #ff6634;
+            color: #fff !important;
+            font-size: 16px;
+            line-height: 21px;
+            font-family: bahij_thesansarabicsemibold;
+            padding: 8px;
+
+            &:hover {
+                background-color: #ff895a;
+                border-color: #ff895a;
+                color: #fff;
+            }
+        }
+    }
+    .list-inline .item {
+        margin: 0 5px 0 0;
+    }
+    .nav-main .item {
+        padding: 8px;
+    }
+    .dashboard,
+    .item a.btn-neutral {
+        background-color: #ff6634;
+        border-color: #ff6634;
+        color: #fff !important;
+        font-size: 16px;
+        line-height: 21px;
+        font-family: bahij_thesansarabicsemibold;
+        padding: 8px;
+
+        &:hover {
+            background-color: #ff895a;
+            border-color: #ff895a;
+            color: #fff;
+        }
+    }
+    .item a.btn-login {
+        font-family: bahij_thesansarabicsemibold;
+        color: #ff6634 !important;
+        font-size: 16px;
+        line-height: 21px;
+        padding: 8px;
+
+        &:hover {
+            color: #ff895a !important;
+            border-color: transparent;
+        }
+    }
+    .nav-courseware {
+        display: flex;
+    }
+    .header-nav {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    ol.user .dropdown-menu {
+        display: flex;
+        position: static;
+        padding: 0;
+        min-width: auto;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        left: 0;
+        top: 0;
+
+        &:before {
+            display: none;
+        }
+
+        li {
+            border: none;
+            box-shadow: none
+        }
+    }
+    .user .dropdown-menu li>a {
+        border: none;
+        padding: 8px;
+        border-radius: 0;
+        margin: 0;
+        width: auto;
+    }
+}

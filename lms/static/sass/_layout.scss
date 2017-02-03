@@ -12,3 +12,12 @@ body {
 .discussion-column {
     font-family: $font-family-sans-serif;
 }
+.header-global-new h1.logo a img {
+    height: 87px;
+}
+.header-global.slim .wrapper-header {
+    height: auto !important;
+}
+body.view-in-course .header-global .wrapper-header, body.view-in-course .header-global.slim .wrapper-header {
+    padding: 0 !important;
+}
