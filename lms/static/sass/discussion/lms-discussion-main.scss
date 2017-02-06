@@ -8,6 +8,7 @@ $btn-neutral-focus-color: #fff;
 
 $font-family-sans-serif: bahij_thesansarabicplain;
 $btn-font-weight: normal;
+$f-sans-serif: bahij_thesansarabicplain;
 
 // Import the original styles from edx-platform.
 @import "lms/static/sass/discussion/lms-discussion-main";
@@ -37,4 +38,8 @@ $link-visited-color: darken($link-color, 10%);
 @import "../raccoon-block";
 @import "../student-profile";
 @import "discussion-body";
+@import "forum-nav-browse-title";
 @import "../window-wrap";
+@import "../big-navigation";
+@import "../wrapper-header";
+@import "big-navigation";

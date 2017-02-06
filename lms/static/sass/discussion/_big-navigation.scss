@@ -1,0 +1,34 @@
+.big-navigation {
+    .dropdown-menu-container {
+        .menu-title {
+            display: none;
+        }
+        .menu-button {
+            display: none;
+        }
+        .dropdown-menu {
+            position: static;
+            background: transparent;
+            z-index: 1000;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            margin-top: 0;
+            padding: 0;
+            width: auto;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .dropdown-item:last-child {
+
+        a {
+            display: inline-block !important;
+            font-size: 16px;
+            line-height: 21px;
+            padding: 8px;
+        }
+    }
+}
