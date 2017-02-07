@@ -193,7 +193,7 @@ from django.template.defaultfilters import truncatechars
                       reg_element_id = ""
                   %>
                   <a href="${reg_href}" class="add-to-cart theme-btn-2" id="${reg_element_id}">
-                    ${_("Add to Cart")}
+                    ${_("Add to Cart <span>({price} USD)</span>").format(course_name=course.display_number_with_default, price=course_price)}
                   </a>
                   <div id="register_error"></div>
                 %else:
