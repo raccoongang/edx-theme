@@ -31,7 +31,8 @@ course_mode_class = course_mode if course_mode else ''
                 <div class="accomplishment-statement">
                     <p class="accomplishment-statement-lead">
                         <strong class="accomplishment-recipient hd-1 emphasized" id="student-name">${accomplishment_copy_name | h}</strong>
-                        <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
+                        <span class="accomplishment-summary copy copy-lead" id="first-span">${_(u"har slutfört nedanstående lärarfortbildning")}</span>
+                        <span class="accomplishment-summary copy copy-lead">${_(u"med godkänt resultat")}</span>
 
                         <span class="accomplishment-course hd-1 emphasized">
                             <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
