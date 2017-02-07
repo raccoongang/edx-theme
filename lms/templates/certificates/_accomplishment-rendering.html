@@ -41,8 +41,12 @@ course_mode_class = course_mode if course_mode else ''
                     <!-- <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p> -->
                 </div>
 
-                <p class="accomplishment-certificate-course-hours">${_("Motsvarande {course_hours} kurstimmar").format(course_hours=course_hours)}</p>
-                <p class="accomplishment-certificate-date">${_("Datum:")} ${certificate_date.strftime('%Y-%m-%d')}</p>
+                % if course_hours:
+                    <p class="accomplishment-certificate-course-hours">${_("Motsvarande {course_hours} kurstimmar").format(course_hours=course_hours)}</p>
+                % endif
+                % if certificate_date:
+                    <p class="accomplishment-certificate-date">${_("Datum:")} ${certificate_date.strftime('%Y-%m-%d')}</p>
+                % endif
 
                 % if mode != 'base':
                 <div class="accomplishment-signatories">
