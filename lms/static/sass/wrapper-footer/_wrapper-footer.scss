@@ -1,5 +1,5 @@
 .wrapper-footer {
-    background: #45a2d6;
+    background: #000;
     padding: 0;
 
     footer#footer-openedx {
@@ -7,4 +7,21 @@
         box-sizing: border-box;
         padding: 37px 40px 0;
     }
+}
+
+.wrapper-footer footer#footer-openedx a {
+	font-size: 18px;
+}
+
+.wrapper-footer footer#footer-openedx p {
+	font-size: 18px;
+}
+
+.wrapper-footer footer#footer-openedx a:hover {
+	border: none;
+}
+
+.wrapper-footer footer#footer-openedx ul a:active,
+.wrapper-footer footer#footer-openedx ul a:focus, {
+    border: none;
 }

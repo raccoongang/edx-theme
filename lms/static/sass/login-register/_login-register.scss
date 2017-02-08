@@ -30,6 +30,12 @@
     }
     .action-primary {
         width: auto;
+        box-shadow: none;
+    }
+
+    .action-primary:hover,
+    .action-primary:focus {
+        box-shadow: none;
     }
     .form-field {
         .tip {
