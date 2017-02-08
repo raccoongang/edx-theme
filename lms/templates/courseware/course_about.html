@@ -289,23 +289,22 @@ from django.template.defaultfilters import truncatechars
 
           % if pre_requisite_courses:
           <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
-          <li class="prerequisite-course important-dates-item">
-            <span class="icon fa fa-list-ul" aria-hidden="true"></span>
-            <p class="important-dates-item-title">${_("Prerequisites")}</p>
-            ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
-            <span class="important-dates-item-text pre-requisite"><a href="${prc_target}">${pre_requisite_courses[0]['display']}</a></span>
-            <p class="tip">
-            ${_("You must successfully complete {link_start}{prc_display}{link_end} before you begin this course.").format(
-              link_start='<a href="{}">'.format(prc_target),
-              link_end='</a>',
-              prc_display=pre_requisite_courses[0]['display'],
-            )}
-            </p>
-          </li>
+          
           % endif
           % if get_course_about_section(request, course, "prerequisites"):
             <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${truncatechars(course.display_number_with_default, 25) | h}</span></li>
           % endif
+          <li class="prerequisite-course important-dates-item important-dates-item__other">
+            <span class="icon fa fa-list-ul" aria-hidden="true"></span>
+            <p class="important-dates-item-title">${_("Prerequisites")}</p>
+            ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
+            <span class="important-dates-item-text pre-requisite"><a href="#">pre_requisite_courses</a></span>
+            <p class="tip">
+            You must successfully complete before you begin this course<a href="{}"> ho </a>
+              prc_display=pre_requisite_courses
+            
+            </p>
+          </li>
         </ol>
     </div>
       ## For now, ocw links are the only thing that goes in additional resources
