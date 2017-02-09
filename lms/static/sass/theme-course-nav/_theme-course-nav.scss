@@ -35,8 +35,9 @@ a.theme-course-nav_list-link {
     color: #666;
     text-transform: uppercase;
 
-    &:hover {
-        color: #e46c54;
+    &:hover,
+    &:focus {
+        color: #46bc8c;
         text-decoration: none;
     }
 }
@@ -44,7 +45,8 @@ a.theme-course-nav_social-link {
     color: #848484;
     font-size: 16px;
 
-    &:hover {
-        color: #e46c54;
+    &:hover,
+    &:focus {
+        color: #46bc8c;
     }
 }

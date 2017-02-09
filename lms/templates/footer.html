@@ -18,7 +18,7 @@
     % endif
   >
     <div class="theme-footer_row">
-        <ul class="theme-footer_list" aria-label="${_('About')}">
+<!--         <ul class="theme-footer_list" aria-label="${_('About')}">
             % for item_num, link in enumerate(footer['navigation_links'], start=1):
             <li class="nav-colophon-0${item_num}">
               <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
@@ -29,6 +29,18 @@
               <a href="${link['url']}">${link['title']}</a>
             </li>
             % endfor
+        </ul> -->
+        <ul class="theme-footer_list" aria-label="${_('About')}">
+            <% about = footer['navigation_links'][0] %>
+            <li><a id="${about['name']}" href="${about['url']}">${_('About')}</a></li>
+            <% tos = footer['legal_links'][1] %>
+            <li><a id="${tos['name']}" href="${tos['url']}">${tos['title']}</a></li>
+            <li><a id="faq" href="${marketing_link('FAQ')}">${_('FAQ')}</a></li>
+            <% blog = footer['navigation_links'][1] %>
+            <li><a id="${blog['name']}" href="${blog['url']}">${blog['title']}</a></li>
+            <% contact = footer['navigation_links'][2] %>
+            <li><a id="${contact['name']}" href="${contact['url']}">${_('Contact')}</a></li>
+            <li><a id="catalog" href="#">${_('Catalog')}</a></li>
         </ul>
         <ul class="theme-footer_social-list">
           <li class="theme-footer_social-list-item">

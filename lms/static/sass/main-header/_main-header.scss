@@ -8,7 +8,8 @@
         display:flex;
         justify-content: flex-end;
         align-items: center;
-        padding-top: 1px;
+        /*padding-top: 1px;*/
+        flex-grow: 2;
     }
     .nav-global {
         margin-right: 36px;
@@ -22,7 +23,8 @@
        
         &:focus, 
         &:hover {
-            color: lighten(#dd4628, 10%) !important;
+            /*color: lighten(#dd4628, 10%) !important;*/
+            color: #46bc8c;
         }
     }
     .wrapper-header {
@@ -47,4 +49,8 @@
 
 .main-header .wrapper-header {
     height: 100px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }

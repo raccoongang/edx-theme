@@ -28,16 +28,16 @@
     }
     &_copyright {
         font: 16px/1.3 $font-regular;
-        color: #a2d1eb;
+        color: #97d9bd;
         margin: 0;
         padding: 0;
     }
     &_platform-link {
         font-family: $font-bold !important;
-        color: #a2d1eb !important;
+        color: #97d9bd !important;
 
         &:hover {
-            color: darken(#a2d1eb, 10%) !important;
+            color: darken(#97d9bd, 10%) !important;
         }
     }
     &_social-list {
@@ -55,14 +55,14 @@
         width: 40px;
         height: 40px;
         boder-radius: 2px;
-        background-color: #307195;
+        background-color: #328362;
         background-position: 50%;
         background-repeat: no-repeat;
         display: block;
 
         &:hover {
             text-decoration: none;
-            background-color: darken(#307195, 10%);
+            background-color: darken(#328362, 10%);
             border: none !important;
         }
     }
@@ -72,4 +72,10 @@
     &_social-list-twitter {
         background-image: url("../images/ico-twetter.png");
     }
+}
+
+#catalog {
+    pointer-events: none;
+    cursor: default;
+    color: #46bc8c !important;
 }
