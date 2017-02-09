@@ -289,7 +289,7 @@ from django.template.defaultfilters import truncatechars
 
           % if pre_requisite_courses:
           <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
-          <li class="prerequisite-course important-dates-item important-dates-item__other">
+          <li class="prerequisite-course important-dates-item">
             <span class="icon fa fa-list-ul" aria-hidden="true"></span>
             <p class="important-dates-item-title">${_("Prerequisites")}</p>
             ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
