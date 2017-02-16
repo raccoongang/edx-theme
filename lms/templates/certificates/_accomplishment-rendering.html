@@ -61,10 +61,12 @@ course_mode_class = course_mode if course_mode else ''
                                     <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
                                     <hr id="line">
                                     <p class="signatory-credentials copy copy-micro">
-                                        <span class="signatory-name hd-5">${signatory['name']}</span>,  
+                                        <span class="role">${signatory['name']}</span>,  
                                         <span class="role">${signatory['title']}</span>
                                     </p>
-                                    <p class="organization">${signatory['organization']}</p>
+                                    <p class="signatory-credentials copy copy-micro">
+                                        <span class="role">${signatory['organization']}</span>
+                                    </p>
                                 </div>
                                 % endfor
                             % endif
