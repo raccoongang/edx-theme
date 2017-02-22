@@ -2,6 +2,7 @@
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
+signatories = certificate_data.get('signatories', [])
 %>
 
 <main class="accomplishment accomplishment-main">
@@ -54,25 +55,38 @@ course_mode_class = course_mode if course_mode else ''
                     <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
 
                     <div class="wrapper-signatories">
-                        <div class="list-signatories">
+                        <div class="signatory-table">
                             % if certificate_data:
-                                % for index, signatory, in enumerate(certificate_data.get('signatories', [])):
-                                <div class="signatory" id="sign${index}">
-                                    <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
-                                    <hr id="line">
-                                    <p class="signatory-credentials copy copy-micro">
-                                        <span class="role">${signatory['name']}</span>,  
-                                        <span class="role">${signatory['title']}</span>
-                                    </p>
-                                    <p class="signatory-credentials copy copy-micro">
-                                        <span class="role">${signatory['organization']}</span>
-                                    </p>
+                                <div class="signatory-col" id="sign0">
+                                    <div class="signatory-holder">
+                                        <img class="signatory-col_img" height="40" src="${static.url(signatories[0]['signature_image_path'])}" alt="${signatories[0]['name']}">
+                                        <hr id="line">
+                                        <p class="signatory-credentials copy copy-micro">
+                                            <span class="role">${signatories[0]['name']}</span>,  
+                                            <span class="role">${signatories[0]['title']}</span>
+                                        </p>
+                                        <p class="signatory-credentials copy copy-micro">
+                                            <span class="role">${signatories[0]['organization']}</span>
+                                        </p>
+                                    </div>
                                 </div>
-                                % endfor
-                            % endif
-                            % if organization_logo:
-                                <div class="organization">
-                                    <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}">
+                                % if organization_logo:
+                                    <div class="organization-row">
+                                        <img class="organization-img" width="124" height="149" src="${organization_logo.url}" alt="${platform_name}">
+                                    </div>
+                                % endif
+                                <div class="signatory-col" id="sign1">
+                                    <div class="signatory-holder signatory-holder__left">
+                                        <img class="signatory-col_img" height="40" src="${static.url(signatories[1]['signature_image_path'])}" alt="${signatories[1]['name']}">
+                                        <hr id="line">
+                                        <p class="signatory-credentials copy copy-micro">
+                                            <span class="role">${signatories[1]['name']}</span>,  
+                                            <span class="role">${signatories[1]['title']}</span>
+                                        </p>
+                                        <p class="signatory-credentials copy copy-micro">
+                                            <span class="role">${signatories[1]['organization']}</span>
+                                        </p>
+                                    </div>
                                 </div>
                             % endif
                         </div>
