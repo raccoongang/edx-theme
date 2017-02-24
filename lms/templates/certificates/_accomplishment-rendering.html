@@ -45,7 +45,7 @@ show_signatory = request.GET.get('signatory', 'true')
                 </div>
 
                 % if course_hours:
-                    <p class="accomplishment-certificate-course-hours">${_("Motsvarande {course_hours} kurstimmar").format(course_hours=course_hours)}</p>
+                    <p class="accomplishment-certificate-course-hours">${_("motsvarande {course_hours} kurstimmar").format(course_hours=course_hours)}</p>
                 % endif
                 % if certificate_date:
                     <p class="accomplishment-certificate-date">${_("Datum:")} ${certificate_date.strftime('%Y-%m-%d')}</p>
