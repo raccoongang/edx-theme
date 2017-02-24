@@ -3,6 +3,7 @@
 <%
 course_mode_class = course_mode if course_mode else ''
 signatories = certificate_data.get('signatories', [])
+show_signatory = request.GET.get('signatory', 'true')
 %>
 
 <main class="accomplishment accomplishment-main">
@@ -57,6 +58,7 @@ signatories = certificate_data.get('signatories', [])
                     <div class="wrapper-signatories">
                         <div class="signatory-table">
                             % if certificate_data:
+                              % if show_signatory != 'false':
                                 <div class="signatory-col" id="sign0">
                                     <div class="signatory-holder">
                                         <img class="signatory-col_img" height="40" src="${static.url(signatories[0]['signature_image_path'])}" alt="${signatories[0]['name']}">
@@ -70,11 +72,13 @@ signatories = certificate_data.get('signatories', [])
                                         </p>
                                     </div>
                                 </div>
+                              % endif
                                 % if organization_logo:
                                     <div class="organization-row">
                                         <img class="organization-img" width="124" height="149" src="${organization_logo.url}" alt="${platform_name}">
                                     </div>
                                 % endif
+                              % if show_signatory != 'false':
                                 <div class="signatory-col" id="sign1">
                                     <div class="signatory-holder signatory-holder__left">
                                         <img class="signatory-col_img" height="40" src="${static.url(signatories[1]['signature_image_path'])}" alt="${signatories[1]['name']}">
@@ -88,6 +92,7 @@ signatories = certificate_data.get('signatories', [])
                                         </p>
                                     </div>
                                 </div>
+                              % endif
                             % endif
                         </div>
                     </div>
