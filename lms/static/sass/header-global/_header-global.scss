@@ -13,6 +13,8 @@
     .nav-global {
         margin-top: 0;
         padding-top: 0;
+        display: flex;
+        align-items: center;
     }
 
     .nav-courseware {
@@ -45,7 +47,7 @@
     font-size: 16px;
     line-height: 1.3;
     border: none;
-    font-family: $font-regular;
+    font-family: titilliumweb-regular, sans-serif;
     padding: 0 15px;
 }
 .header-global .nav-global .tab-nav-item .tab-nav-link {
