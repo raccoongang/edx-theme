@@ -1,0 +1,26 @@
+.header-search {
+    margin-right: 24px;
+
+    &_button {
+        @extend %button-reset;
+        color: #bdbdbd;
+        padding: 0 !important;
+        margin: 4px 0 0 -34px;
+        text-shadow: none !important;
+        font-size: 22px;
+
+        &:hover {
+            color: lighten(#bdbdbd, 10%);
+            background: none;
+        }
+    }
+    &_label {
+        font-size: 0;
+        line-height: 0;
+    }
+    &_input {
+        border-radius: 0 !important;
+        font: 14px/18px $helvetica !important;
+        color: #7f848c;
+    }
+}

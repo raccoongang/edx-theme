@@ -1,0 +1,41 @@
+.courses-box {
+    display: flex;
+    width: 100%;
+
+    &_img-holder {
+        min-width: 668px;
+        position: relative;
+        overflow: hidden;
+    }
+    &_holder {
+        background: #fff;
+        padding: 46px 19px 63px;
+    }
+    &_img {
+        position: absolute;
+        min-width: 100%;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &_text {
+        font: 16px/21px $helvetica;
+        color: #111827;
+        margin: 0 0 19px;
+    }
+    &_title {
+        font: 26px/34px $helvetica;
+        text-transform: uppercase;
+        color: #111827;
+        display: block;
+        margin: 0 0 7px;
+    }
+    &_lable {
+        font: 16px/21px $helvetica;
+        padding: 0 0 0 7px;
+    }
+    &_time {
+        padding: 0 0 29px;
+    }
+}

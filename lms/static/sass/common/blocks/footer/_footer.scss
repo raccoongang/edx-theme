@@ -1,0 +1,42 @@
+.footer {
+    &_wrapper {
+        @extend %wrapper;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0 21px;
+    }
+    &_holder {
+        background: #626262;
+    }
+    &_text {
+        color: #fff;
+        font: 16px/21px $helvetica;
+        text-transform: uppercase;
+    }
+    &_input {
+        border-radius: 0 !important;
+        border: none !important;
+        width: 238px;
+        margin-right: 26px;
+    }
+}
+.wrapper-footer {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    footer#footer-openedx {
+        max-width: 1140px;
+        position: relative;
+
+        .copyright {
+            text-align: center;
+        }
+        .footer-about-openedx {
+            position: absolute;
+            right: 0;
+            bottom: -2px;
+        }
+    }
+}

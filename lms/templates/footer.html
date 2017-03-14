@@ -1,0 +1,72 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer">
+  <div class="footer_holder">
+    <div class="footer_wrapper">
+      <span class="footer_text">Get notified about new courses, events and news from your Learning Camp</span>
+      <div class="footer_box">
+        <input class="footer_input" type="text">
+        <a class="btn-2" href="#">Register</a>
+      </div>
+    </div>
+  </div>
+  <footer id="footer-openedx" class="grid-container"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
+      <nav class="footer-nav" aria-label="${_('About')}">
+        <ol class="footer-nav_list">
+            % for item_num, link in enumerate(footer['navigation_links'], start=1):
+            <li class="footer-nav_item">
+              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+            </li>
+            % endfor
+            % for item_num, link in enumerate(footer['legal_links'], start=1):
+            <li class="footer-nav_item">
+              <a href="${link['url']}">${link['title']}</a>
+            </li>
+            % endfor
+        </ol>
+      </nav>
+
+      ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
+      <p class="copyright">© World Scout Bureau Inc.</p>
+
+    ## Please leave this link and use one of the logos provided
+    ## The OpenEdX link may be hidden when this view is served
+    ## through an API to partner sites (such as marketing sites or blogs),
+    ## which are not technically powered by OpenEdX.
+    % if not hide_openedx_link:
+    <div class="footer-about-openedx">
+      <p>
+        <a href="${footer['openedx_link']['url']}" target="_blank">
+          <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+        </a>
+      </p>
+    </div>
+    % endif
+  </footer>
+</div>
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif

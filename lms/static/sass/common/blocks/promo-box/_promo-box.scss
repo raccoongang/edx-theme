@@ -1,0 +1,79 @@
+.promo-box {
+    display: flex;
+    justify-content: space-between;
+    height: 363px;
+    overflow: hidden;
+    position: relative;
+    background: #e6e6e6;
+    
+    &_right,
+    &_left {
+        position: relative;
+        overflow: hidden;
+    }
+    &_left {
+        width: 63.3%;
+    }
+    &_right {
+        width: 36.3%;
+    }
+    &_img {
+        position: absolute;
+        width: auto;
+        min-height: 100%;
+        left: 0;
+        top: 0;
+    }
+    &_text {
+        font: 18px/23px $helvetica;
+        text-transform: uppercase;
+        color: #fff;
+        display: block;
+        margin-bottom: 8px;
+    }
+    &_heading {
+        font: 56px/72px $helvetica;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &_text-holder {
+        position: relative;
+        min-width: 330px;
+
+        &__other {
+            min-width: 510px;
+        }
+    }
+    &_text-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &_wrapper {
+        position: absolute;
+        bottom: 88px;
+        width: 100%;
+        left: 0;
+    }
+    &_holder {
+        @extend %wrapper;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_helper {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -95px;
+        height: 190px;
+        background: url("../images/textures.png") repeat-x;
+        width: 100%;
+    }
+    &_big-text {
+        font: 28px/55px $helvetica;
+        text-transform: uppercase;
+        color: #fff;
+        width: 330px;
+        margin-bottom: 19px;
+    }
+}

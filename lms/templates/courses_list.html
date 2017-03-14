@@ -1,0 +1,170 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<section class="courses-container">
+  <section class="highlighted-courses">
+    <strong class="courses-container_heading">Courses on highlight</strong>
+    <div class="courses-container_btn-holder">
+      <a class="btn-2" href="#">Wiew All Courses</a>
+    </div>
+    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+      <section class="courses">
+        <ul class="courses-listing">
+          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+          <li class="courses-listing-item">
+              <%include file="course.html" args="course=course" />
+          </li>
+        %endfor
+        </ul>
+      </section>
+    ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
+      % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
+      <div class="courses-more">
+        <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
+      </div>
+    % endif
+    % endif
+
+    <strong class="courses-container_heading">Programs on highlight</strong>
+    <div class="courses-container_btn-holder">
+      <a class="btn-2" href="#">Wiew All Programs</a>
+    </div>
+    <section class="courses">
+        <ul class="courses-listing">
+          <li class="courses-listing-item">
+              
+        <article class="course" id="course-v1:edX+DemoX+Demo_Course" role="region" aria-label="edX Demonstration Course">
+          <a href="/courses/course-v1:edX+DemoX+Demo_Course/about">
+            <header class="course-image">
+              <div class="cover-image">
+                <img src="/asset-v1:edX+DemoX+Demo_Course+type@asset+block@images_course_image.jpg" alt="edX Demonstration Course DemoX">
+                <div class="learn-more" aria-hidden="true">LEARN MORE</div>
+              </div>
+            </header>
+            <h2 class="course_heading course_heading__other">LOREM IPSUM</h2>
+            <div class="course-info" aria-hidden="true">
+              <h2 class="course-name">
+                <span class="course-organization">edX</span>
+                <span class="course-code">DemoX</span>
+                <span class="course-title">edX Demonstration Course</span>
+              </h2>
+              <div class="course-date" aria-hidden="true">Starts: Feb 05, 2013</div>
+            </div>
+            <div class="sr">
+              <ul>
+              <li>edX</li>
+              <li>DemoX</li>
+              <li>Starts: <time itemprop="startDate" datetime="Feb 05, 2013">Feb 05, 2013</time></li>
+            </ul>
+            </div>
+          </a>
+        </article>
+
+          </li>
+        <li class="courses-listing-item">
+            
+          <article class="course" id="course-v1:edX+DemoX+Demo_Course" role="region" aria-label="edX Demonstration Course">
+            <a href="/courses/course-v1:edX+DemoX+Demo_Course/about">
+              <header class="course-image">
+                <div class="cover-image">
+                  <img src="/asset-v1:edX+DemoX+Demo_Course+type@asset+block@images_course_image.jpg" alt="edX Demonstration Course DemoX">
+                  <div class="learn-more" aria-hidden="true">LEARN MORE</div>
+                </div>
+              </header>
+              <h2 class="course_heading course_heading__other">LOREM IPSUM</h2>
+              <div class="course-info" aria-hidden="true">
+                <h2 class="course-name">
+                  <span class="course-organization">edX</span>
+                  <span class="course-code">DemoX</span>
+                  <span class="course-title">edX Demonstration Course</span>
+                </h2>
+                <div class="course-date" aria-hidden="true">Starts: Feb 05, 2013</div>
+              </div>
+              <div class="sr">
+                <ul>
+                <li>edX</li>
+                <li>DemoX</li>
+                <li>Starts: <time itemprop="startDate" datetime="Feb 05, 2013">Feb 05, 2013</time></li>
+              </ul>
+              </div>
+            </a>
+          </article>
+
+          </li><li class="courses-listing-item">
+              
+          <article class="course" id="course-v1:edX+DemoX+Demo_Course" role="region" aria-label="edX Demonstration Course">
+            <a href="/courses/course-v1:edX+DemoX+Demo_Course/about">
+              <header class="course-image">
+                <div class="cover-image">
+                  <img src="/asset-v1:edX+DemoX+Demo_Course+type@asset+block@images_course_image.jpg" alt="edX Demonstration Course DemoX">
+                  <div class="learn-more" aria-hidden="true">LEARN MORE</div>
+                </div>
+              </header>
+              <h2 class="course_heading course_heading__other">LOREM IPSUM</h2>
+              <div class="course-info" aria-hidden="true">
+                <h2 class="course-name">
+                  <span class="course-organization">edX</span>
+                  <span class="course-code">DemoX</span>
+                  <span class="course-title">edX Demonstration Course</span>
+                </h2>
+                <div class="course-date" aria-hidden="true">Starts: Feb 05, 2013</div>
+              </div>
+              <div class="sr">
+                <ul>
+                <li>edX</li>
+                <li>DemoX</li>
+                <li>Starts: <time itemprop="startDate" datetime="Feb 05, 2013">Feb 05, 2013</time></li>
+              </ul>
+              </div>
+            </a>
+          </article>
+
+          </li><li class="courses-listing-item">
+              
+          <article class="course" id="course-v1:edX+DemoX+Demo_Course" role="region" aria-label="edX Demonstration Course">
+            <a href="/courses/course-v1:edX+DemoX+Demo_Course/about">
+              <header class="course-image">
+                <div class="cover-image">
+                  <img src="/asset-v1:edX+DemoX+Demo_Course+type@asset+block@images_course_image.jpg" alt="edX Demonstration Course DemoX">
+                  <div class="learn-more" aria-hidden="true">LEARN MORE</div>
+                </div>
+              </header>
+              <h2 class="course_heading course_heading__other">LOREM IPSUM</h2>
+              <div class="course-info" aria-hidden="true">
+                <h2 class="course-name">
+                  <span class="course-organization">edX</span>
+                  <span class="course-code">DemoX</span>
+                  <span class="course-title">edX Demonstration Course</span>
+                </h2>
+                <div class="course-date" aria-hidden="true">Starts: Feb 05, 2013</div>
+              </div>
+              <div class="sr">
+                <ul>
+                <li>edX</li>
+                <li>DemoX</li>
+                <li>Starts: <time itemprop="startDate" datetime="Feb 05, 2013">Feb 05, 2013</time></li>
+              </ul>
+              </div>
+            </a>
+          </article>
+
+          </li></ul>
+      </section>
+      <div class="courses-box">
+        <div class="courses-box_holder">
+          <p class="courses-box_text">You have lot’s of ideas on how to contribute to this project and want to share them with us?</p>
+          <strong class="courses-box_title">Engage with us</strong>
+          <div class="courses-box_time">
+            <span class="ico-clock">time</span><span class="courses-box_lable">Starts: TBD</span>
+          </div>
+          <a class="btn-1" href="#">Contact us</a>
+        </div>
+        <div class="courses-box_img-holder">
+          <img class="courses-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="course img">
+        </div>
+      </div>
+
+  </section>
+</section>

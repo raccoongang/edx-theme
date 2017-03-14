@@ -1,0 +1,45 @@
+.header-helper {
+    background: #461b6e;
+
+    &_wrapper {
+        @extend %wrapper;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 12px;
+        padding-bottom: 14px;
+    }
+    &_right-side {
+        display: flex;
+    }
+    &_mail,
+    &_link {
+        font-size: 12px;
+        line-height: 16px;
+        color: #fff !important;
+
+        &:hover {
+            color: #007db8 !important;
+            text-decoration: none;
+        }
+    }
+    &_mail {
+        margin-left: 83px;
+    }
+    &_ico-holder {
+        margin-right: 8px;
+    }
+    &_caption {
+        font-size: 12px;
+        line-height: 17px;
+        color: #fff;
+    }
+    &_list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &_list-item {
+        margin-left: 20px;
+    }
+}
