@@ -1,12 +1,20 @@
 .header-helper {
     background: #461b6e;
 
+    &:after {
+        display: none;
+    }
+
     &_wrapper {
         @extend %wrapper;
         display: flex;
         justify-content: space-between;
         padding-top: 12px;
         padding-bottom: 14px;
+
+        &:after {
+            display: none;
+        }
     }
     &_right-side {
         display: flex;

@@ -5,6 +5,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 24px 0 21px;
+
+        &:after {
+            display: none;
+        }
     }
     &_holder {
         background: #626262;
@@ -25,6 +29,7 @@
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
+    width: auto;
 
     footer#footer-openedx {
         max-width: 1140px;
