@@ -1,0 +1,73 @@
+$theme-color: #0f293d;
+$color-1: #888;
+$color-2: #ff6600;
+
+.header-global {
+    background: $theme-color;
+    box-shadow: none;
+    border: none;
+    
+    a,
+    .nav-global li a {
+        color: $color-1;
+
+        &:hover {
+            color: $color-2;
+        }
+    }
+    .nav-courseware li .btn {
+        background: $color-2;
+
+        &:hover {
+            background: $color-1;
+        }
+    }
+}
+.wrapper-footer {
+    background: $theme-color;
+
+    footer#footer-openedx .colophon .nav-colophon li a {
+        color: $color-1;
+
+        &:hover {
+            color: $color-2;
+            border-color: $color-2;
+        }
+    }
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: $color-2;
+
+    &:hover {
+        background: $color-1;
+    }
+}
+.logo img,
+.wrapper-logo img {
+    max-width: 158px;
+    height: auto;
+}
+.home>header {
+    background-image: url("../images/Dean-Bragonier.png");
+    background-size: cover;
+    background-position: 50%;
+    min-height: 520px;
+
+    .title {
+        background: rgba(255, 255, 255, .7);
+    }
+}
+.user-menu {
+    position: relative;
+    bottom: -9px;
+}
+.header-global .primary>a {
+    box-shadow: none;
+    color: $color-1;
+    text-shadow: none;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-2;
+    }
+}
