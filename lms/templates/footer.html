@@ -1,0 +1,55 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer">
+  <a class="footer_openedx-link" href="http://code.edx.org">
+      <img class="footer_openedx-img" src="/static/edx-theme/images/openedx_logo.png" alt="open edx logo">
+    </a>
+  <footer id="footer-openedx" class="grid-container"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
+    <div class="colophon">
+      <ul class="footer-list">
+        <li class="footer-list_item"><a href="/tos" class="footer-list_link">Terms of Service and Privacy Policy</a></li>
+        <li class="footer-list_item"><a href="/about" class="footer-list_link">About us</a></li>
+        <li class="footer-list_item"><a href="/honor" class="footer-list_link">Honor Code</a></li>
+        <li class="footer-list_item"><a href="/contact" class="footer-list_link">Contact</a></li>
+      </ul>
+    </div>
+
+    ## Please leave this link and use one of the logos provided
+    ## The OpenEdX link may be hidden when this view is served
+    ## through an API to partner sites (such as marketing sites or blogs),
+    ## which are not technically powered by OpenEdX.
+    % if not hide_openedx_link:
+    <div class="footer-about-openedx">
+      <a class="footer_logo-link" href="http://www.noticeability.org/">
+        <img class="footer_logo" src="/static/edx-theme/images/logo.png" alt="notice ability logo">
+      </a>
+    </div>
+    % endif
+  </footer>
+</div>
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif

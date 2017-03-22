@@ -6,8 +6,12 @@ $color-2: #ff6600;
     background: $theme-color;
     box-shadow: none;
     border: none;
-    
+    position: relative;
+    z-index: 11;
+
     a,
+    a:visited,
+    .nav-global li a:visited,
     .nav-global li a {
         color: $color-1;
 
@@ -25,6 +29,7 @@ $color-2: #ff6600;
 }
 .wrapper-footer {
     background: $theme-color;
+    padding-top: 35px;
 
     footer#footer-openedx .colophon .nav-colophon li a {
         color: $color-1;
@@ -78,5 +83,50 @@ $color-2: #ff6600;
     display: block;
 }
 .home>header .outer-wrapper {
-    margin: 210px auto 0;
+    margin: 321px auto 0;
+    padding-bottom: 0;
+}
+.footer-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &_item {
+        margin-right: 15px;
+    }
+    &_link {
+        color: $color-1 !important;
+        font-size: 16px;
+        line-height: 16px;
+
+        &:hover {
+            color: $color-2 !important;
+            border-bottom: none !important;
+        }
+    }
+}
+.footer_logo-link {
+    margin: -17px 0 0 0;
+}
+.footer_openedx-link {
+    float: left;
+    margin: -2px 0 0;
+}
+.footer_logo {
+    max-width: 157px;
+}
+.footer_openedx-img {
+    max-width: 84px;
+}
+.contact-form {
+    text-align: right;
+    margin-right: 33%;
+}
+.contact-form input,
+.contact-form textarea {
+    margin: 0 0 10px 10px;
+}
+.doc-link {
+    margin-top: 13px;
 }

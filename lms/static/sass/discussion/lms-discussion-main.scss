@@ -1,0 +1,28 @@
+//import the original styles from edx-platform
+@import "lms/static/sass/discussion/lms-discussion-main.scss";
+@import "../main";
+
+$theme-color: #0f293d;
+$color-1: #888;
+$color-2: #ff6600;
+
+body {
+    -webkit-font-smoothing:initial;
+}
+.header-global .wrapper-header {
+    padding: 10px;
+}
+.course-header {
+    color: $color-1;
+}
+.dropdown-menu-container .menu-title {
+    color: $color-1 !important;
+
+    &:hover {
+        color: $color-2 !important;
+    }
+}
+.dropdown-menu-container .menu-button {
+    color: #fff;
+    margin-top: -4px;
+}
