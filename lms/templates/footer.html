@@ -10,7 +10,7 @@
 
 <div class="wrapper wrapper-footer">
   <a class="footer_openedx-link" href="http://code.edx.org">
-      <img class="footer_openedx-img" src="/static/edx-theme/images/openedx_logo.png" alt="open edx logo">
+      <img class="footer_openedx-img" src="/static/${settings.DEFAULT_SITE_THEME}/images/openedx_logo.png" alt="open edx logo">
     </a>
   <footer id="footer-openedx" class="grid-container"
     ## When rendering the footer through the branding API,
@@ -36,7 +36,7 @@
     % if not hide_openedx_link:
     <div class="footer-about-openedx">
       <a class="footer_logo-link" href="http://www.noticeability.org/">
-        <img class="footer_logo" src="/static/edx-theme/images/logo.png" alt="notice ability logo">
+        <img class="footer_logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="notice ability logo">
       </a>
     </div>
     % endif
