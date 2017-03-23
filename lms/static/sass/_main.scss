@@ -1,6 +1,6 @@
 $theme-color: #336633;
-$color-1: #888;
-$color-2: #ff6600;
+$color-1: #fff;
+$color-2: #DD823E;
 
 .header-global {
     background: $theme-color;
@@ -24,14 +24,18 @@ $color-2: #ff6600;
         background: $color-2;
 
         &:hover {
-            background: $color-1;
+            background: lighten($color-2, 10%);
+            color: $color-1;
         }
     }
 }
+.header-global .wrapper-header .course-header {
+    display: none;
+}
 .wrapper-footer {
-    background: $theme-color;
-    padding-top: 35px;
-    padding-bottom: 38px;
+    background: #000;
+    padding-top: 26px;
+    padding-bottom: 26px;
 
     footer#footer-openedx .colophon .nav-colophon li a {
         color: $color-1;
@@ -40,6 +44,13 @@ $color-2: #ff6600;
             color: $color-2;
             border-color: $color-2;
         }
+    }
+}
+.wrapper-header .dropdown-menu-container .menu-title {
+    color: $color-1 !important;
+
+    &:hover {
+        color: $color-2 !important;
     }
 }
 .courses-container .courses .course .course-image .cover-image .learn-more {
@@ -51,18 +62,16 @@ $color-2: #ff6600;
 }
 .logo img,
 .wrapper-logo img {
-    max-width: 158px;
+    max-width: 223px;
     height: auto;
 }
 .home>header {
-    background-image: url("../images/Dean-Bragonier.png");
-    background-size: cover;
+    background-color: #CFD4CD;
+    background-image: url("../images/gcsen-back.png");
     background-position: 50%;
-    min-height: 520px;
-
-    .title {
-        background: rgba(255, 255, 255, .7);
-    }
+    background-repeat: no-repeat;
+    background-size: 27%;
+    height: 488px;
 }
 .user-menu {
     position: relative;
@@ -78,16 +87,11 @@ $color-2: #ff6600;
         color: $color-2;
     }
 }
-.home>header .title>.heading-group h1 {
-    text-align: center;
-}
-.home>header .title>.heading-group {
-    display: block;
-}
 .home>header .outer-wrapper {
-    margin: 321px auto 0;
-    padding-bottom: 0;
+    padding: 230px 0 0;
+    opacity: 0.7;
 }
+
 .footer-list {
     display: flex;
     margin: 0;
@@ -98,9 +102,29 @@ $color-2: #ff6600;
         margin-right: 15px;
     }
     &_link {
-        color: $color-1 !important;
+        color: #737373 !important;
         font-size: 16px;
         line-height: 16px;
+
+        &:hover {
+            color: $color-2 !important;
+            border-bottom: none !important;
+        }
+    }
+}
+.raccoon-block {
+    padding: 20px 0 0;
+
+    img {
+        height: 16px;
+        vertical-align: baseline;
+        opacity: 0.5;
+    }
+    a {
+        font-size: 9px;
+        line-height: 11px;
+        vertical-align: bottom;
+        color: #737373 !important;
 
         &:hover {
             color: $color-2 !important;
@@ -116,7 +140,8 @@ $color-2: #ff6600;
     margin: -2px 0 0;
 }
 .footer_logo {
-    max-width: 157px;
+    max-width: 255px;
+    margin-top: 9px;
 }
 .footer_openedx-img {
     max-width: 84px;
@@ -131,4 +156,12 @@ $color-2: #ff6600;
 }
 .doc-link {
     margin-top: 13px;
+}
+.wrapper-footer footer#footer-openedx .colophon {
+    float: left;
+    width: auto;
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+    float: right;
+    width: auto;
 }
