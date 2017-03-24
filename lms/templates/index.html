@@ -29,13 +29,12 @@ from openedx.core.djangolib.markup import HTML, Text
         <div class="theme-categories_holder">
           <h2 class="theme-categories_title">
             <span>classement par</span>
-            <strong>categories</strong>
+            <strong>categorie</strong>
           </h2>
           <ul class="theme-categories_list">
            % for category in settings.FEATURES.get('CATEGORY_FILTER', []):
             <li class="theme-categories_item">
-              <a href="?category=${category['id']}">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/${category.get('icon', 'list-item-1.png')}" alt="machinisme" class="theme-categories_img">
+              <a class="theme-categories_link" href="?category=${category['id']}">
                 <span class="theme-categories_name">${category['name']}</span>
               </a>
             </li>

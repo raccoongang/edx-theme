@@ -118,10 +118,11 @@ from django.template.defaultfilters import truncatechars
             ${course.display_name_with_default_escaped}
             <!-- <a href="#">${course.display_org_with_default | h}</a> -->
           </h1>
-
-          <h3>
-            ${get_course_about_section(request, course, 'short_description')}
-          </h3>
+          % if get_course_about_section(request, course, 'short_description'):
+            <h3>
+              ${get_course_about_section(request, course, 'short_description')}
+            </h3>
+          % endif
           <!--span class="theme-course-about_categories">Catégorie(s) : Céréales</span-->
         </div>
       </section>
