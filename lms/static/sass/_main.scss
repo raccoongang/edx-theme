@@ -93,6 +93,9 @@ $color-2: #ff6600;
     margin: 0;
     padding: 0;
     list-style: none;
+    @media only screen and (max-width: 800px) {
+        padding-top: 10px;
+    }
 
     &_item {
         margin-right: 15px;
@@ -110,6 +113,9 @@ $color-2: #ff6600;
 }
 .footer_logo-link {
     margin: -19px 0 0 0;
+    @media only screen and (max-width: 800px) {
+        margin-top: 10px;
+    }
 }
 .footer_openedx-link {
     float: left;
