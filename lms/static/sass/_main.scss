@@ -1,148 +1,18 @@
-$theme-color: #0f293d;
+$theme-color: #f67f45;
 $color-1: #888;
 $color-2: #ff6600;
 
+body {
+    background: #eaeaea;
+}
 .header-global {
-    background: $theme-color;
-    box-shadow: none;
-    border: none;
-    position: relative;
-    z-index: 11;
-
-    a,
-    a:visited,
-    .nav-global li a:visited,
-    .nav-global li a {
-        color: $color-1;
-
-        &:hover {
-            color: $color-2;
-            text-decoration: none;
-        }
-    }
-    .nav-courseware li .btn {
-        background: $color-2;
-
-        &:hover {
-            background: $color-1;
-        }
-    }
-}
-.wrapper-footer {
-    background: $theme-color;
-    padding-top: 35px;
-    padding-bottom: 38px;
-
-    footer#footer-openedx .colophon .nav-colophon li a {
-        color: $color-1;
-
-        &:hover {
-            color: $color-2;
-            border-color: $color-2;
-        }
-    }
-}
-.courses-container .courses .course .course-image .cover-image .learn-more {
-    background: $color-2;
-
-    &:hover {
-        background: $color-1;
-    }
-}
-.logo img,
-.wrapper-logo img {
-    max-width: 158px;
     height: auto;
-}
-.home>header {
-    background-image: url("../images/Dean-Bragonier.png");
-    background-size: cover;
-    background-position: 50%;
-    min-height: 520px;
 
-    .title {
-        background: rgba(255, 255, 255, .7);
+    h1.logo img {
+        width: 95px;
     }
-}
-.user-menu {
-    position: relative;
-    bottom: -9px;
-}
-.header-global .primary>a {
-    box-shadow: none;
-    color: $color-1;
-    text-shadow: none;
-
-    &:hover {
-        background-color: transparent;
-        color: $color-2;
+    .nav,
+    .wrapper-header {
+        height: auto;
     }
-}
-.home>header .title>.heading-group h1 {
-    text-align: center;
-}
-.home>header .title>.heading-group {
-    display: block;
-}
-.home>header .outer-wrapper {
-    margin: 321px auto 0;
-    padding-bottom: 0;
-}
-.footer-list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    @media only screen and (max-width: 800px) {
-        padding-top: 10px;
-    }
-
-    &_item {
-        margin-right: 15px;
-    }
-    &_link {
-        color: $color-1 !important;
-        font-size: 16px;
-        line-height: 16px;
-
-        &:hover {
-            color: $color-2 !important;
-            border-bottom: none !important;
-        }
-    }
-}
-.footer_logo-link {
-    margin: -19px 0 0 0;
-    @media only screen and (max-width: 800px) {
-        margin-top: 10px;
-    }
-}
-.footer_openedx-link {
-    float: left;
-    margin: -2px 0 0;
-}
-.footer_logo {
-    max-width: 157px;
-}
-.footer_openedx-img {
-    max-width: 84px;
-}
-.contact-form {
-    text-align: right;
-    margin-right: 33%;
-}
-.contact-form input,
-.contact-form textarea {
-    margin: 0 0 10px 10px;
-}
-.doc-link {
-    margin-top: 13px;
-}
-.wrapper-footer footer#footer-openedx .colophon {
-    float: left;
-    width: auto;
-}
-.wrapper-footer footer#footer-openedx .footer-about-openedx {
-    float: right;
-    width: auto;
 }
