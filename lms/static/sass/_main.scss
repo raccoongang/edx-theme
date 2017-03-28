@@ -1,7 +1,7 @@
 $theme-color: #f67f45;
 $color-1: #201c1d;
-$color-2: #ff6600;
 
+html,
 body {
     background: #eaeaea;
 }
@@ -21,15 +21,30 @@ body {
             width: 95px;
         }
     }
+    &.slim h1.logo img {
+        width: 95px !important;
+        height: auto !important;
+    }
+    &.slim h1.logo:before {
+        top: 8px !important;
+    }
     .nav,
     .wrapper-header {
         height: auto;
         padding-bottom: 13px;
     }
+    .wrapper-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:after {
+            display: none;
+        }
+    }
     .nav-global {
         margin-top: 0;
-        float: right;
-        margin-right: 227px;
+        padding-left: 232px;
 
         li a {
             border-radius: 2px;
@@ -57,12 +72,13 @@ body {
     background: $theme-color;
     box-shadow: none;
 }
-.wrapper-footer footer#footer-openedx .wrapper_list {
+.wrapper-footer footer#footer-openedx .footer_list {
     display: flex;
     padding: 17px 0 49px;
     margin: 0;
     list-style: none;
     justify-content: center;
+    width: 100%;
     
     &-item {
         margin: 0 24px;
@@ -115,13 +131,13 @@ body {
         height: 40px;
 
         &__facebook {
-            background: url("../images/ico-facebook.jpg") no-repeat;
+            background: url("#{$img-path}ico-facebook.jpg") no-repeat;
         }
         &__twitter {
-            background: url("../images/ico-twitter.jpg") no-repeat;
+            background: url("#{$img-path}ico-twitter.jpg") no-repeat;
         }
         &__youtube {
-            background: url("../images/ico-youtube.jpg") no-repeat;
+            background: url("#{$img-path}ico-youtube.jpg") no-repeat;
         }
         &:hover {
             border: none !important;
@@ -132,8 +148,31 @@ body {
 .footer-holder {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 .footer-raccoon {
     color: #fff !important;
     font-size: 10px;
+    margin: 16px 0 0;
+}
+.footer-logo:hover {
+    border: none !important;
+}
+.nav-holder {
+    display: flex;
+}
+.doc-link {
+    color: #201c1d !important;
+
+    &:hover {
+        color: $theme-color !important;
+        text-decoration: none;
+    }
+}
+.header-global.slim .nav-global {
+    padding-left: 0;
+}
+.header-global.slim h1.logo:before,
+.header-global.slim h1.logo:after {
+    display: none !important;
 }

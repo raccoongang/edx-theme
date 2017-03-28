@@ -122,11 +122,12 @@ site_status_msg = get_site_status_msg(course_id)
         </%block>
       </ol>
 
-      <%include file="user_dropdown.html"/>
-
+      <div class="nav-holder">
       <a href="${get_online_help_info(online_help_token)['doc_url']}" 
          target="_blank"
          class="doc-link">${_("Help")}</a>
+      <%include file="user_dropdown.html"/>
+      </div>
 
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
@@ -138,28 +139,6 @@ site_status_msg = get_site_status_msg(course_id)
         </ol>
       % endif
     % else:
-       <ol class="right nav-courseware list-inline">
-        <%block name="navigation_sign_in">
-          <li class="item nav-courseware-01">
-            % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-              % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-                <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">вхід</a>
-              % else:
-                <a class="theme-btn" href="/login${login_query()}">вхід</a>
-              % endif
-            % endif
-          </li>
-          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <li class="item nav-global-04">
-                <a class="theme-btn" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">реєстрація</a>
-              </li>
-            % else:
-              <li class="item nav-global-04">
-                <a class="theme-btn" href="/register${login_query()}">реєстрація</a>
-              </li>
-            % endif
-        </%block>
-      </ol>
       <ol class="left list-inline nav-global">
         <%block name="navigation_global_links">
           % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
@@ -187,7 +166,28 @@ site_status_msg = get_site_status_msg(course_id)
           % endif
         </%block>
       </ol>
-   
+       <ol class="right nav-courseware list-inline">
+        <%block name="navigation_sign_in">
+          <li class="item nav-courseware-01">
+            % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+              % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">вхід</a>
+              % else:
+                <a class="theme-btn" href="/login${login_query()}">вхід</a>
+              % endif
+            % endif
+          </li>
+          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+              <li class="item nav-global-04">
+                <a class="theme-btn" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">реєстрація</a>
+              </li>
+            % else:
+              <li class="item nav-global-04">
+                <a class="theme-btn" href="/register${login_query()}">реєстрація</a>
+              </li>
+            % endif
+        </%block>
+      </ol>
 
       
     % endif
