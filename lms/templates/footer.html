@@ -1,0 +1,58 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx" class="grid-container"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
+  <ul class="wrapper_list">
+    <li class="wrapper_list-item">
+      <a class="wrapper_list-link" target="_blank" href="http://desk.ua/about-us/privacy-policy/">Угода користувача та політика приватносі</a>
+    </li>
+    <li class="wrapper_list-item">
+      <a class="wrapper_list-link" target="_blank" href="http://desk.ua/about-us/user-agreement/">Правила користування</a>
+    </li>
+    <li class="wrapper_list-item">
+      <a class="wrapper_list-link" target="_blank" href="#">Кодекс честі</a>
+    </li>
+    <li class="wrapper_list-item">
+      <a class="wrapper_list-link" target="_blank" href="http://desk.ua/about-us/contacts/">Контакти</a>
+    </li>
+  </ul>
+  <div class="footer-holder">
+    <a href="http://desk.ua/" class="footer-logo" target="_blank">
+      <img src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.jpg" alt="logo">
+    </a>
+    <ul class="footer-social">
+      <li class="footer-social_item"><a href="https://www.facebook.com/deskeducation" target="_blank" class="footer-social_link footer-social_link__facebook">facebook</a></li>
+      <li class="footer-social_item"><a href="#" target="_blank" class="footer-social_link footer-social_link__twitter">twitter</a></li>
+      <li class="footer-social_item"><a href="https://www.youtube.com/channel/UCwqvKZUOvQCkAwTDn8klp0g" target="_blank" class="footer-social_link footer-social_link__youtube">youtube</a></li>
+    </ul>
+    <p class="footer-raccoon">powered by RACCOON GANG <a class="footer-raccoon_link" href="https://raccoongang.com/" target="_blank"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-raccoon.jpg" alt="logo"></a></p>
+  </div>
+
+  </footer>
+</div>
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif

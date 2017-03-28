@@ -1,10 +1,23 @@
+.theme-btn:visited,
 .theme-btn {
     background: $theme-color;
+    border: 2px solid $theme-color;
     border-radius: 2px;
     box-shadow: none;
     display: inline-block;
     vertical-align: middle;
     text-transform: uppercase;
     color: #fff !important;
-    
+    font-size: 14px;
+    line-height: 14px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    min-width: 106px;
+    text-align: center;
+
+    &:hover {
+        background: #fff;
+        color: $theme-color !important;
+        text-decoration: none;
+    }
 }

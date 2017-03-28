@@ -82,7 +82,7 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
               <li class="item nav-global-01 nav-global-01-xseries-style">
-                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">знайти курс</a>
               </li>
               <li class="tab-nav-item">
                 <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
@@ -97,7 +97,7 @@ site_status_msg = get_site_status_msg(course_id)
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing and context.get('threads') == None:
               <li class="item nav-global-01">
-                <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+                <a href="${marketing_link('COURSES')}">знайти курс</a>
               </li>
             % endif
             % if show_program_listing:
@@ -138,35 +138,7 @@ site_status_msg = get_site_status_msg(course_id)
         </ol>
       % endif
     % else:
-      <ol class="left list-inline nav-global">
-        <%block name="navigation_global_links">
-          % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-            <li class="item nav-global-01">
-              <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-            </li>
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-              <li class="item nav-global-02">
-                <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
-              </li>
-            % endif
-            <li class="item nav-global-03">
-              <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-            </li>
-          % endif
-        </%block>
-
-        <%block name="navigation_other_global_links">
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
-              </li>
-            %endif
-          % endif
-        </%block>
-      </ol>
-
-      <ol class="right nav-courseware list-inline">
+       <ol class="right nav-courseware list-inline">
         <%block name="navigation_sign_in">
           <li class="item nav-courseware-01">
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
@@ -188,6 +160,36 @@ site_status_msg = get_site_status_msg(course_id)
             % endif
         </%block>
       </ol>
+      <ol class="left list-inline nav-global">
+        <%block name="navigation_global_links">
+          % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+            <li class="item nav-global-01">
+              <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+            </li>
+            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+              <li class="item nav-global-02">
+                <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
+              </li>
+            % endif
+            <li class="item nav-global-03">
+              <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+            </li>
+          % endif
+        </%block>
+
+        <%block name="navigation_other_global_links">
+          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+              <li class="item nav-global-05">
+                <a class="btn" href="/courses">знайти курс</a>
+              </li>
+            %endif
+          % endif
+        </%block>
+      </ol>
+   
+
+      
     % endif
     % if static.show_language_selector():
      <% languages = static.get_released_languages() %>
