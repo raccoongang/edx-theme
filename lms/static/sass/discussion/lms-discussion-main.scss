@@ -4,21 +4,8 @@ $img-path: "../../images/";
 @import "../main";
 @import "../theme-btn/theme-btn";
 
-.header-global.slim .wrapper-header .course-header {
-    display: block;
-    width: 65%;
-    float: left;
-    font-size: 0.9em;
-    font-weight: 600;
-    color: #646464;
-    letter-spacing: 0;
-    margin-top: 9px;
-    margin-bottom: 0;
-    text-transform: none;
-    text-shadow: 0 1px 0 #fff;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.header-global .wrapper-header .course-header {
+    display: none;
 }
 .header-global.slim .wrapper-header {
     height: auto;
