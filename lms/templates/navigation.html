@@ -169,7 +169,13 @@ site_status_msg = get_site_status_msg(course_id)
        <ol class="right nav-courseware list-inline">
         <%block name="navigation_sign_in">
           <li class="item nav-courseware-01">
+              <a class="theme-btn" href="${marketing_link('COURSES')}">знайти курс</a>
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+              % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+                <li class="item nav-global-05">
+                  <a class="theme-btn" href="/courses">${_("Explore Courses")}</a>
+                </li>
+              %endif
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                 <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">вхід</a>
               % else:
