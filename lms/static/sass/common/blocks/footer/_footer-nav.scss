@@ -3,6 +3,11 @@
     width: 574px;
     padding: 28px 0 0;
 
+    .footer-nav_list {
+        list-style: none;
+        margin-left: 0;
+    }
+
     &_item {
         padding: 0 0 12px;
         
@@ -14,6 +19,7 @@
             &:hover {
                 color: lighten(#7f848c, 10%) !important;
                 border: none !important;
+                text-decoration: none;
             }
         }
     }

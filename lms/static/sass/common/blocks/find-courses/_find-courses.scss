@@ -1,0 +1,46 @@
+.find-courses {
+    background: #e6e6e6;
+
+    .filters {
+        .filters-inner {
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+        li {
+            background: #007db8;
+            padding: 6px 15px;
+            margin: 10px 10px 10px 0;
+
+            .facet-option {
+                color: #fff;
+            }
+        }
+        .clear-filters {
+            line-height: 35px;
+            font-size: 14px;
+            font-size: 14px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+    .wrapper-search-context {
+        .search-status-label {
+            display: none;
+        }
+        .wrapper-search-input {
+            float: none;
+            width: 480px;
+            box-sizing: border-box;
+            margin: 0 auto 30px !important;
+        }
+        .discovery-input {
+            border: 1px solid #bdbdbd;
+            border-radius: 2px;
+        }
+        .discovery-submit {
+            border: none;
+            background: transparent;
+            color: #bdbdbd;
+        }
+    }
+}

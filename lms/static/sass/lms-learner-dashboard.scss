@@ -1,0 +1,18 @@
+// ------------------------------
+// LMS Learner Dashboard styling
+// users the Pattern Library
+
+// NOTE: This is the left-to-right (LTR) configured style compile.
+// It should mirror lms-learner-dashboard-rtl w/ the exception of bi-app references.
+
+
+// Load the LTR version of lms main
+@import "lms/static/sass/lms-main-v2";
+
+//import the original styles from edx-platform
+@import "lms/static/sass/lms-learner-dashboard";
+
+// Load the shared build
+@import "lms/static/sass/build-learner-dashboard";
+@import "utils/_utils";
+@import "common/_common";
