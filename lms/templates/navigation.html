@@ -52,19 +52,19 @@ site_status_msg = get_site_status_msg(course_id)
       <div class="header-helper_wrapper">
         <div class="header-helper_left-side">
           <a class="header-helper_link" href="#">Have any question?</a>
-          <a class="header-helper_mail" href="#"><span class="header-helper_ico-holder"><span class="ico-mail">mail</span></span>elearning@scout.org</a>
+          <a class="header-helper_mail" href="mailto:elearning@scout.org"><span class="header-helper_ico-holder"><span class="ico-mail">mail</span></span>elearning@scout.org</a>
         </div>
         <div class="header-helper_right-side">
           <span class="header-helper_caption">Find us in social network</span>
           <ul class="header-helper_list">
             <li class="header-helper_list-item">
-              <a class="header-helper_list-link" href="#"><span class="ico-twitter">twitter</span></a>
+              <a class="header-helper_list-link" href="https://twitter.com/worldscouting"><span class="ico-twitter">twitter</span></a>
             </li>
             <li class="header-helper_list-item">
-              <a class="header-helper_list-link" href="#"><span class="ico-facebook">facebook</span></a>
+              <a class="header-helper_list-link" href="https://www.facebook.com/WOSM.OMMS"><span class="ico-facebook">facebook</span></a>
             </li>
             <li class="header-helper_list-item">
-              <a class="header-helper_list-link" href="#"><span class="ico-youtube">youtube</span></a>
+              <a class="header-helper_list-link" href="https://www.youtube.com/user/WorldScouting"><span class="ico-youtube">youtube</span></a>
             </li>
           </ul>
         </div>
@@ -73,9 +73,9 @@ site_status_msg = get_site_status_msg(course_id)
     <div class="header-wrapper" aria-label="${_('Global')}">
     <div class="header-wrapper_helper">
     <h1 class="logo">
-      <a href="${marketing_link('ROOT')}">
+      <a href="https://www.scout.org/" target="_blank">
         <%block name="navigation_logo">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -161,12 +161,15 @@ site_status_msg = get_site_status_msg(course_id)
               <a class="header-nav_link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
           
           % endif
+
         </%block>
 
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
                 <a class="header-nav_link" href="/courses">${_("Explore Courses")}</a>
+                <a class="header-nav_link" href="#">Organisations & Partners </a>
+                <a class="header-nav_link" href="#">About</a>
             %endif
           % endif
         </%block>
@@ -177,7 +180,7 @@ site_status_msg = get_site_status_msg(course_id)
       <div class="header-search">
         <form method="get" action="/courses">
           <label><span class="header-search_label">${_("Search for a course")}</span>
-            <input class="header-search_input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+            <input class="header-search_input" name="search_query" type="text" placeholder="${_("Search")}"></input>
           </label>
           <button class="header-search_button" type="submit">
             <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
@@ -188,16 +191,16 @@ site_status_msg = get_site_status_msg(course_id)
       <div class="signin-box">
         % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-            <a class="link-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+            <a class="link-login" href="https://www.scout.org/login" target="_blank">${_("Sign in")}</a>
           % else:
-            <a class="link-login" href="/login${login_query()}">${_("Sign in")}</a>
+            <a class="link-login" href="https://www.scout.org/login" target="_blank">${_("Sign in")}</a>
           % endif
         % endif
         % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <a class="btn-1" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+              <a class="btn-1" href="https://www.scout.org/register" target="_blank">${_("Register")}</a>
           % else:
-              <a class="btn-1" href="/register${login_query()}">${_("Register")}</a>
+              <a class="btn-1" href="https://www.scout.org/register" target="_blank">${_("Register")}</a>
           % endif
         % endif
       </div>

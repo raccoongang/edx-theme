@@ -18,7 +18,7 @@
     background: #007db8;
     text-align: right;
     color: #fff;
-    font: 13px/17px $helvetica;
+    font: 13px/17px $font-default;
     padding: 7px;
 
     &__other {
@@ -32,22 +32,22 @@
     .course-organization {
         padding: 1px 15px 2px 15px;
         text-transform: uppercase;
-        font: 13px/17px $helvetica;
+        font: 13px/17px $font-default;
         color: #2e2e2e;
     }
     .course-code {
-        font: 13px/17px $helvetica;
+        font: 13px/17px $font-default;
         color: #2e2e2e;
         text-transform: uppercase;
     }
     .course-title {
-        font: 17px/20px $helvetica;
+        font: 17px/20px $font-default;
         color: #919191;
         text-transform: uppercase;
         margin: 5px 0 0;
     }
     .course-date {
-        font: 13px/17px $helvetica;
+        font: 13px/17px $font-default;
         color: #2e2e2e;
     }
 }
@@ -55,7 +55,7 @@
     max-width: 1140px;
 
     &_heading {
-        font: 28px/36px $helvetica;
+        font: 28px/36px $font-regular;
         color: #007db8;
         display: block;
         padding: 54px 0 0;

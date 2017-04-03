@@ -25,14 +25,14 @@
         top: 0;
     }
     &_text {
-        font: 18px/23px $helvetica;
+        font: 18px/23px $font-light;
         text-transform: uppercase;
         color: #fff;
         display: block;
         margin-bottom: 8px;
     }
     &_heading {
-        font: 56px/72px $helvetica;
+        font: 56px/72px $font-bold;
         text-transform: uppercase;
         color: #fff;
     }
@@ -62,15 +62,14 @@
     }
     &_helper {
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
-        margin-top: -95px;
-        height: 190px;
-        background: url("../images/textures.png") repeat-x;
+        height: 100%;
+        background: url("../images/textures.png") no-repeat;
         width: 100%;
     }
     &_big-text {
-        font: 28px/55px $helvetica;
+        font: 28px/55px $font-bold;
         text-transform: uppercase;
         color: #fff;
         width: 330px;

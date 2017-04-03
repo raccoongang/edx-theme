@@ -28,16 +28,30 @@
   >
       <nav class="footer-nav" aria-label="${_('About')}">
         <ol class="footer-nav_list">
-            % for item_num, link in enumerate(footer['navigation_links'], start=1):
             <li class="footer-nav_item">
-              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+              <a href="https://www.scout.org/node/6924" target="_blank">Terms and Conditions</a>
             </li>
-            % endfor
-            % for item_num, link in enumerate(footer['legal_links'], start=1):
             <li class="footer-nav_item">
-              <a href="${link['url']}">${link['title']}</a>
+              <a href="#">News</a>
             </li>
-            % endfor
+            <li class="footer-nav_item">
+              <a href="#">Partner with us</a>
+            </li>
+            <li class="footer-nav_item">
+              <a href="https://www.scout.org/wsb" target="_blank">Contact us</a>
+            </li>
+            <li class="footer-nav_item">
+              <a href="https://www.scout.org/node/6924" target="_blank">Terms and Conditions</a>
+            </li>
+            <li class="footer-nav_item">
+              <a href="https://www.scout.org/copyright" target="_blank">Specific Terms of Use</a>
+            </li>
+            <li class="footer-nav_item">
+              <a href="https://www.scout.org/node/9529" target="_blank">Privacy Policy</a>
+            </li>
+            <li class="footer-nav_item">
+              <a href="https://www.scout.org/node/9528" target="_blank">Cookies Policy</a>
+            </li>
         </ol>
       </nav>
 
@@ -52,7 +66,7 @@
     <div class="footer-about-openedx">
       <p>
         <a href="${footer['openedx_link']['url']}" target="_blank">
-          <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/Open_EDX.svg" alt="${footer['openedx_link']['title']}" width="140" />
         </a>
       </p>
     </div>
