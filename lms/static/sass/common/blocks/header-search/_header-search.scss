@@ -8,6 +8,13 @@
         margin: 4px 0 0 -34px;
         text-shadow: none !important;
         font-size: 22px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        background: transparent none;
         
         &:focus,
         &:hover {
@@ -20,6 +27,15 @@
         line-height: 0;
     }
     &_input {
+        background: #fff;
+        border: 1px solid #c8c8c8;
+        box-shadow: 0 1px 0 0 rgba(255,255,255,0.6), inset 0 0 3px 0 rgba(0,0,0,0.1);
+        box-sizing: border-box;
+        font: italic 300 1rem/1.6rem Georgia,Cambria,"Times New Roman",Times,serif;
+        height: 35px;
+        padding: 5px 12px;
+        vertical-align: top;
+        -webkit-font-smoothing: antialiased;
         border-radius: 0 !important;
         font: 14px/18px $helvetica !important;
         color: #7f848c;
