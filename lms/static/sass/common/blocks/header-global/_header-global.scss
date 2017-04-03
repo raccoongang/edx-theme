@@ -11,5 +11,16 @@
     }
     .user {
         margin: 0 0 0 auto;
+
+        &>.primary>a {
+            background: transparent;
+            box-shadow: none;
+
+            &:hover {
+                background: transparent;
+                box-shadow: none;
+                color: #3394c9;
+            }
+        }
     }
 }

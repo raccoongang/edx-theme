@@ -96,11 +96,11 @@ site_status_msg = get_site_status_msg(course_id)
       % if user.is_authenticated():
         <div class="header-nav">
         <%block name="navigation_global_links_authenticated">
-          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
+          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE'):
             <a class="header-nav_link" href="${marketing_link('COURSES')}">${_('Courses')}</a>
 
             <a class="header-nav_link" href="${reverse('dashboard')}">
-              ${_("Courses")}
+              ${_("Dashboard")}
             </a>
           
             <a class="header-nav_link" href="${reverse('program_listing_view')}">
@@ -108,7 +108,7 @@ site_status_msg = get_site_status_msg(course_id)
             </a>
               
           % else:
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing and context.get('threads') == None:
+            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
               
               <a class="header-nav_link" href="${marketing_link('COURSES')}">${_('Courses')}</a>
               
