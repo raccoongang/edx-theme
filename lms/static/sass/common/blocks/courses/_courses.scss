@@ -52,7 +52,7 @@
     }
 }
 .courses-container {
-    max-width: 1140px;
+    @extend %wrapper;
 
     &_heading {
         font: 28px/36px $font-regular;
@@ -70,4 +70,8 @@
 }
 .home .highlighted-courses {
     overflow: hidden;
+}
+.course-info header.course-profile {
+    min-height: 280px;
+    height: auto;
 }
