@@ -21,3 +21,16 @@
         text-decoration: none;
     }
 }
+
+.header-global .theme-btn__active {
+    border: 2px solid #201c1d;
+    color: #201c1d !important;
+    background-color: transparent;
+
+    &:hover {
+        border-color: #f67f45;
+        background: #f67f45;
+        color: #fff !important;
+        text-decoration: none;
+    }
+}
