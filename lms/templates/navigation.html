@@ -179,7 +179,7 @@ site_status_msg = get_site_status_msg(course_id)
       <div class="header-wrapper_holder">
 
       <div class="header-search ${"header-search__hide" if request.path == "xseries" or "courses" in request.path else ""}" >
-        <form method="get" action="/courses">
+        <form class="header-search_form" method="get" action="/courses">
           <label><span class="header-search_label">${_("Search for a course")}</span>
             <input class="header-search_input" name="search_query" type="text" placeholder="${_("Search")}"></input>
           </label>

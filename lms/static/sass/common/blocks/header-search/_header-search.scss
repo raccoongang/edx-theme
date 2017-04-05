@@ -3,13 +3,13 @@
 
     &_button {
         @extend %button-reset;
+        position: absolute;
+        right: 8px;
+        top: 3px;
         color: #bdbdbd;
         padding: 0 !important;
-        margin: 4px 0 0 -34px;
         text-shadow: none !important;
         font-size: 22px;
-        display: inline-block;
-        text-align: center;
         text-decoration: none;
         box-shadow: none;
         border: none;
@@ -39,6 +39,9 @@
         border-radius: 0 !important;
         font: 14px/18px $helvetica !important;
         color: #7f848c;
+    }
+    &_form {
+        position: absolute;
     }
     &__hide {
         display: none;

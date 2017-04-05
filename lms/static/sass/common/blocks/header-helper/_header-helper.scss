@@ -11,6 +11,10 @@
         justify-content: space-between;
         padding-top: 12px;
         padding-bottom: 14px;
+        flex-wrap: wrap;
+        @media screen and (min-width: $media-tablet) {
+            flex-wrap: no-wrap;
+        }
 
         &:after {
             display: none;
@@ -18,7 +22,25 @@
     }
     &_right-side {
         display: flex;
+        width: 100%;
         align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        @media screen and (min-width: $media-tablet) {
+            width: auto;
+            justify-content: flex-start;
+            padding-top: 0;
+        }
+    }
+    &_left-side {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        @media screen and (min-width: $media-tablet) {
+            display: block;
+            width: auto;
+            justify-content: flex-start;
+        }
     }
     &_mail,
     &_link {
@@ -33,7 +55,9 @@
         }
     }
     &_mail {
-        margin-left: 83px;
+        @media screen and (min-width: $media-tablet) {
+            margin-left: 83px;
+        }
     }
     &_ico-holder {
         margin-right: 8px;
@@ -43,6 +67,10 @@
         font-size: 12px;
         line-height: 17px;
         color: #fff;
+        display: none;
+        @media screen and (min-width: $media-tablet) {
+            display: inline-block;
+        }
     }
     &_list {
         display: flex;
