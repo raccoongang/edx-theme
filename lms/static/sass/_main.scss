@@ -13,9 +13,23 @@ body {
 }
 .header-global {
     height: auto;
+    min-height: 70px;
+    @media (max-width: 820px){
+        z-index: 100;
+    }
+    .user {
+        display: flex;
+        align-items: center;
+    }
 
     h1.logo {
-        margin: -7px 39px 0 0;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        @media (max-width: 570px) {
+            margin: 0 auto 10px auto;
+        }
 
         img {
             width: 95px;
@@ -28,6 +42,12 @@ body {
     &.slim h1.logo:before {
         top: 8px !important;
     }
+    nav {
+        height: auto;
+        min-height: 70px;
+        padding: 0;
+        position: relative;
+    }
     .nav,
     .wrapper-header {
         height: auto;
@@ -37,7 +57,24 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        @media (max-width: 570px) {
+            display: block;
+            &:after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+        }
+        @media (max-width: 820px) {
+            position: absolute;
+            top: 71px;
+            right: 0;
+            background-color: #fff;
+            padding: 20px 75px 20px 20px;
+            display: flex;
+            display: none;
+            flex-direction: column;
+        }
         &:after {
             display: none;
         }
@@ -45,6 +82,9 @@ body {
     .nav-global {
         margin-top: 0;
         padding-left: 232px;
+        @media (max-width: 820px) {
+            padding-left: 0;
+        }
 
         li a {
             border-radius: 2px;
@@ -64,8 +104,22 @@ body {
             }
         }
     }
-    .nav-courseware li {
-        margin-left: 5px;
+    .nav-courseware {
+        @media (max-width: 820px) {
+            float: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            margin-left: 5px;
+            @media (max-width: 570px) {
+                margin-bottom: 10px;
+            }
+            @media (max-width: 450px) {
+                display: block;
+            }
+        }
     }
 }
 .wrapper-footer {
@@ -79,7 +133,16 @@ body {
     list-style: none;
     justify-content: center;
     width: 100%;
-    
+    @media (max-width: 600px) {
+        display: block;
+        
+        &:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+    }
+
     &-item {
         margin: 0 24px;
         position: relative;
@@ -94,9 +157,19 @@ body {
             left: -26px;
             top: 50%;
             margin-top: -2px;
+            @media (max-width: 600px) {
+                display: none;
+            }
         }
         &:first-child:after {
             display: none;
+        }
+
+        @media (max-width: 600px) {
+            float: left;
+            width: 50%;
+            text-align: center;
+            margin: 10px 0;
         }
     }
     &-link {
@@ -149,17 +222,33 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 .footer-raccoon {
     color: #fff !important;
     font-size: 10px;
     margin: 16px 0 0;
+    @media (max-width: 600px) {
+        text-align: center;
+    }
 }
-.footer-logo:hover {
-    border: none !important;
+.footer-logo {
+    @media (max-width: 600px) {
+        margin-bottom: 10px;
+    }
+
+    &:hover{
+        border: none !important;
+    }
 }
 .nav-holder {
     display: flex;
+    @media (max-width: 820px) {
+        width: 100%;
+    }
 }
 .doc-link {
     color: #201c1d !important;
@@ -186,5 +275,45 @@ body {
     line-height: 1.2;
     li{
         margin: 5px 0;
+    }
+}
+.dropdown {
+    .fa {
+        vertical-align: super;
+    }
+}
+
+.view-profile .profile-section-one-fields .u-field-username .u-field-value {
+    @media (max-width: 600px) {
+        width: auto;
+    }
+}
+
+.menu-action {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+    z-index: 11;
+    @media (max-width: 820px) {
+        display: block;
+    }
+}
+.header-global.menu-show .wrapper-header{
+    transform: translateY(0);
+}
+@media (max-width: 820px) {
+    .blocked-page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.3;
+        z-index: 99;
+        display: none;
     }
 }
