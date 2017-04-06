@@ -1,0 +1,78 @@
+%btn-style {
+    background: #f67f45 !important;
+    border: 2px solid #f67f45 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: #fff !important;
+    transition: all 0.1s linear 0s;
+
+    &:hover {
+        background: #fff !important;
+        color: #f67f45 !important;
+        text-decoration: none;
+    }
+
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+%btn-style-mirror {
+    border: 2px solid #f67f45 !important;
+    background: #fff !important;
+    color: #f67f45 !important;
+    text-decoration: none;
+    background-color: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: all 0.1s linear 0s;
+
+    &:hover {
+        background: #f67f45 !important;
+        color: #fff !important;
+        text-decoration: none;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+body {
+    .btn-brand {
+         @extend %btn-style;
+    }
+    .login-register .action-primary {
+        @extend %btn-style;
+    }
+    .discussion-module .btn {
+         @extend %btn-style-mirror;
+    }
+    .login-register .nav-btn {
+        @extend %btn-style-mirror;
+    }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+        @extend %btn-style;
+    }
+    .heading-group button{
+        @extend %btn-style;
+    }
+    .btn-brand:active:not(:disabled) {
+        border: 2px solid #f67f45;
+    }
+    .btn-brand:active:not(:disabled),
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
+    .heading-group button:active:not(:disabled),
+    .login-register .nav-btn:active {
+        box-shadow: none;
+    }
+
+    .login-register .action-primary:focus,
+    .login-register .action-primary:active,
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
+        background: #fff;
+        color: #f67f45;
+    }
+}
