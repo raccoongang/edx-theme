@@ -7,6 +7,7 @@
     transition: all 0.1s linear 0s;
 
     &:hover {
+        border: 2px solid #f67f45 !important;
         background: #fff !important;
         color: #f67f45 !important;
         text-decoration: none;
@@ -28,6 +29,7 @@
     transition: all 0.1s linear 0s;
 
     &:hover {
+        border: 2px solid #f67f45 !important;
         background: #f67f45 !important;
         color: #fff !important;
         text-decoration: none;
@@ -40,6 +42,11 @@
     }
 }
 body {
+    .discussion-module .btn:active {
+        border: 2px solid #f67f45 !important;
+        background: #fff !important;
+        color: #f67f45 !important;
+    }
     .btn-brand {
          @extend %btn-style;
     }
