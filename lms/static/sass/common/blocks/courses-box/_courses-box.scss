@@ -1,23 +1,40 @@
 .courses-box {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
+    @media screen and (min-width: $media-desktop){
+        flex-wrap: nowrap;
+    }
 
     &_img-holder {
-        min-width: 668px;
+        width: 100%;
         position: relative;
         overflow: hidden;
+        order: 1;
+        @media screen and (min-width: $media-desktop){
+            order: 2;
+            min-width: 668px;
+        }
     }
     &_holder {
         background: #fff;
         padding: 46px 19px 63px;
+        order: 2;
+        width: 100%;
+        @media screen and (min-width: $media-desktop){
+            order: 1;
+            width: auto;
+        }
     }
     &_img {
-        position: absolute;
         min-width: 100%;
         height: auto;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        @media screen and (min-width: $media-desktop){
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
     }
     &_text {
         font: 16px/21px $font-thin;

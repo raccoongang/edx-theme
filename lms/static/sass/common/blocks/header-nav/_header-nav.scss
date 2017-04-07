@@ -1,6 +1,10 @@
 .header-nav {
     display: flex;
-    padding-left: 50px;
+    flex-wrap: wrap;
+    @media screen and (min-width: $media-desktop){
+        flex-wrap: nowrap;
+        margin-left: 43px;
+    }
 
     &_link {
         color: #007db8 !important;

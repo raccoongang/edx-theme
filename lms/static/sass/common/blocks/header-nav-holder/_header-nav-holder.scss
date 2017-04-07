@@ -1,0 +1,58 @@
+.header-nav-holder {
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    &_wrapper {
+        width: 100%;
+        position: absolute;
+        visibility: hidden;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 21px 0 0;
+        opacity: 0;
+        @media screen and (min-width: $media-desktop){
+            opacity: 1;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            visibility: visible;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-nav-holder.show & {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &_btn {
+        width: 30px;
+        height: 20px;
+        border: 3px solid #000;
+        border-left: 0;
+        border-right: 0;
+        position: absolute;
+        right: 0;
+        top: -10px;
+        @media screen and (min-width: $media-desktop){
+            display: none;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background: #000;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -2px;
+        }
+    }
+}

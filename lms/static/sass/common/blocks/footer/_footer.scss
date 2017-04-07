@@ -4,7 +4,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 24px 0 21px;
+        padding: 24px 10px 21px;
 
         &:after {
             display: none;
@@ -17,6 +17,10 @@
         color: #fff;
         font: 16px/21px $font-light;
         text-transform: uppercase;
+        display: none;
+        @media screen and (min-width: $media-desktop) {
+            display: block;
+        }
     }
     &_input {
         border-radius: 0 !important;
@@ -35,6 +39,8 @@
 
     footer#footer-openedx {
         max-width: 1140px;
+        box-sizing: border-box;
+        padding: 0 10px;
         position: relative;
 
         .copyright {
@@ -42,9 +48,12 @@
             font-family: $font-regular;
         }
         .footer-about-openedx {
-            position: absolute;
-            right: 0;
-            bottom: -2px;
+            width: auto;
+            @media screen and (min-width: $media-desktop) {
+                position: absolute;
+                right: 0;
+                bottom: -2px;
+            }
         }
     }
 }

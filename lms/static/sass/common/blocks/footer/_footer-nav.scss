@@ -1,7 +1,10 @@
 .footer-nav {
-    column-count: 2;
-    width: 574px;
     padding: 28px 0 0;
+    @media screen and (min-width: $media-tablet){
+        column-count: 2;
+        width: 574px;
+    }
+
 
     .footer-nav_list {
         list-style: none;

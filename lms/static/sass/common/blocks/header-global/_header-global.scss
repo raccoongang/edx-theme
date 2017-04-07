@@ -8,6 +8,10 @@
 
     h1.logo {
         margin: 0;
+        position: absolute;
+        @media screen and (min-width: $media-tablet){
+            position: relative;
+        }
     }
     .user {
         margin: 0 0 0 auto;

@@ -9,9 +9,14 @@ body.view-in-course .wrapper-footer {
 .racoon-link {
     white-space: nowrap;
     color: #7f848c !important;
-    font-size: 12px;
+    font-size: 12px !important;
+
+    &:hover {
+        text-decoration: none;
+        border: none;
+    }
 
     img {
-        width: 67px;
+        width: 33px;
     }
 }

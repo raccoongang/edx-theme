@@ -1,10 +1,14 @@
 .promo-box {
     display: flex;
     justify-content: space-between;
-    height: 363px;
     overflow: hidden;
     position: relative;
     background: #e6e6e6;
+    flex-wrap: wrap;
+    @media screen and (min-width: $media-desktop){
+        flex-wrap: nowrap;
+        height: 363px;
+    }
     
     &_right,
     &_left {
@@ -12,10 +16,16 @@
         overflow: hidden;
     }
     &_left {
-        width: 58.3%;
+        width: 100%;
+        @media screen and (min-width: $media-desktop){
+            width: 58.3%;
+        }
     }
     &_right {
-        width: 41.3%;
+        width: 100%;
+        @media screen and (min-width: $media-desktop){
+            width: 41.3%;
+        }
     }
     &_img {
         position: absolute;
@@ -38,16 +48,28 @@
     }
     &_text-holder {
         position: relative;
-        min-width: 330px;
+        z-index: 10;
+        @media screen and (min-width: $media-desktop){
+            min-width: 330px;
+        }
 
         &__other {
-            min-width: 510px;
+            @media screen and (min-width: $media-desktop){
+                margin-right: 190px;
+                float: right;
+                min-width: 510px;
+            }
         }
     }
     &_text-wrapper {
-        position: absolute;
-        left: 0;
-        bottom: 0;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        padding-left: 30px;
+        @media screen and (min-width: $media-desktop){
+            padding-top: 128px;
+            padding-bottom: 0;
+            float: right;
+        }
     }
     &_wrapper {
         position: absolute;
@@ -68,6 +90,10 @@
         background: url("../images/textures.png") no-repeat 50%;
         background-size: contain;
         width: 100%;
+        display: none;
+        @media screen and (min-width: $media-desktop){
+            display: block;
+        }
     }
     &_big-text {
         font: 28px/55px $font-bold;

@@ -15,6 +15,7 @@
     }
 }
 .course_heading {
+    display: none;
     background: #007db8;
     text-align: right;
     color: #fff;
@@ -51,7 +52,7 @@
         color: #2e2e2e;
     }
 }
-.courses-container {
+.home .courses-container {
     @extend %wrapper;
 
     &_heading {
@@ -62,7 +63,9 @@
     }
     &_btn-holder {
         text-align: right;
-        margin-top: -35px;
+        @media screen and (min-width: $media-desktop){
+            margin-top: -35px;
+        }
     }
 }
 .content-wrapper {

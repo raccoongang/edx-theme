@@ -17,8 +17,12 @@
         width: 100%;
     }
     &_holder {
-        margin: 0 0 0 auto;
         display: flex;
+        padding: 20px 0;
+        @media screen and (min-width: $media-desktop){
+            padding: 0;
+            margin: 0 0 0 auto;
+        }
 
         .course-header {
             display: none;

@@ -47,7 +47,7 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
-  <header id="global-navigation" class="header-global" >
+<header id="global-navigation" class="header-global" >
     <div class="header-helper">
       <div class="header-helper_wrapper">
         <div class="header-helper_left-side">
@@ -71,68 +71,64 @@ site_status_msg = get_site_status_msg(course_id)
       </div>
     </div>
     <div class="header-wrapper" aria-label="${_('Global')}">
-    <div class="header-wrapper_helper">
-    <h1 class="logo">
-      <a href="${marketing_link('ROOT')}">
-        <%block name="navigation_logo">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-        </%block>
-      </a>
-    </h1>
+        <h1 class="logo">
+          <a href="${marketing_link('ROOT')}">
+            <%block name="navigation_logo">
+                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            </%block>
+          </a>
+        </h1>
 
-    % if course:
-      <h2 class="course-header"><span class="provider">${truncatechars(course.display_org_with_default, 20)}:</span>
-        <span class="course-number">${truncatechars(course.display_number_with_default, 20)}</span>
-        <%
-        display_name = course.display_name_with_default
-        if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-          ccx = get_current_ccx(course.id)
-          if ccx:
-            display_name = ccx.display_name
-        %>
-        <span class="course-name">${truncatechars(display_name,20)}</span></h2>
+      % if course:
+        <h2 class="course-header">
+          <span class="provider">${truncatechars(course.display_org_with_default, 20)}:</span>
+          <span class="course-number">${truncatechars(course.display_number_with_default, 20)}</span>
+          <%
+          display_name = course.display_name_with_default
+          if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+            ccx = get_current_ccx(course.id)
+            if ccx:
+              display_name = ccx.display_name
+          %>
+          <span class="course-name">${truncatechars(display_name,20)}</span>
+        </h2>
       % endif
+      <div class="header-nav-holder">
 
+        <span class="header-nav-holder_btn"></span>
+
+      <div class="header-nav-holder_wrapper">
       % if user.is_authenticated():
         <div class="header-nav">
-        <%block name="navigation_global_links_authenticated">
-          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE'):
-            <a class="header-nav_link" href="${marketing_link('COURSES')}">${_('Courses')}</a>
-
-            <a class="header-nav_link" href="${reverse('dashboard')}">
-              ${_("Dashboard")}
-            </a>
-          
-            <a class="header-nav_link" href="${reverse('program_listing_view')}">
-              ${_("Programs")}
-            </a>
-              
-          % else:
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
-              
+          <%block name="navigation_global_links_authenticated">
+            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE'):
               <a class="header-nav_link" href="${marketing_link('COURSES')}">${_('Courses')}</a>
-              
-            % endif
-            % if show_program_listing:
-              
               <a class="header-nav_link" href="${reverse('dashboard')}">
-                ${_("Courses")}
+                ${_("Dashboard")}
               </a>
-            
               <a class="header-nav_link" href="${reverse('program_listing_view')}">
                 ${_("Programs")}
               </a>
-              
+            % else:
+              % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
+                <a class="header-nav_link" href="${marketing_link('COURSES')}">${_('Courses')}</a>
+              % endif
+              % if show_program_listing:
+                <a class="header-nav_link" href="${reverse('dashboard')}">
+                  ${_("Courses")}
+                </a>
+                <a class="header-nav_link" href="${reverse('program_listing_view')}">
+                  ${_("Programs")}
+                </a>
+              % endif
             % endif
-          % endif
-          %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
-            
-            ## Translators: This is short for "System administration".
-            <a class="header-nav_link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-            
-          %endif
-        </%block>
-      </div>
+
+            %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
+              ## Translators: This is short for "System administration".
+              <a class="header-nav_link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+            %endif
+          </%block>
+        </div>
 
       <%include file="user_dropdown.html"/>
 
@@ -146,98 +142,89 @@ site_status_msg = get_site_status_msg(course_id)
         </ol>
       % endif
     % else:
-      <div class="header-nav">
-        <%block name="navigation_global_links">
-          % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-            
-              <a class="header-nav_link" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-            
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-            
-              <a class="header-nav_link" href="${marketing_link('COURSES')}">${_("Courses")}</a>
-          
+        <div class="header-nav">
+          <%block name="navigation_global_links">
+            % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+                <a class="header-nav_link" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+              % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+                <a class="header-nav_link" href="${marketing_link('COURSES')}">${_("Courses")}</a>
+              % endif
+                <a class="header-nav_link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
             % endif
-          
-              <a class="header-nav_link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-          
-          % endif
 
-        </%block>
+          </%block>
 
-        <%block name="navigation_other_global_links">
+          <%block name="navigation_other_global_links">
+            % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+              % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+                  <a class="header-nav_link" href="/courses">${_("Courses")}</a>
+                  <a class="header-nav_link" href="#">Organisations & Partners </a>
+                  <a class="header-nav_link" href="#">About</a>
+              %endif
+            % endif
+          </%block>
+        </div>
+        <div class="header-wrapper_holder">
+          <div class="header-search ${"header-search__hide" if request.path == "xseries" or "courses" in request.path else ""}" >
+            <form class="header-search_form" method="get" action="/courses">
+              <label><span class="header-search_label">${_("Search for a course")}</span>
+                <input class="header-search_input" name="search_query" type="text" placeholder="${_("Search")}"></input>
+              </label>
+              <button class="header-search_button" type="submit">
+                <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="signin-box">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-                <a class="header-nav_link" href="/courses">${_("Courses")}</a>
-                <a class="header-nav_link" href="#">Organisations & Partners </a>
-                <a class="header-nav_link" href="#">About</a>
-            %endif
+            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+              <a class="link-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+            % else:
+              <a class="link-login" href="/login${login_query()}">${_("Sign in")}</a>
+            % endif
           % endif
-        </%block>
-      </div>
-      </div>
-      <div class="header-wrapper_helper">
-      <div class="header-wrapper_holder">
-
-      <div class="header-search ${"header-search__hide" if request.path == "xseries" or "courses" in request.path else ""}" >
-        <form class="header-search_form" method="get" action="/courses">
-          <label><span class="header-search_label">${_("Search for a course")}</span>
-            <input class="header-search_input" name="search_query" type="text" placeholder="${_("Search")}"></input>
-          </label>
-          <button class="header-search_button" type="submit">
-            <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-          </button>
-        </form>
-      </div>
-      </div>
-        
-      <div class="signin-box">
-        % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-            <a class="link-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
-          % else:
-            <a class="link-login" href="/login${login_query()}">${_("Sign in")}</a>
+          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                <a class="btn-1" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+            % else:
+                <a class="btn-1" href="/register${login_query()}">${_("Register")}</a>
+            % endif
           % endif
-        % endif
-        % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <a class="btn-1" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-          % else:
-              <a class="btn-1" href="/register${login_query()}">${_("Register")}</a>
-          % endif
-        % endif
-      </div>
+        </div>
     % endif
     % if static.show_language_selector():
      <% languages = static.get_released_languages() %>
       % if len(languages) > 1:
-      <ol class="user">
-        <li class="primary">
-          <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-            % if user.is_authenticated():
-            <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-            % else:
-            <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-            % endif
-            <label><span class="sr">${_("Choose Language")}</span>
-                <select class="input select language-selector" id="settings-language-value" name="language">
-                  % for language in languages:
-                    % if language[0] == LANGUAGE_CODE:
-                      <option value="${language[0]}" selected="selected">${language[1]}</option>
-                    % else:
-                      <option value="${language[0]}" >${language[1]}</option>
-                    % endif
-                  % endfor
-                </select>
-            </label>
-          </form>
-        </li>
-      </ol>
+        <ol class="user">
+          <li class="primary">
+            <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+              <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+              % if user.is_authenticated():
+              <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+              % else:
+              <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
+              % endif
+              <label><span class="sr">${_("Choose Language")}</span>
+                  <select class="input select language-selector" id="settings-language-value" name="language">
+                    % for language in languages:
+                      % if language[0] == LANGUAGE_CODE:
+                        <option value="${language[0]}" selected="selected">${language[1]}</option>
+                      % else:
+                        <option value="${language[0]}" >${language[1]}</option>
+                      % endif
+                    % endfor
+                  </select>
+              </label>
+            </form>
+          </li>
+        </ol>
       % endif
       % endif
       </div>
+      </div>
     </div>
-    </div>
+  </div>
 </header>
 % if course:
 <!--[if lte IE 9]>
@@ -251,3 +238,14 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 
 <%include file="help_modal.html"/>
+<script type="text/javascript">
+  var expanders = document.querySelectorAll('.header-nav-holder_btn');
+
+if (expanders) {
+    [].slice.call(expanders).forEach(function(exp) {
+        exp.addEventListener('click', function() {
+            exp.parentNode.classList.toggle('show');
+        });
+    });
+}
+</script>
