@@ -94,7 +94,7 @@ body {
     .login-register .nav-btn:active {
         box-shadow: none;
     }
-
+    .courseware-bookmarks-button .bookmarks-list-button:hover,
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
     .login-register .action-primary:focus,
     .login-register .action-primary:active,
@@ -105,10 +105,9 @@ body {
     }
     .search-bar .search-button,
     .courseware-bookmarks-button .bookmarks-list-button:focus,
-    .courseware-bookmarks-button .bookmarks-list-button:hover{
+    .courseware-bookmarks-button .bookmarks-list-button:hover {
         background: #f67f45 !important;
     }
-    .course-material .tabs .tab a.active,.course-material .tabs .tab a:visited.active,
     .wrapper-course-material .course-tabs li.tab a:focus,
     .wrapper-course-material .course-tabs li.tab a:hover,
     .wrapper-course-material .course-tabs li.tab a.active {
@@ -118,6 +117,8 @@ body {
     .nav-holder .doc-link:hover{
         color: #161616 !important;
     }
+    .forum-nav-browse-title,
+    .course-tabs a,
     .home .page-header-secondary:hover .last-accessed-link,
     .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section,
     .nav-item .btn-link,
@@ -128,4 +129,17 @@ body {
 }
 .page-header .btn {
     @extend %btn-style-mirror;
+    border-width: 1px !important;
+
+    &:hover {
+        border-width: 1px !important;
+    }
+}
+.tabs .tab a:hover,.tabs .tab a:focus,
+.tabs .tab a:visited:hover,
+.tabs .tab a:visited:focus,
+.tabs .tab a.active,
+.tabs .tab a:visited.active {
+    color: #f67f45 !important;
+    border-bottom-color: #f67f45 !important;
 }
