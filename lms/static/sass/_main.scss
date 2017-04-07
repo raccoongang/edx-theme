@@ -328,5 +328,9 @@ body {
 body {
     .header-global .wrapper-header .list-inline.nav-global {
         margin-top: 0;
+        @media (max-width: 820px) {
+            margin-bottom: 15px;
+        }
     }
+
 }
