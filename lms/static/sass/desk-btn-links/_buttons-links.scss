@@ -108,12 +108,20 @@ body {
     .courseware-bookmarks-button .bookmarks-list-button:hover{
         background: #f67f45 !important;
     }
+    .page-header .btn {
+        @extend %btn-style-mirror;
+    }
+    .course-material .tabs .tab a.active,.course-material .tabs .tab a:visited.active,
     .wrapper-course-material .course-tabs li.tab a:focus,
     .wrapper-course-material .course-tabs li.tab a:hover,
     .wrapper-course-material .course-tabs li.tab a.active {
         color: #f67f45;
         border-bottom-color: #f67f45;
     }
+    .nav-holder .doc-link:hover{
+        color: #161616 !important;
+    }
+    body .home .page-header-secondary:hover a,
     .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section,
     .nav-item .btn-link,
     .courseware-bookmarks-button .bookmarks-list-button,
