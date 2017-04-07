@@ -74,6 +74,7 @@ body {
             display: flex;
             display: none;
             flex-direction: column;
+            width: auto;
         }
         &:after {
             display: none;
@@ -322,5 +323,10 @@ body {
         opacity: 0.3;
         z-index: 99;
         display: none;
+    }
+}
+body {
+    .header-global .wrapper-header .list-inline.nav-global {
+        margin-top: 0;
     }
 }

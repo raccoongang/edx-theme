@@ -83,6 +83,9 @@ body {
     .heading-group button{
         @extend %btn-style;
     }
+    .discussion-module .btn-brand:focus,
+    .discussion-module .btn-brand,
+    .discussion-module .btn-brand:hover,
     .courseware-bookmarks-button .bookmarks-list-button,
     .btn-brand:active:not(:disabled) {
         border: 2px solid #f67f45 !important;
@@ -97,6 +100,9 @@ body {
         box-shadow: none;
     }
 
+    .btn-brand:active:not(:disabled),
+    .discussion-module .btn-brand:focus,
+     .discussion-module .btn-brand:hover,
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
     .login-register .action-primary:focus,
     .login-register .action-primary:active,
@@ -110,7 +116,13 @@ body {
     .courseware-bookmarks-button .bookmarks-list-button:hover {
         background: #f67f45 !important;
     }
+    .courseware-bookmarks-button .bookmarks-list-button:focus,
     .courseware-bookmarks-button .bookmarks-list-button:hover {
+        color: #fff !important;
+    }
+   
+    .courseware-bookmarks-button .bookmarks-list-button.is-active {
+        background-color: #f67f45 !important;
         color: #fff !important;
     }
     .wrapper-course-material .course-tabs li.tab a:focus,
@@ -130,6 +142,11 @@ body {
     .courseware-bookmarks-button .bookmarks-list-button,
     .course-index .accordion .course-navigation .button-chapter {
         color: #f67f45 !important;
+    }
+    button.btn.cancel,
+    .discussion-module .btn-brand{
+        display: inline-block;
+        vertical-align: middle;
     }
 }
 .forum-new-post-form .btn.cancel{
