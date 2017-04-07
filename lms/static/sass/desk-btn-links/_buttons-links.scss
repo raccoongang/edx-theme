@@ -51,6 +51,8 @@ body {
     .home .page-header-secondary {
         @extend %btn-style;
     }
+    .forum-new-post-form .btn.cancel:focus,
+    .forum-new-post-form .btn.cancel:active,
     .forum-new-post-form .post-type-input:checked+.post-type-label{
         border: 2px solid #f67f45 !important;
         color: #fff !important;
@@ -94,7 +96,7 @@ body {
     .login-register .nav-btn:active {
         box-shadow: none;
     }
-    .courseware-bookmarks-button .bookmarks-list-button:hover,
+
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
     .login-register .action-primary:focus,
     .login-register .action-primary:active,
@@ -107,6 +109,9 @@ body {
     .courseware-bookmarks-button .bookmarks-list-button:focus,
     .courseware-bookmarks-button .bookmarks-list-button:hover {
         background: #f67f45 !important;
+    }
+    .courseware-bookmarks-button .bookmarks-list-button:hover {
+        color: #fff !important;
     }
     .wrapper-course-material .course-tabs li.tab a:focus,
     .wrapper-course-material .course-tabs li.tab a:hover,
@@ -126,6 +131,9 @@ body {
     .course-index .accordion .course-navigation .button-chapter {
         color: #f67f45 !important;
     }
+}
+.forum-new-post-form .btn.cancel{
+    @extend %btn-style-mirror;
 }
 .page-header .btn {
     @extend %btn-style-mirror;
