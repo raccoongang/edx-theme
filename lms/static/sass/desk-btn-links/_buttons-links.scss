@@ -48,6 +48,21 @@ body {
         background: #fff !important;
         color: #f67f45 !important;
     }
+    .home .page-header-secondary {
+        @extend %btn-style;
+    }
+    .forum-new-post-form .post-type-input:checked+.post-type-label{
+        border: 2px solid #f67f45 !important;
+        color: #fff !important;
+        background-color: #f67f45 !important;
+    }
+    .forum-new-post-form .post-type-label {
+        border: 2px solid #f67f45 !important;
+        color: #f67f45 !important;
+    }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
+        @extend %btn-style;
+    }
     .btn-brand {
          @extend %btn-style;
     }
@@ -66,9 +81,13 @@ body {
     .heading-group button{
         @extend %btn-style;
     }
+    .courseware-bookmarks-button .bookmarks-list-button,
     .btn-brand:active:not(:disabled) {
-        border: 2px solid #f67f45;
+        border: 2px solid #f67f45 !important;
     }
+    
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
     .btn-brand:active:not(:disabled),
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
     .heading-group button:active:not(:disabled),
@@ -76,11 +95,29 @@ body {
         box-shadow: none;
     }
 
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
     .login-register .action-primary:focus,
     .login-register .action-primary:active,
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
-        background: #fff;
+        background: #fff !important;
+        color: #f67f45 !important;
+    }
+    .search-bar .search-button,
+    .courseware-bookmarks-button .bookmarks-list-button:focus,
+    .courseware-bookmarks-button .bookmarks-list-button:hover{
+        background: #f67f45 !important;
+    }
+    .wrapper-course-material .course-tabs li.tab a:focus,
+    .wrapper-course-material .course-tabs li.tab a:hover,
+    .wrapper-course-material .course-tabs li.tab a.active {
+        color: #f67f45;
+        border-bottom-color: #f67f45;
+    }
+    .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section,
+    .nav-item .btn-link,
+    .courseware-bookmarks-button .bookmarks-list-button,
+    .course-index .accordion .course-navigation .button-chapter {
         color: #f67f45;
     }
 }
