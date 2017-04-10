@@ -1,0 +1,30 @@
+.header-global {
+    box-sizing: border-box;
+    background-color: rgba(0, 56, 116, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+    min-height: $header-height;
+    z-index: 100;
+    &__nav {
+        position: relative;
+    }
+    &_flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: $header-height;
+        @media screen and (max-width: $large-responsive) {
+            flex-direction: column;
+            padding: 10px 20px;
+            a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    }
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        font: 14px/1.2 "museosans500",Arial, sans-serif;
+    }
+}

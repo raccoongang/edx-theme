@@ -1,0 +1,151 @@
+.course-info header.course-profile {
+    height: auto;
+    padding-bottom: 200px;
+}
+.header-global h1.logo {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    margin: 0;
+}
+.header-global nav {
+    height: auto;
+    padding: 0 5px;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: $header-height;
+}
+.header-global .wrapper-header {
+    height: auto;
+    padding: 0;
+    max-width: 1200px;
+    padding-left: 195px;
+    box-sizing: border-box;
+    @media screen and (max-width: $large-responsive) {
+        display: none;
+        padding-left: 0;
+        position: absolute;
+        right: 0;
+        top: 79px;
+        background-color: rgba(0,56,116,1);
+        width: auto;
+    }
+    &:after{
+        display: none;
+    }
+}
+.header-global .nav-global {
+    float: none;
+    margin-top: 0;
+}
+.header-global .nav-global li a {
+    color: #fff;
+}
+.header-global .user {
+    float: none;
+    display: flex;
+    align-items: center;
+}
+.header-global .primary>a:hover, 
+.header-global .primary>a:focus, 
+.header-global .primary>a:active {
+    background: none;
+}
+.header-global .primary>a {
+    box-shadow: none;
+}
+.nav-global-04 {
+    margin-left: 5px;
+    @media screen and (max-width: $large-responsive) {
+        margin-left: 0;
+    }
+}
+.header-global .nav-global li a, 
+.header-global .nav-global div a {
+    padding: 0;
+}
+.header-global .nav-global li a{
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 2px solid #ffffff;
+    min-width: 136px;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: transparent;
+    &:hover{
+        color: #ffffff;
+        background-color: $active-color;
+        text-decoration: none;
+        border-color: $active-color;
+    }
+}
+.header-global .user .user-link .label-username {
+    color: #fff;
+    font: 14px/1.2 "museosans500",Arial, sans-serif;
+    text-shadow: none;
+}
+a.doc-link {
+    color: #fff;
+    font: 14px/1.2 "museosans500",Arial, sans-serif;
+    text-transform: capitalize;
+    &:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+    @media screen and (max-width: $large-responsive) {
+        margin-right: 10px;
+    }
+}
+.wrapper-header {
+    .theme-btn {
+        &:hover{
+            background-color: transparent;
+            color: $active-color;
+            text-decoration: none;
+        }     
+    }
+}
+.header-global .theme-btn__active {
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 2px solid #ffffff;
+    min-width: 136px;
+    text-align: center;
+    padding: 10px 15px;
+    margin-right: 13vw;
+    background-color: transparent;
+    text-decoration: none;
+    transition: background-color 0.1s linear 0s;
+    @media screen and (max-width: $large-responsive) {
+        margin-right: 0;
+        display: block;
+    }
+    &:hover{
+        color: #ffffff;
+        background-color: $active-color;
+        text-decoration: none;
+        border-color: $active-color;
+    }
+}
+.header-global .nav-courseware li {
+    @media screen and (max-width: $large-responsive) {
+        display: block;
+    }
+}
+.nav-holder {
+    .doc-link {
+        margin: 15px;
+    }
+}
+.home>header {
+    min-height: 480px;
+    margin-top: -79px;
+    background: #003874 url(../images/banner.jpg) no-repeat;
+    display: flex;
+    align-items: center;
+}
+.home>header .outer-wrapper {
+    display: none;
+}
