@@ -1,3 +1,25 @@
 .main-title {
-    text-align: center;
+    font: 42px/1.2 "museosans500",Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -30px;
+    letter-spacing: 2px;
+    text-transform: none;
+    &_bold {
+        font: 42px/1.2 "museosans900",Arial, sans-serif;
+    }
+    &_color {
+        color: $active-color;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -47px;
+        height: 5px;
+        width: 100px;
+        margin-left: -50px;
+        background-color: $active-color;
+    }
 }

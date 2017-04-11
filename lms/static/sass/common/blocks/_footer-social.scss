@@ -1,0 +1,32 @@
+.footer-social {
+    padding-left: 0;
+    margin: 0;
+    @media screen and (max-width: 600px) {
+        margin: 15px 0;
+    }
+    &_item {
+        display: inline-block;
+        margin: 0 2px;
+        @media screen and (max-width: 600px) {
+            margin: 0 10px;
+        }
+    }
+    &_link {
+        background-image: url(../images/icons.png);
+        background-repeat: no-repeat;
+        display: block;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        text-indent: -9999px;
+        &__facebook {
+            background-position: -1px -1px;
+        }
+        &__twitter {
+            background-position: -43px -1px;
+        }
+        &__youtube {
+            background-position: -85px -1px;
+        }
+    }
+}

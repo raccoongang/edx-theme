@@ -1,20 +1,21 @@
 .course-info header.course-profile {
     height: auto;
     padding-bottom: 200px;
+    margin-top: 0;
 }
 .header-global h1.logo {
     float: none;
     position: absolute;
     top: 50%;
-    left: 5px;
+    left: 10px;
     transform: translateY(-50%);
     margin: 0;
 }
 .header-global nav {
     height: auto;
-    padding: 0 5px;
+    padding: 0 10px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1210px;
     min-height: $header-height;
 }
 .header-global .wrapper-header {
@@ -139,13 +140,100 @@ a.doc-link {
         margin: 15px;
     }
 }
+.home {
+    background-color: #eaeaea;
+    padding-bottom: 40px;
+}
 .home>header {
     min-height: 480px;
     margin-top: -79px;
     background: #003874 url(../images/banner.jpg) no-repeat;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 .home>header .outer-wrapper {
     display: none;
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: transparent;
+    font-size: 14px;
+    border: 2px solid #fff;
+}
+.highlighted-courses .courses .course:focus,
+.highlighted-courses .courses .course:hover {
+    box-shadow: none;
+}
+.courses-container .courses .course {
+    box-shadow: none;
+    border: none;
+    border-bottom: 5px solid transparent;
+}
+.highlighted-courses .courses .course:hover {
+    border-color: transparent;
+}
+.highlighted-courses .courses .course {
+    border-color: $active-color;
+}
+.courses-container .courses .course:hover .cover-image:before,
+.courses-container .courses .course:focus .cover-image:before {
+    opacity: 0.5;
+}
+.courses-container .courses .course .course-info .course-organization {
+    padding: 15px 15px 2px 15px;
+}
+.courses-container .courses .course .course-image .cover-image:before {
+    background: #003874;
+}
+.courses-container .courses .course .course-info .course-title {
+    margin: 0 0 45px 0;
+    color: rgb(145, 145, 145);
+    text-transform: uppercase;
+}
+.courses-container .courses .course .course-info .course-date {
+    font-size: 12px;
+}
+.highlighted-courses .courses .course a {
+    cursor: pointer;
+}
+.courses-container .courses .course .course-info .course-date,
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    color: rgb(93, 93, 93);
+}
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    text-transform: uppercase;
+}
+.wrapper-footer {
+    background: #003874;
+    padding: 40px 0 65px 0;
+}
+.footer-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media screen and (max-width: 600px) {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.footer-raccoon {
+    font-size: 10px;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+.wrapper-footer footer#footer-openedx .footer-list_link {
+    color: #fff;
+    text-transform: uppercase;
+    font: 14px/1.2 "museosans500",Arial, sans-serif;
+}
+.wrapper-footer footer#footer-openedx a:hover {
+    border: none;
+    color: $active-color;
+}
+.wrapper-footer footer#footer-openedx {
+    padding: 0 5px;
+    max-width: 1210px;
 }
