@@ -1,6 +1,6 @@
 .header-global {
     box-sizing: border-box;
-    background-color: rgba(0, 56, 116, 0.7);
+    background-color: rgba(0, 56, 116, 1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: none;
     min-height: $header-height;
@@ -8,10 +8,13 @@
     &__nav {
         position: relative;
     }
-    &_flex{
+    &_main {
+        background-color: rgba(0, 56, 116, 0.7);
+    }
+    &_flex {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; 
         min-height: $header-height;
         @media screen and (max-width: $large-responsive) {
             flex-direction: column;

@@ -95,6 +95,10 @@ a.doc-link {
         color: #fff;
         text-decoration: none;
     }
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
     @media screen and (max-width: $large-responsive) {
         margin-right: 10px;
     }
@@ -213,6 +217,7 @@ a.doc-link {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    width: 100%;
     @media screen and (max-width: 600px) {
         align-items: center;
         flex-direction: column;
@@ -232,8 +237,57 @@ a.doc-link {
 .wrapper-footer footer#footer-openedx a:hover {
     border: none;
     color: $active-color;
+    text-decoration: none;
 }
 .wrapper-footer footer#footer-openedx {
     padding: 0 5px;
     max-width: 1210px;
+}
+.courses-container .courses .course .course-image .cover-image img {
+    min-height: 160px;
+}
+.header-global .wrapper-header .course-header {
+    display: none;
+}
+.dropdown-menu-container .menu-image {
+    max-width: 40px;
+    border-radius: 10%;
+}
+.dropdown-menu-container .menu-title {
+    color: #fff;
+    text-transform: none;
+    margin: 15px 5px 15px 15px;
+}
+.dropdown-menu-container .menu-button {
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 0;
+}
+.dropdown-menu-container {
+    display: flex;
+    align-items: center;
+}
+.header-global .wrapper-header .list-inline.nav-global {
+    margin-top: 0;
+}
+.find-courses .courses .course {
+    border-color: #fbad18;
+}
+.find-courses .courses .course:hover,
+.find-courses .courses .course:focus {
+    background: #f5f5f5;
+    border-color: #bebebe;
+    box-shadow: none;
+}
+.courses-container .courses .course:hover,
+.courses-container .courses .course {
+    box-shadow: none;
+    border: none;
+    border-bottom: 5px solid #fbad18;
+}
+.courses-container .courses .course:hover {
+    border-bottom: 5px solid transparent;
+}
+.header-global .user .dropdown {
+    min-height: 25px;
 }

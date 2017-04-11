@@ -8,4 +8,7 @@
     opacity: 0.3;
     z-index: 99;
     display: none;
+    @media screen and (min-width: $large-responsive) {
+        display: none !important;
+    }
 }
