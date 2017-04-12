@@ -149,7 +149,7 @@ a.doc-link {
     padding-bottom: 40px;
 }
 .home>header {
-    min-height: 480px;
+    height: 480px;
     margin-top: -79px;
     background: #003874 url(../images/banner.jpg) no-repeat;
     display: flex;
@@ -290,4 +290,12 @@ a.doc-link {
 }
 .header-global .user .dropdown {
     min-height: 25px;
+}
+.header-global .nav-global li a,
+.header-global .nav-global div a {
+    font-weight: normal;
+}
+.header-global .nav-global li a:focus,
+.header-global .nav-global li a:active {
+    color: #fff;
 }

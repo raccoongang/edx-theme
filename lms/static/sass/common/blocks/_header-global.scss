@@ -15,10 +15,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center; 
-        min-height: $header-height;
+        height: $header-height;
         @media screen and (max-width: $large-responsive) {
             flex-direction: column;
             padding: 10px 20px;
+            height: auto;
             a {
                 display: block;
                 margin: 10px 0;
