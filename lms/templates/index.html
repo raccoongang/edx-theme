@@ -34,6 +34,22 @@ from openedx.core.djangolib.markup import HTML, Text
     <section class="home">
       <%include file="${courses_list}" />
 
+      <%include file="${programs_list}" />
+
+      <div class="courses-box">
+        <div class="courses-box_holder">
+          <p class="courses-box_text">You have lot’s of ideas on how to contribute to this project and want to share them with us?</p>
+          <strong class="courses-box_title">Engage with us</strong>
+          <div class="courses-box_time">
+            <span class="ico-clock">time</span><span class="courses-box_lable">Starts: TBD</span>
+          </div>
+          <a class="btn-1" href="https://www.scout.org/wsb" target="_blank">Contact us</a>
+        </div>
+        <div class="courses-box_img-holder">
+          <img class="courses-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="course img">
+        </div>
+      </div>
+
     </section>
 </main>
 
