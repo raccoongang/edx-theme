@@ -63,7 +63,7 @@
         margin-left: 0;
     }
 }
-.header-global .nav-global li a, 
+
 .header-global .nav-global div a {
     padding: 0;
 }
@@ -73,7 +73,7 @@
     border: 2px solid #ffffff;
     min-width: 136px;
     text-align: center;
-    padding: 10px 15px;
+    padding: 11px 25px;
     background-color: transparent;
     &:hover{
         color: #ffffff;
@@ -118,7 +118,7 @@ body a.doc-link {
     border: 2px solid #ffffff;
     min-width: 136px;
     text-align: center;
-    padding: 10px 15px;
+    padding: 11px 25px;
     margin-right: 13vw;
     background-color: transparent;
     text-decoration: none;
@@ -152,6 +152,7 @@ body a.doc-link {
     height: 480px;
     margin-top: -79px;
     background: #003874 url(../images/banner.jpg) no-repeat;
+    background-position: center;
     display: flex;
     align-items: center;
     text-align: center;
@@ -301,4 +302,15 @@ body a.doc-link {
 }
 .header-app .logo {
     width: 17.25rem;
+}
+html body.view-in-course .header-global .wrapper-header {
+    padding-left: 195px;
+    padding-right: 0;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper {
+    max-width: 580px;
+    overflow: hidden;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav ol li {
+    min-width: 58.1px;
 }
