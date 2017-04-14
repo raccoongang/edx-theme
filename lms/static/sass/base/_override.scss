@@ -127,11 +127,14 @@ body a.doc-link {
         margin-right: 0;
         display: block;
     }
-    &:hover{
+    &:hover {
         color: #ffffff;
         background-color: $active-color;
         text-decoration: none;
         border-color: $active-color;
+    }
+    &:focus {
+        color: #ffffff;
     }
 }
 .header-global .nav-courseware li {
@@ -313,4 +316,10 @@ html body.view-in-course .header-global .wrapper-header {
 }
 .xmodule_display.xmodule_SequenceModule .sequence-nav ol li {
     min-width: 58.1px;
+}
+.nav-holder .dropdown-menu-container .menu-title { 
+    margin: 15px 5px 15px 0; 
+} 
+body a.doc-link::-moz-focus-inner{ 
+    border: none; 
 }
