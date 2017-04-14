@@ -145,6 +145,10 @@ body a.doc-link {
 .nav-holder {
     .doc-link {
         margin: 15px;
+        outline: 0;
+        &:active {
+            outline: 0;
+        }
     }
 }
 .home {
@@ -314,7 +318,7 @@ html body.view-in-course .header-global .wrapper-header {
     max-width: 580px;
     overflow: hidden;
 }
-.xmodule_display.xmodule_SequenceModule .sequence-nav ol li {
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li {
     min-width: 58.1px;
 }
 .nav-holder .dropdown-menu-container .menu-title { 
