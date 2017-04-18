@@ -1,0 +1,47 @@
+.programs {
+    @extend .courses;
+    &-image__title {
+        @extend .course-image__title;
+        background-color: #461b6e;
+    }
+    &-container {
+        @extend .courses-container;
+    }
+    &__title {
+        @extend .courses-container_heading;
+    }
+    &-listing {
+        @extend .courses-listing;
+    }
+    &-listing-item {
+        @extend .courses-listing-item;
+    }
+    &-image {
+        @extend .course-image;
+    }
+    &-info {
+        @extend .course-info;
+    }
+    &-name {
+        @extend .course-name;
+    }
+    &-organization {
+        @extend .course-organization;
+    }
+    &-code {
+        @extend .course-code;
+    }
+    &-title {
+        @extend .course-title;
+    }
+    &-date {
+        @extend .course-date;
+        visibility: hidden;
+    }
+}
+.home .programs__title {
+    padding-top: 0;
+}
+.programs__btn-holder {
+    @extend .courses-container_btn-holder;
+}

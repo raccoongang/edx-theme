@@ -12,6 +12,7 @@
     &:hover {
         box-shadow: none;
         background: #fff;
+        cursor: pointer;
     }
 }
 .course_heading {
@@ -29,27 +30,34 @@
 .courses-container .courses .course .course-info {
     min-height: 166px;
     height: auto;
+    position: relative;
+    padding-top: 20px;
+    box-sizing: border-box;
 
     .course-organization {
-        padding: 1px 15px 2px 15px;
+        padding: 0;
         text-transform: uppercase;
-        font: 13px/17px $font-default;
-        color: #2e2e2e;
+        font: 13px/1.2 Helvetica, Arial, sans-serif;
+        color: rgb(46, 46, 46);
+        margin: 0 0 7px 0;
     }
     .course-code {
-        font: 13px/17px $font-default;
-        color: #2e2e2e;
+        padding: 0;
         text-transform: uppercase;
+        font: 13px/1.2 Helvetica, Arial, sans-serif;
+        color: rgb(46, 46, 46);
     }
     .course-title {
-        font: 17px/20px $font-default;
-        color: #919191;
+        font: 17px/1.2  Helvetica, Arial, sans-serif;
+        color: rgb(145, 145, 145);
         text-transform: uppercase;
         margin: 5px 0 0;
+        padding: 0;
     }
     .course-date {
-        font: 13px/17px $font-default;
-        color: #2e2e2e;
+        font: 13px/1.2 Helvetica, Arial, sans-serif;
+        color: rgb(46, 46, 46);
+        padding: 5px 15px 17px 15px;
     }
 }
 .home .courses-container {
@@ -73,8 +81,34 @@
 }
 .home .highlighted-courses {
     overflow: hidden;
+    margin-bottom: 0;
 }
 .course-info header.course-profile {
     min-height: 280px;
     height: auto;
+}
+.course {
+    &-name {
+        padding: 0 0 0 15px;
+        margin-bottom: 20px;
+    }
+    &-image {
+        &__title {
+            box-sizing: border-box;
+            background-color: #007db8;
+            color: #fff;
+            position: absolute;
+            top: -25px;
+            width: 100%;
+            text-align: right;
+            min-height: 30px;
+            padding-right: 10px;
+            font: 13px/30px Helvetica,Arial, sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+}
+.courses-container .courses .course .course-image .cover-image img {
+    min-height: 160px;
 }

@@ -1,0 +1,44 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='static_content.html'/>
+<%! 
+from django.utils.translation import ugettext as _
+%>
+
+% if show_program_listing:
+
+<section class="programs-container">
+    <div class="highlighted-courses">
+        <strong class="programs__title">${_("Featured programs")}</strong>
+        <div class="programs__btn-holder">
+        <a class="btn-2" href="#">View All Courses</a>
+    </div>
+    <section class="programs">
+        <ul class="programs-listing">
+        % for program in programs:
+            <li class="programs-listing-item">
+                <article aria-labelledby="program-${program['id']}" role="group" class="program-card course">
+                    <a href="${program['detail_url']}">
+                        <header class="programs-image">
+                            <div class="cover-image">
+                                <img src="${program['banner_image_urls'].get('w435h145', '')}" alt="${program['name']} Home Page." />
+                                <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
+                            </div>
+                        </header>
+                        <div class="programs-info">
+                            <div class="programs-image__title">${program['name']}</div>
+                            <h2 class="programs-name">
+                                <span id="program-${program['id']}" class="programs-organization hd-3">${program['name']}</span>
+                                <span class="programs-code">${', '.join(o['display_name'] for o in program['organizations'])}</span>
+                                <span class="programs-title">${program['display_category']} Program</span>
+                            </h2>
+                            <div class="programs-date" aria-hidden="true">${_("Starts")}:</div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        %endfor
+        </ul>
+    </section>
+</section>
+
+% endif
