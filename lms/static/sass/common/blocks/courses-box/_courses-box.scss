@@ -1,7 +1,11 @@
 .courses-box {
+    box-sizing: border-box;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    max-width: 1140px;
+    margin: 0 auto 40px auto;
+    padding: 0 10px;
     @media screen and (min-width: $media-desktop){
         flex-wrap: nowrap;
     }
@@ -29,12 +33,6 @@
     &_img {
         min-width: 100%;
         height: auto;
-        left: 50%;
-        top: 50%;
-        @media screen and (min-width: $media-desktop){
-            transform: translate(-50%, -50%);
-            position: absolute;
-        }
     }
     &_text {
         font: 16px/21px $font-thin;

@@ -8,7 +8,7 @@ from django.utils.translation import ugettext as _
 
 <section class="programs-container">
     <div class="highlighted-courses">
-        <strong class="programs__title">${_("Featured programs")}</strong>
+        <strong class="programs__title">${_("Programs on highlight")}</strong>
         <div class="programs__btn-holder">
         <a class="btn-2" href="#">View All Courses</a>
     </div>
@@ -27,8 +27,8 @@ from django.utils.translation import ugettext as _
                         <div class="programs-info">
                             <div class="programs-image__title">${program['name']}</div>
                             <h2 class="programs-name">
-                                <span id="program-${program['id']}" class="programs-organization hd-3">${program['name']}</span>
-                                <span class="programs-code">${', '.join(o['display_name'] for o in program['organizations'])}</span>
+                                <span id="program-${program['id']}" class="programs-organization hd-3">${', '.join(o['display_name'] for o in program['organizations'])}</span>
+                                <span class="programs-code">${program['name']}</span>
                                 <span class="programs-title">${program['display_category']} Program</span>
                             </h2>
                             <div class="programs-date" aria-hidden="true">${_("Starts")}:</div>
