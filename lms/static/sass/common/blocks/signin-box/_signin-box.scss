@@ -1,4 +1,7 @@
 .signin-box {
     display: flex;
     align-items: center;
+    @media screen and (max-width: $media-desktop){
+        margin-right: 25px;
+    }
 }

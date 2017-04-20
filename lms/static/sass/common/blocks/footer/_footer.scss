@@ -27,6 +27,9 @@
         border: none !important;
         width: 238px;
         margin-right: 26px;
+        @media (max-width: 420px) {
+            margin-bottom: 15px;
+        }
     }
 }
 .wrapper-footer {
@@ -43,6 +46,11 @@
         padding: 0 10px;
         position: relative;
 
+        a:active,
+        a:focus {
+            border-bottom: none;
+        }
+        
         .copyright {
             text-align: center;
             font-family: $font-regular;

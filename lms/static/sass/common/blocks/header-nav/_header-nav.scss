@@ -1,11 +1,13 @@
 .header-nav {
     display: flex;
     flex-wrap: wrap;
-    @media screen and (min-width: $media-desktop){
+    @media screen and (min-width: $media-desktop) {
         flex-wrap: nowrap;
         margin-left: 43px;
     }
-
+    @media screen and (max-width: $media-desktop) {
+        justify-content: flex-end;
+    }
     &_link {
         color: #007db8 !important;
         margin-right: 23px;

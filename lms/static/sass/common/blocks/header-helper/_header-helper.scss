@@ -80,5 +80,10 @@
     }
     &_list-item {
         margin-left: 20px;
+        &:first-child {
+            @media screen and (max-width: $media-tablet) {
+                margin-left: 0;
+            }
+        }
     }
 }

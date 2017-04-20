@@ -71,8 +71,10 @@
     }
     &_btn-holder {
         text-align: right;
-        @media screen and (min-width: $media-desktop){
-            margin-top: -35px;
+        margin-top: -35px;
+        @media screen and (max-width: $media-tablet){
+            margin-top: 10px;
+            text-align: left;
         }
     }
 }
