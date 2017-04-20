@@ -20,11 +20,25 @@
         @media screen and (min-width: $media-desktop){
             width: 58.3%;
         }
+        .promo-box_text-wrapper {
+            @media screen and (max-width: 1600px) {
+                padding-left: 30px;
+            }
+            @media screen and (max-width: 1180px) {
+                padding-left: 45px;
+            }
+            @media screen and (max-width: $media-desktop){
+                padding-left: 60px;
+            }
+        }
     }
     &_right {
         width: 100%;
         @media screen and (min-width: $media-desktop){
             width: 41.3%;
+        }
+        .promo-box_text-wrapper {
+            padding-left: 60px;
         }
     }
     &_img {
@@ -64,11 +78,11 @@
     &_text-wrapper {
         padding-top: 64px;
         padding-bottom: 64px;
-        padding-left: 30px;
+
         @media screen and (min-width: $media-desktop){
             padding-top: 128px;
             padding-bottom: 0;
-            float: right;
+            float: left;
         }
     }
     &_wrapper {
@@ -96,7 +110,7 @@
         }
     }
     &_big-text {
-        font: 28px/55px $font-bold;
+        font: 28px/55px $font-regular;
         text-transform: uppercase;
         color: #fff;
         width: 330px;
