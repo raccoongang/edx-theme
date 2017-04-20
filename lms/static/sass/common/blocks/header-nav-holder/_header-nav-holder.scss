@@ -1,13 +1,12 @@
 .header-nav-holder {
     width: 100%;
     display: flex;
-    position: relative;
 
     &_wrapper {
         width: 100%;
         position: absolute;
-        top: 32px;
-        right: -10px;
+        top: 84px;
+        right: 0;
         visibility: hidden;
         background: #fff;
         box-sizing: border-box;
@@ -30,10 +29,6 @@
             flex-direction: row;
             align-items: center;
         }
-        @media screen and (max-width: $media-tablet) {
-            top: 10px;
-            width: calc(100% + 20px);
-        }
         .header-nav-holder.show & {
             visibility: visible;
             opacity: 1;
@@ -47,8 +42,8 @@
         border-left: 0;
         border-right: 0;
         position: absolute;
-        right: 0;
-        top: -10px;
+        right: 10px;
+        top: 35px;
         @media screen and (min-width: $media-desktop){
             display: none;
         }
