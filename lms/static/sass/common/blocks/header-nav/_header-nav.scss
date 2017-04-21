@@ -1,9 +1,12 @@
 .header-nav {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+
     @media screen and (min-width: $media-desktop) {
         flex-wrap: nowrap;
         margin-left: 43px;
+        width: auto;
     }
     @media screen and (max-width: $media-desktop) {
         justify-content: flex-end;
