@@ -123,7 +123,8 @@ site_status_msg = get_site_status_msg(course_id)
         <ol class="user">
           <li class="primary">
             <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
-              <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+              <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+              <span class="shopping-cart__text">${_("Shopping Cart")}</span> 
             </a>
           </li>
         </ol>
