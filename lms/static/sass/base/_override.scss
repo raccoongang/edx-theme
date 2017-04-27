@@ -1,15 +1,17 @@
+.header-global {
+    z-index: 100;
+}
 .header-global .wrapper-header {
     box-sizing: border-box;
     padding-left: 0;
     padding-right: 22px;
     max-width: 1200px;
-    height: 76px;
     padding-top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media screen and (max-width: 400px) {
-        flex-direction: column;
+    .header-flex {
+        height: 77px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &:after {
         display: none;
@@ -51,7 +53,7 @@
     .outer-wrapper {
         box-sizing: border-box;
         animation-name: none;
-        padding: 0;
+        padding: 0 15px;
         width: 100%;
     }
     .title {
@@ -107,6 +109,9 @@
         .heading-group {
             padding-bottom: 0;
             margin-bottom: 40px;
+            @media screen and (max-width: $large-responsive) {
+                margin-bottom: 10px;
+            }
             h1,p {
                 color: rgb(255, 255, 255);
                 line-height: 1.2;
@@ -116,10 +121,16 @@
             p {
                 font-size: 30px;
                 font-style: normal;
+                @media screen and (max-width: $large-responsive) {
+                    font-size: 28px;
+                }
             }
             h1 {
                 font: 50px/1.2 "Roboto-Regular",Arial, sans-serif;
                 margin-bottom: 10px;
+                @media screen and (max-width: $large-responsive) {
+                    font-size: 38px;
+                }
             }
             strong {
                 font-family: "Roboto-Bold", Arial, sans-serif;
@@ -133,7 +144,12 @@
     box-shadow: none;
     border-top: none;
 }
-.header-global .nav-global,
+.header-global .nav-global {
+    visibility: hidden;
+    @media screen and (max-width: $large-responsive) {
+        display: none;
+    }
+}
 .wrapper-footer footer#footer-openedx .copyright,
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon,
 .wrapper-footer footer#footer-openedx .wrapper-logo {
@@ -178,12 +194,16 @@
     margin-bottom: 45px;
     letter-spacing: -1px;
 }
+.courses-container .courses .course .course-image .cover-image img {
+    min-height: 160px;
+}
 .courses-container .courses .course .course-info .course-organization {
     padding-top: 14px;
 }
 .wrapper-footer footer#footer-openedx .nav-legal li a{
     font: 14px/1.2 Verdana, Arial, sans-serif;
     color: #fff;
+    text-decoration: none;
     &:active,
     &:focus,
     &:hover {
@@ -195,24 +215,69 @@
     padding: 40px 60px 40px 40px;
     display: flex;
     align-items: center; 
+    @media screen and (max-width: $large-responsive) {
+        flex-direction: column;
+        padding: 40px;
+    }
 }
 .wrapper-footer footer#footer-openedx .nav-legal li {
     margin-right: 10px;
+    @media screen and (max-width: $large-responsive) {
+        display: block;
+    }
 }
 .wrapper-footer footer#footer-openedx .footer-about-openedx a {
     margin-top: -19px;
+    @media screen and (max-width: $large-responsive) {
+        margin-top: 0;
+        float: none;
+    }
 }
 .wrapper-footer footer#footer-openedx a:active,
 .wrapper-footer footer#footer-openedx a:focus {
     border-bottom: none;
 }
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+    width: 217px;
+}
+.wrapper-footer footer#footer-openedx .colophon {
+    width: calc(100% - 217px);
+    padding-right: 20px;
+}
 .wrapper-footer footer#footer-openedx .footer-about-openedx,
 .wrapper-footer footer#footer-openedx .colophon {
-    width: 50%;
+    @media screen and (max-width: $large-responsive) {
+        width: 100%;
+    }
 }
 .wrapper-footer footer#footer-openedx .colophon {
     margin-right: 0;
 }
 .wrapper-footer footer#footer-openedx .nav-legal {
     line-height: 22px;
+    @media screen and (max-width: $large-responsive) {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+.footer-about-openedx p {
+    text-align: center;
+}
+.header-global .wrapper-header .course-header {
+    display: none;
+}
+.wrapper-footer footer#footer-openedx .colophon,
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+    margin-right: 0;
+    margin-left: 0;
+}
+.wrapper-header a:hover,
+.wrapper-header a:focus,
+.wrapper-header a:active {
+    text-decoration: none;
+}
+.header-global .nav-global.authenticated {
+    display: block;
+    visibility: visible;
 }

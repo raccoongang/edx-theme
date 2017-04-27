@@ -1,0 +1,19 @@
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $large-responsive) {
+        flex-direction: column;
+    }
+    &_wrap {
+        width: 50%;
+        @media screen and (max-width: $large-responsive) {
+            width: auto;
+            position: absolute;
+            top: 76px;
+            right: 0;
+            background: #fff;
+            padding: 20px 75px 20px 20px;
+            display: none;
+        }
+    }
+}
