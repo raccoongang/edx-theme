@@ -323,13 +323,21 @@
             color: $theme-color;
         }
     }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
+        color: $theme-color;
+        background: transparent;
+        box-shadow: none;
+    }
     .course-info .container .wrap-instructor-info .instructor-info-action {
         color: $theme-color;
         &:hover {
             background: $theme-color;
             color: #fff;
+            text-decoration: none;
         }
     }
+    .empty-dashboard-message a,
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
     .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
     .intro-inner-wrapper button,

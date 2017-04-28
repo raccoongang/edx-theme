@@ -4,6 +4,12 @@ $theme-color-light: #09b10a;
     .user .doc-link:hover {
         color: #065683;
     }
+    .date-summary-container .date-summary-todays-date {
+        background: $theme-color;
+    }
+    section.wiki .btn.btn-primary,
+    .home .page-header-secondary,
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
     .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
     .intro-inner-wrapper button,
@@ -20,6 +26,9 @@ $theme-color-light: #09b10a;
             background: transparent;
             box-shadow: none;
         }
+    }
+    .home .page-header-secondary:hover .last-accessed-link {
+        color: $theme-color;
     }
     .course-header a:hover {
         color: #065683;
@@ -134,6 +143,7 @@ $theme-color-light: #09b10a;
             border-color: $theme-color;
         }
     }
+    .accordion-toggle,
     .gradebook-link,
     section.wiki .article-functions .see-children a {
         color: $theme-color;
@@ -178,11 +188,13 @@ $theme-color-light: #09b10a;
     .discussion-module .btn-brand {
         border-color: $theme-color !important;
         background-color: $theme-color !important;
+        box-shadow: none;
         &:focus,
         &:active,
         &:hover {
             border-color: $theme-color-light !important;
             background: $theme-color-light !important;
+            box-shadow: none;
         }
 
     }
