@@ -61,19 +61,8 @@ $theme-color-light: #09b10a;
     .course-wrapper p a:hover {
         background: transparent;
     }
-    .xmodule_display.xmodule_VideoModule .video .subtitles a,
-    .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
-    .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
-    .xmodule_display.xmodule_HtmlModule a:link,
-    .updates a,
-    .chapters a,
-    .course-wrapper p a, .course-wrapper p a:visited,
-    .supplemental-link a,
-    .login-register .form-field .field-link {
+    .xmodule_display.xmodule_VideoModule .video .wrapper-downloads .wrapper-download-video .video-sources:focus {
         color: $theme-color;
-        &:hover {
-            color: $theme-color;
-        }
     }
     .course-wrapper a {
         color: $theme-color;
@@ -136,6 +125,7 @@ $theme-color-light: #09b10a;
             color: $theme-color;
         }
     }
+
     .search-bar .search-button {
         background: $theme-color;
         &:focus,
@@ -217,6 +207,22 @@ $theme-color-light: #09b10a;
     .wrap-instructor-info .instructor-info-action {
         color: #fff;
         background-color: $theme-color;
+    }
+    .list-download-transcripts a,
+    .xmodule_display.xmodule_VideoModule .video .wrapper-downloads .wrapper-download-video .video-sources,
+    .xmodule_display.xmodule_VideoModule .video .subtitles a,
+    .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
+    .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+    .xmodule_display.xmodule_HtmlModule a:link,
+    .updates a,
+    .chapters a,
+    .course-wrapper p a, .course-wrapper p a:visited,
+    .supplemental-link a,
+    .login-register .form-field .field-link {
+        color: $theme-color;
+        &:hover {
+            color: $theme-color;
+        }
     }
 }
 .forum-new-post-form .btn.cancel,
