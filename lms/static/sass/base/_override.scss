@@ -154,6 +154,7 @@
     border: 3px solid #fff;
     background: transparent;
 }
+.courses-container .courses .course,
 .highlighted-courses .courses .course {
     border: none;
     box-shadow: none;
@@ -286,3 +287,91 @@
 .header-global .wrapper-header .list-inline .item {
     font-size: 0.875em;
 }
+
+.search-bar .search-button {
+    background: $theme-color;
+    &:focus,
+    &:active,
+    &:hover {
+        background: $theme-color!important;
+    }
+}
+.header-flex .nav-global-01 li a {
+    color: $theme-color;
+    &:hover {
+        color: $theme-color;
+    }
+}
+    .btn-link,
+    .course-index .accordion .course-navigation .button-chapter,
+    .course-title a,
+    .header-global .nav-global li a {
+        color: $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .updates a,
+    .chapters a,
+    .course-wrapper p a, .course-wrapper p a:visited,
+    .supplemental-link a,
+    .login-register .form-field .field-link {
+        color: $theme-color;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .course-info .container .wrap-instructor-info .instructor-info-action {
+        color: $theme-color;
+        &:hover {
+            background: $theme-color;
+            color: #fff;
+        }
+    }
+    .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+    .intro-inner-wrapper button,
+    .login-register .action-primary {
+        background: $theme-color;
+        box-shadow: none;
+        text-shadow: none;
+        box-sizing: border-box;
+        border: 1px solid $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            color: $theme-color;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled) {
+            color: $theme-color;
+            background: transparent;
+            box-shadow: none;
+    }
+    .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+        border-top: 7px solid $theme-color;
+    }
+    .wrapper-account-settings .wrapper-header .account-nav button:hover, .wrapper-account-settings .wrapper-header .account-nav button:focus {
+            border-bottom: 4px solid $theme-color !important;
+    }
+    .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
+    .courseware-bookmarks-button .bookmarks-list-button,
+    .dashboard .my-courses .course .details .enter-course,
+    .login-register .nav-btn {
+        border: 1px solid $theme-color;
+        color: $theme-color;
+        background: transparent;
+        &:focus,
+        &:active,
+        &:hover {
+            box-shadow: none;
+            background: $theme-color;
+            color: #fff;
+        }
+    }

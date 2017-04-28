@@ -1,0 +1,214 @@
+$theme-color: #089209;
+$theme-color-light: #09b10a;
+.window-wrap {
+    .user .doc-link:hover {
+        color: #065683;
+    }
+    .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+    .intro-inner-wrapper button,
+    .login-register .action-primary {
+        background: $theme-color;
+        box-shadow: none;
+        text-shadow: none;
+        box-sizing: border-box;
+        border: 1px solid $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            color: $theme-color;
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    .course-header a:hover {
+        color: #065683;
+    }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled) {
+            color: $theme-color;
+            background: transparent;
+            box-shadow: none;
+    }
+    .courseware-bookmarks-button .bookmarks-list-button,
+    .dashboard .my-courses .course .details .enter-course,
+    .login-register .nav-btn {
+        border: 1px solid $theme-color;
+        color: $theme-color;
+        background: transparent;
+        &:focus,
+        &:active,
+        &:hover {
+            box-shadow: none;
+            background: $theme-color;
+            color: #fff;
+        }
+    }
+    .updates a,
+    .chapters a,
+    .course-wrapper p a, .course-wrapper p a:visited,
+    .supplemental-link a,
+    .login-register .form-field .field-link {
+        color: $theme-color;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .course-wrapper a {
+        color: $theme-color;
+            &:focus,
+            &:active,
+            &:hover {
+                color: #fff;
+                background: $theme-color-light;
+        }
+    }
+    div.info-wrapper section.handouts ol li a {
+        color: $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            color: $theme-color-light;
+        }
+    }
+    .course-title a,
+    .header-global .nav-global li a {
+        color: $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .wrapper-course-material .course-tabs li a {
+        &:focus,
+        &:hover {
+            color: $theme-color;
+            border-bottom-color: $theme-color;
+        }
+    }
+    .wrapper-course-material .course-tabs li a.active {
+        color: $theme-color;
+        border-bottom-color: $theme-color;
+        &:focus,
+        &:hover {
+            color: $theme-color;
+            border-bottom-color: $theme-color;
+        }
+    }
+    div.info-wrapper section.handouts ol li a {
+        color: $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            color: $theme-color-light;
+        }
+    }
+    .btn-link,
+    .course-index .accordion .course-navigation .button-chapter
+    .course-title a,
+    .header-global .nav-global li a {
+        color: $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .search-bar .search-button {
+        background: $theme-color;
+        &:focus,
+        &:active,
+        &:hover {
+            background: $theme-color;
+        }
+    }
+    .forum-new-post-form .post-type-input:checked+.post-type-label {
+        background: $theme-color;
+    }
+    .progress-link,
+    .btn-default {
+        color: $theme-color;
+        &:hover {
+            border-color: $theme-color;
+        }
+    }
+    .gradebook-link,
+    section.wiki .article-functions .see-children a {
+        color: $theme-color;
+        &:hover {
+            color: $theme-color-light;
+        }
+    }
+    .doc-link:hover {
+        color: #065683!important;
+    }
+    section.wiki .nav-tabs li.active a,
+    section.wiki .nav-tabs a,
+    section.wiki .breadcrumb li a,
+    .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
+    .discussion.inline-discussion .new-post-article .add-post-cancel,
+    .discussion-module .btn,
+    .course-index .accordion .course-navigation .button-chapter,
+    .btn-default {
+        color: $theme-color;
+    }
+    .course-index .accordion .course-navigation .button-chapter.active .group-heading {
+        color: #3c3c3c;
+    }
+    .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover {
+        border-color: $theme-color;
+    }
+    .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
+    .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
+    .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover {
+        border-bottom-color: $theme-color;
+    }
+    .xmodule_display.xmodule_SequenceModule .sequence-nav button.active  {
+        border-color: $theme-color;
+        &:hover {
+            border-color: $theme-color;
+        }
+    }
+    .discussion-module .btn {
+        border-color: $theme-color !important;
+    }
+    .forum-new-post-form .btn-brand,
+    .discussion-module .btn-brand {
+        border-color: $theme-color !important;
+        background-color: $theme-color !important;
+        &:focus,
+        &:active,
+        &:hover {
+            border-color: $theme-color-light !important;
+            background: $theme-color-light !important;
+        }
+
+    }
+    .discussion-module .btn:focus,
+    .discussion-module .btn:hover {
+        border-color: $theme-color !important;
+        background-color: $theme-color !important;
+    }
+    .wrap-instructor-info .instructor-info-action {
+        color: #fff;
+        background-color: $theme-color;
+    }
+}
+.forum-new-post-form .btn.cancel,
+.discussion .page-header-secondary .btn {
+    border: 1px solid $theme-color;
+    color: $theme-color;
+    background: transparent;
+        &:focus,
+        &:active,
+        &:hover {
+            box-shadow: none;
+            background: $theme-color;
+            color: #fff;
+        }
+}
+    .discussion .user .doc-link:hover {
+        color: #065683;
+    }
