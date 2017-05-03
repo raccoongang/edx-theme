@@ -1,3 +1,5 @@
+@import "../const";
+
 html,
 body{
     -webkit-font-smoothing: auto !important;
@@ -65,6 +67,9 @@ body{
     margin-right: 36px;
     display: flex;
     align-items: center;
+    @media screen and (max-width: $responsive-large) {
+        margin-right: 0;
+    }
 }
 
 .header-global {
@@ -110,6 +115,9 @@ body{
 
 .header-global .wrapper-header .wrapper-user-menu {
     margin-top: 0;
+    @media screen and (max-width: $responsive-large) {
+        margin-top: 10px;
+    }
 }
 
 .main-header .nav-global li a,
@@ -240,4 +248,7 @@ body{
 .dropdown-menu-container .dropdown-menu .dropdown-item a:active, 
 .dropdown-menu-container .dropdown-menu .dropdown-item a:focus {
     text-decoration: none;
+}
+.certificate-container img {
+    width: 100%;
 }
