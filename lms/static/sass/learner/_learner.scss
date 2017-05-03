@@ -202,7 +202,7 @@ body{
     &_social-list-twitter {
         width: 40px;
         height: 40px;
-        boder-radius: 2px;
+        border-radius: 2px;
         background-color: #307195;
         background-position: 50%;
         background-repeat: no-repeat;
@@ -236,4 +236,9 @@ body{
 }
 .icon-fallback-img .icon-angle-down {
     display: none;
+}
+.dropdown-menu-container .dropdown-menu .dropdown-item a:hover, 
+.dropdown-menu-container .dropdown-menu .dropdown-item a:active, 
+.dropdown-menu-container .dropdown-menu .dropdown-item a:focus {
+    text-decoration: none;
 }
