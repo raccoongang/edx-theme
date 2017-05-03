@@ -1,0 +1,17 @@
+@import "../const";
+
+.menu-action {
+    color: #dd4628;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: $responsive-large) {
+        display: block;
+    }
+    @media screen and (min-width: $responsive-large) {
+        display: none!important;
+    }
+}

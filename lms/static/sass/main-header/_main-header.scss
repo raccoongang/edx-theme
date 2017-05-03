@@ -1,17 +1,32 @@
+@import "../const";
+
 .main-header {
     box-shadow: none;
     border: none;
     height: 100px;
     background: none;
-    
+    z-index: 100;
+
     &_holder {
         display:flex;
         justify-content: flex-end;
         align-items: center;
         padding-top: 1px;
+        @media screen and (max-width: $responsive-large) {
+            flex-direction: column;
+        }
+        a {
+            @media screen and (max-width: $responsive-large) {
+                margin: 5px 0;
+            }  
+        }
     }
     .nav-global {
         margin-right: 36px;
+        @media screen and (max-width: $responsive-large) {
+            margin-right: 0;
+            flex-direction: column;
+        }
     }
     .nav-global li a, 
     .nav-global div a {
@@ -33,6 +48,17 @@
     }
     &__black {
         background: #30363a;
+    }
+    &_wrap {
+        @media screen and (max-width: $responsive-large) {
+            position: absolute;
+            right: 0;
+            top: 100px;
+            width: auto;
+            background: #222629;
+            padding: 20px 35px 20px 20px;
+            display: none;
+        }
     }
     &_wrapper {
         width: 100%;
