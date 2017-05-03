@@ -48,6 +48,9 @@
     }
     &__black {
         background: #30363a;
+        .main-header_wrapper {
+                background: rgba(0,0,0,0.3);
+        }
     }
     &_wrap {
         @media screen and (max-width: $responsive-large) {

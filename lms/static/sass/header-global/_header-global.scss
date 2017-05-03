@@ -1,3 +1,5 @@
+@import "../const";
+
 .header-global {
 
     .user > .primary > a {
@@ -78,6 +80,9 @@
     list-style: none;
     display: flex;
     align-items: center;
+    @media screen and (max-width: $responsive-large) {
+        margin-top: 10px;
+    }
     a.shopping-cart {
         border-radius: 4px;
         border: 1px solid #c8c8c8;
