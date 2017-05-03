@@ -6,6 +6,11 @@
         background-color: #fefefe;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
         min-height: 206px;
+        @media screen and (max-width: 640px) {
+            flex-direction: column;
+            width: 309px;
+            margin: 0 auto;
+        }
     }
     &_image-holder {
         width: 309px;
@@ -13,6 +18,12 @@
         border-right: 1px solid #d5d5d5;
         position: relative;
         overflow: hidden;
+        @media screen and (max-width: 640px) {
+            height: 246px;
+            margin: 0 auto;
+            border-right: none;
+            border-bottom: 1px solid #d5d5d5;
+        }
     }
     &_image {
         position: absolute;
@@ -42,6 +53,5 @@
     &_btn-holder {
         position: absolute;
         bottom: 29px;
-        width: 100%;
     }
 }

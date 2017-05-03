@@ -5,7 +5,7 @@
     border: none;
     height: 100px;
     background: none;
-    z-index: 100;
+    z-index: 101;
 
     &_holder {
         display:flex;
@@ -76,4 +76,7 @@
 
 .main-header .wrapper-header {
     height: 100px !important;
+}
+.show-menu .main-header_wrapper__fixed {
+    background: #222629;
 }
