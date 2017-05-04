@@ -46,7 +46,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo_llpa.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -75,7 +75,7 @@ site_status_msg = get_site_status_msg(course_id)
               </li>
               <li class="tab-nav-item">
                 <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
+                  Professional Programs
                 </a>
               </li>
           % else:
@@ -87,7 +87,7 @@ site_status_msg = get_site_status_msg(course_id)
             % if show_program_listing:
               <li class="tab-nav-item">
                 <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
+                  Professional Programs
                 </a>
               </li>
             % endif
