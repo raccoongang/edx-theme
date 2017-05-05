@@ -162,11 +162,11 @@ site_status_msg = get_site_status_msg(course_id)
               </li>
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                 <li class="item nav-global-04">
-                  <a class="btn-neutral" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">Log in</a>
+                  <a class="tab-nav-link" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">Log in</a>
                 </li>
               % else:
                 <li class="item nav-global-04">
-                  <a class="btn-neutral" href="/login${login_query()}">Log in</a>
+                  <a class="tab-nav-link" href="/login${login_query()}">Log in</a>
                 </li>
               % endif
             % endif
