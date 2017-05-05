@@ -10,7 +10,9 @@
         list-style: none;
         columns: 180px 2;
         column-gap: 20px;
-
+        @media screen and (max-width: 640px) {
+            columns: 180px 1;
+        }
         a {
             font: 16px/1.3 font-regular;
             color: #fff !important;
