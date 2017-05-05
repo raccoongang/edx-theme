@@ -1,4 +1,9 @@
+@import "../const";
+
 .header-global {
+    h1.logo {
+        margin-right: 0;
+    }
     .user > .primary > a {
         color: #fff;
         box-shadow: none;
@@ -59,6 +64,11 @@
 }
 .header-global .user .user-link .label-username {
     margin: 13px 5px 13px 15px;
+    max-width: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+    padding: 2px 0;
 }
 .header-global .wrapper-header .wrapper-user-menu {
     display: flex;
@@ -77,7 +87,9 @@
     list-style: none;
     display: flex;
     align-items: center;
-    
+    @media screen and (max-width: $responsive-large) {
+        margin-top: 10px;
+    }
     a.shopping-cart {
         border-radius: 4px;
         border: 1px solid #c8c8c8;

@@ -6,6 +6,13 @@
         max-width: 1080px;
         box-sizing: border-box;
         padding: 37px 40px 0;
+        a {
+            &:hover,
+            &:focus,
+            &:active {
+                border-bottom: none;
+            }
+        }
     }
 
     .grid-container{

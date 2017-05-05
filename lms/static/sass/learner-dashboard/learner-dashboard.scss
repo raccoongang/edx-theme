@@ -1,17 +1,16 @@
-.icon-fallback-img .icon-angle-down,
-.header-global .wrapper-header .course-header {
-    display: none;
-}
-.main-header_wrapper {
-    background: #30363a;
-}
-
-.header-global .wrapper-header .logo {
-    margin-top: 0;
-}
-
-.header-global .wrapper-header .wrapper-user-menu {
-    margin-top: 0;
+@import "../const";
+.header-global {
+    .wrapper-header {
+        .logo {
+            margin-right: 0;
+            margin-top: 0;
+        }
+        .list-inline.nav-global {
+            @media screen and (max-width: $responsive-large) {
+                margin-right: 36px;
+            }
+        }
+    }
 }
 .dropdown-menu-container .dropdown-menu .dropdown-item,
 .wrapper-footer footer#footer-openedx {
@@ -22,7 +21,7 @@
             text-decoration: none;
         }
     }
-}    
+}
 .header-global {
     .label-username {
         margin: 0 5px 0 15px;
