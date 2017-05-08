@@ -220,3 +220,17 @@ body{
 .icon-fallback-img .icon-angle-down {
     display: none;
 }
+.dropdown-menu-container .dropdown-menu .dropdown-item,
+.wrapper-header,
+.wrapper-footer footer#footer-openedx {
+    a {
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+    }
+}
+.dropdown-menu-container .menu-title:hover {
+    color: #ffe100 !important;
+}

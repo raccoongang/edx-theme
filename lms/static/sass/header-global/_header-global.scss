@@ -1,3 +1,5 @@
+@import "../const";
+
 .header-global {
     .user > .primary > a {
         color: #fff;
@@ -15,6 +17,11 @@
         padding-top: 0;
         display: flex;
         align-items: center;
+        @media screen and (max-width: $responsive-large) {
+            a {
+                margin: 5px 0;
+            }
+        }
     }
 
     .nav-courseware {
@@ -78,6 +85,8 @@
 .header-global .user {
     margin-left: 0;
     list-style: none;
+    display: flex;
+    align-items: center;
 
     a.shopping-cart {
         border-radius: 4px;
