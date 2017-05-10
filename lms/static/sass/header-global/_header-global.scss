@@ -99,6 +99,9 @@
         line-height: 16px;
         display: inline-block;
         text-transform: uppercase;
+        @media screen and (max-width: $responsive-large) {
+            margin-top: 10px;
+        }
     }
 }
 .header-global .wrapper-header .dropdown-menu {
