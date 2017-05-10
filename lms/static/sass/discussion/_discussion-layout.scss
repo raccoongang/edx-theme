@@ -13,3 +13,33 @@
 .header-global .wrapper-header .wrapper-user-menu {
     margin-top: 0;
 }
+.dropdown-menu-container .dropdown-menu .dropdown-item,
+.wrapper-header,
+.wrapper-footer footer#footer-openedx {
+    a {
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
+    }
+}
+.dropdown-menu-container .menu-title {
+    display: flex;
+    align-items: center;
+}
+.header-global .label-username {
+    margin: 13px 5px 13px 15px;
+    max-width: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+    padding: 2px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.dropdown-menu-container .menu-image {
+    margin-right: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
