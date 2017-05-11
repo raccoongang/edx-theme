@@ -206,7 +206,7 @@ site_status_msg = get_site_status_msg(course_id)
     <div class="theme-main-nav_logo">
       <a href="${marketing_link('ROOT')}">
         <span class="theme-nav-wrapper_logo-holder">
-            <img src="${static.url("edx-theme/images/header-info/logo-racoon.png")}" alt="racoon logo"/>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.jpg" alt="racoon logo"/>
         </span>
       </a>
     </div>
@@ -223,6 +223,11 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
 </div>
 </div>
+<script type="text/javascript">
+  $( ".theme-main-nav_opener" ).click(function() {
+    $(".theme-main-nav").toggleClass("theme-main-nav__open");
+  });
+</script>
 % if course:
 <!--[if lte IE 9]>
 <div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
