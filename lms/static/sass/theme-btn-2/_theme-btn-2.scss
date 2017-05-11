@@ -11,7 +11,9 @@ a.theme-btn-2,
     text-shadow: none;
     white-space: nowrap;
     display: inline-block;
-
+    &--margin {
+        margin-top: 10px;
+    }
     &:focus,
     &:hover {
 /*        background-color: darken(#dd4628, 10%);

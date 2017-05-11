@@ -54,7 +54,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img id="logo" src="/static/it-bursa/images/logo_horizontal.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" height="42" width="155"/>
+            <img id="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo_horizontal.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" height="42" width="155"/>
         </%block>
       </a>
     </h1>

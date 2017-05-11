@@ -107,3 +107,10 @@
 .header-global .wrapper-header .dropdown-menu {
     top: calc(40px * 0.75) !important;
 }
+.header-global nav:after,
+.header-global .wrapper-header:after {
+    display: none;
+}
+.header-global h1.logo {
+    margin-right: 0;
+}

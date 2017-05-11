@@ -159,7 +159,7 @@ from django.template.defaultfilters import truncatechars
                 %if user.is_authenticated() and registered:
                   %if show_courseware_link:
                     <span class="register disabled">${_("You are enrolled in this course")}</span>
-                    <a href="${course_target}" class="theme-btn-2">
+                    <a href="${course_target}" class="theme-btn-2 theme-btn-2--margin">
                       ${_("View Course")}
                     </a>
                   %endif
