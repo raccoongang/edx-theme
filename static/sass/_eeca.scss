@@ -320,7 +320,7 @@ header.global {
 
 #first {
   display: inline-block !important;
-  height: 62px !important;
+  height: auto !important;
   width: 140px !important;
   padding-left: 15px !important;
   padding-bottom: 5px !important;
@@ -540,10 +540,20 @@ header.global .nav-courseware li .cta:hover {
     color: #fff !important;
 }
 
-h1.logo a img{
+h1.logo a {
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  img{
     height: 64px !important;
     max-width: 327px;
     width: 134% !important;
+
+    &:last-child {
+      height: auto !important;
+    }
 }
 
 header.global nav {
