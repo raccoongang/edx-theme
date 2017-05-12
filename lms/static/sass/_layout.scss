@@ -55,7 +55,10 @@ body{
 .course-info header.course-profile {
     margin-top: 0;
     padding-bottom: 100px;
+    min-height: 280px;
+    height: auto;
 }
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     background: #dd4628;
@@ -84,6 +87,9 @@ body{
         box-shadow: none !important;
     }
 }
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:focus:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:active:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
