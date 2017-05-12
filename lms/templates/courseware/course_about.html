@@ -269,7 +269,7 @@ from django.template.defaultfilters import truncatechars
           </ul>
           <h2 id="staff">Course staff</h2>
           <div class="staff-box">
-            <img src="/static/edx-theme/images/avatar.png" alt="staff avatar" class="staff-box_avatar">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/avatar.png" alt="staff avatar" class="staff-box_avatar">
               <div class="staff-box_holder">
                 <h3>Gerry O'Brien</h3>
                 <p>Gerry O'Brien is a Senior Content Development Manager at Microsoft Learning with a focus on software development and database platforms. He has over 18 years of industry experience working in various roles and programming with various languages such as:</p>
@@ -308,13 +308,6 @@ from django.template.defaultfilters import truncatechars
             <li class="important-dates-item">
                 <span class="icon fa fa-calendar" aria-hidden="true"></span>
                 <p class="important-dates-item-title">${_("Classes End")}</p>
-                <span class="important-dates-item-text final-date">
-                    % if get_course_about_section(request, course, "end_date"):
-                        ${get_course_about_section(request, course, "end_date")}
-                    % else:
-                        ${course.end_datetime_text()}
-                    % endif
-                </span>
             </li>
             % endif
 
