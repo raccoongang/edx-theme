@@ -1,3 +1,5 @@
+@import "const";
+
 html,
 body,
 h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5, h6 {
@@ -49,4 +51,45 @@ body{
 }
 .container.about p {
     line-height: 1.4;
+}
+.course-info header.course-profile {
+    margin-top: 0;
+    padding-bottom: 100px;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+    background: #dd4628;
+    font: 20px/1.3 titilliumweb-bold,sans-serif;
+    text-transform: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 8px 27px 5px;
+    box-shadow: 0px 3px 0px 0px #9a311c;
+    text-shadow: none;
+    white-space: nowrap;
+    display: inline-block;
+    border: none;
+    &:hover {
+        background: #b5361d;
+    }
+}
+.course-info .theme-btn-1 {
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    &:focus,
+    &:active,
+    &:hover {
+        background: #b5361d !important;
+        box-shadow: none !important;
+    }
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
+    background: #b5361d;
+    box-shadow: none;
 }

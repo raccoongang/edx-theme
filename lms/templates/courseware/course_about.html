@@ -115,7 +115,7 @@ from openedx.core.lib.courses import course_image_url
         <div class="heading-group">
           <h1>
             ${course.display_name_with_default_escaped}
-            <button type="button">${course.display_org_with_default | h}</button>
+            <button class="theme-btn-1" type="button">${course.display_org_with_default | h}</button>
           </h1>
           <br>
           <h3>
@@ -191,14 +191,14 @@ from openedx.core.lib.courses import course_image_url
       % if get_course_about_section(request, course, "video"):
       <a href="#video-modal" class="media" rel="leanModal">
         <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
+           <img src="${course_image_urls['large']}" alt="" />
           <div class="play-intro"></div>
         </div>
       </a>
       %else:
       <div class="media">
         <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
+           <img src="${course_image_urls['large']}" alt="" />
         </div>
       </div>
       % endif
