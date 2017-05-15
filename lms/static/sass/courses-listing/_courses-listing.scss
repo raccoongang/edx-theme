@@ -1,0 +1,11 @@
+.courses-listing {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.find-courses .courses-container .courses .courses-listing .courses-listing-item{
+    max-height: none;
+    min-height: 360px;
+}
