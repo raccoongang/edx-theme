@@ -3,8 +3,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 0 0 32px;
+        padding: 0 0 17px;
         text-align: center;
+        width: 100%;
         @media all and (min-width: 800px) {
             flex-wrap: nowrap;
             text-align: left;
@@ -12,7 +13,7 @@
     }
     &_list {
         margin: 0;
-        padding: 0;
+        padding: 0 0 15px;
         list-style: none;
         width: 100%;
         
@@ -74,6 +75,7 @@
             margin-left: 15px;
         }
     }
+    &_social-list-linkedin,
     &_social-list-facebook,
     &_social-list-twitter {
         width: 40px;
@@ -95,5 +97,8 @@
     }
     &_social-list-twitter {
         background-image: url("../images/ico-twetter.png");
+    }
+    &_social-list-linkedin {
+        background-image: url("../images/in.png");
     }
 }

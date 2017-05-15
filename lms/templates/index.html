@@ -19,7 +19,7 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>Start Learning Now!</h1>
+                  <h1>Connecting In-Class to On-Line</h1>
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
               % endif
             </div>
@@ -51,31 +51,31 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="homepage-boxes">
         <div class="homepage-boxes-container">
           <div class="homepage-boxes-item">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/azure.svg">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni facere consequatur consequuntur quis repellendus cum at debitis rem doloremque vero provident modi est quam libero minima, atque porro recusandae quaerat!</p>
-            <a href="#">Learn more</a>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-04.png">
+            <h1>Torque IT</h1>
+            <p>Torque IT is an industry-leading, vendor-aligned delivery partner that specialises in ICT training, enablement and international certification. Some of our training methodologies include in class, virtual, digital and self-paced.</p>
+            <a href="http://www.torque-it.com/">Learn more</a>
           </div>
           
           <div class="homepage-boxes-item">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/certificate.svg">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, itaque dolor iure, laudantium inventore numquam ab esse quisquam iste ut quos, dolorum laborum similique veniam et! Iure repudiandae, sunt assumenda.</p>
-            <a href="#">Learn more</a>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-03.png">
+            <h1>MOC On-Demand</h1>
+            <p>Microsoft in-class &amp; certification training is now accessible online, 24/7, at your own pace, in your own time. Keep your skills and certifications current through MOD.</p>
+            <a href="http://www.mocondemand.co/">Learn more</a>
           </div>
 
           <div class="homepage-boxes-item">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/bulb.svg">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quaerat, amet aperiam hic pariatur, quos debitis. Voluptas unde porro error, nobis eos quasi expedita repudiandae, aut impedit nesciunt fuga, delectus!</p>
-            <a href="#">Learn more</a>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-01.png">
+            <h1>Professional Programs</h1>
+            <p>Earn your Professional Program certificate through specialised Microsoft programs on unique and in demand skills.</p>
+            <a href="https://edx.torque-it.com/xseries/">Learn more</a>
           </div>
 
           <div class="homepage-boxes-item">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/azure.svg">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dolor aperiam a dicta, consequuntur alias impedit, minus provident possimus molestiae illum vitae ut suscipit veniam. Iure ipsa illo enim odit!</p>
-            <a href="#">Learn more</a>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-02.png">
+            <h1>Onsite Training</h1>
+            <p>With a track record of successful training deliveries around the world, Torque IT is your trusted and experienced training delivery partner. Reach out to us regarding your specific requirement.</p>
+            <a href="http://www.torque-it.com/">Learn more</a>
           </div>
         </div>
       </div>
@@ -84,12 +84,10 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="viewall-top-btn"><a href="/courses/">View all courses</a></div>
       <%include file="${courses_list}" />
       <div class="viewall-top-btn mobile"><a href="/courses/">View all courses</a></div>
-      <h1 class="theme-content_heading">Programs</h1>
+      <h1 class="theme-content_heading">Microsoft Professional Programs</h1>
       <div class="viewall-top-btn"><a href="/xseries/">View all programs</a></div>
       <%include file="${programs_list}" />
       <div class="viewall-top-btn mobile"><a href="/xseries/">View all programs</a></div>
-
-
     </section>
 </main>
 
