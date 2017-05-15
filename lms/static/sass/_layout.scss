@@ -55,3 +55,11 @@ body{
 body.view-in-course .content-wrapper {
      min-width: 760px;
 }
+.teacher img {
+    max-width: 120px;
+}
+.teacher-image:after {
+    content: '';
+    display: table;
+    clear: both;
+}

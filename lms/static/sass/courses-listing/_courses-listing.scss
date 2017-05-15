@@ -1,3 +1,4 @@
+@import "../const";
 .courses-listing {
     &:after {
         content: '';
@@ -5,7 +6,9 @@
         clear: both;
     }
 }
-.find-courses .courses-container .courses .courses-listing .courses-listing-item{
-    max-height: none;
-    min-height: 360px;
+.find-courses .courses-container .courses .courses-listing .courses-listing-item {
+    @media screen and (max-width: 640px) {
+        max-height: none;
+        min-height: 360px;
+    }
 }
