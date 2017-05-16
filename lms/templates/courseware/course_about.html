@@ -27,8 +27,9 @@ from django.template.defaultfilters import truncatechars
   (function() {
     $(".theme-course-nav_list-link").click(function() {
         var idThis = $(this).attr("href");
+        var height = $('#header-holder').outerHeight();
         $('html, body').animate({
-            scrollTop: $(idThis).offset().top-280
+            scrollTop: $(idThis).offset().top - height
         }, 1000);
     });
     $(".register").click(function(event) {
