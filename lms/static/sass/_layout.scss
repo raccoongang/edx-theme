@@ -88,6 +88,7 @@ body{
 
         &:hover {
             color: #e46c54 !important;
+            text-decoration: none;
         }
     }
 }
@@ -107,4 +108,8 @@ section.outside-app p {
 }
 .find-courses .courses-container .courses .courses-listing .courses-listing-item {
     max-height: none !important;
+}
+.course-info .course-sidebar {
+    float: right;
+    margin-right: 30px;
 }
