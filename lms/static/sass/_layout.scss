@@ -55,3 +55,14 @@ body.view-in-course .content-wrapper {
 body .register aside .btn-login .btn-login-action {
     color: #fff;
 }
+.teacher img {
+    max-width: 120px;
+}
+.teacher-image:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.inner-wrapper p + p {
+    margin-top: 0;
+}
