@@ -152,11 +152,6 @@
     display: none;
   }
 }
-a#find-courses,
-#find-courses {
-  color: #fff;
-  font-size: 20px;
-}
 /*Header added*/
 .header-global {
   height: 76px;
@@ -209,8 +204,6 @@ a#find-courses,
 a#find-courses {
   color: #fff;
   font-size: 20px;
-  margin: 0 10%;
-  flex-grow: 1;
 }
 
 .dropdown-menu-container .menu-image {
@@ -465,4 +458,45 @@ a, a:visited {
     color: #e00000 !important;
     border-color: #e00000 !important;
   }
+}
+.btn-link{
+  color: #e00000;
+  &:hover {
+    color: #3c3c3c;
+    text-decoration: none !important;
+  }
+}
+.btn {
+  color: #e00000;
+  border-color: #e00000;
+  &:active,
+  &:focus,
+  &:hover {
+    color: #fff;
+    background: #e00000;
+    border-color: #e00000;
+  }
+}
+.field-input:focus {
+   border-color: #e00000;
+}
+.wrapper-footer footer#footer-openedx a {
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.wrapper-footer a,
+.header-global a {
+  text-decoration: none;
+}
+.wrapper-footer footer#footer-openedx::after {
+  display: none;
+}
+.wrapper-footer footer#footer-openedx .colophon {
+    width: auto;
+}
+.wrapper-footer .flex-center {
+    width: 100%;
 }

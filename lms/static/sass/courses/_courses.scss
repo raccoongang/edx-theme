@@ -8,6 +8,9 @@
 .enrollment-wrapper strong {
     color: #e00000 !important;
 }
+section.wiki .breadcrumb li a,
+section.wiki .nav-tabs a,
+section.wiki .nav-tabs li.active a,
 a, a:visited {
   color: #e00000;
 }
@@ -34,4 +37,47 @@ a, a:visited {
       color: #fff;
       background: #e00000 !important;
     }
+}
+.wrapper-footer footer#footer-openedx .colophon {
+    width: auto;
+}
+.wrapper-footer .flex-center {
+    width: 100%;
+}
+.xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct,
+.xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct:hover, .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicegroup_correct:hover, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicegroup label.choicegroup_correct:hover, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label.choicegroup_correct:hover, .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicetextgroup_correct:hover, .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup section.choicetextgroup_correct:hover, .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_CapaModule .choicegroup label.choicetextgroup_correct:hover, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label.choicetextgroup_correct:hover, .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_CapaModule .choicegroup section.choicetextgroup_correct:hover, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup section.choicetextgroup_correct:hover,
+.xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover, .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label:hover, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicegroup label:hover, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label:hover,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+     border-color: #e00000;
+}
+.xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct .status-icon:after, .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicegroup_correct .status-icon:after, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicegroup label.choicegroup_correct .status-icon:after, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label.choicegroup_correct .status-icon:after, .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicetextgroup_correct .status-icon:after, .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup section.choicetextgroup_correct .status-icon:after, .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_CapaModule .choicegroup label.choicetextgroup_correct .status-icon:after, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label.choicetextgroup_correct .status-icon:after, .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_CapaModule .choicegroup section.choicetextgroup_correct .status-icon:after, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup section.choicetextgroup_correct .status-icon:after,
+.course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon {
+    color: #e00000;
+}
+.xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover{
+    background: #e00000;
+}
+.btn-default {
+    color: #e00000;
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+        color: #e00000;
+        border-color: #e00000;
+    }
+}
+.btn-brand {
+  color: #e00000;
+  border-color: #e00000;
+  background: transparent;
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    background: #e00000;
+    color: #fff;
+    text-decoration: none !important;
+    border-color: #e00000;
+  }
 }

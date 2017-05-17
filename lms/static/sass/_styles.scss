@@ -1060,6 +1060,7 @@ text-decoration: none;
     text-decoration: none;
   }
 }
+.program-header .crumb-link,
 a, a:visited {
   color: #e00000;
 }
@@ -1074,4 +1075,61 @@ a, a:visited {
     color: #e00000 !important;
     border-color: #e00000 !important;
   }
+}
+.search-bar .search-button, 
+.search-bar .cancel-button {
+    color: #fff;
+    background: #e00000;
+    &:active,
+    &:focus,
+    &:hover {
+      color: #fff;
+      background: #e00000 !important;
+    }
+}
+.wrapper-account-settings .wrapper-header .account-nav button.active {
+      border-bottom: 4px solid #e00000 !important;
+}
+.wrapper-account-settings .wrapper-header .account-nav button, 
+.wrapper-account-settings .wrapper-header .account-nav button {
+  &:hover,
+  &:focus {
+    border-color: #e00000 !important;
+  }
+}
+.btn-link{
+  color: #e00000;
+  &:hover {
+    color: #3c3c3c;
+    text-decoration: none !important;
+  }
+}
+.btn {
+  color: #e00000;
+  border-color: #e00000;
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    background: #e00000;
+    color: #fff;
+    text-decoration: none !important;
+    border-color: #e00000;
+  }
+}
+.course-card .cta-secondary {
+    background-color: #e00000;
+    border-color: #e00000;
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent;
+      color: #e00000;
+      border-color: #e00000;
+    }
+}
+.blue-icon .certificate-body {
+  fill: #e00000;
+  border-color: #e00000;
 }
