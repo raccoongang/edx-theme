@@ -47,18 +47,19 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
-  <header id="global-navigation" class="header-global ${"slim" if course else ""}" >
+  <header id="global-navigation" class="header-global">
     <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img id="logo" src="/static/firebrand/images/firebrand_logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img id="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/firebrand_logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
     % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
         <a id="find-courses" href="/courses">${_("FIND COURSES")}</a>
     %endif
+    <div class="nav-wrap">
     % if course:
       <h2 class="course-header"><span class="provider">${truncatechars(course.display_org_with_default, 20)}:</span>
         <span class="course-number">${truncatechars(course.display_number_with_default, 20)}</span>
@@ -192,6 +193,7 @@ site_status_msg = get_site_status_msg(course_id)
       </ol>
       % endif
       % endif
+      </div>
     </nav>
 </header>
 % if course:

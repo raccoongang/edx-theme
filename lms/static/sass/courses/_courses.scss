@@ -1,0 +1,37 @@
+.btn-link{
+  color: #e00000;
+  &:hover {
+    color: #3c3c3c;
+    text-decoration: none !important;
+  }
+}
+.enrollment-wrapper strong {
+    color: #e00000 !important;
+}
+a, a:visited {
+  color: #e00000;
+}
+.wrapper-course-material .course-tabs li a.active {
+    color: #e00000 !important;
+    border-color: #e00000 !important;
+}
+.wrapper-course-material .course-tabs li a {
+  &:active,
+  &:hover,
+  &:focus {
+    color: #e00000 !important;
+    border-color: #e00000 !important;
+  }
+}
+
+.search-bar .search-button, 
+.search-bar .cancel-button {
+    color: #fff;
+    background: #e00000;
+    &:active,
+    &:focus,
+    &:hover {
+      color: #fff;
+      background: #e00000 !important;
+    }
+}

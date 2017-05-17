@@ -142,8 +142,21 @@
   height: 80px;
   margin-left: 5px;
 }
-
-
+.header-global .wrapper-header {
+  display: flex;
+  align-items: center;
+  padding:0;
+  height: 76px;
+  justify-content: space-between;
+  &:after {
+    display: none;
+  }
+}
+a#find-courses,
+#find-courses {
+  color: #fff;
+  font-size: 20px;
+}
 /*Header added*/
 .header-global {
   height: 76px;
@@ -437,4 +450,19 @@ body.discussion .posted-details .username:focus {
 .forum-nav-thread.is-unread .forum-nav-thread-comments-count:focus {
   color: #e00000;
   text-decoration: none;
+}
+a, a:visited {
+  color: #e00000;
+}
+.wrapper-course-material .course-tabs li a.active {
+    color: #e00000 !important;
+    border-color: #e00000 !important;
+}
+.wrapper-course-material .course-tabs li a {
+  &:active,
+  &:hover,
+  &:focus {
+    color: #e00000 !important;
+    border-color: #e00000 !important;
+  }
 }
