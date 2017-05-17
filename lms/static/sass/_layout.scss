@@ -44,3 +44,14 @@ body{
 .icon-fallback-img .icon-angle-down {
     display: none;
 }
+.teacher img {
+    max-width: 120px;
+}
+.teacher-image:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.inner-wrapper p + p {
+    margin-top: 0;
+}
