@@ -7,7 +7,7 @@
             
         &:focus,
         &:hover {
-            color: #dd4628;
+            color: $tourque-orange;
             background: transparent;
         }
     }
@@ -31,6 +31,7 @@
     }
     .wrapper-header .logo {
         margin-top: -2px;
+        font: normal 2em/1.4em "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
 
         img {
             width: 300px;
@@ -92,7 +93,7 @@
         
         &:focus,
         &:hover {
-            color: #e46c54 !important;
+            color: $tourque-orange !important;
             border: none !important;
             text-decoration: none !important;
         }

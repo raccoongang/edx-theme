@@ -37,23 +37,20 @@
        
         &:focus, 
         &:hover {
-            color: lighten(#dd4628, 10%) !important;
+            color: lighten($tourque-orange, 10%) !important;
             border: none;
         }
     }
     .wrapper-header {
-        max-width: 1080px;
-        box-sizing: border-box;
-        padding: 26px 40px 23px;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
         height: auto;
         position: relative;
-    }
-    &__black {
-        background: #30363a;
+        background: rgba(0, 0, 0, .3);
     }
     &_wrapper {
         width: 100%;
-        background: rgba(0, 0, 0, .3);
         max-height: none;
         min-height: 100px;
 
@@ -62,9 +59,26 @@
             top: 0;
             height: 100px;
         }
-        &__black {
-            background: #30363a;
-        }
+    }
+    &__black {
+        background: #30363a;
     }
 }
+.wrapper-header {
+    .main-header_wrapper__black & {
+        background: #30363a;
+    }
+    .main-header__black & {
+        background: none;
+    }
 
+    &_holder {
+        max-width: 1080px;
+        box-sizing: border-box;
+        padding: 26px 40px 23px;
+        height: auto;
+        position: relative;
+        margin: 0 auto;
+        min-height: 100px;
+    }
+}

@@ -369,7 +369,6 @@ import urllib
         </div>
       % endif
     </div>
-    % endif
 ## CourseTalk widget
       % if show_coursetalk_widget:
       <ul style="padding: 0 0 0 0;">
@@ -380,19 +379,18 @@ import urllib
       </li>
       </ul>
       % endif
-  </div>
-          <div class="ugc">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
+      <div class="ugc">
+        % if staff_access and studio_url is not None:
+          <div class="wrap-instructor-info studio-view">
+            <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
+          </div>
+        % endif
+
+        <div class="inner-wrapper">
+          ${get_course_about_section(request, course, "overview")}
         </div>
-      % endif
-
-      <div class="inner-wrapper">
-        ${get_course_about_section(request, course, "overview")}
-      </div>
+    </div>
   </div>
-
   </div>
 </div>
 
