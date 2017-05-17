@@ -34,7 +34,6 @@ from django.template.defaultfilters import truncatechars
         $('html, body').animate({
             scrollTop: $(idThis).offset().top - height
         }, 1000);
-        console.log(height);
     });
     $(".register").click(function(event) {
       $("#class_enroll_form").submit();
@@ -111,8 +110,10 @@ from django.template.defaultfilters import truncatechars
     var avatarElem = document.getElementById('header-holder');
     var aboutWrapper = document.querySelector('.theme-course-info_header-helper');
     var avatarSourceBottom = avatarElem.getBoundingClientRect().top + window.pageYOffset;
+
     window.onscroll = function() {
       var aboutHeight = avatarElem.offsetHeight;
+
       if (avatarElem.classList.contains('theme-course-info_header-holder__fixed') && window.pageYOffset <= avatarSourceBottom) {
         avatarElem.classList.remove('theme-course-info_header-holder__fixed');
       } else if (window.pageYOffset > avatarSourceBottom) {
@@ -243,57 +244,7 @@ from django.template.defaultfilters import truncatechars
       % endif
 
       <div class="inner-wrapper">
-        ##${get_course_about_section(request, course, "overview")}
-          <section id="about">
-  
-  <h2>Про цей курс</h2>
-  <p>Сайт - потужний засіб розвитку. Як особистого, професійного, так і бізнесового або громадського. Втім, існує нездоланний психологічний бар'єр, що заважає багатьом і багатьом українцям зважитись і взятись за це діло. </p>
-
-  <p>Будуймо сайти, будуймо Україну!</p>
-</section>
-
-<section id="prerquisites">
-  <h2>Вимоги щодо початкового рівня комп'ютерної підготовки</h2>
-  <p>Жодних! Вчителі і бібліотекарі, інженери і лікарі - всі, хто побачив цей текст на своєму комп'ютері (чи телефоні), є готовими до навчання в рамках курсу.</p>
-</section>
-
-<section id="staff">
-  <h2>Персонал курсу</h2>
-  <article class="teacher">
-    <div class="teacher-image">
-      <img src="/static/11.jpg" align="left" style="margin:0 20 px 0" alt="Course Staff Image #1">
-    </div>
-
-    <h3>Вадим Петриченко. Автор курсу</h3>
-    <p>Кадрове резюме:  </p>
-    <a href="https://www.facebook.com/vadimpetr/about?lst=100000856620900%3A100000856620900%3A1485253394&section=education&pnref=about"> Фейсбук-акаунт </a>
-  </article>
-
-  <article class="teacher">
-    <div class="teacher-image">
-      <img src="/static/images/placeholder-faculty.png" align="left" style="margin:0 20 px 0" alt="Course Staff Image #2">
-    </div>
-
-    <h3>Вакансія</h3>
-    <p>Помічник, як буде багато студентів, не завадить</p>
-  </article>
-</section>
-
-<section id="faq">
-  <section class="responses">
-    <h2>Популярні запитання</h2>
-    <article class="response">
-      <h3>Скільки часу потрібно для створення сайту, яка його трудоємність?</h3>
-      <p>Від кількох годин - це, звісно, простий чи елементарний варіант - до всього життя. Адже сайт є створінням живим і весь час розвивається, змінюється.</p>
-      <p>Але сайтом справа може не обмежитись. <a href="http://ukr-mod.blogspot.com/p/blog-page_88.html">Тут про це більше.</a> Головне - почати, тоді відкриються різні цікаві перспективи, а як очікувати слушних нагод...</p>
-    </article>
-
-    <article class="response">
-      <h3>Чому ж тоді, як це так просто, мало хто береться за цю справу?</h3>
-      <p>Чекають. Понеділка, "після відпустки", "коли призначать керівником підрозділу". Це помилка, починати треба зараз.</p>
-    </article>
-  </section>
-</section>
+        ${get_course_about_section(request, course, "overview")}
 
           </div>
         </div>
