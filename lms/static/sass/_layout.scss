@@ -126,3 +126,91 @@ section.wiki .breadcrumb li a {
         color: #fff !important;
     }
 }
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button:hover {
+    background: darken($tourque-blue, 10%) !important;
+}
+.btn-default {
+    color: $tourque-blue !important;
+
+    &:hover {
+        color: $tourque-blue !important;
+    }
+}
+.bookmark-button {
+    &:hover {
+        color: darken($tourque-orange, 10%) !important;
+    }
+}
+.instructor-dashboard-wrapper-2 .file-download-link a,
+a.progress-link,
+.gradebook-link a,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link,
+.hd.hd-5 a,
+.xmodule_display.xmodule_HtmlModule a {
+    color: $tourque-blue !important;
+
+    &:hover {
+        color: darken($tourque-blue, 10%) !important;
+    }
+}
+section.wiki .btn.btn-danger,
+.wrap-instructor-info .instructor-info-action,
+.course-card .cta-primary {
+    background: $tourque-orange !important;
+    color: #fff !important;
+    border-color: $tourque-orange !important;
+
+    &:hover {
+        background: darken($tourque-orange, 10%) !important;
+        color: #fff !important;
+        border-color: darken($tourque-orange, 10%) !important;
+        text-decoration: none;
+    }
+}
+.sidebar .program-advertise .new-programs-btn,
+.empty-dashboard-message a,
+input[type="submit"],
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+.instructor-dashboard-wrapper-2 .btn-blue,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
+section.wiki .btn.btn-primary,
+body .btn-brand,
+.search-bar .search-button,
+section.wiki .btn.btn-primary,
+.search-bar .search-button,
+.course-card .cta-secondary,
+.find-courses .discovery-submit,
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: $tourque-blue !important;
+    color: #fff !important;
+    border-color: $tourque-blue !important;
+
+    &:hover {
+        background: darken($tourque-blue, 10%) !important;
+        color: #fff !important;
+        border-color: darken($tourque-blue, 10%) !important;;
+    }
+}
+.sequence-nav button.active {
+    border-color: $tourque-blue !important;
+}
+.xmodule_display.xmodule_VideoModule .video .subtitles a,
+body .course-index .accordion .course-navigation .button-chapter {
+    color: $tourque-blue;
+}
+body .discussion-module .btn:hover {
+    background: darken($tourque-blue, 10%) !important;
+    color: #fff !important;
+    border-color: darken($tourque-blue, 10%) !important;;
+}
+body .forum-new-post-form .post-type-input:checked+.post-type-label {
+    background: darken($tourque-blue, 10%) !important;
+}
+.btn.cancel:hover,
+.btn.btn-small.search-btn:hover {
+    background: darken($tourque-blue, 10%) !important;
+}
