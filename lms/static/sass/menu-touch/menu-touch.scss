@@ -1,0 +1,48 @@
+@import "../const";
+
+.menu-touch {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -15px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+    @media screen and (max-width: $responsive-large) {
+        display: block;
+    }
+    &__line{
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 45px;
+        background-color: #fff;
+        transform-origin: 0 0;
+        transition: all 0.5s;
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 15px;
+        }
+        &:nth-child(3) {
+            top: 28px;
+        }
+    }
+}
+.menu-show {
+    .menu-touch__line {
+        &:nth-child(1) {
+            transform: rotate(45deg);
+            left: 1px;
+        }
+        &:nth-child(2) {
+            left: -50px;
+        }
+        &:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+    }
+}

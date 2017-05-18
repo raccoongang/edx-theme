@@ -1,0 +1,29 @@
+@import "../const";
+
+.header-menu__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: $responsive-large) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+.header-menu {
+    width: 100%;
+    @media screen and (max-width: $responsive-large) {
+        display: none;
+    }
+}
+.menu-show {
+    .header-menu {
+        display: block;
+        position: absolute;
+        top: 76px;
+        right: 0;
+        width: 100%;
+        background: #e00000;
+        padding: 20px 30px;
+    }
+}

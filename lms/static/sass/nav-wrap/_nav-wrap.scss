@@ -1,4 +1,13 @@
+@import "../const";
+
 .nav-wrap {
     display: flex;
     align-items: center;
+    @media screen and (max-width: $responsive-large) {
+        align-items: stretch;
+        flex-direction: column;
+        li.item {
+            margin-bottom: 10px;
+        }
+    }
 }

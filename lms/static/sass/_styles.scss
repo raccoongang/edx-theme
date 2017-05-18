@@ -1,3 +1,5 @@
+@import "const";
+
 /*HEADER*/
 h1.logo {
   font-size: 1.75rem !important;
@@ -6,6 +8,7 @@ h1.logo {
 .header-global {
   height: 76px;
   background: #e00000;
+  z-index: 100;
 }
 
 .header-global .wrapper-header {
@@ -14,6 +17,8 @@ h1.logo {
   padding:0;
   height: 76px;
   justify-content: space-between;
+  position: relative;
+  z-index: 100;
   &:after {
     display: none;
   }
@@ -49,6 +54,10 @@ h1.logo {
   flex-grow: 1;
   text-align: end;
   margin-right: 10px;
+    @media screen and (max-width: $responsive-large) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
 
 .header-global .nav-global li a {
@@ -57,11 +66,6 @@ h1.logo {
   padding: 10px 20px;
   text-transform: capitalize;
   border-radius: 1px;
-}
-
-.header-global .nav-global li a:hover {
-  color: #fff;
-  background: #1c2a33;
 }
 
 .header-global .nav-global li a:active {
@@ -112,7 +116,9 @@ h1.logo {
 .btn-neutral:hover {
   background: #1954a6;
 }
-
+.btn-neutral {
+  background-color: #fff;
+}
 .btn:hover {
   border-color: #fff;
 }
@@ -133,6 +139,9 @@ h1.logo {
 
 #logo {
   height: 20px;
+    @media screen and (max-width: $responsive-large) {
+      margin-left: 20px;
+    }
 }
 
 .header-global h1.logo a {
@@ -142,6 +151,11 @@ a#find-courses,
 #find-courses {
   color: #fff;
   font-size: 20px;
+  margin-right: auto;
+  margin-left: auto;
+    @media screen and (max-width: $responsive-large) {
+        margin: 0 0 10px 0;
+    }
 }
 
 #find-courses:hover {
@@ -292,6 +306,9 @@ a#find-courses,
   &:after {
     display: none;
   }
+    @media screen and (max-width: $responsive-large) {
+        height: auto;
+    }
 }
 
 .wrapper-footer footer#footer-openedx a:hover {
@@ -354,6 +371,10 @@ a#find-courses,
 }
 .wrapper-footer .flex-center {
   width: 100%;
+    @media screen and (max-width: $responsive-large) {
+      flex-direction: column;
+      height: auto;
+    }
 }
 [class^='wrapper']{
   width: inherit;
@@ -1060,6 +1081,9 @@ text-decoration: none;
     text-decoration: none;
   }
 }
+p a:hover, p a:focus, p a:visited:hover, p a:visited:focus {
+  color: #e00000 !important;
+}
 .program-header .crumb-link,
 a, a:visited {
   color: #e00000;
@@ -1120,7 +1144,7 @@ a, a:visited {
 .course-card .cta-secondary {
     background-color: #e00000;
     border-color: #e00000;
-    &:visited,
+    color: #fff;
     &:hover,
     &:active,
     &:focus {
@@ -1133,6 +1157,11 @@ a, a:visited {
   fill: #e00000;
   border-color: #e00000;
 }
+.forum-nav-load-more-link:hover, .forum-nav-load-more-link:focus,
 .courseware-bookmarks-button .bookmarks-list-button.is-active {
   background: #e00000;
+}
+.header-global .nav-global li a:hover {
+  color: #fff;
+  background: #1c2a33;
 }

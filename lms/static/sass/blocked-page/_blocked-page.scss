@@ -1,0 +1,21 @@
+@import "../const";
+
+.blocked-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 99;
+    display: none;
+    @media screen and (min-width: $responsive-large) {
+        display: none!important;
+    }
+}
+.menu-show {
+    .blocked-page {
+        display: block;
+    }
+}
