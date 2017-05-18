@@ -75,6 +75,10 @@
             text-align: left;
             background-color: transparent;
         }
+
+        a:hover {
+            text-decoration: none;
+        }
     }
     .nav-global .tab-nav-item .tab-nav-link {
         color: #fff !important;
@@ -129,6 +133,10 @@
             width: auto;
             background: none;
             padding: 0;
+        }
+
+        .dropdown-menu li>a {
+            color: $tourque-blue;
         }
     }
 }

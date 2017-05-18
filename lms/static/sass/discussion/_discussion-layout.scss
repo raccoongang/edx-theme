@@ -37,3 +37,14 @@
 .dropdown-menu-container .menu-title:hover {
     text-decoration: none;
 }
+.tabs .tab a {
+    color: #5e5e5e !important;
+
+    &:hover {
+        color: #005d90 !important;
+    }
+
+    &.active {
+        color: $tourque-blue !important;
+    }
+}

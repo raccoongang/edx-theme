@@ -44,7 +44,7 @@
     .wrapper-header {
         max-width: 100%;
         width: 100%;
-        padding: 0;
+        padding: 0 !important;
         height: auto;
         position: relative;
         background: rgba(0, 0, 0, .3);
@@ -81,4 +81,8 @@
         margin: 0 auto;
         min-height: 100px;
     }
+}
+.wrapper-course-material .course-tabs li a.active {
+    color: $tourque-blue !important;
+    border-bottom-color: $tourque-blue !important;
 }
