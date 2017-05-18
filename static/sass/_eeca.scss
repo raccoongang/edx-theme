@@ -200,7 +200,7 @@ $f-sans-serif: $sans-serif;
 
 header.global {
   background: #fff !important;
-  height: 73px !important;
+  height: auto !important;
 
   .user>.primary:last-child>a.shopping-cart {
     margin-right: 0 !important;
@@ -553,12 +553,15 @@ h1.logo a {
 
     &:last-child {
       width: auto !important;
+      margin-left: 30px;
+      height: 100px !important;
     }
   }
 }
 
 header.global nav {
-    padding: 15px 10px 0 !important;
+    padding: 15px 10px !important;
+    height: auto !important;
     .nav-global {
         margin-top: -5px;
     }
@@ -825,4 +828,8 @@ textarea,
 form#wiki_revision 
 .CodeMirror {
   font-family: $sans-serif !important;
+}
+
+.container.about {
+  line-height: 1.3;
 }
