@@ -143,7 +143,7 @@ section.wiki .breadcrumb li a {
 }
 .instructor-dashboard-wrapper-2 .file-download-link a,
 a.progress-link,
-.gradebook-link a,
+a.gradebook-link,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
 .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link,
 .hd.hd-5 a,
@@ -168,6 +168,8 @@ section.wiki .btn.btn-danger,
         text-decoration: none;
     }
 }
+.home .page-header-secondary .last-accessed-link,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
 .sidebar .program-advertise .new-programs-btn,
 .empty-dashboard-message a,
 input[type="submit"],
@@ -208,9 +210,12 @@ body .discussion-module .btn:hover {
     border-color: darken($tourque-blue, 10%) !important;;
 }
 body .forum-new-post-form .post-type-input:checked+.post-type-label {
-    background: darken($tourque-blue, 10%) !important;
+    background: $tourque-blue !important;
 }
 .btn.cancel:hover,
 .btn.btn-small.search-btn:hover {
+    background: darken($tourque-blue, 10%) !important;
+}
+.course-card .course-actions .view-course-link:hover {
     background: darken($tourque-blue, 10%) !important;
 }
