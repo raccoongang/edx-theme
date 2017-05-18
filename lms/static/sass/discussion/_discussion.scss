@@ -333,60 +333,34 @@ a#find-courses {
   background: #e00000;
   border-color: #e00000;
   box-shadow: none;
-}
-
-.forum-new-post-form .submit:hover {
-  background: #e00000;
-  border-color: #e00000;
-  box-shadow: none;
-}
-
-.forum-new-post-form .submit:focus {
-  background: #e00000;
-  border-color: #e00000;
-  box-shadow: none;
-}
-
-.forum-new-post-form .submit:active {
-  background: #e00000;
-  border-color: #e00000;
-  box-shadow: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #e00000;
+    border-color: #e00000;
+    box-shadow: none;
+  }
 }
 
 body.discussion .posted-details .username {
   color: #e00000;
-}
-
-body.discussion .posted-details .username:hover {
-  color: #e00000;
-}
-
-body.discussion .posted-details .username:focus {
-  color: #e00000;
+  &:hover,
+  &:focus {
+    color: #e00000;
+  }
 }
 
 .container .discussion-body .discussion-submit-post {
   background: #e00000;
   border-color: #e00000;
   box-shadow: none;
-}
-
-.container .discussion-body .discussion-submit-post:hover {
-  background: #e00000;
-  border-color: #e00000;
-  box-shadow: none;
-}
-
-.container .discussion-body .discussion-submit-post:focus {
-  background: #e00000;
-  border-color: #e00000;
-  box-shadow: none;
-}
-
-.container .discussion-body .discussion-submit-post:active {
-  background: #e00000;
-  border-color: #e00000;
-  box-shadow: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #e00000;
+    border-color: #e00000;
+    box-shadow: none;
+  }
 }
 
 .forum-new-post-form .post-type-input:checked+.post-type-label {
@@ -394,43 +368,24 @@ body.discussion .posted-details .username:focus {
   background: #fff;
   border: 1px solid #e00000;
   box-shadow: none;
-}
-
-.forum-new-post-form .post-type-input:checked+.post-type-label:hover {
-  color: #e00000;
-  background: #fff;
-  border: 1px solid #e00000;
-  box-shadow: none;
-}
-
-.forum-new-post-form .post-type-input:checked+.post-type-label:focus {
-  color: #e00000;
-  background: #fff;
-  border: 1px solid #e00000;
-  box-shadow: none;
-}
-
-.forum-new-post-form .post-type-input:checked+.post-type-label:active {
-  color: #e00000;
-  background: #fff;
-  border: 1px solid #e00000;
-  box-shadow: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #e00000;
+    background: #fff;
+    border: 1px solid #e00000;
+    box-shadow: none;
+  }
 }
 
 .forum-nav-thread-title {
   color: #e00000;
+  &:hover,
+  &:focus {
+    color: #e00000;
+    text-decoration: none;
+  }
 }
-
-.forum-nav-thread-title:hover {
-  color: #e00000;
-  text-decoration: none;
-}
-
-.forum-nav-thread-title:focus {
-  color: #e00000;
-  text-decoration: none;
-}
-
 .forum-nav-thread.is-unread .forum-nav-thread-comments-count {
   color: #e00000;
 }
@@ -444,12 +399,30 @@ body.discussion .posted-details .username:focus {
   color: #e00000;
   text-decoration: none;
 }
+.discussion .action-button.action-follow .action-label,
+.discussion .post-label.post-label-following,
 a, a:visited {
   color: #e00000;
 }
+.forum-nav-thread-wrapper-1 {
+  width: 100%;
+}
+.discussion .action-button.action-follow:hover, .discussion .action-button.action-follow:focus,
+.discussion .action-button.action-follow:hover .action-icon, .discussion .action-button.action-follow:focus .action-icon,
 .wrapper-course-material .course-tabs li a.active {
     color: #e00000 !important;
     border-color: #e00000 !important;
+}
+.discussion .action-button.action-follow.is-checked .action-icon {
+  border-color: #e00000 !important;
+}
+.discussion .action-button.action-follow.is-checked .action-icon,
+.container .discussion-body .discussion-submit-post, .container .discussion-module .discussion-submit-post {
+  color: #fff;
+}
+.btn-brand,
+.discussion .action-button.action-follow.is-checked .action-icon {
+  background: #e00000;
 }
 .wrapper-course-material .course-tabs li a {
   &:active,
@@ -466,6 +439,8 @@ a, a:visited {
     text-decoration: none !important;
   }
 }
+
+.btn-brand,
 .btn {
   color: #e00000;
   border-color: #e00000;
@@ -476,6 +451,9 @@ a, a:visited {
     background: #e00000;
     border-color: #e00000;
   }
+}
+.btn-brand {
+  color: #fff;
 }
 .field-input:focus {
    border-color: #e00000;
@@ -499,4 +477,11 @@ a, a:visited {
 }
 .wrapper-footer .flex-center {
     width: 100%;
+}
+.header-global .wrapper-header .course-header {
+  display: none;
+}
+.discussion .action-button.action-follow:focus .action-icon,
+.discussion .action-button.action-follow:hover .action-icon {
+    color: #fff !important
 }
