@@ -220,9 +220,18 @@
   margin: 0;
 }
 
-a#find-courses {
+a#find-courses,
+#find-courses {
   color: #fff;
   font-size: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  left: 25px;
+    @media screen and (max-width: $responsive-large) {
+        margin: 0 0 10px 0;
+        left: 0;
+    }
 }
 
 .dropdown-menu-container .menu-image {
@@ -316,28 +325,17 @@ a#find-courses {
 }
 
 .forum-new-post-form .post-type-label {
-  background: #e00000;
-  color: white;
-  border: none;
+  background: #fff;
+  color: #e00000;
+  border: 1px solid #e00000;
   cursor: pointer;
-}
-
-.forum-new-post-form .post-type-label:hover {
-  background: #e00000;
-  color: white;
-  border: none;
-}
-
-.forum-new-post-form .post-type-label:focus {
-  background: #e00000;
-  color: white;
-  border: none;
-}
-
-.forum-new-post-form .post-type-label:active {
-  background: #e00000;
-  color: white;
-  border: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #e00000;
+    color: white;
+    border: 1px solid #e00000;
+  }
 }
 
 .forum-new-post-form .post-topic a.topic-title {
@@ -384,15 +382,15 @@ body.discussion .posted-details .username {
 }
 
 .forum-new-post-form .post-type-input:checked+.post-type-label {
-  color: #e00000;
-  background: #fff;
+  color: #fff;
+  background: #e00000;
   border: 1px solid #e00000;
   box-shadow: none;
   &:hover,
   &:focus,
   &:active {
-    color: #e00000;
-    background: #fff;
+    color: #fff;
+    background: #e00000;
     border: 1px solid #e00000;
     box-shadow: none;
   }
@@ -446,6 +444,7 @@ a, a:visited {
   background: #e00000;
 }
 .wrapper-course-material .course-tabs li a {
+  color: #5e5e5e;
   &:active,
   &:hover,
   &:focus {
@@ -528,7 +527,7 @@ a, a:visited {
    background: #e00000;
    border-color: #e00000;
 }
-.forum-new-post-form .post-type-label, .edit-post-form .post-type-label {
+.edit-post-form .post-type-label {
   color: #e00000;
   cursor: pointer;
   border-color: #e00000;

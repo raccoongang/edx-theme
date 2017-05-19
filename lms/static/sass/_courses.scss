@@ -285,7 +285,9 @@ div.info-wrapper section.updates section article .toggle-visibility-button:hover
 div.info-wrapper section.updates section article .toggle-visibility-button:focus {
   color: #e00000;
 }
-
+.xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover {
+  color: #fff !important;
+}
 div.info-wrapper section.handouts a {
   color: #e00000;
 }
@@ -619,4 +621,8 @@ div.book-wrapper section.book-sidebar #booknav li a,
     color: #fff !important;
     -webkit-font-smoothing: initial;
   }
+}
+.content-wrapper .xblock-license a:hover,
+.content-wrapper .xblock-license a:active {
+  color: #e00000 !important;
 }

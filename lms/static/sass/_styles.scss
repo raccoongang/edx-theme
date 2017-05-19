@@ -616,7 +616,7 @@ section.wiki .breadcrumb {
 .course-content .bookmark-button {
   font-weight: normal;
   color: #e00000;
-  border-color: #e00000;
+  border-color: transparent;
 }
 
 .course-content .bookmark-button:hover {
@@ -1097,6 +1097,8 @@ text-decoration: none;
     text-decoration: none;
   }
 }
+.content-wrapper .xblock-license a:hover,
+.content-wrapper .xblock-license a:active,
 div.info-wrapper section.updates div article .toggle-visibility-button,
 p a:hover, p a:focus, p a:visited:hover, p a:visited:focus {
   color: #e00000 !important;
@@ -1144,6 +1146,9 @@ a, a:visited {
 .wrapper-account-settings .wrapper-header .account-nav button.active {
       border-bottom: 4px solid #e00000 !important;
 }
+.xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark {
+  color: #e00000 !important;
+}
 .wrapper-account-settings .wrapper-header .account-nav button, 
 .wrapper-account-settings .wrapper-header .account-nav button {
   &:hover,
@@ -1188,8 +1193,15 @@ a, a:visited {
   border-color: #e00000;
 }
 .forum-nav-load-more-link:hover, .forum-nav-load-more-link:focus,
-.courseware-bookmarks-button .bookmarks-list-button.is-active {
-  background: #e00000;
+div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active,
+div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-inactive:active {
+  background: #e00000 !important;
+}
+.window-wrap button:active:not(:disabled) {
+  background: transparent !important;
+}
+.xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover {
+  color: #fff !important;
 }
 .header-global .nav-global li a:hover {
   color: #fff;
@@ -1207,7 +1219,7 @@ a, a:visited {
 }
 .content-wrapper .gradebook-link,
 .content-wrapper .progress-link,
-.window-wrap a {
+div.window-wrap a {
   &:hover,
   &:active,
   &:focus {
@@ -1233,8 +1245,9 @@ a, a:visited {
   list-style: none !important;
 }
 .home .page-header-secondary {
-  background: #e00000;
+  background: #e00000 !important;
 }
+.window-wrap .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
 .window-wrap .instructor-dashboard-wrapper-2 .btn-blue,
 .window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
 .window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
@@ -1247,9 +1260,21 @@ a, a:visited {
   box-shadow: none;
   text-shadow: 0 1px 0 #e00000;
 }
+.window-wrap .instructor-dashboard-wrapper-2 .btn-blue {
+    color: #fff;
+}
 .window-wrap .instructor-dashboard-wrapper-2 button:active:not(:disabled),
 .window-wrap .instructor-dashboard-wrapper-2 button:focus:not(:disabled),
-.window-wrap .instructor-dashboard-wrapper-2 button:hover:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 button:hover:not(:disabled) {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  color: #e00000;
+  text-shadow: none;
+}
+.window-wrap .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse:focus:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse:active:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse:hover:not(:disabled),
 .window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:active:not(:disabled), 
 .window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:focus:not(:disabled),
 .window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:hover:not(:disabled),
@@ -1272,10 +1297,18 @@ a, a:visited {
 .highlighted-courses .courses .course:hover, .highlighted-courses .courses .course:focus, .find-courses .courses .course:hover, .find-courses .courses .course:focus {
   box-shadow: none;
 }
-.find-courses .discovery-submit {
+div.window-wrap .find-courses .discovery-submit {
   &:hover,
   &:active,
   &:focus {
     color: #fff;
+    background-color: #e00000 !important;
+  }
+}
+div.window-wrap button.btn-link.link-cross-reference {
+  &:hover,
+  &:active,
+  &:focus {
+     border: 1px solid transparent;
   }
 }
