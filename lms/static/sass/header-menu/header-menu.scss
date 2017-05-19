@@ -18,12 +18,14 @@
 }
 .menu-show {
     .header-menu {
-        display: block;
-        position: absolute;
-        top: 76px;
-        right: 0;
-        width: 100%;
-        background: #e00000;
-        padding: 20px 30px;
+        @media screen and (max-width: $responsive-large) {
+            display: block;
+            position: absolute;
+            top: 76px;
+            right: 0;
+            width: 100%;
+            background: #e00000;
+            padding: 20px 30px;
+        }
     }
 }
