@@ -250,8 +250,45 @@ header.global {
       }
     }
   }
-  h1.logo {
+}
+
+body header.global h1.logo {
+  margin: 0 0 20px;
+  width: 100%;
+  float: none;
+  // margin: -7px 78px 0 0 !important;
+  @media all and (min-width: 900px) {
+    float: left;
+    width: auto;
     margin: -7px 78px 0 0 !important;
+  }
+  a {
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    img {
+      // height: 64px !important;
+      // max-width: 327px;
+      // width: 134% !important;
+      max-width: 50%;
+      height: auto;
+      @media all and (min-width: 450px) {
+        max-height: 64px;
+      }
+
+      &:last-child {
+        max-width: 30%;
+        height: auto;
+        margin-left: 30px;
+        // height: 100px !important;
+        // width: auto !important;
+        @media all and (min-width: 450px) {
+          max-height: 100px;
+        }
+      }
+    }
   }
 }
 
@@ -538,25 +575,6 @@ header.global .nav-courseware li .cta:hover {
     background: #353535 !important;
     box-shadow: none !important;
     color: #fff !important;
-}
-
-h1.logo a {
-
-  &:hover {
-    text-decoration: none !important;
-  }
-
-  img{
-    height: 64px !important;
-    max-width: 327px;
-    width: 134% !important;
-
-    &:last-child {
-      width: auto !important;
-      margin-left: 30px;
-      height: 100px !important;
-    }
-  }
 }
 
 header.global nav {
