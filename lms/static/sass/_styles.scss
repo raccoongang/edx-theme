@@ -1269,3 +1269,13 @@ a, a:visited {
   border: 1px solid #e00000;
   box-shadow: none;
 }
+.highlighted-courses .courses .course:hover, .highlighted-courses .courses .course:focus, .find-courses .courses .course:hover, .find-courses .courses .course:focus {
+  box-shadow: none;
+}
+.find-courses .discovery-submit {
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+  }
+}
