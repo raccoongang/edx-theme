@@ -592,14 +592,31 @@ p a:focus {
   border-color: #e00000;
 }
 
+div.book-wrapper section.book-sidebar #booknav li a,
 .wrapper-cohort-supplemental a {
   color: #e00000;
+  &:hover,
+  &:focus {
+    color: #e00000;
+  }
 }
-
-.wrapper-cohort-supplemental a:hover {
-  color: #e00000;
+.button:active:not(:disabled) {
+  box-shadow: none !important;
 }
-
-.wrapper-cohort-supplemental a:focus {
-  color: #e00000;
+.dashboard .my-courses .listing-courses li {
+  list-style: none !important;
+}
+.home .page-header-secondary {
+  background: #e00000;
+}
+.wrap-instructor-info .instructor-info-action {
+  color: #e00000 !important;
+  -webkit-font-smoothing: initial;
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: #e00000 !important;
+    color: #fff !important;
+    -webkit-font-smoothing: initial;
+  }
 }

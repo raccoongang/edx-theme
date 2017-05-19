@@ -23,7 +23,13 @@ h1.logo {
     display: none;
   }
 }
-
+.header-global .wrapper-header .tab-nav-item .tab-nav-link {
+  &:active,
+  &:hover,
+  &:focus {
+    border-bottom: none;
+  }
+}
 .header-global .wrapper-header .logo {
   margin: 0;
 }
@@ -31,6 +37,10 @@ h1.logo {
 .header-global .wrapper-header .list-inline.nav-global {
   margin: 0;
   order: 1;
+  @media screen and (max-width: $responsive-large) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .header-global.slim {
@@ -66,18 +76,13 @@ h1.logo {
   padding: 10px 20px;
   text-transform: capitalize;
   border-radius: 1px;
-}
-
-.header-global .nav-global li a:active {
-  color: #fff;
-  border: none;
-  background: #1c2a33;
-}
-
-.header-global .nav-global li a:focus {
-  color: #fff;
-  border: none;
-  background: #1c2a33;
+  &:active,
+  &:focus,
+  &:hover {
+    color: #fff;
+    border: none;
+    background: #1c2a33;
+  }
 }
 
 .header-global .nav-courseware li .btn {
@@ -153,8 +158,11 @@ a#find-courses,
   font-size: 20px;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
+  left: 25px;
     @media screen and (max-width: $responsive-large) {
         margin: 0 0 10px 0;
+        left: 0;
     }
 }
 
@@ -169,17 +177,26 @@ a#find-courses,
 /*LAYOUT*/
 .home>header {
   background-image: url("../images/layout_background.jpg");
-  height: auto;
   background-position: center;
   background-repeat: no-repeat;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .home>header .outer-wrapper {
   position: relative;
   margin: 0 auto;
-  padding: 230px 0 0;
+  padding: 0;
   max-width: 1600px;
-  opacity: 0.7;
+  animation: none;
+  text-align: center;
+  margin-top: 85px;
+  @media screen and (max-width: $responsive-large) {
+      margin-top: 0;
+  }
 }
 
 .home>header .title {
@@ -187,7 +204,9 @@ a#find-courses,
   min-height: 150px;
   text-align: center;
 }
-
+.courses-container .courses .course .course-image .cover-image img {
+  min-height: 160px;
+}
 .home>header .title>.heading-group {
   padding-bottom: 25px;
   padding-top: 25px;
@@ -232,7 +251,6 @@ a#find-courses,
 #button-holder {
   width: 100%;
   text-align: center;
-  margin: 70px 0 30px 0;
 }
 
 .courses-container {
@@ -347,6 +365,10 @@ a#find-courses,
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
   height: 22px;
+    @media screen and (max-width: $responsive-large) {
+        height: auto;
+        margin-left: 0;
+    }
 }
 
 #org-logo {
@@ -691,25 +713,16 @@ section.wiki .breadcrumb {
   color: #1c2a33;
   text-decoration: none;
 }
-
+.course-card .course-actions .view-course-link,
 .find-courses .filters .flt-right {
   color: #fff;
   background: #e00000;
-}
-
-.find-courses .filters .flt-right:hover {
-  color: #fff;
-  background: #e00000;
-}
-
-.find-courses .filters .flt-right:active {
-  color: #fff;
-  background: #e00000;
-}
-
-.find-courses .filters .flt-right:focus {
-  color: #fff;
-  background: #e00000;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background: #e00000;
+  }
 }
 
 /*/info*/
@@ -1048,6 +1061,10 @@ text-decoration: none;
 }
 .header-global .wrapper-header .tab-nav-item .tab-nav-link {
   padding-bottom: 0;
+    @media screen and (max-width: $responsive-large) {
+        padding: 0;
+        margin-bottom: 10px;
+    }
 }
 .header-global .wrapper-header .tab-nav-item .tab-nav-link:hover,
 .header-global .wrapper-header .tab-nav-item .active {
@@ -1055,8 +1072,7 @@ text-decoration: none;
   color: #fff;
 }
 .header-global .wrapper-header .tab-nav-item .tab-nav-link:active, 
-.header-global .wrapper-header .tab-nav-item .tab-nav-link:focus,
-.header-global .nav-global li a:hover {
+.header-global .wrapper-header .tab-nav-item .tab-nav-link:focus {
   background: none;
 }
 .header-global .wrapper-header .wrapper-user-menu {
@@ -1081,9 +1097,19 @@ text-decoration: none;
     text-decoration: none;
   }
 }
+div.info-wrapper section.updates div article .toggle-visibility-button,
 p a:hover, p a:focus, p a:visited:hover, p a:visited:focus {
   color: #e00000 !important;
 }
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel,
+button:active:not(:disabled),
+button:focus:not(:disabled),
+button:hover:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+div.book-wrapper section.book-sidebar #booknav li a,
 .program-header .crumb-link,
 a, a:visited {
   color: #e00000;
@@ -1100,8 +1126,12 @@ a, a:visited {
     border-color: #e00000 !important;
   }
 }
-.search-bar .search-button, 
-.search-bar .cancel-button {
+.window-wrap button:active:not(:disabled),
+.button:active:not(:disabled) {
+  box-shadow: none !important;
+}
+.window-wrap .search-bar .search-button, 
+.window-wrap .search-bar .cancel-button {
     color: #fff;
     background: #e00000;
     &:active,
@@ -1163,5 +1193,75 @@ a, a:visited {
 }
 .header-global .nav-global li a:hover {
   color: #fff;
-  background: #1c2a33;
+}
+.header-global .nav-global.authenticated li a:hover {
+  background: transparent;
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: transparent;
+    font-size: 14px;
+    border: 2px solid #fff;
+}
+.content-wrapper .container {
+  border: none;
+}
+.content-wrapper .gradebook-link,
+.content-wrapper .progress-link,
+.window-wrap a {
+  &:hover,
+  &:active,
+  &:focus {
+    color: #e00000;
+  }
+}
+.logo-edx {
+  display: flex;
+  align-items: center;
+}
+.wrap-instructor-info .instructor-info-action {
+  color: #e00000 !important;
+  -webkit-font-smoothing: initial;
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: #e00000 !important;
+    color: #fff !important;
+    -webkit-font-smoothing: initial;
+  }
+}
+.dashboard .my-courses .listing-courses li {
+  list-style: none !important;
+}
+.home .page-header-secondary {
+  background: #e00000;
+}
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-submit,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create {
+  border: 1px solid #e00000;
+  background: #e00000;
+  box-shadow: none;
+  text-shadow: 0 1px 0 #e00000;
+}
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:active:not(:disabled), 
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:focus:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:hover:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:active:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:focus:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:hover:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:hover:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create:hover:not(:disabled) {
+  box-shadow: none;
+  border: 1px solid #e00000;
+  background: transparent;
+  color: #e00000;
+  text-shadow: none;
+}
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:focus:not(:disabled),
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:active:not(:disabled) {
+  border: 1px solid #e00000;
+  box-shadow: none;
 }

@@ -1,3 +1,5 @@
+@import "../const";
+
 /*HEADER*/
 .header-global .wrapper-header .list-inline .item a {
   font-size: 14px;
@@ -52,9 +54,21 @@
   width: 35px;
   margin-left: 5px;
 }
-
+#logo {
+  height: 20px;
+    @media screen and (max-width: $responsive-large) {
+      margin-left: 20px;
+    }
+}
 .wrapper-footer footer#footer-openedx {
   height: 111px;
+  justify-content: space-between;
+  &:after {
+    display: none;
+  }
+    @media screen and (max-width: $responsive-large) {
+        height: auto;
+    }
 }
 
 .wrapper-footer footer#footer-openedx a:hover {
@@ -135,6 +149,10 @@
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
   height: 22px;
+    @media screen and (max-width: $responsive-large) {
+        height: auto;
+        margin-left: 0;
+    }
 }
 
 #org-logo {
@@ -156,6 +174,7 @@
 .header-global {
   height: 76px;
   background: #e00000;
+  z-index: 100;
 }
 
 .header-global.slim .wrapper-header {
@@ -300,6 +319,7 @@ a#find-courses {
   background: #e00000;
   color: white;
   border: none;
+  cursor: pointer;
 }
 
 .forum-new-post-form .post-type-label:hover {
@@ -457,6 +477,7 @@ a, a:visited {
 .btn-brand {
   color: #fff;
 }
+.edit-post-form .post-update:hover, .edit-post-form .post-update:focus,
 .field-input:focus {
    border-color: #e00000;
 }
@@ -478,7 +499,11 @@ a, a:visited {
     width: auto;
 }
 .wrapper-footer .flex-center {
-    width: 100%;
+  width: 100%;
+    @media screen and (max-width: $responsive-large) {
+      flex-direction: column;
+      height: auto;
+    }
 }
 .header-global .wrapper-header .course-header {
   display: none;
@@ -486,4 +511,28 @@ a, a:visited {
 .discussion .action-button.action-follow:focus .action-icon,
 .discussion .action-button.action-follow:hover .action-icon {
     color: #fff !important
+}
+.logo-edx {
+  display: flex;
+  align-items: center;
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+.discussion .action-button.action-follow:hover .action-icon {
+  background-color: #e00000;
+  border: 1px solid #e00000;
+}
+.edit-post-form .post-type-input:checked+.post-type-label {
+   background: #e00000;
+   border-color: #e00000;
+}
+.forum-new-post-form .post-type-label, .edit-post-form .post-type-label {
+  color: #e00000;
+  cursor: pointer;
+  border-color: #e00000;
+}
+.forum-new-post-form .post-type-input:focus+.post-type-label, .edit-post-form .post-type-input:focus+.post-type-label {
+  box-shadow: none;
 }
