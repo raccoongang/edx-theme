@@ -617,12 +617,26 @@ section.wiki .breadcrumb {
   font-weight: normal;
   color: #e00000;
   border-color: transparent;
+  border: none;
 }
-
+.course-content .bookmark-button:active,
 .course-content .bookmark-button:hover {
   background: #e00000;
+  border: none;
 }
-
+.instructor-dashboard-wrapper-2 .certificates-wrapper button:active:not(:disabled),
+.instructor-dashboard-wrapper-2 .certificates-wrapper button:focus:not(:disabled),
+.instructor-dashboard-wrapper-2 .certificates-wrapper button:hover:not(:disabled) {
+    border: 1px solid #e00000!important;
+}
+.instructor-dashboard-content-2 .certificates-wrapper input[type="button"]:active:not(:disabled),
+.instructor-dashboard-content-2 .certificates-wrapper input[type="button"]:focus:not(:disabled),
+.instructor-dashboard-content-2 .certificates-wrapper input[type="button"]:hover:not(:disabled) {
+    box-shadow: none;
+    background: transparent;
+    color: #e00000;
+    text-shadow: none
+}
 .course-content .bookmark-button:focus {
   background: #e00000;
   outline-color: none;
@@ -1200,6 +1214,7 @@ div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-inactive:
 .window-wrap button:active:not(:disabled) {
   background: transparent !important;
 }
+.xmodule_display.xmodule_CapaModule div.problem button.btn-brand:focus,
 .xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover {
   color: #fff !important;
 }
@@ -1217,6 +1232,7 @@ div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-inactive:
 .content-wrapper .container {
   border: none;
 }
+.window-wrap div.book-wrapper section.book-sidebar #booknav .chapter,
 .content-wrapper .gradebook-link,
 .content-wrapper .progress-link,
 div.window-wrap a {
@@ -1244,6 +1260,7 @@ div.window-wrap a {
 .dashboard .my-courses .listing-courses li {
   list-style: none !important;
 }
+section.wiki .wiki-wrapper .btn:active:not(:disabled),
 .home .page-header-secondary {
   background: #e00000 !important;
 }
@@ -1311,4 +1328,37 @@ div.window-wrap button.btn-link.link-cross-reference {
   &:focus {
      border: 1px solid transparent;
   }
+}
+div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:hover {
+  border-color: #e00000;
+}
+div.window-wrap .xmodule_display.xmodule_CapaModule div.problem button.btn-brand:active {
+  color: #e00000 !important;
+}
+.window-wrap div.book-wrapper section.book-sidebar #booknav .chapter,
+div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
+div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before {
+  color: #e00000;
+}
+.instructor-dashboard-wrapper-2 .certificates-wrapper .customBrowseBtn .file-browse {
+    position: relative;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    &:active,
+    &:focus,
+    &:hover {
+      background: transparent;
+    }
+}
+.instructor-dashboard-wrapper-2 .certificates-wrapper .customBrowseBtn .file-browse .file_field  {
+    position: relative;
+    height: auto;
+    left: 0;
+    width: auto;
+}
+.instructor-dashboard-wrapper-2 .certificates-wrapper .customBrowseBtn .file-browse .browse {
+    margin-left: 0;
+    position: relative;
+    margin-right: 10px;
 }
