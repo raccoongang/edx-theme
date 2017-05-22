@@ -1091,6 +1091,8 @@ text-decoration: none;
 }
 .header-global .wrapper-header .wrapper-user-menu {
   order: 1;
+  display: flex;
+  align-items: center;
 }
 .wrapper-footer footer#footer-openedx a {
   &:active,
@@ -1242,10 +1244,6 @@ div.window-wrap a {
     color: #e00000;
   }
 }
-.logo-edx {
-  display: flex;
-  align-items: center;
-}
 .wrap-instructor-info .instructor-info-action {
   color: #e00000 !important;
   -webkit-font-smoothing: initial;
@@ -1365,6 +1363,11 @@ div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before {
 .logo-edx .footer-text {
   width: 60px;
 }
+.logo-edx {
+  display: flex;
+  align-items: center;
+  height: 95px;
+}
 .view-wiki section.wiki .btn {
   border-color: #e00000;
   background: transparent;
@@ -1380,4 +1383,72 @@ div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before {
 }
 .view-wiki .well {
   background: transparent;
+}
+.window-wrap .discussion-module .btn {
+      color: #e00000 !important;
+      border-color: #e00000 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: #e00000 !important;
+        background-color: #e00000 !important;
+        color: #fff !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+}
+.window-wrap .discussion-module .new-post-btn {
+  background: transparent;
+}
+.window-wrap .discussion.inline-discussion .new-post-article .add-post-cancel {
+  color: #e00000 !important;
+}
+.window-wrap .forum-new-post-form .post-type-label {
+  background: #fff;
+  color: #e00000;
+  border: 1px solid #e00000;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #e00000;
+    color: white;
+    border: 1px solid #e00000;
+  }
+}
+.window-wrap .forum-new-post-form .post-type-input:checked+.post-type-label {
+  color: #fff;
+  background: #e00000;
+  border: 1px solid #e00000;
+  box-shadow: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background: #e00000;
+    border: 1px solid #e00000;
+    box-shadow: none;
+  }
+}
+.window-wrap .discussion-module .btn-brand,
+.window-wrap .discussion-module .btn {
+  color: #e00000;
+  border-color: #e00000;
+  &:active,
+  &:focus,
+  &:hover {
+    color: #fff;
+    background: #e00000;
+    border-color: #e00000;
+  }
+}
+.window-wrap .discussion-module .btn-brand {
+  color: #fff;
+  background: #e00000;
+}
+.header-global .user .primary {
+    margin: auto;
 }
