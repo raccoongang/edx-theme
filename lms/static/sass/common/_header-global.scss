@@ -1,0 +1,28 @@
+.header-global {
+    border: none;
+    background: rgba(74, 74, 79, 0.8);
+    border-bottom: 1px solid #454545;
+    .wrapper-header {
+        padding: 0 10px 0 10px;
+        max-width: 1220px;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:after {
+            display: none;
+        }
+    }
+    .nav-global,
+    h1.logo {
+        margin: 0;
+    }
+}
+.header-global .nav-courseware li .btn {
+    @include btn-active ($active-color);
+}
+.home>header .outer-wrapper {
+    animation: none;
+    padding: 0;
+}

@@ -1,0 +1,35 @@
+$active-color: #f15a24;
+
+@mixin btn-empty ($active-color) {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    &:focus,
+    &:active,
+    &:hover {
+        background: $active-color;
+        border: 1px solid $active-color;
+        color: #fff;
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+
+@mixin btn-active ($active-color) {
+    background: $active-color;
+    border: 1px solid $active-color;
+    color: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    &:focus,
+    &:active,
+    &:hover {
+        border: 1px solid $active-color;
+        background: transparent;
+        color: #fff;
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
