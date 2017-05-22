@@ -1440,9 +1440,9 @@ div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before {
   &:active,
   &:focus,
   &:hover {
-    color: #fff;
-    background: #e00000;
-    border-color: #e00000;
+    color: #fff !important;
+    background: #e00000 !important;
+    border-color: #e00000 !important;
   }
 }
 .window-wrap .discussion-module .btn-brand {
@@ -1451,4 +1451,35 @@ div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before {
 }
 .header-global .user .primary {
     margin: auto;
+}
+.window-wrap .discussion .action-button.action-follow .action-label,
+.window-wrap .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+.window-wrap .discussion .post-label.post-label-following {
+  color: #e00000;
+}
+.window-wrap .discussion .action-button.action-follow:hover, 
+.window-wrap .discussion .action-button.action-follow:focus,
+.window-wrap .discussion .action-button.action-follow:hover .action-icon, 
+.window-wrap .discussion .action-button.action-follow:focus .action-icon {
+    color: #e00000 !important;
+    border-color: #e00000 !important;
+}
+.window-wrap .discussion .action-button.action-follow.is-checked .action-icon {
+  border-color: #e00000 !important;
+}
+
+.window-wrap .discussion .action-button.action-follow.is-checked .action-icon {
+  color: #fff;
+}
+
+.window-wrap .discussion .action-button.action-follow.is-checked .action-icon {
+  background: #e00000;
+}
+.window-wrap .discussion .action-button.action-follow:focus .action-icon,
+.window-wrap .discussion .action-button.action-follow:hover .action-icon {
+    color: #fff !important
+}
+.window-wrap .discussion .action-button.action-follow:hover .action-icon {
+  background-color: #e00000;
+  border: 1px solid #e00000;
 }
