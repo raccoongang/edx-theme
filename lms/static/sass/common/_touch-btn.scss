@@ -1,0 +1,51 @@
+.touch-btn {
+    display: none;
+}
+@media (max-width: $responsive-large) {
+    body {
+        .touch-btn {
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            right: 20px;
+            width: 40px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            box-shadow: none;
+            text-shadow: none;
+            background: transparent;
+            &:hover,
+            &:active,
+            &:focus {
+                box-shadow: none;
+                text-shadow: none;
+                background: transparent;
+            }
+            }
+            .touch-btn:before,
+            .touch-btn::after {
+                content: '';
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                top: 15px;
+                left: 0;
+                background-color: $active-color;
+                transition: all 0.3s;
+            }
+            .touch-btn::after {
+                box-shadow: 0 15px 0 0 $active-color,
+                        0 -15px 0 0 $active-color;
+            }
+    }
+    .menu-open .touch-btn::after {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+    .menu-open .touch-btn::before {
+        transform: rotate(-45deg);
+    }
+}

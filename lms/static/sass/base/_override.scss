@@ -6,4 +6,45 @@
     position: relative;
     top: -80px;
     height: 480px;
+    display: flex;
+    align-items: center;
+}
+.home>header .title {
+    margin-left: 0;
+    box-shadow: none;
+    max-width: 1220px;
+    width: 100%;
+    padding: 0 10px;
+    background: transparent;
+}
+.header-global .menu-wrap li a {
+    box-sizing: border-box;
+    @include btn-empty ($active-color);
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font: 400 14px/1.2 "Montserrat-Regular", Arial, sans-serif;
+    @media (max-width: $responsive-large) {
+        min-width: 120px;
+        margin: 5px 0;
+    }
+}
+.header-global .menu-wrap li a[href='/register'] {
+    @include btn-active($active-color);
+}
+ol.left.list-inline.nav-global {
+    margin: 0 auto;
+    @media (max-width: $responsive-large) {
+        margin: 0;
+    }
+}
+.home>header .title>.heading-group h1 {
+    text-shadow: none;
+    color: #fff;
+    text-transform: uppercase;
+    font: 700 42px/1.2 "Montserrat-Regular", Arial, sans-serif;
+    span {
+        color: $active-color;
+    }
 }

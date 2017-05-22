@@ -1,0 +1,27 @@
+.menu-wrap {
+    display: block;
+    width: 100%;
+    @media (max-width: $responsive-large) {
+        position: absolute;
+        top: 75px;
+        right: 0;
+        background: #4a4a4f;
+        padding: 10px;
+        display: none;
+    }
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+         @media (max-width: $responsive-large) {
+            flex-direction: column;
+            align-items: flex-end;
+         }
+    }
+}
+.menu-open .menu-wrap {
+    @media (max-width: $responsive-large) {
+        display: block;
+    }
+}
