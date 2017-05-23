@@ -38,9 +38,12 @@
 }
 ol.left.list-inline.nav-global {
     margin-left: auto;
-    margin-right: 17%;
+    margin-right: auto;
     @media (max-width: $responsive-large) {
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 .home>header .title>.heading-group h1 {
@@ -244,4 +247,86 @@ ol.left.list-inline.nav-global {
 }
 .wrapper-footer footer#footer-openedx .nav-legal {
     text-align: center;
+}
+.wrapper-footer footer#footer-openedx a {
+    &:hover,
+    &:active,
+    &focus {
+        border-bottom: none;
+    }
+}
+
+/* END MAIN PAGE*/
+
+/* Start style other pages*/
+
+.window-wrap a {
+    color: $active-color;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        color: $active-color;
+    }
+}
+.window-wrap a.doc-link {
+    color: #fff;
+}
+.login-register .form-field .field-link {
+    color: $active-color;
+}
+.login-register .action-primary {
+    @include btn-active($active-color);
+}
+.login-register .nav-btn {
+    @include btn-empty ($active-color);
+}
+.header-global .nav-global .tab-nav-item .tab-nav-link {
+    color: #fff;
+    padding: 10px 20px;
+}
+.window-wrap .header-global .nav-global .tab-nav-item .active {
+    border-bottom: 1px solid #fff !important;
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: $active-color !important;
+    }
+}
+.header-global .user>.primary>a {
+    padding: 0;
+    border: none;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        background: none;
+        border: none;
+    }
+}
+.header-global .nav-global .tab-nav-item .tab-nav-link:hover, 
+.header-global .nav-global .tab-nav-item .tab-nav-link:focus {
+    border-bottom: 1px solid $active-color;
+}
+.authenticated li {
+    @media (min-width: $responsive-large) {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}
+.header-global .user {
+    display: flex;
+    align-items: center;
+}
+.header-global .user .dropdown-menu li>a {
+    color: $active-color;
+    &:active,
+    &:focus,
+    &:hover {
+        background: none;
+        border: 1px solid transparent;
+    }
+}
+.dashboard .my-courses .course .details .enter-course {
+     @include btn-active($active-color);
 }

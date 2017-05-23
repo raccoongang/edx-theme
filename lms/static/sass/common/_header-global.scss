@@ -1,7 +1,7 @@
 .header-global {
     box-sizing: border-box;
     border: none;
-    background: rgba(74, 74, 79, 0.8);
+    background: rgba(74, 74, 79, 1);
     border-bottom: 1px solid #454545;
     z-index: 103;
     .wrapper-header {
@@ -24,11 +24,6 @@
     h1.logo {
         margin-left: 15px;
     }
-    .menu-wrap__flex li {
-        @media (max-width: $responsive-large) {
-            display: block;
-        }
-    }
 }
 .header-global .nav-courseware li .btn {
     @include btn-empty ($active-color);
@@ -37,6 +32,16 @@
     animation: none;
     padding: 0;
 }
+.header-global__black {
+    background: rgba(74, 74, 79, 0.8);
+}
 .menu-open .header-global__black {
     background: rgba(74, 74, 79, 1);
+}
+.header-global .nav-courseware {
+    @media (max-width: $responsive-large) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }

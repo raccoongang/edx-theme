@@ -20,9 +20,10 @@
             &:hover,
             &:active,
             &:focus {
-                box-shadow: none;
+                box-shadow: none !important;
                 text-shadow: none;
-                background: transparent;
+                background: transparent !important;
+                border: none !important;
             }
             }
             .touch-btn:before,
