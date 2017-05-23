@@ -499,7 +499,8 @@ a#find-courses,
 .header-global.slim .wrapper-header .list-inline.nav-global {
   margin: 0;
 }
-
+.window-wrap .xmodule_display.xmodule_HtmlModule a:link,
+.window-wrap div.info-wrapper section.handouts a,
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a {
   color: #e00000;
 }
@@ -1403,6 +1404,7 @@ div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before {
 .window-wrap .discussion-module .new-post-btn {
   background: transparent;
 }
+.instructor-dashboard-wrapper-2 .file-download-link a,
 .window-wrap .discussion.inline-discussion .new-post-article .add-post-cancel {
   color: #e00000 !important;
 }
@@ -1482,4 +1484,21 @@ div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before {
 .window-wrap .discussion .action-button.action-follow:hover .action-icon {
   background-color: #e00000;
   border: 1px solid #e00000;
+}
+.slick-header-column.ui-state-default {
+    height: 22px !important;
+}
+.custom-dashboard-notifications .empty-dashboard-message a {
+  background-color: #e00000;
+  color: #fff!important;
+  &:hover,
+  &:focus {
+    background-color: #e00000;
+    color: #fff!important;
+  }
+}
+.window-wrap .container.activation h1.valid {
+  color: #fff;
+  background-color: #e00000;
+  border-color: #e00000;
 }
