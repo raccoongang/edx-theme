@@ -32,9 +32,13 @@
 }
 .header-global .menu-wrap li a[href='/register'] {
     @include btn-active($active-color);
+    @media (min-width: $responsive-large) {
+        margin-left: 10px;
+    }
 }
 ol.left.list-inline.nav-global {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: 17%;
     @media (max-width: $responsive-large) {
         margin: 0;
     }
@@ -44,7 +48,200 @@ ol.left.list-inline.nav-global {
     color: #fff;
     text-transform: uppercase;
     font: 700 42px/1.2 "Montserrat-Regular", Arial, sans-serif;
+    text-align: center;
+    letter-spacing: 3.3px;
     span {
         color: $active-color;
     }
+}
+.home>header .title .course-search .search-input {
+    border: 2px solid #fff;
+    background: rgba(255,255,255, 0.3);
+    padding-left: 20px;
+    font: 16px/1.2 'Montserrat-Regular', Arial, sans-serif;
+    color: #fff;
+    &:focus {
+        border-color: $active-color;
+    }
+}
+.home>header .title .course-search {
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: block;
+    max-width: 605px;
+    width: 100%;
+    position: relative;
+    top: 33px;
+    margin: 0 auto;
+}
+.home>header .title .course-search .search-button {
+    right: 13px;
+    background: transparent;
+    border: none;
+    &:hover,
+    &:focus,
+    &:active {
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+}
+.home>header .title .course-search .search-input::-webkit-input-placeholder {
+  color: #fff;
+  font: 16px/1.2 'Montserrat-Regular', Arial, sans-serif;
+}
+.home>header .title .course-search .search-input::-moz-placeholder {
+  color: #fff;
+  font: 16px/1.2 'Montserrat-Regular', Arial, sans-serif;
+}
+.home>header .title .course-search .search-input:-ms-input-placeholder {
+  color: #fff;
+  font: 16px/1.2 'Montserrat-Regular', Arial, sans-serif;
+}
+.home>header .title .course-search .search-input:-moz-placeholder {
+  color: #fff;
+  font: 16px/1.2 'Montserrat-Regular', Arial, sans-serif;
+}
+.content-wrapper {
+    background: #f1f1f1;
+}
+.courses-container .courses .course .course-image .cover-image img {
+    min-height: 160px;
+}
+.courses-container .courses .course {
+    border: none;
+    border-bottom: 5px solid $active-color;
+    box-shadow: none;
+    background: #fff;
+    &:hover,
+    &:focus {
+        background: #fff;
+        box-shadow: none;
+        border-color: #fff;
+    }
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 2px;
+}
+.courses-container .courses .course .course-info .course-organization,
+.courses-container .courses .course .course-info .course-code {
+    text-transform: uppercase;
+    color: rgb(93, 93, 93);
+    font: 14px/1.2 'OpenSans-Regular', Arial, sans-serif;
+}
+.courses-container .courses .course .course-info .course-title {
+    color: rgb(145, 145, 145);
+    font: 18px/1.2 'OpenSans-Regular', Arial, sans-serif;
+    font-weight: lighter;
+    margin-bottom: 47px;
+}
+.courses-container .courses .course .course-info .course-organization {
+    padding: 20px 0 0 0;
+    margin-bottom: 5px;
+}
+.courses-container .courses .course .course-info .course-date {
+    color: rgb(93, 93, 93);
+    font: 12px/1.2 'OpenSans-Regular', Arial, sans-serif;
+}
+.highlighted-courses .courses {
+    margin-bottom: 55px;
+}
+.home .highlighted-courses {
+    margin-bottom: 0;
+}
+.courses-container .courses .course .course-info {
+    padding: 0 20px;
+}
+.courses-container .courses .course .course-info .course-date,
+.courses-container .courses .course .course-info .course-title,
+.courses-container .courses .course .course-info .course-code,
+.highlighted-courses .courses {
+    padding: 0;
+}
+.wrapper-footer footer#footer-openedx .nav-legal li:last-of-type a::after,
+.wrapper-footer footer#footer-openedx:after,
+.wrapper-footer footer#footer-openedx .copyright,
+.wrapper-footer footer#footer-openedx .wrapper-logo,
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+    display: none;
+}
+.wrapper-footer {
+    box-shadow: none;
+    border: none;
+    background: #dddddd;
+    padding: 45px 10px 60px 10px;
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx,
+.wrapper-footer footer#footer-openedx .colophon {
+    float: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+.wrapper-footer footer#footer-openedx .footer-list_link {
+    color: rgb(129, 129, 129);
+    font: 14px/1.2 'Montserrat-Regular', Arial, sans-serif;
+    text-decoration: none;
+    margin: 0 13px 0 15px;
+    position: relative;
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: $active-color;
+        border: none;
+    }
+    @media (max-width: $responsive-large) {
+        margin: 5px 15px;
+        display: inline-block;
+    }
+    &:after {
+        @media (min-width: $responsive-large) {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-top: -2px;
+        }
+    }
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx .social-block a {
+    display: flex;
+}
+.wrapper-footer footer#footer-openedx a.powered {
+    color: #8d8d8d;
+    font: 10px/1.2 'OpenSans-Regular', Arial, sans-serif;
+    @media (max-width: $responsive-large) {
+        order: 1;
+        margin-top: 10px;
+    }
+}
+.powered img {
+    margin-left: 10px;
+}
+.wrapper-footer footer#footer-openedx .colophon {
+    margin-bottom: 35px;
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+    @media (min-width: $responsive-large) {
+        height: 50px;
+        align-items: flex-end;
+    }
+    @media (max-width: $responsive-large) {
+        flex-direction: column;
+    }
+}
+.wrapper-footer footer#footer-openedx .nav-legal {
+    text-align: center;
 }

@@ -1,0 +1,24 @@
+.social-block {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    margin-left: -60px;
+    @media (max-width: $responsive-large) {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: $active-color;
+        display: flex;
+    }
+}

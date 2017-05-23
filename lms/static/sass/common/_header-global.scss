@@ -5,7 +5,8 @@
     border-bottom: 1px solid #454545;
     z-index: 103;
     .wrapper-header {
-        padding: 0 10px 0 0;
+        box-sizing: border-box;
+        padding: 0;
         max-width: 1220px;
         width: 100%;
         height: 80px;
@@ -21,7 +22,7 @@
         margin: 0;
     }
     h1.logo {
-        margin-left: 10px;
+        margin-left: 15px;
     }
     .menu-wrap__flex li {
         @media (max-width: $responsive-large) {
