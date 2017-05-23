@@ -196,9 +196,8 @@
 }
 
 .dropdown-menu-container .menu-button {
-  margin-top: 7px;
+  margin-top: 0;
 }
-
 .header-global.slim .wrapper-header .wrapper-user-menu {
   text-align: center;
 }
@@ -511,10 +510,6 @@ a, a:visited {
 .discussion .action-button.action-follow:hover .action-icon {
     color: #fff !important
 }
-.logo-edx {
-  display: flex;
-  align-items: center;
-}
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
   margin-bottom: 0;
   margin-right: 15px;
@@ -539,6 +534,9 @@ a, a:visited {
   order: 1;
   display: flex;
   align-items: center;
+}
+.logo-edx .footer-text {
+  width: 60px;
 }
 .logo-edx {
   display: flex;
