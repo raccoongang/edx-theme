@@ -253,14 +253,25 @@ from django.template.defaultfilters import truncatechars
         <ol class="important-dates">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${truncatechars(course.display_number_with_default, 25) | h}</span></li>
           % if not course.start_date_is_still_default:
-            <li class="important-dates-item"><span class="icon fa fa-calendar" aria-hidden="true"></span><p class="important-dates-item-title">${_("Classes Start")}</p></li>
+            <%
+                  course_start_date = isinstance(course.start, str) and course.start or course.start.strftime('%b %d, %Y')
+            %>
+            <li class="important-dates-item">
+                <span class="icon fa fa-calendar" aria-hidden="true"></span>
+                <p class="important-dates-item-title">${_("Classes Start")}</p>
+                <span class="important-dates-item-text start-date">${course_start_date}</span>
+            </li>
           % endif
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.
             % if get_course_about_section(request, course, "end_date") or course.end:
+            <%
+                    course_end_date = isinstance(course.end, str) and course.end or course.end.strftime('%b %d, %Y')
+            %>
             <li class="important-dates-item">
                 <span class="icon fa fa-calendar" aria-hidden="true"></span>
                 <p class="important-dates-item-title">${_("Classes End")}</p>
+                <span class="important-dates-item-text final-date">${course_end_date}</span>
             </li>
             % endif
 
@@ -274,6 +285,7 @@ from django.template.defaultfilters import truncatechars
             <li class="important-dates-item">
               <span class="icon fa fa-money" aria-hidden="true"></span>
               <p class="important-dates-item-title">${_("Price")}</p>
+
               <span class="important-dates-item-text">${course_price}</span>
             </li>
           %endif
