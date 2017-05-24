@@ -261,6 +261,8 @@ ol.left.list-inline.nav-global {
 
 /* Start style other pages*/
 
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
+.window-wrap div.book-wrapper section.book-sidebar #booknav li a,
 .window-wrap .discussion .post-label.post-label-following,
 .window-wrap .xmodule_display.xmodule_VideoModule .video .subtitles a,
 .window-wrap .btn-link,
@@ -295,6 +297,14 @@ div.window-wrap a {
 .login-register .form-field .field-link {
     color: $active-color;
 }
+.email_settings_form input[type="submit"],
+.empty-dashboard-message a,
+.certificates-wrapper .btn-blue,
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+.course-info header.course-profile .intro-inner-wrapper .intro button,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+.modal .inner-wrapper form .submit input[type="submit"],
 .window-wrap .discussion-module .btn-brand,
 .window-wrap .btn-brand,
 .forum-new-post-form .post-type-input:checked+.post-type-label,
@@ -383,6 +393,7 @@ div.window-wrap a {
 .wrapper-account-settings .wrapper-header .account-nav button.active {
     border-bottom: 4px solid #4a4a4f !important;
 }
+.content-wrapper .register.theme-btn-2,
 .courseware-bookmarks-button .bookmarks-list-button,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
     @include btn-empty-border ($active-color);
@@ -401,6 +412,14 @@ div.window-wrap .wrapper-course-material .course-tabs li a.active {
     &:focus,
     &:active{
         border-bottom: none !important;
+    }
+}
+.window-wrap .course-info .container .wrap-instructor-info .instructor-info-action {
+    color: $active-color;
+    &:hover {
+        background: $active-color;
+        color: #fff;
+        text-decoration: none;
     }
 }
 div.search-bar .search-button,
@@ -445,6 +464,7 @@ div.xmodule_display.xmodule_SequenceModule .sequence-nav button {
 .window-wrap section.wiki .btn {
     color: #333;
 }
+.bookmarks-results-list .bookmarks-results-list-item:hover,
 .date-summary-container .date-summary-todays-date,
 .discussion .action-button.action-follow.is-checked .action-icon,
 .discussion .action-button.action-follow:hover .action-icon,
@@ -474,11 +494,31 @@ div.xmodule_display.xmodule_SequenceModule .sequence-nav button {
 .window-wrap .header-global .menu-wrap li a {
     color: #fff;
 }
+div.window-wrap .doc-link.help {
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+    }
+}
 .window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct:hover,
 .window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct,
 .window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover {
     border: 2px solid $active-color;
 }
+.home .page-header-secondary .last-accessed-link {
+    color: $active-color !important;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $active-color !important;
+    }
+}
+.window-wrap div.info-wrapper section.updates div article .toggle-visibility-button,
+.window-wrap .find-courses .filters .clear-filters,
+.window-wrap .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
+.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before,
 .window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct .status-icon:after, 
 .window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicegroup_correct .status-icon:after, 
 .window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicegroup label.choicegroup_correct .status-icon:after, 
@@ -491,6 +531,57 @@ div.xmodule_display.xmodule_SequenceModule .sequence-nav button {
 .window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup section.choicetextgroup_correct .status-icon:after {
     color: $active-color;
 }
+.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active,
 .window-wrap .home .page-header-secondary {
     background-color: $active-color;
+}
+.window-wrap .find-courses .search-facets .facet-option:hover, 
+.window-wrap .find-courses .search-facets .facet-option:focus {
+    background: $active-color;
+}
+.course-info header.course-profile {
+    min-height: 280px;
+    height: auto;
+    margin-top: 0;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+.window-wrap .find-courses .courses-container .discovery-submit {
+    border-color: $active-color;
+    background: $active-color;
+    &:active,
+    &:focus,
+    &:hover {
+        border-color: $active-color;
+        background: $active-color;
+        box-shadow: none;
+    }
+}
+.window-wrap .find-courses .courses-container .discovery-input:focus {
+    border-color: $active-color;
+}
+.container.activation h1.valid {
+    background: $active-color !important;
+    border: 1px solid $active-color !important;
+    color: #fff;
+    &:hover,
+    &:focus {
+        background: $active-color !important;
+        border: 1px solid $active-color !important;
+        color: #fff;
+    }
+}
+.social-sharing {
+    display: none;
+}
+article.teacher {
+    margin: 10px 0;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.content-wrapper .register.theme-btn-2 {
+    padding: 10px 20px;
 }

@@ -1,0 +1,27 @@
+.important-dates {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.important-dates-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0;
+    font: 18px/23px $font-regular;
+
+    &__other {
+        flex-wrap: wrap;
+    }
+
+    .icon {
+        width: 30px;
+    }
+}
+.important-dates-item-text {
+    margin-left: auto;
+
+    .important-dates-item__other & {
+        margin-left: 3px;
+    }
+}
