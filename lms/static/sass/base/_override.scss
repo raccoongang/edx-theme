@@ -163,6 +163,7 @@ ol.left.list-inline.nav-global {
 .highlighted-courses .courses {
     padding: 0;
 }
+.header-global .wrapper-header .course-header,
 .wrapper-footer footer#footer-openedx .nav-legal li:last-of-type a::after,
 .wrapper-footer footer#footer-openedx:after,
 .wrapper-footer footer#footer-openedx .copyright,
@@ -260,7 +261,19 @@ ol.left.list-inline.nav-global {
 
 /* Start style other pages*/
 
-.window-wrap a {
+.window-wrap .discussion .post-label.post-label-following,
+.window-wrap .xmodule_display.xmodule_VideoModule .video .subtitles a,
+.window-wrap .btn-link,
+.window-wrap .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .toggle-transcript.is-active,
+.window-wrap .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
+div.course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
+div.course-index .accordion .course-navigation .button-chapter,
+.window-wrap section.wiki .breadcrumb li a,
+.window-wrap section.wiki .nav-tabs li.active a,
+.window-wrap .content-wrapper a,
+.window-wrap section.wiki .nav-tabs a,
+.window-wrap div.info-wrapper section.handouts ol li a,
+div.window-wrap a {
     color: $active-color;
     &:hover,
     &:focus,
@@ -269,17 +282,39 @@ ol.left.list-inline.nav-global {
         color: $active-color;
     }
 }
+.forum-new-post-form .post-type-label {
+    cursor: pointer;
+}
 .window-wrap a.doc-link {
     color: #fff;
+    font-weight: normal;
 }
+.window-wrap .discussion.inline-discussion .new-post-article .add-post-cancel,
+.window-wrap  .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary, 
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
 .login-register .form-field .field-link {
     color: $active-color;
 }
-.login-register .action-primary {
-    @include btn-active($active-color);
+.window-wrap .discussion-module .btn-brand,
+.window-wrap .btn-brand,
+.forum-new-post-form .post-type-input:checked+.post-type-label,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
+.window-wrap section.wiki .btn.btn-primary {
+    @include btn-active-hard ($active-color);
 }
+
+.login-register .action-primary {
+    @include btn-active ($active-color);
+}
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn,
 .login-register .nav-btn {
     @include btn-empty ($active-color);
+}
+.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
+    color: $active-color;
 }
 .header-global .nav-global .tab-nav-item .tab-nav-link {
     color: #fff;
@@ -329,4 +364,133 @@ ol.left.list-inline.nav-global {
 }
 .dashboard .my-courses .course .details .enter-course {
      @include btn-active($active-color);
+}
+.search-bar .search-button, 
+.search-bar .cancel-button {
+    background: $active-color;
+    &:active,
+    &:focus,
+    &:hover {
+        background: $active-color !important;
+    }
+}
+.account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+    border-top: 7px solid $active-color;
+}
+.wrapper-account-settings .wrapper-header .account-nav button:hover, .wrapper-account-settings .wrapper-header .account-nav button:focus {
+    border-bottom: 4px solid $active-color !important;
+}
+.wrapper-account-settings .wrapper-header .account-nav button.active {
+    border-bottom: 4px solid #4a4a4f !important;
+}
+.courseware-bookmarks-button .bookmarks-list-button,
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
+    @include btn-empty-border ($active-color);
+}
+div.window-wrap .wrapper-course-material .course-tabs li a:hover,
+div.window-wrap .wrapper-course-material .course-tabs li a:focus,
+div.window-wrap .wrapper-course-material .course-tabs li a.active {
+    color: $active-color;
+    border-bottom-color: ($active-color);
+}
+.header-global .user .dropdown {
+    min-height: 25px;
+}
+.wrapper-footer footer#footer-openedx a {
+    &:hover,
+    &:focus,
+    &:active{
+        border-bottom: none !important;
+    }
+}
+div.search-bar .search-button,
+div.wrap-instructor-info .instructor-info-action:hover {
+    background: $active-color;
+    color: #fff;
+}
+div.xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+    border-bottom: 3px solid $active-color;
+    &:focus,
+    &:active,
+    &:hover {
+        border-bottom: 3px solid $active-color;
+    }
+}
+div.xmodule_display.xmodule_SequenceModule .sequence-nav button {
+    &:focus,
+    &:active,
+    &:hover {
+        border-bottom: 3px solid $active-color;
+    }
+}
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover {
+    background: transparent;
+}
+.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,
+.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, 
+.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,
+.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
+.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
+.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+    border-bottom: 3px solid $active-color;
+}
+.forum-new-post-form .post-type-label,
+.discussion .btn,
+.window-wrap .discussion-module .btn {
+    @include btn-empty-border-hard ($active-color);
+}
+.enrollment-wrapper strong {
+    color: $active-color !important;
+}
+.window-wrap section.wiki .btn {
+    color: #333;
+}
+.date-summary-container .date-summary-todays-date,
+.discussion .action-button.action-follow.is-checked .action-icon,
+.discussion .action-button.action-follow:hover .action-icon,
+.discussion .action-button.action-follow:hover, 
+.discussion .action-button.action-follow:focus{
+    border-color: $active-color !important;
+}
+.discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+.discussion .action-button.action-follow .action-label {
+    color: $active-color !important;
+}
+.discussion .action-button.action-follow.is-checked .action-icon, 
+.discussion .action-button.action-follow:hover .action-icon, 
+.discussion .action-button.action-follow:focus .action-icon,
+.discussion .action-button.action-follow .action-icon,
+.discussion .action-button.action-follow:hover .action-icon {
+    background: $active-color !important;
+    color: #fff !important;
+}
+.forum-nav-load-more-link:hover {
+    background: transparent!important;
+}
+.window-wrap .forum-nav-thread.never-read .forum-nav-thread-link {
+    border-left-color: $active-color;
+    color: $active-color;
+}
+.window-wrap .header-global .menu-wrap li a {
+    color: #fff;
+}
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct:hover,
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct,
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover {
+    border: 2px solid $active-color;
+}
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicegroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicegroup label.choicegroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label.choicegroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicetextgroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup section.choicetextgroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_CapaModule .choicegroup label.choicetextgroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label.choicetextgroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_CapaModule .choicegroup section.choicetextgroup_correct .status-icon:after, 
+.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup section.choicetextgroup_correct .status-icon:after {
+    color: $active-color;
+}
+.window-wrap .home .page-header-secondary {
+    background-color: $active-color;
 }
