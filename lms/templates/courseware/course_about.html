@@ -316,10 +316,10 @@ from django.template.defaultfilters import truncatechars
              ${get_course_about_section(request, course, "ocw_links")}
         </div>
         %endif
-    </div>
-## CourseTalk widget
+
+  ## CourseTalk widget
       % if show_coursetalk_widget:
-      <ul style="padding: 0 0 0 0;">
+      <ul class="course-talk-widget" style="padding: 0 0 0 0;">
       <li style="list-style: none;">
       <div class="coursetalk-read-reviews">
           <div id="ct-custom-read-review-widget" data-provider="${platform_key}" data-course="${course_review_key}"></div>
@@ -327,6 +327,7 @@ from django.template.defaultfilters import truncatechars
       </li>
       </ul>
       % endif
+    </div>
   </div>
 
   </div>
