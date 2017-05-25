@@ -505,6 +505,9 @@ div.window-wrap .doc-link.help {
     &:active {
         color: #fff;
     }
+    @media (max-width: $responsive-large) {
+        margin-top: 5px;
+    }
 }
 .window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct:hover,
 .window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct,
@@ -591,4 +594,15 @@ article.teacher {
 }
 .find-courses .loading-spinner {
     background: $active-color;
+}
+.content-wrapper .xblock-license a {
+    color: #3c3c3c;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $active-color !important;
+    }
+}
+.instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field {
+    margin-bottom: 10px;
 }
