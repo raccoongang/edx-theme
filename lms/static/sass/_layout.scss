@@ -47,3 +47,11 @@ body{
 .find-courses .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item {
     width: 100%;
 }
+article.teacher {
+    margin-bottom: 10px;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
