@@ -14,7 +14,8 @@ body {
 .header-global {
     height: auto;
     min-height: 70px;
-    @media (max-width: 820px){
+    border-top: 10px solid #f67f45;
+    @media (max-width: 820px) {
         z-index: 100;
     }
     .user {
@@ -88,12 +89,12 @@ body {
         }
 
         li a {
-            border-radius: 2px;
+            border-radius: 4px;
             font-size: 14px;
             line-height: 14px;
             font-weight: 400;
             box-sizing: border-box;
-            padding: 10px 16px;
+            padding: 7px 10px;
             min-width: 106px;
             border: 2px solid $color-1;
             color: $color-1;
@@ -125,7 +126,7 @@ body {
     }
 }
 .wrapper-footer {
-    background: $theme-color;
+    background: #555;
     box-shadow: none;
 }
 .wrapper-footer footer#footer-openedx .footer_list {
@@ -208,17 +209,20 @@ body {
         font-size: 0;
         line-height: 0;
         text-indent: -90px;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
 
         &__facebook {
-            background: url("#{$img-path}ico-facebook.jpg") no-repeat;
+            background: url("#{$img-path}ico-facebook.png") no-repeat;
         }
         &__twitter {
-            background: url("#{$img-path}ico-twitter.jpg") no-repeat;
+            background: url("#{$img-path}ico-twitter.png") no-repeat;
         }
         &__youtube {
-            background: url("#{$img-path}ico-youtube.jpg") no-repeat;
+            background: url("#{$img-path}ico-youtube.png") no-repeat;
+        }
+        &__vk {
+            background: url("#{$img-path}ico-vk.png") no-repeat;
         }
         &:hover {
             border: none !important;
