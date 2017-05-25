@@ -1,3 +1,7 @@
+html {
+    background: #f5f5f5;
+}
+
 .home>header {
     background: #676667 url(#{$img-path}/banner.jpg);
     background-position: center center;
@@ -508,11 +512,11 @@ div.window-wrap .doc-link.help {
     border: 2px solid $active-color;
 }
 .home .page-header-secondary .last-accessed-link {
-    color: $active-color !important;
+    color: #fff !important;
     &:hover,
     &:focus,
     &:active {
-        color: $active-color !important;
+        color: #fff !important;
     }
 }
 .window-wrap div.info-wrapper section.updates div article .toggle-visibility-button,
