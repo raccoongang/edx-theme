@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Montserrat-Regular';
-  src:  url(#{$font-path}/Montserrat-Regular.ttf) format('truetype');
+  src:  url(#{$font-path}/Montserrat-Regular.ttf) format('truetype'),
+        url(#{$font-path}/Montserrat-Regular.woff) format('woff');
 }
 @font-face {
   font-family: 'OpenSans-Regular';
