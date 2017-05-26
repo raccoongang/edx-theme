@@ -65,6 +65,8 @@ ol.left.list-inline.nav-global {
     border: 2px solid #fff;
     background: rgba(255,255,255, 0.3);
     padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     font: 16px/1.2 'Montserrat-Regular', Arial, sans-serif;
     color: #fff;
     &:focus {
@@ -313,6 +315,9 @@ div.window-wrap a {
 .login-register .form-field .field-link {
     color: $active-color;
 }
+
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
 .edit-post-form .post-type-input:checked+.post-type-label,
 .openassessment .list--actions .action--submit,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
@@ -348,6 +353,9 @@ div.window-wrap a {
 .header-global .nav-global .tab-nav-item .tab-nav-link {
     color: #fff;
     padding: 10px 20px;
+}
+.wrapper-msg.wrapper-auto-cert .auto-cert-message {
+    border-left: 3px solid $active-color !important;
 }
 .window-wrap .header-global .nav-global .tab-nav-item .active {
     border-bottom: 1px solid #fff !important;
@@ -648,4 +656,10 @@ article.teacher {
 }
 .social-block li {
     margin-bottom: 0;
+}
+.login-register .form-field label[for="register-honor_code"] {
+    width: 94%;
+}
+.forum-nav-thread-wrapper-1 {
+    width: 100%;
 }

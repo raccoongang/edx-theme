@@ -29,7 +29,7 @@
     border: 1px solid transparent;
     border-radius: 3px;
     box-sizing: border-box;
-    color: $active-color;
+    color: $active-color !important;
     cursor: pointer;
     display: block;
     margin: 5px 0px;
@@ -86,4 +86,7 @@
     &:hover {
         text-decoration: none;
     }
+}
+.wrapper-footer footer#footer-openedx ul {
+    margin-left: 0;
 }
