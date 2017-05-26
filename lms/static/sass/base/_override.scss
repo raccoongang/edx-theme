@@ -670,9 +670,15 @@ article.teacher {
 .forum-nav-thread-wrapper-1 {
     width: 100%;
 }
-.content-wrapper {
+body.view-in-course .content-wrapper {
     min-width: 760px;
 }
 body.view-in-course div.window-wrap {
     min-width: 320px;
+}
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action {
+    text-align: right;
+}
+.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    columns: 1;
 }
