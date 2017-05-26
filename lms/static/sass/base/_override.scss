@@ -39,7 +39,7 @@ html {
         margin: 5px 0;
     }
 }
-.header-global .menu-wrap li a[href='/register'] {
+.header-global .menu-wrap li a[href*='/register'] {
     @include btn-active($active-color);
     @media (min-width: $responsive-large) {
         margin-left: 10px;
