@@ -90,3 +90,14 @@
 .wrapper-footer footer#footer-openedx ul {
     margin-left: 0;
 }
+.discussion .list-inline .item {
+    @media (max-width: $responsive-large) {
+        margin-right: 0;
+    }
+}
+.window-wrap .header-global .menu-wrap li a {
+    font-size: 1rem;
+}
+div.window-wrap .tabs .tab a {
+    color: #5e5e5e;
+}

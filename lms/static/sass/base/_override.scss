@@ -1,7 +1,12 @@
+* {
+    font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif !important;
+}
 html {
     background: #f5f5f5;
 }
-
+.fa {
+    font-family: FontAwesome !important;
+}
 .home>header {
     background: #676667 url(#{$img-path}/banner.jpg);
     background-position: center center;
@@ -420,6 +425,7 @@ div.window-wrap a {
 .wrapper-account-settings .wrapper-header .account-nav button.active {
     border-bottom: 4px solid #4a4a4f !important;
 }
+.login-register .nav-btn,
 .content-wrapper .register.theme-btn-2,
 .courseware-bookmarks-button .bookmarks-list-button,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
@@ -502,11 +508,12 @@ div.xmodule_display.xmodule_SequenceModule .sequence-nav button {
 .discussion .action-button.action-follow:focus{
     border-color: $active-color !important;
 }
-.openassessment .openassessment__steps__step.is--in-progress .step__status__value,
+
 .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
 .discussion .action-button.action-follow .action-label {
     color: $active-color !important;
 }
+.openassessment .openassessment__steps__step.is--in-progress .step__status__value,
 .discussion .action-button.action-follow.is-checked .action-icon, 
 .discussion .action-button.action-follow:hover .action-icon, 
 .discussion .action-button.action-follow:focus .action-icon,
@@ -662,4 +669,10 @@ article.teacher {
 }
 .forum-nav-thread-wrapper-1 {
     width: 100%;
+}
+.content-wrapper {
+    min-width: 760px;
+}
+body.view-in-course div.window-wrap {
+    min-width: 320px;
 }
