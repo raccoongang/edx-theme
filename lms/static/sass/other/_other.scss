@@ -8,3 +8,36 @@ section.outside-app,
         min-width: 760px;
     }
 }
+.supplemental-link a,
+.login-register .form-field .field-link {
+    color: #ef6060;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: #ef6060;
+    }
+}
+.find-courses .discovery-submit {
+    border: 2px solid #ef6060;
+    background: #ef6060;
+    &:active,
+    &:focus,
+    &:visited,
+    &:hover {
+        border: 2px solid #ef6060;
+        background: #ef8686;
+        box-shadow: none;
+    }
+}
+.find-courses .search-facets .facet-option:hover, 
+.find-courses .search-facets .facet-option:focus,
+.find-courses .loading-spinner {
+    background: #ef8686;
+}
+.find-courses .discovery-input:focus {
+    border-color: #ef8686;
+}
+.find-courses {
+    padding-top: 20px;
+}

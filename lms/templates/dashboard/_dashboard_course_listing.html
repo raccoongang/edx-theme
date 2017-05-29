@@ -1,4 +1,4 @@
-<%page args="course_overview, enrollment, show_courseware_link, cert_status, can_unenroll, credit_status, show_email_settings, course_mode_info, show_refund_option, is_paid_course, is_course_blocked, verification_status, course_requirements, dashboard_index, share_settings, course_program_info" expression_filter="h"/>
+<%page args="course_overview, enrollment, show_courseware_link, cert_status, can_unenroll, credit_status, show_email_settings, course_mode_info, show_refund_option, is_paid_course, is_course_blocked, verification_status, course_requirements, dashboard_index, share_settings, related_programs, display_course_modes_on_dashboard" expression_filter="h"/>
 
 <%!
 import urllib
@@ -10,7 +10,6 @@ from course_modes.models import CourseMode
 from course_modes.helpers import enrollment_mode_display
 from openedx.core.djangolib.js_utils import dump_js_escaped_json
 from openedx.core.djangolib.markup import HTML, Text
-from openedx.core.lib.time_zone_utils import get_user_time_zone
 from student.helpers import (
   VERIFY_STATUS_NEED_TO_VERIFY,
   VERIFY_STATUS_SUBMITTED,
@@ -99,18 +98,6 @@ from student.helpers import (
         </h3>
         <span class="theme-courses_date" data-tooltip="Hi">
           <span class="theme-courses_ico-holder"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-        <% time_zone = get_user_time_zone(user) %>
-        % if course_overview.has_ended():
-          ${_("Ended - {end_date}").format(end_date=course_overview.end_datetime_text("SHORT_DATE", time_zone))}
-        % elif course_overview.has_started():
-          ${_("Started - {start_date}").format(start_date=course_overview.start_datetime_text("SHORT_DATE", time_zone))}
-        % elif course_overview.start_date_is_still_default: # Course start date TBD
-          ${_("Coming Soon")}
-        % elif course_overview.starts_within(days=5):   # hasn't started yet
-          ${_("Starts - {start_date}").format(start_date=course_overview.start_datetime_text("DAY_AND_TIME", time_zone))}
-        % else:   # hasn't started yet
-          ${_("Starts - {start_date}").format(start_date=course_overview.start_datetime_text("SHORT_DATE", time_zone))}
-        % endif
         </span>
         <div class="wrapper-course-actions">
           <div class="course-actions">

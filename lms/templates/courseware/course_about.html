@@ -214,7 +214,7 @@ from openedx.core.lib.courses import course_image_url
         <ol class="theme-aside_list">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
           % if not course.start_date_is_still_default:
-            <li class="important-dates-item"><span class="icon fa fa-calendar" aria-hidden="true"></span><p class="important-dates-item-title">${_("Classes Start")}</p><span class="important-dates-item-text start-date">${course.start_datetime_text()}</span></li>
+            <li class="important-dates-item"><span class="icon fa fa-calendar" aria-hidden="true"></span><p class="important-dates-item-title">${_("Classes Start")}</p></li>
           % endif
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.
@@ -222,13 +222,6 @@ from openedx.core.lib.courses import course_image_url
             <li class="important-dates-item">
                 <span class="icon fa fa-calendar" aria-hidden="true"></span>
                 <p class="important-dates-item-title">${_("Classes End")}</p>
-                <span class="important-dates-item-text final-date">
-                    % if get_course_about_section(request, course, "end_date"):
-                        ${get_course_about_section(request, course, "end_date")}
-                    % else:
-                        ${course.end_datetime_text()}
-                    % endif
-                </span>
             </li>
             % endif
 

@@ -29,7 +29,7 @@
     &_logo-holder {
         display: none;
         overflow: hidden;
-        width: 54px;
+        width: 110px;
         @media all and (min-width: 860px){
             display: inline;
         }
@@ -38,10 +38,10 @@
             display: block;
         }
         img {
-            margin: -4px 0 0 -5px;
-            max-width: none;
+            margin: 0;
+            max-width: 110px;
             @media all and (min-width: 860px){
-                margin: 0;
+                max-width: 180px
             }
         }
     }

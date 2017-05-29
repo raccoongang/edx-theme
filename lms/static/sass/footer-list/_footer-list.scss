@@ -2,17 +2,26 @@
     float: right;
     margin: 0;
     padding: 0;
+    @media (max-width: 600px) {
+        float: none;
+    }
 
     &_item {
         display: inline-block;
         vertical-align: top;
         margin-left: 20px;
+        @media (max-width: 600px) {
+            display: block;
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
     }
 }
 
 a.footer-list_link {
     text-transform: uppercase;
     color: #fff;
+    font: 13px/1.3 muliregular;
 
     &:hover {
         color: #fff;

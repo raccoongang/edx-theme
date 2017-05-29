@@ -1,9 +1,9 @@
 .theme-main-nav {
-    background: #ef6060;
     width: 100%;
     order: -1;
     position: relative;
     padding-top: 44px;
+    background: #ef6060;
     @media all and (min-width: 860px){
         order: 2;
         padding-top: 0;
@@ -17,6 +17,8 @@
         flex-wrap: wrap;
         justify-content: center;
         display: none;
+        margin: 0;
+        list-style: none;
         @media all and (min-width: 860px){
             flex-wrap: nowrap;
             justify-content: flex-start;
@@ -93,9 +95,7 @@
         position: absolute;
         left: 15px;
         top: 0;
-        height: 44px;
-        width: 44px;
-        overflow: hidden;
+        width: 110px;
         @media all and (min-width: 860px){
             display: none;
         }

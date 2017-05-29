@@ -9,12 +9,12 @@
         flex-wrap: wrap;
         max-width: 1600px;
         margin-bottom: 1px;
-        @media all and (min-width: 600px){
+        @media all and (min-width: 860px){
             flex-wrap: nowrap;
         }
 
         &:nth-child(even) {
-            @media all and (min-width: 600px){
+            @media all and (min-width: 860px){
                 justify-content: flex-end;
             }
         }
@@ -26,6 +26,13 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+        min-height: 200px;
+        @media all and (min-width: 860px){
+            min-height: 297px;
+        }
+        @media all and (min-width: 1100px){
+            height: 397px;
+        }
     }
     &_code,
     &_org {
@@ -82,13 +89,13 @@
     &_content {
         padding: 15px;
         width: 100%;
-        @media all and (min-width: 600px){
+        @media all and (min-width: 860px){
             width: auto;
             padding: 52px 58px 0;
         }
 
         .theme-courses_course:nth-child(even) & {
-            @media all and (min-width: 600px){
+            @media all and (min-width: 860px){
                 order: -1;
             }
         }
@@ -111,22 +118,19 @@
         position: relative;
         width: 100%;
         height: 200px;
-        @media all and (min-width: 600px){
+        @media all and (min-width: 860px){
             min-width: 60%;
             width: 60%;
             border-right: 10px solid #ef8686;
             box-shadow: inset -5px 0px 0px 0px #fff;
-            height: 197px;
             padding-right: 5px;
-        }
-        @media all and (min-width: 800px){
             height: 297px;
         }
         @media all and (min-width: 1100px){
             height: 397px;
         }
         .theme-courses_course:nth-child(even) & {
-            @media all and (min-width: 600px){
+            @media all and (min-width: 860px){
                 border: none;
                 border-left: 10px solid #ef8686;
                 box-shadow: inset 5px 0px 0px 0px #fff;
