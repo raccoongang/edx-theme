@@ -1,5 +1,5 @@
 .theme-main-nav {
-    background: #1f1d20;
+    background: $theme-main-nav;
     width: 100%;
     order: -1;
     position: relative;
@@ -42,9 +42,8 @@
         }
 
         &:hover {
-            background: $theme-color-main;
+            background: $theme-color-main-hover;
             text-decoration: none;
-            color: #1f1d20 !important;
         }
     }
     &_item {
