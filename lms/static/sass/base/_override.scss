@@ -207,6 +207,7 @@ body a.doc-link {
 }
 .highlighted-courses .courses .course a {
     cursor: pointer;
+    position: static;
 }
 .courses-container .courses .course .course-info .course-date,
 .courses-container .courses .course .course-info .course-code,
@@ -322,4 +323,28 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li {
 } 
 body a.doc-link::-moz-focus-inner{ 
     border: none; 
+}
+.courses-listing {
+    display: flex;
+    flex-wrap: wrap;
+}
+.courses-container .courses .courses-listing .courses-listing-item {
+    height: auto;
+    min-height: 360px;
+    max-height: none;
+}
+.courses-container .courses .course {
+    height: 100%;
+}
+.courses-container .courses .course .course-info .course-title {
+    min-height: 72px;
+    height: auto;
+}
+.courses-container .courses .course .course-info {
+    height: auto;
+    min-height: 150px;
+}
+.courses-container .courses .course .course-info .course-date {
+    position: absolute;
+    bottom: 0;
 }
