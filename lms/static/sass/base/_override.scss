@@ -384,11 +384,15 @@
             color: #fff;
         }
     }
+    .copyright-page,
     .honor,
     .tos {
         min-width: 320px;
-        &--center {
+        &_center {
             text-align: center;
+        }
+        &_left {
+            text-align: left;
         }
         .underline {
             text-decoration: underline;
@@ -400,10 +404,10 @@
             letter-spacing: normal;
             font-family: Arial, Helvetica, sans-serif;
         }
-        .margin--l {
+        .margin_l {
             margin-bottom: 20px;
         }
-        .margin--xl {
+        .margin_xl {
             margin-bottom: 35px;
         }
     }
