@@ -1,0 +1,35 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Honor Code")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about honor">
+        <h1>${_("DJAM ACADEMY HONOR CODE PLEDGE")}</h1>
+        <h2 class="margin--l">${_("COLLABORATION POLICY")}</h2>
+        <p class="margin--l">${_("By enrolling in a course on Djam Academy, you are joining a special worldwide community of learners. The aspiration of Djam Academy is to improve lives through a holistic education experience engineered to inspire and motivate you to reach your maximum potential. You are a part of the community that will help Djam Academy achieve this goal. Djam Academy depends upon your motivation to learn the material and to do so with honesty and academic integrity. In order to participate in Djam Academy, you must agree to the Honor Code below and any additional terms specific to a class. This Honor Code, and any additional terms, will be posted on each class website.")}</p>
+        <p class="margin--l">${_("Djam Academy depends upon your motivation to learn the material and to do so with honesty. In order to participate in Djam Academy, you must agree to the Honor Code below and any additional terms specific to a class. This Honor Code, and any additional terms, will be posted on each class website.")}</p>
+        <h2 class="margin--l"><b>${_("DJAM ACADEMY HONOR CODE PLEDGE")}</b></h2>
+        <p>${_("By enrolling in an Djam Academy course, I agree that I will:")}</p>
+        <ul class="margin--l">
+            <li>${_("Complete all tests and assignments on my own, unless collaboration on an assignment is explicitly permitted.")}</li>
+            <li>${_("Maintain only one user account and not let anyone else use my username and/or password.")}</li>
+            <li>${_("Not engage in any activity that would dishonestly improve my results, or improve or hurt the results of others.")}</li>
+            <li>${_("Not post answers to problems that are being used to assess student performance.")}</li>
+        </ul>
+        <h2><b>${_("VIOLATIONS")}</b></h2>
+        <p>${_("If you are found in violation of the Terms of Service or Honor Code, you may be subject to one or more of the following actions:")}</p>
+        <ul class="margin--l">
+            <li>${_("Receiving a zero or no credit for an assignment;")}</li>
+            <li>${_("Having any certificate earned in the course withheld or revoked;")}</li>
+            <li>${_("Being unenrolled from a course; or")}</li>
+            <li>${_("Termination of your use of the Site.")}</li>
+            <li>${_("Additional actions may be taken at the sole discretion of Djam Academy and Djam Academy Member course providers. ")}</li>
+            <li>${_("No refunds will be issued in the case of any corrective action for such violations.")}</li>
+        </ul>
+        <p class="margin--l">${_("Honor code violations will be determined at the sole discretion of Djam Academy Members. You will be notified if a determination has been made that you have violated this honor code and you will be informed of the corresponding action to be taken as a result of the violation.")}</p>
+        <h2 class="margin--l">${_("CHANGING THE HONOR CODE")}</h2>
+        <p class="margin--l">${_("Please note that we review and may make changes to this Honor Code from time to time. Any changes to this Honor Code will be effective immediately upon posting on this page, with an updated effective date. By accessing the Site after any changes have been made, you signify your agreement on a prospective basis to the modified Honor Code and any changes contained therein. Be sure to return to this page periodically to ensure familiarity with the most current version of this Honor Code.")}</p>
+    </section>
+</main>
