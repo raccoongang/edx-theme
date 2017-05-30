@@ -1,0 +1,80 @@
+.theme-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 $mobile-indent 28px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    @media all and (min-width: 450px){
+        flex-wrap: nowrap;
+    }
+    @media all and (min-width: 1600px){
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &:after {
+        display: none;
+    }
+    &_holder {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        @media all and (min-width: 450px){
+            flex-wrap: nowrap;
+        }
+    }
+    &_logo-holder {
+        display: none;
+        overflow: hidden;
+        width: 54px;
+        @media all and (min-width: 860px){
+            display: inline;
+        }
+
+        .theme-main-nav & {
+            display: block;
+        }
+        img {
+            margin: -4px 0 0 -5px;
+            max-width: none;
+            @media all and (min-width: 860px){
+                margin: 0;
+            }
+        }
+    }
+    .nav-global {
+        font: 0/0 a;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .cta-discovery {
+            @include inline-block;
+            font-size: 26px;
+            padding: 0;
+            margin-right: 10px;
+            color: $theme-color-main;
+            @media all and (min-width: 600px){
+                margin-right: 21px;
+            }
+        }
+        .item {
+            margin: 0 10px 0 0;
+            @media all and (min-width: 600px){
+                margin-right: 21px;
+            }
+        }
+        .btn-neutral,
+        .btn {
+            font: 14px/18px muliregular;
+            color: #515e66;
+            text-transform: uppercase;
+        }
+    }
+    .nav-courseware {
+        margin: 0;
+    }
+}
