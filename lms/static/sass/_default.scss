@@ -194,8 +194,6 @@ img#fourth-img {
     height: auto;
   }
   .nav-global {
-    font-size: 0.89em;
-    margin-left: -10px;
     li {
       margin: 0;
     }
@@ -286,4 +284,18 @@ img#fourth-img {
 .wrapper-footer footer,
 .header-global nav {
     width: auto !important;
+}
+.course .course-image {
+  position: relative;
+  border-bottom: 18px solid #080;
+
+  &:after {
+    content: '';
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    bottom: -45px;
+    background:  url("../images/verified.png") 0 100%;
+  }
 }
