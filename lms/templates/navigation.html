@@ -220,6 +220,15 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
 </div>
 </div>
+<script>
+  $(".theme-main-nav_opener").on("click", function open(){
+    if ($(this).parent().hasClass("theme-main-nav__open")){
+      $(this).parent().removeClass("theme-main-nav__open");
+    } else {
+      $(this).parent().addClass("theme-main-nav__open");
+    }
+  });
+</script>
 % if course:
 <!--[if lte IE 9]>
 <div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
