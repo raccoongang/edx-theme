@@ -60,3 +60,148 @@ body{
         background: #f4f4f4;
     }
 }
+body.view-in-course {
+    .window-wrap {
+        min-width: 320px !important;
+    }
+    .container {
+         .info-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            @media screen and (min-width: 1000px) {
+                display: table;
+                table-layout: fixed;
+            }
+        }
+        section.handouts {
+            border-top: 1px solid #c8c8c8;
+            width: 100%;
+            @media screen and (min-width: 1000px) {
+                border-top: none;
+                width: 28%;
+            }
+        }
+        .course-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            @media screen and (min-width: 1000px) {
+                display: table;
+                table-layout: fixed;
+            }
+
+            .course-content {
+                width: 100%;
+                @media screen and (min-width: 1000px) {
+                    width: 76%;
+                }
+            }
+        }
+        .course-index {
+            width: 100%;
+            @media screen and (min-width: 1000px) {
+                width: auto;
+                display: block !important;
+            }
+        }
+    }
+    .show-course-index {
+        display: inline-block;
+        margin: 50px auto 10px;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background: #ccc;
+        max-width: 80%;
+        text-align: center;
+        @media screen and (min-width: 1000px) {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-nav-button {
+    min-width: 60px;
+    @media screen and (min-width: 1000px) {
+        min-width: 120px;
+    }
+    span {
+        display: none;
+        @media screen and (min-width: 1000px) {
+            display: inline;
+        }
+    }
+    span.icon {
+        display: inline;
+    }
+}
+.wiki-wrapper .article-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1000px) {
+        display: bock;
+    }
+
+    .main-article {
+        order: 2;
+    }
+    .article-functions {
+        order: 1;
+    }
+}
+section.wiki .wiki-wrapper .article-functions {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #c8c8c8;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1000px) {
+        border: none;
+        width: 23%;
+        display: block;
+    }
+    
+    .see-children,
+    .timestamp {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        margin-left: 30px;
+        @media screen and (min-width: 1000px) {
+            margin-left: 0;
+            margin-top: 15px;
+            padding: 15px 0 0;
+            border-top: 1px solid #ddd;
+        }
+    }
+    .timestamp {
+        margin-left: 0;
+        padding-left: 0;
+        @media screen and (min-width: 1000px) {
+            margin-top: 15px;
+            padding: 15px 0 0;
+        }
+    }
+}
+.container>div {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+section.wiki .wiki-wrapper .nav-tabs {
+    display: flex;
+    width: 100%;
+    @media screen and (min-width: 1000px) {
+        display: block;
+        width: auto;
+    }
+    li {
+        margin-left: 20px;
+        margin-bottom: 40px;
+        @media screen and (min-width: 1000px) {
+            margin: 0;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
