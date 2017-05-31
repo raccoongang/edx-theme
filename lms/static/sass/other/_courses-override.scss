@@ -1,9 +1,14 @@
+.find-courses .wrapper-search-context,
 .find-courses .courses-container {
     max-width: 1600px;
+    padding: 0 20px;
 }
 .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item {
     max-width: 1600px;
     width: 100%;
+    float: none;
+    margin-top: 0;
+    max-height: none;
 }
 .courses-container .courses .course {
     border: none;
@@ -16,12 +21,22 @@
     }
     a {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        @media (max-width: 960px) {
+            flex-direction: column;
+        }
     }
 }
 .courses-container .courses .course .course-image .cover-image .learn-more {
-    position: relative;
+    position: absolute;
     opacity: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0, 0.5);
+    font-size: 14px;
+    border: 2px solid #fff;
 }
 .courses-container .courses .course:hover .cover-image:before, .courses-container .courses .course:focus .cover-image:before {
     transition: none;
@@ -31,5 +46,88 @@
     display: none;
 }
 .courses-container .courses .course .course-image .cover-image {
+    position: relative;
     height: auto;
+    overflow: visible;
+}
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    display: block;
+    font-size: 20px;
+    line-height: 26px;
+    font: 20px/26px Arial, sans-serif;
+    font-weight: 600;
+    color: #0b1d2b;
+    padding: 0;
+}
+.courses-container .courses .course .course-info .course-title {
+    font: 24px/1 Arial, sans-serif;
+    font-weight: 700;
+    color: #0b1d2b;
+    margin-bottom: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0;
+    height: auto;
+}
+.courses-container .courses .course .course-info .course-date {
+    font: 16px/20px Arial, sans-serif;
+    color: #0a2d46;
+    padding: 2px 0;
+    margin: 0;
+    position: relative;
+    padding-left: 20px;
+    &:after {
+        content: "\f017";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $theme-color-main;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+.courses-listing-item {
+    .sr {
+        display: none;
+    }
+    .course-image {
+        width: 70%;
+        @media (max-width: 960px) {
+            width: 100%;
+        }
+    }
+}
+.find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(even) a{
+    flex-direction: row-reverse;
+        @media (max-width: 960px) {
+            flex-direction: column;
+        }
+}
+.courses-container .courses .course .course-info {
+    width: 30%;
+    height: auto;
+    padding: 0 58px;
+    @media (max-width: 960px) {
+        width: 100%;
+        padding: 0;
+    }
+}
+.courses-container .courses .course .course-image .cover-image img {
+    min-height: 220px;
+    min-width: 320px;
+    @media (max-width: 960px) {
+        margin-bottom: 20px;
+    }
+}
+.find-courses .search-facets .facet-option:hover, .find-courses .search-facets .facet-option:focus {
+    background: $theme-color-main;
+}
+.find-courses .filters .clear-filters {
+    color: $theme-color-main;
 }

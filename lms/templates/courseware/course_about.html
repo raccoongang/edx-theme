@@ -121,8 +121,8 @@ from openedx.core.lib.courses import course_image_url
 
         % if get_course_about_section(request, course, "video"):
         <a href="#video-modal" class="theme-btn theme-btn__invert media" rel="leanModal">
+          ${_('Watch video about course')}
           <div class="hero">
-            <img src="${course_image_urls['large']}" alt="" />
             <div class="play-intro"></div>
           </div>
         </a>
@@ -184,7 +184,7 @@ from openedx.core.lib.courses import course_image_url
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="theme-btn">
+          <a href="${reg_href}" class="theme-btn theme-btn__disable">
             ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
           </a>
           <div id="register_error"></div>

@@ -11,3 +11,11 @@ section.outside-app,
 .find-courses {
     padding-top: 20px;
 }
+.supplemental-link a {
+    color: $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-color-main;
+    }
+}
