@@ -55,6 +55,7 @@ body{
 .inner-wrapper p + p {
     margin-top: 0;
 }
+
 .view-passwordreset {
     .window-wrap {
         background: #f4f4f4;
@@ -140,7 +141,7 @@ body.view-in-course {
     display: flex;
     flex-wrap: wrap;
     @media screen and (min-width: 1000px) {
-        display: bock;
+        display: block;
     }
 
     .main-article {
@@ -184,7 +185,8 @@ section.wiki .wiki-wrapper .article-functions {
     }
 }
 .container>div {
-    max-width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 section.wiki .wiki-wrapper .nav-tabs {
@@ -202,6 +204,61 @@ section.wiki .wiki-wrapper .nav-tabs {
         }
         &:first-child {
             margin-left: 0;
+        }
+    }
+}
+.container .profile-wrapper .course-info>.chapters>section {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1000px) {
+        display: table;
+    }
+
+    .hd {
+        width: 100%;
+        margin-bottom: 40px;
+        border: none;
+        @media screen and (min-width: 1000px) {
+            width: 20.45455%;
+            border-right: 1px dashed #ddd;
+            margin-bottom: 0;
+        }
+    }
+    .sections {
+        width: 100%;
+        padding-left: 0;
+        @media screen and (min-width: 1000px) {
+            padding-left: 2.27273%;
+            width: 77.27273%;
+        }
+    }
+}
+body.view-in-course .content-wrapper .wrapper-course-material {
+    padding: 0 2%;
+    @media screen and (min-width: 1230px) {
+        padding: 0;
+    }
+}
+body .xmodule_display.xmodule_VideoModule .video {
+    .tc-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (min-width: 1000px) {
+            display: block;
+        }
+    }
+    .video-wrapper {
+        width: 100%;
+        margin-right: 0;
+        @media screen and (min-width: 1000px) {
+            margin-right: 2.27273%;
+            width: 65.90909%;
+        }
+    }
+    .subtitles {
+        width: 100%;
+        @media screen and (min-width: 1000px) {
+            width: 31.81818%;
         }
     }
 }
