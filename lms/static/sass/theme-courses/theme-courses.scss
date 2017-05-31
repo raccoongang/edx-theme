@@ -26,6 +26,13 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+        &-wrap {
+            width: 50%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
     &_code,
     &_org {
@@ -131,4 +138,8 @@
     &_img-link {
         display: inline-block;
     }
+}
+.dashboard .my-courses .theme-courses_course:nth-child(even),
+.dashboard .my-courses .listing-courses .course-item:nth-of-type(even) .theme-courses_course{
+    flex-direction: row-reverse;
 }

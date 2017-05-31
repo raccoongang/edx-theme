@@ -11,11 +11,37 @@ section.outside-app,
 .find-courses {
     padding-top: 20px;
 }
-.supplemental-link a {
+.dashboard a {
     color: $theme-color-main;
+    &:visited,
     &:hover,
     &:focus,
     &:active {
         color: $theme-color-main;
     }
+}
+.search-bar .search-button {
+    background: $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+        background: $theme-color-main;
+    }
+}
+body.view-in-course header.header-global {
+    width: 100%;
+}
+.help-link {
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $theme-color-main;
+    }
+}
+div.window-wrap .wrapper-course-material .course-tabs li a:hover,
+div.window-wrap .wrapper-course-material .course-tabs li a:focus,
+div.window-wrap .wrapper-course-material .course-tabs li a.active {
+    color: $theme-color-main;
+    border-bottom-color: $theme-color-main;
 }

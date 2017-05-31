@@ -47,7 +47,7 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
 <div class="nav-holder" aria-label="${_('Global')}">
-  <header id="global-navigation" class="theme-header header-global ${"slim" if course else ""}" >
+  <header id="global-navigation" class="theme-header header-global" >
     <div class="theme-header-info">
         <div class="theme-header-info_contact">
             <span class="theme-header-info_text">Have any question?</span>
@@ -106,7 +106,7 @@ site_status_msg = get_site_status_msg(course_id)
 
       <a href="${get_online_help_info(online_help_token)['doc_url']}" 
          target="_blank"
-         class="doc-link">${_("Help")}</a>
+         class="doc-link help-link">${_("Help")}</a>
 
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">

@@ -131,3 +131,24 @@
 .find-courses .filters .clear-filters {
     color: $theme-color-main;
 }
+.dashboard .my-courses .course .details .wrapper-course-actions {
+    float: none;
+}
+.wrapper-course-actions .course-actions {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more {
+    float: left;
+}
+.wrapper-course-actions .theme-btn__right {
+    float: none;
+}
+.my-courses .course-container {
+    .theme-courses_content {
+        width: 50%;
+    }
+}
