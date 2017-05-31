@@ -140,8 +140,10 @@ body.view-in-course {
 .wiki-wrapper .article-wrapper {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     @media screen and (min-width: 1000px) {
         display: block;
+        width: auto;
     }
 
     .main-article {
@@ -184,10 +186,19 @@ section.wiki .wiki-wrapper .article-functions {
         }
     }
 }
-.container>div {
+body .container>div {
     max-width: 1180px;
     margin: 0 auto;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1000px) {
+        display: block;
+    }
+}
+body .home .page-header-secondary {
+    margin-left: auto;
+    white-space: nowrap;
 }
 section.wiki .wiki-wrapper .nav-tabs {
     display: flex;
@@ -261,4 +272,10 @@ body .xmodule_display.xmodule_VideoModule .video {
             width: 31.81818%;
         }
     }
+}
+body .home .page-header-main {
+    padding-right: 15px;
+}
+body section.wiki .wiki-wrapper>header {
+    width: 100%;
 }
