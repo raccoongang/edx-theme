@@ -1,0 +1,35 @@
+.find-courses .courses-container {
+    max-width: 1600px;
+}
+.find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item {
+    max-width: 1600px;
+    width: 100%;
+}
+.courses-container .courses .course {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    &:hover {
+        border: none;
+        box-shadow: none;
+        background: transparent; 
+    }
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    position: relative;
+    opacity: 1;
+}
+.courses-container .courses .course:hover .cover-image:before, .courses-container .courses .course:focus .cover-image:before {
+    transition: none;
+    opacity: 1;
+}
+.courses-container .courses .course .course-image .cover-image:before {
+    display: none;
+}
+.courses-container .courses .course .course-image .cover-image {
+    height: auto;
+}
