@@ -128,6 +128,7 @@
 .find-courses .search-facets .facet-option:hover, .find-courses .search-facets .facet-option:focus {
     background: $theme-color-main;
 }
+div.window-wrap .doc-link:visited,
 .find-courses .filters .clear-filters {
     color: $theme-color-main;
 }
@@ -145,10 +146,77 @@
     float: left;
 }
 .wrapper-course-actions .theme-btn__right {
-    float: none;
+    float: left;
+    margin-right: 10px;
 }
 .my-courses .course-container {
     .theme-courses_content {
         width: 50%;
     }
+}
+div.window-wrap section.wiki .btn.btn-primary,
+div.window-wrap .modal .inner-wrapper form .submit input[type="submit"] {
+    border-color: $theme-color-main;
+    background: $theme-color-main;
+    box-shadow: none;
+    text-shadow: none;
+}
+div.window-wrap .modal .inner-wrapper form .submit input[type="submit"]:hover:not(:disabled) {
+    background: $theme-color-main-hover;
+}
+div.window-wrap .modal .inner-wrapper form .submit input[type="submit"]:active:not(:disabled),
+div.window-wrap .modal .inner-wrapper form .submit input[type="submit"]:focus:not(:disabled) {
+    box-shadow: none;
+}
+.header-global .user {
+    display: flex;
+    align-items: center;
+}
+.header-global .user .dropdown {
+    margin: 0;
+    line-height: 1.6rem;
+}
+section.wiki #cheatsheetLink,
+.wiki-wrapper a.accordion-toggle,
+div.window-wrap section.wiki .nav-tabs li.active a,
+div.window-wrap section.wiki .article-functions .see-children a,
+div.window-wrap section.wiki .nav-tabs a,
+div.window-wrap section.wiki .breadcrumb li a,
+div.window-wrap .header-global .user .dropdown-menu li>a {
+    color: $theme-color-main;
+}
+.dropdown-menu-container .dropdown-menu .dropdown-item a:hover, 
+.dropdown-menu-container .dropdown-menu .dropdown-item a:active, 
+.dropdown-menu-container .dropdown-menu .dropdown-item a:focus {
+    text-decoration: none;
+    color: #3c3c3c;
+}
+.dropdown-menu-container .menu-title {
+    &:hover {
+        text-decoration: none;
+    }
+}
+div.window-wrap section.wiki .btn.btn-primary:hover:not(:disabled),
+div.window-wrap section.wiki .btn.btn-primary:active:not(:disabled), 
+div.window-wrap section.wiki .btn.btn-primary:focus:not(:disabled) {
+    box-shadow: none;
+    color: $theme-color-main;
+    border-color: $theme-color-main;
+    background: transparent;
+}
+div.window-wrap .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+    border-top-color: $theme-color-main;
+}
+div.window-wrap .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
+    color: $theme-color-main;
+    border-color: $theme-color-main;
+    &:focus,
+    &:hover {
+        color: #fff;
+        background-color: $theme-color-main;
+    }
+}
+div.window-wrap .wrapper-account-settings .wrapper-header .account-nav button:hover, 
+div.window-wrap .wrapper-account-settings .wrapper-header .account-nav button:focus {
+    border-bottom: 4px solid $theme-color-main !important;
 }

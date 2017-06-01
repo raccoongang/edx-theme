@@ -17,16 +17,19 @@ section.outside-app,
     &:hover,
     &:focus,
     &:active {
-        color: $theme-color-main;
+        color: $theme-color-main-hover;
     }
 }
-.search-bar .search-button {
+div.window-wrap .search-bar .search-button {
     background: $theme-color-main;
     &:hover,
     &:focus,
     &:active {
-        background: $theme-color-main;
+        background: $theme-color-main-hover;
     }
+}
+div.window-wrap .search-bar .search-button:hover:hover {
+    background: $theme-color-main-hover;
 }
 body.view-in-course header.header-global {
     width: 100%;
@@ -36,7 +39,8 @@ body.view-in-course header.header-global {
     &:hover,
     &:active,
     &:focus {
-        color: $theme-color-main;
+        color: $theme-color-main-hover;
+        text-decoration: none;
     }
 }
 div.window-wrap .wrapper-course-material .course-tabs li a:hover,
@@ -44,4 +48,14 @@ div.window-wrap .wrapper-course-material .course-tabs li a:focus,
 div.window-wrap .wrapper-course-material .course-tabs li a.active {
     color: $theme-color-main;
     border-bottom-color: $theme-color-main;
+}
+.courseware-bookmarks-button .bookmarks-list-button.is-active,
+div.window-wrap .courseware-bookmarks-button .bookmarks-list-button {
+    color: $theme-color-main;
+    border-color: $theme-color-main;
+    &:focus,
+    &:hover {
+        background: $theme-color-main-hover;
+        color: #fff;
+    }
 }
