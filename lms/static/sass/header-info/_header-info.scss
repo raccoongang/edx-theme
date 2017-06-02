@@ -15,8 +15,11 @@
         padding-left: 0;
         padding-right: 0;
     }
-    @media all and (max-width: 860px) {
+    @media all and (max-width: 859px) {
         flex-direction: column;
+        padding: 15px 0;
+        margin: 0;
+        align-items: flex-start;
     }
     &_contact {
         display: flex;
@@ -35,7 +38,7 @@
         display: flex;
         width: 100%;
         justify-content: center;
-        padding-top: 14px;
+        padding-top: 0;
         @media all and (min-width: 450px){
             padding: 0;
             width: auto;
@@ -57,11 +60,11 @@
         line-height: 15px;
         color: $theme-color-grey;
         padding-left: 18px;
-        background: url('#{$theme-img-path}phone.png') no-repeat 0 50%;
+        background: url('#{$theme-img-path}/phone.png') no-repeat 0 50%;
         @media all and (min-width: 860px){
             margin-left: 24px;
         }
-        @media all and (max-width: 860px) {
+        @media all and (max-width: 859px) {
             margin-bottom: 10px;
         }
     }
@@ -69,13 +72,13 @@
         font-size: 12px;
         line-height: 15px;
         color: $theme-color-grey;
-        background: url('#{$theme-img-path}mail.png') no-repeat 0 50%;
+        background: url('#{$theme-img-path}/mail.png') no-repeat 0 50%;
         padding-left: 18px;
         margin-left: 18px;
         @media all and (max-width: 450px) {
             margin-left: 0;
         }
-        @media all and (max-width: 860px) {
+        @media all and (max-width: 859px) {
             display: none;
         }
     }
@@ -96,7 +99,7 @@
 }
 .social-list_link.theme-header-info_mail {
     display: none;
-    @media all and (max-width: 860px){
+    @media all and (max-width: 859px){
         display: block;
         height: 10px;
         width: 12px;

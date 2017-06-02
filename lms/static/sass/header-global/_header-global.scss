@@ -12,21 +12,27 @@
         }
     }
     .nav-global {
-        margin-top: 7px;
+        margin-top: 0;
         width: 100%;
         padding-left: 0;
         @media all and (min-width: 450px){
             width: auto;
+        }
+        @media all and (max-width: 450px) {
+            display: flex;
+            justify-content: center;
         }
         li:last-child {
             margin: 0 10px 0 0;
             @media all and (min-width: 600px){
                 margin-right: 21px;
             }
-            @media all and (max-width: 600px){
+            @media all and (max-width: 450px){
                 margin-right: 0;
+                margin-bottom: 10px;
             }
         }
+
         .tab-nav-item .tab-nav-link {
             color: #fff;
             line-height: 18px;

@@ -14,7 +14,7 @@
 
         &:first-child {
             padding-left: 0;
-            @media all and (max-width: 860px) {
+            @media all and (max-width: 859px) {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -22,12 +22,7 @@
         }
     }
     &_link {
-        color: #ccccce;
         font-size: 16px;
         line-height: 1.3;
-
-        &:hover {
-            color: darken(#ccccce, 20%);
-        }
     }
 }

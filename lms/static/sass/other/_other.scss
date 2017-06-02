@@ -37,11 +37,15 @@ body.view-in-course header.header-global {
 }
 .help-link {
     color: #fff;
+    margin: 0 0 0 15px;
     &:hover,
     &:active,
     &:focus {
         color: $theme-color-main-hover;
         text-decoration: none;
+    }
+    @media all and (max-width: 850px) {
+        margin-right: 0;
     }
 }
 div.window-wrap .wrapper-course-material .course-tabs li a:hover,

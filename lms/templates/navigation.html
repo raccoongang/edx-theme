@@ -107,15 +107,6 @@ site_status_msg = get_site_status_msg(course_id)
               <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
             </li>
           % endif
-        </%block>
-
-        <%block name="navigation_other_global_links">
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
-              </li>
-            %endif
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
               <li class="item nav-global-04">
                 <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
@@ -125,7 +116,6 @@ site_status_msg = get_site_status_msg(course_id)
                 <a class="btn-neutral" href="/register${login_query()}">${_("Register")}</a>
               </li>
             % endif
-          % endif
         </%block>
       </ol>
 
@@ -214,6 +204,16 @@ site_status_msg = get_site_status_msg(course_id)
                     <a class="theme-main-nav_link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
                   </li>
                 %endif
+              </%block>
+            % else:
+              <%block name="navigation_other_global_links">
+                % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+                    <li class="theme-main-nav_item">
+                      <a class="theme-main-nav_link" href="/courses">${_("Explore Courses")}</a>
+                    </li>
+                  %endif
+                % endif
               </%block>
             %endif
         </ul>
