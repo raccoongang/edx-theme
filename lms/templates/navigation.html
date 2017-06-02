@@ -57,6 +57,7 @@ site_status_msg = get_site_status_msg(course_id)
         <div class="theme-header-info_social">
             <span class="theme-header-info_text">Find us in social network</span>
             <ul class="social-list">
+                <li class="social-list_item social-list_item__first"><a class="social-list_link theme-header-info_mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#097;&#099;&#099;&#111;&#111;&#110;&#103;&#097;&#110;&#103;&#046;&#099;&#111;&#109;"></a></li>
                 <li class="social-list_item"><a class="social-list_link" href="https://twitter.com/raccoongangcom"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li class="social-list_item"><a class="social-list_link" href="https://www.facebook.com/raccoongangco"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li class="social-list_item"><a class="social-list_link" href="https://www.linkedin.com/company/raccoon-gang"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -74,33 +75,6 @@ site_status_msg = get_site_status_msg(course_id)
 
       <div class="theme-nav-wrapper_holder">
       % if user.is_authenticated():
-        <ol class="left nav-global list-inline authenticated">
-        <%block name="navigation_global_links_authenticated">
-          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
-            <li class="item nav-global-01">
-              <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
-            </li>
-          % endif
-          % if show_program_listing:
-            <li class="tab-nav-item">
-              <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
-                ${_("Courses")}
-              </a>
-            </li>
-            <li class="tab-nav-item">
-              <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                ${_("Programs")}
-              </a>
-            </li>
-          % endif
-          %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
-            <li class="item">
-              ## Translators: This is short for "System administration".
-              <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-            </li>
-          %endif
-        </%block>
-      </ol>
 
       <%include file="user_dropdown.html"/>
 
@@ -212,10 +186,36 @@ site_status_msg = get_site_status_msg(course_id)
     </div>
     <nav class="theme-main-nav_holder">
         <ul class="theme-main-nav_list">
-            <li class="theme-main-nav_item"><a href="/about" class="theme-main-nav_link">About The University</a></li>
-            <li class="theme-main-nav_item"><a href="/courses" class="theme-main-nav_link">Courses</a></li>
-            <li class="theme-main-nav_item"><a href="/blog" class="theme-main-nav_link">Blog</a></li>
-            <li class="theme-main-nav_item"><a href="/contact" class="theme-main-nav_link">Contact Us</a></li>
+            <li class="theme-main-nav_item"><a href="/about" class="theme-main-nav_link">${_('About The University')}</a></li>
+            <li class="theme-main-nav_item"><a href="/blog" class="theme-main-nav_link">${_('Blog')}</a></li>
+            <li class="theme-main-nav_item"><a href="/contact" class="theme-main-nav_link">${_('Contact Us')}</a></li>
+            % if user.is_authenticated():
+              <%block name="navigation_global_links_authenticated">
+                % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
+                  <li class="theme-main-nav_item">
+                    <a class="theme-main-nav_link" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+                  </li>
+                % endif
+                % if show_program_listing:
+                  <li class="theme-main-nav_item">
+                    <a class="${'active ' if reverse('dashboard') == request.path else ''}theme-main-nav_link" href="${reverse('dashboard')}">
+                      ${_("Courses")}
+                    </a>
+                  </li>
+                  <li class="theme-main-nav_item">
+                    <a class="${'active ' if reverse('program_listing_view') in request.path else ''}theme-main-nav_link" href="${reverse('program_listing_view')}">
+                      ${_("Programs")}
+                    </a>
+                  </li>
+                % endif
+                %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
+                  <li class="theme-main-nav_item">
+                    ## Translators: This is short for "System administration".
+                    <a class="theme-main-nav_link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+                  </li>
+                %endif
+              </%block>
+            %endif
         </ul>
     </nav>
 </div>

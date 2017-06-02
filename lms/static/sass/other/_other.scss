@@ -20,6 +20,7 @@ section.outside-app,
         color: $theme-color-main-hover;
     }
 }
+div.window-wrap .find-courses .loading-spinner,
 div.window-wrap .search-bar .search-button {
     background: $theme-color-main;
     &:hover,
@@ -58,4 +59,26 @@ div.window-wrap .courseware-bookmarks-button .bookmarks-list-button {
         background: $theme-color-main-hover;
         color: #fff;
     }
+}
+div.window-wrap .find-courses .discovery-submit {
+    border-color: $theme-color-main;
+    background: $theme-color-main;
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: $theme-color-main;
+    }
+}
+div.window-wrap .find-courses .discovery-input:focus {
+    border-color: $theme-color-main-hover;
+}
+div.window-wrap .find-courses button:focus:not(:disabled),
+div.window-wrap .find-courses button:active:not(:disabled) {
+    box-shadow: none;
+}
+body.view-in-course div.window-wrap {
+    min-width: 320px;
+}
+body.view-in-course .window-wrap .content-wrapper{
+    min-width: 720px;
 }

@@ -3,4 +3,8 @@
     height: auto;
     border: none;
     box-shadow: none;
+    @media all and (max-width: 860px) {
+        display: flex;
+        flex-direction: column;
+    }
 }

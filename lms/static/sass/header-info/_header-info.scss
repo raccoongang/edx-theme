@@ -15,6 +15,9 @@
         padding-left: 0;
         padding-right: 0;
     }
+    @media all and (max-width: 860px) {
+        flex-direction: column;
+    }
     &_contact {
         display: flex;
         align-items: center;
@@ -58,7 +61,7 @@
         @media all and (min-width: 860px){
             margin-left: 24px;
         }
-        @media all and (max-width: 450px) {
+        @media all and (max-width: 860px) {
             margin-bottom: 10px;
         }
     }
@@ -71,6 +74,9 @@
         margin-left: 18px;
         @media all and (max-width: 450px) {
             margin-left: 0;
+        }
+        @media all and (max-width: 860px) {
+            display: none;
         }
     }
     &_social-list {
@@ -87,4 +93,14 @@
 }
 .theme-header {
     background: #1f1d20;
+}
+.social-list_link.theme-header-info_mail {
+    display: none;
+    @media all and (max-width: 860px){
+        display: block;
+        height: 10px;
+        width: 12px;
+        margin-left: 0;
+        padding: 0;
+    }
 }

@@ -13,7 +13,13 @@
         padding-left: 0;
         padding-right: 0;
     }
-
+    @media all and (max-width: 600px) {
+        justify-content: center;
+    }
+    @media all and (max-width: 850px) {
+        order: -1;
+        padding-bottom: 0;
+    }
     &:after {
         display: none;
     }
@@ -27,7 +33,7 @@
         }
         @media all and (max-width: 600px) {
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
         }
     }
     &_logo-holder {
@@ -54,7 +60,9 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-
+        @media all and (max-width: 600px){
+            flex-direction: column;
+        }
         .cta-discovery {
             @include inline-block;
             font-size: 26px;
@@ -70,6 +78,9 @@
             @media all and (min-width: 600px){
                 margin-right: 21px;
             }
+            @media all and (max-width: 600px){
+                margin-right: 0;
+            }
         }
         .btn-neutral,
         .btn {
@@ -80,5 +91,6 @@
     }
     .nav-courseware {
         margin: 0;
+        padding: 0;
     }
 }

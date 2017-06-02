@@ -3,7 +3,9 @@
         box-shadow: none;
         text-shadow: none;
         color: #fff;
-
+        
+        &:focus,
+        &:active,
         &:hover {
             background: none;
             color: $theme-color-main;
@@ -16,7 +18,15 @@
         @media all and (min-width: 450px){
             width: auto;
         }
-
+        li:last-child {
+            margin: 0 10px 0 0;
+            @media all and (min-width: 600px){
+                margin-right: 21px;
+            }
+            @media all and (max-width: 600px){
+                margin-right: 0;
+            }
+        }
         .tab-nav-item .tab-nav-link {
             color: #fff;
             line-height: 18px;
@@ -27,6 +37,9 @@
             &:hover,
             &.active {
                 border-color: $theme-color-main !important;
+            }
+            @media all and (max-width: 600px) {
+                margin-bottom: 10px;
             }
         }
     }
