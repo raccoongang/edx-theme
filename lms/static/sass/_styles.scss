@@ -181,22 +181,6 @@ h1.logo {
   line-height: 2.5em;
 }
 
-// .courses-container .courses .courses-listing {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-wrap: wrap;
-// }
-
-// .home .courses-container .courses .courses-listing .courses-listing-item {
-//   margin: 0 5%;
-//   height: 360px;
-// }
-
-// .home .courses-container .courses .courses-listing .courses-listing-item:last-child {
-//   margin-right: 5%;
-// }
-
 .courses-container .courses {
   padding-bottom: 40px;
 }
@@ -574,3 +558,56 @@ button.button.button-primary.button-oa2-linkedin-oauth2.login-provider.register-
   font-size: 0.7em;
   margin: 0;
 }
+
+/* slider */
+div.window-wrap .home .courses-container .courses .courses-listing  {
+  display: none;
+}
+.courses-container .courses {
+  position: relative;
+}
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 30px;
+  margin-top: -25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_left {
+    left: 0;
+  }
+  &_right {
+    right: 0;
+  }
+  .fa {
+    color: #61a60e;
+  }
+}
+.slider-container {
+  box-sizing: border-box;
+  max-width: 335px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 30px;
+  overflow: hidden;
+}
+.slider-wrap {
+  width: 275px;
+  display: flex;
+  position: relative;
+  transition: 0.5s all;
+  left: 0
+}
+.slider-item {
+  height: 350px;
+  width: 275px;
+  min-width: 275px;
+  border: 1px solid red;
+  background: #ccc;
+  margin-right: 30px;
+}
+/* end slider*/
