@@ -1,0 +1,45 @@
+.content-box {
+    &_item {
+        overflow: hidden;
+        margin-bottom: 12px;
+    }
+    &_ico-holder {
+        background-color: #1aa1de;
+        border-radius: 50%;
+        height: 44px;
+        text-align: center;
+        width: 44px;
+        position: relative;
+        float: left;
+        margin-right: 20px;
+        color: #fff;
+        font-size: 29px;
+        line-height: 44px;
+    }
+    &_text-holder {
+        overflow: hidden;
+    }
+    &_text-heading {
+        color: #050505;
+        margin-bottom: 4.5px;
+    }
+    &_text {
+        margin-bottom: 16px;
+    }
+    &_link {
+        display: block;
+        width: 250px;
+        margin: 0 auto 20px;
+        @media screen and (min-width: 1000px) {
+            float: right;
+            margin: 15px 0 20px 20px;
+        }
+    }
+    &_img {
+        width: 250px;
+    }
+    &_header {
+        color: #050505;
+        margin-bottom: 20px;
+    }
+}

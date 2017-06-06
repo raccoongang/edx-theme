@@ -289,6 +289,10 @@ img#fourth-img {
   position: relative;
   border-bottom: 18px solid #080;
 
+  .details & {
+    border: none;
+  }
+
   &:after {
     content: '';
     height: 50px;
@@ -296,6 +300,113 @@ img#fourth-img {
     position: absolute;
     right: 0;
     bottom: -45px;
-    background:  url("../images/verified.png") 0 100%;
+    background: url("../images/verified.png") 0 100%;
+
+    .details & {
+      background: none;
+    }
   }
+}
+.course .details .course-image {
+  border: none;
+
+  &:after {
+    background: none;
+  }
+}
+body .course-info header.course-profile {
+  background: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: auto;
+
+  .intro-inner-wrapper {
+    background: none;
+    border: none;
+    box-shadow: none;
+    min-width: auto;
+
+    &>div.table {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      @media screen and (min-width: 760px) {
+        flex-wrap: nowrap;
+      }
+    }
+    .intro {
+      order: 2;
+      width: 100%;
+      @media screen and (min-width: 760px) {
+        width: auto;
+        max-width: 34%;
+      }
+
+      .main-cta a.register {
+        width: auto;
+        background: #0c5995;
+      }
+    }
+    .media {
+      order: 1;
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+      @media screen and (min-width: 760px) {
+        width: 66%;
+      }
+
+      .hero {
+        border: none;
+      }
+    }
+  }
+}
+.header-global h1.logo a:last-child img {
+  max-width: none;
+  width: 100px;
+}
+.course-info .container {
+  min-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  @media screen and (min-width: 760px) {
+    display: block;
+    padding: 40 0;
+  }
+}
+.course-info .details {
+  float: none;
+  width: 100%;
+  margin-right: 0;
+  order: 2;
+  padding: 0 10px;
+  @media screen and (min-width: 760px) {
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    padding: 0;
+  }
+}
+.course-info .course-sidebar {
+  order: 1;
+  width: 100%;
+  @media screen and (min-width: 760px) {
+    width: 31.76157%;
+  }
+}
+.course-info .details .inner-wrapper .course-staff .teacher {
+  margin-bottom: 40px;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  @media screen and (min-width: 760px) {
+    width: 25%;
+  }
+}
+.course-info .details .inner-wrapper .course-staff .teacher .teacher-image {
+  float: none;
 }
