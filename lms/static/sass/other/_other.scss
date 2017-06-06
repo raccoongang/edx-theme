@@ -11,6 +11,26 @@ section.outside-app,
 .find-courses {
     padding-top: 20px;
 }
+div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active {
+    background: transparent;
+}
+.promo-box_heading a,
+.u-field-message-notification a,
+div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
+div.window-wrap .bookmarks-results-list .list-item-right-section,
+div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before,
+div.window-wrap .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
+div.window-wrap .login-register .form-field .field-link, 
+div.window-wrap .financial-assistance-wrapper .financial-assistance-form .form-field .field-link,
+div.window-wrap p a, 
+div.window-wrap p a:visited,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
+div.window-wrap .instructor-dashboard-wrapper-2 .file-download-link a,
+.instructor-dashboard-content-2 a,
+div.window-wrap .btn-link,
+.supplemental-link a,
 .dashboard a {
     color: $theme-color-main;
     &:visited,
@@ -73,6 +93,11 @@ div.window-wrap .find-courses .discovery-submit {
         border-color: $theme-color-main;
     }
 }
+div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:hover,
+div.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover, 
+div.window-wrap .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label:hover, 
+div.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicegroup label:hover, 
+div.window-wrap .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label:hover,
 div.window-wrap .find-courses .discovery-input:focus {
     border-color: $theme-color-main-hover;
 }
@@ -85,4 +110,62 @@ body.view-in-course div.window-wrap {
 }
 body.view-in-course .window-wrap .content-wrapper{
     min-width: 720px;
+}
+div.window-wrap .wrap-instructor-info .instructor-info-action {
+    color: $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        background: $theme-color-main-hover;
+    }
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+.enrollment-wrapper strong {
+    color: $theme-color-main !important;
+}
+div.window-wrap .btn-brand,
+div.window-wrap .xmodule_display.xmodule_CapaModule div.problem button.btn-brand,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
+    color: #fff;
+    background: $theme-color-main;
+    box-shadow: none;
+    text-shadow: none;
+    border-color: $theme-color-main;
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: $theme-color-main-hover;
+        background: transparent;
+        color: $theme-color-main-hover;
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+div.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, 
+div.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, 
+div.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, 
+div.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, 
+div.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, 
+div.window-wrap .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+    border-bottom: 3px solid $theme-color-main;
+}
+div.window-wrap .btn-default {
+    color: $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+    border-color: $theme-color-main-hover;
+    background-color: transparent;
+    color: $theme-color-main-hover;
+    }
+}
+div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active:focus, 
+div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active:hover{
+    background: $theme-color-main;
+    color: #fff;
 }

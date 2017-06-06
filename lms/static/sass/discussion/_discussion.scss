@@ -134,3 +134,15 @@ div.window-wrap .discussion .action-button.action-follow:focus .action-icon {
 body.discussion .window-wrap .content-wrapper{
     min-width: 720px;
 }
+.discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+.page-header .user-name a {
+    color: $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-color-main-hover;
+    }
+}
+div.window-wrap .list-divided .item {
+    border-bottom: 0.0625rem dotted;
+}
