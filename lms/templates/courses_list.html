@@ -15,20 +15,106 @@
           </li>
         %endfor
         </ul>
-        <div class="slider-container">
-          <div class="slider-wrap">
-            <div class="slider-item"></div>
-            <div class="slider-item"></div>
-            <div class="slider-item"></div>
+      <div class="single-item slider">
+        <div class="slide-item">
+          <div class="slide">
+            <header class="slide-header">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img.png" alt="course banner" height="160">
+              <a class="learn-more" href="">LÄS MER</a>
+            </header>
+            <div class="slider-container">
+              <header>
+                <span class="course-organization">Opusplace</span>
+                <span class="course-title">Rädda Ekvationerna <br>del 2</span>
+              </header>
+              <footer>
+                <span class="course-date">Startdatum:</span>
+                <span class="course-date">
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA101.1+2017_08/about">28 aug, 2017</a>
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA101.1+2017_09/about">25 sep, 2017</a>
+                </span>
+              </footer>
+            </div>
           </div>
-          <span class="slide-btn slide-btn_left" role="button">
-              <span class="fa fa-angle-left fa-4x" aria-hidden="true"></span>
-          </span>
-          <span class="slide-btn slide-btn_right" role="button">
-              <span class="fa fa-angle-right fa-4x" aria-hidden="true"></span>
-          </span>
         </div>
+
+        <div class="slide-item">
+          <div class="slide">
+            <header class="slide-header">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img.png" alt="course banner" height="160">
+              <a class="learn-more" href="">LÄS MER</a>
+            </header>
+            <div class="slider-container">
+              <header>
+                <span class="course-organization">Opusplace</span>
+                <span class="course-title">Problemlösning<br>Att väcka intresse</span>
+              </header>
+              <footer>
+                <span class="course-date">Startdatum:</span>
+                <span class="course-date">
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA102.1+2017_09/about">25 sep, 2017</a>
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA102.1+2017_11/about">6 nov, 2017</a>
+                </span>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-item">
+          <div class="slide">
+            <header class="slide-header">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img.png" alt="course banner" height="160">
+              <a class="learn-more" href="">LÄS MER</a>
+            </header>
+            <div class="slider-container">
+              <header>
+                <span class="course-organization">Opusplace</span>
+                <span class="course-title">Tolerans och Demokrati</span>
+              </header>
+              <footer>
+                <span class="course-date">Startdatum:</span>
+                <span class="course-date">
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+SO100.1+2017_09/about">25 sep, 2017</a>
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+SO100.1+2017_11/about">20 nov, 2017</a>
+                </span>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-item">
+          <div class="slide">
+            <header class="slide-header">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img.png" alt="course banner" height="160">
+              <a class="learn-more" href="">LÄS MER</a>
+            </header>
+            <div class="slider-container">
+              <header>
+                <span class="course-organization">Opusplace</span>
+                <span class="course-title">Projekt CitizenZ</span>
+              </header>
+              <footer>
+                <span class="course-date">Startdatum:</span>
+                <span class="course-date">
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+SO101.1+2017_OPEN/about">4 sep, 2017 (self-paced until 5 nov, 2017)</a>
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+SO101.1+2017_11/about">6 nov, 2017</a>
+                </span>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
       </section>
+      <script src="/static/${settings.DEFAULT_SITE_THEME}/js/slick.min.js"></script>
+      <script>
+      var slider = $('.single-item');
+        slider.slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          pauseOnHover: true
+        }
+      );
+      </script>
     ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
       % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
       <div class="courses-more">
@@ -39,32 +125,3 @@
 
   </section>
 </section>
-<script>
-    var body = document,
-        slideWrap = body.querySelector('.slider-wrap'),
-        slideBtnLeft = body.querySelector('.slide-btn_left'),
-        slideBtnRight = body.querySelector('.slide-btn_right'),
-        sliderLength = body.querySelectorAll('.slider-item').length,
-        sliderWidth = body.querySelectorAll('.slider-item')[0].offsetWidth + 30,
-        count = 0,
-        sliderMaxWidth = sliderLength * sliderWidth - sliderWidth;
-
-        function slideBtnLeftAction() {
-          if(count <= 0 ) {
-            return false;
-          }
-          count = count - sliderWidth;
-          slideWrap.style.left = count + "px";
-        }
-
-        function slideBtnRightAction() {
-          if(count >= sliderMaxWidth ) {
-            return false;
-          }
-          count = count + sliderWidth;
-          slideWrap.style.left = count + "px";
-        }
-
-        slideBtnRight.addEventListener('click', slideBtnRightAction);
-        slideBtnLeft.addEventListener('click', slideBtnLeftAction);
-</script>

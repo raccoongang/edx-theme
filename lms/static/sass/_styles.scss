@@ -563,51 +563,286 @@ button.button.button-primary.button-oa2-linkedin-oauth2.login-provider.register-
 div.window-wrap .home .courses-container .courses .courses-listing  {
   display: none;
 }
-.courses-container .courses {
-  position: relative;
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
 }
-.slide-btn {
-  position: absolute;
-  top: 50%;
-  height: 50px;
-  width: 30px;
-  margin-top: -25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &_left {
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
     left: 0;
-  }
-  &_right {
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.slider {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.slide {
+    height: 350px;
+    width: 275px;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.125), inset 0 0 0 1px rgba(255,255,255,0.75);
+    background: #fafafa;
+    margin: 0 auto;
+    display: block;
+    border-bottom: 3px solid #61a60e;
+    transition: all 0.5s;
+    &:hover {
+      background: #f5f5f5;
+      border-color: #bebebe;
+      box-shadow: 0 1px 4px 0 #61a60e;
+    }
+}
+.slick-slide img{
+    margin: 0 auto;
+}
+.slick-initialized .slick-slide:focus,
+.slick-slide img:focus{
+    outline: none;
+}
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    z-index: 100;
+    width: 43px;
+    height: 50px;
+    text-indent: -200px;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-shadow: none;
+    box-shadow: none;
+    &:hover,
+    &:active,
+    &:focus {
+      background: transparent!important;
+      box-shadow: none!important;
+    }
+}
+.slick-next {
     right: 0;
-  }
-  .fa {
+}
+.slick-arrow:before {
+    font-size: 70px;
+    line-height: 35px;
+    text-indent: 0;
+    position: absolute;
+    top: 0;
     color: #61a60e;
+}
+.slick-prev:before {
+    content: "\f104";
+    left: 0;
+    margin-left: 10px;
+}
+.slick-next:before{
+    content: "\f105";
+    right: 0;
+    margin-right: 10px;
+}
+.slide .learn-more {
+  left: calc(50% - 100px);
+  box-sizing: border-box;
+  line-height: 41.44px;
+  position: absolute;
+  top: 55px;
+  opacity: 0;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  padding: 0 20px;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  transition: opacity 0.25s;
+  z-index: 100;
+}
+.slide .learn-more {
+  &:hover, 
+  &:focus, 
+  &:visited:hover, 
+  &:visited:focus {
+      color: #fff;
+      text-decoration: none;
   }
+}
+.slide:hover .learn-more{
+  opacity: 1;
+}
+.slide-header {
+  position: relative;
+  &:after {
+    left: 0;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background: #000;
+    width: 100%;
+    height: 160px;
+    content: '';
+    transition: opacity 0.25s;
+  }
+  &:before {
+    width: 100%;
+    height: 6px;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #61a60e;
+  }
+}
+.slide:hover .slide-header:after {
+  opacity: 0.6;
+}
+.slide-header img {
+  width: 100%;
 }
 .slider-container {
-  box-sizing: border-box;
-  max-width: 335px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 30px;
-  overflow: hidden;
-}
-.slider-wrap {
-  width: 275px;
   display: flex;
-  position: relative;
-  transition: 0.5s all;
-  left: 0
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+  padding: 0 15px;
+  font-family: "Open Sans",Verdana,Geneva,sans-serif;
 }
-.slider-item {
-  height: 350px;
-  width: 275px;
-  min-width: 275px;
-  border: 1px solid red;
-  background: #ccc;
-  margin-right: 30px;
+.slider .course-organization{
+  line-height: 16.28px;
+  padding: 10px 15px 2px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #474747;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: block;
+}
+.slide .course-title {
+    line-height: 23.68px;
+    margin: 5px 0 35px 0;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #000;
+}
+.slider .course-date {
+    color: #474747;
+    line-height: 20.72px;
+    padding: 2px 0;
+    font-size: 14px;
+    margin-right: 5px;
+    a {
+      color: #474747;
+      position: relative;
+      border-bottom: 1px solid #61a60e;
+      display: block;
+      margin-bottom: 5px;
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+        color: #474747;
+      }
+    }
+}
+.slider-container footer {
+  display: flex;
 }
 /* end slider*/
