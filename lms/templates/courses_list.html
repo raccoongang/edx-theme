@@ -96,7 +96,7 @@
               <footer>
                 <span class="course-date">Startdatum:</span>
                 <span class="course-date">
-                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+SO101.1+2017_OPEN/about">4 sep, 2017 (self-paced until 5 nov, 2017)</a>
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+SO101.1+2017_OPEN/about">4 sep - 5 nov, 2017 <br>öppen tillgång</a>
                   <a href="https://content.opusplace.com/courses/course-v1:Opusplace+SO101.1+2017_11/about">6 nov, 2017</a>
                 </span>
               </footer>
@@ -113,13 +113,13 @@
             <div class="slider-container">
               <header>
                 <span class="course-organization">Opusplace</span>
-                <span class="course-title">Rädda Ekvationerna <br>del 1</span>
+                <span class="course-title">Rädda Ekvationerna<br>del 1</span>
               </header>
               <footer>
                 <span class="course-date">Startdatum:</span>
                 <span class="course-date">
-                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA101.1+2017_08/about">28 aug, 2017</a>
-                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA101.1+2017_09/about">25 sep, 2017</a>
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA100.1+2017_08/about">28 aug, 2017</a>
+                  <a href="https://content.opusplace.com/courses/course-v1:Opusplace+MA100.1+2017_09/about">25 sep, 2017</a>
                 </span>
               </footer>
             </div>
@@ -130,13 +130,49 @@
       </section>
       <script src="/static/${settings.DEFAULT_SITE_THEME}/js/slick.min.js"></script>
       <script>
-      var slider = $('.single-item');
-        slider.slick({
-          autoplay: true,
-          autoplaySpeed: 2000,
-          pauseOnHover: true
-        }
+        var slider = $('.single-item')
+          .slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 600,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            pauseOnHover: true,
+            responsive: [{
+                    breakpoint: 980,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 650,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+          }
       );
+      slider.slick('slickPlay');
+      var myTimeout;
+        $( '.slick-arrow' )
+        .mouseenter(function() {
+            slider.slick('slickPause');
+        })
+        .mouseleave(function() {
+            slider.slick('slickPlay');
+        })
+        .click(function() {
+            clearTimeout(myTimeout);
+            myTimeout = setTimeout(function() {
+                slider.slick('slickPlay');
+            }, 6000);
+        });
+
+        $( '.slide' ).click(function() {
+            clearTimeout(myTimeout);
+            myTimeout = setTimeout(function() {
+                slider.slick('slickPlay');
+            }, 6000);
+        });
       </script>
     ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
       % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
