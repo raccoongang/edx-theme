@@ -1,67 +1,48 @@
 .promo-box {
-    position: relative;
-    margin: 0 auto 66px;
-    max-width: 1600px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    min-height: 200px;
-    justify-content: center;
-    @media all and (min-width: 800px){
-        min-height: 500px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-left: 8%;
+    box-sizing: border-box;
+    padding-right: 8%;
+    padding-top: 3%;
+    @media screen and (min-width: 760px) {
+        padding-left: 30%;
+    }
+    @media screen and (min-width: 1000px) {
+        padding-left: 40%;
     }
 
-    &__course {
-        min-height: 350px;
-    }
-
-    &_img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &_title {
+        line-height: 1.3;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        display: block;
+        font-size: 35px;
+        text-shadow: 1px 0px 1px rgba(0, 0, 0, 1);
+        @media screen and (min-width: 1000px) {
+            font-size: 40px;
+        }
+        @media screen and (min-width: 1500px) {
+            font-size: 43px;
+        }
     }
     &_text {
-        display: none;
-        @media all and (min-width: 860px){
-            display: block;
-            font: 24px/1 muliregular;
-            color: #fff;
-            text-transform: uppercase;
+        line-height: 1.3;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-style: italic;
+        text-shadow: 1px 0px 1px rgba(0, 0, 0, 1);
+        @media screen and (min-width: 1000px) {
+            font-size: 20px;
+        }
+        @media screen and (min-width: 1500px) {
+            font-size: 25px;
         }
     }
-    &_heading {
-        display: none;
-        @media all and (min-width: 800px){
-            display: block;
-            font: 60px/1.3 'Work Sans', sans-serif;
-            color: #fff;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin: 0 0 48px;
-        }
-    }
-    &_link {
-        font: 16px/1.3 muliregular;
-        display: inline-block;
-        background: #74bb00;
-        padding: 13px 14px 12px;
-        color: #fff !important;
-        text-transform: uppercase;
-    }
-    &_helper {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: #000;
-        opacity: .2;
-    }
-    &_holder {
-        position: relative;
-        text-align: center;
-    }
-};
+}

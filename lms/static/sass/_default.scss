@@ -2,6 +2,9 @@
   background-image: url("../images/background.jpg");
   height: 420px;
   background-position: center;
+  position: relative;
+  background-color: #040404;
+  background-position: 0 0;
   .outer-wrapper {
     padding: 280px 0 0;
     opacity: 0.7;
@@ -26,11 +29,65 @@
   border-bottom: none !important;
   // height: 93px !important;
   background: white !important;
-
 }
 .header-global .user {
   //:float: initial;
 }
+.home-button-wrapper {
+  overflow: hidden;
+  @media screen and (min-width: 760px) {
+    overflow: visible;
+  }
+}
+
+.header-global .nav-global {
+    margin: 20px 0 0;
+    float: none;
+    @media screen and (min-width: 760px) {
+      width: auto;
+      margin: 10px 0 0 auto;
+      float: left;
+    }
+
+    .item {
+      width: 100%;
+      border-top: 1px solid #000;
+      @media screen and (min-width: 760px) {
+        width: auto;
+        border: none;
+      }
+    }
+    .tab-nav-item {
+      width: 100%;
+      border-top: 1px solid #000;
+      @media screen and (min-width: 760px) {
+        width: auto;
+        border: none;
+      }
+
+      .active {
+        border: none !important;
+        @media screen and (min-width: 760px) {
+          border-bottom: 4px solid rgba(0,0,0,0.75) !important;
+          width: auto;
+        }
+      }
+      .tab-nav-link {
+        width: 100%;
+        padding: 5px 25px;
+        @media screen and (min-width: 760px) {
+          padding: 5px 25px 23px;
+        }
+
+        &:hover {
+          border: none !important;
+          @media screen and (min-width: 760px) {
+
+          }
+        }
+      }
+    }
+  }
 
 .header-global .user>.primary:last-child {
   margin-top: 10px;
@@ -109,15 +166,9 @@
   margin-top: -13px;
 }
 
-.header-global.slim {
+body .header-global.slim {
   h2 {
-    width: auto !important;
-    width: initial !important;
-  }
-  .wrapper-header {
-    .user, .wrapper-user-menu {
-      margin: 40px -253px 2px 0;
-    }
+    display: none;
   }
 }
 
@@ -285,6 +336,13 @@ img#fourth-img {
 .header-global nav {
     width: auto !important;
 }
+.header-global .wrapper-header {
+  display: block;
+  padding: 18px 10px;
+  @media screen and (min-width: 760px){
+    display: flex;
+  }
+}
 .course .course-image {
   position: relative;
   border-bottom: 18px solid #080;
@@ -363,6 +421,9 @@ body .course-info header.course-profile {
     }
   }
 }
+.header-global h1.logo a:last-child {
+  width: auto;
+}
 .header-global h1.logo a:last-child img {
   max-width: none;
   width: 100px;
@@ -374,7 +435,10 @@ body .course-info header.course-profile {
   padding: 0 10px;
   @media screen and (min-width: 760px) {
     display: block;
-    padding: 40 0;
+    padding: 40px 10px;
+  }
+  @media screen and (min-width: 1180px) {
+    padding: 40px 0;
   }
 }
 .course-info .details {
