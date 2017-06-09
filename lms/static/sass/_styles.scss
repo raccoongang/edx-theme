@@ -743,23 +743,45 @@ div.window-wrap .home .courses-container .courses .courses-listing  {
     margin-right: 10px;
 }
 .slide .learn-more {
-  left: calc(50% - 100px);
   box-sizing: border-box;
-  line-height: 41.44px;
   position: absolute;
-  top: 55px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  line-height: 24.44px;
   opacity: 0;
   border: 3px solid #fff;
   border-radius: 3px;
-  padding: 0 20px;
-  width: 200px;
-  height: 50px;
+  padding: 10px 0;
+  width: 246px;
+  height: auto;
   text-align: center;
   color: #fff;
   transition: opacity 0.25s;
   z-index: 100;
+    @media (max-width: 450px) {
+      width: 200px;
+    }
+  &_date {
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    &:hover {
+      border-bottom: 1px solid #61a60e;
+    }
+  }
+  &_text {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
 }
-.slide .learn-more {
+.slide .learn-more a{
+  color: #fff;
+  display: inline-block;
   &:hover, 
   &:focus, 
   &:visited:hover, 
