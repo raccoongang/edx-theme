@@ -1,0 +1,22 @@
+.open-box {
+    padding: 0 0 50px;
+    position: relative;
+    overflow: hidden;
+    transition: height .1s;
+    height: auto;
+    box-sizing: border-box;
+
+    &__show {
+        height: auto;
+    }
+    &_link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: red;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

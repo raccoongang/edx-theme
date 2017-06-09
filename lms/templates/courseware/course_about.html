@@ -25,6 +25,102 @@ from django.template.defaultfilters import truncatechars
   % endif
   <script type="text/javascript">
   (function() {
+    // $(".open-box_link").click(function() {
+    //   $(this).parent().slideToggle( "fast", function() {});
+    // });
+
+        // var expanders = document.querySelectorAll('.open-box_link');
+    // if (expanders) {
+    //     [].slice.call(expanders).forEach(function(exp) {
+    //         exp.addEventListener('click', function() {
+    //             exp.parentNode.classList.toggle('open-box__show');
+    //         });
+    //     });
+    // }
+    // $(".open-box_link").bind("click", function(e){
+    //     var boxHeight = $(this).parent().height();
+    //     console.log(boxHeight)
+    //     $(this).parent().css("height", boxHeight); 
+    // });
+
+    
+    
+    //   $(".open-box_link").click(function(){
+    //     console.log('click');
+    //     if($(this).parent().height() === 0){
+    //       autoHeightAnimate($(this).parent(), 500);
+    //     } else {
+    //       $(this).parent().stop().animate({ height: '150' }, 500);
+    //     }
+    //   });
+
+    //   /* Function to animate height: auto */
+    // function autoHeightAnimate(element, time){
+    //     var curHeight = element.height(), // Get Default Height
+    //         autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+    //         element.height(curHeight); // Reset to Default Height
+    //         element.stop().animate({ height: autoHeight }, time);
+    // };
+
+    // This is the important part!
+
+function collapseSection(element) {
+  // get the height of the element's inner content, regardless of its actual size
+  var sectionHeight = element.scrollHeight;
+  
+  // temporarily disable all css transitions
+  var elementTransition = element.style.transition;
+  element.style.transition = '';
+  
+  // on the next frame (as soon as the previous style change has taken effect),
+  // explicitly set the element's height to its current pixel height, so we 
+  // aren't transitioning out of 'auto'
+  requestAnimationFrame(function() {
+    element.style.height = sectionHeight + 'px';
+    element.style.transition = elementTransition;
+    
+    // on the next frame (as soon as the previous style change has taken effect),
+    // have the element transition to height: 0
+    requestAnimationFrame(function() {
+      element.style.height = 150 + 'px';
+    });
+  });
+  
+  // mark the section as "currently collapsed"
+  element.setAttribute('data-collapsed', 'true');
+}
+
+function expandSection(element) {
+  // get the height of the element's inner content, regardless of its actual size
+  var sectionHeight = element.scrollHeight;
+  
+  // have the element transition to the height of its inner content
+  element.style.height = sectionHeight + 'px';
+
+  // when the next css transition finishes (which should be the one we just triggered)
+  element.addEventListener('transitionend', function(e) {
+    // remove this event listener so it only gets triggered once
+    element.removeEventListener('transitionend', arguments.callee);
+    
+    // remove "height" from the element's inline styles, so it can return to its initial value
+    element.style.height = null;
+  });
+  
+  // mark the section as "currently not collapsed"
+  element.setAttribute('data-collapsed', 'false');
+}
+$(".open-box_link").click(function() {
+  var section = document.querySelector('.open-box');
+  var isCollapsed = section.getAttribute('data-collapsed') === 'true';
+  if(isCollapsed) {
+    expandSection(section)
+    section.setAttribute('data-collapsed', 'false')
+  } else {
+    collapseSection(section)
+  }
+});
+
+      
     $(".register").click(function(event) {
       $("#class_enroll_form").submit();
       event.preventDefault();
@@ -222,6 +318,14 @@ from django.template.defaultfilters import truncatechars
 
       <div class="inner-wrapper ugc">
         ${get_course_about_section(request, course, "overview")}
+        <div class="open-box">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!</p>
+          <span class="open-box_link">see more</span>
+        </div>
         <div class="content-box">
           <h2 class="content-box_header">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
             <a class="content-box_link" href="#"><img class="content-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/cert-verified-thumb.png" alt=""></a>
