@@ -82,7 +82,7 @@ function collapseSection(element) {
     // on the next frame (as soon as the previous style change has taken effect),
     // have the element transition to height: 0
     requestAnimationFrame(function() {
-      element.style.height = 150 + 'px';
+      element.style.height = 180 + 'px';
     });
   });
   
@@ -110,7 +110,7 @@ function expandSection(element) {
   element.setAttribute('data-collapsed', 'false');
 }
 $(".open-box_link").click(function() {
-  var section = document.querySelector('.open-box');
+  var section = $(this).closest('.open-box').get(0);
   var isCollapsed = section.getAttribute('data-collapsed') === 'true';
   if(isCollapsed) {
     expandSection(section)
@@ -318,13 +318,13 @@ $(".open-box_link").click(function() {
 
       <div class="inner-wrapper ugc">
         ${get_course_about_section(request, course, "overview")}
-        <div class="open-box">
+        <div class="open-box" data-collapsed="true" style="height: 180px">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!</p>
-          <span class="open-box_link">see more</span>
+          <span class="open-box_link"> <span class="icon fa fa-plus"></span> see more</span>
         </div>
         <div class="content-box">
           <h2 class="content-box_header">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
@@ -428,6 +428,12 @@ $(".open-box_link").click(function() {
           % if get_course_about_section(request, course, "prerequisites"):
             <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${truncatechars(course.display_number_with_default, 25) | h}</span></li>
           % endif
+          <li class="important-dates-item"><i class="icon fa fa-clock-o"></i><p class="important-dates-item-title">Length</p><span class="important-dates-item-text">5</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-tachometer"></i><p class="important-dates-item-title">Effort</p><span class="important-dates-item-text">5</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-university"></i><p class="important-dates-item-title">Institute</p><span class="important-dates-item-text">5</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">Certificate</p><span class="important-dates-item-text">5</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-comment-o"></i><p class="important-dates-item-title">Language</p><span class="important-dates-item-text">5</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-certificate"></i><p class="important-dates-item-title">Level</p><span class="important-dates-item-text">5</span></li>
         </ol>
     </div>
       ## For now, ocw links are the only thing that goes in additional resources
