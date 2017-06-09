@@ -753,15 +753,12 @@ div.window-wrap .home .courses-container .courses .courses-listing  {
   border: 3px solid #fff;
   border-radius: 3px;
   padding: 10px 0;
-  width: 246px;
+  width: 200px;
   height: auto;
   text-align: center;
   color: #fff;
   transition: opacity 0.25s;
   z-index: 100;
-    @media (max-width: 450px) {
-      width: 200px;
-    }
   &_date {
     border-bottom: 1px solid transparent;
     display: inline-block;
@@ -775,8 +772,8 @@ div.window-wrap .home .courses-container .courses .courses-listing  {
     }
   }
   &_text {
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 17px;
+    display: block;
   }
 }
 .slide .learn-more a{
