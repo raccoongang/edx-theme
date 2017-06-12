@@ -14,8 +14,24 @@ section.outside-app,
 div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: transparent;
 }
+div.window-wrap .post-context a,
+div.window-wrap .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
+div.window-wrap .xmodule_display.xmodule_VideoModule .video .subtitles a,
+div.window-wrap .profile-wrapper .course-info>.chapters>section .sections a,
+div.window-wrap .view-discussion-home .helpgrid-row-participation .fa-star,
+div.window-wrap .discussion .action-button.action-follow .action-label,
+div.window-wrap .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+div.window-wrap .discussion .post-label.post-label-following,
+div.window-wrap .discussion.inline-discussion .new-post-article .add-post-cancel,
+div.window-wrap .course-index .accordion .course-navigation .button-chapter,
+div.window-wrap .xmodule_display.xmodule_CapaModule div.problem .hints div header a,
+div.window-wrap .incontext-help.action-secondary.action-help,
+div.window-wrap .form-cancel.action-secondary.action-cancel,
+div.window-wrap .action-type-container a,
+div.window-wrap .progress-link-wrapper a.progress-link,
 div.window-wrap .promo-box_heading a,
-.u-field-message-notification a,
+div.window-wrap .u-field-message-notification a,
+div.window-wrap .supplemental-link a,
 div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
 div.window-wrap .bookmarks-results-list .list-item-right-section,
 div.window-wrap .bookmarks-results-list .bookmarks-results-list-item:before,
@@ -28,10 +44,11 @@ div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_man
 div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
 div.window-wrap .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
 div.window-wrap .instructor-dashboard-wrapper-2 .file-download-link a,
-.instructor-dashboard-content-2 a,
+div.window-wrap .instructor-dashboard-content-2 a,
 div.window-wrap .btn-link,
-.supplemental-link a,
-.dashboard a {
+div.window-wrap .updates a,
+div.window-wrap div.info-wrapper section.handouts ol li a,
+div.window-wrap .dashboard a {
     color: $theme-color-main;
     &:visited,
     &:hover,
@@ -168,4 +185,61 @@ div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active:fo
 div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active:hover{
     background: $theme-color-main;
     color: #fff;
+}
+.window-wrap .find-courses .wrapper-search-context {
+    padding: 0;
+}
+div.window-wrap .discussion-module .btn {
+    border: 1px solid $theme-color-main;
+    color: $theme-color-main !important;
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $theme-color-main !important;
+        background-color: $theme-color-main !important;
+        background-image: none !important;
+        box-shadow: none !important;
+        color: #fff !important;
+        text-decoration: none !important;
+    }
+}
+div.window-wrap .discussion-module .btn-brand, 
+div.window-wrap .wmd-prompt-dialog .btn {
+    &:hover,
+    &:focus,
+    &:active {
+    border-color: $theme-color-main !important;
+    background-color: $theme-color-main !important;
+    }
+}
+div.window-wrap .forum-new-post-form .post-type-input:checked + .post-type-label, 
+div.window-wrap .edit-post-form .post-type-input:checked + .post-type-label {
+    background-color: $theme-color-main;
+}
+div.window-wrap .forum-nav-thread.never-read .forum-nav-thread-link {
+    border-left: 3px solid $theme-color-main;
+    color: $theme-color-main;
+}
+div.window-wrap .discussion .action-button.action-follow.is-checked .action-icon, 
+div.window-wrap .discussion .action-button.action-follow:hover .action-icon, 
+div.window-wrap .discussion .action-button.action-follow:focus .action-icon {
+    background-color: $theme-color-main;
+    border: 1px solid $theme-color-main;
+}
+div.window-wrap .discussion .action-button.action-follow:hover, 
+div.window-wrap .discussion .action-button.action-follow:focus {
+    border-color: $theme-color-main;
+}
+div.window-wrap .empty-dashboard-message a{
+    background-color: $theme-color-main;
+    border: 1px solid $theme-color-main;
+    color: #fff;
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-color-main;
+        border: 1px solid $theme-color-main;
+        background: transparent;
+    }
 }
