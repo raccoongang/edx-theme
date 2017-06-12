@@ -28,4 +28,24 @@
             cursor: pointer;
         }
     }
+    &_more {
+        display: inline-block;
+    }
+    &_hide {
+        display: none;
+    }
+    .open-box__open & {
+        &_more {
+            display: none;
+        }
+        &_hide {
+            display: inline-block;
+        }
+    }
+    .fa {
+        border: 2px solid #2968aa;
+        border-radius: 50%;
+        width: 14px;
+        padding: 1px 1px 1px 3px;
+    }
 }

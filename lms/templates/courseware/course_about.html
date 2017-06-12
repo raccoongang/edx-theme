@@ -71,6 +71,7 @@ function collapseSection(element) {
   // temporarily disable all css transitions
   var elementTransition = element.style.transition;
   element.style.transition = '';
+  element.classList.remove('open-box__open');
   
   // on the next frame (as soon as the previous style change has taken effect),
   // explicitly set the element's height to its current pixel height, so we 
@@ -109,17 +110,74 @@ function expandSection(element) {
   // mark the section as "currently not collapsed"
   element.setAttribute('data-collapsed', 'false');
 }
+function collapseSectionCourse(element) {
+  // get the height of the element's inner content, regardless of its actual size
+  var sectionHeight = element.scrollHeight;
+  
+  // temporarily disable all css transitions
+  var elementTransition = element.style.transition;
+  element.style.transition = '';
+  element.classList.remove('course-outline__open');
+  
+  // on the next frame (as soon as the previous style change has taken effect),
+  // explicitly set the element's height to its current pixel height, so we 
+  // aren't transitioning out of 'auto'
+  requestAnimationFrame(function() {
+    element.style.height = sectionHeight + 'px';
+    element.style.transition = elementTransition;
+    
+    // on the next frame (as soon as the previous style change has taken effect),
+    // have the element transition to height: 0
+    requestAnimationFrame(function() {
+      element.style.height = 0 + 'px';
+    });
+  });
+  
+  // mark the section as "currently collapsed"
+  element.setAttribute('data-collapsed', 'true');
+}
+
+function expandSectionCourse(element) {
+  // get the height of the element's inner content, regardless of its actual size
+  var sectionHeight = element.scrollHeight;
+  
+  // have the element transition to the height of its inner content
+  element.style.height = sectionHeight + 'px';
+
+  // when the next css transition finishes (which should be the one we just triggered)
+  element.addEventListener('transitionend', function(e) {
+    // remove this event listener so it only gets triggered once
+    element.removeEventListener('transitionend', arguments.callee);
+    
+    // remove "height" from the element's inline styles, so it can return to its initial value
+    element.style.height = null;
+  });
+  
+  // mark the section as "currently not collapsed"
+  element.setAttribute('data-collapsed', 'false');
+}
 $(".open-box_link").click(function() {
   var section = $(this).closest('.open-box').get(0);
   var isCollapsed = section.getAttribute('data-collapsed') === 'true';
   if(isCollapsed) {
-    expandSection(section)
-    section.setAttribute('data-collapsed', 'false')
+    expandSection(section);
+    section.setAttribute('data-collapsed', 'false');
+    section.classList.add('open-box__open');
   } else {
-    collapseSection(section)
+    collapseSection(section);
   }
 });
-
+$(".course-outline_link").click(function() {
+  var section = $(this).closest('.course-outline').get(0);
+  var isCollapsed = section.getAttribute('data-collapsed') === 'true';
+  if(isCollapsed) {
+    expandSectionCourse(section);
+    section.setAttribute('data-collapsed', 'false');
+    section.classList.add('course-outline__open');
+  } else {
+    collapseSectionCourse(section);
+  }
+});
       
     $(".register").click(function(event) {
       $("#class_enroll_form").submit();
@@ -324,7 +382,21 @@ $(".open-box_link").click(function() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!</p>
-          <span class="open-box_link"> <span class="icon fa fa-plus"></span> see more</span>
+          <span class="open-box_link">
+            <span class="open-box_more"><span class="icon fa fa-plus"></span> see more</span>
+            <span class="open-box_hide"><span class="icon fa fa-minus"></span> hide</span>
+          </span>
+        </div>
+        <div class="course-outline" data-collapsed="true" style="height: 0px">
+          <span class="course-outline_link">
+            <span class="course-outline_more"><span class="icon fa fa-file-text"></span> View course outline</span>
+            <span class="course-outline_hide"><span class="icon fa fa-file-text"></span> Hide course outline</span>
+          </span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!</p>
         </div>
         <div class="content-box">
           <h2 class="content-box_header">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>

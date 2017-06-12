@@ -1,0 +1,26 @@
+.course-outline {
+    position: relative;
+    overflow: hidden;
+    transition: height .1s;
+    height: auto;
+    box-sizing: border-box;
+    padding-bottom: 21px;
+
+    &_link {
+        color: #2968aa;
+    }
+    &_more {
+        display: inline-block;
+    }
+    &_hide {
+        display: none;
+    }
+    .course-outline__open & {
+        &_more {
+            display: none;
+        }
+        &_hide {
+            display: inline-block;
+        }
+    }
+}
