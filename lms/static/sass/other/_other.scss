@@ -14,6 +14,10 @@ section.outside-app,
 div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: transparent;
 }
+div.window-wrap .login form .field.is-focused .tip, 
+div.window-wrap .register form .field.is-focused .tip, 
+div.window-wrap .passwordreset form .field.is-focused .tip,
+div.window-wrap #forgot-password-modal #password-reset form .field.is-focused .tip,
 .view-register div.window-wrap .introduction header .title .title-super, 
 .view-login div.window-wrap .introduction header .title .title-super, 
 .view-passwordreset div.window-wrap .introduction header .title .title-super,
@@ -66,6 +70,7 @@ div.window-wrap .dashboard a {
     &:focus,
     &:active {
         color: $theme-color-main-hover;
+        border-bottom: none;
     }
 }
 div.window-wrap .find-courses .loading-spinner,
@@ -254,6 +259,7 @@ div.window-wrap .empty-dashboard-message a{
         background: transparent;
     }
 }
+div.window-wrap .register .form-actions button[type="submit"],
 div.window-wrap #forgot-password-modal #password-reset .form-actions button[type="submit"],
 div.window-wrap .login .form-actions button[type="submit"] {
     box-shadow: none;
@@ -268,10 +274,7 @@ div.window-wrap .login .form-actions button[type="submit"] {
         color: $theme-color-main;
     }
 }
-.view-register div.window-wrap .register h3 {
-    color: #fff;
-}
-div.window-wrap .register .complementary .btn-brand {
+div.window-wrap .register .btn-brand.btn-login {
     background: transparent;
 }
 div.window-wrap .register aside .btn-login .btn-login-action {
@@ -283,4 +286,22 @@ div.window-wrap .register aside .btn-login .btn-login-action {
         border: 1px solid $theme-color-main;
         color: #fff;
     }
+}
+div.window-wrap .search-bar .search-button, 
+div.window-wrap .search-bar .cancel-button, 
+div.window-wrap .search-bar .search-button:hover, 
+div.window-wrap .search-bar .cancel-button:hover,
+div.window-wrap .search-bar .search-button:hover, 
+div.window-wrap .search-bar .search-button:focus, 
+div.window-wrap .search-bar .search-button:active, 
+div.window-wrap .search-bar .cancel-button:hover, 
+div.window-wrap .search-bar .cancel-button:focus, 
+div.window-wrap .search-bar .cancel-button:active, 
+div.window-wrap .search-bar .search-button:hover:hover, 
+div.window-wrap .search-bar .search-button:hover:focus, 
+div.window-wrap .search-bar .search-button:hover:active, 
+div.window-wrap .search-bar .cancel-button:hover:hover, 
+div.window-wrap .search-bar .cancel-button:hover:focus, 
+div.window-wrap .search-bar .cancel-button:hover:active {
+    background: $theme-color-main;
 }
