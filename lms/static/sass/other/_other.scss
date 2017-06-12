@@ -14,6 +14,17 @@ section.outside-app,
 div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: transparent;
 }
+.view-register div.window-wrap .introduction header .title .title-super, 
+.view-login div.window-wrap .introduction header .title .title-super, 
+.view-passwordreset div.window-wrap .introduction header .title .title-super,
+div.window-wrap .login form .field.is-focused label,
+div.window-wrap .register form .field.is-focused label,
+div.window-wrap .passwordreset form .field.is-focused label, 
+div.window-wrap #forgot-password-modal #password-reset form .field.is-focused label,
+div.window-wrap .register a:link,
+.view-login div.window-wrap #forgot-password-modal #password-reset header h2,
+div.window-wrap .login a,
+div.window-wrap .login a:link,
 div.window-wrap .post-context a,
 div.window-wrap .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
 div.window-wrap .xmodule_display.xmodule_VideoModule .video .subtitles a,
@@ -241,5 +252,35 @@ div.window-wrap .empty-dashboard-message a{
         color: $theme-color-main;
         border: 1px solid $theme-color-main;
         background: transparent;
+    }
+}
+div.window-wrap #forgot-password-modal #password-reset .form-actions button[type="submit"],
+div.window-wrap .login .form-actions button[type="submit"] {
+    box-shadow: none;
+    background: $theme-color-main;
+    border: 1px solid $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none;
+        background: transparent;
+        border: 1px solid $theme-color-main;
+        color: $theme-color-main;
+    }
+}
+.view-register div.window-wrap .register h3 {
+    color: #fff;
+}
+div.window-wrap .register .complementary .btn-brand {
+    background: transparent;
+}
+div.window-wrap .register aside .btn-login .btn-login-action {
+    color: $theme-color-main;
+    &:focus,
+    &:hover,
+    &:active {
+        background: $theme-color-main;
+        border: 1px solid $theme-color-main;
+        color: #fff;
     }
 }
