@@ -75,6 +75,11 @@
         background: url('#{$img-path}/header-info/mail.png') no-repeat 0 50%;
         padding-left: 18px;
         margin-left: 18px;
+        &:hover,
+        &:focus {
+            color: $theme-color-main-hover;
+            text-decoration: none;
+        }
         @media all and (max-width: 450px) {
             margin-left: 0;
         }

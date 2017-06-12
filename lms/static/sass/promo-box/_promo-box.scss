@@ -5,13 +5,16 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    height: 200px; //ie
     min-height: 200px;
     justify-content: center;
     @media all and (min-width: 800px){
+        height: 500px; //ie
         min-height: 500px;
     }
 
     &__course {
+        height: 350px; //ie
         min-height: 350px;
     }
 

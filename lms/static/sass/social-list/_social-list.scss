@@ -26,3 +26,10 @@
         line-height: 1.3;
     }
 }
+div.window-wrap a.social-list_link {
+    &:hover,
+    &:focus {
+        color: $theme-color-main-hover;
+        text-decoration: none;
+    }
+}

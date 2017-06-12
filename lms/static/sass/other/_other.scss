@@ -70,6 +70,18 @@ div.window-wrap .dashboard a {
     &:focus,
     &:active {
         color: $theme-color-main-hover;
+    }
+}
+.register form .field.required label a:visited{
+    color: $theme-color-main-hover;
+}
+div.window-wrap .register a,
+div.window-wrap .login a:link {
+    border-bottom: none;
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
         border-bottom: none;
     }
 }
