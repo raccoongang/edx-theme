@@ -328,6 +328,7 @@ body a.doc-link::-moz-focus-inner{
     display: flex;
     flex-wrap: wrap;
 }
+.find-courses .courses-container .courses .courses-listing .courses-listing-item,
 .courses-container .courses .courses-listing .courses-listing-item {
     height: auto;
     min-height: 360px;
@@ -347,4 +348,7 @@ body a.doc-link::-moz-focus-inner{
 .courses-container .courses .course .course-info .course-date {
     position: absolute;
     bottom: 0;
+}
+.find-courses .courses .course a {
+    height: 100%;
 }
