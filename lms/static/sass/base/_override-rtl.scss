@@ -21,26 +21,126 @@
     margin-left: auto;
     margin-bottom: 15px;
 }
+.view-profile .profile-image-field,
+.dashboard .my-courses .course .details .course-info, 
+.dashboard .my-courses .course .details .programs-info,
+.dashboard .my-courses,
+div.program-cards-container,
+.wrapper-account-settings .wrapper-header .account-nav,
 .discussion-body .forum-nav,
 .discussion .tabs .tab {
     float: right
 }
+.dashboard .my-courses .course .details .wrapper-course-actions,
+.dashboard-search-bar,
+.grid-container .col.col-last, 
+.course-card .section .col.col-last,
 .container .discussion-body .discussion-column,
 body.discussion .course-tabs .right {
     float: left;
+}
+.dashboard .my-courses .course .details .wrapper-course-details {
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.dashboard-search-bar {
+    margin-left: 0;
+    margin-right: 2.35765%;
+}
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more,
+.wrapper-course-actions .course-actions {
+    display: flex;
+}
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more {
+    width: auto;
+}
+.dashboard .my-courses .course .details .enter-course {
+    order: 1;
 }
 .footer_wrapper,
 .courses-box,
 .promo-box {
     flex-direction: row-reverse;
 }
+.account-settings-sections .section .account-settings-section-body .u-field {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
+    padding: 24px 100px 0 0;
+}
 .home .courses-container_btn-holder, 
 .home .programs__btn-holder {
     text-align: left;
 }
+button.forum-nav-browse-title,
+.container .discussion-body .discussion-article, 
+.container .discussion-module .discussion-article, 
+.container .discussion-user-threads .discussion-article,
+.forum-nav-search-input,
+textarea, form#wiki_revision .CodeMirror, 
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+.search-bar .search-field,
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group, 
+.programs-info header.course-profile .intro-inner-wrapper .intro>.heading-group,
+.find-courses .wrapper-search-context .discovery-input,
+.find-courses .search-facets .header-facet,
+.find-courses .search-facets .facet-option,
+.courses-container .courses .course .course-info .course-date,
+.dashboard .my-courses .wrapper-header-courses .header-courses,
+.dashboard-search-bar form,
+.account-settings-sections .section .account-settings-section-body .u-field .field .field-input,
+.courses-box_holder,
 .home .courses-container_heading, 
 .home .programs__title {
     text-align: right;
+}
+.forum-nav-search .icon {
+    right: 100%;
+    margin-right: -20px;
+}
+.forum-nav-search-input {
+    padding-right: 10px !important;
+}
+.course-info header.course-profile .intro-inner-wrapper .media, 
+.programs-info header.course-profile .intro-inner-wrapper .media {
+    align-self: baseline;
+}
+div.wrapper-course-modes {
+    padding: 5px;
+}
+.search-field {
+    span.icon.fa.fa-search {
+        position: relative;
+        left: -60px;
+    }
+}
+.find-courses .discovery-submit {
+    left: 0;
+}
+.find-courses .search-facets .facet-option .count {
+    text-align: left;
+    right: 100%;
+    margin-right: -50px;
+}
+body.view-in-course .course-wrapper,
+.course-info header.course-profile .intro-inner-wrapper>div.table, 
+.programs-info header.course-profile .intro-inner-wrapper>div.table {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.course-info .details, 
+.programs-info .details {
+    float: right;
+    margin-left: 2.35765%;
+    margin-right: 0;
+    text-align: right;
+}
+.find-courses .filters .filters-inner:after {
+    display: none;
 }
 .wrapper-footer footer#footer-openedx {
     &:after {
@@ -49,9 +149,115 @@ body.discussion .course-tabs .right {
         clear: both;
     }
 }
+.view-profile .profile-section-one-fields {
+    float: right;
+    margin-left: 0;
+    margin-right: 20px;
+}
+.find-courses .filters .filters-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
 .header-nav-holder_btn {
     right: 100%;
     margin-right: -50px;
+}
+.promo-box_right .promo-box_text-wrapper {
+    padding-left: 0;
+    padding-right: 60px;
+}
+.courses-box_lable {
+    padding: 0 30px 0 0;
+}
+.courses-box_time {
+    position: relative;
+    .ico-clock {
+        text-indent: 50px;
+        position: absolute;
+        right: 0;
+    }
+}
+.header-helper_list-item:last-child {
+     margin-left:0
+}
+.header-helper_mail {
+    position: relative;
+    padding-right: 25px;
+    .header-helper_ico-holder {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
+    position: relative;
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx .racoon-link {
+    position: relative;
+    padding-left: 40px;
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+.promo-box {
+    text-align: right;
+    &_big-text {
+        margin-left: auto;
+    }
+}
+.find-courses .search-facets {
+    margin: 28px 0 70px 0;
+}
+.course-name, 
+.programs-name {
+    padding: 0 15px 0 5px;
+    text-align: right;
+}
+@media (min-width: 768px){
+    .program-cards-container {
+        margin-right: 0;
+        margin-left: 2.12766%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header-helper_left-side {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+    .header-helper_mail {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.header-nav-holder.show .header-nav-holder_wrapper {
+    align-items: flex-start;
+}
+@media screen and (max-width: 1140px){
+    .header-nav {
+        justify-content: flex-start;
+    }
+    .promo-box_left .promo-box_text-wrapper {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+@media screen and (min-width: 1140px){
+    .promo-box_text-wrapper {
+        float: right;
+        text-align: right;
+    }
+}
+@media screen and (min-width: 980px) {
+    .find-courses .courses-container .courses:not(.no-course-discovery) {
+        float: right;
+        margin-right: 0;
+        margin-left: 2.35765%;
+    }
 }
 @media screen and (max-width: 600px){
     .header-helper_list-item:first-child {
