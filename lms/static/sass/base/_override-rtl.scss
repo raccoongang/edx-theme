@@ -16,6 +16,11 @@
 .find-courses .wrapper-search-context .wrapper-search-input {
     margin: 0 auto 30px 0 !important;
 }
+.footer-nav {
+    text-align: right;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
 .discussion-body .forum-nav,
 .discussion .tabs .tab {
     float: right
@@ -23,4 +28,37 @@
 .container .discussion-body .discussion-column,
 body.discussion .course-tabs .right {
     float: left;
+}
+.footer_wrapper,
+.courses-box,
+.promo-box {
+    flex-direction: row-reverse;
+}
+.home .courses-container_btn-holder, 
+.home .programs__btn-holder {
+    text-align: left;
+}
+.home .courses-container_heading, 
+.home .programs__title {
+    text-align: right;
+}
+.wrapper-footer footer#footer-openedx {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.header-nav-holder_btn {
+    right: 100%;
+    margin-right: -50px;
+}
+@media screen and (max-width: 600px){
+    .header-helper_list-item:first-child {
+        margin-left: 20px;
+    }
+    .header-helper_ico-holder {
+        margin-right: 0;
+        margin-left: 10px;
+    }
 }
