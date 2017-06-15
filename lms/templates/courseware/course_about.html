@@ -25,43 +25,6 @@ from django.template.defaultfilters import truncatechars
   % endif
   <script type="text/javascript">
   (function() {
-    // $(".open-box_link").click(function() {
-    //   $(this).parent().slideToggle( "fast", function() {});
-    // });
-
-        // var expanders = document.querySelectorAll('.open-box_link');
-    // if (expanders) {
-    //     [].slice.call(expanders).forEach(function(exp) {
-    //         exp.addEventListener('click', function() {
-    //             exp.parentNode.classList.toggle('open-box__show');
-    //         });
-    //     });
-    // }
-    // $(".open-box_link").bind("click", function(e){
-    //     var boxHeight = $(this).parent().height();
-    //     console.log(boxHeight)
-    //     $(this).parent().css("height", boxHeight); 
-    // });
-
-    
-    
-    //   $(".open-box_link").click(function(){
-    //     console.log('click');
-    //     if($(this).parent().height() === 0){
-    //       autoHeightAnimate($(this).parent(), 500);
-    //     } else {
-    //       $(this).parent().stop().animate({ height: '150' }, 500);
-    //     }
-    //   });
-
-    //   /* Function to animate height: auto */
-    // function autoHeightAnimate(element, time){
-    //     var curHeight = element.height(), // Get Default Height
-    //         autoHeight = element.css('height', 'auto').height(); // Get Auto Height
-    //         element.height(curHeight); // Reset to Default Height
-    //         element.stop().animate({ height: autoHeight }, time);
-    // };
-
     // This is the important part!
 
 function collapseSection(element) {
@@ -341,7 +304,7 @@ $(".course-outline_link").click(function() {
           </a>
           <div id="register_error"></div>
         %endif
-          <label for="mail-check">
+          <label class="label" for="mail-check">
             <input id="mail-check" type="checkbox">
             I would like to receive email from ITT /ADPC and learn about other offerings related to Eco DRR.
           </label>
@@ -376,6 +339,29 @@ $(".course-outline_link").click(function() {
 
       <div class="inner-wrapper ugc">
         ${get_course_about_section(request, course, "overview")}
+        <section class="course-staff">
+           <h2>Course Staff</h2>
+           <article class="teacher">
+            <a href="/teacher_1">
+             <div class="teacher-image">
+               <img src="/asset-v1:edX+DemoX+Demo_Course+type@asset+block/images_pl-faculty.png" align="left" style="margin:0 20 px 0">
+             </div>
+            </a>
+             <h3>Staff Member #1</h3>
+             <p>Biography of instructor/staff member #1</p>
+           </article>
+            
+           <article class="teacher">
+            <a href="/teacher_2">
+             <div class="teacher-image">
+               <img src="/asset-v1:edX+DemoX+Demo_Course+type@asset+block/images_pl-faculty.png" align="left" style="margin:0 20 px 0">
+             </div>
+             </a>
+
+             <h3>Staff Member #2</h3>
+             <p>Biography of instructor/staff member #2</p>
+           </article>
+         </section>
         <div class="open-box" data-collapsed="true" style="height: 180px">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, ea, explicabo corrupti repudiandae laborum placeat minus quis doloribus quisquam sint! Facilis incidunt assumenda quo officia, magni veritatis similique tenetur!

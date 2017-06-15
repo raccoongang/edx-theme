@@ -247,6 +247,10 @@ img#fourth-img {
   .nav-global {
     li {
       margin: 0;
+
+      a {
+        padding: 10px;
+      }
     }
   }
   .nav-courseware {
@@ -377,6 +381,7 @@ body .course-info header.course-profile {
   padding-top: 0;
   padding-bottom: 0;
   height: auto;
+  margin-top: 0;
 
   .intro-inner-wrapper {
     background: none;
@@ -476,4 +481,16 @@ body .course-info header.course-profile {
 }
 .course-info .course-sidebar .important-dates li .icon {
   margin: 0px 10px 6px 0;
+}
+body .course-info .details .inner-wrapper>section {
+  overflow: hidden;
+}
+.btn-theme {
+  background: #ec1f27;
+  color: #fff !important;
+  border-radius: 4px;
+  padding: 5px;
+   &:hover {
+    background: lighten(#ec1f27, 10%);
+   }
 }
