@@ -21,6 +21,7 @@
     margin-left: auto;
     margin-bottom: 15px;
 }
+.content-wrapper .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
 .view-profile .profile-image-field,
 .dashboard .my-courses .course .details .course-info, 
 .dashboard .my-courses .course .details .programs-info,
@@ -215,6 +216,26 @@ body.view-in-course .course-wrapper,
 .programs-name {
     padding: 0 15px 0 5px;
     text-align: right;
+}
+.wrapper-user-menu.dropdown-menu-container button:focus:not(:disabled),
+.wrapper-user-menu.dropdown-menu-container button:active:not(:disabled),
+.wrapper-user-menu.dropdown-menu-container button:hover:not(:disabled),
+.wrapper-user-menu.dropdown-menu-container button{
+    box-shadow: none;
+    background: transparent;
+}
+.program-card {
+    float: right;
+    margin-right: 0;
+    margin-left: 2.12766%;
+}
+.sidebar .program-advertise .btn-neutral {
+    display: flex;
+    flex-direction: row-reverse;
+    .icon {
+        margin-right: 0;
+        margin-left: 0.3125rem;
+    }
 }
 @media (min-width: 768px){
     .program-cards-container {
