@@ -90,6 +90,7 @@ body.discussion .course-tabs .right {
     box-sizing: border-box;
     padding-right: 10px;
 }
+.content-wrapper .course-card .course-details,
 .content-wrapper .instructor-dashboard-wrapper-2 section.idash-section#certificates .white-listed-students table td, 
 .content-wrapper .instructor-dashboard-wrapper-2 section.idash-section#certificates .invalidation-history table td,
 .login-register .form-wrapper form, .financial-assistance-wrapper .financial-assistance-form .form-wrapper form,
@@ -298,10 +299,17 @@ input#generate-example-certificates-submit {
     flex-direction: row-reverse;
     align-items: center;
 }
+.content-wrapper .program-header .breadcrumb-list {
+    float: right;
+}
 @media (min-width: 768px){
     .program-cards-container {
         margin-right: 0;
         margin-left: 2.12766%;
+    }
+    .program-card:nth-child(2n) {
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
@@ -334,11 +342,53 @@ input#generate-example-certificates-submit {
         text-align: right;
     }
 }
+.content-wrapper .find-courses .courses-container .courses:not(.no-course-discovery) {
+    float: right;
+}
+@media screen and (max-width: 768px) and (min-width: 541px) {
+    .content-wrapper .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item {
+        float: right;
+        margin-left: 3.57866%;
+        margin-right: 0;
+    }
+}
 @media screen and (min-width: 980px) {
     .find-courses .courses-container .courses:not(.no-course-discovery) {
         float: right;
         margin-right: 0;
         margin-left: 2.35765%;
+    }
+    .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(3n) {
+        margin-left: 0;
+    }
+    .content-wrapper .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item ,
+    .content-wrapper .home .courses-container .courses .courses-listing .courses-listing-item,
+    .content-wrapper .home .programs-container .programs .programs-listing .programs-listing-item {
+        float: right;
+        margin-right: 0;
+        margin-left: 2.35765%;
+    }
+    .content-wrapper .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(3n),
+    .content-wrapper .home .courses-container .courses .courses-listing .courses-listing-item:nth-child(4n),
+    .content-wrapper  .home .programs-container .programs .programs-listing .programs-listing-item:nth-child(4n) {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 979px) and (min-width: 769px){
+    .content-wrapper .home .programs-container .programs .programs-listing .programs-listing-item:nth-child(3n),
+    .content-wrapper .home .courses-container .courses .courses-listing .courses-listing-item:nth-child(3n) {
+        margin-left: 0;
+    }
+    .content-wrapper .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item,
+    .content-wrapper .home .courses-container .courses .courses-listing .courses-listing-item,
+    .content-wrapper .home .programs-container .programs .programs-listing .programs-listing-item {
+        float: right;
+        margin-right: 0;
+        margin-left: 2.35765%;
+    }
+    .content-wrapper .home .courses-container .courses .courses-listing .courses-listing-item:nth-child(4n),
+    .content-wrapper  .home .programs-container .programs .programs-listing .programs-listing-item:nth-child(4n) {
+        margin-left: 0;
     }
 }
 @media screen and (max-width: 600px){
