@@ -13,15 +13,20 @@
     <script type="text/javascript" src="{% static i18njs_path %}"></script>
   {% endwith %}
 
-  {% stylesheet 'style-vendor' %}
-  {% stylesheet 'style-main-v1' %}
-
   {% block main_vendor_js %}
   {% javascript 'main_vendor' %}
   {% endblock %}
   {% block headextra %}{% endblock %}
   {% render_block "css" %}
-
+  <!-- added style -->
+  {% stylesheet 'style-vendor' %}
+  {% if LANGUAGE_BIDI %}
+  {% stylesheet 'style-main-v1-rtl' %}
+  {% stylesheet 'style-course-rtl' %}
+  {% else %}
+  {% stylesheet 'style-main-v1' %}
+  {% stylesheet 'style-course' %}
+  {% endif %}
   {% optional_include "head-extra.html"|microsite_template_path %}
 
   <meta name="path_prefix" content="{{EDX_ROOT_URL}}">

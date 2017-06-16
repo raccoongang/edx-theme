@@ -14,13 +14,17 @@
     left: 5px;
 }
 .find-courses .wrapper-search-context .wrapper-search-input {
-    margin: 0 auto 30px 0 !important;
+    margin: 0 auto 30px auto !important;
 }
 .footer-nav {
     text-align: right;
     margin-left: auto;
     margin-bottom: 15px;
 }
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status .xseries-action .xseries-msg,
+.container .discussion-body .discussion-submit-post, 
+.container .discussion-module .discussion-submit-post,
+.container .discussion-user-threads .discussion-submit-post,
 .content-wrapper .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
 .view-profile .profile-image-field,
 .dashboard .my-courses .course .details .course-info, 
@@ -32,6 +36,10 @@ div.program-cards-container,
 .discussion .tabs .tab {
     float: right
 }
+.tab-content a.accordion-toggle {
+    float: right!important;
+}
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status .xseries-action .xseries-border-btn,
 .dashboard .my-courses .course .details .wrapper-course-actions,
 .dashboard-search-bar,
 .grid-container .col.col-last, 
@@ -75,6 +83,36 @@ body.discussion .course-tabs .right {
 .home .programs__btn-holder {
     text-align: left;
 }
+.discussion-module .new-post-btn, .discussion-user-threads .new-post-btn {
+    margin-left: 10px;
+}
+.container .discussion-module .wmd-preview-label {
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+.content-wrapper .instructor-dashboard-wrapper-2 section.idash-section#certificates .white-listed-students table td, 
+.content-wrapper .instructor-dashboard-wrapper-2 section.idash-section#certificates .invalidation-history table td,
+.login-register .form-wrapper form, .financial-assistance-wrapper .financial-assistance-form .form-wrapper form,
+.sidebar .program-advertise .advertise-message,
+.find-courses .search-facets .header-search-facets, 
+.find-courses .search-facets .header-facet,
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status .xseries-action .xseries-msg,
+.container.about,
+.login-register .submission-error, 
+.financial-assistance-wrapper .financial-assistance-form .submission-error, 
+.login-register .system-error, 
+.financial-assistance-wrapper .financial-assistance-form .system-error,
+.login-register .form-field, 
+.financial-assistance-wrapper .financial-assistance-form .form-field,
+.login-register .form-field .field-link, 
+.financial-assistance-wrapper .financial-assistance-form .form-field .field-link,
+div.gradebook-wrapper section.gradebook-content .student-search-field,
+.forum-new-post-form, 
+.edit-post-form,
+.login-register .form-field .tip, 
+.financial-assistance-wrapper .financial-assistance-form .form-field .tip,
+.login-register .form-field label, 
+.financial-assistance-wrapper .financial-assistance-form .form-field label,
 button.forum-nav-browse-title,
 .container .discussion-body .discussion-article, 
 .container .discussion-module .discussion-article, 
@@ -102,6 +140,14 @@ input[type="password"],
 .forum-nav-search .icon {
     right: 100%;
     margin-right: -20px;
+}
+.find-courses .wrapper-search-context .discovery-input {
+    padding-right: 20px;
+    padding-left: 30px;
+}
+.search-bar.dashboard-search-bar .search-button {
+    right: 0;
+    left: 12px;
 }
 .forum-nav-search-input {
     padding-right: 10px !important;
@@ -191,8 +237,15 @@ body.view-in-course .course-wrapper,
         top: 0;
     }
 }
+.content-wrapper .customBrowseBtn .file-browse input.file_field,
+.content-wrapper section.wiki #div_id_confirm #id_confirm,
+.content-wrapper section.wiki #hint_id_content,
 .wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
     position: relative;
+}
+section.delete {
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 .wrapper-footer footer#footer-openedx .footer-about-openedx .racoon-link {
     position: relative;
@@ -217,6 +270,9 @@ body.view-in-course .course-wrapper,
     padding: 0 15px 0 5px;
     text-align: right;
 }
+input#generate-example-certificates-submit {
+    margin-top: 10px;
+}
 .wrapper-user-menu.dropdown-menu-container button:focus:not(:disabled),
 .wrapper-user-menu.dropdown-menu-container button:active:not(:disabled),
 .wrapper-user-menu.dropdown-menu-container button:hover:not(:disabled),
@@ -236,6 +292,11 @@ body.view-in-course .course-wrapper,
         margin-right: 0;
         margin-left: 0.3125rem;
     }
+}
+.find-courses .filters li .facet-option {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 @media (min-width: 768px){
     .program-cards-container {
@@ -287,5 +348,8 @@ body.view-in-course .course-wrapper,
     .header-helper_ico-holder {
         margin-right: 0;
         margin-left: 10px;
+    }
+    .wrapper-footer footer#footer-openedx .footer-about-openedx {
+        float: right;
     }
 }
