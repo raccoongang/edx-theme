@@ -11,7 +11,7 @@
 }
 .header-search_button {
     right: 0;
-    left: 5px;
+    left: 12px;
 }
 .find-courses .wrapper-search-context .wrapper-search-input {
     margin: 0 auto 30px auto !important;
@@ -72,9 +72,14 @@ body.discussion .course-tabs .right {
 .promo-box {
     flex-direction: row-reverse;
 }
+.footer_box,
 .account-settings-sections .section .account-settings-section-body .u-field {
     display: flex;
     flex-direction: row-reverse;
+}
+.footer_holder .footer_input {
+    margin-left: 26px;
+    margin-right: 0;
 }
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
     padding: 24px 100px 0 0;
@@ -90,6 +95,7 @@ body.discussion .course-tabs .right {
     box-sizing: border-box;
     padding-right: 10px;
 }
+body.view-student-notes .title-search-container .search-notes-input,
 .content-wrapper .course-card .course-details,
 .content-wrapper .instructor-dashboard-wrapper-2 section.idash-section#certificates .white-listed-students table td, 
 .content-wrapper .instructor-dashboard-wrapper-2 section.idash-section#certificates .invalidation-history table td,
@@ -174,6 +180,7 @@ div.wrapper-course-modes {
     right: 100%;
     margin-right: -50px;
 }
+.wrapper-notes-search form,
 body.view-in-course .course-wrapper,
 .course-info header.course-profile .intro-inner-wrapper>div.table, 
 .programs-info header.course-profile .intro-inner-wrapper>div.table {
