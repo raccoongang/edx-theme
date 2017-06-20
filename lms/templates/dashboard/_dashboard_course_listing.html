@@ -38,6 +38,9 @@ from student.helpers import (
 <%namespace name='static' file='../static_content.html'/>
 
 <li class="course-item">
+% if course_overview.has_ended():
+  <span class="round-is-over">${_("Round is over")}</span>
+% endif
   % if settings.FEATURES.get('ENABLE_VERIFIED_CERTIFICATES'):
     <%
         course_verified_certs = enrollment_mode_display(
