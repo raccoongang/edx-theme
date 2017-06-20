@@ -51,6 +51,9 @@
         @media all and (min-width: 800px) {
             width: auto;
         }
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
     &_platform-link {
         font-family: $font-bold !important;

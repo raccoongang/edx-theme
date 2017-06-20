@@ -5,11 +5,12 @@
     width: 100%;
     background: #454a4e;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     @media all and (min-width: 800px) {
         display: block;
         background: transparent;
         width: auto;
+        justify-content: flex-end;
     }
 
     &:after {
@@ -48,4 +49,13 @@
 }
 body.discussion .content-wrapper {
    min-width: 760px;
+}
+.window-wrap .main-header .wrapper-header {
+    @media (max-width: 420px) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+.window-wrap .forum-nav-thread-wrapper-1 {
+    width: 100%;
 }

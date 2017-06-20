@@ -31,6 +31,9 @@
         color: #a2d1eb;
         margin: 0;
         padding: 0;
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
     &_platform-link {
         font-family: $font-bold !important;

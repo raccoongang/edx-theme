@@ -97,3 +97,20 @@ section.outside-app p {
 .search-info h2 {
     margin-top: 0;
 }
+body.view-passwordreset {
+    background: #f4f4f4;
+}
+body.view-passwordreset .header-global nav {
+    max-width: 960px;
+    width: 100%;
+    min-width: 320px;
+}
+.view-passwordreset .wrapper-footer footer#footer-openedx {
+    width: 100%;
+}
+.window-wrap .main-header .wrapper-header {
+    @media (max-width: 420px) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}

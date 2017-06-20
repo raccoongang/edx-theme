@@ -11,8 +11,15 @@
             background: transparent;
         }
     }
+    .user {
+        display: flex;
+    }
     .user>.primary {
         float: right;
+        @media (max-width: 800px) {
+            text-align: center;
+            float: none;
+        }
 }
     .nav-global {
         margin-top: 0;
