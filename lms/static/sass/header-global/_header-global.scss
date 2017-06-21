@@ -10,6 +10,7 @@
             background: transparent;
         }
     }
+    
     .nav-global {
         margin-top: 0 !important;
         padding-top: 0;
@@ -30,6 +31,7 @@
 .header-global .nav-global .tab-nav-item .tab-nav-link:hover,
 .header-global .nav-global .tab-nav-item .tab-nav-link:focus, {
     border: none;
+    color: #46bc8c;
 }
 
 .header-global .nav-global .tab-nav-item .active {
@@ -83,6 +85,8 @@
 .header-global .user {
     margin-left: 0;
     list-style: none;
+    display: flex;
+    align-items: center;
 
     a.shopping-cart {
         border-radius: 4px;

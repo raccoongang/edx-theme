@@ -13,3 +13,24 @@
 .header-global .wrapper-header .wrapper-user-menu {
     margin-top: 0;
 }
+.dropdown-menu-container .menu-title,
+.header-global .nav-global .tab-nav-item .tab-nav-link,
+.header-global .nav-global .tab-nav-item .tab-nav-link {
+    &:hover,
+    &:focus,
+    &:active {
+        border: none;
+        text-decoration: none;
+        color: #46bc8c;
+    }
+}
+.dropdown-menu-container .dropdown-menu .dropdown-item a,
+.wrapper-footer footer#footer-openedx ul a,
+.main-header .nav-global li a,  
+.main-header .nav-global div a {
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+}

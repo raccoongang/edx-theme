@@ -53,7 +53,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img id="logo" src="/static/thellpa-faculty/images/Faculty_logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img id="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/Faculty_logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -212,6 +212,14 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
     </div>
 </header>
+<span class="blocked-page"></span>
+<script type="text/javascript">
+  $( ".menu-action" ).click(function() {
+    $( ".main-header_wrap" ).slideToggle( "fast", function() {});
+    $(".blocked-page").toggle();
+    $("body").toggleClass("show-menu");
+  });
+</script>
 % if course:
 <!--[if lte IE 9]>
 <div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
