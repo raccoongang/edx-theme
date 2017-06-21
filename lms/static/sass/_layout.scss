@@ -280,3 +280,8 @@ body .home .page-header-main {
 body section.wiki .wiki-wrapper>header {
     width: 100%;
 }
+.idash-section:after {
+    content: '';
+    display: table;
+    clear: both;
+}
