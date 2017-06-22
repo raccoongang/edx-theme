@@ -1,0 +1,23 @@
+.home .banner {
+    &_title {
+        color: #fff;
+        font: bold 36px/1.2 Verdana, Arial, sans-serif;
+    }
+    &_btn {
+        font: 15px/1.2 Arial, sans-serif;
+        color: #fff;
+        text-align: center;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        padding: 8px 15px;
+        display: inline-block;
+        position: relative;
+        top: 13px;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: #fff;
+            background: $primary-color;
+        }
+    }
+}

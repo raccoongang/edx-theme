@@ -1,0 +1,23 @@
+a.btn-login {
+    color: #fff;
+    padding: 6px 16px;
+    background: $primary-color;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: 3px solid $primary-color;
+    font: 18px/1.2 Arial, sans-serif;
+    display: inline-block;
+    &[href*="/register"] {
+        margin-left: 5px;
+        @media (max-width: $responsive-large) {
+            margin-left: 0;
+        }
+    }
+    &:active,
+    &:focus,
+    &:hover {
+        color: $primary-color;
+        text-decoration: none;
+        background: transparent;
+    }
+}

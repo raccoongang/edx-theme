@@ -1,0 +1,29 @@
+.wrapper-footer .footer-menu {
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media (max-width: 555px) {
+        flex-direction: column;
+        text-align: center;
+    }
+    &_item {
+        list-style: none;
+        @media (max-width: 555px) {
+                margin-bottom: 10px;
+            }
+    }
+    &_link {
+        color: #fff;
+        font: 14px/1.2 Verdana, Arial, sans-serif;
+        padding: 0 8px;
+        &:visited,
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}

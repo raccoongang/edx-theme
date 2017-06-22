@@ -6,10 +6,137 @@
     padding: 0 20px;
     width: 200px;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 3px solid #fff;
     border-radius: 3px;
     background: transparent;
+    font: 18px/1.2 Arial, sans-serif;
 }
+
 .header-global h1.logo {
     margin: 0;
+    transform: translateY(25%);
+}
+.window-wrap .animation-home-header-pop-up, 
+.window-wrap .home>header .outer-wrapper {
+    animation: none;
+    padding: 0;
+    position: relative;
+    top: -6px;
+}
+.window-wrap .home>header .title {
+    float: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    min-height: auto;
+    background: transparent;
+    max-width: 1200px;
+    width: 100%;
+}
+.home>header {
+    background: #2e6e95 url(#{$img-path}/banner.jpg) no-repeat center center;
+    height: 442px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-shadow: none;
+}
+.header-global .wrapper-header .course-header,
+.footer-about-openedx,
+.colophon,
+.home>header .title .course-search {
+    display: none;
+}
+.home>header .title>.heading-group h1 {
+    text-align: center;
+    text-shadow: none;
+    margin-bottom: 15px;
+}
+.home>header .title>.heading-group p {
+    font-style: normal;
+    margin-bottom: 30px;
+    color: #fff;
+    font: 36px/1.2 Verdana, Arial, sans-serif;
+    text-align: center;
+}
+.view-register .wrapper-footer footer, 
+.view-login .wrapper-footer footer, 
+.view-passwordreset .wrapper-footer footer,
+.view-register .header-global nav, 
+.view-login .header-global nav {
+    width: auto;
+}
+.home>header .title>.heading-group {
+    text-align: center;
+}
+.courses-container .courses .course {
+    background: #fff;
+    box-shadow: none;
+    border: none;
+    border-bottom: 3px solid #fff;
+    &:hover,
+    &:focus {
+        box-shadow: none;
+        background: #fff;
+        border: none;
+        border-bottom: 3px solid $primary-color;
+    }
+}
+.courses-container .courses .course .course-info .course-date,
+.courses-container .courses .course .course-info .course-organization,
+.courses-container .courses .course .course-info .course-code {
+  color: rgb(46, 46, 46);
+  font: 14px/1.2 "Helvetica", Arial, sans-serif;
+}
+.courses-container .courses .course .course-info .course-title {
+    color: rgb(145, 145, 145);
+    font: 18px/1.2 "Helvetica", Arial, sans-serif;
+}
+.courses-container .courses .course .course-info .course-organization,
+.courses-container .courses .course .course-info .course-code {
+    text-transform: uppercase;
+}
+.courses-container .courses .course .course-info .course-organization {
+    padding: 15px 15px 4px 15px;
+}
+.courses-container .courses .course .course-info .course-title {
+    margin: 5px 0 40px 0;
+}
+.highlighted-courses .courses {
+    padding-bottom: 70px;
+}
+.header-global .nav-global li:last-child {
+    margin: 0 21px 0 0;
+    @media (max-width: $responsive-large) {
+        margin: 0 0 10px 0;
+    }
+}
+li.item.nav-global-01.nav-global-01-xseries-style {
+    @media (max-width: $responsive-large) {
+        margin: 0 0 10px 0;
+    }
+}
+.header-global .wrapper-header .logo {
+    margin: 0;
+}
+.window-wrap .header-global .nav-global li a, 
+.window-wrap .header-global .nav-global div a {
+    font-weight: normal;
+}
+.window-wrap .dropdown-menu-container .menu-title,
+.window-wrap .dropdown-menu-container .dropdown-menu .dropdown-item a,
+.window-wrap .doc-link {
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        text-decoration: none;
+    }
+}
+.user-menu {
+    margin-top: 6px;
 }

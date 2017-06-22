@@ -1,3 +1,10 @@
-.btn-explore {
-
+a.btn-explore {
+    font: 20px/1.2 Arial, sans-serif;
+    color: $primary-color;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $primary-color;
+    }
 }
