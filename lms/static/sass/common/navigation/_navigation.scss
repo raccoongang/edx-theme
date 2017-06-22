@@ -1,0 +1,44 @@
+.window-wrap .navigation {
+    padding: 0;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $responsive-large) {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 75px;
+        background: #fff;
+        width: 100%;
+        li {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    &:after {
+        display: none;
+    }
+    &_items {
+        margin: 0;
+        @media (max-width: $responsive-large) {
+            width: 100%;
+            text-align: center;
+        }
+        &__register {
+            display: flex;
+            flex-direction: row-reverse;
+            @media (max-width: $responsive-large) {
+                flex-direction: column;
+            }
+        }
+    }
+}
+.menu-open {
+    .window-wrap .navigation {
+        @media (max-width: $responsive-large) {
+            display: block;
+        }
+    }
+}

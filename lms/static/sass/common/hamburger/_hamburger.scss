@@ -1,6 +1,9 @@
 .hamburger {
-  display: block;
-  position: relative;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: $hamburger-width / -2;
   width: $hamburger-width;
   height: $hamburger-height;
   background: transparent;
@@ -9,6 +12,9 @@
   padding: 0;
   border-radius: 0;
   box-shadow: none;
+  @media (max-width: $responsive-large) {
+    display: block;
+  }
   &:after,
   &:before {
     content: '';

@@ -48,21 +48,21 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
   <header id="global-navigation" class="header-global ${"slim" if course else ""}" >
-    <nav class="wrapper-header" aria-label="${_('Global')}">
-    <h1 class="logo">
-      <a href="${marketing_link('ROOT')}">
-        <%block name="navigation_logo">
-        <%
-        logo_url = get_enterprise_customer_logo_url(request)
-        logo_size = 'ec-logo-size'
-        if logo_url is None:
-            logo_url = branding_api.get_logo_url(is_secure)
-            logo_size = ''
-        %>
-            <img class="${logo_size}" src="${logo_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-        </%block>
-      </a>
-    </h1>
+    <div class="wrapper-header" aria-label="${_('Global')}">
+      <h1 class="logo">
+        <a href="${marketing_link('ROOT')}">
+          <%block name="navigation_logo">
+          <%
+          logo_url = get_enterprise_customer_logo_url(request)
+          logo_size = 'ec-logo-size'
+          if logo_url is None:
+              logo_url = branding_api.get_logo_url(is_secure)
+              logo_size = ''
+          %>
+              <img class="${logo_size}" src="${logo_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+          </%block>
+        </a>
+      </h1>
 
     % if course:
       <h2 class="course-header"><span class="provider">${course.display_org_with_default}:</span>
@@ -76,7 +76,7 @@ site_status_msg = get_site_status_msg(course_id)
         %>
         <span class="course-name">${display_name}</span></h2>
       % endif
-
+      <nav class="navigation">
       % if user.is_authenticated():
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
@@ -138,7 +138,7 @@ site_status_msg = get_site_status_msg(course_id)
         </ol>
       % endif
     % else:
-      <ol class="left list-inline nav-global">
+      <ol class="navigation_items">
         <%block name="navigation_global_links">
           % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
             <li class="item nav-global-01">
@@ -159,14 +159,14 @@ site_status_msg = get_site_status_msg(course_id)
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
+                <a class="btn btn-explore" href="/courses">${_("Explore Courses")}</a>
               </li>
             %endif
           % endif
         </%block>
       </ol>
 
-      <ol class="right nav-courseware list-inline">
+      <ol class="navigation_items navigation_items__register">
         <%block name="navigation_sign_in">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
@@ -217,9 +217,11 @@ site_status_msg = get_site_status_msg(course_id)
       </ol>
       % endif
       % endif
-    </nav>
+      </nav>
+    </div>
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
 </header>
+<span class="blocked-page"></span>
 <script>
     var btn = document.getElementById('hamburger'),
         body = document.body;
