@@ -15,7 +15,7 @@ course_mode_class = course_mode if course_mode else ''
 
             <div class="accomplishment-type">
                 <span class="accomplishment-type-symbol">
-                    <img class="src" src="/static/${settings.DEFAULT_SITE_THEME}/images/cartificate-logo.png" alt="">
+                    <img class="src" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-etc.png" alt="">
                 </span>
 
                 <span class="accomplishment-type-label hd-4">${document_title}</span>
@@ -46,7 +46,7 @@ course_mode_class = course_mode if course_mode else ''
                             % if certificate_data:
                                 % for signatory in certificate_data.get('signatories', []):
                                 <div class="signatory">
-                                    <img class="signatory-signature" src="/static/${settings.DEFAULT_SITE_THEME}/images/signature.jpg" alt="${signatory['name']}">
+                                    <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
 
                                     <h4 class="signatory-name hd-5">${signatory['name']}</h4>
                                     <p class="signatory-credentials copy copy-micro">
