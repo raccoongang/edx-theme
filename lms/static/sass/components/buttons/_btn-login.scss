@@ -7,6 +7,10 @@ a.btn-login {
     border: 3px solid $primary-color;
     font: 18px/1.2 Arial, sans-serif;
     display: inline-block;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
     &[href*="/register"] {
         margin-left: 5px;
         @media (max-width: $responsive-large) {
