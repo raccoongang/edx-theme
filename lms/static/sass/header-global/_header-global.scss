@@ -11,6 +11,16 @@
             background: transparent;
         }
     }
+    .user {
+        display: flex;
+    }
+    .user>.primary {
+        float: right;
+        @media (max-width: 800px) {
+            text-align: center;
+            float: none;
+        }
+}
     .nav-global {
         margin-top: 0;
         display: block;
@@ -50,18 +60,20 @@
         text-decoration: none;
         font-family: $font-regular;
         height: 60px;
+        width: 100%;
         line-height: 60px;
-        margin: 0 !important;
+        margin: 0;
         font-size: 18px;
         text-align: center;
         background: #454a4e;
         border-bottom: 1px solid rgba(0,0,0,0.2);
         
         @media all and (min-width: 800px) {
-            margin-right: 21px !important;
+            margin-right: 21px;
             display: flex;
             border: none;
             height: auto;
+            width: auto;
             line-height: inherit;
             font-size: inherit;
             text-align: left;
@@ -87,6 +99,7 @@
         &:hover {
             color: #e46c54 !important;
             border: none !important;
+            text-decoration: none !important;
         }
     }
     .user .user-link .label-username {

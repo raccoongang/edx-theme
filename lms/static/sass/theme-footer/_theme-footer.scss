@@ -5,6 +5,7 @@
         justify-content: space-between;
         padding: 0 0 32px;
         text-align: center;
+        width: 100%;
         @media all and (min-width: 800px) {
             flex-wrap: nowrap;
             text-align: left;
@@ -50,6 +51,9 @@
         @media all and (min-width: 800px) {
             width: auto;
         }
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
     &_platform-link {
         font-family: $font-bold !important;
@@ -72,13 +76,16 @@
         
         &-item {
             margin-left: 15px;
+            &:first-child {
+                margin-left: 0;
+            }
         }
     }
     &_social-list-facebook,
     &_social-list-twitter {
         width: 40px;
         height: 40px;
-        boder-radius: 2px;
+        border-radius: 2px;
         background-color: #307195;
         background-position: 50%;
         background-repeat: no-repeat;
@@ -91,9 +98,9 @@
         }
     }
     &_social-list-facebook {
-        background-image: url("../images/ico-facebook.png");
+        background-image: url("#{$img-path}images/ico-facebook.png");
     }
     &_social-list-twitter {
-        background-image: url("../images/ico-twetter.png");
+        background-image: url("#{$img-path}images/ico-twetter.png");
     }
 }

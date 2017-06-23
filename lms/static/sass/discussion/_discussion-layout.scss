@@ -10,6 +10,7 @@
         display: block;
         background: transparent;
         width: auto;
+        justify-content: flex-end;
     }
 
     &:after {
@@ -33,4 +34,28 @@
 }
 .dropdown-menu-container .menu-button {
     background: transparent;
+
+    .text {
+        font-size: 0;
+        line-height: 0;
+    }
+}
+.window-wrap .dropdown-menu-container .dropdown-menu .dropdown-item a {
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+}
+body.discussion .content-wrapper {
+   min-width: 760px;
+}
+.window-wrap .main-header .wrapper-header {
+    @media (max-width: 420px) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+.window-wrap .forum-nav-thread-wrapper-1 {
+    width: 100%;
 }
