@@ -126,6 +126,9 @@ li.item.nav-global-01.nav-global-01-xseries-style {
 .window-wrap .header-global .nav-global li a, 
 .window-wrap .header-global .nav-global div a {
     font-weight: normal;
+    font: 20px/1.2 Arial, sans-serif;
+    color: #0075b3;
+    text-transform: uppercase;
 }
 .window-wrap .dropdown-menu-container .menu-title,
 .window-wrap .dropdown-menu-container .dropdown-menu .dropdown-item a,
@@ -139,4 +142,17 @@ li.item.nav-global-01.nav-global-01-xseries-style {
 }
 .user-menu {
     margin-top: 6px;
+}
+.content-wrapper .course-info header.course-profile {
+    min-height: 280px;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 100px;
+}
+body.view-in-course div.window-wrap {
+    min-width: 320px;
+}
+body.discussion div.content-wrapper,
+body.view-in-course div.content-wrapper {
+    min-width: 760px;
 }
