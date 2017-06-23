@@ -73,7 +73,7 @@ course_mode_class = course_mode if course_mode else ''
                     </li>
                     <li class="wrapper-organization">
                         <div class="organization organization-edX">
-                            <img class="organization-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/signature.jpg" alt="${platform_name}">
+                            <img class="organization-logo" src="${static.url(signatory['signature_image_path'])}" alt="${platform_name}">
                         </div>
                     </li>
                 </ul>
