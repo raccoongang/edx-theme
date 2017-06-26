@@ -126,13 +126,18 @@ li.item.nav-global-01.nav-global-01-xseries-style {
 .window-wrap .header-global .nav-global li a, 
 .window-wrap .header-global .nav-global div a {
     font-weight: normal;
-    font: 20px/1.2 Arial, sans-serif;
+    font: 18px/1.2 Arial, sans-serif;
     color: #0075b3;
     text-transform: uppercase;
     -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility:    hidden;
     -ms-backface-visibility:     hidden;
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
 }
 .window-wrap .dropdown-menu-container .menu-title,
 .window-wrap .dropdown-menu-container .dropdown-menu .dropdown-item a,
@@ -162,4 +167,15 @@ body.view-in-course div.content-wrapper {
 }
 .window-wrap .register aside .btn-login .btn-login-action {
     background: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primary-color;
+    }
+}
+.page-content .forum-nav-thread-wrapper-1 {
+    width: 100%;
+}
+.content-wrapper .course-info .course-sidebar .important-dates li .icon {
+    margin-top: 0;
 }
