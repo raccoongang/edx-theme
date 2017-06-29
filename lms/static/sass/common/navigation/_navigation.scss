@@ -14,17 +14,26 @@
         width: 100%;
         li {
             display: block;
-            margin-bottom: 10px;
+            margin: 0 0 10px 0;
+            text-align: center;
         }
     }
     &:after {
         display: none;
     }
+    &_buttons {
+        @media (max-width: $responsive-large) {
+            display: flex;
+            justify-content: center;
+        }
+    }
     &_items {
         margin: 0;
+        margin-left: auto;
         @media (max-width: $responsive-large) {
             width: 100%;
             text-align: center;
+            margin: 0;
         }
         &__register {
             display: flex;
@@ -39,6 +48,9 @@
     .window-wrap .navigation {
         @media (max-width: $responsive-large) {
             display: block;
+            background: $header-bg;
+            padding: 15px 0;
+            border-top: 3px solid #666;
         }
     }
 }

@@ -1,3 +1,6 @@
+body {
+    background: #fff;
+}
 .window-wrap .courses-container .courses .course .course-image .cover-image .learn-more {
     left: calc(50% - 100px);
     box-sizing: border-box;
@@ -9,7 +12,187 @@
     border: 3px solid #fff;
     border-radius: 3px;
     background: transparent;
+    font: 18px Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header-global h1.logo {
     margin: 0;
+    margin-top: -3px;
+}
+.header-global .wrapper-header {
+    max-width: 1200px;
+    padding-top: 19px;
+}
+.home>header {
+    background: #3374a4 url(#{$img-path}/banner.jpg) no-repeat center center;
+    height: 442px;
+    display: flex;
+    align-items: center;
+    .title {
+        box-shadow: none;
+        background: transparent;
+        float: none;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        &>.heading-group {
+            text-align: center;
+            h1 {
+                text-shadow: 3px 3px 2px rgb(51, 117, 168);
+                text-align: center;
+                font: bold 48px/1.2 Verdana, Arial, sans-serif;
+                color: #fff;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                letter-spacing: 2px;
+                @media (max-width: 540px) {
+                    font-size: 34px;
+                }
+            }
+        }
+        a {
+            color: #fff;
+            font: 15px/1.2 Arial, sans-serif;
+            background-color: $btn-bg;
+            display: inline-block;
+            text-transform: uppercase;
+            border-radius: 2px;
+            padding: 8px 17px;
+            &:visited {
+                background-color: $btn-bg;
+                text-decoration: none;
+                color: #fff;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $btn-bg-hover;
+                text-decoration: none;
+                color: #fff;
+            }
+        } 
+        .course-search {
+            display: none;
+        }
+    }
+}
+.animation-home-header-pop-up, 
+.home>header .outer-wrapper {
+    animation: none;
+    padding: 0;
+}
+.courses-container .courses .course {
+    box-shadow: none;
+    border: none;
+    border-bottom: 3px solid #567a17;
+}
+.courses-container .courses .course .course-info .course-date,
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    color: rgb(46, 46, 46);
+    font: 14px/1.2 "Helvetica", Arial, sans-serif;
+}
+.courses-container .courses .course .course-info .course-title,
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    text-transform: uppercase;
+}
+.courses-container .courses .course .course-info .course-organization {
+    padding-top: 17px;
+}
+.courses-container .courses .course .course-info .course-title {
+    color: rgb(232, 67, 65);
+    font: 18px/1.2 "Helvetica", Arial, sans-serif;
+    margin-top: 7px;
+}
+.highlighted-courses .courses .course:hover, 
+.highlighted-courses .courses .course:focus, 
+.find-courses .courses .course:hover, 
+.find-courses .courses .course:focus {
+    box-shadow: none;
+    border-color: #f6f5f5;
+}
+.footer-about-openedx,
+.colophon {
+    display: none;
+}
+.courses-container .courses .course .course-info .course-date {
+    padding-top: 5px;
+}
+.header-global .user {
+    display: flex;
+    align-items: center;
+}
+.header-global .user>.primary>a {
+    box-shadow: none;
+    color: #fff;
+    text-shadow: none;
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+        background: transparent;
+    }
+}
+a.doc-link {
+    color: #fff;
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+.header-global .nav-global li a.tab-nav-link {
+    color: #fff;
+    font: 18px/1.2 Verdana, Arial, sans-serif;
+    background-color: $btn-bg;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 8px 17px;
+    &:visited {
+        background-color: $btn-bg;
+        text-decoration: none;
+        color: #fff;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $btn-bg-hover;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+.header-global .nav-global .tab-nav-item .active {
+    border-bottom: none!important;
+}
+.header-global .nav-global {
+    margin: 0 auto;
+    @media (max-width: $responsive-large) {
+        float: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.grid-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header-global .user .dropdown {
+    height: 25px;
+    width: 29px;
+}
+li.item.nav-global-01.nav-global-01-xseries-style {
+    @media (max-width: $responsive-large) {
+        margin-bottom: 10px;
+    }
+}
+.find-courses, .university-profile {
+    background: #fff;
 }

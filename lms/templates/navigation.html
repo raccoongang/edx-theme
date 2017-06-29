@@ -47,7 +47,7 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
-  <header id="global-navigation" class="header-global ${"slim" if course else ""}" >
+  <header id="global-navigation" class="header-global" >
     <div class="wrapper-header" aria-label="${_('Global')}">
       <h1 class="logo">
         <a href="${marketing_link('ROOT')}">
@@ -59,7 +59,7 @@ site_status_msg = get_site_status_msg(course_id)
               logo_url = branding_api.get_logo_url(is_secure)
               logo_size = ''
           %>
-              <img class="${logo_size}" src="${logo_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+              <img class="${logo_size}" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
           </%block>
         </a>
       </h1>
@@ -82,14 +82,14 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
               <li class="item nav-global-01 nav-global-01-xseries-style">
-                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('FIND COURSES')}</a>
               </li>
-              <li class="tab-nav-item">
+              <li>
                 <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
                   ${_("Courses")}
                 </a>
               </li>
-              <li class="tab-nav-item">
+              <li>
                 <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
                   ${_("Programs")}
                 </a>
@@ -97,16 +97,16 @@ site_status_msg = get_site_status_msg(course_id)
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing and context.get('threads') == None:
               <li class="item nav-global-01">
-                <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+                <a href="${marketing_link('COURSES')}">${_('FIND COURSES')}</a>
               </li>
             % endif
             % if show_program_listing:
-              <li class="tab-nav-item">
+              <li>
                 <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
                   ${_("Courses")}
                 </a>
               </li>
-              <li class="tab-nav-item">
+              <li>
                 <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
                   ${_("Programs")}
                 </a>
@@ -121,12 +121,13 @@ site_status_msg = get_site_status_msg(course_id)
           %endif
         </%block>
       </ol>
+      <div class="navigation_buttons">
+        <%include file="user_dropdown.html"/>
 
-      <%include file="user_dropdown.html"/>
-
-      <a href="${get_online_help_info(online_help_token)['doc_url']}" 
-         target="_blank"
-         class="doc-link">${_("Help")}</a>
+        <a href="${get_online_help_info(online_help_token)['doc_url']}" 
+          target="_blank"
+          class="doc-link">${_("Help")}</a>
+      </div>
 
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
@@ -159,7 +160,7 @@ site_status_msg = get_site_status_msg(course_id)
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <li class="item nav-global-05">
-                <a class="btn btn-explore" href="/courses">${_("Explore Courses")}</a>
+                <a class="btn btn-explore" href="/courses">${_('FIND COURSES')}</a>
               </li>
             %endif
           % endif

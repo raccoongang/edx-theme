@@ -1,0 +1,28 @@
+.footer {
+    text-align: center;
+    &_text {
+        color: rgb(57, 57, 57);
+        font: 16px/1.2 "Verdana", Arial, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+        letter-spacing: 0.1px;
+        text-align: center;
+    }
+    &_logos {
+        max-width: 555px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: inline-block;
+            &:hover,
+            &:focus,
+            &:visited,
+            &:active {
+                text-decoration: none;
+                border: none;
+            }
+        }
+    }
+}
