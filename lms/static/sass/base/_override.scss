@@ -276,3 +276,69 @@ body.discussion .window-wrap .content-wrapper,
 body.view-in-course .window-wrap .content-wrapper {
     min-width: 760px;
 }
+.view-login .form-actions button[type="submit"],
+.register .form-actions button[type="submit"],
+.login-register .action-primary {
+    @include btn-active;
+}
+.login-register .nav-btn {
+    @include btn-empty;
+}
+div.btn-brand {
+    border-color: $btn-bg;
+    background: $btn-bg;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        border-color: $btn-bg-hover;
+        background: $btn-bg-hover;  
+    }
+}
+.complementary p a,
+.cta-help a,
+.register a:link,
+.login a:link {
+    color: $btn-bg;
+    border-bottom: none;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: $btn-bg-hover !important;
+        border-bottom: none;
+    }
+}
+.list-input .is-focused label {
+    color: $btn-bg !important;
+}
+.view-register .introduction header .title .title-super, 
+.view-login .introduction header .title .title-super, 
+.view-passwordreset .introduction header .title .title-super {
+    color: $btn-bg;
+}
+.register aside .btn-login .btn-login-action,
+.view-register section.register .btn-login h3 {
+    color: #fff;
+}
+.register aside .btn-login .btn-login-action {
+    background: transparent;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        background: transparent;
+        border-color: #fff;
+    }
+}
+.view-register .wrapper-footer footer, 
+.view-login .wrapper-footer footer, 
+.view-passwordreset .wrapper-footer footer {
+    max-width: 1200px;
+    width: 100%;
+}
+.view-register .header-global nav, 
+.view-login .header-global nav, 
+.view-passwordreset .header-global nav {
+    width: auto;
+}

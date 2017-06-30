@@ -8,3 +8,32 @@ $responsive-large: 980px;
 $header-bg: #476f00;
 $btn-bg: #78b700;
 $btn-bg-hover: #689c06;
+
+@mixin btn-active {
+    box-shadow: none;
+    background: $btn-bg;
+    color: #fff;
+    text-shadow: none;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: $btn-bg-hover;
+        box-shadow: none;
+    }
+}
+@mixin btn-empty {
+    border: 1px solid $btn-bg;
+    box-shadow: none;
+    background: transparent;
+    color: $btn-bg;
+    text-shadow: none;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        background: $btn-bg;
+        box-shadow: none;
+        color: #fff;
+    }
+}
