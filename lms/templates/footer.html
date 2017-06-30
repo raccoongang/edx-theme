@@ -1,0 +1,59 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx">
+    <div class="colophon">
+       <nav class="nav-colophon">
+         <ol>
+             <li class="nav-colophon-00">
+                <a id="education" target="_blank" href="https://www.microsoft.com/uk-ua/education/">Образование</a>
+             </li>
+             <li class="nav-colophon-01">
+                <a id="office" target="_blank" href="https://portal.office.com/">Офис 365</a>
+             </li>
+             <li class="nav-colophon-02">
+                <a id="products" target="_blank" href="https://products.office.com/uk-UA/student/office-in-education?omkt=uk-UA">Продукты</a>
+             </li>
+         </ol>
+       </nav>
+
+    </div>
+    <div class="references" style="margin:0;">
+
+      <a href="http://code.edx.org" target="_blank">
+
+        <span class="raccoongang">
+
+        Built on <img src="/static/${settings.DEFAULT_SITE_THEME}/images/open_edx.png">
+        </span>
+      </a>
+      <a href="http://raccoongang.com" target="_blank">
+
+        <span class="raccoongang">
+
+         by Raccoon Gang
+        </span>
+      </a>
+    </div>
+
+  </footer>
+</div>
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif
