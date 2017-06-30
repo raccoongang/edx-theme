@@ -276,11 +276,16 @@ body.discussion .window-wrap .content-wrapper,
 body.view-in-course .window-wrap .content-wrapper {
     min-width: 760px;
 }
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+input[type="submit"], input[type="button"], 
+button, 
+.button,
 .view-login .form-actions button[type="submit"],
 .register .form-actions button[type="submit"],
 .login-register .action-primary {
     @include btn-active;
 }
+.dashboard .my-courses .course .details .enter-course,
 .login-register .nav-btn {
     @include btn-empty;
 }
@@ -293,6 +298,17 @@ div.btn-brand {
     &:visited {
         border-color: $btn-bg-hover;
         background: $btn-bg-hover;  
+    }
+}
+.find-courses .filters .clear-filters,
+.dashboard .my-courses .course .wrapper-messages-primary .message a,
+.dashboard .my-courses .course .details .course-title a {
+    color: $btn-bg;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: $btn-bg-hover !important;
     }
 }
 .complementary p a,
@@ -341,4 +357,54 @@ div.btn-brand {
 .view-login .header-global nav, 
 .view-passwordreset .header-global nav {
     width: auto;
+}
+.find-courses .discovery-submit {
+    background: $btn-bg;
+    border-color: $btn-bg;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        background: $btn-bg-hover;
+        border-color: $btn-bg-hover;
+        box-shadow: none;
+    }
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+input[type="submit"], 
+input[type="button"], 
+button, 
+.button,
+.find-courses .discovery-input:focus {
+    border-color: $btn-bg;
+}
+.find-courses .search-facets .facet-option:hover, 
+.find-courses .search-facets .facet-option:focus,
+.find-courses .loading-spinner {
+    background: $btn-bg;
+}
+input[type="submit"]:active:not(:disabled), 
+input[type="submit"]:focus:not(:disabled), 
+input[type="button"]:active:not(:disabled), 
+input[type="button"]:focus:not(:disabled), 
+button:active:not(:disabled), 
+button:focus:not(:disabled), 
+.button:active:not(:disabled), 
+.button:focus:not(:disabled),
+input[type="submit"]:active:not(:disabled), 
+input[type="submit"]:focus:not(:disabled), 
+input[type="button"]:active:not(:disabled), 
+input[type="button"]:focus:not(:disabled), 
+button:active:not(:disabled), 
+button:focus:not(:disabled), 
+.button:active:not(:disabled), 
+.button:focus:not(:disabled) {
+    box-shadow: none;
+}
+input[type="submit"]:hover:not(:disabled), 
+input[type="button"]:hover:not(:disabled), 
+button:hover:not(:disabled), 
+.button:hover:not(:disabled) {
+        background: $btn-bg-hover;
+        box-shadow: none;
 }
