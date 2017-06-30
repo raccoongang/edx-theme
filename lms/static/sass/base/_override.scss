@@ -115,6 +115,7 @@ body {
     box-shadow: none;
     border-color: #f6f5f5;
 }
+.header-global .wrapper-header .course-header,
 .footer-about-openedx,
 .colophon {
     display: none;
@@ -183,6 +184,7 @@ a.doc-link {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    display: block;
 }
 .header-global .user .dropdown {
     height: 25px;
@@ -195,4 +197,10 @@ li.item.nav-global-01.nav-global-01-xseries-style {
 }
 .find-courses, .university-profile {
     background: #fff;
+}
+.course-info header.course-profile {
+    height: auto;
+    min-height: 280px;
+    margin-top: 0;
+    padding-bottom: 150px;
 }
