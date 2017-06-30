@@ -5,7 +5,7 @@
   top: 50%;
   margin-top: $hamburger-width / -2;
   width: $hamburger-width;
-  height: $hamburger-height;
+  height: $hamburger-height + 5;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -34,6 +34,7 @@
   &:active,
   &:hover {
       outline: none;
+      border: none !important;
       box-shadow: none !important; //platform has many selectors
       background: transparent !important; //platform has many selectors
   }

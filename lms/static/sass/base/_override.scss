@@ -17,6 +17,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+.header-global .wrapper-header .logo,
 .header-global h1.logo {
     margin: 0;
     margin-top: -3px;
@@ -203,4 +204,75 @@ li.item.nav-global-01.nav-global-01-xseries-style {
     min-height: 280px;
     margin-top: 0;
     padding-bottom: 150px;
+}
+.course-info .course-sidebar .important-dates li .icon,
+.header-global .wrapper-header .wrapper-user-menu,
+.header-global .wrapper-header .list-inline.nav-global {
+    margin-top: 0;
+}
+.dropdown-menu-container .menu-image {
+    border-radius: 10%;
+}
+.dropdown-menu-container .menu-title {
+    display: flex;
+}
+.dropdown-menu-container .menu-title {
+    margin-right: 5px;
+    color: #fff;
+    &:focus,
+    &:active,
+    &:hover {
+        text-decoration: none;
+  }
+}
+.header-global .wrapper-header .wrapper-user-menu,
+.program-details .navigation_buttons,
+.discussion .navigation_buttons {
+    display: flex;
+    align-items: center;
+}
+.navigation_buttons,
+.header-global .wrapper-header .list-inline.nav-global {
+    display: flex;
+}
+.discussion .list-inline li,
+li.item.nav-global-01.nav-global-01-xseries-style {
+    float: none;
+    margin-right: 21px;
+    @media (max-width: $responsive-large) {
+        margin-right: 0;
+    }
+}
+.dropdown-menu-container .menu-button {
+    font-size: 0.875em;
+    padding: 0 10px;
+    color: #3c3c3c;
+    border: none;
+    background: #fff;
+    box-shadow: none;
+    height: 25px;
+    width: 29px;
+    text-shadow: none;
+    border-radius: 3px;
+}
+.header-global .wrapper-header .left {
+  @media (max-width: $responsive-large) {
+    float: none;
+  }
+}
+.dropdown-menu-container .dropdown-menu .dropdown-item a {
+    &:active,
+    &:focus,
+    &:active,
+    &:hover {
+        text-decoration: none;
+  }
+}
+
+body.view-in-course .window-wrap {
+    min-width: 320px;
+}
+body.discussion .window-wrap .content-wrapper,
+body.view-in-course .window-wrap .content-wrapper {
+    min-width: 760px;
 }
