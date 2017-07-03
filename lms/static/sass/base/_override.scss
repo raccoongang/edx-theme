@@ -254,6 +254,7 @@ li.item.nav-global-01.nav-global-01-xseries-style {
     width: 29px;
     text-shadow: none;
     border-radius: 3px;
+    margin-top: 0;
 }
 .header-global .wrapper-header .left {
   @media (max-width: $responsive-large) {
@@ -560,9 +561,6 @@ body .xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover {
     }
 }
 body .discussion {
-    .dropdown-menu-container .menu-button {
-        margin-top: 0;
-    }
     .btn {
         @include btn-empty;
     }
