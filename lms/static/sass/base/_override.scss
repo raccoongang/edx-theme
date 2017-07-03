@@ -470,6 +470,10 @@ input[type="button"]:hover:not(:disabled) {
         background: $btn-bg-hover;
         box-shadow: none;
 }
+body .instructor-dashboard-wrapper-2 section.idash-section#certificates .bulk-white-list-exception .white-list-csv .arrow,
+body .content-wrapper .xblock-license a:active,
+body .content-wrapper .xblock-license a:hover,
+body .discussion.inline-discussion .new-post-article .add-post-cancel,
 .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
 .bookmarks-results-list .bookmarks-results-list-item:before,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
@@ -533,6 +537,8 @@ body .wrap-instructor-info .instructor-info-action {
         text-decoration: none;
     }
 }
+body .empty-dashboard-message a,
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
 .view-in-course .btn-brand {
    @include btn-active;
     border-color: $btn-bg;
@@ -553,7 +559,7 @@ body .xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover {
         border-color: $btn-bg;
     }
 }
-.discussion {
+body .discussion {
     .dropdown-menu-container .menu-button {
         margin-top: 0;
     }
@@ -634,6 +640,8 @@ body .wrapper-account-settings .wrapper-header .account-nav button:hover,
 body .wrapper-account-settings .wrapper-header .account-nav button:focus {
     border-bottom: 4px solid $btn-bg !important;
 }
+body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+body .discussion .post-label.post-label-following,
 body .instructor-dashboard-wrapper-2 .file-download-link a,
 body.view-login #forgot-password-modal #password-reset header h2,
 body .xmodule_display.xmodule_HtmlModule a {
@@ -658,9 +666,25 @@ body .home .page-header-secondary {
         background: $btn-bg-hover;
     }
 }
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 body .date-summary-container .date-summary-todays-date {
     border-left-color: $btn-bg; 
 }
 body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
     left: -28%;
+    padding-top: 6px;
+}
+body .discussion-module button.btn-brand, 
+body .wmd-prompt-dialog button.btn-brand {
+    @include btn-active-hard;
+}
+body .discussion-module .btn,
+body .wmd-prompt-dialog .btn {
+    @include btn-empty-hard;
+}
+.forum-nav-thread-wrapper-1 {
+    width: 100%;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    columns: 1;
 }

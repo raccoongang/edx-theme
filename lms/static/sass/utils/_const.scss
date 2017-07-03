@@ -37,3 +37,33 @@ $btn-bg-hover: #689c06;
         color: #fff;
     }
 }
+@mixin btn-active-hard {
+    box-shadow: none !important;
+    background: $btn-bg !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        border: 1px solid $btn-bg-hover !important;
+        background: $btn-bg-hover !important;
+        box-shadow: none !important;
+    }
+}
+@mixin btn-empty-hard {
+    border: 1px solid $btn-bg !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: $btn-bg !important;
+    text-shadow: none !important;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+        border: 1px solid $btn-bg !important;
+        background: $btn-bg !important;
+        box-shadow: none !important;
+        color: #fff !important;
+    }
+}
