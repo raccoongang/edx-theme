@@ -260,7 +260,7 @@ li.item.nav-global-01.nav-global-01-xseries-style {
     float: none;
   }
 }
-.dropdown-menu-container .dropdown-menu .dropdown-item a {
+body .dropdown-menu-container .dropdown-menu .dropdown-item a {
     &:active,
     &:focus,
     &:active,
@@ -276,10 +276,8 @@ body.discussion .window-wrap .content-wrapper,
 body.view-in-course .window-wrap .content-wrapper {
     min-width: 760px;
 }
-.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+body #forgot-password-modal #password-reset .form-actions button[type="submit"],
 input[type="submit"], input[type="button"], 
-button, 
-.button,
 .view-login .form-actions button[type="submit"],
 .register .form-actions button[type="submit"],
 .login-register .action-primary {
@@ -287,8 +285,24 @@ button,
 }
 .dashboard .my-courses .course .details .enter-course,
 .login-register .nav-btn {
-    @include btn-empty;
+    border: 1px solid $btn-bg;
+    box-shadow: none;
+    background: transparent;
+    color: $btn-bg;
+    text-shadow: none;
+    &:hover,
+    &:focus,
+    &:active {
+        background: $btn-bg;
+        box-shadow: none;
+        color: #fff !important;
+        border: 1px solid $btn-bg;
+    }
+    &:visited {
+        color: $btn-bg;
+    }
 }
+
 div.btn-brand {
     border-color: $btn-bg;
     background: $btn-bg;
@@ -300,6 +314,27 @@ div.btn-brand {
         background: $btn-bg-hover;  
     }
 }
+body .dropdown-menu-container .dropdown-menu .dropdown-item a,
+body .header-global .user .dropdown-menu li>a,
+body section.wiki .breadcrumb li a,
+body section.wiki .nav-tabs a,
+body section.wiki .nav-tabs li.active a,
+a.gradebook-link,
+a.progress-link,
+.setup-value a,
+body .accordion-toggle,
+section.wiki #cheatsheetLink,
+section.wiki .article-functions .see-children a,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary, 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+a.link-to-group-settings,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel,
+.hd a,
+.course-wrapper .courseware-results-wrapper p,
+body .btn-link,
+.login-register .form-field .field-link,
+.financial-assistance-wrapper .financial-assistance-form .form-field .field-link,
 .find-courses .filters .clear-filters,
 .dashboard .my-courses .course .wrapper-messages-primary .message a,
 .dashboard .my-courses .course .details .course-title a {
@@ -312,9 +347,7 @@ div.btn-brand {
     }
 }
 .complementary p a,
-.cta-help a,
-.register a:link,
-.login a:link {
+.cta-help a{
     color: $btn-bg;
     border-bottom: none;
     &:hover,
@@ -325,8 +358,37 @@ div.btn-brand {
         border-bottom: none;
     }
 }
+.register a:link,
+.login a:link {
+    color: $btn-bg;
+    border-bottom: none;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: $btn-bg-hover ;
+        border-bottom: none;
+    } 
+}
 .list-input .is-focused label {
     color: $btn-bg !important;
+}
+body div.book-wrapper section.book-sidebar #booknav li a,
+body div.info-wrapper section.updates div article .toggle-visibility-button,
+body div.info-wrapper section.handouts a,
+body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
+body .xmodule_display.xmodule_VideoModule .video .subtitles a,
+body .course-index .accordion .course-navigation .button-chapter,
+body div.info-wrapper section.handouts ol li a,
+body a,
+body a:visited,
+body p a:visited,
+body p a {
+    color: $btn-bg;
+    &:hover,
+    &:focus {
+        color: $btn-bg-hover;
+    }
 }
 .view-register .introduction header .title .title-super, 
 .view-login .introduction header .title .title-super, 
@@ -370,13 +432,23 @@ div.btn-brand {
         box-shadow: none;
     }
 }
+.xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover, 
+.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label:hover, 
+.xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicegroup label:hover, 
+.xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_CapaModule .choicetextgroup label:hover,
+.bookmarks-results-list .bookmarks-results-list-item:hover,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 input[type="submit"], 
 input[type="button"], 
-button, 
-.button,
 .find-courses .discovery-input:focus {
     border-color: $btn-bg;
+}
+.search-bar .search-button, 
+.search-bar .cancel-button, 
+.search-bar .search-button:hover, 
+.search-bar .cancel-button:hover,
+.search-bar .search-button:hover:hover {
+    background: $btn-bg !important;
 }
 .find-courses .search-facets .facet-option:hover, 
 .find-courses .search-facets .facet-option:focus,
@@ -387,24 +459,202 @@ input[type="submit"]:active:not(:disabled),
 input[type="submit"]:focus:not(:disabled), 
 input[type="button"]:active:not(:disabled), 
 input[type="button"]:focus:not(:disabled), 
-button:active:not(:disabled), 
-button:focus:not(:disabled), 
-.button:active:not(:disabled), 
-.button:focus:not(:disabled),
 input[type="submit"]:active:not(:disabled), 
 input[type="submit"]:focus:not(:disabled), 
 input[type="button"]:active:not(:disabled), 
-input[type="button"]:focus:not(:disabled), 
-button:active:not(:disabled), 
-button:focus:not(:disabled), 
-.button:active:not(:disabled), 
-.button:focus:not(:disabled) {
+input[type="button"]:focus:not(:disabled) {
     box-shadow: none;
 }
 input[type="submit"]:hover:not(:disabled), 
-input[type="button"]:hover:not(:disabled), 
-button:hover:not(:disabled), 
-.button:hover:not(:disabled) {
+input[type="button"]:hover:not(:disabled) {
         background: $btn-bg-hover;
         box-shadow: none;
+}
+.bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
+.bookmarks-results-list .bookmarks-results-list-item:before,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+.course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded span.menu-icon,
+.courseware-bookmarks-button .bookmarks-list-button,
+.login form .field.is-focused .tip,
+.register form .field.is-focused .tip,
+.passwordreset form .field.is-focused .tip,
+#forgot-password-modal #password-reset form .field.is-focused .tip,
+.login form .field.is-focused label,
+.register form .field.is-focused label,
+.passwordreset form .field.is-focused label,
+#forgot-password-modal #password-reset form .field.is-focused label {
+    color: $btn-bg;
+}
+nav.wrapper-course-material .course-tabs li a:hover, 
+nav.wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover+h4, 
+div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover+h4, 
+nav.wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus+h4, 
+div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus+h4, 
+nav.wrapper-course-material .course-tabs li a:focus, .wrapper-course-material .course-tabs li a.active, 
+nav.wrapper-course-material .course-tabs li a:visited:hover, 
+nav.wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover+h4:visited,
+div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover+h4:visited, 
+nav.wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus+h4:visited, 
+div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus+h4:visited, 
+nav.wrapper-course-material .course-tabs li a:visited:focus, 
+nav.wrapper-course-material .course-tabs li a:visited.active {
+    color: $btn-bg;
+    border-bottom-color: $btn-bg;
+}
+.courseware-bookmarks-button .bookmarks-list-button.is-active {
+    background: $btn-bg-hover;
+}
+.courseware-bookmarks-button .bookmarks-list-button {
+    border: 1px solid $btn-bg;
+    &:focus,
+    &:hover {
+        background: $btn-bg;
+    }
+}
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button {
+        border-bottom-color: $btn-bg;    
+}
+body .course-info .container .wrap-instructor-info .instructor-info-action,
+body .wrap-instructor-info .instructor-info-action {
+    color: $btn-bg;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: #fff;
+        background: $btn-bg;
+        text-decoration: none;
+    }
+}
+.view-in-course .btn-brand {
+   @include btn-active;
+    border-color: $btn-bg;
+}
+body .xmodule_display.xmodule_CapaModule div.problem button.btn-brand:hover {
+    background: $btn-bg-hover;
+    border-color: $btn-bg-hover;
+    box-shadow: none;
+    color: #fff;
+}
+.btn-default {
+    color: $btn-bg;
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: $btn-bg;
+        border-color: $btn-bg;
+    }
+}
+.discussion {
+    .dropdown-menu-container .menu-button {
+        margin-top: 0;
+    }
+    .btn {
+        @include btn-empty;
+    }
+    .tabs .tab a, 
+    .tabs .tab a:visited {
+        color: #5e5e5e;
+    }
+    .discussion-response .response-header-content .username,
+    .post-label.post-label-following,
+    .action-button.action-follow .action-label,
+    .discussion-article .posted-details .username {
+        color: $btn-bg;
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited {
+            color: $btn-bg-hover;
+        }
+    }
+    .btn-brand {
+        border-color: $btn-bg;
+        @include btn-active;
+        &:focus,
+        &:hover {
+            border-color: $btn-bg;
+        }
+    }
+    .forum-new-post-form .post-type-input:checked+.post-type-label, 
+    .edit-post-form .post-type-input:checked+.post-type-label {
+        background: $btn-bg;
+        box-shadow: none;
+    }
+    .action-button.action-follow.is-checked .action-icon, 
+    .action-button.action-follow:hover .action-icon, 
+    .action-button.action-follow:focus .action-icon {
+        background-color: $btn-bg;
+        border: 1px solid $btn-bg;
+    }
+     .action-button.action-follow:hover, 
+     .action-button.action-follow:focus {
+         border-color: $btn-bg;
+     }
+}
+body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+.heading-group button,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+body section.wiki .btn.btn-primary,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
+    box-shadow: none;
+    background: $btn-bg;
+    color: #fff;
+    text-shadow: none;
+    border-color: $btn-bg;
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        background: $btn-bg-hover;
+        border-color: $btn-bg-hover;
+        box-shadow: none;
+    }
+}
+.account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+        border-top: 7px solid $btn-bg;
+}
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
+    @include btn-empty;
+}
+body .wrapper-account-settings .wrapper-header .account-nav button:hover, 
+body .wrapper-account-settings .wrapper-header .account-nav button:focus {
+    border-bottom: 4px solid $btn-bg !important;
+}
+body.view-login #forgot-password-modal #password-reset header h2,
+body .xmodule_display.xmodule_HtmlModule a {
+    color: $btn-bg;
+    &:hover,
+    &:focus,
+    &:link {
+        color: $btn-bg;
+    }
+}
+body .xmodule_HtmlModule.xblock-initialized ol li a span {
+    color: $btn-bg !important;
+    &:hover,
+    &:focus {
+        color: $btn-bg-hover !important;
+    }
+}
+body .home .page-header-secondary {
+    background: $btn-bg;
+    &:hover,
+    &:focus {
+        background: $btn-bg-hover;
+    }
+}
+body .date-summary-container .date-summary-todays-date {
+    border-left-color: $btn-bg; 
 }
