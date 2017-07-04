@@ -481,6 +481,7 @@ body .course-info header.course-profile {
 }
 .course-info .details .inner-wrapper .course-staff .teacher .teacher-image {
   float: none;
+  border-radius: 50%;
 }
 .course-info .course-sidebar .important-dates li .icon {
   margin: 0px 10px 6px 0;
@@ -496,4 +497,19 @@ body .course-info .details .inner-wrapper>section {
    &:hover {
     background: lighten(#ec1f27, 10%);
    }
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register {
+  float: none;
+}
+.markets {
+  @media screen and (min-width: 760px) {
+    float: right;
+    margin-top: -49px;
+  }
+}
+.course-info .course-sidebar header .social-sharing {
+  margin-top: 16px;
+  @media screen and (min-width: 760px) {
+    margin-top: 0;
+  }
 }

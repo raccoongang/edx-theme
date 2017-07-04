@@ -167,12 +167,18 @@
     }
 }
 .slick-prev {
-    left: -45px;
+    left: -25px;
     top: 36px;
     transform: rotate(90deg);
+    @media screen and (min-width: 760px) {
+        left: -45px;
+    }
 }
 .slick-next {
-    right: -45px;
+    right: -25px;
     top: 36px;
     transform: rotate(-90deg);
+    @media screen and (min-width: 760px) {
+        right: -45px;
+    }
 }
