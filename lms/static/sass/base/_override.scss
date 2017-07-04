@@ -289,7 +289,7 @@ body.view-in-course .window-wrap .content-wrapper {
     min-width: 760px;
 }
 body #forgot-password-modal #password-reset .form-actions button[type="submit"],
-input[type="submit"], input[type="button"], 
+input[type="submit"],
 .view-login .form-actions button[type="submit"],
 .register .form-actions button[type="submit"],
 .login-register .action-primary {
@@ -312,6 +312,7 @@ input[type="submit"], input[type="button"],
     }
     &:visited {
         color: $btn-bg;
+         border: 1px solid $btn-bg;
     }
 }
 
@@ -453,7 +454,6 @@ body p a {
 .bookmarks-results-list .bookmarks-results-list-item:hover,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 input[type="submit"], 
-input[type="button"], 
 .find-courses .discovery-input:focus {
     border-color: $btn-bg;
 }
@@ -686,6 +686,7 @@ body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
     left: -28%;
     padding-top: 6px;
 }
+body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
 body .discussion-module button.btn-brand, 
 body .wmd-prompt-dialog button.btn-brand {
     @include btn-active-hard;
