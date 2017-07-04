@@ -317,3 +317,12 @@ div.window-wrap .search-bar .cancel-button:hover:focus,
 div.window-wrap .search-bar .cancel-button:hover:active {
     background: $theme-color-main;
 }
+body div.info-wrapper section.updates div article .toggle-visibility-button,
+body div.info-wrapper section.handouts a {
+    color: $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-color-main-hover;
+    }
+}
