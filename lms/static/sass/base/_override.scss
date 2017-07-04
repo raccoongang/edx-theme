@@ -223,6 +223,7 @@ li.item.nav-global-01.nav-global-01-xseries-style {
     &:active,
     &:hover {
         text-decoration: none;
+        color: #fff;
   }
 }
 .header-global .wrapper-header .wrapper-user-menu,
@@ -359,8 +360,9 @@ body .btn-link,
         border-bottom: none;
     }
 }
-.register a:link,
-.login a:link {
+body .register a,
+body .register a:link,
+body .login a:link {
     color: $btn-bg;
     border-bottom: none;
     &:hover,
@@ -689,4 +691,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fiel
 }
 body.view-register .nav-global-04 a {
         color: #fff !important;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-primary {
+    vertical-align: top
 }
