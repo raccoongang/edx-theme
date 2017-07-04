@@ -500,6 +500,11 @@ body .course-info .details .inner-wrapper>section {
 }
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register {
   float: none;
+  margin: 0;
+  width: 100%;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
+  width: 100%;
 }
 .markets {
   @media screen and (min-width: 760px) {
@@ -511,5 +516,19 @@ body .course-info .details .inner-wrapper>section {
   margin-top: 16px;
   @media screen and (min-width: 760px) {
     margin-top: 0;
+  }
+}
+.header-global .nav-global li a,
+.header-global.slim .nav-global li a {
+  text-align: center;
+}
+.header-global .user {
+  display: flex;
+  justify-content: center;
+  float: none;
+  margin: 0 0 10px;
+  @media screen and (min-width: 760px) {
+    display: block;
+    float: right;
   }
 }
