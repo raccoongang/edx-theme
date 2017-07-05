@@ -401,11 +401,21 @@ $(".course-outline_link").click(function() {
           <%
               course_descriptor = modulestore().get_course(course.id)
           %>
-          <li class="important-dates-item"><i class="icon fa fa-clock-o"></i><p class="important-dates-item-title">Length</p><span class="important-dates-item-text">${course_descriptor.length}</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-university"></i><p class="important-dates-item-title">Institute</p><span class="important-dates-item-text">${course_descriptor.institute}</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">Certificate</p><span class="important-dates-item-text">${course_descriptor.certificate}</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-comment-o"></i><p class="important-dates-item-title">Language</p><span class="important-dates-item-text">${course_descriptor.language}</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-certificate"></i><p class="important-dates-item-title">Levels</p><span class="important-dates-item-text">${course_descriptor.levels}</span></li>
+          % if course_descriptor.length:
+              <li class="important-dates-item"><i class="icon fa fa-clock-o"></i><p class="important-dates-item-title">Length</p><span class="important-dates-item-text">${course_descriptor.length}</span></li>
+          % endif
+          % if course_descriptor.institute:
+              <li class="important-dates-item"><i class="icon fa fa-university"></i><p class="important-dates-item-title">Institute</p><span class="important-dates-item-text">${course_descriptor.institute}</span></li>
+          % endif
+          % if course_descriptor.certificate:
+              <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">Certificate</p><span class="important-dates-item-text">${course_descriptor.certificate}</span></li>
+          % endif
+          % if course_descriptor.language:
+              <li class="important-dates-item"><i class="icon fa fa-comment-o"></i><p class="important-dates-item-title">Language</p><span class="important-dates-item-text">${dict(settings.LANGUAGES).get(course_descriptor.language, course_descriptor.language)}</span></li>
+          % endif
+          % if course_descriptor.levels:
+              <li class="important-dates-item"><i class="icon fa fa-certificate"></i><p class="important-dates-item-title">Levels</p><span class="important-dates-item-text">${course_descriptor.levels}</span></li>
+          % endif
         </ol>
     </div>
       ## For now, ocw links are the only thing that goes in additional resources
