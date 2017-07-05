@@ -149,6 +149,9 @@ html body.view-in-course {
         background: transparent;
     }
 }
+.program-details .doc-link {
+    margin: 0 0 0 15px;
+}
 body header a.doc-link {
     color: #fff;
     &:visited,
@@ -245,6 +248,9 @@ li.item.nav-global-01.nav-global-01-xseries-style {
 .navigation_buttons,
 .header-global .wrapper-header .list-inline.nav-global {
     display: flex;
+}
+.navigation_buttons {
+    align-items: center;
 }
 .discussion .list-inline li,
 li.item.nav-global-01.nav-global-01-xseries-style {
@@ -388,6 +394,7 @@ body .login a:link {
 .list-input .is-focused label {
     color: $btn-bg !important;
 }
+body .program-header .crumb-link,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-discussions-nav .cohorted-text,
 body div.book-wrapper section.book-sidebar #booknav li a,
 body div.info-wrapper section.updates div article .toggle-visibility-button,
@@ -646,6 +653,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
         border-top: 7px solid $btn-bg;
 }
+.program-details .btn,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
     @include btn-empty;
 }
@@ -687,13 +695,19 @@ body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
     left: -28%;
     padding-top: 6px;
 }
+.program-details .btn-brand,
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
 body .discussion-module button.btn-brand, 
 body .wmd-prompt-dialog button.btn-brand {
     @include btn-active-hard;
 }
+.program-details .btn-brand,
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
     border: 1px solid $btn-bg;
+}
+.program-details .blue-icon .certificate-body {
+    fill: $btn-bg;
+    border-color: $btn-bg;
 }
 body .discussion-module .btn,
 body .wmd-prompt-dialog .btn {
