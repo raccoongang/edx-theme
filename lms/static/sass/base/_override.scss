@@ -295,6 +295,7 @@ input[type="submit"],
 .login-register .action-primary {
     @include btn-active;
 }
+.dashboard .my-courses .course .details .enter-course.archived,
 .dashboard .my-courses .course .details .enter-course,
 .login-register .nav-btn {
     border: 1px solid $btn-bg;
@@ -312,7 +313,7 @@ input[type="submit"],
     }
     &:visited {
         color: $btn-bg;
-         border: 1px solid $btn-bg;
+        border: 1px solid $btn-bg;
     }
 }
 
@@ -690,6 +691,9 @@ body .dashboard .my-courses .course .wrapper-messages-primary .message.message-s
 body .discussion-module button.btn-brand, 
 body .wmd-prompt-dialog button.btn-brand {
     @include btn-active-hard;
+}
+body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
+    border: 1px solid $btn-bg;
 }
 body .discussion-module .btn,
 body .wmd-prompt-dialog .btn {
