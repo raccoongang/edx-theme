@@ -246,13 +246,9 @@ $(".course-outline_link").click(function() {
         <div class="main-cta">
         %if user.is_authenticated() and registered:
           %if show_courseware_link:
+            <span class="register disabled">${_("You are enrolled in this course")}</span>
             <a href="${course_target}">
-          %endif
-
-          <span class="register disabled">${_("You are enrolled in this course")}</span>
-
-          %if show_courseware_link:
-            <strong>${_("View Course")}</strong>
+              <strong>${_("View Course")}</strong>
             </a>
           %endif
 
