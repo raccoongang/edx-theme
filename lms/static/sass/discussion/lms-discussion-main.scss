@@ -1,3 +1,14 @@
 @import "lms/static/sass/discussion/lms-discussion-main.scss";
 @import "../nav-box/nav-box";
-@import "../default"
+@import "../gamburger/gamburger";
+@import "../default";
+
+.header-global .wrapper-header .wrapper-user-menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        display: block;
+        width: auto;
+    }
+}
