@@ -8,6 +8,7 @@ from django.conf import settings
 from edxmako.shortcuts import marketing_link
 from openedx.core.lib.courses import course_image_url
 from django.template.defaultfilters import truncatechars
+from xmodule.modulestore.django import modulestore
 %>
 
 <%inherit file="../main.html" />
@@ -401,11 +402,14 @@ $(".course-outline_link").click(function() {
           % if get_course_about_section(request, course, "prerequisites"):
             <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${truncatechars(course.display_number_with_default, 25) | h}</span></li>
           % endif
-          <li class="important-dates-item"><i class="icon fa fa-clock-o"></i><p class="important-dates-item-title">Length</p><span class="important-dates-item-text">5</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-university"></i><p class="important-dates-item-title">Institute</p><span class="important-dates-item-text">5</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">Certificate</p><span class="important-dates-item-text">5</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-comment-o"></i><p class="important-dates-item-title">Language</p><span class="important-dates-item-text">5</span></li>
-          <li class="important-dates-item"><i class="icon fa fa-certificate"></i><p class="important-dates-item-title">Levels</p><span class="important-dates-item-text">5</span></li>
+          <%
+              course_descriptor = modulestore().get_course(course.id)
+          %>
+          <li class="important-dates-item"><i class="icon fa fa-clock-o"></i><p class="important-dates-item-title">Length</p><span class="important-dates-item-text">${course_descriptor.length}</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-university"></i><p class="important-dates-item-title">Institute</p><span class="important-dates-item-text">${course_descriptor.institute}</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-info-circle"></i><p class="important-dates-item-title">Certificate</p><span class="important-dates-item-text">${course_descriptor.certificate}</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-comment-o"></i><p class="important-dates-item-title">Language</p><span class="important-dates-item-text">${course_descriptor.language}</span></li>
+          <li class="important-dates-item"><i class="icon fa fa-certificate"></i><p class="important-dates-item-title">Levels</p><span class="important-dates-item-text">${course_descriptor.levels}</span></li>
         </ol>
     </div>
       ## For now, ocw links are the only thing that goes in additional resources
