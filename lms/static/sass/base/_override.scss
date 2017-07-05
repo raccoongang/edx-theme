@@ -39,9 +39,60 @@
     display: inline-block;
     vertical-align: bottom;
 
-    img {
+    + img {
         height: 27px;
-        display: inline-block;
         vertical-align: bottom;
     }
+}
+body .course-info header.course-profile {
+    height: auto;
+    margin-top: 0;
+    padding: 20px 0;
+}
+body .header-global .primary>a {
+    box-shadow: none;
+}
+a.doc-link {
+    color: #fff;
+
+    &:hover {
+        color: #065683;
+    }
+}
+body .header-global .user>.primary>a {
+    background: transparent;
+}
+.user-menu {
+    margin: 6px 0 0;
+}
+.wrapper-footer footer#footer-openedx a:ficus,
+.wrapper-footer footer#footer-openedx a:hover,
+.references a:hover,
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {
+    border: none !important;
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+    margin: 12px 0 30px 0;
+}
+.wrapper-footer footer#footer-openedx .colophon {
+    float: left;
+    width: auto;
+}
+.wrapper-footer footer#footer-openedx .references {
+    float: right;
+    width: auto;
+    font-size: 16px;
+    line-height: 16px;
+
+    a:hover {
+        text-decoration: none;
+        border: none;
+    }
+}
+.header-global .user .user-link .label-username {
+    color: #fff;
+    text-shadow: none;
+}
+.wrapper-footer footer#footer-openedx {
+    max-width: 1180px;
 }
