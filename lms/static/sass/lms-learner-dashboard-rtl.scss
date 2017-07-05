@@ -1,2 +1,7 @@
+@import "const";
+
+//import the original styles from edx-platform
 @import "lms/static/sass/lms-learner-dashboard-rtl";
-@import "learner/learner";
+
+@import "common";
+@import "base/override-rtl";

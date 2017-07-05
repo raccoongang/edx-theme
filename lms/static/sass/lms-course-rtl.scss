@@ -1,3 +1,7 @@
+@import "const";
+
+//import the original styles from edx-platform
 @import "lms/static/sass/lms-course-rtl";
 
-@import "courses/courses";
+@import "common";
+@import "base/override-rtl";

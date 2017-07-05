@@ -1,0 +1,29 @@
+.rtl {
+    .theme-footer_row {
+        flex-direction: row-reverse;
+    }
+    .theme-content .home .outer-wrapper .course-search .search-button {
+        right: calc(100% - 56px);
+    }
+    .theme-content .home .outer-wrapper .course-search .search-input {
+        padding: 0 19px 0 56px;
+    }
+    .menu-action {
+        right: calc(100% - 80px);
+    }
+    .main-header_wrap {
+        @media screen and (max-width: 1090px) {
+            left: 0
+        }
+    }
+    .dropdown-menu-container .menu-title {
+        display: flex;
+        align-items: center;
+        .label-username {
+            margin: 13px 5px 13px 15px;
+        }
+    }
+    .wrapper-course-material .course-tabs li {
+        float: right;
+    }
+}
