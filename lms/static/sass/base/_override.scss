@@ -352,3 +352,18 @@ body a.doc-link::-moz-focus-inner{
 .find-courses .courses .course a {
     height: 100%;
 }
+body .window-wrap {
+    .course-info .details .inner-wrapper table td,
+    div.info-wrapper table td {
+        border-right: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+    }
+    .course-info .details .inner-wrapper table td:last-child,
+    div.info-wrapper table td:last-child {
+        border-right: none;
+    }
+    .course-info .details .inner-wrapper table tr:last-child td,
+    div.info-wrapper table tr:last-child td {
+        border-bottom: none;
+    }
+}
