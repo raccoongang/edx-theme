@@ -219,6 +219,14 @@ $(".course-outline_link").click(function() {
 
     %endif
 
+    $('#email_settings_form input#receive_emails').change(function () {
+        $form = $('#email_settings_form');
+        $.post($form.attr('action'), $form.serialize(), function () {
+            window.location = window.location;
+        });
+        return false;
+    });
+
   })(this)
   </script>
 
@@ -301,10 +309,19 @@ $(".course-outline_link").click(function() {
           </a>
           <div id="register_error"></div>
         %endif
-          <label class="label" for="mail-check">
-            <input id="mail-check" type="checkbox">
-            I would like to receive email from ITT /ADPC and learn about other offerings related to Eco DRR.
-          </label>
+        %if user.is_authenticated():
+          <%
+            is_receive_emails = not user.optout_set.filter(course_id=course.id).exists() and 'checked' or ''
+          %>
+          <form id="email_settings_form" method="post" action="/change_email_settings">
+            <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
+            <input name="course_id" id="email_settings_course_id" type="hidden" value="${course.id.to_deprecated_string()}" />
+            <label class="label" for="mail-check">
+              <input id="receive_emails" type="checkbox" name="receive_emails" ${is_receive_emails} />
+              I would like to receive email from ITT /ADPC and learn about other offerings related to Eco DRR.
+            </label>
+          </form>
+        %endif
         </div>
 
       </section>
