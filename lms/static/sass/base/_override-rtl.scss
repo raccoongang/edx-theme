@@ -1,4 +1,4 @@
-.rtl {
+.view-wiki, .rtl {
     .theme-footer_row {
         flex-direction: row-reverse;
     }
@@ -23,7 +23,56 @@
             margin: 13px 5px 13px 15px;
         }
     }
+
+    .dashboard .my-courses .course .details .course-actions .action,
     .wrapper-course-material .course-tabs li {
         float: right;
     }
+
+    .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
+        padding: 24px 100px 0 0;
+    }
+
+    .search-bar .search-field {
+        padding-left: 40px;
+    }
+
+}
+.wiki .accordion-toggle {
+    float: right !important;
+}
+body section.wiki .main-article,
+body section.wiki .breadcrumb li,
+body .wrapper-course-material .course-tabs li {
+    float: right;
+}
+.wiki .accordion-toggle,
+section.wiki label,
+body section.wiki p,
+body section.wiki h1,
+body section.wiki .breadcrumb li a,
+body section.wiki .wiki-wrapper .article-functions,
+body .theme-footer_list li {
+    text-align: right;
+}
+section.wiki .add-article-btn.btn.pull-left {
+    float: left;
+}
+body section.wiki .breadcrumb li:after {
+    display: none;
+}
+body section.wiki .main-article {
+    padding: 40px;
+}
+section.wiki .CodeMirror-scroll {
+    margin-right: 0;
+    text-align: right;
+}
+.wiki #div_id_summary.control-group .controls {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+section.wiki #hint_id_content {
+    position: relative;
 }
