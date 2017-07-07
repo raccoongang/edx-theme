@@ -53,12 +53,13 @@ body .header-global .primary>a {
     box-shadow: none;
 }
 a.doc-link {
-    color: #fff;
+    color: #fff !important;
     
+    &:active,
     &:visited,
     &:focus,
     &:hover {
-        color: #fff;
+        color: #fff !important;
         text-decoration: none;
     }
 }
