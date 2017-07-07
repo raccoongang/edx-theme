@@ -21,3 +21,19 @@
     color: #0079bc;
     -webkit-font-smoothing: auto;
 }
+.header-global .wrapper-header .list-inline.nav-global {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        width: auto;
+    }
+}
+.header-global .wrapper-header .list-inline .item {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    @media screen and (min-width: 760px) {
+        width: auto;
+        border-bottom: none;
+        text-align: auto;
+    }
+}
