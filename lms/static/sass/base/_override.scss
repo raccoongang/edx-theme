@@ -54,9 +54,11 @@ body .header-global .primary>a {
 }
 a.doc-link {
     color: #fff;
-
+    
+    &:focus,
     &:hover {
-        color: #065683;
+        color: #fff;
+        text-decoration: none;
     }
 }
 body .header-global .user>.primary>a {
@@ -65,11 +67,11 @@ body .header-global .user>.primary>a {
 .user-menu {
     margin: 6px 0 0;
 }
-.wrapper-footer footer#footer-openedx a:ficus,
-.wrapper-footer footer#footer-openedx a:hover,
 .references a:hover,
-.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover,
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:focus {
     border: none !important;
+    text-decoration: none;
 }
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon {
     margin: 12px 0 30px 0;
@@ -95,4 +97,9 @@ body .header-global .user>.primary>a {
 }
 .wrapper-footer footer#footer-openedx {
     max-width: 1180px;
+}
+.wrapper-footer footer#footer-openedx a:ficus,
+.wrapper-footer footer#footer-openedx a:hover {
+    border: none !important;
+    text-decoration: none;
 }

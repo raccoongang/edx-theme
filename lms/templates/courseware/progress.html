@@ -148,9 +148,9 @@ from django.utils.http import urlquote_plus
                     <h3 class="hd hd-4 sr">${_('Details for each chapter')}</h3>
                     %for chapter in courseware_summary:
                         %if not chapter['display_name'] == "hidden":
-                        <section aria-labelledby="chapter_${loop.index}">&nbsp;<!-- fix for mozzila -->
+                        <section aria-labelledby="chapter_${loop.index}">
                             <h4 class="hd hd-4" id="chapter_${loop.index}">${ chapter['display_name']}</h4>
-                            <div class="sections">
+                            <div class="sections">&nbsp;<!-- fix for mozzila -->
                                 %for section in chapter['sections']:
                                     <div>
                                         <%

@@ -59,7 +59,7 @@ site_status_msg = get_site_status_msg(course_id)
             logo_url = branding_api.get_logo_url(is_secure)
             logo_size = ''
         %>
-            <img class="${logo_size}" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img class="${logo_size}" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-head.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -95,7 +95,7 @@ site_status_msg = get_site_status_msg(course_id)
                 </a>
               </li>
           % else:
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing and context.get('threads') == None:
+            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
               <li class="item nav-global-01">
                 <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
               </li>
