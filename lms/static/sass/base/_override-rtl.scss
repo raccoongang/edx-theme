@@ -1,6 +1,7 @@
 .view-wiki, .rtl {
     .theme-footer_row {
         flex-direction: row-reverse;
+        width: 100%;
     }
     .theme-content .home .outer-wrapper .course-search .search-button {
         right: calc(100% - 56px);
@@ -82,5 +83,15 @@ section.wiki #hint_id_content {
 .view-wiki {
     .theme-footer_row {
         flex-direction: row;
+        width: 100%;
     }
+}
+body div.info-wrapper section.updates div article .date {
+    float: none;
+}
+body .course-index .accordion .course-navigation .button-chapter .group-heading .icon {
+    right: 100%;
+    margin-right: -21px;
+    transform: rotate(-180deg);
+    width: 5px;
 }
