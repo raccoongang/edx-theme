@@ -1,0 +1,257 @@
+// Buttons mixin
+//************************************************************************//
+
+/// Mixin to make new buttoms
+@mixin button-base ($color, $background, $border, $color-hover, $background-hover, $border-hover) {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: $color;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-shadow: none;
+  text-decoration: none;
+  vertical-align: middle;
+  background: $background;
+  background-color: $background;
+  background-image: none;
+  border: $border;
+  border-radius: 4px;
+  box-shadow: none;
+  user-select: none;
+
+  &:visited {
+    color: $color;
+  }
+
+  // Share hover and focus styles
+  &:focus,
+  &:hover,
+  &:visited,
+  &:hover:not(:disabled) {
+    text-decoration: none;
+    outline: 0;
+    background-image: none;
+    text-decoration: none;
+    color: $color-hover;
+    background: $background-hover;
+    background-color: $background-hover;
+    border: $border-hover;
+    box-shadow: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    box-shadow: none;
+  }
+
+  &.current,
+  &.active {
+    background: $background-hover;
+    background-color: $background-hover;
+    color: $color;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:hover:not(:disabled) {
+      color: $color-hover;
+    }
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    box-shadow: none;
+    opacity: .65;
+  }
+}
+
+%button-ghost {
+  @include button-base($color-orange, transparent, 1px solid transparent, $color-orange-dark, transparent, 1px solid transparent);
+}
+
+%button-grey {
+  @include button-base($color-white, $color-grey, 1px solid $color-grey, $color-white, $color-grey-dark, 1px solid $color-grey-dark);
+}
+
+%button-orange {
+  @include button-base($color-white, $color-orange, 1px solid $color-orange, $color-white, $color-orange-dark, 1px solid $color-orange-dark);
+}
+
+%button-orange-invert {
+  @include button-base($color-orange, transparent, 1px solid $color-orange, $color-white, transparent, 1px solid $color-orange-dark);
+}
+
+%button-border {
+  @include button-base($color-white, transparent, 1px solid $color-white, $color-white, rgba(158,158,158,.2), 1px solid $color-white);
+}
+
+// Use button mixin
+//************************************************************************//
+
+// Base buttons
+.btn,
+a.btn,
+button[type="submit"],
+input[type="submit"],
+input[type="button"] {
+  @extend %button-grey;
+}
+
+a.btn-orange,
+button.btn-orange {
+  @extend %button-orange;
+}
+
+
+// Login and register buttons
+.header-global .nav-courseware li .btn,
+.nav-drawer .btn {
+  &-login {
+    @extend %button-orange;
+  }
+
+  &-register {
+    @extend %button-border;
+  }
+}
+
+.header-global .nav-courseware li .btn-login {
+  margin-left: 1.5rem;
+}
+
+
+.login-register {
+  .login-button,
+  .register-button {
+    @extend %button-orange;
+  }
+
+ .form-field .field-link {
+    @extend %button-ghost;
+    padding: 0;
+ }
+}
+
+.login-register button.nav-btn.form-toggle {
+  @extend %button-ghost;
+}
+
+// .course-item__info {
+//   @extend %button-orange;
+// }
+
+.dashboard .my-courses {
+  .empty-dashboard-message a {
+    @extend %button-orange;
+  }
+
+  .course {
+    .details .enter-course,
+    .wrapper-messages-primary .message.message-status .verification-cta .btn,
+    .wrapper-messages-primary .message.message-status .credit-action .credit-btn,
+    .details .enter-course.archived {
+      @extend %button-orange;
+    }
+  }
+}
+
+.verification-process .report-receipt-provider .provider-buttons-logos .complete-order button,
+
+.btn.bookmark-button {
+  @extend %button-ghost;
+}
+
+.btn-blue,
+.dashboard-banner .wrapper-msg .msg.has-actions .donate-actions .action-donate,
+.login-register .action-primary,
+.financial-assistance-wrapper .financial-assistance-form .action-primary,
+.reverify-blocked .action-primary,
+.wrapper-authorize .btn-authorization-allow,
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn {
+  @extend %button-orange;
+}
+
+.verification-process {
+  .action-primary-blue {
+    @extend %button-orange;
+  }
+
+  .carousel {
+    .wrapper-task .controls .control .action,
+    .wrapper-task .msg .list-actions .action-retakephotos a,
+    #wrapper-review .review-task-name .list-actions .action-editname a {
+      @extend %button-orange;
+    }
+  }
+
+  &.step-select-track .register-choice-audit .action-select input,
+  &.step-confirmation .course-info .options .action-course,
+  &.step-confirmation .course-info .course-actions .action-dashboard {
+    @extend %button-orange;
+  }
+}
+
+.nav-drawer a {
+  @include button-base($color-grey-light, transparent, 1px solid transparent, $color-grey-light, #535358, 1px solid transparent);
+}
+
+body.discussion {
+  .btn,
+  .search-button,
+  .forum-search .search-button {
+    @extend %button-orange;
+  }
+
+  .has-breadcrumbs .breadcrumbs .all-topics {
+    @include button-base($color-grey-dark, transparent, 1px solid transparent, $color-grey-dark, #e3e3e3, 1px solid transparent);
+  }
+
+  .discussion-column {
+    input[type="submit"],
+    button[type="submit"] {
+      @extend %button-orange;
+    }
+
+    .btn.cancel {
+      @extend %button-ghost;
+    }
+  }
+
+  .edit-post-form .post-field .field-label,
+  .forum-new-post-form .post-field .field-label {
+    .field-input,
+    .wrapper-custom-select,
+    .field-input,
+    .wrapper-custom-select {
+      vertical-align: middle;
+    }
+  }
+}
+
+.modal,
+.leanModal_box {
+  .inner-wrapper .close-modal {
+    @extend %button-ghost;
+  }
+}
+
+.help-buttons button {
+  @extend %button-orange-invert;
+}
+
+.find-courses .discovery-submit {
+  @extend %button-orange;
+}
+
+.edx-notes-wrapper .annotator-wrapper .annotator-editor.annotator-outer button.annotator-save,
+.view-student-notes .title-search-container button.search-notes-submit {
+  @extend %button-orange;
+}
+
+.view-student-notes .wrapper-tabs .tab-list .tab .action-close {
+  @extend %button-ghost;
+  line-height: 1.5;
+}

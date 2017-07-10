@@ -1,0 +1,26 @@
+<%def name="online_help_token()"><% return "course" %></%def>
+<%namespace name='static' file='static_content.html'/>
+<%!
+  from django.utils.translation import ugettext as _
+  from django.core.urlresolvers import reverse
+%>
+<%page args="course" expression_filter="h"/>
+<article class="course-item" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
+  <a class="course-item__image" href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">
+    <img src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
+  </a>
+
+  <div class="course-item__info" aria-hidden="true">
+    <h1 class="course-name">
+      <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">
+        <span class="course-title">${course.display_name_with_default}</span>
+      </a>
+    </h1>
+    %if course.short_description:
+      <p class="course-description">${course.short_description}</p>
+    % endif
+    <div class="course-item__actions">
+      <a class="btn btn-orange" href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">Sign in</a>
+    </div>
+  </div>
+</article>

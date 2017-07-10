@@ -1,0 +1,147 @@
+.home-intro {
+  @include banner-component();
+}
+
+.courses-listing li {
+  width: 100% !important;
+}
+
+.find-courses .course-description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.courses-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 2rem 0.5rem;
+    background-color: $color-white;
+
+    &:nth-child(odd) {
+      background-color: darken($color-grey-light, .78);
+    }
+  }
+}
+
+.course-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: .5rem 0 1rem 0;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+
+  &__image {
+    width: calc(33.3333333333% - 16px);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(66.6666666667% - 16px);
+    margin-left: 2.75rem;
+    box-sizing: border-box;
+  }
+
+  &__actions {
+    width: 100%;
+    margin-top: 0.75rem;
+    text-align: right;
+  }
+
+  .course-name {
+    margin-bottom: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+
+    a {
+      color: $color-orange !important;
+
+      &:hover,
+      &:active,
+      &:visited,
+      &:visited:hover {
+        color: $color-orange-dark;
+        text-decoration: none;
+      }
+
+    }
+  }
+
+  .course-description {
+    line-height: 1.5;
+  }
+}
+
+// @media (max-width: $desktop) {
+// }
+
+@media (max-width: $tablet) {
+  .home-component__text {
+    min-width: auto;
+  }
+
+  .course-item {
+    flex-direction: column;
+    padding: 0 1rem;
+    box-sizing: border-box;
+
+    &__image {
+      width: 100%;
+      margin-left: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__info {
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      margin-left: 0;
+      padding: 0.5rem;
+      margin-top: -60px;
+      background: rgba(0, 0, 0, 0.7);
+
+      .course-name {
+        margin-bottom: 0;
+        margin-right: 1rem;
+        color: $color-white;
+        font-size: 22px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .course-description {
+        display: none;
+      }
+    }
+
+    &__actions {
+      width: auto;
+      margin-top: 0;
+
+      .btn {
+        min-width: 56px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .course-item__info .course-name {
+    font-size: 18px;
+  }
+}

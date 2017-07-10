@@ -1,0 +1,104 @@
+// course outline - accordion
+.course-outline .block-tree .section {
+  margin: 0;
+  padding: 0;
+  background: $color-white;
+  box-sizing: border-box;
+
+  .section-name {
+    margin: 0 !important;
+    padding: 1rem;
+    background: $color-grey-dark;
+
+    h3 {
+      color: #FFF;
+    }
+  }
+
+  ol.outline-item {
+    margin: 0;
+    padding: 0;
+
+    .subsection {
+      border: none !important;
+
+      a.outline-item {
+        padding: 1rem;
+        color: $color-grey;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $color-grey-dark;
+          background: #fbe6de;
+
+          .subsection-text .details {
+            color: $color-grey-dark;
+          }
+        }
+
+        .subsection-text .details {
+          color: $color-grey;
+        }
+      }
+
+      &-actions .resume-right {
+        @extend %button-orange;
+      }
+    }
+  }
+}
+
+.page-header-search .search-form {
+  display: flex;
+  width: 100%;
+
+  .search-input {
+    width: 100%;
+  }
+}
+
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions .btn {
+  @extend %button-orange;
+}
+
+.course-sidebar {
+  padding-left: 0;
+}
+
+@media (max-width: $tablet) {
+  .content-wrapper {
+    .course-sidebar {
+      margin-top: 2rem;
+    }
+
+    .page-header {
+      &-main {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+
+      &-search {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      &.has-secondary .page-header-secondary {
+        width: 100%;
+
+        .form-actions {
+          display: block;
+          width: 100%;
+          margin-top: 1rem;
+          margin-left: 0;
+
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

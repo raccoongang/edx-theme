@@ -1,0 +1,31 @@
+.wrapper-account-settings {
+  .account-settings {
+    &-container {
+      margin: 1rem auto;
+      background: #efefef;
+    }
+
+    &-sections .section {
+      padding: 0 1rem;
+    }
+  }
+
+
+  .wrapper-header .account-nav button.active {
+    border-bottom-color: $color-orange !important;
+  }
+}
+
+.bookmarks-results-list .bookmarks-results-list-item {
+  &:before {
+    color: $color-orange;
+  }
+
+  &:hover {
+    border-color: $color-orange;
+
+    .list-item-breadcrumbtrail {
+      color: $color-orange;
+    }
+  }
+}

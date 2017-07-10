@@ -1,0 +1,95 @@
+.login-register-content {
+  margin-top: 0;
+}
+
+.login-register,
+.financial-assistance-wrapper .financial-assistance-form {
+  margin-top: 0;
+
+  .form-wrapper {
+    margin-bottom: 40px;
+    padding: 1rem;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+  }
+
+  #login-anchor .form-wrapper:not(.hidden) {
+    margin-top: 340px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 164px;
+      height: 164px;
+      top: 0;
+      left: 50%;
+      margin: 88px -82px 0;
+      background-image: url('../images/register-circle.jpg');
+      background-size: cover;
+    }
+  }
+
+  #register-anchor .form-wrapper:not(.hidden) {
+    margin-top: 416px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 402px;
+      top: 0;
+      left: 0;
+      background-image: url('../images/register-bg.jpg');
+      background-size: cover;
+    }
+  }
+
+  .section-title.lines::after {
+    display: none;
+  }
+
+  .form-field {
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      color: $color-grey;
+      background-color: rgb(252, 252, 252);
+      border-color: #BFBFC1;
+      border-radius: 4px;
+
+      &:-webkit-autofill {
+        color: $color-grey;
+        background-color: rgb(252, 252, 252);
+      }
+    }
+  }
+
+  .section-title {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: $smartphone) {
+  .login-register #register-anchor .form-wrapper:not(.hidden),
+  .financial-assistance-wrapper .financial-assistance-form #register-anchor .form-wrapper:not(.hidden),
+  .financial-assistance-wrapper .financial-assistance-form #register-anchor .form-wrapper:not(.hidden) {
+    margin-top: 166px;
+
+    &:before {
+      height: 152px;
+      background-position: center;
+    }
+  }
+
+  .login-register form,
+  .financial-assistance-wrapper .financial-assistance-form form,
+  .login-register .wrapper-other-login,
+  .financial-assistance-wrapper .financial-assistance-form .wrapper-other-login {
+    border: none;
+
+    &.login-form {
+      border: 1px solid #e4e4e4;
+    }
+  }
+}

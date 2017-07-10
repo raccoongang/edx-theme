@@ -1,0 +1,45 @@
+// Footer styles
+//************************************************************************//
+.wrapper-footer {
+  position: relative;
+  margin-top: 0;
+  padding: 2rem 0;
+  box-shadow: none;
+  border-top: 8px solid darken(saturate($color-grey-dark, 0.18), 24.31);
+  z-index: 100;
+
+  footer {
+    @extend %navigation-wrapper;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-right: 1.5rem;
+    }
+
+    a {
+      color: $color-white;
+    }
+  }
+}
+
+@media (max-width: $smartphone) {
+  .wrapper-footer nav ul {
+    flex-direction: column;
+
+    li {
+      margin-right: 0;
+      margin-bottom: .5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

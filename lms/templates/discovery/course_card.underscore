@@ -1,0 +1,23 @@
+<article class="course-item" role="region" aria-label="<%- content.display_name %>">
+  <div class="wrapper-course-image" aria-hidden="true">
+    <a class="course-item__image" href="/courses/<%- course %>/about">
+      <img src="<%- image_url %>" alt="<%- content.display_name %> <%- content.number %>" />
+    </a>
+    <div class="date-info">
+      <%- interpolate(gettext("Starts: %(start_date)s"), { start_date: start }, true ) %>
+    </div>
+  </div>
+  <div class="course-item__info" aria-hidden="true">
+    <h1 class="course-name">
+      <a href="/courses/<%- course %>/about">
+        <span class="course-title"><%- content.display_name %></span>
+      </a>
+    </h1>
+    <% if (content.overview) { %>
+      <p class="course-description"><%- content.overview %></p>
+    <% } %>
+    <div class="course-item__actions">
+      <a class="btn btn-orange" href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">Sign in</a>
+    </div>
+  </div>
+</article>
