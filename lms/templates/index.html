@@ -2,48 +2,46 @@
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
 <%!
-from django.utils.translation import ugettext as _
-from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from django.core.urlresolvers import reverse
 
-from openedx.core.djangolib.markup import HTML, Text
+  from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    <section class="home">
-      <header>
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-                <h1>${_("Welcome to ")} C<span>O</span>DE ${_(" institute!")}</h1>
-            </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
-
-          </div>
-
-          % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
+  <header class="home-intro">
+    <div class="home-intro__container">
+      % if homepage_overlay_html:
+        ${homepage_overlay_html | n, decode.utf8}
+      % else:
+        <div class="home-intro__text">
+          <h1><b>Sign In</b> </br> Page</h1>
         </div>
+      % endif
+    </div>
+  </header>
 
-      </header>
-      <%include file="${courses_list}" />
+  <section class="home-courses">
+    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+      <ul class="courses-list">
+        ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+        %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+          <li>
+            <div class="courses-container">
+              <%include file="course.html" args="course=course" />
+            </div>
+          </li>
+        %endfor
+      </ul>
 
-    </section>
+      ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
+      % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
+        <div class="courses-more">
+          <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
+        </div>
+      % endif
+    % endif
+  </section>
 </main>
 
 % if show_homepage_promo_video:
@@ -55,19 +53,19 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
-   <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
-   </script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      if(getParameterByName('next')) {
+        $('#login').trigger("click");
+      }
+    })
+  </script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
   ## NOTE: This won't work in production, because anonymous views are cached, so it will
   ## show either with or without this extra js for 3 minutes at a time.
-<script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
-</script>
+  <script type="text/javascript">
+    $(window).load(function() {$('#signup_action').trigger("click");});
+  </script>
 % endif

@@ -1,8 +1,32 @@
-//import the original styles from edx-platform
-@import "lms/static/sass/lms-main-v1";
+/* ========================================================
 
-//our overrides for settings we want to change
-$img-path: "../images" !default;
-$font-path: "../fonts" !default;
+  LMS style for Code Academy Theme
 
-@import "main";
+======================================================== */
+
+// import variables
+@import 'variables';
+
+
+// import extras
+@import 'utils';
+
+
+// import LMS base
+@import 'lms/static/sass/lms-main-v1';
+
+
+// import modules
+@import 'base';
+@import 'buttons';
+
+@import 'header';
+@import 'home';
+@import 'login-register';
+@import 'dashboard';
+@import 'course-info';
+@import 'course-content';
+@import 'forum';
+@import 'footer';
+
+@import 'shame';
