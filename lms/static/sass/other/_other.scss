@@ -288,6 +288,9 @@ div.window-wrap .login .form-actions button[type="submit"] {
 }
 div.window-wrap .register .btn-brand.btn-login {
     background: transparent;
+    @media (max-width: 450px) {
+        margin-bottom: 15px;
+    }
 }
 div.window-wrap .register aside .btn-login .btn-login-action {
     color: $theme-color-main;
