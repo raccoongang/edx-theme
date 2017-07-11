@@ -326,3 +326,22 @@ body div.info-wrapper section.handouts a {
         color: $theme-color-main-hover;
     }
 }
+.view-register .introduction,
+.view-register .container,
+.view-login .introduction,
+.view-login .container {
+    min-width: 320px;
+    width: auto;
+    max-width: 1180px;
+}
+.register .content,
+.login .content {
+    max-width: 600px;
+    width: 100%;
+    min-width: 280px;
+}
+.view-register .introduction header .title .title-sub, .view-login .introduction header .title .title-sub, .view-passwordreset .introduction header .title .title-sub {
+    @media (max-width: 450px) {
+        margin-left: 0;
+    }
+}
