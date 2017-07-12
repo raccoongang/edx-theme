@@ -27,6 +27,9 @@
             background: #fff;
             border: 1px solid $theme-color-main-hover;
         }
+        @media (max-width: 800px) {
+            margin-bottom: 10px;
+        }
     }
     &__right {
         float: right;

@@ -16,8 +16,11 @@
     &__course {
         height: 350px; //ie
         min-height: 350px;
+        @media (max-width: $res_450) {
+            padding: 20px 0;
+            height: auto;
+        }
     }
-
     &_img {
         width: 100%;
         height: auto;
@@ -25,10 +28,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        min-width: 1600px;
     }
     &_text {
-        display: none;
-        @media all and (min-width: 860px){
+        font: 24px/1 muliregular;
+        @media all and (min-width: $res_860){
             display: block;
             font: 24px/1 muliregular;
             color: #fff;
@@ -36,12 +40,12 @@
         }
     }
     &_heading {
-        display: none;
+        font: 40px/1.3 'Work Sans', sans-serif;
+        color: #fff;
+        font-weight: 800;
         @media all and (min-width: 800px){
             display: block;
             font: 60px/1.3 'Work Sans', sans-serif;
-            color: #fff;
-            font-weight: 800;
             text-transform: uppercase;
             margin: 0 0 18px;
         }
@@ -61,12 +65,15 @@
         right: 0;
         bottom: 0;
         background: #000;
-        opacity: .2;
+        opacity: .5;
     }
     &_description {
         margin-bottom: 25px;
         color: #fff;
         font: 24px/1.3 'Work Sans', sans-serif;
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
     &_holder {
         position: relative;
