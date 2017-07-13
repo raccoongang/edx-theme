@@ -1,0 +1,37 @@
+.footer {
+    &_list {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    &_icons {
+        display: inline-block;
+        background-image: url(../images/icons.svg);
+        background-repeat:no-repeat;
+        width:32px;
+        height:32px;
+        &__fb {
+            background-position: 0 0;
+            background-size: 50px;
+        }
+        &__youtube {
+            background-position: 0 -130px;
+            background-size: 50px;
+        }
+        &__music {
+            background-position: 0 -21px;
+        }
+        &__crown {
+            background-position: 0 -51px;
+            background-size: 32px;
+        }
+    }
+}

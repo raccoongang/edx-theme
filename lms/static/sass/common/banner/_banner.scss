@@ -1,0 +1,14 @@
+.banner {
+    &_logo {
+        position: absolute;
+        left: 0;
+        top: 93px;
+        @media (max-width: 720px) {
+            left: 50%;
+            top: 15px;
+            width: 150px;
+            height: auto;
+            transform: translateX(-50%);
+        }
+    }
+}

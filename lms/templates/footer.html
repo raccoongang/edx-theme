@@ -1,0 +1,37 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer">
+  <footer class="grid-container"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
+  <ul class="footer_list">
+    <li><a href="https://www.facebook.com/simpleconomicsgt/" class="footer_icons footer_icons__fb" target="_blank"></a></li>
+    <li><a href="https://www.youtube.com/channel/UCSTptXsFPrsBpzi1_cTOsgg" class="footer_icons footer_icons__youtube" target="_blank"></a></li>
+    <li><a href="https://itunes.apple.com/gt/podcast/simpleconomicss-podcast/id1162175991?l=en&mt=2" class="footer_icons footer_icons__music" target="_blank"></a></li>
+    <li><a href="http://simpleconomics.libsyn.com/" class="footer_icons footer_icons__crown" target="_blank"></a></li>
+  </ul>
+</div>
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif

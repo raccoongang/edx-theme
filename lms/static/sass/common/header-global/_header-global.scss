@@ -1,4 +1,28 @@
 .header-global {
     z-index: 100;
+    background: $header-color;
+    border-bottom: none;
+    box-shadow: none;
     position: relative;
+    box-shadow: 0 1px 5px 0 rgba(164,164,164,0.5);
+    height: 78px;
+    &_menu {
+        @media (max-width: $responsive-large) {
+            position: absolute;
+            background: #fff;
+            top: 78px;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            display: none;
+        }
+    }
+}
+.menu-open .header-global_menu {
+    @media (max-width: $responsive-large) {
+        display: flex;
+    }
 }

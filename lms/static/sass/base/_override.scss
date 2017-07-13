@@ -1,15 +1,405 @@
-.window-wrap .courses-container .courses .course .course-image .cover-image .learn-more {
-    left: calc(50% - 100px);
-    box-sizing: border-box;
-    position: absolute;
-    top: 55px;
-    padding: 0 20px;
-    width: 200px;
-    height: 50px;
-    border: 3px solid #fff;
-    border-radius: 3px;
-    background: transparent;
+body,html,.view-register, .view-login, .view-passwordreset {
+    background-color: #eeeeee;
 }
-.header-global h1.logo {
-    margin: 0;
+.header-global {
+    height: auto;
+    h1.logo {
+        margin: 0;
+    }
+    .nav-courseware {
+        margin-top: 7px;
+    }
+    .wrapper-header {
+        height: auto;
+        padding: 13px 10px;
+        box-sizing: border-box;
+        max-width: 1216px;
+    }
+    .nav-global {
+        li a {
+            color: $header-nav-link-color;
+
+            &:hover {
+                color: $header-nav-link-color-hover;
+            }
+        }
+        .tab-nav-item {
+            .active {
+                border: none !important;
+            }
+            .tab-nav-link {
+                color: $header-nav-link-color;
+                padding: 5px;
+
+                &:hover {
+                    color: $header-nav-link-color-hover;
+                    border: none;
+                }
+            }
+        }
+    }
+    .user {
+        .user-link .label-username {
+            text-shadow: none;
+            margin: 13px 5px 13px 15px;
+        }
+        .dropdown {
+            background: none;
+            margin: 4px 0 0;
+            width: 29px;
+            height: 25px;
+            box-sizing: border-box;
+        }
+    }
+    .primary>a {
+        box-shadow: none;
+
+        &:focus,
+        &:hover {
+            background: none;
+        }
+    }
+}
+.course-info header.course-profile {
+    height: auto;
+    margin-top: 0;
+    padding: 20px 0;
+}
+.doc-link {
+    color: $header-nav-link-color !important;
+    margin: 12px 15px;
+    line-height: 16px;
+
+    &:visited {
+        color: $header-nav-link-color !important;
+    }
+
+    &:focus,
+    &:hover {
+        color: $header-nav-link-color-hover !important;
+        text-decoration: none;
+    }
+}
+.wrapper-footer {
+    background: $footer-color;
+    box-shadow: none;
+    border: none;
+    padding: 30px 10px 30px 10px;
+    footer#footer-openedx {
+        a:hover,
+        a:focus {
+            text-decoration: none !important;
+            border: none !important;
+        }
+        .colophon .nav-colophon li a {
+            color: $footer-nav-link-color;
+            
+            &:focus,
+            &:hover {
+                border: none !important;
+                text-decoration: none !important;
+                color: $footer-nav-link-color-hover !important;
+            }
+        }
+    }
+}
+.animation-home-header-pop-up, .home>header .outer-wrapper {
+    animation: none;
+    padding: 60px 0;
+}
+.course-header,
+.header-global .item.nav-global-05 {
+    display: none;
+}
+.view-login .header-global .nav-courseware .btn-login {
+    display: inline-block;
+}
+.view-register .header-global nav, .view-login .header-global nav {
+    width: 100%;
+}
+.header-global .nav-courseware li, .header-global .nav-courseware div {
+    @media (max-width: $responsive-large) {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+.home>header {
+    background: #232849 url(../images/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    box-shadow: none;
+    min-height: 442px;
+    .title {
+        float: none;
+        margin-right: 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        background: transparent;
+        box-shadow: none;
+        min-height: auto;
+        margin-top: 48px;
+        padding: 20px 10px;
+        @media (max-width: 720px) {
+            position: relative;
+            top: 80px;
+        }
+        .course-search {
+            display: none;
+        }
+        &>.heading-group {
+            text-align: center;
+            h1,p {
+                text-align: center;
+                text-shadow: 0 2px 0 rgba(15, 34, 99, 1);        
+                color: #fff;
+            }
+            h1 {
+                font: bold 52px/1.2 Verdana, Arial, sans-serif;
+                letter-spacing: 3px;
+                margin-bottom: 13px;
+                @media (max-width: 720px) {
+                    font-size: 36px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 25px;
+                }
+            }
+            p {
+                font: 36px/1.2 Verdana, Arial, sans-serif;
+                margin-bottom: 24px;
+                @media (max-width: 720px) {
+                    font-size: 28px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+.courses-container .courses .course {
+    box-shadow: none;
+    .course-info  {
+        background-color: #fff;
+    }
+}
+.content-wrapper {
+    background-color: #eeeeee;
+    margin-bottom: 37px;
+}
+.find-courses .courses .course,
+.highlighted-courses .courses .course {
+    background-color: #fff;
+    border-width: 0 0 3px 0;
+    &:hover,
+    &:focus {
+        background-color: #fff;
+        box-shadow: none;
+        border-color: #fff;
+    }
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font: 18px/50px Arial, sans-serif;
+    text-transform: uppercase;
+}
+.courses-container .courses .course .course-info .course-title,
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    text-transform: uppercase;
+}
+.courses-container .courses .course .course-info .course-date,
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    color: rgb(46, 46, 46);
+    font: 14px/1.2 Helvetica, Arial, sans-serif;
+}
+.courses-container .courses .course .course-info .course-title {
+    font: 18px/1.2 Helvetica, Arial, sans-serif;
+    color: rgb(15, 34, 99);
+}
+.courses-container .courses .course .course-info .course-organization {
+    padding: 15px 15px 5px 15px;
+}
+.courses-container .courses .course .course-info .course-title {
+    margin-bottom: 40px;
+}
+.view-register .content-wrapper, 
+.view-login .content-wrapper, 
+.view-passwordreset .content-wrapper,
+.view-login .container,
+.view-register .container,
+.view-passwordreset .container,
+.view-register .introduction, 
+.view-login .introduction, 
+.view-passwordreset .introduction,
+.view-register .wrapper-footer footer, 
+.view-login .wrapper-footer footer, 
+.view-passwordreset .wrapper-footer footer {
+    box-sizing: border-box;
+    max-width: 960px;
+    padding: 0 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+.register .content,
+.login .content {
+    float: none;
+    max-width: 600px;
+    width: 100%;
+    @media (max-width: 950px) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+.register aside,
+.login aside {
+    float: none;
+    max-width: 280px;
+    width: 100%;
+    @media (max-width: 950px) {
+        margin: 0 auto;
+    }
+}
+.view-register .register.container,
+.view-login .login.container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    min-width: 280px;
+    &::after {
+        display: none;
+    }
+    @media (max-width: 950px) {
+        flex-direction: column;
+    }
+}
+.view-register .introduction header,
+.view-login .introduction header {
+    min-height: 120px;
+    height: auto;
+}
+.view-register .introduction header .title, 
+.view-login .introduction header .title, 
+.view-passwordreset .introduction header .title {
+    position: relative;
+    left: 0;
+    padding-left: 30px;
+    @media (max-width: 950px) {
+        text-align: center;
+    }
+}
+body .home .page-header-secondary,
+#forgot-password-modal #password-reset .form-actions button[type="submit"],
+.register .form-actions button[type="submit"],
+.login .form-actions button[type="submit"] {
+    color: $header-color;
+    background-color: $header-nav-link-color;
+    border-radius: 2px;
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $header-color;
+        background-color: $header-nav-link-color-hover;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+.register aside .btn-login h3.title {
+    color: #fff;
+    margin-bottom: 5px;
+}
+.register aside .btn-login .btn-login-action,
+body .btn-brand.btn-login {
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        text-decoration: none;
+        box-shadow: none;
+    }  
+}
+.register aside .btn-login .btn-login-action {
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $header-nav-link-color-hover;
+        border-color: $header-nav-link-color-hover;
+    } 
+}
+body .btn-brand.btn-login {
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $header-nav-link-color;
+    }
+}
+div.info-wrapper section.updates div article .toggle-visibility-button,
+.login.container a:link,
+.login.container a,
+.register form .field.required label a,
+.register a:link,
+.register .cta a,
+.inner-wrapper p a {
+    color: $header-nav-link-color-hover !important;
+    &:hovere,
+    &:focus,
+    &:active,
+    &:visited {
+        color: $header-nav-link-color-hover!important;
+    }
+}
+.find-courses .filters .clear-filters,
+.view-login #forgot-password-modal #password-reset header h2,
+.login form .field.is-focused .tip,.register form .field.is-focused .tip,.passwordreset form .field.is-focused .tip,#forgot-password-modal #password-reset form .field.is-focused .tip,
+.login form .field.is-focused label, .register form .field.is-focused label, .passwordreset form .field.is-focused label, #forgot-password-modal #password-reset form .field.is-focused label,
+.view-register .introduction header .title .title-super, .view-login .introduction header .title .title-super, .view-passwordreset .introduction header .title .title-super {
+    color: $header-nav-link-color-hover;
+}
+.course-info .course-sidebar .important-dates li .icon {
+    margin-top: 0;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+.intro-inner-wrapper button {
+    color: $header-color;
+    background: $header-nav-link-color;
+    border-color: $header-nav-link-color;
+    box-shadow: none;
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        color: $header-color;
+        background: $header-nav-link-color-hover;
+        text-decoration: none;
+        border-color: $header-nav-link-color-hover;
+        box-shadow: none;
+    }
+}
+.courses-container .courses .course {
+    border-bottom-color: #4088ff;
+}
+.find-courses .discovery-submit {
+    background: $header-nav-link-color;
+    border-color: $header-nav-link-color;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+        background: $header-nav-link-color-hover;
+        border-color: $header-nav-link-color-hover;
+        box-shadow: none;
+    }
+}
+.find-courses .loading-spinner {
+    background: $header-nav-link-color;
+}
+.find-courses .discovery-input:focus {
+    border-color: $header-nav-link-color-hover;
+}
+.find-courses .search-facets .facet-option:hover, .find-courses .search-facets .facet-option:focus {
+    background: $header-nav-link-color-hover;
 }
