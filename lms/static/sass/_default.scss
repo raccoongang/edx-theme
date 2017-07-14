@@ -17,13 +17,16 @@
       h1 {
         font-size: 1.4em;
         line-height: 1em;
+        font-family: "Open Sans",Arial,Helvetica,sans-serif;
       }
       p {
         font-size: 1em;
+        font-family: "Open Sans",Arial,Helvetica,sans-serif;
       }
     }
   }
 }
+
 
 .header.global {
   border-bottom: none !important;
@@ -470,9 +473,11 @@ body .course-info header.course-profile {
   }
 }
 .course-info .details .inner-wrapper .course-staff .teacher {
+  margin-left: -5px;
   margin-bottom: 40px;
-  float: left;
   width: 50%;
+  display: inline-block;
+  vertical-align: top;
   box-sizing: border-box;
   padding: 0 10px;
   @media screen and (min-width: 760px) {
