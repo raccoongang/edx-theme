@@ -1,4 +1,4 @@
-body,html,.view-register, .view-login, .view-passwordreset {
+body,html,.view-register, .view-login, .view-passwordreset,body.view-in-course,.window-wrap {
     background-color: #eeeeee;
 }
 .header-global {
@@ -314,8 +314,12 @@ body,html,.view-register, .view-login, .view-passwordreset {
         text-align: center;
     }
 }
+body .edit-post-form .post-update {
+    border-color: $header-nav-link-color;
+}
+body .xmodule_display.xmodule_CapaModule div.problem .action .submit-attempt-container .submit,
+body .edit-post-form .post-update,
 .discussion .comments .comment-form .discussion-submit-comment,
-.forum-new-post-form .btn-brand.submit,
 body .home .page-header-secondary,
 #forgot-password-modal #password-reset .form-actions button[type="submit"],
 .register .form-actions button[type="submit"],
@@ -331,6 +335,20 @@ body .home .page-header-secondary,
         background-color: $header-nav-link-color-hover;
         text-decoration: none;
         box-shadow: none;
+    }
+}
+body .forum-new-post-form .btn-brand.submit {
+    color: $header-color !important;
+    background-color: $header-nav-link-color !important;
+    border-radius: 2px;
+    box-shadow: none !important;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $header-color !important;
+        background-color: $header-nav-link-color-hover !important;
+        text-decoration: none !important;
+        box-shadow: none !important;
     }
 }
 .register aside .btn-login h3.title {
@@ -388,6 +406,7 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 .course-info .course-sidebar .important-dates li .icon {
     margin-top: 0;
 }
+body .modal .inner-wrapper form .submit input[type="submit"],body .leanModal_box .inner-wrapper form .submit input[type="submit"],
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
 .intro-inner-wrapper button {
@@ -408,6 +427,7 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 .courses-container .courses .course {
     border-bottom-color: #4088ff;
 }
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active,
 .wrapper-account-settings .wrapper-header .account-nav button:hover, .wrapper-account-settings .wrapper-header .account-nav button:focus {
     border-bottom-color: $active-color-hover !important;
 }
@@ -419,8 +439,13 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
         color: $active-color-hover;
     } 
 }
+body section.wiki .btn.btn-primary {
+    text-shadow: none;
+}
+body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
+.view-instructordash .instructor-dashboard-wrapper-2 .btn-blue,
 .submit-attempt-container btn-brand,
-boy section.wiki .btn.btn-primary,
+body section.wiki .btn.btn-primary,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
@@ -441,6 +466,18 @@ body .login-register .action-primary,
         box-shadow: none;
     }
 }
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
+.view-instructordash .instructor-dashboard-wrapper-2 .btn-blue {
+    color: #fff;
+    text-shadow: none;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+        color: #fff;
+        text-shadow: none;
+    }
+}
+body .edit-post-form .post-cancel,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
 .add-response .btn,
 .reply-post-control .btn,
@@ -499,6 +536,15 @@ body .btn-link.link-cross-reference {
         color: $all-link-color-hover;
     }
 }
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+body .discussion.inline-discussion .new-post-article .add-post-cancel,
+.btn-link.new-post-btn,
+.btn-link.bookmark-button,
+body .dropdown-menu-container .dropdown-menu .dropdown-item a,
+section.wiki .directory-toolbar+p a,
+a.accordion-toggle,
+section.wiki .article-functions .see-children a,
+html body .header-global .user .dropdown-menu a,
 .u-field-message-notification a,
 body section.wiki .nav-tabs a,
 body section.wiki .nav-tabs li.active a,
@@ -544,13 +590,15 @@ body .cohort-management-settings-form a,
 .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
     border-bottom-color: $active-color;
 }
-.wmd-prompt-dialog .btn,
-.discussion-module .btn {
+body .wmd-prompt-dialog .btn,
+body .discussion-module .btn {
+    color: #fff;
     border-color: $active-color;
     background-color: $active-color;
     &:hover,
     &:focus,
     &:active {
+        color: #fff;
         border-color: $active-color-hover !important;
         background-color: $active-color-hover !important;       
     }
@@ -561,16 +609,30 @@ body .cohort-management-settings-form a,
 .header-global .wrapper-header .list-inline.nav-global {
     margin-top: 0;
 }
-.forum-new-post-form .post-type-input:checked+.post-type-label, .edit-post-form .post-type-input:checked+.post-type-label {
+body .forum-new-post-form .post-type-input:checked+.post-type-label, body .edit-post-form .post-type-input:checked+.post-type-label {
     background-color: $active-color-hover;
 }
 .forum-nav-thread-wrapper-1 {
     width: 100%;
 }
 .discussion .action-button.action-follow.is-checked .action-icon, .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button.action-follow:focus .action-icon {
-    background-color: $active-color;
-    border: 1px solid $active-color;
+    background-color: $active-color-hover;
+    border: 1px solid $active-color-hover;
 }
 .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
     border-top-color: $active-color;
+}
+.discussion .action-button.action-follow .action-label {
+    color: $active-color-hover;
+}
+.discussion .action-button.action-follow:hover, 
+.discussion .action-button.action-follow:focus {
+    color: $active-color-hover;
+    border-color:  $active-color-hover;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    columns: 1;
+}
+body .date-summary-container .date-summary-todays-date {
+    border-left-color: $active-color;
 }
