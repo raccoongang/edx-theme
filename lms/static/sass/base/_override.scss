@@ -88,12 +88,12 @@ body,html,.view-register, .view-login, .view-passwordreset {
     padding: 20px 0;
 }
 .doc-link {
-    color: $header-nav-link-color !important;
+    color: $link-color !important;
     margin: 12px 15px;
     line-height: 16px;
 
     &:visited {
-        color: $header-nav-link-color !important;
+        color: $link-color !important;
     }
 
     &:focus,
@@ -314,6 +314,8 @@ body,html,.view-register, .view-login, .view-passwordreset {
         text-align: center;
     }
 }
+.discussion .comments .comment-form .discussion-submit-comment,
+.forum-new-post-form .btn-brand.submit,
 body .home .page-header-secondary,
 #forgot-password-modal #password-reset .form-actions button[type="submit"],
 .register .form-actions button[type="submit"],
@@ -369,7 +371,7 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 .register .cta a,
 .inner-wrapper p a {
     color: $header-nav-link-color-hover !important;
-    &:hovere,
+    &:hover,
     &:focus,
     &:active,
     &:visited {
@@ -406,12 +408,15 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 .courses-container .courses .course {
     border-bottom-color: #4088ff;
 }
+.wrapper-account-settings .wrapper-header .account-nav button:hover, .wrapper-account-settings .wrapper-header .account-nav button:focus {
+    border-bottom-color: $active-color-hover !important;
+}
 .instructor-nav .btn-link {
-    color: $header-nav-link-color;
+    color: $active-color;
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &:active:not(:disabled) {
-        color: $header-nav-link-color-hover;
+        color: $active-color-hover;
     } 
 }
 .submit-attempt-container btn-brand,
@@ -425,71 +430,82 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 body .courseware-bookmarks-button .bookmarks-list-button.is-active,
 body .login-register .action-primary,
 .find-courses .discovery-submit {
-    background: $header-nav-link-color;
-    border-color: $header-nav-link-color;
+    background: $active-color;
+    border-color: $active-color;
     box-shadow: none;
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &:active:not(:disabled) {
-        background: $header-nav-link-color-hover;
-        border-color: $header-nav-link-color-hover;
+        background: $active-color-hover;
+        border-color: $active-color-hover;
         box-shadow: none;
     }
 }
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
+.add-response .btn,
+.reply-post-control .btn,
+.forum-new-post-form .btn.cancel,
 body.discussion .page-header-secondary .btn,
 body .courseware-bookmarks-button .bookmarks-list-button,
 .dashboard .my-courses .course .details .enter-course,
 body .login-register .nav-btn {
-    color: $header-nav-link-color;
+    color: $active-color;
     background: transparent;
-    border-color: $header-nav-link-color;
+    border-color: $active-color;
     box-shadow: none;
     &:hover,
     &:focus,
     &:active {
         color: #fff;
-        background: $header-nav-link-color-hover;
-        border-color: $header-nav-link-color-hover;
+        background: $active-color-hover;
+        border-color: $active-color-hover;
         box-shadow: none;
     }
 }
 .find-courses .loading-spinner {
-    background: $header-nav-link-color;
+    background: $active-color;
 }
 .find-courses .discovery-input:focus {
-    border-color: $header-nav-link-color-hover;
+    border-color: $active-color-hover;
 }
 .find-courses .search-facets .facet-option:hover, .find-courses .search-facets .facet-option:focus {
-    background: $header-nav-link-color-hover;
+    background: $active-color-hover;
 }
 html body .wrap-instructor-info .instructor-info-action,
 .course-info .container .wrap-instructor-info .instructor-info-action {
-    color: $hamburger-color;
+    color: $active-color-hover;
     &:hover,
     &:focus,
     &:active {
         color: #fff;
-        background: $header-nav-link-color-hover;
+        background: $active-color-hover;
     }
 }
 body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
 html body .tabs .tab a,html body .tabs .tab a:visited {
-    color: $header-nav-link-color;
+    color: $active-color;
 }
 html body .wrapper-course-material .course-tabs li.tab a:focus,
 html body .wrapper-course-material .course-tabs li.tab a:hover,
 html body .wrapper-course-material .course-tabs li.tab a.active {
-    border-bottom-color: $header-nav-link-color;
-    color: $header-nav-link-color;
+    border-bottom-color: $active-color;
+    color: $active-color;
 }
 body .btn-link.link-cross-reference {
-    color: $header-nav-link-color-hover;
+    color: $active-color-hover;
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &:active:not(:disabled) {
         color: $all-link-color-hover;
     }
 }
+.u-field-message-notification a,
+body section.wiki .nav-tabs a,
+body section.wiki .nav-tabs li.active a,
+.discussion-response .response-header-content .username,
+.discussion .post-label.post-label-following,
+.discussion-article .posted-details .username,
+.has-breadcrumbs .breadcrumbs .all-topics,
 .course-index .accordion .course-navigation .button-chapter,
 div.info-wrapper section.updates>ol>li a,
 body div.info-wrapper section.handouts ol li a,
@@ -501,7 +517,7 @@ body .instructor-dashboard-content-2 a,
 body .cohort-management-settings-form a,
 .dashboard .my-courses .course .details .course-title a,
 .login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link {
-    color: $header-nav-link-color-hover;
+    color: $link-color;
     &:hover,
     &:focus,
     &:active {
@@ -510,38 +526,51 @@ body .cohort-management-settings-form a,
 }
 .search-bar button.search-button, 
 .search-bar button.cancel-button {
-    background: $header-nav-link-color;
+    background: $active-color;
     &:hover,
     &:focus,
     &:active {
-        background: $header-nav-link-color-hover;
+        background: $active-color-hover;
     }
 }
 .search-bar button.search-button:hover:hover, 
 .search-bar button.cancel-button:hover:hover {
-    background: $header-nav-link-color-hover;
+    background: $active-color-hover;
 }
 .enrollment-wrapper strong {
-    color: $header-nav-link-color-hover !important;
+    color: $active-color-hover !important;
 }
 .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
 .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
-    border-bottom-color: $header-nav-link-color;
+    border-bottom-color: $active-color;
 }
 .wmd-prompt-dialog .btn,
 .discussion-module .btn {
-    border-color: $header-nav-link-color;
-    background-color: $header-nav-link-color;
+    border-color: $active-color;
+    background-color: $active-color;
     &:hover,
     &:focus,
     &:active {
-        border-color: $header-nav-link-color-hover !important;
-        background-color: $header-nav-link-color-hover !important;       
+        border-color: $active-color-hover !important;
+        background-color: $active-color-hover !important;       
     }
 }
 .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
-    color: $header-nav-link-color;
+    color: $active-color;
 }
 .header-global .wrapper-header .list-inline.nav-global {
     margin-top: 0;
+}
+.forum-new-post-form .post-type-input:checked+.post-type-label, .edit-post-form .post-type-input:checked+.post-type-label {
+    background-color: $active-color-hover;
+}
+.forum-nav-thread-wrapper-1 {
+    width: 100%;
+}
+.discussion .action-button.action-follow.is-checked .action-icon, .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button.action-follow:focus .action-icon {
+    background-color: $active-color;
+    border: 1px solid $active-color;
+}
+.account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+    border-top-color: $active-color;
 }
