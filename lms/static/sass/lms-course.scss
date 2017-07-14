@@ -1,0 +1,9 @@
+//import the original styles from edx-platform
+@import "lms/static/sass/lms-course";
+// @import "../css/time-lms.css";
+
+//our overrides for settings we want to change
+$img-path: "../images" !default;
+$font-path: "../fonts" !default;
+
+@import "main";

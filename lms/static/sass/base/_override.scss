@@ -16,6 +16,13 @@ body,html,.view-register, .view-login, .view-passwordreset {
         max-width: 1216px;
     }
     .nav-global {
+        float: none;
+        margin-left: 20%;
+        @media (max-width: $responsive-large) {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+        }
         li a {
             color: $header-nav-link-color;
 
@@ -28,12 +35,26 @@ body,html,.view-register, .view-login, .view-passwordreset {
                 border: none !important;
             }
             .tab-nav-link {
-                color: $header-nav-link-color;
-                padding: 5px;
+                color: $header-color;
+                background-color: $header-nav-link-color;
+                padding: 8px 16px;
+                text-transform: uppercase;
+                font: 18px/1.2 Verdana, Arial, sans-serif;
+                border-radius: 2px;
+                display: inline-block;
+                text-align: center;
+                margin: 0 5px;
 
-                &:hover {
-                    color: $header-nav-link-color-hover;
-                    border: none;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $header-color;
+                    background-color: $header-nav-link-color-hover;
+                    text-decoration: none;
+                    border-bottom: none;
+                }
+                @media (max-width: $responsive-large) {
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -364,6 +385,7 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 .course-info .course-sidebar .important-dates li .icon {
     margin-top: 0;
 }
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
 .intro-inner-wrapper button {
     color: $header-color;
@@ -402,4 +424,20 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 }
 .find-courses .search-facets .facet-option:hover, .find-courses .search-facets .facet-option:focus {
     background: $header-nav-link-color-hover;
+}
+html body .wrap-instructor-info .instructor-info-action,
+.course-info .container .wrap-instructor-info .instructor-info-action {
+    color: $hamburger-color;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        background: $hamburger-color;
+    }
+}
+html body .wrapper-course-material .course-tabs li.tab a:focus,
+html body .wrapper-course-material .course-tabs li.tab a:hover,
+html body .wrapper-course-material .course-tabs li.tab a.active {
+    border-bottom-color: $header-nav-link-color;
+    color: $header-nav-link-color;
 }
