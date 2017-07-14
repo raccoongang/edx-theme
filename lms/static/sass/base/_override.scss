@@ -405,12 +405,28 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 .courses-container .courses .course {
     border-bottom-color: #4088ff;
 }
+body .login-register .action-primary,
 .find-courses .discovery-submit {
     background: $header-nav-link-color;
     border-color: $header-nav-link-color;
+    box-shadow: none;
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &:active:not(:disabled) {
+        background: $header-nav-link-color-hover;
+        border-color: $header-nav-link-color-hover;
+        box-shadow: none;
+    }
+}
+body .login-register .nav-btn {
+    color: $header-nav-link-color;
+    background: transparent;
+    border-color: $header-nav-link-color;
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
         background: $header-nav-link-color-hover;
         border-color: $header-nav-link-color-hover;
         box-shadow: none;
@@ -440,4 +456,12 @@ html body .wrapper-course-material .course-tabs li.tab a:hover,
 html body .wrapper-course-material .course-tabs li.tab a.active {
     border-bottom-color: $header-nav-link-color;
     color: $header-nav-link-color;
+}
+.login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link {
+    color: $header-nav-link-color-hover;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $header-nav-link-color-hover;
+    }
 }
