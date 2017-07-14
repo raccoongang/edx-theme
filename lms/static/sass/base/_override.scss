@@ -18,6 +18,7 @@ body,html,.view-register, .view-login, .view-passwordreset {
     .nav-global {
         float: none;
         margin-left: 20%;
+        margin-top: 0;
         @media (max-width: $responsive-large) {
             margin-left: 0;
             display: flex;
@@ -34,7 +35,7 @@ body,html,.view-register, .view-login, .view-passwordreset {
             .active {
                 border: none !important;
             }
-            .tab-nav-link {
+            a.tab-nav-link {
                 color: $header-color;
                 background-color: $header-nav-link-color;
                 padding: 8px 16px;
@@ -43,7 +44,7 @@ body,html,.view-register, .view-login, .view-passwordreset {
                 border-radius: 2px;
                 display: inline-block;
                 text-align: center;
-                margin: 0 5px;
+                margin: 7px 5px 0 5px;
 
                 &:hover,
                 &:focus,
@@ -405,6 +406,23 @@ div.info-wrapper section.updates div article .toggle-visibility-button,
 .courses-container .courses .course {
     border-bottom-color: #4088ff;
 }
+.instructor-nav .btn-link {
+    color: $header-nav-link-color;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+        color: $header-nav-link-color-hover;
+    } 
+}
+.submit-attempt-container btn-brand,
+boy section.wiki .btn.btn-primary,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
+body .courseware-bookmarks-button .bookmarks-list-button.is-active,
 body .login-register .action-primary,
 .find-courses .discovery-submit {
     background: $header-nav-link-color;
@@ -418,6 +436,9 @@ body .login-register .action-primary,
         box-shadow: none;
     }
 }
+body.discussion .page-header-secondary .btn,
+body .courseware-bookmarks-button .bookmarks-list-button,
+.dashboard .my-courses .course .details .enter-course,
 body .login-register .nav-btn {
     color: $header-nav-link-color;
     background: transparent;
@@ -448,8 +469,12 @@ html body .wrap-instructor-info .instructor-info-action,
     &:focus,
     &:active {
         color: #fff;
-        background: $hamburger-color;
+        background: $header-nav-link-color-hover;
     }
+}
+body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
+html body .tabs .tab a,html body .tabs .tab a:visited {
+    color: $header-nav-link-color;
 }
 html body .wrapper-course-material .course-tabs li.tab a:focus,
 html body .wrapper-course-material .course-tabs li.tab a:hover,
@@ -457,11 +482,66 @@ html body .wrapper-course-material .course-tabs li.tab a.active {
     border-bottom-color: $header-nav-link-color;
     color: $header-nav-link-color;
 }
+body .btn-link.link-cross-reference {
+    color: $header-nav-link-color-hover;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+        color: $all-link-color-hover;
+    }
+}
+.course-index .accordion .course-navigation .button-chapter,
+div.info-wrapper section.updates>ol>li a,
+body div.info-wrapper section.handouts ol li a,
+section.wiki #cheatsheetLink,
+body section.wiki .breadcrumb li a,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-discussions-nav .cohorted-text,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+body .instructor-dashboard-content-2 a,
+body .cohort-management-settings-form a,
+.dashboard .my-courses .course .details .course-title a,
 .login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link {
     color: $header-nav-link-color-hover;
     &:hover,
     &:focus,
     &:active {
-        color: $header-nav-link-color-hover;
+        color: $all-link-color-hover;
     }
+}
+.search-bar button.search-button, 
+.search-bar button.cancel-button {
+    background: $header-nav-link-color;
+    &:hover,
+    &:focus,
+    &:active {
+        background: $header-nav-link-color-hover;
+    }
+}
+.search-bar button.search-button:hover:hover, 
+.search-bar button.cancel-button:hover:hover {
+    background: $header-nav-link-color-hover;
+}
+.enrollment-wrapper strong {
+    color: $header-nav-link-color-hover !important;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
+.xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+    border-bottom-color: $header-nav-link-color;
+}
+.wmd-prompt-dialog .btn,
+.discussion-module .btn {
+    border-color: $header-nav-link-color;
+    background-color: $header-nav-link-color;
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $header-nav-link-color-hover !important;
+        background-color: $header-nav-link-color-hover !important;       
+    }
+}
+.xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
+    color: $header-nav-link-color;
+}
+.header-global .wrapper-header .list-inline.nav-global {
+    margin-top: 0;
 }
