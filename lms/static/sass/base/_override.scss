@@ -56,6 +56,7 @@ body,html,.view-register, .view-login, .view-passwordreset,body.view-in-course,.
                 }
                 @media (max-width: $responsive-large) {
                     margin-bottom: 10px;
+                    min-width: 220px;
                 }
             }
         }
@@ -317,36 +318,41 @@ body,html,.view-register, .view-login, .view-passwordreset,body.view-in-course,.
 body .edit-post-form .post-update {
     border-color: $header-nav-link-color;
 }
+body .empty-dashboard-message a,
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
+body .course-card .cta-secondary,
+body .openassessment .openassessment_student_info_form .action--submit-username,body .openassessment .list--actions .action--submit,
 body .xmodule_display.xmodule_CapaModule div.problem .action .submit-attempt-container .submit,
 body .edit-post-form .post-update,
-.discussion .comments .comment-form .discussion-submit-comment,
 body .home .page-header-secondary,
 #forgot-password-modal #password-reset .form-actions button[type="submit"],
 .register .form-actions button[type="submit"],
 .login .form-actions button[type="submit"] {
-    color: $header-color;
-    background-color: $header-nav-link-color;
+    color: #fff;
+    background-color: $active-color;
     border-radius: 2px;
     box-shadow: none;
     &:hover,
     &:focus,
     &:active {
-        color: $header-color;
-        background-color: $header-nav-link-color-hover;
+        color: #fff;
+        background-color: $active-color-hover;
         text-decoration: none;
         box-shadow: none;
     }
 }
+body .discussion .comments .comment-form .discussion-submit-comment,
+body .edit-post-form .post-update,
 body .forum-new-post-form .btn-brand.submit {
-    color: $header-color !important;
-    background-color: $header-nav-link-color !important;
+    color: #fff !important;
+    background-color: $active-color !important;
     border-radius: 2px;
     box-shadow: none !important;
     &:hover,
     &:focus,
     &:active {
-        color: $header-color !important;
-        background-color: $header-nav-link-color-hover !important;
+        color: #fff !important;
+        background-color: $active-color-hover !important;
         text-decoration: none !important;
         box-shadow: none !important;
     }
@@ -442,6 +448,7 @@ body .modal .inner-wrapper form .submit input[type="submit"],body .leanModal_box
 body section.wiki .btn.btn-primary {
     text-shadow: none;
 }
+
 body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
 .view-instructordash .instructor-dashboard-wrapper-2 .btn-blue,
 .submit-attempt-container btn-brand,
@@ -477,6 +484,8 @@ body .login-register .action-primary,
         text-shadow: none;
     }
 }
+body .course-card .course-actions .view-course-link,
+body .openassessment .step--response .response__submission__actions .action--save,body .openassessment .action--submit,body .step--response .action--upload,
 body .edit-post-form .post-cancel,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
 .add-response .btn,
@@ -502,22 +511,28 @@ body .login-register .nav-btn {
 .find-courses .loading-spinner {
     background: $active-color;
 }
+body .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover,
+body .bookmarks-results-list .bookmarks-results-list-item:hover,
 .find-courses .discovery-input:focus {
     border-color: $active-color-hover;
 }
 .find-courses .search-facets .facet-option:hover, .find-courses .search-facets .facet-option:focus {
     background: $active-color-hover;
 }
+body .wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button,
 html body .wrap-instructor-info .instructor-info-action,
 .course-info .container .wrap-instructor-info .instructor-info-action {
     color: $active-color-hover;
+    -webkit-font-smoothing: auto;
     &:hover,
     &:focus,
     &:active {
         color: #fff;
         background: $active-color-hover;
+        -webkit-font-smoothing: auto;
     }
 }
+body .bookmarks-results-list .bookmarks-results-list-item:before,
 body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
 html body .tabs .tab a,html body .tabs .tab a:visited {
     color: $active-color;
@@ -536,6 +551,17 @@ body .btn-link.link-cross-reference {
         color: $all-link-color-hover;
     }
 }
+body .course-wrapper .courseware-results-wrapper p,
+body .container.activation a,
+body div.book-wrapper section.book-sidebar #booknav li a,
+body .instructor-dashboard-wrapper-2 .file-download-link a,
+body .program-header .crumb-link,
+body .course-title .course-title-link,
+.profile-wrapper .course-info>.chapters a,
+section.wiki .table.table-striped a,
+body .openassessment .ui-slidable__container .ui-slidable:not([disabled]),
+body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+.dashboard .my-courses .course .wrapper-messages-primary .message a,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
 body .discussion.inline-discussion .new-post-article .add-post-cancel,
 .btn-link.new-post-btn,
@@ -603,6 +629,7 @@ body .discussion-module .btn {
         background-color: $active-color-hover !important;       
     }
 }
+body .discussion .post-label.post-label-following,
 .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
     color: $active-color;
 }
@@ -615,24 +642,69 @@ body .forum-new-post-form .post-type-input:checked+.post-type-label, body .edit-
 .forum-nav-thread-wrapper-1 {
     width: 100%;
 }
-.discussion .action-button.action-follow.is-checked .action-icon, .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button.action-follow:focus .action-icon {
+body .discussion .action-button.action-follow.is-checked .action-icon,body .discussion .action-button.action-follow:hover .action-icon, .discussion .action-button.action-follow:focus .action-icon {
     background-color: $active-color-hover;
     border: 1px solid $active-color-hover;
 }
 .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
     border-top-color: $active-color;
 }
-.discussion .action-button.action-follow .action-label {
+body .discussion .action-button.action-follow .action-label {
     color: $active-color-hover;
 }
-.discussion .action-button.action-follow:hover, 
-.discussion .action-button.action-follow:focus {
+body .discussion .action-button.action-follow:hover, 
+body .discussion .action-button.action-follow:focus {
     color: $active-color-hover;
     border-color:  $active-color-hover;
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
     columns: 1;
 }
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 body .date-summary-container .date-summary-todays-date {
     border-left-color: $active-color;
+}
+
+body .forum-nav-thread.never-read .forum-nav-thread-link {
+    border-left: 3px solid $active-color;
+    color: $active-color;
+}
+body .openassessment .is--in-progress.openassessment__steps__step {
+    border-top-color: $active-color;
+}
+body .openassessment .openassessment__steps__step.is--in-progress .step__status__value {
+    background: $active-color;
+}
+body .header-global .user .user-link .label-username {
+    color: #3c3c3c;
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        color: #3c3c3c;
+    }
+}
+body .blue-icon .certificate-body {
+    fill: $active-color;
+    border-color: $active-color;
+}
+.bookmarks-results-list .bookmarks-results-list-item:hover .bookmarks-results-list-item:before,
+.bookmarks-results-list .bookmarks-results-list-item:hover .list-item-right-section,
+.bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail {
+    color: $active-color-hover;
+}
+html body.view-in-course .window-wrap {
+    min-width: 320px;
+}
+body.discussion .content-wrapper,
+body.view-in-course .window-wrap .content-wrapper{
+    min-width: 760px;
+}
+.container.activation h1.valid {
+    border-color: $active-color;
+    background: transparent;
+    color: $active-color;
+}
+body .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn:hover {
+    border-color: $active-color;
 }
