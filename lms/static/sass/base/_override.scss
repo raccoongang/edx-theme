@@ -590,10 +590,12 @@ body .cohort-management-settings-form a,
 .dashboard .my-courses .course .details .course-title a,
 .login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link {
     color: $link-color;
+    -webkit-font-smoothing: auto;
     &:hover,
     &:focus,
     &:active {
         color: $all-link-color-hover;
+        -webkit-font-smoothing: auto;
     }
 }
 .search-bar button.search-button, 
