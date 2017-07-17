@@ -318,6 +318,7 @@ body,html,.view-register, .view-login, .view-passwordreset,body.view-in-course,.
 body .edit-post-form .post-update {
     border-color: $active-color;
 }
+body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
 body .empty-dashboard-message a,
 body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
 body .course-card .cta-secondary,
@@ -342,19 +343,13 @@ body .home .page-header-secondary,
     }
 }
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
-    color: #fff;
     background: $active-color;
     border-color: $active-color;
-    border-radius: 2px;
-    box-shadow: none;
     &:hover,
     &:focus,
     &:active {
-        color: #fff;
         background: $active-color-hover;
         border-color: $active-color-hover;
-        text-decoration: none;
-        box-shadow: none;
     }
 }
 body .discussion .comments .comment-form .discussion-submit-comment,
@@ -551,6 +546,8 @@ html body .wrap-instructor-info .instructor-info-action,
         -webkit-font-smoothing: auto;
     }
 }
+body .discussion .post-label.post-label-following,
+.xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn,
 body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
 html body .tabs .tab a,html body .tabs .tab a:visited {
     color: $active-color;
@@ -569,6 +566,7 @@ body .btn-link.link-cross-reference {
         color: $all-link-color-hover;
     }
 }
+.staff_actions .btn-link,
 body .sidebar .certificate-container .certificate-link,
 section.wiki #cheatsheet-body a,
 body .course-wrapper .courseware-results-wrapper p,
@@ -651,10 +649,6 @@ body .discussion-module .btn {
         border-color: $active-color-hover !important;
         background-color: $active-color-hover !important;       
     }
-}
-body .discussion .post-label.post-label-following,
-.xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
-    color: $active-color;
 }
 .header-global .wrapper-header .list-inline.nav-global {
     margin-top: 0;
@@ -747,4 +741,10 @@ body .edit-post-form .post-update:hover {
 }
 body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link {
     padding: 10px 18px;
+}
+body .pattern-library-shim.alert-information {
+    border: 1px solid $active-color;
+}
+body .pattern-library-shim.alert-information .alert-icon {
+    background-color: $active-color;
 }
