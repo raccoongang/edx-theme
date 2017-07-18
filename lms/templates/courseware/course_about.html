@@ -116,7 +116,7 @@ from openedx.core.lib.courses import course_image_url
       <section class="promo-box_holder">
         <h1 class="promo-box_heading">
           ${course.display_name_with_default_escaped}
-          <a href="#">${course.display_org_with_default | h}</a>
+          ${course.display_org_with_default | h}
         </h1>
         <p class="promo-box_description">Hello ${get_course_about_section(request, course, 'short_description')}</p>
         % if get_course_about_section(request, course, "video"):
