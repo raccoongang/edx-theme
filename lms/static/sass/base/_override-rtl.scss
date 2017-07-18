@@ -119,3 +119,9 @@ body .program-card .card-link .banner-image-container .banner-image {
 body .login-register .login-provider.button-oa2-facebook {
     padding-left: 10px;
 }
+.highcharts-legend-item.highcharts-area-series rect.highcharts-point,
+.highcharts-legend-item.highcharts-bar-series rect.highcharts-point,
+.highcharts-legend-item.highcharts-column-series rect.highcharts-point,
+.highcharts-legend-item.highcharts-pie-series rect.highcharts-point {
+    transform: translateX(25px);
+}
