@@ -103,6 +103,7 @@
             display: inline-block;
             vertical-align: middle;
             margin-left: 10px;
+            margin-bottom: 0;
             &:first-child {
                 margin-left: 0;
             }
@@ -110,24 +111,22 @@
     }
     &_icons {
         display: inline-block;
-        background-image: url(../../images/icons.svg);
-        background-repeat:no-repeat;
-        width:32px;
-        height:32px;
+        vertical-align: middle;
+        background-image: url(../../images/icons.png);
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
         &__fb {
-            background-position: 0 0;
-            background-size: 50px;
+            background-position: -44px -3px;
         }
         &__youtube {
-            background-position: 0 -130px;
-            background-size: 50px;
+            background-position: -126px -3px;
         }
         &__music {
-            background-position: 0 -21px;
+            background-position: -85px -3px;
         }
         &__crown {
-            background-position: 0 -51px;
-            background-size: 32px;
+            background-position: -3px -3px;
         }
     }
 }
