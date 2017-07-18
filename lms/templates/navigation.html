@@ -175,7 +175,7 @@ site_status_msg = get_site_status_msg(course_id)
               </li>
             % else:
               <li class="item nav-global-04">
-                <a class="btn btn-login" href="/register${login_query()}">${_("Register")}</a>
+                <a class="btn-register" href="/register${login_query()}">${_("Register")}</a>
               </li>
             % endif
             <li class="item nav-courseware-01">
@@ -221,6 +221,7 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
 </header>
+<span class="blocked-page"></span>
 <script>
     var btn = document.getElementById('hamburger'),
         body = document.body;

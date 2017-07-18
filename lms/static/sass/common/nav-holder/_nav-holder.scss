@@ -3,18 +3,22 @@
     display: flex;
     flex-wrap: wrap;
     display: none;
-
+    padding-right: 10px;
     .menu-open & {
-        display: block;
+        @media (max-width: 760px) {
+            display: block;
+            position: absolute;
+            top: 79px;
+            margin: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 0;
+            background: darken($header-color, 5%);
+        }
     }
     @media screen and (min-width:760px ) {
-        width: auto;
+        width: 100%;
         display: block;
     }
 
-    &:after {
-        content: '';
-        clear: both;
-        display: table;
-    }
 }

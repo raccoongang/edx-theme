@@ -1,0 +1,33 @@
+.social-icons {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    &_item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 5px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &_link {
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url(../images/icons.png);
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        &__fb {
+            background-position: -3px -3px;
+        }
+        &__linkedin {
+            background-position: -44px -3px;
+        }
+        &__tw {
+            background-position: -85px -3px;
+        }
+        &__you-tube {
+            background-position: -126px -3px;
+        }
+    }
+}

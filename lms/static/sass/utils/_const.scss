@@ -1,23 +1,23 @@
 
 //settings for header
-$header-nav-link-color: #888;
-$header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
-$header-color: #ccc;
+$header-nav-link-color: #75c9ce;
+$header-nav-link-color-hover: darken($header-nav-link-color, 20%);
+$header-color: #5b6b78;
 $dropdown-menu-color: red;
-$dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
+$dropdown-menu-color-hover: darken($dropdown-menu-color, 20%);
 //settings for hamburger
-$hamburger-color: #333;
+$hamburger-color: #75c9ce;
 $hamburger-width: 40px;
 $hamburger-height: 30px;
 $hamburger-height-line: 3px;
 //settings for footer
 $footer-nav-link-color: #888;
-$footer-nav-link-color-hover: lighten($header-nav-link-color, 20%);
-$footer-color: #ccc;
+$footer-nav-link-color-hover: darken($header-nav-link-color, 20%);
+$footer-color: #5b6b78;
 //btn
-$theme-btn-bg: #777;
-$theme-btn-text-color: #ffe;
-$theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
+$theme-btn-bg: #75c9ce;
+$theme-btn-text-color: #fff;
+$theme-btn-bg-hover: darken($theme-btn-bg, 20%);
 $theme-btn-shadow: darken($theme-btn-bg, 20%);
 //btn-white
 $theme-btn-white-bg: #fff;
@@ -25,3 +25,6 @@ $theme-btn-white-border: #777;
 $theme-btn-white-text-color: #777;
 $theme-btn-white-text-color-hover: #fff;
 $theme-btn-white-bg-hover: $theme-btn-bg-hover;
+//links
+$link-static-color: #75c9ce;
+$link-hover-color: darken($link-static-color, 20%);
