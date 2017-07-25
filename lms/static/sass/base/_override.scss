@@ -174,6 +174,10 @@
     }
 }
 // links
+body section.wiki .nav-tabs li.active a,
+body section.wiki .breadcrumb li a,
+body section.wiki .nav-tabs a,
+body div.info-wrapper section.handouts ol li a,
 body a.progress-link,
 body .sections a,
 body .xmodule_display.xmodule_HtmlModule a:link,
@@ -337,5 +341,4 @@ input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disab
     span {
         color: $theme-btn-white-text-color;
     }
-} 
-
+}
