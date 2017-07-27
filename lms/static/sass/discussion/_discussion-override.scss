@@ -1,9 +1,6 @@
 .header-global .wrapper-header {
     max-width: 1200px;
 
-    .logo {
-        margin: -2px 39px 0 0;
-    }
     .course-header {
         display: none;
     }
@@ -23,7 +20,7 @@
     }
     .list-inline {
         &.nav-global {
-            margin-top: 10px;
+            margin-top: 0;
         }
         .item {
             text-transform: none;
@@ -139,8 +136,74 @@
 .has-breadcrumbs .breadcrumbs .all-topics {
     box-shadow: none;
     border: none;
-
+    color: $theme-btn-bg;
+    &:focus,
     &:hover {
         background: none;
+        color: $theme-btn-bg-hover;
+    }
+}
+.header-global .nav-global li a {
+    padding: 5px;
+}
+.dropdown-menu-container .menu-button {
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &:active {
+        background: transparent;
+    }
+}
+.dropdown-menu-container .menu-title {
+    color: $theme-btn-bg;
+    &:hover,
+    &:focus {
+        color: $theme-btn-bg-hover;
+        text-decoration: none;
+    }
+}
+.discussion .post-label.post-label-following {
+    color: $theme-btn-bg-hover;
+}
+.header-global .wrapper-header .wrapper-user-menu span {
+    color: $theme-btn-bg;
+}
+.dropdown-menu-container .menu-image {
+    border-radius: 10%;
+}
+.tabs .tab a, .tabs .tab a:visited {
+    color: #5e5e5e;
+}
+.social-icons {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    &_item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 5px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &_link {
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url(../../images/icons.png);
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        &__fb {
+            background-position: -3px -3px;
+        }
+        &__linkedin {
+            background-position: -44px -3px;
+        }
+        &__tw {
+            background-position: -85px -3px;
+        }
+        &__you-tube {
+            background-position: -126px -3px;
+        }
     }
 }

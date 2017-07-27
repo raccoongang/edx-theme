@@ -1,4 +1,4 @@
-.header-global {
+.window-wrap .header-global {
     background: $header-color;
     padding: 0;
     position: relative;
@@ -272,10 +272,8 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     box-shadow: none;
 }
-input[type="submit"], input[type="button"], button, .button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     background: $theme-btn-bg;
-    box-shadow: 0 2px 1px 0 $theme-btn-shadow;
     color: $theme-btn-text-color;
 
     &:focus {
@@ -285,7 +283,6 @@ input[type="submit"], input[type="button"], button, .button,
         background: $theme-btn-bg-hover;
     }
 }
-input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
@@ -329,5 +326,116 @@ input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disab
         .course-search {
             display: none;
         }
+    }
+}
+.courses-container .courses .course .course-info .course-date,
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+    font: 14px/1.2 Helvetica, Arial, sans-serif;
+    color: rgb(46, 46, 46);
+}
+.courses-container .courses .course .course-info .course-title {
+    font: 18px/1.2 Helvetica, Arial, sans-serif;
+    color: rgb(0, 109, 197);
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: transparent;
+    border: 2px solid #fff;
+    font-size: 18px;
+    font-family: Arial;
+    line-height: 45px;
+}
+.courses-container .courses .course {
+    border-bottom-color: $theme-btn-bg;
+    box-shadow: none;
+    border-width: 0 0 3px 0;
+}
+.highlighted-courses .courses .course:hover {
+    box-shadow: none;
+    border-color: #f5f5f5;
+}
+.courses-container .courses .course .course-info .course-organization {
+    padding: 12px 15px 7px 15px;
+}
+.courses-container .courses .course .course-info .course-title {
+    margin: 5px 0 39px 0;
+}
+.highlighted-courses .courses {
+    padding-bottom: 45px;
+}
+.course-info .course-sidebar .important-dates li .icon {
+    margin-top: 0;
+}
+.heading-group button,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+    box-shadow: none;
+    text-shadow: none;
+    border-color: $theme-btn-bg;
+}
+.heading-group button:active:not(:disabled),
+.heading-group button:focus:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled),
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
+    box-shadow: none;
+}
+.details a {
+    color: $theme-btn-bg;
+    &:focus,
+    &:hover {
+        color: $theme-btn-bg-hover;
+    }
+}
+.header-global .user .user-link .label-username {
+    color: $theme-btn-bg;
+    &:hover,
+    &:focus {
+        color: $theme-btn-bg-hover;
+    }
+}
+.header-global .user .dropdown {
+    color: $theme-btn-bg;
+}
+.header-global .nav-global .tab-nav-item {
+    margin-right: 10px;
+}
+.header-global .nav-global .tab-nav-item .tab-nav-link:hover, .header-global .nav-global .tab-nav-item .tab-nav-link:focus {
+    border-bottom: none;
+}
+body .window-wrap .wrapper-course-material .course-tabs li a:focus,
+body .window-wrap .wrapper-course-material .course-tabs li a:hover,
+body .window-wrap .wrapper-course-material .course-tabs li a.active {
+    color: $theme-btn-bg-hover;
+    border-bottom-color: $theme-btn-bg-hover;
+}
+.courseware-bookmarks-button .bookmarks-list-button:focus,
+.courseware-bookmarks-button .bookmarks-list-button.is-active {
+    background-color: $theme-btn-bg-hover;
+}
+.courseware-bookmarks-button .bookmarks-list-button.is-active  {
+    border-color: $theme-btn-bg-hover;
+}
+body .search-bar .cancel-button {
+    background: $theme-btn-bg;
+    &:hover,
+    &:active,
+    &:hover:hover,
+    &:focus {
+        background: $theme-btn-bg-hover;
+    }
+}
+.item.nav-global-01 a {
+    margin-top: 14px;
+}
+.header-global .nav-global li a {
+    color: $link-static-color;
+    text-transform: uppercase;
+    font: 14px/1.2 Verdana, Arial, sans-serif;
+    margin-top: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    &:focus,
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: none;
     }
 }
