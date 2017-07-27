@@ -20,6 +20,9 @@
     }
     h1.logo {
         margin: -5px 25px 0 10px;
+        img {
+            max-width: none;
+        }
     }
     .nav-global {
         width: 100%;
@@ -437,5 +440,95 @@ body .search-bar .cancel-button {
     &:hover {
         color: $link-hover-color;
         text-decoration: none;
+    }
+}
+.discussion-response .response-header-content .username,
+.discussion-article .posted-details .username {
+    color: $theme-btn-bg;
+    &:hover,
+    &:focus {
+        color: $theme-btn-bg-hover;
+    }
+}
+body .discussion .action-button.action-follow.is-checked .action-icon, 
+body .discussion .action-button.action-follow:hover .action-icon, 
+body .discussion .action-button.action-follow:focus .action-icon {
+    background-color: $theme-btn-bg-hover;
+    border: 1px solid $theme-btn-bg-hover;
+}
+body .discussion .action-button.action-follow:hover, 
+body .discussion .action-button.action-follow:focus {
+    border-color: $theme-btn-bg-hover;
+}
+body .discussion .action-button.action-follow .action-label {
+    color: $theme-btn-bg-hover;
+}
+.forum-new-post-form .post-type-input:checked+.post-type-label, 
+.edit-post-form .post-type-input:checked+.post-type-label {
+    background-color: $theme-btn-bg;
+}
+body .forum-new-post-form .post-type-input:focus+.post-type-label, 
+body .edit-post-form .post-type-input:focus+.post-type-label {
+    box-shadow: none;
+}
+.discussion .btn-brand {
+    border-color: $theme-btn-bg;
+    background: $theme-btn-bg;
+    &:hover,
+    &:focus {
+        border-color: $theme-btn-bg-hover;
+        background: $theme-btn-bg-hover;     
+    }
+}
+body .discussion .actions-dropdown .action-list-item {
+    color: $link-static-color;
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+    }
+}
+body .btn:focus:hover,
+body .btn:active:hover {
+    background: transparent !important;
+}
+body .btn:active {
+    background: transparent;
+}
+body .btn:active,
+body .btn:focus {
+    border-color: $theme-btn-bg-hover;
+    color: $theme-btn-bg-hover;
+}
+section.wiki #cheatsheetLink,
+body section.wiki .nav-tabs li.active a,
+body section.wiki .nav-tabs a,
+body section.wiki .article-functions .see-children a,
+body section.wiki .breadcrumb li a {
+    color: $link-static-color;
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+    }
+}
+body section.wiki .btn.btn-primary {
+    text-shadow: 0 1px 0 $theme-btn-bg;
+    box-shadow: none;
+    border-color: $theme-btn-bg;
+    background: $theme-btn-bg;
+    color: #fff;
+    &:active:not(:disabled),
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        text-shadow: 0 1px 0 $theme-btn-bg-hover;
+        box-shadow: none;
+        border-color: $theme-btn-bg-hover;
+        background: $theme-btn-bg-hover;
+        color: #fff;
+    }
+}
+body section.wiki .btn.btn-primary {
+    &:focus:hover,
+    &:active:hover {
+        background: $theme-btn-bg-hover !important;
     }
 }
