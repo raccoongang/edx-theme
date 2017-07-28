@@ -138,6 +138,7 @@ $(".course-outline_link").click(function() {
     expandSectionCourse(section);
     section.setAttribute('data-collapsed', 'false');
     section.classList.add('course-outline__open');
+    section.classList.remove('course-outline__height')
   } else {
     collapseSectionCourse(section);
   }
