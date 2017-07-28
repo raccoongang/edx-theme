@@ -501,6 +501,8 @@ body .btn:focus {
     border-color: $theme-btn-bg-hover;
     color: $theme-btn-bg-hover;
 }
+body .supplemental-link a,
+.login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link,
 .find-courses .filters .clear-filters,
 .view-login #forgot-password-modal #password-reset header h2,
 .login form .field.is-focused .tip,.register form .field.is-focused .tip,.passwordreset form .field.is-focused .tip,#forgot-password-modal #password-reset form .field.is-focused .tip,
@@ -836,4 +838,21 @@ body .register aside .btn-login .btn-login-action {
 }
 .view-register .header-global nav, .view-login .header-global nav {
     width: 100%;
+}
+.login-register .nav-btn,
+.login-register .action-primary {
+    box-shadow: none;
+    text-shadow: none;
+    &:active {
+        background: $theme-btn-bg-hover;
+    }
+    &:active,
+    &:hover {
+        box-shadow: none;
+    }
+}
+.login-register .nav-btn:focus {
+    box-shadow: none;
+    background: $theme-btn-bg-hover;
+    border-color: $theme-btn-bg-hover;
 }

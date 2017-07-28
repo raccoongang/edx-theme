@@ -59,7 +59,7 @@ site_status_msg = get_site_status_msg(course_id)
             logo_url = branding_api.get_logo_url(is_secure)
             logo_size = ''
         %>
-            <img class="${logo_size}" src="${logo_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="176" height="54"/>
+            <img class="${logo_size}" src="/static/${settings.FEATURES.get('LEORON_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="176" height="54"/>
         </%block>
       </a>
     </h1>
