@@ -1,3 +1,6 @@
+.my-hide {
+    display: none !important;
+}
 .window-wrap .header-global {
     background: $header-color;
     padding: 0;
@@ -14,6 +17,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-sizing: border-box;
         &:after {
             display: none;
         }
@@ -55,7 +59,6 @@
             }
             .tab-nav-link {
                 color: $header-nav-link-color;
-                padding: 5px;
 
                 &:hover {
                     color: $header-nav-link-color-hover;
@@ -118,13 +121,8 @@
         }
     }
     .user {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        @media screen and (min-width:760px ) {
-            display: block;
-            width: auto;
-        }
+        display: block;
+        width: auto;
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
@@ -169,16 +167,12 @@
 }
 .doc-link {
     color: $header-nav-link-color !important;
-    margin: 12px 0;
     line-height: 16px;
-    width: 100%;
     text-align: center;
     box-sizing: border-box;
-    @media screen and (min-width:760px ) {
-        width: auto;
-        text-align: left;
-        margin: 12px 15px;
-    }
+    width: auto;
+    text-align: left;
+    margin: 12px 15px;
 
     &:visited {
         color: $header-nav-link-color !important;
@@ -263,8 +257,13 @@ body .search-bar .search-button {
     background: $theme-btn-bg;
     color: $theme-btn-text-color;
 
-    &:focus {
-        background: $theme-btn-bg;
+    &:focus:not(:disabled) {
+        background: $theme-btn-bg-hover;
+        box-shadow: none;
+        border-color: $theme-btn-bg-hover;
+    }
+    &:active:not(:disabled) {
+        box-shadow: none;
     }
     &:hover {
         background: $theme-btn-bg-hover !important;
@@ -348,7 +347,7 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     font-family: Arial;
     line-height: 45px;
 }
-.courses-container .courses .course {
+.window-wrap .courses-container .courses .course {
     border-bottom-color: $theme-btn-bg;
     box-shadow: none;
     border-width: 0 0 3px 0;
@@ -441,6 +440,9 @@ body .search-bar .cancel-button {
         color: $link-hover-color;
         text-decoration: none;
     }
+    @media (max-width: 759px) {
+        margin-bottom: 14px;
+    }
 }
 .discussion-response .response-header-content .username,
 .discussion-article .posted-details .username {
@@ -463,8 +465,8 @@ body .discussion .action-button.action-follow:focus {
 body .discussion .action-button.action-follow .action-label {
     color: $theme-btn-bg-hover;
 }
-.forum-new-post-form .post-type-input:checked+.post-type-label, 
-.edit-post-form .post-type-input:checked+.post-type-label {
+body .forum-new-post-form .post-type-input:checked+.post-type-label, 
+body .edit-post-form .post-type-input:checked+.post-type-label {
     background-color: $theme-btn-bg;
 }
 body .forum-new-post-form .post-type-input:focus+.post-type-label, 
@@ -499,6 +501,66 @@ body .btn:focus {
     border-color: $theme-btn-bg-hover;
     color: $theme-btn-bg-hover;
 }
+.find-courses .filters .clear-filters,
+.view-login #forgot-password-modal #password-reset header h2,
+.login form .field.is-focused .tip,.register form .field.is-focused .tip,.passwordreset form .field.is-focused .tip,#forgot-password-modal #password-reset form .field.is-focused .tip,
+.login form .field.is-focused label, .register form .field.is-focused label, .passwordreset form .field.is-focused label, #forgot-password-modal #password-reset form .field.is-focused label,
+.view-register .introduction header .title .title-super, .view-login .introduction header .title .title-super, .view-passwordreset .introduction header .title .title-super,
+body.view-login #forgot-password-modal #password-reset header h2,
+body.view-register .introduction header .title .title-super, 
+body.view-login .introduction header .title .title-super, 
+body.view-passwordreset .introduction header .title .title-super,
+body .login a:link, 
+body .login a:visited, 
+body .login a:hover, 
+body .login a:active, 
+body .login a:focus, 
+body .register a:link, 
+body .register a:visited, 
+body .register a:hover, 
+body .register a:active, 
+body .register a:focus, 
+body .passwordreset a:link, 
+body .passwordreset a:visited, 
+body .passwordreset a:hover, 
+body .passwordreset a:active, 
+body .passwordreset a:focus, 
+body #forgot-password-modal #password-reset a:link, 
+body #forgot-password-modal #password-reset a:visited, 
+body #forgot-password-modal #password-reset a:hover, 
+body #forgot-password-modal #password-reset a:active,
+body #forgot-password-modal #password-reset a:focus,
+body .u-field-message-notification a,
+.window-wrap .problem a,
+body .profile-wrapper .course-info>.chapters>section .sections>div .hd a,
+body .main-article p a,
+body section.wiki.history .accordion a,
+.btn-link.staff-debug-sdelete,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+.course-wrapper .courseware-results-wrapper p,
+body .bookmarks-results-list .bookmarks-results-list-item:before,
+body .btn-link.staff-debug-reset,
+body .discussion.inline-discussion .new-post-article .add-post-cancel,
+body .discussion .post-label.post-label-following,
+body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+body .btn-link.new-post-btn,
+body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
+.window-wrap button.bookmark-button,
+body .course-index .accordion .course-navigation .button-chapter,
+body div.info-wrapper section.handouts ol li a,
+.updates a,
+body .find-courses .filters .clear-filters,
+body a.progress-link,
+body a.gradebook-link,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-discussions-nav .cohorted-text,
+.incontext-help.action-secondary.action-help,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel,
+body .link-to-group-settings,
+.btn-link.link-cross-reference,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+body .dashboard-search-results .search-info a,
 section.wiki #cheatsheetLink,
 body section.wiki .nav-tabs li.active a,
 body section.wiki .nav-tabs a,
@@ -531,4 +593,247 @@ body section.wiki .btn.btn-primary {
     &:active:hover {
         background: $theme-btn-bg-hover !important;
     }
+}
+body .course-info .container .wrap-instructor-info .instructor-info-action,
+body .wrap-instructor-info .instructor-info-action {
+    color: $link-static-color;
+    &:hover {
+        background-color: $link-hover-color;
+        color: #fff;
+    }
+}
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link {
+    color: $link-static-color;
+}
+body .heading-group button,
+body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
+    border: 1px solid $theme-btn-bg;
+    box-shadow: none;
+    background: $theme-btn-bg;
+    text-shadow: none;
+    &:focus:not(:disabled),
+    &:active:not(:disabled),
+    &:hover:not(:disabled) {
+        box-shadow: none;
+        text-shadow: none;
+        background: $link-hover-color;
+        border-color: $theme-btn-bg-hover;
+    }
+}
+.find-courses .discovery-submit {
+    background: $theme-btn-bg;
+    border-color: $theme-btn-bg;
+    &:focus,
+    &:hover {
+        background: $theme-btn-bg-hover;
+        border-color: $theme-btn-bg-hover;
+        box-shadow: none;
+    }
+    &:active:not(:disabled) {
+        box-shadow: none;
+    }
+}
+body .find-courses .loading-spinner,
+body .find-courses .search-facets .facet-option:hover, 
+body .find-courses .search-facets .facet-option:focus {
+    background: $theme-btn-bg-hover;
+}
+body .find-courses .discovery-input:focus {
+    border-color: $theme-btn-bg-hover;
+}
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+    border-bottom-color: $theme-btn-bg-hover;
+}
+body .xmodule_display.xmodule_CapaModule div.problem button.btn-brand {
+    border-color: $theme-btn-bg;
+    background: $theme-btn-bg;
+    &:focus:not(:disabled),
+    &:active:not(:disabled),
+    &:hover {
+        border-color: $theme-btn-bg-hover;
+        background: $theme-btn-bg-hover;
+    }
+}
+body .discussion-module .btn:hover {
+    border-color: $theme-btn-bg-hover !important;
+}
+body .discussion-module .btn:active,
+body .discussion-module .btn:focus {
+    border-color: $theme-btn-bg-hover !important;
+    background-color: $theme-btn-bg-hover !important;
+}
+.xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
+    color: $theme-btn-bg;
+    &:active:not(:disabled) {
+        box-shadow: none;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-btn-bg-hover;
+    }
+    &:hover {
+        border-color: $theme-btn-bg-hover;
+    }
+}
+body .forum-nav-thread.never-read .forum-nav-thread-link {
+    border-left: 3px solid $theme-btn-bg;
+    color: $theme-btn-bg;
+}
+body .discussion-module .btn-brand,
+body .wmd-prompt-dialog .btn-brand {
+    background-color: $theme-btn-bg;
+    border-color: $theme-btn-bg;
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: $theme-btn-bg-hover !important;
+        background-color: $theme-btn-bg-hover !important;  
+    }
+}
+body .bookmarks-results-list .bookmarks-results-list-item:hover {
+    border-color: $theme-btn-bg-hover;
+    color: $theme-btn-bg-hover;
+}
+body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+    border-top: 7px solid $theme-btn-bg;
+}
+body .wrapper-account-settings .wrapper-header .account-nav button:hover, 
+body .wrapper-account-settings .wrapper-header .account-nav button:focus {
+    border-bottom: 4px solid $theme-btn-bg-hover !important;
+}
+html body.view-in-course .window-wrap {
+    min-width: 320px;
+}
+body.discussion .content-wrapper,
+body.view-in-course .window-wrap .content-wrapper {
+    min-width: 760px;
+}
+.window-wrap .header-global .nav-global li a {
+    padding: 0;
+}
+body.view-register .wrapper-footer footer, 
+body.view-login .wrapper-footer footer, 
+body.view-passwordreset .wrapper-footer footer {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+body .register .form-actions button[type="submit"],
+body #forgot-password-modal #password-reset .form-actions button[type="submit"],
+body.view-login .form-actions button[type="submit"] {
+    box-shadow: none;
+    background: $theme-btn-bg;
+    border-color: $theme-btn-bg;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        background: $theme-btn-bg-hover;
+        border-color: $theme-btn-bg-hover;
+    }
+}
+.login a:hover, .login a:active, .login a:focus, .register a:hover, .register a:active, .register a:focus, .passwordreset a:hover, .passwordreset a:active, .passwordreset a:focus, #forgot-password-modal #password-reset a:hover, #forgot-password-modal #password-reset a:active, #forgot-password-modal #password-reset a:focus {
+    border-bottom-color: $theme-btn-bg !important;
+}
+.view-login .header-global .nav-courseware .btn-login {
+    display: block;
+}
+.register .btn-brand.btn-login {
+    background: transparent;
+    border-color: $theme-btn-bg;
+}
+body .register aside .btn-login .btn-login-action {
+    border-color: $theme-btn-bg;
+    color: $theme-btn-bg;
+    &:active,
+    &:focus,
+    &:hover {
+        box-shadow: none;
+        border: 1px solid $theme-btn-bg-hover;
+        color: #fff;
+        background: $theme-btn-bg-hover;
+    }
+}
+.window-wrap .header-global .nav-courseware li .btn-register {
+    color: $link-static-color !important;
+    &:hover,
+    &:focus {
+        color: $link-hover-color !important;
+    }
+}
+.view-register .content-wrapper, 
+.view-login .content-wrapper, 
+.view-passwordreset .content-wrapper,
+.view-login .container,
+.view-register .container,
+.view-passwordreset .container,
+.view-register .introduction, 
+.view-login .introduction, 
+.view-passwordreset .introduction,
+.view-register .wrapper-footer footer, 
+.view-login .wrapper-footer footer, 
+.view-passwordreset .wrapper-footer footer {
+    box-sizing: border-box;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+.register .content,
+.login .content {
+    float: none;
+    max-width: 600px;
+    width: 100%;
+    @media (max-width: 950px) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+.register aside,
+.login aside {
+    float: none;
+    max-width: 280px;
+    width: 100%;
+    @media (max-width: 950px) {
+        margin: 0 auto;
+    }
+}
+.view-register .register.container,
+.view-login .login.container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    min-width: 280px;
+    &::after {
+        display: none;
+    }
+    @media (max-width: 950px) {
+        flex-direction: column;
+    }
+}
+.view-register .introduction header,
+.view-login .introduction header {
+    min-height: 120px;
+    height: auto;
+}
+.view-register .introduction header .title, 
+.view-login .introduction header .title, 
+.view-passwordreset .introduction header .title {
+    position: relative;
+    left: 0;
+    padding-left: 30px;
+    @media (max-width: 950px) {
+        text-align: center;
+    }
+}
+.view-register .header-global nav, .view-login .header-global nav {
+    width: 100%;
 }

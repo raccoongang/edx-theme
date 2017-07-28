@@ -5,14 +5,9 @@
         display: none;
     }
     .wrapper-user-menu {
-        display: flex;
-        width: 100%;
-        justify-content: center;
+        display: block;
+        width: auto;
         margin: 0;
-        @media screen and (min-width: 760px) {
-            display: block;
-            width: auto;
-        }
 
         span {
             font-size: 14px;
@@ -142,9 +137,6 @@
         background: none;
         color: $theme-btn-bg-hover;
     }
-}
-.header-global .nav-global li a {
-    padding: 5px;
 }
 .dropdown-menu-container .menu-button {
     box-shadow: none;

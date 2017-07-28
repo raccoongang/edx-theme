@@ -6,7 +6,8 @@
     padding-right: 10px;
     .menu-open & {
         @media (max-width: 760px) {
-            display: block;
+            display: flex;
+            justify-content: center;
             position: absolute;
             top: 79px;
             margin: 0;
