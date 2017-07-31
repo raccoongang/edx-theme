@@ -235,6 +235,7 @@
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
 body .discussion-module .btn,
 .courseware-bookmarks-button .bookmarks-list-button,
+.dashboard .my-courses .course .details .enter-course.archived,
 .dashboard .my-courses .course .details .enter-course {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
@@ -247,6 +248,12 @@ body .discussion-module .btn,
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
     }
+}
+.dashboard .my-courses .course .details .enter-course.archived,
+.dashboard .my-courses .course .details .enter-course {
+    &:focus {
+        background: $theme-btn-white-bg-hover;
+    }    
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
 body .instructor-dashboard-content-2 input[type="button"],
@@ -416,6 +423,9 @@ body .window-wrap .wrapper-course-material .course-tabs li a.active {
 .courseware-bookmarks-button .bookmarks-list-button.is-active  {
     border-color: $theme-btn-bg-hover;
 }
+.window-wrap .header-global .nav-courseware li .btn:focus:hover {
+    background: $theme-btn-bg-hover !important;
+}
 body .search-bar .cancel-button {
     background: $theme-btn-bg;
     &:hover,
@@ -501,6 +511,16 @@ body .btn:focus {
     border-color: $theme-btn-bg-hover;
     color: $theme-btn-bg-hover;
 }
+html body .window-wrap a.link-to-group-settings,
+body .xmodule_display.xmodule_VideoModule .video .subtitles a,
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads a,
+.discussion-body .discussion-article .post-context a,
+body .window-wrap div.book-wrapper section.book-sidebar #booknav li a,
+body .table.table-striped a,
+body .xmodule_display.xmodule_HtmlModule a:link,
+body .xmodule_display.xmodule_HtmlModule a,
+body div.info-wrapper section.updates div article .toggle-visibility-button,
+body .container.activation a,
 body .supplemental-link a,
 .login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link,
 .find-courses .filters .clear-filters,
@@ -855,4 +875,59 @@ body .register aside .btn-login .btn-login-action {
     box-shadow: none;
     background: $theme-btn-bg-hover;
     border-color: $theme-btn-bg-hover;
+}
+body .forum-nav-thread-wrapper-1 {
+    width: 100%;
+}
+body .empty-dashboard-message a {
+    background-color: $theme-btn-bg;
+    border: 1px solid  $theme-btn-bg;
+    &:hover,
+    &:focus {
+        background-color: $theme-btn-bg-hover;
+        border: 1px solid  $theme-btn-bg-hover;        
+    }
+}
+body .home .page-header-secondary,
+body .container.activation h1.valid {
+    background-color: $theme-btn-bg;
+    border: 1px solid  $theme-btn-bg;
+}
+body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
+body .instructor-dashboard-wrapper-2 .btn-blue,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+body .modal .inner-wrapper form .submit input[type="submit"] {
+    box-shadow: none;
+    background: $theme-btn-bg;
+    border-color: $theme-btn-bg;
+    text-shadow: none;
+    &:active:not(:disabled),
+    &:focus:not(:disabled),
+    &:hover:not(:disabled) {
+        box-shadow: none;
+        text-shadow: none;
+        background: $theme-btn-bg-hover;
+        border-color: $theme-btn-bg-hover;    
+    }
+}
+.date-summary-container .date-summary-todays-date {
+    border-left-color: $theme-btn-bg;
+}
+body .u-field.mode-placeholder:hover,
+body .jxgbox,
+body .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover {
+    border-color: $theme-btn-bg-hover;
+}
+body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li {
+    color: $theme-btn-bg;
+}
+body .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
+body.discussion .post-label.post-label-reported,
+body.discussion .post-label.post-label-pinned,
+body .content-wrapper .xblock-license a:active,
+body .content-wrapper .xblock-license a:hover {
+    color: $theme-btn-bg-hover;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    columns: 1;
 }

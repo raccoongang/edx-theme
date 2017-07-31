@@ -18,6 +18,7 @@ course_mode_class = course_mode if course_mode else ''
     <title>${document_title}</title>
 
     <%static:css group='style-certificates'/>
+    <link rel="icon" href="/static/${settings.FEATURES.get('LEORON_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/favicon-ie.ico" type="image/x-icon">
 </head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
@@ -39,5 +40,28 @@ course_mode_class = course_mode if course_mode else ''
     %if badge:
         <%include file="_badges-modal.html" />
     %endif
+    <style type="text/css">
+        body .header-app .logo {
+            width: 10rem;
+        }
+        body .layout-accomplishment .accomplishment-orgs .organization-logo {
+            max-width: 100%;
+        }
+        .btn-link,
+        .copy-meta a {
+            color: #75c9ce;
+        }
+        .btn-link:hover,
+        .btn-link:focus,
+        .copy-meta a:hover,
+        .copy-meta a:focus {
+            color: #3a9da3;
+        }
+        .btn-link:hover,
+        .btn-link:focus {
+            background: transparent;
+            border-color: #3a9da3;
+        }
+    </style>
 </body>
 </html>
