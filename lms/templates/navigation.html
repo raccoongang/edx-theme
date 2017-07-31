@@ -172,7 +172,7 @@ site_status_msg = get_site_status_msg(course_id)
           <ol class="right nav-courseware list-inline">
             <%block name="navigation_sign_in">
               <li class="item nav-courseware-01">
-                  <a class="theme-btn theme-btn__active" href="${marketing_link('COURSES')}">${_('All courses')}</a>
+                  <a class="theme-btn theme-btn__active" href="http://desk.ua">${_('All courses')}</a>
                 % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
                   % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
                     <li class="item nav-global-05">
