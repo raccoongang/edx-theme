@@ -511,6 +511,10 @@ body .btn:focus {
     border-color: $theme-btn-bg-hover;
     color: $theme-btn-bg-hover;
 }
+.window-wrap .discussion .actions-dropdown .action-list-item.is-checked.action-report,
+.window-wrap .discussion .actions-dropdown .action-list-item.is-checked.action-pin,
+.window-wrap .discussion .post-label.post-label-by-staff,
+.window-wrap .discussion .post-label.post-label-pinned,
 html body .window-wrap a.link-to-group-settings,
 body .xmodule_display.xmodule_VideoModule .video .subtitles a,
 .xmodule_display.xmodule_VideoModule .video .wrapper-downloads a,
@@ -555,7 +559,7 @@ body #forgot-password-modal #password-reset a:focus,
 body .u-field-message-notification a,
 .window-wrap .problem a,
 body .profile-wrapper .course-info>.chapters>section .sections>div .hd a,
-body .main-article p a,
+body .window-wrap .main-article p a,
 body section.wiki.history .accordion a,
 .btn-link.staff-debug-sdelete,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
@@ -572,7 +576,7 @@ body .course-index .accordion .course-navigation .button-chapter,
 body div.info-wrapper section.handouts ol li a,
 .updates a,
 body .find-courses .filters .clear-filters,
-body a.progress-link,
+body .window-wrap a.progress-link,
 body a.gradebook-link,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-discussions-nav .cohorted-text,
 .incontext-help.action-secondary.action-help,
@@ -913,6 +917,8 @@ body .modal .inner-wrapper form .submit input[type="submit"] {
 .date-summary-container .date-summary-todays-date {
     border-left-color: $theme-btn-bg;
 }
+body.view-profile .profile-image-field .image-wrapper .u-field-upload-button:hover,
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover,
 body .u-field.mode-placeholder:hover,
 body .jxgbox,
 body .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover {
@@ -921,13 +927,26 @@ body .xmodule_display.xmodule_CapaModule div.problem .choicegroup label:hover {
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li {
     color: $theme-btn-bg;
 }
+body.view-profile .profile-image-field .image-wrapper .u-field-upload-button:hover,
+body.view-profile .profile-image-field .image-wrapper .upload-button-icon:hover,
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover .u-field-title, 
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover i,
+body .u-field.mode-placeholder:hover span,
 body .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
 body.discussion .post-label.post-label-reported,
 body.discussion .post-label.post-label-pinned,
+body .discussion .post-label.post-label-reported,
+body .discussion .post-label.post-label-pinned,
 body .content-wrapper .xblock-license a:active,
 body .content-wrapper .xblock-license a:hover {
     color: $theme-btn-bg-hover;
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
     columns: 1;
+}
+.window-wrap .discussion .user-label-staff {
+    background: $theme-btn-bg;
+}
+body .window-wrap .find-courses .courses .course:hover {
+    border-color: #f5f5f5;
 }
