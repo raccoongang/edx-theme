@@ -328,6 +328,11 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
         text-align: center;
         background: rgba(255, 255, 255, 0.7);
         box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+        @media (max-width: 759px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            min-height: auto;
+        }
         &:last-child {
             margin-right: auto;
         }
@@ -528,6 +533,8 @@ body .btn:focus {
     border-color: $theme-btn-bg-hover;
     color: $theme-btn-bg-hover;
 }
+section.outside-app a,
+div.gradebook-wrapper section.gradebook-content .student-table a,
 body .forum-nav-load-more-link,
 div.info-wrapper section.updates a,
 .window-wrap .message-copy a,
