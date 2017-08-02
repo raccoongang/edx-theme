@@ -643,6 +643,10 @@ body section.wiki .btn.btn-primary {
         color: #fff;
     }
 }
+body .forum-nav-load-more-link:hover,
+body .forum-nav-load-more-link:focus {
+    background: $theme-btn-bg-hover !important;
+}
 body section.wiki .btn.btn-primary {
     &:focus:hover,
     &:active:hover {
