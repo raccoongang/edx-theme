@@ -442,6 +442,8 @@ body {
     .courses-container .courses .course .course-info .course-title {
         color: rgb(0, 117, 181);
         font: 400 18px/1.2 'Open Sans', Arial, sans-serif;
+        padding-left: 10px;
+        margin-bottom: 40px;
     }
     .courses-container .courses .course {
         border-width: 0 0 3px 0;
@@ -464,4 +466,42 @@ body {
         font: 18px/50px 'Open Sans', Arial, sans-serif;
         text-transform: uppercase;
     }
+    .courses-container .courses .course .course-info .course-organization {
+        padding: 16px 15px 4px 10px;
+    }
+    .courses-container .courses .course .course-info .course-date,
+    .courses-container .courses .course .course-info .course-code {
+        padding-left: 10px;
+    }
+}
+body .wrapper-footer {
+    box-shadow: none;
+    border: none;
+}
+body footer.footer-container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    a {
+        font: 14px/1.2 "Open Sans", Arial, sans-serif;
+        display: inline-block;
+        color: $theme-link;
+        &:hover,
+        &:focus {
+            color: $theme-link-hover;
+        }
+    }
+}
+.Privacy_Policy______d2o_Support______About_d2o {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(27, 112, 151);
+  line-height: 1.2;
+  text-align: center;
+  position: absolute;
+  left: 356.703px;
+  top: 1102.603px;
+  z-index: 6;
 }
