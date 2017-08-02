@@ -136,3 +136,14 @@ body .social-icons_item {
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-primary {
     width: auto;
 }
+.rtl.page-about .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    &_item {
+        margin: 0 0 0 7px;
+        &:first-child {
+            margin-left: 7px;
+        }
+    }
+}
