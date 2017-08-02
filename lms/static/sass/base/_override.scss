@@ -554,7 +554,7 @@ body .xmodule_display.xmodule_HtmlModule a:link,
 body .xmodule_display.xmodule_HtmlModule a,
 body div.info-wrapper section.updates div article .toggle-visibility-button,
 body .container.activation a,
-body .supplemental-link a,
+body .window-wrap .supplemental-link a,
 .login-register .form-field .field-link, .financial-assistance-wrapper .financial-assistance-form .form-field .field-link,
 .find-courses .filters .clear-filters,
 .view-login #forgot-password-modal #password-reset header h2,
@@ -606,7 +606,7 @@ body div.info-wrapper section.handouts ol li a,
 .window-wrap .updates a,
 body .find-courses .filters .clear-filters,
 body .window-wrap a.progress-link,
-body a.gradebook-link,
+body .window-wrap a.gradebook-link,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-discussions-nav .cohorted-text,
 .incontext-help.action-secondary.action-help,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
@@ -626,6 +626,13 @@ body section.wiki .breadcrumb li a {
     &:focus {
         color: $link-hover-color;
     }
+}
+body .window-wrap a.progress-link,
+body .window-wrap a.gradebook-link {
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+    }  
 }
 body section.wiki .btn.btn-primary {
     text-shadow: 0 1px 0 $theme-btn-bg;
