@@ -115,7 +115,7 @@ from openedx.core.lib.courses import course_image_url
         <div class="heading-group">
           <h1>
             ${course.display_name_with_default_escaped}
-            <button type="button">${course.display_org_with_default | h}</button>
+            <span class="heading-group_title">${course.display_org_with_default | h}</span>
           </h1>
           <br>
           <h3>

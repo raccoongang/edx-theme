@@ -33,10 +33,7 @@ html body,html {
         max-width: 1200px;
     }
     .nav-global {
-        width: 100%;
-        @media screen and (min-width:760px ) {
-            width: auto;
-        }
+        width: auto;
 
         li {
             width: 100%;
@@ -589,4 +586,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .co
     &:focus {
         color: $theme-link-hover !important;
     }
+}
+.header-global .user>.primary:last-child>a.shopping-cart {
+    padding-bottom: 10px;
 }
