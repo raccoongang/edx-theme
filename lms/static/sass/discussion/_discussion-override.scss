@@ -9,12 +9,11 @@
     }
     .wrapper-user-menu {
         display: flex;
-        width: 100%;
+        width: auto;
         justify-content: center;
         margin: 0;
         @media screen and (min-width: 760px) {
             display: block;
-            width: auto;
         }
 
         span {
@@ -130,7 +129,6 @@
         }
     }
 }  
-.btn,
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
@@ -152,5 +150,26 @@
 
     &:hover {
         background: none;
+    }
+}
+body .wrapper-footer::after {
+    display: none;
+}
+body [class^='wrapper'] {
+    width: auto;
+}
+body .window-wrap {
+    background: #f1f1f1;
+}
+body .btn {
+    color: #fff;
+    background: $theme-btn-bg;
+    border-color: $theme-btn-border-color;
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: $theme-btn-border-color-hover;
+        background: $theme-btn-bg-hover;
+        color: #fff;
     }
 }
