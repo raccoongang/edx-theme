@@ -190,6 +190,7 @@ html body,html {
     }
 }
 // links
+.container.activation .message a,
 body .discussion .post-label.post-label-following,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
 .idash-section.active-section a,
@@ -638,4 +639,13 @@ body.view-in-course .window-wrap .content-wrapper{
 }
 .profile-wrapper .course-info>.chapters>section .sections>div .hd {
     border-right: none;
+}
+.empty-dashboard-message a:focus:not(:disabled) {
+    color: #fff;
+}
+.container.activation h1.valid {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-weight: bold;
 }
