@@ -190,6 +190,13 @@ html body,html {
     }
 }
 // links
+body .add-to-cart a,
+section.wiki .main-article a,
+div.info-wrapper section.updates>ol>li a,
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-message a,
+body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li span,
+body .xmodule_display.xmodule_VideoModule .video .subtitles a,
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads a,
 .container.activation .message a,
 body .discussion .post-label.post-label-following,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
@@ -567,6 +574,7 @@ input[type="submit"]:active:not(:disabled), input[type="submit"]:focus:not(:disa
     box-shadow: none;
     text-shadow: none;
 }
+body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create {
     box-shadow: none;
     text-shadow: none;
@@ -648,4 +656,22 @@ body.view-in-course .window-wrap .content-wrapper{
     border: none;
     color: #000;
     font-weight: bold;
+}
+body .date-summary-container .date-summary-todays-date {
+    border-left: 3px solid $theme-btn-border-color;
+}
+body.verification-process .carousel #wrapper-review .review .payment-buttons .payment-button,
+body .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade {
+    box-shadow: none;
+    text-shadow: none;
+    background: $theme-btn-bg;
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        text-shadow: none;
+        background: $theme-btn-bg-hover;
+        color: #fff;
+    }
 }
