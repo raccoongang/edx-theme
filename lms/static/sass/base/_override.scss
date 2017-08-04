@@ -190,8 +190,8 @@ html body,html {
     }
 }
 // links
+body .discussion .post-label.post-label-pinned,
 body .add-to-cart a,
-section.wiki .main-article a,
 div.info-wrapper section.updates>ol>li a,
 .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-message a,
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li span,
@@ -223,8 +223,8 @@ body div.info-wrapper section.handouts a,
 body div.info-wrapper section.updates div article .toggle-visibility-button,
 .dashboard .my-courses .course .details .course-title a,
 .supplemental-link a,
-.login-register .form-field .field-link,
-body a {
+.login-register .form-field .field-link
+a, {
     color: $theme-link;
 
     &:hover {
@@ -302,7 +302,12 @@ body .discussion-module .btn,
         background: $theme-btn-white-bg-hover !important;
     }
 }
-
+body .discussion-module .btn-brand,
+body .discussion-module .btn {
+    &:hover {
+        border-color: $theme-btn-white-bg-hover !important;
+    }
+}
 .empty-dashboard-message a,
 body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
 body .btn-blue,
@@ -345,7 +350,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     box-shadow: none;
 }
-input[type="submit"], input[type="button"], .button,
+.button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     background: $theme-btn-bg;
     box-shadow: none;
@@ -362,7 +367,6 @@ input[type="submit"], input[type="button"], .button,
         border-color: $theme-btn-bg-hover;
     }
 }
-input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
@@ -569,11 +573,17 @@ body .course-info .container .wrap-instructor-info .instructor-info-action {
 body .course-info .course-sidebar .important-dates li .icon {
     margin-top: 0;
 }
-input[type="submit"]:active:not(:disabled), input[type="submit"]:focus:not(:disabled), input[type="button"]:active:not(:disabled), input[type="button"]:focus:not(:disabled),
+
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:active:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:focus:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:active:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:focus:not(:disabled) {
     box-shadow: none;
     text-shadow: none;
 }
+.intro .register,
+body #e-commerce #registration_code_generation_modal input[name="generate-registration-codes-csv"],
+body .ecommerce-wrapper span.invalid_sale .add, 
+body .proctoring-wrapper span.invalid_sale .add,
+body .ecommerce-wrapper span.code_tip .add,
+body .proctoring-wrapper span.code_tip .add,
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create {
     box-shadow: none;
@@ -674,4 +684,17 @@ body .dashboard .my-courses .course .wrapper-messages-primary .message.message-u
         background: $theme-btn-bg-hover;
         color: #fff;
     }
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    columns: 1;
+}
+body div.book-wrapper section.book-sidebar {
+    background: #fff;
+}
+body .forum-nav-thread.never-read .forum-nav-thread-link {
+    border-left: 3px solid $theme-btn-bg;
+    color: $theme-link;
+}
+.batch-enrollment membership-section label {
+    display: block;
 }
