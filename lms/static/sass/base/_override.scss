@@ -103,13 +103,8 @@ html body,html {
         }
     }
     .user {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        @media screen and (min-width:760px ) {
-            display: block;
-            width: auto;
-        }
+        display: block;
+        width: auto;
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
@@ -195,6 +190,14 @@ html body,html {
     }
 }
 // links
+body .discussion .post-label.post-label-following,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
+.idash-section.active-section a,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary, 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+.wrapper-cohort-supplemental a,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings a,
 body .cohort-management-settings-form a,
 body div.book-wrapper section.book-sidebar #booknav li a,
 body section.wiki .nav-tabs li.active a,
@@ -465,7 +468,7 @@ body {
     .courses-container .courses .course {
         border-width: 0 0 3px 0;
         box-shadow: none;
-        border-bottom-color: #1a7098;
+        border-bottom-color: $theme-btn-bg;
         background: #fff;
     }
     .highlighted-courses .courses .course:hover, 
@@ -541,12 +544,9 @@ body footer.footer-container {
         text-shadow: none;
     }
 }
-body .account-settings-sections .section .account-settings-section-body .u-field .field .field-input,
-.dashboard-search-bar .search-field {
-    background: transparent;
-}
+
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .action-more {
-    background: transparent;
+    background: $theme-btn-white-bg;
     border-color: #767676;
 }
 body .wrap-instructor-info .instructor-info-action,
@@ -589,4 +589,53 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .co
 }
 .header-global .user>.primary:last-child>a.shopping-cart {
     padding-bottom: 10px;
+    margin-top: 15px;
+    @media (min-width: 760px) {
+        margin-top: 0;
+    }
+}
+.forum-nav-thread-wrapper-1 {
+    width: 100%;
+}
+body .discussion .action-button.action-follow.is-checked .action-icon, 
+body .discussion .action-button.action-follow:hover .action-icon, 
+body .discussion .action-button.action-follow:focus .action-icon {
+    background-color: $theme-btn-bg;
+    border: 1px solid $theme-btn-border-color;
+}
+body .discussion .action-button.action-follow:hover, 
+body .discussion .action-button.action-follow:focus {
+    border-color: $theme-btn-border-color;
+}
+body .discussion .action-button.action-follow .action-label {
+    color: $theme-link;
+}
+span.heading-group_title {
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    font: normal 1.2rem/1.6rem "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    letter-spacing: 1px;
+    padding: 4px 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+    background-color: $theme-link;
+}
+html body.view-in-course .window-wrap {
+    min-width: 320px;
+}
+body.discussion .content-wrapper,
+body.view-in-course .window-wrap .content-wrapper{
+    min-width: 760px;
+}
+.profile-wrapper .course-info>.chapters>section .sections>div .hd {
+    border-right: none;
 }
