@@ -139,11 +139,14 @@ body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fiel
 .rtl.page-about .social-icons {
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
     &_item {
         margin: 0 0 0 7px;
         &:first-child {
             margin-left: 7px;
         }
     }
+}
+.rtl .dashboard .my-courses .course .details .course-actions li a.action {
+    float: none;
+    display: block;
 }
