@@ -72,13 +72,14 @@
         font-size: 12px;
         line-height: 15px;
         color: $theme-color-grey;
-        background: url('#{$img-path}/header-info/mail.png') no-repeat 0 50%;
-        padding-left: 18px;
         margin-left: 18px;
         &:hover,
         &:focus {
-            color: $theme-color-blue-hover;
+            color: $theme-color-main;
             text-decoration: none;
+        }
+        i.fa.fa-envelope {
+            margin-right: 12px;
         }
         @media all and (max-width: 450px) {
             margin-left: 0;
@@ -106,7 +107,6 @@
     display: none;
     @media all and (max-width: 859px){
         display: block;
-        height: 10px;
         width: 12px;
         margin-left: 0;
         padding: 0;
