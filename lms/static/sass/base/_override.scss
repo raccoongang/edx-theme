@@ -1,23 +1,29 @@
 .my-hide {
     display: none !important;
 }
-html,
-html body,
+html {
+    background: transparent;
+}
+.window-wrap,
 body .wrapper-account-settings,
 body .account-settings-sections .section,
 html body.view-in-course .content-wrapper,
 body.view-profile .window-wrap,
 body.view-profile .content-wrapper,
 body .content-wrapper,
+body,
 .home {
     background: #f1f1f1;
 }
 .content-wrapper {
     padding-bottom: 30px;
 }
+body.discussion,
+html .view-dashboard,
 html body.view-in-course {
     background: #fff;
 }
+
 .header-global {
     height: auto;
     background: $header-color;
