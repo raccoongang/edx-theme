@@ -1,6 +1,8 @@
 .my-hide {
     display: none !important;
 }
+html,
+html body,
 body .wrapper-account-settings,
 body .account-settings-sections .section,
 html body.view-in-course .content-wrapper,
@@ -13,8 +15,7 @@ body .content-wrapper,
 .content-wrapper {
     padding-bottom: 30px;
 }
-html body.view-in-course,
-html body,html {
+html body.view-in-course {
     background: #fff;
 }
 .header-global {
@@ -45,7 +46,7 @@ html body,html {
 
             a {
                 color: $header-nav-link-color;
-
+                text-transform: uppercase;
                 &:hover {
                     color: $header-nav-link-color-hover;
                 }
@@ -428,6 +429,9 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     text-align: center;
     display: table-cell;
     vertical-align: bottom;
+    @media (max-width: 759px) {
+        padding: 60px 0;
+    }
 }
 a.banner-btn {
     border-radius: 3px;
@@ -719,4 +723,14 @@ body .forum-nav-thread.never-read .forum-nav-thread-link {
 }
 .batch-enrollment membership-section label {
     display: block;
+}
+body .shopping-cart .user-data .data-input .three-col .col-1 .price.green,
+body .shopping-cart .discount .code-applied .green {
+    color: $theme-link;
+}
+body .shopping-cart .discount .code-text span {
+    margin-right: 10px;
+}
+body.view-passwordreset .header-global .nav-courseware .btn-login {
+    display: inline-block;
 }
