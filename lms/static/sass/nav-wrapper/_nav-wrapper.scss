@@ -40,7 +40,7 @@
     &_logo-holder {
         display: none;
         overflow: hidden;
-        width: 54px;
+        width: 90px;
         @media all and (min-width: 860px){
             display: inline;
         }
@@ -49,11 +49,8 @@
             display: block;
         }
         img {
-            margin: -4px 0 0 -5px;
+            margin: 0;
             max-width: none;
-            @media all and (min-width: 860px){
-                margin: 0;
-            }
         }
     }
     .nav-global {

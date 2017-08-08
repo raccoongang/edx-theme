@@ -28,9 +28,16 @@ body .social-list {
     }
 }
 div.window-wrap a.social-list_link {
+    .fa-linkedin {
+        color: #ccccce;
+        &:hover,
+        &:focus {
+            color: #98989c;
+        }
+    }
     &:hover,
     &:focus {
-        color: $theme-color-main-hover;
+        color: $theme-color-blue-hover;
         text-decoration: none;
     }
 }
