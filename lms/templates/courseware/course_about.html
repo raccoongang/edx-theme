@@ -127,6 +127,7 @@ $(".open-box_link").click(function() {
     expandSection(section);
     section.setAttribute('data-collapsed', 'false');
     section.classList.add('open-box__open');
+    section.classList.remove('open-box__height')
   } else {
     collapseSection(section);
   }
