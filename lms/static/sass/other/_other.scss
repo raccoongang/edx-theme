@@ -14,14 +14,7 @@ section.outside-app,
 div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: transparent;
 }
-div.window-wrap .login form .field.is-focused .tip, 
-div.window-wrap .register form .field.is-focused .tip, 
-div.window-wrap .passwordreset form .field.is-focused .tip,
-div.window-wrap #forgot-password-modal #password-reset form .field.is-focused .tip,
-.view-register div.window-wrap .introduction header .title .title-super, 
-.view-login div.window-wrap .introduction header .title .title-super, 
-.view-passwordreset div.window-wrap .introduction header .title .title-super,
-div.window-wrap .login form .field.is-focused label,
+
 div.window-wrap .register form .field.is-focused label,
 div.window-wrap .passwordreset form .field.is-focused label, 
 div.window-wrap #forgot-password-modal #password-reset form .field.is-focused label,
@@ -64,6 +57,24 @@ div.window-wrap .btn-link,
 div.window-wrap .updates a,
 div.window-wrap div.info-wrapper section.handouts ol li a,
 div.window-wrap .dashboard a {
+    color: $theme-color-main;
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-color-main-hover;
+    }
+}
+body div.book-wrapper section.book-sidebar #booknav li a,
+div.window-wrap .login form .field.is-focused .tip, 
+div.window-wrap .register form .field.is-focused .tip, 
+div.window-wrap .passwordreset form .field.is-focused .tip,
+div.window-wrap #forgot-password-modal #password-reset form .field.is-focused .tip,
+.view-register div.window-wrap .introduction header .title .title-super, 
+.view-login div.window-wrap .introduction header .title .title-super, 
+.view-passwordreset div.window-wrap .introduction header .title .title-super,
+div.window-wrap .login form .field.is-focused label,
+.table a {
     color: $theme-color-main;
     &:visited,
     &:hover,
@@ -357,4 +368,67 @@ body div.info-wrapper section.handouts a {
     position: relative;
     left: 0;
     padding: 0 30px;
+}
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
+body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
+    color: #fff;
+    background: $theme-color-main;
+    border-color: $theme-color-main;
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-color-main;
+        background: transparent;
+        border-color: $theme-color-main;
+    }
+}
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn {
+    border-width: 1px;
+    border-style: solid;
+    &:hover,
+    &:focus,
+    &:active {
+        border-width: 1px;
+        border-style: solid;
+    } 
+}
+body .home .page-header-secondary {
+    background: $theme-color-main;
+}
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
+body .date-summary-container .date-summary-todays-date {
+    border-left: 3px solid $theme-color-main;
+}
+body .find-courses, 
+body .university-profile {
+    background: #fff;
+}
+.inner-wrapper .ugc > a {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: $theme-color-main !important;
+    border: 1px solid $theme-color-main !important;
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        color: $theme-color-main !important;
+        background: transparent !important;
+        border-color: $theme-color-main !important;
+    }
+}
+body .find-courses .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item {
+    float: none;
+    margin-right: 0;
+    width: auto;
+}
+@media (min-width: 600px) {
+    .theme-courses_course:nth-child(even) {
+        justify-content: flex-end;
+    }
+    .theme-courses_course:nth-child(even) .theme-courses_content {
+        order: -1;
+    }
 }

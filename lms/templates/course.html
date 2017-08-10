@@ -15,10 +15,6 @@ from django.core.urlresolvers import reverse
         <span class="theme-courses_org">${course.display_org_with_default}</span>
         <span class="theme-courses_code">${course.display_number_with_default}</span>
         <h1 class="theme-courses_title">${course.display_name_with_default}</h1>
-        <!--<div class="theme-courses_date" aria-hidden="true"><span class="theme-courses_ico-holder"><i class="fa fa-clock-o" aria-hidden="true"></i>
-
-            </span>
-        </div>-->
         <a class="theme-btn" href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">view more</a>
     </div>
 </article>
