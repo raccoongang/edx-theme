@@ -352,3 +352,14 @@ body a.doc-link::-moz-focus-inner{
 .find-courses .courses .course a {
     height: 100%;
 }
+body .xmodule_display.xmodule_HtmlModule h5:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.course-wrapper .course-content .edx-notes-wrapper-content ul, 
+.course-wrapper .courseware-results-wrapper .edx-notes-wrapper-content ul {
+    p,li {
+        margin-bottom: 0;
+    } 
+}
