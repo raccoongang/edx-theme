@@ -62,7 +62,7 @@ site_status_msg = get_site_status_msg(course_id)
               <%block name="navigation_global_links_authenticated">
                 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
                   <li class="theme-main-nav_item">
-                    <a class="theme-main-nav_link" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+                    <a class="theme-main-nav_link" href="${marketing_link('COURSES')}">${_('Explore Courses')}</a>
                   </li>
                 % endif
                 % if show_program_listing:
