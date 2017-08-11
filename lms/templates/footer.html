@@ -7,55 +7,26 @@
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
-
 <footer class="theme-footer">
-  <div class="theme-footer_holder">
-    <div class="theme-footer_section">
-      <span class="theme-footer_text">If you have some questions please contact us</span>
-      <a class="theme-btn theme-btn__contact" href="/contact">Contact us</a>
-    </div>
-  </div>
-  <div class="theme-footer_holder theme-footer_holder__color">
-    <div class="theme-footer_wrapper">
-      <div class="theme-footer_col">
-        <h2 class="theme-footer_col-header">About the university</h2>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/en/raccoon-university/" target="_blank">Raccoon Gang University</a>  
-        </div>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/en/about-us/" target="_blank">About Us</a>
-        </div>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/#our_services" target="_blank">eDX Services</a>
-        </div>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/en/blog/" target="_blank">Blog</a>
-        </div>
-      </div>
-      <div class="theme-footer_col">
-        <h2 class="theme-footer_col-header">courses</h2>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://studio-marvel-ficus.raccoongang.com/" target="_blank">Create Course Now</a>
-        </div>
-      </div>
-      <div class="theme-footer_col">
-        <h2 class="theme-footer_col-header">Contact us</h2>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="/contact">Contact Us</a>
-        </div>
-        <div class="theme-footer_col-holder">
-          <a class="theme-footer_col-link" href="https://raccoongang.com/en/contact-us/" target="_blank">Help</a>
-        </div>
+  <div class="theme-footer_container">
+    <div class="theme-footer_nav">
+        <ul class="theme-footer_col">
+          <li><a href="http://mehackit.org" target="_blank">About Mehackit</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/tos">Terms of Service and Privacy Policy</a></li>
+        </ul>
+        <div class="raccoon-block">
+          <a href="http://code.edx.org" target="_blank">
+          Built on <img src="/static/${settings.DEFAULT_SITE_THEME}/images/footer/openedx_logo.png" width="79">
+          </a>
+          <a href="http://raccoongang.com" target="_blank">
+            by Raccoon Gang <img src="/static/${settings.DEFAULT_SITE_THEME}/images/footer/RaccoonLogo.png" width="20">
+          </a>
       </div>
     </div>
-    <div class="theme-footer_section">
-      <div class="theme-footer_copyright">
-        © 2016 Racoongang. All Rights Reserved
-        <a href="${footer['openedx_link']['url']}">
-          <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-        </a>
-      </div>
-    </div>
+    <a href="/">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.svg" alt="logo" width="218">
+    </a>
   </div>
 </footer>
 % if include_dependencies:

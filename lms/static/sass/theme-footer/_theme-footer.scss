@@ -1,91 +1,71 @@
-.theme-footer {
-    background: #fff;
-
-    &_holder {
-        padding-top: 53px;
-
-        &__color {
-            background: #1f1d20;
-        }
-    }
-    &_header {
-        font: 18px/1.3 muliregular;
-        color: #111827;
-        text-align: center;
-        margin: 0 0 37px;
-        text-transform: none;
-    }
-    &_section {
-        border-top: 1px solid #ececec;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 1140px;
+body .theme-footer {
+    margin-top: 40px;
+    background: $theme-footer-bg;
+    box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
+    border-top: 1px solid #c4c5c7;
+    padding: 25px 10px 30px 10px;
+    &_container {
+        box-sizing: border-box;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 28px 15px;
-        
-        @media (max-width: 450px) {
-            flex-direction: column;
-        }
-        .theme-footer_holder__color & {
-            border-color: #2f343b;
-        }
-    }
-    &_link {
-        display: inline-block;
-        font: 14px/1.3 muliregular;
-        color: #85d600 !important;
-        border: 1px solid #85d600;
-        padding: 11px 48px 10px;
-        text-transform: uppercase;
-    }
-    &_wrapper {
         display: flex;
         justify-content: space-between;
-        max-width: 1140px;
-        margin: 0 auto 20px;
-        padding: 0 15px;
-        box-sizing: border-box;
+        align-items: center;
         flex-wrap: wrap;
-        @media all and (min-width: 600px){
-            flex-wrap: nowrap;
+        @media (max-width: 800px) {
+            flex-direction: column;
         }
     }
-    &_col-header {
-        display: block;
-        font: 14px/1.3 muliregular;
-        color: #fff;
-        padding: 0 0 13px;
-        border-bottom: 1px solid #2f343b;
-        text-transform: uppercase;
-    }
-    &_col-holder {
-        margin: 0 0 11px;
-    }
-    &_col-link {
-        font: 14px/1.3 muliregular;
-        color: #7f848c !important;
-    }
-    &_text {
-        font: 17px/1.3 muliregular;
-        color: #5a666e;
-        margin-right: 50px;
-
-        @media (max-width: 450px) {
-            margin-right: 0;
-            margin-bottom: 20px;
-            text-align: center;
-        } 
-    }
-    &_copyright {
-        font: 13px/1.3 muliregular;
-        color: #7f848c;
+    &_nav {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 800px) {
+            margin-bottom: 30px;
+            align-items: center;
+        }
     }
     &_col {
-        width: 100%;
-        margin: 0 0 25px;
-        @media all and (min-width: 600px){
-            width: auto;
+        display: flex;
+        margin: 5px 0 30px 0;
+        padding: 0;
+        list-style: none;
+        a {
+            color: #f7f7f7;
+            font: 16px/1.2 "Arial","helvetica","Geneva", sans-serif;
+            &:hover,
+            &:focus {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+        li {
+            margin-right: 15px;
+            position: relative;
+            &:after {
+                content: '\2022';
+                padding: 0 0 0 15px;
+                color: #fff;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .raccoon-block a {
+        font-size: 10px;
+        color: $theme-footer-link;
+        display: inline-block;
+        vertical-align: bottom;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+        img {
+            opacity: 0.5;
+            display: inline-block;
+            vertical-align: baseline;
         }
     }
 }
