@@ -120,6 +120,7 @@
 
 
 <div class="nav-drawer ${"not-logged" if not user.is_authenticated() else ""}">
+  <img class="logo-img" src="${static.url("images/logo-circle.png")}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
   <ul>
     % if user.is_authenticated():
       <%block name="navigation_global_links_authenticated">
@@ -211,6 +212,8 @@
   // sidebar menu
   $('.nav-trigger').on('click', function(e){
     e.preventDefault();
+
+    $('body').toggleClass('no-scroll');
     $('.nav-trigger, .nav-drawer').toggleClass('active');
   });
 </script>

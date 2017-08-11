@@ -1,5 +1,5 @@
 .course-intro {
-  @include banner-component('dashboard-bg');
+  @include banner-component();
 
   &__button {
     position: absolute;
@@ -9,7 +9,6 @@
     flex-direction: column;
     right: 0;
     bottom: 0;
-    height: 100%;
     padding: 2rem;
     box-sizing: border-box;
   }
@@ -30,6 +29,10 @@
     &:after {
       display: none;
     }
+
+    .social-sharing .share {
+      color: $color-orange;
+    }
   }
 
   .course-title {
@@ -37,6 +40,11 @@
     padding: 0 1rem;
     text-align: center;
     font-weight: 500;
+  }
+
+  .btn .btn.disabled {
+    background: transparent;
+    border: none;
   }
 
   .secction-title {
@@ -53,6 +61,7 @@
       vertical-align: middle;
     }
   }
+
 
   .secction-subtitle {
     display: block;
@@ -73,6 +82,15 @@
 
 .course-info .details .inner-wrapper .course-staff .teacher .teacher-image {
   border-radius: 50%;
+}
+
+.details-button .btn .btn.disabled {
+  background: transparent;
+  border: none;
+
+  + strong {
+    vertical-align: middle
+  }
 }
 
 @media (max-width: $tablet) {

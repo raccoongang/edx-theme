@@ -194,8 +194,9 @@ button.btn-orange {
   }
 }
 
-.nav-drawer a {
-  @include button-base($color-grey-light, transparent, 1px solid transparent, $color-grey-light, #535358, 1px solid transparent);
+.nav-drawer a,
+.nav-drawer .btn-register, {
+  @include button-base($color-grey-dark, transparent, 1px solid transparent, $color-grey-dark, rgba(0, 0, 0, 0.08), 1px solid transparent);
 }
 
 body.discussion {

@@ -11,7 +11,9 @@ body.view-in-course .xmodule_display.xmodule_SequenceModule {
     justify-content: space-between;
     height: auto;
     padding: 0.5rem;
-    background: #a0a0a0;
+    background: #efefef;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12);
 
     &:before,
     &:after {
@@ -21,36 +23,35 @@ body.view-in-course .xmodule_display.xmodule_SequenceModule {
     ol {
       position: relative;
       width: 100%;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       align-content: center;
       box-sizing: border-box;
 
-      &:after {
-        content: '';
-        display: block;
-        height: 64px;
-        background: #efefef;
-        flex-grow: 1;
-        margin: 6px;
-      }
-
       li {
-        flex-grow: 0;
+        display: none;
+        width: 100%;
+        margin: 0.5rem;
         border: none !important;
 
-        &:first-child .sequence-nav button {
-          margin-left: 6px;
+        &.js-prosequence-level-2 {
+          display: block;
+        }
+
+        &:first-child {
+          margin-left: 0.5rem;
+        }
+
+        &:last-child {
+          margin-right: 0.5rem;
         }
       }
     }
 
     &-button,
     button {
-      width: 64px;
       height: 64px;
-      margin: 6px;
+      min-width: 64px;
       background: #FFF;
       border: none !important;
       border-radius: 0;
@@ -76,34 +77,23 @@ body.view-in-course .xmodule_display.xmodule_SequenceModule {
       }
     }
 
+    button {
+      width: 100%;
+    }
+
     .sequence-nav-button {
       position: relative;
+      margin: 0.5rem;
       padding: 0;
-      background: #efefef;
+      background: transparent !important;
 
-      span:not(.fa) {
-        position: absolute;
-        display: block;
-        width: 100%;
-        bottom: 0;
-        padding: 4px;
-        font-family: 'Academy Sans', Verdana, Geneva, sans-serif, sans-serif;
-        background: rgba(160, 160, 160, 0.37);
-        box-sizing: border-box;
-      }
-
-      span.fa {
+      .icon {
         position: relative;
         display: block;
-        margin-bottom: 28px;
         padding: 0;
-        color: #4a4a4f;
-        font-size: 16px;
-        line-height: 36px;
-      }
-
-      &:first-child {
-        margin-left: 6px;
+        color: #7b7b7c;
+        font-size: 64px;
+        line-height: 64px;
       }
 
       &.focused,
@@ -113,10 +103,14 @@ body.view-in-course .xmodule_display.xmodule_SequenceModule {
         padding-top: 0;
 
         span {
-          color: #FFF;
+          color: #4a4a4f;
         }
       }
     }
+  }
+
+  .sequence-list-wrapper {
+    z-index: 9999;
   }
 }
 
@@ -283,13 +277,52 @@ body.view-in-course .xmodule_display.xmodule_SequenceModule {
 }
 
 .modal,
+.container .modal,
 .leanModal_box {
   position: fixed;
+  display: none;
+  width: 480px !important;
   top: 50%;
+  left: 50%;
   margin: 0 -240px;
 }
 
+@media (max-width: $tablet-landscape) {
+  body.view-in-course .xmodule_display.xmodule_SequenceModule .sequence-nav {
+    padding: 0.2rem;
+
+    .sequence-nav-button {
+      margin: 0 0.2rem;
+    }
+
+    ol li {
+      margin: 0.2rem;
+
+      &:first-child {
+        margin-left: 0.2rem;
+      }
+
+      &:last-child {
+        margin-right: 0.2rem;
+      }
+    }
+  }
+}
+
 @media (max-width: $tablet) {
+  body.view-in-course .xmodule_display.xmodule_SequenceModule {
+    .sequence-nav ol li {
+      &.js-prosequence-level-2 {
+        display: none;
+      }
+
+      &.js-prosequence-active,
+      &.js-prosequence-level-1 {
+        display: block;
+      }
+    }
+  }
+
   .view-student-notes {
     .title-search-container .wrapper-notes-search {
       width: 100%;
@@ -327,24 +360,16 @@ body.view-in-course .xmodule_display.xmodule_SequenceModule {
   }
 }
 
-@media (max-width: $smartphone) {
-  body.view-in-course .xmodule_display.xmodule_SequenceModule .sequence-nav  {
-    flex-flow: row wrap;
+@media (max-width: $mobile) {
+  body.view-in-course .xmodule_display.xmodule_SequenceModule {
+    .sequence-nav-button span {
+      &.icon {
+        display: none;
+      }
 
-    .sequence-list-wrapper {
-      width: 100%;
-      order: 2;
-      margin-top: 0.75rem;
+      &.text {
+        margin-bottom: 0;
+      }
     }
-
-    &-button {
-      width: 100%;
-      order: 1;
-      margin: 0 !important;
-    }
-
-    // ol:after {
-    //   display: none;
-    // }
   }
 }

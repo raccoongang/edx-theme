@@ -109,7 +109,8 @@ from openedx.core.lib.courses import course_image_url
 
 <section class="course-info">
 
-  <header class="course-intro" style="background-image:url('${course_details.banner_image_asset_path}');">
+  <header class="course-intro">
+    <img class="home-intro__image" src="${course_details.banner_image_asset_path}">
     <div class="course-intro__container">
       <div class="course-intro__text">
         <h1>${course.display_name_with_default_escaped}</h1>

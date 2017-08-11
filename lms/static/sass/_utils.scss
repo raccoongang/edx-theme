@@ -17,13 +17,19 @@
   box-sizing: border-box;
 }
 
-@mixin banner-component($bg-image: 'home-bg'){
+@mixin banner-component(){
   position: relative;
   width: 100%;
-  height: 50vh;
-  background-image: url('../images/#{$bg-image}.jpg');
-  background-position: center;
-  background-size: cover;
+
+  &__image {
+    width: 100%;
+    min-height: 182px;
+  }
+
+  &__video {
+    width: 100%;
+    min-height: 512px;
+  }
 
   &__container {
     @extend %content-wrapper;
@@ -36,8 +42,20 @@
     left: 0;
     bottom: 0;
     margin: 2rem 0;
-    background: rgba(0, 0, 0, .6);
     padding: 1rem 4rem 1rem 2rem;
+    background: rgba(0, 0, 0, .6);
+    box-sizing: border-box;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      transform: translateX(-100%);
+    }
 
     h1 {
       margin-bottom: 0;
