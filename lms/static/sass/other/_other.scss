@@ -453,3 +453,25 @@ body .container.activation h1.valid {
     color: #000;
     font-weight: bold;
 }
+
+body .u-field.editable-toggle.mode-display,
+body .view-profile .profile-section-two-fields .u-field-textarea.editable-toggle {
+    &:hover,
+    &:focus {
+        background-color: $profile-bg-hover;
+        .message-can-edit {
+            color: #000;
+        }
+    }
+}
+body.view-profile .profile-image-field .image-wrapper .u-field-upload-button {
+    color: #000;
+    background: $profile-bg-hover;
+    &:focus,
+    &:hover {
+        border-color: $theme-color-main;
+    }
+}
+body div.info-wrapper {
+    background: #fff;
+}
