@@ -65,6 +65,7 @@ div.window-wrap .dashboard a {
         color: $theme-color-main-hover;
     }
 }
+.login-register .status .message-copy a,
 body div.book-wrapper section.book-sidebar #booknav li a,
 div.window-wrap .login form .field.is-focused .tip, 
 div.window-wrap .register form .field.is-focused .tip, 
@@ -428,7 +429,27 @@ body .find-courses .courses-container .courses.no-course-discovery .courses-list
     .theme-courses_course:nth-child(even) {
         justify-content: flex-end;
     }
-    .theme-courses_course:nth-child(even) .theme-courses_content {
+    .find-courses .courses-container .courses.no-course-discovery .courses-listing .courses-listing-item:nth-child(even) .theme-courses_content{
         order: -1;
     }
+}
+@media (max-width: 599px) {
+    .find-courses .courses-container .courses .courses-listing .courses-listing-item {
+        min-height: 360px;
+        max-height: none;
+    }
+}
+body div.window-wrap .doc-link {
+    &:hover {
+        color: $link-hover;
+    }
+}
+.theme-courses_content_title {
+    display: flex;
+}
+body .container.activation h1.valid {
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: bold;
 }

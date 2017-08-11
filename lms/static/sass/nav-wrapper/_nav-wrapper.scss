@@ -40,13 +40,13 @@
     &_logo-holder {
         display: none;
         overflow: hidden;
-        width: 90px;
         @media all and (min-width: 860px){
             display: inline;
         }
-
-        .theme-main-nav & {
-            display: block;
+        &_small {
+            .theme-main-nav & {
+                display: block;
+            }
         }
         img {
             margin: 0;

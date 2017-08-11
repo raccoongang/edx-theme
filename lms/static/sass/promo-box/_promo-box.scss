@@ -5,12 +5,13 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    height: 200px; //ie
+    padding: 50px 20px;
     min-height: 200px;
     justify-content: center;
     @media all and (min-width: 800px){
         height: 500px; //ie
         min-height: 500px;
+        padding: 0;
     }
 
     &__course {
@@ -30,13 +31,10 @@
         min-width: 1600px;
     }
     &_text {
+        display: block;
         font: 24px/1 muliregular;
-        @media all and (min-width: $res_860){
-            display: block;
-            font: 24px/1 muliregular;
-            color: #fff;
-            text-transform: uppercase;
-        }
+        color: #fff;
+        text-transform: uppercase;
     }
     &_heading {
         font: 40px/1.3 'Work Sans', sans-serif;

@@ -47,138 +47,17 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
 <div class="nav-holder" aria-label="${_('Global')}">
-  <header id="global-navigation" class="theme-header header-global" >
-    <div class="theme-header-info">
-        <div class="theme-header-info_contact">
-            <span class="theme-header-info_text">Have any question?</span>
-            <span class="theme-header-info_phone">+1 857 4533328</span>
-            <a class="theme-header-info_mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#097;&#099;&#099;&#111;&#111;&#110;&#103;&#097;&#110;&#103;&#046;&#099;&#111;&#109;"><i class="fa fa-envelope" aria-hidden="true"></i>info@raccoongang.com</a>
-        </div>
-        <div class="theme-header-info_social">
-            <span class="theme-header-info_text">Find us in social network</span>
-            <ul class="social-list">
-                <li class="social-list_item social-list_item__first"><a class="social-list_link theme-header-info_mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#097;&#099;&#099;&#111;&#111;&#110;&#103;&#097;&#110;&#103;&#046;&#099;&#111;&#109;"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                <li class="social-list_item"><a class="social-list_link" href="https://twitter.com/raccoongangcom" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li class="social-list_item"><a class="social-list_link" href="https://www.facebook.com/raccoongangco" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li class="social-list_item"><a class="social-list_link" href="https://www.linkedin.com/company/raccoon-gang" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="theme-nav-wrapper" aria-label="${_('Global')}">
-      <a href="${marketing_link('ROOT')}">
-        <%block name="navigation_logo">
-            <span class="theme-nav-wrapper_logo-holder">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.svg" alt="logo" width="130">
-            </span>
-        </%block>
-      </a>
-
-      <div class="theme-nav-wrapper_holder">
-      % if user.is_authenticated():
-
-      <%include file="user_dropdown.html"/>
-
-      <a href="${get_online_help_info(online_help_token)['doc_url']}" 
-         target="_blank"
-         class="doc-link help-link">${_("Help")}</a>
-
-      % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
-        <ol class="user">
-          <li class="primary">
-            <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
-              <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
-            </a>
-          </li>
-        </ol>
-      % endif
-    % else:
-      <ol class="left list-inline nav-global">
-        <%block name="navigation_global_links">
-          % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-            <li class="item nav-global-01">
-              <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-            </li>
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-              <li class="item nav-global-02">
-                <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
-              </li>
-            % endif
-            <li class="item nav-global-03">
-              <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-            </li>
-          % endif
-            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <li class="item nav-global-04">
-                <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-              </li>
-            % else:
-              <li class="item nav-global-04">
-                <a class="btn-neutral" href="/register${login_query()}">${_("Register")}</a>
-              </li>
-            % endif
-        </%block>
-      </ol>
-
-      <ol class="right nav-courseware list-inline">
-        <%block name="navigation_sign_in">
-          <li class="item nav-courseware-01">
-            % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-              % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-                <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
-              % else:
-                <a class="theme-btn" href="/login${login_query()}">${_("Sign in")}</a>
-              % endif
-            % endif
-          </li>
-        </%block>
-      </ol>
-    % endif
-    % if static.show_language_selector():
-     <% languages = static.get_released_languages() %>
-      % if len(languages) > 1:
-      <ol class="user">
-        <li class="primary">
-          <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-            % if user.is_authenticated():
-            <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-            % else:
-            <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-            % endif
-            <label><span class="sr">${_("Choose Language")}</span>
-                <select class="input select language-selector" id="settings-language-value" name="language">
-                  % for language in languages:
-                    % if language[0] == LANGUAGE_CODE:
-                      <option value="${language[0]}" selected="selected">${language[1]}</option>
-                    % else:
-                      <option value="${language[0]}" >${language[1]}</option>
-                    % endif
-                  % endfor
-                </select>
-            </label>
-          </form>
-        </li>
-      </ol>
-      % endif
-      % endif
-      </div>
-    </div>
-</header>
-
 <div class="theme-main-nav">
     <div class="theme-main-nav_opener"></div>
     <div class="theme-main-nav_logo">
       <a href="${marketing_link('ROOT')}">
-        <span class="theme-nav-wrapper_logo-holder">
+        <span class="theme-nav-wrapper_logo-holder theme-nav-wrapper_logo-holder_small">
             <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.svg" alt="logo" width="90"/>
         </span>
       </a>
     </div>
     <nav class="theme-main-nav_holder">
         <ul class="theme-main-nav_list">
-            <li class="theme-main-nav_item"><a href="/about" class="theme-main-nav_link">${_('About')}</a></li>
-            <li class="theme-main-nav_item"><a href="/blog" class="theme-main-nav_link">${_('Blog')}</a></li>
-            <li class="theme-main-nav_item"><a href="/contact" class="theme-main-nav_link">${_('Contact Us')}</a></li>
             % if user.is_authenticated():
               <%block name="navigation_global_links_authenticated">
                 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
@@ -218,6 +97,135 @@ site_status_msg = get_site_status_msg(course_id)
             %endif
         </ul>
     </nav>
+    <div class="theme-header-info theme-header-info_mobile">
+        <div class="theme-header-info_contact">
+            <a class="theme-header-info_mail" href="mailto:hello@mehackit.org"><i class="fa fa-envelope" aria-hidden="true"></i>hello@mehackit.org</a>
+        </div>
+        <div class="theme-header-info_social">
+            <span class="theme-header-info_text">Find us in social network</span>
+            <ul class="social-list">
+                <li class="social-list_item social-list_item__first"><a class="social-list_link theme-header-info_mail" href="mailto:hello@mehackit.org"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                <li class="social-list_item"><a class="social-list_link" href="https://twitter.com/mehackit" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-list_item"><a class="social-list_link" href="https://www.facebook.com/Mehackit/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-list_item"><a class="social-list_link" href="https://www.youtube.com/channel/UCGarPyS1YjMAbVbUzknyimg" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <header id="global-navigation" class="theme-header header-global" >
+      <div class="theme-header-info">
+          <div class="theme-header-info_contact">
+              <a class="theme-header-info_mail" href="mailto:hello@mehackit.org"><i class="fa fa-envelope" aria-hidden="true"></i>hello@mehackit.org</a>
+          </div>
+          <div class="theme-header-info_social">
+              <span class="theme-header-info_text">Find us in social network</span>
+              <ul class="social-list">
+                  <li class="social-list_item social-list_item__first"><a class="social-list_link theme-header-info_mail" href="mailto:hello@mehackit.org"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                  <li class="social-list_item"><a class="social-list_link" href="https://twitter.com/mehackit" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li class="social-list_item"><a class="social-list_link" href="https://www.facebook.com/Mehackit/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li class="social-list_item"><a class="social-list_link" href="https://www.youtube.com/channel/UCGarPyS1YjMAbVbUzknyimg" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="theme-nav-wrapper" aria-label="${_('Global')}">
+        <a href="${marketing_link('ROOT')}">
+          <%block name="navigation_logo">
+              <span class="theme-nav-wrapper_logo-holder">
+                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.svg" alt="logo" width="130">
+              </span>
+          </%block>
+        </a>
+
+        <div class="theme-nav-wrapper_holder">
+        % if user.is_authenticated():
+
+        <%include file="user_dropdown.html"/>
+
+        <a href="${get_online_help_info(online_help_token)['doc_url']}" 
+          target="_blank"
+          class="doc-link help-link">${_("Help")}</a>
+
+        % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
+          <ol class="user">
+            <li class="primary">
+              <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
+                <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+              </a>
+            </li>
+          </ol>
+        % endif
+      % else:
+        <ol class="left list-inline nav-global">
+          <%block name="navigation_global_links">
+            % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+              <li class="item nav-global-01">
+                <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+              </li>
+              % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+                <li class="item nav-global-02">
+                  <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
+                </li>
+              % endif
+              <li class="item nav-global-03">
+                <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+              </li>
+            % endif
+              % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                <li class="item nav-global-04">
+                  <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+                </li>
+              % else:
+                <li class="item nav-global-04">
+                  <a class="btn-neutral" href="/register${login_query()}">${_("Register")}</a>
+                </li>
+              % endif
+          </%block>
+        </ol>
+
+        <ol class="right nav-courseware list-inline">
+          <%block name="navigation_sign_in">
+            <li class="item nav-courseware-01">
+              % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                  <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+                % else:
+                  <a class="theme-btn" href="/login${login_query()}">${_("Sign in")}</a>
+                % endif
+              % endif
+            </li>
+          </%block>
+        </ol>
+      % endif
+      % if static.show_language_selector():
+      <% languages = static.get_released_languages() %>
+        % if len(languages) > 1:
+        <ol class="user">
+          <li class="primary">
+            <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+              <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+              % if user.is_authenticated():
+              <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+              % else:
+              <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
+              % endif
+              <label><span class="sr">${_("Choose Language")}</span>
+                  <select class="input select language-selector" id="settings-language-value" name="language">
+                    % for language in languages:
+                      % if language[0] == LANGUAGE_CODE:
+                        <option value="${language[0]}" selected="selected">${language[1]}</option>
+                      % else:
+                        <option value="${language[0]}" >${language[1]}</option>
+                      % endif
+                    % endfor
+                  </select>
+              </label>
+            </form>
+          </li>
+        </ol>
+        % endif
+        % endif
+        </div>
+      </div>
+  </header>
 </div>
 </div>
 <script>

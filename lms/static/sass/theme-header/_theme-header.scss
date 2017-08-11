@@ -4,11 +4,16 @@
     border: none;
     box-shadow: none;
     @media all and (max-width: 859px) {
-        display: flex;
+        display: none;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        padding: 0 15px;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding: 15px;
+        .theme-main-nav__open & {
+            display: flex;
+            justify-content: center;
+        }
     }
     @media all and (max-width: 450px) {
         flex-direction: column;
