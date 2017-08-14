@@ -129,11 +129,12 @@ from openedx.core.lib.courses import course_image_url
         % endif
 
         %if user.is_authenticated() and registered:
+        <span class="theme-btn theme-btn__disable">${_("You are enrolled in this course")}</span>
           %if show_courseware_link:
             <a class="theme-btn theme-btn__disable" href="${course_target}">
           %endif
 
-          <span class="theme-btn theme-btn__disable">${_("You are enrolled in this course")}</span>
+          
 
           %if show_courseware_link:
             <strong>${_("View Course")}</strong>
