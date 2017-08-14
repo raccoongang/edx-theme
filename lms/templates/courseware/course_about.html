@@ -129,7 +129,7 @@ from openedx.core.lib.courses import course_image_url
         % endif
 
         %if user.is_authenticated() and registered:
-        <span class="theme-btn theme-btn__disable">${_("You are enrolled in this course")}</span>
+        <span class="register theme-btn theme-btn__disable">${_("You are enrolled in this course")}</span>
           %if show_courseware_link:
             <a class="theme-btn theme-btn__disable" href="${course_target}">
           %endif
@@ -146,16 +146,16 @@ from openedx.core.lib.courses import course_image_url
             ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
           </span>
         % elif is_course_full:
-          <span class="theme-btn theme-btn__disable">
+          <span class="register theme-btn theme-btn__disable">
             ${_("Course is full")}
           </span>
         % elif invitation_only and not can_enroll:
-          <span class="theme-btn theme-btn__disable">${_("Enrollment in this course is by invitation only")}</span>
+          <span class="register theme-btn theme-btn__disable">${_("Enrollment in this course is by invitation only")}</span>
         ## Shib courses need the enrollment button to be displayed even when can_enroll is False,
         ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
         ## so that they can register and become a real user that can enroll.
         % elif not is_shib_course and not can_enroll:
-          <span class="theme-btn theme-btn__disable">${_("Enrollment is Closed")}</span>
+          <span class="register theme-btn theme-btn__disable">${_("Enrollment is Closed")}</span>
         %elif can_add_course_to_cart:
           <%
           if user.is_authenticated():
@@ -185,7 +185,7 @@ from openedx.core.lib.courses import course_image_url
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="theme-btn theme-btn__disable">
+          <a href="${reg_href}" class="${href_class} theme-btn theme-btn__disable">
             ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
           </a>
           <div id="register_error"></div>
@@ -215,14 +215,38 @@ from openedx.core.lib.courses import course_image_url
         <ol class="theme-aside_list">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
           % if not course.start_date_is_still_default:
-            <li class="important-dates-item"><span class="icon fa fa-calendar" aria-hidden="true"></span><p class="important-dates-item-title">${_("Classes Start")}</p></li>
+              <%
+                  course_start_date = course.start
+              %>
+            <li class="important-dates-item"><span class="icon fa fa-calendar" aria-hidden="true"></span>
+            <p class="important-dates-item-title">${_("Classes Start")}</p>
+              % if isinstance(course_start_date, str):
+                  <span class="important-dates-item-text start-date">${course_start_date}</span>
+              % else:
+                  <%
+                     course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                  %>
+                  <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
+              % endif
+            </li>
           % endif
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.
             % if get_course_about_section(request, course, "end_date") or course.end:
+              <%
+                  course_end_date = course.end
+              %>
             <li class="important-dates-item">
                 <span class="icon fa fa-calendar" aria-hidden="true"></span>
                 <p class="important-dates-item-title">${_("Classes End")}</p>
+                  % if isinstance(course_end_date, str):
+                      <span class="important-dates-item-text final-date">${course_end_date}</span>
+                  % else:
+                    <%
+                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                    %>
+                    <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
+                  % endif
             </li>
             % endif
 
