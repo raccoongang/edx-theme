@@ -1,4 +1,4 @@
-    .find-courses .wrapper-search-context,
+.find-courses .wrapper-search-context,
 .find-courses .courses-container {
     max-width: 1600px;
     padding: 0 20px;
@@ -219,4 +219,13 @@ div.window-wrap .account-settings-sections .section .account-settings-section-bo
 div.window-wrap .wrapper-account-settings .wrapper-header .account-nav button:hover, 
 div.window-wrap .wrapper-account-settings .wrapper-header .account-nav button:focus {
     border-bottom: 4px solid $theme-color-main !important;
+}
+body .xmodule_display.xmodule_HtmlModule a,
+body .xmodule_display.xmodule_HtmlModule a:link {
+    color: $theme-color-main;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $theme-color-main-hover;
+    }
 }

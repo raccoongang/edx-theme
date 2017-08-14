@@ -16,7 +16,9 @@
         border-color: $theme-color-main;
         text-decoration: none;
     }
-
+    @media (max-width: 800px) {
+        margin-bottom: 10px;
+    }
     &__invert {
         color: #fff !important;
         background: $theme-color-main;
