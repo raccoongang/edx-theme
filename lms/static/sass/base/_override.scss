@@ -67,7 +67,6 @@
 
             .btn {
                 background: $theme-btn-bg;
-                box-shadow: 0 2px 1px 0 $theme-btn-shadow;
                 color: $theme-btn-text-color;
 
                 &:focus {
@@ -220,7 +219,6 @@ body .wrapper-account-settings .wrapper-header .account-nav button:hover {
 .login-register {
     .action-primary {
         background: $theme-btn-bg;
-        box-shadow: 0 2px 1px 0 $theme-btn-shadow;
         color: $theme-btn-text-color;
 
         &:active,
@@ -310,7 +308,6 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
 input[type="submit"], input[type="button"], button, .button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     background: $theme-btn-bg;
-    box-shadow: 0 2px 1px 0 $theme-btn-shadow;
     color: $theme-btn-text-color;
     
     &:active,
@@ -327,11 +324,10 @@ input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disab
 }
 // end btns
 .home>header {
-    background-image: url('../images/background.jpg');
     height: 420px;
     background-position: center;
     position: relative;
-    background-color: #040404;
+    background-color: #3f66b1;
     background-position: 0 0;
 }
 .login-register .login-provider {
@@ -341,4 +337,8 @@ input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disab
     span {
         color: $theme-btn-white-text-color;
     }
+}
+body {
+    display: flex;
+    flex-direction: column;
 }
