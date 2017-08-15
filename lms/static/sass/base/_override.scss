@@ -1,3 +1,6 @@
+.hide {
+    display: none!important;
+}
 .header-global {
     height: auto;
     background: $header-color;
@@ -68,12 +71,19 @@
             .btn {
                 background: $theme-btn-bg;
                 color: $theme-btn-text-color;
-
+                box-shadow: none;
                 &:focus {
                     background: $theme-btn-bg;
                 }
                 &:hover {
                     background: $theme-btn-bg-hover;
+                }
+                &_empty {
+                    background: none;
+                    &:focus,
+                    &:hover {
+                        background: none;
+                    }
                 }
             }
         }
@@ -327,7 +337,7 @@ input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disab
     height: 420px;
     background-position: center;
     position: relative;
-    background-color: #3f66b1;
+    background-color: #1D66B5;
     background-position: 0 0;
 }
 .login-register .login-provider {
@@ -341,4 +351,17 @@ input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disab
 body {
     display: flex;
     flex-direction: column;
+}
+.home>header .title {
+    float: none;
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+    .course-search {
+        display: none;
+    }
+}
+.home>header .outer-wrapper {
+    animation: none;
 }
