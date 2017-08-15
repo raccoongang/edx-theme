@@ -472,6 +472,8 @@ body .view-profile .profile-section-two-fields .u-field-textarea.editable-toggle
         }
     }
 }
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder,
+body .u-field.mode-placeholder,
 body.view-profile .profile-image-field .image-wrapper .u-field-upload-button {
     color: #000;
     background: $profile-bg-hover;
@@ -479,6 +481,10 @@ body.view-profile .profile-image-field .image-wrapper .u-field-upload-button {
     &:hover {
         border-color: $theme-color-main;
     }
+}
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover .u-field-title,
+body .u-field.mode-placeholder:hover span {
+    color: #000;
 }
 body div.info-wrapper {
     background: #fff;
