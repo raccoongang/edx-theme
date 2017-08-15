@@ -17,7 +17,8 @@ body .discussion,
 div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: transparent;
 }
-body {
+body div.book-wrapper section.book-sidebar,
+html body {
     background-color: #fff;
 }
 div.window-wrap .register form .field.is-focused label,
@@ -338,6 +339,7 @@ div.window-wrap .search-bar .cancel-button:hover:focus,
 div.window-wrap .search-bar .cancel-button:hover:active {
     background: $theme-color-main;
 }
+.student-table a,
 body .xmodule_display.xmodule_HtmlModule a,
 body .xmodule_display.xmodule_HtmlModule a:link,
 body div.info-wrapper section.updates div article .toggle-visibility-button,
@@ -501,4 +503,33 @@ body div.info-wrapper {
 }
 .line-height p {
     line-height: 1.2;
+}
+body.view-profile .profile-image-field .image-wrapper .upload-button-input {
+    opacity: 0;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    columns: 1;
+}
+
+body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
+body .instructor-dashboard-wrapper-2 button.btn-blue {
+    background: $theme-color-main;
+    box-shadow: none;
+    &:active:not(:disabled),
+    &:focus:not(:disabled),
+    &:hover:not(:disabled) {
+        background: $link-hover;
+        box-shadow: none;
+        border: none;
+    }
+}
+body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse {
+    border-color: $theme-color-main;
+    text-shadow: none;
+    &:active:not(:disabled),
+    &:focus:not(:disabled),
+    &:hover:not(:disabled) {
+        border: 1px solid $link-hover;
+        text-shadow: none;
+    }
 }
