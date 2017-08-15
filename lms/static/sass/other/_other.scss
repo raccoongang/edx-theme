@@ -461,7 +461,8 @@ body .container.activation h1.valid {
     color: #000;
     font-weight: bold;
 }
-
+body .u-field.mode-placeholder,
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder,
 body .u-field.editable-toggle.mode-display,
 body .view-profile .profile-section-two-fields .u-field-textarea.editable-toggle {
     &:hover,
@@ -472,8 +473,14 @@ body .view-profile .profile-section-two-fields .u-field-textarea.editable-toggle
         }
     }
 }
-body.view-profile .profile-section-two-fields .u-field.mode-placeholder,
 body .u-field.mode-placeholder,
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder {
+    &:hover,
+    &:focus {
+        border-color: $profile-bg-hover;
+    }
+}
+
 body.view-profile .profile-image-field .image-wrapper .u-field-upload-button {
     color: #000;
     background: $profile-bg-hover;
