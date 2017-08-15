@@ -216,7 +216,7 @@ from openedx.core.lib.courses import course_image_url
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
           % if not course.start_date_is_still_default:
               <%
-                  course_start_date = course.start
+                  course_start_date = isinstance(course.start, str) and course.start or course.start.strftime('%b %d, %Y')
               %>
             <li class="important-dates-item"><span class="icon fa fa-calendar" aria-hidden="true"></span>
             <p class="important-dates-item-title">${_("Classes Start")}</p>
@@ -234,7 +234,7 @@ from openedx.core.lib.courses import course_image_url
             ## but for backwards compatibility, show about/end_date blob if it exists.
             % if get_course_about_section(request, course, "end_date") or course.end:
               <%
-                  course_end_date = course.end
+                  course_end_date = isinstance(course.end, str) and course.end or course.end.strftime('%b %d, %Y')
               %>
             <li class="important-dates-item">
                 <span class="icon fa fa-calendar" aria-hidden="true"></span>
