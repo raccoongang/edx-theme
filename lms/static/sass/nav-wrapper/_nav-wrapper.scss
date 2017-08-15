@@ -28,11 +28,6 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        flex-wrap: wrap;
-        @media all and (min-width: 450px){
-            flex-wrap: nowrap;
-            justify-content: center;
-        }
         @media all and (max-width: 450px){
             justify-content: center;
         }

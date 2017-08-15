@@ -11,10 +11,15 @@ section.outside-app,
 .find-courses {
     padding-top: 20px;
 }
+html body.view-in-course,
+body .discussion,
+.discussion .window-wrap,
 div.window-wrap .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: transparent;
 }
-
+body {
+    background-color: #fff;
+}
 div.window-wrap .register form .field.is-focused label,
 div.window-wrap .passwordreset form .field.is-focused label, 
 div.window-wrap #forgot-password-modal #password-reset form .field.is-focused label,
@@ -442,8 +447,9 @@ body .find-courses .courses-container .courses.no-course-discovery .courses-list
     }
 }
 body div.window-wrap .doc-link {
+    color: #fff;
     &:hover {
-        color: $link-hover;
+        color: $theme-color-main;
     }
 }
 .theme-courses_content_title {
@@ -479,4 +485,7 @@ body div.info-wrapper {
 }
 .content-wrapper {
     padding-bottom: 40px;
+}
+.line-height p {
+    line-height: 1.2;
 }
