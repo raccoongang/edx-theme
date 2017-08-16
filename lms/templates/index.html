@@ -15,7 +15,9 @@ from openedx.core.djangolib.markup import HTML, Text
           <img class="promo-box_img" src="/static/${settings.FEATURES.get('MARVEL_BLUE_DEFAULT_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/promo-box/promo-img.jpg" alt="promo img">
           <div class="promo-box_helper"></div>
           <div class="promo-box_holder">
-            <span class="promo-box_text">the best theme for education</span>
+            <span class="promo-box_text">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.svg" alt="logo" width="550">
+            </span>
             <h1 class="promo-box_heading">Building the best creative technology education in the world</h1>
             <a class="theme-btn theme-btn__invert" href="/courses">start learning now</a>
           </div>

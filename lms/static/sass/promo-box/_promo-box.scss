@@ -32,9 +32,15 @@
     }
     &_text {
         display: block;
-        font: 24px/1 muliregular;
-        color: #fff;
-        text-transform: uppercase;
+        margin-bottom: 30px;
+        img {
+            @media (max-width: 859px) {
+                width: 300px;
+            }
+            @media (max-width: 450px) {
+                width: 250px;
+            }
+        }
     }
     &_heading {
         font: 40px/1.3 'Work Sans', sans-serif;
