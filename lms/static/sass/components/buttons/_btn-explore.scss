@@ -1,3 +1,13 @@
-.btn-explore {
-
+a.btn-explore {
+    color: #fff;
+    border: 2px solid #fff;
+    font: 14px 'SourceSansPro-SemiBold', Arial, sans-serif;
+    padding: 6px 44px;
+    background: transparent;
+    &:hover,
+    &:focus {
+        border-color: $theme-btn-bg;
+        background: $theme-btn-bg;
+        color: #fff;
+    }
 }
