@@ -1,6 +1,7 @@
 .hide {
     display: none!important;
 }
+html body,
 body .content-wrapper,
 html {
     background: #f2f2f2;
@@ -32,10 +33,10 @@ html {
             }
 
             a {
-                color: $header-nav-link-color;
+                color: $header-link-color;
 
                 &:hover {
-                    color: $header-nav-link-color-hover;
+                    color: $header-link-color-hover;
                 }
             }
         } 
@@ -44,11 +45,11 @@ html {
                 border: none !important;
             }
             .tab-nav-link {
-                color: $header-nav-link-color;
+                color: $header-link-color;
                 padding: 5px;
 
                 &:hover {
-                    color: $header-nav-link-color-hover;
+                    color: $header-link-color-hover;
                     border: none;
                 }
             }
@@ -107,12 +108,14 @@ html {
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
-
+            color: $header-link-color;
+            &:focus,
             &:hover {
-                color: #3c3c3c;
+                color: $header-link-color-hover;
             }
         }
         .dropdown {
+            color: $header-link-color;
             background: none;
             margin: 4px 0 0;
             width: 29px;
@@ -147,7 +150,7 @@ html {
     padding: 20px 0;
 }
 .doc-link {
-    color: $header-nav-link-color !important;
+    color: $header-link-color !important;
     margin: 12px 0;
     line-height: 16px;
     width: 100%;
@@ -160,12 +163,12 @@ html {
     }
 
     &:visited {
-        color: $header-nav-link-color !important;
+        color: $header-link-color !important;
     }
 
     &:focus,
     &:hover {
-        color: $header-nav-link-color-hover !important;
+        color: $header-link-color-hover !important;
         text-decoration: none;
     }
 }
@@ -238,27 +241,42 @@ body .wrapper-account-settings .wrapper-header .account-nav button:hover {
     .action-primary {
         background: $theme-btn-bg;
         color: $theme-btn-text-color;
+        box-shadow: none;
+        text-shadow: none;
 
         &:active,
         &:focus {
             background: $theme-btn-bg;
+            box-shadow: none;
+            text-shadow: none;
         }
         &:hover {
             background: $theme-btn-bg-hover;
+            box-shadow: none;
+            text-shadow: none;
         }
     }
     .nav-btn {
         background: $theme-btn-white-bg;
         color: $theme-btn-white-text-color;
         border-color: $theme-btn-white-border;
+        box-shadow: none;
+        text-shadow: none;
 
         &:active,
         &:focus {
-            background: $theme-btn-white-bg;
-        }
-        &:hover {
             color: $theme-btn-white-text-color-hover;
             background: $theme-btn-white-bg-hover;
+            border-color: $theme-btn-white-bg-hover;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        &:hover {
+            border-color: $theme-btn-white-bg-hover;
+            color: $theme-btn-white-text-color-hover;
+            background: $theme-btn-white-bg-hover;
+            box-shadow: none;
+            text-shadow: none;
         }
     }
 }
@@ -275,6 +293,8 @@ body .discussion-module .btn,
     &:active,
     &:focus {
         background: $theme-btn-white-bg;
+        color: $theme-btn-white-text-color;
+        border-color: $theme-btn-white-border;
     }
     &:hover {
         color: $theme-btn-white-text-color-hover;
@@ -420,7 +440,9 @@ body .courses-container .courses .course .course-image .cover-image .learn-more 
     background: $theme-btn-bg;
     height: 34px;
     top: 70px;
-    width: 110px;
+    min-width: 110px;
+    width: auto;
+    padding: 0 10px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -474,8 +496,77 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 87px;
+    box-sizing: border-box;
+    @media (max-width: 450px) {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+.find-courses .discovery-input:focus {
+    border-color: $theme-btn-bg;
+}
+.find-courses .discovery-submit {
+    border-color: $theme-btn-bg;
+    background: $theme-btn-bg;
+    &:focus {
+        border-color: $theme-btn-bg-hover;
+        background: $theme-btn-bg-hover;
+        &:not(:disabled) {
+            box-shadow: none;
+        }
+    }
+}
+.find-courses .search-facets .facet-option:hover, 
+.find-courses .search-facets .facet-option:focus,
+.find-courses .loading-spinner {
+    background: $theme-btn-bg;
+}
+body .btn-default,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
+.find-courses .filters .clear-filters {
+    color: $theme-btn-bg;
+}
+.find-courses .search-facets {
+    margin-top: 15px;
+}
+.courseware-bookmarks-button .bookmarks-list-button.is-active {
+    background: $theme-btn-bg;
+}
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+    border-bottom: 3px solid $theme-btn-bg;
+}
+body .wrap-instructor-info .instructor-info-action {
+    color: $theme-link;
+    &:hover,
+    &:focus {
+        color: #fff;
+        background: $theme-link;
+    }
+}
+body .btn-default {
+    &:hover,
+    &:focus {
+        color: $theme-link;
+        border-color: $theme-link;
+    }
+}
+body .main-article a,
+body section.wiki .article-functions .see-children a,
+body section.wiki #cheatsheetLink {
+    color: $theme-link;
+    &:hover,
+    &:focus {
+        color: $theme-link-hover;
+    }
 }
