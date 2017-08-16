@@ -1,19 +1,24 @@
 .promo-box {
     position: relative;
     margin: 0 auto 40px;
-    max-width: 1600px;
+    max-width: 1170px;
     display: flex;
     align-items: center;
     overflow: hidden;
     padding: 50px 20px;
     min-height: 200px;
     justify-content: center;
+    background: url("../images/banner.jpg") 50% 15% #8e769a;
+    background-size: cover;
     @media all and (min-width: 800px){
-        height: 500px; //ie
-        min-height: 500px;
+        min-height: 555px;
+        height: 555px;
         padding: 0;
     }
-
+    &_wrapper {
+        position: relative;
+        z-index: 10;
+    }
     &__course {
         min-height: 350px;
         @media (max-width: $res_450) {
