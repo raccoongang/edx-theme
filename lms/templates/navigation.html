@@ -88,7 +88,10 @@ site_status_msg = get_site_status_msg(course_id)
                     <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('All courses')}</a>
                   </li>
                   <li class="tab-nav-item">
-                    <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
+                    <%
+                        lang = LANGUAGE_CODE in ['en', 'ru'] and '{}/'.format(LANGUAGE_CODE) or ''
+                    %>
+                    <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" target="_blank" href="${'http://desk.ua/{}courses'.format(lang)}">
                       ${_("Courses")}
                     </a>
                   </li>
