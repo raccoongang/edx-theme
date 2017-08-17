@@ -1,6 +1,9 @@
 .hide {
     display: none!important;
 }
+body.view-register, 
+body.view-login,
+body.view-passwordreset,
 html body,
 body .content-wrapper,
 html {
@@ -524,6 +527,14 @@ footer.main-footer {
 .find-courses .loading-spinner {
     background: $theme-btn-bg;
 }
+body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
+    border-top: 7px solid $theme-btn-bg;
+}
+body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+body .discussion .post-label.post-label-following,
+body .discussion.inline-discussion .new-post-article .add-post-cancel,
+body .forum-nav-thread.never-read .forum-nav-thread-link,
+body .discussion .post-label.post-label-by-staff,
 body .btn-default,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark,
 .find-courses .filters .clear-filters {
@@ -558,7 +569,10 @@ body .btn-default {
         border-color: $theme-link;
     }
 }
-
+body .message a,
+body .gradebook-link a,
+body .discussion-article .posted-details .username,
+body .u-field-message-notification a,
 body div.book-wrapper section.book-sidebar #booknav li a,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -572,6 +586,11 @@ body section.wiki #cheatsheetLink {
     &:hover,
     &:focus {
         color: $theme-link-hover;
+    }
+}
+body .window-wrap a {
+    &:visited {
+        color: $theme-link;
     }
 }
 body .course-info .course-sidebar .important-dates li .icon {
@@ -612,4 +631,43 @@ body.view-in-course .window-wrap .content-wrapper {
         display: flex;
         flex-direction: row-reverse;
     }
+} 
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
+body .forum-nav-thread.never-read .forum-nav-thread-link {
+    border-left-color: $theme-link;
+}
+body .discussion .user-label-staff,
+body .forum-new-post-form .post-type-input:checked+.post-type-label, 
+body .edit-post-form .post-type-input:checked+.post-type-label {
+    background: $theme-link;
+}
+body .discussion .comments .comment-form .discussion-submit-comment,
+body .discussion-module .btn-brand, 
+body .wmd-prompt-dialog .btn-brand {
+    background: $theme-link;
+    border-color: $theme-link;
+    box-shadow: none;
+    &:hover {
+        border-color: $theme-link-hover;
+    }
+    &:focus,
+    &:active {
+        background: $theme-link-hover !important;
+        border-color: $theme-link-hover !important;
+    }
+}
+body .discussion-module .btn-brand,
+body .discussion .comments .comment-form .discussion-submit-comment {
+    &:hover {
+        border-color: $theme-link-hover !important;
+    }
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    columns: 1;
+}
+.container.activation h1.valid {
+    border: none;
+    background: none;
+    color: #000;
+    font-weight: bold;
 }

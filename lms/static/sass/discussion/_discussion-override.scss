@@ -169,3 +169,11 @@ body .dropdown-menu-container .menu-title .label-username {
         text-decoration: none;
     }
 }
+body .input-text[type=search]+button {
+    &:active,
+    &:focus {
+        background: transparent;
+        border-color: $theme-link;
+        color: $theme-link;
+    }
+}
