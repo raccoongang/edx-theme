@@ -1,9 +1,5 @@
 .header-global .wrapper-header {
-    max-width: 1200px;
-
-    .logo {
-        margin: -2px 39px 0 0;
-    }
+     max-width: 1170px;
     .course-header {
         display: none;
     }
@@ -78,7 +74,7 @@
 }
 .dropdown-menu-container {
     .menu-button {
-        color: #000;
+        color: #fff;
         box-shadow: none;
 
         &:hover {
@@ -152,5 +148,24 @@
 
     &:hover {
         background: none;
+    }
+}
+html body .content-wrapper {
+    background: #f5f5f5;
+}
+body footer.main-footer {
+    height: 101px;
+}
+body .dropdown-menu-container .menu-title .label-username {
+    color: $header-link-color !important;
+
+    &:visited {
+        color: $header-link-color !important;
+    }
+
+    &:focus,
+    &:hover {
+        color: $header-link-color-hover !important;
+        text-decoration: none;
     }
 }

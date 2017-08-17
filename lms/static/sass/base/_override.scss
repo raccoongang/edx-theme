@@ -34,7 +34,7 @@ html {
 
             a {
                 color: $header-link-color;
-
+                text-transform: uppercase;
                 &:hover {
                     color: $header-link-color-hover;
                 }
@@ -98,13 +98,10 @@ html {
         }
     }
     .user {
-        display: flex;
-        width: 100%;
+        display: block;
+        width: auto;
         justify-content: center;
-        @media screen and (min-width:760px ) {
-            display: block;
-            width: auto;
-        }
+
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
@@ -151,16 +148,11 @@ html {
 }
 .doc-link {
     color: $header-link-color !important;
-    margin: 12px 0;
     line-height: 16px;
-    width: 100%;
-    text-align: center;
+    width: auto;
+    text-align: left;
+    margin: 12px 15px;
     box-sizing: border-box;
-    @media screen and (min-width:760px ) {
-        width: auto;
-        text-align: left;
-        margin: 12px 15px;
-    }
 
     &:visited {
         color: $header-link-color !important;
@@ -217,6 +209,9 @@ body a {
         color: $theme-link-hover;
         text-decoration: none !important;
     }
+}
+div.info-wrapper section.handouts ol li a:focus {
+    color: $theme-link-hover;
 }
 body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
 .courses-container .courses .course .course-info .course-title {
@@ -301,6 +296,8 @@ body .discussion-module .btn,
         background: $theme-btn-white-bg-hover !important;
     }
 }
+body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
 .empty-dashboard-message a,
 body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
 body .btn-blue,
@@ -387,10 +384,6 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     span {
         color: $theme-btn-white-text-color;
     }
-}
-body {
-    display: flex;
-    flex-direction: column;
 }
 .home>header .title {
     float: none;
@@ -487,17 +480,12 @@ body .find-courses .courses .course {
 footer.main-footer {
     background: $footer-color;
     border-top: 7px solid #f58d2e;
-    height: 87px;
+    height: 94px;
 }
 //sticky footer//
 
-html,
-body { 
-    height: 100%; 
-}
 .window-wrap {
-    min-height: 100%;
-    margin-bottom: -94px;
+    min-height: calc(100vh - 101px);
 }
 
 .main-footer_container {
@@ -510,7 +498,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 87px;
+    height: 94px;
     box-sizing: border-box;
     @media (max-width: 450px) {
         flex-direction: column;
@@ -570,7 +558,14 @@ body .btn-default {
         border-color: $theme-link;
     }
 }
-body .main-article a,
+
+body div.book-wrapper section.book-sidebar #booknav li a,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
+body div.cohort-management-settings a,
+body .problem a,
+body article.main-article a,
 body section.wiki .article-functions .see-children a,
 body section.wiki #cheatsheetLink {
     color: $theme-link;
@@ -581,4 +576,40 @@ body section.wiki #cheatsheetLink {
 }
 body .course-info .course-sidebar .important-dates li .icon {
     margin-top: 0;
+}
+body .discussion-module .btn {
+    &:focus,
+    &:hover {
+        border-color: $theme-btn-bg-hover !important;
+    }
+    &:focus {
+        background: $theme-btn-bg-hover !important;
+    }
+}
+body .profile-wrapper .course-info>.chapters>section .sections>div .hd {
+    border-right: none;
+}
+body .home .page-header-secondary {
+    background: $theme-link;
+}
+body .date-summary-container .date-summary-todays-date {
+    border-left-color: $theme-link;
+}
+.header-global .wrapper-header .list-inline.nav-global {
+    @media (max-width: 759px) {
+         margin-bottom: 10px;
+    }
+}
+html body.view-in-course .window-wrap {
+    min-width: 320px;
+}
+body.discussion .content-wrapper,
+body.view-in-course .window-wrap .content-wrapper {
+    min-width: 760px;
+}
+.flex {
+    @media (max-width: 759px) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
