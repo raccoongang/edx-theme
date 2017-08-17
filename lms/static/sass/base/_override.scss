@@ -343,20 +343,32 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     box-shadow: none;
 }
-input[type="submit"], input[type="button"], button, .button,
+.button,
+.heading-group button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     background: $theme-btn-bg;
     color: $theme-btn-text-color;
-    
+    border-color: $theme-btn-bg;
+    text-shadow: none;
+    box-shadow: none;
     &:active,
     &:focus {
         background: $theme-btn-bg;
+        border-color: $theme-btn-bg;
+        text-shadow: none;
+        box-shadow: none;
+        &:not(:disabled) {
+             box-shadow: none;
+        }
     }
     &:hover {
         background: $theme-btn-bg-hover;
+        border-color: $theme-btn-bg-hover;
+        text-shadow: none;
+        box-shadow: none;
     }
 }
-input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled),
+.button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
@@ -475,20 +487,17 @@ body .find-courses .courses .course {
 footer.main-footer {
     background: $footer-color;
     border-top: 7px solid #f58d2e;
-    position: absolute; 
-    left: 0 ; 
-    right: 0; 
-    bottom: 0; 
     height: 87px;
 }
 //sticky footer//
-html { 
+
+html,
+body { 
     height: 100%; 
 }
-body {
-    min-height: 100%; 
-    position: relative; 
-    padding-bottom: 87px;
+.window-wrap {
+    min-height: 100%;
+    margin-bottom: -94px;
 }
 
 .main-footer_container {
@@ -569,4 +578,7 @@ body section.wiki #cheatsheetLink {
     &:focus {
         color: $theme-link-hover;
     }
+}
+body .course-info .course-sidebar .important-dates li .icon {
+    margin-top: 0;
 }
