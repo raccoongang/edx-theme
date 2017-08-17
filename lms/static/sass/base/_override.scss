@@ -38,6 +38,7 @@ html {
             a {
                 color: $header-link-color;
                 text-transform: uppercase;
+                &:focus,
                 &:hover {
                     color: $header-link-color-hover;
                 }
@@ -554,6 +555,7 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
     border-bottom: 3px solid $theme-btn-bg;
 }
+body .course-info .container .wrap-instructor-info .instructor-info-action,
 body .wrap-instructor-info .instructor-info-action {
     color: $theme-link;
     &:hover,
