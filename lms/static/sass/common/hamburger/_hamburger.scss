@@ -34,6 +34,9 @@
         box-shadow: none !important; //platform has many selectors
         background: transparent !important; //platform has many selectors
     }
+    &:focus:not(:disabled) {
+        border: none;
+    }
     @media screen and (min-width: 760px) {
         display: none;
     }

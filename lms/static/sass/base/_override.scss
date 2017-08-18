@@ -1,6 +1,10 @@
 .hide {
     display: none!important;
 }
+body.view-profile .content-wrapper,
+body.view-profile .window-wrap,
+html body.view-in-course,
+body .wrapper-account-settings,
 body.view-register, 
 body.view-login,
 body.view-passwordreset,
@@ -8,6 +12,9 @@ html body,
 body .content-wrapper,
 html {
     background: #f2f2f2;
+}
+body .wrapper-account-settings .account-settings-container {
+    background: #fff;
 }
 .header-global {
     height: auto;
@@ -300,6 +307,8 @@ body .discussion-module .btn,
         background: $theme-btn-white-bg-hover !important;
     }
 }
+body .modal .inner-wrapper form .submit input[type="submit"],
+body .leanModal_box .inner-wrapper form .submit input[type="submit"],
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
 .empty-dashboard-message a,
@@ -571,6 +580,8 @@ body .btn-default {
         border-color: $theme-link;
     }
 }
+body .xmodule_display.xmodule_VideoModule .video .subtitles a,
+body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
 body .message a,
 body .gradebook-link a,
 body .discussion-article .posted-details .username,
@@ -668,4 +679,22 @@ body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fiel
     background: none;
     color: #000;
     font-weight: bold;
+}
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover,
+body .u-field.mode-placeholder:hover {
+    border-color: $theme-btn-bg;
+    span {
+        color: $theme-link;
+    }
+}
+body.view-profile .profile-image-field .image-wrapper .u-field-upload-button {
+    color: $theme-link;
+    &:hover,
+    &:focus {
+        border-color: $theme-btn-bg;
+    }
+}
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover .u-field-title, 
+body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover i {
+    color: $theme-link;
 }
