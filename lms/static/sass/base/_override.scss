@@ -206,7 +206,7 @@ body .sections a,
 body .xmodule_display.xmodule_HtmlModule a:link,
 body .xmodule_display.xmodule_HtmlModule a,
 body .course-index .accordion .course-navigation .button-chapter,
-body .btn-link,
+html body .btn-link,
 div.info-wrapper section.updates div a,
 body div.info-wrapper section.handouts a,
 body div.info-wrapper section.updates div article .toggle-visibility-button,
@@ -543,6 +543,7 @@ footer.main-footer {
 body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
     border-top: 7px solid $theme-btn-bg;
 }
+.bookmarks-results-list-item:focus .list-item-right-section,
 body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
 body .discussion .post-label.post-label-following,
 body .discussion.inline-discussion .new-post-article .add-post-cancel,
@@ -583,6 +584,7 @@ body .btn-default {
         border-color: $theme-link;
     }
 }
+
 body .courses-container .courses .course .course-image .cover-image img,
 body .outside-app p a,
 body .message-copy a,
@@ -592,6 +594,7 @@ body .updates a,
 body .xmodule_display.xmodule_VideoModule .video .subtitles a,
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
 body .message a,
+body .discussion-module .btn-link,
 body .gradebook-link a,
 body .discussion-article .posted-details .username,
 body .u-field-message-notification a,
@@ -611,6 +614,8 @@ body section.wiki #cheatsheetLink {
         color: $theme-link-hover;
     }
 }
+body .student-table a,
+body .xmodule_display.xmodule_HtmlModule a,
 body .courses-container .courses .course .course-image .cover-image img,
 body .outside-app p a,
 body .message-copy a,
