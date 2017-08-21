@@ -349,6 +349,9 @@ body .search-bar .search-button {
         color: $theme-btn-text-color;
     }
 }
+body .empty-dashboard-message a:focus {
+    color: #fff;
+}
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:hover:not(:disabled),
 body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     box-shadow: none;
@@ -580,6 +583,12 @@ body .btn-default {
         border-color: $theme-link;
     }
 }
+body .courses-container .courses .course .course-image .cover-image img,
+body .outside-app p a,
+body .message-copy a,
+body .dashboard .my-courses .course .details .wrapper-course-image .cover,
+body .instructor-dashboard-wrapper-2 .file-download-link a,
+body .updates a,
 body .xmodule_display.xmodule_VideoModule .video .subtitles a,
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li,
 body .message a,
@@ -592,6 +601,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .to
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
 body div.cohort-management-settings a,
 body .problem a,
+body .bookmark-button-wrapper .btn-link,
 body article.main-article a,
 body section.wiki .article-functions .see-children a,
 body section.wiki #cheatsheetLink {
@@ -601,7 +611,18 @@ body section.wiki #cheatsheetLink {
         color: $theme-link-hover;
     }
 }
-
+body .courses-container .courses .course .course-image .cover-image img,
+body .outside-app p a,
+body .message-copy a,
+body .bookmark-button-wrapper .btn-link,
+body .sections a,
+body .progress-link-wrapper a,
+body .updates a,
+body .idash-section a {
+    &:visited {
+        color: $theme-link;
+    }
+}
 body .course-info .course-sidebar .important-dates li .icon {
     margin-top: 0;
 }
@@ -694,7 +715,27 @@ body.view-profile .profile-image-field .image-wrapper .u-field-upload-button {
         border-color: $theme-btn-bg;
     }
 }
+body .u-field.editable-toggle.mode-display:hover .message-can-edit,
+body .bookmarks-results-list .bookmarks-results-list-item:hover .list-item-breadcrumbtrail,
+body .bookmarks-results-list .bookmarks-results-list-item:before,
 body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover .u-field-title, 
 body.view-profile .profile-section-two-fields .u-field.mode-placeholder:hover i {
     color: $theme-link;
+}
+.discussion-body .btn {
+    &:active,
+    &:focus {
+        border-color: $theme-link;
+        color: $theme-link;
+    }
+    &:focus:hover {
+        color: #fff;
+    }
+}
+body .bookmarks-results-list .bookmarks-results-list-item:hover {
+    border-color: $theme-link;
+}
+body .input-text[type=search]+button:focus:hover,
+.courseware-bookmarks-button .bookmarks-list-button.is-active:focus {
+    color: #fff;
 }
