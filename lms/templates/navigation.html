@@ -95,16 +95,6 @@ site_status_msg = get_site_status_msg(course_id)
                 % endif
               </%block>
             %endif
-            % if settings.FEATURES.get('FILTER_LANGUAGES', False):
-                <li class="theme-main-nav_item">
-                  <a class="theme-main-nav_link" href="?">${_("All Сourses")}</a>
-                </li>
-              % for lang, code in settings.FEATURES.get('FILTER_LANGUAGES', {}).items():
-                <li class="theme-main-nav_item">
-                  <a class="theme-main-nav_link" href="?filter_language=${lang}" class="btn${lang == selected_language and ' active' or ''}">${dict(settings.LANGUAGES).get(code)}</a>
-                </li>
-              % endfor
-            % endif
         </ul>
     </nav>
     <div class="theme-header-info theme-header-info_mobile">
