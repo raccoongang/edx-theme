@@ -34,4 +34,11 @@ div.window-wrap a.social-list_link {
         color: $link-hover;
         text-decoration: none;
     }
+    @media (max-width: 859px) {
+        color: #fff;
+            &:hover,
+            &:focus {
+                color: darken(#fff, 20%);
+            }
+    }
 }

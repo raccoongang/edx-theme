@@ -52,13 +52,11 @@
     }
     &_social {
         display: flex;
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        justify-content: flex-start;
         padding-top: 0;
-        @media all and (min-width: 450px){
-            padding: 0;
-            width: auto;
-            justify-content: flex-start;
+        @media (max-width: 859px) {
+            flex-direction: column;
         }
     }
     &_text {
@@ -81,13 +79,15 @@
             margin-left: 24px;
         }
         @media all and (max-width: 859px) {
-            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #fff;
         }
     }
     &_mail {
         font-size: 12px;
         line-height: 15px;
         color: $theme-color-grey;
+        padding-left: 15px;
         &:hover,
         &:focus {
             color: $theme-color-main;
