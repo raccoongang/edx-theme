@@ -95,7 +95,7 @@ site_status_msg = get_site_status_msg(course_id)
                 % endif
               </%block>
             %endif
-            % if settings.FEATURES.get('FILTER_LANGUAGES', False):
+            % if settings.FEATURES.get('FILTER_LANGUAGES', False) and request.path in ('/', '/courses', '/dashboard'):
                 <li class="theme-main-nav_item">
                   <a class="theme-main-nav_link" href="?">${_("All Сourses")}</a>
                 </li>
