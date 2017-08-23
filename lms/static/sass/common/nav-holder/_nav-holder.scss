@@ -11,8 +11,11 @@
         }
     }
     @media screen and (min-width:760px ) {
-        width: auto;
-        display: block;
+        width: 100%;
+        display: flex;
+        position: relative;
+        top: 4px;
+        justify-content: space-between;
     }
 
     &:after {

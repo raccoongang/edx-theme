@@ -11,13 +11,20 @@ body.view-passwordreset,
 html body,
 body .content-wrapper,
 html {
-    background: #f2f2f2;
+    background: #fff;
 }
 body .wrapper-account-settings .account-settings-container {
     background: #fff;
 }
 *:not(.fa) {
-    font-family: "Franklin Gothic", "ITC Franklin Gothic","SourceSansPro-Regular", Arial, sans-serif !important;
+    font-family: Calibri, "Calibri-custom", Arial, sans-serif !important;
+}
+body .header-global h1.logo {
+    float: none;
+    display: inline-block;
+    @media (min-width: 860px) {
+        margin-right: 160px;
+    }
 }
 .header-global {
     height: auto;
@@ -29,7 +36,7 @@ body .wrapper-account-settings .account-settings-container {
     .wrapper-header {
         height: auto;
         padding: 0;
-        max-width: 1170px;
+        max-width: 1200px;
     }
     .nav-global {
         width: 100%;
@@ -72,7 +79,8 @@ body .wrapper-account-settings .account-settings-container {
     .nav-courseware {
         width: 100%;
         @media screen and (min-width:760px ) {
-            width: auto;
+            display: flex;
+            justify-content: space-between;
         }
 
         li {
@@ -92,8 +100,9 @@ body .wrapper-account-settings .account-settings-container {
                 background: $theme-btn-bg;
                 color: $theme-btn-text-color;
                 box-shadow: none;
-                padding: 10px 31px;
-                font: 14px 'SourceSansPro-Regular', Arial, sans-serif;
+                padding: 11px 28px;
+                font: 16px/1 'Calibri-custom', Calibri, Arial, sans-serif;
+                text-transform: uppercase;
                 &:focus {
                     background: $theme-btn-bg;
                 }
@@ -101,6 +110,7 @@ body .wrapper-account-settings .account-settings-container {
                     background: $theme-btn-bg-hover;
                 }
                 &_empty {
+                    color: rgb(51, 51, 51);
                     background: none;
                     padding: 10px 21px;
                     &:focus,
@@ -111,6 +121,7 @@ body .wrapper-account-settings .account-settings-container {
             }
         }
     }
+
     .user {
         display: block;
         width: auto;
@@ -390,11 +401,17 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
 }
 // end btns
 .home>header {
-    height: 262px;
+    box-sizing: border-box;
+    height: 442px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
     background-position: center;
     position: relative;
-    background-color: #1D66B5;
-    background-position: 0 0;
+    background: #fff url(../images/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 80px;
 }
 .login-register .login-provider {
     .icon {
@@ -408,9 +425,16 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     float: none;
     margin: 0;
     width: 100%;
-    box-shadow: none;
-    background: transparent;
-    padding-top: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+    min-height: auto;
+    padding: 40px 82px;
+    position: relative;
+    top: -5px;
+    @media (max-width: 450px) {
+        padding: 20px 30px;
+        top: 0;
+    }
     .course-search {
         display: none;
     }
@@ -430,95 +454,93 @@ body .highlighted-courses .courses,
 body .find-courses .courses {
     padding-top: 0;
 }
+body .courses-container .courses .course .course-info .course-date,
 body .courses-container .courses .course .course-info .course-code,
 body .courses-container .courses .course .course-info .course-organization {
-    font: 500 14px 'SourceSansPro-SemiBold', Arial, sans-serif;
-    color: rgb(64, 64, 64);
+    font: 300 16px 'Calibri-custom', Calibri, Arial, sans-serif;
+    color: rgb(46, 46, 46);
 }
+body .courses-container .courses .course .course-info .course-organization,
 body .courses-container .courses .course .course-info .course-code {
     text-transform: uppercase;
 }
 body .courses-container .courses .course .course-info .course-title {
-    font: 500 20px 'SourceSansPro-SemiBold', Arial, sans-serif;
-    color: rgb(63, 102, 177);
+    font: 18px 'Calibri-custom', Calibri, Arial, sans-serif;
+    color: rgb(0, 109, 197);
     margin-bottom: 0;
 }
 body .courses-container .courses .course .course-info .course-date {
-    font: 500 14px 'SourceSansPro-SemiBold', Arial, sans-serif;
-    color: rgb(162, 162, 162);
+    margin-bottom: 10px;
 }
+
 body .courses-container .courses .course {
     border: none;
     box-shadow: none;
-    background: #fff;
+    background: #f5f5f5;
+    border-bottom: 3px solid #f5f5f5;
     &:hover,
     &:focus {
         border: none;
         box-shadow: none;
-        background: #fff;
+        background: #f5f5f5;
+        border-bottom: 3px solid #20769f;
     }
 }
 body .courses-container .courses .course .course-image .cover-image .learn-more {
-    font: 14px/34px 'SourceSansPro-Regular', Arial, sans-serif;
-    border-color: $theme-btn-bg;
-    background: $theme-btn-bg;
-    height: 34px;
-    top: 70px;
-    min-width: 110px;
-    width: auto;
-    padding: 0 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 2px;
+    text-transform: uppercase;
 }
 body .courses-container .courses .course .course-info {
     height: auto;
-    min-height: 165px;
+    min-height: 190px;
 }
 body .courses-container .courses .course .course-info h2 {
-    margin-bottom: 0;
+    margin-bottom: 37px;
+    letter-spacing: normal;
 }
 body .highlighted-courses .courses .course,
 body .find-courses .courses .course {
     margin-bottom: 15px;
 }
+
 .raccoon-block a {
-    font-size: 10px;
-    color: #767676;
+    font: 12px 'Calibri-custom', Calibri, Arial, sans-serif;
+    color: rgb(255, 255, 255);
     display: inline-block;
     vertical-align: bottom;
     &:hover,
     &:focus {
-        color: #767676;
+        color: rgb(255, 255, 255);
     }
     img {
-        opacity: 0.5;
         display: inline-block;
         vertical-align: baseline;
     }
 }
 footer.main-footer {
     background: $footer-color;
-    border-top: 7px solid #f58d2e;
-    height: 94px;
-}
-//sticky footer//
-
-.window-wrap {
-    min-height: calc(100vh - 101px);
+    padding-bottom: 35px;
+    margin-top: 34px;
 }
 
 .main-footer_container {
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 128px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 94px;
+    justify-content: space-between;
+    align-items: flex-end;
     box-sizing: border-box;
+    @media (max-width: 920px) {
+        height: auto;
+        padding: 20px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
     @media (max-width: 450px) {
         flex-direction: column;
         justify-content: space-around;
@@ -749,4 +771,80 @@ body .input-text[type=search]+button:focus:hover,
 }
 body .u-field.editable-toggle.mode-display:hover {
     outline: 2px dashed $theme-link;
+}
+.home>header .title>.heading-group p {
+    font: 40px/1.2 'Calibri-custom', Calibri, Arial, sans-serif;
+    color: rgb(0, 50, 102);
+}
+body .home>header .title>.heading-group {
+    padding-bottom: 0;
+}
+.main-footer_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: 49px;
+    @media (max-width: 1120px) {
+        right: 0;
+    }
+    @media (max-width: 920px) {
+        order: -1;
+        margin-bottom: 15px;
+    }
+}
+.raccoon-container {
+    @media (max-width: 920px) {
+        margin-bottom: 15px;
+    } 
+}
+.social-block,
+.footer-nav {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.social-block {
+    margin-bottom: 22px;
+} 
+.social-item,
+.footer-nav_item {
+    list-style: none;
+    margin-right: 10px;
+}
+.social-item {
+    a {
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+body .footer-nav_item {
+    color: #fff;
+    a {
+        color: #fff;
+        font: 16px/1.2 'Calibri-custom', Calibri, Arial, sans-serif;
+        &:hover,
+        &:focus {
+            opacity: 0.6;
+            color: #fff;
+        }
+    }
+}
+.footer-logo {
+    display: inline-block;
+    position: relative;
+    top: -5px;
+}
+body .nav-holder:after,
+body .header-global .wrapper-header:after {
+    display: none;
+}
+body .header-global .wrapper-header {
+    @media (min-width: 860px) {
+        display: flex;
+        justify-content: space-between;
+    }
 }

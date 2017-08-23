@@ -59,7 +59,7 @@ site_status_msg = get_site_status_msg(course_id)
             logo_url = branding_api.get_logo_url(is_secure)
             logo_size = ''
         %>
-            <img class="${logo_size}" src="${logo_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="130">
         </%block>
       </a>
     </h1>
@@ -170,22 +170,22 @@ site_status_msg = get_site_status_msg(course_id)
       <ol class="right nav-courseware list-inline">
         <%block name="navigation_sign_in">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+              <li class="item nav-global-04">
+                <a class="btn btn_empty" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+              </li>
+            % else:
+              <li class="item nav-global-04">
+                <a class="btn btn_empty" href="/register${login_query()}">${_("Register")}</a>
+              </li>
+            % endif
             <li class="item nav-courseware-01">
                 % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                     <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
                 % else:
-                    <a class="btn btn_empty" href="/login${login_query()}">${_("Sign in")}</a>
+                    <a class="btn btn-login" href="/login${login_query()}">${_("Sign in")}</a>
                 % endif      
-            </li>
-            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <li class="item nav-global-04">
-                <a class="btn btn-login" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-              </li>
-            % else:
-              <li class="item nav-global-04">
-                <a class="btn btn-login" href="/register${login_query()}">${_("Register")}</a>
-              </li>
-            % endif
+            </li> 
           % endif
         </%block>
       </ol>

@@ -11,7 +11,6 @@ course_mode_class = course_mode if course_mode else ''
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head dir="${dir_rtl}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,33 +39,26 @@ course_mode_class = course_mode if course_mode else ''
         <%include file="_badges-modal.html" />
     %endif
     <style type="text/css">
-        @font-face {
-            font-family: 'Franklin Gothic';
-            src:  url(/static/reportsnow-ficus/fonts/FranklinGothicBook.ttf) format('truetype');
-        }
-        *:not(.fa) {
-            font-family: "Franklin Gothic", "ITC Franklin Gothic","SourceSansPro-Regular", Arial, sans-serif !important;
-        }
-        body .header-app .logo {
+        /*body .header-app .logo {
             width: 10rem;
         }
         body.layout-accomplishment .accomplishment-orgs .organization-logo {
             max-width: 100%;
-        }
+        }*/
         .btn-link,
         .copy-meta a {
-            color: #9bc547;
+            color: #80bc01;
         }
         .btn-link:hover,
         .btn-link:focus,
         .copy-meta a:hover,
         .copy-meta a:focus {
-            color: #c5dd95;
+            color: #90cd0e;
         }
         .btn-link:hover,
         .btn-link:focus {
             background: transparent;
-            border-color: #c5dd95;
+            border-color: #90cd0e;
             text-decoration: none;
         }
         .rtl.layout-accomplishment .accomplishment-orgs .organization-logo {

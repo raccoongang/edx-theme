@@ -14,10 +14,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
-                <div class="logo-container">
-                  <img src="/static/${settings.DEFAULT_SITE_THEME}/images/banner-logo.jpg" alt="reportsnow academy">
-                </div>
-                <a class="btn-explore" href="/courses">${_("Find Courses")}</a>
+                <p>${_("Welcome to ")} DataChangers ${_("Academy")}!</p>
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <div class="course-search">
