@@ -16,9 +16,6 @@ html {
 body .wrapper-account-settings .account-settings-container {
     background: #fff;
 }
-*:not(.fa) {
-    font-family: Calibri, "Calibri-custom", Arial, sans-serif !important;
-}
 body .header-global h1.logo {
     float: none;
     display: inline-block;
@@ -101,7 +98,7 @@ body .header-global h1.logo {
                 color: $theme-btn-text-color;
                 box-shadow: none;
                 padding: 11px 28px;
-                font: 16px/1 'Calibri-custom', Calibri, Arial, sans-serif;
+                font: 16px/1 "Open Sans", Arial, sans-serif;
                 text-transform: uppercase;
                 &:focus {
                     background: $theme-btn-bg;
@@ -418,7 +415,7 @@ body .find-courses .courses {
 body .courses-container .courses .course .course-info .course-date,
 body .courses-container .courses .course .course-info .course-code,
 body .courses-container .courses .course .course-info .course-organization {
-    font: 300 16px 'Calibri-custom', Calibri, Arial, sans-serif;
+    font: 300 16px "Open Sans", Arial, sans-serif;
     color: rgb(46, 46, 46);
 }
 body .courses-container .courses .course .course-info .course-organization,
@@ -426,7 +423,7 @@ body .courses-container .courses .course .course-info .course-code {
     text-transform: uppercase;
 }
 body .courses-container .courses .course .course-info .course-title {
-    font: 18px 'Calibri-custom', Calibri, Arial, sans-serif;
+    font: 18px "Open Sans", Arial, sans-serif;
     color: rgb(0, 109, 197);
     margin-bottom: 0;
 }
@@ -467,7 +464,7 @@ body .find-courses .courses .course {
 }
 
 .raccoon-block a {
-    font: 12px 'Calibri-custom', Calibri, Arial, sans-serif;
+    font: 12px "Open Sans", Arial, sans-serif;
     color: #333333;
     display: inline-block;
     vertical-align: bottom;
@@ -766,7 +763,7 @@ body .footer-nav_item {
     color: #fff;
     a {
         color: #fff;
-        font: 16px/1.2 'Calibri-custom', Calibri, Arial, sans-serif;
+        font: 16px/1.2 "Open Sans", Arial, sans-serif;
         &:hover,
         &:focus {
             opacity: 0.6;
