@@ -23,7 +23,7 @@ body .header-global h1.logo {
     float: none;
     display: inline-block;
     @media (min-width: 860px) {
-        margin-right: 160px;
+        margin-right: 60px;
     }
 }
 .header-global {
@@ -400,19 +400,6 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
 // end btns
-.home>header {
-    box-sizing: border-box;
-    height: 442px;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    background-position: center;
-    position: relative;
-    background: #fff url(../images/banner.jpg);
-    background-position: center center;
-    background-size: cover;
-    margin-bottom: 80px;
-}
 .login-register .login-provider {
     .icon {
         background: $theme-btn-bg;
@@ -420,32 +407,6 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     span {
         color: $theme-btn-white-text-color;
     }
-}
-.home>header .title {
-    float: none;
-    margin: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
-    min-height: auto;
-    padding: 40px 82px;
-    position: relative;
-    top: -5px;
-    @media (max-width: 450px) {
-        padding: 20px 30px;
-        top: 0;
-    }
-    .course-search {
-        display: none;
-    }
-}
-.home>header .outer-wrapper {
-    animation: none;
-    padding: 0;
-}
-body .home>header .title>.heading-group {
-    display: block;
-    text-align: center;
 }
 .logo-container {
     margin-bottom: 35px;
@@ -507,12 +468,12 @@ body .find-courses .courses .course {
 
 .raccoon-block a {
     font: 12px 'Calibri-custom', Calibri, Arial, sans-serif;
-    color: rgb(255, 255, 255);
+    color: #333333;
     display: inline-block;
     vertical-align: bottom;
     &:hover,
     &:focus {
-        color: rgb(255, 255, 255);
+        color: #333333;
     }
     img {
         display: inline-block;
@@ -521,8 +482,8 @@ body .find-courses .courses .course {
 }
 footer.main-footer {
     background: $footer-color;
-    padding-bottom: 35px;
     margin-top: 34px;
+    border-top: 1px solid #b4b4b4;
 }
 
 .main-footer_container {
@@ -530,21 +491,8 @@ footer.main-footer {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 128px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    padding: 68px 0 40px 0;
     box-sizing: border-box;
-    @media (max-width: 920px) {
-        height: auto;
-        padding: 20px 10px;
-        flex-direction: column;
-        align-items: center;
-    }
-    @media (max-width: 450px) {
-        flex-direction: column;
-        justify-content: space-around;
-    }
 }
 .find-courses .discovery-input:focus {
     border-color: $theme-btn-bg;
@@ -772,13 +720,6 @@ body .input-text[type=search]+button:focus:hover,
 body .u-field.editable-toggle.mode-display:hover {
     outline: 2px dashed $theme-link;
 }
-.home>header .title>.heading-group p {
-    font: 40px/1.2 'Calibri-custom', Calibri, Arial, sans-serif;
-    color: rgb(0, 50, 102);
-}
-body .home>header .title>.heading-group {
-    padding-bottom: 0;
-}
 .main-footer_nav {
     display: flex;
     flex-direction: column;
@@ -848,7 +789,16 @@ body .header-global .wrapper-header {
         justify-content: space-between;
     }
 }
-.logo img {
-    width: 130px;
-    max-width: 130px;
+.footer-logo {
+    position: relative;
+    margin-right: 46px;
+    &:after {
+        content: '';
+        position: absolute;
+        height: 54px;
+        width: 1px;
+        background-color: #b4b4b4;
+        right: -27px;
+        top: -3px;
+    }
 }

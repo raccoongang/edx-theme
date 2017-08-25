@@ -10,34 +10,12 @@
 
 <footer class="main-footer">
     <div class="main-footer_container">
-        <div class="raccoon-container">
-            <div class="raccoon-block">
-              <a href="http://code.edx.org" target="_blank">
-              Built on <img src="/static/${settings.DEFAULT_SITE_THEME}/images/openedx_logo.png" width="79">
-              </a>
-              <a href="http://raccoongang.com" target="_blank">
-                  by RACCOON GANG <img src="/static/${settings.DEFAULT_SITE_THEME}/images/RaccoonLogo.png" width="20">
-              </a>
-            </div>
-        </div>
-        <div class="main-footer_nav">
-          <ul class="social-block">
-            <li class="social-item"><a class="social-icons social-icons_fb" href="" target="_blank"></a></li>
-            <li class="social-item"><a class="social-icons social-icons_youtube" href="" target="_blank"></a></li>
-            <li class="social-item"><a class="social-icons social-icons_tw" href="" target="_blank"></a></li>
-            <li class="social-item"><a class="social-icons social-icons_linkedin" href="" target="_blank"></a></li>
-            <li class="social-item"><a class="social-icons social-icons_google" href="" target="_blank"></a></li>
-          </ul>
-          <ul class="footer-nav">
-            <li class="footer-nav_item"><a href="/about">${_('About Us')}</a></li>
-            <li class="footer-nav_item"><a href="/contact">${_('Contact')}</a></li>
-            <li class="footer-nav_item"><a href="/tos">${_('Terms of Service')}</a> & <a href="/honor">${_('Honor Code')}</a></li>
-            <li class="footer-nav_item"><a href="/privacy">${_('Privacy Policy')}</a></li>
-          </ul>
-        </div>
+      <div>
         <a class="footer-logo" href="/">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-white.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="130">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-footer.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="47">
         </a>
+        <span class="copyright">&copy; 2017 Fast Lane. All rights reserved </span>
+      </div>
     </div>
 </footer>
 % if include_dependencies:

@@ -174,31 +174,10 @@ body .input-text[type=search]+button {
         color: $theme-link;
     }
 }
-.social-icons {
-	background: url('../../images/social-icons.png') no-repeat 0 0;
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-	&_fb {
-		background-position: 0 0;
-	}
-	&_youtube {
-		background-position: -44px 0;
-	}
-	&_tw {
-		background-position: -88px 0;
-	}
-	&_linkedin {
-		background-position: -133px 0;
-	}
-	&_google {
-		background-position: -178px 0;
-	}
-}
 body .header-global .wrapper-header .logo {
     float: none;
     @media (min-width: 860px) {
-        margin-right: 160px;
+        margin-right: 60px;
     }
 }
 .header-global .wrapper-header .tab-nav-item .tab-nav-link {
@@ -208,6 +187,6 @@ body .header-global .wrapper-header .logo {
 }
 .header-global .wrapper-header .list-inline.nav-global {
     @media (min-width: 760px) {
-        margin-top: 14px;
+        margin-top: 5px;
     }
 }
