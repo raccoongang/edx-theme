@@ -843,8 +843,12 @@ body .header-global .wrapper-header:after {
     display: none;
 }
 body .header-global .wrapper-header {
-    @media (min-width: 860px) {
+    @media (min-width: 760px) {
         display: flex;
         justify-content: space-between;
     }
+}
+.logo img {
+    width: 130px;
+    max-width: 130px;
 }

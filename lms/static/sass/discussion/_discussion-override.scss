@@ -197,4 +197,17 @@ body .input-text[type=search]+button {
 }
 body .header-global .wrapper-header .logo {
     float: none;
+    @media (min-width: 860px) {
+        margin-right: 160px;
+    }
+}
+.header-global .wrapper-header .tab-nav-item .tab-nav-link {
+    padding: 5px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.header-global .wrapper-header .list-inline.nav-global {
+    @media (min-width: 760px) {
+        margin-top: 14px;
+    }
 }
