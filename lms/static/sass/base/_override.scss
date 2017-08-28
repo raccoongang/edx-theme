@@ -510,6 +510,8 @@ body .find-courses .courses .course {
     color: rgb(255, 255, 255);
     display: inline-block;
     vertical-align: bottom;
+    &:visited,
+    &:visited:hover,
     &:hover,
     &:focus {
         color: rgb(255, 255, 255);
@@ -851,4 +853,48 @@ body .header-global .wrapper-header {
 .logo img {
     width: 130px;
     max-width: 130px;
+}
+body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled), 
+body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
+html body .btn-link:active:not(:disabled) {
+    box-shadow: none;
+ }
+ html body .btn-link:focus:not(:disabled),
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:focus {
+    color: $theme-link;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:focus:not(:disabled),
+body section.wiki .btn.btn-primary:active:not(:disabled), 
+body section.wiki .btn.btn-primary:focus:not(:disabled),
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:focus:not(:disabled),
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create:focus:not(:disabled),
+body .instructor-dashboard-content-2 input[type="button"]:active:not(:disabled), 
+body .instructor-dashboard-content-2 input[type="button"]:focus:not(:disabled),
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:focus:not(:disabled) {
+    box-shadow: none;
+    border-color: $theme-link;
+}
+.header-global .wrapper-header .tab-nav-item .tab-nav-link:active, 
+.header-global .wrapper-header .tab-nav-item .tab-nav-link:focus, 
+.header-global .wrapper-header .tab-nav-item .tab-nav-link:hover,
+.header-global .nav-global .tab-nav-item .tab-nav-link:hover, 
+.header-global .nav-global .tab-nav-item .tab-nav-link:focus {
+    border-bottom: none!important;
+    text-decoration: none!important;
+}
+html body div.content-wrapper,
+body .window-wrap,
+body .find-courses, 
+body .university-profile {
+    background-color: #fff;
+}
+.discussion .btn-brand:active {
+    color: #fff;
+}
+.discussion-body .btn:active {
+    background: transparent;
 }
