@@ -100,6 +100,7 @@ body .header-global h1.logo {
                 padding: 11px 28px;
                 font: 16px/1 "Open Sans", Arial, sans-serif;
                 text-transform: uppercase;
+                &:active,
                 &:focus {
                     background: $theme-btn-bg;
                 }
@@ -110,6 +111,7 @@ body .header-global h1.logo {
                     color: rgb(51, 51, 51);
                     background: none;
                     padding: 10px 21px;
+                    &:active,
                     &:focus,
                     &:hover {
                         background: none;
@@ -424,7 +426,7 @@ body .courses-container .courses .course .course-info .course-code {
 }
 body .courses-container .courses .course .course-info .course-title {
     font: 18px "Open Sans", Arial, sans-serif;
-    color: rgb(0, 109, 197);
+    color: $theme-link;
     margin-bottom: 0;
 }
 body .courses-container .courses .course .course-info .course-date {
@@ -441,7 +443,7 @@ body .courses-container .courses .course {
         border: none;
         box-shadow: none;
         background: #f5f5f5;
-        border-bottom: 3px solid #20769f;
+        border-bottom: 3px solid $theme-link;
     }
 }
 body .courses-container .courses .course .course-image .cover-image .learn-more {
@@ -798,4 +800,43 @@ body .header-global .wrapper-header {
         right: -27px;
         top: -3px;
     }
+}
+html body .btn-link:focus:not(:disabled),
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:focus {
+    color: $theme-link;
+}
+body .instructor-dashboard-content-2 input[type="button"]:active:not(:disabled), 
+body .instructor-dashboard-content-2 input[type="button"]:focus:not(:disabled),
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:focus:not(:disabled) {
+    box-shadow: none;
+    border-color: $theme-link;
+}
+.header-global .wrapper-header .tab-nav-item .tab-nav-link:active, 
+.header-global .wrapper-header .tab-nav-item .tab-nav-link:focus, 
+.header-global .wrapper-header .tab-nav-item .tab-nav-link:hover,
+.header-global .nav-global .tab-nav-item .tab-nav-link:hover, 
+.header-global .nav-global .tab-nav-item .tab-nav-link:focus {
+    border-bottom: none!important;
+    text-decoration: none!important;
+}
+html body div.content-wrapper,
+body .window-wrap,
+body .find-courses, 
+body .university-profile {
+    background-color: #fff;
+}
+.discussion .btn-brand:active {
+    color: #fff;
+}
+.discussion-body .btn:active {
+    background: transparent;
+}
+body .header-global h1.logo a{
+    display: flex;
+    margin-top: 5px;
+}
+body .header-global h1.logo img {
+    width: 230px;
+    max-width: 230px;
 }
