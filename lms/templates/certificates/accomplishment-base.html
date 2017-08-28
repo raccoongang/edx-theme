@@ -39,6 +39,16 @@ course_mode_class = course_mode if course_mode else ''
         <%include file="_badges-modal.html" />
     %endif
     <style type="text/css">
+        @font-face {
+        font-family: 'Gilroy-Regular';src: url('/static/fastlane-ficus/fonts/33F6D7_6_0.eot');
+        src: url('/static/fastlane-ficus/fonts/33F6D7_6_0.eot?#iefix') format('embedded-opentype'),
+                url('/static/fastlane-ficus/fonts/33F6D7_6_0.woff2') format('woff2'),
+                url('/static/fastlane-ficus/fonts/33F6D7_6_0.woff') format('woff'),
+                url('/static/fastlane-ficus/fonts/33F6D7_6_0.ttf') format('truetype');
+        }
+        *:not(.fa) {
+            font-family: "Gilroy-Regular", Arial, Helvetica, sans-serif !important;
+        }
         body .header-app .logo {
             width: 10rem;
         }

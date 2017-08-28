@@ -1,6 +1,13 @@
 .hide {
     display: none!important;
 }
+footer.main-footer,
+.window-wrap * {
+    font-family: "Gilroy-Regular", Arial, Helvetica, sans-serif !important
+}
+.fa {
+    font-family: FontAwesome !important;
+}
 body.view-profile .content-wrapper,
 body.view-profile .window-wrap,
 html body.view-in-course,
@@ -805,6 +812,14 @@ html body .btn-link:focus:not(:disabled),
 .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:focus {
     color: $theme-link;
 }
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit:focus:not(:disabled),
+body section.wiki .btn.btn-primary:active:not(:disabled), 
+body section.wiki .btn.btn-primary:focus:not(:disabled),
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create:focus:not(:disabled),
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create:active:not(:disabled), 
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create:focus:not(:disabled),
 body .instructor-dashboard-content-2 input[type="button"]:active:not(:disabled), 
 body .instructor-dashboard-content-2 input[type="button"]:focus:not(:disabled),
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:active:not(:disabled), 
@@ -840,3 +855,8 @@ body .header-global h1.logo img {
     width: 230px;
     max-width: 230px;
 }
+body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled), 
+body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
+html body .btn-link:active:not(:disabled) {
+    box-shadow: none;
+ }
