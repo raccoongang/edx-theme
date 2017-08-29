@@ -30,6 +30,10 @@ body .theme-footer {
         margin: 5px 0 30px 0;
         padding: 0;
         list-style: none;
+        @media (max-width: 530px) {
+            flex-direction: column;
+            text-align: center;
+        }
         a {
             color: #f7f7f7;
             font: 16px/1.2 "Arial","helvetica","Geneva", sans-serif;
@@ -43,10 +47,16 @@ body .theme-footer {
             margin-right: 15px;
             margin-bottom: 10px;
             position: relative;
+            @media (max-width: 530px) {
+                margin-right: 0
+            }
             &:after {
                 content: '\2022';
                 padding: 0 0 0 15px;
                 color: #fff;
+                @media (max-width: 530px) {
+                    display: none;
+                }
             }
             &:last-child {
                 &:after {
