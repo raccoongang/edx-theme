@@ -39,6 +39,13 @@ course_mode_class = course_mode if course_mode else ''
         <%include file="_badges-modal.html" />
     %endif
     <style type="text/css">
+        @font-face {
+            font-family: "Calibri-custom";
+            src:  url('/static/md2c-ficus/fonts/Calibri.ttf') format('truetype');
+        }
+        *:not(.fa) {
+            font-family: Calibri, "Calibri-custom", Arial, sans-serif !important;
+        }
         body .header-app .logo {
             width: 10rem;
         }
