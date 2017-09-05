@@ -366,3 +366,13 @@ body .xmodule_display.xmodule_HtmlModule h5:after {
         margin-bottom: 0;
     } 
 }
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}
