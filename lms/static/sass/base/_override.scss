@@ -376,3 +376,13 @@ body .xmodule_display.xmodule_HtmlModule h5:after {
     content: '';
     display: table;
 }
+body div.book-wrapper {
+  display: flex;
+}
+body div.book-wrapper section.book-sidebar {
+    width: 270px;
+    min-width: 270px;
+}
+div.book-wrapper {
+    min-width: 1150px;
+}
