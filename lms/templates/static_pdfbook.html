@@ -45,8 +45,9 @@ $(function(){
     </section>
     %endif
 
-    <div class="book sticky">
+    <div class="book">
     <iframe
+    class="sticky"
     title="${current_chapter['title']}"
     id="viewer-frame"
     src="${request.path}?viewer=true${viewer_params}"
