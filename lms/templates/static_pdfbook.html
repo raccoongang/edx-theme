@@ -45,10 +45,10 @@ $(function(){
     </section>
     %endif
 
-    <div class="book">
+    <div class="book" id="sticker">
     <iframe
     title="${current_chapter['title']}"
-    id="viewer-frame sticker"
+    id="viewer-frame"
     src="${request.path}?viewer=true${viewer_params}"
     width="856"
     height="1108"
@@ -59,6 +59,7 @@ $(function(){
     </div>
     </div>
 </main>
+<script src="/static/${settings.DEFAULT_SITE_THEME}/polyfill/sticky-polyfill.js"></script>
 <script>
   $(document).ready(function(){
     $("#sticker").sticky({topSpacing:0});
