@@ -47,30 +47,20 @@ $(function(){
 
     <div class="book">
     <iframe
-    class="sticky"
     title="${current_chapter['title']}"
-    id="viewer-frame"
+    id="viewer-frame sticker"
     src="${request.path}?viewer=true${viewer_params}"
     width="856"
     height="1108"
     frameborder="0"
     tabindex="-1"
+    style="min-width: 856px"
     seamless></iframe>
     </div>
     </div>
 </main>
 <script>
-    ;(function(){
-        var book = document.getElementById('viewer-frame');
-        var body = document.body;
-        function initBook(e) {
-            var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-            if(book.getBoundingClientRect().top < 0) {
-                if(!body.classList.contains('viewer-frame-is-sticky')) {
-                    body.classList.add('viewer-frame-is-sticky')
-                }
-            }
-        }
-        window.addEventListener('scroll', initBook);
-    })();
+  $(document).ready(function(){
+    $("#sticker").sticky({topSpacing:0});
+  });
 </script>

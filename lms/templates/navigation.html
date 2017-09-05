@@ -47,7 +47,7 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
-  <header id="global-navigation" class="header-global ${"" if request.path != '/' else "header-global_main"}" >
+  <header id="global-navigation sticky" class="header-global ${"" if request.path != '/' else "header-global_main"}" >
     <span class="fa fa-bars fa-2x menu-action" aria-hidden="true"></span>
 
     <nav class="header-global__nav" aria-label="${_('Global')}">
