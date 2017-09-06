@@ -243,11 +243,6 @@ $(".course-outline_link").click(function() {
       <div class="table">
       <section class="intro">
         <div class="heading-group">
-          <h1>
-            ${truncatechars(course.display_name_with_default_escaped, 20)}
-            <a href="#">${course.display_org_with_default | h}</a>
-          </h1>
-          <br>
           <h3>
             ${get_course_about_section(request, course, 'short_description')}
           </h3>
