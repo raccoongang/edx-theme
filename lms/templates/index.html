@@ -19,9 +19,9 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>Welcome to TrainIT!</h1>
+                  <h1>${_("Welcome to TrainIT!")}</h1>
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <p>your first choice for latest technology training</p>
+                  <p>${_("your first choice for latest technology training")}</p>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -108,14 +108,14 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
 
-      <h1 class="theme-content_heading">Featured courses</h1>
-      <div class="viewall-top-btn"><a href="/courses/">View all courses</a></div>
+      <h1 class="theme-content_heading">${_("Featured courses")}</h1>
+      <div class="viewall-top-btn"><a href="/courses/">${_("View all courses")}</a></div>
       <%include file="courses_list.html" />
-      <div class="viewall-top-btn mobile"><a href="/courses/">View all courses</a></div>
+      <div class="viewall-top-btn mobile"><a href="/courses/">${_("View all courses")}</a></div>
       <h1 class="theme-content_heading">TrainIT Learning Tracks</h1>
-      <div class="viewall-top-btn"><a href="/xseries/">View all tracks</a></div>
+      <div class="viewall-top-btn"><a href="/xseries/">${_("View all tracks")}</a></div>
       <%include file="programs_list.html" />
-      <div class="viewall-top-btn mobile"><a href="/xseries/">View all tracks</a></div>
+      <div class="viewall-top-btn mobile"><a href="/xseries/">${_("View all tracks")}</a></div>
 
 
     </section>

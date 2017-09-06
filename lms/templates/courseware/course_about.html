@@ -71,7 +71,7 @@ from openedx.core.djangoapps.models.course_details import CourseDetails
         perms_error = _('The currently logged-in user account does not have permission to enroll in this course. '
                         'You may need to {start_logout_tag}log out{end_tag} then try the enroll button again. '
                         'Please visit the {start_help_tag}help page{end_tag} for a possible solution.').format(
-                          start_help_tag="<a href='{url}'>".format(url=marketing_link('FAQ')), end_tag='</a>',
+                          start_help_tag="<a href='{url}'>".format(url=marketing_link('${_("FAQ")}')), end_tag='</a>',
                           start_logout_tag="<a href='{url}'>".format(url=reverse('logout'))
                           )
       %>
@@ -236,10 +236,10 @@ from openedx.core.djangoapps.models.course_details import CourseDetails
           </div>
           <nav class="theme-course-nav">
             <ul class="theme-course-nav_list">
-              <li class="theme-course-nav_list-item"><a href="#about" class="theme-course-nav_list-link">ABOUT THIS COURSE</a></li>
-              <li class="theme-course-nav_list-item"><a href="#prerquisites" class="theme-course-nav_list-link">PREREQUISITES</a></li>
-              <li class="theme-course-nav_list-item"><a href="#staff" class="theme-course-nav_list-link">COURSE STAFF</a></li>
-              <li class="theme-course-nav_list-item"><a href="#faq" class="theme-course-nav_list-link">FAQ</a></li>
+              <li class="theme-course-nav_list-item"><a href="#about" class="theme-course-nav_list-link">${_("ABOUT THIS COURSE")}</a></li>
+              <li class="theme-course-nav_list-item"><a href="#prerquisites" class="theme-course-nav_list-link">${_("PREREQUISITES")}</a></li>
+              <li class="theme-course-nav_list-item"><a href="#staff" class="theme-course-nav_list-link">${_("COURSE STAFF")}</a></li>
+              <li class="theme-course-nav_list-item"><a href="#${_("FAQ")}" class="theme-course-nav_list-link">${_("FAQ")}</a></li>
             </ul>
             <ul class="theme-course-nav_social">
               <li class="theme-course-nav_social-item"><a href="https://www.facebook.com/ETC.Microsoft.Training" target="_blank" class="theme-course-nav_social-link"><span class="icon fa fa-facebook" aria-hidden="true"></span></a></li>
