@@ -1,0 +1,15 @@
+@import "../const";
+
+.courses-listing {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.find-courses .courses-container .courses .courses-listing .courses-listing-item {
+    @media screen and (max-width: $responsive-middle) {
+        max-height: none;
+        min-height: 360px;
+    }
+}
