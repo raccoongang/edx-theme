@@ -8,10 +8,15 @@
     .wrapper-header {
         height: auto;
         padding: 0;
+
+        .logo img {
+            width: 73px;
+        }
     }
     .nav-global {
         width: 100%;
         @media screen and (min-width:760px ) {
+            margin-top: 20px;
             width: auto;
         }
 
@@ -167,7 +172,7 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-color;
     position: relative;
-    padding: 65px 10px 30px 10px;
+    padding: 30px 10px;
 
     footer#footer-openedx {
         a:hover,
@@ -498,7 +503,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     background: $theme-btn-bg-hover;
 }
 .courses-container .courses .course {
-    border-bottom: 3px solid #fc6a15;
+    border-bottom: 3px solid #854b9c;
 
     .course-image .cover-image .learn-more {
         background-color: transparent;
@@ -623,7 +628,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background-position: center;
     position: relative;
     background-color: #040404;
-    background-position: 0 0;
+    background-position: 100% 0;
 
     .outer-wrapper {
         animation: none;
@@ -653,8 +658,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 color: #fff;
                 text-align: center;
                 font-weight: bold;
-                text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
+                text-shadow: 0px 0px 10px #43427b, 0px 0px 10px #43427b, 0px 0px 2px #43427b, 0px 0px 2px #43427b, 0px 0px 2px #43427b;
                 margin-bottom: 50px;
+                font-family: 'courier_primeregular';
                 @media screen and (min-width:760px ) { 
                     font-size: 52px;
                 }
@@ -669,11 +675,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 margin-bottom: 40px;
             }
             .link {
-                background: transparent;
-                border: 3px solid #fff;
+                background: #fff;
+                border: 3px solid #854b9c;
                 text-shadow: none;
                 box-shadow: none;
-                color: #fff;
+                color: #854b9c;
                 border-radius: 2px;
                 padding: 10px 20px;
                 display: inline-block;
@@ -776,7 +782,7 @@ body.view-in-course,
 .university-profile,
 .wrapper-account-settings,
 .view-profile .content-wrapper {
-    background: $theme-content-bg;
+    background: url('../images/background-2.jpg');
 }
 .account-settings-sections .section {
     padding: 10px;
@@ -934,4 +940,15 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, 
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
         border-bottom: 3px solid $theme-btn-bg;
+}
+.dog-wizard {
+    float: left;
+    color: #854b9c;
+    margin: 24px 37px 0 -29px;
+}
+.login-register {
+    background: transparent;
+}
+.copy {
+    color: #fff;
 }
