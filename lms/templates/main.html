@@ -135,7 +135,7 @@ from pipeline_mako import render_require_js_path_overrides
         <%include file="${static.get_template_path('header.html')}" args="online_help_token=online_help_token" />
     % endif
 
-    <div class="content-wrapper" id="content">
+    <div class="content-wrapper container main-container" id="content">
       ${self.body()}
       <%block name="bodyextra"/>
     </div>
