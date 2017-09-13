@@ -19,6 +19,7 @@
 
         span {
             font-size: 14px;
+            color: #fff;
         }
     }
     .list-inline {
@@ -35,9 +36,10 @@
     }
 }
 .wrapper-footer {
-    box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
-    border-top: 1px solid #c5c6c7;
-    padding: 65px 10px 30px 10px;
+    box-shadow: none;
+    border-top: none;
+    padding: 35px 10px;
+    background: url('#{$img-path}/bg-footer-1.jpg');
 
     footer#footer-openedx {
         max-width: 1200px;
@@ -85,8 +87,11 @@
             background: none;
         }
     }
-    .menu-title:hover {
-        text-decoration: none;
+    .menu-title {
+        color: #fff;
+        &:hover {
+            text-decoration: none;
+        }
     }
     .dropdown-menu {
         box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
