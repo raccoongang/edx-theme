@@ -18,7 +18,7 @@ course_mode_class = course_mode if course_mode else ''
     <title>${document_title}</title>
 
     <%static:css group='style-certificates'/>
-    <link rel="icon" href="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/favicon-ie.ico" type="image/x-icon">
+    <link rel="icon" href="/static/${settings.FEATURES.get('SCANIA_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/favicon-ie.ico" type="image/x-icon">
 </head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
@@ -42,21 +42,21 @@ course_mode_class = course_mode if course_mode else ''
     %endif
     <style>
         .rtl.layout-accomplishment .accomplishment-orgs .organization-logo {
-                position: relative;
-                top: 0;
-                right: 0;
-                transform: translate(0, 0);
+            position: relative;
+            top: 0;
+            right: 0;
+            transform: translate(0, 0);
         }
         .btn-link,
         .copy-meta a {
-            color: #842a97;
+            color: #a40006;
             border: none;
         }
         .btn-link:hover,
         .btn-link:focus,
         .copy-meta a:focus,
         .copy-meta a:hover {
-            color: #bb57d0;
+            color: #ff0b14;
             background: none;
             text-decoration: none;
             border: none;

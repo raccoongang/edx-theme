@@ -232,6 +232,7 @@ body .container.activation h1.valid {
     }
 }
 // links
+body .login a,
 body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
 body .message-copy a,
 body .openassessment span,
@@ -268,11 +269,13 @@ body a {
     &:focus {
         color: $theme-link;
         text-decoration: none !important;
+        border-bottom: none;
     }
 
     &:hover {
         color: $theme-link-hover;
         text-decoration: none !important;
+        border-bottom: none;
     }
 }
 body .discussion .user-label-staff {
@@ -332,6 +335,7 @@ body .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn
 }
 // end links
 // btns
+body .view-login .form-actions button[type="submit"],
 body .login-register {
     .action-primary {
         background: $theme-btn-bg;
@@ -1008,3 +1012,16 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
         margin: 26px 0;
     }
 }
+.login {
+    aside {
+        display: none;
+    }
+    .content {
+        margin: 0 auto;
+        float: none;
+    }
+}
+.view-login .introduction {
+    display: none;
+}
+
