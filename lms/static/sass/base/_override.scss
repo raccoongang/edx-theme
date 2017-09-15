@@ -327,7 +327,7 @@ body .login a, {
     &:focus,
     &:hover,
     &.active {
-        color: $theme-link !important;
+        color: $theme-link-hover !important;
     }
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
@@ -384,7 +384,25 @@ body .login-register {
     }
 }
 body .view-login .form-actions button[type="submit"],
-body .login .form-actions button[type="submit"],
+body .login .form-actions button[type="submit"] {
+    background: $theme-btn-white-bg;
+    color: $theme-btn-white-text-color;
+    box-shadow: none !important;
+    border: 2px solid $theme-btn-white-border !important;
+    
+    &:active,
+    &:focus {
+        border-color: $theme-btn-white-border;
+        background: $theme-btn-white-bg;
+        color: $theme-btn-white-text-color;
+        box-shadow: none;
+    }
+    &:hover {
+        color: $theme-btn-white-text-color-hover;
+        background: $theme-btn-white-bg-hover !important;
+        border-color: $theme-btn-white-border;
+    }
+}
 .login-register .login-provider,
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
