@@ -232,6 +232,7 @@ body .container.activation h1.valid {
     }
 }
 // links
+body .login a:link,
 body .login a,
 body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
 body .message-copy a,
@@ -319,6 +320,16 @@ body .message a{
         text-decoration: none !important;
     }
 }
+body .login a:link,
+body .login a, {
+    color: $theme-link !important;
+    
+    &:focus,
+    &:hover,
+    &.active {
+        color: $theme-link !important;
+    }
+}
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
 body .forum-nav-thread.never-read .forum-nav-thread-link,
 body .discussion .post-label.post-label-following {
@@ -335,7 +346,6 @@ body .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn
 }
 // end links
 // btns
-body .view-login .form-actions button[type="submit"],
 body .login-register {
     .action-primary {
         background: $theme-btn-bg;
@@ -373,6 +383,8 @@ body .login-register {
         }
     }
 }
+body .view-login .form-actions button[type="submit"],
+body .login .form-actions button[type="submit"],
 .login-register .login-provider,
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
@@ -1020,8 +1032,12 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
         margin: 0 auto;
         float: none;
     }
+    .deco-divider {
+        display: none;
+    }
 }
 .view-login .introduction {
     display: none;
 }
+
 
