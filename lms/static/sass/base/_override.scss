@@ -1057,5 +1057,7 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
 .view-login .introduction {
     display: none;
 }
-
-
+body .login form .field.is-focused .tip,
+body .login form .field.is-focused label {
+    color: $theme-link;
+}
