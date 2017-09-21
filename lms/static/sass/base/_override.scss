@@ -379,13 +379,16 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
 }
 // end btns
 .home>header {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/d2o-academy-front2-tinted.jpg');
     height: 442px;
     background-position: center;
     position: relative;
     background-color: #040404;
-    background-position: 0 0;
+    background-position: 80% 0;
     display: table;
+    @media screen and (min-width:1200px ) {
+        background-position: 0 0;
+    }
 }
 .login-register .login-provider {
     .icon {
@@ -398,17 +401,16 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
 .home>header .title {
     margin: 0 auto;
     width: 100%;
+    max-width: 1200px;
     box-shadow: none;
     background: transparent;
     float: none;
+    box-sizing: border-box;
     padding: 0 30px;
     position: relative;
     top: 34px;
     &:last-child {
         margin-right: auto;
-    }
-    .course-search {
-        display: none;
     }
     &>.heading-group {
         text-align: center;
@@ -432,11 +434,51 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
 }
 .home>header .outer-wrapper {
     animation: none;
-    text-align: center;
-    display: table-cell;
-    vertical-align: bottom;
+    text-align: left;
+    color: #fff;
     @media (max-width: 759px) {
-        padding: 60px 0;
+        padding: 38px 0 0;
+    }
+    .course-search form {
+        overflow: hidden;
+        position: relative;
+
+        .search-button {
+            right: 0;
+            margin-top: 1px;
+            margin-right: 1px;
+            background: #fff;
+            border: none;
+            height: 45px;
+            border-radius: 7px;
+
+            .icon {
+                color: #000;
+            }
+        }
+        .search-input {
+            background: #fff;
+            border: 1px solid #8e8b8c;
+            height: 47px;
+            border-radius: 7px;
+            padding-left: 90px;
+        }
+    }
+    .heading-group {
+        h1 {
+            color: #fff;
+            text-align: left;
+            text-shadow: 1px 1px 6px #333;
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #fff;
+            font-size: 30px;
+            text-shadow: 1px 1px 6px #333;
+            margin-bottom: 19px;
+            line-height: 1.3;
+        }
     }
 }
 a.banner-btn {
@@ -739,4 +781,29 @@ body .shopping-cart .discount .code-text span {
 }
 body.view-passwordreset .header-global .nav-courseware .btn-login {
     display: inline-block;
+}
+.title-wrapper {
+    width: 100%;
+    @media screen and (min-width:760px ) {
+        float: left;
+        width: 450px;
+    }
+}
+.search-help {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #8e8b8c;
+    height: 45px;
+    border-radius: 7px 0 0 7px;
+    font-size: 14px;
+    color: #4e4e4e;
+    width: 84px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-style: normal;
+    font-weight: bold;
 }
