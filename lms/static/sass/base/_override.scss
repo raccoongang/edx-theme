@@ -11,7 +11,11 @@
         padding: 0;
     }
     .logo img {
-        width: 300px;
+        width: 200px;
+
+        @media screen and (min-width:760px ) {
+            width: 300px;
+        }
     }
     .nav-global {
         float: right;
@@ -115,6 +119,7 @@
                 text-shadow: none;
                 color: #fff;
                 margin: 13px 5px 13px 15px;
+                font-family: Arial, Helvetica, sans-serif;
 
                 &:hover {
                     color: #ffe;
@@ -702,7 +707,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
         margin: 0 auto;
         float: none;
         width: auto;
-        float: right;
+        @media screen and (min-width:760px ) {
+            float: right;
+        }
 
         .course-search {
             display: none;
