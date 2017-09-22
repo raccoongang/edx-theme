@@ -39,6 +39,8 @@
                 color: $header-nav-link-color;
                 font-family: Arial, Helvetica, sans-serif;
                 text-transform: uppercase;
+                font-weight: normal;
+                letter-spacing: 1px;
 
                 &:active,
                 &:focus {
@@ -111,6 +113,7 @@
         margin: 2px -32px 0 0;
 
         .user-link  {
+            font-weight: normal;
             .user-image-frame {
                 max-width: 30px;
                 margin: 4px 0 0;
@@ -120,6 +123,7 @@
                 color: #fff;
                 margin: 13px 5px 13px 15px;
                 font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 1.2px;
 
                 &:hover {
                     color: #ffe;
