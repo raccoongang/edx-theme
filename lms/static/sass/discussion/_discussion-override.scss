@@ -24,11 +24,12 @@
     }
     .list-inline {
         &.nav-global {
-            margin-top: 10px;
+            margin-top: 9px;
         }
         .item {
             text-transform: none;
             font-size: 14px;
+            -webkit-font-smoothing: auto;
         }
     }
     .nav-global li a:hover {
@@ -91,6 +92,11 @@
         color: #fff;
         &:hover {
             text-decoration: none;
+        }
+
+        .menu-image {
+            width: 30px;
+            height: 30px;
         }
     }
     .dropdown-menu {
@@ -178,4 +184,5 @@
 }
 body .header-global .wrapper-header .wrapper-user-menu {
     width: auto;
+    margin: 0 -28px 0 0;
 }

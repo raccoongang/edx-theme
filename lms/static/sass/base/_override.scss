@@ -16,10 +16,10 @@
     .nav-global {
         float: right;
         width: 100%;
-        margin-top: 8px;
-        margin-right: 50px;
+        margin-top: 10px;
         @media screen and (min-width:760px ) {
             width: auto;
+            margin-right: 50px;
         }
 
         li {
@@ -33,7 +33,8 @@
 
             a {
                 color: $header-nav-link-color;
-                font-family: 'Scania';
+                font-family: Arial, Helvetica, sans-serif;
+                text-transform: uppercase;
 
                 &:active,
                 &:focus {
@@ -64,6 +65,7 @@
         width: 100%;
         @media screen and (min-width:760px ) {
             width: auto;
+            margin-top: 5px;
         }
 
         li {
@@ -102,15 +104,21 @@
     .user {
         display: block;
         width: auto;
-        margin: 0 -32px 0 0;
+        margin: 2px -32px 0 0;
 
-        .user-link .label-username {
-            text-shadow: none;
-            color: #fff;
-            margin: 13px 5px 13px 15px;
+        .user-link  {
+            .user-image-frame {
+                max-width: 30px;
+                margin: 4px 0 0;
+            }
+            .label-username {
+                text-shadow: none;
+                color: #fff;
+                margin: 13px 5px 13px 15px;
 
-            &:hover {
-                color: #ffe;
+                &:hover {
+                    color: #ffe;
+                }
             }
         }
         .dropdown {
@@ -1008,14 +1016,15 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
         border-bottom: 3px solid $theme-btn-bg;
 }
 .logo2 {
-        display: none;
+    display: none;
     @media screen and (min-width:760px ) {
+        margin: 8px 0 0;
         display: block;
         float: right;
     }
 
     img {
-        width: 54px;
+        width: 48px;
         margin: -7px 0 0 44px;
     }
 }
