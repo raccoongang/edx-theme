@@ -1,0 +1,55 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<main class="accomplishment accomplishment-main">
+    <div class="wrapper-accomplishment-rendering">
+        <div class="accomplishment-rendering certificates">
+            <img src="/static/certificates/images/Back.png" class="certificates__background">
+            <img src="/static/certificates/images/border.png" class="certificates__border">
+            <img src="/static/certificates/images/books.png" class="certificates__books">
+            <div class="certificates__title">
+                <div class="certificates__title--holder">
+                        <img src="/static/certificates/images/title.png" alt="title">
+                        <span>Сертифікат</span>
+                </div> 
+            </div>
+            <div class="certificates__proove">Цей сертифікат підтверджує, що</div>
+            <div class="certificates__owner-name">
+                <div class="certificates__relative-wrapper">
+                        <div class="certificates__name">${accomplishment_copy_name | h}</div>
+                        <img src="/static/certificates/images/line.png" alt="">
+                </div>
+            </div>
+            <div class="certificates__award-text">${accomplishment_copy_course_description}</div>
+            <div class="certificates__stamp-holder">
+                % if certificate_data:
+                % for signatory in certificate_data.get('signatories', []):
+                <div class="certificates__stamp">
+                    <div class="certificates__flex-wrapper">
+                        <div>
+                            <div class="certificates__relative-wrapper">
+                                <div class="certificates__stamp-name">${signatory['name']}</div>
+                                <img src="/static/certificates/images/line.png" alt="">
+                            </div>
+                            <div class="certificates__stamp-descr">${signatory['title']}</div>
+                        </div>
+                        <img src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}" class="certificates__stamp-image">
+                    </div>
+                </div>
+                % endfor
+                % endif
+            </div>
+            <div class="certificates__id-date">
+                <div class="certificate__date">
+                    <span>${certificate_date_issued_title}:</span><span>${certificate_date_issued}</span>
+                </div>
+                <div class="certificate__date">
+                    <span>${certificate_id_number_title}:</span><span>${certificate_id_number}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
