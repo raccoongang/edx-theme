@@ -279,7 +279,6 @@ body .btn-link,
 div.info-wrapper section.updates div a,
 body div.info-wrapper section.handouts a,
 body div.info-wrapper section.updates div article .toggle-visibility-button,
-.dashboard .my-courses .course .details .course-title a,
 .supplemental-link a,
 .login-register .form-field .field-link,
 body a {
@@ -309,7 +308,6 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 }
 .courses-container .courses .course .course-info .course-title {
     color: #000;
-    font-weight: bold;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -1113,4 +1111,7 @@ body .login.container {
 body.view-login .wrapper-footer footer {
     width: auto;
     max-width: 960px;
+}
+.dashboard .my-courses .course .details .course-title a {
+    color: #000;
 }
