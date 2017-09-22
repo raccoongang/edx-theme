@@ -14,7 +14,10 @@
         width: 300px;
     }
     .nav-global {
+        float: right;
         width: 100%;
+        margin-top: 8px;
+        margin-right: 50px;
         @media screen and (min-width:760px ) {
             width: auto;
         }
@@ -30,6 +33,7 @@
 
             a {
                 color: $header-nav-link-color;
+                font-family: 'Scania';
 
                 &:active,
                 &:focus {
@@ -98,6 +102,7 @@
     .user {
         display: block;
         width: auto;
+        margin: 0 -32px 0 0;
 
         .user-link .label-username {
             text-shadow: none;
@@ -286,9 +291,12 @@ body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:h
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:focus {
     text-decoration: none !important;
 }
-body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
-.courses-container .courses .course .course-info .course-title {
+body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon {
     color: $theme-link;
+}
+.courses-container .courses .course .course-info .course-title {
+    color: #000;
+    font-weight: bold;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -685,12 +693,19 @@ body .wmd-prompt-dialog .btn-brand:focus {
         max-width: 1000px;
         margin: 0 auto;
         float: none;
+        width: auto;
+        float: right;
+
+        .course-search {
+            display: none;
+        }
 
         &:last-child {
             margin-right: auto;
             margin-left: auto;
         }
         >.heading-group {
+            padding-top: 80px;
             text-align: center;
             width: 100%;
 
@@ -704,7 +719,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
                 margin-bottom: 50px;
                 @media screen and (min-width:760px ) { 
-                    font-size: 80px;
+                    font-size: 48px;
+                    text-align: left;
+                    margin-bottom: 0;
                 }
             }
             span {
@@ -999,7 +1016,7 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
 
     img {
         width: 54px;
-        margin: -7px 0 0 38px;;
+        margin: -7px 0 0 44px;
     }
 }
 .courses-container .courses .course .course-info .course-organization {
