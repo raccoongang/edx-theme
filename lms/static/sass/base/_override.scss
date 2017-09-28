@@ -217,6 +217,7 @@ body .header-global h1.logo {
     }
 }
 // links
+body .login a:link,
 body section.wiki .nav-tabs li.active a,
 body section.wiki .breadcrumb li a,
 body section.wiki .nav-tabs a,
@@ -261,6 +262,16 @@ body .wrapper-course-material .course-tabs li a {
 body .wrapper-account-settings .wrapper-header .account-nav button:hover {
     border-color: $theme-link !important;
 }
+body .login a:link,
+body .login a, {
+    color: $theme-link !important;
+    
+    &:focus,
+    &:hover,
+    &.active {
+        color: $theme-link !important;
+    }
+}
 // end links
 // btns
 .login-register {
@@ -304,6 +315,25 @@ body .wrapper-account-settings .wrapper-header .account-nav button:hover {
             box-shadow: none;
             text-shadow: none;
         }
+    }
+}
+body .login .form-actions button[type="submit"] {
+    background: $theme-btn-white-bg;
+    color: $theme-btn-white-text-color;
+    box-shadow: none !important;
+    border: 2px solid $theme-btn-white-border !important;
+    
+    &:active,
+    &:focus {
+        border-color: $theme-btn-white-border;
+        background: $theme-btn-white-bg;
+        color: $theme-btn-white-text-color;
+        box-shadow: none;
+    }
+    &:hover {
+        color: $theme-btn-white-text-color-hover;
+        background: $theme-btn-white-bg-hover !important;
+        border-color: $theme-btn-white-border;
     }
 }
 .login-register .login-provider,
@@ -852,11 +882,24 @@ body .header-global h1.logo a{
     margin-top: 5px;
 }
 body .header-global h1.logo img {
-    width: 230px;
-    max-width: 230px;
+    width: 80px;
+    max-width: 80px;
+    height: 80px;
 }
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled), 
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled),
 html body .btn-link:active:not(:disabled) {
     box-shadow: none;
  }
+.login {
+    aside {
+        display: none;
+    }
+    .content {
+        margin: 0 auto;
+        float: none;
+    }
+}
+.view-login .introduction {
+    display: none;
+}

@@ -15,7 +15,7 @@ course_mode_class = course_mode if course_mode else ''
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>${document_title}</title>
-  <link rel="icon" href="/static/${settings.DEFAULT_SITE_THEME}/images/custom-favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/static/${settings.FEATURES.get('FLANE_DE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/custom-favicon.ico" type="image/x-icon">
     <%static:css group='style-certificates'/>
 </head>
 
