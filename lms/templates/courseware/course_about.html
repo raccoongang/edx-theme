@@ -126,22 +126,22 @@ from openedx.core.lib.courses import course_image_url
         <div class="main-cta">
         %if user.is_authenticated() and registered:
           %if show_courseware_link:
-            <span class="register disabled">${_("You are enrolled in this course")}</span>
+            <span class="register disabled">You are enrolled in this module</span>
             <a href="${course_target}">
-              <strong>${_("View Course")}</strong>
+              <strong>${_("View Module")}</strong>
             </a>
           %endif
 
         %elif in_cart:
           <span class="add-to-cart">
-            ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
+            ${_('This module is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
           </span>
         % elif is_course_full:
           <span class="register disabled">
-            ${_("Course is full")}
+            Module is full
           </span>
         % elif invitation_only and not can_enroll:
-          <span class="register disabled">${_("Enrollment in this course is by invitation only")}</span>
+          <span class="register disabled">Enrollment in this module is by invitation only</span>
         ## Shib courses need the enrollment button to be displayed even when can_enroll is False,
         ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
         ## so that they can register and become a real user that can enroll.
@@ -221,7 +221,7 @@ from openedx.core.lib.courses import course_image_url
         <%include file="course_about_sidebar_header.html" />
 
         <ol class="important-dates">
-          <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
+          <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">Module Number</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
           % if not course.start_date_is_still_default:
               <%
                   course_start_date = course.start
