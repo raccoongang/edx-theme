@@ -35,7 +35,7 @@ course_mode_class = course_mode if course_mode else ''
                                 </div>
                                 <div class="certificates__stamp-descr">Засновник освiтньоi платформи DESK</div>
                             </div>
-                            <img src="#" alt="" class="certificates__sign-image">
+                            
                         </div>
                         <img class="certificates__stamp-image" src="/static/certificates/images/stamp.png" alt="">
                     </div>  
@@ -53,7 +53,9 @@ course_mode_class = course_mode if course_mode else ''
                                     </div>
                                     <div class="certificates__stamp-descr">${signatory['title']}</div>
                                 </div>
+                                % if signatory['signature_image_path']:
                                 <img src="${static.url(signatory['signature_image_path'])}" alt="" class="certificates__sign-image">
+                                % endif
                             </div>
                         </div>
                         % endfor
