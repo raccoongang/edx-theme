@@ -25,26 +25,44 @@ course_mode_class = course_mode if course_mode else ''
             </div>
             <div class="certificates__award-text">${course_info}</div>
             <div class="certificates__stamp-holder">
-                % if certificate_data:
-                % for signatory in certificate_data.get('signatories', []):
-                <div class="certificates__stamp">
-                    <div class="certificates__flex-wrapper">
-                        <div>
-                            <div class="certificates__relative-wrapper">
-                                <div class="certificates__stamp-name">${signatory['name']}</div>
-                                <img src="/static/certificates/images/line.png" alt="">
+                <div class="certificates__owner">
+                    <div class="certificates__stamp">
+                        <div class="certificates__flex-wrapper">
+                            <div>
+                                <div class="certificates__relative-wrapper">
+                                    <div class="certificates__stamp-name">Вiктор Досенко</div>
+                                    <img src="/static/certificates/images/line.png" alt="">
+                                </div>
+                                <div class="certificates__stamp-descr">Доктор Медичних Наук, Завiдувач вiддiлу загальноi та молекулярноi патофiзiологii Iнституту iм. О.О. Богомольця</div>
                             </div>
-                            <div class="certificates__stamp-descr">${signatory['title']}</div>
+                            <img src="#" alt="sign" class="certificates__sign-image">
                         </div>
-                        <img src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}" class="certificates__sign-image">
+                        <img class="certificates__stamp-image" src="/static/certificates/images/stamp.png" alt="">
+                    </div>  
+                </div>
+                <div class="certificates__stamp-wrapper">
+                    <div class="certificates__stamp-inner-holder">
+                        % if certificate_data:
+                        % for signatory in certificate_data.get('signatories', []):
+                        <div class="certificates__stamp">
+                            <div class="certificates__flex-wrapper">
+                                <div>
+                                    <div class="certificates__relative-wrapper">
+                                        <div class="certificates__stamp-name">${signatory['name']}</div>
+                                        <img src="/static/certificates/images/line.png" alt="">
+                                    </div>
+                                    <div class="certificates__stamp-descr">${signatory['title']}</div>
+                                </div>
+                                <img src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}" class="certificates__sign-image">
+                            </div>
+                        </div>
+                        % endfor
+                        % endif
+                    </div>
+                    <div class="certificates__stamp-image-holder">
+                        <img class="certificates__stamp-image" src="/static/certificates/images/red-stamp.png" alt="">
                     </div>
                 </div>
-                % endfor
-                % endif
-            </div>
-            <div class="certificates__stamps">
-                <img src="/static/certificates/images/stamp.png" alt="">
-                <img src="/static/certificates/images/red-stamp.png" alt="">
             </div>
             <div class="certificates__id-date">
                 <div class="certificate__date">
