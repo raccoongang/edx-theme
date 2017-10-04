@@ -11,7 +11,10 @@ html body.view-in-course .content-wrapper,
 body.view-profile .window-wrap,
 body.view-profile .content-wrapper,
 body .content-wrapper,
-body,
+body {
+    background: #fff;
+}
+.find-courses,
 .home {
     background: #f1f1f1;
 }
@@ -406,7 +409,7 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     background: transparent;
     float: none;
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 0;
     position: relative;
     top: 34px;
     &:last-child {
@@ -469,8 +472,11 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
             color: #fff;
             text-align: left;
             text-shadow: 1px 1px 6px #333;
-            font-size: 56px;
+            font-size: 43px;
             margin-bottom: 20px;
+            @media screen and (min-width: 760px) {
+                font-size: 56px;
+            }
         }
         p {
             color: #fff;
@@ -806,4 +812,7 @@ body.view-passwordreset .header-global .nav-courseware .btn-login {
     top: 0;
     font-style: normal;
     font-weight: bold;
+}
+.wrapper-logo.footer-container_col {
+    width: auto;
 }
