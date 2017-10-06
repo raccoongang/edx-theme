@@ -935,3 +935,88 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
         border-bottom: 3px solid $theme-btn-bg;
 }
+
+.home>header .title .course-search {
+    display: none;
+}
+.wrapper-footer footer#footer-openedx .colophon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .icon-list {
+    display: none;
+}
+
+
+//lernonet malyavin
+body {
+    .home>header .title>.heading-group {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+        margin-bottom: 20%;
+        & > h1, & > a {
+            display: none !important;
+        }
+        span {
+            margin: 5px 0;
+            color: $gray;
+        }
+    }
+    .header-global .user .user-link .label-username {
+        color: #f5f5f5;
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .header-global .user .dropdown {
+        color: #f5f5f5;
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .header-global .nav-global li a {
+        display: none;
+    }
+    .header-global .nav-global .tab-nav-item .tab-nav-link {
+        color: #f5f5f5;
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .courses-container .courses .course {
+        border-color: #4cbea7;
+    }
+    .courses-container .courses .course .course-info .course-title {
+        color: #4cbea7;
+    }
+    .home>header .outer-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    .wrapper-footer footer#footer-openedx a {
+        position: static;
+    }
+    .courses-container .courses .course .course-image .cover-image:before {
+        background: #4cbea7;
+    }
+    .header-global .nav-global {
+        margin-top: 13px;
+    }
+    .wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+        margin: 0;
+    }
+    div.wrapper.wrapper-footer {
+        padding: 30px 10px;
+    }
+    .find-courses .wrapper-search-context,
+    .find-courses .search-facets.phone-menu,
+    .dashboard-search-bar {
+        display: none;
+    }
+    .find-courses .courses-container .courses:not(.no-course-discovery),
+    .dashboard .my-courses {
+        width: 100%;
+    }
+}
