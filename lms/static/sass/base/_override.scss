@@ -975,13 +975,15 @@ body {
             color: rgba(255, 255, 255, 0.8);
         }
     }
-    .header-global .nav-global li a {
-        display: none;
-    }
     .header-global .nav-global .tab-nav-item .tab-nav-link {
         color: #f5f5f5;
         &:hover {
             color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    .doc-link {
+        &:hover {
+            color: rgba(255, 255, 255, 0.8) !important;
         }
     }
     .courses-container .courses .course {
@@ -990,6 +992,17 @@ body {
     .courses-container .courses .course .course-info .course-title {
         color: #4cbea7;
     }
+    .btn.discussion-submit-post.control-button {
+        color: #4cbea7;
+        &:hover {
+            color: #fff;
+            background: #4cbea7;
+        }
+    }
+    .tab-nav-item {
+        display: none;
+    }
+
     .home>header .outer-wrapper {
         height: 100%;
         display: flex;
@@ -1018,5 +1031,40 @@ body {
     .find-courses .courses-container .courses:not(.no-course-discovery),
     .dashboard .my-courses {
         width: 100%;
+    }
+    .header-app .logo a {
+        width: 15rem;
+    }
+    .course-index .accordion .course-navigation .button-chapter .group-heading {
+        padding: 15px 40px !important;
+    }
+    .instructor-dashboard-wrapper-2 section.idash-section#membership .enroll-option .hint {
+        z-index: 2;
+    }
+    .footer-logo-holder {
+        @media screen and (min-width : 600px) {
+            margin: 0 !important;
+        }
+    }
+}
+body.rtl {
+    .hamburger {
+        left: auto;
+        right: 10px;
+    }
+    .footer-logo-holder {
+        margin: 0 !important;
+    }
+    .article-wrapper {
+        display: flex;
+        .wiki-article {
+            padding-right: 10px;
+        }
+    }
+    .discussion .comments .comment-form .wmd-input {
+        min-height: 40px;
+    }
+    .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+        right: 1%;
     }
 }
