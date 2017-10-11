@@ -1,0 +1,142 @@
+/*Headings and text*/
+h3{
+  color: #4a4a4f !important ;
+  font-weight: 600;
+}
+
+p{
+  color: #4a4a4f;
+  font-weight: 400;
+}
+
+a.tipslinks{
+  color: #e4562c;
+}
+
+a, a:hover, a:focus, a:active{
+  color: #e4562c !important;
+}
+
+div.busyperiodnote{
+  background-color: #efefef;
+  box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
+  padding: 3px 5px 5px 5px;
+  margin-top: 35px;
+}
+
+#displayname{
+  color: #e4562c;
+}
+/*END OF Headings and text*/
+
+/* Standard form inputs and submits*/
+fieldset{
+  margin-top: 25px;
+}
+
+#launch-intercom {
+  background-color: #e4562c;
+  box-shadow: 3.9px 5.2px 7.4px 0.6px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+legend {
+  margin-bottom: 0;
+  font-size: larger;
+}
+
+.form-check-label{
+  display: block;
+  color: #4a4a4f;
+  font-weight: 300;
+  margin: 5px 0;
+}
+
+p.form-check-label{
+  padding: 0px 4px;
+}
+
+.form-check-label.form-check-label-option{
+  font-weight: 200;
+}
+
+input.form-check-input{
+    margin-right: 5px !important;
+}
+
+input#githubrepo {
+    width: 50%;
+}
+
+input#githubrepo:focus{
+    border-color: rgba(228,86,44,0.5);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(228,86,44,0.6);
+}
+/* END OF Standard form inputs and submits*/
+
+/*Combobox*/
+.custom-combobox {
+/*Makes dropdown toggle same size as searchbox*/
+  position: relative;
+  display: inline-block;
+}
+
+.custom-combobox-toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /*Overlaps border of searchbox and dropdown to make them look part of the same element*/
+  margin-left: -1px;
+  padding: 0;
+}
+
+.custom-combobox-input {
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  background-color: white;
+}
+.ui-visual-focus {
+  box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+}
+/*END OF Combobox*/
+
+/*Tooltips*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #efefef;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #efefef;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #efefef transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/*END OF Tooltips*/

@@ -1,7 +1,8 @@
 <%page expression_filter="h"/>
 <%inherit file="main.html" />
-<%def name="online_help_token()"><% return "learnerdashboard" %></%def>
-<%namespace name='static' file='static_content.html'/>
+<%def name="online_help_token()"><% return "learnerdashboard" %>
+  </%def>
+  <%namespace name='static' file='static_content.html'/>
 <%!
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
@@ -13,13 +14,13 @@ from openedx.core.djangolib.js_utils import dump_js_escaped_json, js_escaped_str
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
-<%
+    <%
   cert_name_short = settings.CERT_NAME_SHORT
   cert_name_long = settings.CERT_NAME_LONG
 %>
 
 
-<%block name="pagetitle">${_("Dashboard")}</%block>
+      <%block name="pagetitle">${_("Dashboard")}</%block>
 <%block name="bodyclass">view-dashboard is-authenticated</%block>
 
 <%block name="header_extras">
@@ -88,16 +89,56 @@ from openedx.core.djangolib.markup import HTML, Text
       </div>
     %endif
 </div>
+<script data-cfasync="false">
+        (function(r, e, E, m, b) {
+            E[r] = E[r] || {};
+            E[r][b] = E[r][b] || function() {
+                (E[r].q = E[r].q || []).push(arguments)
+            };
+            b = m.getElementsByTagName(e)[0];
+            m = m.createElement(e);
+            m.async = 1;
+            m.src = ("file:" == location.protocol ? "https:" : "") + "//s.reembed.com/G-1g5L3X.js";
+            b.parentNode.insertBefore(m, b)
+        })("reEmbed", "script", window, document, "api");
+    </script>
 
 <main id="main" aria-label="Content" tabindex="-1">
   <header class="dashboard-intro">
-    <iframe class="home-intro__video" width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-    <div class="dashboard-intro__container">
-      <div class="dashboard-intro__text">
-        <h1><b>${_("Navigate through")}</b> </br> ${_("Your LMS")}</h1>
-      </div>
-    </div>
-  </header>
+     <div class="video-container">
+      <div class="video-image"></div>
+      <span class="btn btn-orange btn-video">Watch the video</span>
+       
+       
+     </div>
+   </header>
+   
+   <script type="text/javascript">
+     $(document).ready(function(){
+       var iframeAdd = '<iframe width="853" height="510" src="https://embed.reembed.com/player/1KVhe23EiC0m1cgTvh3JeTCz" allowfullscreen></iframe>';
+       var iframeRemove = $(".video-modal iframe");
+       
+       $(".btn-video, .video-close, .video-layer").on("click touch", function() {
+         $(".video-modal").toggleClass("show");
+         $(".video-layer").toggleClass("show");
+         $("body").toggleClass("video-modal-show");
+         
+          $('html, body').animate({scrollTop: '0px'}, 500);
+       }); 
+       
+       // add iframe 
+       $(".btn-video").on("click touch", function(){
+         $(".video-modal").append(iframeAdd);
+       });
+       
+       // remove iframe
+       $(".video-close, .video-layer").on("click touch", function() {
+         $(".video-modal iframe").remove();
+       });
+       
+     
+     });
+   </script>
 
   % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
     <div class="dashboard-container container">
@@ -132,19 +173,19 @@ from openedx.core.djangolib.markup import HTML, Text
             )
         %>
         % for dashboard_index, enrollment in enumerate(course_enrollments):
-          <% show_courseware_link = (enrollment.course_id in show_courseware_links_for) %>
+        <% show_courseware_link = (enrollment.course_id in show_courseware_links_for) %>
           <% cert_status = cert_statuses.get(enrollment.course_id) %>
-          <% can_unenroll = (not cert_status) or cert_status.get('can_unenroll') %>
-          <% credit_status = credit_statuses.get(enrollment.course_id) %>
-          <% show_email_settings = (enrollment.course_id in show_email_settings_for) %>
-          <% course_mode_info = all_course_modes.get(enrollment.course_id) %>
-          <% show_refund_option = (enrollment.course_id in show_refund_option_for) %>
-          <% is_paid_course = (enrollment.course_id in enrolled_courses_either_paid) %>
-          <% is_course_blocked = (enrollment.course_id in block_courses) %>
-          <% course_verification_status = verification_status_by_course.get(enrollment.course_id, {}) %>
-          <% course_requirements = courses_requirements_not_met.get(enrollment.course_id) %>
-          <% related_programs = inverted_programs.get(unicode(enrollment.course_id)) %>
-          <%include file='dashboard/_dashboard_course_listing.html' args='course_overview=enrollment.course_overview, enrollment=enrollment, show_courseware_link=show_courseware_link, cert_status=cert_status, can_unenroll=can_unenroll, credit_status=credit_status, show_email_settings=show_email_settings, course_mode_info=course_mode_info, show_refund_option=show_refund_option, is_paid_course=is_paid_course, is_course_blocked=is_course_blocked, verification_status=course_verification_status, course_requirements=course_requirements, dashboard_index=dashboard_index, share_settings=share_settings, user=user, related_programs=related_programs, display_course_modes_on_dashboard=display_course_modes_on_dashboard' />
+            <% can_unenroll = (not cert_status) or cert_status.get('can_unenroll') %>
+              <% credit_status = credit_statuses.get(enrollment.course_id) %>
+                <% show_email_settings = (enrollment.course_id in show_email_settings_for) %>
+                  <% course_mode_info = all_course_modes.get(enrollment.course_id) %>
+                    <% show_refund_option = (enrollment.course_id in show_refund_option_for) %>
+                      <% is_paid_course = (enrollment.course_id in enrolled_courses_either_paid) %>
+                        <% is_course_blocked = (enrollment.course_id in block_courses) %>
+                          <% course_verification_status = verification_status_by_course.get(enrollment.course_id, {}) %>
+                            <% course_requirements = courses_requirements_not_met.get(enrollment.course_id) %>
+                              <% related_programs = inverted_programs.get(unicode(enrollment.course_id)) %>
+                                <%include file='dashboard/_dashboard_course_listing.html' args='course_overview=enrollment.course_overview, enrollment=enrollment, show_courseware_link=show_courseware_link, cert_status=cert_status, can_unenroll=can_unenroll, credit_status=credit_status, show_email_settings=show_email_settings, course_mode_info=course_mode_info, show_refund_option=show_refund_option, is_paid_course=is_paid_course, is_course_blocked=is_course_blocked, verification_status=course_verification_status, course_requirements=course_requirements, dashboard_index=dashboard_index, share_settings=share_settings, user=user, related_programs=related_programs, display_course_modes_on_dashboard=display_course_modes_on_dashboard' />
         % endfor
 
         </ul>

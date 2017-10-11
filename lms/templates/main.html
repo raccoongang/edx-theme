@@ -27,6 +27,9 @@ from pipeline_mako import render_require_js_path_overrides
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/${settings.DEFAULT_SITE_THEME}/css/content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.min.css" />
 
 ## Define a couple of helper functions to make life easier when
 ## embedding theme conditionals into templates. All inheriting
@@ -123,12 +126,16 @@ from pipeline_mako import render_require_js_path_overrides
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
-
+<div class="video-layer"></div>
 <%static:optional_include_mako file="body-initial.html" is_theming_enabled="True" />
 <div id="page-prompt"></div>
 % if not disable_window_wrap:
   <div class="window-wrap" dir="${static.dir_rtl()}">
 % endif
+  
+  <div class="video-modal">
+    <span class="video-close">X</span>
+  </div>
     <a class="nav-skip" href="#main">${_("Skip to main content")}</a>
 
     % if not disable_header:
@@ -152,7 +159,15 @@ from pipeline_mako import render_require_js_path_overrides
 
   <%include file="widgets/segment-io-footer.html" />
   <script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/intro.min.js"></script>
   <script type="text/javascript" src="${static.url('js/utils/navigation.js')}" charset="utf-8"></script>
+  <script type="text/javascript" src="${static.url('scripts/iframes.js')}" charset="utf-8"></script>
+  <script src="${static.url("js/combobox.js")}"></script>
+  <script src="${static.url("js/tutoredstudents.js")}"></script>
+  <script src="${static.url("js/intercomapicall.js")}"></script>
+  <script src="${static.url("js/lmsunits.js")}"></script>
+  <script src="${static.url("js/intercomlauncher.js")}"></script>
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
 </body>
 </html>

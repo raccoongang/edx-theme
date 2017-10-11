@@ -130,7 +130,7 @@ from openedx.core.lib.courses import course_image_url
 
         %if user.is_authenticated() and registered:
           %if show_courseware_link:
-            <a class="btn btn-orange" href="${course_target}">
+            <a class="btn btn-mdb" href="${course_target}">
               <span class="register disabled">${_("You are enrolled in this course")}</span> <strong>${_("View Course")}</strong>
             </a>
           %else:
@@ -201,7 +201,7 @@ from openedx.core.lib.courses import course_image_url
         <section class="details-button">
           %if user.is_authenticated() and registered:
             %if show_courseware_link:
-              <a class="btn btn-orange" href="${course_target}">
+              <a class="btn btn-mdb" href="${course_target}">
             %endif
 
               <span class="btn register disabled">${_("You are enrolled in this course")}</span>
@@ -252,7 +252,7 @@ from openedx.core.lib.courses import course_image_url
               else:
                 href_class = "register"
             %>
-            <a href="${reg_href}" class="btn btn-orange ${href_class}">
+            <a href="${reg_href}" class="btn btn-mdb ${href_class}">
               ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
             </a>
             <div id="register_error"></div>
@@ -339,7 +339,7 @@ from openedx.core.lib.courses import course_image_url
           % if get_course_about_section(request, course, "prerequisites"):
             <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
           % endif
-        </ol>
+        <
       </div>
 
       ## CourseTalk widget

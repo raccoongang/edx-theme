@@ -10,7 +10,7 @@
 
 <main id="main" aria-label="Content" tabindex="-1">
   <header class="home-intro">
-    <img class="home-intro__image" src="${static.url("images/home-bg.jpg")}">
+    <img class="home-intro__image" src="${static.url("images/Ident3.gif")}">
     <div class="home-intro__container">
       % if homepage_overlay_html:
         ${homepage_overlay_html | n, decode.utf8}
@@ -54,6 +54,7 @@
 % endif
 
 <%block name="js_extra">
+
   <script type="text/javascript">
     $(window).load(function() {
       if(getParameterByName('next')) {
