@@ -1046,6 +1046,9 @@ body {
             margin: 0 !important;
         }
     }
+    .nav-global-01-xseries-style {
+        display: none;
+    }
 }
 body.lang_he {
     .hamburger {
@@ -1069,5 +1072,11 @@ body.lang_he {
     }
     .header-global h1.logo {
         float: left !important;
+    }
+    .wrap-instructor-info .instructor-info-action {
+        color: #4cbea7;
+        &:hover {
+        color: lighten(#4CBEA7, 20%);
+    }
     }
 }
