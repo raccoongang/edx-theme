@@ -440,7 +440,8 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     text-align: left;
     color: #fff;
     @media (max-width: 759px) {
-        padding: 38px 0 0;
+        padding: 38px 20px 0;
+        text-align: center;
     }
     .course-search form {
         overflow: hidden;
@@ -469,13 +470,14 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled) {
     }
     .heading-group {
         h1 {
+            text-align: center;
             color: #fff;
-            text-align: left;
             text-shadow: 1px 1px 6px #333;
             font-size: 43px;
             margin-bottom: 20px;
             @media screen and (min-width: 760px) {
                 font-size: 56px;
+                text-align: left;
             }
         }
         p {
@@ -538,8 +540,10 @@ body {
     .courses-container .courses .course {
         border-width: 0 0 3px 0;
         box-shadow: none;
+        border: 1px solid #bebebe;
         border-bottom-color: $theme-btn-bg;
-        background: #fff;
+        border-bottom-width: 3px;
+        background: #f5f5f5;
     }
     .highlighted-courses .courses .course:hover, 
     .highlighted-courses .courses .course:focus, 
@@ -815,4 +819,47 @@ body.view-passwordreset .header-global .nav-courseware .btn-login {
 }
 .wrapper-logo.footer-container_col {
     width: auto;
+}
+.header-global .user {
+    @include float(right);
+    @extend %ui-print-excluded;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    .settings-language-form {
+      margin: 4px;
+      .language-selector {
+        width: 120px;
+      }
+    }
+
+    > .primary {
+      display: block;
+      @include float(left);
+      margin: 0;
+      position: relative;
+
+      > a {
+        margin: 0;
+        background-image: none;
+      }
+
+      &:last-child {
+        > a {
+          padding: ($baseline/2);
+
+          &.shopping-cart {
+            border-radius: 4px;
+            border: 1px solid $border-color-2;
+            @include margin-right(10px);
+            padding-bottom: 6px;
+            color: #3c3c3c;
+            text-transform: uppercase;
+            display: block;
+          }
+        }
+      }
+    }
 }

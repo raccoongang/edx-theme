@@ -8,7 +8,9 @@
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 %>
-
+<a role="button" class="nav-item-open-collapsed btn-shopping-cart btn btn-secondary mr-3" href="${reverse('shoppingcart.views.show_cart')}">
+        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+      </a>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
 
