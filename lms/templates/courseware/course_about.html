@@ -68,7 +68,8 @@ from openedx.core.lib.courses import course_image_url
       if(xhr.status == 200) {
         location.href = "${reverse('dashboard')}";
       } else if (xhr.status == 403) {
-        location.href = "${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}?course_id=${course.id | u}&enrollment_action=enroll";
+        location.href = "${reverse('signin_user')}?course_id=${course.id | u}&enrollment_action=enroll";
+##        location.href = "${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}?course_id=${course.id | u}&enrollment_action=enroll";
       } else if (xhr.status == 400) { //This means the user did not have permission
         $('#register_error').html("${perms_error}").css("display", "block");
       } else {
@@ -89,7 +90,8 @@ from openedx.core.lib.courses import course_image_url
           location.href = xhr.responseText;
         }
       } else if (xhr.status == 403) {
-          location.href = "${reverse('register_user')}?course_id=${course.id | u}&enrollment_action=enroll";
+          location.href = "${reverse('signin_user')}?course_id=${course.id | u}&enrollment_action=enroll";
+##          location.href = "${reverse('register_user')}?course_id=${course.id | u}&enrollment_action=enroll";
       } else {
         $('#register_error').html(
             (xhr.responseText ? xhr.responseText : "${_("An error occurred. Please try again later.")}")
