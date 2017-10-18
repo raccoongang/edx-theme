@@ -58,9 +58,12 @@ site_status_msg = get_site_status_msg(course_id)
       </h1>
       <div class="header-menu">
           <div class="header-menu__wrap">
+            <div id="find-courses">
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-                <a id="find-courses" href="/courses">${_("FIND COURSES")}</a>
+                <a class="find-courses-link" href="/courses">${_("FIND COURSES")}</a>
             %endif
+            <a class="dashboard-link" href="${reverse('dashboard')}">${_("DASHBOARD")}</a>
+            </div>
           <div class="nav-wrap">
           % if course:
             <h2 class="course-header"><span class="provider">${truncatechars(course.display_org_with_default, 20)}:</span>
