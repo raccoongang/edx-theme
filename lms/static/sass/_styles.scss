@@ -899,3 +899,11 @@ div.window-wrap .home .courses-container .courses .courses-listing  {
     max-height: 380px;
   }
 }
+
+#global-navigation > nav > ol.right.nav-courseware.list-inline {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  line-height: 22px;
+}
