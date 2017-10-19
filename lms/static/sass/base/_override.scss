@@ -1051,6 +1051,7 @@ body {
     .nav-global-01-xseries-style {
         display: none !important;
     }
+
 }
 body.lang_he,
 body.rtl {
@@ -1081,5 +1082,12 @@ body.rtl {
         &:hover {
         color: lighten(#4CBEA7, 20%);
     }
+    }
+    section.wiki h1 {
+        text-align: right;
+        margin-right: 10px;
+    }
+    .right.nav-courseware.list-inline {
+        margin: 7px 0 0 15px;
     }
 }
