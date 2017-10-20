@@ -8,6 +8,6 @@
     <section class="container about">
         <h1>${_("About")}</h1>
 	<p>${_('«We believe that you can make a change in this world of data. At every level, with talent, passion and perseverance.»')}</p>
-        <p>${_("More information can be found on")} <a href="http://www.datachangers.com">www.datachangers.com</a></p>
+        <p>${_("More information can be found on {link_mktg}{site_name}{link_close}").format(link_mktg='<a href="http://www.datachangers.com">',site_name='www.datachangers.com',link_close='</a>') |n}</p>
     </section>
 </main>
