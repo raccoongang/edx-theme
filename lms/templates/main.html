@@ -120,7 +120,10 @@ from pipeline_mako import render_require_js_path_overrides
     })();
     </script>
 % endif
-
+  <script type="text/javascript">
+    window.IS_LMS = true;
+  </script>
+  <script type="text/javascript" src="${static.url("tiny_mce/tinymce.min.js")}"></script>
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
