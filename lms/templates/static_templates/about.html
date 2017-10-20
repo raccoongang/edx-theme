@@ -1,0 +1,13 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About")}</h1>
+	<p>${_('«We believe that you can make a change in this world of data. At every level, with talent, passion and perseverance.»')}</p>
+        <p>${_("More information can be found on")} <a href="http://www.datachangers.com">www.datachangers.com</a></p>
+    </section>
+</main>
