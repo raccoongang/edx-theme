@@ -336,8 +336,8 @@ body.view-in-course .container {
       font-family: "Academy Sans", sans-serif;
       text-align: center;
       width: 100%;
-     padding-bottom: 20px;
-    
+      padding-bottom: 20px;
+     
       h3 {
         text-align: center;
         font-family: 'Open Sans';
@@ -361,13 +361,11 @@ body.view-in-course .container {
       
       @include sm {
         height: auto;
-        margin-bottom: 40px;
         width: 30%;
         vertical-align: inherit;
         float: none;
         display: table-cell;
         width: 30%;
-        margin-bottom: 40px;
       }
      
       .question-text {
@@ -462,7 +460,6 @@ body.view-in-course .container {
 .xmodule_display.xmodule_SequenceModule nav.sequence-bottom {
     margin: 0 !important;
     display: block !important;
-    //justify-content: flex-end !important;
     height: auto !important;
 }
 
@@ -1269,7 +1266,6 @@ body.view-in-course .wrapper-footer {
 .xblock.xblock-student_view.xblock-student_view-video.xmodule_display.xmodule_VideoModule.xblock-initialized {
     .video {
         background-color: #fff;
-        box-shadow: 3.9px 5.2px 7.4px 0.6px rgba(0, 0, 0, 0.17);
        //padding: 15px 30px 20px 20px;
 
         /*@include md {
@@ -1542,27 +1538,28 @@ p {
     background-color: #fff !important;
 }
 
-.xblock.xblock-student_view.xblock-student_view-html.xmodule_display.xmodule_HtmlModule.xblock-initialized > section {
-   display: table-row; 
-    margin: 0 auto 30px;
-}
-
-.xblock.xblock-student_view.xblock-student_view-html.xmodule_display.xmodule_HtmlModule.xblock-initialized {
-    display: table;
-    width: 100%;
-    border-spacing: 15px 0;
-    
-    @include md {
-        border-spacing: 30px 0 !important;
+.vert-0 {
+    margin-bottom: 40px;
+    .xblock.xblock-student_view.xblock-student_view-html.xmodule_display.xmodule_HtmlModule.xblock-initialized > section {
+       display: table-row; 
+       margin: 0 auto 30px;
     }
     
+    .xblock.xblock-student_view.xblock-student_view-html.xmodule_display.xmodule_HtmlModule.xblock-initialized {
+        display: table;
+        width: 100%;
+        border-spacing: 15px 0;
+        
+        @include md {
+            border-spacing: 30px 0 !important;
+        }
+        
+    }
 }
 
 #dashboard-search-results {
     display: none;
 }
-
-
 
 #content {
     .course-item__info {
@@ -1642,8 +1639,12 @@ p {
     float: none !important;
 }
 
-div[data-block-type="video"] {
-    margin-top: 30px;
+#courseWrapper  {
+    div[data-block-type="video"] {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        box-shadow: 3.9px 5.2px 7.4px 0.6px rgba(0,0,0,0.17);
+    }
 }
 
 .window-wrap .wrapper-footer {
@@ -1655,6 +1656,10 @@ div[data-block-type="video"] {
 }
 
 .home .page-header-secondary .last-accessed-link {
+    color: #fff !important;
+}
+
+.btn-login {
     color: #fff !important;
 }
 
