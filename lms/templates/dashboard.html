@@ -106,14 +106,12 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
   <header class="dashboard-intro">
      <div class="video-container">
-      <div class="video-image"></div>
-      <span class="btn btn-orange btn-video">Watch the video</span>
-       
-       
+        <div class="video-image"></div>
+        <span class="btn btn-orange btn-video">Watch the video</span>
      </div>
    </header>
    
-   <script type="text/javascript">
+    <script type="text/javascript">
      $(document).ready(function(){
        var iframeAdd = '<iframe width="853" height="510" src="https://embed.reembed.com/player/1KVhe23EiC0m1cgTvh3JeTCz" allowfullscreen></iframe>';
        var iframeRemove = $(".video-modal iframe");
@@ -133,13 +131,12 @@ from openedx.core.djangolib.markup import HTML, Text
        
        // remove iframe
        $(".video-close, .video-layer").on("click touch", function() {
-         $(".video-modal iframe").remove();
+         $(iframeRemove).remove();
        });
        
      
      });
    </script>
-
   % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
     <div class="dashboard-container container">
       <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
