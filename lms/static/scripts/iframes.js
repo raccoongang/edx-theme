@@ -16,28 +16,10 @@ function toggleFullScreen(iframeId) {
 }
 
 function startTour() {
-	var tour = introJs()
+    var tour = introJs()
     tour.setOption('tooltipPosition', 'auto');
-	tour.setOption('positionPrecedence', ['left', 'right', 'bottom', 'top'])
-	tour.start()
+    tour.setOption('positionPrecedence', ['left', 'right', 'bottom', 'top'])
+    tour.start()
 }
 
-$(document).ready(function(){
 
-    $(".challenge-input").click(function(){
-     var $currentRadio = $(this);
-     var $hint = $currentRadio.parent().parent().parent().next().find(".challenge-content#hint");
-     var $challenge = $currentRadio.parent().parent().parent().next().find(".challenge-content#challenge");
-
-        if ($currentRadio.is("#hint-radio")) {
-            $hint.show();
-            $challenge.hide();
-        }
-        
-        if ($currentRadio.is("#challenge-radio")) {
-            $hint.hide();
-            $challenge.show();
-        }
-    });
- 
-});
