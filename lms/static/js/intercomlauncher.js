@@ -3,6 +3,8 @@ jQuery(window).load(function() {
     window.username = userElem.innerHTML;
     window.displayname = window.username;
 
+    var courseName = document.querySelector('header.header-global h2');
+    window.courseName = courseName.innerHTML;
 
     if (TUTORED_STUDENTS[window.username]) {
         // Welcome tutored student
