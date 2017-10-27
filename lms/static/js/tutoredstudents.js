@@ -2,7 +2,7 @@ var TUTORED_STUDENTS = {
     // us (for testing)
     'yoni': {id: 1267165000006768197, email: 'yoni@codeinstitute.net'},
     'nakita_ci': {id: 1267165000005073155, email: 'nakita@codeinstitute.net'},
-    'nakitastudent': {id: 2267165000006727085, email: 'nakitacodeinstitute@gmail.com'}
+    'nakitastudent': {id: 2267165000006727085, email: 'nakitacodeinstitute@gmail.com'},
     'tiffanysnell': {id: 1267165000006727085, email: 'tiffany@codeinstitute.net'},
     'snig501': {id: 3267165000006727085, email: 'aaron@codeinstitute.net'},
     // actual students
