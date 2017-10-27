@@ -1,5 +1,4 @@
-// **** TODO on deployment: Override this with actual APP_ID
-window.INTERCOM_APP_ID = "yourIntercomAppID";
+window.INTERCOM_APP_ID = "lcxk4jqa";
 (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function")
 	{ic('reattach_activator');ic('update',intercomSettings);}else
 	{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args)
