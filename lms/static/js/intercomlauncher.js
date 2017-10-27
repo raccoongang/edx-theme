@@ -9,6 +9,12 @@ jQuery(window).load(function() {
     if (TUTORED_STUDENTS[window.username]) {
         // Welcome tutored student
         document.getElementById('displayname').innerHTML = displayname;
+    } else {
+        // Kick out non-tutored students
+        console.log('Sorry', username, 'you\'re not a tutored student');
+        setTimeout(function() {
+            window.location.replace('https://courses.codeinstitute.net');
+        }, 500);
     }
 
     // Enable the combobox widget

@@ -5,6 +5,10 @@ var TUTORED_STUDENTS = {
     'tiffanysnell': {id: 1267165000006727085, email: 'tiffany@codeinstitute.net'},
     'snig501': {id: 1267165000006727085, email: 'aaron@codeinstitute.net'},
     // actual students
+    'tjasa_jan': {id: 1267165000015434169, email: 'tjasaa@gmail.com'},
+    'Bruce_H': {id: 1267165000014948209, email: 'bruce@harrisonemail.com'},
+    'denismoc': {id: 1267165000014520506, email: 'denismoc@live.ie'},
+    'eloisestancioff': {id: 1267165000014554557, email: 'cestancioff@gmail.com'},
     'danielmontanari': {id: 1267165000012613686, email: 'daniel_montanari@hotmail.com'},
     'deankelly': {id: 1267165000012554810, email: 'Dean.kelly07@gmail.com'},
     'libusehorankova': {id: 1267165000012554134, email: 'libusehoran@gmail.com'},
