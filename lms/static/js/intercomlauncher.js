@@ -10,7 +10,7 @@ jQuery(window).load(function() {
     }
 
     // Enable the combobox widget
-    populateUnits();
+    populateLessons();
     jQuery( "#combobox" ).combobox();
     jQuery( "#toggle" ).on( "click", function() {
         jQuery( "#combobox" ).toggle();
@@ -25,8 +25,8 @@ function launchIntercom(){
     Intercom('trackEvent', 'question', {
         user_id: TUTORED_STUDENTS[window.username].id,
         email: TUTORED_STUDENTS[window.username].email,
-        stream: document.querySelector('input[name="stream"]:checked').value,
-        unit: document.getElementById('selectedunit').value,
+        module: window.courseName,
+        lesson: document.getElementById('selectedlesson').value,
         type: document.querySelector('input[name="question_type"]:checked').value,
         urgency: document.querySelector('input[name="urgency"]:checked').value,
         github: document.getElementById('githubrepo').value,
@@ -38,8 +38,8 @@ function launchIntercom(){
         email: TUTORED_STUDENTS[window.username].email,
         username: window.username,
         name: window.displayname,
-        stream: document.querySelector('input[name="stream"]:checked').value,
-        unit: document.getElementById('selectedunit').value,
+        module: window.courseName,
+        lesson: document.getElementById('selectedlesson').value,
         type: document.querySelector('input[name="question_type"]:checked').value,
         urgency: document.querySelector('input[name="urgency"]:checked').value,
         githubrepo: document.getElementById('githubrepo').value,
@@ -53,8 +53,8 @@ function launchIntercom(){
 }
 
 
-function populateUnits() {
-	LMS_UNITS.forEach(function(unitName) {
-		jQuery('#combobox').append('<option name="unit" value="' + unitName + '" class="lmsunit">' + unitName + '</option>');
-	});
+function populateLessons() {
+    LESSONS[courseName].forEach(function(lessonName) {
+        jQuery('#combobox').append('<option name="lesson" value="' + lessonName + '" class="lesson">' + lessonName + '</option>');
+    });
 }

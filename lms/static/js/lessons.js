@@ -59,13 +59,13 @@ LESSONS = {
 		"Sending Emails Using EmailJS",
 		"The GitHub API",
 	],
-	"PracticalPython":[
+	"Practical Python":[
 		"Test-Driven Development with Python",
 		"Boggle Solver Part One",
 		"Boggle Solver Part Two",
 		"File I/O"
 	],
-	"DataCentricDevelopment":[
+	"DataCentric Development":[
 		"Data Fundamentals",
 		"Data Store Types",
 		"Database Fundamentals",
@@ -79,7 +79,7 @@ LESSONS = {
 		"Twitter Streams - Storing",
 		"Twitter Streams - Reading Back"
 	], 
-	"FullStackFrameworkswithDjango":[
+	"FullStack Frameworkswith Django":[
 		"Introduction to Deployment",
 		"The Heroku Platform",
 		"Making Our Code Deployment Ready",
