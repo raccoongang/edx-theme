@@ -1,22 +1,3 @@
-/*Headings and text*/
-h3{
-  color: #4a4a4f !important ;
-  font-weight: 600;
-}
-
-p{
-  color: #4a4a4f;
-  font-weight: 400;
-}
-
-a.tipslinks{
-  color: #e4562c;
-}
-
-a, a:hover, a:focus, a:active{
-  color: #e4562c !important;
-}
-
 div.busyperiodnote{
   background-color: #efefef;
   box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
@@ -32,12 +13,7 @@ div.busyperiodnote{
 /* Standard form inputs and submits*/
 fieldset{
   margin-top: 25px;
-}
-
-#launch-intercom {
-  background-color: #e4562c;
-  box-shadow: 3.9px 5.2px 7.4px 0.6px rgba(0, 0, 0, 0.25);
-  color: white;
+  border: none;
 }
 
 legend {
@@ -66,12 +42,23 @@ input.form-check-input{
 
 input#githubrepo {
     width: 50%;
+    padding: 3px;
+    border: 1px solid #ddd9d7;
 }
 
-input#githubrepo:focus{
-    border-color: rgba(228,86,44,0.5);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(228,86,44,0.6);
+input#githubrepo:focus, input#githubrepo:active, input#githubrepo:hover {
+    width: 50%;
+    border-color: #e4562c;
 }
+
+input#selectedlesson {
+    border: 1px solid #ddd9d7;
+}
+
+a.ui-button.ui-widget.ui-button-icon-only.custom-combobox-toggle.ui-corner-right{
+    border: 1px solid #ddd9d7;
+}
+
 /* END OF Standard form inputs and submits*/
 
 /*Combobox*/
@@ -97,11 +84,21 @@ input#githubrepo:focus{
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
 .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
-  background-color: white;
+  background-color: #ffffff;
 }
 .ui-visual-focus {
-  box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+  box-shadow: 0 0 3px 1px #e4562c;
 }
+
+#selectedlesson:active, #selectedlesson:focus, #selectedlesson:hover, #selectedlesson:visited{
+  border-color: #e4562c;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #e4562c;
+    background: #e4562c;
+    font-weight: normal;
+    color: #ffffff;
 /*END OF Combobox*/
 
 /*Tooltips*/
