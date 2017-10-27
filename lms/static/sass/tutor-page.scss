@@ -1,39 +1,39 @@
 div.busyperiodnote{
-  background-color: #efefef;
-  box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
-  padding: 3px 5px 5px 5px;
-  margin-top: 35px;
+    background-color: #efefef;
+    box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
+    padding: 3px 5px 5px 5px;
+    margin-top: 35px;
 }
 
 #displayname{
-  color: #e4562c;
+    color: #e4562c;
 }
 /*END OF Headings and text*/
 
 /* Standard form inputs and submits*/
 fieldset{
-  margin-top: 25px;
-  border: none;
+    margin-top: 25px;
+    border: none;
 }
 
 legend {
-  margin-bottom: 0;
-  font-size: larger;
+    margin-bottom: 0;
+    font-size: larger;
 }
 
 .form-check-label{
-  display: block;
-  color: #4a4a4f;
-  font-weight: 300;
-  margin: 5px 0;
+    display: block;
+    color: #4a4a4f;
+    font-weight: 300;
+    margin: 5px 0;
 }
 
 p.form-check-label{
-  padding: 0px 4px;
+    padding: 0px 4px;
 }
 
 .form-check-label.form-check-label-option{
-  font-weight: 200;
+    font-weight: 200;
 }
 
 input.form-check-input{
@@ -63,42 +63,45 @@ a.ui-button.ui-widget.ui-button-icon-only.custom-combobox-toggle.ui-corner-right
 
 /*Combobox*/
 .custom-combobox {
-/*Makes dropdown toggle same size as searchbox*/
-  position: relative;
-  display: inline-block;
+    /*Makes dropdown toggle same size as searchbox*/
+    position: relative;
+    display: inline-block;
 }
 
 .custom-combobox-toggle {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  /*Overlaps border of searchbox and dropdown to make them look part of the same element*/
-  margin-left: -1px;
-  padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /*Overlaps border of searchbox and dropdown to make them look part of the same element*/
+    margin-left: -1px;
+    padding: 0;
 }
 
 .custom-combobox-input {
-  margin: 0;
-  padding: 5px 10px;
+    margin: 0;
+    padding: 5px 10px;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
 .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 .ui-visual-focus {
-  box-shadow: 0 0 3px 1px #e4562c;
+    box-shadow: 0 0 3px 1px #e4562c;
 }
 
 #selectedlesson:active, #selectedlesson:focus, #selectedlesson:hover, #selectedlesson:visited{
-  border-color: #e4562c;
+    border-color: #e4562c;
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+.ui-state-active, .ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, a.ui-button:active, 
+.ui-button:active, .ui-button.ui-state-active:hover {
     border: 1px solid #e4562c;
     background: #e4562c;
     font-weight: normal;
     color: #ffffff;
+}
 /*END OF Combobox*/
 
 /*Tooltips*/
