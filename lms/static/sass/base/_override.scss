@@ -939,7 +939,7 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, 
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, 
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
-        border-bottom: 3px solid $theme-btn-bg;
+    border-bottom: 3px solid $theme-btn-bg;
 }
 .dog-wizard {
     float: left;
@@ -950,5 +950,8 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
     background: transparent;
 }
 .copy {
+    color: #fff;
+}
+.header-global .user .user-link .label-username {
     color: #fff;
 }
