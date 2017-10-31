@@ -1,6 +1,5 @@
 .hamburger {
     display: block;
-    position: relative;
     width: $hamburger-width;
     height: $hamburger-height + 6;
     background: transparent;
@@ -10,7 +9,7 @@
     border-radius: 0;
     box-shadow: none;
     position: absolute;
-    top: 18px;
+    top: 30px;
     right: 10px;
     &:after,
     &:before {

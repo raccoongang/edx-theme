@@ -1212,3 +1212,28 @@ body .home .page-header-main {
 body section.wiki .wiki-wrapper>header {
     width: 100%;
 }
+
+body {
+    .header-global .user .user-link .label-username {
+        color: #0698dc;
+        &:hover {
+            color: lighten(#0698dc, 20%);
+        }
+    }
+    .header-global .nav-global {
+        margin-top: 17px;
+    }
+    .header-global .user {
+        margin-top: 12px;
+    }
+    #global-navigation > nav > div > a,
+    #global-navigation > nav > div > div > a {
+        margin-top: 24px;
+    }
+    .header-global .user .dropdown {
+        color: #0698dc;
+    }
+    #footer-openedx > div > a > img {
+        transform: translate(-40%,0);
+    }
+}
