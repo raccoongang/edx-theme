@@ -19,11 +19,12 @@
 
         span {
             font-size: 14px;
+            color: #fff;
         }
     }
     .list-inline {
         &.nav-global {
-            margin-top: 10px;
+            margin-top: 25px;
         }
         .item {
             text-transform: none;
@@ -173,7 +174,26 @@
 }
 body .header-global .wrapper-header .wrapper-user-menu {
     width: auto;
+    margin-top: 12px;
 }
+.dropdown-menu-container .menu-title .label-username,
 .header-global .user .user-link .label-username {
     color: #fff;
+
+    &:hover {
+        color: $theme-link;
+    }
+}
+.wrapper-footer footer#footer-openedx ul {
+    margin-bottom: 17px;
+}
+.window-wrap {
+    background: #fff url('../../images/background-2.jpg') no-repeat 0 50%;
+}
+.header-global .nav-global .tab-nav-item .tab-nav-link {
+    padding: 0;
+    font-size: 14px;
+}
+.header-global .wrapper-header .list-inline .item {
+    float: left;
 }
