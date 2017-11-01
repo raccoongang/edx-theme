@@ -2,8 +2,25 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    @media all and (min-width: 1200px) {
+        margin: 0 -30px 0 0;
+        justify-content: flex-start;
+    }
 
     &_item {
+        width: 100%;
         padding: 0 0 20px;
+        transition: all 0.2s ease;
+        @media all and (min-width: 600px) {
+            width: 49%;
+        }
+        @media all and (min-width: 1200px) {
+            width: 249px;
+            margin-right: 28px;
+        }
     }
 }
