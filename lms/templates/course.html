@@ -3,6 +3,9 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
+from openedx.core.djangoapps.models.course_details import CourseDetails
+from course_category.models import CourseCategory
+from django.template.defaultfilters import truncatechars
 %>
 <%page args="course" expression_filter="h"/>
 <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="theme-course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
