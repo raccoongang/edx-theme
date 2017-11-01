@@ -810,7 +810,6 @@ section.wiki .global-functions {
     }
 }
 .content-wrapper {
-    padding-bottom: 80px;
     background: $theme-content-bg;
 }
 .main-article {
@@ -1001,7 +1000,7 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
 .header-global .user .user-link .label-username {
     color: #fff;
     &:hover {
-        color: $theme-link;
+        color: #fff;
     }
 }
 .register,
@@ -1067,4 +1066,15 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 }
 .container.about {
     line-height: 1.3;
+}
+.course-info .course-sidebar .important-dates,
+.dashboard .my-courses .course .wrapper-messages-primary .messages-list {
+    list-style: none;
+
+    .tip a {
+        color: $theme-link;
+    }
+}
+.course-info .course-sidebar .important-dates a {
+    color: $theme-link;
 }
