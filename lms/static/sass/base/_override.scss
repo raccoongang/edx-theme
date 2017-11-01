@@ -1066,6 +1066,14 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 }
 .container.about {
     line-height: 1.3;
+
+    a {
+        color: $theme-link;
+
+        &:hover {
+            color: $theme-link-hover;
+        }
+    }
 }
 .course-info .course-sidebar .important-dates,
 .dashboard .my-courses .course .wrapper-messages-primary .messages-list {
