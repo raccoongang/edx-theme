@@ -1,56 +1,41 @@
-.icon-fallback-img .icon-angle-down,
 .header-global .wrapper-header .course-header {
     display: none;
 }
-.main-header_wrapper {
-    background: #30363a;
-}
+.dicussion-holder-drop {
+    width: 100%;
+    background: #454a4e;
+    display: flex;
+    justify-content: center;
+    @media all and (min-width: 800px) {
+        display: block;
+        background: transparent;
+        width: auto;
+    }
 
-.header-global .wrapper-header .logo {
-    margin-top: -3px;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
+.header-global .wrapper-header .wrapper-user-menu.dropdown-menu-container {
+    height: 61px;
+    padding: 10px;
+    box-sizing: border-box;
 
-.header-global .wrapper-header .wrapper-user-menu {
-    margin-top: 0;
-    @media screen and (max-width: $responsive-large) {
-        margin-top: 10px;
+    @media all and (min-width: 800px) {
+        height: 40px;
+        padding: 0;
     }
 }
-.dropdown-menu-container .dropdown-menu .dropdown-item a:hover, 
-.dropdown-menu-container .dropdown-menu .dropdown-item a:active, 
-.dropdown-menu-container .dropdown-menu .dropdown-item a:focus {
-    text-decoration: none;
+.dropdown-menu-container .menu-button.default-icon:after {
+    border-top-color: #fff;
 }
-.wrapper-footer {
-    footer#footer-openedx {
-        a {
-            &:hover,
-            &:focus,
-            &:active {
-                border-bottom: none;
-                text-decoration: none;
-            }
-        }
-    }
-}
-.main-header_holder {
-        a {
-            &:hover,
-            &:focus,
-            &:active {
-                text-decoration: none;
-            }
-        }
-}
-aside.layout-col {
-    margin-bottom: 80px;
-    @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-    }
-}
-.view-discussion-home {
-    padding-left: 0;
-    @media screen and (min-width: 768px) {
-        padding-left: 20px;
+.dropdown-menu-container .menu-button {
+    background: transparent;
+
+    .text {
+        font-size: 0;
+        line-height: 0;
     }
 }

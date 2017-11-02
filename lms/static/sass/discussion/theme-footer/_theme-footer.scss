@@ -1,7 +1,4 @@
 .theme-footer {
-    .grid-container{
-        display: block;
-    }
     &_row {
         display: flex;
         justify-content: space-between;
@@ -11,7 +8,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        columns: 180px 2;
+        columns: 180px;
         column-gap: 20px;
 
         a {
@@ -27,10 +24,6 @@
 
         li {
             padding: 0 0 10px;
-
-            &:last-child {
-                padding-bottom: 10px;
-            }
         }
     }
     &_copyright {

@@ -1,5 +1,8 @@
+@import "const";
+
+//import the original styles from edx-platform
 @import "lms/static/sass/lms-learner-dashboard";
-@import "learner/learner";
+
 @import "font";
 @import "layout";
 @import "theme-btn-1/theme-btn-1";
@@ -21,15 +24,9 @@
 @import "hello-container/hello-container";
 @import "category-breadcrumbs/category-breadcrumbs";
 @import "categories/categories";
-@import "important-dates/important-dates";
-@import "verification/verification";
-@import "blocked-page/blocked-page";
-@import "menu-action/menu-action";
-
-.header-global .wrapper-header .logo {
-    margin-top: -6px;
-    margin-left: 0;
-}
-.theme-footer_list li {
-    margin: 0;
-}
+@import "programs-error/programs-error";
+@import "homepage-boxes/homepage-boxes";
+@import "show-menu/show-menu";
+@import "viewall-top-btn/viewall-top-btn";
+@import "discussion/discussion-layout";
+@import "tos-list/tos-list";

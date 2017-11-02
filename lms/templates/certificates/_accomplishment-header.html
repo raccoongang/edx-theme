@@ -1,14 +1,9 @@
 <%! from django.utils.translation import ugettext as _ %>
 
-<div class="wrapper-header">
-
-    <header class="header-app" role="banner">
-        <h1 class="header-app-title">
-            <a class="logo" style="width: 200px" href="${logo_url}">
-                <img class="logo-img" src="/static/${settings.DEFAULT_SITE_THEME}/images/computrain-logo-cert.png" alt="${_('{platform_name} Home').format(platform_name=platform_name)}" />
-            </a>
-            <span class="sr-only">${logo_subtitle}</span>
-        </h1>
+<div class="certificates_header">
+    <header class="certificates_holder" role="banner">
+        <a class="logo" href="${logo_url}">
+            <img class="logo-img" src="/static/${settings.DEFAULT_SITE_THEME}/images/computrain-logo-cert.png" alt="llpa logo" />
+        </a>
     </header>
-
 </div>
