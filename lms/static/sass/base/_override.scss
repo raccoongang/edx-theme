@@ -904,3 +904,24 @@ body .university-profile {
         text-align: center;
     }
 }
+.container.about {
+    line-height: 1.3;
+    color: #616161;
+    b {
+        font-family: Calibri, "Calibri-bold", Arial, sans-serif !important;
+        color: #000;
+    }
+
+    h2 {
+        color: #000;
+        font-family: Calibri, "Calibri-bold", Arial, sans-serif !important;
+        font-weight: bold;
+    }
+    a {
+        color: $theme-link;
+
+        &:hover {
+            color: $theme-link-hover;
+        }
+    }
+}

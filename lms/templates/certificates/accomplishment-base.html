@@ -41,7 +41,8 @@ course_mode_class = course_mode if course_mode else ''
     <style type="text/css">
         @font-face {
             font-family: "Calibri-custom";
-            src:  url('/static/md2c-ficus/fonts/Calibri.ttf') format('truetype');
+            src: url('/static/md2c-ficus/fonts/Calibri.woff2') format('woff2'),
+                   url('/static/md2c-ficus/fonts/Calibri.woff') format('woff');
         }
         *:not(.fa) {
             font-family: Calibri, "Calibri-custom", Arial, sans-serif !important;
