@@ -92,7 +92,10 @@ site_status_msg = get_site_status_msg(course_id)
         <ol class="right nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
-              <li class="item nav-global-01 nav-global-01-xseries-style">
+              <li class="tab-nav-item">
+                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="/support">Support</a>
+              </li>
+              <li class="tab-nav-item">
                 <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">MODULES</a>
               </li>
               <li class="tab-nav-item">
@@ -107,6 +110,9 @@ site_status_msg = get_site_status_msg(course_id)
               </li>
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
+              <li class="item nav-global-01">
+                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="/support">Support</a>
+              </li>
               <li class="item nav-global-01">
                 <a href="${marketing_link('COURSES')}">MODULES</a>
               </li>
@@ -179,6 +185,9 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+              <li class="item nav-global-04">
+                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="/support">Support</a>
+              </li>
               <li class="item nav-global-05">
                 <a class="btn" href="/courses">MODULES</a>
               </li>
