@@ -1236,4 +1236,41 @@ body {
     #footer-openedx > div > a > img {
         transform: translate(-40%,0);
     }
+    .login-register .action-primary:hover,
+    .register .form-actions button[type="submit"],
+    .header-global .nav-courseware li .btn,
+    #forgot-password-modal #password-reset .form-actions button[type="submit"] {
+        color: #212320 !important;
+    }
+    #content > section.introduction,
+    #content > section.register.container > aside {
+        display: none;
+    }
+    #content > section.register.container {
+        display: flex;
+        justify-content: center;
+    }
+    .header-global .nav-global .tab-nav-item .active {
+       border-bottom: 4px solid #0698dc !important;
+    }
+
+}
+#content > section.register.container,
+#content > section.login.container {
+    padding-bottom: 60px !important;
+}
+.view-login .header-global .nav-courseware .btn-login {
+    display: block;
+}
+@media screen and (max-width: 960px){
+    .view-register .header-global nav, .view-login .header-global nav,
+    .view-register .wrapper-footer footer, .view-login .wrapper-footer footer, .view-passwordreset .wrapper-footer footer,
+    #content > section.register.container,
+    .register .content
+    {
+        width: 100%;
+        max-width: 960px;
+        min-width: 0;
+    }
+
 }
