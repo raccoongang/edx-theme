@@ -1212,3 +1212,34 @@ body .home .page-header-main {
 body section.wiki .wiki-wrapper>header {
     width: 100%;
 }
+body {
+    .home>header {
+        background-image: url(../images/background.png);
+    }
+    #global-navigation > nav > .nav-holder {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100%;
+        vertical-align: middle;
+        height: 134px;
+    }
+    .login-register .action-primary:hover {
+        color: #fabb00;
+    }
+    #global-navigation > nav > div > div > ol > li:nth-child(1) > a > div,
+    #global-navigation > nav > div > div > ol > li:nth-child(2) {
+        color: #284e7c;
+    }
+    .course-info .details .inner-wrapper,
+    .course-info .details h2 {
+        font-family: "Open Sans", Verdana, Geneva, sans-serif;
+    }
+    .nav-holder:after {
+        display: none;
+    }
+    .footer-logo-holder {
+        top: -75px;
+        left: 44%;
+    }
+}
