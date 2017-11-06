@@ -1253,7 +1253,39 @@ body {
     .header-global .nav-global .tab-nav-item .active {
        border-bottom: 4px solid #0698dc !important;
     }
-
+    .course-info .details .inner-wrapper,
+    .course-info .details h2 {
+        font-family: "Open Sans", Verdana, Geneva, sans-serif;
+    }
+    .header-global .nav-global li a {
+        padding: 5px;
+        font-size: 16px;
+    }
+    .header-global .wrapper-header .list-inline .item {
+        display: inline-flex;
+    }
+    .icon-list_link {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 75px;
+        height: 55px;
+        &__flag {
+            background-image: url("../images/artboard.png");
+        }
+        &__hasa {
+            background-image: url("../images/download_en.svg");
+        }
+        &__house {
+            background-image: url("../images/hamishmar.png");
+        }
+        &__shower {
+            background-image: url("../images/shower.png");
+        }
+        &__cc {
+            background-image: url("../images/CC1.png");
+        }
+    }
 }
 #content > section.register.container,
 #content > section.login.container {
@@ -1272,5 +1304,4 @@ body {
         max-width: 960px;
         min-width: 0;
     }
-
 }
