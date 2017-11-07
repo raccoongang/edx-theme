@@ -1335,3 +1335,10 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 .course-info .course-sidebar .important-dates a {
     color: $theme-link;
 }
+
+body {
+    .header-global .nav-global li a:hover,
+    .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover {
+        color: $theme-link;
+    }
+}
