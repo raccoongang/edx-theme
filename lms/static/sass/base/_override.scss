@@ -1250,7 +1250,8 @@ body {
         display: flex;
         justify-content: center;
     }
-    .header-global .nav-global .tab-nav-item .active {
+    .header-global .nav-global .tab-nav-item .active,
+    .active.tab-nav-link {
        border-bottom: 4px solid #0698dc !important;
     }
     .course-info .details .inner-wrapper,
@@ -1259,7 +1260,7 @@ body {
     }
     .header-global .nav-global li a {
         padding: 5px;
-        font-size: 16px;
+        font-size: 16px !important;
     }
     .header-global .wrapper-header .list-inline .item {
         display: inline-flex;
@@ -1308,5 +1309,10 @@ body {
         width: 100%;
         max-width: 960px;
         min-width: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .icon-list_link {
+        width: 60px;
     }
 }
