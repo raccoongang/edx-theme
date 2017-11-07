@@ -1255,8 +1255,9 @@ body {
        border-bottom: 4px solid #0698dc !important;
     }
     .course-info .details .inner-wrapper,
-    .course-info .details h2 {
-        font-family: "Open Sans", Verdana, Geneva, sans-serif;
+    .course-info .details h2,
+    section.course-info {
+        font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
     }
     .header-global .nav-global li a {
         padding: 5px;
@@ -1313,6 +1314,6 @@ body {
 }
 @media screen and (max-width: 500px) {
     .icon-list_link {
-        width: 60px;
+        width: 60px !important;
     }
 }
