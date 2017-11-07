@@ -93,7 +93,7 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
               <li class="tab-nav-item">
-                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="/support">Support</a>
+                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="/support_contacts">Support</a>
               </li>
               <li class="tab-nav-item">
                 <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">MODULES</a>
