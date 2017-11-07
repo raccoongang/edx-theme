@@ -1332,6 +1332,19 @@ body.view-login #forgot-password-modal #password-reset header h2 {
         color: $theme-link;
     }
 }
+
 .course-info .course-sidebar .important-dates a {
     color: $theme-link;
+}
+.container.dashboard {
+    min-width: auto;
+    
+    @media screen and (min-width: 760px) {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
