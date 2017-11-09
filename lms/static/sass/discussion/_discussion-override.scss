@@ -191,4 +191,14 @@ body {
     .course-info .details h2 {
         font-family: "Open Sans", Verdana, Geneva, sans-serif;
     }
+    .discussion-module .btn {
+        background-color: #284e7c;
+        color: #fabb00;
+        border-color: #fabb00;
+        transition: 0.2s;
+        &:hover {
+            background-color: lighten(#284e7c,20%);
+            transition: 0.2s;
+        }
+    }
 }
