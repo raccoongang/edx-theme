@@ -1234,7 +1234,7 @@ body {
         color: #0698dc;
     }
     #footer-openedx > div > a > img {
-        transform: translate(-40%,0);
+        transform: translate(-38%,0);
     }
     .login-register .action-primary:hover,
     .register .form-actions button[type="submit"],
@@ -1252,11 +1252,12 @@ body {
     }
     .header-global .nav-global .tab-nav-item .active,
     .active.tab-nav-link {
-       border-bottom: 4px solid #0698dc !important;
+       border-bottom: none !important;
     }
     .course-info .details .inner-wrapper,
     .course-info .details h2,
-    section.course-info {
+    section.course-info,
+    #content > section > header > div > div > section > div.heading-group {
         font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
     }
     .header-global .nav-global li a {
@@ -1292,6 +1293,9 @@ body {
         color: #0698dc;
         text-align: center;
         list-style: none;
+    }
+    #footer-openedx > div > ol {
+        padding: 0;
     }
 }
 #content > section.register.container,

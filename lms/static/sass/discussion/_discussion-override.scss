@@ -192,4 +192,26 @@ body {
     .dropdown-menu-container .menu-button {
         color: #0698dc;
     }
+    .icon-list_link {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 75px;
+        height: 55px;
+        &__flag {
+            background-image: url("../../images/download_en.svg");
+        }
+        &__hasa {
+            background-image: url("../../images/artboard.png");
+        }
+        &__house {
+            background-image: url("../../images/hamishmar.png");
+        }
+        &__shower {
+            background-image: url("../../images/shower.png");
+        }
+        &__cc {
+            background-image: url("../../images/CC1.png");
+        }
+    }
 }
