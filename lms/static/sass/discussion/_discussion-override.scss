@@ -6,6 +6,11 @@
     }
     .course-header {
         display: none;
+        font-size: 14px;
+        padding: 0 45px 0 5px;
+        @media screen and (min-width:600px ) {
+            display: block;
+        }
     }
     .wrapper-user-menu {
         display: flex;

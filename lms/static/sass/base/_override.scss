@@ -5,6 +5,16 @@
     position: relative;
     box-sizing: border-box;
 
+    h2 {
+        display: none;
+        @media screen and (min-width:600px ) {
+            font-size: 16px;
+            padding: 20px 45px 0 5px;
+            text-align: center;
+            display: block;
+        }
+    }
+
     .wrapper-header {
         height: auto;
         padding: 0;
@@ -477,11 +487,14 @@ body .courseware-bookmarks-button .bookmarks-list-button.is-active {
         border-color: $theme-btn-white-border;
     }
 }
+
 body #forgot-password-modal #password-reset .form-actions button[type="submit"],
 body .find-courses .discovery-submit,
 body .modal .inner-wrapper form .submit input[type="submit"],
 body .wiki-wrapper section.wiki .btn.btn-primary,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+body .forum-new-post-form .post-type-input:checked+.post-type-label,
+body .edit-post-form .post-type-input:checked+.post-type-label,
 body .empty-dashboard-message a,
 body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
 body .btn-blue,
@@ -499,6 +512,7 @@ body .home .page-header-secondary,
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
 body .instructor-dashboard-content-2 input[type="button"],
+body .search-bar .cancel-button,
 body .search-bar .search-button {
     text-shadow: none;
     box-shadow: none;
@@ -1178,6 +1192,7 @@ body .home .page-header-secondary {
 }
 section.wiki .wiki-wrapper .nav-tabs {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     @media screen and (min-width: 1000px) {
         display: block;
@@ -1254,6 +1269,8 @@ body .home .page-header-main {
 }
 body section.wiki .wiki-wrapper>header {
     width: 100%;
+    height: auto;
+    min-height: 33px;
 }
 .register,
 .login {
@@ -1337,23 +1354,180 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 }
 #dashboard-search-bar {
     width: 100%;
+    order: 1;
+    margin-bottom: 30px;
 
     @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        order: 2;
         padding-right: 10px;
         padding-left: 10px;
+        width: 23.23176%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+.dashboard .my-courses {
+    width: 100%;
+    order: 2;
+    @media screen and (min-width: 1200px) {
+        width: 74.41059%;
+        order: 1;
     }
 }
 .container.dashboard {
     min-width: auto;
     display: flex;
     flex-wrap: wrap;
+    padding-right: 10px;
+    padding-left: 10px;
+    align-items: flex-start;
     
-    @media screen and (min-width: 760px) {
-        padding-right: 10px;
-        padding-left: 10px;
-    }
     @media screen and (min-width: 1200px) {
         padding-right: 0;
         padding-left: 0;
     }
+}
+#dashboard-search-results {
+    order: 3;
+    min-height: auto;
+    width: 100%;
+}
+#profile-sidebar {
+    order: 4;
+}
+.dashboard .my-courses .wrapper-header-courses {
+    width: 100%;
+}
+.dashboard .my-courses .course .details {
+    .wrapper-course-image {
+        width: 100%;
+
+        @media screen and (min-width: 760px) {
+            width: 23.23176%;
+        }
+
+        .cover {
+            float: none;
+
+            @media screen and (min-width: 760px) {
+                float: left;
+            }
+        }
+    }
+    .course-info {
+        width: 100%;
+
+        @media screen and (min-width: 760px) {
+            width: 31.76157%;
+        }
+    }
+    .wrapper-course-actions {
+        width: 100%;
+
+        @media screen and (min-width: 760px) {
+            width: 65.88078%;
+        }
+    }
+    .wrapper-course-details {
+        width: 100%;
+
+        @media screen and (min-width: 760px) {
+            width: 74.41059%;
+        }
+    }
+}
+.dashboard-search-results .search-info {
+    width: 100%;
+}
+.search-results .search-results-item {
+    .result-excerpt {
+        margin-top: 22px;
+    }
+    .result-link {
+        top: 10px;
+        color: $theme-link;
+        
+        &:visited,
+        &:focus,
+        &:hover {
+            color: $theme-link-hover;
+        }
+    }
+    .result-type {
+        bottom: 10px;
+    }
+}
+.global-functions.pull-right {
+    width: 100%;
+
+    @media screen and (min-width: 760px) {
+        width: auto;
+    }
+}
+section.wiki .wiki-wrapper>header {
+    height: auto;
+    min-height: 33px;
+}
+section.wiki .global-functions {
+    width: 100%;
+
+    @media screen and (min-width: 760px) {
+        width: auto;
+    }
+}
+section.wiki a.btn {
+    float: none;
+
+    @media screen and (min-width: 760px) {
+        float: left;
+    }
+}
+section.wiki .wiki-wrapper .nav-tabs li {
+    margin-right: 20px;
+    margin-left: 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.profile-wrapper .course-info {
+    width: 100%;
+}
+.instructor-dashboard-wrapper-2 {
+    section.idash-section#cohort_management .cohort-management-nav .cohort-management-nav-form {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px;
+        @media screen and (min-width: 760px) {
+            width: 60%;
+            float: left;
+            margin: 0;
+        }
+    }
+}
+.instructor-dashboard-content-2 .instructor-nav {
+    li.nav-item {
+        display: block;
+        text-align: center;
+
+        @media screen and (min-width: 760px) {
+            display: inline-block;
+            text-align: left;
+        }
+    }
+}
+.xmodule_display.xmodule_HtmlModule img {
+    max-width: 100%;
+    height: auto;
+}
+.grade-detail-graph {
+    display: none;
+}
+body h2,
+body .home>header .title>.heading-group p,
+body section.outside-app h1 {
+    letter-spacing: 0;
 }
