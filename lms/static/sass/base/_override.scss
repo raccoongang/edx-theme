@@ -637,6 +637,7 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous {
     span {
         color: #222;
+        border-left: 1px solid #c8c8c8;
     }
 }
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
@@ -1519,6 +1520,13 @@ section.wiki .wiki-wrapper .nav-tabs li {
         }
     }
 }
+.instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"] {
+    width: auto;
+}
+.instructor-dashboard-wrapper-2 section.idash-section#data_download input {
+    word-break: break-all;
+    white-space: normal;
+}
 .xmodule_display.xmodule_HtmlModule img {
     max-width: 100%;
     height: auto;
@@ -1530,4 +1538,30 @@ body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
     letter-spacing: 0;
+}
+section.wiki h1 {
+    word-break: break-all;
+}
+section.wiki .wiki-wrapper .article-functions .see-children {
+    margin-left: 0;
+    @media screen and (min-width: 760px) {
+        margin-left: 30px;
+    }
+}
+.instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field,
+input[name="subject"] {
+    width: 100%;
+    max-width: 600px;
+}
+.instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-primary {
+    display: block;
+    width: auto;
+    @media screen and (min-width: 760px) {
+        width: 20%;
+        display: table-cell;
+    }
+}
+.instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email {
+    width: 100%;
+    max-width: 300px;
 }
