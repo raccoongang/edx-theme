@@ -1227,6 +1227,7 @@ body {
     }
     .home>header {
         background-image: url(../images/background.png);
+        background-position: center;
     }
     .nav-holder {
         display: flex;
@@ -1282,9 +1283,15 @@ body {
     //}
     .home>header .title>.heading-group .link {
         background: #284e7c;
+        border: none;
+        color: #fabb00;
     }
     .login-register .form-type, .financial-assistance-wrapper .financial-assistance-form .form-type {
         margin-bottom: 100px;
+    }
+    body .forum-new-post-form .post-type-label, body .edit-post-form .post-type-label, body .home .page-header-secondary .last-accessed-link {
+        color: #fabb00;
+        background: none;
     }
     @media screen and (max-width:767px) {
         .nav-holder {
@@ -1295,5 +1302,9 @@ body {
             left: 60%;
             transform: translate(-50%);
         }
+    }
+    .view-passwordreset .wrapper-footer footer,
+    .view-passwordreset .header-global nav {
+        width: auto;
     }
 }

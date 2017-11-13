@@ -201,4 +201,14 @@ body {
             transition: 0.2s;
         }
     }
+    @media screen and (max-width:767px) {
+        .nav-holder {
+            display: none;
+        }
+        .footer-logo-holder {
+            top: -75px;
+            left: 60%;
+            transform: translate(-50%);
+        }
+    }
 }
