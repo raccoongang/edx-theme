@@ -5,19 +5,6 @@
     position: relative;
     box-sizing: border-box;
 
-    h2 {
-        display: none;
-        @media screen and (min-width:600px ) {
-            font-size: 16px;
-            padding: 20px 45px 0 5px;
-            text-align: center;
-            display: block;
-        }
-        @media screen and (min-width:760px ) {
-            padding-right: 20px;
-        }
-    }
-
     .wrapper-header {
         height: auto;
         padding: 0;
@@ -1612,4 +1599,9 @@ section.wiki .main-article {
 }
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+}
+body {
+    * {
+        letter-spacing: 0;
+    }
 }
