@@ -1489,6 +1489,9 @@ body {
             width: 100%;
         }
     }
+    .logo-en {
+        max-width:170px;
+    }
     .nav-holder {
         display: flex;
         align-items: center;
@@ -1502,5 +1505,16 @@ body {
     }
     .nav-holder::after {
         display: none;
+    }
+    .container {
+        min-width: 0;
+    }
+    @media screen and (max-width: 768px){
+        .nav-holder {
+            display: none;
+        }
+        body .wrapper-header {
+            display: block;
+        }
     }
 }
