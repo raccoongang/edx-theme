@@ -59,7 +59,7 @@ site_status_msg = get_site_status_msg(course_id)
             logo_url = branding_api.get_logo_url(is_secure)
             logo_size = ''
         %>
-            <img class="${logo_size}logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img class="${logo_size}logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
             <img class="${logo_size}logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-ar.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
@@ -90,11 +90,11 @@ site_status_msg = get_site_status_msg(course_id)
                   ${_("Courses")}
                 </a>
               </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
-                </a>
-              </li>
+##               <li class="tab-nav-item">
+##                 <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
+##                   ${_("Programs")}
+##                 </a>
+##               </li>
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
               <li class="item nav-global-01">
@@ -107,11 +107,11 @@ site_status_msg = get_site_status_msg(course_id)
                   ${_("Courses")}
                 </a>
               </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
-                </a>
-              </li>
+##               <li class="tab-nav-item">
+##                 <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
+##                   ${_("Programs")}
+##                 </a>
+##               </li>
             % endif
           % endif
           %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
