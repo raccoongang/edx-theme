@@ -13,6 +13,9 @@
             text-align: center;
             display: block;
         }
+        @media screen and (min-width:760px ) {
+            padding-right: 20px;
+        }
     }
 
     .wrapper-header {
@@ -637,7 +640,6 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous {
     span {
         color: #222;
-        border-left: 1px solid #c8c8c8;
     }
 }
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
@@ -1564,4 +1566,47 @@ input[name="subject"] {
 .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email {
     width: 100%;
     max-width: 300px;
+}
+.xmodule_display.xmodule_SequenceModule nav.sequence-bottom .sequence-nav-button:last-of-type {
+    border-left: 1px solid #c8c8c8;
+}
+.instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
+    word-break: break-all;
+}
+.instructor-dashboard-wrapper-2 .customBrowseBtn .enhanced-input-file {
+    max-width: 250px;
+    width: 100%;
+}
+.instructor-dashboard-wrapper-2 .customBrowseBtn {
+    max-width: 350px;
+    width: 100%;
+}
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+    left: -96px;
+    top: 0;
+}
+.instructor-dashboard-content-2 input[type="button"] {
+    white-space: normal;
+}
+section.wiki .main-article {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    @media screen and (min-width: 760px) {
+        width: 74.57627%;
+        padding: 40px 0 40px 40px;
+    }
+}
+.course-info {
+    .hd-3 {
+        word-break: break-all;
+    }
+}
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
+    position: static;
+    @media screen and (min-width: 760px) {
+        position: absolute;
+    }
+}
+.email-targets-primary li {
+    overflow: hidden;
 }
