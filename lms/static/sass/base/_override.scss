@@ -1485,6 +1485,7 @@ section.wiki .wiki-wrapper .nav-tabs li {
 }
 .profile-wrapper .course-info {
     width: 100%;
+    display: block;
 }
 .instructor-dashboard-wrapper-2 {
     section.idash-section#cohort_management .cohort-management-nav .cohort-management-nav-form {
@@ -1550,12 +1551,19 @@ input[name="subject"] {
         display: table-cell;
     }
 }
+.instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
+    display: block;
+    @media screen and (min-width: 760px) {
+        display: table-cell;
+    }
+}
 .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email {
     width: 100%;
     max-width: 300px;
 }
 .xmodule_display.xmodule_SequenceModule nav.sequence-bottom .sequence-nav-button:last-of-type {
     border-left: 1px solid #c8c8c8;
+    border-right: 1px solid #c8c8c8;
 }
 .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
     word-break: break-all;
@@ -1571,6 +1579,11 @@ input[name="subject"] {
 .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
     left: -96px;
     top: 0;
+
+    .lang_ar & {
+        left: auto;
+        right: - 100px;
+    }
 }
 .instructor-dashboard-content-2 input[type="button"] {
     white-space: normal;
@@ -1594,14 +1607,18 @@ section.wiki .main-article {
         position: absolute;
     }
 }
+.email-targets-secondary li,
 .email-targets-primary li {
     overflow: hidden;
 }
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
 }
-body {
+body.lang_ar {
     * {
-        letter-spacing: 0;
+        letter-spacing: 0 !important;
     }
+}
+section.wiki .table.table-striped {
+    word-wrap: break-word;
 }
