@@ -15,6 +15,7 @@ from openedx.core.djangolib.markup import HTML, Text
 from branding import api as branding_api
 # app that handles site status messages
 from status.status import get_site_status_msg
+from third_party_auth import pipeline
 %>
 
 ## Provide a hook for themes to inject branding on top.
@@ -134,15 +135,15 @@ site_status_msg = get_site_status_msg(course_id)
                 <a class="btn" href="/courses">${_("Explore Courses")}</a>
               </li>
             %endif
-            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <li class="item nav-global-04">
-                <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("REGISTRERA")}</a>
-              </li>
-            % else:
-              <li class="item nav-global-04">
-                <a class="btn-neutral" href="/register${login_query()}">${_("REGISTRERA")}</a>
-              </li>
-            % endif
+##            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+##              <li class="item nav-global-04">
+##                <a class="btn-neutral" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("REGISTRERA")}</a>
+##              </li>
+##            % else:
+##              <li class="item nav-global-04">
+##                <a class="btn-neutral" href="/register${login_query()}">${_("REGISTRERA")}</a>
+##              </li>
+##            % endif
           % endif
         </%block>
       </ol>
@@ -154,7 +155,14 @@ site_status_msg = get_site_status_msg(course_id)
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                 <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("LOGGA IN")}</a>
               % else:
-                <a class="btn btn-login" href="/login${login_query()}">${_("LOGGA IN")}</a>
+                <%
+                    login_url = pipeline.get_login_url(
+                        'saml-saml',
+                        pipeline.AUTH_ENTRY_LOGIN,
+                        redirect_url='/dashboard'
+                    )
+                %>
+                <a class="btn btn-login" href="${login_url | n}">${_("LOGGA IN")}</a>
               % endif
             % endif
           </li>
