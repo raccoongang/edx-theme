@@ -1509,6 +1509,10 @@ body {
     .container {
         min-width: 0;
     }
+    a:visited {
+        color: #d23153 !important;
+    }
+
     @media screen and (max-width: 768px){
         .nav-holder {
             display: none;
@@ -1519,6 +1523,9 @@ body {
     }
     .fa {
         font-family: FontAwesome !important;
+    }
+    a.active-section {
+        color: darken(#d23153, 20%) !important;
     }
 }
 * * {
