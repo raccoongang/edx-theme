@@ -43,10 +43,9 @@ var TUTORED_STUDENTS = {
     "JuanMa": {id: 65, email: "juanma.garrido@gmail.com"},
     "railto": {id: 66, email: "mark@markrailton.com"},
     "LearningEmail": {id: 68, email: "learning@codeinstitute.net"},
-    "ysholqamy": {id: 73, email: "youssefsholqamy@gmail.com"},    
-    "AideenKerr": {id: 110, email:"aideen@codeinstitute.net"},        
-
-    // Students    
+    "ysholqamy": {id: 73, email: "youssefsholqamy@gmail.com"},
+    "AideenKerr": {id: 110, email: "aideen@codeinstitute.net"},
+    // Students
     "denismoc": {id: 54, email: "denismoc@live.ie"},
     "Bruce_H": {id: 55, email: "bruce@harrisonemail.com"},
     "ofey": {id: 57, email: "shanegibney@gmail.com"},
@@ -88,13 +87,13 @@ var TUTORED_STUDENTS = {
     "stephenblair": {id: 100, email: "stephenjohnblair@outlook.com"},
     "Grace": {id: 101, email: "Graciechan@Gmail.com"},
     "MMelouk": {id: 102, email: "mmelouk94@gmail.com"},
-    "davidhurley": {id: 103, email:"dhurley91@gmail.com"}    
-    "swarnapundir": {id: 104, email:"swarnapundir@gmail.com"},
-    "Ali": {id: 105, email:"letslearntocode@mail.com"},
-    "darchard": {id: 106, email:"dafydd_archard@me.com"},
-    "d_archard": {id: 107, email:"dafydd_archard@hotmail.com"},
-    "liudmilasergushova": {id: 108, email:"dliudmila03@gmail.com"},
-    "sammyagbon": {id: 109, email:"psalmyagbon@gmail.com"}
+    "davidhurley": {id: 103, email: "dhurley91@gmail.com"},
+    "swarnapundir": {id: 104, email: "swarnapundir@gmail.com"},
+    "Ali": {id: 105, email: "letslearntocode@mail.com"},
+    "darchard": {id: 106, email: "dafydd_archard@me.com"},
+    "d_archard": {id: 107, email: "dafydd_archard@hotmail.com"},
+    "liudmilasergushova": {id: 108, email: "dliudmila03@gmail.com"},
+    "sammyagbon": {id: 109, email: "psalmyagbon@gmail.com"}
 };
 
 
@@ -191,12 +190,12 @@ var all_users = {
     "stephenblair": {id: 100, email: "stephenjohnblair@outlook.com"},
     "Grace": {id: 101, email: "Graciechan@Gmail.com"},
     "MMelouk": {id: 102, email: "mmelouk94@gmail.com"},
-    "davidhurley": {id: 103, email:"dhurley91@gmail.com"}    
-    "swarnapundir": {id: 104, email:"swarnapundir@gmail.com"},
-    "Ali": {id: 105, email:"letslearntocode@mail.com"},
-    "darchard": {id: 106, email:"dafydd_archard@me.com"},
-    "d_archard": {id: 107, email:"dafydd_archard@hotmail.com"},
-    "liudmilasergushova": {id: 108, email:"dliudmila03@gmail.com"},
-    "sammyagbon": {id: 109, email:"psalmyagbon@gmail.com"},
-    "AideenKerr": {id: 110, email:"aideen@codeinstitute.net"}
+    "davidhurley": {id: 103, email: "dhurley91@gmail.com"},
+    "swarnapundir": {id: 104, email: "swarnapundir@gmail.com"},
+    "Ali": {id: 105, email: "letslearntocode@mail.com"},
+    "darchard": {id: 106, email: "dafydd_archard@me.com"},
+    "d_archard": {id: 107, email: "dafydd_archard@hotmail.com"},
+    "liudmilasergushova": {id: 108, email: "dliudmila03@gmail.com"},
+    "sammyagbon": {id: 109, email: "psalmyagbon@gmail.com"},
+    "AideenKerr": {id: 110, email: "aideen@codeinstitute.net"}
 };
