@@ -1289,9 +1289,12 @@ body {
     .login-register .form-type, .financial-assistance-wrapper .financial-assistance-form .form-type {
         margin-bottom: 100px;
     }
-    body .forum-new-post-form .post-type-label, body .edit-post-form .post-type-label, body .home .page-header-secondary .last-accessed-link {
+    .forum-new-post-form .post-type-label, .edit-post-form .post-type-label,.home .page-header-secondary .last-accessed-link {
         color: #fabb00;
         background: none;
+    }
+    .courses-container .courses .course {
+        border-bottom: 3px solid #fabb00;
     }
     @media screen and (max-width:767px) {
         .nav-holder {
