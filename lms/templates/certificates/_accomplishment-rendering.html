@@ -24,17 +24,17 @@ course_mode_class = course_mode if course_mode else ''
             <div class="wrapper-statement-and-signatories">
                 <div class="accomplishment-statement">
                     <p class="accomplishment-statement-lead">
-                        <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name | h}</strong>
-                        <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
+                        <strong class="accomplishment-recipient hd-1 emphasized"  style='font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serifx'>${accomplishment_copy_name | h}</strong>
+                        <span class="accomplishment-summary copy copy-lead"  style='font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serifx'>${accomplishment_copy_description_full}</span>
 
                         <span class="accomplishment-course hd-1 emphasized">
-                            <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
-                            <span class="accomplishment-course-number">${course_number}</span>:
-                            <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
+                            <span class="accomplishment-course-org"  style='font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serifx'>${accomplishment_copy_course_org}  </span>
+                            <span class="accomplishment-course-number"  style='font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serifx'>${course_number}</span>:
+                            <span class="accomplishment-course-name"  style='font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serifx'>${accomplishment_copy_course_name}</span>
                         </span>
                     </p>
 
-                    <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p>
+                    <p class="accomplishment-statement-detail copy copy-lead"  style='font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serifx'>${accomplishment_copy_course_description}</p>
                 </div>
 
                 % if mode != 'base':
