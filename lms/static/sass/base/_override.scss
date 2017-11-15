@@ -1256,6 +1256,10 @@ body {
         left: 55%;
         transform: translate(-50%);
     }
+    #footer-openedx,
+    #global-navigation > nav {
+        width: auto !important;
+    }
     .fa,
     #global-navigation > nav > div > div > ol > li:nth-child(2) > div > button > span.fa.fa-sort-desc,
     #dashboard-search-bar > form > div > button.search-button > span,
@@ -1306,8 +1310,5 @@ body {
             transform: translate(-50%);
         }
     }
-    .view-passwordreset .wrapper-footer footer,
-    .view-passwordreset .header-global nav {
-        width: auto;
-    }
+
 }
