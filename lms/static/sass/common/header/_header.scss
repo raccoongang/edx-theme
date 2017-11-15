@@ -1,0 +1,65 @@
+.header {
+    position: relative;
+}
+.header__holder {
+    padding: 20px;
+    max-width: $desktop-size;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    @media (min-width: $tablet-size) {
+        border-radius: 45%;
+        justify-content: space-between;
+    }
+}
+.header__logo {
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    margin: 0;
+    line-height: 1;
+}
+.header__helper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 120%;
+    background: $gradient;
+    z-index: 0;
+
+    &:before {
+        content: '';
+        padding-top: 100%;
+        float: left;
+    }
+    @media (min-width: $tablet-size) {
+        border-radius: 45%;
+    }
+}
+.header__opener {
+    position: absolute;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 18px;
+    height: 8px;
+    left: 20px;
+    top: 26px;
+
+    &:after {
+        content: '';
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        top: 3px;
+        left: 0;
+    }
+    @media (min-width: $tablet-size) {
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+a.login-theme,
+.login-theme {
+    background-image: linear-gradient(-180deg, #00BCD4 0%, #00ACC1 100%);
+    background: #57C4BD;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.10);
+    border-radius: 4px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0;
+    padding: 11px 42px 12px;
+    text-transform: uppercase;
+    transition: background .3s linear .3s;
+    display: none;
+
+    &:hover {
+        background: #CE3BC8;
+        color: #fff;
+    }
+
+    @media (min-width: $tablet-size) {
+        display: block;
+    }
+}

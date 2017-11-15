@@ -1,0 +1,57 @@
+## mako
+
+<%page expression_filter="h" args="online_help_token"/>
+
+<%namespace name='static' file='../static_content.html'/>
+<%namespace file='../main.html' import="login_query"/>
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+%>
+
+<ul class="main-nav">
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="/">Главная</a>
+  </li>
+  <%block name="navigation_global_links">
+    % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+      % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="${marketing_link('COURSES')}">Курсы</a>
+        </li>
+      % endif
+      <li class="main-nav__item">
+        <a class="main-nav__link" href="${marketing_link('SCHOOLS')}">Школы</a>
+      </li>
+    % endif
+  </%block>
+  <%block name="navigation_other_global_links">
+    % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="/courses">Курсы</a>
+        </li>
+      %endif
+    % endif
+  </%block>
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="#">Школы</a>
+  </li>
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="#">О проекте</a>
+  </li>
+  <li class="main-nav__item main-nav__item_mobile">
+    <a class="main-nav__link" href="/login${login_query()}">${_("Sign in")}</a>
+  </li>
+</ul>
+
+
+<%block name="navigation_sign_in">
+    % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+      % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+        <a class="login-theme" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+      % else:
+        <a class="login-theme" href="/login${login_query()}">${_("Sign in")}</a>
+      % endif
+    % endif
+</%block>
