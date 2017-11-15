@@ -3,3 +3,27 @@
 // @import "../css/time-lms-main-v1-rtl.css";
 
 @import "main";
+
+.header-global.header-global__course {
+    height: auto;
+    background: $header-color;
+    padding: 18px 10px;
+    position: relative;
+    box-sizing: border-box;
+
+    h2 {
+        display: none;
+        @media screen and (min-width:600px ) {
+            font-size: 16px;
+            padding: 20px 45px 0 5px;
+            text-align: center;
+            display: block;
+        }
+        @media screen and (min-width:760px ) {
+            padding-right: 20px;
+        }
+    }
+}
+.container .profile-wrapper .course-info>.chapters>section {
+    width: 100%;
+}
