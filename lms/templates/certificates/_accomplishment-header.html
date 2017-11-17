@@ -1,10 +1,14 @@
 <%! from django.utils.translation import ugettext as _ %>
-
+<style>
+    * * {
+        font-family: "Ebrima", Verdana, Geneva, sans-serif !important
+    }
+</style>
 <div class="wrapper-header">
 
     <header class="header-app" role="banner">
         <h1 class="header-app-title">
-            <a class="logo" href="${logo_url}" style="width: 16rem">
+            <a class="logo" href="https://learn.workademy.com" style="width: 8rem">
                 <img class="logo-img" src="/static/${settings.FEATURES.get('DEMO_WRD_ACA_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.svg" alt="${_('{platform_name} Home').format(platform_name=platform_name)}" />
             </a>
             <span class="sr-only">${logo_subtitle}</span>

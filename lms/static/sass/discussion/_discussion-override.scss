@@ -213,3 +213,46 @@ body .header-global .wrapper-header .wrapper-user-menu {
 .header-global .wrapper-header .list-inline .item {
     float: left;
 }
+body {
+    .icon-list_link {
+        &__ok {
+            background: url('../images/ico-ok.svg');
+        }
+        &__vimeo {
+            background: url('../images/ico-vimeo.svg');
+        }
+        &__vk {
+            background: url('../images/ico-vk.svg');
+        }
+        &__behance {
+            background: url('../images/ico-behance.svg');
+        }
+        &__edx {
+            background: url('../images/ico-edx.svg') no-repeat center;
+            height: 21px;
+            width: 60px;
+            display: inline-block;
+            margin: 0 5px -5px;
+        }
+        &__raccoon {
+            background: url('../images/ico-raccoon.svg') no-repeat center;
+            height: 21px;
+            width: 25px;
+            display: inline-block;
+            margin: 0 5px -5px;
+        }
+    }
+    .dropdown-menu-container .menu-title .label-username, .header-global .user .user-link .label-username {
+        color: $theme-link;
+    }
+    .footer__creators {
+        display: flex;
+        color: #fff;
+        font-size: 12px;
+        position: absolute;
+        top: 50%;
+    }
+    .header-global .user .user-link .label-username:hover {
+        color: $header-nav-link-color-hover;
+    }
+}

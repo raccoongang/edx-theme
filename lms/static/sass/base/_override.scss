@@ -1481,7 +1481,8 @@ body {
         border-bottom: 3px solid #454545;
     }
     .logo-en {
-        width: 70px;
+        width: 140px;
+        height: 100%;
     }
     .home > header .title:last-child {
         margin-left: 0;
@@ -1494,6 +1495,7 @@ body {
         right: 0;
         img {
             width: 140px;
+            height: 100%;
         }
     }
     .header-global .wrapper-header {
@@ -1546,6 +1548,9 @@ body {
         position: absolute;
         top: 50%;
     }
+    .footer__edx-text {
+        color: #fff !important;
+    }
     .header-global .user .user-link .label-username,
     .header-global .user .dropdown {
         color: $theme-link;
@@ -1553,19 +1558,33 @@ body {
     .fa {
         font-family: FontAwesome !important;
     }
+    .header-global .user .user-link .label-username:hover {
+        color: $header-nav-link-color-hover;
+    }
     @media screen and (max-width: 978px) {
-        .footer__creators,
         .footer-logo-holder {
             display: none;
+        }
+        .footer__creators {
+            position: static;
+            justify-content: center;
+            margin-top: 15px;
         }
     }
     @media screen and (max-width: 768px) {
         .icon-list_link {
             width: 25px;
             height: 25px;
+            &__edx {
+                width: 60px;
+            }
         }
         .nav-holder {
             display: none;
+            margin-top: 40px;
+        }
+        .view-in-course .container .course-index {
+            display: block !important;
         }
     }
 }
