@@ -19,6 +19,12 @@ a.login-theme,
     }
 
     @media (min-width: $tablet-size) {
-        display: block;
+        display: inline-block;
+    }
+
+    .video-box & {
+        position: absolute;
+        top: 218px;
+        left: 50px;
     }
 }
