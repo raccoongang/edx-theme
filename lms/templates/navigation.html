@@ -53,7 +53,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img id="logo" src="/static/opusplace/images/Opusplace_A.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img id="logo" src="/static/opusplace/images/opusplace_logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -166,9 +166,9 @@ site_status_msg = get_site_status_msg(course_id)
               % endif
             % endif
           </li>
-          <li class="item nav-courseware-01">
+          <!--li class="item nav-courseware-01">
             <a class="btn btn-login" href="/zh-cn/zhongguo/">KINA<br>中国</a>
-          </li>
+          </li-->
         </%block>
       </ol>
     % endif
