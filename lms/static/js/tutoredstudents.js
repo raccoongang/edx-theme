@@ -93,7 +93,8 @@ var TUTORED_STUDENTS = {
     "darchard": {id: 106, email: "dafydd_archard@me.com"},
     "d_archard": {id: 107, email: "dafydd_archard@hotmail.com"},
     "liudmilasergushova": {id: 108, email: "dliudmila03@gmail.com"},
-    "sammyagbon": {id: 109, email: "psalmyagbon@gmail.com"}
+    "sammyagbon": {id: 109, email: "psalmyagbon@gmail.com"},
+    "ignatius": {id: 111, email: "ignatiusukwuoma@gmail.com"}
 };
 
 
@@ -197,5 +198,6 @@ var all_users = {
     "d_archard": {id: 107, email: "dafydd_archard@hotmail.com"},
     "liudmilasergushova": {id: 108, email: "dliudmila03@gmail.com"},
     "sammyagbon": {id: 109, email: "psalmyagbon@gmail.com"},
-    "AideenKerr": {id: 110, email: "aideen@codeinstitute.net"}
+    "AideenKerr": {id: 110, email: "aideen@codeinstitute.net"},
+    "ignatius": {id: 111, email: "ignatiusukwuoma@gmail.com"}
 };
