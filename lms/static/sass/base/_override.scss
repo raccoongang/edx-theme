@@ -94,8 +94,7 @@ hr {
         background: #fff;
         z-index: 1;
         position: relative;
-        max-width: 480px;
-        width: 100%;
+        min-width: 480px;
         padding: 40px;
         box-shadow: 0 0 20px 2px rgba(0,0,0,0.2);
         border-radius: 6px;
@@ -103,6 +102,7 @@ hr {
     h2 {
         text-align: center;
         text-transform: uppercase;
+        margin: 0 0 20px;
     }
     .tip.tip-input {
         display: none;
@@ -114,9 +114,6 @@ hr {
         border-radius: 4px;
         border: 0;
         padding-left: 30px;
-    }
-    .form-wrapper form {
-        margin-bottom: 40px;
     }
     .input-block.checkbox {
         width: auto;
@@ -142,19 +139,35 @@ hr {
     }
     .login-provider {
         width: 50%;
+        border: 0;
     }
-    .login-provider.button-oa2-vk-oauth2 .icon {
-        &:before {
-            content: '\f189';
-            color: #fff;
+    .login-provider.button-oa2-vk-oauth2 {
+        background: #126f9a;
+        color: #fff;
+        &:hover {
+            background: lighten(#126f9a, 20%);
+        }
+        .icon {
+            &:before {
+                content: '\f189';
+                color: #fff;
+            }
         }
     }
-    .login-provider.button-oa2-facebook .icon {
-        &:before {
-            content: '\f09a';
-            color: #fff;
+    .login-provider.button-oa2-facebook {
+        background: #3B5998;
+        color: #fff;
+        &:hover {
+            background: lighten(#3B5998, 20%);
+        }
+        .icon {
+            &:before {
+                content: '\f09a';
+                color: #fff;
+            }
         }
     }
+
     .form-field {
         position: relative;
         &:before {
@@ -185,12 +198,23 @@ hr {
         position: absolute;
         bottom: -40px;
     }
+    .form-field .field-link {
+        color: #57C4BD;
+    }
 }
 .login-register-content {
     padding-bottom: 10px;
 }
 .login-providers {
     margin: 80px -40px -40px -40px;
+    display: flex;
+    border-radius: 0 6px 6px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    .button {
+        margin: 0;
+    }
 }
 
 .courses-listing {
