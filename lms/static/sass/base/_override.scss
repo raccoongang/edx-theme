@@ -89,13 +89,13 @@ hr {
     border-top: none;
 }
 .login-register-content .login-register {
-    padding-bottom: 10px;
+    padding-bottom: 50px;
     .form-wrapper {
         background: #fff;
         z-index: 1;
         position: relative;
-        width: 480px;
-        height: 400px;
+        max-width: 480px;
+        width: 100%;
         padding: 40px;
         box-shadow: 0 0 20px 2px rgba(0,0,0,0.2);
         border-radius: 6px;
@@ -115,23 +115,18 @@ hr {
         border: 0;
         padding-left: 30px;
     }
-    //.input-block.checkbox {
-    //    visibility: hidden;
-    //    &:before {
-    //        visibility: visible;
-    //        content: '\f096';
-    //    }
-    //    &:checked:before {
-    //        visibility: visible;
-    //        content: '\f046' !important;
-    //    }
-    //}
+    .form-wrapper form {
+        margin-bottom: 40px;
+    }
+    .input-block.checkbox {
+        width: auto;
+    }
     .label-text {
         display: none;
     }
     .forgot-password.field-link {
         position: absolute;
-        bottom: -116px;
+        bottom: -90px;
     }
     .action.action-primary.action-update {
         float: right;
@@ -145,16 +140,16 @@ hr {
     .section-title.lines {
         display: none;
     }
-    .login-register .login-provider {
+    .login-provider {
         width: 50%;
     }
-    .login-register .login-provider.button-oa2-vk-oauth2 .icon {
+    .login-provider.button-oa2-vk-oauth2 .icon {
         &:before {
             content: '\f189';
             color: #fff;
         }
     }
-    .login-register .login-provider.button-oa2-facebook .icon {
+    .login-provider.button-oa2-facebook .icon {
         &:before {
             content: '\f09a';
             color: #fff;
@@ -182,9 +177,13 @@ hr {
             }
         }
     }
-    .login-register .form-field input.error, .financial-assistance-wrapper .financial-assistance-form .form-field input.error, .login-register .form-field select.error, .financial-assistance-wrapper .financial-assistance-form .form-field select.error, .login-register .form-field textarea.error, .financial-assistance-wrapper .financial-assistance-form .form-field textarea.error {
+    .form-field input.error ~ label {
         border: 1px solid #D0021B;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    }
+    .toggle-form {
+        position: absolute;
+        bottom: -40px;
     }
 }
 .login-register-content {
