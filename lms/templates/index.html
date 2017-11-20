@@ -2,31 +2,31 @@
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
 <%!
-from django.utils.translation import ugettext as _
-from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from django.core.urlresolvers import reverse
 
-from openedx.core.djangolib.markup import HTML, Text
+  from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    <section class="home">
-      <!-- <header>
+  <section class="home">
+    <!-- <header>
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
               % if homepage_overlay_html:
-                ${homepage_overlay_html | n, decode.utf8}
+                                        ${homepage_overlay_html | n, decode.utf8}
               % else:
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
+                                          ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
                   <h1>${Text(_(u"Welcome to the Open edX{registered_trademark} platform!")).format(registered_trademark=HTML("<sup style='font-size: 65%'>&reg;</sup>"))}</h1>
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
                   <p>${_("It works! This is the default homepage for this Open edX instance.")}</p>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
+                                                                                                                                                                                                                                                                                                                                                                                     <div class="course-search">
+                                                                                                                                                                                                                                                                                                                                                                                       <form method="get" action="/courses">
+                                                                                                                                                                                                                                                                                                                                                                                         <label><span class="sr">${_("Search for a course")}</span>
                     <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
                   </label>
                   <button class="search-button" type="submit">
@@ -39,99 +39,194 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
 
           % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a href="#video-modal" class="media" rel="leanModal">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="hero">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="play-intro"></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </a>
+% endif
         </div>
 
       </header> -->
-      <article class="promo-block">
-        <div class="promo-block__holder">
-          <div class="video-box">
-            <p class="video-box__text">Лучшие образовательные <br> курсы — бесплатно и онлайн</p>
-            <a href="#" class="login-theme">найти курс</a>
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="promo box img">
-          </div>
-          <div class="course-section">
-            <a class="course-section__item" href="#">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg" alt="course img">
-              <div class="course-section__description">
-                <span class="course-section__stat course-section__stat_color1">НОВЫЙ КУРС!</span>
-                <strong class="course-section__name">Механика</strong>
-                <span class="course-section__school">СУНЦ МГУ</span>
-              </div>
-            </a>
-            <a class="course-section__item" href="#">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
-              <div class="course-section__description">
-                <span class="course-section__stat course-section__stat_color2">ПОПУЛЯРНЫЙ КУРС</span>
-                <strong class="course-section__name">Статистика</strong>
-                <span class="course-section__school">Intellectuale</span>
-              </div>
-            </a>
-            <a class="course-section__item" href="#">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img3.jpg" alt="course img">
-              <div class="course-section__description">
-                <span class="course-section__stat course-section__stat_color3">ПОПУЛЯРНЫЙ КУРС</span>
-                <strong class="course-section__name">Экономика</strong>
-                <span class="course-section__school">Лицей НИУ ВШЭ</span>
-              </div>
-            </a>
-          </div>
+    <article class="promo-block">
+      <div class="promo-block__holder">
+        <div class="video-box">
+          <p class="video-box__text">Лучшие образовательные <br> курсы — бесплатно и онлайн</p>
+          <a href="#" class="login-theme">найти курс</a>
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="promo box img">
         </div>
-        <div class="schools">
-          <a class="schools__item schools__item_color1" href="#">
-            <strong class="schools__name">СУНЦ МГУ</strong>
-            <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
+        <div class="course-section">
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color1">НОВЫЙ КУРС!</span>
+              <strong class="course-section__name">Механика</strong>
+              <span class="course-section__school">СУНЦ МГУ</span>
+            </div>
           </a>
-          <a class="schools__item schools__item_color2" href="#">
-            <strong class="schools__name">Лицей НИУ ВШЭ</strong>
-            <p class="schools__text"><span class="schools__strong">Топ-10</span> в рейтинге российских школ</p>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color2">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Статистика</strong>
+              <span class="course-section__school">Intellectuale</span>
+            </div>
           </a>
-          <a class="schools__item schools__item_color3" href="#">
-            <strong class="schools__name">Школа 1329</strong>
-            <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
-          </a>
-          <a class="schools__item schools__item_color4" href="#">
-            <strong class="schools__name">57 школа</strong>
-            <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
-          </a>
-          <a class="schools__item schools__item_color5" href="#">
-            <strong class="schools__name">Вторая школа</strong>
-            <p class="schools__text"><span class="schools__strong">Топ-10</span> в рейтинге российских школ</p>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img3.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color3">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Экономика</strong>
+              <span class="course-section__school">Лицей НИУ ВШЭ</span>
+            </div>
           </a>
         </div>
-      </article>
-      <%include file="${courses_list}" />
-
-    </section>
+      </div>
+      <div class="schools">
+        <a class="schools__item schools__item_color1" href="#">
+          <strong class="schools__name">СУНЦ МГУ</strong>
+          <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
+        </a>
+        <a class="schools__item schools__item_color2" href="#">
+          <strong class="schools__name">Лицей НИУ ВШЭ</strong>
+          <p class="schools__text"><span class="schools__strong">Топ-10</span> в рейтинге российских школ</p>
+        </a>
+        <a class="schools__item schools__item_color3" href="#">
+          <strong class="schools__name">Школа 1329</strong>
+          <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
+        </a>
+        <a class="schools__item schools__item_color4" href="#">
+          <strong class="schools__name">57 школа</strong>
+          <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
+        </a>
+        <a class="schools__item schools__item_color5" href="#">
+          <strong class="schools__name">Вторая школа</strong>
+          <p class="schools__text"><span class="schools__strong">Топ-10</span> в рейтинге российских школ</p>
+        </a>
+      </div>
+    </article>
+    <article class="gallery-index">
+      <div class="slider-gallery">
+        <div class="slider-gallery__item">
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+               class="slider-gallery__image">
+          <div class="slider-gallery__blur-filter"></div>
+          <div class="slider-gallery__info">
+            <div class="slider-gallery__text-holder">
+              <span class="slider-gallery__title">CУНЦ МГУ</span>
+              <strong class="slider-gallery__bold-text">Москва</strong>
+              <p class="slider-gallery__paragraph">Топ-5 российских школ</p>
+              <p class="slider-gallery__paragraph">Школа основана в 1963 году академиком Колмогоровым</p>
+              <p class="slider-gallery__paragraph">Школа специализируется на <strong class="slider-gallery__bold-text">математике</strong>,
+                <strong class="slider-gallery__bold-text">физике</strong> и <strong class="slider-gallery__bold-text">информатике</strong>
+              </p>
+            </div>
+            <button>Курсы Школы</button>
+          </div>
+        </div>
+        <div class="slider-gallery__item">
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+               class="slider-gallery__image">
+          <div class="slider-gallery__blur-filter"></div>
+          <div class="slider-gallery__info">
+            <div class="slider-gallery__text-holder">
+              <span class="slider-gallery__title">CУНЦ МГУ</span>
+              <strong class="slider-gallery__bold-text">Москва</strong>
+              <p class="slider-gallery__paragraph">Топ-5 российских школ</p>
+              <p class="slider-gallery__paragraph">Школа основана в 1963 году академиком Колмогоровым</p>
+              <p class="slider-gallery__paragraph">Школа специализируется на <strong class="slider-gallery__bold-text">математике</strong>,
+                <strong class="slider-gallery__bold-text">физике</strong> и <strong class="slider-gallery__bold-text">информатике</strong>
+              </p>
+            </div>
+            <button class="slider-gallery__button">Курсы Школы</button>
+          </div>
+        </div>
+        <div class="slider-gallery__item">
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+               class="slider-gallery__image">
+          <div class="slider-gallery__blur-filter"></div>
+          <div class="slider-gallery__info">
+            <div class="slider-gallery__text-holder">
+              <span class="slider-gallery__title">CУНЦ МГУ</span>
+              <strong class="slider-gallery__bold-text">Москва</strong>
+              <p class="slider-gallery__paragraph">Топ-5 российских школ</p>
+              <p class="slider-gallery__paragraph">Школа основана в 1963 году академиком Колмогоровым</p>
+              <p class="slider-gallery__paragraph">Школа специализируется на <strong class="slider-gallery__bold-text">математике</strong>,
+                <strong class="slider-gallery__bold-text">физике</strong> и <strong class="slider-gallery__bold-text">информатике</strong>
+              </p>
+            </div>
+            <button class="slider-gallery__button">Курсы Школы</button>
+          </div>
+        </div>
+        <div class="slider-gallery__item">
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+               class="slider-gallery__image">
+          <div class="slider-gallery__blur-filter"></div>
+          <div class="slider-gallery__info">
+            <div class="slider-gallery__text-holder">
+              <span class="slider-gallery__title">CУНЦ МГУ</span>
+              <strong class="slider-gallery__bold-text">Москва</strong>
+              <p class="slider-gallery__paragraph">Топ-5 российских школ</p>
+              <p class="slider-gallery__paragraph">Школа основана в 1963 году академиком Колмогоровым</p>
+              <p class="slider-gallery__paragraph">Школа специализируется на <strong class="slider-gallery__bold-text">математике</strong>,
+                <strong class="slider-gallery__bold-text">физике</strong> и <strong class="slider-gallery__bold-text">информатике</strong>
+              </p>
+            </div>
+            <button class="slider-gallery__button">Курсы Школы</button>
+          </div>
+        </div>
+        <div class="slider-gallery__item">
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+               class="slider-gallery__image">
+          <div class="slider-gallery__blur-filter"></div>
+          <div class="slider-gallery__info">
+            <div class="slider-gallery__text-holder">
+              <span class="slider-gallery__title">CУНЦ МГУ</span>
+              <strong class="slider-gallery__bold-text">Москва</strong>
+              <p class="slider-gallery__paragraph">Топ-5 российских школ</p>
+              <p class="slider-gallery__paragraph">Школа основана в 1963 году академиком Колмогоровым</p>
+              <p class="slider-gallery__paragraph">Школа специализируется на <strong class="slider-gallery__bold-text">математике</strong>,
+                <strong class="slider-gallery__bold-text">физике</strong> и <strong class="slider-gallery__bold-text">информатике</strong>
+              </p>
+            </div>
+            <button class="slider-gallery__button">Курсы Школы</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <%include file="${courses_list}" />
+  </section>
 </main>
 
 % if show_homepage_promo_video:
   <section id="video-modal" class="modal home-page-video-modal video-modal">
     <div class="inner-wrapper">
-      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <iframe title="YouTube Video" width="640" height="360"
+              src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0"
+              allowfullscreen></iframe>
     </div>
   </section>
 % endif
 
 <%block name="js_extra">
-   <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
-   </script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      if (getParameterByName('next')) {
+        $('#login').trigger("click");
+      }
+    })
+  </script>
+  <script src="/static/${settings.DEFAULT_SITE_THEME}/plugins/slick/slick.js"></script>
+  <script src="/static/${settings.DEFAULT_SITE_THEME}/js/main.js"></script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
   ## NOTE: This won't work in production, because anonymous views are cached, so it will
   ## show either with or without this extra js for 3 minutes at a time.
-<script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
-</script>
+
+  <script type="text/javascript">
+    $(window).load(function () {
+      $('#signup_action').trigger("click");
+    });
+  </script>
 % endif
