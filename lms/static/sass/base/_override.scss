@@ -112,8 +112,20 @@ hr {
         height: 40px;
         width: 100%;
         border-radius: 4px;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        border: 0;
+        padding-left: 30px;
     }
+    //.input-block.checkbox {
+    //    visibility: hidden;
+    //    &:before {
+    //        visibility: visible;
+    //        content: '\f096';
+    //    }
+    //    &:checked:before {
+    //        visibility: visible;
+    //        content: '\f046' !important;
+    //    }
+    //}
     .label-text {
         display: none;
     }
@@ -123,11 +135,61 @@ hr {
     }
     .action.action-primary.action-update {
         float: right;
+        background: #57C4BD;
+        color: #fff;
+        box-shadow: 0 0 6px 2px rgba(0,0,0,0.1);
+        border-radius: 4px;
+        padding: 12px 35px 11px 35px;
+        font-size: 14px;
     }
     .section-title.lines {
         display: none;
     }
+    .login-register .login-provider {
+        width: 50%;
+    }
+    .login-register .login-provider.button-oa2-vk-oauth2 .icon {
+        &:before {
+            content: '\f189';
+            color: #fff;
+        }
+    }
+    .login-register .login-provider.button-oa2-facebook .icon {
+        &:before {
+            content: '\f09a';
+            color: #fff;
+        }
+    }
+    .form-field {
+        position: relative;
+        &:before {
+            font-family: FontAwesome;
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translate(0,-63%);
+            color: #B3B3B3;
+        }
+        &.email-email:before {
+            content: '\f0e0';
+        }
+        &.password-password:before {
+            content: '\f023';
+        }
+        &.checkbox-remember {
+            .label-text {
+                display: inline;
+            }
+        }
+    }
+    .login-register .form-field input.error, .financial-assistance-wrapper .financial-assistance-form .form-field input.error, .login-register .form-field select.error, .financial-assistance-wrapper .financial-assistance-form .form-field select.error, .login-register .form-field textarea.error, .financial-assistance-wrapper .financial-assistance-form .form-field textarea.error {
+        border: 1px solid #D0021B;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    }
 }
 .login-register-content {
     padding-bottom: 10px;
+}
+.login-providers {
+    margin: 80px -40px -40px -40px;
 }
