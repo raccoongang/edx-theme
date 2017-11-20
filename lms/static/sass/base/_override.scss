@@ -95,7 +95,7 @@ hr {
         z-index: 1;
         position: relative;
         min-width: 480px;
-        padding: 40px;
+        padding: 40px 40px 60px;
         box-shadow: 0 0 20px 2px rgba(0,0,0,0.2);
         border-radius: 6px;
     }
@@ -140,6 +140,7 @@ hr {
     .login-provider {
         width: 50%;
         border: 0;
+        border-radius: 0;
     }
     .login-provider.button-oa2-vk-oauth2 {
         background: #126f9a;
@@ -148,6 +149,9 @@ hr {
             background: lighten(#126f9a, 20%);
         }
         .icon {
+            background: none;
+            top: 0;
+            bottom: 0;
             &:before {
                 content: '\f189';
                 color: #fff;
@@ -161,6 +165,9 @@ hr {
             background: lighten(#3B5998, 20%);
         }
         .icon {
+            background: none;
+            top: 0;
+            bottom: 0;
             &:before {
                 content: '\f09a';
                 color: #fff;
@@ -189,17 +196,28 @@ hr {
                 display: inline;
             }
         }
+        &.text-name:before,
+        &.text-username:before {
+            content: '\f007';
+        }
     }
-    .form-field input.error ~ label {
+    .form-field label.error ~ input {
         border: 1px solid #D0021B;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
     }
     .toggle-form {
         position: absolute;
         bottom: -40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
     }
     .form-field .field-link {
         color: #57C4BD;
+    }
+    .form-field.checkbox-honor_code {
+        display: flex;
+        flex-direction: row-reverse;
     }
 }
 .login-register-content {
@@ -208,7 +226,8 @@ hr {
 .login-providers {
     margin: 80px -40px -40px -40px;
     display: flex;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
     position: absolute;
     width: 100%;
     bottom: 40px;
