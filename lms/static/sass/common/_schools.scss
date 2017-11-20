@@ -1,0 +1,41 @@
+.schools {
+    display: flex;
+    justify-content: space-between;
+}
+.schools__item {
+    text-align: center;
+    padding: 0 2%;
+}
+.schools__strong {
+    font-weight: bold;
+}
+.schools__name {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6px;
+    display: block;
+}
+a.schools__item_color1,
+.schools__item_color1 {
+    color: $color1;
+}
+a.schools__item_color2,
+.schools__item_color2 {
+    color: $color2;
+}
+a.schools__item_color3,
+.schools__item_color3 {
+    color: $color3;
+}
+a.schools__item_color4,
+.schools__item_color4 {
+    color: $color4;
+}
+a.schools__item_color5,
+.schools__item_color5 {
+    color: $color5;
+}
+.schools__text {
+    font-size: 14px;
+    line-height: 20px;
+}
