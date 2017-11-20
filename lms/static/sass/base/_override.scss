@@ -88,3 +88,27 @@ hr {
     margin-bottom: 90px;
     border-top: none;
 }
+.login-register-content .login-register {
+    .form-wrapper {
+        background: #fff;
+        z-index: 1;
+        position: relative;
+        width: 480px;
+        height: 400px;
+        padding: 40px;  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    }
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .tip .tip-input {
+        display: none;
+    }
+    .form-field input {
+        background: #F5F5F5;
+        height: 40px;
+        width: 100%;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    }
+}
