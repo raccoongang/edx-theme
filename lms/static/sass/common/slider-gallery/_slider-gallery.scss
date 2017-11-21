@@ -2,7 +2,7 @@
     .slick-track .slick-center {
         transform: translate(0, 0);
         transition: 0.3s;
-        & ~ .slick-slide {
+        & + .slick-slide {
             transform: translate(-25%, 25%) scale(0.5);
         }
         img {
@@ -45,6 +45,16 @@
         left: 50%;
         transform: translate(-90%);
         width: 50%;
+        @media screen and (max-width: 1400px){
+            transform: translate(-95%);
+        }
+        @media screen and (max-width: $tablet-size) {
+            transform: translate(-95%);
+        }
+        @media screen and (max-width: 768px) {
+            left: 77px;
+            transform: translate(-50%);
+        }
     }
     .slick-dots li button:before {
         opacity: 0;

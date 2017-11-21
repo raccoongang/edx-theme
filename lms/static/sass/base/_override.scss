@@ -95,9 +95,12 @@ hr {
         z-index: 1;
         position: relative;
         min-width: 480px;
-        padding: 40px 40px 153px;
+        padding: 40px;
         box-shadow: 0 0 20px 2px rgba(0,0,0,0.2);
         border-radius: 6px;
+    }
+    #login-form.form-wrapper {
+        padding: 40px 40px 153px;
     }
     #register-form.form-wrapper {
         padding: 153px 40px 40px;
@@ -438,5 +441,31 @@ hr {
         &:hover {
             color: #57C4BD;
         }
+    }
+}
+
+.view-dashboard.is-authenticated {
+    .wrapper-msg.urgency-high {
+        background: none;
+    }
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+    .title:after {
+        display: none;
+    }
+    .title {
+        box-shadow: none;
+        transform: translate(0);
+        padding: 0;
+        text-align: center;
+    }
+    .dashboard-search-bar {
+        display: none;
+    }
+    .dashboard .my-courses {
+        width: auto;
+        float: none;
     }
 }
