@@ -95,14 +95,14 @@ var TUTORED_STUDENTS = {
     "liudmilasergushova": {id: 108, email: "dliudmila03@gmail.com"},
     "sammyagbon": {id: 109, email: "psalmyagbon@gmail.com"},
     "ignatius": {id: 111, email: "ignatiusukwuoma@gmail.com"},
-    "ighovie@yahoo.com": {id: 112, email: "Samuel_A_Ighovie"},
-    "pklinehan@gmail.com": {id: 113, email: "Patricia_Linehan"},
-    "sigueros.angel@gmail.com": {id: 114, email: "Sas"},
-    "lukedavis99@hotmail.com": {id: 115, email: "Luke"},
-    "darrenfitzsimons89@yahoo.com": {id: 116, email: "darren_m_fitzsimons"},
-    "ciaradelgrossobates@gmail.com": {id: 117, email: "ciaratamay"},
-    "ihatecian@gmail.com": {id: 118, email: "Cian_OG"},
-    "tomstanko@hotmail.com": {id: 119, email: "Tom"}
+    "Samuel_A_Ighovie": {id: 112, email: "ighovie@yahoo.com"},
+    "Patricia_Linehan": {id: 113, email: "pklinehan@gmail.com"},
+    "Sas": {id: 114, email: "sigueros.angel@gmail.com"},
+    "Luke": {id: 115, email: "lukedavis99@hotmail.com"},
+    "darren_m_fitzsimons": {id: 116, email: "darrenfitzsimons89@yahoo.com"},
+    "ciaratamay": {id: 117, email: "ciaradelgrossobates@gmail.com"},
+    "Cian_OG": {id: 118, email: "ihatecian@gmail.com"},
+    "Tom":  {id: 119, email: "tomstanko@hotmail.com"}
 };
 
 
@@ -208,12 +208,12 @@ var all_users = {
     "sammyagbon": {id: 109, email: "psalmyagbon@gmail.com"},
     "AideenKerr": {id: 110, email: "aideen@codeinstitute.net"},
     "ignatius": {id: 111, email: "ignatiusukwuoma@gmail.com"},
-    "ighovie@yahoo.com": {id: 112, email: "Samuel_A_Ighovie"},
-    "pklinehan@gmail.com": {id: 113, email: "Patricia_Linehan"},
-    "sigueros.angel@gmail.com": {id: 114, email: "Sas"},
-    "lukedavis99@hotmail.com": {id: 115, email: "Luke"},
-    "darrenfitzsimons89@yahoo.com": {id: 116, email: "darren_m_fitzsimons"},
-    "ciaradelgrossobates@gmail.com": {id: 117, email: "ciaratamay"},
-    "ihatecian@gmail.com": {id: 118, email: "Cian_OG"},
-    "tomstanko@hotmail.com": {id: 119, email: "Tom"}
+    "Samuel_A_Ighovie": {id: 112, email: "ighovie@yahoo.com"},
+    "Patricia_Linehan": {id: 113, email: "pklinehan@gmail.com"},
+    "Sas": {id: 114, email: "sigueros.angel@gmail.com"},
+    "Luke": {id: 115, email: "lukedavis99@hotmail.com"},
+    "darren_m_fitzsimons": {id: 116, email: "darrenfitzsimons89@yahoo.com"},
+    "ciaratamay": {id: 117, email: "ciaradelgrossobates@gmail.com"},
+    "Cian_OG": {id: 118, email: "ihatecian@gmail.com"},
+    "Tom":  {id: 119, email: "tomstanko@hotmail.com"}
 };
