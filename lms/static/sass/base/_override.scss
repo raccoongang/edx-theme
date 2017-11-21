@@ -328,7 +328,7 @@ hr {
 .course-info header.course-profile {
     box-shadow: none;
     border: none;
-    background: linear-gradient(to right, rgba(7,36,101,1) 0%,rgba(0,197,189,1) 100%);
+    background: $gradient3;
 }
 .course-info header.course-profile .intro-inner-wrapper {
     box-shadow: none;
@@ -366,4 +366,70 @@ hr {
 }
 .course-info header.course-profile .intro-inner-wrapper .media .hero {
     border: none;
+}
+.user {
+    display: flex;
+
+    .user-link {
+        display: flex;
+        align-items: center;
+        color: #000;
+        font-size: 14px;
+
+        &:hover {
+            color: #000;
+        }
+    }
+    .user-image-frame {
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 6px;
+    }
+    .primary {
+        position: relative;
+    }
+    .user-dropdown-menu {
+        position: absolute;
+        right: 0;
+        top: 110%;
+        background: #fff;
+        border-radius: 6px;
+        padding: 12px;
+        display: none;
+
+        &.expanded {
+            display: block;
+        }
+    }
+    .user-dropdown {
+        border: none;
+        background: none;
+        box-shadow: none;
+        text-shadow: none;
+        color: #57C4BD;
+        padding: 0 8px;
+        
+        &:focus,
+        &:hover {
+            border: none;
+            background: none;
+            box-shadow: none;
+            text-shadow: none;
+        }
+    }
+    .dropdown-item {
+        margin-bottom: 5px;
+    }
+    a.dropdown-menuitem,
+    .dropdown-menuitem {
+        color: #57C4BD;
+        
+        &:visited,
+        &:focus,
+        &:hover {
+            color: #57C4BD;
+        }
+    }
 }
