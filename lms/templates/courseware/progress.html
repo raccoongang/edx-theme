@@ -1,0 +1,159 @@
+<%page expression_filter="h"/>
+<%inherit file="/main.html" />
+<%namespace name='static' file='/static_content.html'/>
+<%def name="online_help_token()"><% return "progress" %></%def>
+<%!
+  from course_modes.models import CourseMode
+  from certificates.models import CertificateStatuses
+  from django.utils.translation import ugettext as _
+  from openedx.core.djangolib.markup import HTML, Text
+  from django.core.urlresolvers import reverse
+  from django.conf import settings
+  from django.utils.http import urlquote_plus
+%>
+<%block name="bodyclass">view-in-course view-progress</%block>
+
+<%block name="headextra">
+  <%static:css group='style-course-vendor'/>
+  <%static:css group='style-course'/>
+</%block>
+
+
+<%namespace name="progress_graph" file="/courseware/progress_graph.js"/>
+
+<%block name="pagetitle">${_("{course_number} Progress").format(course_number=course.display_number_with_default)}</%block>
+
+<%block name="js_extra">
+  <script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.js')}"></script>
+  <script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.stack.js')}"></script>
+  <script type="text/javascript" src="${static.url('js/vendor/flot/jquery.flot.symbol.js')}"></script>
+  <script type="text/javascript" src="${static.url('js/courseware/certificates_api.js')}"></script>
+  <script type="text/javascript" src="${static.url('js/courseware/credit_progress.js')}"></script>
+  <script>
+    ## This JavaScript is being HTML-escaped because it historically has, and it is not clear what
+    ## the correct syntax is. For safety, maintain the previous behavior.
+    ## xss-lint: disable=mako-invalid-js-filter
+    ${progress_graph.body(grade_summary, course.grade_cutoffs, "grade-detail-graph", not course.no_grade, not course.no_grade)}
+</script>
+</%block>
+
+<%include file="/courseware/course_navigation.html" args="active_page='progress'" />
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <style>
+    .progress__holder {
+      display: flex;
+      width: 100%;
+      position: relative;
+      justify-content: space-between;
+    }
+    .progress__inner-holder {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-left: 30px;
+      position: relative;
+    }
+    .progress__bar-holder {
+      border: 1px solid #000;
+      border-radius: 6px;
+      background: #57C4BD;
+      height: 30px;
+      width: 150px;
+      margin-bottom: 15px;
+    }
+    .progress__bar {
+      background: #062860;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .progress__item {
+      max-width: 190px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .progress__title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .progress__subtitle {
+      font-size: 14px;
+      font-style: italic;
+      position: absolute;
+      left: 0;
+      ransform: translate(0,33%);
+    }
+    .progress__image {
+      width: 48px;
+      height: 48px;
+    }
+    .progress__total-result {
+      margin-bottom: 15px;
+    }
+  </style>
+  <!--theme creation-->
+  <div>
+    %if courseware_summary:
+      <section class="progress__holder">
+        %for counter, chapter in enumerate(courseware_summary):
+          %if not chapter['display_name'] == "hidden":
+            <%
+              a = 'images/progress{}.svg'.format(counter)
+            %>
+            <section class="progress__item">
+              <img class="progress__image" src="${static.url(a)}" alt="">
+              <h3 class="progress__title">${ chapter['display_name']}</h3><!--Section Name-->
+              <%
+                chapter_earned = 0
+                chapter_total = 0
+              %>
+              <div class="progress__inner-holder">
+                <div class="#2">
+                  %for in_counter, section in enumerate(chapter['sections']):
+                    <div class="progress__subtitle">
+                      <%
+                        earned = section.all_total.earned
+                        total = section.all_total.possible
+                        percentageString = "{0:.0%}".format(float(earned)/total) if total > 0 else ""
+
+                        chapter_earned += earned
+                        chapter_total += total
+                        chapterPercentageString = "{0:.0%}".format(float(chapter_earned)/chapter_total) if total > 0 else ""
+                      %>
+                      <h4 >${counter}.${in_counter}</h4><!--Subsection Name-->
+                    </div>
+                    <div>
+                      %if len(section.problem_scores.values()) > 0:
+                        <div class="progress__bar-holder"><p class="progress__bar"
+                                                             style="width: ${percentageString}">${percentageString}</p>
+                        </div><!--Subsection Percent-->
+                      %else:
+                        <p>"No problem scores in this Subsection"</p>
+                      %endif
+                    </div>
+                  %endfor
+                </div>
+                <div class="progress__total-result">
+                  %if chapterPercentageString:
+                    <div class="progress__bar-holder"><p class="progress__bar" style="width: ${chapterPercentageString}">${chapterPercentageString}</p></div><!--Section Percent-->
+                  %else:
+                    <p>"No total score"</p>
+                  %endif
+                </div>
+              </div>
+
+            </section>
+          %endif
+        %endfor
+      </section>
+    %endif
+  </div>
+  <!--end-->
+</main>>
+
+

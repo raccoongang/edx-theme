@@ -1,0 +1,22 @@
+.progress {
+    &__holder {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+    &__inner-holder {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    &__bar-holder {
+        border: 1px solid #000;
+        border-radius: 6px;
+        background: #57C4BD;
+    }
+    &__bar {
+        background: #062860;
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+    }
+}
