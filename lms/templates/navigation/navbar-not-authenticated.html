@@ -13,27 +13,9 @@ from django.utils.translation import ugettext as _
   <li class="main-nav__item">
     <a class="main-nav__link" href="/">Главная</a>
   </li>
-  <%block name="navigation_global_links">
-    % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-      % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="${marketing_link('COURSES')}">Курсы</a>
-        </li>
-      % endif
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="${marketing_link('SCHOOLS')}">Школы</a>
-      </li>
-    % endif
-  </%block>
-  <%block name="navigation_other_global_links">
-    % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="/courses">Курсы</a>
-        </li>
-      %endif
-    % endif
-  </%block>
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="/courses">Курсы</a>
+  </li>
   <li class="main-nav__item">
     <a class="main-nav__link" href="#">Школы</a>
   </li>

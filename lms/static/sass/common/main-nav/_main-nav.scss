@@ -36,6 +36,15 @@ a.main-nav__link,
             color: #fff;
         }
     }
+    .view-in-course &,
+    .is-authenticated & {
+        color: #000;
+
+        &:focus,
+        &:hover {
+            color: #000;
+        }
+    }
 }
 .main-nav__item {
     position: relative;
@@ -60,6 +69,11 @@ a.main-nav__link,
             height: 12px;
             background: #fff;
             border-radius: 50%;
+            
+            .view-in-course &,
+            .is-authenticated & {
+                background: #B3B3B3;
+            }
         }
 
         &:hover:after {

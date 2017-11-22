@@ -114,10 +114,15 @@ from openedx.core.lib.courses import course_image_url
             ${course.display_name_with_default_escaped}
             <!-- <button type="button">${course.display_org_with_default | h}</button> -->
           </h1>
-          <span class="intro__school">Intellectuale</span>
+          <span class="intro__school">
+            % if certificate_data:
+                % for signatory in certificate_data.get('signatories', []):
+                  ${signatory['organization']}
+                % endfor
+            % endif
+          </span>
           <h3>
-            ${get_course_about_section(request, course, 'short_description')}
-            <p class="intro__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est maiores quia quam, aspernatur blanditiis omnis repellendus modi iste distinctio nesciunt asperiores rerum error delectus explicabo, accusamus sed. Quibusdam, nostrum, enim.</p>
+            <p class="intro__text">${get_course_about_section(request, course, 'short_description')}</p>
           </h3>
         </div>
 
@@ -219,8 +224,7 @@ from openedx.core.lib.courses import course_image_url
 
     <div class="course-sidebar">
       <div class="course-summary">
-
-        <%include file="course_about_sidebar_header.html" />
+        <hr class="other">
 
         <ol class="important-dates">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
@@ -229,8 +233,8 @@ from openedx.core.lib.courses import course_image_url
                   course_start_date = course.start
               %>
             <li class="important-dates-item">
-              <span class="icon fa fa-calendar" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Classes Start")}</p>
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-course-about.png" alt="ico course about">
+              <p class="important-dates-item-title">${_("Classes Start")}:</p>
               % if isinstance(course_start_date, str):
                   <span class="important-dates-item-text start-date">${course_start_date}</span>
               % else:
@@ -249,8 +253,8 @@ from openedx.core.lib.courses import course_image_url
                 %>
 
             <li class="important-dates-item">
-                <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Classes End")}</p>
+                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-course-about.png" alt="ico course about">
+                <p class="important-dates-item-title">${_("Classes End")}:</p>
                   % if isinstance(course_end_date, str):
                       <span class="important-dates-item-text final-date">${course_end_date}</span>
                   % else:
@@ -263,10 +267,10 @@ from openedx.core.lib.courses import course_image_url
             % endif
 
           % if get_course_about_section(request, course, "effort"):
-            <li class="important-dates-item"><span class="icon fa fa-pencil" aria-hidden="true"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
+            <li class="important-dates-item"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-course-about-2.png" alt="ico course about"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
           % endif
 
-          ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
+          ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}:</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
 
           %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
             <li class="important-dates-item">

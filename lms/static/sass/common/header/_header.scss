@@ -12,7 +12,13 @@
     box-sizing: border-box;
     @media (min-width: $tablet-size) {
         border-radius: 45%;
+        padding: 20px 0 50px;
         justify-content: space-between;
+    }
+
+    .view-in-course &,
+    .is-authenticated & { 
+        padding: 20px 0;
     }
 }
 a.header__logo,
@@ -25,6 +31,15 @@ a.header__logo,
 
     &:hover {
         color: #fff;
+    }
+
+    .view-in-course &,
+    .is-authenticated & {
+        color: #000;
+
+        &:hover {
+            color: #000;
+        }
     }
 }
 .header__helper {
@@ -43,7 +58,11 @@ a.header__logo,
         float: left;
     }
     @media (min-width: $tablet-size) {
-        border-radius: 45%;
+        border-radius: 50%;
+    }
+    .view-in-course &,
+    .is-authenticated & {
+        display: none;
     }
 }
 .header__opener {
