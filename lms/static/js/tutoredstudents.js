@@ -45,6 +45,7 @@ var TUTORED_STUDENTS = {
     "LearningEmail": {id: 68, email: "learning@codeinstitute.net"},
     "ysholqamy": {id: 73, email: "youssefsholqamy@gmail.com"},
     "AideenKerr": {id: 110, email: "aideen@codeinstitute.net"},
+    "test": {id: 120, email: "media@codeinstitute.net"},
     // Students
     "denismoc": {id: 54, email: "denismoc@live.ie"},
     "Bruce_H": {id: 55, email: "bruce@harrisonemail.com"},
@@ -102,7 +103,9 @@ var TUTORED_STUDENTS = {
     "darren_m_fitzsimons": {id: 116, email: "darrenfitzsimons89@yahoo.com"},
     "ciaratamay": {id: 117, email: "ciaradelgrossobates@gmail.com"},
     "Cian_OG": {id: 118, email: "ihatecian@gmail.com"},
-    "Tom":  {id: 119, email: "tomstanko@hotmail.com"}
+    "Tom":  {id: 119, email: "tomstanko@hotmail.com"},
+    "Ciaran_Connolly": {id: 121, email: "ciaran.connolly83@gmail.com"},
+    "Attila_Szorger_Learner": {id: 122, email: "skatenot@gmail.com"}
 };
 
 
@@ -215,5 +218,9 @@ var all_users = {
     "darren_m_fitzsimons": {id: 116, email: "darrenfitzsimons89@yahoo.com"},
     "ciaratamay": {id: 117, email: "ciaradelgrossobates@gmail.com"},
     "Cian_OG": {id: 118, email: "ihatecian@gmail.com"},
-    "Tom":  {id: 119, email: "tomstanko@hotmail.com"}
+    "Tom":  {id: 119, email: "tomstanko@hotmail.com"},
+    "test": {id: 120, email: "media@codeinstitute.net"},
+    "Ciaran_Connolly": {id: 121, email: "ciaran.connolly83@gmail.com"},
+    "Attila_Szorger_Learner": {id: 122, email: "skatenot@gmail.com"}
 };
+
