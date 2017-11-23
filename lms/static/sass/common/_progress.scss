@@ -3,20 +3,73 @@
         display: flex;
         width: 100%;
         position: relative;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (max-width: 1200px) {
+            justify-content: space-around;
+        }
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__inner-holder {
         display: flex;
         flex-direction: column-reverse;
+        padding-left: 40px;
+        position: relative;
     }
     &__bar-holder {
         border: 1px solid #000;
         border-radius: 6px;
         background: #57C4BD;
+        height: 30px;
+        width: 150px;
+        margin-bottom: 15px;
     }
     &__bar {
         background: #062860;
         color: #fff;
         text-align: center;
         overflow: hidden;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item {
+        max-width: 190px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding-left: 40px;
+        @media screen and (max-width: 768px) {
+            padding: 0;
+        }
+    }
+    &__subtitle {
+        font-size: 14px;
+        font-style: italic;
+        position: absolute;
+        left: 0;
+        transform: translate(0, 33%);
+    }
+    &__image {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 10px;
+    }
+    &__total-result {
+        margin-bottom: 15px;
+    }
+    &__wrapper {
+        margin-bottom: 15px;
     }
 }
