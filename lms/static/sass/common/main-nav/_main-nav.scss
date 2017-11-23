@@ -7,6 +7,7 @@
     min-width: 262px;
     margin: 0;
     transform: translate(-100%, 0);
+    list-style: none;   
     @media (min-width: $tablet-size) {
         min-width: auto;
         display: flex;
@@ -22,6 +23,7 @@ a.main-nav__link,
     font-size: 14px;
     color: #000;
     letter-spacing: 0;
+    display: block;
     
     &:focus,
     &:hover {
@@ -36,6 +38,8 @@ a.main-nav__link,
             color: #fff;
         }
     }
+
+    .header__other &,
     .view-in-course &,
     .is-authenticated & {
         color: #000;
@@ -50,6 +54,7 @@ a.main-nav__link,
     position: relative;
     padding: 16px;
     border-bottom: 1px solid #F5F5F5;
+    margin-bottom: 0;
 
     &:last-child {
         margin-right: 0;
@@ -70,6 +75,7 @@ a.main-nav__link,
             background: #fff;
             border-radius: 50%;
             
+            .header__other &,
             .view-in-course &,
             .is-authenticated & {
                 background: #B3B3B3;

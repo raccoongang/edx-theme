@@ -383,6 +383,9 @@ hr.other {
 }
 .user {
     display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
     .user-link {
         display: flex;
@@ -413,6 +416,8 @@ hr.other {
         padding: 12px;
         display: none;
         z-index: 2;
+        margin: 0;
+        list-style: none;
 
         &.expanded {
             display: block;
@@ -740,4 +745,42 @@ section.outside-app,
         width: auto;
         float: none;
     }
+}
+.wrapper-course-material .course-material,
+.wrapper-preview-menu .preview-menu {
+    max-width: 1200px;
+}
+.wrapper-course-material .course-material {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper-course-material .course-material .tabs.course-tabs {
+    background: $gradient3;
+    width: 100%;
+    border-radius: 0;
+    padding-left: 50px !important;
+}
+.wrapper-course-material .course-tabs li a,
+.wrapper-course-material .course-tabs li a:visited {
+    color: #fff;
+}
+.course-material__box {
+    width: 200px;
+    margin-right: 20px;
+}
+.course-material__heading {
+    color: #062860;
+    font-weight: bold;
+    font-size: 24px;
+    left: 30px;
+    margin-bottom: 4px;
+}
+.course-material__school {
+    color: #062860;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+}
+.home {
+    max-width: 1200px;
 }
