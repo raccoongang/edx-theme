@@ -9,25 +9,23 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 %>
 
-<ol class="left nav-global list-inline authenticated">
+<ol class="main-nav">
   <%block name="navigation_global_links_authenticated">
-    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-      <li class="item nav-global-01">
-        <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
-      </li>
-    % endif
-    % if show_program_listing:
-      <li class="tab-nav-item">
-        <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
-          ${_("Courses")}
-        </a>
-      </li>
-      <li class="tab-nav-item">
-        <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-          ${_("Programs")}
-        </a>
-      </li>
-    % endif
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="/">Главная</a>
+  </li>
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="/courses">Курсы</a>
+  </li>
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="#">Школы</a>
+  </li>
+  <li class="main-nav__item">
+    <a class="main-nav__link" href="#">О проекте</a>
+  </li>
+  <li class="main-nav__item main-nav__item_mobile">
+    <a class="main-nav__link" href="/login${login_query()}">${_("Sign in")}</a>
+  </li>
     %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
       <li class="item">
         ## Translators: This is short for "System administration".
