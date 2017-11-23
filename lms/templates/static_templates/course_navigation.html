@@ -35,23 +35,10 @@ if course is not None:
             tab_list = get_course_tab_list(request, course)
             tabs_tmpl = static.get_template_path('/courseware/tabs.html')
             %>
-            <div class="course-material__box">
-                <h2 class="course-material__heading">${course.display_name_with_default}</h2>
-                <strong class="course-material__school">
-                % if certificate_data:
-                    % for signatory in certificate_data.get('signatories', []):
-                        ${signatory['organization']}
-                    % endfor
-                % endif
-                </strong>
-            </div>
-            <div class="course-tabs__holder">
-                <div class="course-tabs__helper"></div>
-                <ol class="tabs course-tabs">
-                    <%include file="${tabs_tmpl}" args="tab_list=tab_list,active_page=active_page,default_tab=default_tab,tab_image=tab_image" />
-                    <%block name="extratabs" />
-                </ol>
-            </div>
+            <ol class="tabs course-tabs">
+                <%include file="${tabs_tmpl}" args="tab_list=tab_list,active_page=active_page,default_tab=default_tab,tab_image=tab_image" />
+                <%block name="extratabs" />
+            </ol>
         </div>
     </nav>
 %endif

@@ -781,9 +781,6 @@ section.outside-app,
 
 //profile settings
 body {
-    .content-wrapper.main-container {
-        position: relative;
-    }
     .account-settings-tabpanels {
         display: flex;
         width: 100%;
@@ -946,14 +943,28 @@ body {
     justify-content: space-between;
 }
 .wrapper-course-material .course-material .tabs.course-tabs {
-    background: $gradient3;
     width: 100%;
     border-radius: 0;
-    padding-left: 50px !important;
+    padding-left: 0 !important;
+    position: relative;
+    border-bottom: 3px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    margin-left: 84px;
 }
-.wrapper-course-material .course-tabs li a,
-.wrapper-course-material .course-tabs li a:visited {
-    color: #fff;
+body .wrapper-course-material .course-tabs li a:focus,
+body .wrapper-course-material .course-tabs li a.active,
+body .wrapper-course-material .course-tabs li a,
+body .wrapper-course-material .course-tabs li a:visited {
+    color: #fff !important;
+}
+body .wrapper-course-material .course-tabs li a:focus,
+body .wrapper-course-material .course-tabs li a.active {
+    border-color: #062860;
+}
+.wrapper-course-material .course-tabs li {
+    margin-bottom: -3px;
 }
 .course-material__box {
     width: 200px;
@@ -971,4 +982,33 @@ body {
     font-size: 20px;
     line-height: 30px;
     font-weight: normal;
+}
+.course-tabs__holder {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    width: 100%;
+    height: 100px;
+
+    &:after {
+        content: '';
+        border-top: 65px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 65px solid #fff;
+        border-left: 50px solid #fff;
+        position: absolute;
+        left: -1px;
+        top: 0;
+    }
+}
+.course-tabs__helper {
+    background: $gradient3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 140%;
+    height: 100%;
+}
+body.view-in-course .wrapper-course-material .course-material {
+    margin-bottom: 50px;
 }
