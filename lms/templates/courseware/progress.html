@@ -40,8 +40,6 @@
 <%include file="/courseware/course_navigation.html" args="active_page='progress'" />
 
 <main id="main" aria-label="Content" tabindex="-1">
-  <style>
-  </style>
   <!--theme creation-->
   <div>
     %if courseware_summary:
@@ -51,6 +49,7 @@
             <%
               a = 'images/progress{}.svg'.format(counter)
             %>
+          <div class="progress__item-wrapper">
             <section class="progress__item">
               <img class="progress__image" src="${static.url(a)}" alt="">
               <h3 class="progress__title">${ chapter['display_name']}</h3><!--Section Name-->
@@ -94,12 +93,13 @@
               </div>
 
             </section>
+          </div>
           %endif
         %endfor
       </section>
     %endif
   </div>
   <!--end-->
-</main>>
+</main>
 
 

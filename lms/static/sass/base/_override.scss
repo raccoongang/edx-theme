@@ -151,6 +151,9 @@ hr.other {
     .label-text {
         display: none;
     }
+    .toggle-form {
+        font-size: 14px;
+    }
     .forgot-password.field-link {
         position: absolute;
         bottom: -90px;
@@ -164,43 +167,9 @@ hr.other {
         padding: 12px 35px 11px 35px;
         font-size: 14px;
     }
-    //.login-provider {
-    //    width: 50%;
-    //    border: 0;
-    //    border-radius: 0;
-    //}
-    //.login-provider.button-oa2-vk-oauth2 {
-    //    background: #126f9a;
-    //    color: #fff;
-    //    &:hover {
-    //        background: lighten(#126f9a, 20%);
-    //    }
-    //    .icon {
-    //        background: none;
-    //        top: 0;
-    //        bottom: 0;
-    //        &:before {
-    //            content: '\f189';
-    //            color: #fff;
-    //        }
-    //    }
-    //}
-    //.login-provider.button-oa2-facebook {
-    //    background: #3B5998;
-    //    color: #fff;
-    //    &:hover {
-    //        background: lighten(#3B5998, 20%);
-    //    }
-    //    .icon {
-    //        background: none;
-    //        top: 0;
-    //        bottom: 0;
-    //        &:before {
-    //            content: '\f09a';
-    //            color: #fff;
-    //        }
-    //    }
-    //}
+    .form-toggle {
+        color: #57C4BD
+    }
 
     .form-field {
         position: relative;
@@ -245,6 +214,12 @@ hr.other {
     .form-field.checkbox-honor_code {
         display: flex;
         flex-direction: row-reverse;
+    }
+    .register-oa2-facebook {
+        transform: translate(105%);
+    }
+    .register-oa2-vk-oauth2 {
+        transform: translate(-105%);
     }
 }
 
