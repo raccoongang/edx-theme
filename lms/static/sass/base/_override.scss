@@ -488,6 +488,7 @@ hr.other {
 .course-info .details {
     float: none;
     width: 100%;
+    flex-wrap: wrap;
 }
 .inner-wrapper {
     display: flex;
@@ -941,6 +942,7 @@ body {
 .wrapper-course-material .course-material {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .wrapper-course-material .course-material .tabs.course-tabs {
     width: 100%;
@@ -1011,4 +1013,30 @@ body .wrapper-course-material .course-tabs li a.active {
 }
 body.view-in-course .wrapper-course-material .course-material {
     margin-bottom: 50px;
+}
+.page-header-main__title {
+    font-size: 24px;
+    line-height: 30px;
+    color: #000;
+    margin: 0 0 16px;
+}
+.page-header-main__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 50px;
+}
+.course-info .container .wrap-instructor-info.studio-view {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.wrapper-course-material .course-material {
+    margin-bottom: 50px;
+}
+.find-courses .courses-container .courses .courses-listing .courses-listing-item {
+    max-height: none;
+}
+.find-courses .courses .course a {
+    height: 100%;
+    background: #DAF8F6;
 }
