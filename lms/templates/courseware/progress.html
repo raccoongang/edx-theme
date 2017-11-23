@@ -41,60 +41,6 @@
 
 <main id="main" aria-label="Content" tabindex="-1">
   <style>
-    .progress__holder {
-      display: flex;
-      width: 100%;
-      position: relative;
-      justify-content: space-between;
-    }
-    .progress__inner-holder {
-      display: flex;
-      flex-direction: column-reverse;
-      padding-left: 30px;
-      position: relative;
-    }
-    .progress__bar-holder {
-      border: 1px solid #000;
-      border-radius: 6px;
-      background: #57C4BD;
-      height: 30px;
-      width: 150px;
-      margin-bottom: 15px;
-    }
-    .progress__bar {
-      background: #062860;
-      color: #fff;
-      text-align: center;
-      overflow: hidden;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .progress__item {
-      max-width: 190px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .progress__title {
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-    .progress__subtitle {
-      font-size: 14px;
-      font-style: italic;
-      position: absolute;
-      left: 0;
-      ransform: translate(0,33%);
-    }
-    .progress__image {
-      width: 48px;
-      height: 48px;
-    }
-    .progress__total-result {
-      margin-bottom: 15px;
-    }
   </style>
   <!--theme creation-->
   <div>
@@ -127,10 +73,10 @@
                       %>
                       <h4 >${counter}.${in_counter}</h4><!--Subsection Name-->
                     </div>
-                    <div>
+                    <div class="progress__wrapper">
                       %if len(section.problem_scores.values()) > 0:
                         <div class="progress__bar-holder"><p class="progress__bar"
-                                                             style="width: ${percentageString}">${percentageString}</p>
+                                                             style="width: ${percentageString}">${percentageString[0:-1]}</p>
                         </div><!--Subsection Percent-->
                       %else:
                         <p>"No problem scores in this Subsection"</p>
