@@ -41,11 +41,7 @@ if course is not None:
                 <!--theme creation-->
                 % if certificate_data:
                     % for signatory in certificate_data.get('signatories', []):
-                    <div>
-                        <p>
-                            <span>${signatory['organization']}</span>
-                        </p>
-                    </div>
+                        ${signatory['organization']}
                     % endfor
                 % endif
                 <!--end-->
