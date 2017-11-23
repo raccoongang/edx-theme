@@ -37,7 +37,19 @@ if course is not None:
             %>
             <div class="course-material__box">
                 <h2 class="course-material__heading">СТАТИСТИКА</h2>
-                <strong class="course-material__school">Intellectuale</strong>
+                <strong class="course-material__school">
+                <!--theme creation-->
+                % if certificate_data:
+                    % for signatory in certificate_data.get('signatories', []):
+                    <div>
+                        <p>
+                            <span>${signatory['organization']}</span>
+                        </p>
+                    </div>
+                    % endfor
+                % endif
+                <!--end-->
+                </strong>
             </div>
             <ol class="tabs course-tabs">
                 <%include file="${tabs_tmpl}" args="tab_list=tab_list,active_page=active_page,default_tab=default_tab,tab_image=tab_image" />
