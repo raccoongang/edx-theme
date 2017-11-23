@@ -1,0 +1,113 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <article class="promo-block">
+      <div class="promo-block__holder">
+        <div class="video-box">
+          <p class="video-box__text">Лучшие образовательные <br> курсы — бесплатно и онлайн</p>
+          <a href="/courses" class="login-theme">найти курс</a>
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="promo box img">
+        </div>
+        <div class="course-section">
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color1">НОВЫЙ КУРС!</span>
+              <strong class="course-section__name">Механика</strong>
+              <span class="course-section__school">СУНЦ МГУ</span>
+            </div>
+          </a>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color2">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Статистика</strong>
+              <span class="course-section__school">СУНЦ МГУ</span>
+            </div>
+          </a>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img3.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color3">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Экономика</strong>
+              <span class="course-section__school">СУНЦ МГУ</span>
+            </div>
+          </a>
+        </div>
+      </div>
+  </article>
+   <article class="promo-block">
+      <div class="promo-block__holder">
+        <div class="video-box">
+          <p class="video-box__text">Лучшие образовательные <br> курсы — бесплатно и онлайн</p>
+          <a href="/courses" class="login-theme">найти курс</a>
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="promo box img">
+        </div>
+        <div class="course-section">
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color1">НОВЫЙ КУРС!</span>
+              <strong class="course-section__name">Пределы</strong>
+              <span class="course-section__school">Школа 1329</span>
+            </div>
+          </a>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color2">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Производные</strong>
+              <span class="course-section__school">Школа 1329</span>
+            </div>
+          </a>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img3.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color3">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Интегралы</strong>
+              <span class="course-section__school">Школа 1329</span>
+            </div>
+          </a>
+        </div>
+      </div>
+  </article>
+   <article class="promo-block">
+      <div class="promo-block__holder">
+        <div class="video-box">
+          <p class="video-box__text">Лучшие образовательные <br> курсы — бесплатно и онлайн</p>
+          <a href="/courses" class="login-theme">найти курс</a>
+          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="promo box img">
+        </div>
+        <div class="course-section">
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color1">НОВЫЙ КУРС!</span>
+              <strong class="course-section__name">Экономика - 1</strong>
+              <span class="course-section__school">Intellectuale</span>
+            </div>
+          </a>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color2">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Экономика - 2</strong>
+              <span class="course-section__school">Intellectuale</span>
+            </div>
+          </a>
+          <a class="course-section__item" href="#">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img3.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color3">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Статистика</strong>
+              <span class="course-section__school">Intellectuale</span>
+            </div>
+          </a>
+        </div>
+      </div>
+  </article>
+</main>
