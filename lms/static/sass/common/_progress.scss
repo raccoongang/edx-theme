@@ -3,11 +3,10 @@
         display: flex;
         width: 100%;
         position: relative;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
-        @media screen and (max-width: 1200px) {
-            justify-content: space-around;
-        }
+        max-width: 1200px;
+        margin: 0 auto;
         @media screen and (max-width: 768px) {
             flex-direction: column;
             align-items: center;
@@ -71,5 +70,11 @@
     }
     &__wrapper {
         margin-bottom: 15px;
+    }
+    &__item-wrapper {
+        flex: 0 0 25%;
+        @media screen and (max-width: 768px) {
+            flex: 0 0 100%;
+        }
     }
 }
