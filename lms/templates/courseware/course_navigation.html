@@ -7,6 +7,7 @@
 from django.utils.translation import ugettext as _
 from courseware.tabs import get_course_tab_list
 from django.conf import settings
+from certificates.api import get_active_web_certificate
 %>
 
 <%
@@ -37,6 +38,7 @@ if course is not None:
             %>
             <div class="course-material__box">
                 <h2 class="course-material__heading">СТАТИСТИКА</h2>
+                <% certificate_data = get_active_web_certificate(course)%>
                 <strong class="course-material__school">
                 <!--theme creation-->
                 % if certificate_data:
