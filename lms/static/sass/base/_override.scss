@@ -1552,6 +1552,9 @@ body {
     .header-global .nav-global .tab-nav-item .tab-nav-link {
         padding: 5px 10px;
     }
+    .dropdown-menu-container .menu-title .label-username {
+        color: $theme-link;
+    }
     @media screen and (max-width: 978px) {
         .footer-logo-holder {
             display: none;
@@ -1560,6 +1563,9 @@ body {
             position: static;
             justify-content: center;
             margin-top: 15px;
+        }
+        .container .course-index {
+            display: block;
         }
     }
     @media screen and (max-width: 768px) {
