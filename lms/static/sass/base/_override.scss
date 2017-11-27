@@ -1347,7 +1347,11 @@ body {
             margin-bottom: 15px;
         }
     }
-
+    @media screen and (max-width: $tablet-size) {
+        .container .course-index {
+            display: block;
+        }
+    }
     @media screen and (max-width:767px) {
         .nav-holder {
             display: none;
