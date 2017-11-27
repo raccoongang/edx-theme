@@ -1556,10 +1556,10 @@ body {
         color: $theme-link;
     }
     @media screen and (max-width: 978px) {
-        .footer-logo-holder {
+        .wrapper-footer .footer-logo-holder {
             display: none;
         }
-        .footer__creators {
+        .wrapper-footer .footer__creators {
             position: static;
             justify-content: center;
             margin-top: 15px;
@@ -1585,6 +1585,7 @@ body {
         }
     }
 }
+
 * * {
     font-family: "Ebrima", Verdana, Geneva, sans-serif !important;
 }
