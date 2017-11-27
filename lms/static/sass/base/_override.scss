@@ -1567,6 +1567,12 @@ body {
         .container .course-index {
             display: block;
         }
+        .container.about {
+            min-width: 0;
+        }
+        .course-info .details {
+            padding: 0 10px;
+        }
     }
     @media screen and (max-width: 768px) {
         .icon-list_link {
