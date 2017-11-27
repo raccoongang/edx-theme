@@ -16,7 +16,9 @@ course_mode_class = course_mode if course_mode else ''
                         <span>Сертифікат</span>
                 </div> 
             </div>
-            <div class="certificates__proove">Цей сертифікат підтверджує, що</div>
+            <div class="certificates__proove">
+              <span class="certificates__proove-text">Цей сертифікат підтверджує, що</span>
+            </div>
             <div class="certificates__owner-name">
                 <div class="certificates__relative-wrapper">
                         <div class="certificates__name">${accomplishment_copy_name | h}</div>
@@ -67,10 +69,10 @@ course_mode_class = course_mode if course_mode else ''
                 </div>
             </div>
             <div class="certificates__id-date">
-                <div class="certificate__date">
+                <div class="certificates__date">
                     <span>${certificate_date_issued_title} </span><span>${certificate_date_issued}</span>
                 </div>
-                <div class="certificate__date">
+                <div class="certificates__date">
                     <span>${certificate_id_number_title}: </span><span>${certificate_id_number}</span>
                 </div>
             </div>
