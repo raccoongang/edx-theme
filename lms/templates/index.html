@@ -18,8 +18,8 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                 <h1>${_(u"Die E-Learning Plattform für das digitalisierte Arbeiten")}</h1>
-                <span>${_(u"Digitales. Lernen")}</span>
-                <a href="/courses" class="link">${_("FIND COURSES")}</a>
+                <span>${_(u"Digitales. Lernen.")}</span>
+                <a href="/courses" class="link">${_("KURSE FINDEN")}</a>
               % endif
             </div>
 ##             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
