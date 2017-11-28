@@ -626,6 +626,15 @@ hr.other {
     height: 141px;
     overflow: hidden;
 }
+.dashboard .my-courses .listing-courses ul.wrapper-course-image__text {
+    color: #fff;
+    max-width: 545px;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 30px;
+    margin-bottom: 8px;
+    color: #fff;
+}
 .dashboard .my-courses .listing-courses li.wrapper-course-image__list-item {
     position: relative;
     font-size: 20px;
@@ -1090,4 +1099,7 @@ body.view-in-course .wrapper-course-material .course-material {
     .account-settings-section-body.accountsTabSections-section-body {
         display: flex;
     }
+}
+.course-info .course-sidebar .important-dates li:first-child {
+    display: none;
 }
