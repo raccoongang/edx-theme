@@ -59,8 +59,10 @@ from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
     >
       <div class="home">
         <div class="page-header-main">
-            <h2 class="page-header-main__title">Добро пожаловать на курс!</h2>
-            <div class="page-header-main__subtitle">Ниже представлена структура курса и основные термины, которые ты узнаешь по окончанию каждой недели:</div>
+            <!--<h2 class="page-header-main__title">Добро пожаловать на курс!</h2>-->
+            <div class="page-header-main__subtitle">
+                ${HTML(get_course_info_section(request, masquerade_user, course, 'updates'))}
+            </div>
         </div>
         % if resume_course_url and user_is_enrolled:
           <div class="page-header-secondary">
@@ -79,8 +81,8 @@ from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
             </div>
           % endif
 
-          <h3 class="hd hd-3">${_("Course Updates and News")}</h3>
-          ${HTML(get_course_info_section(request, masquerade_user, course, 'updates'))}
+          <!--<h3 class="hd hd-3">${_("Course Updates and News")}</h3>-->
+          <!--${HTML(get_course_info_section(request, masquerade_user, course, 'updates'))}-->
 
         </section>
         <div class="week_holder">
@@ -91,7 +93,9 @@ from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
                     <div class="week-structure__helper"></div>
                     <ul class="week-structure__list">
                       % for subsection in section.get('children', []):
-                          <li class="week-structure__list-item">${ subsection['display_name'] }</li>
+                          <a href="${ subsection['student_view_url']}">
+                              <li class="week-structure__list-item">${ subsection['display_name'] }</li>
+                          </a>
                       % endfor
                     </ul>
                 </div>
