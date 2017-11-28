@@ -1017,3 +1017,77 @@ body.view-in-course .wrapper-course-material .course-material {
     height: 100%;
     background: #DAF8F6;
 }
+.login-register .login-provider.button-oa2-facebook {
+    transform: translateX(134px);
+}
+.login-register .login-provider.button-oa2-vk-oauth2 {
+    transform: translateX(-134px);
+}
+.wrapper-account-settings .wrapper-header {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.wrapper-account-settings .wrapper-header .header-title {
+    margin: 0;
+    padding: 0;
+    max-width: 240px;
+    width: 240px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #062860;
+}
+.wrapper-account-settings .wrapper-header .account-nav {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #fff;
+    padding: 35px 0 24px 100px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 140%;
+        background: $gradient2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-top: 75px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 75px solid #fff;
+        border-left: 50px solid #fff;
+        z-index: 2;
+    }
+}
+.wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 3px solid transparent !important;
+
+    &:hover {
+        border-bottom: 3px solid #57C4BD !important;
+    }
+}
+.wrapper-account-settings .wrapper-header .account-nav button.active {
+    border-bottom: 3px solid #57C4BD !important;
+}
+#accountsTabSections-tabpanel {
+    .section:last-child {
+        flex: 100% !important;
+    }
+    .account-settings-section-body.accountsTabSections-section-body {
+        display: flex;
+    }
+}
