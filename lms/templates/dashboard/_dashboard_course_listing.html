@@ -295,9 +295,11 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
       </div>
       <div class="wrapper-course-image" aria-hidden="true">
         <ul class="wrapper-course-image__list">
-          % for chapter in course.get_children():
-               <li class="wrapper-course-image__list-item">${ chapter.display_name }</li>
-          % endfor
+            <div>
+            %if course_overview.short_description:
+                ${ course_overview.short_description }
+            %endif
+            </div>
         </ul>
       % if show_courseware_link:
         % if not is_course_blocked:
