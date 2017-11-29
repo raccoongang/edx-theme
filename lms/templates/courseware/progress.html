@@ -43,8 +43,31 @@
   <!--theme creation-->
   <div>
     %if courseware_summary:
+      <div>
+        <%def name="pointending()">
+          %if points_difference%10 == 1:
+            балл
+          %elif points_difference%10>=2 and points_difference%10<=4:
+            балла
+          %elif points_difference%10==0 or (points_difference%10>=5 and points_difference%10<=9):
+            баллов
+          %else:
+            баллов
+          %endif
+        </%def>
+        <p>Твой прогресс по курсу: ${persentage_current} из 100</p>
+        %if assessment_current:
+          <p>Оценка: ${assessment_current} из ${assessment_maximum}</p>
+                  %if assessment_current != assessment_maximum:
+          <p>(необходимо набрать еще ${points_difference} баллов чтобы получить ${assessment_next} из ${assessment_maximum})</p>
+          %endif
+        %else:
+          <p>Оценка: O из ${assessment_maximum}</p>
+          <p>(необходимо набрать еще ${points_difference} ${pointending()} чтобы получить ${assessment_minimum} из ${assessment_maximum})</p>
+        %endif
+      </div>
       <section class="progress__holder">
-        %for counter, chapter in enumerate(courseware_summary):
+        %for counter, chapter in enumerate(courseware_summary, start=1):
           %if not chapter['display_name'] == "hidden":
             <%
               a = 'images/progress{}.svg'.format(counter)
@@ -53,24 +76,20 @@
             <section class="progress__item">
               <img class="progress__image" src="${static.url(a)}" alt="">
               <h3 class="progress__title">${ chapter['display_name']}</h3><!--Section Name-->
-              <%
-                chapter_earned = 0
-                chapter_total = 0
-              %>
               <div class="progress__inner-holder">
                 <div class="#2">
-                  %for in_counter, section in enumerate(chapter['sections']):
+                  %for section in chapter['sections']:
+                    <%
+                      earned = section.all_total.earned
+                      total = section.all_total.possible
+                      percentageString = "{0:.0%}".format(float(earned)/total) if total > 0 else "0%"
+                    %>
+                    % if not loop.last:
                     <div class="progress__subtitle">
-                      <%
-                        earned = section.all_total.earned
-                        total = section.all_total.possible
-                        percentageString = "{0:.0%}".format(float(earned)/total) if total > 0 else ""
-
-                        chapter_earned += earned
-                        chapter_total += total
-                        chapterPercentageString = "{0:.0%}".format(float(chapter_earned)/chapter_total) if total > 0 else ""
-                      %>
-                      <h4 >${counter}.${in_counter}</h4><!--Subsection Name-->
+                    % else:
+                    <div class="progress__total-result">
+                    %endif
+                      <h4 >${section.display_name}</h4><!--Subsection Name-->
                     </div>
                     <div class="progress__wrapper">
                       %if len(section.problem_scores.values()) > 0:
@@ -78,20 +97,12 @@
                                                              style="width: ${percentageString}">${percentageString[0:-1]}</p>
                         </div><!--Subsection Percent-->
                       %else:
-                        <p>"No problem scores in this Subsection"</p>
+                        <div class="progress__bar-holder"><p class="progress__bar" style="width: 0%"></p></div><!--Section Percent-->
                       %endif
                     </div>
                   %endfor
                 </div>
-                <div class="progress__total-result">
-                  %if chapterPercentageString:
-                    <div class="progress__bar-holder"><p class="progress__bar" style="width: ${chapterPercentageString}">${chapterPercentageString}</p></div><!--Section Percent-->
-                  %else:
-                    <p>"No total score"</p>
-                  %endif
-                </div>
               </div>
-
             </section>
           </div>
           %endif
@@ -101,5 +112,7 @@
   </div>
   <!--end-->
 </main>
-
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+    DateUtilFactory.transform(iterationKey=".localized-datetime");
+</%static:require_module_async>
 
