@@ -294,13 +294,13 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         </div>
       </div>
       <div class="wrapper-course-image" aria-hidden="true">
-        <ul class="wrapper-course-image__list">
-            <div>
+        <div class="wrapper-course-image__list">
+            <div class="wrapper-course-image__text">
             %if course_overview.short_description:
                 ${ course_overview.short_description }
             %endif
             </div>
-        </ul>
+        </div>
       % if show_courseware_link:
         % if not is_course_blocked:
             <a href="${course_target}" data-course-key="${enrollment.course_id}" class="cover">
