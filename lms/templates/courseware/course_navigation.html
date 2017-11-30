@@ -37,11 +37,11 @@ if course is not None:
             tabs_tmpl = static.get_template_path('/courseware/tabs.html')
             %>
             <div class="course-material__box">
-                <% certificate_data = get_active_web_certificate(course)%>
+                <% certificate_school = get_active_web_certificate(course)%>
                 <h2 class="course-material__heading">${course.display_name_with_default}</h2>
                 <strong class="course-material__school">
-                % if certificate_data:
-                    % for signatory in certificate_data.get('signatories', []):
+                % if certificate_school:
+                    % for signatory in certificate_school.get('signatories', []):
                         ${signatory['organization']}
                     % endfor
                 % endif
