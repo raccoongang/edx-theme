@@ -299,6 +299,13 @@ hr.other {
     padding: 0 0 0 16px;
     list-style: none;
 }
+.course-info__description {
+    font-size: 14px;
+    line-height: 23px;
+    color: #000;
+    max-height: 144px;
+    overflow: hidden;
+}
 
 .course-info__list-item {
     font-size: 14px;
@@ -422,11 +429,12 @@ hr.other {
         top: 110%;
         background: #f5f5f5;
         border-radius: 6px;
-        padding: 12px;
+        padding: 16px 0;
         display: none;
         z-index: 2;
         margin: 0;
         list-style: none;
+        width: 200px;
 
         &.expanded {
             display: block;
@@ -448,14 +456,18 @@ hr.other {
             text-shadow: none;
         }
     }
-    .dropdown-item {
+    .item {
         margin-bottom: 5px;
+        padding: 16px;
     }
+    a.user-dropdown-menuitem,
     a.dropdown-menuitem,
     .dropdown-menuitem {
-        color: #57C4BD;
+        color: #000;
 
-        &:visited,
+        &:visited {
+            color: #000;
+        }
         &:focus,
         &:hover {
             color: #57C4BD;
@@ -1059,7 +1071,7 @@ body.view-in-course .wrapper-course-material .course-material {
         content: '';
         position: absolute;
         left: 100px;
-        bottom: 27px;
+        bottom: 24px;
         width: 100%;
         height: 3px;
         background: #fff;
@@ -1429,4 +1441,45 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .modal .inner-wrapper {
     margin-bottom: 0;
+}
+#orders-tab {
+    display: none;
+}
+.dashboard-banner .wrapper-msg .msg {
+    border: none;
+}
+.view-dashboard.is-authenticated .wrapper-msg.urgency-high {
+    background: $gradient2;
+}
+.dashboard-notifications {
+    position: relative;
+    margin: 0 0 -3px;
+    z-index: 1;
+}
+.view-dashboard.is-authenticated .title {
+    text-align: left;
+}
+.empty-dashboard-message {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+.empty-dashboard-message p {
+    color: #3A3D3F;
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 16px;
+}
+body .empty-dashboard-message a {
+    background: #57C4BD;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.10);
+    border-radius: 4px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0;
+    padding: 11px 42px 12px;
+    text-transform: uppercase;
+    transition: background .3s linear .3s;
+    text-align: center;
 }

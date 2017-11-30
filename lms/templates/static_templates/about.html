@@ -5,9 +5,45 @@
 <%block name="pagetitle">${_("About")}</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
-  <section class="container about">
-    <h1>${_("About")}</h1>
-    <p>${_("This page left intentionally blank. Feel free to add your own content.")}</p>
+  <article class="gallery-index">
+    <div class="slider-gallery">
+      <div class="slider-gallery__item">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+             class="slider-gallery__image">
+        <div class="slider-gallery__info slider-gallery__info_other">
+          <div class="slider-gallery__text-holder">
+            <span class="slider-gallery__title slider-gallery__title_other">1 200 000</span>
+            <strong class="slider-gallery__bold-text slider-gallery__bold-text_other">школьников участвует волимпиадах в год*</strong>
+            <p class="slider-gallery__text">В России школьники активно участвуют в олимпиадах в то время как доступа к качественному материалу сильно ограничен, а позволить себе заниматься с лучшими преподавателями может далеко на каждый. На INELLECTUALE ты можешь найти для себя интересные курсы для подготовки к олимпиадам.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slider-gallery__item">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+             class="slider-gallery__image">
+        <div class="slider-gallery__info slider-gallery__info_other">
+          <div class="slider-gallery__text-holder">
+            <span class="slider-gallery__title slider-gallery__title_other">1 200 000</span>
+            <strong class="slider-gallery__bold-text slider-gallery__bold-text_other">школьников участвует волимпиадах в год*</strong>
+            <p class="slider-gallery__text">В России школьники активно участвуют в олимпиадах в то время как доступа к качественному материалу сильно ограничен, а позволить себе заниматься с лучшими преподавателями может далеко на каждый. На INELLECTUALE ты можешь найти для себя интересные курсы для подготовки к олимпиадам.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slider-gallery__item">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+             class="slider-gallery__image">
+        <div class="slider-gallery__info slider-gallery__info_other">
+          <div class="slider-gallery__text-holder">
+            <span class="slider-gallery__title slider-gallery__title_other">1 200 000</span>
+            <strong class="slider-gallery__bold-text slider-gallery__bold-text_other">школьников участвует волимпиадах в год*</strong>
+            <p class="slider-gallery__text">В России школьники активно участвуют в олимпиадах в то время как доступа к качественному материалу сильно ограничен, а позволить себе заниматься с лучшими преподавателями может далеко на каждый. На INELLECTUALE ты можешь найти для себя интересные курсы для подготовки к олимпиадам.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </article>
+  <section class="theme-wrapper">
     <div class="advantage advantage_about">
       <h2 class="advantage__heading">INTELLECTUALE <br> только качественное среднее образование</h2>
       <div class="advantage__row">
@@ -65,7 +101,7 @@
         <div class="inner-wrapper">
           <div class="course-box course-box_about">
             <div class="course-box__title-holder">
-              <h2 class="course-box__header">Нурумов Андрей</h2>
+              <h2 class="course-box__header"><span class="course-box__header-text">Нурумов Андрей</span></h2>
               <h2 class="course-box__header-text">Генеральный директор Intellectuale</h2>
             </div>
             <img src="/static/${settings.DEFAULT_SITE_THEME}/images/founder.png" alt="" class="course-box__image">
@@ -84,7 +120,7 @@
           </div>
           <div class="course-box course-box_about">
             <div class="course-box__title-holder">
-              <h2 class="course-box__header">Нурумов Андрей</h2>
+              <h2 class="course-box__header"><span class="course-box__header-text">Нурумов Андрей</span></h2>
               <h2 class="course-box__header-text">Генеральный директор Intellectuale</h2>
             </div>
             <img src="/static/${settings.DEFAULT_SITE_THEME}/images/founder.png" alt="" class="course-box__image">
@@ -106,3 +142,15 @@
     </div>
   </section>
 </main>
+
+<%block name="js_extra">
+  <script type="text/javascript">
+    $(window).load(function () {
+      if (getParameterByName('next')) {
+        $('#login').trigger("click");
+      }
+    })
+  </script>
+  <script src="/static/${settings.DEFAULT_SITE_THEME}/plugins/slick/slick.js"></script>
+  <script src="/static/${settings.DEFAULT_SITE_THEME}/js/main.js"></script>
+</%block>

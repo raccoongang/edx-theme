@@ -31,11 +31,11 @@ from courseware.courses import get_course
             % endfor
         % endif
       </div>
-      <div>
-          %if course.short_description:
-              ${course.short_description}
-          %endif
-      </div>
+      <p class="course-info__description">
+        %if course.short_description:
+          ${course.short_description}
+        %endif
+      </p>
       <%
       if course.start is not None:
           course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
