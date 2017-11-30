@@ -3,7 +3,6 @@
 }
 .course-box__header {
     width: 100%;
-    background: $gradient3;
     font-size: 20px;
     line-height: 30px;
     padding: 15px 16px;
@@ -12,19 +11,24 @@
     font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
     box-sizing: border-box;
     max-width: 500px;
-    box-shadow: 5px 2px 7px 0px rgba(0, 0, 0, 0.5);
     position: relative;
+    overflow: hidden;
+    height: 67px;
 
-    &:after {
+    &:before {
         content: '';
         position: absolute;
-        border-top: 65px solid transparent;
-        border-right: 50px solid #fff;
-        border-bottom: 65px solid #fff;
-        border-left: 50px solid transparent;
-        right: -10px;
-        top: -13px;
+        right: 20px;
+        top: 0;
+        box-shadow: 5px 2px 7px 0px rgba(0, 0, 0, 0.5);
+        transform: skew(20deg);
+        width: 120%;
+        height: 60px;
+        background: $gradient3;
     }
+}
+.course-box__header-text {
+    position: relative;
 }
 .course-box__holder {
     display: flex;

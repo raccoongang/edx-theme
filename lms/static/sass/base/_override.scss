@@ -566,17 +566,8 @@ hr.other {
         width: 140%;
         height: 100%;
         background: $gradient4;
-    }
-    &:before {
-        content: '';
-        position: absolute;
-        border-top: 95px solid transparent;
-        border-right: 40px solid transparent;
-        border-bottom: 95px solid #fff;
-        border-left: 40px solid #fff;
-        left: -3px;
-        top: -9px;
-        z-index: 2;
+        transform: skew(20deg);
+        box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.5);
     }
 }
 .details {
@@ -983,25 +974,16 @@ body .wrapper-course-material .course-tabs li a.active {
     align-items: flex-end;
     width: 100%;
     height: 100px;
-
-    &:after {
-        content: '';
-        border-top: 65px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 65px solid #fff;
-        border-left: 50px solid #fff;
-        position: absolute;
-        left: -1px;
-        top: 0;
-    }
 }
 .course-tabs__helper {
     background: $gradient3;
     position: absolute;
-    left: 0;
+    left: 20px;
     top: 0;
     width: 140%;
     height: 100%;
+    transform: skew(30deg);
+    box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.5);
 }
 body.view-in-course .wrapper-course-material .course-material {
     margin-bottom: 50px;
@@ -1034,6 +1016,7 @@ body.view-in-course .wrapper-course-material .course-material {
 }
 .login-register .login-provider.button-oa2-facebook {
     transform: translateX(134px);
+    color: #fff;
 }
 .login-register .login-provider.button-oa2-vk-oauth2 {
     transform: translateX(-134px);
@@ -1059,28 +1042,28 @@ body.view-in-course .wrapper-course-material .course-material {
     margin: 0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 3px solid #fff;
     padding: 35px 0 24px 100px;
 
     &:after {
         content: '';
         position: absolute;
-        left: 0;
+        left: 41px;
         top: 0;
         height: 100%;
         width: 140%;
         background: $gradient2;
+        box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.5);
+        transform: skew(20deg);
     }
     &:before {
         content: '';
         position: absolute;
-        left: 0;
-        top: 0;
-        border-top: 75px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 75px solid #fff;
-        border-left: 50px solid #fff;
-        z-index: 2;
+        left: 100px;
+        bottom: 27px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        z-index: 1;
     }
 }
 .wrapper-account-settings .wrapper-header .account-nav .account-nav-link {

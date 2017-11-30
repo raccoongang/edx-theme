@@ -29,26 +29,6 @@
     min-height: 182px;
     order: 1;
 
-    &:after {
-        content: '';
-        border-top: 120px solid #fff;
-        border-right: 50px solid #fff;
-        border-bottom: 120px solid transparent;
-        border-left: 50px solid transparent;
-        position: absolute;
-        right: -1px;
-        top: 0;
-
-        .week-structure:nth-child(2n) & {
-            border-top: 120px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 120px solid #fff;
-            border-left: 50px solid #fff;
-            position: absolute;
-            right: auto;
-            left: -1px;
-        }
-    }
     .week-structure:nth-child(2n) & {
         order: 2;
         padding-left: 106px;
@@ -57,14 +37,16 @@
 .week-structure__helper {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 41px;
     height: 100%;
     width: 140%;
+    box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.5);
+    transform: skew(20deg);
     background: $gradient4;
 
     .week-structure:nth-child(2n) & {
         right: auto;
-        left: 0;
+        left: 41px;
         background: $gradient3;
     }
 }
