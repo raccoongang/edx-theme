@@ -88,6 +88,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
     .advantage__heading {
         flex: 0 0 100%;
     }
@@ -109,5 +113,8 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 15px;
+    }
+    .advantage__ico {
+        margin-bottom: 16px;
     }
 }
