@@ -1483,6 +1483,9 @@ body {
     .logo-en {
         width: 140px;
         height: 100%;
+        @media screen and (max-width: 500px){
+            width: 100px;
+        }
     }
     .home > header .title:last-child {
         margin-left: 0;
@@ -1530,11 +1533,12 @@ body {
         }
         &__xing {
             background: url('../images/ico-xing.svg') no-repeat center;
-            height: 21px;
-            width: 25px;
-            display: inline-block;
             margin: 0 5px -5px;
             background-size: contain;
+            height: 35px;
+            display: inline-block;
+            width: 35px;
+            transform: translate(0, -42%)
         }
     }
     .footer__creators {
@@ -1601,6 +1605,9 @@ body {
         .view-in-course .container .course-index {
             display: block !important;
         }
+    }
+    .form-actions.form-third-party-auth {
+        margin-top: 20px;
     }
 }
 

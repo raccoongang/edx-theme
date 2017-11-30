@@ -248,6 +248,9 @@ body {
     }
     .dropdown-menu-container .menu-title .label-username {
         color: $theme-link;
+        &:hover {
+            color: lighten($theme-link, 20%);
+        }
     }
     .footer-logo-holder {
         left: auto;
