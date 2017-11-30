@@ -107,9 +107,12 @@ var TUTORED_STUDENTS = {
     "Tom":  {id: 119, email: "tomstanko@hotmail.com"},
     "Ciaran_Connolly": {id: 121, email: "ciaran.connolly83@gmail.com"},
     "Attila_Szorger_Learner": {id: 122, email: "skatenot@gmail.com"},
-    "George_Mikhalev": {id: 123,email: "gmikhalev@gmail.com"},
-    "stephen_walsh1": {id: 125,email: "stephen.walsh1@gmail.com"},
-    "Rishaal": {id: 126,email: "rishaal_mahabier@hotmail.com"}
+    "George_Mikhalev": {id: 123, email: "gmikhalev@gmail.com"},
+    "stephen_walsh1": {id: 125, email: "stephen.walsh1@gmail.com"},
+    "Rishaal": {id: 126, email: "rishaal_mahabier@hotmail.com"},
+    "Charlenelin ": {id: 127, email: "charlene.lin@hotmail.fr"},
+    "SarahCrosby": {id: 128, email: "sarahcrosby1987@gmail.com"},
+    "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"} 
 };
 
 
@@ -226,8 +229,11 @@ var all_users = {
     "test": {id: 120, email: "media@codeinstitute.net"},
     "Ciaran_Connolly": {id: 121, email: "ciaran.connolly83@gmail.com"},
     "Attila_Szorger_Learner": {id: 122, email: "skatenot@gmail.com"},
-    "George_Mikhalev": {id: 123,email: "gmikhalev@gmail.com"},
-    "Partners": {id: 124,email: "partners@codeinstitute.net"},
-    "stephen_walsh1": {id: 125,email: "stephen.walsh1@gmail.com"},
-    "Rishaal": {id: 126,email: "rishaal_mahabier@hotmail.com"}
+    "George_Mikhalev": {id: 123, email: "gmikhalev@gmail.com"},
+    "Partners": {id: 124, email: "partners@codeinstitute.net"},
+    "stephen_walsh1": {id: 125, email: "stephen.walsh1@gmail.com"},
+    "Rishaal": {id: 126, email: "rishaal_mahabier@hotmail.com"},
+    "Charlenelin ": {id: 127, email: "charlene.lin@hotmail.fr"},
+    "SarahCrosby": {id: 128, email: "sarahcrosby1987@gmail.com"},
+    "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"}  
 };
