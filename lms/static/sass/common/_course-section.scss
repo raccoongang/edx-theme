@@ -1,6 +1,10 @@
 .course-section {
-    margin-left: 39px;
     width: 30%;
+    order: 2;
+
+    .promo-block:nth-child(2n) & {
+        order: 1;
+    }
 }
 .course-section__item {
     display: flex;
