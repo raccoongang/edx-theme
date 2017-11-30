@@ -22,8 +22,11 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
         </a>
     </li>
     <li class="nav-item dropdown mt-2 nav-item-hidden-collapsed">
-        <% username = self.real_user.username %>
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${username}</a>
+        <%
+        username = self.real_user.username
+        name = self.real_user.profile.name
+        %>
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${name}</a>
         <ul class="dropdown-menu dropdown-menu-right" id="${_("Usermenu")}" aria-labelledby="dropdownMenuLink" tabindex="-1">
             <a class="dropdown-item" href="${reverse('dashboard')}">${_("Dashboard")}</a>
             <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}">${_("Profile")}</a>
@@ -42,10 +45,11 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
                 <span class="sr">${_("Dashboard for:")}</span>
                 <%
                 username = self.real_user.username
+                name = self.real_user.profile.name
                 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
                 %>
                 <img class="user-image-frame" src="${profile_image_url}" alt="">
-                <div class="label-username">${username}</div>
+                <div class="label-username">${name}</div>
             </a>
         </li>
         <li class="primary">
@@ -72,10 +76,11 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
                 <span class="sr">${_("Dashboard for:")}</span>
                 <%
                 username = self.real_user.username
+                name = self.real_user.profile.name
                 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
                 %>
                 <img class="user-image-frame" src="${profile_image_url}" alt="">
-                <div class="label-username">${username}</div>
+                <div class="label-username">${name}</div>
             </a>
         </li>
         <li class="primary">
