@@ -1,0 +1,27 @@
+.about-history {
+    background: linear-gradient(to right, #072465 0%,#00c5bd 100%);
+    &__wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+    }
+    &__text-holder {
+        flex: 0 0 50%;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    &__image-holder {
+        flex: 0 0 50%;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+}

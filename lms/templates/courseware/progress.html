@@ -58,53 +58,58 @@
         <p>Твой прогресс по курсу: ${persentage_current} из 100</p>
         %if assessment_current:
           <p>Оценка: ${assessment_current} из ${assessment_maximum}</p>
-                  %if assessment_current != assessment_maximum:
-          <p>(необходимо набрать еще ${points_difference} баллов чтобы получить ${assessment_next} из ${assessment_maximum})</p>
-          %endif
+        %if assessment_current != assessment_maximum:
+          <p>(необходимо набрать еще ${points_difference} баллов чтобы получить ${assessment_next}
+            из ${assessment_maximum})</p>
+        %endif
         %else:
           <p>Оценка: O из ${assessment_maximum}</p>
-          <p>(необходимо набрать еще ${points_difference} ${pointending()} чтобы получить ${assessment_minimum} из ${assessment_maximum})</p>
+          <p>(необходимо набрать еще ${points_difference} ${pointending()} чтобы получить ${assessment_minimum}
+            из ${assessment_maximum})</p>
         %endif
       </div>
       <section class="progress__holder">
         %for counter, chapter in enumerate(courseware_summary, start=1):
           %if not chapter['display_name'] == "hidden":
-            <%
-              a = 'images/progress{}.svg'.format(counter)
-            %>
-          <div class="progress__item-wrapper">
-            <section class="progress__item">
-              <img class="progress__image" src="${static.url(a)}" alt="">
-              <h3 class="progress__title">${ chapter['display_name']}</h3><!--Section Name-->
-              <div class="progress__inner-holder">
-                <div class="#2">
-                  %for section in chapter['sections']:
+          <%
+            a = 'images/progress{}.svg'.format(counter)
+          %>
+            <div class="progress__item-wrapper">
+              <section class="progress__item">
+                <img class="progress__image" src="${static.url(a)}" alt="">
+                <h3 class="progress__title">${ chapter['display_name']}</h3><!--Section Name-->
+                <div class="progress__inner-holder">
+                  <div class="progress__ol-block">
+                    %for section in chapter['sections']:
                     <%
                       earned = section.all_total.earned
                       total = section.all_total.possible
                       percentageString = "{0:.0%}".format(float(earned)/total) if total > 0 else "0%"
                     %>
-                    % if not loop.last:
-                    <div class="progress__subtitle">
-                    % else:
-                    <div class="progress__total-result">
-                    %endif
-                      <h4 >${section.display_name}</h4><!--Subsection Name-->
-                    </div>
                     <div class="progress__wrapper">
-                      %if len(section.problem_scores.values()) > 0:
-                        <div class="progress__bar-holder"><p class="progress__bar"
-                                                             style="width: ${percentageString}">${percentageString[0:-1]}</p>
-                        </div><!--Subsection Percent-->
-                      %else:
-                        <div class="progress__bar-holder"><p class="progress__bar" style="width: 0%"></p></div><!--Section Percent-->
-                      %endif
+                    % if not loop.last:
+                      <div class="progress__subtitle">
+                    % else:
+                      <div class="progress__total-result">
+                    %endif
+                      <h4>${section.display_name}</h4><!--Subsection Name-->
                     </div>
-                  %endfor
-                </div>
-              </div>
-            </section>
-          </div>
+                      <div class="progress__in-wrapper">
+                        %if len(section.problem_scores.values()) > 0:
+                          <div class="progress__bar-holder"><p class="progress__bar"
+                                                               style="width: ${percentageString}">${percentageString[0:-1]}</p>
+                          </div><!--Subsection Percent-->
+                        %else:
+                          <div class="progress__bar-holder"><p class="progress__bar" style="width: 0%"></p></div>
+                          <!--Section Percent-->
+                        %endif
+                      </div>
+                    </div>
+                    %endfor
+                  </div>
+                  </div>
+              </section>
+            </div>
           %endif
         %endfor
       </section>
@@ -113,6 +118,6 @@
   <!--end-->
 </main>
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
-    DateUtilFactory.transform(iterationKey=".localized-datetime");
+  DateUtilFactory.transform(iterationKey=".localized-datetime");
 </%static:require_module_async>
 
