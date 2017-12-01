@@ -49,7 +49,7 @@ $(document).ready(function () {
                     }
                 },
                 {
-                    breakpoint: 768,
+                    breakpoint: 920,
                     settings: {
                         centerPadding: '0px'
                     }

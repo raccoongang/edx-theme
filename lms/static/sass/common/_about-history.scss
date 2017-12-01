@@ -26,6 +26,10 @@
         width: 100%;
         min-height: 100%;
         overflow: hidden;
+        @media screen and (max-width: 768px) {
+            flex: 1;
+            min-height: 300px;
+        }
     }
     &__image {
         position: absolute;
