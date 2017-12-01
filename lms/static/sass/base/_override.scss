@@ -457,20 +457,28 @@ hr.other {
         }
     }
     .item {
-        margin-bottom: 5px;
-        padding: 16px;
+        margin-bottom: 0;
+        padding: 0;
+        border-top: 1px solid #ccc;
+
+        &:first-child {
+            border: none;
+        }
     }
     a.user-dropdown-menuitem,
     a.dropdown-menuitem,
     .dropdown-menuitem {
+        display: block;
         color: #000;
+        padding: 16px;
 
         &:visited {
             color: #000;
         }
         &:focus,
         &:hover {
-            color: #57C4BD;
+            color: #000;
+            background: #D6F6F4;
         }
     }
 }
@@ -573,7 +581,7 @@ hr.other {
     &:after {
         content: '';
         position: absolute;
-        left: 0;
+        left: 40px;
         top: 0;
         width: 140%;
         height: 100%;
@@ -1482,4 +1490,25 @@ body .empty-dashboard-message a {
     text-transform: uppercase;
     transition: background .3s linear .3s;
     text-align: center;
+}
+.modal.video-modal .inner-wrapper {
+    width: 580px;
+}
+.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro {
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+
+    &:after {
+        margin-left: -10px;
+        margin-top: -14px;
+        color: #000;
+    }
+}
+.course-info header.course-profile .intro-inner-wrapper .media:hover .play-intro {
+    background: #00C5BD;
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: #00C5BD;
 }
