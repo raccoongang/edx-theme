@@ -1,57 +1,21 @@
-div.busyperiodnote{
-    background-color: #efefef;
-    box-shadow: 3px 4px 7.4px 0.6px rgba(0, 0, 0, 0.2);
-    padding: 3px 5px 5px 5px;
-    margin-top: 35px;
-}
-
+/* Headings and text*/
 #displayname{
     color: #e4562c;
 }
 /*END OF Headings and text*/
 
 /* Standard form inputs and submits*/
-fieldset{
-    margin-top: 25px;
-    border: none;
-}
-
-legend {
-    margin-bottom: 0;
-    font-size: larger;
-}
 
 .form-check-label{
     display: block;
-    color: #4a4a4f;
-    font-weight: 300;
-    margin: 5px 0;
-}
-
-p.form-check-label{
-    padding: 0px 4px;
-}
-
-.form-check-label.form-check-label-option{
-    font-weight: 200;
+    margin: 8px 0;
 }
 
 input.form-check-input{
-    margin-right: 5px !important;
+    margin-right: 8px !important;
 }
 
 input#githubrepo {
-    width: 50%;
-    padding: 3px;
-    border: 1px solid #ddd9d7;
-}
-
-input#githubrepo:focus, input#githubrepo:active, input#githubrepo:hover {
-    width: 50%;
-    border-color: #e4562c;
-}
-
-input#selectedlesson {
     border: 1px solid #ddd9d7;
 }
 
