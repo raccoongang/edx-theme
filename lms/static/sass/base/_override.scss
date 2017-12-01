@@ -429,12 +429,13 @@ hr.other {
         top: 110%;
         background: #f5f5f5;
         border-radius: 6px;
-        padding: 16px 0;
+        padding: 0;
         display: none;
         z-index: 2;
         margin: 0;
         list-style: none;
         width: 200px;
+        overflow: hidden;
 
         &.expanded {
             display: block;
@@ -1511,4 +1512,53 @@ body .empty-dashboard-message a {
 }
 .courses-container .courses .course .course-image .cover-image .learn-more {
     background: #00C5BD;
+}
+body.view-in-course .course-wrapper,
+body.view-in-course .profile-wrapper, 
+body.view-in-course .instructor-dashboard-wrapper-2,
+body.view-in-course .wiki-wrapper,
+body.view-in-course .teams-wrapper,
+body.view-in-course .static_tab_wrapper {
+    max-width: 1200px;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav {
+    display: none;
+}
+.course-wrapper .course-content .vert-mod .vert>.xblock-student_view {
+    border-bottom: none;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button {
+    margin: 0 3px;
+    border: none;
+    background: #062860;
+    border-radius: 0;
+    color: #fff;
+
+    .icon {
+        display: none;
+    }
+
+    &:hover {
+        border: none;
+    }
+    
+}
+body.view-in-course .course-wrapper {
+    border: none;
+    box-shadow: none;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button:active,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,
+.xmodule_display.xmodule_SequenceModule .sequence-nav button.focused,
+.xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
+.xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
+.xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
+    border: none;
+    padding-top: 0;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next span,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous span {
+    color: #fff;
 }
