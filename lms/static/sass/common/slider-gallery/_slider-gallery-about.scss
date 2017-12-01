@@ -1,9 +1,9 @@
-.slider-gallery {
+.slider-gallery-about {
     .slick-track .slick-center {
         transform: translate(0, 0);
         transition: 0.3s;
         & + .slick-slide {
-            transform: translate(-25%, 25%) scale(0.5);
+            transform: translate(-5%, 5%) scale(0.9);
         }
         img {
             @media screen and (max-width: $tablet-size) {
@@ -11,18 +11,20 @@
             }
         }
     }
+    .slick-slide {
+        transform: translate(5%, 5%) scale(0.9);
+    }
     .slick-slide img {
         width: 100%;
     }
     .slick-slide {
         margin: 0 10px;
-        transform: translate(25%, 25%) scale(0.5);
         transition: 0.3s;
         min-height: 100%;
         position: relative;
         border-radius: 12px;
         overflow: hidden;
-        //box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
         @media (max-width: $tablet-size) {
             min-height: 350px;
         }

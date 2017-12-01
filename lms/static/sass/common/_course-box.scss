@@ -81,6 +81,8 @@
         .course-box_about & {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
         }
     }
     &_about {
@@ -101,9 +103,11 @@
     }
     &__header-text {
         position: relative;
+        margin: 0;
     }
     &__list-item {
         font-style: normal;
+        margin-bottom: 16px;
     }
     &__quote {
         font-style: italic;
@@ -113,7 +117,7 @@
         margin-bottom: 16px;
     }
     &__header {
-        margin: 0 0 60px;
+        margin: 0;
     }
 }
 //end of styles for about page
