@@ -4,10 +4,11 @@ $(document).ready(function () {
         slidesToScroll: 1,
         focusOnSelect: true,
         centerMode: true,
-        centerPadding: '26%',
+        centerPadding: '20%',
         dots: true,
         arrows: false,
         adaptiveHeight: true,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 1400,
