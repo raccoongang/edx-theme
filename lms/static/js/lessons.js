@@ -1,6 +1,6 @@
 LESSONS = {
 	"User Centric Frontend Development":[
-		"Introduction to The Integrated Development Environment",
+		"Introduction To The Integrated Development Environment",
 		"Cloud9",
 		"The Cloud 9 Ecosystem",
 		"Introduction to Rescue Your Work From Certain Death",
@@ -65,7 +65,7 @@ LESSONS = {
 		"Boggle Solver Part Two",
 		"File I/O"
 	],
-	"DataCentric Development":[
+	"Data Centric Development":[
 		"Data Fundamentals",
 		"Data Store Types",
 		"Database Fundamentals",
@@ -79,7 +79,7 @@ LESSONS = {
 		"Twitter Streams - Storing",
 		"Twitter Streams - Reading Back"
 	], 
-	"FullStack Frameworkswith Django":[
+	"Full Stack Frameworks with Django":[
 		"Introduction to Deployment",
 		"The Heroku Platform",
 		"Making Our Code Deployment Ready",
