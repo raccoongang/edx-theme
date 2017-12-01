@@ -41,9 +41,9 @@
 
 <main id="main" aria-label="Content" tabindex="-1">
   <!--theme creation-->
-  <div>
+  <div class="progress__main-wrapper">
     %if courseware_summary:
-      <div>
+      <div class="progress__score-wrapper">
         <%def name="pointending()">
           %if points_difference%10 == 1:
             балл
@@ -55,18 +55,29 @@
             баллов
           %endif
         </%def>
-        <p>Твой прогресс по курсу: ${persentage_current} из 100</p>
-        %if assessment_current:
-          <p>Оценка: ${assessment_current} из ${assessment_maximum}</p>
-        %if assessment_current != assessment_maximum:
-          <p>(необходимо набрать еще ${points_difference} баллов чтобы получить ${assessment_next}
-            из ${assessment_maximum})</p>
-        %endif
-        %else:
-          <p>Оценка: O из ${assessment_maximum}</p>
-          <p>(необходимо набрать еще ${points_difference} ${pointending()} чтобы получить ${assessment_minimum}
-            из ${assessment_maximum})</p>
-        %endif
+        <div class="progress__score-holder">
+          <p class="progress__main-progress">Твой прогресс по курсу: <strong>${persentage_current} / 100</strong></p>
+          <div class="progress__score-subholder">
+            %if assessment_current:
+              <p class="progress__score">Оценка: <strong>${assessment_current} из ${assessment_maximum}</strong></p>
+            %if assessment_current != assessment_maximum:
+              <p class="progress__score-remaining">(необходимо набрать еще ${points_difference} баллов, чтобы
+                получить ${assessment_next}
+                из ${assessment_maximum})</p>
+            %endif
+            %else:
+              <p class="progress__score">Оценка: <strong>O из ${assessment_maximum}</strong></p>
+              <p class="progress__score-remaining">(необходимо набрать еще ${points_difference} ${pointending()} чтобы
+                получить ${assessment_minimum}
+                из ${assessment_maximum})</p>
+            %endif
+          </div>
+        </div>
+      </div>
+      <div class="progress__static-text-holder">
+        <div class="progress__gradient-line"></div>
+        <div class="progress__static-text">Ниже представлена детальная разбивка на баллы по неделям и заданиям, в %:
+        </div>
       </div>
       <section class="progress__holder">
         %for counter, chapter in enumerate(courseware_summary, start=1):

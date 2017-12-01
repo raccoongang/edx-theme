@@ -28,7 +28,7 @@
         background: #57C4BD;
         height: 30px;
         width: 150px;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
     }
     &__bar {
         background: #062860;
@@ -54,7 +54,7 @@
     }
     &__title {
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 33px;
         align-self: flex-start;
         @media screen and (max-width: 768px) {
             padding: 0;
@@ -67,7 +67,7 @@
     &__image {
         width: 48px;
         height: 48px;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
         align-self: flex-start;
     }
     &__total-result {
@@ -91,6 +91,63 @@
         flex: 0 0 50%;
         @media screen and (max-width: 768px) {
             flex: 0 0 100%;
+            width: 100%;
         }
+    }
+    &__score-holder {
+        font-size: 24px;
+        color: #57C4BD;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 920px){
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 10px;
+        }
+    }
+    &__main-progress {
+        color: #3A3D3F;
+        @media screen and (max-width: 920px){
+            margin-bottom: 16px;
+        }
+    }
+    &__score-remaining {
+        font-size: 12px;
+        font-style: italic;
+    }
+    &__score-wrapper {
+        margin: 0 auto 16px;
+        max-width: 1200px;
+        width: 100%;
+    }
+    &__static-text-holder {
+        width: 100%;
+        position: relative;
+        padding: 16px 0 50px;
+    }
+    &__gradient-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, #072465 0%, #00c5bd 100%);
+        height: 3px;
+        width: 100%;
+    }
+    &__static-text {
+        margin: 16px auto 50px;
+        max-width: 1200px;
+        width: 100%;
+        @media screen and (max-width: 920px){
+            padding: 0 10px;
+        }
+    }
+    &__score-subholder {
+        display: flex;
+        align-items: center;
+    }
+    &__score-remaining {
+        margin: 0 0 0 16px;
+        width: 228px;
     }
 }
