@@ -1579,7 +1579,13 @@ body.view-in-course .course-wrapper {
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous span {
     color: #fff;
 }
-
-.error404-holder {
-
+// sticky footer
+.window-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+.content-wrapper {
+    flex: 1;
+}
+//end of sticky footer
