@@ -1,0 +1,30 @@
+body main .error404 {
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    position: relative;
+    text-align: left;
+    font: 20px/35px Verdana;
+    color: #57C4BD;
+    &__header-holder {
+        height: 70px;
+        font: 700 20px/35px Verdana;
+        color: #fff;
+        background: linear-gradient(to right, #072465 0%,#00c5bd 100%);
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__header,
+    &__text {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+    }
+    &__text {
+        color: #57C4BD;
+        font: 20px/35px Verdana;
+    }
+}

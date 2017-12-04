@@ -1,0 +1,23 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='../static_content.html'/>
+<%!
+  from django.utils.translation import ugettext as _
+  from openedx.core.djangolib.markup import HTML, Text
+%>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Page Not Found")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="outside-app error404">
+    <div class="error404__holder">
+      <div class="error404__header-holder">
+        <h1 class="error404__header">${_("Не работают серверы INTELLECTUALE")}</h1>
+      </div>
+      <div class="error404__text-holder">
+        <p class="error404__text">"Попробуйте перезагрузить страницу. Если не помогло, приносим извинения за временную неработу сайта <strong>www.intellectuale.ru</strong>.
+        Мы работаем над решением проблемы."</p>
+      </div>
+    </div>
+  </section>
+</main>
