@@ -1046,6 +1046,10 @@ body.view-in-course .wrapper-course-material .course-material {
     background: #fff;
     color: #000;
     border: 1px solid #000;
+
+    &:hover {
+        border: 1px solid #000;
+    }
 }
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
@@ -1208,6 +1212,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
+    transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
     
     &:active,
     &:focus {
@@ -1219,7 +1224,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
-        border-color: $theme-btn-white-border;
+        border-color: $theme-btn-white-bg-hover;
     }
 }
 body .discussion-module .btn {

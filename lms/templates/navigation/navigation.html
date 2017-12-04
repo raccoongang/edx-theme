@@ -49,7 +49,7 @@ site_status_msg = get_site_status_msg(course_id)
 % endif
 </%block>
 
-<header id="global-navigation" class="header ${"header__other" if "course" in request.path or "settings" in request.path else ""}">
+<header id="global-navigation" class="header ${"header__other" if "course" in request.path or "settings" in request.path else "404" in request.path ""}">
     <div class="header__helper"></div>
     <nav class="header__holder" aria-label="${_('Global')}">
       <span class="header__opener"></span>
