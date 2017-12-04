@@ -469,6 +469,9 @@ hr.other {
         &:first-child {
             border: none;
         }
+        &:nth-child(2) {
+            display: none;
+        }
     }
     a.user-dropdown-menuitem,
     a.dropdown-menuitem,
