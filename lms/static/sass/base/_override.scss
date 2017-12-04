@@ -1037,10 +1037,15 @@ body.view-in-course .wrapper-course-material .course-material {
 }
 .login-register .login-provider.button-oa2-facebook {
     transform: translateX(134px);
-    color: #fff;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 .login-register .login-provider.button-oa2-vk-oauth2 {
     transform: translateX(-134px);
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
 }
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
@@ -1541,7 +1546,7 @@ body.view-in-course .static_tab_wrapper {
     &:hover {
         border: none;
     }
-    
+
 }
 body.view-in-course .course-wrapper {
     border: none;
