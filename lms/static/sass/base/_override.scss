@@ -1571,6 +1571,10 @@ body {
         display: flex;
         align-items: center;
     }
+    .header-global .nav-global li a, .header-global .nav-global div a {
+        padding: 0;
+    }
+
     @media screen and (max-width: 978px) {
         .wrapper-footer .footer-logo-holder {
             display: none;
@@ -1611,6 +1615,9 @@ body {
     }
     .form-actions.form-third-party-auth {
         margin-top: 20px;
+    }
+    .header-global .nav-global .tab-nav-item .tab-nav-link {
+        padding: 0;
     }
 }
 
