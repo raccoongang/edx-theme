@@ -9,15 +9,6 @@
 <%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
-  <div class="footer_holder">
-    <div class="footer_wrapper">
-      <span class="footer_text">Get notified about new courses, events and news from your Learning Camp</span>
-      <div class="footer_box">
-        <input class="footer_input" type="text">
-        <a class="btn-2" href="#">Register</a>
-      </div>
-    </div>
-  </div>
   <footer id="footer-openedx" class="grid-container"
     ## When rendering the footer through the branding API,
     ## the direction may not be set on the parent element,
@@ -30,12 +21,6 @@
         <ol class="footer-nav_list">
             <li class="footer-nav_item">
               <a href="#" target="_blank">About</a>
-            </li>
-            <li class="footer-nav_item">
-              <a href="https://www.scout.org/news" target="_blank">News</a>
-            </li>
-            <li class="footer-nav_item">
-              <a href="#">Partner with us</a>
             </li>
             <li class="footer-nav_item">
               <a href="https://www.scout.org/wsb" target="_blank">Contact us</a>
@@ -57,21 +42,6 @@
 
       ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
       <p class="copyright">© World Scout Bureau Inc.</p>
-
-    ## Please leave this link and use one of the logos provided
-    ## The OpenEdX link may be hidden when this view is served
-    ## through an API to partner sites (such as marketing sites or blogs),
-    ## which are not technically powered by OpenEdX.
-    % if not hide_openedx_link:
-    <div class="footer-about-openedx">
-      <p>
-        <a class="racoon-link" href="https://raccoongang.com/" target="_blank">
-          powered by RACCOON GANG
-          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/RaccoonLogo.png" alt="${footer['openedx_link']['title']}" width="140" />
-        </a>
-      </p>
-    </div>
-    % endif
   </footer>
 </div>
 % if include_dependencies:
