@@ -280,7 +280,7 @@ hr.other {
 
 .courses-container .courses .course .course-info {
     height: auto;
-    background: #DAF8F6;
+    background: #fff;
     padding: 16px;
 }
 
@@ -295,7 +295,7 @@ hr.other {
 
 .highlighted-courses .courses .course a {
     height: 100%;
-    background: #DAF8F6;
+    background: #fff;
 }
 
 .course-info__list {
@@ -307,7 +307,7 @@ hr.other {
     font-size: 14px;
     line-height: 23px;
     color: #000;
-    max-height: 144px;
+    max-height: 68px;
     overflow: hidden;
 }
 
@@ -468,6 +468,9 @@ hr.other {
 
         &:first-child {
             border: none;
+        }
+        &:nth-child(2) {
+            display: none;
         }
     }
     a.user-dropdown-menuitem,
@@ -653,6 +656,8 @@ hr.other {
     color: #fff;
     position: relative;
     z-index: 2;
+    max-height: 148px;
+    overflow: hidden;
 }
 .dashboard .my-courses .listing-courses li.wrapper-course-image__list-item {
     position: relative;
@@ -1037,7 +1042,7 @@ body.view-in-course .wrapper-course-material .course-material {
 }
 .find-courses .courses .course a {
     height: 100%;
-    background: #DAF8F6;
+    background: #fff;
 }
 .login-register .login-provider.button-oa2-facebook {
     transform: translateX(134px);
@@ -1576,7 +1581,18 @@ body.view-in-course .course-wrapper {
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous span {
     color: #fff;
 }
-
-.error404-holder {
-
+// sticky footer
+.window-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content-wrapper {
+    flex: 1;
+}
+div.info-wrapper {
+    background: #fff;
+}
+.wrapper-preview-menu {
+    width: 100%;
 }

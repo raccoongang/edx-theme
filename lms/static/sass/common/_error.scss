@@ -6,11 +6,12 @@ body main .error404 {
     text-align: left;
     font: 20px/35px Verdana;
     color: #57C4BD;
+    padding-top: 0;
     &__header-holder {
         height: 70px;
-        font: 700 20px/35px Verdana;
+        font: 700 20px/35px Verdana !important;
         color: #fff;
-        background: linear-gradient(to right, #072465 0%,#00c5bd 100%);
+        background: linear-gradient(to right, #57C4BD 0%,#CE3BC8 100%);
         display: flex;
         align-items: center;
         margin-bottom: 40px;
@@ -22,6 +23,13 @@ body main .error404 {
         width: 100%;
         text-align: left;
         color: #fff;
+        a {
+            font-weight: 700;
+            color: #57C4BD;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     &__text {
         color: #57C4BD;

@@ -21,7 +21,7 @@
         right: 20px;
         top: 0;
         box-shadow: 5px 2px 7px 0px rgba(0, 0, 0, 0.5);
-        transform: skew(20deg);
+        transform: skew(-20deg);
         width: 120%;
         height: 60px;
         background: $gradient3;
@@ -52,6 +52,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+}
+.course-box__list_other {
+    padding-left: 40px;
+    margin-bottom: 50px;
 }
 .course-box__list-item {
     position: relative;
@@ -115,11 +119,6 @@
         font-style: italic;
         font-size: 18px;
         line-height: 30px;
-
-    }
-    &__list {
-        padding-left: 40px;
-        margin-bottom: 50px;
     }
     &__header {
         margin: 0;

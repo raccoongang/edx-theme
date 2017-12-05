@@ -107,8 +107,9 @@
                     </div>
                       <div class="progress__in-wrapper">
                         %if len(section.problem_scores.values()) > 0:
-                          <div class="progress__bar-holder"><p class="progress__bar"
-                                                               style="width: ${percentageString}">${percentageString[0:-1]}</p>
+                          <div class="progress__bar-holder">
+                            <p class="progress__bar" style="width: ${percentageString}"></p>
+                            <p class="progress__number">${percentageString[0:-1]}%</p>
                           </div><!--Subsection Percent-->
                         %else:
                           <div class="progress__bar-holder"><p class="progress__bar" style="width: 0%"></p></div>

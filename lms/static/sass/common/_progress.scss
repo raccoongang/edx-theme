@@ -29,6 +29,7 @@
         height: 30px;
         width: 150px;
         margin-bottom: 8px;
+        position: relative;
     }
     &__bar {
         background: #062860;
@@ -141,6 +142,15 @@
         @media screen and (max-width: 920px){
             padding: 0 10px;
         }
+    }
+    &__number {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 0;
+        color: #fff;
+        font-weight: 700;
     }
     &__score-subholder {
         display: flex;
