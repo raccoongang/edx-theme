@@ -8,7 +8,7 @@ from django.core.urlresolvers import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
-<main id="main" aria-label="Content" tabindex="-1">
+  <main id="main" aria-label="Content" tabindex="-1">
     <div class="promo-box">
       <div class="promo-box_left">
         <img class="promo-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/img-2.png" alt="promo img">
@@ -31,10 +31,11 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="promo-box_helper"></div>
     </div>
     <section class="home">
+      % if user.is_authenticated():
       <%include file="${courses_list}" />
 
       <%include file="${programs_list}" />
-
+      % endif
       <div class="courses-box">
         <div class="courses-box_img-holder">
           <img class="courses-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="course img">
@@ -42,6 +43,7 @@ from openedx.core.djangolib.markup import HTML, Text
       </div>
 
     </section>
+    
 </main>
 
 % if show_homepage_promo_video:
@@ -54,19 +56,19 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <%block name="js_extra">
    <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
-   </script>
-   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"2036eac60a14e6549e2c8f745","lid":"7460db3bab"}) })</script>
+    $(window).load(function () {
+      if (getParameterByName('next')) {
+        $('#login').trigger("click");
+      }
+    })
+  </script>
+   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us10.list-manage.com", "uuid": "2036eac60a14e6549e2c8f745", "lid": "7460db3bab" }) })</script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
   ## NOTE: This won't work in production, because anonymous views are cached, so it will
   ## show either with or without this extra js for 3 minutes at a time.
 <script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
+  $(window).load(function () { $('#signup_action').trigger("click"); });
 </script>
 % endif
