@@ -47,6 +47,7 @@ var TUTORED_STUDENTS = {
     "AideenKerr": {id: 110, email: "aideen@codeinstitute.net"},
     "test": {id: 120, email: "media@codeinstitute.net"},
     "Partners": {id: 124,email: "partners@codeinstitute.net"},
+    "Katie_Maxwell": {id: 131, email: "katie@codeinstitute.net"},
     // Students
     "denismoc": {id: 54, email: "denismoc@live.ie"},
     "Bruce_H": {id: 55, email: "bruce@harrisonemail.com"},
@@ -112,7 +113,9 @@ var TUTORED_STUDENTS = {
     "Rishaal": {id: 126, email: "rishaal_mahabier@hotmail.com"},
     "Charlenelin ": {id: 127, email: "charlene.lin@hotmail.fr"},
     "SarahCrosby": {id: 128, email: "sarahcrosby1987@gmail.com"},
-    "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"} 
+    "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"},
+    "davidlittle": {id: 130, email: "dlittle446@gmail.com"},
+    "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"}
 };
 
 
@@ -235,5 +238,8 @@ var all_users = {
     "Rishaal": {id: 126, email: "rishaal_mahabier@hotmail.com"},
     "Charlenelin ": {id: 127, email: "charlene.lin@hotmail.fr"},
     "SarahCrosby": {id: 128, email: "sarahcrosby1987@gmail.com"},
-    "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"}  
+    "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"},
+    "davidlittle": {id: 130, email: "dlittle446@gmail.com"},
+    "Katie_Maxwell": {id: 131, email: "katie@codeinstitute.net"},
+    "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"}
 };
