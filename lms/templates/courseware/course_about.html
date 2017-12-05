@@ -96,6 +96,12 @@ from openedx.core.lib.courses import course_image_url
 
     %endif
 
+    $(".block-replacement-js").click(function(event) {
+      $(".media-wrapper").addClass('hidden');
+      $(".media-wrapper-inner").removeClass('hidden');
+      $(".media-wrapper-inner iframe").attr('src', $(".media-wrapper-inner iframe").attr('src') + "&autoplay=1");
+    });
+
   })(this)
   </script>
 
@@ -187,12 +193,17 @@ from openedx.core.lib.courses import course_image_url
 
       </section>
       % if get_course_about_section(request, course, "video"):
-      <a href="#video-modal" class="media" rel="leanModal">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-          <div class="play-intro"></div>
+      <div class="media">
+        <div class="hero block-replacement-js">
+          <div class="media-wrapper">
+            <img src="${course_image_urls['large']}" alt="" />
+            <div class="play-intro"></div>
+          </div>
+          <div class="media-wrapper-inner hidden">
+            ${get_course_about_section(request, course, "video")}
+          </div>
         </div>
-      </a>
+      </div>
       %else:
       <div class="media">
         <div class="hero">
