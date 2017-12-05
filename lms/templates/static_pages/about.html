@@ -1,0 +1,37 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About the World Scouting Learning Camp Project")}</h1>
+        <p>${_("World Scouting is strongly committed to support National Scout Organizations (NSOs) in the
+            development of individual members, whether they are young people or adults who are
+            motivated to learn because of the role they perform within Scouting or their interests.")}
+        </p>
+        <p>${_("Technology is part of our everyday lives and has proven to provide cost-effective methods
+            of communication. It also has a huge potential to support the development of organisations
+            and individuals.")}
+        </p>
+        <p>${_("Despite the efforts and effective short-term initiatives put in place by World Scouting for the
+            past few years, mostly at the national level, there is yet a strategic approach to its use of
+            new technologies in education. This project aims to address this issue.")}
+        </p>
+        <p>${_("By putting forward this project, we hope to present World Scouting as a learning and up-to-
+            date organisation that uses innovative approaches to support its Member Organizations in
+            the development of their most valuable asset – people. Overall, we strongly believe in the
+            effectiveness of this project and its potential contribution to the implementation of Vision
+            2023.")}
+        </p>
+        <p>${_("The Learning Camp will be launched in early 2018, and will initially offer free and easy
+            access to a growing number of online courses produced by World Scouting. It will be
+            available anytime and anywhere, bringing people together in an online space.\.")}
+        </p>
+        <p>${_("In subsequent phases of the project (commencing in 2018), the Learning Camp will offer
+            NSOs the possibility of developing and uploading training content of their own for users
+            within their respective NSO or anyone else who might find the training material useful.")}
+        </p>
+    </section>
+</main>

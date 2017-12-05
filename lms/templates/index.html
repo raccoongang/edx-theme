@@ -15,7 +15,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <div class="promo-box_text-holder promo-box_text-holder__other">
           <div class="promo-box_text-wrapper">
             <span class="promo-box_text">Online learning is arriving to World Scouting</span>
-            <h2 class="promo-box_heading">Coming in 2017!</h2>
+            <h2 class="promo-box_heading">Coming in 2018!</h2>
             <a class="btn-2" href="/courses">FIND COURSES</a>
           </div>
         </div>
@@ -24,7 +24,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <img class="promo-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/img-1.png" alt="promo img">
         <div class="promo-box_text-holder">
           <div class="promo-box_text-wrapper">
-            <a class="promo-box_big-text btn-3">Register to receive updates</p>
+            <a class="promo-box_big-text btn-3">Register to receive updates</a>
           </div>
         </div>
       </div>
@@ -60,6 +60,7 @@ from openedx.core.djangolib.markup import HTML, Text
          }
       })
    </script>
+   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"2036eac60a14e6549e2c8f745","lid":"7460db3bab"}) })</script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
