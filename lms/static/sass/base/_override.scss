@@ -360,6 +360,7 @@ hr.other {
     box-shadow: none;
     border: none;
     background: $gradient3;
+    padding: 0;
 }
 
 .course-info header.course-profile .intro-inner-wrapper {
@@ -411,6 +412,18 @@ hr.other {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: none;
+    @media (min-width: $tablet-size) {
+        display: block
+    }
+
+    .main-nav & {
+        display: block;
+
+        @media (min-width: $tablet-size) {
+            display: none;
+        }
+    }
 
     .user-link {
         display: flex;
@@ -545,7 +558,8 @@ hr.other {
     font-weight: normal;
 }
 .course-info header.course-profile .intro-inner-wrapper .intro {
-    width: 20%;
+    width: 40%;
+    padding: 50px 0 0;
 }
 .course-info header.course-profile .intro-inner-wrapper .media .hero {
     border-radius: 6px;
@@ -1600,4 +1614,15 @@ div.info-wrapper {
 }
 .wrapper-preview-menu {
     width: 100%;
+}
+.course-info header.course-profile .intro-inner-wrapper>div.table {
+    display: flex;
+}
+.course-info header.course-profile .intro-inner-wrapper .media {
+    width: 625px;
+    height: 350px;
+    display: block;
+    max-height: 350px;
+    max-width: 625px;
+    padding: 25px 0;
 }

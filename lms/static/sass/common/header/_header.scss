@@ -2,7 +2,7 @@
     position: relative;
 }
 .header__holder {
-    padding: 20px 20px 50px;
+    padding: 20px;
     max-width: $desktop-size;
     margin: 0 auto;
     display: flex;
@@ -11,9 +11,10 @@
     position: relative;
     box-sizing: border-box;
     @media (min-width: $tablet-size) {
-        border-radius: 45%;
-        padding: 20px 0 50px;
         justify-content: space-between;
+    }
+    @media (min-width: $desktop-size) {
+        padding: 20px 0 50px;
     }
     
     .header__other &,
@@ -53,15 +54,18 @@ a.header__logo,
     width: 120%;
     background: $gradient;
     z-index: 0;
+    border-radius: 50%;
+    display: none;
 
     &:before {
         content: '';
         padding-top: 100%;
         float: left;
     }
-    @media (min-width: $tablet-size) {
-        border-radius: 50%;
+    @media (min-width: $desktop-size) {
+        display: block;
     }
+    
 
     .header__other &,
     .view-in-course &,
