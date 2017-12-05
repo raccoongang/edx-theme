@@ -31,11 +31,9 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="promo-box_helper"></div>
     </div>
     <section class="home">
-      % if user.is_authenticated():
       <%include file="${courses_list}" />
 
       <%include file="${programs_list}" />
-      % endif
       <div class="courses-box">
         <div class="courses-box_img-holder">
           <img class="courses-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="course img">
