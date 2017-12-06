@@ -7,7 +7,9 @@
     min-width: 262px;
     margin: 0;
     transform: translate(-100%, 0);
-    list-style: none;   
+    list-style: none;
+    transition: transform .2s;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.15);
     @media (min-width: $tablet-size) {
         min-width: auto;
         display: flex;
@@ -15,6 +17,12 @@
         height: auto;
         position: static;
         transform: translate(0, 0);
+        box-shadow: none;
+    }
+
+    .menu-open & {
+        transform: translate(0, 0);
+        z-index: 100;
     }
 }
 a.main-nav__link,

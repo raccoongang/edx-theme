@@ -1,3 +1,6 @@
+*:not(.fa){
+    font-family: Verdana,Geneva,sans-serif,sans-serif !important;
+}
 .window-wrap {
     overflow: hidden;
 }
@@ -408,20 +411,26 @@ hr.other {
 }
 
 .user {
-    display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
     display: none;
     @media (min-width: $tablet-size) {
-        display: block
+        display: flex;
     }
 
     .main-nav & {
-        display: block;
+        display: flex;
+        flex-direction: column;
 
         @media (min-width: $tablet-size) {
             display: none;
+        }
+    }
+
+    .user-menu {
+        .main-nav & { 
+            width: 100%;
         }
     }
 
@@ -434,6 +443,9 @@ hr.other {
         &:hover {
             color: #000;
         }
+        .main-nav & {
+            margin-left: 16px;
+        }
     }
     .user-image-frame {
         width: 36px;
@@ -441,9 +453,24 @@ hr.other {
         overflow: hidden;
         border-radius: 50%;
         margin-right: 6px;
+
+        .main-nav & {
+            width: 22px;
+            height: 22px;
+        }
     }
     .primary {
         position: relative;
+        display: flex;
+
+        .main-nav & { 
+            border-bottom: 1px solid #F5F5F5;
+
+            &:first-child {
+                border-bottom: none;
+                padding: 12px 0px;
+            }
+        }
     }
     .user-dropdown-menu {
         position: absolute;
@@ -461,6 +488,12 @@ hr.other {
 
         &.expanded {
             display: block;
+        }
+        .main-nav & { 
+            position: static;
+            width: 100%;
+            background: transparent;
+            border-radius: 0;
         }
     }
     .user-dropdown {
@@ -490,6 +523,9 @@ hr.other {
         &:nth-child(2) {
             display: none;
         }
+        .main-nav & { 
+            border-top: 1px solid #F5F5F5;
+        }
     }
     a.user-dropdown-menuitem,
     a.dropdown-menuitem,
@@ -505,6 +541,9 @@ hr.other {
         &:hover {
             color: #000;
             background: #D6F6F4;
+        }
+        .main-nav & { 
+            padding-left: 46px;
         }
     }
 }
@@ -604,6 +643,7 @@ hr.other {
     padding: 16px 0 16px 119px;
     box-sizing: border-box;
     align-items: center;
+    min-height: 176px;
 
     &:after {
         content: '';
@@ -992,6 +1032,8 @@ body .wrapper-course-material .course-tabs li a.active,
 body .wrapper-course-material .course-tabs li a,
 body .wrapper-course-material .course-tabs li a:visited {
     color: #fff !important;
+    font-size: 20px;
+    line-height: 1.3;
 }
 body .wrapper-course-material .course-tabs li a:focus,
 body .wrapper-course-material .course-tabs li a.active {
@@ -1067,16 +1109,16 @@ body.view-in-course .wrapper-course-material .course-material {
     transform: translateX(134px);
     background: #fff;
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid #c8c8c8;
 }
 .login-register .login-provider.button-oa2-vk-oauth2 {
     transform: translateX(-134px);
     background: #fff;
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid #c8c8c8;
 
     &:hover {
-        border: 1px solid #000;
+        border: 1px solid #c8c8c8;
     }
 }
 .wrapper-account-settings .wrapper-header {
@@ -1158,6 +1200,7 @@ body .user .user-dropdown-menu {
 body.view-register .form-actions button[type="submit"],
 body.view-login .form-actions button[type="submit"],
 body .login .form-actions button[type="submit"] {
+    white-space: nowrap;
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
@@ -1215,6 +1258,7 @@ body .login-register {
 }
 body .view-login .form-actions button[type="submit"],
 body .login .form-actions button[type="submit"] {
+    white-space: nowrap;
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
@@ -1237,6 +1281,7 @@ body .login .form-actions button[type="submit"] {
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
 .dashboard .my-courses .course .details .enter-course {
+    white-space: nowrap;
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
@@ -1256,6 +1301,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
     }
 }
 body .discussion-module .btn {
+    white-space: nowrap;
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
@@ -1274,6 +1320,7 @@ body .discussion-module .btn {
 }
 body .courseware-bookmarks-button .bookmarks-list-button,
 body .courseware-bookmarks-button .bookmarks-list-button.is-active {
+    white-space: nowrap;
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
@@ -1313,6 +1360,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta st
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
 body .instructor-dashboard-content-2 input[type="button"],
 body .search-bar .search-button {
+    white-space: nowrap;
     text-shadow: none;
     box-shadow: none;
     border: none;
@@ -1339,10 +1387,12 @@ body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled),
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
     box-shadow: none;
     border-color: $theme-btn-bg;
+    white-space: nowrap;
 }
 .button,
 .heading-group button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+    white-space: nowrap;
     background: $theme-btn-bg;
     box-shadow: none;
     color: $theme-btn-text-color;
@@ -1359,6 +1409,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     }
 }
 .heading-group button {
+    white-space: nowrap;
     border-color: $theme-btn-bg;
     &:hover {
          border-color: $theme-btn-bg-hover;
@@ -1459,6 +1510,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     border-color: $theme-btn-bg !important;
     background-color: $theme-btn-bg !important;
     color: $theme-btn-text-color !important;
+    white-space: nowrap;
 }
 // end btns
 

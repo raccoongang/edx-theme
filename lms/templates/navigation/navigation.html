@@ -52,7 +52,7 @@ site_status_msg = get_site_status_msg(course_id)
 <header id="global-navigation" class="header ${"header__other" if "course" in request.path or "settings" in request.path or "404" in request.path or "honor" in request.path else ""}">
     <div class="header__helper"></div>
     <nav class="header__holder" aria-label="${_('Global')}">
-      <span class="header__opener"></span>
+      <span class="header__opener" id="header__opener"></span>
       <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
       % if user.is_authenticated():
         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
@@ -89,6 +89,14 @@ site_status_msg = get_site_status_msg(course_id)
       % endif
     </nav>
 </header>
+<script>
+    var btn = document.getElementById('header__opener'),
+        body = document.body;
+    function btnToggle() {
+       body.classList.toggle('menu-open');
+    }
+    btn.addEventListener('click', btnToggle);
+</script>
 % if course:
 <!--[if lte IE 9]>
 <div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
