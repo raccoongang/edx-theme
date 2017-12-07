@@ -1534,3 +1534,12 @@ body {
 * * {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+#login {
+    .login-button,
+    .form-field.checkbox-remember,
+    .form-field.password-password,
+    .form-field.email-email,
+    .section-title.lines{
+        display: none;
+    }
+}
