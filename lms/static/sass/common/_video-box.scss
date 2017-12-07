@@ -33,6 +33,15 @@
     box-sizing: border-box;
     padding: 50px 30px;
 }
+.video-box__helper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 96, 100, .5);
+    overflow: hidden;
+}
 .video-box__blur {
     position: absolute;
     top: 0;
@@ -40,7 +49,6 @@
     left: 0;
     width: 100%;
     filter: blur(5px);
-    background: rgba(96, 100, 100, 0.5);
     overflow: hidden;
 }
 .video-box_school-name {
@@ -70,7 +78,7 @@
         background: #fff;
         border-radius: 50%;
         position: absolute;
-        left: -14px;
+        left: -18px;
         top: 5px;
     }
 }

@@ -54,7 +54,6 @@
 }
 .course-box__list_other {
     padding-left: 40px;
-    margin-bottom: 50px;
 }
 .course-box__list-item {
     position: relative;
@@ -72,6 +71,11 @@
         position: absolute;
         left: -20px;
         top: 6px;
+    }
+
+    .course-box__list_other & {
+        font-size: 18px;
+        line-height: 30px;
     }
 }
 .course-box__img {
@@ -122,6 +126,7 @@
         font-style: italic;
         font-size: 18px;
         line-height: 30px;
+        color: #062860;
     }
     &__header {
         margin: 0;
