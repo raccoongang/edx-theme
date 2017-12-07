@@ -1488,10 +1488,16 @@ body {
         left: 0;
         margin: 0;
         top: 0;
-        transform: translate(0, -50%);
+        transform: translate(0, -10%);
     }
     .tab.account-nav-link:not(:first-child) {
         display: none;
+    }
+    .wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
+        display: none;
+        &:first-child {
+            display: block;
+        }
     }
     .header-global .wrapper-header .wrapper-user-menu,
     .dropdown-menu-container .menu-title {
@@ -1506,4 +1512,36 @@ body {
     .doc-link {
         margin: 18px 15px;
     }
+    .wrap-instructor-info .instructor-info-action {
+        color: $theme-link;
+        &:hover {
+            color: #fff;
+            background: $theme-link;
+        }
+    }
+    .header-global .user .user-link .label-username,
+    .header-global .user-dropdown,
+    .wiki-wrapper section.wiki .nav-tabs a {
+        color: $theme-link;
+    }
+    .header-global .wrapper-header .list-inline .item {
+        font-size: 0.875em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .dropdown-menu-container .menu-title,
+    .doc-link {
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 0.875rem;
+        font-weight: 700;
+    }
+    .doc-link {
+        line-height: 7px;
+    }
+    .btn {
+        border-color: $theme-link;
+        background: #fff;
+        color: $theme-link;
+    }
+    
 }
