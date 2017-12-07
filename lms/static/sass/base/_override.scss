@@ -1565,8 +1565,12 @@ body {
         background: #d23153;
 
         &:hover {
-            background: #fff;
+            background: #fff !important;
             color: #d23153;
+
+            span {
+                color: #d23153 !important;
+            }
         }
     }
 }
