@@ -24,8 +24,8 @@
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-                                                                                                                                                                                                                                                                                                                                                                            <form method="get" action="/courses">
-                                                                                                                                                                                                                                                                                                                                                                            <label><span class="sr">${_("Search for a course")}</span>
+            <form method="get" action="/courses">
+              <label><span class="sr">${_("Search for a course")}</span>
                     <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
                   </label>
                   <button class="search-button" type="submit">
@@ -45,35 +45,36 @@
     <article class="promo-block">
       <div class="promo-block__holder">
         <div class="video-box">
-          <p class="video-box__text">Лучшие образовательные <br> курсы — бесплатно и онлайн</p>
+          <p class="video-box__text">ПОСТУПЛЕНИЕ В OXFORD, HARVARD  <br> И ЛУЧШИЕ РОССИЙСКИЕ УНИВЕРСИТЕТЫ</p>
           <a href="/courses" class="login-theme">найти курс</a>
-          <iframe width="800" height="457" class="video-box__video" id="video-box__video"
-                    src="https://www.youtube.com/embed/S66Gqwt4Mdg?version=3&amp;autoplay=1&amp;controls=0&amp;fs=0&amp;loop=1&amp;playlist=S66Gqwt4Mdg&amp;rel=0&amp;showinfo=0"
-                    frameborder="0"></iframe>
+          <video class="video-box__video" id="video-box__video" width="800" height="457" controls autoplay muted controlsList="nodownload">
+            <source src="/static/${settings.DEFAULT_SITE_THEME}/images/Intellectuale_Promo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
         </div>
         <div class="course-section">
-          <a class="course-section__item" href="#">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg" alt="course img">
+          <a class="course-section__item" href="https://intellectuale.ru/courses/course-v1:Intellectuale+001+2017/about">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img4.jpg" alt="course img">
             <div class="course-section__description">
               <span class="course-section__stat course-section__stat_color1">НОВЫЙ КУРС!</span>
-              <strong class="course-section__name">Механика</strong>
-              <span class="course-section__school">СУНЦ МГУ</span>
-            </div>
-          </a>
-          <a class="course-section__item" href="#">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
-            <div class="course-section__description">
-              <span class="course-section__stat course-section__stat_color2">ПОПУЛЯРНЫЙ КУРС</span>
-              <strong class="course-section__name">Статистика</strong>
+              <strong class="course-section__name">Vocabulary – 1</strong>
               <span class="course-section__school">Intellectuale</span>
             </div>
           </a>
-          <a class="course-section__item" href="#">
+          <a class="course-section__item" href="https://intellectuale.ru/courses/course-v1:Intellectuale+002+2017/about">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
+            <div class="course-section__description">
+              <span class="course-section__stat course-section__stat_color2">ПОПУЛЯРНЫЙ КУРС</span>
+              <strong class="course-section__name">Статистика – 1</strong>
+              <span class="course-section__school">Intellectuale</span>
+            </div>
+          </a>
+          <a class="course-section__item" href="https://intellectuale.ru/courses/course-v1:1329+003+2017/about">
             <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img3.jpg" alt="course img">
             <div class="course-section__description">
               <span class="course-section__stat course-section__stat_color3">ПОПУЛЯРНЫЙ КУРС</span>
-              <strong class="course-section__name">Экономика</strong>
-              <span class="course-section__school">Лицей НИУ ВШЭ</span>
+              <strong class="course-section__name">Производные</strong>
+              <span class="course-section__school">Школа 1329, Москва</span>
             </div>
           </a>
         </div>
@@ -85,11 +86,11 @@
         </a>
         <a class="schools__item schools__item_color2" href="#">
           <strong class="schools__name">Лицей НИУ ВШЭ</strong>
-          <p class="schools__text"><span class="schools__strong">Топ-10</span> в рейтинге российских школ</p>
+          <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
         </a>
         <a class="schools__item schools__item_color3" href="#">
           <strong class="schools__name">Школа 1329</strong>
-          <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
+          <p class="schools__text"><span class="schools__strong">Топ-10</span> в рейтинге российских школ</p>
         </a>
         <a class="schools__item schools__item_color4" href="#">
           <strong class="schools__name">57 школа</strong>
@@ -128,43 +129,42 @@
   <article class="gallery-index">
     <div class="slider-gallery">
       <div class="slider-gallery__item">
-        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-slide02.jpg" alt=""
              class="slider-gallery__image">
-        <div class="slider-gallery__blur-filter"></div>
+        <div class="slider-gallery__blur-filter slider-gallery__blur-filter_slide-2"></div>
         <div class="slider-gallery__info">
           <div class="slider-gallery__text-holder">
-            <span class="slider-gallery__title">CУНЦ МГУ</span>
+            <span class="slider-gallery__title">Школа 1329</span>
             <strong class="slider-gallery__bold-text">Москва</strong>
-            <p class="slider-gallery__paragraph">Топ-5 российских школ</p>
-            <p class="slider-gallery__paragraph">Школа основана в 1963 году академиком Колмогоровым</p>
+            <p class="slider-gallery__paragraph">Топ-10 российских школ</p>
             <p class="slider-gallery__paragraph">Школа специализируется на <strong class="slider-gallery__bold-text">математике</strong>,
-              <strong class="slider-gallery__bold-text">физике</strong> и <strong class="slider-gallery__bold-text">информатике</strong>
+              <strong class="slider-gallery__bold-text">математике</strong> и <strong class="slider-gallery__bold-text">физике</strong>
             </p>
           </div>
           <a class="login-theme" href="/schools">Школы</a>
         </div>
       </div>
       <div class="slider-gallery__item">
-        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-slide03.jpg" alt=""
              class="slider-gallery__image">
-        <div class="slider-gallery__blur-filter"></div>
+        <div class="slider-gallery__blur-filter slider-gallery__blur-filter_slide-3"></div>
         <div class="slider-gallery__info">
           <div class="slider-gallery__text-holder">
-            <span class="slider-gallery__title">CУНЦ МГУ</span>
+            <span class="slider-gallery__title">Intellectuale</span>
             <strong class="slider-gallery__bold-text">Москва</strong>
             <p class="slider-gallery__paragraph">Топ-5 российских школ</p>
             <p class="slider-gallery__paragraph">Школа основана в 1963 году академиком Колмогоровым</p>
-            <p class="slider-gallery__paragraph">Школа специализируется на <strong class="slider-gallery__bold-text">математике</strong>,
-              <strong class="slider-gallery__bold-text">физике</strong> и <strong class="slider-gallery__bold-text">информатике</strong>
+            <p class="slider-gallery__paragraph">Мы выпускаем курсы соответствующие международным стандартам по <strong class="slider-gallery__bold-text">математике</strong>,
+              <strong class="slider-gallery__bold-text">экономике</strong> и <strong class="slider-gallery__bold-text">английскому языку</strong>
             </p>
           </div>
           <a class="login-theme" href="/schools">Школы</a>
         </div>
       </div>
       <div class="slider-gallery__item">
-        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt=""
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-slide01.jpg" alt=""
              class="slider-gallery__image">
-        <div class="slider-gallery__blur-filter"></div>
+        <div class="slider-gallery__blur-filter slider-gallery__blur-filter_slide-1"></div>
         <div class="slider-gallery__info">
           <div class="slider-gallery__text-holder">
             <span class="slider-gallery__title">CУНЦ МГУ</span>
@@ -182,73 +182,35 @@
   </article>
   <hr>
   <div class="advantage">
-    <h2 class="advantage__heading">INTELLECTUALE <br> только качественное среднее образование</h2>
+    <h2 class="advantage__heading">INTELLECTUALE <br> соответствие мировым стандартам качества</h2>
     <div class="advantage__row">
       <div class="advantage__description">
         <span class="advantage__ico-holder"><img class="advantage__ico"
                                                  src="/static/${settings.DEFAULT_SITE_THEME}/images/ico1.svg"
                                                  alt=""></span>
         <strong class="advantage__caption advantage__caption_color1">1. МАТЕРИАЛЫ КУРСА</strong>
-        <p class="advantage__text">Любой курс включает в себя видео-лекции высшего качества, материалы и закрепляющие
-          задания с автоматической проверкой</p>
+        <p class="advantage__text">Видео-лекции высшего качества с анимированной инфографикой. <br>
+          Материалы курса в удобной сжатой форме для быстрого освоения или повторения тем курса</p>
       </div>
       <img class="advantage__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/advantage_img1.png" alt="">
     </div>
     <div class="advantage__row">
       <div class="advantage__description">
         <span class="advantage__ico-holder"><img class="advantage__ico"
-                                                 src="/static/${settings.DEFAULT_SITE_THEME}/images/ico2.svg"
+                                                 src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-2.png"
                                                  alt=""></span>
-        <strong class="advantage__caption advantage__caption_color2">2. ПОМОЩЬ</strong>
-        <p class="advantage__text">Всегда есть возможность задать вопросы по курсу преподавателю и другим учащимся на
-          форумах.</p>
+        <strong class="advantage__caption advantage__caption_color2">2. Задания</strong>
+        <p class="advantage__text">Проверочные интерактивные задания с автоматической проверкой и детальным решением для закрепления пройденного материала.</p>
       </div>
       <img class="advantage__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/advantage_img2.png" alt="">
     </div>
     <div class="advantage__row">
       <div class="advantage__description">
         <span class="advantage__ico-holder"><img class="advantage__ico"
-                                                 src="/static/${settings.DEFAULT_SITE_THEME}/images/ico3.svg"
+                                                 src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-3.png"
                                                  alt=""></span>
-        <strong class="advantage__caption advantage__caption_color3">3. СЕРТИФИКАТ</strong>
-        <p class="advantage__text">По окончании курса ты получишь сертификат о прохождении курса одной из лучших школ
-          России</p>
-      </div>
-      <img class="advantage__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/advantage_img3.png" alt="">
-    </div>
-  </div>
-  <div class="advantage">
-    <h2 class="advantage__heading">INTELLECTUALE <br> только качественное среднее образование</h2>
-    <div class="advantage__row">
-      <div class="advantage__description">
-        <span class="advantage__ico-holder"><img class="advantage__ico"
-                                                 src="/static/${settings.DEFAULT_SITE_THEME}/images/ico1.svg"
-                                                 alt=""></span>
-        <strong class="advantage__caption advantage__caption_color1">1. МАТЕРИАЛЫ КУРСА</strong>
-        <p class="advantage__text">Любой курс включает в себя видео-лекции высшего качества, материалы и закрепляющие
-          задания с автоматической проверкой</p>
-      </div>
-      <img class="advantage__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/advantage_img1.png" alt="">
-    </div>
-    <div class="advantage__row">
-      <div class="advantage__description">
-        <span class="advantage__ico-holder"><img class="advantage__ico"
-                                                 src="/static/${settings.DEFAULT_SITE_THEME}/images/ico2.svg"
-                                                 alt=""></span>
-        <strong class="advantage__caption advantage__caption_color2">2. ПОМОЩЬ</strong>
-        <p class="advantage__text">Всегда есть возможность задать вопросы по курсу преподавателю и другим учащимся на
-          форумах.</p>
-      </div>
-      <img class="advantage__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/advantage_img2.png" alt="">
-    </div>
-    <div class="advantage__row">
-      <div class="advantage__description">
-        <span class="advantage__ico-holder"><img class="advantage__ico"
-                                                 src="/static/${settings.DEFAULT_SITE_THEME}/images/ico3.svg"
-                                                 alt=""></span>
-        <strong class="advantage__caption advantage__caption_color3">3. СЕРТИФИКАТ</strong>
-        <p class="advantage__text">По окончании курса ты получишь сертификат о прохождении курса одной из лучших школ
-          России</p>
+        <strong class="advantage__caption advantage__caption_color3">3. Результат</strong>
+        <p class="advantage__text">Ты сможешь контролировать прогресс по всем темам курса. Данные знания помогут тебе поступить в Oxford, Harvard и другие вузы США и Великобритании, а также в любой университет России</p>
       </div>
       <img class="advantage__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/advantage_img3.png" alt="">
     </div>

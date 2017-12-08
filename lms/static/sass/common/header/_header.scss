@@ -2,7 +2,7 @@
     position: relative;
 }
 .header__holder {
-    padding: 20px 20px 50px;
+    padding: 20px;
     max-width: $desktop-size;
     margin: 0 auto;
     display: flex;
@@ -10,10 +10,14 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
+    background: $gradient2;
+
     @media (min-width: $tablet-size) {
-        border-radius: 45%;
-        padding: 20px 0 50px;
         justify-content: space-between;
+    }
+    @media (min-width: $desktop-size) {
+        padding: 20px 0 50px;
+        background: none;
     }
     
     .header__other &,
@@ -29,6 +33,8 @@ a.header__logo,
     letter-spacing: 0;
     margin: 0;
     line-height: 1;
+    display: flex;
+    align-items: center;
 
     &:hover {
         color: #fff;
@@ -44,6 +50,24 @@ a.header__logo,
         }
     }
 }
+.header__logo-white {
+    display: block;
+    width: 32px;
+    margin-right: 5px;
+
+    .header__other & {
+        display: none;
+    }
+}
+.header__logo-dark {
+    display: none;
+    width: 32px;
+    margin-right: 5px;
+
+    .header__other & {
+        display: block;
+    }
+}
 .header__helper {
     max-width: 1700px;
     position: absolute;
@@ -53,16 +77,18 @@ a.header__logo,
     width: 120%;
     background: $gradient;
     z-index: 0;
+    border-radius: 50%;
+    display: none;
 
     &:before {
         content: '';
         padding-top: 100%;
         float: left;
     }
-    @media (min-width: $tablet-size) {
-        border-radius: 50%;
+    @media (min-width: $desktop-size) {
+        display: block;
     }
-
+    
     .header__other &,
     .view-in-course &,
     .is-authenticated & {
@@ -73,6 +99,7 @@ a.header__logo,
     position: absolute;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
+    transition: transform .2s;
     width: 18px;
     height: 8px;
     left: 20px;
@@ -87,7 +114,13 @@ a.header__logo,
         top: 3px;
         left: 0;
     }
+    &:hover {
+        cursor: pointer;
+    }
     @media (min-width: $tablet-size) {
         display: none;
+    }
+    .menu-open & {
+        transform: translate(265px, 0);
     }
 }

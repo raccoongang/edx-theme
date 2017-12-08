@@ -9,31 +9,29 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 %>
 
-<ol class="main-nav">
+<div class="main-nav">
   <%block name="navigation_global_links_authenticated">
-  <li class="main-nav__item">
+  <div class="main-nav__item">
     <a class="main-nav__link" href="/">Главная</a>
-  </li>
-  <li class="main-nav__item">
+  </div>
+  <div class="main-nav__item">
     <a class="main-nav__link" href="/courses">Курсы</a>
-  </li>
-  <li class="main-nav__item">
+  </div>
+  <div class="main-nav__item">
     <a class="main-nav__link" href="/schools">Школы</a>
-  </li>
-  <li class="main-nav__item">
+  </div>
+  <div class="main-nav__item">
     <a class="main-nav__link" href="/about">О проекте</a>
-  </li>
-  <li class="main-nav__item main-nav__item_mobile">
-    <a class="main-nav__link" href="/login${login_query()}">${_("Sign in")}</a>
-  </li>
+  </div>
     %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
-      <li class="item">
+      <div class="item">
         ## Translators: This is short for "System administration".
         <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-      </li>
+      </div>
     %endif
   </%block>
-</ol>
+  <%include file="../user_dropdown.html"/>
+</div>
 
 <%include file="../user_dropdown.html"/>
 
@@ -46,3 +44,4 @@ from django.utils.translation import ugettext as _
     </li>
   </ol>
 % endif
+
