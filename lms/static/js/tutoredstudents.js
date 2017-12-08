@@ -115,7 +115,8 @@ var TUTORED_STUDENTS = {
     "SarahCrosby": {id: 128, email: "sarahcrosby1987@gmail.com"},
     "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"},
     "davidlittle": {id: 130, email: "dlittle446@gmail.com"},
-    "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"}
+    "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"},
+    "Sabelo_Mcanyana": {id: 133, email: "sabelom@gmail.com"}
 };
 
 
@@ -241,5 +242,6 @@ var all_users = {
     "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"},
     "davidlittle": {id: 130, email: "dlittle446@gmail.com"},
     "Katie_Maxwell": {id: 131, email: "katie@codeinstitute.net"},
-    "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"}
+    "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"},
+    "Sabelo_Mcanyana": {id: 133, email: "sabelom@gmail.com"}
 };
