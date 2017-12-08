@@ -3,7 +3,6 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
-from certificates.api import get_active_web_certificate
 from courseware.courses import get_course
 %>
 <%page args="course" expression_filter="h"/>
@@ -21,15 +20,12 @@ from courseware.courses import get_course
         <span class="course-code">${course.display_number_with_default}</span>
         <span class="course-title"></span> -->
         <% course_subject=get_course(course.id, depth=1) %>
-        <% certificate_data = get_active_web_certificate(course_subject)%>
         ${course.display_name_with_default}
       </h2>
       <div class="course-info__school">
-        % if certificate_data:
-            % for signatory in certificate_data.get('signatories', []):
-              ${signatory['organization']}
-            % endfor
-        % endif
+      % if course_subject.display_organization:
+        ${course_subject.display_organization}
+      % endif
       </div>
       <p class="course-info__description">
         %if course.short_description:

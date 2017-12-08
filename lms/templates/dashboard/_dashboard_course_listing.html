@@ -6,7 +6,6 @@ import urllib
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 from django.core.urlresolvers import reverse
-from certificates.api import get_active_web_certificate
 from course_modes.models import CourseMode
 from course_modes.helpers import enrollment_mode_display
 from courseware.courses import get_course
@@ -78,13 +77,10 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           % endif
         </h3>
         <% course=get_course(course_overview.id, depth=1) %>
-        <% certificate_data = get_active_web_certificate(course)%>
         <strong class="course-school">
-          % if certificate_data:
-            % for signatory in certificate_data.get('signatories', []):
-              ${signatory['organization']}
-            % endfor
-          % endif
+        % if course.display_organization:
+            ${course.display_organization}
+        % endif
         </strong>
         <div class="course-info">
           <span class="info-university">${course_overview.display_org_with_default} - </span>

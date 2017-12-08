@@ -121,11 +121,9 @@ from openedx.core.lib.courses import course_image_url
             <!-- <button type="button">${course.display_org_with_default | h}</button> -->
           </h1>
           <span class="intro__school">
-            % if certificate_data:
-                % for signatory in certificate_data.get('signatories', []):
-                  ${signatory['organization']}
-                % endfor
-            % endif
+          % if course.display_organization:
+              ${course.display_organization}
+          % endif
           </span>
           <h3>
             <p class="intro__text">${get_course_about_section(request, course, 'short_description')}</p>
