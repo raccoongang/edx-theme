@@ -79,37 +79,7 @@ site_status_msg = get_site_status_msg(course_id)
       % endif
         <div class="nav-holder">
       % if user.is_authenticated():
-        <ol class="left nav-global list-inline authenticated">
-        <%block name="navigation_global_links_authenticated">
-          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
-              <li class="item nav-global-01 nav-global-01-xseries-style">
-                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
-              </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
-                  ${_("Courses")}
-                </a>
-              </li>
-          % else:
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
-              <li class="item nav-global-01">
-                <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
-              </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
-                  ${_("Courses")}
-                </a>
-              </li>
-            % endif
-          % endif
-          %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
-            <li class="item">
-              ## Translators: This is short for "System administration".
-              <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-            </li>
-          %endif
-        </%block>
-      </ol>
+        
       <div class="flex">
         <%include file="user_dropdown.html"/>
 
@@ -127,34 +97,6 @@ site_status_msg = get_site_status_msg(course_id)
         </ol>
       % endif
     % else:
-      <ol class="left list-inline nav-global">
-        <%block name="navigation_global_links">
-          % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-            <li class="item nav-global-01">
-              <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-            </li>
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-              <li class="item nav-global-02">
-                <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
-              </li>
-            % endif
-            <li class="item nav-global-03">
-              <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-            </li>
-          % endif
-        </%block>
-
-        <%block name="navigation_other_global_links">
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
-              </li>
-            %endif
-          % endif
-        </%block>
-      </ol>
-
       <ol class="right nav-courseware list-inline">
         <%block name="navigation_sign_in">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
