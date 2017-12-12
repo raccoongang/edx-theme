@@ -60,6 +60,8 @@
     color: #57C4BD;
     font-size: 24px;
     line-height: 1;
+    display: flex;
+    align-items: center;
 }
 
 .wrapper-footer footer#footer-openedx .footer-about-openedx:last-child {
@@ -384,7 +386,7 @@ hr.other {
 .courses-container .courses .courses-listing .courses-listing-item {
     max-height: none;
     margin: 0 24px 30px;
-    @media (min-width: $tablet-size) {
+    @media (min-width: $desktop-size) {
         margin: 0 30px 50px 0;
 
         &:nth-child(4n) {

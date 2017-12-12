@@ -64,9 +64,6 @@ a.header__logo,
     .header__other & {
         display: none;
     }
-    .footer-about-openedx & {
-        display: block;
-    }
 }
 .header__logo-dark {
     display: none;
@@ -77,6 +74,9 @@ a.header__logo,
     .header__other &,
     .view-in-course &,
     .is-authenticated & {
+        display: block;
+    }
+    .footer-about-openedx & {
         display: block;
     }
 }

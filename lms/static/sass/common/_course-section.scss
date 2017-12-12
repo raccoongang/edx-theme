@@ -70,7 +70,10 @@
     display: block;
     font-size: 10px;
     text-transform: uppercase;
-    margin-bottom: 72px;
+    margin-bottom: 61px;
+    @media (min-width: $tablet-size) {
+        margin-bottom: 72px;
+    }
 }
 .course-section__stat_color1 {
     color: $color4;
