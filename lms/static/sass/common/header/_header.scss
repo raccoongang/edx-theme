@@ -20,6 +20,7 @@
         background: none;
     }
     
+    .error-404 &,
     .header__other &,
     .view-in-course &,
     .is-authenticated & { 
@@ -40,6 +41,7 @@ a.header__logo,
         color: #fff;
     }
     
+    .error-404 &,
     .header__other &,
     .view-in-course &,
     .is-authenticated & {
@@ -55,6 +57,10 @@ a.header__logo,
     width: 32px;
     margin-right: 5px;
 
+    .error-404 &,
+    .header__other &,
+    .view-in-course &,
+    .is-authenticated &,
     .header__other & {
         display: none;
     }
@@ -67,7 +73,10 @@ a.header__logo,
     width: 32px;
     margin-right: 5px;
 
-    .header__other & {
+    .error-404 &,
+    .header__other &,
+    .view-in-course &,
+    .is-authenticated & {
         display: block;
     }
 }
@@ -92,6 +101,7 @@ a.header__logo,
         display: block;
     }
     
+    .error-404 &,
     .header__other &,
     .view-in-course &,
     .is-authenticated & {
