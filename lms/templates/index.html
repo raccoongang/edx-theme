@@ -48,7 +48,8 @@
           <div class="video-box__wrapper">
             <p class="video-box__text">ПОСТУПЛЕНИЕ В OXFORD, HARVARD  <br> И ЛУЧШИЕ РОССИЙСКИЕ УНИВЕРСИТЕТЫ</p>
             <a href="/courses" class="login-theme">найти курс</a>
-            <iframe class="video-box__video" id="video-box__video" width="800" height="457" src="https://www.youtube.com/embed/S66Gqwt4Mdg?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            <div class="video-box__video" id="player"></div>
+            <!-- <iframe class="video-box__video" id="video-box__video" width="800" height="457" src="https://www.youtube.com/embed/S66Gqwt4Mdg?rel=0&amp;showinfo=0&amp;" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
           </div>
         </div>
         <div class="course-section">
@@ -240,3 +241,48 @@
     });
   </script>
 % endif
+<script type="text/javascript">
+ // 1. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 2. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
+    playerVars: {
+              autoplay: 1,
+              loop: 1,
+              controls: 1,
+              showinfo: 0,
+              autohide: 1,
+              modestbranding: 1,
+              vq: 'hd1080'},
+    videoId: 'S66Gqwt4Mdg',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+// 3. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+  player.mute();
+}
+
+var done = false;
+function onPlayerStateChange(event) {
+  
+}
+function stopVideo() {
+  player.stopVideo();
+}
+</script>
