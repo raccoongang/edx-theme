@@ -4,18 +4,38 @@
 }
 
 .advantage__heading {
-    color: $color1;
-    font-size: 24px;
-    line-height: 33px;
-    margin: 0 0 50px;
-    text-align: center;
-    font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 30px;
+    font-family: Verdana, Geneva, sans-serif, sans-serif;
+    background: $gradient2;
+    padding: 15px 24px;
+
+    @media (min-width: $tablet-size) {
+        padding: 0;
+        font-size: 24px;
+        line-height: 33px;
+        background: transparent;
+        color: $color1;
+        text-align: center;
+        margin: 0 0 50px;
+    }
 }
 
 .advantage__row {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 50px;
+    flex-wrap: wrap;
+    padding: 0 23px;
+    @media (min-width: $mobile-size) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    @media (min-width: $tablet-size) {
+        padding: 0;
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -24,18 +44,29 @@
 
 .advantage__caption {
     display: block;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1.3;
     text-transform: uppercase;
     margin: 0 0 8px;
     font-weight: normal;
+    text-align: center;
+    @media (min-width: $tablet-size) {
+        font-size: 24px;
+        text-align: left;
+    }
 }
 
 .advantage__img {
-    order: 1;
+    order: 2;
 
+    @media (min-width: $tablet-size) {
+        order: 1;
+    }
+    
     .advantage__row:nth-child(2n) & {
-        order: 2;
+        @media (min-width: $tablet-size) {
+            order: 2;
+        }
     }
 }
 
@@ -57,8 +88,12 @@
     border-radius: 50%;
     display: block;
     position: relative;
-    box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.5);
-    margin-bottom: 16px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.03);
+    margin: 0 auto 16px;
+    @media (min-width: $tablet-size) {
+        box-shadow: 0 1px 3px 1px rgba(0,0,0,0.20);
+        margin: 0 0 16px;
+    }
 }
 
 .advantage__ico {
@@ -73,14 +108,28 @@
     font-size: 14px;
     line-height: 23px;
     color: #000;
+    text-align: center;
+    margin: 0 0 16px;
+
+    @media (min-width: $tablet-size) {
+        margin: 0;
+        text-align: left;
+    }
 }
 
 .advantage__description {
-    max-width: 407px;
-    order: 2;
+    order: 1;
+    width: 100%;
+    @media (min-width: $tablet-size) {
+        max-width: 407px;
+        width: auto;
+        order: 2;
+    }
 
     .advantage__row:nth-child(2n) & {
-        order: 1;
+        @media (min-width: $tablet-size) {
+            order: 1;
+        }
     }
 }
 

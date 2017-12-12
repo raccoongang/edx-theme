@@ -1,40 +1,58 @@
 .title {
-    transform: translate(38%, 0);
-    padding: 23px 0 23px 100px;
+    padding: 15px 24px;
     position: relative;
     margin-bottom: 50px;
+
+    @media (min-width: $tablet-size) {
+        transform: translate(38%, 0);
+        padding: 23px 0 23px 100px;
+    }
 }
 .title_left {
-    transform: translate(-38%, 0);
-    padding: 23px 100px 23px 0;
-    
+    @media (min-width: $tablet-size) {
+        transform: translate(-38%, 0);
+        padding: 23px 100px 23px 0;
+    }
 }
 .title__heading {
     margin: 0;
-    font-size: 20px;
+    font-size: 14px;
     color: #fff;
-    line-height: 27px;
+    line-height: 20px;
     position: relative;
-    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    font-family: Verdana,Geneva,sans-serif,sans-serif;
+    @media (min-width: $tablet-size) {
+        font-size: 20px;
+        line-height: 27px;
+    }
 
     .title_left & {
-        text-align: right;
+        @media (min-width: $tablet-size) {
+            text-align: right;
+        }
     }
 }
 .title__helper {
-    width: 75%;
+    width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     position: absolute;
     background: $gradient2;
-    transform: skew(20deg);
-    box-shadow: -1px 2px 7px 0px rgba(0,0,0,0.5);
+
+    @media (min-width: $tablet-size) {
+        box-shadow: -1px 3px 3px 0 rgba(0,0,0,0.30);
+        width: 75%;
+        transform: skew(20deg);
+    }
 
     .title_left & {
         left: auto;
         right: 0;
-        transform: skew(-20deg);
-        box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.5);
+
+        @media (min-width: $tablet-size) {
+            box-shadow: 1px 3px 3px 0 rgba(0,0,0,0.30);
+            transform: skew(-20deg);
+        }
     }
 }

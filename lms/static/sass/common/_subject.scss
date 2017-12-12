@@ -1,22 +1,32 @@
 .subject {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding: 0 24px 20px;
+    @media (min-width: $desktop-size) {
+        justify-content: space-between;
+        padding: 0 0 20px;
+    }
 }
 .subject__item {
     width: 23%;
-    min-height: 219px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);;
+    min-height: 220px;
+    min-width: 277px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.10);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 0 24px 30px;
     overflow: hidden;
+    @media (min-width: $desktop-size) {
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.30);
+        margin: 0 0 30px;
+        border-radius: 6px;
+    }
 }
 .subject__img {
     position: absolute;

@@ -14,12 +14,32 @@
     margin-left: 60px;
     font-weight: normal;
     order: 2;
+    display: flex;
+    justify-content: flext-end;
+    align-items: center;
 
     .week-structure:nth-child(2n) & {
         order: 1;
         text-align: left;
         margin-left: 0;
         margin-right: 60px;
+        justify-content: flext-start;
+    }
+
+    strong {
+        font-weight: normal;
+    }
+}
+.week-structure__ico {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    min-height: 48px;
+    margin: 0 16px 0 0;
+    background: url("../images/info-ico-1.png");
+
+    .week-structure:nth-child(2n) & {
+        background: url("../images/info-ico-2.png");
     }
 }
 .week-structure__box {
@@ -40,7 +60,7 @@
     right: 41px;
     height: 100%;
     width: 140%;
-    box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -3px 3px 0 rgba(0,0,0,0.30);
     transform: skew(20deg);
     background: $gradient4;
 
@@ -48,7 +68,7 @@
         right: auto;
         left: 41px;
         background: $gradient3;
-        box-shadow: -3px 2px 7px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.30);
     }
 }
 .week-structure__list {
@@ -76,5 +96,9 @@
         height: 11px;
         background: #fff;
         border-radius: 50%
+    }
+
+    a {
+        color: #fff;
     }
 }

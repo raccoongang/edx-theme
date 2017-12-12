@@ -5,6 +5,12 @@
 }
 .promo-block__holder {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (min-width: $desktop-size) {
+        flex-wrap: nowrap;
+        margin-bottom: 50px;
+    }
 }

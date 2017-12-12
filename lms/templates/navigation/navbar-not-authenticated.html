@@ -31,9 +31,9 @@ from django.utils.translation import ugettext as _
 <%block name="navigation_sign_in">
     % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
       % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-        <a class="login-theme" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+        <a class="login-theme login-theme_other" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
       % else:
-        <a class="login-theme" href="/login${login_query()}">${_("Sign in")}</a>
+        <a class="login-theme login-theme_other" href="/login${login_query()}">${_("Sign in")}</a>
       % endif
     % endif
 </%block>

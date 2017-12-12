@@ -1,17 +1,38 @@
 .video-box {
     position: relative;
-    border-radius: 6px;
     overflow: hidden;
     box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
     order: 1;
     background: #000;
     max-height: 448px;
     overflow: hidden;
+    width: 100%;
+    margin-bottom: 30px;
     .promo-block:nth-child(2n) & {
         order: 2;
     }
     .login-theme {
         z-index: 3;
+    }
+
+    @media (min-width: $desktop-size) {
+        width: auto;
+        margin: 0;
+        border-radius: 6px;
+    }
+}
+.video-box__wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    @media (min-width: 800px) {
+        width: 800px;
+    }
+    .login-theme {
+        display: none;
+        @media (min-width: $desktop-size) {
+            display: block;
+        }
     }
 }
 .video-box__text {
@@ -23,6 +44,10 @@
     left: 50px;
     line-height: 31px;
     z-index: 3;
+    display: none;
+    @media (min-width: $desktop-size) {
+        display: block;
+    }
 }
 .video-box__holder {
     position: absolute;
@@ -94,4 +119,6 @@
     position: relative;
     z-index: 1;
     top: -4px;
+    width: 100%;
+    height: auto;
 }

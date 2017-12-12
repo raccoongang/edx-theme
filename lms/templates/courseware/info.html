@@ -93,17 +93,19 @@ from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
                     <div class="week-structure__helper"></div>
                     <ul class="week-structure__list">
                       % for subsection in section.get('children', []):
-                          <a
+                        <li class="week-structure__list-item">
+                            <a
                             class="outline-item focusable"
                             href="${ subsection['lms_web_url'] }"
                             id="${ subsection['id'] }"
                           >
-                            <li class="week-structure__list-item">${ subsection['display_name'] }</li>
-                          </a>
+                          ${ subsection['display_name'] }</a>
+                        </li>
                       % endfor
                     </ul>
                 </div>
                 <div class="week-structure__name">
+                    <span class="week-structure__ico"></span>
                     <strong>${ section['display_name'] }</strong>
                 </div>
             </section>

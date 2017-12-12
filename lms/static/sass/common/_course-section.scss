@@ -1,24 +1,65 @@
 .course-section {
-    width: 30%;
     order: 2;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 24px 24px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     .promo-block:nth-child(2n) & {
         order: 1;
     }
+
+    @media (min-width: $desktop-size) {
+        width: 30%;
+        display: block;
+        padding: 0;
+    }
 }
 .course-section__item {
     display: flex;
-    margin-bottom: 29px;
     border-radius: 6px;
     overflow: hidden;
     width: 100%;
-    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
-
+    margin-bottom: 16px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+    @media (min-width: $tablet-size) {
+        min-width: 360px;
+    }
+        
+    img {
+        width: 115px;
+        height: 115px;
+        @media (min-width: 800px) {
+            width: 130px;
+            height: 130px;
+        }
+    }
     &:last-child {
         margin-bottom: 0;
     }
+    @media (min-width: 800px) {
+        min-width: 360px;
+        box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
+        width: 49%;
+    }
+    @media (min-width: $desktop-size) {
+        width: 100%;
+        margin-bottom: 29px;
+    }
+}
+.course-section__item_mobile {
+    box-shadow: none;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $desktop-size) {
+        display: none;
+    }
 }
 .course-section__description {
+    position: relative;
     background: #fff;
     padding: 16px 16px 0;
     width: 100%;
@@ -29,7 +70,7 @@
     display: block;
     font-size: 10px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 72px;
 }
 .course-section__stat_color1 {
     color: $color4;
@@ -43,12 +84,24 @@
 .course-section__name {
     width: 100%;
     display: block;
-    font-size: 24px;
+    font-size: 16px;
     color: #000;
     margin-bottom: 24px;
     font-weight: normal;
+    position: absolute;
+    width: 230px;
+    top: 50%;
+    transform: translate(0,-50%);
+    @media (min-width: 800px) {
+        font-size: 24px;
+    }
 }
 .course-section__school {
     font-size: 14px;
     color: #9B9B9B;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
 }

@@ -10,7 +10,6 @@ a.login-theme,
     padding: 11px 42px 12px;
     text-transform: uppercase;
     transition: background .3s linear .3s;
-    display: none;
     text-align: center;
 
     &:hover {
@@ -30,5 +29,11 @@ a.login-theme,
     .course-actions & {
         padding-left: 10px;
         padding-right: 10px;
+    }
+    &_other {
+        display: none;
+        @media (min-width: $tablet-size) {
+            display: inline-block;
+        }
     }
 }

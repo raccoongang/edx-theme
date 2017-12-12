@@ -101,6 +101,10 @@ hr {
     background: $gradient2;
     margin-bottom: 90px;
     border-top: none;
+    display: none;
+    @media (min-width: $desktop-size) {
+        display: block;
+    }
 }
 hr.other {
     background: $gradient3;
@@ -249,13 +253,22 @@ hr.other {
 
 .courses-listing {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: $desktop-size) {
+        justify-content: flex-start;
+    }
 
     .courses-listing-item {
         width: 100%;
         max-width: 277px;
-        margin-bottom: 50px;
+            @media (min-width: $tablet-size) {
+                margin-right: 32px;
+
+            &:nth-child(4n) {
+                margin-right: none;
+            }
+        }
     }
 }
 
@@ -290,11 +303,14 @@ hr.other {
 
 .courses-container .courses .course {
     border-bottom: none;
-    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.10);
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 0;
     height: 100%;
+    @media (min-width: $desktop-size) {
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.30);
+    }
 }
 
 .highlighted-courses .courses .course a {
@@ -315,7 +331,7 @@ hr.other {
     font-size: 14px;
     line-height: 23px;
     color: #000;
-    max-height: 68px;
+    height: 68px;
     overflow: hidden;
 }
 
@@ -356,7 +372,10 @@ hr.other {
 
 .courses-container .courses .courses-listing .courses-listing-item {
     max-height: none;
-    margin-bottom: 50px;
+    margin: 0 24px 30px;
+    @media (min-width: $tablet-size) {
+        margin: 0 32px 50px 0;
+    }
 }
 
 .course-info header.course-profile {
@@ -692,9 +711,8 @@ hr.other {
     z-index: 1;
 }
 .dashboard .my-courses .course .details .wrapper-course-image .cover .course-image {
-    max-width: 245px;
-    max-height: 136px;
-    width: auto;
+    width: 245px;
+    height: 136px;
 }
 .dashboard .my-courses .listing-courses ul.wrapper-course-image__list {
     margin: 0;
@@ -741,9 +759,9 @@ hr.other {
         background: #fff;
     }
 }
-.dashboard .my-courses .course .details .course-title a {
+.dashboard .my-courses .course .details .course-title a,
+.dashboard .my-courses .course .details .course-title span {
     font-size: 24px;
-    white-space: nowrap;
     line-height: 30px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1521,7 +1539,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
 .view-dashboard.is-authenticated .wrapper-preview-menu, 
 .view-dashboard.is-authenticated .content-wrapper {
-    position: static;
+    position: relative;
+    z-index: auto;
 }
 .modal .inner-wrapper, 
 .leanModal_box .inner-wrapper {
@@ -1616,9 +1635,6 @@ body.view-in-course .teams-wrapper,
 body.view-in-course .static_tab_wrapper {
     max-width: 1200px;
 }
-.xmodule_display.xmodule_SequenceModule .sequence-nav {
-    display: none;
-}
 .course-wrapper .course-content .vert-mod .vert>.xblock-student_view {
     border-bottom: none;
 }
@@ -1676,7 +1692,7 @@ div.info-wrapper {
     display: flex;
 }
 .course-info header.course-profile .intro-inner-wrapper .media {
-    width: 625px;
+    width: 623px;
     height: 350px;
     display: block;
     max-height: 350px;
@@ -1697,4 +1713,10 @@ div.info-wrapper {
 }
 .container.about.honor {
     line-height: 1.3;
+}
+.page-header.has-secondary {
+    display: none;
+}
+.bookmark-button {
+    display: none !important;
 }

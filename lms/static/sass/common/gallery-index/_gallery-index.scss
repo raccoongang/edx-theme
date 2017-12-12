@@ -1,5 +1,9 @@
 .gallery-index {
     position: relative;
     max-width: 100%;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
+
+    @media (min-width: $tablet-size) {
+        margin-bottom: 50px;
+    }
 }

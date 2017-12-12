@@ -1,6 +1,9 @@
 .schools {
-    display: flex;
     justify-content: space-between;
+    display: none;
+    @media (min-width: $desktop-size) {
+        display: flex;
+    }
 }
 .schools__item {
     text-align: center;
