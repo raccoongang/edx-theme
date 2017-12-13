@@ -116,7 +116,22 @@ var TUTORED_STUDENTS = {
     "Mariusz_Brozda": {id: 129, email: "mariusz.brozda@wp.pl"},
     "davidlittle": {id: 130, email: "dlittle446@gmail.com"},
     "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"},
-    "Sabelo_Mcanyana": {id: 133, email: "sabelom@gmail.com"}
+    "Sabelo_Mcanyana": {id: 133, email: "sabelom@gmail.com"},
+    "NicolaMcCarthy": {id: 134, email: "nicolamcca@gmail.com"},
+    "Dave_ODea": {id: 135, email: "daveodea@gmail.com"},
+    "KeithErskine": {id: 136, email: "kerskine@gmail.com"},
+    "CraigNoonan": {id: 137, email: "craignoonan3@gmail.com"},
+    "Shaun_P_Nugent": {id: 138, email: "shaun.n88@gmail.com"},
+    "Bogdan_A_Gherghel": {id: 139, email: "gherghel.bogdan90@gmail.com"},
+    "Alan_O_S": {id: 140, email: "alazeebub@gmail.com"},
+    "conorsulli": {id: 141, email: "conorsulli@gmail.com"},
+    "Luisa": {id: 142, email: "luisaanegri@gmail.com"},
+    "DamianMcNulty": {id: 143, email: "damianmcnulty@me.com"},
+    "Andrew_Gray": {id: 144, email: "grayagray@gmail.com"},
+    "PuckFletcher": {id: 145, email: "puckfletcher@gmail.com"},
+    "Alexander_K": {id: 146, email: "k.alexander@live.com"},
+    "Adam_OMahony": {id: 147, email: "adamomahony@gmail.com"},
+    "shanecoen": {id: 148, email: "shanecoen@hotmail.com"}
 };
 
 
@@ -243,5 +258,20 @@ var all_users = {
     "davidlittle": {id: 130, email: "dlittle446@gmail.com"},
     "Katie_Maxwell": {id: 131, email: "katie@codeinstitute.net"},
     "bencomo": {id: 132, email: "jonathanbencomo@gmail.com"},
-    "Sabelo_Mcanyana": {id: 133, email: "sabelom@gmail.com"}
+    "Sabelo_Mcanyana": {id: 133, email: "sabelom@gmail.com"},
+    "NicolaMcCarthy": {id: 134, email: "nicolamcca@gmail.com"},
+    "Dave_ODea": {id: 135, email: "daveodea@gmail.com"},
+    "KeithErskine": {id: 136, email: "kerskine@gmail.com"},
+    "CraigNoonan": {id: 137, email: "craignoonan3@gmail.com"},
+    "Shaun_P_Nugent": {id: 138, email: "shaun.n88@gmail.com"},
+    "Bogdan_A_Gherghel": {id: 139, email: "gherghel.bogdan90@gmail.com"},
+    "Alan_O_S": {id: 140, email: "alazeebub@gmail.com"},
+    "conorsulli": {id: 141, email: "conorsulli@gmail.com"},
+    "Luisa": {id: 142, email: "luisaanegri@gmail.com"},
+    "DamianMcNulty": {id: 143, email: "damianmcnulty@me.com"},
+    "Andrew_Gray": {id: 144, email: "grayagray@gmail.com"},
+    "PuckFletcher": {id: 145, email: "puckfletcher@gmail.com"},
+    "Alexander_K": {id: 146, email: "k.alexander@live.com"},
+    "Adam_OMahony": {id: 147, email: "adamomahony@gmail.com"},
+    "shanecoen": {id: 148, email: "shanecoen@hotmail.com"}
 };
