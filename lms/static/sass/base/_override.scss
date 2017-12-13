@@ -120,6 +120,7 @@ hr.other {
 }
 .login-register-content .login-register {
     padding-bottom: 50px;
+    width: 100%;
     .form-wrapper {
         background: #fff;
         z-index: 1;
@@ -131,6 +132,12 @@ hr.other {
     }
     #login-form.form-wrapper {
         padding: 40px 40px 153px;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: auto;
+        @media (min-width: 800px) {
+            width: auto;
+        }
     }
     #register-form.form-wrapper {
         padding: 153px 40px 40px;
