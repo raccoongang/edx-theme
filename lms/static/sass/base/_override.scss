@@ -131,11 +131,12 @@ hr.other {
         border-radius: 6px;
     }
     #login-form.form-wrapper {
-        padding: 40px 40px 153px;
+        padding: 20px 16px 153px;
         box-sizing: border-box;
         width: 100%;
         min-width: auto;
         @media (min-width: 800px) {
+            padding: 40px 40px 153px;
             width: auto;
         }
     }
@@ -184,16 +185,29 @@ hr.other {
     }
     .forgot-password.field-link {
         position: absolute;
-        bottom: -90px;
+        bottom: -151px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        @media (min-width: $tablet-size) {
+            bottom: -90px;
+            transform: translate(0, 0);
+            left: auto;
+        }
+        
     }
     .action.action-primary.action-update {
-        float: right;
-        background: #57C4BD;
-        color: #fff;
-        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-        padding: 12px 35px 11px 35px;
-        font-size: 14px;
+        width: 100%;
+
+        @media (min-width: $tablet-size) {
+            width: auto;
+            float: right;
+            background: #57C4BD;
+            color: #fff;
+            box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 12px 35px 11px 35px;
+            font-size: 14px;
+        }
     }
     .form-toggle {
         color: #57C4BD
