@@ -27,13 +27,14 @@ body {
     }
 
     .header-global {
-        height: auto;
-        border: none;
+        height: auto !important;
+        box-shadow: none;
+        border-bottom: 5px solid #00A3E0;
     }
 
     .header-global .wrapper-header {
         height: auto;
-        padding: 18px 0;
+        padding: 36px 0;
     }
 
     .home > header .title > .heading-group h1 {
@@ -44,7 +45,7 @@ body {
     .home > header .title > .heading-group p {
         color: #fff;
         font-style: normal;
-        font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
+        font-family: "Open Sans", Verdana, Geneva, sans-serif;
         font-size: 50px;
         text-shadow: none;
         margin-bottom: 16px;
@@ -81,13 +82,9 @@ body {
         }
     }
 
-    .header-global .nav-courseware {
-        transform: translate(0, -200%);
-    }
+    .header-global .nav-courseware {}
 
-    .header-global .user {
-        transform: translate(0, -140%);
-    }
+    .header-global .user {}
 
     .header-global .nav-global {
         float: none;
@@ -98,6 +95,10 @@ body {
 
     .doc-link {
         display: none;
+    }
+
+    .header-global .user .user-link .label-username {
+        font-size: 24px;
     }
 
     .header-global .user .user-link .label-username,
@@ -129,8 +130,21 @@ body {
     }
 
     .wrapper-footer footer#footer-openedx .footer-questions a,
-    .courses-container .courses .course .course-info .course-title {
+    .courses-container .courses .course .course-info .course-title,
+    .copy-lead a, .copy-large a, .copy-base a, .alert-copy a, .alert-copy-with-title a, .copy-meta a, .table caption a, .table-simplified caption a, .copy-micro a, a, .link, .btn-link,
+    .table-sortable .sortable .action-sort,
+    .wrapper-course-material .course-tabs li a:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4, .wrapper-course-material .course-tabs li a:focus, .wrapper-course-material .course-tabs li a.active, .wrapper-course-material .course-tabs li a:visited:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4:visited, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4:visited, .wrapper-course-material .course-tabs li a:visited:focus,
+    .wrapper-course-material .course-tabs li a:visited.active,
+    .wrapper-course-material .course-tabs li a, .wrapper-course-material .course-tabs li a:visited,
+    div.info-wrapper section.handouts a,
+    div.info-wrapper section.handouts ol li a, .wiki-wrapper section.wiki .nav-tabs a,
+    .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1,
+    .payment-buttons .purchase .product-info, .payment-buttons .purchase .product-name, .payment-buttons .purchase .price {
         color: #00A3E0;
+    }
+
+    .wrapper-course-material .course-tabs li a:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4, .wrapper-course-material .course-tabs li a:focus, .wrapper-course-material .course-tabs li a.active, .wrapper-course-material .course-tabs li a:visited:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4:visited, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4:visited, .wrapper-course-material .course-tabs li a:visited:focus, .wrapper-course-material .course-tabs li a:visited.active {
+        border-bottom-color: #00A3E0;
     }
 
     .footer-questions span {
@@ -144,7 +158,8 @@ body {
 
     .find-courses .wrapper-search-context .wrapper-search-input,
     .find-courses .search-facets.phone-menu,
-    .dashboard-search-bar {
+    .dashboard-search-bar,
+    #content > section > header > div > div > section > div.heading-group > h1 > button {
         display: none;
     }
 
@@ -155,13 +170,46 @@ body {
 
     .courses-container .courses .course .course-image .cover-image .learn-more,
     input[type="submit"], input[type="button"], button, .button,
-    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
+    .btn-brand, .modal .inner-wrapper form .submit input[type="submit"], .leanModal_box .inner-wrapper form .submit input[type="submit"] {
         background: #00A3E0;
         border-color: #00A3E0;
+        text-shadow: none;
+        color: #fff;
 
         &:hover {
             background: lighten(#00A3E0, 20%);
+            color: #fff;
         }
+    }
+
+    .btn, .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions > button,
+    .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action {
+        background: #ffc627;
+        border-color: #ffc627;
+        text-shadow: none;
+        color: #fff;
+
+        &:hover {
+            background: lighten(#ffc627, 20%);
+            color: #fff;
+        }
+    }
+
+    .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade, .verification-process .action-primary, .verification-process .action-confirm, .verification-process .carousel .wrapper-task .controls .control.approved .action, .verification-process.step-select-track .register-choice-certificate .action-select input, .wrapper-msg .has-actions .nav-actions .action-primary, .wrapper-msg .has-actions .msg-actions .action-primary {
+        background: #78be20;
+        border-color: #78be20;
+        text-shadow: none;
+        color: #fff;
+
+        &:hover {
+            background: lighten(#78be20, 20%);
+            color: #fff;
+        }
+    }
+
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled) {
+        background: lighten(#00A3E0, 20%);
     }
 
     input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled) {
@@ -190,11 +238,114 @@ body {
         border-radius: 5px;
         overflow: hidden;
     }
+
+    .course-info header.course-profile,
+    .course-info header.course-profile .intro-inner-wrapper,
+    .course-info header.course-profile .intro-inner-wrapper .media .hero,
+    .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group,
+    .dashboard .my-courses .course .details .wrapper-course-image .cover,
+    .dashboard .my-courses .listing-courses .course-item .course-container {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .course-info header.course-profile .intro-inner-wrapper > div.table {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .course-info header.course-profile .intro-inner-wrapper .intro {
+        display: flex;
+    }
+
+    .dashboard .my-courses .course .details .wrapper-course-details {
+        display: grid;
+        grid-template-columns: 1fr 210px;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .dashboard .my-courses .course .details .course-info {
+        grid-row: 2;
+    }
+
+    .dashboard .my-courses .course .details .wrapper-course-actions {
+        grid-row: span 2;
+        justify-self: end;
+    }
+
+    .course-actions {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dashboard .profile-sidebar {
+        width: 100%;
+    }
+
+    .dashboard .profile-sidebar .user-info .status {
+        border: none;
+        border-top: 4px solid #ffc627 !important;
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+    }
+
+    .verification-process .pay-and-verify .nav-wizard.center, .verification-process .incourse-reverify .nav-wizard.center, .verification-process .reverify .nav-wizard.center {
+        border: none;
+        background: none;
+        border-top: 4px solid #78be20 !important;
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+    }
+
     .fa {
         font-family: 'FontAwesome' !important;
+    }
+
+    footer#footer-openedx.grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper-footer footer#footer-openedx .colophon {
+        align-self: flex-start;
+    }
+
+    .wrapper-footer footer#footer-openedx ul {
+        margin: 0;
+    }
+
+    .left.list-inline.nav-global {
+        display: none;
+    }
+
+    .verification-process .header-global {
+        height: auto;
     }
 }
 
 * * {
     font-family: 'Roboto', sans-serif !important;
+}
+
+.verification-process .pay-and-verify .nav-wizard.center, .verification-process .incourse-reverify .nav-wizard.center, .verification-process .reverify .nav-wizard.center {
+    border: none;
+    background: none;
+    border-top: 4px solid #78be20 !important;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+    padding: 20px !important;
+}
+
+.verification-process .carousel #wrapper-review .review .payment-buttons .payment-button {
+    background: #78be20;
+    border-color: #78be20;
+    text-shadow: none;
+    color: #fff;
+    box-shadow: none;
+
+    &:hover {
+        background: lighten(#78be20, 20%);
+        color: #fff;
+    }
 }

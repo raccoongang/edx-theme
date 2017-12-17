@@ -7,7 +7,11 @@ from django.core.urlresolvers import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
-
+<div class="subnav">
+  <div class="subnav__wrapper">
+    <i class="subnav__home-icon fa fa-home" aria-hidden="true"></i>
+  </div>
+</div>
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
@@ -17,13 +21,10 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-              ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>Global Freshman Academy</h1>
-              ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <p>Start Earning Collage Credit</p>
-                  <button class="find-courses-button" type="submit">
-                    Find Courses
-                  </button>
+                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
+                  <h1>Begin college today</h1>
+                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
+                  <p>Make progress towards a degree</p>
               % endif
             </div>
           </div>
