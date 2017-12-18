@@ -7,6 +7,7 @@
 <%!
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
+from third_party_auth import pipeline
 %>
 
 <ol class="left list-inline nav-global">
@@ -33,15 +34,15 @@ from django.utils.translation import ugettext as _
           <a class="btn" href="/courses">${_("Explore Courses")}</a>
         </li>
       %endif
-      % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-        <li class="item nav-global-04">
-          <a class="btn-neutral btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-        </li>
-      % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
-        <li class="item nav-global-04">
-          <a class="btn-neutral btn-register" href="/register${login_query()}">${_("Register")}</a>
-        </li>
-      % endif
+##      % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+##        <li class="item nav-global-04">
+##          <a class="btn-neutral btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+##        </li>
+##      % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
+##        <li class="item nav-global-04">
+##          <a class="btn-neutral btn-register" href="/register${login_query()}">${_("Register")}</a>
+##        </li>
+##      % endif
     % endif
   </%block>
 </ol>
@@ -53,7 +54,14 @@ from django.utils.translation import ugettext as _
         % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
           <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
         % else:
-          <a class="btn btn-login" href="/login${login_query()}">${_("Sign in")}</a>
+          <%
+              login_url = pipeline.get_login_url(
+                  'saml-tpa-saml',
+                  pipeline.AUTH_ENTRY_LOGIN,
+                  redirect_url='/dashboard'
+              )
+          %>
+          <a class="btn btn-login" href="${login_url | n}">${_("Sign in")}</a>
         % endif
       % endif
     </li>
