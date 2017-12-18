@@ -171,13 +171,15 @@ body {
     .courses-container .courses .course .course-image .cover-image .learn-more,
     input[type="submit"], input[type="button"], button, .button,
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
-    .btn-brand, .modal .inner-wrapper form .submit input[type="submit"], .leanModal_box .inner-wrapper form .submit input[type="submit"] {
+    .btn-brand, .modal .inner-wrapper form .submit input[type="submit"], .leanModal_box .inner-wrapper form .submit input[type="submit"],
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
         background: #00A3E0;
         border-color: #00A3E0;
         text-shadow: none;
         color: #fff;
 
-        &:hover {
+        &:hover,
+        .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
             background: lighten(#00A3E0, 20%);
             color: #fff;
         }
@@ -322,6 +324,9 @@ body {
 
     .verification-process .header-global {
         height: auto;
+    }
+    .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
+        background: none;
     }
 }
 
