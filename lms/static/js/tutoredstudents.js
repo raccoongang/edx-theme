@@ -48,6 +48,7 @@ var TUTORED_STUDENTS = {
     "test": {id: 120, email: "media@codeinstitute.net"},
     "Partners": {id: 124, email: "partners@codeinstitute.net"},
     "Katie_Maxwell": {id: 131, email: "katie@codeinstitute.net"},
+    "aliashik": {id: 150, email: "mail@aliashik.com"},
     // Students
     "denismoc": {id: 54, email: "denismoc@live.ie"},
     "Bruce_H": {id: 55, email: "bruce@harrisonemail.com"},
@@ -132,8 +133,7 @@ var TUTORED_STUDENTS = {
     "Alexander_K": {id: 146, email: "k.alexander@live.com"},
     "Adam_OMahony": {id: 147, email: "adamomahony@gmail.com"},
     "shanecoen": {id: 148, email: "shanecoen@hotmail.com"},
-    "Clive": {id: 149, email: "clivenoonan93@gmail.com"}, 
-    "aliashik": {id: 150, email: "mail@aliashik.com"}, 
+    "Clive": {id: 149, email: "clivenoonan93@gmail.com"},  
     "Alan_W_Smith": {id: 151, email: "solanus@gmail.com"}, 
     "Brian_Quinn": {id: 152, email: "brianjosephquinn@gmail.com"}, 
     "EricNiee": {id: 153, email: "ericjoelle@yahoo.com"}, 
