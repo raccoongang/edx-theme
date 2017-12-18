@@ -282,7 +282,6 @@ hr.other {
 
 .login-providers {
     position: absolute;
-    width: 100%;
     left: 20px;
     right: 20px;
     bottom: 20px;
@@ -1173,20 +1172,29 @@ body.view-in-course .wrapper-course-material .course-material {
     background: #fff;
 }
 .login-register .login-provider.button-oa2-facebook {
-    transform: translateX(134px);
     background: #fff;
     color: #000;
     border: 1px solid #c8c8c8;
+    margin-bottom: 16px;
+
+    @media (min-width: $desktop-size) {
+        transform: translateX(134px);
+        margin: 0;
+    }
     
     &:hover {
         border: 1px solid #c8c8c8;
     }
 }
 .login-register .login-provider.button-oa2-vk-oauth2 {
-    transform: translateX(-134px);
     background: #fff;
     color: #000;
     border: 1px solid #c8c8c8;
+
+    @media (min-width: $desktop-size) {
+        transform: translateX(-134px);
+        margin: 0;
+    }
 
     &:hover {
         border: 1px solid #c8c8c8;
