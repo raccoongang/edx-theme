@@ -131,7 +131,18 @@ var TUTORED_STUDENTS = {
     "PuckFletcher": {id: 145, email: "puckfletcher@gmail.com"},
     "Alexander_K": {id: 146, email: "k.alexander@live.com"},
     "Adam_OMahony": {id: 147, email: "adamomahony@gmail.com"},
-    "shanecoen": {id: 148, email: "shanecoen@hotmail.com"}
+    "shanecoen": {id: 148, email: "shanecoen@hotmail.com"},
+    "Clive": {id: 149, email: "clivenoonan93@gmail.com"}, 
+    "aliashik": {id: 150, email: "mail@aliashik.com"}, 
+    "Alan_W_Smith": {id: 151, email: "solanus@gmail.com"}, 
+    "Brian_Quinn": {id: 152, email: "brianjosephquinn@gmail.com"}, 
+    "EricNiee": {id: 153, email: "ericjoelle@yahoo.com"}, 
+    "GU1DER": {id: 154, email: "con.guider@gmail.com"}, 
+    "Deniss": {id: 155, email: "mden7785@gmail.com"}, 
+    "KhadraFarah": {id: 156, email: "khadrafarah13@gmail.com"}, 
+    "denisdeasy": {id: 157, email: "denisdeasy@gmail.com"}, 
+    "Jordan": {id: 158, email: "jordandaly@gmail.com"}, 
+    "StephenScott": {id: 159, email: "stephenjmscott@gmail.com"}
 };
 
 
@@ -273,5 +284,16 @@ var all_users = {
     "PuckFletcher": {id: 145, email: "puckfletcher@gmail.com"},
     "Alexander_K": {id: 146, email: "k.alexander@live.com"},
     "Adam_OMahony": {id: 147, email: "adamomahony@gmail.com"},
-    "shanecoen": {id: 148, email: "shanecoen@hotmail.com"}
+    "shanecoen": {id: 148, email: "shanecoen@hotmail.com"},
+    "Clive": {id: 149, email: "clivenoonan93@gmail.com"}, 
+    "aliashik": {id: 150, email: "mail@aliashik.com"}, 
+    "Alan_W_Smith": {id: 151, email: "solanus@gmail.com"}, 
+    "Brian_Quinn": {id: 152, email: "brianjosephquinn@gmail.com"}, 
+    "EricNiee": {id: 153, email: "ericjoelle@yahoo.com"}, 
+    "GU1DER": {id: 154, email: "con.guider@gmail.com"}, 
+    "Deniss": {id: 155, email: "mden7785@gmail.com"}, 
+    "KhadraFarah": {id: 156, email: "khadrafarah13@gmail.com"}, 
+    "denisdeasy": {id: 157, email: "denisdeasy@gmail.com"}, 
+    "Jordan": {id: 158, email: "jordandaly@gmail.com"}, 
+    "StephenScott": {id: 159, email: "stephenjmscott@gmail.com"}
 };
