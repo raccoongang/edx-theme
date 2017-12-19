@@ -57,12 +57,22 @@
 }
 .video-box__holder {
     position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
-    width: 35%;
+    right: 0;
     box-sizing: border-box;
-    padding: 50px 30px;
+    padding: 24px;
+    height: 125px;
+    @media (min-width: $desktop-size) {
+        height: auto;
+        right: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 35%;
+        box-sizing: border-box;
+        padding: 50px 30px;
+    }
 }
 .video-box__helper{
     position: absolute;
@@ -78,39 +88,74 @@
     top: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
-    filter: blur(5px);
+    right: 0;
+    filter: blur(1px);
     overflow: hidden;
+    @media (min-width: $desktop-size) {
+        filter: blur(5px);
+        width: 100%;
+        right: auto;
+    }
+
+    img {
+        width: 100%;
+        position: absolute;
+        max-width: 800px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        @media (min-width: $desktop-size) {
+            left: 0;
+            width: auto;
+            transform: translate(0, 0);
+        }
+    }
 }
 .video-box_school-name {
     color: #fff;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 29px;
-    margin: 0 0 50px;
+    margin: 0 0 19px;
     position: relative;
+    @media (min-width: $desktop-size) {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 0 50px;
+    }
 }
 .video-box__list {
     margin: 0;
-    padding: 0 0 0 14px;
+    padding: 0;
     list-style: none;
     position: relative;
+    @media (min-width: $desktop-size) {
+        padding: 0 0 0 14px;
+    }
 }
 .video-box__list-item {
     position: relative;
     color: #fff;
-    font-size: 16px;
-    line-height: 19px;
-    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    @media (min-width: $desktop-size) {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 19px
+    }
 
     &:after {
-        content: '';
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        border-radius: 50%;
-        position: absolute;
-        left: -18px;
-        top: 5px;
+        @media (min-width: $desktop-size) {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: -18px;
+            top: 5px;
+        }
     }
 }
 .video-box__cover {
@@ -127,4 +172,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+.video-box__img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
 }

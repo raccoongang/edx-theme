@@ -161,7 +161,7 @@ hr.other {
             position: absolute;
             left: 20px;
             right: 20px;
-            bottom: 5px;
+            bottom: 20px;
             top: auto;
             
             @media (min-width: $mobile-size) {
@@ -313,6 +313,11 @@ hr.other {
     right: 20px;
     bottom: 5px;
     top: auto;
+    @media (min-width: $tablet-size) {
+        left: 0;
+        right: 0;
+        bottom: 32px;
+    }
     .button {
         margin: 0;
     }
@@ -1821,6 +1826,10 @@ div.info-wrapper {
     border-bottom: 6px solid #57C4BD;
     padding: 0 16px 16px;
     margin: 0 -16px;
+    @media (min-width: 800px) {
+        padding: 0 40px 16px;
+        margin: -16px -40px 16px;
+    }
     @media (min-width: $tablet-size) {
         display: none;
     }
