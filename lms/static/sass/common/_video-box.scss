@@ -9,7 +9,9 @@
     width: 100%;
     margin-bottom: 30px;
     .promo-block:nth-child(2n) & {
-        order: 2;
+        @media (min-width: $desktop-size) {
+            order: 2;
+        }
     }
     .login-theme {
         z-index: 3;

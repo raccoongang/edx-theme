@@ -144,14 +144,34 @@ hr.other {
         }
     }
     #register-form.form-wrapper {
-        padding: 153px 40px 40px;
+        padding: 20px 16px 210px;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: auto;
+
+        @media (min-width: $mobile-size) {
+            padding: 153px 16px 20px;
+        }
+        @media (min-width: 800px) {
+            padding: 153px 40px 40px;
+            width: auto;
+        }
+
         .login-providers {
-            text-align: center;
             position: absolute;
-            width: 100%;
-            left: 0;
-            top: 20px;
-            bottom: auto;
+            left: 20px;
+            right: 20px;
+            bottom: 5px;
+            top: auto;
+            
+            @media (min-width: $mobile-size) {
+                text-align: center;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 20px;
+                bottom: auto;
+            }
         }
         h2 {
             display: none;
@@ -291,7 +311,7 @@ hr.other {
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 20px;
+    bottom: 5px;
     top: auto;
     .button {
         margin: 0;
@@ -315,6 +335,17 @@ hr.other {
             &:nth-child(4n) {
                 margin-right: none;
             }
+        }
+    }
+}
+body .find-courses .courses-container .courses .courses-listing .courses-listing-item {
+    width: 100% !important;
+    max-width: 277px;
+        @media (min-width: $tablet-size) {
+            margin-right: 32px;
+
+        &:nth-child(4n) {
+            margin-right: none;
         }
     }
 }

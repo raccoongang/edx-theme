@@ -8,7 +8,9 @@
     flex-wrap: wrap;
 
     .promo-block:nth-child(2n) & {
-        order: 1;
+        @media (min-width: $desktop-size) {
+            order: 1;
+        }
     }
 
     @media (min-width: $desktop-size) {
