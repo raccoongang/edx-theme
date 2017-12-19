@@ -142,7 +142,9 @@ var TUTORED_STUDENTS = {
     "KhadraFarah": {id: 156, email: "khadrafarah13@gmail.com"}, 
     "denisdeasy": {id: 157, email: "denisdeasy@gmail.com"}, 
     "Jordan": {id: 158, email: "jordandaly@gmail.com"}, 
-    "StephenScott": {id: 159, email: "stephenjmscott@gmail.com"}
+    "StephenScott": {id: 159, email: "stephenjmscott@gmail.com"},
+    "MrGJenkins": {id: 160, email: "grthjenkins9@gmail.com"},
+    "Cleppard": {id: 161, email: "cillian.leppard@gmail.com"}
 };
 
 
@@ -295,5 +297,7 @@ var all_users = {
     "KhadraFarah": {id: 156, email: "khadrafarah13@gmail.com"}, 
     "denisdeasy": {id: 157, email: "denisdeasy@gmail.com"}, 
     "Jordan": {id: 158, email: "jordandaly@gmail.com"}, 
-    "StephenScott": {id: 159, email: "stephenjmscott@gmail.com"}
+    "StephenScott": {id: 159, email: "stephenjmscott@gmail.com"},
+    "MrGJenkins": {id: 160, email: "grthjenkins9@gmail.com"},
+    "Cleppard": {id: 161, email: "cillian.leppard@gmail.com"}
 };
