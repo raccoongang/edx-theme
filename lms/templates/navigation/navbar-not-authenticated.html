@@ -55,11 +55,12 @@ from third_party_auth import pipeline
           <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
         % else:
           <%
-              login_url = pipeline.get_login_url(
-                  'saml-tpa-saml',
-                  pipeline.AUTH_ENTRY_LOGIN,
-                  redirect_url='/dashboard'
-              )
+              ##login_url = pipeline.get_login_url(
+              ##    'saml-tpa-saml',
+              ##    pipeline.AUTH_ENTRY_LOGIN,
+              ##    redirect_url='/dashboard'
+              ##)
+              login_url = "https://weblogin.asu.edu/cas/login?service=https%3A%2F%2Fshibboleth2.asu.edu%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De1s1&entityId=urn%3Aauth0%3Aopened%3AASUShibboleth"
           %>
           <a class="btn btn-login" href="${login_url | n}">${_("Sign in")}</a>
         % endif
