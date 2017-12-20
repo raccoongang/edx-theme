@@ -138,7 +138,7 @@ hr.other {
         @media (min-width: $mobile-size) {
             padding: 20px 16px 173px;
         }
-        @media (min-width: 800px) {
+        @media (min-width: $tablet-size) {
             padding: 40px 40px 153px;
             width: auto;
         }
@@ -1825,7 +1825,7 @@ div.info-wrapper {
     border-bottom: 6px solid #57C4BD;
     padding: 0 16px 16px;
     margin: 0 -16px;
-    @media (min-width: 800px) {
+    @media (min-width: $tablet-size) {
         padding: 0 40px 16px;
         margin: -16px -40px 16px;
         display: none;
