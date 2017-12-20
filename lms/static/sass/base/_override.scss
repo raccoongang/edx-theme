@@ -764,6 +764,13 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     justify-content: space-between;
     width: 100%;
     align-items: flex-start;
+
+    &_desktop {
+        display: none;
+        @media (min-width: $desktop-size) {
+            display: block;
+        }
+    }
 }
 .dashboard .my-courses .course .details .wrapper-course-details {
     width: 100%;

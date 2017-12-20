@@ -5,13 +5,19 @@
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        padding: 30px 0;
+        padding: 26px 0;
         box-sizing: border-box;
         min-height: 410px;
         @media screen and (max-width: 768px) {
             padding: 26px;
             box-sizing: border-box;
             flex-direction: column;
+        }
+        @media screen and (min-width: $tablet-size) {
+            padding: 26px;
+        }
+        @media screen and (min-width: $desktop-size) {
+            padding: 30px 0;
         }
     }
     &__text-holder {
@@ -23,18 +29,16 @@
     &__image-holder {
         flex: 0 0 50%;
         position: relative;
-        width: 100%;
-        min-height: 100%;
         overflow: hidden;
         @media screen and (max-width: 768px) {
             flex: 1;
-            min-height: 300px;
+        }
+        @media screen and (min-width: $desktop-size) {
+            width: 100%;
+            min-height: 100%;
         }
     }
     &__image {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: auto;
     }
@@ -62,8 +66,9 @@
     }
 }
 .founders .inner-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 16px;
     @media screen and (max-width: 768px){
+        margin-bottom: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
