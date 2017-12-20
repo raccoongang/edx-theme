@@ -152,7 +152,7 @@ hr.other {
         // @media (min-width: $mobile-size) {
         //     padding: 153px 16px 20px;
         // }
-        @media (min-width: 800px) {
+        @media (min-width: $tablet-size) {
             padding: 153px 40px 40px;
             width: auto;
         }
@@ -164,7 +164,7 @@ hr.other {
             bottom: 20px;
             top: auto;
             
-            @media (min-width: 800px) {
+            @media (min-width: $tablet-size) {
                 text-align: center;
                 position: absolute;
                 width: 100%;
