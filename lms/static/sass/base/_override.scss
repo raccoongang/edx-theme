@@ -267,7 +267,7 @@ body {
     .dashboard .my-courses .course .details .wrapper-course-details {
         display: grid;
         grid-template-columns: 1fr 210px;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr auto;
     }
 
     .dashboard .my-courses .course .details .course-info {
@@ -334,6 +334,9 @@ body {
 
     .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
         background: none;
+    }
+    .dashboard .my-courses .wrapper-header-courses {
+        border-bottom: 1px solid rgb(211,211,211);
     }
 }
 
@@ -434,4 +437,15 @@ body {
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
     display: none;
 }
-
+#my-courses .info-holder {
+    .info-university,
+    .info-course-id {
+        font-size: 18px !important;
+        color: rgb(120,120,120);
+        line-height: 23px;
+        margin-bottom: 20px;
+    }
+}
+.dashboard .my-courses .course .details .course-title a {
+    margin-bottom: 0;
+}
