@@ -9,16 +9,16 @@
         box-sizing: border-box;
         min-height: 410px;
         @media screen and (max-width: 768px) {
-            padding: 0 10px;
+            padding: 26px;
             box-sizing: border-box;
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
     }
     &__text-holder {
         flex: 0 0 50%;
         padding-right: 20px;
         box-sizing: border-box;
-        color: #fff
+        color: #fff;
     }
     &__image-holder {
         flex: 0 0 50%;
@@ -39,16 +39,23 @@
         height: auto;
     }
     &__title {
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 700;
         font-family: "Open Sans",Verdana,Geneva,sans-serif;
         color: #fff;
         margin-bottom: 16px;
+        line-height: 1.3;
+        @media screen and (min-width: $desktop-size) {
+            font-size: 24px;
+        }
     }
     &__paragraph {
-        font-size: 20px;
+        font-size: 14px;
         line-height: 30px;
         margin-bottom: 20px;
+        @media screen and (min-width: $desktop-size) {
+            font-size: 20px;
+        }
     }
     &__strong {
         font-weight: 700;
