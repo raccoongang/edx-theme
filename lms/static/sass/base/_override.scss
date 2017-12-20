@@ -118,6 +118,12 @@ hr {
 hr.other {
     background: $gradient3;
 }
+.login-providers + .section-title.lines {
+    display: none;
+    @media (min-width: $tablet-size) {
+        display: block;
+    }
+}
 .login-register-content .login-register {
     padding-bottom: 50px;
     width: 100%;
