@@ -1224,10 +1224,12 @@ body.view-in-course .wrapper-course-material .course-material {
     color: #000;
     border: 1px solid #c8c8c8;
     margin-bottom: 16px;
+    width: 100%;
 
     @media (min-width: $desktop-size) {
         transform: translateX(134px);
         margin: 0;
+        width: 134px;
     }
     
     &:hover {
@@ -1238,10 +1240,12 @@ body.view-in-course .wrapper-course-material .course-material {
     background: #fff;
     color: #000;
     border: 1px solid #c8c8c8;
+    width: 100%;
 
     @media (min-width: $desktop-size) {
         transform: translateX(-134px);
         margin: 0;
+        width: 134px;
     }
 
     &:hover {
