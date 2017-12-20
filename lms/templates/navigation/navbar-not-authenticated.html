@@ -55,11 +55,12 @@ from third_party_auth import pipeline
           <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
         % else:
           <%
-              login_url = pipeline.get_login_url(
-                  'saml-tpa-saml',
-                  pipeline.AUTH_ENTRY_LOGIN,
-                  redirect_url='/dashboard'
-              )
+              ##login_url = pipeline.get_login_url(
+              ##    'saml-tpa-saml',
+              ##    pipeline.AUTH_ENTRY_LOGIN,
+              ##    redirect_url='/dashboard'
+              ##)
+              login_url = "https://opened.auth0.com/authorize?client_id=QcWF79CnoZ86s5RcrRuwbuPkCYoF1lCL&response_type=token id_token&redirect_uri=https://courses-staging.ea.asu.edu/dashboard&scope=openid&audience=https://qr0vf9lwi5.execute-api.us-east-2.amazonaws.com&connection=ASUShibboleth&state=-Fa3M8zlVisVqiAuJirrMJ6oYEN-6B91&nonce=abq-LVOMlN1yvO4ZuNNaN4mZQz4MES9b&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOC4xMi4xIn0="
           %>
           <a class="btn btn-login" href="${login_url | n}">${_("Sign in")}</a>
         % endif
