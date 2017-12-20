@@ -334,24 +334,16 @@ hr.other {
     .courses-listing-item {
         width: 100%;
         max-width: 277px;
-            @media (min-width: $tablet-size) {
-                margin-right: 32px;
-
-            &:nth-child(4n) {
-                margin-right: none;
-            }
+        @media (min-width: $tablet-size) {
+            margin-right: 32px;
         }
     }
 }
 body .find-courses .courses-container .courses .courses-listing .courses-listing-item {
     width: 100% !important;
     max-width: 277px;
-        @media (min-width: $tablet-size) {
-            margin-right: 32px;
-
-        &:nth-child(4n) {
-            margin-right: none;
-        }
+    @media (min-width: $tablet-size) {
+        margin-right: 32px;
     }
 }
 
