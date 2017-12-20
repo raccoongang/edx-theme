@@ -98,7 +98,7 @@ body {
     }
 
     .header-global .user .user-link .label-username {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .header-global .user .user-link .label-username,
@@ -106,7 +106,7 @@ body {
     .wrapper-footer footer#footer-openedx a,
     .wrapper-footer footer#footer-openedx .copyright,
     .header-global .user .user-dropdown .fa {
-        color: #9b9b9b;
+        color: #b8b8b8;
     }
 
     .header-global .user > .primary > a {
@@ -172,14 +172,14 @@ body {
     input[type="submit"], input[type="button"], button, .button,
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
     .btn-brand, .modal .inner-wrapper form .submit input[type="submit"], .leanModal_box .inner-wrapper form .submit input[type="submit"],
-    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta > a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
         background: #00A3E0;
         border-color: #00A3E0;
         text-shadow: none;
         color: #fff;
 
         &:hover,
-        .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
+        .course-info header.course-profile .intro-inner-wrapper .intro .main-cta > a.find-courses:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
             background: lighten(#00A3E0, 20%);
             color: #fff;
         }
@@ -204,9 +204,11 @@ body {
         text-shadow: none;
         color: #fff;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background: lighten(#78be20, 20%);
             color: #fff;
+            box-shadow: none;
         }
     }
 
@@ -220,11 +222,12 @@ body {
     }
 
     .dashboard .my-courses .course .details .enter-course {
-        color: #00A3E0;
+        color: #fff;
         border-color: #00A3E0;
-
+        background: #00A3E0;
+        order: 2;
         &:hover {
-            background: #00A3E0;
+            background: lighten(#00A3E0, 20%);
             color: #fff;
         }
     }
@@ -235,8 +238,8 @@ body {
 
     .courses-container .courses .course {
         box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
-        border: 1px solid #bebebe;
-        border-bottom: 3px solid #126f9a;
+        border: none;
+        border-bottom: 3px solid #00A3E0;
         border-radius: 5px;
         overflow: hidden;
     }
@@ -279,8 +282,11 @@ body {
     .course-actions {
         height: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
+    }
+    .wrapper-action-more {
+        order: 1;
     }
 
     .dashboard .profile-sidebar {
@@ -325,6 +331,7 @@ body {
     .verification-process .header-global {
         height: auto;
     }
+
     .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
         background: none;
     }
@@ -354,3 +361,77 @@ body {
         color: #fff;
     }
 }
+
+.verification-process .carousel .requirements .requirement {
+    border: none;
+    border-top: 4px solid #00A3E0 !important;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.verification-process .carousel .view > .title,
+.verification-process .carousel .view .instruction {
+    display: none;
+}
+
+.facephoto.view .wrapper-task #facecam,
+.verification-process .carousel .wrapper-task .task {
+    border: none;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.verification-process .cam .placeholder-cam {
+    background: #f5f5f5;
+}
+
+.verification-process .carousel .wrapper-task .controls .control .action {
+    border-radius: 5px;
+    background: #00A3E0;
+}
+
+.verification-process .nav-wizard {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade, .verification-process .action-primary, .verification-process .action-confirm, .verification-process .carousel .wrapper-task .controls .control.approved .action, .verification-process.step-select-track .register-choice-certificate .action-select input, .wrapper-msg .has-actions .nav-actions .action-primary, .wrapper-msg .has-actions .msg-actions .action-primary {
+    background: #78be20;
+    border-color: #78be20;
+    text-shadow: none;
+    color: #fff;
+    box-shadow: none !important;
+
+    &:hover,
+    &:focus {
+        background: lighten(#78be20, 20%);
+        color: #fff;
+    }
+}
+
+.verification-process .carousel #wrapper-review .review-task {
+    background: #fff;
+}
+
+.verification-process .carousel #wrapper-review .review-task-photos .wrapper-photos .wrapper-photo .placeholder-photo {
+    border: none;
+    background: f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.content-wrapper.main-container#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown {
+    width: auto;
+}
+body .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
+    display: none;
+}
+
