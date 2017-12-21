@@ -50,7 +50,7 @@ site_status_msg = get_site_status_msg(course_id)
   <header id="global-navigation" class="header-global" >
     <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">
-      <a href="${reverse('dashboard')}">
+      <a href="https://edforhumanity.org/" target="_blank">
         <%block name="navigation_logo">
         <%
         logo_url = get_enterprise_customer_logo_url(request)
@@ -83,12 +83,12 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
               <li class="item nav-global-01 nav-global-01-xseries-style">
-                <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">${_('Back to dasbhoard')}</a>
+                <a target="_blank" class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="https://edforhumanity.org/">${_('Back to Portal Home')}</a>
               </li>
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
               <li class="item nav-global-01">
-                <a href="${reverse('dashboard')}">${_('Back to dasbhoard')}</a>
+                <a target="_blank" href="https://edforhumanity.org/">${_('Back to Portal Home')}</a>
               </li>
             % endif
             % if show_program_listing:
