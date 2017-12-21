@@ -137,4 +137,14 @@ a.header__logo,
     .menu-open & {
         transform: translate(265px, 0);
     }
+    .error-404 &,
+    .header__other &,
+    .view-in-course &,
+    .is-authenticated & {
+        border-color: #57C4BD;
+
+        &:after {
+            background: #57C4BD;
+        }
+    }
 }
