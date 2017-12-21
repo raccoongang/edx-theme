@@ -88,7 +88,7 @@ site_status_msg = get_site_status_msg(course_id)
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
               <li class="item nav-global-01">
-                <a href="${marketing_link('COURSES')}">${_('Back to dasbhoard')}</a>
+                <a href="${reverse('dashboard')}">${_('Back to dasbhoard')}</a>
               </li>
             % endif
             % if show_program_listing:
