@@ -748,7 +748,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         background: transparent;
         box-shadow: none;
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 57px auto 0;
         float: none;
 
         &:last-child {
@@ -765,7 +765,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 color: #fff;
                 text-align: center;
                 font-weight: bold;
-                text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
+                text-shadow: 0px 0px 6px #000;
                 margin-bottom: 50px;
                 @media screen and (min-width: 760px) {
                     font-size: 52px;
@@ -1545,5 +1545,6 @@ body {
     }
     .home>header {
         background-position: center; 
+
     }
 }
