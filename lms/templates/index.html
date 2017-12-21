@@ -24,7 +24,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <img class="promo-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/img-1.png" alt="promo img">
         <div class="promo-box_text-holder">
           <div class="promo-box_text-wrapper">
-            <a class="promo-box_big-text" href="#">Register to receive updates</a>
+            <a class="promo-box_big-text" id="open-popup" href="#">Register to receive updates</a>
           </div>
         </div>
       </div>
@@ -54,7 +54,25 @@ from openedx.core.djangolib.markup import HTML, Text
       }
     })
   </script>
-   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function (L) { L.start({ "baseUrl": "mc.us10.list-manage.com", "uuid": "2036eac60a14e6549e2c8f745", "lid": "7460db3bab" }) })</script>
+  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script>
+    $(window).load(function () {
+        $("#open-popup").on("click", showMailingPopUp);
+        function showMailingPopUp(event) {
+            if (event) {
+                event.preventDefault();
+            }
+            require(
+                ["mojo/signup-forms/Loader"],
+                function(L) {
+                    L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"2036eac60a14e6549e2c8f745","lid":"7460db3bab"})
+                }
+            );
+            document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+            document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+        }
+    })
+  </script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
