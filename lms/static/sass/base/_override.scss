@@ -393,6 +393,10 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     @media (min-width: $desktop-size) {
         box-shadow: 0 3px 3px 0 rgba(0,0,0,0.30);
     }
+    &:hover {
+        box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.5);
+        background: #fff;
+    }
 }
 
 .highlighted-courses .courses .course a {
@@ -402,6 +406,7 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 
 .highlighted-courses .courses .course:hover {
     box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.5);
+    background: #fff;
 }
 
 .course-info__list {
@@ -805,6 +810,9 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     border-radius: 0;
     position: relative;
     z-index: 1;
+    width: 245px;
+    height: 136px;
+    max-height: 136px;
 }
 .dashboard .my-courses .course .details .wrapper-course-image .cover .course-image {
     width: 245px;

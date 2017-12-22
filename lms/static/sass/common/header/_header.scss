@@ -37,6 +37,7 @@ a.header__logo,
     line-height: 1;
     display: flex;
     align-items: center;
+    transition: transform .2s;
 
     &:hover {
         color: #fff;
@@ -51,6 +52,9 @@ a.header__logo,
         &:hover {
             color: #000;
         }
+    }
+    .menu-open & {
+        transform: translate(120%, 0);
     }
 }
 .header__logo-white {

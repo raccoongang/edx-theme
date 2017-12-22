@@ -28,7 +28,7 @@
         background: #57C4BD;
         height: 30px;
         width: 150px;
-        margin-bottom: 8px;
+        margin-bottom: 0;
         position: relative;
     }
     &__bar {
@@ -72,14 +72,21 @@
         align-self: flex-start;
     }
     &__total-result {
-        margin-bottom: 15px;
+        margin-bottom: 0;
         padding-right: 10px;
         flex: 0 0 50%;
+
+        h4 {
+            font-size: 14px;
+            line-height: 1;
+        }
     }
     &__wrapper {
         display: flex;
         justify-content: space-between;
         order: 2;
+        align-items: center;
+
         &:last-child {
             order: 1;
             margin-bottom: 30px;
