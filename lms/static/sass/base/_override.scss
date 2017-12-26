@@ -1633,11 +1633,11 @@ body .header-global .user {
 }
 
 body .header-global .nav-global {
-    margin-top: 18px;
+    margin-top: 38px;
 }
 
 body .doc-link {
-    margin-top: 24px;
+    margin-top: 44px;
 }
 
 body .header-global {
@@ -1646,11 +1646,11 @@ body .header-global {
 
 body .header-global .wrapper-header .wrapper-user-menu,
 body .header-global .user {
-    margin-top: 11px;
+    margin-top: 31px;
 }
 
 body .header-global .wrapper-header .list-inline.nav-global {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 body .wrapper-footer footer#footer-openedx .copyright {
@@ -1667,7 +1667,7 @@ body .wrapper-footer footer#footer-openedx .copyright {
     display: none;
 }
 
-.dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade {
     box-shadow: none;
     background: $theme-link;
 }
@@ -1679,4 +1679,12 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
 }
 .wrapper-account-settings .wrapper-header .account-nav button.active {
     border-color: $theme-link;
+}
+body .header-global .logo img,
+.wrapper-footer footer#footer-openedx .wrapper-logo img {
+    width: 256px;
+}
+.home>header .title>.heading-group h1 {
+    background: rgb(227, 236, 211);
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.125), inset 0 0 0 1px rgba(255,255,255,0.75); 
 }
