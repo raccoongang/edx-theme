@@ -26,9 +26,9 @@
 
           ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
           <p class="copyright">
-            <span>Camara Education Inc. is a registered 501 (c)3 in the US</span><br>
-            <span> Camara Learning Limited is registered with the Charities Commission (1135540) in England</span><br>
-            <span>Camara Education Limited is registered with the Revenue Commissioners (CHY 16922) in Ireland</span>
+            <div>Camara Education Inc. is a registered 501 (c)3 in the US</div><br>
+            <div> Camara Learning Limited is registered with the Charities Commission (1135540) in England</div><br>
+            <div>Camara Education Limited is registered with the Revenue Commissioners (CHY 16922) in Ireland</div>
           </p>
 
           <nav class="navbar legal-nav navbar-toggleable-sm navbar-light" aria-label="${_('Legal')}">
@@ -73,6 +73,16 @@
       % endif
     >
       <div class="colophon">
+        
+        <nav class="nav-colophon" aria-label="${_('About')}">
+          <ol>
+              % for item_num, link in enumerate(footer['navigation_links'], start=1):
+              <li class="nav-colophon-0${item_num}">
+                <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+              </li>
+              % endfor
+          </ol>
+        </nav>
         <div class="footer-logo-holder">
           <div class="wrapper-logo">
             <p>
@@ -91,16 +101,6 @@
           </div>
           % endif
         </div>
-        <nav class="nav-colophon" aria-label="${_('About')}">
-          <ol>
-              % for item_num, link in enumerate(footer['navigation_links'], start=1):
-              <li class="nav-colophon-0${item_num}">
-                <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-              </li>
-              % endfor
-          </ol>
-        </nav>
-
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
         % endif
@@ -108,7 +108,11 @@
         
 
         ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-        <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
+        <p class="copyright">
+            Camara Education Inc. is a registered 501 (c)3 in the US<br>
+            Camara Learning Limited is registered with the Charities Commission (1135540) in England<br>
+            Camara Education Limited is registered with the Revenue Commissioners (CHY 16922) in Ireland
+        </p>
 
         <nav class="nav-legal" aria-label="${_('Legal')}">
           <ul>

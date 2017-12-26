@@ -384,8 +384,7 @@ body .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn
 // btns
 body.view-register .form-actions button[type="submit"],
 body.view-login .form-actions button[type="submit"],
-body .login .form-actions button[type="submit"],
-body .btn {
+body .login .form-actions button[type="submit"] {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
@@ -472,7 +471,8 @@ body .login .form-actions button[type="submit"] {
 .login-register .login-provider,
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
-.dashboard .my-courses .course .details .enter-course {
+.dashboard .my-courses .course .details .enter-course,
+body .input-text[type=search]+button {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
@@ -1562,7 +1562,7 @@ body {
     .copy-lead a, .copy-large a, .copy-base a, .alert-copy a, .alert-copy-with-title a, .copy-meta a, .table caption a, .table-simplified caption a, .copy-micro a, a, .link, .btn-link, .table-sortable .sortable .action-sort,
     .header-global .wrapper-header .list-inline .item a,
     .date-summary-container .date-summary .date-summary-link a,
-    .header-global .user .user-dropdown-menu li>a,
+    .header-global .user .user-dropdown-menu li > a,
     .wiki-wrapper section.wiki .nav-tabs a,
     .dropdown-menu-container .menu-title,
     .dropdown-menu-container .menu-button {
@@ -1587,6 +1587,14 @@ body {
 .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:hover, .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:focus {
     background-color: rgb(227, 236, 211);
     color: $theme-link;
+}
+
+.wrapper-footer footer#footer-openedx a {
+    color: rgb(227, 236, 211);
+
+    &:hover {
+        color: lighten(rgb(227, 236, 211), 20%);
+    }
 }
 
 .wiki-wrapper section.wiki .nav-tabs li.active a {
@@ -1616,34 +1624,59 @@ body .wiki-wrapper section.wiki .btn {
 }
 
 body .header-global .user .user-dropdown {
-    background: #000;
+    background: $header-color;
     color: $theme-link;
 }
 
 body .header-global .user {
     display: flex;
 }
+
 body .header-global .nav-global {
     margin-top: 18px;
 }
+
 body .doc-link {
     margin-top: 24px;
 }
+
 body .header-global {
     border: none;
 }
+
 body .header-global .wrapper-header .wrapper-user-menu,
 body .header-global .user {
     margin-top: 11px;
 }
+
 body .header-global .wrapper-header .list-inline.nav-global {
     margin-top: 20px;
 }
+
 body .wrapper-footer footer#footer-openedx .copyright {
-    color:  rgb(227, 236, 211);
+    color: rgb(227, 236, 211);
 }
+
 .footer-logo-holder {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
+    display: none;
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade .action-upgrade-icon {
+    box-shadow: none;
+    background: $theme-link;
+}
+body .header-global .wrapper-header .list-inline .item a {
+    text-transform: capitalize;
+}
+div.dropdown-menu-container .dropdown-menu .dropdown-item a {
+    color: $theme-link;
+}
+.wrapper-account-settings .wrapper-header .account-nav button.active {
+    border-color: $theme-link;
 }
