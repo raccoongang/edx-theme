@@ -33,8 +33,10 @@
     img {
         width: 115px;
         height: 115px;
+        min-width: 115px;
         @media (min-width: 800px) {
             width: 130px;
+            min-width: 130px;
             height: 130px;
         }
     }
