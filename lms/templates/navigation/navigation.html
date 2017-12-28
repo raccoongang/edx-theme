@@ -56,6 +56,30 @@ site_status_msg = get_site_status_msg(course_id)
         <span class="navbar-toggler-icon"></span>
       </button>
       <%include file="bootstrap/navbar-logo-header.html" args="online_help_token=online_help_token"/>
+      ## Course filtering
+
+      % if settings.FEATURES.get('COUNTRY_FILTER', False):
+      <li class="nav-global-02">
+        <form action="" method="get">
+          <select name="country"> 
+            <option value="">all courses</option>
+          % for key, value in settings.FEATURES.get('COUNTRY_FILTER', False).items():
+            <option value="${value}"
+              %if value == country:
+                selected
+              %endif
+              >
+              ${key}
+            </option>
+          % endfor
+          </select>
+          <input type="submit" value="filter" class="filter_button">
+        </form>
+      </li>
+      % endif
+
+      ## ------------------------
+
       % if user.is_authenticated():
         <%include file="bootstrap/navbar-authenticated.html" args="online_help_token=online_help_token"/>
       % else:
@@ -65,17 +89,42 @@ site_status_msg = get_site_status_msg(course_id)
   </header>
 % else:
   <header id="global-navigation" class="header-global" >
-    <nav class="wrapper-header" aria-label="${_('Global')}">
-      <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
+    <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
+    <nav class="wrapper-header nav-holder" aria-label="${_('Global')}">
       % if user.is_authenticated():
         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
       % else:
         <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
       % endif
+      ## Course filtering
+
+      % if settings.FEATURES.get('COUNTRY_FILTER', False):
+      <ol class="user-filter">
+        <li class="nav-global-02">
+            <form action="" method="get">
+              <select name="country">
+                <option value="">all courses</option>
+              % for key, value in settings.FEATURES.get('COUNTRY_FILTER', False).items():
+                <option value="${value}"
+                  %if value == country:
+                    selected
+                  %endif
+                  >
+                  ${key}
+                </option>
+              % endfor
+              </select>
+              <input type="submit" value="filter" class="filter_button">
+            </form>
+          </li>
+      </ol>
+      % endif
+
+      ## ------------------------
       % if header_language_selector_is_enabled():
         <% languages = released_languages() %>
         % if len(languages) > 1:
-          <ol class="user">
+          <ol class="user-filter">
             <li class="primary">
               <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
                 <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
@@ -101,7 +150,16 @@ site_status_msg = get_site_status_msg(course_id)
         % endif
       % endif
     </nav>
+    <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
   </header>
+  <script>
+      var btn = document.getElementById('hamburger'),
+          body = document.body;
+      function btnToggle() {
+        body.classList.toggle('menu-open');
+      }
+      btn.addEventListener('click', btnToggle);
+    </script>
 % endif
 % if course:
 <!--[if lte IE 9]>

@@ -553,7 +553,14 @@ body .home .page-header-secondary,
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
 body .instructor-dashboard-content-2 input[type="button"],
-body .search-bar .search-button {
+body .search-bar .search-button,
+body .empty-cart a.blue,
+body .wiki-wrapper section.wiki .btn,
+body .confirm-enrollment button[type="submit"],
+body .wiki-wrapper section.wiki .btn ,
+body .wiki-wrapper section.wiki .btn:not(:disabled),
+body .wiki-wrapper section.wiki .btn:not(:disabled)
+ {
     text-shadow: none;
     box-shadow: none;
     border: none;
@@ -1565,7 +1572,9 @@ body {
     .header-global .user .user-dropdown-menu li > a,
     .wiki-wrapper section.wiki .nav-tabs a,
     .dropdown-menu-container .menu-title,
-    .dropdown-menu-container .menu-button {
+    .dropdown-menu-container .menu-button,
+    .breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited,
+    .field-label .field-input:checked+.field-input-label, .field-label .wrapper-custom-select:checked+.field-input-label {
         color: $theme-link;
 
         &:focus {
@@ -1685,6 +1694,9 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
 }
 
 @media screen and (max-width: 768px) {
+    .wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
+        margin-bottom: 25px;
+    }
     body .header-global .logo {
         width: 100%;
     }
@@ -1701,6 +1713,7 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     body .doc-link {
         width: auto;
         margin-right: 30px;
+        order: 1;
     }
 
     .find-courses .courses-container .courses:not(.no-course-discovery) {
@@ -1719,6 +1732,41 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     .wiki-wrapper section.wiki .main-article {
         width: auto;
     }
+    body .header-global .wrapper-header .list-inline.nav-global {
+        width: 100%;
+        li {
+            margin: 0;
+        }
+        li a {
+            background: #82bc00;
+            box-shadow: none;
+            color: #ffe !important;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-shadow: none;
+            font-weight: 500;
+            letter-spacing: 0;
+            margin: 0 0 15px;
+            border-radius: 2px;
+            &:hover {
+                background: lighten(#82bc00,20%);
+            }
+        }
+    }
+    body .header-global .logo img, .wrapper-footer footer#footer-openedx .wrapper-logo img {
+        width: 150px !important;
+    }
+    body .header-global .logo-header {
+        display: flex;  
+    }
+    body .header-global .user {
+        order: 2;
+    }
+    body .header-global .nav-courseware {
+        margin-top: 0;
+    }
+
 }
 
 @media screen and (max-width: 410px) {
@@ -1739,7 +1787,63 @@ body .header-global .logo img,
 
 .home > header .title > .heading-group h1 {
     background: rgba(227, 236, 211, 0.5);
-    color: rgb(45, 45, 43);
     border-radius: 6px; 
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+.user-filter {
+    display: inline-block;
+    margin-left: 20px;
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    select {
+        margin-bottom: 10px;
+    }
+    input[type="submit"] {
+        box-shadow: none;
+        background: $theme-link;
+        border: none;
+        text-shadow: none;
+        border-radius: 2px;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        &:hover,&:focus {
+            background: lighten($theme-link, 20%);
+            box-shadow: none;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 15px 0 0;
+        select {
+            height: 36px;
+        }
+
+    }
+}
+body .header-global .nav-courseware {
+    margin-top: 14px
+}
+div.dropdown-menu-container .dropdown-menu .dropdown-item a:hover {
+    color: lighten(#82bc00, 20%);
+}
+
+.wiki-wrapper section.wiki .article-functions .see-children a:hover, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:hover+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:hover+h4, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:focus+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:focus+h4, .wiki-wrapper section.wiki .article-functions .see-children a:focus {
+    color: $theme-link-hover;
+}
+body .header-global .user>.primary:last-child>a.shopping-cart {
+    text-shadow: none;
+    border-color: $theme-link;
+    color: $theme-link;
+    &:hover,&:focus {
+        border-color: $theme-link-hover;
+        color: $theme-link-hover;
+    }
+}
+body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper section.wiki .btn:focus:not(:disabled) {
+    box-shadow: none;
+    background: $theme-link-hover;
 }
