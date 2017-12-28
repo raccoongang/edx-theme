@@ -706,7 +706,9 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 .course-info .course-sidebar .important-dates {
     display: flex;
     flex-wrap: wrap;
-    margin: -64px 0 0;
+    @media (min-width: $tablet-size) {
+        margin: -64px 0 0;
+    }
 }
 .course-info .course-sidebar .important-dates li {
     border-bottom: none;
