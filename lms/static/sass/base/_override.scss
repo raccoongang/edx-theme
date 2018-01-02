@@ -1657,7 +1657,7 @@ body .header-global .wrapper-header .wrapper-user-menu,
 body .header-global .user {
     margin-top: 11px;
 }
-body .header-global .user {
+body .header-global .user-shop {
     float: right;
     margin-top: 22px;
 }
@@ -1855,16 +1855,6 @@ body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper s
     background: $theme-link-hover;
 }
 
-//sticky footer
-.window-wrap {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    .content-wrapper {
-        flex: 1;
-    }
-}
-
 .logo-header .logo {
     display: inline-block;
     
@@ -1891,4 +1881,19 @@ body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper s
     .filter_button {
         padding: 7px 18px;
     }
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
+    margin-right: 0;
+}
+body .home>header {
+    display: flex;
+    align-items: center;
+}
+.home>header .title>.heading-group h1 {
+    padding: 30px;
+}
+.home>header .title {
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 0;
 }
