@@ -1718,6 +1718,15 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
         margin-right: 30px;
         order: 1;
     }
+    .dropdown-menu-container .menu-title,
+    .dropdown-menu-container .menu-button,
+    .header-global .wrapper-header .list-inline .item a {
+        color: $theme-link;
+    }
+    
+    .doc-link {
+        margin: 18px 15px;
+    }
 
     .find-courses .courses-container .courses:not(.no-course-discovery) {
         width: 100%;
@@ -1828,9 +1837,37 @@ body .header-global .logo img,
         form {
             width: 100%;
         }
-
     }
 }
+body {
+    .banner__citate {
+        text-align: right;
+        font-size: 30px;
+    }
+    // ecomerce fix
+    .ecommerce-wrapper span.code_tip .add, .proctoring-wrapper span.code_tip .add, .ecommerce-wrapper span.tip .add:active:not(:disabled), .ecommerce-wrapper span.tip .add:focus:not(:disabled), .proctoring-wrapper span.tip .add:active:not(:disabled), .proctoring-wrapper span.tip .add:focus:not(:disabled),
+    {
+        box-shadow: none;
+        border: none;
+        background: $theme-link;
+        &:hover, &:focus {
+            box-shadow: none;
+            border: none;
+            background: lighten($theme-link, 20%);
+        }
+    }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+        box-shadow: none;
+        border: none;
+        background: $theme-link;
+        &:hover, &:focus {
+            box-shadow: none;
+            border: none;
+            background: lighten($theme-link, 20%);
+        }
+    }
+}
+    
 body .header-global .nav-courseware {
     margin-top: 14px
 }
