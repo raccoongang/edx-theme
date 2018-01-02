@@ -1,0 +1,74 @@
+// focus color on register page
+
+.login form .field.is-focused label, .register form .field.is-focused label, .passwordreset form .field.is-focused label, #forgot-password-modal #password-reset form .field.is-focused label {
+    color: $theme-link;
+}
+
+// user menu colors 
+
+.header-global .user .user-dropdown-menu li>a,
+.header-global .user .user-dropdown {
+    color: $theme-link;
+}
+
+// show hide social links in footer 
+
+body .icon-list {
+    display: flex;
+}
+
+// username color on Forum
+
+body .dropdown-menu-container .menu-title .label-username, .header-global .user .user-link .label-username {
+    color: $theme-link;
+}
+
+//Colors inside 'Add post' in Forum
+.field-label .field-input:checked+.field-input-label, .field-label .wrapper-custom-select:checked+.field-input-label {
+    color: $theme-link;
+}
+
+// Bredcrumbs colors 
+.breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
+    color: $theme-link;
+}
+
+//outline color on focus 
+body a:focus {
+    outline-color: $theme-link;
+}
+
+//hover and focus for wiki 
+body .wiki-wrapper section.wiki .nav-tabs a:hover, .wiki-wrapper section.wiki .nav-tabs div.info-wrapper section.handouts ol li div.hitarea:hover+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .nav-tabs div.hitarea:hover+h4, .wiki-wrapper section.wiki .nav-tabs div.info-wrapper section.handouts ol li div.hitarea:focus+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .nav-tabs div.hitarea:focus+h4, .wiki-wrapper section.wiki .nav-tabs a:focus {
+    color: $theme-link;
+}
+
+//active link in wiki 
+body .wiki-wrapper section.wiki .nav-tabs li.active a {
+    color: $theme-link;
+    border-color: $theme-link;
+}
+
+//Color inside 'Add post' in unit 
+body .field-label .field-input:checked+.field-input-label {
+    color: $theme-link;
+}
+
+// Resume course button border color fix 
+
+body .btn-brand {
+    border: 1px solid $theme-link;
+    &:hover {
+        border: 1px solid $theme-link;
+    }
+}
+
+//lesson in course , active border color fix 
+
+.course-outline .block-tree .section ol.outline-item .subsection.current {
+    border-color: $theme-link;
+    &:hover {
+        border-color: $theme-link;
+    }
+}
+

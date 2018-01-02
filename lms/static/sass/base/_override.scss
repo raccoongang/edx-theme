@@ -1508,7 +1508,7 @@ body {
     .dropdown-menu-container .menu-title,
     .dropdown-menu-container .menu-button,
     .header-global .wrapper-header .list-inline .item a {
-        color: $theme-link;
+        color: $theme-link !important;
     }
     .doc-link {
         margin: 18px 15px;
@@ -1547,7 +1547,20 @@ body {
     .home>header {
         background-position: center; 
     }
-    banner__citate {
+    .banner__citate {
         text-align: right;
     }
+}
+.container.about h1 {
+    margin: 24px 0;
+    text-align: left;
+}
+
+
+* * {
+    font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
+}
+
+.fa {
+    font-family: "FontAwesome" !important;
 }

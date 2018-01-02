@@ -37,17 +37,31 @@ body .wrapper {
     .view-dashboard #course-index-tabs li.active {
         border-color: #9250f0;
     }
+    .copy-lead a, .copy-large a, .badges-overlay .badges-modal a, .copy-base a, .alert-copy a, .alert-copy-with-title a, .accomplishment-metadata .metadata .value a, .accomplishment-metadata .recipient-details a, .copy-meta a, .table caption a, .table-simplified caption a, .accomplishment-metadata .metadata .label a, .copy-micro a, a, .link, .btn-link, .table-sortable .sortable .action-sort {
+        color: #9250f0;
+    }
 }
 .nav-item.is-current, body.howitworks .nav-not-signedin-hiw, body.dashboard .nav-account-dashboard, body.course.view-outline .nav-course-courseware .title, body.course.view-updates .nav-course-courseware .title, body.course.view-static-pages .nav-course-courseware .title, body.course.view-uploads .nav-course-courseware .title, body.course.view-textbooks .nav-course-courseware .title, body.course.view-video-uploads .nav-course-courseware .title, body.course.view-outline .nav-course-courseware-outline, body.course.view-updates .nav-course-courseware-updates, body.course.view-static-pages .nav-course-courseware-pages, body.course.view-uploads .nav-course-courseware-uploads, body.course.view-textbooks .nav-course-courseware-textbooks, body.course.view-video-uploads .nav-course-courseware-videos, body.course.schedule .nav-course-settings .title, body.course.grading .nav-course-settings .title, body.course.view-team .nav-course-settings .title, body.course.view-group-configurations .nav-course-settings .title, body.course.advanced .nav-course-settings .title, body.course.view-certificates .nav-course-settings .title, body.course.schedule .nav-course-settings-schedule, body.course.grading .nav-course-settings-grading, body.course.view-team .nav-course-settings-team, body.course.view-group-configurations .nav-course-settings-group-configurations, body.course.advanced .nav-course-settings-advanced, body.course.view-certificates .nav-course-settings-certificates, body.course.view-import .nav-course-tools .title, body.course.view-export .nav-course-tools .title, body.course.view-export-git .nav-course-tools .title, body.course.view-import .nav-course-tools-import, body.course.view-export .nav-course-tools-export, body.course.view-export-git .nav-course-tools-export-git, body.course.view-team .nav-library-settings .title, body.course.view-team .nav-library-settings-team {
     color: #9250f0;
 }
 .view-signup .content-primary form .form-actions .action-primary, .view-signin .content-primary form .form-actions .action-primary, .view-util .content-primary form .form-actions .action-primary,
-    .not-signedin .wrapper-header .nav-pitch .action-signup, .view-util .wrapper-header .nav-pitch .action-signup {
-        border: 1px solid #9250f0 !important;
-        background-color: #9250f0 !important;
-        color: #fff;
-    }
-    .view-signup .content-primary form .form-actions .action-primary:hover, .view-signup .content-primary form .form-actions .action-primary:focus, .view-signup .content-primary form .form-actions .action-primary:active, .view-signin .content-primary form .form-actions .action-primary:hover, .view-signin .content-primary form .form-actions .action-primary:focus, .view-signin .content-primary form .form-actions .action-primary:active, .view-util .content-primary form .form-actions .action-primary:hover, .view-util .content-primary form .form-actions .action-primary:focus, .view-util .content-primary form .form-actions .action-primary:active,
-    .not-signedin .wrapper-header .nav-pitch .action-signup:hover, .not-signedin .wrapper-header .nav-pitch .action-signup:focus, .not-signedin .wrapper-header .nav-pitch .action-signup:active, .view-util .wrapper-header .nav-pitch .action-signup:hover, .view-util .wrapper-header .nav-pitch .action-signup:focus, .view-util .wrapper-header .nav-pitch .action-signup:active {
-        background-color: lighten(#9250f0,20%) !important;
-    }
+.not-signedin .wrapper-header .nav-pitch .action-signup, .view-util .wrapper-header .nav-pitch .action-signup {
+    border: 1px solid #9250f0 !important;
+    background-color: #9250f0 !important;
+    color: #fff;
+}
+.view-signup .content-primary form .form-actions .action-primary:hover, .view-signup .content-primary form .form-actions .action-primary:focus, .view-signup .content-primary form .form-actions .action-primary:active, .view-signin .content-primary form .form-actions .action-primary:hover, .view-signin .content-primary form .form-actions .action-primary:focus, .view-signin .content-primary form .form-actions .action-primary:active, .view-util .content-primary form .form-actions .action-primary:hover, .view-util .content-primary form .form-actions .action-primary:focus, .view-util .content-primary form .form-actions .action-primary:active,
+.not-signedin .wrapper-header .nav-pitch .action-signup:hover, .not-signedin .wrapper-header .nav-pitch .action-signup:focus, .not-signedin .wrapper-header .nav-pitch .action-signup:active, .view-util .wrapper-header .nav-pitch .action-signup:hover, .view-util .wrapper-header .nav-pitch .action-signup:focus, .view-util .wrapper-header .nav-pitch .action-signup:active {
+    background-color: lighten(#9250f0,20%) !important;
+}
+
+.view-howitworks.not-signedin .wrapper-content-header {
+    background: #9250f0;
+}
+.view-howitworks.not-signedin .content-cta .list-actions .action.action-primary {
+    background: #9250f0;
+    border-color: #9250f0;
+}
+.wrapper-header .nav-dd .title:hover, .wrapper-header .nav-dd .title:active {
+    color: #9250f0;
+}
