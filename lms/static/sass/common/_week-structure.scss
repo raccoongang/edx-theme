@@ -27,6 +27,10 @@
         margin: 0 0 0 60px;
         text-transform: none;
         flex-direction: row;
+        padding-left: 24px;
+    }
+    @media (min-width: $tablet-size) {
+        padding-left: 0;
     }
 
     .week-structure:nth-child(2n) & {
@@ -116,11 +120,11 @@
     margin: 0;
     padding: 0 0 0 15px;
     list-style: none;
-    column-count: 2;
-    column-gap: 50px;
-    max-width: 75%;
     @media (min-width: $tablet-size) {
-        padding-left: 24px;
+        padding-left: 39px;
+        column-count: 2;
+        column-gap: 50px;
+        max-width: 75%;
     }
     @media (min-width: $desktop-size) {
         padding-left: 0;
