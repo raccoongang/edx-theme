@@ -852,9 +852,10 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 }
 .dashboard .my-courses .course .details .wrapper-course-details {
     width: 100%;
-    max-width: 310px;
+    max-width: none;
     @media (min-width: $tablet-size) {
         padding-left: 20px;
+        max-width: 310px;
     }
     @media (min-width: $desktop-size) {
         padding-left: 0;
