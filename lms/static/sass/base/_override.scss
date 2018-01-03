@@ -1805,7 +1805,7 @@ body .header-global .logo img,
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
 }
 .user-filter {
-    display: inline-block;
+    display: none;
     margin-left: 20px;
     form {
         display: flex;
@@ -1948,4 +1948,8 @@ body .home>header {
     &:hover, &:focus {
         color: $theme-link-hover;
     }
+}
+
+.showFilter .user-filter {
+    display: inline-block;
 }
