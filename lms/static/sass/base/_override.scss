@@ -1432,7 +1432,8 @@ body.view-login .wrapper-footer footer {
     max-width: 960px;
 }
 
-body.view-login .header-global .nav-courseware .btn-login {
+body.view-login .header-global .nav-courseware .btn-login,
+body .header-global .nav-courseware .btn-login {
     display: block;
     color: #fff;
 }
@@ -1508,7 +1509,7 @@ body {
     .dropdown-menu-container .menu-title,
     .dropdown-menu-container .menu-button,
     .header-global .wrapper-header .list-inline .item a {
-        color: $theme-link !important;
+        color: $theme-link;
     }
     .doc-link {
         margin: 18px 15px;
