@@ -1703,7 +1703,9 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     body .header-global .logo {
         width: 100%;
     }
-
+    body .header-global {
+        min-height: 70px;
+    }
     .header-global .nav-global li,
     .header-global .nav-global {
         width: auto;
@@ -1856,7 +1858,8 @@ body {
             background: lighten($theme-link, 20%);
         }
     }
-    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
+    .confirm-enrollment a.course-link-bg-color {
         box-shadow: none;
         border: none;
         background: $theme-link;
@@ -1864,6 +1867,12 @@ body {
             box-shadow: none;
             border: none;
             background: lighten($theme-link, 20%);
+        }
+    }
+    .well .filter-clear a {
+        color: $theme-link;
+        &:hover, &:focus {
+            color: $theme-link-hover;
         }
     }
 }
@@ -1933,4 +1942,10 @@ body .home>header {
     width: 100%;
     max-width: 1100px;
     margin-bottom: 0;
+}
+.enrollment-text a {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
