@@ -46,7 +46,7 @@ if course is not None:
             </div>
             <div class="course-tabs__holder">
                 <div class="course-tabs__helper"></div>
-                <ol class="tabs course-tabs">
+                <ol class="tabs course-tabs" id="course__tabs">
                     <%include file="${tabs_tmpl}" args="tab_list=tab_list,active_page=active_page,default_tab=default_tab,tab_image=tab_image" />
                     <%block name="extratabs" />
                 </ol>
@@ -54,3 +54,11 @@ if course is not None:
         </div>
     </nav>
 %endif
+<script>
+    var btn = document.getElementById('course__tabs'),
+    body = document.body;
+    function btnToggle() {
+       body.classList.toggle('course__tabs-open');
+    }
+    btn.addEventListener('click', btnToggle);
+</script>

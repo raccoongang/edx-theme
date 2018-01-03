@@ -1280,17 +1280,35 @@ body {
     }   
 }
 .wrapper-course-material .course-material .tabs.course-tabs {
-    width: 100%;
+    width: 272px;
     border-radius: 0;
     padding-left: 0 !important;
     position: relative;
-    border-bottom: 3px solid #fff;
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
     margin-left: 24px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    border: 2px solid #fff;
+    border-radius: 4px;
+
     @media (min-width: $tablet-size) {
+        width: 100%;
+        border: none;
+        border-bottom: 3px solid #fff;
         margin-left: 84px;
+        flex-direction: row;
+        position: relative;
+        border-radius: 0;
+    }
+
+    .course__tabs-open & {
+        background: #ccc;
+        @media (min-width: $tablet-size) {
+            background: transparent;
+        }
     }
 }
 body .wrapper-course-material .course-tabs li a:focus,
@@ -1300,8 +1318,25 @@ body .wrapper-course-material .course-tabs li a:visited {
     color: #fff !important;
     font-size: 14px;
     line-height: 1.3;
+    text-align: left;
     @media (min-width: $tablet-size) {
+        display: block;
         font-size: 20px;
+    }
+}
+.wrapper-course-material ol.course-tabs li a {
+    display: none;
+    @media (min-width: $tablet-size) {
+        display: block;
+    }
+
+    .course__tabs-open & {
+        color: #000 !important;
+        display: inline-block;
+        @media (min-width: $tablet-size) {
+            display: block;
+            color: #fff !important;
+        }
     }
 }
 body .wrapper-course-material .course-tabs li a:focus,
@@ -1309,6 +1344,14 @@ body .wrapper-course-material .course-tabs li a.active {
     border-color: transparent;
     @media (min-width: $tablet-size) {
         border-color: #062860;
+    }
+}
+body .wrapper-course-material .course-tabs li a.active {
+    display: inline-block;
+    border: none;
+    @media (min-width: $tablet-size) {
+        display: block;
+        border-bottom: 4px solid #065683;
     }
 }
 .wrapper-course-material .course-tabs li {
@@ -1338,10 +1381,15 @@ body .wrapper-course-material .course-tabs li a.active {
     }
 }
 .course-material__school {
-    color: #062860;
-    font-size: 20px;
-    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.3;
     font-weight: normal;
+    @media (min-width: $tablet-size) {
+        color: #062860;
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 .course-tabs__holder {
     display: flex;
@@ -2056,4 +2104,9 @@ div.info-wrapper {
 }
 body.view-in-course .window-wrap {
     min-width: auto;
+}
+body.view-in-course .wrapper-course-material, 
+body.view-in-course .wrapper-preview-menu {
+    position: relative;
+    z-index: 2;
 }
