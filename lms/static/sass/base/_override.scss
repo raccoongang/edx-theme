@@ -1708,9 +1708,14 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     }
     .header-global .nav-global li,
     .header-global .nav-global {
-        width: auto;
+        width: 100%;
     }
-
+    .header-global .nav-global li {
+        display: flex;
+        a {
+            width: 100%;
+        }
+    }
     .header-global .nav-global li, .header-global .nav-global div {
         display: block;
     }
@@ -1776,6 +1781,7 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     }
     body .header-global .user {
         order: 2;
+        margin: 11px 0 0;
     }
     body .header-global .nav-courseware {
         margin-top: 0;
@@ -1889,11 +1895,17 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a:hover {
 }
 body .header-global .user>.primary:last-child>a.shopping-cart {
     text-shadow: none;
-    border-color: $theme-link;
+    border: 1px solid $theme-link;
     color: $theme-link;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-transform: uppercase;
     &:hover,&:focus {
         border-color: $theme-link-hover;
         color: $theme-link-hover;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 
     }
 }
 body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper section.wiki .btn:focus:not(:disabled) {
@@ -1952,4 +1964,10 @@ body .home>header {
 
 .showFilter .user-filter {
     display: inline-block;
+}
+
+#global-navigation > div > nav > ol.user {
+    float: right;
+    margin-top: 22px;
+
 }
