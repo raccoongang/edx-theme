@@ -281,6 +281,12 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
       </div>
     <div class="wrapper-course-image" aria-hidden="true">
         <div class="wrapper-course-image__list">
+          <h2 class="wrapper-course-image__mobile-title">${course_overview.display_name_with_default}</h2>
+          <div class="wrapper-course-image__mobile-school">
+            % if course.display_organization:
+                ${course.display_organization}
+            % endif
+          </div>
             <div class="wrapper-course-image__text">
             %if course_overview.short_description:
                 ${ course_overview.short_description }
