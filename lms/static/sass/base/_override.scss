@@ -1704,7 +1704,7 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
         width: 100%;
     }
     body .header-global {
-        min-height: 70px;
+        min-height: 85px;
     }
     .header-global .nav-global li,
     .header-global .nav-global {
@@ -1755,6 +1755,7 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
         width: 100%;
         li {
             margin: 0;
+            display: flex;
         }
         li a {
             background: #82bc00;
@@ -1869,10 +1870,14 @@ body {
         box-shadow: none;
         border: none;
         background: $theme-link;
+        background-color: none;
+        background-image: none;
         &:hover, &:focus {
             box-shadow: none;
             border: none;
             background: lighten($theme-link, 20%);
+            background-color: none;
+            background-image: none;
         }
     }
     .well .filter-clear a {
@@ -1966,8 +1971,10 @@ body .home>header {
     display: inline-block;
 }
 
-#global-navigation > div > nav > ol.user {
+#global-navigation > div > nav > ol.user-shop {
     float: right;
     margin-top: 22px;
-
+}
+body .course-outline .block-tree .section ol.outline-item .subsection.current {
+    border-color: $theme-link;
 }
