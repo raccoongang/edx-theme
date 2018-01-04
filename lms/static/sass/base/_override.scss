@@ -1912,7 +1912,7 @@ body {
         background-color: none;
         background-image: none;
         &:hover, &:focus {
-            color: $theme-link-hover !important;
+            background: $theme-link-hover !important;
         }
     }
 }
@@ -2013,10 +2013,14 @@ body .course-outline .block-tree .section ol.outline-item .subsection.current {
 }
 
 .view-in-course #global-navigation>div>nav>ol.user-shop {
-    margin-top: 11px;
+    margin-top: 22px;
+    @media screen and (max-width: 768px){
+        margin-top: 11px;
+    }
+    
 }
 
-.heading-groud .add-to-cart a {
+.heading-group .add-to-cart a {
     color: $theme-link;
     &:hover,&:focus {
         color: $theme-link-hover;
