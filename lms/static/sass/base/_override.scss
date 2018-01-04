@@ -1856,13 +1856,14 @@ body {
     // ecomerce fix
     .ecommerce-wrapper span.code_tip .add, .proctoring-wrapper span.code_tip .add, .ecommerce-wrapper span.tip .add:active:not(:disabled), .ecommerce-wrapper span.tip .add:focus:not(:disabled), .proctoring-wrapper span.tip .add:active:not(:disabled), .proctoring-wrapper span.tip .add:focus:not(:disabled),
     {
-        box-shadow: none;
-        border: none;
-        background: $theme-link;
+        box-shadow: none !important;
+        border: none !important;
+        background: $theme-link !important;
+        
         &:hover, &:focus {
-            box-shadow: none;
-            border: none;
-            background: lighten($theme-link, 20%);
+            box-shadow: none !important;
+            border: none !important;
+            background: darken($theme-link, 20%) !important;
         }
     }
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
@@ -1875,7 +1876,7 @@ body {
         &:hover, &:focus {
             box-shadow: none;
             border: none;
-            background: lighten($theme-link, 20%);
+            background: darken($theme-link, 20%);
             background-color: none;
             background-image: none;
         }
@@ -1886,7 +1887,22 @@ body {
             color: $theme-link-hover;
         }
     }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
+        box-shadow: none;
+        border: none;
+        background: darken($theme-link, 20%);
+        background-color: none;
+        background-image: none;
+    }
+    .ecommerce-wrapper span.code_tip .add:hover:not(:disabled), .proctoring-wrapper span.code_tip .add:hover:not(:disabled) {
+        box-shadow: none;
+        border: none;
+        background: darken($theme-link, 20%);
+        background-color: none;
+        background-image: none;
+    }
 }
+
     
 body .header-global .nav-courseware {
     margin-top: 14px
@@ -1946,14 +1962,17 @@ body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper s
     }
 }
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
-    margin-right: 0;
+    margin: 0;
+    padding: 0;
 }
 body .home>header {
     display: flex;
     align-items: center;
+    height: 520px;
 }
 .home>header .title>.heading-group h1 {
     padding: 30px;
+    margin: 84px 0 0;
 }
 .home>header .title {
     width: 100%;
@@ -1961,7 +1980,7 @@ body .home>header {
     margin-bottom: 0;
 }
 .enrollment-text a {
-    color: $theme-link;
+    color: $theme-link !important; 
     &:hover, &:focus {
         color: $theme-link-hover;
     }
@@ -1977,4 +1996,15 @@ body .home>header {
 }
 body .course-outline .block-tree .section ol.outline-item .subsection.current {
     border-color: $theme-link;
+}
+
+.view-in-course #global-navigation>div>nav>ol.user-shop {
+    margin-top: 11px;
+}
+
+.heading-groud .add-to-cart a {
+    color: $theme-link;
+    &:hover,&:focus {
+        color: $theme-link-hover;
+    }
 }
