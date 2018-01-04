@@ -1854,7 +1854,10 @@ body {
         font-size: 30px;
     }
     // ecomerce fix
-    .ecommerce-wrapper span.code_tip .add, .proctoring-wrapper span.code_tip .add, .ecommerce-wrapper span.tip .add:active:not(:disabled), .ecommerce-wrapper span.tip .add:focus:not(:disabled), .proctoring-wrapper span.tip .add:active:not(:disabled), .proctoring-wrapper span.tip .add:focus:not(:disabled),
+    
+    .ecommerce-wrapper span.code_tip .add, .proctoring-wrapper span.code_tip .add,
+    .ecommerce-wrapper span.tip .add, .proctoring-wrapper span.tip .add,
+    #e-commerce #add-coupon-modal input[type="button"]#update_coupon_button, #e-commerce #add-coupon-modal input[type="button"]#add_coupon_button, #e-commerce #add-coupon-modal input[type="button"]#set_course_button, #e-commerce #add-coupon-modal input[type="button"]#lookup_regcode, #e-commerce #invalidate_registration_code_modal input[type="button"]#update_coupon_button, #e-commerce #invalidate_registration_code_modal input[type="button"]#add_coupon_button, #e-commerce #invalidate_registration_code_modal input[type="button"]#set_course_button, #e-commerce #invalidate_registration_code_modal input[type="button"]#lookup_regcode, #e-commerce #edit-coupon-modal input[type="button"]#update_coupon_button, #e-commerce #edit-coupon-modal input[type="button"]#add_coupon_button, #e-commerce #edit-coupon-modal input[type="button"]#set_course_button, #e-commerce #edit-coupon-modal input[type="button"]#lookup_regcode, #e-commerce #set-course-mode-price-modal input[type="button"]#update_coupon_button, #e-commerce #set-course-mode-price-modal input[type="button"]#add_coupon_button, #e-commerce #set-course-mode-price-modal input[type="button"]#set_course_button, #e-commerce #set-course-mode-price-modal input[type="button"]#lookup_regcode, #e-commerce #registration_code_generation_modal input[type="button"]#update_coupon_button, #e-commerce #registration_code_generation_modal input[type="button"]#add_coupon_button, #e-commerce #registration_code_generation_modal input[type="button"]#set_course_button, #e-commerce #registration_code_generation_modal input[type="button"]#lookup_regcode
     {
         box-shadow: none !important;
         border: none !important;
