@@ -2013,7 +2013,7 @@ body .course-outline .block-tree .section ol.outline-item .subsection.current {
 }
 
 .view-in-course #global-navigation>div>nav>ol.user-shop {
-    margin-top: 22px;
+    margin-top: 17px;
     @media screen and (max-width: 768px){
         margin-top: 11px;
     }
@@ -2037,6 +2037,9 @@ body .course-outline .block-tree .section ol.outline-item .subsection.current {
         margin-bottom: 16px;
         label {
             font-style: normal;
+        }
+        textarea {
+            width: 100%;
         }
     }
     .form-actions {
