@@ -103,3 +103,10 @@ body .btn-brand {
 body .view-register .nav-global-04 a {
     color: $theme-link !important;
 }
+
+body .well .filter-clear a {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
