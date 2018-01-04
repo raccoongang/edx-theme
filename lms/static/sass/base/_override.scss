@@ -2008,3 +2008,31 @@ body .course-outline .block-tree .section ol.outline-item .subsection.current {
         color: $theme-link-hover;
     }
 }
+
+.list-input {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        label {
+            font-style: normal;
+        }
+    }
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        button {
+            background: $theme-link;
+            color: #fff;
+            border: none;
+            &:hover,&:focus {
+                background: $theme-link-hover;
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+}
