@@ -1901,6 +1901,14 @@ body {
         background-color: none;
         background-image: none;
     }
+    .ecommerce-wrapper span.invalid_sale .add, .proctoring-wrapper span.invalid_sale .add,
+    #e-commerce #add-coupon-modal input[name="generate-registration-codes-csv"], #e-commerce #invalidate_registration_code_modal input[name="generate-registration-codes-csv"], #e-commerce #edit-coupon-modal input[name="generate-registration-codes-csv"], #e-commerce #set-course-mode-price-modal input[name="generate-registration-codes-csv"], #e-commerce #registration_code_generation_modal input[name="generate-registration-codes-csv"] {
+        box-shadow: none;
+        border: none;
+        background: darken($theme-link, 20%);
+        background-color: none;
+        background-image: none;
+    }
 }
 
     
@@ -1926,7 +1934,7 @@ body .header-global .user>.primary:last-child>a.shopping-cart {
         color: $theme-link-hover;
     }
     @media screen and (max-width: 768px) {
-        margin-top: 11px;
+        
     }
 }
 body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper section.wiki .btn:focus:not(:disabled) {
