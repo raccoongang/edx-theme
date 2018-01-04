@@ -2,6 +2,9 @@
 
 .login form .field.is-focused label, .register form .field.is-focused label, .passwordreset form .field.is-focused label, #forgot-password-modal #password-reset form .field.is-focused label {
     color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 // user menu colors 
@@ -9,6 +12,9 @@
 .header-global .user .user-dropdown-menu li>a,
 .header-global .user .user-dropdown {
     color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 // show hide social links in footer 
@@ -21,16 +27,25 @@ body .icon-list {
 
 body .dropdown-menu-container .menu-title .label-username, .header-global .user .user-link .label-username {
     color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 //Colors inside 'Add post' in Forum
 .field-label .field-input:checked+.field-input-label, .field-label .wrapper-custom-select:checked+.field-input-label {
     color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 // Bredcrumbs colors 
 .breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
     color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 //outline color on focus 
@@ -41,12 +56,18 @@ body a:focus {
 //hover and focus for wiki 
 body .wiki-wrapper section.wiki .nav-tabs a:hover, .wiki-wrapper section.wiki .nav-tabs div.info-wrapper section.handouts ol li div.hitarea:hover+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .nav-tabs div.hitarea:hover+h4, .wiki-wrapper section.wiki .nav-tabs div.info-wrapper section.handouts ol li div.hitarea:focus+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .nav-tabs div.hitarea:focus+h4, .wiki-wrapper section.wiki .nav-tabs a:focus {
     color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 //active link in wiki 
 body .wiki-wrapper section.wiki .nav-tabs li.active a {
     color: $theme-link;
     border-color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 //Color inside 'Add post' in unit 
