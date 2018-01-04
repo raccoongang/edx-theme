@@ -10,7 +10,8 @@
 // user menu colors 
 
 .header-global .user .user-dropdown-menu li>a,
-.header-global .user .user-dropdown {
+.header-global .user .user-dropdown,
+body div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     color: $theme-link;
     &:hover, &:focus {
         color: $theme-link-hover;
@@ -25,11 +26,15 @@ body .icon-list {
 
 // username color on Forum
 
-body .dropdown-menu-container .menu-title .label-username, .header-global .user .user-link .label-username {
+body .dropdown-menu-container .menu-title .label-username,
+.header-global .user .user-link .label-username {
     color: $theme-link;
     &:hover, &:focus {
         color: $theme-link-hover;
     }
+}
+body .dropdown-menu-container .menu-title .label-username:hover {
+    color: $theme-link-hover;
 }
 
 //Colors inside 'Add post' in Forum
@@ -60,7 +65,9 @@ body .wiki-wrapper section.wiki .nav-tabs a:hover, .wiki-wrapper section.wiki .n
         color: $theme-link-hover;
     }
 }
-
+.wiki-wrapper section.wiki .article-functions .see-children a:hover, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:hover+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:hover+h4, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:focus+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:focus+h4, .wiki-wrapper section.wiki .article-functions .see-children a:focus {
+    color: $theme-link-hover;
+}
 //active link in wiki 
 body .wiki-wrapper section.wiki .nav-tabs li.active a {
     color: $theme-link;

@@ -3,23 +3,28 @@ body .wrapper {
     .not-signedin .wrapper-header .nav-pitch .action-signup, .view-util .wrapper-header .nav-pitch .action-signup {
         background: #9250f0;
     }
-    a,.view-dashboard #course-index-tabs li a,
+
+    a, .view-dashboard #course-index-tabs li a,
     .wrapper-footer footer.primary a {
         color: #9250f0;
+
         &:hover {
             color: lighten(#9250f0, 20%);
         }
     }
+
     .wrapper-mast .mast.has-actions .nav-actions .button, .wrapper-sock .sock .support .list-actions .action-primary, .wrapper-sock .sock .feedback .list-actions .action-primary, .notice-incontext.has-actions .list-actions .action-primary, .notice-instruction.has-actions .list-actions .action-primary, .view-dashboard .status-creationrights .list-actions .action-primary, .view-dashboard .status-creationrights .form-actions .action-primary, .view-dashboard .course-item:hover .view-live-button, .view-export .export-controls .action-export, .view-export .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary, .view-import .wrapper-status .list-progress .item-progresspoint.has-actions .list-actions .action-primary, .view-settings .group-settings.basic .note-promotion-courseURL .list-actions .action-primary, .view-container .content-supplementary .bit-publishing .wrapper-pub-actions .action-publish, .view-export-git .export-git-controls .action-export-git, .view-group-configurations .content-primary .wrapper-collection .collection-edit .actions .action-primary, .view-certificates .wrapper-collection .collection-edit .actions .action-primary, .xmodule_VideoDescriptor .wrapper-comp-settings.basic_metadata_edit .transcripts-status .action {
         background: #9250f0;
         border-color: #9250f0;
         color: #fff;
-        &:hover,&:focus {
-            background: lighten(#9250f0,20%);
-            border-color: lighten(#9250f0,20%);
+
+        &:hover, &:focus {
+            background: lighten(#9250f0, 20%);
+            border-color: lighten(#9250f0, 20%);
             color: #fff;
         }
     }
+
     .wrapper-comp-settings .file-uploader .upload-setting, .wrapper-comp-settings .list-input.settings-list .metadata-list-enum .create-setting, .wrapper-comp-settings .list-input.settings-list .metadata-dict .create-setting, .outline-content .add-item .button-new, .bit .external-help-button, .view-outline .new-subsection-item, .view-outline .new-unit-item, .view-outline .outline-complex .add-item .button-new, .view-settings .group-settings #field-course-image .wrapper-input .action-upload-image, .view-settings .group-settings #field-banner-image .wrapper-input .action-upload-image, .view-settings .group-settings #field-video-thumbnail-image .wrapper-input .action-upload-image, .view-settings .group-settings.instructor-types .field-group .wrapper-input .action-upload-instructor-image, .view-textbooks .content-primary .textbook .edit-textbook .chapters-fields .field-group .field .action-upload, .view-textbooks .content-primary .textbook .edit-textbook .textbook-fields .field-group .field .action-upload, .view-textbooks .content-primary .textbook .edit-textbook .action-add-chapter, .view-group-configurations .content-primary .wrapper-collection .action-add-item, .view-group-configurations .content-primary .action-add, .view-certificates .wrapper-collection .collection-edit .action-add-signatory, .view-certificates .wrapper-collection .action-add-item, .view-certificates .action-add, .view-certificates .certificates .signatory-edit .field .signature-upload-wrapper .action-upload-signature, .xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations .create-setting, .xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations .upload-setting {
         transition: all 0.15s;
         text-align: center;
@@ -29,39 +34,57 @@ body .wrapper {
         background-color: #fff;
         color: #9250f0;
     }
+
     .wrapper-comp-settings .file-uploader .upload-setting:hover, .wrapper-comp-settings .list-input.settings-list .metadata-list-enum .create-setting:hover, .wrapper-comp-settings .list-input.settings-list .metadata-dict .create-setting:hover, .outline-content .add-item .button-new:hover, .bit .external-help-button:hover, .view-outline .new-subsection-item:hover, .view-outline .new-unit-item:hover, .view-outline .outline-complex .add-item .button-new:hover, .view-settings .group-settings #field-course-image .wrapper-input .action-upload-image:hover, .view-settings .group-settings #field-banner-image .wrapper-input .action-upload-image:hover, .view-settings .group-settings #field-video-thumbnail-image .wrapper-input .action-upload-image:hover, .view-settings .group-settings.instructor-types .field-group .wrapper-input .action-upload-instructor-image:hover, .view-textbooks .content-primary .textbook .edit-textbook .chapters-fields .field-group .field .action-upload:hover, .view-textbooks .content-primary .textbook .edit-textbook .textbook-fields .field-group .field .action-upload:hover, .view-textbooks .content-primary .textbook .edit-textbook .action-add-chapter:hover, .view-group-configurations .content-primary .wrapper-collection .action-add-item:hover, .view-group-configurations .content-primary .action-add:hover, .view-certificates .wrapper-collection .collection-edit .action-add-signatory:hover, .view-certificates .wrapper-collection .action-add-item:hover, .view-certificates .action-add:hover, .view-certificates .certificates .signatory-edit .field .signature-upload-wrapper .action-upload-signature:hover, .xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations .create-setting:hover, .xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations .upload-setting:hover, .wrapper-comp-settings .file-uploader .upload-setting:focus, .wrapper-comp-settings .list-input.settings-list .metadata-list-enum .create-setting:focus, .wrapper-comp-settings .list-input.settings-list .metadata-dict .create-setting:focus, .outline-content .add-item .button-new:focus, .bit .external-help-button:focus, .view-outline .new-subsection-item:focus, .view-outline .new-unit-item:focus, .view-outline .outline-complex .add-item .button-new:focus, .view-settings .group-settings #field-course-image .wrapper-input .action-upload-image:focus, .view-settings .group-settings #field-banner-image .wrapper-input .action-upload-image:focus, .view-settings .group-settings #field-video-thumbnail-image .wrapper-input .action-upload-image:focus, .view-settings .group-settings.instructor-types .field-group .wrapper-input .action-upload-instructor-image:focus, .view-textbooks .content-primary .textbook .edit-textbook .chapters-fields .field-group .field .action-upload:focus, .view-textbooks .content-primary .textbook .edit-textbook .textbook-fields .field-group .field .action-upload:focus, .view-textbooks .content-primary .textbook .edit-textbook .action-add-chapter:focus, .view-group-configurations .content-primary .wrapper-collection .action-add-item:focus, .view-group-configurations .content-primary .action-add:focus, .view-certificates .wrapper-collection .collection-edit .action-add-signatory:focus, .view-certificates .wrapper-collection .action-add-item:focus, .view-certificates .action-add:focus, .view-certificates .certificates .signatory-edit .field .signature-upload-wrapper .action-upload-signature:focus, .xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations .create-setting:focus, .xmodule_VideoDescriptor .wrapper-comp-settings .list-input.settings-list .metadata-video-translations .upload-setting:focus {
         border: 1px solid #9250f0;
         background-color: #9250f0;
         color: #fff;
     }
+
     .view-dashboard #course-index-tabs li.active {
         border-color: #9250f0;
     }
+
     .copy-lead a, .copy-large a, .badges-overlay .badges-modal a, .copy-base a, .alert-copy a, .alert-copy-with-title a, .accomplishment-metadata .metadata .value a, .accomplishment-metadata .recipient-details a, .copy-meta a, .table caption a, .table-simplified caption a, .accomplishment-metadata .metadata .label a, .copy-micro a, a, .link, .btn-link, .table-sortable .sortable .action-sort {
         color: #9250f0;
     }
 }
+
 .nav-item.is-current, body.howitworks .nav-not-signedin-hiw, body.dashboard .nav-account-dashboard, body.course.view-outline .nav-course-courseware .title, body.course.view-updates .nav-course-courseware .title, body.course.view-static-pages .nav-course-courseware .title, body.course.view-uploads .nav-course-courseware .title, body.course.view-textbooks .nav-course-courseware .title, body.course.view-video-uploads .nav-course-courseware .title, body.course.view-outline .nav-course-courseware-outline, body.course.view-updates .nav-course-courseware-updates, body.course.view-static-pages .nav-course-courseware-pages, body.course.view-uploads .nav-course-courseware-uploads, body.course.view-textbooks .nav-course-courseware-textbooks, body.course.view-video-uploads .nav-course-courseware-videos, body.course.schedule .nav-course-settings .title, body.course.grading .nav-course-settings .title, body.course.view-team .nav-course-settings .title, body.course.view-group-configurations .nav-course-settings .title, body.course.advanced .nav-course-settings .title, body.course.view-certificates .nav-course-settings .title, body.course.schedule .nav-course-settings-schedule, body.course.grading .nav-course-settings-grading, body.course.view-team .nav-course-settings-team, body.course.view-group-configurations .nav-course-settings-group-configurations, body.course.advanced .nav-course-settings-advanced, body.course.view-certificates .nav-course-settings-certificates, body.course.view-import .nav-course-tools .title, body.course.view-export .nav-course-tools .title, body.course.view-export-git .nav-course-tools .title, body.course.view-import .nav-course-tools-import, body.course.view-export .nav-course-tools-export, body.course.view-export-git .nav-course-tools-export-git, body.course.view-team .nav-library-settings .title, body.course.view-team .nav-library-settings-team {
     color: #9250f0;
 }
+
 .view-signup .content-primary form .form-actions .action-primary, .view-signin .content-primary form .form-actions .action-primary, .view-util .content-primary form .form-actions .action-primary,
 .not-signedin .wrapper-header .nav-pitch .action-signup, .view-util .wrapper-header .nav-pitch .action-signup {
     border: 1px solid #9250f0 !important;
     background-color: #9250f0 !important;
     color: #fff;
 }
+
 .view-signup .content-primary form .form-actions .action-primary:hover, .view-signup .content-primary form .form-actions .action-primary:focus, .view-signup .content-primary form .form-actions .action-primary:active, .view-signin .content-primary form .form-actions .action-primary:hover, .view-signin .content-primary form .form-actions .action-primary:focus, .view-signin .content-primary form .form-actions .action-primary:active, .view-util .content-primary form .form-actions .action-primary:hover, .view-util .content-primary form .form-actions .action-primary:focus, .view-util .content-primary form .form-actions .action-primary:active,
 .not-signedin .wrapper-header .nav-pitch .action-signup:hover, .not-signedin .wrapper-header .nav-pitch .action-signup:focus, .not-signedin .wrapper-header .nav-pitch .action-signup:active, .view-util .wrapper-header .nav-pitch .action-signup:hover, .view-util .wrapper-header .nav-pitch .action-signup:focus, .view-util .wrapper-header .nav-pitch .action-signup:active {
-    background-color: lighten(#9250f0,20%) !important;
+    background-color: lighten(#9250f0, 20%) !important;
 }
 
 .view-howitworks.not-signedin .wrapper-content-header {
     background: #9250f0;
 }
+
 .view-howitworks.not-signedin .content-cta .list-actions .action.action-primary {
     background: #9250f0;
     border-color: #9250f0;
 }
+
 .wrapper-header .nav-dd .title:hover, .wrapper-header .nav-dd .title:active {
     color: #9250f0;
+}
+
+body #content > div.wrapper-content-header.wrapper {
+    background: #9250f0 !important;
+    background-image: none;
+    background-color: none;
+}
+
+.wrapper-sock .list-cta .cta-show-sock:hover {
+    background-color: #9250f0 !important;
 }
