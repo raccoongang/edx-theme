@@ -1908,9 +1908,12 @@ body {
     #e-commerce #add-coupon-modal input[name="generate-registration-codes-csv"], #e-commerce #invalidate_registration_code_modal input[name="generate-registration-codes-csv"], #e-commerce #edit-coupon-modal input[name="generate-registration-codes-csv"], #e-commerce #set-course-mode-price-modal input[name="generate-registration-codes-csv"], #e-commerce #registration_code_generation_modal input[name="generate-registration-codes-csv"] {
         box-shadow: none;
         border: none;
-        background: darken($theme-link, 20%);
+        background: $theme-link !important;
         background-color: none;
         background-image: none;
+        &:hover, &:focus {
+            color: $theme-link-hover !important;
+        }
     }
 }
 
