@@ -146,7 +146,11 @@ var TUTORED_STUDENTS = {
     "MrGJenkins": {id: 160, email: "grthjenkins9@gmail.com"},
     "Cleppard": {id: 161, email: "cillian.leppard@gmail.com"},
     "ayse_kubra": {id: 162, email: "aysekubrakupeli@gmail.com"},
-    "YazeedKelly": {id: 163, email: "yazeedkelly@hotmail.com"}
+    "YazeedKelly": {id: 163, email: "yazeedkelly@hotmail.com"},
+    "Joan_Sweeney": {id: 164, email: "joanms@eircom.net"},
+    "Lio_Mendonca": {id: 165, email: "liov.mendonca@outlook.com"},
+    "Josep": {id: 166, email: "pujol.rabat@gmail.com"},
+    "Sarah_Suess": {id: 167, email: "sarah_sus@yahoo.de"}
 };
 
 
@@ -303,5 +307,9 @@ var all_users = {
     "MrGJenkins": {id: 160, email: "grthjenkins9@gmail.com"},
     "Cleppard": {id: 161, email: "cillian.leppard@gmail.com"},
     "ayse_kubra": {id: 162, email: "aysekubrakupeli@gmail.com"},
-    "YazeedKelly": {id: 163, email: "yazeedkelly@hotmail.com"}
+    "YazeedKelly": {id: 163, email: "yazeedkelly@hotmail.com"},
+    "Joan_Sweeney": {id: 164, email: "joanms@eircom.net"},
+    "Lio_Mendonca": {id: 165, email: "liov.mendonca@outlook.com"},
+    "Josep": {id: 166, email: "pujol.rabat@gmail.com"},
+    "Sarah_Suess": {id: 167, email: "sarah_sus@yahoo.de"}
 };
