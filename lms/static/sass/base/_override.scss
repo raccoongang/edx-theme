@@ -2007,6 +2007,12 @@ body .home>header {
 #global-navigation > div > nav > ol.user-shop {
     float: right;
     margin-top: 22px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 22px;
+        display: flex ;
+        justify-content: center 
+    }
 }
 body .course-outline .block-tree .section ol.outline-item .subsection.current {
     border-color: $theme-link;
@@ -2015,10 +2021,7 @@ body .course-outline .block-tree .section ol.outline-item .subsection.current {
 .view-in-course #global-navigation>div>nav>ol.user-shop {
     margin-top: 17px;
     @media screen and (max-width: 768px){
-        width: 100%;
         margin-top: 22px;
-        display: flex ;
-        justify-content: center 
     }
     
 }
