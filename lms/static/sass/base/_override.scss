@@ -1804,7 +1804,7 @@ body .wiki-wrapper {
 body .header-global .logo img,
 .wrapper-footer footer#footer-openedx .wrapper-logo img {
     width: 256px;
-    margin-left: -27px;
+    margin-left: -24px;
 }
 
 .home > header .title > .heading-group h1 {
@@ -2074,13 +2074,19 @@ body .add-to-cart a {
 }
 
 body .header-global .wrapper-header .list-inline .item .btn-neutral  {
-    color: $theme-link;
+    color: $theme-link !important;
     &:hover, &:focus {
-        color: $theme-link-hover;
+        color: $theme-link-hover !important;
     }
 }
 
-.login form .field.is-focused label, .register form .field.is-focused label, .passwordreset form .field.is-focused label, #forgot-password-modal #password-reset form .field.is-focused label {
+.login form .field.is-focused label, .register form .field.is-focused label,
+.passwordreset form .field.is-focused label,
+#forgot-password-modal #password-reset form .field.is-focused label,
+.login form .field.is-focused span, .register form .field.is-focused span,
+.passwordreset form .field.is-focused span,
+#forgot-password-modal #password-reset form .field.is-focused span,
+   {
     color: $theme-link;
 }
 
