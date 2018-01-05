@@ -2083,10 +2083,8 @@ body .header-global .wrapper-header .list-inline .item .btn-neutral  {
 .login form .field.is-focused label, .register form .field.is-focused label,
 .passwordreset form .field.is-focused label,
 #forgot-password-modal #password-reset form .field.is-focused label,
-.login form .field.is-focused span, .register form .field.is-focused span,
-.passwordreset form .field.is-focused span,
-#forgot-password-modal #password-reset form .field.is-focused span,
-   {
+.login form .field.is-focused .tip, .register form .field.is-focused .tip, .passwordreset form .field.is-focused .tip, #forgot-password-modal #password-reset form .field.is-focused .tip
+{
     color: $theme-link;
 }
 
