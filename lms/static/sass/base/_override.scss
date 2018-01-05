@@ -553,7 +553,14 @@ body .home .page-header-secondary,
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
 body .instructor-dashboard-content-2 input[type="button"],
-body .search-bar .search-button {
+body .search-bar .search-button,
+body .empty-cart a.blue,
+body .wiki-wrapper section.wiki .btn,
+body .confirm-enrollment button[type="submit"],
+body .wiki-wrapper section.wiki .btn ,
+body .wiki-wrapper section.wiki .btn:not(:disabled),
+body .wiki-wrapper section.wiki .btn:not(:disabled)
+ {
     text-shadow: none;
     box-shadow: none;
     border: none;
@@ -692,7 +699,7 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.disabled {
     span {
-        color: lighten(#222, 0.5);
+        color: darken(#222, 0.5);
     }
 }
 
@@ -1565,7 +1572,9 @@ body {
     .header-global .user .user-dropdown-menu li > a,
     .wiki-wrapper section.wiki .nav-tabs a,
     .dropdown-menu-container .menu-title,
-    .dropdown-menu-container .menu-button {
+    .dropdown-menu-container .menu-button,
+    .breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited,
+    .field-label .field-input:checked+.field-input-label, .field-label .wrapper-custom-select:checked+.field-input-label {
         color: $theme-link;
 
         &:focus {
@@ -1593,7 +1602,7 @@ body {
     color: rgb(227, 236, 211);
 
     &:hover {
-        color: lighten(rgb(227, 236, 211), 20%);
+        color: darken(rgb(227, 236, 211), 20%);
     }
 }
 
@@ -1633,11 +1642,11 @@ body .header-global .user {
 }
 
 body .header-global .nav-global {
-    margin-top: 38px;
+    margin-top: 18px;
 }
 
 body .doc-link {
-    margin-top: 44px;
+    margin-top: 24px;
 }
 
 body .header-global {
@@ -1646,11 +1655,14 @@ body .header-global {
 
 body .header-global .wrapper-header .wrapper-user-menu,
 body .header-global .user {
-    margin-top: 31px;
+    margin-top: 11px;
 }
-
+body .header-global .user-shop {
+    float: right;
+    margin-top: 22px;
+}
 body .header-global .wrapper-header .list-inline.nav-global {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 body .wrapper-footer footer#footer-openedx .copyright {
@@ -1685,15 +1697,25 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
 }
 
 @media screen and (max-width: 768px) {
+    .wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
+        margin-bottom: 25px;
+    }
     body .header-global .logo {
         width: 100%;
     }
-
+    body .header-global {
+        min-height: 85px;
+    }
     .header-global .nav-global li,
     .header-global .nav-global {
-        width: auto;
+        width: 100%;
     }
-
+    .header-global .nav-global li {
+        display: flex;
+        a {
+            width: 100%;
+        }
+    }
     .header-global .nav-global li, .header-global .nav-global div {
         display: block;
     }
@@ -1701,6 +1723,16 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     body .doc-link {
         width: auto;
         margin-right: 30px;
+        order: 1;
+    }
+    .dropdown-menu-container .menu-title,
+    .dropdown-menu-container .menu-button,
+    .header-global .wrapper-header .list-inline .item a {
+        color: $theme-link;
+    }
+    
+    .doc-link {
+        margin: 18px 15px;
     }
 
     .find-courses .courses-container .courses:not(.no-course-discovery) {
@@ -1719,6 +1751,43 @@ div.dropdown-menu-container .dropdown-menu .dropdown-item a {
     .wiki-wrapper section.wiki .main-article {
         width: auto;
     }
+    body .header-global .wrapper-header .list-inline.nav-global {
+        width: 100%;
+        li {
+            margin: 0;
+            display: flex;
+        }
+        li a {
+            background: #82bc00;
+            box-shadow: none;
+            color: #ffe !important;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-shadow: none;
+            font-weight: 500;
+            letter-spacing: 0;
+            margin: 0 0 15px;
+            border-radius: 2px;
+            &:hover {
+                background: darken(#82bc00,20%);
+            }
+        }
+    }
+    body .header-global .logo img, .wrapper-footer footer#footer-openedx .wrapper-logo img {
+        width: 150px !important;
+    }
+    body .header-global .logo-header {
+        display: flex;  
+    }
+    body .header-global .user {
+        order: 2;
+        margin: 11px 0 0;
+    }
+    body .header-global .nav-courseware {
+        margin-top: 0;
+    }
+
 }
 
 @media screen and (max-width: 410px) {
@@ -1739,8 +1808,267 @@ body .header-global .logo img,
 
 .home > header .title > .heading-group h1 {
     background: rgba(227, 236, 211, 0.5);
-    color: rgb(45, 45, 43);
     border-radius: 6px; 
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+.user-filter {
+    display: none;
+    margin-left: 20px;
+    form {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    select {
+        margin-bottom: 10px;
+    }
+    input[type="submit"] {
+        box-shadow: none;
+        background: $theme-link;
+        border: none;
+        text-shadow: none;
+        border-radius: 2px;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        &:hover,&:focus {
+            background: darken($theme-link, 20%);
+            box-shadow: none;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 15px 0 0;
+        select {
+            height: 36px;
+        }
+        form {
+            width: 100%;
+        }
+    }
+}
+body {
+    .banner__citate {
+        text-align: right;
+        font-size: 30px;
+    }
+    // ecomerce fix
+    
+    .ecommerce-wrapper span.code_tip .add, .proctoring-wrapper span.code_tip .add,
+    .ecommerce-wrapper span.tip .add, .proctoring-wrapper span.tip .add,
+    #e-commerce #add-coupon-modal input[type="button"]#update_coupon_button, #e-commerce #add-coupon-modal input[type="button"]#add_coupon_button, #e-commerce #add-coupon-modal input[type="button"]#set_course_button, #e-commerce #add-coupon-modal input[type="button"]#lookup_regcode, #e-commerce #invalidate_registration_code_modal input[type="button"]#update_coupon_button, #e-commerce #invalidate_registration_code_modal input[type="button"]#add_coupon_button, #e-commerce #invalidate_registration_code_modal input[type="button"]#set_course_button, #e-commerce #invalidate_registration_code_modal input[type="button"]#lookup_regcode, #e-commerce #edit-coupon-modal input[type="button"]#update_coupon_button, #e-commerce #edit-coupon-modal input[type="button"]#add_coupon_button, #e-commerce #edit-coupon-modal input[type="button"]#set_course_button, #e-commerce #edit-coupon-modal input[type="button"]#lookup_regcode, #e-commerce #set-course-mode-price-modal input[type="button"]#update_coupon_button, #e-commerce #set-course-mode-price-modal input[type="button"]#add_coupon_button, #e-commerce #set-course-mode-price-modal input[type="button"]#set_course_button, #e-commerce #set-course-mode-price-modal input[type="button"]#lookup_regcode, #e-commerce #registration_code_generation_modal input[type="button"]#update_coupon_button, #e-commerce #registration_code_generation_modal input[type="button"]#add_coupon_button, #e-commerce #registration_code_generation_modal input[type="button"]#set_course_button, #e-commerce #registration_code_generation_modal input[type="button"]#lookup_regcode
+    {
+        box-shadow: none !important;
+        border: none !important;
+        background: $theme-link !important;
+        
+        &:hover, &:focus {
+            box-shadow: none !important;
+            border: none !important;
+            background: darken($theme-link, 20%) !important;
+        }
+    }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
+    .confirm-enrollment a.course-link-bg-color {
+        box-shadow: none;
+        border: none;
+        background: $theme-link;
+        background-color: none;
+        background-image: none;
+        &:hover, &:focus {
+            box-shadow: none;
+            border: none;
+            background: darken($theme-link, 20%);
+            background-color: none;
+            background-image: none;
+        }
+    }
+    .well .filter-clear a {
+        color: $theme-link;
+        &:hover, &:focus {
+            color: $theme-link-hover;
+        }
+    }
+    .course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
+        box-shadow: none;
+        border: none;
+        background: darken($theme-link, 20%);
+        background-color: none;
+        background-image: none;
+    }
+    .ecommerce-wrapper span.code_tip .add:hover:not(:disabled), .proctoring-wrapper span.code_tip .add:hover:not(:disabled) {
+        box-shadow: none;
+        border: none;
+        background: darken($theme-link, 20%);
+        background-color: none;
+        background-image: none;
+    }
+    .ecommerce-wrapper span.invalid_sale .add, .proctoring-wrapper span.invalid_sale .add,
+    #e-commerce #add-coupon-modal input[name="generate-registration-codes-csv"], #e-commerce #invalidate_registration_code_modal input[name="generate-registration-codes-csv"], #e-commerce #edit-coupon-modal input[name="generate-registration-codes-csv"], #e-commerce #set-course-mode-price-modal input[name="generate-registration-codes-csv"], #e-commerce #registration_code_generation_modal input[name="generate-registration-codes-csv"] {
+        box-shadow: none;
+        border: none;
+        background: $theme-link !important;
+        background-color: none;
+        background-image: none;
+        &:hover, &:focus {
+            background: $theme-link-hover !important;
+        }
+    }
+}
+
+    
+body .header-global .nav-courseware {
+    margin-top: 14px
+}
+div.dropdown-menu-container .dropdown-menu .dropdown-item a:hover {
+    color: darken(#82bc00, 20%);
+}
+
+.wiki-wrapper section.wiki .article-functions .see-children a:hover, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:hover+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:hover+h4, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:focus+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:focus+h4, .wiki-wrapper section.wiki .article-functions .see-children a:focus {
+    color: $theme-link-hover;
+}
+body .header-global .user>.primary:last-child>a.shopping-cart {
+    text-shadow: none;
+    border: 1px solid $theme-link;
+    color: $theme-link;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    &:hover,&:focus {
+        border-color: $theme-link-hover;
+        color: $theme-link-hover;
+    }
+    @media screen and (max-width: 768px) {
+        
+    }
+}
+body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper section.wiki .btn:focus:not(:disabled) {
+    box-shadow: none;
+    background: $theme-link-hover;
+}
+
+.logo-header .logo {
+    display: inline-block;
+    
+}
+.header-global .logo-header {
+    float: left;
+    margin-bottom: 0;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+}
+.header-wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.header-global .logo {
+    float: left;
+    margin: -2px 39px 0 0;
+    position: relative;
+}
+
+#global-navigation > div > nav > ol.user-filter > .nav-global-02 {
+    display: flex;
+    .filter_button {
+        padding: 7px 18px;
+    }
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
+    margin: 0;
+    padding: 0;
+}
+body .home>header {
+    display: flex;
+    align-items: center;
+    height: 520px;
+}
+.home>header .title>.heading-group h1 {
+    padding: 30px;
+    margin: 84px 0 0;
+}
+.home>header .title {
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 0;
+}
+.enrollment-text a {
+    color: $theme-link !important; 
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+
+.showFilter .user-filter {
+    display: inline-block;
+}
+
+#global-navigation > div > nav > ol.user-shop {
+    float: right;
+    margin-top: 22px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 22px;
+        display: flex ;
+        justify-content: center 
+    }
+}
+body .course-outline .block-tree .section ol.outline-item .subsection.current {
+    border-color: $theme-link;
+}
+
+.view-in-course #global-navigation>div>nav>ol.user-shop {
+    margin-top: 17px;
+    @media screen and (max-width: 768px){
+        margin-top: 22px;
+    }
+    
+}
+
+.heading-group .add-to-cart a {
+    color: $theme-link;
+    &:hover,&:focus {
+        color: $theme-link-hover;
+    }
+}
+body .add-to-cart a {
+    color: $theme-link;
+    &:hover,&:focus {
+        color: $theme-link-hover;
+    }
+}
+.list-input {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        label {
+            font-style: normal;
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        button {
+            background: $theme-link;
+            color: #fff;
+            border: none;
+            &:hover,&:focus {
+                background: $theme-link-hover;
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+}
+#id_message {
+    width: 100%;
 }
 
