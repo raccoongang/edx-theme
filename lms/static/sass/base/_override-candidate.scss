@@ -100,8 +100,12 @@ body .btn-brand {
     }
 }
 
-body .view-register .nav-global-04 a {
+body .view-register .nav-global-04 a,
+body .header-global .wrapper-header .list-inline .item .btn-neutral {
     color: $theme-link !important;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
 }
 
 body .well .filter-clear a {
