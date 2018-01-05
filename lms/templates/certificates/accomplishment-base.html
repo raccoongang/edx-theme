@@ -22,7 +22,17 @@ course_mode_class = course_mode if course_mode else ''
 </head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
-
+<style>
+    body .header-app .logo {
+        width: 280px;
+    }
+    body .btn-link, body .copy-meta a {
+        color: #8BC34A;
+    }
+    body .btn-link:hover, .copy-meta a:hover, body .btn-link:focus, .copy-meta a:focus {
+        color: darken(#8BC34A, 20%);
+    }
+</style>
     <div class="wrapper-view" dir="${dir_rtl}">
 
         <%include file="_accomplishment-header.html" />

@@ -1342,5 +1342,43 @@ body .wrapper-header .logo-en {
 
 body .footer-logo-holder {
     max-height: 100px;
-    position: static;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    img {
+        max-height: 100px;
+    }
+}
+
+body .header-global .nav-global {
+    margin-top: 60px;
+}
+
+body .flex {
+    margin-top: 45px;
+    float: right;
+}
+body.view-in-course .wrapper-footer footer#footer-openedx {
+    position: relative;
+}
+
+body .header-global .nav-global li a {
+    @media screen {
+        width: 100%;
+        background: $theme-link;
+        color: #fff;
+        &:hover, &:focus {
+            background: $theme-link-hover;
+            color: #fff;
+        }
+    }
+}
+body .header-global .user .dropdown {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+.forum-new-post-form .post-option .is-enabled, .edit-post-form .post-option .is-enabled {
+    color: $theme-link;
 }
