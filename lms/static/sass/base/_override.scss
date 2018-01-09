@@ -2073,17 +2073,21 @@ body .add-to-cart a {
     width: 100%;
 }
 
-body .header-global .wrapper-header .list-inline .item .btn-neutral  {
-    color: $theme-link !important;
+#global-navigation > div > nav > ol.left.list-inline.nav-global > li > a  {
+    color: $theme-link;
     &:hover, &:focus {
-        color: $theme-link-hover !important;
+        color: $theme-link-hover;
+    }
+    @media screen and (max-width: 768px) {
+        color: #fff !important;
     }
 }
 
 .login form .field.is-focused label, .register form .field.is-focused label,
 .passwordreset form .field.is-focused label,
 #forgot-password-modal #password-reset form .field.is-focused label,
-.login form .field.is-focused .tip, .register form .field.is-focused .tip, .passwordreset form .field.is-focused .tip, #forgot-password-modal #password-reset form .field.is-focused .tip
+.login form .field.is-focused .tip, .register form .field.is-focused .tip, .passwordreset form .field.is-focused .tip, #forgot-password-modal #password-reset form .field.is-focused .tip,
+.login-register-content h2
 {
     color: $theme-link;
 }
@@ -2092,4 +2096,13 @@ body .header-global .wrapper-header .list-inline .item .btn-neutral  {
     body .header-global .wrapper-header .list-inline.nav-global {
         margin-top: 50px;
     }
+}
+.login form .group-form .list-input .field.checkbox {
+    display: block;
+}
+.view-register .header-global nav, .view-login .header-global nav, .view-passwordreset .header-global nav {
+    width: auto;
+}
+.view-register .wrapper-footer footer, .view-login .wrapper-footer footer, .view-passwordreset .wrapper-footer footer {
+    width: auto;
 }
