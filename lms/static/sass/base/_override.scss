@@ -2074,9 +2074,9 @@ body .add-to-cart a {
 }
 
 #global-navigation > div > nav > ol.left.list-inline.nav-global > li > a  {
-    color: $theme-link;
+    color: $theme-link !important;
     &:hover, &:focus {
-        color: $theme-link-hover;
+        color: $theme-link-hover !important;
     }
     @media screen and (max-width: 768px) {
         color: #fff !important;
@@ -2102,7 +2102,9 @@ body .add-to-cart a {
 }
 .view-register .header-global nav, .view-login .header-global nav, .view-passwordreset .header-global nav {
     width: auto;
+    max-width: 100%;
 }
 .view-register .wrapper-footer footer, .view-login .wrapper-footer footer, .view-passwordreset .wrapper-footer footer {
     width: auto;
+    max-width: 100%;
 }
