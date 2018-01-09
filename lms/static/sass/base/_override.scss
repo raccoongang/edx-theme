@@ -2080,6 +2080,9 @@ body .add-to-cart a {
     }
     @media screen and (max-width: 768px) {
         color: #fff !important;
+        &:hover, &:focus {
+            color: #fff !important;
+        }
     }
 }
 
