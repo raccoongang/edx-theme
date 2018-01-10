@@ -2115,3 +2115,12 @@ body.view-login .header-global nav {
     width: auto;
     max-width: 100%;
 }
+
+
+.login .orn-plus, .register .orn-plus, .passwordreset .orn-plus, #forgot-password-modal #password-reset .orn-plus {
+    color: $theme-link;
+    display: block;
+    body .view-login .form-actions button[type="submit"]:hover &, body .login .form-actions button[type="submit"]:hover & {
+        color: #fff;
+    }
+}
