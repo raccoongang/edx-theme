@@ -150,7 +150,14 @@ var TUTORED_STUDENTS = {
     "Joan_Sweeney": {id: 164, email: "joanms@eircom.net"},
     "Lio_Mendonca": {id: 165, email: "liov.mendonca@outlook.com"},
     "Josep": {id: 166, email: "pujol.rabat@gmail.com"},
-    "Sarah_Suess": {id: 167, email: "sarah_sus@yahoo.de"}
+    "Sarah_Suess": {id: 167, email: "sarah_sus@yahoo.de"},
+    "SuchadaRotjanathamrong": {id: 169, email: "suchada.r79@outlook.com"},
+    "Dessie_Donnelly": {id: 170, email: "habsub@email.com"},
+    "Chris_Godsell": {id: 171, email: "cmgodsell@googlemail.com"},
+    "Anthony_DeWayne": {id: 172, email: "therapybyanthony@gmail.com"},
+    "Helen_Sayer": {id: 173, email: "helen.sayer10@gmail.com"},
+    "Marilyn6": {id: 174, email: "onlymari@yahoo.co.uk"},
+    "reno": {id: 175, email: "nazza3110@hotmail.com"}
 };
 
 
@@ -311,5 +318,13 @@ var all_users = {
     "Joan_Sweeney": {id: 164, email: "joanms@eircom.net"},
     "Lio_Mendonca": {id: 165, email: "liov.mendonca@outlook.com"},
     "Josep": {id: 166, email: "pujol.rabat@gmail.com"},
-    "Sarah_Suess": {id: 167, email: "sarah_sus@yahoo.de"}
+    "Sarah_Suess": {id: 167, email: "sarah_sus@yahoo.de"},
+    "declanmunroe": {id: 168, email: "decofeco29@gmail.com"},
+    "SuchadaRotjanathamrong": {id: 169, email: "suchada.r79@outlook.com"},
+    "Dessie_Donnelly": {id: 170, email: "habsub@email.com"},
+    "Chris_Godsell": {id: 171, email: "cmgodsell@googlemail.com"},
+    "Anthony_DeWayne": {id: 172, email: "therapybyanthony@gmail.com"},
+    "Helen_Sayer": {id: 173, email: "helen.sayer10@gmail.com"},
+    "Marilyn6": {id: 174, email: "onlymari@yahoo.co.uk"},
+    "reno": {id: 175, email: "nazza3110@hotmail.com"}
 };
