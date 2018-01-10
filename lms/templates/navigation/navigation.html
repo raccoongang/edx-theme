@@ -56,6 +56,30 @@ site_status_msg = get_site_status_msg(course_id)
         <span class="navbar-toggler-icon"></span>
       </button>
       <%include file="bootstrap/navbar-logo-header.html" args="online_help_token=online_help_token"/>
+      ## Course filtering
+
+      % if settings.FEATURES.get('COUNTRY_FILTER', False):
+      <li class="nav-global-02">
+        <form action="" method="get">
+          <select name="country"> 
+            <option value="">all courses</option>
+          % for key, value in settings.FEATURES.get('COUNTRY_FILTER', False).items():
+            <option value="${value}"
+              %if value == country:
+                selected
+              %endif
+              >
+              ${key}
+            </option>
+          % endfor
+          </select>
+          <input type="submit" value="filter" class="filter_button">
+        </form>
+      </li>
+      % endif
+
+      ## ------------------------
+
       % if user.is_authenticated():
         <%include file="bootstrap/navbar-authenticated.html" args="online_help_token=online_help_token"/>
       % else:
@@ -64,44 +88,80 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
   </header>
 % else:
-  <header id="global-navigation" class="header-global" >
-    <nav class="wrapper-header" aria-label="${_('Global')}">
-      <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-      % if user.is_authenticated():
-        <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-      % else:
-        <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-      % endif
-      % if header_language_selector_is_enabled():
-        <% languages = released_languages() %>
-        % if len(languages) > 1:
-          <ol class="user">
-            <li class="primary">
-              <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-                <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-                % if user.is_authenticated():
-                  <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-                % else:
-                  <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-                % endif
-                <label><span class="sr">${_("Choose Language")}</span>
-                  <select class="input select language-selector" id="settings-language-value" name="language">
-                    % for language in languages:
-                      % if language[0] == LANGUAGE_CODE:
-                        <option value="${language[0]}" selected="selected">${language[1]}</option>
-                      % else:
-                        <option value="${language[0]}" >${language[1]}</option>
-                      % endif
-                    % endfor
+  <header id="global-navigation" class="header-global ${"showFilter" if "dashboard" in request.path or "courses" in request.path and request.path.endswith("courses") or len(request.path)==1 else ""}" >
+    <div class="header-wrapper">
+        <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
+        <nav class="wrapper-header nav-holder" aria-label="${_('Global')}">
+          % if user.is_authenticated():
+            <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+          % else:
+            <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+          % endif
+          ## Course filtering
+    
+          % if settings.FEATURES.get('COUNTRY_FILTER', False):
+          <ol class="user-filter">
+            <li class="nav-global-02">
+                <form action="" method="get">
+                  <select name="country">
+                    <option value="">all courses</option>
+                  % for key, value in settings.FEATURES.get('COUNTRY_FILTER', False).items():
+                    <option value="${value}"
+                      %if value == country:
+                        selected
+                      %endif
+                      >
+                      ${key}
+                    </option>
+                  % endfor
                   </select>
-                </label>
-              </form>
-            </li>
+                  <input type="submit" value="filter" class="filter_button">
+                </form>
+              </li>
           </ol>
-        % endif
-      % endif
-    </nav>
+          % endif
+    
+          ## ------------------------
+          % if header_language_selector_is_enabled():
+            <% languages = released_languages() %>
+            % if len(languages) > 1:
+              <ol class="user-filter">
+                <li class="primary">
+                  <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+                    <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+                    % if user.is_authenticated():
+                      <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+                    % else:
+                      <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
+                    % endif
+                    <label><span class="sr">${_("Choose Language")}</span>
+                      <select class="input select language-selector" id="settings-language-value" name="language">
+                        % for language in languages:
+                          % if language[0] == LANGUAGE_CODE:
+                            <option value="${language[0]}" selected="selected">${language[1]}</option>
+                          % else:
+                            <option value="${language[0]}" >${language[1]}</option>
+                          % endif
+                        % endfor
+                      </select>
+                    </label>
+                  </form>
+                </li>
+              </ol>
+            % endif
+          % endif
+        </nav>
+        <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
+    </div>
   </header>
+  <script>
+      var btn = document.getElementById('hamburger'),
+          body = document.body;
+      function btnToggle() {
+        body.classList.toggle('menu-open');
+      }
+      btn.addEventListener('click', btnToggle);
+    </script>
 % endif
 % if course:
 <!--[if lte IE 9]>
