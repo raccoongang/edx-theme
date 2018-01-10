@@ -76,18 +76,25 @@
         
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
-              % for item_num, link in enumerate(footer['navigation_links'], start=1):
-              <li class="nav-colophon-0${item_num}">
-                <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+              <li class="nav-colophon-01">
+                <a href="/about">${_("About Us")}</a>
               </li>
-              % endfor
+              <li class="nav-colophon-02">
+                <a href="/privacy">${_("Privacy Policy")}</a>
+              </li>
+              <li class="nav-colophon-03">
+                <a href="/tos">${_("Terms of Service")}</a>
+              </li>
+              <li class="nav-colophon-03">
+                <a href="/contact">${_("Contact")}</a>
+              </li>
           </ol>
         </nav>
         <div class="footer-logo-holder">
           <div class="wrapper-logo">
             <p>
-              <a href="/">
-                <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
+              <a href="http://camara.org" target="_blank">
+                <img alt="organization logo" src="/static/${settings.FEATURES.get('IRELAND_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.png">
               </a>
             </p>
           </div>
@@ -114,16 +121,7 @@
             Camara Education Limited is registered with the Revenue Commissioners (CHY 16922) in Ireland
         </p>
 
-        <nav class="nav-legal" aria-label="${_('Legal')}">
-          <ul>
-            % for item_num, link in enumerate(footer['legal_links'], start=1):
-              <li class="nav-legal-0${item_num}">
-                <a href="${link['url']}">${link['title']}</a>
-              </li>
-            % endfor
-            <li><a href="${footer['edx_org_link']['url']}" target="_blank">${footer['edx_org_link']['text']}</a></li>
-          </ul>
-        </nav>
+       
       </div>
 
       ## Please leave this link and use one of the logos provided
