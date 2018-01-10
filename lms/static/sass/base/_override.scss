@@ -1190,9 +1190,10 @@ body {
         color: #fff;
         box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
         border-radius: 4px;
-        padding: 12px 35px 11px 35px;
+        padding: 12px 15px;
         font-size: 14px;
         border: 0;
+        white-space: normal;
     }
     .account-settings-sections .section .account-settings-section-body .u-field.u-field-username,
     .account-settings-sections .section .account-settings-section-body .u-field .field .field-label,
@@ -1511,9 +1512,12 @@ body.view-in-course .wrapper-course-material .course-material {
 }
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
-    display: flex;
+    display: none;
     align-items: center;
     border: none;
+    @media (min-width: $tablet-size) {
+        display: flex;
+    }
 }
 .wrapper-account-settings .wrapper-header .header-title {
     margin: 0;
