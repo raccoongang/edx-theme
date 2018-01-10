@@ -2086,6 +2086,8 @@ body .add-to-cart a {
     }
 }
 
+// Register on microsite
+
 .login form .field.is-focused label, .register form .field.is-focused label,
 .passwordreset form .field.is-focused label,
 #forgot-password-modal #password-reset form .field.is-focused label,
@@ -2120,7 +2122,8 @@ body.view-login .header-global nav {
 .login .orn-plus, .register .orn-plus, .passwordreset .orn-plus, #forgot-password-modal #password-reset .orn-plus {
     color: $theme-link;
     display: block;
-    body .view-login .form-actions button[type="submit"]:hover &, body .login .form-actions button[type="submit"]:hover & {
-        color: #fff;
-    }
+    
+}
+body .view-login .form-actions button[type="submit"]:hover .orn-plus, body .login .form-actions button[type="submit"]:hover .orn-plus {
+    color: #fff;
 }
