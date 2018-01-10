@@ -386,3 +386,25 @@ body div.book-wrapper section.book-sidebar {
 div.book-wrapper {
     min-width: 1150px;
 }
+
+.dashboard-notifications {
+    display: none;
+}
+
+.wrapper-msg.urgency-high {
+    background: none;
+}
+.wrapper-msg .msg-content .title {
+    font-size: 30px;
+    color: #646464;
+    margin-bottom: 20px;
+    text-shadow: 0 1px rgba(255,255,255,0.6);
+    line-height: 1.3;
+}
+.wrapper-msg .msg-content .copy p {
+    font-size: 24px;
+    color: #646464;
+    margin-bottom: 20px;
+    text-shadow: 0 1px rgba(255,255,255,0.6);
+    line-height: 1.3;
+}
