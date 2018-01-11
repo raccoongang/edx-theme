@@ -157,7 +157,9 @@ var TUTORED_STUDENTS = {
     "Anthony_DeWayne": {id: 172, email: "therapybyanthony@gmail.com"},
     "Helen_Sayer": {id: 173, email: "helen.sayer10@gmail.com"},
     "Marilyn6": {id: 174, email: "onlymari@yahoo.co.uk"},
-    "reno": {id: 175, email: "nazza3110@hotmail.com"}
+    "reno": {id: 175, email: "nazza3110@hotmail.com"},
+    "CormacCollins90": {id: 176, email: "Cormaccollins90@gmail.com"},
+    "Paul_Whelan": {id: 177, email: "paul.p.whelan@gmail.com"}
 };
 
 
@@ -326,5 +328,7 @@ var all_users = {
     "Anthony_DeWayne": {id: 172, email: "therapybyanthony@gmail.com"},
     "Helen_Sayer": {id: 173, email: "helen.sayer10@gmail.com"},
     "Marilyn6": {id: 174, email: "onlymari@yahoo.co.uk"},
-    "reno": {id: 175, email: "nazza3110@hotmail.com"}
+    "reno": {id: 175, email: "nazza3110@hotmail.com"},
+    "CormacCollins90": {id: 176, email: "Cormaccollins90@gmail.com"},
+    "Paul_Whelan": {id: 177, email: "paul.p.whelan@gmail.com"}
 };
