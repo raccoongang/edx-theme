@@ -1335,3 +1335,97 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 .course-info .course-sidebar .important-dates a {
     color: $theme-link;
 }
+
+// footer logo
+.wrapper-footer footer#footer-openedx {
+    position: relative;
+}
+.wrapper-footer footer#footer-openedx a {
+    top: 0;
+    left: 30px;
+    margin: 0;
+}
+
+.footer-logo-holder img {
+    max-width: 150px;
+}
+
+
+body .footer-logo-holder {
+    max-width: 150px;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    img {
+        width: 150px;
+    }
+}
+
+body .header-global .nav-global {
+    margin-top: 20px;
+}
+
+body .flex {
+    margin-top: 45px;
+    float: right;
+}
+body.view-in-course .wrapper-footer footer#footer-openedx {
+    position: relative;
+}
+
+body .header-global .nav-global li a {
+    &:visitied {
+        color: $theme-link;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        background: $theme-link;
+        color: #fff !important;
+        &:hover, &:focus {
+            background: $theme-link-hover;
+            color: #fff !important;
+        }
+    }
+}
+body .header-global .nav-global li {
+    @media screen and (max-width: 768px) {
+        margin-bottom: 15px !important;
+    }
+}
+body .header-global .user .dropdown {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+.forum-new-post-form .post-option .is-enabled, .edit-post-form .post-option .is-enabled {
+    color: $theme-link;
+}
+
+body .wrapper-footer footer#footer-openedx {
+    position: relative;
+}
+
+body .header-global .nav-courseware {
+    margin-top: 18px;
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
+    }
+}
+body .wrapper-account-settings .wrapper-header .account-nav button.active {
+    border-color: $theme-link;
+}
+.intro-inner-wrapper {
+    input[type="submit"], input[type="button"], button, .button {
+        border: none;
+        background-image: none;
+        background-color: $theme-link;
+        text-shadow: none;
+        &:hover,&:focus {
+            border: none;
+            background-image: none;
+            background-color: $theme-link-hover;
+            text-shadow: none;
+        }
+    }
+} 
