@@ -173,7 +173,7 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-color;
     position: relative;
-    padding: 65px 10px 30px 10px;
+    padding: 30px 10px 30px 10px;
 
     footer#footer-openedx {
         a:hover,
@@ -1337,26 +1337,36 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 }
 
 body .wrapper-header .logo-en {
-    max-height: 150px;
+    max-height: 100px;
 }
 
 body .footer-logo-holder {
     max-height: 100px;
     position: absolute;
-    top: 0;
+    top: -15px;
     left: 30px;
     img {
         height: 100px;
     }
+    @media screen and (max-width: 768px) {
+        max-height: 50px;
+        top: 5px;
+        img {
+            height: 50px;
+        }
+    }
 }
 
 body .header-global .nav-global {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 body .flex {
-    margin-top: 45px;
+    margin-top: 25px;
     float: right;
+    @media screen and (max-width: 768px) {
+        margin-top: 5px;
+    }
 }
 body.view-in-course .wrapper-footer footer#footer-openedx {
     position: relative;
@@ -1393,7 +1403,7 @@ body .wrapper-footer footer#footer-openedx {
 }
 
 body .header-global .nav-courseware {
-    margin-top: 46px;
+    margin-top: 26px;
     @media screen and (max-width: 768px) {
         margin-top: 0;
     }
@@ -1415,3 +1425,24 @@ body .wrapper-account-settings .wrapper-header .account-nav button.active {
         }
     }
 } 
+
+* * {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
+}
+.fa {
+    font-family: "FontAwesome" !important;
+}
+.home>header {
+    background-image: url("../images/background.png");
+    background-position: center;
+}
+.home>header .title>.heading-group h1,
+.home>header .title>.heading-group span {
+    text-transform: uppercase;
+}
+.home>header .title>.heading-group {
+    background: rgba(50,50,50,0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 0;
+}
