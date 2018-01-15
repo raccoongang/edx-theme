@@ -590,7 +590,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
 }
 
 .courses-container .courses .course {
-    border-bottom: 3px solid #fc6a15;
+    border-bottom: 3px solid $theme-link;
 
     .course-image .cover-image .learn-more {
         background-color: transparent;
@@ -1547,4 +1547,18 @@ body {
     .home>header {
         background-position: center; 
     }
+}
+.footer-logo-holder img,
+.logo-header img {
+    width: 148px;
+}
+.login-register-content h2,
+.login-register-content .home>header .title>.heading-group p,
+.home>header .title>.heading-group .login-register-content p,
+.login-register-content section.outside-app h1,
+section.outside-app .login-register-content h1 {
+    color: #c8c6c2;
+}
+.header-global .user .user-dropdown-menu li>a {
+    color: $theme-link;
 }
