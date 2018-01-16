@@ -962,7 +962,6 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     display: block; 
     .doc-link {
         width: auto;
-        margin: 12px 10px;
     }
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary:after {
@@ -1493,7 +1492,6 @@ body .header-global .nav-global {
 }
 
 body .flex {
-    margin-top: 45px;
     float: right;
 }
 body.view-in-course .wrapper-footer footer#footer-openedx {
@@ -1663,9 +1661,11 @@ body {
 }
 
 body .header-global .wrapper-header .list-inline .item {
-    display: flex;
-    a {
-        padding: 10px;
+    @include sm {
+        display: flex;
+        a {
+            padding: 10px;
+        }
     }
 }
 
