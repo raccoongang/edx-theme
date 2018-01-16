@@ -1450,3 +1450,8 @@ body .wrapper-account-settings .wrapper-header .account-nav button.active {
 body.view-in-course .show-course-index {
     align-self: center;
 }
+body .container .course-index {
+    @include sm {
+        display: block;
+    }
+}
