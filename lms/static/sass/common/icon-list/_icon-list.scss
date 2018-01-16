@@ -16,21 +16,34 @@
         font-size: 0;
         line-height: 0;
         text-indent: -9999px;
-
+        
         &__facebook {
             background: url('#{$img-path}/ico-facebook.svg');
+            background-size: cover;
         }
         &__instagramm {
             background: url('#{$img-path}/ico-instagram.svg');
+            background-size: cover;
         }
         &__twitter {
             background: url('#{$img-path}/ico-twitter.svg');
+            background-size: cover;
         }
         &__linkedin {
             background: url('#{$img-path}/ico-linkedIn.svg');
+            background-size: cover;
         }
         &__youtube {
             background: url('#{$img-path}/ico-youtube.svg');
+            background-size: cover;
+        }   
+        &__gplus {
+            background: url('#{$img-path}/ico-gplus.svg') no-repeat;
+            background-size: cover;
+        }
+        &__blog {
+            background: url('#{$img-path}/ico-blog.svg');
+            background-size: cover;
         }
     }
 }
