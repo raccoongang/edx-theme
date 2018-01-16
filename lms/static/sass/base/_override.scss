@@ -1451,7 +1451,7 @@ body.view-in-course .show-course-index {
     align-self: center;
 }
 body .container .course-index {
-    @include sm {
+    @media screen and (max-width: 768px) {
         display: block;
     }
 }
