@@ -1335,3 +1335,69 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     color: $theme-link;
 }
 
+.home>header .title>.heading-group {
+    position: absolute;
+    left: 50%;
+    transform: translate(37%);
+    width: auto;
+    top: -31px;
+    @media screen and (max-width: 600px) {
+        transform: translate(-50%);
+    }
+    span,strong,p {
+        font-size: 24px;
+        margin: 0 0 7px;
+        text-align: left;
+        font-style: normal;
+        color: #fff;
+    }
+    strong {
+        background: #fff;
+        color: $hamburger-color;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    p {
+        font-weight: 300;
+        text-align: right;
+    }
+    span {
+        text-align: left;
+        position: relative;
+        text-shadow: none;
+        &:before {
+            content: '';
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 200px;
+            display: block;
+            background: #fff;
+
+        }
+    }
+}
+header > .logo-holder {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 150px;
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 12px 0 0 12px;
+    img {
+        width: 100%;
+    }
+}
+header > .link {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: none;
+    text-shadow: none;
+    &:hover,&:focus {
+        background: $theme-link;
+        color: #fff;
+    }
+}

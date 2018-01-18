@@ -11,6 +11,9 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
+        <div class="logo-holder">
+            <img class="" src="/static/${settings.DEFAULT_SITE_THEME}/images/banner-logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+        </div>
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
@@ -22,19 +25,6 @@ from openedx.core.djangolib.markup import HTML, Text
                  <p>eLearning</p>
               % endif
             </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
-
           </div>
 
           % if show_homepage_promo_video:
@@ -45,7 +35,7 @@ from openedx.core.djangolib.markup import HTML, Text
             </a>
           % endif
         </div>
-
+        <button href="/courses" class="link btn">${_("FIND COURSES")}</button>
       </header>
       <%include file="${courses_list}" />
 
