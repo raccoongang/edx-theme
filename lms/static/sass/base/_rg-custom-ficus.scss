@@ -365,7 +365,29 @@ body .content-wrapper .container {
         width: 100%;
     }
 }
+body .header-global .wrapper-header .list-inline .item a {
+    background: none;
+}
 
+header > .link {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 5px;
+    padding: 11px 20px;
+    border: 1px solid $theme-link;
+    background: #fff;
+    font-size: 20px;
+    &:hover,&:focus {
+        background: $theme-link;
+        color: #fff;
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
 
 
 

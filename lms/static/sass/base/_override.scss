@@ -1396,6 +1396,10 @@ header > .link {
     transform: translate(-50%);
     box-shadow: none;
     text-shadow: none;
+    border-radius: 5px;
+    padding: 4px 20px;
+    border: 1px solid $theme-link;
+    background: #fff;
     &:hover,&:focus {
         background: $theme-link;
         color: #fff;

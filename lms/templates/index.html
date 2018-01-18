@@ -35,7 +35,7 @@ from openedx.core.djangolib.markup import HTML, Text
             </a>
           % endif
         </div>
-        <button href="/courses" class="link btn">${_("FIND COURSES")}</button>
+        <a href="/courses" class="link">${_("FIND COURSES")}</a>
       </header>
       <%include file="${courses_list}" />
 
