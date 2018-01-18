@@ -319,9 +319,9 @@ body {
         margin-top: 7px;
     }
     .dropdown-menu-container .dropdown-menu .dropdown-item a {
-        color: $dropdown-menu-color;
+        color: $dropdown-menu-color !important;
         &:hover, &:focus {
-            color: $dropdown-menu-color-hover;
+            color: $dropdown-menu-color-hover !important;
         }
     }
 }

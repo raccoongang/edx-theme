@@ -213,3 +213,11 @@ body .header-global .wrapper-header .wrapper-user-menu {
 .header-global .wrapper-header .list-inline .item {
     float: left;
 }
+
+
+body .dropdown-menu-container .dropdown-menu .dropdown-item a {
+    color: $dropdown-menu-color;
+    &:hover, &:focus {
+        color: $dropdown-menu-color-hover;
+    }
+}
