@@ -731,19 +731,23 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .home > header {
-    background-image: url('#{$img-path}/background.jpg');
-    height: 420px;
+    // background-image: url('#{$img-path}/background.jpg');
+    // height: 420px;
     background-position: center;
     position: relative;
     background-color: #040404;
     background-position: 0 0;
+    margin: -89px 0 0;
+    float: left;
 
     .outer-wrapper {
-        animation: none;
+        // animation: none;
         padding: 0;
-        @media screen and (min-width: 760px) {
-            padding: 30px;
-        }
+        position: absolute;
+        left: 50%;
+        top: 83px;
+        transform: translate(-50%, 83px);
+        width: 100%;
     }
     .title {
         background: transparent;
@@ -755,21 +759,22 @@ body .wmd-prompt-dialog .btn-brand:focus {
         &:last-child {
             margin-right: auto;
             margin-left: auto;
+            width: 100%;
         }
         > .heading-group {
-            text-align: center;
+            text-align: left;
             width: 100%;
 
             h1 {
                 font-size: 32px;
                 line-height: 1.2;
                 color: #fff;
-                text-align: center;
+                text-align: left;
                 font-weight: bold;
                 text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
-                margin-bottom: 50px;
+                margin-bottom: 0;
                 @media screen and (min-width: 760px) {
-                    font-size: 52px;
+                    font-size: 77px;
                 }
             }
             span {
@@ -794,6 +799,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 &:hover {
                     text-decoration: none;
                 }
+            }
+            p {
+                color: #fff;
+                font-size: 36px;
             }
         }
     }
@@ -883,7 +892,7 @@ section.wiki .global-functions {
 }
 
 .content-wrapper {
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
     background: $theme-content-bg;
 }
 
@@ -1519,6 +1528,17 @@ body {
             color: $theme-link-hover;
         }
     }
+    .header-global.header__none-shadow .wrapper-header .nav-holder .list-inline .item a {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .header-global .wrapper-header .nav-holder .left.list-inline .item .btn {
+        background-color: transparent;
+    }
     .doc-link {
         margin: 18px 15px;
     }
@@ -1580,4 +1600,12 @@ section.outside-app .login-register-content h1 {
 .container .inner-wrapper *,
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group *{
     font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
+}
+.promo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.header__none-shadow {
+    box-shadow: none !important;
 }
