@@ -337,6 +337,9 @@ body {
             color: #fff;
         }
     }
+    .course-outline .block-tree .section ol.outline-item .subsection:hover {
+        border-color: $theme-link; 
+    }
 }
 .container.about h1 {
     margin: 24px 0;
@@ -388,4 +391,12 @@ body .content-wrapper .container {
 // course select hover 
 .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:hover, .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:focus {
     background-color: lighten($theme-link, 30%);
+}
+
+
+@include sm {
+    .dashboard .my-courses .course .details .wrapper-course-actions,
+    .dashboard .my-courses .course .details .course-info {
+        width: 100%;
+    }
 }
