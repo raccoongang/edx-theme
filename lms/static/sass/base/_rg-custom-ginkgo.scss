@@ -1,0 +1,391 @@
+// Start Override
+
+@mixin sm {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+// footer logo
+// focus color on register page
+
+.login form .field.is-focused label, .register form .field.is-focused label, .passwordreset form .field.is-focused label, #forgot-password-modal #password-reset form .field.is-focused label {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+
+// user menu colors 
+
+.header-global .user .user-dropdown-menu li>a,
+.header-global .user .user-dropdown,
+body div.dropdown-menu-container .dropdown-menu .dropdown-item a {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+
+// show hide social links in footer 
+
+body .icon-list {
+    display: flex;
+}
+
+// username color on Forum
+
+body .dropdown-menu-container .menu-title .label-username,
+.header-global .user .user-link .label-username {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+body .dropdown-menu-container .menu-title .label-username:hover {
+    color: $theme-link-hover;
+}
+
+//Colors inside 'Add post' in Forum
+.field-label .field-input:checked+.field-input-label, .field-label .wrapper-custom-select:checked+.field-input-label {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+
+// Bredcrumbs colors 
+.breadcrumbs .nav-item a, .breadcrumbs .nav-item a:visited {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+
+//outline color on focus 
+body a:focus {
+    outline-color: $theme-link;
+}
+
+//hover and focus for wiki 
+body .wiki-wrapper section.wiki .nav-tabs a:hover, .wiki-wrapper section.wiki .nav-tabs div.info-wrapper section.handouts ol li div.hitarea:hover+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .nav-tabs div.hitarea:hover+h4, .wiki-wrapper section.wiki .nav-tabs div.info-wrapper section.handouts ol li div.hitarea:focus+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .nav-tabs div.hitarea:focus+h4, .wiki-wrapper section.wiki .nav-tabs a:focus {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+.wiki-wrapper section.wiki .article-functions .see-children a:hover, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:hover+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:hover+h4, .wiki-wrapper section.wiki .article-functions .see-children div.info-wrapper section.handouts ol li div.hitarea:focus+h4, div.info-wrapper section.handouts ol li .wiki-wrapper section.wiki .article-functions .see-children div.hitarea:focus+h4, .wiki-wrapper section.wiki .article-functions .see-children a:focus {
+    color: $theme-link-hover;
+}
+//active link in wiki 
+body .wiki-wrapper section.wiki .nav-tabs li.active a {
+    color: $theme-link;
+    border-color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+
+//Color inside 'Add post' in unit 
+body .field-label .field-input:checked+.field-input-label {
+    color: $theme-link;
+}
+
+// Resume course button border color fix 
+
+body .btn-brand {
+    border: 1px solid $theme-link;
+    &:hover {
+        border: 1px solid $theme-link;
+    }
+}
+
+//lesson in course , active border color fix 
+
+.course-outline .block-tree .section ol.outline-item .subsection.current {
+    border-color: $theme-link;
+    &:hover {
+        border-color: $theme-link;
+    }
+}
+
+body .well .filter-clear a {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+
+body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
+    margin: 0;
+}
+
+
+.wrapper-footer footer#footer-openedx {
+    position: relative;
+}
+.wrapper-footer footer#footer-openedx a {
+    top: 0;
+    left: 30px;
+    margin: 0;
+}
+
+.footer-logo-holder img {
+    max-width: 150px;
+}
+
+
+body .footer-logo-holder {
+    max-width: 150px;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    img {
+        width: 150px;
+    }
+    @include sm {
+        position: relative;
+        left: 50% !important;
+        transform: translate(-50%) !important;
+        margin: 20px 0 !important;
+        display: block;
+    }
+}
+
+body .header-global .nav-global {
+    margin-top: 20px;
+}
+
+body .flex {
+    float: right;
+}
+body.view-in-course .wrapper-footer footer#footer-openedx {
+    position: relative;
+
+}
+
+body .header-global .nav-global li a {
+    &:visitied {
+        color: $theme-link;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        background: $theme-link;
+        color: #fff !important;
+        &:hover, &:focus {
+            background: $theme-link-hover;
+            color: #fff !important;
+        }
+    }
+}
+body .header-global .nav-global li {
+    @media screen and (max-width: 768px) {
+        margin-bottom: 15px !important;
+    }
+}
+body .header-global .user .dropdown {
+    color: $theme-link;
+    &:hover, &:focus {
+        color: $theme-link-hover;
+    }
+}
+.forum-new-post-form .post-option .is-enabled, .edit-post-form .post-option .is-enabled {
+    color: $theme-link;
+}
+
+body .wrapper-footer footer#footer-openedx {
+    position: relative;
+}
+
+body .header-global .nav-courseware {
+    margin-top: 0;
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
+    }
+}
+body .wrapper-account-settings .wrapper-header .account-nav button.active {
+    border-color: $theme-link;
+}
+.intro-inner-wrapper {
+    input[type="submit"], input[type="button"], button, .button {
+        border: none;
+        background-image: none;
+        background-color: $theme-link;
+        text-shadow: none;
+        &:hover,&:focus {
+            border: none;
+            background-image: none;
+            background-color: $theme-link-hover;
+            text-shadow: none;
+        }
+    }
+}
+
+
+body {
+    .header-global .nav-global,
+    .header-global .wrapper-header .list-inline.nav-global {
+        margin-top: 16px;
+    }
+    .header-global .wrapper-header .list-inline.nav-global {
+        display: flex;
+    }
+    .header-global .nav-courseware li {
+        margin-top: 13px;
+    }
+    .wrapper-footer .colophon {
+        position: relative;
+    }
+    .footer-logo-holder {
+        left: 0;
+        margin: 0;
+        top: 0;
+        transform: translate(0, -10%);
+    }
+    .tab.account-nav-link:not(:first-child) {
+        display: none;
+    }
+    .wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+    .header-global .wrapper-header .wrapper-user-menu,
+    .dropdown-menu-container .menu-title {
+        display: flex;
+
+    }
+    .dropdown-menu-container .menu-title,
+    .dropdown-menu-container .menu-button,
+    .header-global .wrapper-header .list-inline .item a {
+        color: $theme-link;
+    }
+    .doc-link {
+        margin: 22px 15px 18px;
+    }
+    .wrap-instructor-info .instructor-info-action {
+        color: $theme-link;
+        &:hover {
+            color: #fff;
+            background: $theme-link;
+        }
+    }
+    .header-global .user .user-link .label-username,
+    .header-global .user-dropdown,
+    .wiki-wrapper section.wiki .nav-tabs a {
+        color: $theme-link;
+    }
+    .header-global .wrapper-header .list-inline .item {
+        font-size: 0.875em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .dropdown-menu-container .menu-title,
+    .doc-link {
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 0.875rem;
+        font-weight: 700;
+    }
+    .doc-link {
+        line-height: 7px;
+    }
+    .btn {
+        border-color: $theme-link;
+        background: #fff;
+        color: $theme-link;
+    }
+    .home>header {
+        background-position: center; 
+    }
+    .banner__citate {
+        text-align: right;
+    }
+    .header-global .user {
+        display: flex;
+        margin-top: 5px;
+    }
+    .wrapper-footer {
+        padding-top: 30px;
+    }
+    .header-global {
+        border-bottom: 2px solid $hamburger-color;
+    }
+    .courses-container .courses .course {
+        border-bottom: 3px solid $hamburger-color;
+    }
+    .login-register-content h2, .login-register-content .home>header .title>.heading-group p, .home>header .title>.heading-group .login-register-content p, .login-register-content section.outside-app h1, section.outside-app .login-register-content h1 {
+        color: $theme-link;
+    }
+    .header-global .wrapper-header .wrapper-user-menu {
+        margin-top: 7px;
+    }
+    .container .course-index {
+        @include sm {
+            display: block;
+        }
+    }
+    .header-global .logo {
+        max-width: 150px;
+        img {
+            width: 100%;
+        }
+    }
+    .search-button {
+        &:hover,&:focus {
+            background: $theme-link;
+            border-color: $theme-link;
+            color: #fff;
+        }
+    }
+}
+.container.about h1 {
+    margin: 24px 0;
+    text-align: left;
+}
+
+body .header-global .wrapper-header .list-inline .item {
+    @include sm {
+        display: flex;
+        a {
+            padding: 10px;
+        }
+    }
+}
+
+* * {
+    font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
+}
+
+.fa {
+    font-family: "FontAwesome" !important;
+}
+
+//ie responsive fix in course menu
+body.view-in-course .show-course-index {
+    align-self: center;
+}
+body .container .course-index {
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+body .content-wrapper .container {
+    min-width: 0% !important;
+}
+//end ie fix
+
+.wiki-wrapper section.wiki .article-functions {
+    @include sm {
+        width: 100%;
+    }
+}
+.wiki-wrapper section.wiki .main-article {
+    @include sm {
+        width: 100%;
+    }
+}
+
+// course select hover 
+.course-outline .block-tree .section ol.outline-item .subsection a.outline-item:hover, .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:focus {
+    background-color: lighten($theme-link, 30%);
+}
