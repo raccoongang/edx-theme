@@ -1,4 +1,4 @@
-.header-global {
+body .header-global {
     height: auto;
     background: $header-color;
     padding: 18px 10px;
@@ -1512,11 +1512,11 @@ body {
     }
     .dropdown-menu-container .menu-title,
     .dropdown-menu-container .menu-button,
-    .header-global .wrapper-header .list-inline .item a {
-        color: $theme-link !important;
+    .header-global .wrapper-header .nav-holder .list-inline .item a {
+        color: $theme-link;
 
         &:hover {
-            color: $theme-link-hover !important;
+            color: $theme-link-hover;
         }
     }
     .doc-link {
