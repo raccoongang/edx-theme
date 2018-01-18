@@ -25,7 +25,12 @@ body div.dropdown-menu-container .dropdown-menu .dropdown-item a {
         color: $theme-link-hover;
     }
 }
-
+.header-global .user .user-dropdown {
+    background: none;
+    &:hover, &:focus {
+        background: none;
+    }
+}
 // show hide social links in footer 
 
 body .icon-list {
