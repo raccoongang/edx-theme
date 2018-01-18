@@ -1403,7 +1403,7 @@ body .login form .field.is-focused label {
 
 body.view-register .header-global nav,
 body.view-login .header-global nav {
-    max-width: 960px;
+    max-width: 1200px;
     width: auto;
 }
 
@@ -1486,10 +1486,15 @@ body {
         position: relative;
     }
     .footer-logo-holder {
-        left: 0;
+        left: 50%;
+        top: -37px;
+        transform: translate( -50%, 0);
         margin: 0;
-        top: 0;
-        transform: translate(0, -10%);
+        @media screen and (max-width: 900px) {
+            left: 0;
+            top: 0;
+            transform: translate(0, -10%);
+        }
     }
     .tab.account-nav-link:not(:first-child) {
         display: none;
@@ -1508,7 +1513,11 @@ body {
     .dropdown-menu-container .menu-title,
     .dropdown-menu-container .menu-button,
     .header-global .wrapper-header .list-inline .item a {
-        color: $theme-link;
+        color: $theme-link !important;
+
+        &:hover {
+            color: $theme-link-hover !important;
+        }
     }
     .doc-link {
         margin: 18px 15px;
@@ -1561,4 +1570,14 @@ section.outside-app .login-register-content h1 {
 }
 .header-global .user .user-dropdown-menu li>a {
     color: $theme-link;
+}
+.login form .field.is-focused .tip,
+.register form .field.is-focused .tip,
+.passwordreset form .field.is-focused .tip,
+#forgot-password-modal #password-reset form .field.is-focused .tip {
+    color: $theme-link;
+}
+.container .inner-wrapper *,
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group *{
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
 }
