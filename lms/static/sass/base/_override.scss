@@ -731,7 +731,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .home > header {
-    background-image: url('#{$img-path}/background.jpg');
+    background-image: url("https://s3-ap-southeast-1.amazonaws.com/dev-alu-edx-s3/hosted-images/aiip-bgimage-03.jpg");
     height: 420px;
     background-position: center;
     position: relative;
@@ -746,7 +746,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         }
     }
     .title {
-        background: transparent;
+        background: #fff;
         box-shadow: none;
         max-width: 1000px;
         margin: 0 auto;
@@ -763,11 +763,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
             h1 {
                 font-size: 32px;
                 line-height: 1.2;
-                color: #fff;
+                color: #3c3c3c;
                 text-align: center;
                 font-weight: bold;
                 text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
-                margin-bottom: 50px;
+                margin-bottom: 20px;
                 @media screen and (min-width: 760px) {
                     font-size: 52px;
                 }
@@ -794,6 +794,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 &:hover {
                     text-decoration: none;
                 }
+            }
+            p {
+                color: #3c3c3c;
+                font-size: 30px;
             }
         }
     }
