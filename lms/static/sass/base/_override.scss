@@ -1524,6 +1524,24 @@ body {
             color: $theme-link-hover;
         }
     }
+    .header-global .wrapper-header .nav-holder .list-inline .item a.btn-register {
+        color: $theme-link !important;
+
+        &:hover {
+            color: $theme-link-hover !important;
+        }
+    }
+    .header-global.header__none-shadow .wrapper-header .nav-holder .list-inline .item a {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .header-global .wrapper-header .nav-holder .left.list-inline .item .btn {
+        background-color: transparent;
+    }
     .doc-link {
         margin: 18px 15px;
     }
