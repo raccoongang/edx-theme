@@ -1,0 +1,46 @@
+html,
+body,
+h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5, h6 {
+    font-family: $font-regular;
+}
+html,
+body{
+    height: 100%;
+    background: #f4f4f4;
+    -webkit-font-smoothing: auto !important;
+}
+.content-wrapper {
+    background: #f4f4f4;
+}
+.courses-container .courses {
+    float: none;
+    // width: 100% !important;
+}
+.highlighted-courses .courses,
+.find-courses .courses {
+    padding: 32px 0 15px;
+}
+
+.home .highlighted-courses {
+    margin-bottom: 25px;
+}
+.dropdown-menu-container .menu-image {
+    margin-right: 12px;
+    border-radius: 10%;
+}
+.dropdown-menu-container .menu-title {
+    color: #fff;
+
+    &:hover {
+        color: #dd4628;
+    }
+}
+.dropdown-menu-container .menu-button {
+    background: #fff;
+    border-radius: 6px;
+    height: 25px;
+}
+.find-courses .courses-container .courses
+.icon-fallback-img .icon-angle-down {
+    display: none;
+}

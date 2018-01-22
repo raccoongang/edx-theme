@@ -1,0 +1,35 @@
+.theme-course-info {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #fff;
+
+    &_header {
+        background: #fff;
+    }
+    &_header-holder {
+        &__fixed {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+    &_header-wrapper {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    &_header-helper {
+        min-height: 260px;
+    }
+    .container {
+        display: flex;
+    }
+    .course-summary {
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+        width: 330px;
+        padding: 10px 20px;
+        margin-right: 20px;
+        box-sizing: border-box;
+    }
+}
