@@ -67,8 +67,7 @@ site_status_msg = get_site_status_msg(course_id)
   <header id="global-navigation" class="header-global" >
     <nav class="wrapper-header" aria-label="${_('Global')}">
       <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-      <div class="nav-holder">
-        % if user.is_authenticated():
+      % if user.is_authenticated():
         <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
       % else:
         <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
@@ -101,9 +100,8 @@ site_status_msg = get_site_status_msg(course_id)
           </ol>
         % endif
       % endif
-      </div>
-
     </nav>
+
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
   </header>
   <script>
