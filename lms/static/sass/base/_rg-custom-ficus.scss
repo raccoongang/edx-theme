@@ -5,6 +5,11 @@
         @content;
     }
 }
+@mixin xl {
+    @media screen and (max-width: 1180px) {
+        @content;
+    }
+}
 // footer logo
 // focus color on register page
 
@@ -129,20 +134,16 @@ body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
     margin: 0;
 }
 
-.footer-logo-holder img {
-    max-width: 150px;
-}
-
 // Footer logo styles
 body .footer-logo-holder {
-    max-width: 150px;
+    max-width: 230px;
     position: absolute;
     top: 0;
     left: 30px;
     img {
-        width: 150px;
+        width: 100%;
     }
-    @include sm {
+    @include xl {
         position: relative;
         left: 50% !important;
         transform: translate(-50%) !important;
@@ -255,9 +256,14 @@ body {
 
     }
     .dropdown-menu-container .menu-title,
-    .dropdown-menu-container .menu-button,
+    .dropdown-menu-container .menu-button {
+        color: $theme-link;
+    }
     .header-global .wrapper-header .list-inline .item a {
         color: $theme-link;
+        &:hover {
+            color: $theme-link-hover;
+        }
     }
     .doc-link {
         margin: 22px 15px 18px;
@@ -381,7 +387,7 @@ body .content-wrapper .container {
 }
 
 div.window-wrap header#global-navigation.header-global nav.wrapper-header h1.logo a img {
-    max-width: 250px;
+    max-width: 300px;
 }
 
 .tab-nav-link {
