@@ -1,3 +1,12 @@
+@font-face{
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Milo';
+    src: url("../fonts/MiloWeb.eot");
+    src: url("../fonts/MiloWeb.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/MiloWeb.woff") format("woff")
+}
+
 .header-global {
     height: auto;
     background: $header-color;
@@ -176,6 +185,7 @@ body .container.activation h1.valid {
     padding: 65px 10px 30px 10px;
 
     footer#footer-openedx {
+        display: none;
         a:hover,
         a:focus {
             text-decoration: none !important;
@@ -561,7 +571,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     background: $theme-btn-bg-hover;
 }
 .courses-container .courses .course {
-    border-bottom: 3px solid #fc6a15;
+    border-bottom: 3px solid #8abc3e;
 
     .course-image .cover-image .learn-more {
         background-color: transparent;
@@ -657,6 +667,14 @@ body .wmd-prompt-dialog .btn-brand:focus {
     color: $theme-btn-text-color !important;
 }
 // end btns
+//text
+html {
+    color: #252525;
+    *:not(.fa){
+        font-family: "Milo", "Arial", sans-serif;
+    }
+}
+//end text
 .u-field.mode-placeholder:hover {
     border-color: $theme-btn-bg;
 
@@ -1303,7 +1321,7 @@ body.view-login .wrapper-footer footer {
 }
 body.view-login .header-global .nav-courseware .btn-login {
     display: block;
-},
+}
 body.view-register .container {
     background: transparent;
 }
