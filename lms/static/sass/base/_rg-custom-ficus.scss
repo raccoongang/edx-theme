@@ -1,7 +1,7 @@
 // Start Override
 
 @mixin sm {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
         @content;
     }
 }
@@ -223,13 +223,13 @@ body .wrapper-account-settings .wrapper-header .account-nav button.active {
 body {
     .header-global .nav-global,
     .header-global .wrapper-header .list-inline.nav-global {
-        margin-top: 16px;
+        margin-top: 12px;
     }
     // .header-global .wrapper-header .list-inline.nav-global {
     //     display: flex;
     // }
     .header-global .nav-courseware li {
-        margin-top: 13px;
+        margin-top: 7px;
     }
     .wrapper-footer .colophon {
         position: relative;
@@ -295,6 +295,7 @@ body {
     }
     .home>header {
         background-position: center;
+        background-color: $theme-link;
     }
     .banner__citate {
         text-align: right;
@@ -323,6 +324,9 @@ body {
         &:hover, &:focus {
             color: $dropdown-menu-color-hover !important;
         }
+    }
+    .home>header .title {
+        width: 100%;
     }
 }
 .container.about h1 {
@@ -366,11 +370,22 @@ body .content-wrapper .container {
     }
 }
 
+//nav remove white bg
 
+.nav-global .item .btn {
+    background: none;
+    @include sm {
+        background: $theme-link;
+    }
+}
 
+div.window-wrap header#global-navigation.header-global nav.wrapper-header h1.logo a img {
+    max-width: 250px;
+}
 
-
-
+.tab-nav-link {
+    text-transform: uppercase;
+}
 
 //Place to Add/Remove custom fonts. Please, make it last in code
 * * {
