@@ -18,8 +18,8 @@ from status.status import get_site_status_msg
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 %>
 
-## Provide a hook for themes to inject branding on top.
-<%block name="navigation_top" />
+  ## Provide a hook for themes to inject branding on top.
+  <%block name="navigation_top" />
 
 ## Add UI Toolkit components if using the Pattern Library
 % if uses_pattern_library:
@@ -39,20 +39,27 @@ except:
     course_id = None
 site_status_msg = get_site_status_msg(course_id)
 %>
-% if site_status_msg:
-<div class="site-status">
-  <div class="inner-wrapper">
-    <span class="icon fa fa-warning"></span>
-    <p>${site_status_msg}</p>
-  </div>
-</div>
-% endif
-</%block>
-
-% if uses_bootstrap:
+    % if site_status_msg:
+    <div class="site-status">
+      <div class="inner-wrapper">
+        <span class="icon fa fa-warning"></span>
+        <p>${site_status_msg}</p>
+      </div>
+    </div>
+    % endif
+  </%block>
+  <script>
+    function goToPage(url) {
+      if (url != "") {
+        window.open(url);
+      }
+    }
+  </script> 
+  % if uses_bootstrap:
   <header class="navigation-container header-global">
     <nav class="navbar navbar-toggleable-md navbar-light">
-      <button class="navbar-toggler navbar-toggler-right mt-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right mt-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <%include file="bootstrap/navbar-logo-header.html" args="online_help_token=online_help_token"/>
@@ -61,19 +68,24 @@ site_status_msg = get_site_status_msg(course_id)
       % if settings.FEATURES.get('COUNTRY_FILTER', False):
       <li class="nav-global-02">
         <form action="" method="get">
-          <select name="country"> 
+          <select name="country" onchange="goToPage(this.options(this.selectedIndex).value)"> 
             <option value="">all courses</option>
-          % for key, value in settings.FEATURES.get('COUNTRY_FILTER', False).items():
-            <option value="${value}"
-              %if value == country:
-                selected
-              %endif
-              >
-              ${key}
+            <option value="https://ireland.learn.camara.org">
+              Ireland
             </option>
-          % endfor
+            <option value="https://tanzania.learn.camara.org">
+              Tanzania
+            </option>
+            <option value="https://ethiopia.learn.camara.org">
+              Ethiopia
+            </option>
+            <option value="https://kenya.learn.camara.org">
+              Kenya
+            </option>
+            <option value="https://zambia.learn.camara.org">
+              Zambia
+            </option>
           </select>
-          <input type="submit" value="filter" class="filter_button">
         </form>
       </li>
       % endif
@@ -103,75 +115,40 @@ site_status_msg = get_site_status_msg(course_id)
           <ol class="user-filter">
             <li class="nav-global-02">
                 <form action="" method="get">
-                  <select name="country">
+                  <select name="country" onchange="goToPage(this.options[this.selectedIndex].value)">
                     <option value="">all courses</option>
-                  % for key, value in settings.FEATURES.get('COUNTRY_FILTER', False).items():
-                    <option value="${value}"
-                      %if value == country:
-                        selected
-                      %endif
-                      >
-                      ${key}
+                    <option value="https://ireland.learn.camara.org">
+                      Ireland
                     </option>
-                  % endfor
+                    <option value="https://tanzania.learn.camara.org">
+                      Tanzania
+                    </option>
+                    <option value="https://ethiopia.learn.camara.org">
+                      Ethiopia
+                    </option>
+                    <option value="https://kenya.learn.camara.org">
+                      Kenya
+                    </option>
+                    <option value="https://zambia.learn.camara.org">
+                      Zambia
+                    </option>
                   </select>
-                  <input type="submit" value="filter" class="filter_button">
                 </form>
               </li>
           </ol>
           % endif
-    
-          ## ------------------------
-          % if header_language_selector_is_enabled():
-            <% languages = released_languages() %>
-            % if len(languages) > 1:
-              <ol class="user-filter">
-                <li class="primary">
-                  <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-                    <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-                    % if user.is_authenticated():
-                      <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-                    % else:
-                      <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-                    % endif
-                    <label><span class="sr">${_("Choose Language")}</span>
-                      <select class="input select language-selector" id="settings-language-value" name="language">
-                        % for language in languages:
-                          % if language[0] == LANGUAGE_CODE:
-                            <option value="${language[0]}" selected="selected">${language[1]}</option>
-                          % else:
-                            <option value="${language[0]}" >${language[1]}</option>
-                          % endif
-                        % endfor
-                      </select>
-                    </label>
-                  </form>
-                </li>
-              </ol>
-            % endif
-          % endif
-        </nav>
-        <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
+    </nav>
+    <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
     </div>
   </header>
   <script>
-      var btn = document.getElementById('hamburger'),
-          body = document.body;
-      function btnToggle() {
-        body.classList.toggle('menu-open');
-      }
-      btn.addEventListener('click', btnToggle);
-    </script>
-% endif
-% if course:
-<!--[if lte IE 9]>
-<div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
-    begin_strong=HTML('<strong>'),
-    end_strong=HTML('</strong>'),
-    chrome_link=HTML('<a href="https://www.google.com/chrome" target="_blank">Chrome</a>'),
-    ff_link=HTML('<a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>'),
-)}</div>
-<![endif]-->
-% endif
-
-<%include file="../help_modal.html"/>
+    var btn = document.getElementById('hamburger'),
+      body = document.body;
+    function btnToggle() {
+      body.classList.toggle('menu-open');
+    }
+    btn.addEventListener('click', btnToggle);
+  </script> 
+  % endif
+  
+  <%include file="../help_modal.html"/>
