@@ -1,0 +1,91 @@
+<!-- theme-footer.html -->
+<!-- By Eslam Diaa -->
+<!-- Jan23, 2018 -->
+
+## mako
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+%>
+<%namespace name='static' file='/static_content.html'/>
+<%!
+from datetime import date
+%>
+
+<!--<div class="wrapper-footer">-->
+    <!--<footer>-->
+        <!--<div class="colophon">-->
+            <!--<nav class="nav-colophon">-->
+                <!--<ol>-->
+                    <!--<li><a href="${reverse('about')}">About</a></li>-->
+                    <!--<li><a href="${reverse('about')}#careers">Careers</a></li>-->
+                    <!--<li><a href="${reverse('about')}#contact">Contact</a></li>-->
+                    <!--<li><a href="${reverse('tos')}">Terms of Service</a></li>-->
+                    <!--<li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>-->
+                    <!--<li><a href="${reverse('tos')}#honor">Honor Code</a></li>-->
+                    <!--<li><a href="${reverse('tos')}#copyright">Copyright</a></li>-->
+                <!--</ol>-->
+            <!--</nav>-->
+        <!--</div>-->
+        <!--<div class="references">-->
+            <!--<span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>-->
+        <!--</div>-->
+
+        <!--<div class="copyright">-->
+            <!--<p><span>-->
+            <!--${_('Copyright {year}. All rights reserved.').format(-->
+                <!--year=date.today().year-->
+            <!--)}-->
+        <!--</span></p>-->
+        <!--</div>-->
+    <!--</footer>-->
+<!--</div>-->
+
+<!-- Footer -->
+<footer id="footer" class="footer divider" data-bg-color="#f7f7f7">
+    <div class="container pt-70 pb-40">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="widget dark">
+                    <img class="mt-5 mb-20" alt="" src="images/tetco_logo.png">
+                    <p>الرياض - السعودية</p>
+                    <ul class="list-inline mt-5">
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i> <a class="text-gray" href="#">920000438</a> </li>
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored2 mr-5"></i> <a class="text-gray" href="mailto:info@tetco.sa">info@tetco.sa</a> </li>
+                        <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored2 mr-5"></i> <a class="text-gray" href="http://training.tetco.sa">training.tetco.sa</a> </li>
+                    </ul>
+                    <ul class="styled-icons icon-sm icon-bordered icon-circled clearfix mt-10">
+                        <li><a href="https://twitter.com/TETCOSA"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCAxKAOyP4S4ih6iUfwq2Ekw"><i class="fa fa-youtube"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- end wrapper -->
+
+<!-- Footer Scripts -->
+<!-- JS | Custom script for all pages -->
+<script src="js/custom.js"></script>
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+      (Load Extensions only on Local File Systems !
+       The following part can be removed on Server for On Demand Loading) -->
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+
+</body>
+</html>
