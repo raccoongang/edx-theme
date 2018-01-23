@@ -124,8 +124,6 @@ body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
     position: relative;
 }
 .wrapper-footer footer#footer-openedx a {
-    top: 0;
-    left: 30px;
     margin: 0;
 }
 
@@ -138,7 +136,8 @@ body .footer-logo-holder {
     max-width: 150px;
     position: absolute;
     top: 0;
-    left: 30px;
+    right: 30px;
+    left: auto;
     img {
         width: 150px;
     }
@@ -236,9 +235,7 @@ body {
         position: relative;
     }
     .footer-logo-holder {
-        left: 0;
         margin: 0;
-        top: 0;
         transform: translate(0, -10%);
     }
     .tab.account-nav-link:not(:first-child) {

@@ -5,8 +5,8 @@
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
 %>
-<% footer = get_footer(is_secure=is_secure) %>
-<%namespace name='static' file='static_content.html'/>
+  <% footer = get_footer(is_secure=is_secure) %>
+    <%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
   <footer id="footer-openedx" class="grid-container"
@@ -21,7 +21,7 @@
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
+              <a href="/about">${_("About Us")}</a>
             </li>
             <li class="nav-colophon-02">
               <a href="/privacy">${_("Privacy Policy")}</a>
@@ -29,15 +29,27 @@
             <li class="nav-colophon-03">
               <a href="/tos">${_("Terms of Service")}</a>
             </li>
+            <li class="nav-colophon-04">
+              <a href="/contact">${_("Contact us")}</a>
+            </li>
         </ol>
       </nav>
-      <ul class="icon-list">
-        <li class="icon-list_item"><a href=" https://www.facebook.com/alghurairfoundation" target="_blank" class="icon-list_link icon-list_link__facebook">facebook</a></li>
-        <li class="icon-list_item"><a href="https://www.instagram.com/alghurairfoundation/" target="_blank" class="icon-list_link icon-list_link__instagramm">instagramm</a></li>
-        <li class="icon-list_item"><a href="https://twitter.com/agfforE" target="_blank" class="icon-list_link icon-list_link__twitter">twitter</a></li>
-        <li class="icon-list_item"><a href="https://www.linkedin.com/company-beta/6641359/" target="_blank" class="icon-list_link icon-list_link__linkedin">linkedin</a></li>
-        <li class="icon-list_item"><a href="https://www.youtube.com/channel/UChsc1FpsAPEANu3R3AZ7Uhw" target="_blank" class="icon-list_link icon-list_link__youtube">youtube</a></li>
-      </ul>
+      <div class="raccoon-block">
+        <a href="http://code.edx.org" target="_blank">
+
+          <span class="raccoongang">
+
+            Built on <img src="/static/${settings.DEFAULT_SITE_THEME}/images/openedx_logo.png" />
+          </span>
+        </a>
+        <a href="http://raccoongang.com" target="_blank">
+
+          <span class="raccoongang">
+
+    	    by Raccoon Gang <img src="/static/${settings.DEFAULT_SITE_THEME}/images/RaccoonLogo.png" />
+          </span>
+        </a>
+      </div>
       <a href="/" class="footer-logo-holder">
         <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
       </a>
