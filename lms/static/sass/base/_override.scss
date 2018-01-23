@@ -185,7 +185,6 @@ body .container.activation h1.valid {
     padding: 65px 10px 30px 10px;
 
     footer#footer-openedx {
-        display: none;
         a:hover,
         a:focus {
             text-decoration: none !important;
@@ -227,6 +226,9 @@ body .container.activation h1.valid {
                     }
                 }
             }
+        }
+        .icon-list {
+            display: none;
         }
     }
 }
@@ -1353,3 +1355,4 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 .course-info .course-sidebar .important-dates a {
     color: $theme-link;
 }
+
