@@ -1352,6 +1352,91 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     color: $theme-link;
 }
 
+body.view-in-course .container .course-index {
+    display: none;
+}
+
+.wrapper-course-material {
+    .hamburger-course {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 36px;
+        margin: 14px 0 10px;
+        padding: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 0;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            &:not(:disabled) {
+                border: none;
+                background: none;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        @media screen and (min-width: 760px) {
+            display: none;
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            top: 16px;
+            left: 5px;
+            background-color: #719d2e;
+            transition: all 0.3s;
+            
+        }
+        &:after {
+            box-shadow: 0 10px 0 0 $hamburger-color, 0 -10px 0 0 $hamburger-color;
+        }
+    }
+    .course-material {
+        display: none;
+        @media screen and (min-width: 760px) {
+            display: block;
+        }
+    }
+    .course-tabs {
+        li {
+            display: block;
+            @media screen and (min-width: 760px) {
+                display: inline-block;
+            }
+            a {
+                padding: 1px 10px;
+                text-align: left;
+                @media screen and (min-width: 760px) {
+                    padding: 10px 15px 13px;
+                    text-align: center;
+                }
+            }
+        }   
+    }
+}
+
+.course-nav-open {
+    .hamburger-course {
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+            box-shadow: none;
+        }
+    }
+    .course-material {
+        display: block;
+    }
+}
+
+
 //responsive for dashboard page
 .dashboard {
     min-width: 320px;
