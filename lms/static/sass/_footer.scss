@@ -24,7 +24,11 @@
     }
 
     a {
-      color: $color-white;
+      color: $color-white !important;
+
+      &:hover {
+        color: #EF683F !important;
+      }
     }
   }
 }
