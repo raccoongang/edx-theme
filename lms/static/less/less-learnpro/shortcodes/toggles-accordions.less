@@ -1,0 +1,230 @@
+/*
+ * Shortcode: Toggles-Accordions.less
+ * -----------------------------------------------
+*/
+.panel-group {
+	.panel-heading {
+		padding: 0;
+		.panel-title {
+			font-size: 13px;
+			position: relative;
+			a {
+				color: @black-111;
+				display: block;
+				padding: 10px 15px;
+			}
+		}
+	}
+	&.accordion-icon-right {
+		.panel-heading {
+			.panel-title {
+				a {
+					&:after {
+						content: "\f068";
+						font-family: fontawesome;
+						font-size: 10px;
+						right: 0;
+						padding: 4px 10px;
+						position: absolute;
+					}
+					&.collapsed {
+						&::after {
+							content: "\f067";
+						}
+					}
+				}
+			}
+		}
+	}
+	&.accordion-icon-left {
+		.panel-heading {
+			.panel-title {
+				a {
+					padding-left: 30px;
+					&:before {
+						content: "\f068";
+						font-family: fontawesome;
+						font-size: 10px;
+						left: 0;
+						padding: 3px 10px;
+						position: absolute;
+					}
+					&.collapsed {
+						&::before {
+							content: "\f067";
+						}
+					}
+				}
+			}
+		}
+	}
+	&.accordion-bordered {
+		border: 1px solid #dddddd;
+		.panel {
+			border: none;
+			box-shadow: none;
+			border-bottom: 1px solid #dddddd;
+			&:last-child {
+				border-bottom: none;
+			}
+			.panel-heading {
+				background-color: transparent;
+				.panel-title {
+					a {
+					}
+				}
+			}
+		}
+	}
+	&.accordion-flat {
+		.panel {
+			border-radius: 0;
+			.panel-heading {
+				border-radius: 0;
+			}
+		}
+	}
+	&.accordion-no-border {
+		border: 0;
+		.panel {
+			border: none;
+			box-shadow: none;
+			&:last-child {
+				border-bottom: none;
+			}
+			.panel-heading {
+				background-color: transparent;
+				.panel-title {
+					font-size: 14px;
+					a {
+						padding-left: 0;
+						padding-right: 0;
+					}
+				}
+			}
+			.panel-body {
+				border-top: none;
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+			}
+		}
+		&.accordion-icon-left {
+			.panel {
+				.panel-heading {
+					.panel-title {
+						a {
+							padding-left: 20px;
+							&:before {
+								padding-left: 0;
+							}
+						}
+					}
+				}
+				.panel-body {
+					padding-left: 20px;
+				}
+			}
+		}
+		&.accordion-icon-right {
+			.panel {
+				.panel-heading {
+					.panel-title {
+						a {
+							padding-right: 20px;
+							&:before {
+								padding-right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.accordion-icon-filled {
+		&.accordion-icon-left {
+			.panel {
+				.panel-heading {
+					.panel-title {
+						a {
+							padding-left: 30px;
+							&:before {
+								background-color:@black-333;
+								color: #fff;
+								padding: 4px 6px;
+							}
+						}
+					}
+				}
+				.panel-body {
+					padding-left: 30px;
+				}
+			}
+		}
+		&.accordion-icon-right {
+			.panel {
+				.panel-heading {
+					.panel-title {
+						a {
+							&:after {
+								background-color:@black-333;
+								color: #fff;
+								padding: 4px 6px;
+							}
+						}
+					}
+				}
+				.panel-body {
+					padding-right: 30px;
+				}
+			}
+		}
+	}
+	&.accordion-stylished-left-border {
+		.panel {
+			box-shadow: none;
+			-webkit-border-radius: 0 0 0 0;
+			-moz-border-radius: 0;
+			-ms-border-radius: 0 0 0 0;
+			border-radius: 0 0 0 0;
+			border: none;
+			position: relative;
+
+			&:not(:last-child):before {
+				border-left: 1px dashed #cccccc;
+				content: "";
+				height: 100%;
+				left: 14px;
+				position: absolute;
+				top: 15px;
+				width: 1px;
+				z-index: 0;
+			}
+		}
+		&.accordion-icon-left {
+			.panel {
+				.panel-heading {
+					padding-bottom: 15px;
+					.panel-title {
+						a {
+							padding-left: 40px;
+							&:before {
+								border-radius: 5px;
+								font-size: 12px;
+								padding: 6px 10px;
+								top: 5px;
+							}
+						}
+					}
+				}
+				.panel-body {
+					padding-left: 40px;
+				}
+			}
+		}
+	}
+
+}
+
+
+/* -------- Toggle ---------- */

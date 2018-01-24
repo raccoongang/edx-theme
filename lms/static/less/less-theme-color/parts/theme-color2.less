@@ -1,0 +1,484 @@
+/* Modern Header */
+.modern-header {
+  &.modern-header-theme-colored2 {
+    .header-nav {
+      .header-nav-wrapper {
+        &:not(.scroll-to-fixed-fixed) {
+          nav {
+            background: @theme-color2;
+          }
+        }
+        .menuzord-menu > li:not(.active):not(:hover) {
+          > a {
+            @media only screen and (min-width : 901px) {
+            }
+          }
+        }
+        &.scroll-to-fixed-fixed {
+          background: @theme-color2;
+        }
+      }
+    }
+  }
+}
+
+/* -------- Text Theme Color ---------- */
+.text-theme-colored2 {
+  color: @theme-color2 !important;
+}
+.text-hover-theme-colored2 {
+  &:hover {
+    color: @theme-color2 !important;
+  }
+}
+ul.list.theme-colored2 li:before,
+ul.list.theme-colored2.angle-double-right li:before,
+ul.list.theme-colored2.angle-right li:before,
+ul.list.theme-colored2.check-circle li:before,
+ul.list.theme-colored2.check li:before,
+.list-icon.theme-colored2 li i {
+  color: @theme-color2;
+}
+
+/* -------- border-theme-color ---------- */
+.border-theme-colored2 {
+  border-color: @theme-color2 !important;
+}
+.border-1px-theme-colored2 {
+  border: 1px solid @theme-color2;
+}
+
+/* border-left-color */
+blockquote.theme-colored2 {
+    border-left: 3px solid @theme-color2;
+}
+blockquote.bg-theme-colored2 {
+    border-left: 3px solid darken(@theme-color2, 10%);
+    color: @white-base;
+
+    footer {
+      color: @gray-lighter;
+    }
+}
+blockquote.gray.bg-theme-colored2 {
+    background-color: @gray-lighter !important;
+    border-left: 3px solid @theme-color2;
+    color: @theme-color2;
+    
+    footer {
+      color: @gray-light;
+    }
+}
+
+
+/* -------- bg-theme-color ---------- */
+.bg-theme-colored2 {
+  background-color: @theme-color2 !important;
+}
+.bg-hover-theme-colored2 {
+  &:hover {
+    background: @theme-color2 !important;
+    border-color: @theme-color2 !important;
+    color: @white-base !important;
+    
+    h1,h2,h3,h4,h5,h6,p,a,i {
+      color: @white-base !important;
+    }
+  }
+}
+.list-icon.theme-colored2.square li i,
+.list-icon.theme-colored2.rounded li i {
+  background: @theme-color2;
+}
+
+/* -------- Transparent bg Color ---------- */
+.bg-theme-colored2-transparent-9 {
+  background-color: fade(@theme-color2, 90%) !important;
+}
+.bg-theme-colored2-transparent-8 {
+  background-color: fade(@theme-color2, 80%) !important;
+}
+.bg-theme-colored2-transparent-7 {
+  background-color: fade(@theme-color2, 70%) !important;
+}
+.bg-theme-colored2-transparent-6 {
+  background-color: fade(@theme-color2, 60%) !important;
+}
+.bg-theme-colored2-transparent-5 {
+  background-color: fade(@theme-color2, 50%) !important;
+}
+.bg-theme-colored2-transparent-4 {
+  background-color: fade(@theme-color2, 40%) !important;
+}
+.bg-theme-colored2-transparent-3 {
+  background-color: fade(@theme-color2, 30%) !important;
+}
+.bg-theme-colored2-transparent-2 {
+  background-color: fade(@theme-color2, 20%) !important;
+}
+.bg-theme-colored2-transparent-1 {
+  background-color: fade(@theme-color2, 10%) !important;
+}
+.bg-theme-colored2-transparent {
+  background-color: fade(@theme-color2, 50%) !important;
+}
+
+
+
+/* -------- layer overlay Color ---------- */
+.layer-overlay {
+  /* .overlay-theme-colored2 */
+  &.overlay-theme-colored2 {
+    &::before {
+      background-color: fade(@theme-color2, 80%) !important;
+    }
+  }
+  &.overlay-theme-colored2-1 {
+    &::before {
+      background-color: fade(@theme-color2, 10%);
+    }
+  }
+  &.overlay-theme-colored2-2 {
+    &::before {
+      background-color: fade(@theme-color2, 20%);
+    }
+  }
+  &.overlay-theme-colored2-3 {
+    &::before {
+      background-color: fade(@theme-color2, 30%);
+    }
+  }
+  &.overlay-theme-colored2-4 {
+    &::before {
+      background-color: fade(@theme-color2, 40%);
+    }
+  }
+  &.overlay-theme-colored2-5 {
+    &::before {
+      background-color: fade(@theme-color2, 50%);
+    }
+  }
+  &.overlay-theme-colored2-6 {
+    &::before {
+      background-color: fade(@theme-color2, 60%);
+    }
+  }
+  &.overlay-theme-colored2-7 {
+    &::before {
+      background-color: fade(@theme-color2, 70%);
+    }
+  }
+  &.overlay-theme-colored2-8 {
+    &::before {
+      background-color: fade(@theme-color2, 80%);
+    }
+  }
+  &.overlay-theme-colored2-9 {
+    &::before {
+      background-color: fade(@theme-color2, 90%);
+    }
+  }
+}
+
+
+/*
+ * btn-default: theme-color
+ * -----------------------------------------------
+*/
+.btn-default.btn-theme-colored2 {
+  .button-variant(@theme-color2; @btn-default-bg; @theme-color2);
+}
+.btn-default.btn-theme-colored2:hover,
+.btn-default.btn-theme-colored2:active,
+.btn-default.btn-theme-colored2:focus {
+  background-color: @theme-color2;
+  border-color: @theme-color2;
+  color: @white-base;
+}
+
+
+/*
+ * btn-border
+ * -----------------------------------------------
+*/
+.btn-border.btn-theme-colored2 {
+  .button-variant(@theme-color2; @btn-border-bg; @theme-color2);
+}
+.btn-border.btn-theme-colored2:hover,
+.btn-border.btn-theme-colored2:active,
+.btn-border.btn-theme-colored2:focus {
+  background-color: darken(@theme-color2, 10%);
+  border-color: darken(@theme-color2, 10%);
+  color: @white-base;
+}
+
+
+/*
+ * btn-dark
+ * -----------------------------------------------
+*/
+.btn-dark.btn-theme-colored2 {
+  .button-variant(@btn-dark-color; @theme-color2; @theme-color2);
+}
+
+
+/*
+ * btn-gray
+ * -----------------------------------------------
+*/
+.btn-gray.btn-theme-colored2 {
+  .button-variant(@theme-color2; lighten(@theme-color2, 10%); lighten(@theme-color2, 10%));
+}
+
+/*
+ * btn-primary: theme-color
+ * -----------------------------------------------
+*/
+.btn-theme-colored2 {
+  .button-variant(@btn-primary-color; @theme-color2; @theme-color2)
+}
+
+
+.btn-hover-theme-colored2 {
+  &:hover {
+    background-color: @theme-color2;
+    border-color: @theme-color2;
+    color: @white-base;
+  }
+}
+
+/*
+ * Shortcode: styled-icons Theme Colored
+ * -----------------------------------------------
+*/
+.icon-theme-colored2 {
+  a {
+    color: @theme-color2;
+  }
+
+  &.icon-bordered {
+    a {
+      border-color: @theme-color2;
+
+      &:hover {
+        background-color: @theme-color2;
+        color: @white-base;
+      }
+    }
+  }
+
+  &.icon-dark {
+    a {
+      background-color: @theme-color2;
+      color: @white-base;
+
+      &:hover {
+        background-color: darken(@theme-color2, 10%);
+        color: darken(@theme-color2, 10%);
+      }
+    }
+
+    &.icon-bordered {
+      a {
+        border-color: @theme-color2;
+        color: @theme-color2;
+
+        &:hover {
+          background-color: @theme-color2;
+          border-color: @theme-color2;
+          color: @white-base;
+        }
+      }
+    }
+  }
+
+  &.icon-gray {
+    a {
+      color: @theme-color2;
+
+      &:hover {
+        color: darken(@theme-color2, 10%);
+      }
+    }
+
+    &.icon-bordered {
+      a {
+        color: @theme-color2;
+
+        &:hover {
+          background-color: @gray-lighter;
+          border-color: @gray-lighter;
+          color: @theme-color2;
+        }
+      }
+    }
+  }
+}
+
+.icon-theme-colored2 {
+  a {
+    &:hover {
+      color: darken(@theme-color2, 10%);
+    }
+  }  
+}
+
+.icon-hover-theme-colored2 {
+  a {
+    &:hover {
+      background-color: @theme-color2;
+      border-color: @theme-color2;
+      color: @white-base;
+    }
+  }  
+}
+
+.styled-icons.icon-hover-theme-colored2 {
+  a {
+    &:hover {
+      background-color: @theme-color2;
+      border-color: @theme-color2;
+      color: @white-base;
+    }
+  }  
+}
+
+/*
+ * Shortcode: Icon Boxes Theme Colored
+ * -----------------------------------------------
+*/
+.icon-box{
+  &.iconbox-theme-colored2 {
+    .icon {
+      color: @theme-color2;
+
+      &.icon-border-effect {
+        &::after {
+          box-shadow: 0 0 0 3px @theme-color2;
+        }
+      }
+
+      &.icon-bordered {
+        border-color: @theme-color2;
+
+        &:hover {
+          background-color: @theme-color2;
+          color: @white-base;
+        }
+      }
+
+      &.icon-gray {
+        &:hover {
+          background-color: @theme-color2;
+          color: @white-base;
+        }
+
+        &.icon-bordered {
+          border-color: @gray-lighter;
+
+          &:hover {
+            background-color: @theme-color2;
+            border-color: @theme-color2;
+            color: @white-base;
+          }
+        }
+      }
+
+      &.icon-dark {
+        background-color: @theme-color2;
+        color: @white-base;
+
+        &:hover {
+          color: @white-base;
+        }
+
+        &.icon-bordered {
+          background-color: transparent;
+          border-color: @theme-color2;
+          color: @theme-color2;
+
+          &:hover {
+            background-color: @theme-color2;
+            border-color: @theme-color2;
+            color: @white-base;
+          }
+        }
+      }
+
+
+
+      &.icon-white {
+        background-color: @white-base;
+        color: @theme-color2;
+
+        &:hover {
+          background-color: @theme-color2;
+          color: @white-base;
+        }
+
+        &.icon-bordered {
+          background-color: transparent;
+          border-color: @theme-color2;
+          color: @white-base;
+
+          &:hover {
+            background-color: @theme-color2;
+            border-color: @theme-color2;
+            color: @white-base;
+          }
+        }
+      }
+    }
+
+    &.iconbox-border {
+      border-color: @theme-color2;
+    }
+  }
+}
+
+
+
+/*
+ *  accordion.less
+ * -----------------------------------------------
+*/
+.accordion-theme-colored2 {
+  .panel-default > .panel-heading {
+    background-color:@theme-color2;
+    .panel-title > a,
+    .panel-title > a:hover,
+    .panel-title > a:focus {
+      color: #fff;
+    }
+  }
+}
+.panel-group {
+  &.accordion-icon-filled {
+    &.accordion-icon-left {
+      &.accordion-icon-filled-theme-colored2 {
+        .panel-heading {
+          .panel-title {
+            a {
+              &:before {
+                background-color:@theme-color2;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.accordion-icon-right {
+      &.accordion-icon-filled-theme-colored2 {
+        .panel-heading {
+          .panel-title {
+            a {
+              &:after {
+                background-color:@theme-color2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

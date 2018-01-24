@@ -1,0 +1,164 @@
+/*
+ * common.less
+ * -----------------------------------------------
+*/
+.header-nav .nav-lg .menuzord .menuzord-menu > li {
+  padding: 28px 0;
+}
+.header-nav .nav-lg .menuzord .menuzord-menu ul.dropdown {
+  top: 90px;
+}
+.header-nav .nav-lg .menuzord .menuzord-menu ul.dropdown li ul.dropdown {
+  top: auto;
+}
+.read-more {
+  position: relative;
+}
+.read-more::after {
+  content: "\f054";
+  font-family: fontawesome;
+  font-size: 11px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.read-more:hover::after {
+  margin-left: 8px;
+  .transition(all 200ms ease-in-out 0s);
+}
+input.input-circled {
+  border-radius: 40px;
+}
+.mfp-close-btn-in .mfp-close {
+  right: 5px;
+  top: 5px;
+}
+.portfolio-filter a {
+  color: @black-333;
+}
+.play-btn {
+  border-radius: 50%;
+  font-size: 72px;
+  height: 56px;
+  line-height: 56px;
+  transition: all 100ms ease-in-out 0s;
+  width: 56px;
+}
+.vertical-align-middle {
+  vertical-align: middle;
+}
+.call-to-action {
+  display: inline-flex;
+}
+.header-search {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 18px;
+}
+.search-menu {
+  border-radius: 4px;
+  display: block;
+  height: 36px;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  width: 36px;
+}
+.search {
+  border: medium none;
+  box-shadow: none;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 71px;
+  width: auto;
+  z-index: 9999;
+}
+.search-menu i.search {
+  font-size: 16px;
+  color: #ffffff;
+  height: inherit;
+  line-height: 36px;
+  margin: 0;
+  position: static;
+  width: inherit;
+}
+.search .search-form {
+  transform: scaleY(0);
+  transition: all 150ms ease-in-out 0s;
+}
+.search.open .search-form {
+  transform: scaleY(1);
+}
+.search .search-form input[type="text"] {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  color: @black-666;
+  font-size: 14px;
+  font-weight: 300;
+  height: 49px;
+  padding: 0 50px 0 40px;
+  width: 100%;
+}
+.search .search-form button[type="submit"] {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  display: block;
+  font-size: 18px;
+  height: 50px;
+  left: 0;
+  line-height: 48px;
+  padding: 0 15px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all 0.3s ease 0s;
+}
+.header.header-floating .header-nav .header-nav-wrapper {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+}
+.header.header-floating.header-floating-text-dark .sticky-wrapper:not(.is-sticky) .header-nav.navbar-sticky .menuzord-menu > li:not(.active):not(:hover) > a {
+  color: #fff;
+}
+.header.header-floating .sticky-wrapper.is-sticky .header-nav.navbar-sticky .header-nav-wrapper {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.hover-effect-box-shadow {
+  .transition(all 120ms ease-in-out 0s);
+}
+.hover-effect-box-shadow:hover {
+  box-shadow: 3px 4px 14px 0 #ccc;
+}
+.subscribe-newsletter {
+  background-image: url("../images/bg/bg11.jpg");
+  background-size: cover;
+  padding: 290px 100px 45px;
+}
+.newsletter-form {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+	.subscribe-newsletter {
+	  padding: 215px 100px 30px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.subscribe-newsletter p {
+	  display: none;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+	.subscribe-newsletter {
+	  padding: 100px 90px 25px;
+	}
+}

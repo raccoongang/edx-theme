@@ -1,0 +1,57 @@
+/*
+ * footer.less
+ * -----------------------------------------------
+*/
+.footer {
+	 a {
+		color: @gray-base;
+		&:focus,
+		&:hover,
+		&:active {
+			color: @gray-dimgray;
+		}
+	}
+
+	.widget {
+		.widget-title {
+			margin-top: 0px;
+		}
+	}
+
+	.widget.dark {
+		.quick-contact-form {
+			button {
+				border-color: @black-333;
+				color: lighten(@black, 56.30%);
+
+				&:hover {
+					background-color: @gray-lighter;
+					border-color: @gray-lighter;
+					color: @black-333;
+				}
+			}
+		}
+	}
+}
+
+/* fixed footer */
+footer#footer {
+	&.fixed-footer {
+	    bottom: 0;
+	    left: 0;
+	    position: fixed;
+	    right: 0;
+	    z-index: 1;
+		@media screen and (max-width:992px) {
+			position: relative;
+		}	
+	}
+}
+body.has-fixed-footer .main-content {
+	background-color: #fff;
+    position: relative;
+    z-index: 2;
+	@media screen and (max-width:992px) {
+		margin-bottom: 0 !important;
+	}	
+}

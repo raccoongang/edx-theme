@@ -1,0 +1,53 @@
+/*
+ * features.less
+ * -----------------------------------------------
+*/
+
+.feature-icon {
+  float: left;
+}
+.feature-icon > img {
+  width: 65px;
+}
+.feature-title {
+  padding-left: 90px;
+  text-align: left;
+}
+.feature-box {
+  width: 265px;
+}
+.feature-box:hover .feature-icon {
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-name: bounce;
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.feature-box {
+		width: 100%;
+	}
+}
+.features-box-colored {
+  position: relative;
+}
+.features-box-colored .shadow-icon i {
+  bottom: -28px;
+  color: #fff;
+  font-size: 72px;
+  left: 0;
+  opacity: 0.1;
+  position: absolute;
+  right: 0;
+  top: 70%;
+  .transition(all 300ms ease-in-out 0s);
+}
+.features-box-colored:hover .shadow-icon i {
+  font-size: 95px;
+}
+.icon-box.hover-effect {
+  .transition(all 120ms ease-in-out 0s);
+}
+.icon-box.hover-effect:hover {
+  box-shadow: 3px 4px 14px 0 #ccc;
+  margin-top: -10px;
+}

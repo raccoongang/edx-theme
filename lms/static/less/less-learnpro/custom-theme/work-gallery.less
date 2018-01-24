@@ -1,0 +1,76 @@
+/*
+ * work-gallery.less
+ * -----------------------------------------------
+*/
+
+.work-gallery {
+  margin: 0 auto 30px;
+  max-width: 400px;
+}
+.work-gallery .gallery-thumb {
+  overflow: hidden;
+  position: relative;
+}
+.work-gallery .gallery-bottom-part {
+  background-color: @white-f7;
+  padding: 10px 10px 16px;
+}
+.work-gallery .gallery-thumb .gallery-overlay {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  .scale(0.2);
+  .transition(all 300ms ease-in-out 0s);
+  width: 100%;
+}
+.work-gallery:hover .gallery-thumb .gallery-overlay {
+  opacity: 1;
+  .scale(1);
+}
+.gallery-contect {
+  height: 100%;
+  opacity: 0;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  .scale(0.2);
+  .transition(all 100ms ease-in-out 0s);
+  width: 100%;
+}
+.work-gallery:hover .gallery-thumb .gallery-contect {
+  opacity: 1;
+  .scale(1);
+}
+.work-gallery .gallery-thumb .styled-icons a {
+  border-color: @white-base;
+  height: 36px;
+  width: 36px;
+  line-height: 34px;
+}
+.work-gallery .gallery-thumb .styled-icons a i {
+  color: @white-base;
+}
+.work-gallery .gallery-thumb .styled-icons a:hover i {
+  color: @white-base;
+}
+.work-gallery .gallery-thumb .styled-icons a:hover {
+  color: @white-base;
+  .transition(all 100ms ease-in-out 0s);
+}
+.work-gallery .gallery-thumb .gallery-contect .styled-icons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 45%;
+}
+.work-gallery:hover .gallery-bottom-part {
+  .transition(all 300ms ease-in-out 0s);
+}
+.work-gallery:hover .gallery-bottom-part .title {
+  color: @white-base;
+}
+.work-gallery:hover .gallery-bottom-part .sub-title {
+  color: @white-base;
+}

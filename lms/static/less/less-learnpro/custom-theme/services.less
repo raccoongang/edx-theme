@@ -1,0 +1,77 @@
+/*
+ * services.less
+ * -----------------------------------------------
+*/
+.rotated-service-box {    
+  position: relative;
+  .icon {
+    background-color: @gray-lightgray;
+    display: inline-block;
+    height: 90px;
+    left: 0;
+    margin: 0 auto;
+    padding: 30px;    
+    position: absolute;
+    right: 0;
+    top: -45px;
+    .rotate(45deg);
+    width: 90px;
+
+    i {
+      color: @white-base;
+      font-size: 32px;
+      .rotate(-45deg);
+    }
+
+  }
+
+  .heading  {
+	  .transition(all .2s ease-in-out);
+  }
+}
+.services-list li {
+	border: medium none;
+	padding: 0 !important;
+}
+.services-list li.active {
+	position: relative;
+	padding-left: 30px;
+}
+.services-list ul li a {
+	background: #f8f8f8 none repeat scroll 0 0;
+	border: 1px solid #f1f1f1;
+	color: @black-111;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 20px 45px;
+	width: 100%;
+	.transition(all 50ms ease);
+}
+.services-list li.active a {
+	border: 1px solid transparent;
+	color: @white-base;
+	font-weight: 600;
+}
+.services-list li.active::after {
+	color: @white-base;
+	content: "\e686";
+	font-family: "Pe-icon-7-stroke";
+	font-size: 35px;
+	right: 10px;
+	position: absolute;
+	top: 5px;
+}
+.brochured li a {
+      background: #f8f8f8 none repeat scroll 0 0;
+      border: 1px solid #f1f1f1;
+      display: inline-block;
+      padding: 16px 30px;
+      width: 100%;
+    .transition(all .1s ease) !important;
+}
+.brochured li a i {
+    font-size: 18px;
+    margin-right: 12px;
+    vertical-align: middle;
+}

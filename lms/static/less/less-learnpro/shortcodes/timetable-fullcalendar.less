@@ -1,0 +1,196 @@
+/*
+ * Shortcode: timetable-fullcalendar.less
+ * -----------------------------------------------
+*/
+.fc-timetable-wrapper {
+
+	.fc-scroller {
+	  height: auto;
+	  overflow: hidden;
+	}
+
+	.fc-toolbar {
+		display: none;
+		height: 38px;
+		margin-bottom: 20px;
+		h2 {
+			color: #7f7f7f;
+			font-family: 'Lato', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 38px;
+			text-transform: uppercase;
+		}
+		.fc-button {
+			-moz-box-sizing:border-box;
+			-moz-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			-webkit-box-sizing:border-box;
+			-webkit-transition: all 0.3s ease;
+			background: #ffffff;
+			border: 1px solid #e5e5e5;
+			box-shadow: none;
+			box-sizing: border-box;
+			height: 38px;
+			line-height: 36px;
+			transition: all 0.3s ease;
+			width: 40px;
+			&:hover {
+				background: #5fc7ae;
+				border-color: #5fc7ae;
+				.fc-icon.fc-icon-left-single-arrow {
+					background-position: -108px -50px;
+				}
+				.fc-icon.fc-icon-right-single-arrow {
+					background-position: -115px -50px;
+				}
+			}
+			.fc-icon {
+				height: 11px;
+				top: -1px;
+				width: 6px;
+				&:after {
+					display: none;
+				}
+			}
+			.fc-icon.fc-icon-left-single-arrow {
+				background-position: -100px -50px;
+			}
+			.fc-icon.fc-icon-right-single-arrow {
+				background-position: -122px -50px;
+			}
+		}
+	}
+
+	.fc-day-header {
+		background: #ffffff;
+		color: #7f7f7f;
+		font-family: 'Lato', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 52px;
+	}
+	.fc-time-grid {
+		.fc-day.fc-widget-content {
+			background: #ffffff;
+		}
+	}
+	.fc-axis {
+		background: #ffffff;
+	}
+	.filter-departments {
+		margin-bottom: 20px;
+		li {
+			margin-bottom: 20px;
+		}
+		a {
+			background: #eeeeee;
+			border-color: #eeeeee;
+			border-radius: 5px;
+			color: #333333;
+			padding: 5px;
+			padding: 7px 15px;
+		}
+		.active {
+			background: #888888;
+			border-color: #888888;
+			color: #ffffff;
+		}
+		.fc-departments-orthopaedics {
+			background: #72a230;
+			border-color: #72a230;
+		}
+		.fc-departments-cardiology {
+			background: #ffab00;
+			border-color: #ffab00;
+		}
+		.fc-departments-neurology {
+			background: #fd4084;
+			border-color: #fd4084;
+		}
+		.fc-departments-dental {
+			background: #00a4ef;
+			border-color: #00a4ef;
+		}
+		.fc-departments-haematology {
+			background: #80acdd;
+			border-color: #80acdd;
+		}
+	}
+	.fc-event {
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		border-radius: 0;
+		border: 0;
+		border: 2px solid #5fc7ae;
+		color: #ffffff;
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		transition: all 0.3s ease;
+		.fc-bg {
+			opacity: 0;
+		}
+		.fc-content {
+			padding-left: 10px;
+			padding-top: 10px;
+			div.fc-time {
+				display: none;
+			}
+		}
+	}
+	.fc-event.hide {
+		opacity: 0;
+		z-index: -2;
+	}
+	.fc-event.fc-departments-orthopaedics {
+		background: #72a230;
+		border-color: #72a230;
+	}
+	.fc-event.fc-departments-cardiology {
+		background: #ffab00;
+		border-color: #ffab00;
+	}
+	.fc-event.fc-departments-neurology {
+		background: #fd4084;
+		border-color: #fd4084;
+	}
+	.fc-event.fc-departments-dental {
+		background: #00a4ef;
+		border-color: #00a4ef;
+	}
+	.fc-event.fc-departments-haematology {
+		background: #80acdd;
+		border-color: #80acdd;
+	}
+	td.fc-time {
+		color: #7f7f7f;
+		font-family: 'Lato', sans-serif;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 70px;
+		text-align: center;
+	}
+	.fc-time-grid-container {
+		height: auto;
+	}
+	.fc-content-skeleton {
+		.fc-event-container {
+			margin: 0;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.fc-day-header {
+		  font-size: 10px;
+		}
+		.fc-time-grid-event .fc-time, .fc-time-grid-event .fc-title {
+		  font-size: 12px;
+		}
+		.fc-event .fc-content {
+		  padding-left: 0;
+		  padding-top: 0;
+		}
+	}
+}

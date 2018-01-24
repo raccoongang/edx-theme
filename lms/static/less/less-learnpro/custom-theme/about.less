@@ -1,0 +1,130 @@
+/*
+ * about.less
+ * -----------------------------------------------
+*/
+.top-course-thumb {
+  position: relative;
+}
+.top-course-thumb::after {
+  background: #000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  .transition(all 200ms ease-in-out 0s);
+  width: 100%;
+}
+.top-course-thumb:hover::after {
+  opacity: 0.8;
+  border: 8px solid rgba(255, 255, 255, 0.15);
+}
+.top-course-thumb .desc-box {
+  left: 0;
+  margin: -15px auto;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  top: 30px;
+}
+.top-course-thumb .desc-box .title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  left: 0;
+  margin: -15px auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 35%;
+  z-index: 1;
+}
+.top-course-thumb .desc-box .off {
+  font-size: 42px;
+  font-weight: 600;
+  left: 0;
+  margin: -15px auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 45%;
+  z-index: 1;
+}
+.top-course-thumb .desc-box .signup {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  left: 0;
+  margin: -15px auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: underline;
+  top: 64%;
+  z-index: 1;
+}
+/* Individual effect = play button */
+.about-video {
+	.thumb {
+		.scale(1);
+	}
+
+	&:hover .thumb {
+		.scale(1) !important;
+	}
+
+	/* Text Holder */
+	.text-holder {
+		opacity: 1;
+	}
+	.text-holder-middle {
+		top: 34%;
+		.scale(1);
+	}
+	&:hover .text-holder-middle {
+		top: 34%;
+		.scale(1.2);
+	}
+
+	.video-button {
+		z-index: 11;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: rgba(255, 255, 255, 0.8);
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+		.transition(all 200ms ease);
+	}
+	.video-button:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 0;
+		height: 0;
+		border-top: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 10px solid #666;
+		-webkit-transform: translate(-15%, -50%);
+		transform: translate(-15%, -50%);
+		.transition(all 200ms ease);
+	}
+	&:hover .video-button {
+	    width: 65px;
+	    height: 65px;
+	    box-shadow: 1px 1px 20px rgba(0, 0, 0, .3)
+	}
+	&:hover .video-button:before {
+	    border-left: 10px solid #fff;
+	}
+}

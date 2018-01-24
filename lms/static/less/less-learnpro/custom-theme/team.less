@@ -1,0 +1,69 @@
+/*
+ * team.less
+ * -----------------------------------------------
+*/
+.team-members {
+  overflow: hidden;
+  position: relative;
+  .team-details {
+      background: #fff none repeat scroll 0 0;
+      bottom: -100px;
+      padding: 10px 15px;
+      position: absolute;
+      transition: all 300ms ease-in-out 0s;
+      width: 100%;
+    }
+    &:hover .team-details {
+      bottom: 0;
+    }
+}
+.team-social {
+  opacity: 0;
+  padding: 14px 0;
+  position: absolute;
+  right: 0;
+  top: -140px;
+  transition: all 300ms ease-in-out 0s;
+}
+.team-social li {
+  display: block;
+}
+.team-members:hover .team-social {
+  opacity: 1;
+  top: 0;
+}
+.team-members .team-social li a {
+  margin: 0;
+}
+.team-social li a i {
+  color: #fff;
+}
+.team-social li a:hover i {
+  color: #212331;
+}
+@media only screen and (max-width : 1199px) {
+	.team-members .team-details {
+	bottom: -45px;
+	}
+	.team-members:hover .team-details {
+	  bottom: -18px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	.team-members .team-details {
+	  bottom: -100px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.team-members .team-details {
+	  bottom: -75px;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+	.team-members .team-details {
+	  bottom: -98px;
+	}
+}

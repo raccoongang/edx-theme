@@ -1,0 +1,123 @@
+/*
+ * event.less
+ * -----------------------------------------------
+*/
+.event {
+	background: @white-f6;
+	border: 1px solid transparent;
+	.transition(all .4s ease 0s);
+}
+.event:hover {
+	background: @white-fa;
+}
+.event .event-content .media-heading a {
+	.transition(all 0.4s ease 0s);
+}
+.event .event-content ul li {
+	font-size: 12px;
+	line-height: 1;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.event .event-date ul li {
+	line-height: 1;
+}
+.event .event-date ul li:first-child {
+	margin-bottom: 10px;
+}
+
+/* -------- Schedule-Box Style ---------- */
+.schedule-box {
+	.thumb {
+		position: relative;
+		overflow-x: hidden;
+
+		.overlay {
+			background-color: rgba(255, 255, 255, 0.85);
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			.transition(0.3s ease-in-out 0s);
+			top: -100%;
+
+			a i {
+				background-color: #333;
+				color: #fff;
+				margin: 0 auto;
+				padding: 13px 12px;
+				position: absolute;
+				text-align: center;
+				.transition(all 0.45s ease-in-out 0s);
+				top: 0;
+			}
+		}
+	}
+	.schedule-details {
+		border-bottom: 1px solid #bbb;
+		ul li {
+			margin: 0;
+		}
+		.title a {
+			.transition(all 0.3s ease-in-out 0s);
+		}
+	}
+	&:hover .thumb .overlay {
+		opacity: 1;
+		top: 0;
+
+		a i {
+			opacity: 1;
+			top: 40%;
+		}
+	}
+}
+
+/* -------- Event-Table ---------- */
+.table-schedule {
+	thead tr th {
+		color: #fff;
+		font-size: 16px;
+		padding: 15px 25px;
+		text-transform: uppercase;
+	}
+	> tbody > tr {
+		background-color: #fcfcfc;
+		&:nth-child(2n+1) {
+			background-color: #f9f9f9;
+		}
+	}
+	tbody tr td {
+		border-top: 1px solid #ddd;
+		color: #333;
+		font-weight: 300;
+		padding: 15px 25px;
+		
+		.speaker-thumb {
+			float: left;
+			margin-right: 15px;
+			margin-top: 5px;
+			width: 55px;
+		}
+		.title {
+			font-size: 15px;
+			margin-bottom: 0;
+			margin-top: 3px;
+		}
+		.name {
+			font-size: 13px;
+			margin: 0;
+		}
+		strong {
+			font-weight: 700;
+		}
+	}
+	.toggle-content {
+		cursor: pointer;
+	}
+	.session-details {
+		display: none;
+	}
+}

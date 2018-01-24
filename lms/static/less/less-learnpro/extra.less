@@ -1,0 +1,46 @@
+/*  
+ * extra.less 
+ * -----------------------------------------------
+*/
+
+/* -------- Heading Style ---------- */
+.heading-border {
+  border-bottom: 1px solid @gray-lightgray;
+  margin: 30px 0;
+  padding: 20px 0;
+}
+
+/* -------- FullCalendar - Plugin ---------- */
+.fc-day-number {
+  color: @black-333;
+  
+  &.fc-other-month {
+    opacity: 0.4;
+  }
+}
+/* scrolltofixed-container */
+.scrolltofixed-container {
+  position: static;
+}
+@media only screen and (max-width: 767px) {
+  .scrolltofixed-container .scrolltofixed {
+    position: static !important;
+  }
+  .scrolltofixed-container .scrolltofixed + div {
+    display: none !important;
+  }
+}
+/* slider revolution */
+.tp-bannertimer {
+  z-index: 21;
+}
+.mfp-close-btn-in .mfp-close {
+  color: #fff;
+  font-size: 48px;
+}
+.mfp-bg {
+  z-index: 1112;
+}
+.mfp-wrap {
+  z-index: 1113;
+}
