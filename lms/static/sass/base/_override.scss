@@ -1625,3 +1625,103 @@ section.wiki .table.table-striped {
 #main {
     max-width: 100%;
 }
+
+//responsive for dashboard page
+.dashboard {
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    &-search-bar {
+        float: none;
+        width: auto;
+        @media screen and (min-width: 1000px) {
+            float: right;
+            width: 23.23176%;
+        }
+    }
+    .my-courses {
+        float: none;
+        width: auto;
+        margin-bottom: 0;
+        @media screen and (min-width: 1000px) {
+            float: letf;
+            width: 74.41059%;
+            margin-bottom: 40px;
+        }
+        .course {
+            .details {
+                .wrapper-course {
+                    &-image {
+                        float: none;
+                        width: 100%;
+                        margin: 0 0 10px;
+                        @media screen and (min-width: 760px) {
+                            float: left;
+                            margin: 0 2.35765% 0 0;
+                            width: 23.23176%; 
+                        }
+                        .cover {
+                            float: none;
+                            display: block;
+                            max-height: initial;
+                            @media screen and (min-width: 760px) {
+                                float: left;
+                                max-height: 120px;
+                            }
+                        }
+                    }
+                    &-details {
+                        float: none;
+                        width: initial;
+                        @media screen and (min-width: 760px) {
+                            float: left;
+                            width: 74.41059%;
+                        }
+                    }
+                    &-actions {
+                        width: initial;
+                        @media screen and (min-width: 760px) {
+                            width: 65.88078%;
+                        }
+                    }
+                }
+                .course {
+                    &-title {
+                        a {
+                            font-size: 1.2em;
+                            line-height: 1.2;
+                            @media screen and (min-width: 760px) {
+                                font-size: 36px;
+                                line-height: 53.28px;
+                            }
+                        }
+                    }
+                    &-info {
+                        float: none;
+                        width: 100%;
+                        @media screen and (min-width: 760px) {
+                            float: left;
+                            width: 31.76157%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-search-results {
+        min-height: initial;
+        @media screen and (min-width: 760px) {
+            min-height: 300px;
+        }
+    }
+}
+
+body {
+    .container {
+        .dashboard-search-bar {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+//end responsive for dashboard page
