@@ -48,13 +48,7 @@ site_status_msg = get_site_status_msg(course_id)
     </div>
     % endif
   </%block>
-  <script>
-    function goToPage(url) {
-      if (url != "") {
-        window.open(url);
-      }
-    }
-  </script> 
+  
   % if uses_bootstrap:
   <header class="navigation-container header-global">
     <nav class="navbar navbar-toggleable-md navbar-light">
@@ -65,30 +59,6 @@ site_status_msg = get_site_status_msg(course_id)
       <%include file="bootstrap/navbar-logo-header.html" args="online_help_token=online_help_token"/>
       ## Course filtering
 
-      % if settings.FEATURES.get('COUNTRY_FILTER', False):
-      <li class="nav-global-02">
-        <form action="" method="get">
-          <select name="country" onchange="goToPage(this.options(this.selectedIndex).value)"> 
-            <option value="">all courses</option>
-            <option value="https://ireland.learn.camara.org">
-              Ireland
-            </option>
-            <option value="https://tanzania.learn.camara.org">
-              Tanzania
-            </option>
-            <option value="https://ethiopia.learn.camara.org">
-              Ethiopia
-            </option>
-            <option value="https://kenya.learn.camara.org">
-              Kenya
-            </option>
-            <option value="https://zambia.learn.camara.org">
-              Zambia
-            </option>
-          </select>
-        </form>
-      </li>
-      % endif
 
       ## ------------------------
 
@@ -111,32 +81,7 @@ site_status_msg = get_site_status_msg(course_id)
           % endif
           ## Course filtering
     
-          % if settings.FEATURES.get('COUNTRY_FILTER', False):
-          <ol class="user-filter">
-            <li class="nav-global-02">
-                <form action="" method="get">
-                  <select name="country" onchange="goToPage(this.options[this.selectedIndex].value)">
-                    <option value="">all courses</option>
-                    <option value="https://ireland.learn.camara.org">
-                      Ireland
-                    </option>
-                    <option value="https://tanzania.learn.camara.org">
-                      Tanzania
-                    </option>
-                    <option value="https://ethiopia.learn.camara.org">
-                      Ethiopia
-                    </option>
-                    <option value="https://kenya.learn.camara.org">
-                      Kenya
-                    </option>
-                    <option value="https://zambia.learn.camara.org">
-                      Zambia
-                    </option>
-                  </select>
-                </form>
-              </li>
-          </ol>
-          % endif
+        
     </nav>
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
     </div>
