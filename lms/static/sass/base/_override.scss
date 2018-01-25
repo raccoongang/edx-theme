@@ -29,7 +29,7 @@ body {
     .header-global {
         height: auto !important;
         box-shadow: none;
-        border-bottom: 5px solid #00A3E0;
+        border-bottom: 5px solid #FFC627;
     }
 
     .header-global .wrapper-header {
@@ -98,7 +98,7 @@ body {
     }
 
     .header-global .user .user-link .label-username {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .header-global .user .user-link .label-username,
@@ -180,8 +180,9 @@ body {
 
         &:hover,
         .course-info header.course-profile .intro-inner-wrapper .intro .main-cta > a.find-courses:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
-            background: lighten(#00A3E0, 20%);
+            background: lighten(#00A3E0, 20%) !important;
             color: #fff;
+            box-shadow: none;
         }
     }
 
@@ -337,6 +338,9 @@ body {
     }
     .dashboard .my-courses .wrapper-header-courses {
         border-bottom: 1px solid rgb(211,211,211);
+    }
+    .user-image-frame {
+        max-width: 30px;
     }
 }
 
