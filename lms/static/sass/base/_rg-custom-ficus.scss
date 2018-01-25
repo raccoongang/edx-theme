@@ -131,6 +131,7 @@ body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
 
 .footer-logo-holder img {
     max-width: 150px;
+    width: 100%;
 }
 
 // Footer logo styles
@@ -141,6 +142,9 @@ body .footer-logo-holder {
     left: 30px;
     img {
         width: 150px;
+        width: 100%;
+        max-height: 100px;
+        height: 100px;
     }
     @include sm {
         position: relative;
@@ -150,7 +154,12 @@ body .footer-logo-holder {
         display: block;
     }
 }
-
+html body.ltr.lang_en div.window-wrap header#global-navigation.header-global nav.wrapper-header div.nav-holder ol.left.list-inline.nav-global li.item a.btn {
+    background: none;
+    &:hover {
+        color: $theme-link-hover;
+    }
+}
 body .header-global .nav-global {
     margin-top: 20px;
 }
@@ -366,8 +375,22 @@ body .content-wrapper .container {
     }
 }
 
+// header logo size and position
+.header-global h1.logo {
+    max-width: 150px;
+    margin: 8px 39px 0 0;
+}
 
+.header-global h1.logo svg,
+.header-global h1.logo img {
+    width: 150px;
+    
+}
 
+body .search-btn {
+    color: $theme-btn-white-text-color;
+    border-color: $theme-btn-white-border;
+}
 
 
 
