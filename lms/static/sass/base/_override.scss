@@ -408,3 +408,156 @@ div.book-wrapper {
     text-shadow: 0 1px rgba(255,255,255,0.6);
     line-height: 1.3;
 }
+//rewrite for search
+//index page
+.wrapper_index-page .find-courses .courses-container .courses:not(.no-course-discovery),
+.wrapper_index-page .find-courses .wrapper-search-context .search-status-label{
+    order: 2;
+}
+.wrapper_index-page .find-courses .search-facets.phone-menu,
+.wrapper_index-page .find-courses .wrapper-search-context .wrapper-search-input {
+    order: 1;
+}
+.course__help-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.wrapper_index-page .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item {
+    margin: 0 0 30px 2.8%;
+    width: 31%;
+}
+.wrapper_index-page .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(3n+1) {
+    margin-left: 1.4%;
+}
+//end index page
+//rewrite elements
+.find-courses .wrapper-search-context:after {
+    display: none;
+}
+.find-courses .wrapper-search-context .search-status-label {
+    margin: 0;
+    width: auto;
+}
+.find-courses .wrapper-search-context {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b2b2b2;
+    padding: 0 0 20px;
+}
+.find-courses .wrapper-search-context .search-status-label {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #5d5d5d;
+    min-height: 0;
+    line-height: 1.3;
+}
+.find-courses .discovery-input {
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #f3a100;
+    border-radius: 3px;
+    width: 295px;
+    line-height: 1.3;
+}
+.find-courses .discovery-submit {
+    height: 40px;
+    border-color: transparent;
+    background: transparent;
+    color: #bdbdbd;
+    font-size: 20px;
+    padding: 0 10px;
+    line-height: 1.3;
+}
+.find-courses .wrapper-search-context .wrapper-search-input {
+    width: 295px;
+}
+.find-courses .filters {
+    margin-top: -1px;
+    margin-bottom: 19px;
+}
+.find-courses .filters li {
+    margin: 10px 10px 10px 0;
+    background: #f4a000;
+    padding: 9px 15px;
+}
+.find-courses .filters li .facet-option {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.3;
+}
+.find-courses .filters .clear-filters {
+    color: #6c6c6c;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+}
+.find-courses .filters .filters-inner {
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.find-courses .filters .filters-inner:after {
+    display: none;
+}
+.find-courses .courses-container .courses:not(.no-course-discovery) {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.find-courses .search-facets.phone-menu {
+    margin: 0;
+    width: 295px;
+    min-width: 295px;
+    max-width: 295px;
+    border-top: 5px solid #f39f00;
+    border-bottom: 5px solid #f39f00;
+}
+.find-courses .courses-container .courses .courses-listing .courses-listing-item {
+    margin: 0 0 30px;
+}
+.find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item {
+    margin: 0 2.8% 30px 0;
+    width: 31%;
+}
+.find-courses .courses .course a {
+    background: #fff;
+}
+.find-courses .search-facets .header-search-facets,
+.find-courses .search-facets .header-facet {
+    color: #6f6f6f;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.find-courses .search-facets .header-search-facets {
+    font-size: 15px;
+}
+.find-courses .search-facets .header-facet {
+    border-color: #f3a100;
+    line-height: 1.3;
+    padding-bottom: 0;
+}
+.find-courses .search-facets .facet-option {
+    padding: 0 10px;
+}
+.find-courses .search-facets .facet-option.selected {
+    background: #f3a100;
+    color: #fff;
+}
+.find-courses .search-facets .facet-option.selected .count .count-number {
+    display: block;
+    color: #fff;
+}
+.find-courses .search-facets .facet-option.selected .count:before,
+.find-courses .search-facets .facet-option.selected:hover .count:before,
+.find-courses .search-facets .facet-option.selected:focus .count:before {
+    display: none;
+}
+.find-courses .search-facets .facet-list li {
+    height: 20px;
+    overflow: hidden;
+}
+//end rewrite elements

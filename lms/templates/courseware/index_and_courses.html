@@ -83,7 +83,7 @@
       <section class="courses-container">
         % if course_discovery_enabled:
         <div id="discovery-form" role="search" aria-label="course" class="wrapper-search-context">
-          <div id="discovery-message" class="search-status-label"></div>
+          <div class="search-status-label">our courses</div>
           <form class="wrapper-search-input">
             <label for="discovery-input" class="sr">${_('Search for a course')}</label>
             <input id="discovery-input" class="discovery-input" placeholder="${_('Search for a course')}" type="text"/>
@@ -102,26 +102,26 @@
         <div id="filter-bar" class="filters hide-phone is-collapsed">
         </div>
         % endif
+        <div class="course__help-wrapper">
+          <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
+            <ul class="courses-listing">
+              %for course in courses:
+              <li class="courses-listing-item">
+                <%include file="../course.html" args="course=course" />
+              </li>
+              %endfor
+            </ul>
+          </div>
 
-        <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-          <ul class="courses-listing">
-            %for course in courses:
-            <li class="courses-listing-item">
-              <%include file="../course.html" args="course=course" />
-            </li>
-            %endfor
-          </ul>
+
+          % if course_discovery_enabled:
+          <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
+            <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
+            <section class="search-facets-lists">
+            </section>
+          </aside>
+          % endif
         </div>
-
-
-        % if course_discovery_enabled:
-        <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
-          <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
-          <section class="search-facets-lists">
-          </section>
-        </aside>
-        % endif
-
       </section>
     </section>
 </main>
