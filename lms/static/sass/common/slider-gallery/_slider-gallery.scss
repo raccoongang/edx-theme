@@ -20,11 +20,15 @@
         transition: 0.3s;
         min-height: 100%;
         position: relative;
-        border-radius: 12px;
         overflow: hidden;
+        border-radius: 12px;
         //box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
         @media (max-width: $tablet-size) {
             min-height: 350px;
+        }
+        @media (max-width: $mobile-size) {
+            margin: 0;
+            border-radius: 0;
         }
     }
     .slick-dots li {
@@ -122,7 +126,7 @@
             background-image: url('../images/main-slide02.jpg');
         }
         &_slide-3 {
-            background-image: url('../images/main-slide03.png');
+            background-image: url('../images/main-slide03.jpg');
         }
     }
 
