@@ -532,12 +532,15 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 }
 
 .intro__text {
-    color: #fff;
+    color: #000;
     font-size: 18px;
     line-height: 27px;
     font-style: italic;
     font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
     margin-bottom: 16px;
+    @media (min-width: $tablet-size) {
+        color: #fff;
+    }
 }
 
 .course-info header.course-profile .intro-inner-wrapper .media .hero {
