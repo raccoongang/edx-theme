@@ -1,0 +1,243 @@
+@import 'lms/static/sass/partials/base/variables';
+
+// Theming overrides for sample theme
+$header-bg: rgb(255,255,255);
+$footer-bg: rgb(247,247,247);
+$container-bg: rgb(255,255,255);
+$content-wrapper-bg: rgb(255,255,255);
+$serif: 'DINNextLTArabic-Light', 'DINNextLTArabic-Light';
+$sans-serif: 'DINNextLTArabic-Light', 'DINNextLTArabic-Light';
+
+@font-face {
+  font-family: 'DINNextLTArabic-Light';
+  src:
+    url('http://training.tetco.sa/static/stanford-style/images/DINNextLTArabic-Light.woff') format('woff'),
+    url('http://training.tetco.sa/static/stanford-style/images/DINNextLTArabic-Light.eot') format('eot'),
+    url('http://training.tetco.sa/static/stanford-style/images/DINNextLTArabic-Light.ttf') format('ttf'),
+    url('http://training.tetco.sa/static/stanford-style/images/DINNextLTArabic-Light.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.home>header {
+    height: 500px;
+    background-image: url("http://staging.ilearn-portal.com/lms/header.jpg");
+
+    .outer-wrapper {
+        padding: 120px 0 !important;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
+    font-family: "DINNextLTArabic-Light"!important;
+}
+
+.home>header {
+    height: 500px;
+    background-image: url("http://staging.ilearn-portal.com/lms/header.jpg");
+
+    .outer-wrapper {
+        padding: 120px 0 !important;
+    }
+}
+
+.home>header {
+    height: 500px;
+    background-image: url("http://staging.ilearn-portal.com/lms/header.jpg");
+
+    .outer-wrapper {
+        padding: 120px 0 !important;
+    }
+}
+.outer-wrapper {
+    background-image: url('http://staging.ilearn-portal.com/lms/header.jpg')!important;
+    height: 300px!important;
+}
+.btn {
+    box-shadow: none!important;
+    color: rgb(255, 255, 255);
+    background: rgb(22, 175, 163)!important;
+}
+.header-global {
+height: 120px!important;
+} 
+
+.home>header .title {
+    float: right;
+    display: block;
+    margin-left: 2.35765%;
+    width: 65.88078%;
+    
+    box-sizing: border-box;
+    transition: all 0.2s linear 0s;
+    position: relative;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.90);
+    padding: 20px 30px;
+    min-height: 120px;
+    font-size: 12px!important;
+    margin-right: 10px!important;
+    vertical-align: top;
+}
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    right: calc(50% - 100px);
+    box-sizing: border-box;
+    position: absolute;
+    top: 55px;
+    padding: 0 20px;
+    width: 200px;
+    height: 50px;
+    border-color: #0075b4;
+    border-radius: 3px;
+    background: rgb(22, 175, 163)!important;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    opacity: 0;
+    text-transform: none;
+}
+.home {
+    background: #f5f9fa!important;
+}
+.courses-container .courses .course {
+    box-sizing: border-box;
+    transition: all 0.125s linear 0s;
+    position: relative;
+    border-bottom: 3px solid #126f9a;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.125), inset 0 0 0 1px rgba(255,255,255,0.75);
+    background: #ffffff!important;
+    width: 100%;
+}
+.header-global .nav-global li a, .header-global .nav-global div a {
+    display: block;
+    padding: 5px;
+    color: #16afa3!important;
+    font-size: 18px!important;
+}
+.header-global .nav-global {
+    margin-top: 50px!important;
+    list-style: none;
+    float: right;
+}
+.header-global .nav-courseware {
+    float: left;
+    list-style: none;
+    margin-top: 48px!important;
+}
+.home>header .outer-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 60px;
+    max-width: 6796px!important;
+}
+input[type="submit"], input[type="button"], button, .button {
+    border-radius: 3px;
+    border: 0px solid #000663!important;
+    border-bottom: 0px solid #00003a!important;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 0 #2592c0;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    background-color: #16afa3!important;
+    background-image: none!important;
+    /* background-image: linear-gradient(to bottom,#0075b4 0%,#004393 50%,#002a84 50%,#002f86 100%); */
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none!important;
+    font: normal 1.2rem/1.6rem "DINNextLTArabic-Light","DINNextLTArabic-Light";
+    letter-spacing: 1px;
+    padding: 4px 20px;
+    text-transform: uppercase;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta>a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+    border: 0px solid #000663!important;
+    border-bottom: 0px solid #00003a!important;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 0 #2592c0;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    background-color: #16afa3!important;
+    background-image: none!important;
+    background-image: none!important;
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none!important;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: block;
+    font: normal 1.2rem/1.6rem "DINNextLTArabic-Light","DINNextLTArabic-Light";
+    letter-spacing: 1px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    text-align: center;
+    width: 48.82117%;
+}
+.header-global.slim .logo img {
+    height: 100px!important;
+    vertical-align: middle;
+}
+
+.header-global.slim .course-header {
+    float: right;
+    margin: 10px 10px 0px 10px;
+    display: inline-block;
+    width: 65%;
+    font-weight: 600!important;
+    font-size: 1rem;
+    line-height: 5!important;
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.focused .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button:active .icon, .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon {
+    color: #ffffff!important;
+}
+.header-global .user .user-dropdown {
+    font-size: 0.875em;
+    padding: 0 10px;
+    color: #ffffff!important;
+    border: none;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+}
+.account-nav-link {
+    float: right;
+    font-size: 0.875em;
+    color: !important;
+    font-weight: bold;
+    padding: 5px 25px 23px;
+    display: inline-block;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: transparent none;
+}
+
+
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid #0079bc;
+    color: #ffffff!important;
+    padding: 11px 14px;
+    line-height: normal;
+}
+
+.header-global.slim .course-header {
+    float: right;
+    margin: 10px 10px 0px 10px;
+    display: inline-block;
+    width: 45%!important;
+    font-weight: 600 !important;
+    font-size: 1rem;
+    line-height: 5 !important;
+}

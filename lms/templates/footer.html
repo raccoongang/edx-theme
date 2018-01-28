@@ -1,0 +1,41 @@
+## mako
+<%!
+  from datetime import date
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+%>
+<%namespace name='static' file='static_content.html'/>
+<!-- footer overrides for stanford theme go here -->
+<div class="wrapper-footer">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+        <ol>
+         
+        </ol>
+      </nav>
+
+      % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+          <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+      % endif
+
+    </div>
+    <div class="references">
+<center>
+<span class="footerlogo">
+<img src="http://training.tetco.sa/static/stanford-style/images/tetco_footer_logo.png">
+</span>
+</center>
+      <span>Built on <a href="http://open.edx.org">OpenEdX by Tetco</a>.</span>
+    </div>
+
+    <div class="copyright">
+        <p><span>
+            ${_('Copyright {year}. All rights reserved.').format(
+                year=date.today().year
+            )}
+        </span></p>
+    </div>
+  </footer>
+</div>
