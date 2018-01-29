@@ -1728,3 +1728,687 @@ body {
 }
 
 //end responsive for dashboard page
+
+
+//responsive for forum page
+.view-discussion-home {
+    padding: 0;
+    @media screen and (min-width: 768px) {
+        padding-left: 20px;
+    }
+}
+
+.content-wrapper .page-header.has-secondary .page-header-secondary {
+    float: none;
+    width: 100%;
+    text-align: left;
+    @media screen and (min-width: 760px) {
+        float: right;
+        width: initial;
+        text-align: right;
+    }
+}
+
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions {
+    margin: 0 10px 16px 0;
+    @media screen and (min-width: 760px) {
+        margin: 0 0 0 20px;
+    }
+}
+
+.content-wrapper .page-header.has-secondary .page-header-secondary  .forum-search{
+    margin: 0 0 16px;
+    @media screen and (min-width: 760px) {
+        margin: 0 0 0 20px;
+    }
+}
+
+.forum-nav {
+    margin-bottom: 20px;
+    @media screen and (min-width: 760px) {
+        margin: 0;
+    }
+}
+
+.view-discussion-home .helpgrid-row {
+    display: block;
+    @media screen and (min-width: 760px) {
+        display: table-row;
+    }
+}
+
+.view-discussion-home .helpgrid-row .row-title{
+    display: block;
+    padding: 16px 20px;
+    @media screen and (min-width: 760px) {
+        display: table-cell;
+        padding: 30px 20px;
+    }
+}
+
+.view-discussion-home .helpgrid-row .row-item,
+.view-discussion-home .helpgrid-row .row-item-full {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    @media screen and (min-width: 760px) {
+        display: table-cell;
+        width: 26%;
+    }
+}
+
+.view-discussion-home .helpgrid-row .row-item-full .notification-checkbox {
+    margin-bottom: 10px;
+    @media screen and (min-width: 760px) {
+        margin-bottom: 0;
+    }
+}
+
+.view-discussion-home .helpgrid-row .row-item-full .row-description {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        width: 80%;
+    }
+}
+//end responsive for forum page
+
+//responsive for course instructor pages
+#main {
+    width: 100%;
+}
+
+.instructor-dashboard-content-2 {
+    padding: 30px;
+    @media screen and (min-width: 760px)  {
+        padding: 40px;
+    }
+}
+
+.instructor-dashboard-content-2 .wrap-instructor-info {
+    display: block;
+    @media screen and (min-width: 760px) {
+        display: inline;
+    }
+}
+
+.wrap-instructor-info .instructor-info-action {
+    float: none;
+    margin: 0 0 10px;
+    display: inline-block;
+    @media screen and (min-width: 760px) {
+        float: right;
+        margin: 0 0 0 10px;
+    }
+}
+
+.instructor-dashboard-content-2 .instructor-nav .nav-item {
+    display: block;
+    @media screen and (min-width: 760px) {
+        display: inline-block;
+    }
+}
+
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link {
+    width: 100%;
+    text-align: left;
+    @media screen and (min-width: 760px) {
+        width: initial;
+        text-align: center;
+    }
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar>label {
+    display: block;
+    margin-bottom: 12px;
+    @media screen and (min-width: 760px) {
+        display: initial;
+        margin: 0;
+    }
+}
+
+.instructor-dashboard-wrapper-2 #membership .member-list-widget .add-field {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        width: initial;
+    }
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
+    position: static;
+    margin: 0;
+    @media screen and (min-width: 760px) {
+        position: absolute;
+        margin-bottom: 1em;
+    }
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"] {
+    max-width: 100%;
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
+    word-wrap: break-word;
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.instructor-dashboard-wrapper-2 .upload-csv-button {
+    margin-bottom: 10px;
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email {
+    max-width: 100%;
+}
+
+.instructor-dashboard-wrapper-2 .customBrowseBtn {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 760px) {
+        width: 350px;
+    }
+}
+
+.instructor-dashboard-wrapper-2 .customBrowseBtn .enhanced-input-file {
+    box-sizing: border-box;
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        box-sizing: content-box;
+        width: 250px;
+    }
+}
+
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse {
+    left: 4px;
+    height: 30px;
+    @media screen and (min-width: 760px) {
+        left: 0;
+        height: initial;
+    }
+}
+
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 2;
+    height: 18px;
+    margin-left: 0;
+    @media screen and (min-width: 760px) {
+        position: static;
+        height: initial;
+        margin-left: 268px;
+    }
+}
+
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    opacity: 0;
+    @media screen and (min-width: 760px) {
+        left: -27%;
+        width: 124%;
+        height: 24px;
+        padding: 4px 0 0;
+        opacity: 1;
+    }
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .cohort-management-nav-form {
+    float: none;
+    margin-bottom: 10px;
+    @media screen and (min-width: 760px) {
+        float: left;
+        margin: 0;
+    }
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
+    float: left;
+    @media screen and (min-width: 760px) {
+        float: right;
+    }
+}
+
+//end responsive for course instructor pages
+
+//responsive for course Wiki page
+section.wiki .wiki-wrapper>header {
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (min-width: 760px) {
+        height: 33px;
+        padding: 24px 0 26px;
+    }
+}
+
+section.wiki .breadcrumb {
+    width: 100%;
+    margin: 0 0 10px;
+    @media screen and (min-width: 760px) {
+        width: initial;
+        margin: 0 0 0 40px;
+    }
+}
+
+section.wiki .global-functions {
+    float: left;
+    @media screen and (min-width: 760px) {
+        float: right;
+    }
+}
+
+section.wiki .add-article-btn {
+    margin-left: 0;
+    @media screen and (min-width: 760px) {
+        margin-left: 25px;
+    }
+}
+
+section.wiki .wiki-wrapper .article-functions {
+    padding: 15px;
+    @media screen and (min-width: 760px) {
+        padding: 40px;
+    }
+}
+
+section.wiki .wiki-wrapper .nav-tabs {
+    -webkit-flex-wrap: wrap; 
+    flex-wrap: wrap;
+}
+
+section.wiki .wiki-wrapper .nav-tabs li {
+    margin: 0 0 20px;
+    @media screen and (min-width: 760px) {
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width: 1000px) {
+        margin: 0;
+    }
+}
+
+section.wiki .wiki-wrapper .nav-tabs li:first-child {
+    @media screen and (min-width: 760px) {
+        margin-left: 0;
+    }
+}
+
+section.wiki .nav-tabs a .icon {
+    width: initial;
+    @media screen and (min-width: 760px) {
+        width: 25px;
+    }
+}
+
+.wiki-wrapper .article-wrapper .main-article {
+    width: 100%;
+    padding: 30px;
+    @media screen and (min-width: 760px) {
+        width: 74.57627%;
+        padding: 40px 0 40px 40px;
+    }
+}
+
+section.wiki .new-article {
+    width: 100%;
+    padding: 30px;
+    @media screen and (min-width: 760px) {
+        width: 74.57627%;
+        padding: 40px 0 40px 40px;
+    }
+}
+
+section.wiki #hint_id_summary {
+    margin-top: 5px;
+    margin-left: 0;
+    line-height: 1.5;
+    @media screen and (min-width: 760px) {
+        margin-left: 15px;
+    }
+}
+
+section.wiki h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    @media screen and (min-width: 760px) {
+        margin-bottom: 30px;
+        font-size: 2em;
+    }
+}
+
+section.wiki .alert {
+    margin: 20px;
+    padding-right: 30px;
+}
+
+section.wiki .alert .close {
+    top: 8px;
+}
+
+section.wiki .btn {
+    margin-bottom: 5px;
+}
+
+section.wiki .btn.btn-danger {
+    float: none;
+    @media screen and (min-width: 760px) {
+        float: right;
+    }
+}
+
+section.wiki .directory-toolbar .well .pull-right {
+    float: none;
+    @media screen and (min-width: 760px)  {
+        float: right;
+    }
+}
+
+section.wiki .directory-toolbar .well .pull-right .search-query {
+    width: 100%;
+}
+//end responsive for course Wiki page
+
+//responsive static pages
+.container.about {
+    min-width: 320px;
+}
+//end responsive static pages
+
+//responsive cource about page
+.course-info header.course-profile {
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.course-info header.course-profile .intro-inner-wrapper {
+    min-width: 290px;
+}
+
+.course-info header.course-profile .intro-inner-wrapper>div.table {
+    display: block;
+    @media screen and (min-width: 760px) {
+        display: table;
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro {
+    display: block;
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        display: table-cell;
+        width: 68.23843%;
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .media {
+    display: block;
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        display: table-cell;
+        width: 31.76157%;
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 {
+    font-size: 1.5em;
+    @media screen and (min-width: 760px) {
+        font-size: 2em;
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register {
+    width: initial;
+    margin: 0 15px 10px 0;
+    padding: 10px;
+    @media screen and (min-width: 760px) {
+        width: 61.158%;
+        margin: 1px 3.57866% 0 0;
+        padding: 10px 0px 8px;
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
+    width: initial;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    @media screen and (min-width: 760px) {
+        width: 35.26334%;
+        font-size: 1.2rem;
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
+    display: inline-block;
+    width: auto;
+    padding: 10px 16px;
+    @media screen and (min-width: 760px) {
+        display: block;
+        width: 48.82117%;
+    }
+}
+
+.course-info .container {
+    box-sizing: border-box;
+    max-width: 1210px;
+    min-width: 320px;
+    padding: 40px 15px;
+}
+
+.course-info .details {
+    width: 100%;
+    margin: 0;
+    @media screen and (min-width: 760px) {
+        margin-right: 2.35765%;
+        width: 65.88078%;
+    }
+}
+
+.course-info .course-sidebar {
+    float: none;
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        float: left;
+        width: 31.76157%;
+    }
+}
+//end responsive cource about page
+
+//profile page responsive
+.view-profile .wrapper-profile-sections,
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy  {
+    min-width: 320px;
+}
+
+.view-profile .profile-section-one-fields {
+    width: 100%;
+    margin: 0;
+    @media screen and (min-width: 760px) {
+        width: 31.76157%;
+        margin-left: 20px;
+    }
+}
+
+.view-profile .wrapper-profile-section-two {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        width: 65.88078%;
+    }
+}
+
+.view-profile .profile-section-one-fields .u-field-username .u-field-value {
+    max-width: 100%;
+}
+
+.view-profile .wrapper-profile-section-one {
+    margin-left: 0;
+}
+
+.view-profile .profile-section-two-fields .u-field-title{
+    float: left;
+    width: initial;
+}
+//end profile page responsive
+
+//account page responsive
+.wrapper-account-settings .wrapper-header {
+    height: auto;
+    border-bottom: none;
+    @media screen and (min-width: 760px) {
+        height: 139px;
+        border-bottom: 4px solid #f5f5f5;
+    }
+}
+
+.wrapper-account-settings .wrapper-header .account-nav {
+    float: none;
+    overflow: hidden;
+    @media screen and (min-width: 760px) {
+        float: left;
+    }
+}
+
+.wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
+    border-bottom: 4px solid #f5f5f5;
+    @media screen and (min-width: 760px) {
+        border-bottom: none;
+    }
+}
+
+.wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
+    padding: 16px 12px;
+    &:focus {
+        outline: none;
+    }
+    @media screen and (min-width: 760px) {
+        padding: 5px 25px 23px;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field {
+    width: 100%;
+    max-width: 300px;
+    @media screen and (min-width: 760px) {
+        width: 30%;
+        max-width: 30%;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field-orderHistory .field{
+    width: auto;
+    max-width: 100%;
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .u-field-order > span {
+    padding: 10px 5px;
+    font-size: 0.8em;
+    @media screen and (min-width: 760px) {
+        padding: 20px;
+        font-size: 1em;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-title {
+    width: auto;
+    padding-left: 5px;
+    font-size: 0.8em;
+    @media screen and (min-width: 760px) {
+        width: 26%;
+        padding-left: 40px;
+        font-size: 1.25em;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-date {
+    width: auto;
+    @media screen and (min-width: 760px) {
+        width: 16%;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-value {
+    width: auto;
+    @media screen and (min-width: 760px) {
+        width: 12%;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-link {
+    width: auto;
+    @media screen and (min-width: 760px) {
+        width: 15%;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
+    padding-left: 0;
+    @media screen and (min-width: 760px) {
+        padding-left: 100px;
+    }
+}
+
+.account-settings-sections .u-field-message {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        width: 49.15254%;
+    }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
+    width: initial;
+    @media screen and (min-width: 760px) {
+        width: 100%;
+    }
+}
+//end account page responsive
+
+.container {
+    min-width: 320px;
+}
+
+//sysadmin page responsive
+.sysadmin-dashboard-content .instructor-nav a {
+    white-space: nowrap;
+}
+
+.sysadmin-dashboard-content ol{
+    word-break: break-all;
+    @media screen and (min-width: 760px) {
+        word-break: normal;
+    }
+}
+
+table.stat_table {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        width: initial;
+    }
+}
+
+.sysadmin-dashboard-content input[type="text"],
+.sysadmin-dashboard-content input[type="email"],
+.sysadmin-dashboard-content input[type="password"] {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        width: initial;
+    }
+}
+
+.sysadmin-dashboard-content button[value="download_users"],
+.sysadmin-dashboard-content button[value="repair_eamap"] {
+    width: auto !important;
+    @media screen and (min-width: 760px) {
+        width: 350px !important;
+    }
+}
+//end sysadmin page responsive
+
+
