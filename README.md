@@ -6,6 +6,8 @@ Overview
 ========
 This directory stores a default theme for ilearn Open edX instance.
 
+It's the current theme (from the http://training.tetco.sa/ server)
+
 We've organized the tree to mimic the directory structure of the edX
 codebase so that it's easy to tell where the files will end up upon
 deploy. We'll use a special settings file to set the template and
