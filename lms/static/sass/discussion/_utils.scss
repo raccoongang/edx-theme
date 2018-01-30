@@ -1,0 +1,73 @@
+%navigation-wrapper {
+  width: 100%;
+  min-width: 0;
+  max-width: 100% !important;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+%content-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0 !important;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin banner-component(){
+  position: relative;
+  width: 100%;
+
+  &__image {
+    width: 100%;
+    min-height: 182px;
+  }
+
+  &__video {
+    width: 100%;
+    min-height: 512px;
+  }
+
+  &__container {
+    @extend %content-wrapper;
+  }
+
+  &__text {
+    position: absolute;
+    min-width: 232px;
+    max-width: 356px;
+    left: 0;
+    bottom: 0;
+    margin: 2rem 0;
+    padding: 1rem 4rem 1rem 2rem;
+    background: rgba(0, 0, 0, .6);
+    box-sizing: border-box;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      transform: translateX(-100%);
+    }
+
+    h1 {
+      margin-bottom: 0;
+      color: $color-white;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &__text {
+      min-width: auto;
+    }
+  }
+
+}

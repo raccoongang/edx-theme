@@ -1,6 +1,8 @@
 // Import the original styles from edx-platform.
 // Import the original styles from edx-platform.
 @import "lms/static/sass/discussion/lms-discussion-main";
+// import extras
+@import 'utils';
 $img-path: "../../images";
 $font-path: "../../fonts";
 @import '../main';
@@ -12,7 +14,7 @@ $font-path: "../../fonts";
 @import '../header';
 @import '../login-register';
 // @import '../dashboard';
-// @import '../course-info';
+@import '../course-info';
 @import '../course-content';
 @import '../forum';
 @import '../footer';

@@ -5,15 +5,15 @@
 @mixin button-base ($color, $background, $border, $color-hover, $background-hover, $border-hover) {
   display: inline-block;
   padding: 0.5rem 1rem;
-  color: $color;
+  color: $color !important;
   font-weight: 400;
   line-height: 1;
   text-align: center;
   text-shadow: none;
   text-decoration: none;
   vertical-align: middle;
-  background: $background;
-  background-color: $background;
+  background: $background !important;
+  background-color: $background !important;
   background-image: none;
   border: $border;
   border-radius: 4px;
@@ -33,9 +33,9 @@
     outline: 0;
     background-image: none;
     text-decoration: none;
-    color: $color-hover;
-    background: $background-hover;
-    background-color: $background-hover;
+    color: $color-hover !important;
+    background: $background-hover !important;
+    background-color: $background-hover !important;
     border: $border-hover;
     box-shadow: none;
   }
