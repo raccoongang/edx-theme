@@ -60,6 +60,10 @@ body.view-in-course {
 //override
 .wrapper-footer nav ul a {
   font-family: "Roboto", sans-serif !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 .nav-drawer a,
 .nav-drawer .btn-register,
@@ -77,6 +81,7 @@ body.view-in-course {
 
   li {
     margin: 0;
+    float: left;
   }
 }
 .course-index {
