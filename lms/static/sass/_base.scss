@@ -7,6 +7,7 @@ body,
 }
 
 body {
+  -webkit-font-smoothing: auto;
   min-width: 432px;
 
   &.no-scroll {
@@ -52,7 +53,14 @@ body.view-in-course {
     background: #efefef;
   }
 }
-
+.header-global .nav-global {
+  margin-top: 0;
+  margin-right: 20px;
+}
+//override
+.wrapper-footer nav ul a {
+  font-family: "Roboto", sans-serif !important;
+}
 
 // LMS - assets - fonts
 // ====================
