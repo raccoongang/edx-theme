@@ -411,26 +411,60 @@ div.book-wrapper {
 //rewrite for search
 //index page
 .wrapper_index-page .find-courses .courses-container .courses:not(.no-course-discovery),
-.wrapper_index-page .find-courses .wrapper-search-context .search-status-label{
+.wrapper_index-page .find-courses .wrapper-search-context .search-status-label {
     order: 2;
 }
 .wrapper_index-page .find-courses .search-facets.phone-menu,
 .wrapper_index-page .find-courses .wrapper-search-context .wrapper-search-input {
     order: 1;
 }
+.wrapper_index-page .find-courses .wrapper-search-context .wrapper-search-input {
+    @media screen and (max-width: 600px) {
+        max-width: 50%;
+    }
+}
 .course__help-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+    .wrapper_index-courses & {
+
+    }
 }
 .wrapper_index-page .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item {
     margin: 0 0 30px 2.8%;
     width: 31%;
+    @media screen and (max-width: 700px) {
+        width: 48%;
+        margin: 0 1% 30px;
+    }
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        margin: 0 0 30px;
+    }
 }
 .wrapper_index-page .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(3n+1) {
     margin-left: 1.4%;
+    @media screen and (max-width: 700px) {
+        margin: 0 1% 30px;
+    }
 }
 //end index page
+//courses page
+    .wrapper_index-courses .find-courses .courses-container .courses:not(.no-course-discovery){
+        @media screen and (max-width: 900px) {
+            order: 2;
+        }
+    }
+    .wrapper_index-courses .find-courses .search-facets.phone-menu {
+        @media screen and (max-width: 900px) {
+            order: 1;
+        }
+    }
+//end courses page
 //rewrite elements
 .find-courses .wrapper-search-context:after {
     display: none;
@@ -460,6 +494,9 @@ div.book-wrapper {
     border-radius: 3px;
     width: 295px;
     line-height: 1.3;
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
 }
 .find-courses .discovery-submit {
     height: 40px;
@@ -504,7 +541,7 @@ div.book-wrapper {
     display: none;
 }
 .find-courses .courses-container .courses:not(.no-course-discovery) {
-    width: auto;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -515,6 +552,11 @@ div.book-wrapper {
     max-width: 295px;
     border-top: 5px solid #f39f00;
     border-bottom: 5px solid #f39f00;
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
 }
 .find-courses .courses-container .courses .courses-listing .courses-listing-item {
     margin: 0 0 30px;
@@ -565,5 +607,51 @@ div.book-wrapper {
     max-width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.wrapper_index-courses .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(2n+1) {
+    margin: 0 2.8% 30px 0;
+    width: 31%;
+    @media screen and (max-width: 700px) {
+        width: 48%;
+        margin: 0 1% 30px;
+    }
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+}
+.wrapper_index-courses .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(2n){
+    margin: 0 2.8% 30px 0;
+    width: 31%;
+    @media screen and (max-width: 700px) {
+        width: 48%;
+        margin: 0 1% 30px;
+    }
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+}
+.wrapper_index-courses .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item {
+    @media screen and (max-width: 700px) {
+        width: 48%;
+        margin: 0 1% 30px;
+    }
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+}
+.wrapper_index-courses .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(3n) {
+    margin: 0 0 30px 0;
+    width: 31%;
+    @media screen and (max-width: 700px) {
+        width: 48%;
+        margin: 0 1% 30px;
+    }
+    @media screen and (max-width: 450px) {
+        width: 100%;
+        margin: 0 0 30px;
+    }
 }
 //end rewrite elements
