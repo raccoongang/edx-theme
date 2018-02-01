@@ -1,3 +1,5 @@
+$theme-color: #FFC627;
+
 body {
     .window-wrap {
         min-height: 100vh;
@@ -29,7 +31,7 @@ body {
     .header-global {
         height: auto !important;
         box-shadow: none;
-        border-bottom: 5px solid #FFC627;
+        border-bottom: 5px solid $theme-color;
     }
 
     .header-global .wrapper-header {
@@ -121,8 +123,8 @@ body {
     }
 
     .find-courses-button {
-        background: #00A3E0;
-        color: #fff;
+        background: $theme-color;
+        color: #000;
         border-radius: 5px;
         padding: 20px 60px;
         text-shadow: none;
@@ -140,11 +142,11 @@ body {
     div.info-wrapper section.handouts ol li a, .wiki-wrapper section.wiki .nav-tabs a,
     .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1,
     .payment-buttons .purchase .product-info, .payment-buttons .purchase .product-name, .payment-buttons .purchase .price {
-        color: #00A3E0;
+        color: $theme-color;
     }
 
     .wrapper-course-material .course-tabs li a:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4, .wrapper-course-material .course-tabs li a:focus, .wrapper-course-material .course-tabs li a.active, .wrapper-course-material .course-tabs li a:visited:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4:visited, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4:visited, .wrapper-course-material .course-tabs li a:visited:focus, .wrapper-course-material .course-tabs li a:visited.active {
-        border-bottom-color: #00A3E0;
+        border-bottom-color: $theme-color;
     }
 
     .footer-questions span {
@@ -169,67 +171,67 @@ body {
     }
 
     .courses-container .courses .course .course-image .cover-image .learn-more,
-    input[type="submit"], input[type="button"], button, .button,
+    input[type="submit"], input[type="button"],
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
     .btn-brand, .modal .inner-wrapper form .submit input[type="submit"], .leanModal_box .inner-wrapper form .submit input[type="submit"],
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta > a.find-courses, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register, .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
-        background: #00A3E0;
-        border-color: #00A3E0;
+        background: $theme-color;
+        border-color: $theme-color;
         text-shadow: none;
-        color: #fff;
+        color: #000;
 
         &:hover,
         .course-info header.course-profile .intro-inner-wrapper .intro .main-cta > a.find-courses:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled), .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart:hover:not(:disabled) {
-            background: lighten(#00A3E0, 20%) !important;
-            color: #fff;
+            background: lighten($theme-color, 20%) !important;
+            color: #000;
             box-shadow: none;
         }
     }
 
     .btn, .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions > button,
     .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action {
-        background: #ffc627;
-        border-color: #ffc627;
+        background: $theme-color;
+        border-color: $theme-color;
         text-shadow: none;
-        color: #fff;
+        color: #000;
 
         &:hover {
-            background: lighten(#ffc627, 20%);
-            color: #fff;
+            background: lighten($theme-color, 20%);
+            color: #000;
         }
     }
 
     .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade, .verification-process .action-primary, .verification-process .action-confirm, .verification-process .carousel .wrapper-task .controls .control.approved .action, .verification-process.step-select-track .register-choice-certificate .action-select input, .wrapper-msg .has-actions .nav-actions .action-primary, .wrapper-msg .has-actions .msg-actions .action-primary {
-        background: #78be20;
-        border-color: #78be20;
+        background: $theme-color;
+        border-color: $theme-color;
         text-shadow: none;
-        color: #fff;
+        color: #000;
 
         &:hover,
         &:focus {
-            background: lighten(#78be20, 20%);
-            color: #fff;
+            background: lighten($theme-color, 20%);
+            color: #000;
             box-shadow: none;
         }
     }
 
     .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled) {
-        background: lighten(#00A3E0, 20%);
+        background: lighten($theme-color, 20%);
     }
 
     input[type="submit"]:hover:not(:disabled), input[type="button"]:hover:not(:disabled), button:hover:not(:disabled), .button:hover:not(:disabled) {
-        background: lighten(#00A3E0, 20%);
-        border-color: lighten(#00A3E0, 20%);
+        background: lighten($theme-color, 20%);
+        border-color: lighten($theme-color, 20%);
     }
 
     .dashboard .my-courses .course .details .enter-course {
-        color: #fff;
-        border-color: #00A3E0;
-        background: #00A3E0;
+        color: #000;
+        border-color: $theme-color;
+        background: $theme-color;
         order: 2;
-        &:hover {
-            background: lighten(#00A3E0, 20%);
-            color: #fff;
+        &:hover, &:focus {
+            background: lighten($theme-color, 20%);
+            color: #000;
         }
     }
 
@@ -240,7 +242,7 @@ body {
     .courses-container .courses .course {
         box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
         border: none;
-        border-bottom: 3px solid #00A3E0;
+        border-bottom: 3px solid $theme-color;
         border-radius: 5px;
         overflow: hidden;
     }
@@ -272,6 +274,7 @@ body {
     }
 
     .dashboard .my-courses .course .details .course-info {
+        font-style: italic;
         grid-row: 2;
     }
 
@@ -296,7 +299,7 @@ body {
 
     .dashboard .profile-sidebar .user-info .status {
         border: none;
-        border-top: 4px solid #ffc627 !important;
+        border-top: 4px solid $theme-color !important;
         box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
     }
 
@@ -339,8 +342,52 @@ body {
     .dashboard .my-courses .wrapper-header-courses {
         border-bottom: 1px solid rgb(211,211,211);
     }
-    .user-image-frame {
+    .header-global .user .user-link .user-image-frame {
         max-width: 30px;
+    }
+    .header-global .user .user-dropdown {
+        &:hover,&:focus {
+            background: none;
+            color: #00A3E0;
+        }
+    }
+    .dropdown-menu-container .menu-title {
+        color: #b8b8b8;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .wrapper-preview-menu {
+        width: 100%;
+    }
+    .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade span {
+        color: #000;
+    }
+    .dropdown-menu-container .menu-button {
+        color: #b8b8b8;
+    }
+    .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link {
+        &:hover,&:focus {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    .course-outline .block-tree .section ol.outline-item .subsection.current {
+        border-color: $theme-color !important;
+    }
+    .dashboard .my-courses .course .wrapper-messages-primary .message {
+        border: none;
+    }
+    .wrapper-messages-primary {
+        border-radius: 6px;
+        border: none;
+        background: none;
+        border-top: 4px solid $theme-color !important;
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.125), inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+        margin-top: 30px;
+    }
+    .dashboard .my-courses .course .wrapper-messages-primary .message.message-status .credit-action .credit-btn:hover {
+        color: #000;
+        border: none;
     }
 }
 
@@ -357,15 +404,15 @@ body {
 }
 
 .verification-process .carousel #wrapper-review .review .payment-buttons .payment-button {
-    background: #78be20;
-    border-color: #78be20;
+    background: $theme-color;
+    border-color: $theme-color;
     text-shadow: none;
-    color: #fff;
+    color: #000;
     box-shadow: none;
 
     &:hover {
-        background: lighten(#78be20, 20%);
-        color: #fff;
+        background: lighten($theme-color, 20%);
+        color: #000;
     }
 }
 
@@ -396,7 +443,7 @@ body {
 
 .verification-process .carousel .wrapper-task .controls .control .action {
     border-radius: 5px;
-    background: #00A3E0;
+    background: $theme-color;
 }
 
 .verification-process .nav-wizard {
@@ -406,16 +453,30 @@ body {
 }
 
 .dashboard .my-courses .course .wrapper-messages-primary .message.message-upsell .action-upgrade, .verification-process .action-primary, .verification-process .action-confirm, .verification-process .carousel .wrapper-task .controls .control.approved .action, .verification-process.step-select-track .register-choice-certificate .action-select input, .wrapper-msg .has-actions .nav-actions .action-primary, .wrapper-msg .has-actions .msg-actions .action-primary {
-    background: #78be20;
-    border-color: #78be20;
+    background: $theme-color;
+    border-color: $theme-color;
     text-shadow: none;
-    color: #fff;
+    color: #000;
     box-shadow: none !important;
 
     &:hover,
     &:focus {
-        background: lighten(#78be20, 20%);
-        color: #fff;
+        background: lighten($theme-color, 20%);
+        color: #000;
+    }
+}
+
+body .credit-checkout .checkout-controls .payment-button {
+    background: $theme-color;
+    border-color: $theme-color;
+    text-shadow: none;
+    color: #000;
+    box-shadow: none !important;
+
+    &:hover,
+    &:focus {
+        background: lighten($theme-color, 20%);
+        color: #000;
     }
 }
 
