@@ -585,6 +585,8 @@ div.book-wrapper {
 .find-courses .search-facets .facet-option {
     padding: 0 10px;
 }
+.find-courses .search-facets .facet-option:hover,
+.find-courses .search-facets .facet-option:focus,
 .find-courses .search-facets .facet-option.selected {
     background: #f3a100;
     color: #fff;
@@ -599,14 +601,16 @@ div.book-wrapper {
     display: none;
 }
 .find-courses .search-facets .facet-list li {
-    height: 20px;
+    height: auto;
+    max-height: 40px;
     overflow: hidden;
+}
+.find-courses .search-facets .facet-option {
+    white-space: normal;
 }
 .find-courses .search-facets .facet-option .name {
     display: inline-block;
     max-width: 80%;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 .wrapper_index-courses .find-courses .courses-container .courses:not(.no-course-discovery) .courses-listing .courses-listing-item:nth-child(2n+1) {
     margin: 0 2.8% 30px 0;
