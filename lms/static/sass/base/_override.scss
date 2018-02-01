@@ -670,14 +670,16 @@ body .wmd-prompt-dialog .btn-brand:focus {
     color: $theme-btn-text-color !important;
 }
 // end btns
+
 //text
 html {
     color: #252525;
-    *:not(.fa){
-        font-family: "Milo", "Arial", sans-serif;
+    *:not(.fa) {
+        font-family: "Milo", "Arial", sans-serif !important;
     }
 }
 //end text
+
 .u-field.mode-placeholder:hover {
     border-color: $theme-btn-bg;
 
