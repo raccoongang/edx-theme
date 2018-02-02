@@ -2332,6 +2332,11 @@ section.tool-wrapper {
     max-width: 100%;
 }
 
+#headerDiv a {
+    margin: 0 5px;
+    line-height: inherit;
+}
+
 .xmodule_display.xmodule_HtmlModule img {
     height: auto;
 }
@@ -2345,12 +2350,19 @@ section.tool-wrapper {
 .courseware .edit-post-form .post-field {
     margin-bottom: 20px;
 }
-.wrapper-problem-response div {
-    max-width: 100%;
+section.tool-wrapper div#controlls-container {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        display: table-cell;
+        width: 48.86364%;
+    }
 }
-.wrapper-problem-response div img {
-    max-width: 100%;
-    height: auto;
+section.tool-wrapper div#graph-container {
+    width: 100%;
+    @media screen and (min-width: 760px) {
+        display: table-cell;
+        width: 51.13636%;
+    }
 }
 
 //end responsive cource about page
