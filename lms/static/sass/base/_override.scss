@@ -2125,9 +2125,10 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 
 .course-info .details {
     width: 100%;
-    margin: 0;
+    margin: 0 0 20px;
     @media screen and (min-width: 760px) {
         margin-right: 2.35765%;
+        margin-bottom: 0;
         width: 65.88078%;
     }
 }
@@ -2139,6 +2140,16 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
         float: left;
         width: 31.76157%;
     }
+}
+.course-info .course-summary{
+    width: 290px;
+    max-width: 100%;
+    @media screen and (min-width: 1000px) {
+        width: auto;
+    }
+}
+.course-info .course-sidebar .important-dates li .important-dates-item-title {
+    padding-right: 10px;
 }
 //end responsive cource about page
 
