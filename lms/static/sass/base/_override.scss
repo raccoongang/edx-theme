@@ -2046,7 +2046,6 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
         padding: 10px;
     }
 }
-
 //end responsive for course instructor pages
 
 //responsive for course Wiki page
@@ -2302,6 +2301,58 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info .course-sidebar .important-dates li .important-dates-item-title {
     padding-right: 10px;
 }
+
+.xmodule_display.xmodule_CapaModule div.problem input[type="email"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="number"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="password"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="search"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="tel"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="text"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="url"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="color"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="date"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="datetime"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="datetime-local"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="month"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="time"],
+.xmodule_display.xmodule_CapaModule div.problem input[type="week"] {
+    max-width: 100%;
+}
+
+section.tool-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (min-width: 760px) {
+        margin: 1.41575em -1.41575em 0;
+    }
+}
+
+#headerDiv,
+#contentDiv {
+    max-width: 100%;
+}
+
+.xmodule_display.xmodule_HtmlModule img {
+    height: auto;
+}
+
+.courseware .forum-new-post-form .post-type-label,
+.courseware .edit-post-form .post-type-label {
+    margin-bottom: 10px;
+}
+
+.courseware .forum-new-post-form .post-field,
+.courseware .edit-post-form .post-field {
+    margin-bottom: 20px;
+}
+.wrapper-problem-response div {
+    max-width: 100%;
+}
+.wrapper-problem-response div img {
+    max-width: 100%;
+    height: auto;
+}
+
 //end responsive cource about page
 
 //profile page responsive
