@@ -2319,8 +2319,16 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 
 table.stat_table {
     width: 100%;
+    word-wrap: break-word;
     @media screen and (min-width: 760px) {
         width: initial;
+    }
+}
+
+.sysadmin-dashboard-content table.stat_table td {
+    padding: 4px;
+    @media screen and (min-width: 760px) {
+        padding: 8px;
     }
 }
 
