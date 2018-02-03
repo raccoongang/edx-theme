@@ -1,41 +1,204 @@
 ## mako
-<%!
-  from datetime import date
-  from django.core.urlresolvers import reverse
-  from django.utils.translation import ugettext as _
-  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
-%>
 <%namespace name='static' file='static_content.html'/>
 <!-- footer overrides for stanford theme go here -->
 <div class="wrapper-footer">
-  <footer>
-    <div class="colophon">
-      <nav class="nav-colophon">
-        <ol>
-         
-        </ol>
-      </nav>
+    <footer>
+        <div class="colophon">
+            <style>
+                .styled-icons a{color:#333333;font-size:18px;height:32px;line-height:32px;width:32px;float:right;margin:5px 0 5px 7px;text-align:center;-webkit-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+                body.view-in-course .container {
+                    max-width: 1140px;
+                    min-width: initial;
+                    width: auto;
+                    padding: 0 2%;
+                }
+                .container>div {
+                    display: table;
+                    table-layout: fixed;
+                    width: 100%;
+                    border: 1px solid #c8c8c8;
+                    background: #fff;
+                    box-shadow: none!important;
+                }
+                .col-md-4 {
+                    width: 33.33333333%!important;
+                    background: transparent!important;
+                    border: 0px!important;
+                }
 
-      % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-          <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-      % endif
+                .container {
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    margin-right: auto!important;
+                    margin-left: auto!important;
+                }
 
-    </div>
-    <div class="references">
-<center>
-<span class="footerlogo">
-<img src="http://training.tetco.sa/static/stanford-style/images/tetco_footer_logo.png">
-</span>
-</center>
-      <span>Built on <a href="http://open.edx.org">OpenEdX by Tetco</a>.</span>
-    </div>
+                *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+                :after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 
-    <div class="copyright">
-        <p><span>
-            ${_('Copyright {year}. All rights reserved.').format(
-                year=date.today().year
-            )}
-        </span></p>
-    </div>
-  </footer>
+                img{vertical-align:middle;}
+                hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee;}
+                p{margin:0 0 10px;}
+                ul{margin-top:0;margin-bottom:10px;}
+                .list-inline{padding-left:0;margin-left:-5px;list-style:none;}
+                .list-inline>li{display:inline-block;padding-right:5px;padding-left:5px;}
+                .container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
+                @media (min-width:768px){
+                    .container{width:750px;}
+                }
+                @media (min-width:992px){
+                    .container{width:970px;}
+                }
+                @media (min-width:1200px){
+                    .container{width:1170px;}
+                }
+                .container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
+                .col-md-4{position:relative;min-height:1px;padding-right:15px;padding-left:15px;}
+                @media (min-width:992px){
+                    .col-md-4{float:left;}
+                    .col-md-4{width:33.33333333%;}
+                }
+                .clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before{display:table;content:" ";}
+                .clearfix:after,.container-fluid:after,.container:after{clear:both;}
+                /*! CSS Used from: http://training.tetco.sa/static/stanford-style/css2/style-main-rtl.css */
+                /*! @import http://training.tetco.sa/static/stanford-style/css2/font-awesome.min.css */
+
+                .fa-envelope-o:before{content:"\f003";}
+                .fa-phone:before{content:"\f095";}
+                .fa-twitter:before{content:"\f099";}
+                .fa-globe:before{content:"\f0ac";}
+                /*! end @import */
+                .text-gray{color:#808080!important;}
+                .mr-5{margin-right:5px!important;}
+                /*! end @import */
+                ::selection{background:#333333;color:#fff;text-shadow:none;}
+                ::-moz-selection{background:#333333;color:#fff;text-shadow:none;}
+                ::-webkit-selection{background:#333333;color:#fff;text-shadow:none;}
+                :active,:focus{outline:none!important;}
+                a{text-decoration:none;}
+                a:hover,a:focus{color:#737373;text-decoration:none;}
+                img{max-width:100%;}
+                p,ul{margin-bottom:10px;}
+                html a{-webkit-font-smoothing:antialiased;}
+                img{max-width:100%;}
+                ul{list-style:none;margin:0;padding:0;}
+                ul{list-style:none;margin:0;padding:0;}
+                ul.list{list-style:outside none none;margin-top:13px;padding-right:0;}
+                ul.list li{margin:5px 0;font-weight:500;padding-right:15px;position:relative;}
+
+                ul.list li:hover:before{background:none;border-color:transparent;}
+                ul.list li a{text-decoration:none;-webkit-transition:all 300ms ease-in;-o-transition:all 300ms ease-in;transition:all 300ms ease-in;}
+                .divider{background-repeat:repeat;background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:block;position:relative;overflow:hidden;width:100%;}
+                .divider .container{padding-top:20px!important;padding-bottom:0px!important;}
+
+                .styled-icons a:hover{color:#666666;}
+                .styled-icons.icon-bordered a{border:1px solid #777777;}
+                .styled-icons.icon-bordered a:hover{background-color:#777777;color:#fff;}
+                .styled-icons.icon-circled a{border-radius:50%;}
+
+                .styled-icons li{display:inline-block;margin-bottom:0;margin-top:0;}
+                .widget{margin-bottom:40px;}
+                .widget ul li{margin-bottom:5px;padding-bottom:5px;}
+                .widget ul.list li{margin-bottom:10px;padding-bottom:10px;}
+                .widget .styled-icons li{margin-bottom:0;padding-bottom:0;}
+                .widget .styled-icons li a{margin-bottom:0;}
+                .widget.dark .styled-icons li a:hover i{color:#fff;}
+                .widget ul.list li::before{display:none;}
+                .widget.dark ul.list li::before{display:none;}
+
+
+                /*! CSS Used from: http://training.tetco.sa/static/stanford-style/css2/bootstrap-rtl.min.css */
+                .col-md-4{position:relative;min-height:1px;padding-left:15px;padding-right:15px;}
+                @media (min-width:992px){
+                    .col-md-4{float:right;}
+                    .col-md-4{width:33.33333333%;}
+                }
+
+                html {
+                    font-family: "DINNextLTArabic-Light"!important;
+                }
+                .colophon {
+                    font-family: "DINNextLTArabic-Light"!important;
+                }
+                .text-theme-colored2 {
+                    color: #00b0a2 !important;
+                }
+                .course-outline .block-tree .section ol.outline-item .subsection a.outline-item .subsection-title {
+                    margin: 0;
+
+                    color: #065683!important;
+                }
+            </style>
+
+            <barter id="barter" class="barter divider" data-bg-color="#f7f7f7" style="background: rgb(247, 247, 247) !important;" dir="rtl">
+                <div class="container">
+                    <div class="col-md-4 widget dark">
+                        <img class="mb-10" alt="" src="http://training.tetco.sa/static/stanford-style/images/tetco_logo.png">
+                        <br><br>
+                        <p>الرياض - السعودية</p>
+                        <ul class="list-inline">
+                            <li class="m-0 pl-10 pr-10">
+                                <i class="fa fa-phone text-theme-colored2 mr-5"></i>
+                                <a class="text-gray" href="#">920000438</a>
+                            </li>
+                            <li class="m-0 pl-10 pr-10">
+                                <i class="fa fa-envelope-o text-theme-colored2 mr-5"></i>
+                                <a class="text-gray" href="mailto:info@tetco.sa">info@tetco.sa</a>
+                            </li>
+                            <li class="m-0 pl-10 pr-10"><i class="fa fa-globe text-theme-colored2 mr-5"></i>
+                                <a class="text-gray" href="http://training.tetco.sa">training.tetco.sa</a>
+                            </li>
+                        </ul>
+                        <ul class="styled-icons icon-sm icon-bordered icon-circled clearfix mt-10">
+                            <li>
+                                <a href="https://twitter.com/TETCOSA"><i class="fa fa-twitter text-theme-colored2"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://www.tetco.sa">
+                                    <i class="fa fa-globe text-theme-colored2"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 widget dark">
+                    </div>
+                    <div class="col-md-4 widget dark">
+                        <b>روابط سريعة</b>
+                        <ul class="list mt-15">
+                            <li class="m-0 pr-10">
+                                <a class="text-gray" href="/#gallery">
+                                    تصفح الدورات
+                                </a>
+                            </li>
+                            <li class="m-0 pr-10">
+                                <a class="text-gray" href="http://training.tetco.sa/faq">
+                                    أسئلة شائعة
+                                </a>
+                            </li>
+                            <li class="m-0 pr-10">
+                                <a class="text-gray" href="http://training.tetco.sa/contact">
+                                    الدعم الفني
+                                </a>
+                            </li>
+                            <li class="m-0 pr-10">
+                                <a class="text-gray" href="#">
+                                    اتفاقية الاستخدام
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Copyright-->
+                <div class="footer-copyright" style="text-align: center;">
+                    <hr>
+                    <div class="container-fluid">
+                        جميع الحقوق محفوظة لوزارة التعليم ٢٠١٨
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <!--/.Copyright-->
+            </barter>
+        </div>
+    </footer>
 </div>
