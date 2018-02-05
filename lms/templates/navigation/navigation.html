@@ -51,7 +51,7 @@ site_status_msg = get_site_status_msg(course_id)
   <script>
     function goToPage(url) {
       if (url != "") {
-        location.href = url;
+        window.open(url);
       }
     }
   </script> 
@@ -69,9 +69,7 @@ site_status_msg = get_site_status_msg(course_id)
       <li class="nav-global-02">
         <form action="" method="get">
           <select name="country" onchange="goToPage(this.options(this.selectedIndex).value)"> 
-            <option value="https://learn.camara.org">
-              All courses
-            </option>
+            <option value="">all courses</option>
             <option value="https://ireland.learn.camara.org">
               Ireland
             </option>
@@ -86,9 +84,6 @@ site_status_msg = get_site_status_msg(course_id)
             </option>
             <option value="https://zambia.learn.camara.org">
               Zambia
-            </option>
-            <option value="https://education.camara.org">
-              Camara Project
             </option>
           </select>
         </form>
@@ -120,10 +115,8 @@ site_status_msg = get_site_status_msg(course_id)
           <ol class="user-filter">
             <li class="nav-global-02">
                 <form action="" method="get">
-                  <select name="country" onchange="goToPage(this.options(this.selectedIndex).value)"> 
-                    <option value="https://learn.camara.org">
-                      All courses
-                    </option>
+                  <select name="country" onchange="goToPage(this.options[this.selectedIndex].value)">
+                    <option value="">all courses</option>
                     <option value="https://ireland.learn.camara.org">
                       Ireland
                     </option>
@@ -138,9 +131,6 @@ site_status_msg = get_site_status_msg(course_id)
                     </option>
                     <option value="https://zambia.learn.camara.org">
                       Zambia
-                    </option>
-                    <option value="https://education.camara.org">
-                      Camara Project
                     </option>
                   </select>
                 </form>
