@@ -83,8 +83,20 @@ body {
             box-sizing: border-box;
         }
     }
-
-    .header-global .nav-courseware {}
+    .header-global .nav-courseware {
+        li .btn {
+            background: #ffc627;
+            color: #000;
+            box-shadow: none;
+            border: none;
+            &:hover,&:focus {
+                background: lighten(#ffc627, 20%);
+                color: #000;
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
 
     .header-global .user {}
 
