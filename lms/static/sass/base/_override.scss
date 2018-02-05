@@ -399,7 +399,10 @@ body {
     }
     .dashboard .my-courses .course .wrapper-messages-primary .message.message-status .credit-action .credit-btn:hover {
         color: #000;
-        border: none;
+        border-color: transparent;
+    }
+    .dashboard .my-courses .course .wrapper-messages-primary .message.message-status .credit-action .credit-btn {
+        color: $theme-color;
     }
 }
 
