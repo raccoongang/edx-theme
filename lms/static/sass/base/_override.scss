@@ -1659,6 +1659,16 @@ body {
         width: 80%;
     }
 }
+
+.forum-nav-thread-list {
+    @media screen and (max-width: 759px) {
+        height: 100px !important;
+    }
+}
+
+.forum-nav-browse-menu {
+    max-height: 500px;
+}
 //end responsive for forum page
 
 //responsive for course instructor pages
