@@ -9,6 +9,7 @@ body .header-global {
     .wrapper-header {
         height: auto;
         padding: 0;
+        max-width: 1200px;
     }
     .nav-global {
         width: 100%;
@@ -758,7 +759,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
         &:last-child {
             margin-right: auto;
-            margin-left: auto;
+            margin-left: 0;
+            padding-left: 0;
             width: 100%;
         }
         > .heading-group {
@@ -1530,10 +1532,10 @@ body {
         }
     }
     .header-global .wrapper-header .nav-holder .list-inline .item a.btn-register {
-        color: $theme-link !important;
+        color: $header-nav-link-color !important;
 
         &:hover {
-            color: $theme-link-hover !important;
+            color: $header-nav-link-color !important;
         }
     }
     .header-global.header__none-shadow .wrapper-header .nav-holder .list-inline .item a {
