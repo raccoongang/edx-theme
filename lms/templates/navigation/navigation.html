@@ -114,7 +114,7 @@ site_status_msg = get_site_status_msg(course_id)
           <ol class="user-filter">
             <li class="nav-global-02">
               <form action="" method="get">
-                <select name="country" onchange="goToPage(this.options(this.selectedIndex).value)"> 
+                <select name="country" onchange="goToPage(this.options[this.selectedIndex].value)"> 
                   <option value="https://learn.camara.org/">All Courses</option>
                   <option value="https://ireland.learn.camara.org">
                     Ireland
