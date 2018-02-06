@@ -1274,12 +1274,20 @@ section.wiki .wiki-wrapper .nav-tabs {
         }
     }
 }
-body.view-in-course .content-wrapper .wrapper-course-material {
+body.view-in-course .content-wrapper .wrapper-course-material,
+.discussion  .content-wrapper .wrapper-course-material{
     padding: 0 2%;
     @media screen and (min-width: 1230px) {
         padding: 0;
     }
 }
+.view-in-course .wrapper-course-material .course-material {
+    padding: 10px 0 0 0;
+}
+.discussion .wrapper-course-material .course-material .course-tabs {
+    padding: 0;
+}
+
 body .xmodule_display.xmodule_VideoModule .video {
     .tc-wrapper {
         display: flex;
@@ -1444,12 +1452,15 @@ body.view-in-course .container .course-index {
     .course-tabs {
         li {
             display: block;
+            float: none;
             @media screen and (min-width: 760px) {
                 display: inline-block;
             }
             a {
                 padding: 1px 10px;
                 text-align: left;
+                font-weight: 400;
+                line-height: 20.72px;
                 @media screen and (min-width: 760px) {
                     padding: 10px 15px 13px;
                     text-align: center;
@@ -1668,6 +1679,7 @@ body {
 }
 
 .forum-nav-browse-menu {
+    min-height: 89px;
     max-height: 500px;
 }
 //end responsive for forum page
