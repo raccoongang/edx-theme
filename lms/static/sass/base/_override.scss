@@ -734,11 +734,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
 .home > header {
     background-image: url("../images/background.jpg");
-    height: 420px;
+    // height: 420px;
     background-position: center;
     position: relative;
     background-color: #040404;
     background-position: 0 0;
+    height: calc(100vh - 182px - 88px);
 
     .outer-wrapper {
         padding: 0;
