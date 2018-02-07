@@ -701,6 +701,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         max-width: 1000px;
         margin: 0 auto;
         float: none;
+        background: rgba(50,50,50,0.7);
 
         &:last-child {
             margin-right: auto;
@@ -1317,3 +1318,9 @@ body.view-register .container {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
 }
 
+body .header-global .logo {
+    padding: 6px 0;
+}
+.find-courses .courses .course {
+    z-index: 2;
+}
