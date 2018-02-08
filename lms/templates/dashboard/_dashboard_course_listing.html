@@ -155,7 +155,6 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                     )
                     and not is_audit
                 )
-                print("FPI "+ str(credit_status))
 
                 is_credit_converted = credit_status and credit_status["request_status"] == 'approved'
 
@@ -241,7 +240,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                        <span class="sr">${_('Audit course')}</span>
                    </a>
               %elif is_credit_converted:
-                   <a class="enter-course" href="http://example.com/"  data-course-id="${course_overview.id}" data-user="${user.username}">
+                   <a class="enter-course" href="https://go.oasis.asu.edu/unofficialtranscript/"  data-course-id="${course_overview.id}" data-user="${user.username}">
                        <span class="sr">${_('View Transcript')}</span>
                    </a>
               % elif credit_btn_label:
