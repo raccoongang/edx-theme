@@ -5,6 +5,12 @@
         @content;
     }
 }
+
+@mixin s950 {
+    @media screen and (max-width: 950px) {
+        @content;
+    }
+}
 // footer logo
 // focus color on register page
 
@@ -130,24 +136,22 @@ body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
 }
 
 .footer-logo-holder img {
-    max-width: 150px;
+    max-height: 50px;
 }
 
 // Footer logo styles
 body .footer-logo-holder {
-    max-width: 150px;
+    max-height: 50px;
     position: absolute;
     top: 0;
     left: 30px;
     img {
-        width: 150px;
+        height: 50px;
     }
-    @include sm {
-        position: relative;
-        left: 50% !important;
-        transform: translate(-50%) !important;
-        margin: 20px 0 !important;
-        display: block;
+    @include s950 {
+        display: flex;
+        justify-content: center;
+        position: static;
     }
 }
 
