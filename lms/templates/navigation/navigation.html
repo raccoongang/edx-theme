@@ -64,16 +64,13 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
   </header>
 % else:
-  <header id="global-navigation" class="theme-header" >
-    <nav class="theme-header__holder" aria-label="${_('Global')}">
-      <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-      <div class="theme-header__wrapper">
-        % if user.is_authenticated():
-          <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-        % else:
-          <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-        % endif
-      </div>
+  <header id="global-navigation" class="header-global" >
+    <nav class="wrapper-header" aria-label="${_('Global')}">
+      % if user.is_authenticated():
+        <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+      % else:
+        <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+      % endif
       % if header_language_selector_is_enabled():
         <% languages = released_languages() %>
         % if len(languages) > 1:
@@ -102,7 +99,6 @@ site_status_msg = get_site_status_msg(course_id)
           </ol>
         % endif
       % endif
-    
     </nav>
   </header>
 % endif
