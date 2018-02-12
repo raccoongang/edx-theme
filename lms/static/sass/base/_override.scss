@@ -152,13 +152,14 @@ body .container.activation h1.valid {
     border: 1px solid $theme-link;
 }
 
-.doc-link {
+body .doc-link {
     color: $header-nav-link-color !important;
     margin: 12px 0;
     line-height: 16px;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    color: #992c31 !important;
     @media screen and (min-width: 760px) {
         width: auto;
         text-align: left;
@@ -166,12 +167,12 @@ body .container.activation h1.valid {
     }
 
     &:visited {
-        color: $header-nav-link-color !important;
+        color: #992c31 !important;
     }
 
     &:focus,
     &:hover {
-        color: $header-nav-link-color-hover !important;
+        color: #d05b60 !important;
         text-decoration: none;
     }
 }
@@ -1534,7 +1535,7 @@ body {
             color: $theme-link-hover;
         }
     }
-    .header-global .wrapper-header .nav-holder .list-inline .item a.btn-register {
+    .header-global.header__none-shadow .wrapper-header .nav-holder .list-inline .item a.btn-register {
         color: $header-nav-link-color !important;
 
         &:hover {
