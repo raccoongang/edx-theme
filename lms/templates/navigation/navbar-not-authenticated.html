@@ -42,7 +42,7 @@ from django.utils.translation import ugettext as _
       </ul>
     </div>
     <div class="col-md-5">
-      <ol class="right nav-courseware list-inline">
+      <ol class="right nav-courseware">
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
