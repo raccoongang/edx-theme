@@ -1458,6 +1458,10 @@ body .container .course-index {
 body .content-wrapper .container {
     min-width: 0% !important;
 }
-.wrapper-account-settings .wrapper-header .account-nav button:last-child {
+.wrapper-account-settings .wrapper-header .account-nav button {
     display: none !important;
+
+    &:first-child {
+        display: block !important;
+    }
 } 
