@@ -60,7 +60,7 @@
   </div>
 % else:
   <div class="wrapper wrapper-footer">
-    <footer id="footer-openedx" class="grid-container footer"
+    <footer id="footer-openedx" class="grid-container"
       ## When rendering the footer through the branding API,
       ## the direction may not be set on the parent element,
       ## so we set it here.
@@ -73,8 +73,7 @@
             <div class="row">
               <div class="col-sm-6 col-md-3">
 
-                <!-- //NOT USED IN CUSTOM THEME -->
-                <!-- <nav class="nav-colophon" aria-label="${_('About')}">
+                <nav class="nav-colophon" aria-label="${_('About')}">
                   <ol>
                       % for item_num, link in enumerate(footer['navigation_links'], start=1):
                       <li class="nav-colophon-0${item_num}">
@@ -82,7 +81,7 @@
                       </li>
                       % endfor
                   </ol>
-                </nav> -->
+                </nav>
 
               % if context.get('include_language_selector', footer_language_selector_is_enabled()):
                   <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
@@ -117,7 +116,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="http://training.tetco.sa">
                     <i class="fa fa-globe"></i>
                     training.tetco.sa
                   </a>
@@ -125,12 +124,12 @@
               </ul>
               <ul class="soc">
                 <li>
-                  <a href="#">
+                  <a href="https://twitter.com/TETCOSA">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.youtube.com/channel/UCAxKAOyP4S4ih6iUfwq2Ekw">
                     <i class="fa fa-youtube"></i>
                   </a>
                 </li>
@@ -139,8 +138,7 @@
           </div>
         </div>
 
-        <!--  NOT USED IN CUSTOM THEME -->
-        <!-- ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
+        ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
         <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
 
         <nav class="nav-legal" aria-label="${_('Legal')}">
@@ -152,11 +150,10 @@
             % endfor
             <li><a href="${footer['edx_org_link']['url']}" target="_blank">${footer['edx_org_link']['text']}</a></li>
           </ul>
-        </nav> -->
+        </nav>
       </div>
 
-      <!-- NOT USED IN CUSTOM THEME -->
-      <!-- ## Please leave this link and use one of the logos provided
+      ## Please leave this link and use one of the logos provided
       ## The OpenEdX link may be hidden when this view is served
       ## through an API to partner sites (such as marketing sites or blogs),
       ## which are not technically powered by OpenEdX.
@@ -167,7 +164,7 @@
             <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
           </a>
         </p>
-      </div> -->
+      </div>
       % endif
     </footer>
   </div>

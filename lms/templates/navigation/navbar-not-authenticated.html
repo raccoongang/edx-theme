@@ -11,75 +11,77 @@ from django.utils.translation import ugettext as _
 
 <div class="header-top">
   <div class="container">
-    <div class="col-md-4">
-      <ul class="contacts">
-        <li>
-          <a href="tel:920000438">
-            <i class="fa fa-phone"></i>
-            920000438
-        </a>
-        </li>
-        <li>
-          <a href="mailto:info@tetco.sa">
-            <i class="fa fa-envelope-o"></i>
-             info@tetco.sa
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="contacts">
+          <li>
+            <a href="tel:920000438">
+              <i class="fa fa-phone"></i>
+              920000438
           </a>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-3">
-      <ul class="soc">
-        <li>
-          <a href="#">
-            <i class="fa fa-youtube"></i>
-        </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-twitter"></i>
+          </li>
+          <li>
+            <a href="mailto:info@tetco.sa">
+              <i class="fa fa-envelope-o"></i>
+               info@tetco.sa
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="soc">
+          <li>
+            <a href="https://www.youtube.com/channel/UCAxKAOyP4S4ih6iUfwq2Ekw">
+              <i class="fa fa-youtube"></i>
           </a>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-5">
-      <ol class="right nav-courseware">
-        <%block name="navigation_other_global_links">
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <li class="item nav-global-04">
-                <a class="btn-neutral btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">
-                  <i class="fa fa-user-o"></i>
-                  ${_("Register")}
-                </a>
-              </li>
-            % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
-              <li class="item nav-global-04">
-                <a class="btn-neutral btn-register" href="/register${login_query()}">
-                  <i class="fa fa-user-o"></i>
-                  ${_("Register")}
-                </a>
-              </li>
-            % endif
-          % endif
-        </%block>
-        <%block name="navigation_sign_in">
-          <li class="item nav-courseware-01">
+          </li>
+          <li>
+            <a href="https://twitter.com/TETCOSA">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <ol class="right nav-courseware">
+          <%block name="navigation_other_global_links">
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-                <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">
-                  <i class="fa fa-edit"></i>fa-edit
-                  ${_("Sign in")}
-                </a>
-              % else:
-                <a class="btn btn-login" href="/login${login_query()}">
-                  <i class="fa fa-edit"></i>
-                  ${_("Sign in")}
-                </a>
+                <li class="item nav-global-04">
+                  <a class="btn-neutral btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">
+                    <i class="fa fa-user-o"></i>
+                    ${_("Register")}
+                  </a>
+                </li>
+              % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
+                <li class="item nav-global-04">
+                  <a class="btn-neutral btn-register" href="/register${login_query()}">
+                    <i class="fa fa-user-o"></i>
+                    ${_("Register")}
+                  </a>
+                </li>
               % endif
             % endif
-          </li>
-        </%block>
-      </ol>
+          </%block>
+          <%block name="navigation_sign_in">
+            <li class="item nav-courseware-01">
+              % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                  <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">
+                    <i class="fa fa-edit"></i>fa-edit
+                    ${_("Sign in")}
+                  </a>
+                % else:
+                  <a class="btn btn-login" href="/login${login_query()}">
+                    <i class="fa fa-edit"></i>
+                    ${_("Sign in")}
+                  </a>
+                % endif
+              % endif
+            </li>
+          </%block>
+        </ol>
+      </div>
     </div>
   </div>
 </div>
