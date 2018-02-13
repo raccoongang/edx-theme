@@ -1,4 +1,5 @@
 $theme-color: #FFC627;
+$theme-color-red: #8C1D40;
 
 body {
     .window-wrap {
@@ -154,11 +155,14 @@ body {
     div.info-wrapper section.handouts ol li a, .wiki-wrapper section.wiki .nav-tabs a,
     .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1,
     .payment-buttons .purchase .product-info, .payment-buttons .purchase .product-name, .payment-buttons .purchase .price {
-        color: $theme-color;
+        color: $theme-color-red;
     }
-
+    .wiki-wrapper section.wiki .nav-tabs li.active a {
+        color: $theme-color-red;
+        border-color: $theme-color-red;
+    }
     .wrapper-course-material .course-tabs li a:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4, .wrapper-course-material .course-tabs li a:focus, .wrapper-course-material .course-tabs li a.active, .wrapper-course-material .course-tabs li a:visited:hover, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:hover + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:hover + h4:visited, .wrapper-course-material .course-tabs div.info-wrapper section.handouts ol li div.hitarea:focus + h4:visited, div.info-wrapper section.handouts ol .wrapper-course-material .course-tabs li div.hitarea:focus + h4:visited, .wrapper-course-material .course-tabs li a:visited:focus, .wrapper-course-material .course-tabs li a:visited.active {
-        border-bottom-color: $theme-color;
+        border-bottom-color: $theme-color-red;
     }
 
     .footer-questions span {
@@ -551,3 +555,4 @@ body .dashboard .my-courses .course .wrapper-messages-primary .message.message-u
 body .course-title {
     padding-bottom: 30px;
 }
+
