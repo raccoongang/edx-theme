@@ -146,9 +146,7 @@ from pipeline_mako import render_require_js_path_overrides
       <%block name="bodyextra"/>
     </div>
 
-    % if not disable_footer:
-        <%include file="${static.get_template_path('footer.html')}" />
-    % endif
+    <%include file="${static.get_template_path('footer.html')}" />
 
 % if not disable_window_wrap:
   </div>

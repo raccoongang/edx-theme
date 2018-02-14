@@ -91,6 +91,13 @@ from django.utils.translation import ugettext as _
     <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
     <ol class="left list-inline nav-global">
       <%block name="navigation_global_links">
+        % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+          % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+            <li class="item nav-global-05">
+              <a class="btn" href="/courses">${_("Explore Courses")}</a>
+            </li>
+          %endif
+        % endif
         % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
           <li class="item nav-global-01">
             <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
