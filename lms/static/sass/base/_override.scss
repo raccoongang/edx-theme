@@ -296,6 +296,7 @@ body {
         grid-row: 2;
         width: auto;
         margin: 0;
+        color: #787878;
     }
 
     .dashboard .my-courses .course .details .wrapper-course-actions {
@@ -413,7 +414,7 @@ body {
         color: $theme-color;
     }
     .dashboard .my-courses .listing-courses .course-item {
-        border-bottom: 1px solid #d3d3d3;
+        border-bottom: 1px solid #979797;
     }
 }
 
@@ -550,9 +551,30 @@ body .dashboard .my-courses .course .wrapper-messages-primary .message.message-u
     font-size: 1em;
     line-height: 1.3;
     font-style: italic;
-    color: #787878;
+    color: #000;
 }
 body .course-title {
     padding-bottom: 30px;
 }
 
+body .dashboard .my-courses .course .details .wrapper-course-image {
+    width: 33%;
+}
+body .dashboard .my-courses .course .details .wrapper-course-details {
+    width: 64.4%;
+}
+
+.action-req {
+    padding-left: 20px;
+    display: block;
+    position: relative;
+    &::before {
+        content: '\f071';
+        font-family: FontAwesome;
+        position: absolute;
+        left: 0;
+        color: red;
+        font-style: normal;
+        font-size: 12px;
+    }
+}
