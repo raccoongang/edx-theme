@@ -224,9 +224,10 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
             %>
             % if is_purshue_credit:
                 <p>${_('Click the Purchase Credit button to complete your classes on the Credit Elegible Track')}</p>
-            %endif
-            % if is_audit:
+            %elif is_audit:
                 <p>${_('It looks like you tried to verify your identity but were unsuccessful. The deadline to ID verify has now passed. Call us at 1-844-448-7707.')}</p>
+            %else:
+                <p>${_('ID Verify Status Pending. No action required; we are reviewing your ID information.')}</p>
             %endif
 
         </div>
@@ -247,7 +248,6 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
               % elif credit_btn_label:
                 <a class="btn credit-btn ${credit_btn_class}" href="${credit_btn_href | h}" target="_blank" data-course-key="${credit_status['course_key'] | h}" data-user="${user.username | h}" data-provider="${credit_status['provider_id'] | h}">
                     <span>${credit_btn_label}</span>
-
                 </a>
               %elif show_courseware_link:
                       % if course_overview.has_ended():
