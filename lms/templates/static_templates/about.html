@@ -1,0 +1,70 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="about">
+        <section class="bg">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="title">${_("About")}</h1>
+                </div>
+            </div>
+        </section>
+         <!-- Section About -->
+        <section>
+          <div class="container">
+            <div class="section-content">
+              <div class="row">
+                <div class="col-md-5">
+                  <img class="img-fullwidth" src="/static/${settings.DEFAULT_SITE_THEME}/images/about-content-img.jpg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-uppercasetext-theme-colored mt-0 mt-sm-30">عن <span class="text-theme-colored2">المنصة</span></h2>
+                    <div class="double-line-bottom-theme-colored-2"></div>
+                        <p>انطلاقاً من رؤية المملكة 2030  للوصول الى اقتصاد مزدهر و وطن طموح أطلقت وزارة التعليم منصة متكاملة لنشر محتوى التدريب الالكتروني لتمكين الطلاب والطالبات في مجالات متعددة ، تعد المنصة أحد أهم مبادرات برنامج التحول الوطني 2020 وتهدف إلى رفع المستوى المعرفي والمهاري في عدد من المجالات اللامنهجية والتي تعزز الفكر العملي والريادي في المجتمع السعودي من خلال برامج وحزم تدريبية مصممة خصيصاً لدعم طلاب التعليم العام والتعليم العالي</p>
+                        <p class="hidden-md">تستهدف المنصة في مرحلتها الأولى محوري الاستثمار وريادة الأعمال الموجه لطلاب وطالبات الثانوية العامة، وكذلك انشاء والتحوّل لشركات الاكتتاب العام والموجه لطلاب وطالبات الجامعات السعودية، وتحتوى البرامج على مواضيع متعلقة بريادة الاعمال، انشاء الشركات، التسويق، إدارة المشاريع، تنمية المشاريع وغيرها، ويقدم البرنامج بشكل تزامني (جدولة زمنية) وغير تزامني (تدريب ذاتي) بمحتوى رقمي متنوع الوسائط (صور ومقاطع مرئية ومواد متحركة ورسوم إيضاحية، ومواد تفاعلية)، وبرصد مستمر للتقدم في التدريب بالتوافق مع المعايير العالمية</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+        <!-- Divider: Funfact -->
+        <section class="layer-overlay overlay-theme-colored-9" data-bg-img="http://placehold.it/1920x820" data-parallax-ratio="0.7">
+          <div class="container pt-90 pb-90">
+            <div class="row mt-30">
+              <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                <div class="funfact text-center">
+                  <i class="pe-7s-smile mb-20 text-theme-colored2"></i>
+                  <h2 data-animation-duration="2000" data-value="754" class="animate-number text-white font-38 font-weight-400 mt-0 mb-15">0</h2>
+                  <h5 class="text-white text-uppercase">عدد الطلبة</h5>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                <div class="funfact text-center">
+                  <i class="pe-7s-notebook mb-20 text-theme-colored2"></i>
+                  <h2 data-animation-duration="2000" data-value="675" class="animate-number text-white font-38 font-weight-400 mt-0 mb-15">0</h2>
+                  <h5 class="text-white text-uppercase">عدد المقررات</h5>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                <div class="funfact text-center">
+                  <i class="pe-7s-users mb-20 text-theme-colored2"></i>
+                  <h2 data-animation-duration="2000" data-value="675" class="animate-number text-white font-38 font-weight-400 mt-0 mb-15">0</h2>
+                  <h5 class="text-white text-uppercase">عدد الأساتذة</h5>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                <div class="funfact text-center">
+                  <i class="pe-7s-study mb-20 text-theme-colored2"></i>
+                  <h2 data-animation-duration="2000" data-value="1248" class="animate-number text-white font-38 font-weight-400 mt-0 mb-15">0</h2>
+                  <h5 class="text-white text-uppercase">عدد الشهادات</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </section>
+</main>
