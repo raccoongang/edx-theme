@@ -34,6 +34,19 @@ body {
     font-family: $base-font;
 }
 
+html {
+    font-size: 100%;
+    @media only screen and (max-width: 991px) {
+        font-size: 90%;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 85%;
+    }
+    @media only screen and (max-width: 479px) {
+        font-size: 80%;
+    }
+}
+
 html,
 html a {
     -webkit-font-smoothing: antialiased;
@@ -47,6 +60,7 @@ h5 {
     font-weight: 600;
     color: #333;
     font-family: $base-font;
+    line-height: 1.42857143;
 }
 
 h3,
@@ -67,6 +81,22 @@ a {
     &:visited {
         color: $link-color;
     }
+}
+
+p,
+ul,
+ol {
+    &+p {
+       margin-top: 10px; 
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.img-fullwidth {
+    width: 100%;
 }
 
 [tabindex] {
@@ -90,14 +120,10 @@ a {
     padding-top: 0;
     padding-bottom: 0;
     @media (max-width: 1199px) {
-        .container {
-            max-width: 970px;
-        }
+        max-width: 970px;
     }
-    @media (min-width: 991px) {
-        .container {
-            max-width: 750px;
-        }
+    @media (max-width: 991px) {
+        max-width: 750px;
     }
 }
 
@@ -1043,6 +1069,18 @@ select {
     background: url(../images/bg-pattern2.png) repeat-x;
 }
 
+.bg-dark {
+    color: #fff;
+    background-color: rgba(33, 35, 49, 0.9);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: #fff;
+    }
+}
+
 .section-header {
     padding: 120px 0 60px;
     .title {
@@ -1051,7 +1089,69 @@ select {
     }
 }
 
+.section-content {
+    padding: 20px 0;
+    h2 {
+        margin-top: 0;
+        font-size: 2rem;
+        @media (max-width: 991px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.separator-line{
+    margin-bottom: 20px;
+    margin-top: 8px;
+    padding-bottom: 5px;
+    position: relative;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        right: 10px;
+        bottom: -1px;
+        width: 24px;
+        height: 6px;
+        border-radius: 8px;
+        background: $base-color;
+    }
+    &:after {
+        right: 0;
+        bottom: 1px;
+        width: 64px;
+        height: 2px;
+    }
+}
+
 /*-----ABOUT-----*/
+.info-block {
+    padding: 120px 0 90px;
+}
+
+.funfact {
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    @media (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
+    i {
+        margin-bottom: 20px;
+        font-size: 45px;
+    }
+    h2 {
+        position: relative;
+        margin: 0 0 15px;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 1;
+    }
+    h5 {
+        text-transform: uppercase;
+    }
+}
 
 
 /*-----FOOTER-----*/
