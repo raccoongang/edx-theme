@@ -143,10 +143,13 @@ img {
         color: #fff;
         background-color: #009298;
         border-color: #00888e;
+        &:not(:disabled) {
+            background: $base-color;
+        }
     }
     &:active {
         color: #fff;
-        background-color: #009298;
+        background: #009298;
         border-color: #00888e;
         -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
         box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
@@ -156,25 +159,26 @@ img {
     }
     &:focus {
         color: #fff;
-        background-color: #009298;
+        background: #009298;
         border-color: #00494b;
         box-shadow: none;
+        outline: none;
     }
 }
 
 .btn-sm {
-    font-size: 12px;
     padding: 5px 17px;
+    font-size: 12px;
 }
 
 .btn-lg {
-    font-size: 14px;
     padding: 10px 26px;
+    font-size: 14px;
 }
 
 .btn-xl {
-    font-size: 16px;
     padding: 13px 32px;
+    font-size: 16px;
 }
 
 .btn-flat {
@@ -182,23 +186,38 @@ img {
 }
 
 .btn-transparent {
-    background-color: transparent;
     color: #fff;
+    background: transparent;
     border-color: #ccc;
     &:hover {
         color: #333;
-        background-color: #eee;
+        background: #eee;
         border-color: #eee;
+        &:not(:disabled) {
+            background: #eee;
+        }
     }
     &:active {
         color: #333;
-        background-color: #e6e6e6;
+        background: #e6e6e6;
         border-color: #adadad;
+        &:hover {
+            color: #333;
+            background: #e6e6e6;
+        }
     }
     &:focus {
         color: #333;
-        background-color: #e6e6e6;
+        background: #e6e6e6;
         border-color: #8c8c8c;
+    }
+    &:visited {
+        color: #fff;
+        &:hover {
+            color: #333;
+            background: #eee;
+            border-color: #eee;
+        }
     }
 }
 
@@ -208,6 +227,9 @@ img {
     &:hover {
         background: #222;
         border-color: #222;
+        &:not(:disabled) {
+            background: #222;
+        }
     }
 }
 
@@ -829,11 +851,18 @@ $i:0;
 }
 
 /*-----Forms-----*/
+.form-field {
+    margin-bottom: 15px;
+}
+
 .input-block,
 .form-field .input-block{
+    width: 100%;
     height: 45px;
+    margin: 0 0 5px;
     padding: 6px 12px;
     color: #555;
+    font-style: normal;
     font-size: 14px;
     line-height: 1.42857143;
     font-family: $base-font;
@@ -856,6 +885,12 @@ $i:0;
     }
 }
 
+textarea.input-block,
+.form-field textarea.input-block{
+    height: auto;
+    resize: none;
+}
+
 select {
     height: 45px;
     padding: 0px 12px;
@@ -869,6 +904,16 @@ select {
     &:active {
         outline: none;
     }
+}
+
+label {
+    margin-bottom: 5px;
+    color: #777;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $base-font;
 }
 
 /*-----LOGIN PAGE-----*/
@@ -1153,6 +1198,21 @@ select {
     }
 }
 
+/*-----CONTACT-----*/
+.line-bottom {
+    position: relative;
+    margin: 0 0 30px;
+    padding-bottom: 10px;
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        width: 50px;
+        height: 2px;
+        border: 1px solid #212331;
+    }
+}
 
 /*-----FOOTER-----*/
 .wrapper-footer {

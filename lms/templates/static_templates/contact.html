@@ -1,0 +1,92 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="about">
+        <section>
+            <div class="bg section-header">
+                <div class="container">
+                    <h1 class="title">${_("Contact")}</h1>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="container">
+
+                    <div class="row pt-30">
+                        <div class="col-md-7">
+
+                            <h3 class="line-bottom mt-0 mb-30">للتواصل</h3>
+                            <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label>الاسم <small>*</small></label>
+                                            <input name="form_name" class="input-block" type="text" placeholder="الإسم بالكامل" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label>البريد الالكتروني <small>*</small></label>
+                                            <input name="form_email" class="input-block required email" type="email" placeholder="البريد الالكتروني">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label>الموضوع <small>*</small></label>
+                                            <input name="form_subject" class="input-block required" type="text" placeholder=" عنوان الموضوع">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-field">
+                                            <label>الهاتف</label>
+                                            <input name="form_phone" class="input-block" type="text" placeholder=" رقم الهاتف">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label>الرسالة</label>
+                                    <textarea name="form_message" class="input-block required" rows="5" placeholder="الرجاء كتابة الرسالة هنا"></textarea>
+                                </div>
+                                <div class="form-field">
+                                    <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                                    <button type="submit" class="btn btn-dark btn-flat" data-loading-text="الرجاء الانتظار">إرسال الرسالة</button>
+                                </div>
+                            </form>
+                            <!-- Contact Form Validation-->
+                            <script type="text/javascript">
+                              $("#contact_form").validate({
+                                submitHandler: function(form) {
+                                  var form_btn = $(form).find('button[type="submit"]');
+                                  var form_result_div = '#form-result';
+                                  $(form_result_div).remove();
+                                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                                  var form_btn_old_msg = form_btn.html();
+                                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                                  $(form).ajaxSubmit({
+                                    dataType:  'json',
+                                    success: function(data) {
+                                      if( data.status == 'true' ) {
+                                        $(form).find('.form-control').val('');
+                                      }
+                                      form_btn.prop('disabled', false).html(form_btn_old_msg);
+                                      $(form_result_div).html(data.message).fadeIn('slow');
+                                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                                    }
+                                  });
+                                }
+                              });
+                            </script>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
