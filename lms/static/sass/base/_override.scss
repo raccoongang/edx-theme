@@ -1407,3 +1407,9 @@ header > .link {
         text-shadow: none;
     }
 }
+
+body .home>header {
+    @media screen and (max-width: 1180px) {
+        background-position-x: 80%;
+    }
+}
