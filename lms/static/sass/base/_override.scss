@@ -1121,7 +1121,7 @@ label {
 /*-----COMMON-----*/
 
 .bg{
-    background: url(../images/bg-pattern2.png) repeat-x;
+    background: url(../images/bg-pattern2.png);
 }
 
 .bg-dark {
@@ -1208,9 +1208,31 @@ label {
     }
 }
 
+/*-----Contact-----*/
 .contact {
     .section-content {
         padding-top: 50px;
+    }
+}
+
+/*-----FAQ-----*/
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        margin-bottom: 50px;
+    }
+    h3 {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+a{
+    &.list-group-item {
+        text-decoration: none;
     }
 }
 

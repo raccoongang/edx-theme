@@ -1,0 +1,76 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("FAQ")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="about">
+        <div class="bg section-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="title">${_("FAQ")}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-push-1">
+                        <div class="list-group">
+                          <a href="#section-one" class="list-group-item smooth-scroll-to-target">السؤال الأول</a>
+
+                          <a href="#section-two" class="list-group-item smooth-scroll-to-target">السؤال الثاني</a>
+
+                          <a href="#section-three" class="list-group-item smooth-scroll-to-target">السؤال الثالث</a>
+
+                          <a href="#section-four" class="list-group-item smooth-scroll-to-target">السؤال الرابع</a>
+
+                          <a href="#section-five" class="list-group-item smooth-scroll-to-target">السؤال الخامس</a>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-md-push-1">
+                        <ul class="list">
+                            <li>
+                                <div id="section-one">
+                                    <h3>السؤال الأول</h3>
+                                    <p>الإجابة</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="section-two">
+                                    <h3>السؤال الثاني</h3>
+                                    <p>الإجابة</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="section-three">
+                                    <h3>السؤال الثالث</h3>
+                                    <p>الإجابة</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="section-four">
+                                    <h3>السؤال الرابع</h3>
+                                    <p>الإجابة</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="section-five">
+                                    <h3>السؤال الخامس</h3>
+                                    <p>الإجابة</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%block name="js_extra">
+    <script src="/static/${settings.DEFAULT_SITE_THEME}/js/scroll-to-target.js"></script>
+</%block>
