@@ -253,8 +253,29 @@ body {
             background: lighten($theme-color, 20%);
             color: #000;
         }
+        &--disabled {
+            border-color: #b8b8b8;
+            background: #b8b8b8;
+        }
     }
-
+    .pending-credit-btn {
+        color: #000;
+        border-color: #b8b8b8;
+        background: #b8b8b8;
+        order: 2;
+        min-width: 165px;
+        border-radius: 3px;
+        padding: 11px 20px;
+        cursor: not-allowed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        &:hover,&:focus {
+            border-color: #b8b8b8;
+            background: #b8b8b8;
+        }
+    }
     .logo img {
         width: 200px;
     }
@@ -587,6 +608,30 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
         font-style: normal;
         font-size: 12px;
     }
+    &--green {
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: green;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        &:before {
+            content: '\f141';
+            font-family: FontAwesome;
+            position: absolute;
+            left: 3px;
+            top: 1px;
+            color: #fff;
+            font-style: normal;
+            font-size: 12px;
+            z-index: 2;
+        }
+    }
+    
 }
 .container {
     background: #fff;
