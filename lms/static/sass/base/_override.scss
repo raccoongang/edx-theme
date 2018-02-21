@@ -135,13 +135,14 @@ img {
     text-shadow: none;
     background: $base-color;
     border: 1px solid $base-color;
-    border-radius: 0;
+    border-radius: 4px;
     box-shadow: none;
     &:hover {
         color: #fff;
         background-color: #009298;
         border-color: #00888e;
         &:not(:disabled) {
+            color: #fff;
             background: $base-color;
         }
     }
@@ -1256,6 +1257,73 @@ a{
 }
 
 /*-----COURSE INFO-----*/
+
+.course-info {
+    header {
+        &.course-profile {
+            .intro-inner-wrapper {
+                .intro {
+                    .main-cta {
+                        a {
+                            &.register {
+                                display: inline-block;
+                                width: auto;
+                                padding: 13px 40px;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 1.38;
+                                font-family: "DINNextLTArabic-Light";
+                                letter-spacing: 0;
+                                text-transform: none;
+                                text-shadow: none;
+                                vertical-align: middle;
+                                background: $base-color;
+                                border: 1px solid transparent;
+                                border-radius: 4px;
+                                box-shadow: none;
+                                &:hover {
+                                    &:not(:disabled) {
+                                        background: #009298;
+                                        border-color: #00888e;
+                                    }
+                                }
+                                &:active {
+                                    &:not(:disabled){
+                                        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+                                    }
+                                }
+                                &:focus {
+                                    &:not(:disabled){
+                                        background: #009298;
+                                        border-color: #00494b;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.course-info-header {
+    margin-bottom: 15px;
+}
+
+.main-cta {
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+    .btn {
+        strong {
+            color: #fff;
+        }
+    }
+}
+
 .sidebar {
     &-course {
         margin-left: 30px;
