@@ -335,7 +335,7 @@ body {
     .fa {
         font-family: 'FontAwesome' !important;
     }
-
+    
     footer#footer-openedx.grid-container {
         display: flex;
         flex-direction: column;
@@ -581,9 +581,15 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
 }
 .container {
     background: #fff;
+    height: 100%;
+    flex: 1;
 }
 main#main {
     background: #fafafa;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 .info-course-id {
     font-weight: 800;
