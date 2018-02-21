@@ -173,8 +173,8 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-color;
     position: relative;
-    padding: 65px 10px 30px 10px;
-
+    padding: 100px 10px 20px;
+    text-align: center;
     footer#footer-openedx {
         a:hover,
         a:focus {
@@ -219,6 +219,9 @@ body .container.activation h1.valid {
             }
         }
     }
+    .icon-list {
+        display: none;
+    }
 }
 .bookmarks-results-list .bookmarks-results-list-item:hover {
     border-color: $theme-link;
@@ -259,7 +262,8 @@ body div.info-wrapper section.updates div article .toggle-visibility-button,
 .dashboard .my-courses .course .details .course-title a,
 .supplemental-link a,
 .login-register .form-field .field-link,
-body a {
+body a,
+body a:visited{
     color: $theme-link;
 
     &:focus {
@@ -271,6 +275,9 @@ body a {
         color: $theme-link-hover;
         text-decoration: none !important;
     }
+}
+a.active-section {
+    color: $theme-link;
 }
 body .login a {
     color: $theme-link !important;
@@ -565,7 +572,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     background: $theme-btn-bg-hover;
 }
 .courses-container .courses .course {
-    border-bottom: 3px solid #fc6a15;
+    border-bottom: 3px solid $base-color;
 
     .course-image .cover-image .learn-more {
         background-color: transparent;
@@ -684,12 +691,16 @@ body .wmd-prompt-dialog .btn-brand:focus {
         background: rgba($theme-link-hover, 0.8);
     }
 }
+
+.btn-link, .copy-meta a {
+    color: $base-color !important;
+}
 .home>header {
     background-image: url('#{$img-path}/background.jpg');
-    height: 420px;
+    height: 520px;
     background-position: center;
     position: relative;
-    background-color: #040404;
+    background-color: rgba($base-color, 0.5);
     background-position: 0 0;
 
     .outer-wrapper {
@@ -754,9 +765,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .footer-logo-holder {
     position: absolute;
-    top: -40px;
+    top: 40px;
     left: 50%;
     margin-left: -35px;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 .logo-ar {
     display: none;
