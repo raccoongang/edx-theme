@@ -9,8 +9,8 @@ $(document).ready(function () {
     //         dots: true,
     //         arrows: false,
     //         adaptiveHeight: true,
-    //         infinite: false,
-    //         autoplay: true,
+    //         infinite: true,
+    //         autoplay: false,
     //         autoplaySpeed: 5000,
     //         responsive: [
     //             {
@@ -57,10 +57,20 @@ $(document).ready(function () {
     //         ]
     //     });
     // }
-  $(".owl-carousel").owlCarousel() {
-    loop: true;
-    center: true;
-    dots: true;
-    autoplay: true;
-  };
+  $(".owl-carousel").owlCarousel({
+    dots: true,
+    autoplay: true,
+    center: true,
+    loop: true,
+    margin: 15,
+    items: 2,
+    responsive: {
+        0: {
+            items: 1
+        },
+        901: {
+            items: 2
+        }
+    }
+});
 });
