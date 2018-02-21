@@ -17,8 +17,7 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-                <span>${_("STUDENT SUCCESS")}</span>
+                <h1>${_("Welcome to the Conrado!")}</h1>
                 <a href="/courses" class="link">${_("FIND COURSES")}</a>
               % endif
             </div>
