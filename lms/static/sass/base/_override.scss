@@ -441,9 +441,9 @@ body {
         border-bottom: 1px solid #d3d3d3;
     }
     .listing-courses {
-        margin: 30px;
+        margin: 30px !important;
     }
-    .dashboard .my-courses .wrapper-header-courses
+}
 
 * * {
     font-family: 'Roboto', sans-serif;
@@ -740,4 +740,14 @@ body #reading .green {
     margin: 0 auto 40px !important;
     line-height: 1.3;
     font-size: 20px;
+}
+.helper {
+    color: #b8b8b8;
+    a {
+        color: #787878;
+    }
+}
+.action-req-link {
+    color: #787878;
+    text-decoration: underline;
 }
