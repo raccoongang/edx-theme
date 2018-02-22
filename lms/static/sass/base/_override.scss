@@ -755,3 +755,12 @@ body #reading .green {
     color: #787878;
     text-decoration: underline;
 }
+
+body .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child) a:before {
+    margin-right: 0;
+    content: "";
+}
+
+body .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child) {
+    margin-left: 15px;
+}
