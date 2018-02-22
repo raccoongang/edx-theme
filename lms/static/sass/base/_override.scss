@@ -2019,6 +2019,11 @@ body .empty-dashboard-message a {
         margin-left: -10px;
         margin-top: -14px;
         color: #000;
+        content: '';
+        border-top: 15px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 25px solid #000;
     }
 }
 .course-info header.course-profile .intro-inner-wrapper .media:hover .play-intro {
