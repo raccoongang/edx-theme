@@ -12,7 +12,7 @@
     <div class="main-footer_container">
       <div>
         <a class="footer-logo" href="/">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-footer.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="47" height="47">
+            <img src="/static/${settings.FEATURES.get('FASTLANE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo-footer.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="47" height="47">
         </a>
         <span class="copyright">&copy; 2017 Fast Lane. All rights reserved </span>
       </div>
