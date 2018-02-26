@@ -122,7 +122,7 @@ body .well .filter-clear a {
 }
 
 body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
-    margin: 0;
+    margin: 18px 0 0 0;
 }
 
 
@@ -145,7 +145,7 @@ body .footer-logo-holder {
     top: 0;
     left: 30px;
     img {
-        height: 50px;
+        height: 35px;
     }
     @include s950 {
         display: flex;
@@ -313,6 +313,7 @@ body {
         border-bottom: 2px solid $hamburger-color;
     }
     .courses-container .courses .course {
+        border: 1px solid #ffffff;
         border-bottom: 3px solid $hamburger-color;
     }
     .login-register-content h2, .login-register-content .home>header .title>.heading-group p, .home>header .title>.heading-group .login-register-content p, .login-register-content section.outside-app h1, section.outside-app .login-register-content h1 {
@@ -377,9 +378,13 @@ body .content-wrapper .container {
 
 //Place to Add/Remove custom fonts. Please, make it last in code
 * * {
-    font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
+    font-family: "Segoe UI", Verdana, Geneva, sans-serif !important;
 }
 
 .fa {
     font-family: "FontAwesome" !important;
+}
+
+.flex .doc-link{
+    margin: 20px 10px 0 0; 
 }
