@@ -434,6 +434,7 @@ img {
     }
     &-nav {
         padding: 16px 0 17px;
+        background: #fff;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 }
@@ -489,6 +490,94 @@ img {
                 color: #fff;
             }
         }
+    }
+}
+
+.navbar {
+    &-collapse {
+        padding: 0;
+        &.collapse {
+            display: none !important;
+            @media (min-width: 1000px) {
+                display: block !important;
+            }
+        }
+        .container & {
+            display: none;
+        }
+        &.in {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    &-nav {
+        float: left;
+        margin: 11px 0 10px;
+        @media (max-width: 1000px) {
+            float: none;
+            margin: 20px 0 0;
+        }
+        & > li {
+            float: right;
+            @media (max-width: 1000px) {
+                float: none !important;
+            }
+            & > a {
+                padding: 10px 16px;
+                color: #404040;
+                font-weight: 600;
+                text-decoration: none;
+                -o-transition: color .3s linear, background .3s linear;
+                -moz-transition: color .3s linear, background .3s linear;
+                -webkit-transition: color .3s linear, background .3s linear;
+                transition: color .3s linear, background .3s linear;
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background: $base-color;
+                }
+            }
+            &.active {
+                & > a {
+                    color: #fff;
+                    background: $base-color;
+                }
+            }
+        }
+    }
+    &-toggle {
+        display: none;
+        float: right;
+        margin: 0 0 0 20px;
+        border-color: $base-color;
+        box-shadow: none;
+        &:hover {
+            &:not(:disabled) {
+                background: $base-color;
+            }
+            .icon-bar {
+                background: #fff;
+            }
+        }
+        &:active,
+        &:focus{
+            &:not(:disabled){
+                box-shadow: none;
+            }
+        }
+        @media (max-width: 1000px) {
+            display: block;
+        }
+        .icon-bar {
+            background: $base-color;
+        }
+    }
+}
+
+.collapse.in {
+    display: block !important;
+    @media (max-width: 1000px) {
+        overflow: auto !important;
     }
 }
 
