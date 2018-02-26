@@ -46,3 +46,12 @@
         text-decoration: none;
     }
 }
+.header-global.header__login .theme-btn__active {
+    margin-right: 350px;
+    @media (max-width: 900px) {
+        margin-right: 130px;
+    }
+    @media (max-width: 820px) {
+        margin-right: 0;
+    }
+}
