@@ -1401,7 +1401,29 @@ a{
     margin-bottom: 15px;
 }
 
+.course-info-header-list{
+    padding: 0;
+    li {
+        display: inline-block;
+        vertical-align: bottom;
+        [class^="pe-7s-"],
+        [class*=" pe-7s-"] {
+            margin-right: 5px;
+            font-size: 48px;
+            color: $base-color;
+        }
+        & + li {
+            margin-right: 10px;
+        }
+    }
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
 .main-cta {
+    padding: 12px 0;
     a {
         display: inline-block;
         text-decoration: none;
@@ -1411,6 +1433,45 @@ a{
             color: #fff;
         }
     }
+}
+
+.course-main-image {
+    margin-bottom: 30px;
+}
+
+.course-info-list {
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+    li {
+        float: right;
+    }
+    [class^="pe-7s-"],
+    [class*=" pe-7s-"] {
+        font-size: 26px;
+    }
+}
+
+.important-dates {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    &-item-title {
+        display: inline-block;
+        margin: 0 2px;
+        color: #555;
+        font-weight: 600;
+    }
+    .fa {
+        margin-right: 10px;
+        color: $base-color;
+        font-size: 26px;
+    }
+
 }
 
 .sidebar {
