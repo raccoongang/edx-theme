@@ -1576,9 +1576,7 @@ section.wiki .wiki-wrapper .nav-tabs li {
     max-width: 100%;
     height: auto;
 }
-.grade-detail-graph {
-    display: none;
-}
+
 body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
@@ -2620,3 +2618,37 @@ table.stat_table {
 //end sysadmin page responsive
 
 
+
+body .window-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    .content-wrapper {
+        flex: 1;
+    }
+}
+.footer-logo-holder {
+    color: #222;
+    max-height: 70px !important;
+    font-weight: 600;
+    img {
+        height: 70px !important;
+        max-height: 70px !important;
+    }
+    span {
+        display: block;
+        font-size: 12px;
+    }
+    i {
+        display: block;
+        font-size: 10px;
+        font-style: normal;
+    }
+}
+.course-info .container {
+    background: #fbfbfb;
+}
+.course-info {
+    margin-bottom: -80px;
+}
