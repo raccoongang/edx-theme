@@ -258,6 +258,14 @@ img {
     margin-left: 15px !important;
 }
 
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .tp-parallax-wrap {
     transform-style: preserve-3d;
 }
@@ -1348,6 +1356,18 @@ a{
 /*-----COURSE INFO-----*/
 
 .course-info {
+    @media (max-width: 991px) {
+        padding-bottom: 60px;
+    }
+    .container {
+        padding-bottom: 0;
+    }
+    .section-header {
+        padding-bottom: 138px;
+        @media (max-width: 767px) {
+            padding-bottom: 102px;
+        }
+    }
     header {
         &.course-profile {
             .intro-inner-wrapper {
@@ -1395,31 +1415,65 @@ a{
             }
         }
     }
-}
-
-.course-info-header {
-    margin-bottom: 15px;
-}
-
-.course-info-header-list{
-    padding: 0;
-    li {
-        display: inline-block;
-        vertical-align: bottom;
+    &-header {
+        margin-bottom: 15px;
+    }
+    &-header-list{
+        padding: 0;
+        li {
+            display: inline-block;
+            vertical-align: bottom;
+            [class^="pe-7s-"],
+            [class*=" pe-7s-"] {
+                margin-right: 5px;
+                font-size: 48px;
+                color: $base-color;
+            }
+            & + li {
+                margin-right: 10px;
+            }
+        }
+    }
+    &-list {
+        margin: 20px 0;
+        padding: 0;
+        list-style: none;
+        color: #555;
+        font-weight: 600;
+        font-size: 14px;
+        li {
+            display: inline-block;
+        }
         [class^="pe-7s-"],
         [class*=" pe-7s-"] {
-            margin-right: 5px;
-            font-size: 48px;
-            color: $base-color;
-        }
-        & + li {
             margin-right: 10px;
+            font-size: 26px;
+            color: $base-color;
+            vertical-align: middle;
+        }
+    }
+    .hero {
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 }
 
-.mt-0 {
-    margin-top: 0;
+.course-custom {
+    &-content {
+        overflow: hidden;
+        padding-bottom: 30px;
+    }
+    &-info{
+        padding: 28px 0 20px;
+        .mb {
+            margin-bottom: 34px;
+        }
+        .img-fullwidth-teacher {
+            width: 150px !important;
+        }
+    }
 }
 
 .main-cta {
@@ -1439,37 +1493,28 @@ a{
     margin-bottom: 30px;
 }
 
-.course-info-list {
+.important-dates {
     margin: 20px 0 0;
     padding: 0;
     list-style: none;
-    color: #555;
-    font-weight: 600;
     font-size: 14px;
-    li {
-        float: right;
+    &-item {
+        margin-bottom: 22px;
+        &:last-child {
+            margin-bottom: 7px;
+        }
     }
-    [class^="pe-7s-"],
-    [class*=" pe-7s-"] {
-        font-size: 26px;
-    }
-}
-
-.important-dates {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 14px;
     &-item-title {
         display: inline-block;
-        margin: 0 2px;
+        margin: 0 0 0 2px;
         color: #555;
         font-weight: 600;
     }
-    .fa {
+    .icon {
         margin-right: 10px;
         color: $base-color;
         font-size: 26px;
+        vertical-align: middle;
     }
 
 }
@@ -1477,12 +1522,24 @@ a{
 .sidebar {
     &-course {
         margin-left: 30px;
+        @media (max-width: 991px) {
+            margin: 80px 0 0;
+        }
+        @media (max-width: 767px) {
+            margin-top: 50px;
+        }
     }
     &-widget {
         margin-bottom: 40px;
         padding: 15px;
         background-color: #F9F9F6;
         border: 1px solid #eee;
+        .media {
+            margin-top: 20px;
+        }
+    }
+    .line-bottom-theme-color {
+        margin-bottom: 10px;
     }
 }
 
@@ -1503,7 +1560,7 @@ a{
 }
 
 .play-intro {
-    z-index: 11;
+    z-index: 4;
     position: absolute;
     top: 50%;
     right: 50%;
