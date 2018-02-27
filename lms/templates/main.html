@@ -147,6 +147,9 @@ from pipeline_mako import render_require_js_path_overrides
     </div>
 
     <%include file="${static.get_template_path('footer.html')}" />
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>
+    </a>
 
 % if not disable_window_wrap:
   </div>
@@ -159,6 +162,7 @@ from pipeline_mako import render_require_js_path_overrides
   <script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
   <script type="text/javascript" src="${static.url('js/utils/navigation.js')}" charset="utf-8"></script>
   <script src="/static/${settings.DEFAULT_SITE_THEME}/js/bootstrap.min.js"></script>
+  <script src="/static/${settings.DEFAULT_SITE_THEME}/js/jquery-plugin-collection.js"></script>
   <script src="/static/${settings.DEFAULT_SITE_THEME}/js/custom.js"></script>
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
 </body>

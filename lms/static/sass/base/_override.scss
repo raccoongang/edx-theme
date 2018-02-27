@@ -1035,6 +1035,12 @@ label {
         font-family: $base-font;
         text-align: center;
     }
+    #register-form {
+        h2 {
+            margin-bottom: 95px;
+            padding-top: 34px;
+        }
+    }
 }
 
 .login-register {
@@ -1064,6 +1070,7 @@ label {
     .action-primary {
         @extend .btn;
         @extend .btn-dark;
+        margin-top: 10px;
         &:active,
         &:focus {
             @extend .btn-dark;
@@ -1079,9 +1086,6 @@ label {
             color: #fff;
             @extend .btn-dark;
         }
-    }
-    [disabled] {
-
     }
     .login-button {
         @extend .btn-sm;
@@ -1147,7 +1151,7 @@ label {
         .forgot-password {
             position: absolute;
             left: 50%;
-            bottom: -43px;
+            bottom: -48px;
             margin: 0;
             color: #212331;
             font-size: 12px;
@@ -1158,6 +1162,7 @@ label {
             transform: translateX(-50px);
             @media (max-width: 767px) {
                 position: static;
+                margin-top: 12px;
                 -ms-transform: translateX(0);
                 -webkit-transform: translateX(0);
                 transform: translateX(0);
@@ -1167,7 +1172,7 @@ label {
     .checkbox-remember{
         float: left;
         width: auto;
-        margin-top: 25px;
+        margin-top: 15px;
         #login-remember {
             width: 16px;
             height: 16px;
@@ -1192,15 +1197,14 @@ label {
     position: relative;
     padding-bottom: 15px;
     .register-form {
-        margin-top: 95px;
-        paddinng-bottom: 20px;
+        padding-bottom: 20px;
         @media (max-width: 479px) {
             margin-top: 120px;
         }
     }
     .toggle-form {
-        position: absolute;
-        top: 220px;
+        position: relative;
+        top: 200px;
         color: #333;
     }
     .form-toggle {
@@ -1270,6 +1274,24 @@ label {
         bottom: 1px;
         width: 64px;
         height: 2px;
+    }
+}
+
+.scrollToTop {
+    position: fixed;
+    z-index: 99999;
+    bottom: 15px;
+    left: 15px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
+    i {
+        color: #fff;
+        font-size: 42px;
     }
 }
 
@@ -1480,6 +1502,7 @@ a{
     padding: 12px 0;
     a {
         display: inline-block;
+        color: #fff;
         text-decoration: none;
     }
     .btn {
