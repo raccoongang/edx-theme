@@ -387,9 +387,10 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
         </div>
         <div class="portfolio-filter font-alt align-center">
-          <a href="#" class="active" data-filter="*">الكل</a>
-          <a href="#select1" class="" data-filter=".select1">الاستثمار وريادة الأعمال</a>
-          <a href="#select2" class="" data-filter=".select2">إنشاء الشركات والاكتتاب</a>
+          <a href="?category=" class="${not current_category and 'active'}" data-filter="*">الكل</a>
+          % for category in categories:
+            <a href="?category=${category.slug}" class="${category == current_category and 'active'}">${category.name}</a>
+          % endfor
         </div>
         <%include file="${courses_list}" />
 
