@@ -1414,6 +1414,9 @@ label {
 a{
     &.list-group-item {
         text-decoration: none;
+        &:visited {
+            color: #555;
+        }
     }
 }
 
