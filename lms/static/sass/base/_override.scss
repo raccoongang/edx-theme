@@ -1109,11 +1109,12 @@ label {
         text-align: center;
         border: none;
         border-radius: 6px;
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             border: none;
         }
         &:active {
-            border: none;
             -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
             box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
         }
@@ -1126,19 +1127,22 @@ label {
     }
     .button-oa2-fb {
         background: #3b5998;
-        &:hover {
+        &:hover,
+        &:active {
             background: #3b5998;
         }
     }
     .button-oa2-linkedin {
         background: #126f9a;
-        &:hover {
+        &:hover,
+        &:active {
             background: #126f9a;
         }
     }
     .button-oa2-google-oauth2 {
         background: #d73924;
-        &:hover {
+        &:hover,
+        &:active {
             background: #d73924;
         }
     }
