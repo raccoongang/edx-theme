@@ -2646,6 +2646,14 @@ body .window-wrap {
         font-size: 10px;
         font-style: normal;
     }
+    @media screen and (max-width: 950px)
+    {
+    display: flex;
+    justify-content: center;
+    position: static;
+    align-items: center;
+    flex-direction: column;
+    }
 }
 
 html,body {
