@@ -310,7 +310,7 @@ body {
         padding-top: 30px;
     }
     .header-global {
-        border-bottom: 2px solid $hamburger-color;
+        border-bottom: 2px solid transparent;
     }
     .courses-container .courses .course {
         border-bottom: 3px solid $hamburger-color;
@@ -377,7 +377,8 @@ body .content-wrapper .container {
 
 //Place to Add/Remove custom fonts. Please, make it last in code
 * * {
-    font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
+    // font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
+    font-family: roboto_condensedregular !important;
 }
 
 .fa {

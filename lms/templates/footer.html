@@ -18,9 +18,6 @@
     % endif
   >
     <div class="colophon">
-        <a href="/" class="footer-logo-holder">
-          <img alt="organization logo" src="/static/${settings.FEATURES.get('BRAHMA_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.png">
-        </a>
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
@@ -34,6 +31,13 @@
             </li>
         </ol>
       </nav>
+      <div class="main-wrapper main-wrapper_in-footer">
+        <div class="main-wrapper__holder">
+          <div class="phone">+91 845092986, +91 9923111234</div>
+          <div class="address">Shivaji Niketan, Tejas Society, Behind Dhondiba Sutar Bus Stand, Kothrud, Pune - 411 029</div>
+          <div class="mail">nilesh.devdas@vinsys.com</div>
+        </div>
+      </div>
       <ul class="icon-list">
         <li class="icon-list_item"><a href="https://www.facebook.com/vinsys" target="_blank" class="icon-list_link icon-list_link__facebook">facebook</a></li>
         <li class="icon-list_item"><a href="https://twitter.com/vinsystraining/" target="_blank" class="icon-list_link icon-list_link__twitter">twitter</a></li>
@@ -41,6 +45,7 @@
         <li class="icon-list_item"><a href="https://www.youtube.com/channel/UCRVoaxoz_NeN6_2EJqm5a3Q" target="_blank" class="icon-list_link icon-list_link__youtube">youtube</a></li>
         <li class="icon-list_item"><a href="https://plus.google.com/+VinsysIn" target="_blank" class="icon-list_link icon-list_link__google">google</a></li>
       </ul>
+      <p class="main-copyright">Copyright 2018 vinsys.com All Rights Reserved.</p>
   </footer>
 </div>
 % if include_dependencies:
