@@ -125,12 +125,15 @@ body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
     margin: 0;
 }
 
-
+body.view-login .wrapper-footer footer#footer-openedx {
+    max-width: 960px;
+}
 .wrapper-footer footer#footer-openedx {
     position: relative;
+    max-width: 1180px;
 }
 .wrapper-footer footer#footer-openedx a {
-    top: -8px;
+    top: -9px;
     left: 0px;
     margin: 0;
 }

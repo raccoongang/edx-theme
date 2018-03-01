@@ -881,10 +881,7 @@ section#wiki-content.wiki .delete {
 .forum-nav-thread-wrapper-1 {
     width: 100%;
 }
-.btn:focus:hover,
-.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button:focus:hover {
-    background: #fff !important;
-}
+
 body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
     border-top: 7px solid $theme-input-icon;
 }
@@ -1347,4 +1344,10 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     font-weight: 600;
     color: #fff;
     text-shadow: #767676 2px 2px 5px;
+}
+
+
+
+.register form field.is-focused .tip {
+    color: #646464 !important;
 }

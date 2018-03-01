@@ -221,3 +221,18 @@ body .dropdown-menu-container .dropdown-menu .dropdown-item a {
         color: $dropdown-menu-color-hover;
     }
 }
+body .btn-brand.submit,
+body .btn {
+    border-color: #df4d49;
+    background: #fff;
+    color: #df4d49;
+    &:focus,&:hover {
+        background: #df4d49 !important;
+        color: #fff !important;
+    }
+}
+tr.highlight a {
+    &:visited {
+        color: #ac3f3b;
+    }
+}
