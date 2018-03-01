@@ -341,7 +341,7 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
         </div>
       </section>
-      <section class="home">
+      <section id="gallery" class="home">
         <header>
           <div class="outer-wrapper">
             <div class="title">
@@ -526,15 +526,6 @@ from openedx.core.djangolib.markup import HTML, Text
           }); /*ready*/
         </script>
       <!-- END REVOLUTION SLIDER -->
-      <script src="/static/${settings.DEFAULT_SITE_THEME}/js/isotope.pkgd.js"></script>
-      <script>
-        jQuery(document).ready(function() {
-          var $grid = $('.courses-listing').isotope({
-            filter: '.courses-listing-item',
-            sortBy: 'order'
-          });
-        });
-      </script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:

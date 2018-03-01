@@ -71,7 +71,7 @@
       <div class="colophon">
         <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-md-3">
+              <div class="col-md-4 footer-widget">
 
                 <nav class="nav-colophon" aria-label="${_('About')}">
                   <ol>
@@ -104,9 +104,9 @@
               <p class="location">الرياض - السعودية</p>
               <ul class="contacts">
                 <li>
-                  <a href="tel:920000438">
+                  <a href="tel:920033988">
                     <i class="fa fa-phone"></i>
-                    920000438
+                    920033988
                 </a>
                 </li>
                 <li>
@@ -116,9 +116,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="http://training.tetco.sa">
+                  <a href="http://54.146.177.95">
                     <i class="fa fa-globe"></i>
-                    training.tetco.sa
+                    54.146.177.95
                   </a>
                 </li>
               </ul>
@@ -129,17 +129,46 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/channel/UCAxKAOyP4S4ih6iUfwq2Ekw">
-                    <i class="fa fa-youtube"></i>
+                  <a href="http://www.tetco.sa">
+                    <i class="fa fa-globe"></i>
                   </a>
                 </li>
               </ul>
+            </div>
+            <div class="col-md-4 col-md-offset-4 footer-widget">
+                <p class="footer-title">روابط سريعة</p>
+                <ul class="footer-nav">
+                    <li class="">
+                        <a href="/#gallery">
+                            تصفح الدورات
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/faq">
+                        أسئلة شائعة
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/contact">
+                        الدعم الفني
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        اتفاقية الاستخدام
+                        </a>
+                    </li>
+                </ul>
             </div>
           </div>
         </div>
 
         ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-        <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
+        <div class="footer-bot">
+            <div class="container">
+              <p class="copyright">جميع الحقوق محفوظة لوزارة التعليم ٢٠١٨</p>
+          </div>
+        </div>
 
         <nav class="nav-legal" aria-label="${_('Legal')}">
           <ul>

@@ -278,6 +278,8 @@ img {
 /*-----HEADER-----*/
 .header {
     &-global {
+        position: relative;
+        z-index: 12;
         height: auto;
         border: none;
         box-shadow: none;
@@ -293,6 +295,7 @@ img {
             }
         }
         .nav-courseware {
+            float: left;
             li {
                 & + li {
                     &::before {
@@ -320,6 +323,7 @@ img {
                     &:focus {
                         box-shadow: none;
                         outline: none;
+                        background: none;
                     }
                     &:active {
                         background: none;
@@ -367,6 +371,12 @@ img {
             }
         }
         .user {
+            float: left;
+            @media (max-width: 991px) {
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+            }
             .user-dropdown {
                 display: block;
                 height: 20px;
@@ -435,8 +445,10 @@ img {
             }
         }
         .contacts {
+            float: right;
             margin: 1px 5px 0 0;
             @media (max-width: 991px) {
+                float: none;
                 margin: 0 0 10px;
             }
         }
@@ -449,10 +461,16 @@ img {
 }
 
 .doc-link {
+    float: left;
     margin: 4px 10px;
     color: #fff;
     font-weight: 400;
     text-decoration: none;
+    @media (max-width: 991px) {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -520,7 +538,7 @@ img {
         }
     }
     &-nav {
-        float: left;
+        float: right;
         margin: 11px 0 10px;
         @media (max-width: 1000px) {
             float: none;
@@ -587,6 +605,24 @@ img {
     display: block !important;
     @media (max-width: 1000px) {
         overflow: auto !important;
+    }
+}
+
+.rtl {
+    .header {
+        &-top {
+            .contacts {
+                float: none;
+            }
+        }
+    }
+    .navbar {
+        &-nav {
+            float: left;
+             @media (max-width: 1000px) {
+                float: none;
+            }
+        }
     }
 }
 
@@ -1089,6 +1125,7 @@ label {
         }
     }
     .login-button {
+        float: right;
         @extend .btn-sm;
         line-height: 1.38;
         border-radius: 3px;
@@ -1128,21 +1165,24 @@ label {
     .button-oa2-fb {
         background: #3b5998;
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
             background: #3b5998;
         }
     }
     .button-oa2-linkedin {
         background: #126f9a;
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
             background: #126f9a;
         }
     }
     .button-oa2-google-oauth2 {
         background: #d73924;
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
             background: #d73924;
         }
     }
@@ -1227,6 +1267,14 @@ label {
             width: 16px;
             height: 16px;
             margin: 0 4px;
+        }
+    }
+}
+
+.rtl {
+    .login-register {
+        .login-button {
+            float: none;
         }
     }
 }
@@ -1695,7 +1743,7 @@ a{
     box-shadow: none;
     footer#footer-openedx {
         max-width: 100%;
-        padding: 25px 0 47px;
+        padding: 20px 0 0;
         color: $footer-text-color;
         background: $footer-bg;
         p,
@@ -1739,6 +1787,7 @@ a{
             }
         }
         .soc {
+            margin-bottom: 10px;
             li {
                 a {
                     margin: 2px 0 2px 7px;
@@ -1755,11 +1804,41 @@ a{
                 }
             }
         }
+        .footer-bot {
+            margin: 18px 0 0;
+            padding: 20px 0 4px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        .copyright {
+            margin: 0;
+            color: #777;
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: center;
+        }
     }
-    .copyright,
     .nav-colophon,
     .nav-legal {
         display: none;
+    }
+    .footer-widget {
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    &-title {
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    &-nav {
+        margin: 0;
+        padding: 0 10px 0 0;
+        list-style: none;
+        li {
+            padding-bottom: 10px;
+        }
     }
 }
 
