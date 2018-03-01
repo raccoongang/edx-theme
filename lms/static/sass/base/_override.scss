@@ -778,18 +778,20 @@ $i:0;
 .home {
     .courses-container {
         .courses {
-            &-listing {
+            .courses-listing {
                 list-style: none;
                 display: -webkit-flex;
                 display: flex;
                 -webkit-flex-wrap: wrap;
                 flex-wrap: wrap;
                 .courses-listing-item {
-                    width: 25%;
-                    mah-height: initial;
-                    margin: 0;
+                    max-height: initial;
                     padding-left: 5px;
                     padding-bottom: 5px;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
                 }
             }
         }
@@ -803,7 +805,12 @@ $i:0;
             background: none;
             border: none;
             box-shadow: none;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: nowrap;
+            flex-wrap: nowrap;
             a {
+                width: 100%;
                 color: #333;
                 text-decoration: none;
                 &:hover {
