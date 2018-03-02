@@ -186,7 +186,7 @@ from openedx.core.lib.courses import course_image_url
               edx_url = '{HTTP_X_FORWARDED_PROTO}://{HTTP_HOST}{PATH_INFO}'.format(**request.META)
               redirect_url = '{}/login.aspx?returnUrl={}'.format(settings.FEATURES['PORTAL_URL'], edx_url)
           %>
-          <a href="${redirect_url}" class="${href_class}">
+          <a href="${redirect_url}" class="${href_class}" onclick="function(e) {return true;}">
             ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
           </a>
           <div id="register_error"></div>
