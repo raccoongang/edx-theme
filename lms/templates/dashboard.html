@@ -42,7 +42,7 @@ from openedx.core.djangolib.markup import HTML, Text
     $(document).ready(function() {
       edx.dashboard.legacy.init({
         dashboard: "${reverse('dashboard') | n, js_escaped_string}",
-        signInUser: "${reverse('signin_user') | n, js_escaped_string}",
+        signInUser: "#",
         changeEmailSettings: "${reverse('change_email_settings') | n, js_escaped_string}"
       });
     });
