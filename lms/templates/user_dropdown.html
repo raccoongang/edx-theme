@@ -46,7 +46,7 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
             <a href="${reverse('dashboard')}" class="user-link">
                 <span class="sr">${_("Dashboard for:")}</span>
                 <%
-                username = self.real_user.username
+                username = hasattr(self.real_user, 'profile') and self.real_user.profile.name or self.real_user.email
                 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
                 %>
                 <img class="user-image-frame" src="${profile_image_url}" alt="">
