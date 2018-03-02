@@ -745,7 +745,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
     position: relative;
     background-color: #040404;
     background-position: 0 0;
-
+    @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
     .outer-wrapper {
         animation: none;
         padding: 0;
