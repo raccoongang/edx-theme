@@ -386,13 +386,14 @@ from openedx.core.djangolib.markup import HTML, Text
               <i class="fa fa-cog fa-spin"></i>
           </div>
         </div>
-        <div class="portfolio-filter font-alt align-center">
-          <a href="?category=" class="${not current_category and 'active'}" data-filter="*">الكل</a>
-          % for category in categories:
-            <a href="?category=${category.slug}" class="${category == current_category and 'active'}">${category.name}</a>
-          % endfor
-        </div>
-        <%include file="${courses_list}" />
+
+         <div class="portfolio-filter filters-button-group button-group">
+            <button class="btn active" data-filter="*">الكل</button>
+            % for category in categories:
+            <button class="btn" data-filter="category-${category.slug}">${category.name}</button>
+            % endfor
+          </div>
+          <%include file="${courses_list}" />
 
       </section>
     </div>
@@ -525,6 +526,7 @@ from openedx.core.djangolib.markup import HTML, Text
             }
           }); /*ready*/
         </script>
+        <script src="/static/${settings.DEFAULT_SITE_THEME}/js/isotope.pkgd"></script>
       <!-- END REVOLUTION SLIDER -->
 </%block>
 

@@ -124,7 +124,10 @@ img {
 }
 
 .btn,
-.button{
+.button,
+button,
+input[type="submit"],
+input[type="button"]{
     padding: 8px 22px;
     color: #fff;
     font-weight: 400;
@@ -168,6 +171,11 @@ img {
         outline: none;
         &:not(:disabled) {
             box-shadow: none;
+        }
+    }
+    &.active {
+        &:focus {
+            outline: none;
         }
     }
 }
@@ -778,20 +786,25 @@ $i:0;
 .home {
     .courses-container {
         .courses {
+            float: none;
+            padding-top: 0;
             .courses-listing {
                 list-style: none;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-flex-wrap: wrap;
-                flex-wrap: wrap;
                 .courses-listing-item {
                     max-height: initial;
+                    width: 25%;
+                    margin: 0;
                     padding-left: 5px;
                     padding-bottom: 5px;
-                    display: -webkit-flex;
-                    display: flex;
-                    -webkit-flex-wrap: nowrap;
-                    flex-wrap: nowrap;
+                    @media (max-width: 991px) {
+                        width: 33.333%;
+                    }
+                    @media (max-width: 767px) {
+                        width: 50%;
+                    }
+                    @media (max-width: 479px) {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -970,21 +983,17 @@ $i:0;
 }
 
 .portfolio-filter {
-    margin-bottom: 30px;
-    a {
-        display: inline-block;
-        margin-left: 5px;
+    margin-bottom: 20px;
+    .btn {
+        margin: 0 0 10px 15px;
         padding: 5px 15px;
         color: #333;
         font-weight: 400;
         font-size: 16px;
         line-height: normal;
-        text-decoration: none;
-        background-color: #f8f8f8;
-        border-right: 3px solid transparent;
-        -webkit-transition: all 100ms ease-in-out 0s;
-        -o-transition: all 100ms ease-in-out 0s;
-        transition: all 100ms ease-in-out 0s;
+        background: #f8f8f8;
+        border: none;
+        border-radius: 0;
         &:hover {
             color: #fff;
             background: #212331;
@@ -992,6 +1001,7 @@ $i:0;
         &.active {
             color: #fff;
             background: $base-color;
+            box-shadow: none;
         }
     }
 }
