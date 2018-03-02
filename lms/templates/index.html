@@ -387,7 +387,7 @@ from openedx.core.djangolib.markup import HTML, Text
          <div class="portfolio-filter filters-button-group button-group">
             <button class="btn active" data-filter="*">الكل</button>
             % for category in categories:
-            <button class="btn" data-filter="category-${category.slug}">${category.name}</button>
+            <button class="btn" data-filter=".category-${category.slug}">${category.name}</button>
             % endfor
           </div>
           <%include file="${courses_list}" />
@@ -524,7 +524,7 @@ from openedx.core.djangolib.markup import HTML, Text
       }); /*ready*/
   </script>
   <!-- END REVOLUTION SLIDER -->
-        <script src="/static/${settings.DEFAULT_SITE_THEME}/js/isotope.pkgd"></script>
+        <script src="/static/${settings.DEFAULT_SITE_THEME}/js/isotope.pkgd.js"></script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
