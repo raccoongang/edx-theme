@@ -738,7 +738,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         background: rgba($theme-link-hover, 0.8);
     }
 }
-.home>header {
+.slick-track>header {
     background-image: url('#{$img-path}/background.jpg');
     height: 420px;
     background-position: center;
@@ -805,6 +805,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
             }
         }
     }
+}
+.slick-track>header:nth-child(even) {
+    background: url('#{$img-path}/background.jpg')
+}
+.slick-track>header:nth-child(odd) {
+    background: url('#{$img-path}/Mauritius-Banner-notext.jpg')
 }
 .footer-logo-holder {
     position: absolute;
