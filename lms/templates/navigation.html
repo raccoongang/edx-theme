@@ -60,7 +60,6 @@ site_status_msg = get_site_status_msg(course_id)
             logo_size = ''
         %>
             <img class="${logo_size}logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-            
         </%block>
       </a>
     </h1>
@@ -220,7 +219,9 @@ site_status_msg = get_site_status_msg(course_id)
         <span class="course-name">${display_name}</span></h2>
       % endif
     </nav>
+    % if user.is_authenticated():
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
+    % endif
 </header>
 <script>
     var btn = document.getElementById('hamburger'),
