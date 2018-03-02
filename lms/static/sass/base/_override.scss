@@ -754,12 +754,14 @@ body .wmd-prompt-dialog .btn-brand:focus {
         }
     }
     .title {
-        background: transparent;
+        background: rgba(0,0,0,0.2);
+        padding: 15px;
+        border-radius: 4px;
         box-shadow: none;
         max-width: 1000px;
         margin: 0 auto;
         float: none;
-
+        
         &:last-child {
             margin-right: auto;
             margin-left: auto;
@@ -775,7 +777,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 text-align: center;
                 font-weight: bold;
                 text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
-                margin-bottom: 50px;
                 @media screen and (min-width:760px ) { 
                     font-size: 52px;
                 }
@@ -810,7 +811,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background: url('#{$img-path}/background.jpg')
 }
 .slick-track>header:nth-child(odd) {
-    background: url('#{$img-path}/Mauritius-Banner-notext.jpg')
+    background: url('#{$img-path}/Mauritius-Banner-notext.jpg') no-repeat right;
 }
 .footer-logo-holder {
     position: absolute;
