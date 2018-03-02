@@ -10,6 +10,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
+      <div class="owl-carousel">
       <header>
         <div class="outer-wrapper">
           <div class="title">
@@ -17,7 +18,7 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <h1>Welcome to <br>Cloud Society Learning</h1>
+                <h1>Welcome to <br>Microsoft Cloud Society<br>Learning</h1>
                 <!-- <a href="/courses" class="link">${_("FIND COURSES")}</a> -->
               % endif
             </div>
@@ -33,8 +34,31 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
 
       </header>
-      <%include file="${courses_list}" />
+      <header>
+        <div class="outer-wrapper">
+          <div class="title">
+            <div class="heading-group">
+              % if homepage_overlay_html:
+                ${homepage_overlay_html | n, decode.utf8}
+              % else:
+                <h1>Get Certified and <br>win a trip to the <br>Mauritius Cloud Bootcamp</h1>
+                <!-- <a href="/courses" class="link">${_("FIND COURSES")}</a> -->
+              % endif
+            </div>
+          </div>
 
+          % if show_homepage_promo_video:
+            <a href="#video-modal" class="media" rel="leanModal">
+              <div class="hero">
+                <div class="play-intro"></div>
+              </div>
+            </a>
+          % endif
+        </div>
+
+      </header>
+      </div>
+      <%include file="${courses_list}" />
     </section>
 </main>
 
