@@ -792,6 +792,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .logo-en {
     display: inline;
+    max-width: 80px;
 
     .lang_ar & {
         display: none;
@@ -1547,7 +1548,7 @@ section.wiki .wiki-wrapper .nav-tabs li {
     height: auto;
 }
 .grade-detail-graph {
-    display: none;
+    // display: none;
 }
 body h2,
 body .home>header .title>.heading-group p,
@@ -2645,7 +2646,8 @@ table.stat_table {
     padding-left: 26px;
     padding-right: 26px;
     @media screen and (max-width: 760px) {
-        margin-bottom: 15px
+        margin-bottom: 15px;
+        text-align: center;
     }
     .main-wrapper_in-footer & {
         background-image: url(../images/icons_in-footer.png);
@@ -2656,7 +2658,8 @@ table.stat_table {
     padding-left: 21px;
     padding-right: 21px;
     @media screen and (max-width: 760px) {
-        margin-bottom: 15px
+        margin-bottom: 15px;
+        text-align: center;
     }
     .main-wrapper_in-footer & {
         background-image: url(../images/icons_in-footer.png);
@@ -2800,13 +2803,13 @@ body .find-courses .discovery-submit {
     }
 }
 .course-hover_duration {
-    background: url(../images/icons-2.png) no-repeat -6px -41px;
+    background: url(#{$img-path}/icons-2.png) no-repeat -6px -41px;
 }
 .course-hover_video {
-    background: url(../images/icons-2.png) no-repeat -6px -85px;
+    background: url(#{$img-path}/icons-2.png) no-repeat -6px -85px;
 }
 .course-hover_work {
-    background: url(../images/icons-2.png) no-repeat -6px -41px;
+    background: url(#{$img-path}/icons-2.png) no-repeat -6px -41px;
 }
 .courses-container .courses .course .course-image .cover-image {
     .learn-more,
