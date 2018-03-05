@@ -992,7 +992,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     display: block; 
     .doc-link {
         width: auto;
-        margin: 12px 10px;
+        // margin: 12px 10px;
     }
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary:after {
@@ -2609,6 +2609,7 @@ table.stat_table {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 13px;
     line-height: 1.3;
     @media screen and (max-width: 1180px) {
@@ -2670,8 +2671,14 @@ table.stat_table {
     background: url(../images/icons.png) no-repeat -922px 2px;
     padding-left: 24px;
     padding-right: 24px;
+    a {
+        color: #43220c !important;
+    }
     .main-wrapper_in-footer & {
         background-image: url(../images/icons_in-footer.png);
+        a {
+            color: #bdbdbd !important;
+        }
     }
 }
 .courses-container .courses .course .course-info .course-organization {
@@ -2833,4 +2840,15 @@ body .wrapper-footer {
 }
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon{
     margin: 5px 0 20px 0;
+}
+.courses-title {
+    font-size: 25px;
+    line-height: 1.3;
+    color: #454545;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: 20px auto -63px;
+    @media screen and (min-width: 1200px) {
+        padding: 0 10px;
+    }
 }

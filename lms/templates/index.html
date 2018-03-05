@@ -26,7 +26,7 @@ lacinia pretium elementum. Aenean congue leo at mauris placerat, et dignissim to
               <div class="course-search">
                 <form method="get" action="/courses">
                   <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+                    <input class="search-input" name="search_query" type="text" placeholder="What do you whant to learn ?"></input>
                   </label>
                   <button class="search-button" type="submit">
                     <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
@@ -36,7 +36,7 @@ lacinia pretium elementum. Aenean congue leo at mauris placerat, et dignissim to
             % endif
             <div class="box-holder">
               <p>Take best courses online.</p>
-              <a href="/courses" class="link">${_("FIND COURSES")}</a>
+              <a href="/courses" class="link">All COURSES</a>
             </div>
           </div>
 
@@ -50,6 +50,7 @@ lacinia pretium elementum. Aenean congue leo at mauris placerat, et dignissim to
         </div>
 
       </header>
+      <div class="courses-title">Top Courses</div>
       <%include file="${courses_list}" />
 
     </section>
