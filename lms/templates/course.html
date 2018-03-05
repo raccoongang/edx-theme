@@ -22,9 +22,12 @@ from django.conf import settings
       </h2>
       <%
       if course.start is not None:
-          month = settings.ARABIC_MONTHS[course.start.month]
           course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
-          course_date_string_format = course.start.strftime('%d {}. %Y').format(month)
+          if request.LANGUAGE_CODE == 'ar':
+              month = settings.ARABIC_MONTHS[course.start.month]
+              course_date_string_format = course.start.strftime('%d {}. %Y').format(month)
+          else:
+              course_date_string_format = course.start.strftime('%d %b. %Y')
       else:
           course_date_string = ''
       %>
