@@ -388,7 +388,7 @@ from openedx.core.djangolib.markup import HTML, Text
             <button class="btn active" data-filter="*">الكل</button>
             % if categories:
             %   for category in categories:
-            <button class="btn" data-filter="category-${category.slug}">${category.name}</button>
+            <button class="btn" data-filter=".category-${category.slug}">${category.name}</button>
             %   endfor
             % endif
           </div>
