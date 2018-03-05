@@ -275,6 +275,9 @@ input[type="button"]{
 }
 
 .btn-link {
+    color: $base-color;
+    background: none;
+    border-color: transparent;
     &:focus,
     &:hover,
     &:active {
@@ -283,6 +286,7 @@ input[type="button"]{
             color: $base-color;
             background: none;
             text-decoration: none;
+            border-color: transparent;
         }
     }
     &:active {
@@ -1926,14 +1930,41 @@ a{
 
 /*-----Course innera pages-----*/
 
+body {
+    &.view-in-course {
+        .wrapper-course-material {
+            .course-material {
+                max-width: 1170px;
+                padding: 10px 15px 0;
+            }
+        }
+        .home,
+        .info-wrapper,
+        .course-wrapper,
+        .profile-wrapper,
+        .instructor-dashboard-wrapper-2,
+        .wiki-wrapper,
+        .teams-wrapper,
+        .static_tab_wrapper {
+            background: #fff;
+            border: 1px solid #c8c8c8;
+        }
+    }
+}
+
+
+
 .view-in-course {
     .content-wrapper {
         padding-bottom: 80px;
+        background: #fafafa;
+    }
+    .home {
+        padding: 20px;
     }
 }
 
 .wiki-wrapper {
-    border: 1px solid #c8c8c8;
     section.wiki {
         .article-functions {
             .see-children {
@@ -2086,6 +2117,39 @@ a{
     @extend .btn;
 }
 
+.discussion-module {
+    .btn {
+        @extend .btn;
+    }
+}
+
+.view-discussion-home {
+    .helpgrid-row-navigation {
+        .fa-bars {color: $mid-dray;}
+        .fa-search {color: $mid-dray;}
+        .fa-sort {color: $mid-dray;}
+  }
+}
+
+.xmodule_display {
+    &.xmodule_SequenceModule {
+        .sequence-nav-button {
+            color: $base-color;
+        }
+    }
+    &.xmodule_VideoModule {
+        .video {
+            .subtitles {
+                .subtitles-menu {
+                    li {
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*-----Bootstrap-----*/
 
 table {
@@ -2106,10 +2170,10 @@ table {
         padding: 0;
         list-style: none;
     }
-}
-a {
-    &.active-section {
-        color: #009298;
+    a {
+        &.active-section {
+            color: #009298;
+        }
     }
 }
 
