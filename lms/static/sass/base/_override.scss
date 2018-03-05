@@ -1,5 +1,6 @@
 $dark-cyan: #00b0a2; //green
 $light-gray: #f7f7f7;
+$dark-gray: #404040;
 $mid-dray: #777;
 $mid-gray2: #737373;
 $gray: #808080;
@@ -10,6 +11,9 @@ $footer-bg: $light-gray;
 $footer-text-color: $gray;
 $footer-links-color: $gray;
 
+
+$action-primary-bg: $base-color;
+
 @font-face {
     font-family: 'DINNextLTArabic-Light';
     src: url('../fonts/DINNextLTArabic-Light.woff') format('woff'),
@@ -19,6 +23,179 @@ $footer-links-color: $gray;
 }
 
 $base-font: "DINNextLTArabic-Light";
+
+%btn-pl-default-base {
+    border: 1px solid $action-primary-bg;
+}
+
+// +Dashboard - Course
+// ====================
+.dashboard .my-courses {
+    .course {
+        .details {
+            .enter-course {
+                @extend %btn-pl-white-base;
+            }
+        }
+    }
+}
+
+.search-bar {
+    .search-button,
+    .cancel-button,
+    .search-button:hover,
+    .cancel-button:hover {
+        background: $base-color;
+        &:hover,
+        &:focus,
+        &:active {
+            background: $base-color;
+            box-shadow: none;
+            border: none;
+        }
+    }
+}
+
+.wrapper-course-material {
+    .course-tabs {
+        li {
+            a,
+            a:visited {
+                color: $dark-gray;
+
+                &:hover,
+                &:focus,
+                &.active {
+                  color: $base-color;
+                  border-bottom-color: $base-color;
+                }
+            }
+        }
+    }
+}
+
+.wiki-wrapper section.wiki {
+    .article-functions {
+        .see-children {
+            a {
+                &:hover, &:focus {
+                  color: $base-color;
+                }
+            }
+        }
+    }
+    .nav-tabs {
+        li {
+            &.active {
+                a {
+                    color: $base-color;
+                    border-color: $base-color;
+                }
+            }
+        }
+        a {
+            &:hover, &:focus {
+                color: $base-color;
+            }
+        }
+    }
+}
+
+.course-outline {
+    .block-tree {
+        .section {
+            ol.outline-item {
+                .subsection {
+                    a.outline-item {
+                        &:hover, &:focus {
+                            background-color: lighten($base-color, 60%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.date-summary-container {
+    .date-summary {
+        &-todays-date {
+            @include border-left(3px solid $base-color);
+        }
+    }
+}
+
+.field-input,
+.wrapper-custom-select,
+.field-select,
+.field-textarea {
+    padding: 8px 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.instructor-dashboard-content-2 {
+    .instructor-nav {
+        .nav-item {
+            .btn-link {
+                &:hover,
+                &:focus {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+.open-response-assessment-block .ora-summary-title {
+    color: $base-color;
+}
+
+.instructor-dashboard-wrapper-2  {
+    section.idash-section#membership {
+        .member-lists-management {
+            .auth-list-container {
+                .member-list-widget {
+                    input[type="button"].add {
+                        @extend .btn;
+                         &:hover {
+                            &:not(:disabled) {
+                                @extend .btn;
+                            }
+                        }
+                        &:active {
+                            @extend .btn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    .nav-item {
+        a, a:visited {
+            color: $base-color;
+        }
+        a:hover {
+            color: $base-color;
+        }
+    }
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button {
+    &:hover,
+    &:focus,
+    &:active {
+        color: $base-color;
+    }
+}
+
+.progress {
+    height: auto;
+}
 
 /*-----COMMON-----*/
 
@@ -31,7 +208,6 @@ body {
     color: $text-color;
     font-size: 16px;
     line-height: 1.7;
-    font-family: $base-font;
 }
 
 html {
@@ -59,7 +235,6 @@ h4,
 h5 {
     font-weight: 600;
     color: #333;
-    font-family: $base-font;
     line-height: 1.42857143;
 }
 
@@ -69,19 +244,19 @@ h5 {
     font-weight: 400;
 }
 
-a {
-    color: $link-color;
-    text-decoration: underline;
-    &:hover,
-    &:focus {
-        color: $link-color;
-        text-decoration: none;
-        outline: none;
-    }
-    &:visited {
-        color: $link-color;
-    }
-}
+// a {
+//     color: $link-color;
+//     text-decoration: underline;
+//     &:hover,
+//     &:focus {
+//         color: $link-color;
+//         text-decoration: none;
+//         outline: none;
+//     }
+//     &:visited {
+//         color: $link-color;
+//     }
+// }
 
 p,
 ul,
@@ -161,6 +336,7 @@ input[type="button"]{
         }
         &:not(:disabled) {
             box-shadow: none;
+            border-color: #00888e;
         }
     }
     &:focus {
@@ -171,6 +347,7 @@ input[type="button"]{
         outline: none;
         &:not(:disabled) {
             box-shadow: none;
+            border-color: #00494b;
         }
     }
     &:visited {
@@ -180,6 +357,13 @@ input[type="button"]{
         &:focus {
             outline: none;
         }
+    }
+}
+
+.btn-link {
+    &:focus,
+    &:hover {
+        color: $base-color;
     }
 }
 
@@ -350,7 +534,7 @@ input[type="button"]{
                 padding: 11px 0 10px;
                 a {
                     padding: 8px 16px;
-                    color: #404040;
+                    color: $dark-gray;
                     font-size: 16px;
                     text-decoration: none;
                     &:hover {
@@ -562,7 +746,7 @@ input[type="button"]{
             }
             & > a {
                 padding: 10px 16px;
-                color: #404040;
+                color: $dark-gray;
                 font-weight: 600;
                 text-decoration: none;
                 -o-transition: color .3s linear, background .3s linear;
@@ -1036,7 +1220,7 @@ $i:0;
         outline: none;
     }
     &:focus {
-        color: #404040;
+        color: $dark-gray;
         border-color: rgba(0, 0, 0, 0.3);
         -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -1760,6 +1944,8 @@ a{
 }
 
 .modal {
+    right: auto;
+    bottom: auto;
     &.video-modal{
         position: fixed !important;
         left: 10% !important;

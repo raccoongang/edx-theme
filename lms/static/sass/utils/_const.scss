@@ -1,0 +1,47 @@
+$base-color: #00b0a2;
+$base-color-hover: #009298;
+$gray: #808080;
+$light-gray: #f7f7f7;
+$dark-gray: #404040;
+
+//settings for header
+$header-nav-link-color: $dark-gray;
+$header-nav-link-color-hover: #fff;
+$header-background: #fff;
+$dropdown-menu-background: #9da5ac;
+$dropdown-menu-color: #842a97;
+$dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
+//settings for hamburger
+$hamburger-color: $base-color;
+$hamburger-width: 40px;
+$hamburger-height: 30px;
+$hamburger-height-line: 3px;
+//settings for footer
+$footer-nav-link-color: $gray;
+$footer-nav-link-color-hover: $gray;
+$footer-color: $light-gray;
+//btn
+$theme-btn-bg: $base-color;
+$theme-btn-text-color: #fff;
+$theme-btn-bg-hover: $base-color;
+$theme-btn-text-color-hover: #fff;
+$theme-btn-shadow: darken($theme-btn-bg, 20%);
+//btn-white
+$theme-btn-white-bg: #fff;
+$theme-btn-white-border: $base-color;
+$theme-btn-white-text-color: $base-color;
+$theme-btn-white-text-color-hover: #fff;
+$theme-btn-white-bg-hover: $base-color;
+// link color
+$theme-link: $base-color;
+$theme-link-hover: lighten($theme-link, 20%);
+//settings for bg content pages
+$theme-content-bg: #eee;
+//settings for input icons
+$theme-input-icon: $base-color;
+//user link color 
+$theme-user-link: #fff;
+$theme-user-link-hover: #fff;
+//our overrides for settings we want to change
+$img-path: "../images" !default;
+$font-path: "../fonts" !default;
