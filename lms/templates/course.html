@@ -3,6 +3,7 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
+from django.conf import settings
 %>
 <%page args="course" expression_filter="h"/>
 <article class="course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
@@ -21,8 +22,9 @@ from django.core.urlresolvers import reverse
       </h2>
       <%
       if course.start is not None:
+          month = settings.ARABIC_MONTHS[course.start.month]
           course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
-          course_date_string_format = course.start.strftime('%d %b. %Y')
+          course_date_string_format = course.start.strftime('%d {}. %Y').format(month)
       else:
           course_date_string = ''
       %>
