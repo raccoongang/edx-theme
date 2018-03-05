@@ -74,129 +74,6 @@ $base-font: "DINNextLTArabic-Light";
     }
 }
 
-.wiki-wrapper section.wiki {
-    .article-functions {
-        .see-children {
-            a {
-                &:hover, &:focus {
-                  color: $base-color;
-                }
-            }
-        }
-    }
-    .nav-tabs {
-        li {
-            &.active {
-                a {
-                    color: $base-color;
-                    border-color: $base-color;
-                }
-            }
-        }
-        a {
-            &:hover, &:focus {
-                color: $base-color;
-            }
-        }
-    }
-}
-
-.course-outline {
-    .block-tree {
-        .section {
-            ol.outline-item {
-                .subsection {
-                    a.outline-item {
-                        &:hover, &:focus {
-                            background-color: lighten($base-color, 60%);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.date-summary-container {
-    .date-summary {
-        &-todays-date {
-            @include border-left(3px solid $base-color);
-        }
-    }
-}
-
-.field-input,
-.wrapper-custom-select,
-.field-select,
-.field-textarea {
-    padding: 8px 22px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-}
-
-.instructor-dashboard-content-2 {
-    .instructor-nav {
-        .nav-item {
-            .btn-link {
-                &:hover,
-                &:focus {
-                    color: #000;
-                }
-            }
-        }
-    }
-}
-
-.open-response-assessment-block .ora-summary-title {
-    color: $base-color;
-}
-
-.instructor-dashboard-wrapper-2  {
-    section.idash-section#membership {
-        .member-lists-management {
-            .auth-list-container {
-                .member-list-widget {
-                    input[type="button"].add {
-                        @extend .btn;
-                         &:hover {
-                            &:not(:disabled) {
-                                @extend .btn;
-                            }
-                        }
-                        &:active {
-                            @extend .btn;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.breadcrumbs {
-    .nav-item {
-        a, a:visited {
-            color: $base-color;
-        }
-        a:hover {
-            color: $base-color;
-        }
-    }
-}
-
-.xmodule_display.xmodule_SequenceModule .sequence-nav-button {
-    &:hover,
-    &:focus,
-    &:active {
-        color: $base-color;
-    }
-}
-
-.progress {
-    height: auto;
-}
-
 /*-----COMMON-----*/
 
 *:focus {
@@ -298,8 +175,43 @@ img {
     }
 }
 
+body {
+    &.view-in-course {
+        .window-wrap {
+            min-width: 320px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1170px;
+            min-width: 320px;
+            padding: 0 15px;
+            @media (max-width: 1199px) {
+                max-width: 970px;
+            }
+            @media (max-width: 991px) {
+                max-width: 750px;
+            }
+        }
+        .wrapper-footer {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.container {
+    &>div {
+        display: block;
+        width: auto;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+
 .btn,
 .button,
+form button,
 button,
 input[type="submit"],
 input[type="button"]{
@@ -320,9 +232,11 @@ input[type="button"]{
         color: #fff;
         background-color: #009298;
         border-color: #00888e;
+        box-shadow: none;
         &:not(:disabled) {
             color: #fff;
             background: $base-color;
+            box-shadow: none;
         }
     }
     &:active {
@@ -362,8 +276,17 @@ input[type="button"]{
 
 .btn-link {
     &:focus,
-    &:hover {
+    &:hover,
+    &:active {
         color: $base-color;
+        &:not(:disabled) {
+            color: $base-color;
+            background: none;
+            text-decoration: none;
+        }
+    }
+    &:active {
+        border-color: transparent;
     }
 }
 
@@ -482,6 +405,12 @@ input[type="button"]{
             height: auto;
             max-width: 100%;
             padding: 0;
+            .wrapper-user-menu {
+                margin: 0;
+            }
+            .logo {
+                margin: 0;
+            }
         }
         .logo {
             margin: 0;
@@ -638,6 +567,9 @@ input[type="button"]{
                 margin: 0 0 10px;
                 text-align: center;
             }
+            li {
+                margin-bottom: 0;
+            }
         }
         .contacts {
             float: right;
@@ -652,6 +584,28 @@ input[type="button"]{
         padding: 16px 0 17px;
         background: #fff;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.dropdown-menu-container {
+    height: auto;
+    margin: 0;
+    .menu-title {
+        display: inline-block;
+        color: #fff;
+        line-height: 1.7;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .menu-image {
+        max-width: 30px;
+        height: auto;
+        margin-left: 7px;
+        border-radius: 10%;
+    }
+    .menu-button {
+        margin: 0;
     }
 }
 
@@ -1970,6 +1924,195 @@ a{
     }
 }
 
+/*-----Course innera pages-----*/
+
+.view-in-course {
+    .content-wrapper {
+        padding-bottom: 80px;
+    }
+}
+
+.wiki-wrapper {
+    border: 1px solid #c8c8c8;
+    section.wiki {
+        .article-functions {
+            .see-children {
+                a {
+                    &:hover, &:focus {
+                      color: $base-color;
+                    }
+                }
+            }
+        }
+        .nav-tabs {
+            li {
+                &.active {
+                    a {
+                        color: $base-color;
+                        border-color: $base-color;
+                    }
+                }
+            }
+            a {
+                &:hover, &:focus {
+                    color: $base-color;
+                }
+            }
+        }
+        .breadcrumbs-header {
+            float: left;
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .course-outline {
+        .block-tree {
+            .section {
+                ol.outline-item {
+                    .subsection {
+                        a.outline-item {
+                            &:hover, &:focus {
+                                background-color: lighten($base-color, 60%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.date-summary-container {
+    .date-summary {
+        &-todays-date {
+            @include border-left(3px solid $base-color);
+        }
+    }
+}
+
+.field-input,
+.wrapper-custom-select,
+.field-select,
+.field-textarea {
+    padding: 8px 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.instructor-dashboard-content-2 {
+    .instructor-nav {
+        .nav-item {
+            .btn-link {
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #000;
+                    background: none;
+                    text-decoration: none;
+                }
+                &:active {
+                    border: transparent;
+                }
+            }
+        }
+    }
+}
+
+.open-response-assessment-block .ora-summary-title {
+    color: $base-color;
+}
+
+.instructor-dashboard-wrapper-2  {
+    section.idash-section#membership {
+        .member-lists-management {
+            .auth-list-container {
+                .member-list-widget {
+                    input[type="button"].add {
+                        @extend .btn;
+                         &:hover {
+                            &:not(:disabled) {
+                                @extend .btn;
+                            }
+                        }
+                        &:active {
+                            @extend .btn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    .nav-item {
+        a, a:visited {
+            color: $base-color;
+        }
+        a:hover {
+            color: $base-color;
+        }
+    }
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button {
+    &:hover,
+    &:focus,
+    &:active {
+        color: $base-color;
+    }
+}
+
+.progress {
+    height: auto;
+}
+
+.instructor-dashboard-content-2 {
+    input[type="button"] {
+        @extend .btn;
+    }
+}
+
+.field-label {
+    .field-input:checked + .field-input-label {
+        color: $base-color;
+    }
+
+}
+
+.btn-brand {
+    @extend .btn;
+}
+
+/*-----Bootstrap-----*/
+
+table {
+  background: none;
+}
+
+/*-----SYSADMIN-----*/
+.sysadmin-dashboard-content {
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        a {
+            font-size: 22px;
+        }
+    }
+    .list-input{
+        padding: 0;
+        list-style: none;
+    }
+}
+a {
+    &.active-section {
+        color: #009298;
+    }
+}
+
 /*-----FOOTER-----*/
 .wrapper-footer {
     padding: 0;
@@ -2074,36 +2217,5 @@ a{
         li {
             padding-bottom: 10px;
         }
-    }
-}
-
-/*-----FOOTER COURSE-----*/
-body {
-    &.view-in-course {
-        .wrapper-footer {
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 100%;
-            max-width: 1170px;
-            min-width: 320px;
-            @media (max-width: 1199px) {
-                max-width: 970px;
-            }
-            @media (max-width: 991px) {
-                max-width: 750px;
-            }
-        }
-    }
-}
-
-.container {
-    &>div {
-        display: block;
-        width: auto;
-        background: none;
-        border: none;
-        box-shadow: none;
     }
 }
