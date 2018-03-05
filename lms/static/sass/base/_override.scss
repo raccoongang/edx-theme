@@ -345,7 +345,9 @@ body .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn
 // btns
 body.view-register .form-actions button[type="submit"],
 body.view-login .form-actions button[type="submit"],
-body .login .form-actions button[type="submit"] {
+body .login .form-actions button[type="submit"],
+body .forum-new-post-form .btn-brand.submit,
+body .forum-new-post-form .btn.cancel {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
@@ -1346,10 +1348,17 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     text-shadow: #767676 2px 2px 5px;
 }
 
-.register form .field.is-focused .tip {
+.register form .field.is-focused .tip,
+body .login form .field.is-focused .tip {
     color: #646464 !important;
 }
 .bookmarks-results-list-item:visited .list-item-right-section,
 .bookmarks-results-list-item:hover .list-item-right-section {
     color: $theme-link;
+}
+div.gradebook-wrapper .student-table tr td a:visited {
+    color: darken($theme-link, 20%);
+}
+body.view-register .header-global nav, body.view-login .header-global nav {
+    max-width: 1180px;
 }
