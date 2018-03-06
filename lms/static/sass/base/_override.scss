@@ -739,8 +739,8 @@ body #reading .green {
     }
 }
 .verify-pending-msg {
-    max-width: 750px;
-    margin: 0 auto 40px !important;
+    max-width: 790px;
+    margin: 40px auto 40px auto !important;
     line-height: 1.3;
     font-size: 20px;
 }
@@ -748,6 +748,10 @@ body #reading .green {
     color: #b8b8b8;
     a {
         color: #b9b9b9;
+    }
+
+    b {
+        color: #3c3c3c;
     }
 }
 .action-req-link {
@@ -759,4 +763,13 @@ body .wrapper-footer {
     border-top: none;
     background: #fafafa;
     padding: 0;
+}
+
+body .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child) a:before {
+    margin-right: 0;
+    content: "";
+}
+
+body .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child) {
+    margin-left: 15px;
 }

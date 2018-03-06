@@ -237,6 +237,9 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
             %elif is_id_verification_pending:
                 <p class="action-req" style="display:none">${_('Action required:')} </p>
                 <p>${_('ID Verify Status Pending. We are reviewing your ID information.')}</p>
+            %elif is_credit_pending:
+              <p class="action-req action-req--green">${_('Action requiered:')} </p>
+              <p>${_('No action required; it may take up to 10 business days to process your credit.')}</p>
             %elif credit_btn_label:
                 <p class="action-req">${_('Action required:')} </p>   
                 <p>${_('Before you get your credit, check our')} <a class="action-req-link" href="https://ea.asu.edu/gpa-calculator">GPA calculator</a> ${_('to ensure the credit you’ve earned will help you gain admission to ASU; otherwise, you may consider repeating the course.')}</p>
