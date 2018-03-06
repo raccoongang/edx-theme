@@ -1,8 +1,13 @@
 <%def name="online_help_token()"><% return "course" %></%def>
 <%namespace name='static' file='static_content.html'/>
 <%!
+from django.conf import settings
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
+from shoppingcart.utils import is_shopping_cart_enabled
+from courseware.views.views import get_cosmetic_display_price
+from courseware.courses import get_course
+from course_modes.models import CourseMode
 %>
 <%page args="course" expression_filter="h"/>
 <article class="course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
@@ -32,7 +37,22 @@ from django.core.urlresolvers import reverse
           <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate">${_("Course starts: ")}${course_date_string_format}</div>
           <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
       % endif
-      <div class="cost">$ 155.00</div>
+      <%
+          coursem = get_course(course.id, depth=2)
+          registration_price = CourseMode.min_course_price_for_currency(
+              course.id,
+              settings.PAID_COURSE_REGISTRATION_CURRENCY[0]
+          )
+          course_price = get_cosmetic_display_price(coursem, registration_price)
+          can_add_course_to_cart = is_shopping_cart_enabled() and registration_price
+      %>
+      <div class="cost">
+        % if can_add_course_to_cart:
+          ${course_price.replace('$', '$ ')}
+        % else:
+          $ FREE
+        % endif
+      </div>
     </div>
     <div class="course-hover">
       <p class="course-hover_duration">Training Duration - 50 Hrs</p>
