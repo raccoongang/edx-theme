@@ -540,6 +540,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     color: $theme-btn-text-color;
     text-shadow: none;
     border-radius: 2px;
+    border: none;
     
     &:active,
     &:focus {
@@ -2856,5 +2857,22 @@ body .wrapper-footer {
     margin: 20px auto -63px;
     @media screen and (min-width: 1200px) {
         padding: 0 10px;
+    }
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
+    background: $theme-btn-bg !important;
+    box-shadow: none;
+    color: $theme-btn-text-color;
+    text-shadow: none;
+    border-radius: 2px;
+    border: none !important;
+    
+    &:active,
+    &:focus {
+        background: $theme-btn-bg !important;
+        box-shadow: none !important;
+    }
+    &:hover {
+        background: $theme-btn-bg-hover !important;
     }
 }
