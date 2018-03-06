@@ -2792,7 +2792,6 @@ body .find-courses .discovery-submit {
     padding: 0 3px;
 }
 .course-hover {
-    display: none !important;
     position: absolute;
     bottom: -100%;
     left: 0;
@@ -2824,6 +2823,7 @@ body .find-courses .discovery-submit {
 }
 .course-hover_work {
     background: url(#{$img-path}/icons-2.png) no-repeat -6px -41px;
+    display: none;
 }
 .courses-container .courses .course .course-image .cover-image {
     .learn-more,
