@@ -230,3 +230,45 @@ body .header-global .wrapper-header .wrapper-user-menu {
 .course-hover_work {
     background: url(#{$img-path}/icons-2.png) no-repeat -6px -41px;
 }
+.main-wrapper__holder .phone {
+    background: url(#{$img-path}/icons.png) no-repeat 0 0;
+    padding-left: 26px;
+    padding-right: 26px;
+    @media screen and (max-width: 760px) {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .main-wrapper_in-footer & {
+        background-image: url(#{$img-path}/icons_in-footer.png);
+    }
+}
+.main-wrapper__holder .address {
+    background: url(#{$img-path}/icons.png) no-repeat -363px 0;
+    padding-left: 21px;
+    padding-right: 21px;
+    @media screen and (max-width: 760px) {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .main-wrapper_in-footer & {
+        background-image: url(#{$img-path}/icons_in-footer.png);
+        background-position: -318px 0;
+    }
+}
+.main-wrapper__holder .mail {
+    background: url(#{$img-path}/icons.png) no-repeat -922px 2px;
+    padding-left: 24px;
+    padding-right: 24px;
+    a {
+        color: #43220c !important;
+    }
+    .main-wrapper_in-footer & {
+        background-image: url(#{$img-path}/icons_in-footer.png);
+        a {
+            color: #bdbdbd !important;
+        }
+    }
+}
+body .icon-list {
+    margin-bottom: 20px;
+}

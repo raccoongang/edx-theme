@@ -2641,6 +2641,10 @@ table.stat_table {
     width: 100%;
     text-align: center;
     padding: 15px 0;
+
+    &:hover {
+        color: #fff;
+    }
 }
 .main-wrapper__holder .phone {
     background: url(#{$img-path}/icons.png) no-repeat 0 0;
