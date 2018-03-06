@@ -2117,9 +2117,75 @@ body {
     @extend .btn;
 }
 
-.discussion-module {
-    .btn {
-        @extend .btn;
+.courseware {
+    .discussion-module,
+    .wmd-prompt-dialog {
+        .btn { 
+            color: $base-color;
+            border-color: $base-color;
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: $base-color !important;
+                background: $base-color !important;
+            }
+         }
+
+        .btn-brand {
+            color: $base-color;
+            border-color: $base-color;
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: $base-color !important;
+                background: $base-color !important;
+            }
+        }
+    }
+}
+
+.xmodule_display {
+    &.xmodule_VideoModule {
+        .video {
+            .subtitles {
+                a {
+                    color: $base-color;
+                }
+            }
+        }
+    }
+    &.xmodule_CapaModule {
+        div.problem {
+            button.btn-default {
+                &:hover {
+                    color: $base-color;
+                }
+            }
+            .choicegroup,
+            .choicetextgroup {
+                label {
+                    &:hover {
+                        border-color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+    .xmodule_ConditionalModule {
+        div.problem {
+            .xmodule_display {
+                &.xmodule_CapaModule {
+                    .choicegroup,
+                    .choicetextgroup {
+                        label {
+                            &:hover {
+                                border-color: $base-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
