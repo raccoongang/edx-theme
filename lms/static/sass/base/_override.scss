@@ -657,7 +657,10 @@ main#main {
     line-height: 1.3;
 }
 body footer#footer-openedx.grid-container {
-    max-width: 1120px;
+    max-width: 1180px;
+    background: #fff;
+    padding: 25px 10px 30px 10px;
+    // border-top: 1px solid #c5c6c7;
 }
 
 .dashboard .my-courses .wrapper-header-courses .header-courses {
@@ -744,10 +747,16 @@ body #reading .green {
 .helper {
     color: #b8b8b8;
     a {
-        color: #787878;
+        color: #b9b9b9;
     }
 }
 .action-req-link {
     color: #787878;
     text-decoration: underline;
+}
+body .wrapper-footer {
+    box-shadow: none;
+    border-top: none;
+    background: #fafafa;
+    padding: 0;
 }
