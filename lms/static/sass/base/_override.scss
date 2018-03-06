@@ -531,6 +531,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     box-shadow: none;
     border-color: $theme-btn-bg;
 }
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart,
 .button,
 .heading-group button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
@@ -2790,6 +2791,7 @@ body .find-courses .discovery-submit {
     padding: 0 3px;
 }
 .course-hover {
+    display: none !important;
     position: absolute;
     bottom: -100%;
     left: 0;
