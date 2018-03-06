@@ -739,7 +739,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .slick-track>header {
-    background-image: url('#{$img-path}/background.jpg');
+    
     height: 420px;
     background-position: center;
     position: relative;
@@ -812,11 +812,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
         }
     }
 }
-.slick-track>header:nth-child(even) {
-    background: url('#{$img-path}/background.jpg') no-repeat 70%;
+.slide-1 {
+    background: url('#{$img-path}/32820-CloudSociety-GenericBanners-(1920x520)-1[2].png') no-repeat left;
+    background-size: cover;
 }
-.slick-track>header:nth-child(odd) {
-    background: url('#{$img-path}/Mauritius-Banner-notext.jpg') no-repeat 75%;
+.slide-2 {
+    background: url('#{$img-path}/32820-CloudSociety-GenericBanners-(1920x520)-2[2].png') no-repeat left;
+    background-size: cover;
+}
+.slide-3 {
+    background: url('#{$img-path}/32820-Cloud-Society-Banner-1920x520[2].jpg') no-repeat left;
+    background-size: cover;
 }
 .footer-logo-holder {
     position: absolute;
