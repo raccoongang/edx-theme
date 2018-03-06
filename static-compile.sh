@@ -1,20 +1,25 @@
 #!/bin/bash
-#coment function
+
+#function for add comment 
+comment() {
+    sed -i '' '1s/^/\/\//g' $1 #add coment on first line
+    sed -i '' '2s/\/\//''/g' $1 #remove coment on second line
+}
+#function for remove comment
 recomment() {
-    sed -i '' '/^\/\//s/^\/\//\/\/\//g' $1
-    sed -i '' '/^\/\/\//!s/^/\/\//g' $1
-    sed -i '' '/^\/\/\//s/^\/\/\///g' $1
+    sed -i '' '1s/\/\//''/g' $1 #remove coment on first line
+    sed -i '' '2s/^/\/\//g' $1 #add coment on second line
 }
 
 if [ $1 == start ]
   then
     #change files -- add right coment for local static
-    recomment lms/static/sass/lms-course-rtl.scss
-    recomment lms/static/sass/lms-course.scss
-    recomment lms/static/sass/lms-main-v1-rtl.scss
-    recomment lms/static/sass/lms-main-v1.scss
-    recomment lms/static/sass/discussion/lms-discussion-main-rtl.scss
-    recomment lms/static/sass/discussion/lms-discussion-main.scss
+    comment lms/static/sass/lms-course-rtl.scss
+    comment lms/static/sass/lms-course.scss
+    comment lms/static/sass/lms-main-v1-rtl.scss
+    comment lms/static/sass/lms-main-v1.scss
+    comment lms/static/sass/discussion/lms-discussion-main-rtl.scss
+    comment lms/static/sass/discussion/lms-discussion-main.scss
     #copy files for bild static localy
     cp lms/static/css/lms-course-rtl.css lms/static/css/time-lms-course-rtl.css
     cp lms/static/css/lms-course.css lms/static/css/time-lms-course.css
@@ -29,7 +34,7 @@ fi
 
 if [ $1 == end ]
   then
-    #change files -- add right coment for prod
+    #change files -- remove coment for prod
     recomment lms/static/sass/discussion/lms-discussion-main-rtl.scss
     recomment lms/static/sass/discussion/lms-discussion-main.scss
     recomment lms/static/sass/lms-course-rtl.scss
