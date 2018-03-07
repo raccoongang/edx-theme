@@ -740,8 +740,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .slick-track>header {
     
-    height: 420px;
-    background-position: center;
+    height: 500px;
     position: relative;
     background-color: #040404;
     
@@ -818,17 +817,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .slide-1 {
     background: url('#{$img-path}/bannerbg1.png') no-repeat right;
     background-size: cover;
+    @media screen and (max-width: 600px) {
+        background-position: 81% 0;
+    }
 }
 .slide-2 {
     background: url('#{$img-path}/bannerbg2.png') no-repeat right;
     background-size: cover;
 }
 .slide-3 {
-    background: url('#{$img-path}/bannerbg3.jpg') no-repeat left;
+    background: url('#{$img-path}/bannerbg3.jpg') no-repeat center;
     background-size: cover;
-    @media screen and (max-width: 1180px){
-        background-position: right;
-    }
 }
 .footer-logo-holder {
     position: absolute;
@@ -2712,6 +2711,17 @@ body {
     display: block;
     width: 150px;
     height: auto;
+}
+.logo-block {
+    @media all and (max-width: 768px) {
+        background: rgba(0,0,0,0.1);
+        padding: 5px;
+        width: 100%;
+        margin-left: -10px;
+        box-sizing: border-box;
+        top: 8px;
+        left: 5px;
+    }
 }
 .text-block {
     top: 100px;
