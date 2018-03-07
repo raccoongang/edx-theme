@@ -761,24 +761,6 @@ input[type="button"]{
     }
 }
 
-.rtl {
-    .header {
-        &-top {
-            .contacts {
-                float: none;
-            }
-        }
-    }
-    .navbar {
-        &-nav {
-            float: left;
-             @media (max-width: 1000px) {
-                float: none;
-            }
-        }
-    }
-}
-
 /*-----SLIDER-----*/
 .rev_slider {
     color: #fff;
@@ -1433,14 +1415,6 @@ label {
     }
 }
 
-.rtl {
-    .login-register {
-        .login-button {
-            float: none;
-        }
-    }
-}
-
 .login-form,
 .register-form {
     padding: 10px 0 5px;
@@ -1969,7 +1943,8 @@ body {
         .article-functions {
             .see-children {
                 a {
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                       color: $base-color;
                     }
                 }
@@ -1977,14 +1952,16 @@ body {
         }
         .nav-tabs {
             li {
+                float: none;
                 &.active {
                     a {
                         color: $base-color;
-                        border-color: $base-color;
+                        border: none;
                     }
                 }
             }
             a {
+                border: none;
                 &:hover, &:focus {
                     color: $base-color;
                 }
@@ -1994,6 +1971,15 @@ body {
             float: left;
             height: auto;
             width: 100%;
+        }
+        .breadcrumb {
+            &>li {
+                &+li {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 
@@ -2346,6 +2332,66 @@ table {
         list-style: none;
         li {
             padding-bottom: 10px;
+        }
+    }
+}
+
+
+/*-----RLT-----*/
+
+.rtl {
+    .header {
+        &-top {
+            .contacts {
+                float: none;
+            }
+        }
+    }
+    .navbar {
+        &-nav {
+            float: left;
+             @media (max-width: 1000px) {
+                float: none;
+            }
+        }
+    }
+    .login-register {
+        .login-button {
+            float: none;
+        }
+    }
+
+    .wiki-wrapper {
+        section.wiki {
+            .global-functions {
+                float: left !important;
+                margin: 0 0 0 20px;
+            }
+            .breadcrumb {
+                float: right !important;
+                margin: 0 40px 0 0;
+                li {
+                    float: right;
+                    margin: 0 0 0 10px;
+                    a {
+                        float: right;
+                    }
+                    &:after {
+                        content: '›';
+                    }
+                }
+            }
+            .main-article {
+                float: right;
+                padding: 40px 40px 40px;
+            }
+            &.history {
+                .accordion {
+                    .accordion-toggle {
+                        float: right !important;
+                    }
+                }
+            }
         }
     }
 }
