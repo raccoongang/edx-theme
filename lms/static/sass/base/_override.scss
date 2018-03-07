@@ -1981,6 +1981,37 @@ body {
                 }
             }
         }
+        .btn {
+            &.btn-primary {
+                box-shadow: none;
+                text-shadow: none;
+                background: $base-color;
+                border-color: $base-color;
+                &:hover {
+                    &:not(:disabled) {
+                        color: #fff;
+                        background: #009298;
+                        border-color: #00888e;
+                        box-shadow: none;
+                    }
+                }
+                &:active {
+                    &:not(:disabled) {
+                        background: #009298;
+                        border-color: #00888e;
+                        -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+                        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+                    }
+                }
+                &:focus {
+                    &:not(:disabled) {
+                        background: #009298;
+                        border-color: #00494b;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
     }
 
     .course-outline {
@@ -2202,6 +2233,38 @@ body {
     }
 }
 
+.discussion {
+    .post-label {
+        &.post-label-following {
+            color: $base-color;
+        }
+    }
+    .action-button{
+        &.action-follow {
+            &.is-checked {
+                .action-icon {
+
+                }
+            }
+            &:hover,
+            &:focus {
+                .action-icon {
+                    background-color: $base-color;
+                    border-color: $base-color;
+                }
+            }
+        }
+    }
+}
+
+.forum-nav-sort {
+    width: 50%;
+}
+
+.open-response-assessment-block .ora-summary-title {
+    color: $base-color;
+}
+
 /*-----Bootstrap-----*/
 
 table {
@@ -2378,6 +2441,8 @@ table {
                     }
                     &:after {
                         content: '›';
+                        margin-right: ($baseline/2);
+                        margin-left: 0;
                     }
                 }
             }
