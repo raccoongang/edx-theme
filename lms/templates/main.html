@@ -35,9 +35,14 @@ from pipeline_mako import render_require_js_path_overrides
 
 ## this needs to be here to prevent the title from mysteriously appearing in the body, in one case
 <%def name="pagetitle()" />
+
+<%def name="separator()"><%
+    return ' | '
+%></%def>
+
   <%block name="title">
       <title>
-       ${static.get_page_title_breadcrumbs(self.pagetitle())}
+       ${static.get_page_title_breadcrumbs(self.pagetitle(), separator=self.separator())}
       </title>
   </%block>
 
