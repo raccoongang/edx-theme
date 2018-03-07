@@ -13,7 +13,14 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="owl-carousel">
       <header class="slide-1">
         <div class="outer-wrapper">
-          
+          <div class="logo-block">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo (1).png" alt="">
+          </div>
+          <div class="text-block">
+            Wellcome to<br>
+            Microsoft Cloud Society<br>
+            Learning 
+          </div>
 
           % if show_homepage_promo_video:
             <a href="#video-modal" class="media" rel="leanModal">
@@ -27,7 +34,14 @@ from openedx.core.djangolib.markup import HTML, Text
       </header>
       <header class="slide-2">
         <div class="outer-wrapper">
-          
+          <div class="logo-block">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo (1).png" alt="">
+            </div>
+            <div class="text-block">
+                Get Certified and<br>
+                win a trip to the<br>
+                Mauritius Cloud Camp 
+            </div>
 
           % if show_homepage_promo_video:
             <a href="#video-modal" class="media" rel="leanModal">
@@ -41,8 +55,19 @@ from openedx.core.djangolib.markup import HTML, Text
       </header>
       <header class="slide-3">
         <div class="outer-wrapper">
-          
-
+            <div class="logo-block">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo (1).png" alt="">
+            </div>
+            <div class="text-block">
+                Save 20% on your<br>
+                digital certificate now!<br>
+                Take your skills to the<br>
+                next level. 
+            </div>
+            <div class="big-logo-block">
+                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/Cloud-Society-Banner.jpg" alt="">
+            </div>
+            
           % if show_homepage_promo_video:
             <a href="#video-modal" class="media" rel="leanModal">
               <div class="hero">
