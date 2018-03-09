@@ -1936,6 +1936,11 @@ body {
     .home {
         padding: 20px;
     }
+    .open-response-assessment-block {
+        .ora-summary-title {
+        color: $base-color;
+        }
+    }
 }
 
 .wiki-wrapper {
@@ -2012,6 +2017,9 @@ body {
                 }
             }
         }
+        #hint_id_content {
+            position: static;
+        }
     }
 
     .course-outline {
@@ -2066,10 +2074,6 @@ body {
             }
         }
     }
-}
-
-.open-response-assessment-block .ora-summary-title {
-    color: $base-color;
 }
 
 .instructor-dashboard-wrapper-2  {
@@ -2149,8 +2153,8 @@ body {
          }
 
         .btn-brand {
-            color: $base-color;
             border-color: $base-color;
+            background: $base-color;
             &:hover,
             &:active,
             &:focus {
@@ -2260,14 +2264,61 @@ body {
             }
         }
     }
+    &.inline-discussion {
+        .new-post-article {
+            .add-post-cancel {
+                color: $base-color;
+            }
+        }
+    }
 }
 
 .forum-nav-sort {
     width: 50%;
 }
 
-.open-response-assessment-block .ora-summary-title {
+.bookmarks-results-list {
+    .bookmarks-results-list-item {
+        &:hover {
+            border-color: $base-color;
+            .list-item-breadcrumbtrail {
+                color: $base-color;
+            }
+        }
+        &:before {
+            color: $base-color;
+        }
+    }
+}
+
+.account-settings-sections {
+    .section {
+        .account-settings-section-body {
+            .u-field {
+                .field {
+                    .u-field-link {
+                        color: $base-color;
+                        [disabled] & {
+                            border-color: transparent;
+                        }
+                    }
+                    select {
+                        ~ .icon-caret-down {
+                            &:after {
+                                border-top-color: $base-color;;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.field-label {
+  .field-input:checked + .field-input-label {
     color: $base-color;
+  }
 }
 
 /*-----Bootstrap-----*/
@@ -2467,6 +2518,11 @@ table {
                     }
                 }
             }
+        }
+    }
+    .form-horizontal {
+        .control-label {
+            text-align: right;
         }
     }
 }
