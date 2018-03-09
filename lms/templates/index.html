@@ -18,8 +18,6 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                 <h1>Welcome to VINSYS!</h1>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac placerat arcu, a volutpat orci. Aenean nec augue et magna consectetur sagittis id quis ligula. Etiam 
-lacinia pretium elementum. Aenean congue leo at mauris placerat, et dignissim tortor volutpat. Morbi non massa a metus venenatis fermentum quis sit amet ipsum.</span>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
