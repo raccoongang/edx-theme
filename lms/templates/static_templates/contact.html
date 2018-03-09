@@ -1,5 +1,8 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+from django.utils.translation import ugettext as _ 
+from django.core.urlresolvers import reverse
+%>
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Contact")}</%block>
@@ -21,18 +24,21 @@
                     <div class="row">
                         <div class="col-md-7">
                             <h3 class="line-bottom">للتواصل</h3>
-                            <form id="contact_form" name="contact_form" class="" action="" method="post">
+                            <form id="contact_form" name="contact_form" class="" action="${reverse('contact_form')}" method="post">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-field">
                                             <label>الاسم <small>*</small></label>
-                                            <input name="form_name" class="input-block" type="text" placeholder="الإسم بالكامل" required="">
+                                            <input name="name" class="input-block" type="text" placeholder="الإسم بالكامل" required="">
+                                            ${unicode(form['name'].errors) | n}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-field">
                                             <label>البريد الالكتروني <small>*</small></label>
-                                            <input name="form_email" class="input-block required email" type="email" placeholder="البريد الالكتروني">
+                                            <input name="email" class="input-block required email" type="email" placeholder="البريد الالكتروني">
+                                            ${unicode(form['email'].errors) | n}
                                         </div>
                                     </div>
                                 </div>
@@ -40,19 +46,22 @@
                                     <div class="col-sm-6">
                                         <div class="form-field">
                                             <label>الموضوع <small>*</small></label>
-                                            <input name="form_subject" class="input-block required" type="text" placeholder=" عنوان الموضوع">
+                                            <input name="subject" class="input-block required" type="text" placeholder=" عنوان الموضوع">
+                                            ${unicode(form['subject'].errors) | n}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-field">
                                             <label>الهاتف</label>
-                                            <input name="form_phone" class="input-block" type="text" placeholder=" رقم الهاتف">
+                                            <input name="phone" class="input-block" type="text" placeholder=" رقم الهاتف">
+                                            ${unicode(form['phone'].errors) | n}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-field">
                                     <label>الرسالة</label>
-                                    <textarea name="form_message" class="input-block required" rows="5" placeholder="الرجاء كتابة الرسالة هنا"></textarea>
+                                    <textarea name="message" class="input-block required" rows="5" placeholder="الرجاء كتابة الرسالة هنا"></textarea>
+                                    ${unicode(form['message'].errors) | n}
                                 </div>
                                 <div class="form-field">
                                     <input name="form_botcheck" class="form-control" type="hidden" value="" />
