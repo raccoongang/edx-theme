@@ -2249,10 +2249,14 @@ body {
             }
             &:hover,
             &:focus {
+                border-color: $base-color;
                 .action-icon {
                     background-color: $base-color;
                     border-color: $base-color;
                 }
+            }
+            .action-label {
+                color: $base-color;
             }
         }
     }
@@ -2290,6 +2294,12 @@ table {
         &.active-section {
             color: #009298;
         }
+    }
+}
+
+table {
+    &.stat_table {
+        font-family: $base-font;
     }
 }
 
