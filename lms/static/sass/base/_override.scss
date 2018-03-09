@@ -2243,7 +2243,8 @@ body {
         &.action-follow {
             &.is-checked {
                 .action-icon {
-
+                    background-color: $base-color;
+                    border-color: $base-color;
                 }
             }
             &:hover,
