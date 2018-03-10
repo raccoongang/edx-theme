@@ -1941,6 +1941,18 @@ body {
         color: $base-color;
         }
     }
+    .field-label {
+        .field-input:checked + .field-input-label {
+            color: $base-color;
+        }
+    }
+    &.inline-discussion {
+        .new-post-article {
+            .add-post-cancel {
+                color: $base-color;
+            }
+        }
+    }
 }
 
 .wiki-wrapper {
@@ -2127,13 +2139,6 @@ body {
     }
 }
 
-.field-label {
-    .field-input:checked + .field-input-label {
-        color: $base-color;
-    }
-
-}
-
 .btn-brand {
     @extend .btn;
 }
@@ -2153,6 +2158,7 @@ body {
          }
 
         .btn-brand {
+            color: #fff;
             border-color: $base-color;
             background: $base-color;
             &:hover,
@@ -2264,13 +2270,6 @@ body {
             }
         }
     }
-    &.inline-discussion {
-        .new-post-article {
-            .add-post-cancel {
-                color: $base-color;
-            }
-        }
-    }
 }
 
 .forum-nav-sort {
@@ -2313,12 +2312,6 @@ body {
             }
         }
     }
-}
-
-.field-label {
-  .field-input:checked + .field-input-label {
-    color: $base-color;
-  }
 }
 
 /*-----Bootstrap-----*/
