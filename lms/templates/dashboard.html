@@ -95,6 +95,11 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="my-courses" id="my-courses">
         <%include file="learner_dashboard/_dashboard_navigation_courses.html"/>
 
+        % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
+          <div>
+              <a href="${settings.CMS_BASE}/home">${_("Studio home")}</a>
+          </div>
+        % endif
         % if len(course_enrollments) > 0:
           <ul class="listing-courses">
           <%
