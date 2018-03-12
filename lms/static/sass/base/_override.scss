@@ -1940,7 +1940,7 @@ body {
                 color: $base-color;
             }
         }
-        &inline-discussion {
+        &.inline-discussion {
             .inline-thread {
                 .forum-nav-bar {
                     .all-posts-btn {
@@ -1954,25 +1954,25 @@ body {
                 }
             }
         }
-    }
-    .action-button{
-        &.action-follow {
-            &.is-checked {
-                .action-icon {
-                    background-color: $base-color;
-                    border-color: $base-color;
+        .action-button{
+            &.action-follow {
+                &.is-checked {
+                    .action-icon {
+                        background-color: $base-color;
+                        border-color: $base-color;
+                    }
                 }
-            }
-            &:hover,
-            &:focus {
-                border-color: $base-color;
-                .action-icon {
-                    background-color: $base-color;
+                &:hover,
+                &:focus {
                     border-color: $base-color;
+                    .action-icon {
+                        background-color: $base-color;
+                        border-color: $base-color;
+                    }
                 }
-            }
-            .action-label {
-                color: $base-color;
+                .action-label {
+                    color: $base-color;
+                }
             }
         }
     }
