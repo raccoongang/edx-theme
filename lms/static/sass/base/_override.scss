@@ -121,20 +121,6 @@ h5 {
     font-weight: 400;
 }
 
-// a {
-//     color: $link-color;
-//     text-decoration: underline;
-//     &:hover,
-//     &:focus {
-//         color: $link-color;
-//         text-decoration: none;
-//         outline: none;
-//     }
-//     &:visited {
-//         color: $link-color;
-//     }
-// }
-
 p,
 ul,
 ol {
@@ -1926,8 +1912,6 @@ body {
     }
 }
 
-
-
 .view-in-course {
     .content-wrapper {
         padding-bottom: 80px;
@@ -1946,9 +1930,48 @@ body {
             color: $base-color;
         }
     }
-    &.inline-discussion {
-        .new-post-article {
-            .add-post-cancel {
+    
+    .discussion {
+        a {
+            color: $base-color;
+        }
+        .post-label {
+            &.post-label-following {
+                color: $base-color;
+            }
+        }
+        &inline-discussion {
+            .inline-thread {
+                .forum-nav-bar {
+                    .all-posts-btn {
+                        color: $base-color;
+                    }
+                }
+            }
+            .new-post-article {
+                .add-post-cancel {
+                    color: $base-color;
+                }
+            }
+        }
+    }
+    .action-button{
+        &.action-follow {
+            &.is-checked {
+                .action-icon {
+                    background-color: $base-color;
+                    border-color: $base-color;
+                }
+            }
+            &:hover,
+            &:focus {
+                border-color: $base-color;
+                .action-icon {
+                    background-color: $base-color;
+                    border-color: $base-color;
+                }
+            }
+            .action-label {
                 color: $base-color;
             }
         }
@@ -2243,35 +2266,6 @@ body {
     }
 }
 
-.discussion {
-    .post-label {
-        &.post-label-following {
-            color: $base-color;
-        }
-    }
-    .action-button{
-        &.action-follow {
-            &.is-checked {
-                .action-icon {
-                    background-color: $base-color;
-                    border-color: $base-color;
-                }
-            }
-            &:hover,
-            &:focus {
-                border-color: $base-color;
-                .action-icon {
-                    background-color: $base-color;
-                    border-color: $base-color;
-                }
-            }
-            .action-label {
-                color: $base-color;
-            }
-        }
-    }
-}
-
 .forum-nav-sort {
     width: 50%;
 }
@@ -2312,6 +2306,10 @@ body {
             }
         }
     }
+}
+
+.CodeMirror-scroll {
+    margin-right: 0;
 }
 
 /*-----Bootstrap-----*/
