@@ -536,3 +536,38 @@ from openedx.core.djangolib.markup import HTML, Text
   $(window).load(function() {$('#signup_action').trigger("click");});
 </script>
 % endif
+
+<script type='text/javascript'>
+    var menu_selector = ".navbar-nav";
+    function onScroll(){
+        var scroll_top = $(document).scrollTop();
+        $(menu_selector + " li a[href^=\\/\\?\\#]").each(function(){
+            var hash = $(this).attr("href").replace('/?', '');
+            var target = $(hash);
+            if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+                $(menu_selector + " li.active").removeClass("active");
+                $(this.parentElement).addClass("active");
+            } else {
+//                $(this.parentElement).removeClass("active");
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $(document).on("scroll", onScroll);
+        $("a[href^=\\/\\?\\#]").click(function(e){
+            e.preventDefault();
+            $(document).off("scroll");
+            $(menu_selector + " li.active").removeClass("active");
+            $(this.parentElement).addClass("active");
+            var hash = $(this).attr("href").replace('/?', '');
+            var target = $(hash);
+            $("html, body").animate({
+                scrollTop: target.offset().top
+            }, 500, function(){
+                window.location.hash = hash;
+                $(document).on("scroll", onScroll);
+            });
+        });
+    });
+</script>
