@@ -1276,8 +1276,8 @@ body {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        width: 75px;
-        height: 55px;
+        width: 150px;
+        height: 110px;
 
         &__flag {
             background-image: url("../images/download_en.svg");
@@ -1293,7 +1293,7 @@ body {
         }
         &__cc {
             margin-right: 10px;
-            width: 46px;
+            width: 92px;
             background-image: url("../images/CC1.png");
         }
     }
@@ -1345,11 +1345,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    a {
+        display: flex;
+    }
 }
 .footer-holder_text {
-    font-size: 9px;
+    font-size: 16px;
     line-height: 1.3;
 }
 .footer-holder_text__flag {
     color: #0C509F;
+}
+body .footer-copyright,
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+    display: none;
 }
