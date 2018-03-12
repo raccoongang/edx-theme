@@ -5,3 +5,48 @@ div.info-wrapper section.handouts,
         display: none;
     }
 }
+.sequence-nav-button {
+
+    span {
+        font-size: 0;
+        line-height: 0;
+    }
+    .fa {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous {
+    border-radius: 50% 0 0 50%;
+    min-width: auto;
+    width: 40px;
+    padding: 0 15px;
+    position: relative;
+    background: #d6d6d6;
+    box-shadow: inset 4px 9px 0px -8px rgba(255, 255, 255, .3);
+
+    .fa {
+        padding: 0;
+        position: absolute;
+        top: 11px;
+        left: 13px;
+        text-shadow: 0px 1px 1px #fff;
+    }
+}
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next {
+    border-radius: 0 50% 50% 0;
+    min-width: auto;
+    width: 40px;
+    padding: 0 15px;
+    position: relative;
+    background: #d6d6d6;
+    box-shadow: inset -4px 9px 0px -8px rgba(255, 255, 255, .3);
+
+    .fa {
+        padding: 0;
+        position: absolute;
+        top: 11px;
+        right: 13px;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+    }
+}
