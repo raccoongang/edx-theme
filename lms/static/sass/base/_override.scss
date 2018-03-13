@@ -267,6 +267,11 @@ body a {
         text-decoration: none !important;
     }
 
+    &:visited {
+        color: $theme-link;
+        text-decoration: none !important;
+    }
+
     &:hover {
         color: $theme-link-hover;
         text-decoration: none !important;
