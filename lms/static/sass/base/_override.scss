@@ -173,7 +173,7 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-color;
     position: relative;
-    padding: 65px 10px 30px 10px;
+    padding: 30px 10px;
 
     footer#footer-openedx {
         a:hover,
@@ -565,7 +565,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     background: $theme-btn-bg-hover;
 }
 .courses-container .courses .course {
-    border-bottom: 3px solid #fc6a15;
+    border-bottom: 3px solid $courses-border-color;
 
     .course-image .cover-image .learn-more {
         background-color: transparent;
@@ -690,7 +690,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background-position: center;
     position: relative;
     background-color: #040404;
-    background-position: 0 0;
 
     .outer-wrapper {
         animation: none;
@@ -825,7 +824,6 @@ section.wiki .global-functions {
     }
 }
 .content-wrapper {
-    padding-bottom: 80px;
     background: $theme-content-bg;
 }
 .main-article {
