@@ -30,14 +30,14 @@ from django.core.urlresolvers import reverse
                                     <div class="col-sm-6">
                                         <div class="form-field">
                                             <label>الاسم <small>*</small></label>
-                                            <input name="name" class="input-block" type="text" placeholder="الإسم بالكامل" required="">
+                                            <input name="name" class="input-block" type="text" placeholder="الإسم بالكامل">
                                             ${unicode(form['name'].errors) | n}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-field">
                                             <label>البريد الالكتروني <small>*</small></label>
-                                            <input name="email" class="input-block required email" type="email" placeholder="البريد الالكتروني">
+                                            <input name="email" class="input-block email" type="email" placeholder="البريد الالكتروني">
                                             ${unicode(form['email'].errors) | n}
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@ from django.core.urlresolvers import reverse
                                     <div class="col-sm-6">
                                         <div class="form-field">
                                             <label>الموضوع <small>*</small></label>
-                                            <input name="subject" class="input-block required" type="text" placeholder=" عنوان الموضوع">
+                                            <input name="subject" class="input-block" type="text" placeholder=" عنوان الموضوع">
                                             ${unicode(form['subject'].errors) | n}
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@ from django.core.urlresolvers import reverse
                                 </div>
                                 <div class="form-field">
                                     <label>الرسالة</label>
-                                    <textarea name="message" class="input-block required" rows="5" placeholder="الرجاء كتابة الرسالة هنا"></textarea>
+                                    <textarea name="message" class="input-block" rows="5" placeholder="الرجاء كتابة الرسالة هنا"></textarea>
                                     ${unicode(form['message'].errors) | n}
                                 </div>
                                 <div class="form-field">
