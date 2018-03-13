@@ -130,7 +130,7 @@ from openedx.core.lib.courses import course_image_url
               <i class="pe-7s-ribbon"></i>
               <div class="pull-right">
                 <span>القسم</span>
-                <h5 class="mt-0">الاستثمار وريادة الأعمال</h5>
+                <h5 class="mt-0">${course.course_category and course.course_category.name or '----'}</h5>
               </div>
             </li>
             <li>
@@ -312,6 +312,13 @@ from openedx.core.lib.courses import course_image_url
               % endif
               % if get_course_about_section(request, course, "prerequisites"):
                 <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
+              % endif
+              % if course.language:
+                <li class="important-dates-item">
+                  <span class="icon fa fa-globe" aria-hidden="true"></span>
+                  <p class="important-dates-item-title">${_("Language")}:</p>
+                  <span class="important-dates-item-text">${dict(settings.LANGUAGES).get(course.language, course.language)}</span>
+                </li>
               % endif
             </ol>
           </div>
