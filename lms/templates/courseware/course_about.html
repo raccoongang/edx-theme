@@ -220,7 +220,7 @@ from openedx.core.lib.courses import course_image_url
             <h4 class="widget-title line-bottom-theme-color">مقدمة توضيحية</h4>
             <a href="#video-modal" class="media video-preview" rel="leanModal">
               <div class="hero">
-                <img src="${course_image_urls['large']}" alt="" />
+                <img src="${course_image_url(course, 'video_thumbnail_image')}" alt="" />
                 <div class="play-intro"></div>
               </div>
             </a>
