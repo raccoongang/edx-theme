@@ -97,19 +97,19 @@ from django.utils.translation import ugettext as _
     <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active">
-          <a href="${marketing_link('ROOT')}">الصفحة الرئيسية</a>
+        <li class="${request.path == '/' and 'active' or ''}">
+          <a href="${marketing_link('ROOT')}?#main">الصفحة الرئيسية</a>
         </li>
-        <li>
+        <li class="${request.path == '/about' and 'active' or ''}">
           <a href="/about">نبذة عنا </a>
         </li>
         <li>
-          <a href="/#gallery">تصفح المقررات</a>
+          <a href="/?#gallery">تصفح المقررات</a>
         </li>
-        <li>
+        <li class="${request.path == '/faq' and 'active' or ''}">
           <a href="/faq">أسئلة متكررة</a>
         </li>
-        <li>
+        <li class="${request.path == '/contact/' and 'active' or ''}">
           <a href="/contact">الدعم الفني</a>
         </li>
       </ul>

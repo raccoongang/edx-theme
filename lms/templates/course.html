@@ -41,7 +41,7 @@ from django.conf import settings
           </div>
           <div class="course-date">
             <i class="pe-7s-timer font-26 vertical-align-middle text-theme-colored2 mr-10"></i>  
-            ٢٠ ساعة
+              ${course.start.strftime('%H:%M')}
           </div>
           <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
       % endif
