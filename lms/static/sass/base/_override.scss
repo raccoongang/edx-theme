@@ -5,6 +5,7 @@ $mid-dray: #777;
 $mid-gray2: #737373;
 $gray: #808080;
 $base-color: $dark-cyan;
+$base-lightest: lighten($base-color, 62%); //#edfffe
 $link-color: $base-color;
 $text-color: $mid-dray;
 $footer-bg: $light-gray;
@@ -1931,13 +1932,7 @@ body {
         .ora-summary-title {
         color: $base-color;
         }
-    }
-    .field-label {
-        .field-input:checked + .field-input-label {
-            color: $base-color;
-        }
-    }
-    
+    }    
     .discussion {
         a {
             color: $base-color;
@@ -1982,6 +1977,12 @@ body {
                 }
             }
         }
+    }
+}
+
+.field-label {
+    .field-input:checked + .field-input-label {
+        color: $base-color;
     }
 }
 
@@ -2063,16 +2064,17 @@ body {
             position: static;
         }
     }
+}
 
-    .course-outline {
-        .block-tree {
-            .section {
-                ol.outline-item {
-                    .subsection {
-                        a.outline-item {
-                            &:hover, &:focus {
-                                background-color: lighten($base-color, 60%);
-                            }
+.course-outline {
+    .block-tree {
+        .section {
+            ol.outline-item {
+                .subsection {
+                    a.outline-item {
+                        &:hover,
+                        &:focus {
+                            background: $base-lightest;
                         }
                     }
                 }
@@ -2362,7 +2364,35 @@ table {
             display: none;
         }
     }
+    .profile-section-one-fields {
+        .u-field-message {
+            width: auto;
+            padding: 0;
+            margin: 4px 7px 0;
+            text-align: center;
+        }
+        select {
+            height: 25px;
+        }
+    }
+}
 
+.u-field {
+    &.editable-toggle {
+        &.mode-display {
+            &:hover {
+                background: $base-lightest;
+            }
+        }
+    }
+}
+
+.u-field-dropdown {
+    button {
+        &.u-field-value-display {
+            color: $mid-dray;
+        }
+    }
 }
 
 /*-----FOOTER-----*/
@@ -2535,6 +2565,16 @@ table {
     .form-horizontal {
         .control-label {
             text-align: right;
+        }
+    }
+
+    .profile-wrapper {
+        .course-info {
+            .grade-detail-graph {
+                canvas {
+                    width: 100%;
+                }
+            }
         }
     }
 }
