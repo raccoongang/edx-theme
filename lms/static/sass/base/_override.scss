@@ -2351,6 +2351,20 @@ table {
     }
 }
 
+/*-----Profile-----*/
+.view-profile {
+    .wrapper-profile-sections {
+        .wrapper-profile-section-one {
+            width: 100%;
+            display: inline-block;
+        }
+        &>.is-hidden {
+            display: none;
+        }
+    }
+
+}
+
 /*-----FOOTER-----*/
 .wrapper-footer {
     padding: 0;
