@@ -1,3 +1,100 @@
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('../fonts/NeoSansStd-Regular.woff2') format('woff2'),
+        url('../fonts/NeoSansStd-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-Black.woff2') format('woff2'),
+        url('../fonts/NeoSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-Light.woff2') format('woff2'),
+        url('../fonts/NeoSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-LightItalic.woff2') format('woff2'),
+        url('../fonts/NeoSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('../fonts/NeoSansStd-Light.woff2') format('woff2'),
+        url('../fonts/NeoSansStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans.woff2') format('woff2'),
+        url('../fonts/NeoSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-Medium.woff2') format('woff2'),
+        url('../fonts/NeoSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-Italic.woff2') format('woff2'),
+        url('../fonts/NeoSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-Bold.woff2') format('woff2'),
+        url('../fonts/NeoSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-BoldItalic.woff2') format('woff2'),
+        url('../fonts/NeoSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-MediumItalic.woff2') format('woff2'),
+        url('../fonts/NeoSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NeoSans';
+    src: url('../fonts/NeoSans-BlackItalic.woff2') format('woff2'),
+        url('../fonts/NeoSans-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
 .header-global {
     height: auto;
     background: $header-color;
@@ -2571,4 +2668,26 @@ body .window-wrap .header-global .wrapper-header .list-inline.nav-global {
 
 .header-global .nav-global .tab-nav-item .tab-nav-link {
     padding: 10px;
+}
+
+.raccoon-block {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: #fff;
+    @media screen and (max-width: 760px){
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+    margin-left: 15px;
+    img {
+        height: 14px;
+        margin-top: -6px;
+    }
+    a {
+        color: #fff !important;
+        font-size: 12px;
+    }
 }
