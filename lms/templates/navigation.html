@@ -47,7 +47,7 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
-  <header id="global-navigation" class="header-global" >
+  <header id="global-navigation" class="header-global ${"header-global__course" if course else ""}" >
     <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
@@ -65,18 +65,6 @@ site_status_msg = get_site_status_msg(course_id)
       </a>
     </h1>
 
-    % if course:
-      <h2 class="course-header"><span class="provider">${course.display_org_with_default}:</span>
-        <span class="course-number">${course.display_number_with_default}</span>
-        <%
-        display_name = course.display_name_with_default
-        if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-          ccx = get_current_ccx(course.id)
-          if ccx:
-            display_name = ccx.display_name
-        %>
-        <span class="course-name">${display_name}</span></h2>
-      % endif
         <div class="nav-holder">
       % if user.is_authenticated():
         <ol class="left nav-global list-inline authenticated">
@@ -219,6 +207,18 @@ site_status_msg = get_site_status_msg(course_id)
       % endif
       % endif
       </div>
+      % if course:
+      <h2 class="course-header"><span class="provider">${course.display_org_with_default}:</span>
+        <span class="course-number">${course.display_number_with_default}</span>
+        <%
+        display_name = course.display_name_with_default
+        if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+          ccx = get_current_ccx(course.id)
+          if ccx:
+            display_name = ccx.display_name
+        %>
+        <span class="course-name">${display_name}</span></h2>
+      % endif
     </nav>
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
 </header>
