@@ -501,8 +501,7 @@ body .home .page-header-secondary,
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add,
 body .instructor-dashboard-content-2 input[type="button"],
-body .search-bar .search-button,
-.openassessment__steps button {
+body .search-bar .search-button {
     text-shadow: none;
     box-shadow: none;
     border: none;
@@ -1366,5 +1365,10 @@ body.view-login .wrapper-footer footer#footer-openedx, {
     max-width: 1180px !important;
 }
 .openassessment__steps button {
-    
+    color: $theme-link;
+    border-color: $theme-link;
+    &:hover,&:focus {
+        color: #fff;
+        background: $theme-link;
+    }
 }
