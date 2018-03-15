@@ -1523,9 +1523,6 @@ section.wiki .wiki-wrapper .nav-tabs li {
     max-width: 100%;
     height: auto;
 }
-.grade-detail-graph {
-    display: none;
-}
 body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
@@ -2566,4 +2563,12 @@ table.stat_table {
 }
 //end sysadmin page responsive
 
+body .window-wrap .header-global .wrapper-header .list-inline.nav-global {
+    @media screen and (max-width: 760px) {
+        display: block;
+    }
+}
 
+.header-global .nav-global .tab-nav-item .tab-nav-link {
+    padding: 10px;
+}
