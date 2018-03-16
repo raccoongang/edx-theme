@@ -50,7 +50,7 @@ body {
     .home > header .title > .heading-group p {
         color: #fff;
         font-style: normal;
-        font-family: "Open Sans", Verdana, Geneva, sans-serif;
+        font-family: "Roboto","Open Sans", Verdana, Geneva, sans-serif;
         font-size: 50px;
         text-shadow: none;
         margin-bottom: 16px;
@@ -386,6 +386,9 @@ body {
     .dashboard .my-courses .wrapper-header-courses {
         border-bottom: 1px solid rgb(211,211,211);
         margin: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .header-global .user .user-link .user-image-frame {
         max-width: 30px;
@@ -679,10 +682,6 @@ body.dashboard {
     padding: 40px 15px 20px;
 }
 
-body #reading .code-block,
-body #reading .green {
-    font-family: 'Courier New', monospace !important;
-}
 .verification-process .carousel .wrapper-task .controls .control .action:hover,
 .verification-process .carousel .wrapper-task .controls .control .action:focus {
     background: lighten($theme-color, 20%);
@@ -752,7 +751,7 @@ body #reading .green {
     }
 
     b {
-        color: #3c3c3c;
+        color: #9b9b9b;
     }
 }
 .action-req-link {
@@ -773,4 +772,30 @@ body .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child) a:bef
 
 body .wrapper-footer footer#footer-openedx .nav-legal li:not(:first-child) {
     margin-left: 15px;
+}
+body .header-link {
+    color: $theme-color;
+    padding-right: 20px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0,-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 0 8px 12px;
+        border-color: transparent transparent transparent $theme-color;
+        transition: 0.2s;
+    }
+    &:hover,&:focus {
+        color: lighten($theme-color,20%);
+        &:after {
+            border-color: transparent transparent transparent lighten($theme-color,20%);
+            transition: 0.2s;
+        }
+    }
+    
 }
