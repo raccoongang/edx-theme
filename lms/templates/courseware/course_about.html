@@ -123,7 +123,10 @@ from openedx.core.lib.courses import course_image_url
             <%
               instructors = course_details.instructor_info['instructors']
             %>
-            %for instructor in instructors:
+            %if instructors:
+            <%
+              instructor = instructors[0]
+            %>
             <li>
               <i class="pe-7s-user"></i>
               <div class="pull-right">
@@ -131,7 +134,7 @@ from openedx.core.lib.courses import course_image_url
                 <h5 class="mt-0">${instructor['name'] or '----'}</h5>
               </div>
             </li>
-            %endfor
+            %endif
 
             <li>
               <i class="pe-7s-ribbon"></i>
