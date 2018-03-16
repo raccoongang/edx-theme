@@ -119,13 +119,20 @@ from openedx.core.lib.courses import course_image_url
       <div class="col-md-8">
         <div class="course-info-header">
           <ul class="course-info-header-list">
+
+            <%
+              instructors = course_details.instructor_info['instructors']
+            %>
+            %for instructor in instructors:
             <li>
               <i class="pe-7s-user"></i>
               <div class="pull-right">
-                <span>الأستاذ</span>
-                <h5 class="mt-0">د. محمد أحمد</h5>
+                <span>${instructor['title'] or '----'}</span>
+                <h5 class="mt-0">${instructor['name'] or '----'}</h5>
               </div>
             </li>
+            %endfor
+
             <li>
               <i class="pe-7s-ribbon"></i>
               <div class="pull-right">
