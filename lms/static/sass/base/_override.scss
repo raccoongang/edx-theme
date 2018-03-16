@@ -739,16 +739,21 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .slick-track>header {
-    
     height: 550px;
     position: relative;
-    background-color: #040404;
-    
+    @media screen and (max-width: 1680px) {
+        background-position-y: 100%;
+        background-size: auto 460px;
+    }
+    @media screen and (max-width: 1200px) {
+        background-position-y: 100%;
+        background-size: auto 350px;
+    }
     @media screen and (max-width: 768px) {
         display: flex;
         align-items: center;
         justify-content: center;
-            
+        background-size: auto 250px;
     }
     .outer-wrapper {
         animation: none;
@@ -768,7 +773,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
         max-width: 1000px;
         margin: 0 auto;
         float: none;
-        
         &:last-child {
             margin-right: auto;
             margin-left: auto;
@@ -776,7 +780,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
         >.heading-group {
             text-align: center;
             width: 100%;
-
             h1 {
                 font-size: 32px;
                 line-height: 1.2;
@@ -806,7 +809,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 border-radius: 2px;
                 padding: 10px 20px;
                 display: inline-block;
-
                 &:hover {
                     text-decoration: none;
                 }
@@ -815,19 +817,22 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .slide-1 {
-    background: url('#{$img-path}/bannerbg1.png') no-repeat right;
+    background:  url('#{$img-path}/bannerbg1.png') no-repeat right;
+    background-color: #00bcf2;
     background-size: cover;
-    @media screen and (max-width: 600px) {
-        background-position: 81% 0;
-    }
 }
 .slide-2 {
-    background: url('#{$img-path}/bannerbg2.png') no-repeat right;
+    background:  url('#{$img-path}/bannerbg2.png') no-repeat right;
     background-size: cover;
+    background-color: #0070c8;
 }
 .slide-3 {
-    background: url('#{$img-path}/bannerbg3.jpg') no-repeat center;
+    background: #6ed0f7 url('#{$img-path}/bannerbg3.jpg') no-repeat center;
     background-size: cover;
+    background-color: #6ed0f7;
+    @media screen and (max-width: 768px){
+        background-position: 60% 100%;
+    }
 }
 .footer-logo-holder {
     position: absolute;
@@ -837,7 +842,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .logo-ar {
     display: none;
-
     .lang_ar & {
         display: inline;
     }
@@ -845,16 +849,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .logo-en {
     display: inline;
     height: 35px;
-
-
-
     .lang_ar & {
         display: none;
     }
 }
 .highlighted-courses .courses {
     padding-bottom: 77px;
-
     .course a {
         background: #fff;
     }
@@ -2714,7 +2714,7 @@ body {
 }
 .logo-block {
     @media all and (max-width: 768px) {
-        background: rgba(0,0,0,0.1);
+        
         padding: 10px;
         width: 100%;
         margin-left: -10px;
@@ -2729,8 +2729,11 @@ body {
     font-weight: 300;
     color: #fff;
     line-height: 1.3;
+    @media all and (max-width: 1680px) {
+        font-size: 40px;
+    }
     @media all and (max-width: 1180px) {
-        background: rgba(0,0,0,0.1);
+        top: 60px;
         padding: 10px;
         width: 100%;
         margin-left: -20px;
@@ -2746,9 +2749,21 @@ body {
     right: 20px;
     top: 20px;
     @media all and (max-width: 1500px) {
-        display: none;
+        width: 200px;
+        top: auto;
+        bottom: 20px;
+    }
+    @media all and (max-width: 768px) {
+        width: 100px;
+    }
+    
+    img {
+        width: 100%;
     }
 }
 .slide-3 .text-block {
     font-size: 46px;
+    @media all and (max-width: 1500px) {
+        font-size: 30px;
+    }
 }
