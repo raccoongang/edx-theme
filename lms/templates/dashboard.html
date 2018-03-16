@@ -93,13 +93,8 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <div class="container dashboard" id="dashboard-main">
       <div class="my-courses" id="my-courses">
-        <%include file="learner_dashboard/_dashboard_navigation_courses.html"/>
+        <%include file="learner_dashboard/_dashboard_navigation_courses.html" args='studio_access=studio_access'/>
 
-        % if studio_access:
-          <div class="wrapper-header-courses">
-              <a class="btn studio-home" href="http://${settings.CMS_BASE}/home">${_("Studio home")}</a>
-          </div>
-        % endif
         % if len(course_enrollments) > 0:
           <ul class="listing-courses">
           <%
@@ -268,3 +263,33 @@ from openedx.core.djangolib.markup import HTML, Text
     </form>
   </div>
 </div>
+
+
+
+<script>
+    $( document ).ready(function() {
+        $('.request-credit-btn').click(function (e) {
+            const msg = "${_('This will add your grade and ASU credit to your transcript. Please click OK to continue')}";
+            const courseInformation =  e.target.closest('.request-credit-btn').dataset;
+            const data = {
+                course_id:courseInformation.courseKey
+            };
+            if( confirm(msg)){
+                $.ajax({
+                    type: "POST",
+                    url: "${reverse('ospp_api_v0:send_credit_request')}",
+                    data: JSON.stringify(data),
+                    success: function (){
+                        location.reload(true)
+                    },
+                    failure:function (){
+                        alert("${_('We have some problem with sending credit request. Please try again later.')}");
+                    },
+                    contentType: "application/json; charset=utf-8",
+                });
+            }
+            return false;
+        })
+
+    });
+</script>

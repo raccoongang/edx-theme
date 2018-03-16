@@ -198,7 +198,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                             )
                             credit_msg_class = "credit-request-not-started-msg"
                             credit_btn_label = _("Request Credit")
-                            credit_btn_class = 'pending-credit-btn'
+                            credit_btn_class = 'enter-course request-credit-btn'
+                            credit_btn_href = None
                         elif request_status == 'pending':
                             # Request received but not reviewed
                             ## Translators: provider_name is the name of a credit provider or university (e.g. State University)
@@ -367,6 +368,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                        $('.disable-look-unregister').click();
                    });
                }
+
            });
 </script>
 

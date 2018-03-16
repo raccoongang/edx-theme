@@ -5,7 +5,9 @@ from django.utils.translation import ugettext as _
 
 <header class="wrapper-header-courses">
   <h2 class="header-courses">${_("My Courses")}</h2>
-  <a href="#" class="header-link">LAUNCH STUDIO</a>
+    % if studio_access:
+    <a href="http://${settings.CMS_BASE}/home" class="header-link">LAUNCH STUDIO</a>
+    % endif
 </header>
 
 <h2 class="hd hd-2 sr" id="courses-tab">${_('My Courses')}</h2>
