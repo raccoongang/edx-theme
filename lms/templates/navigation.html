@@ -15,6 +15,7 @@ from branding import api as branding_api
 # app that handles site status messages
 from status.status import get_site_status_msg
 from util.enterprise_helpers import get_enterprise_customer_logo_url
+from openedx.core.djangoapps.site_configuration.helpers import get_value
 %>
 
 ## Provide a hook for themes to inject branding on top.
@@ -158,7 +159,7 @@ site_status_msg = get_site_status_msg(course_id)
                 </%block>
         
                 <%block name="navigation_other_global_links">
-                  % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                  % if not ( get_value('DISABLE_LOGIN_BUTTON', settings.FEATURES['DISABLE_LOGIN_BUTTON'])):
                     % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
                       <li class="item nav-global-05">
                         <a class="btn" href="/courses">${_("Explore Courses")}</a>
@@ -170,7 +171,7 @@ site_status_msg = get_site_status_msg(course_id)
         
               <ol class="right nav-courseware list-inline">
                 <%block name="navigation_sign_in">
-                  % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                  % if not ( get_value('DISABLE_LOGIN_BUTTON', settings.FEATURES['DISABLE_LOGIN_BUTTON'])):
                     % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                       <li class="item nav-global-04">
                         <a class="btn btn-login" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
