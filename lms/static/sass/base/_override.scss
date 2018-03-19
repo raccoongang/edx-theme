@@ -94,7 +94,6 @@
     font-style: italic;
 }
 
-
 .header-global {
     height: auto;
     background: $header-color;
@@ -105,6 +104,7 @@
     .wrapper-header {
         height: auto;
         padding: 0;
+        max-width: 1200px;
     }
     .nav-global {
         width: 100%;
@@ -2659,6 +2659,10 @@ table.stat_table {
     }
 }
 //end sysadmin page responsive
+body .header-global {
+    border: none;
+}
+
 
 body .window-wrap .header-global .wrapper-header .list-inline.nav-global {
     @media screen and (max-width: 760px) {
@@ -2670,7 +2674,7 @@ body .window-wrap .header-global .wrapper-header .list-inline.nav-global {
     padding: 10px;
 }
 
-.raccoon-block {
+.wrapper-footer footer#footer-openedx .raccoon-block {
     position: absolute;
     right: 0;
     top: 50%;
@@ -2689,5 +2693,40 @@ body .window-wrap .header-global .wrapper-header .list-inline.nav-global {
     a {
         color: #fff !important;
         font-size: 12px;
+        &:last-child {
+            margin-left: 12px;
+        }
     }
 }
+
+body .wrapper-footer footer#footer-openedx .footer-logo-holder {
+    left: 0;
+    &>img {
+        width: 102px;
+    }
+}
+
+body .logo-en {
+    width: 102px;
+}
+body .home>header .title>.heading-group h1 {
+    text-transform: uppercase;
+}
+
+
+body .courses-container .courses .course .course-image .cover-image:before {
+    background: #1f1f1f;
+}
+body .courses-container .courses .course .course-info .course-title {
+    color: #1f1f1f;
+}
+body .header-global .nav-courseware li .btn {
+    padding: 11px 27px 7px;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+body section.wiki .pull-left {
+    float: none;
+}
+
