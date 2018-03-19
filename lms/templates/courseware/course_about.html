@@ -126,13 +126,21 @@ from openedx.core.lib.courses import course_image_url
                 <h5 class="mt-0">د. محمد أحمد</h5>
               </div>
             </li>
-            <li>
-              <i class="pe-7s-ribbon"></i>
-              <div class="pull-right">
-                <span>القسم</span>
-                <h5 class="mt-0">${course.course_category and course.course_category.name or '----'}</h5>
-              </div>
-            </li>
+            <%
+              instructors = course_details.instructor_info['instructors']
+            %>
+            %if instructors:
+              <%
+                instructor = instructors[0]
+              %>
+              <li>
+                <i class="pe-7s-user"></i>
+                <div class="pull-right">
+                  <span>${instructor['title'] or '----'}</span>
+                  <h5 class="mt-0">${instructor['name'] or '----'}</h5>
+                </div>
+              </li>
+            %endif
             <li>
               <div class="main-cta">
                 %if user.is_authenticated() and registered:
