@@ -119,20 +119,16 @@ from openedx.core.lib.courses import course_image_url
       <div class="col-md-8">
         <div class="course-info-header">
           <ul class="course-info-header-list">
-            <%
-              instructors = course_details.instructor_info['instructors']
-            %>
+            <% instructors = course_details.instructor_info['instructors'] %>
             %if instructors:
-            <%
-              instructor = instructors[0]
-            %>
-            <li>
-              <i class="pe-7s-user"></i>
-              <div class="pull-right">
-                <span>${instructor['title'] or '----'}</span>
-                <h5 class="mt-0">${instructor['name'] or '----'}</h5>
-              </div>
-            </li>
+              <% instructor = instructors[0] %>
+              <li>
+                <i class="pe-7s-user"></i>
+                <div class="pull-right">
+                  <span>${instructor['title'] or '----'}</span>
+                  <h5 class="mt-0">${instructor['name'] or '----'}</h5>
+                </div>
+              </li>
             %endif
 
             <li>
