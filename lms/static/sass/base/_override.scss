@@ -1707,9 +1707,7 @@ section.wiki .main-article {
 .email-targets-primary li {
     overflow: hidden;
 }
-.course-header {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
-}
+
 body.lang_ar {
     * {
         letter-spacing: 0 !important;
@@ -2731,6 +2729,23 @@ body section.wiki .pull-left {
     float: none;
 }
 
-.header-global .wrapper-header .course-header {
-    
+body .header-global .wrapper-header .course-header {
+    color: #646464;
+    font-size: 16px;
+    padding: 20px 45px 0 5px;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+body .home>header .title {
+    width: 100%;   
+}
+
+.right.nav-courseware.list-inline {
+    display: flex;
+    flex-direction: row-reverse;
+    .item:first-child {
+        margin-left: 6px;
+    }
 }
