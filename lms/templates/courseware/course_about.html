@@ -224,6 +224,7 @@ from openedx.core.lib.courses import course_image_url
       </div>
       <div class="col-sm-12 col-md-4">
         <div class="sidebar sidebar-course">
+          %if course_details.intro_video:
           <div class="widget sidebar-widget">
             <h4 class="widget-title line-bottom-theme-color">مقدمة توضيحية</h4>
             <a href="#video-modal" class="media video-preview" rel="leanModal">
@@ -233,10 +234,13 @@ from openedx.core.lib.courses import course_image_url
               </div>
             </a>
           </div>
+          %endif
+          %if course_details.short_description:
           <div class="widget sidebar-widget">
             <h4 class="widget-title line-bottom-theme-color">المتطلبات</h4>
             <p>${get_course_about_section(request, course, 'short_description')}</p>
           </div>
+          %endif
           <div class="widget sidebar-widget">
             <h4 class="widget-title line-bottom-theme-color">معلومات المقرر</h4>
             <ol class="important-dates">
