@@ -817,9 +817,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .slide-1 {
-    background:  url('#{$img-path}/bannerbg1.png') no-repeat right;
+    background:  url('#{$img-path}/bannerbg1.png') no-repeat;
     background-color: #00bcf2;
     background-size: cover;
+    @media screen and (max-width: 768px){
+        background-position-x: 94%;
+    }
 }
 .slide-2 {
     background:  url('#{$img-path}/bannerbg2.png') no-repeat right;
