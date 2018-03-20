@@ -1323,7 +1323,10 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 
     a {
         color: $theme-link;
-
+        
+        &:focus {
+            color: $theme-link;
+        }
         &:hover {
             color: $theme-link-hover;
         }
