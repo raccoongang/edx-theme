@@ -81,3 +81,221 @@
 body.lang_ar * {
     letter-spacing: 0 !important;
 }
+
+
+
+
+/*----------*/
+$base-color: #87189d; //purple
+$secondary-color: #fc6a15; //orange
+$btn-bg-hover: #fdaa7a; //orange light
+
+%btn {
+    color: #ffe;
+    text-shadow: none;
+    background: $secondary-color;
+    border: none;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+        &:not(:disabled) {
+            box-shadow: none;
+            background: $btn-bg-hover;
+        }
+    }
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+    @extend %btn;
+}
+
+.doc-link {
+    color: $base-color;
+    &:visited {
+      color: $base-color;
+    }
+}
+
+.header-global {
+    .primary {
+        &>a {
+            color: $base-color;
+        }
+    }
+    .user {
+        .user-dropdown {
+            color: $base-color;
+        }
+    }
+}
+
+.courses-container {
+    .courses {
+        .course {
+            .course-image {
+                .cover-image {
+                    &:before {
+                        background: $base-color;
+                    }
+                    .learn-more {
+                        color: #fff;
+                        line-height: 45px;
+                        background: none;
+                        border: 3px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.find-courses {
+    .discovery-submit {
+        border-color: $base-color;
+        background: $base-color;
+        &:hover,
+        &:focus {
+            background: rgba($base-color, 0.8);
+        }
+    }
+}
+
+.course-info {
+    header {
+        &.course-profile {
+            .intro-inner-wrapper {
+                .intro {
+                    .main-cta {
+                        strong {
+                           @extend %btn;
+                        }
+                        a {
+                            &.find-courses,
+                            &.register,
+                            &.add-to-cart {
+                                @extend %btn;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search-bar {
+    .search-button,
+    .cancel-button,
+    .search-button:hover,
+    .cancel-button:hover {
+        background: $base-color;
+        &:hover,
+        &:focus,
+        &:active {
+            background: $base-color;
+        }
+    }
+}
+
+.wrapper-course-material {
+    .course-tabs {
+        li {
+            a,
+            a:visited {
+                &:hover,
+                &:focus,
+                &.active {
+                    color: $base-color;
+                    border-bottom-color: $base-color;
+                }
+            }
+        }
+    }
+}
+
+.instructor-dashboard-wrapper-2 {
+    section {
+        &.idash-section {
+            &#membership {
+                .member-lists-management {
+                    .auth-list-container {
+                        .member-list-widget {
+                            input[type="button"].add {
+                                @extend %btn;
+                                &:active,
+                                &:focus {
+                                    &:not(:disabled) {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#cohort_management {
+                .cohort-management {
+                    .message {
+                        .action-create{
+                            @extend %btn;
+                        }
+                    }
+                    .form-submit {
+                        @extend %btn;
+                    }
+                }
+            }
+            &#discussions_management {
+                .form-submit {
+                    @extend %btn;
+                }
+            }
+        }
+    }
+}
+
+.instructor-dashboard-content-2 {
+    input[type="button"] {
+        @extend %btn;
+        &:hover {
+            &:not(:disabled) {
+                box-shadow: none;
+                background: $btn-bg-hover;
+            }
+        }
+        &:active,
+        &:focus {
+            &:not(:disabled) {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
