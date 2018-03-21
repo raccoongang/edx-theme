@@ -23,6 +23,10 @@
     }
 }
 
+.logo-en,.logo-ar {
+    width: 250px;
+}
+
 .link-logo-en,
 .logo-en {
     display: inline;
@@ -42,16 +46,19 @@
 .language-nav {
     width: 100%;
     justify-content: center;
-    margin: 10px 0;
     display: flex;
+    order: 2;
+    @media screen and (max-width: 760px) {
+        order: 1;
+        margin-bottom: 10px;
+    }
     @media screen and (min-width: 760px) {
-        float: right;
         width: auto;
-        margin: 12px 0 0 10px;
+        margin-left: 10px;
 
         .rtl & {
             float: left;
-            margin: 12px 10px 0 0;
+            margin-right: 10px;
         }
     }
 
@@ -80,4 +87,19 @@
 
 body.lang_ar * {
     letter-spacing: 0 !important;
+}
+.doc-link {
+    margin: 0;
+    margin-right: 15px;
+    color: $header-nav-link-color;
+}
+.grade-detail-graph {
+    display: none;
+}
+.lang_ar .btn-en,
+.lang_en .btn-ar {
+    display: none !important;
+}
+.header-list {
+    flex-direction: column;
 }

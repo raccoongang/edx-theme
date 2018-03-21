@@ -64,18 +64,17 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
   </header>
 % else:
-  <header id="global-navigation" class="header-global" >
-    <nav class="wrapper-header" aria-label="${_('Global')}">
-      <ul class="language-nav">
-        <li class="language-nav_item"><a class="language-nav_link" href="https://courses.youngthinker.org/courses">AR</a></li>
-        <li class="language-nav_item"><a class="language-nav_link" href="https://en-courses.youngthinker.org/courses">EN</a></li>
-      </ul>
+  <header id="global-navigation" class="theme-header" >
+    <span id="hamburger" class="hamburger"></span>
+    <nav class="theme-header__holder" aria-label="${_('Global')}">
       <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-      % if user.is_authenticated():
-        <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-      % else:
-        <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-      % endif
+      <div class="theme-header__wrapper">
+        % if user.is_authenticated():
+          <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+        % else:
+          <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+        % endif
+      </div>
       % if header_language_selector_is_enabled():
         <% languages = released_languages() %>
         % if len(languages) > 1:
@@ -106,6 +105,15 @@ site_status_msg = get_site_status_msg(course_id)
       % endif
     </nav>
   </header>
+  <script>
+      var btn = document.getElementById('hamburger'),
+          body = document.body;
+
+      function btnToggle() {
+         body.classList.toggle('menu-open');
+      }
+      btn.addEventListener('click', btnToggle);
+  </script>
 % endif
 % if course:
 <!--[if lte IE 9]>
