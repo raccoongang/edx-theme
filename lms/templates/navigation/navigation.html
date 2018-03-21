@@ -48,7 +48,13 @@ site_status_msg = get_site_status_msg(course_id)
     </div>
     % endif
   </%block>
-  
+  <script>
+      function goToPage(url) {
+        if (url != "") {
+          location.href = url;
+        }
+      }
+    </script> 
   % if uses_bootstrap:
   <header class="navigation-container header-global">
     <nav class="navbar navbar-toggleable-md navbar-light">
