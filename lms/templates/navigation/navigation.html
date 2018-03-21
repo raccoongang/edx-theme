@@ -81,7 +81,18 @@ site_status_msg = get_site_status_msg(course_id)
             <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
           % endif
           ## Course filtering
-    
+          % if settings.FEATURES.get('COUNTRY_FILTER', False):
+          <ol class="user-filter">
+            <li class="nav-global-02">
+                <form action="" method="get">
+                  <select name="country" onchange="goToPage(this.options[this.selectedIndex].value)">
+                    <option value="0">Country Filter</option>
+                    <option value="https://learn.camara.org">All Courses</option>
+                  </select>
+                </form>
+              </li>
+          </ol>
+          % endif
       
     </nav>
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
