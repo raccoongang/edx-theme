@@ -1364,7 +1364,8 @@ body.view-register .header-global nav, body.view-login .header-global nav,
 body.view-login .wrapper-footer footer#footer-openedx, {
     max-width: 1180px !important;
 }
-.openassessment .openassessment__steps__step.is--in-progress button {
+.openassessment .openassessment__steps__step.is--in-progress button,
+.openassessment .step--response .response__submission__actions .action--save {
     color: $theme-link;
     border-color: $theme-link;
     background: none;
