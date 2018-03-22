@@ -123,3 +123,122 @@ body.lang_ar * {
     display: none;
 }
 
+//на странице логина добавлена кнопка логина через SSO
+.login-register {
+    .form-type {
+        margin-bottom: 40px;
+    }
+
+    .login-provider {
+        .icon {
+            background: $theme-btn-bg;
+        }
+
+        &:hover {
+            span {
+                color: $theme-btn-white-text-color-hover;
+            }
+        }
+    }
+}
+//bg для страницы логина
+body {
+    background: #f5f5f5;
+}
+
+.login-page {
+    background: #eee;
+
+    body {
+        background: #eee;
+    }
+}
+
+//убираем лишние элементы из формы логина, должна быть только одна кнопка SSO
+.login-register .login-provider .icon,
+.login-register .section-title.lines:after,
+.login-register .toggle-form,
+body .login-register .action-primary,
+.login-register .form-field {
+    display: none;
+}
+
+.login-register form {
+    border: none;
+}
+
+
+.login-register .section-title.lines .text {
+    color: #1a1d1c;
+    font-size: 36px;
+    font-weight: 300;
+    padding: 0;
+    letter-spacing: 0.6px;
+    background: transparent;
+}
+
+.login-register .section-title.lines {
+    margin-bottom: 30px;
+}
+
+body .login-register {
+    background: transparent;
+}
+
+.login-register .form-type {
+    max-width: 680px;
+    box-shadow: 0 0 15px 0 rgba(50, 50, 50, 0.2);
+    padding: 0;
+    border-radius: 10px;
+}
+
+.login-register .form-wrapper {
+    background: #fafafc;
+    padding-top: 90px;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+.login-register .login-provider {
+    max-width: 300px;
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: $theme-btn-bg;
+    border-radius: 5px;
+
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+    }
+}
+
+.login-register .login-provider .login-icon {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        top: 4px;
+        left: -34px;
+        height: 18px;
+        width: 18px;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f090";
+    }
+}
+body .login-register {
+    background: none;
+}
+.login-register-content {
+    background-color: transparent;
+}
+.login-register {
+    width: 100%;
+}
