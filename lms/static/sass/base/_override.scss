@@ -1254,6 +1254,20 @@ $btn-bg-hover: #fdaa7a; //orange light
     }
 }
 
+html,
+body,
+body.view-in-course {
+    background: #eee;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.window-wrap {
+    background: none;
+}
+
 input[type="submit"],
 input[type="button"],
 button,
@@ -1267,9 +1281,11 @@ button,
     &:hover,
     &:focus,
     &:active {
-        color: #fff;
-        background: $btn-bg-hover;
-        border-color: $btn-bg-hover;
+        &:not(:disabled) {
+            color: #fff;
+            background: $btn-bg-hover;
+            border: 1px solid $btn-bg-hover;
+        }
     }
 }
 
@@ -1286,15 +1302,17 @@ button,
 }
 
 .btn-default {
-    color: $base-color;
+    color: $secondary-color;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         color: $secondary-color;
         border-color: $secondary-color;
+        border: 1px solid $secondary-color;
     }
     &:active {
         &:not(:disabled) {
-            border: none;
+            border: 1px solid $secondary-color;
         }
     }
 }
@@ -1436,10 +1454,15 @@ button,
         border-color: $base-color;
         background: $base-color;
         &:hover,
+        &:active,
         &:focus {
+            border: 2px solid $base-color;
             background: rgba($base-color, 0.8);
         }
     }
+   .loading-spinner {
+        background: $base-color;
+   }
 }
 
 .course-info {
@@ -1528,14 +1551,15 @@ button,
                 }
                 .cohort-management-nav {
                     .action-create {
-                        color: #fff;
-                        background: $secondary-color;
-                        border-color: $secondary-color;
+                        @extend %theme-btn;
+                        border: 1px solid $secondary-color;
                         &:hover,
                         &:focus,
                         &:active {
-                            background: $btn-bg-hover;
-                            border-color: $btn-bg-hover;
+                            &:not(:disabled) {
+                                box-shadow: none;
+                                border-color: $btn-bg-hover;
+                            }
                         }
                     }
                 }
@@ -1553,9 +1577,20 @@ button,
     }
     .customBrowseBtn {
         .file-browse {
+            &:hover,
+            &:focus,
+            &:active {
+                background: none;
+                border-color: transparent;
+            }
             .browse {
                 @extend %theme-btn;
             }
+        }
+    }
+    .file-download-link {
+        a {
+            color: $base-color;
         }
     }
 }
@@ -1717,9 +1752,12 @@ div {
                             &.outline-item {
                                 &:hover,
                                 &:focus {
-                                    background: $shadow-color;
+                                    background: rgba($shadow-color, 0.4);
                                 }
                             }
+                        }
+                        &:hover {
+                            border-color: $base-color;
                         }
                     }
                 }
@@ -1735,6 +1773,20 @@ div {
         }
         a:hover {
           color: $base-color;
+        }
+    }
+}
+
+.xmodule_display.xmodule_CapaModule {
+    div {
+        &.problem {
+            button {
+                &.btn-brand {
+                    &:hover {
+                        background: $btn-bg-hover;
+                    }
+                }
+            }
         }
     }
 }
@@ -1758,6 +1810,12 @@ div {
             .msg-actions {
                 .btn {
                     background: $secondary-color;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background: $btn-bg-hover;
+                        border-color: $btn-bg-hover;
+                    }
                 }
             }
         }
@@ -1780,3 +1838,26 @@ input[type="password"] {
         max-width: 100%;
     }
 }
+
+/*-----Textbook-----*/
+div {
+    &.book-wrapper {
+        section {
+            &.book-sidebar {
+                #booknav {
+                    li {
+                        a {
+                            color: $base-color;
+                            &:hover,
+                            &:focus {
+                                color: $base-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

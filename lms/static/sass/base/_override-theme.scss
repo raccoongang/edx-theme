@@ -242,3 +242,39 @@ body .login-register {
 .login-register {
     width: 100%;
 }
+
+// Title added on course inner pages
+.course-header {
+    &.preview-menu {
+        overflow: hidden;
+        h2 {
+            margin: 0;
+        }
+        .course-name {
+            position: relative;
+            display: block;
+            padding: 10px 30px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            background: $secondary-color;
+            &:before,
+            &:after {
+                content: '';
+                width: 80px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -80px;
+                background: linear-gradient(to right, #fc6a15 0%, #eee 100%);
+            }
+            &:before {
+                transform: rotate(180deg);
+            }
+            &:after {
+                left: auto;
+                right: -80px;
+            }
+        }
+    }
+}
