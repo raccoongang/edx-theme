@@ -64,7 +64,7 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
   </header>
 % else:
-  <header id="global-navigation" class="theme-header" >
+  <header id="global-navigation" class="theme-header ${"header-global__course" if course else ""} ${"header-global__login" if "login" in request.path else ""}" >
     <span id="hamburger" class="hamburger"></span>
     <nav class="theme-header__holder" aria-label="${_('Global')}">
       <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>

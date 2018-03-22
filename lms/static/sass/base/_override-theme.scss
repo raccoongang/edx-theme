@@ -2,6 +2,7 @@
     border-bottom: 5px #ff6a13 solid;
 }
 
+//не стандартное расположение лого в футере
 .logo-footer__theme {
     position: absolute;
     top: -50px;
@@ -14,6 +15,7 @@
     padding-top: 65px;
 }
 
+//скрываем и показываем ссылки для языковых версий
 .link-logo-ar,
 .logo-ar {
     display: none;
@@ -43,6 +45,7 @@
     }
 }
 
+// добавленны ссылки для перехода на разные языки
 .language-nav {
     width: 100%;
     justify-content: center;
@@ -94,15 +97,30 @@ body.lang_ar * {
     margin-right: 15px;
     color: $header-nav-link-color;
 }
+
+//на странице прогресса выключаем график
 .grade-detail-graph {
     display: none;
 }
+
+//убраем, показываем ссылки на английскую и ртл версию
 .lang_ar .btn-en,
 .lang_en .btn-ar {
     display: none !important;
 }
+
 .header-list {
     flex-direction: column;
+}
+
+//в футер добавлен специальный шрифт
+.footer-list_link {
+    font-family: 'DinAlternate';
+}
+
+//на странице логина скрыта кнопка логина
+.header-global__login .login-btns-list_item .theme-btn{
+    display: none;
 }
 
 /*----------*/

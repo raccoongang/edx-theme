@@ -2,13 +2,13 @@
 
 #function for add comment 
 comment() {
-    sed -i '' '1s/^/\/\//g' $1 #add coment on first line
-    sed -i '' '2s/\/\//''/g' $1 #remove coment on second line
+    sed -i '' '3s/^/\/\//g' $1 #add coment on first line
+    sed -i '' '4s/\/\//''/g' $1 #remove coment on second line
 }
 #function for remove comment
 recomment() {
-    sed -i '' '1s/\/\//''/g' $1 #remove coment on first line
-    sed -i '' '2s/^/\/\//g' $1 #add coment on second line
+    sed -i '' '3s/\/\//''/g' $1 #remove coment on first line
+    sed -i '' '4s/^/\/\//g' $1 #add coment on second line
 }
 
 if [ $1 == start ]
