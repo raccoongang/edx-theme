@@ -1248,9 +1248,17 @@ $btn-bg-hover: #fdaa7a; //orange light
     &:active {
         &:not(:disabled) {
             box-shadow: none;
+            border: none;
             background: $btn-bg-hover;
         }
     }
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+    @extend %theme-btn;
 }
 
 .btn {
@@ -1277,18 +1285,34 @@ $btn-bg-hover: #fdaa7a; //orange light
     }
 }
 
-input[type="submit"],
-input[type="button"],
-button,
-.button {
-    @extend %theme-btn;
+.btn-default {
+    color: $base-color;
+    &:hover,
+    &:active {
+        color: $secondary-color;
+        border-color: $secondary-color;
+    }
+    &:active {
+        &:not(:disabled) {
+            border: none;
+        }
+    }
 }
 
-.doc-link {
+.btn-link {
     color: $base-color;
-    &:visited {
-      color: $base-color;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $base-color;
+        background: none;
     }
+}
+
+.btn-blue,
+.view-teams .action-primary,
+.instructor-dashboard-wrapper-2 .btn-blue {
+    background: $secondary-color;
 }
 
 .header-global {
@@ -1353,6 +1377,28 @@ button,
                 .enter-course {
                     background-color: $action-primary-fg;
                     color: $action-primary-bg;
+                }
+            }
+            .wrapper-messages-primary {
+                .message {
+                    &.message-status {
+                        &.course-status-certavailable {
+                            .actions-primary {
+                                .action-certificate {
+                                    .btn {
+                                        background: $secondary-color;
+                                        border: none;
+                                        &:hover,
+                                        &:focus,
+                                        &:active {
+                                            box-shadow: none;
+                                            background: $btn-bg-hover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1480,11 +1526,35 @@ button,
                         @extend %theme-btn;
                     }
                 }
+                .cohort-management-nav {
+                    .action-create {
+                        color: #fff;
+                        background: $secondary-color;
+                        border-color: $secondary-color;
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background: $btn-bg-hover;
+                            border-color: $btn-bg-hover;
+                        }
+                    }
+                }
+                .toggle-cohort-management-secondary,
+                .toggle-cohort-management-discussions {
+                    color: $base-color;
+                }
             }
             &#discussions_management {
                 .form-submit {
                     @extend %theme-btn;
                 }
+            }
+        }
+    }
+    .customBrowseBtn {
+        .file-browse {
+            .browse {
+                @extend %theme-btn;
             }
         }
     }
@@ -1658,6 +1728,17 @@ div {
     }
 }
 
+.breadcrumbs {
+    .nav-item {
+        a, a:visited {
+          color: $base-color;
+        }
+        a:hover {
+          color: $base-color;
+        }
+    }
+}
+
 /*-----Discussion-----*/
 .field-label {
     .field-input {
@@ -1676,9 +1757,26 @@ div {
         .has-actions {
             .msg-actions {
                 .btn {
-                    baclground: $secondary-color;
+                    background: $secondary-color;
                 }
             }
         }
+    }
+}
+
+/*-----Sysadmin-----*/
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    max-width: 100%;
+}
+
+.sysadmin-dashboard-wrapper {
+    input[type="submit"],
+    input[type="button"],
+    button,
+    .button {
+        @extend %theme-btn;
+        max-width: 100%;
     }
 }
