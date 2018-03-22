@@ -1268,9 +1268,9 @@ body.view-in-course {
     background: none;
 }
 
-input[type="submit"],
-input[type="button"],
-button,
+// input[type="submit"],
+// input[type="button"],
+// button,
 .button {
     @extend %theme-btn;
 }
@@ -1296,8 +1296,10 @@ button,
     &:hover,
     &:focus,
     &:active {
-        background: $btn-bg-hover;
-        border-color: $btn-bg-hover;
+        &:not(:disabled) {
+            background: $btn-bg-hover;
+            border: 1px solid $btn-bg-hover;
+        }
     }
 }
 
@@ -1322,8 +1324,10 @@ button,
     &:hover,
     &:focus,
     &:active {
-        color: $base-color;
-        background: none;
+        &:not(:disabled) {
+            color: $base-color;
+            background: none;
+        }
     }
 }
 
