@@ -2135,3 +2135,21 @@ body .view-login .form-actions button[type="submit"]:hover .orn-plus, body .logi
 body.view-register .header-global nav, body.view-login .header-global nav {
     max-width: 1200px;
 }
+
+.footer-logo-holder .icon-list {
+    @media screen and (max-width: 768px) {
+        flex: 0 0 100%;
+        margin: 1em 0;
+    }
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+    @media screen and (max-width: 768px) {
+        width: auto;
+        margin-bottom: 1em;
+    }
+}
+.footer-logo-holder {
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
