@@ -116,6 +116,8 @@ body.lang_ar * {
 //в футер добавлен специальный шрифт
 .footer-list_link {
     font-family: 'DinAlternate';
+    text-transform: uppercase;
+    font-size: 11px;
 }
 
 //на странице логина скрыта кнопка логина
@@ -280,5 +282,17 @@ body .login-register {
                 right: -80px;
             }
         }
+    }
+}
+
+//убираем дату начала курсов
+body .courses-container .courses .course .course-info .course-date,
+body .course-info .course-date.localized_datetime,
+body .courses-container .courses .course .course-info .course-organization {
+    display: none;
+}
+body .course-info .course-sidebar .important-dates {
+    li:nth-child(2) {
+        display: none;
     }
 }
