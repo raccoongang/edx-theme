@@ -1336,7 +1336,7 @@ body.view-in-course {
 .btn-blue,
 .view-teams .action-primary,
 .instructor-dashboard-wrapper-2 .btn-blue {
-    background: $secondary-color;
+    @extend %theme-btn;
 }
 
 .header-global {
@@ -1584,7 +1584,7 @@ body.view-in-course {
                     @extend %theme-btn;
                 }
             }
-            #certificates {
+            &#certificates {
                 .notes-field {
                     max-width: 100%;
                 }
@@ -1603,7 +1603,7 @@ body.view-in-course {
         .file-browse {
             height: 31px;
             margin: 0;
-            padding-top: 5px;
+            padding-top: 0;
             &:hover,
             &:focus,
             &:active {
@@ -1612,7 +1612,9 @@ body.view-in-course {
             }
             .file_field {
                 top: 0;
+                left: -34%;
                 z-index: 4;
+                width: 134%;
                 height: 31px;
                 box-sizing: border-box;
             }
@@ -1866,37 +1868,37 @@ div {
 }
 
 .profile-wrapper {
-    #course-success {
-        @media (max-width: 767px) {
-            text-align: left;
-        }
-        .has-actions {
-            display: -webkit-flex;
-            display: flex;
-            @media (max-width: 767px) {
-               display: block; 
-            }
-            .msg-content {
-                -webkit-flex: 1 1 auto;
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto;
-                min-width: 0;
-                width: auto;
-                padding-right: 10px;
-                @media (max-width: 767px) {
-                    padding: 0 0 10px;
-                }
-            }
-            .msg-actions {
-                width: auto;
-            }
-        }
-    }
     .course-info {
         @media (max-width: 576px) {
             display: block;
             width: 100%;
             padding: 20px;
+        }
+        #course-success {
+            @media (max-width: 767px) {
+                text-align: left;
+            }
+            .has-actions {
+                display: -webkit-flex;
+                display: flex;
+                @media (max-width: 767px) {
+                   display: block; 
+                }
+                .msg-content {
+                    -webkit-flex: 1 1 auto;
+                    -ms-flex: 1 1 auto;
+                    flex: 1 1 auto;
+                    min-width: 0;
+                    width: auto;
+                    padding-right: 10px;
+                    @media (max-width: 767px) {
+                        padding: 0 0 10px;
+                    }
+                }
+                .msg-actions {
+                    width: auto;
+                }
+            }
         }
         >.chapters {
             >section {
@@ -1981,6 +1983,11 @@ div {
         box-sizing: border-box;
         section {
             &.book-sidebar {
+                @media (max-width: 576px) {
+                    display: block;
+                    width: 100%;
+                    border: 1px solid #c8c8c8;
+                }
                 #booknav {
                     li {
                         a {
@@ -1992,12 +1999,6 @@ div {
                         }
                     }
                 }
-            }
-        }
-        .book-sidebar {
-            @media (max-width: 576px) {
-                display: block;
-                width: 100%;
             }
         }
         .book {
