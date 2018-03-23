@@ -1321,12 +1321,14 @@ body.view-in-course {
 
 .btn-link {
     color: $base-color;
+    border: none;
     &:hover,
     &:focus,
     &:active {
         &:not(:disabled) {
             color: $base-color;
             background: none;
+            border: none;
         }
     }
 }
@@ -1474,6 +1476,11 @@ body.view-in-course {
         &.course-profile {
             .intro-inner-wrapper {
                 .intro {
+                    &>.heading-group {
+                        button {
+                            @extend %theme-btn;
+                        }
+                    }
                     .main-cta {
                         strong {
                            @extend %theme-btn;
@@ -1577,20 +1584,52 @@ body.view-in-course {
                     @extend %theme-btn;
                 }
             }
+            #certificates {
+                .notes-field {
+                    max-width: 100%;
+                }
+            }
         }
     }
     .customBrowseBtn {
+        width: 300px;
+        max-width: 100%;
+        margin-bottom: 10px;
+        .enhanced-input-file {
+            width: 100%;
+            padding: 20px 6px 9px;
+            box-sizing: border-box;
+        }
         .file-browse {
+            height: 31px;
+            margin: 0;
+            padding-top: 5px;
             &:hover,
             &:focus,
             &:active {
                 background: none;
-                border-color: transparent;
+                border: none;
+            }
+            .file_field {
+                top: 0;
+                z-index: 4;
+                height: 31px;
+                box-sizing: border-box;
             }
             .browse {
                 @extend %theme-btn;
+                position: absolute;
+                top: 0;
+                right: -2px;
+                margin: 0;
+                margin-left: 78%;
+                padding: 4px 10px 5px;
+                z-index: 3;
             }
         }
+    }
+    .upload-csv-button {
+        margin-bottom: 10px;
     }
     .file-download-link {
         a {
@@ -1826,6 +1865,76 @@ div {
     }
 }
 
+.profile-wrapper {
+    #course-success {
+        @media (max-width: 767px) {
+            text-align: left;
+        }
+        .has-actions {
+            display: -webkit-flex;
+            display: flex;
+            @media (max-width: 767px) {
+               display: block; 
+            }
+            .msg-content {
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                min-width: 0;
+                width: auto;
+                padding-right: 10px;
+                @media (max-width: 767px) {
+                    padding: 0 0 10px;
+                }
+            }
+            .msg-actions {
+                width: auto;
+            }
+        }
+    }
+    .course-info {
+        @media (max-width: 576px) {
+            display: block;
+            width: 100%;
+            padding: 20px;
+        }
+        >.chapters {
+            >section {
+                @media (max-width: 767px) {
+                    display: block;
+                    padding: 20px 0 10px;
+                }
+                .hd {
+                    @media (max-width: 767px) {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        padding: 0;
+                        border: none;
+                    }
+                }
+                .sections {
+                    @media (max-width: 767px) {
+                        display: block;
+                        width: 100%;
+                        padding: 0;
+                    }
+                    >div {
+                        @media (max-width: 767px) {
+                            padding: 0 0 10px;
+                        }
+                        .hd {
+                            @media (max-width: 767px) {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*-----Sysadmin-----*/
 input[type="text"],
 input[type="email"],
@@ -1843,9 +1952,33 @@ input[type="password"] {
     }
 }
 
+.sysadmin-dashboard-content {
+    ol {
+        word-break: break-word;
+    }
+    table {
+        &.stat_table {
+            word-break: break-word;
+            @media (max-width: 767px) {
+                line-height: 1.5em;
+            }
+            th,
+            td {
+                @media (max-width: 767px) {
+                    padding: 4px;
+                }
+            }
+        }
+    }
+}
+
 /*-----Textbook-----*/
 div {
     &.book-wrapper {
+        max-width: 1200px;
+        min-width: 320px;
+        padding: 0 15px;
+        box-sizing: border-box;
         section {
             &.book-sidebar {
                 #booknav {
@@ -1859,6 +1992,21 @@ div {
                         }
                     }
                 }
+            }
+        }
+        .book-sidebar {
+            @media (max-width: 576px) {
+                display: block;
+                width: 100%;
+            }
+        }
+        .book {
+            @media (max-width: 576px) {
+                display: block;
+                width: 100%;
+            }
+            iframe {
+                max-width: 100%;
             }
         }
     }
