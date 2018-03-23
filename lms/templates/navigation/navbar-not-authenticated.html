@@ -28,7 +28,6 @@ from django.utils.translation import ugettext as _
 
   <%block name="navigation_other_global_links">
     % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
         <li class="header-list_item">
           <a class="header-list_link" href="/courses">${_("Explore Courses")}</a>
         </li>
@@ -36,7 +35,6 @@ from django.utils.translation import ugettext as _
           <a class="header-list_link btn-en" href="https://youngthinker.org/en/dashboard" target="_blank">${_('Back to YTP Dashboard')}</a>
           <a class="header-list_link btn-ar" href="https://youngthinker.org/ar/dashboard" target="_blank">${_('Back to YTP Dashboard')}</a>
         </li>
-      %endif
     % endif
   </%block>
 </ol>
