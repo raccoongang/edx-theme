@@ -1019,6 +1019,10 @@ div {
                 }
                 @media (max-width: 767px) {
                     width: auto;
+                    min-width: 260px;
+                }
+                @media (max-width: 479px) {
+                    width: 100%;
                 }
             }
             #hint_id_content {
@@ -1249,6 +1253,9 @@ div {
             margin-bottom: 12px;
         }
     }
+    .btn {
+        @extend %theme-btn;
+    }
 }
 
 /*-----Popup-----*/
@@ -1349,6 +1356,11 @@ body.view-in-course {
             border: 1px solid $btn-bg-hover;
         }
     }
+    &:active {
+        &:not(:disabled) {
+            box-shadow: none;
+        }
+    }
 }
 
 .btn-default {
@@ -1396,6 +1408,7 @@ body.view-in-course {
     .user {
         .user-dropdown {
             color: $base-color;
+            box-shadow: none !important;
         }
     }
 }
@@ -1577,6 +1590,7 @@ body.view-in-course {
     }
 }
 
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit
 .instructor-dashboard-wrapper-2 {
     section {
         &.idash-section {
@@ -1611,13 +1625,11 @@ body.view-in-course {
                 .cohort-management-nav {
                     .action-create {
                         @extend %theme-btn;
-                        border: 1px solid $secondary-color;
                         &:hover,
                         &:focus,
                         &:active {
                             &:not(:disabled) {
                                 box-shadow: none;
-                                border-color: $btn-bg-hover;
                             }
                         }
                     }
@@ -1625,6 +1637,11 @@ body.view-in-course {
                 .toggle-cohort-management-secondary,
                 .toggle-cohort-management-discussions {
                     color: $base-color;
+                }
+                .file-upload-form {
+                    .action-submit {
+                        @extend %theme-btn;
+                    }
                 }
             }
             &#discussions_management {
