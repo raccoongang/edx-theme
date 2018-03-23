@@ -155,6 +155,8 @@ body {
 }
 
 //убираем лишние элементы из формы логина, должна быть только одна кнопка SSO
+
+.login-register-content h2,
 .login-register .login-provider .icon,
 .login-register .section-title.lines:after,
 .login-register .toggle-form,
@@ -166,7 +168,6 @@ body .login-register .action-primary,
 .login-register form {
     border: none;
 }
-
 
 .login-register .section-title.lines .text {
     color: #1a1d1c;
