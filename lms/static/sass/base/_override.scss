@@ -2079,3 +2079,21 @@ body .add-to-cart a {
 .user-filter {
     margin-top: 22px;
 }
+
+.footer-logo-holder .icon-list {
+    @media screen and (max-width: 768px) {
+        flex: 0 0 100%;
+        margin: 1em 0;
+    }
+}
+.wrapper-footer footer#footer-openedx .footer-about-openedx {
+    @media screen and (max-width: 768px) {
+        width: auto;
+        margin-bottom: 1em;
+    }
+}
+.footer-logo-holder {
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
