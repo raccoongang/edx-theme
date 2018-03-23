@@ -765,7 +765,7 @@ div {
             .btn-link {
                 display: block;
                 width: 100%;
-                text-align: left;
+                text-align: initial;
             }
         }
     }
@@ -849,6 +849,52 @@ div {
     }
 }
 
+/*-----Instructor Gradebook-----*/
+div {
+    &.gradebook-wrapper {
+        section {
+            &.gradebook-content {
+                @media (max-width: 576px)  {
+                    padding: 20px;
+                }
+                .student-table {
+                    @media (max-width: 991px) {
+                        width: 30%;
+                    }
+                    @media (max-width: 767px) {
+                        width: 36%;
+                    }
+                    td {
+                        @media (max-width: 767px) {
+                            height: 40px;
+                            padding-left: 10px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+                .grades {
+                    @media (max-width: 991px) {
+                        width: 70%;
+                    }
+                    @media (max-width: 767px) {
+                        width: 64%;
+                    }
+                }
+                .grade-table {
+                    width: 100%;
+                    td {
+                         @media (max-width: 767px) {
+                            height: 40px;
+                            padding-left: 10px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*-----Discussion-----*/
 .discussion {
     .container {
@@ -904,14 +950,16 @@ div {
 .content-wrapper {
     .page-header {
         @media (max-width: 479px) {
-            padding: 10px 20px 16px;
+            padding: 20px;
         }
         &.has-secondary {
             .page-header-secondary {
                 .form-actions {
-                    margin: 0 20px 0 0;
-                    @media (max-width: 479px) {
-                        margin-bottom: 10px;
+                    &:not(:last-child) {
+                        margin: 0 20px 0 0;
+                        @media (max-width: 479px) {
+                            margin-bottom: 10px;
+                        }
                     }
                 }
                 .forum-search {
@@ -935,9 +983,9 @@ div {
                 -webkit-flex-wrap: wrap;
                 flex-wrap: wrap;
                 height: auto;
-                padding: 24px 30px 16px;
+                padding: 24px 30px 14px;
                 @media (max-width: 767px){
-                    padding: 12px 20px 14px;
+                    padding: 12px 20px 10px;
                 }
             }
             .breadcrumb {
