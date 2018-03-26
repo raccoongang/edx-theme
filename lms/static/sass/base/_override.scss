@@ -1590,7 +1590,6 @@ body.view-in-course {
     }
 }
 
-.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit
 .instructor-dashboard-wrapper-2 {
     section {
         &.idash-section {
@@ -1722,7 +1721,55 @@ body.view-in-course {
             }
         }
     }
+    section {
+        &.idash-section {
+            &#data_download {
+                .reports-download-container {
+                    .report-downloads-table {
+                        .slickgrid,
+                        .slick-viewport {
+                            height: auto !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .report-downloads-table {
+        .slick-header-columns {
+            left: auto !important;
+            right: 0;
+        }
+        .slickgrid {
+            .grid-canvas {
+                width: auto !important;
+                height: auto !important;
+            }
+            .slick-cell {
+                position: static;
+                top: auto;
+                height: auto;
+            }
+        }
+        .slick-row {
+            &.ui-widget-content {
+                position: static;
+                top: 0 !important;
+                height: auto;
+            }
+        }
+    }
+    .slick-header-column {
+        &.ui-state-default {
+            height: 24px;
+            width: 100% !important;
+            left: auto;
+            box-sizing: border-box;
+        }
+    }
 }
+
+
 
 /*-----Course Lesson-----*/
 .xmodule_display {
@@ -2065,6 +2112,13 @@ div {
                     }
                 }
             }
+            &.gradebook-content {
+                .student-search-field {
+                    @media (max-width: 767px) {
+                        padding: 0 10px;
+                    }
+                }
+            }
         }
         .book {
             @media (max-width: 576px) {
@@ -2077,5 +2131,3 @@ div {
         }
     }
 }
-
-
