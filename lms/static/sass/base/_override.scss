@@ -1246,6 +1246,11 @@ div {
     .discussion-module {
         .btn {
             @extend %theme-btn;
+            &:hover,
+            &:focus,
+            &:active {
+                background: $btn-bg-hover !important;
+            }
         }
     }
 }
@@ -1380,12 +1385,9 @@ button {
     &:hover,
     &:active,
     &:focus {
-        color: $secondary-color;
-        border-color: $secondary-color;
-        border: 1px solid $secondary-color;
-    }
-    &:active {
         &:not(:disabled) {
+            color: $secondary-color;
+            border-color: $secondary-color;
             border: 1px solid $secondary-color;
         }
     }
@@ -1676,17 +1678,6 @@ button {
             padding: 20px 6px 9px;
             box-sizing: border-box;
         }
-        .browse-file {
-            &:hover,
-            &:active,
-            &:focus {
-                + .file-browse {
-                    .browse {
-                        background: $btn-bg-hover;
-                    }
-                }
-            }
-        }
         .file-browse {
             height: 31px;
             margin: 0;
@@ -1696,6 +1687,13 @@ button {
             &:active {
                 background: none;
                 border: none;
+                .browse {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background: $btn-bg-hover;
+                    }
+                }
             }
             .file_field {
                 top: 0;
