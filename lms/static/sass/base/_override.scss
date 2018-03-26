@@ -90,15 +90,6 @@ body {
 
 html {
     font-size: 100%;
-    @media only screen and (max-width: 991px) {
-        font-size: 90%;
-    }
-    @media only screen and (max-width: 767px) {
-        font-size: 85%;
-    }
-    @media only screen and (max-width: 479px) {
-        font-size: 80%;
-    }
 }
 
 html,
@@ -583,6 +574,7 @@ input[type="button"]{
     margin: 0;
     .menu-title {
         display: inline-block;
+        padding-right: 4px;
         color: #fff;
         line-height: 1.7;
         &:hover {
@@ -592,15 +584,77 @@ input[type="button"]{
     .menu-image {
         max-width: 30px;
         height: auto;
-        margin-left: 7px;
+        margin-right: 4px;
         border-radius: 10%;
     }
     .menu-button {
         margin: 0;
     }
+    .user-menu {
+        position: relative;
+    }
+    .dropdown-menu {
+        &:before {
+            background: transparent;
+            border-top: 6px solid #fcfcfc;
+            border-right: 6px solid #fcfcfc;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid transparent;
+            box-shadow: 1px 0 0 0 #ccc, 0 -1px 0 0 #ccc;
+            height: 0px;
+            right: 7px;
+            top: -5px;
+            width: 0px;
+        }
+    }
 }
 
-.doc-link {
+.dropdown-menu {
+    >li {
+        >a {
+            &:hover,
+            &:focus {
+                background: none;
+            }
+        }
+    }
+}
+
+div {
+    &.dropdown-menu-container {
+        .dropdown-menu {
+            top: 37px;
+            .dropdown-item {
+                a {
+                    color: $base-color;
+                }
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    &.is-visible {
+        display: block;
+    }
+}
+
+.header-global {
+    .wrapper-header {
+        .wrapper-user-menu {
+            float: left;
+            @media (max-width: 991px) {
+                float: none;
+                display: inline-block;
+            }
+        }
+        .dropdown-menu {
+            top: 37px;
+        }
+    }
+}
+
+a.doc-link {
     float: left;
     margin: 4px 10px;
     color: #fff;
@@ -1047,6 +1101,29 @@ $i:0;
                 box-shadow: none;
             }
         }
+    }
+}
+
+.find-courses {
+    .discovery-submit {
+        background: $base-color;
+        border-color: #00888e;
+        &:hover,
+        &:active,
+        &:focus {
+            background: #009298;
+            border-color: #00888e;
+        }
+        &:active {
+            -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+            box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+        }
+        &:focus  {
+            border-color: #00494b;
+        }
+    }
+    .loading-spinner {
+        background: $base-color;
     }
 }
 
@@ -2511,6 +2588,29 @@ table {
             .contacts {
                 float: none;
             }
+        }
+    }
+    div {
+        &.dropdown-menu-container {
+            .dropdown-menu {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+    .dropdown-menu-container {
+        .dropdown-menu {
+            &:before {
+                right: auto;
+                left: 7px;
+            }
+        }
+        .menu-title {
+            padding-right: 0;
+        }
+        .menu-image {
+            margin-right: 0;
+            margin-left: 8px;
         }
     }
     .navbar {
