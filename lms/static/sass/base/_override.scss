@@ -872,6 +872,11 @@ div {
                         }
                     }
                 }
+                .student-search-field {
+                    @media (max-width: 767px) {
+                        padding: 0 10px;
+                    }
+                }
                 .grades {
                     @media (max-width: 991px) {
                         width: 70%;
@@ -881,6 +886,7 @@ div {
                     }
                 }
                 .grade-table {
+                    position: static;
                     width: 100%;
                     td {
                          @media (max-width: 767px) {
@@ -2109,13 +2115,6 @@ div {
                                 color: $base-color;
                             }
                         }
-                    }
-                }
-            }
-            &.gradebook-content {
-                .student-search-field {
-                    @media (max-width: 767px) {
-                        padding: 0 10px;
                     }
                 }
             }

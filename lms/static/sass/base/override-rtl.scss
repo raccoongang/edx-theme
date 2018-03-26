@@ -109,10 +109,10 @@ div {
                 .student-table {
                     float: right;
                     td {
-                        border-keft: none;
-                        border-right: 1px solid #c8c8c8;
                         padding-right: 20px;
                         padding-left: 10px;
+                        border-left: none;
+                        border-right: 1px solid #c8c8c8;
                         @media (max-width: 767px) {
                             padding-right: 10px;
                         }
@@ -120,11 +120,6 @@ div {
                 }
                 .grades {
                     float: right;
-                }
-                .grade-table {
-                    width: 1000px;
-                    right: 0;
-                    left: auto;
                 }
             }
         }
