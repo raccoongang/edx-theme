@@ -1,0 +1,397 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<style>
+
+    @font-face {
+        font-family: 'Avenir';
+        src: url('/static/fonts/AvenirLTStd-Medium.woff2') format('woff2'),
+        url('/static/fonts/AvenirLTStd-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Avenir';
+        src: url('/static/fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('/static/fonts/AvenirLTStd-Book.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Avenir';
+        src: url('/static/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+        url('/static/fonts/AvenirNextLTPro-Bold.woff') format('woff');
+        font-weight: 800;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'DinArabic';
+        src: url('/static/fonts/DINNextLTArabic-Medium.woff2') format('woff2'),
+        url('/static/fonts/DINNextLTArabic-Medium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .certificates {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        max-width: 1170px;
+    }
+    .certificates__background {
+        width: 100%;
+        height: auto;
+    }
+    .certificates__title {
+        position: absolute;
+        left: 50%;
+        top: 6%;
+        transform: translate(-51%, 0);
+        -webkit-transform: translate(-51%, 0);
+        color: #8f6c29;
+        font: 80px/80px Avenir;
+        width: 100% !important;
+        height: 23%;
+        margin: 0 !important;
+
+    }
+    .rtl .certificates__title {
+        font-family: DinArabic;
+    }
+    .certificates__title span {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        top: 33%;
+        font-size: 156.2%;
+    }
+    .certificates__title img {
+        width: 42%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+    }
+    .wrapper-statement-and-signatories {
+        top: 25%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+    }
+    .certificates__static-text {
+        font-family: Avenir;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .rtl .certificates__static-text {
+        font-family: DinArabic;
+    }
+    .certificates__static-text--small {
+        font-size: 18px;
+    }
+    .certificates__owner-name {
+        font-family: Avenir !important;
+        font-weight: 800;
+        font-size: 60px;
+        margin-top: 5px;
+        margin-bottom: 3px;
+        display: block;
+    }
+    .rtl .certificates__owner-name {
+        font-family: DinArabic !important;
+    }
+    .accomplishment-orgs,
+    .wrapper-accomplishment-metadata{
+        position: absolute;
+    }
+
+    .certificates__course-name {
+        background: #fc6a15;
+        color: #fff;
+        padding: 18px 40px 10px;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: Avenir;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    .rtl .certificates__course-name {
+        font-family: DinArabic;
+        padding: 10px 40px 10px;
+    }
+    .certificate .accomplishment-rendering .accomplishment-statement {
+        width: 63%;
+        margin: 0 auto 10px;
+        padding: 0;
+    }
+    .signatory {
+        display: flex !important;
+        width: 380px !important;
+    }
+    .signatory-holder {
+        display: block;
+        font-family: Avenir, sans-serif;
+        font-weight: 600;
+    }
+    .rtl .signatory-holder {
+        font-family: DinArabic;
+    }
+    body .accomplishment-rendering .accomplishment-signatories .signatory-credentials {
+        text-align: left;
+    }
+    body.rtl .accomplishment-rendering .accomplishment-signatories .signatory-credentials {
+        text-align: right;
+    }
+    .list-signatories {
+        width: 53%;
+        margin: 0 auto !important;
+        display: flex !important;
+    }
+    .layout-accomplishment .accomplishment-signatories .signatory .signatory-signature {
+        height: 10rem;
+        max-height: 100%;
+        margin: 0;
+        padding: 1.25rem 0.325rem;
+    }
+    .accomplishment-rendering .accomplishment-signatories .signatory-name {
+        font-size: 22px;
+        font-weight: 800;
+        text-align: left;
+        margin-top: 11px;
+    }
+    body.rtl .accomplishment-rendering .accomplishment-signatories .signatory-name {
+        text-align: right;
+    }
+    .logo-ar {
+        display: none;
+    }
+    body.rtl .logo-en {
+        display: none;
+    }
+    body.rtl .logo-ar {
+        display: block;
+    }
+    .accomplishment-rendering .accomplishment-signatories .signatory-credentials {
+        font-size: 14px;
+    }
+    .issued-on {
+        text-align: left;
+        padding-top: 16px;
+        font-size: 19px;
+        font-family: Avenir, sans-serif;
+        font-weight: 600;
+    }
+    .rtl .issued-on {
+        font-family: DinArabic;
+    }
+    .accomplishment-rendering .wrapper-statement-and-signatories,
+    .accomplishment-rendering .accomplishment-statement,
+    .accomplishment-rendering .accomplishment-signatories {
+        border: none;
+    }
+    .wrapper-accomplishment-metadata {
+        display: none;
+    }
+    .issued-on__text {
+        margin-bottom: 10px;
+    }
+    .issued-on strong {
+        font-size: 29px;
+    }
+    .accomplishment-rendering .accomplishment-orgs {
+        position: absolute;
+        top: 80%;
+    }
+    .accomplishment-rendering .accomplishment-orgs .organization-logo {
+        max-height: 1000%;
+        max-width: 1000% !important;
+        width: 490px;
+    }
+    .list-signatories {
+        transform: translate(7%);
+    }
+    .rtl .list-signatories {
+        transform: translate(-7%);
+    }
+    .wrapper-signatories {
+        margin-top: -10px;
+    }
+    @media print {
+        @page {
+            size: landscape;
+            margin: 0;
+            border: 0;
+        }
+        html, body {
+            height: auto;
+            margin: 0 !important;
+        }
+        .certificates {
+            /*width: 20.4cm !important;*/
+            height: 20.9cm !important;
+            margin: 0 !important;
+        }
+        .certificates__title span {
+            top: 30%;
+            font-size: 114.2%;
+        }
+        .certificates__background {
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .certificates__proove {
+            font: 600 21px/30px Avenir;
+        }
+        .certificates__owner-name {
+            font: 800 60px/50px Avenir;
+        }
+        .certificates__award-text {
+            font: 600 17px/24px Avenir;
+            max-height: 141px;
+        }
+        .rtl .certificates__proove,
+        .rtl .certificates__owner-name,
+        .rtl .certificates__award-text {
+            font-family: DinArabic;
+        }
+        .certificates__stamp-name {
+            font-size: 17px;
+            line-height: 21px;
+        }
+        .certificates__stamp-descr {
+            font-size: 12px;
+            line-height: 15px;
+            max-height: 90px;
+        }
+        .wrapper-accomplishment-rendering {
+            margin: 0 !important;
+        }
+        .certificates__id-date {
+            font-size: 12px;
+        }
+        .certificates__stamp {
+            height: 130px;
+            min-width: 160px;
+            max-width: 200px;
+        }
+        .certificates__stamp-image {
+            height: 130px;
+            width: 130px;
+        }
+        .certificates__stamps {
+            padding: 0 80px;
+        }
+        .certificates__name {
+            max-height: 103px;
+            overflow: hidden;
+            padding: 4px 5px 0;
+        }
+        .certificates__sign-image {
+            max-height: 50px;
+        }
+    }
+</style>
+
+<main class="accomplishment accomplishment-main" xdfgbfgb>
+
+    <div class="wrapper-accomplishment-rendering">
+        <div class="accomplishment-rendering certificates">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/background.png" class="certificates__background logo-en">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/BgAssetsArabic-01.png" class="certificates__background logo-ar">
+
+            <div class="accomplishment-type certificates__title">
+
+                <img class="src logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/cert-logo.png" alt="">
+                <img class="src logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/CertificateofAcheivement-01_arabic-01.png" alt="">
+
+                <!--<span class="accomplishment-type-label hd-4">${document_title}</span>-->
+            </div>
+
+            <div class="wrapper-statement-and-signatories">
+                <div class="accomplishment-statement">
+                    <p class="accomplishment-statement-lead">
+                        <span class="certificates__static-text">${_('This is to certify that')}</span>
+                        <strong class="certificates__owner-name">${accomplishment_copy_name | h}</strong>
+                        <span class="certificates__static-text">${_('successfully completed')}</span>
+                        <div class="certificates__course-name">${accomplishment_copy_course_name}</div>
+                        <span class="certificates__static-text certificates__static-text--small">${_('a course of study offered by the<br>Al Ghurair Young Thinkers Program.')}</span>
+                    </p>
+                </div>
+
+                % if mode != 'base':
+                <div class="accomplishment-signatories">
+                    <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
+
+                    <div class="wrapper-signatories">
+                        <div class="list-signatories">
+                                <div class="signatory">
+                                    <img class="signatory-signature" src="/static/certificates/images/signature-01.png" alt="">
+                                    <div class="signatory-holder">
+                                        <h4 class="signatory-name hd-5">${_('Nesma Farahat')}</h4>
+                                        <div class="signatory-credentials copy copy-micro">
+                                            <div class="role">${_('Program Manager')}</div>
+                                            <span class="organization">${_('Al Ghurair Young Thinkers Program')}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="issued-on">
+                                <div class="issued-on__text">${_('Issued On')}</div>
+                                <strong>${certificate_date_issued}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                % endif
+            </div>
+
+            <div class="accomplishment-orgs">
+                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
+
+                <ul class="wrapper-orgs list-orgs">
+                    <li class="wrapper-organization">
+                        <div class="organization organization-edX">
+                            <img class="organization-logo logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/Agfelofowide-01.png" alt="${platform_name}">
+                            <img class="organization-logo logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/Agfelofowide_arabic-01.png" alt="${platform_name}">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper-accomplishment-metadata">
+                <div class="accomplishment-metadata">
+                    <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about | h}</h2>
+
+                    <div class="wrapper-metadata">
+                        <dl class="metadata accomplishment-recipient">
+                            <dt class="label sr-only">Awarded to:</dt>
+                            <dd class="value copy copy-meta">
+                        <span class="recipient-img">
+                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="">
+                        </span>
+                                <div class="recipient-details">
+                                    <h3 class="recipient-name">${accomplishment_copy_name | h}</h3>
+                                    <p class="recipient-username">${accomplishment_copy_username} @ ${platform_name}</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="metadata accomplishment-id">
+                            <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
+                            <dd class="value copy copy-base">${certificate_id_number}</dd>
+                        </dl>
+                        <dl class="metadata accomplishment-date">
+                            <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+                            <dd class="value copy copy-base">${certificate_date_issued}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
