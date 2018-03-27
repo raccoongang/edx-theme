@@ -765,7 +765,7 @@ div {
             .btn-link {
                 display: block;
                 width: 100%;
-                text-align: left;
+                text-align: initial;
             }
         }
     }
@@ -849,6 +849,58 @@ div {
     }
 }
 
+/*-----Instructor Gradebook-----*/
+div {
+    &.gradebook-wrapper {
+        section {
+            &.gradebook-content {
+                @media (max-width: 576px)  {
+                    padding: 20px;
+                }
+                .student-table {
+                    @media (max-width: 991px) {
+                        width: 30%;
+                    }
+                    @media (max-width: 767px) {
+                        width: 36%;
+                    }
+                    td {
+                        @media (max-width: 767px) {
+                            height: 40px;
+                            padding-left: 10px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+                .student-search-field {
+                    @media (max-width: 767px) {
+                        padding: 0 10px;
+                    }
+                }
+                .grades {
+                    @media (max-width: 991px) {
+                        width: 70%;
+                    }
+                    @media (max-width: 767px) {
+                        width: 64%;
+                    }
+                }
+                .grade-table {
+                    position: static;
+                    width: 100%;
+                    td {
+                         @media (max-width: 767px) {
+                            height: 40px;
+                            padding-left: 10px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*-----Discussion-----*/
 .discussion {
     .container {
@@ -904,14 +956,16 @@ div {
 .content-wrapper {
     .page-header {
         @media (max-width: 479px) {
-            padding: 10px 20px 16px;
+            padding: 20px;
         }
         &.has-secondary {
             .page-header-secondary {
                 .form-actions {
-                    margin: 0 20px 0 0;
-                    @media (max-width: 479px) {
-                        margin-bottom: 10px;
+                    &:not(:last-child) {
+                        margin: 0 20px 0 0;
+                        @media (max-width: 479px) {
+                            margin-bottom: 10px;
+                        }
                     }
                 }
                 .forum-search {
@@ -935,9 +989,9 @@ div {
                 -webkit-flex-wrap: wrap;
                 flex-wrap: wrap;
                 height: auto;
-                padding: 24px 30px 16px;
+                padding: 24px 30px 14px;
                 @media (max-width: 767px){
-                    padding: 12px 20px 14px;
+                    padding: 12px 20px 10px;
                 }
             }
             .breadcrumb {
@@ -971,6 +1025,10 @@ div {
                 }
                 @media (max-width: 767px) {
                     width: auto;
+                    min-width: 260px;
+                }
+                @media (max-width: 479px) {
+                    width: 100%;
                 }
             }
             #hint_id_content {
@@ -1185,6 +1243,16 @@ div {
             }
         }
     }
+    .discussion-module {
+        .btn {
+            @extend %theme-btn;
+            &:hover,
+            &:focus,
+            &:active {
+                background: $btn-bg-hover !important;
+            }
+        }
+    }
 }
 
 .discussion-module {
@@ -1275,6 +1343,15 @@ body.view-in-course {
     @extend %theme-btn;
 }
 
+button {
+    &:active,
+    &:focus {
+        &:not(:disabled) {
+            box-shadow: none;
+        }
+    }
+}
+
 .btn {
     color: $secondary-color;
     border-color: $secondary-color;
@@ -1308,12 +1385,9 @@ body.view-in-course {
     &:hover,
     &:active,
     &:focus {
-        color: $secondary-color;
-        border-color: $secondary-color;
-        border: 1px solid $secondary-color;
-    }
-    &:active {
         &:not(:disabled) {
+            color: $secondary-color;
+            border-color: $secondary-color;
             border: 1px solid $secondary-color;
         }
     }
@@ -1348,6 +1422,7 @@ body.view-in-course {
     .user {
         .user-dropdown {
             color: $base-color;
+            box-shadow: none !important;
         }
     }
 }
@@ -1563,13 +1638,11 @@ body.view-in-course {
                 .cohort-management-nav {
                     .action-create {
                         @extend %theme-btn;
-                        border: 1px solid $secondary-color;
                         &:hover,
                         &:focus,
                         &:active {
                             &:not(:disabled) {
                                 box-shadow: none;
-                                border-color: $btn-bg-hover;
                             }
                         }
                     }
@@ -1577,6 +1650,11 @@ body.view-in-course {
                 .toggle-cohort-management-secondary,
                 .toggle-cohort-management-discussions {
                     color: $base-color;
+                }
+                .file-upload-form {
+                    .action-submit {
+                        @extend %theme-btn;
+                    }
                 }
             }
             &#discussions_management {
@@ -1609,6 +1687,13 @@ body.view-in-course {
             &:active {
                 background: none;
                 border: none;
+                .browse {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background: $btn-bg-hover;
+                    }
+                }
             }
             .file_field {
                 top: 0;
@@ -1656,6 +1741,58 @@ body.view-in-course {
                 border: none;
             }
         }
+    }
+    section {
+        &.idash-section {
+            &#data_download {
+                .reports-download-container {
+                    .report-downloads-table {
+                        .slickgrid,
+                        .slick-viewport {
+                            height: auto !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .report-downloads-table {
+        .slick-header-columns {
+            left: auto !important;
+            right: 0;
+        }
+        .slickgrid {
+            .grid-canvas {
+                width: auto !important;
+                height: auto !important;
+            }
+            .slick-cell {
+                position: static;
+                top: auto;
+                height: auto;
+            }
+        }
+        .slick-row {
+            &.ui-widget-content {
+                position: static;
+                top: 0 !important;
+                height: auto;
+            }
+        }
+    }
+    .slick-header-column {
+        &.ui-state-default {
+            height: 24px;
+            width: 100% !important;
+            left: auto;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.open-response-assessment-block {
+    .ora-summary-title {
+        color: $base-color;
     }
 }
 
@@ -1836,6 +1973,20 @@ div {
     }
 }
 
+.bookmarks-results-list {
+     .bookmarks-results-list-item {
+        &:hover {
+            border-color: $base-color;
+            .list-item-breadcrumbtrail {
+                color: $base-color;
+            }
+        }
+        &:before {
+            color: $base-color;
+        }
+     }
+}
+
 /*-----Discussion-----*/
 .field-label {
     .field-input {
@@ -2013,4 +2164,28 @@ div {
     }
 }
 
+/*-----Popup-----*/
+.modal,
+.leanModal_box {
+    .inner-wrapper {
+        form {
+            .submit {
+                input[type="submit"] {
+                    @extend %theme-btn;
+                }
+            }
+        }
+    }
+}
 
+/*-----No courses enrolled-----*/
+.empty-dashboard-message {
+    padding: 40px 15px;
+    a {
+        @extend %theme-btn;
+        &:hover,
+        &:focus {
+            color: #ffe;
+        }
+    }
+}

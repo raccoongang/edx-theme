@@ -1,0 +1,127 @@
+/*-----Home-----*/
+.home {
+    &>header {
+        .title {
+            .course-search {
+                .search-button {
+                     right: auto;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+/*-----Course-----*/
+.content-wrapper {
+    .page-header {
+        &.has-secondary {
+            .page-header-secondary {
+                @media (max-width: 479px) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+/*-----Course - Lesson-----*/
+.xmodule_display {
+    &.xmodule_SequenceModule {
+        .sequence-nav {
+            .sequence-nav-button {
+                &.button-previous {
+                    @media (max-width: 767px) {
+                        left: 50%;
+                        right: auto;
+                        margin-left: -1px;
+                    }
+                }
+                &.button-next {
+                    @media (max-width: 767px) {
+                        margin-left: 0;
+                        left: auto;
+                        right: 50%;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+/*-----Wiki-----*/
+.wiki-wrapper {
+    section {
+        &.wiki {
+            .breadcrumb {
+                padding-right: 0;
+                li {
+                    float: right;
+                    margin: 0 0 0 10px;
+                    a {
+                        float: right;
+                    }
+                    &:after {
+                        margin-right: 10px;
+                        margin-left: 0;
+                    }
+                }
+            }
+            .main-article {
+                float: right;
+                padding: 40px 40px 40px 0;
+                @media (max-width: 991px) {
+                    padding: 20px 20px 20px 0;
+                }
+                @media (max-width: 767px) {
+                    padding: 20px;
+                }
+            }
+            .article-functions {
+                float: right;
+            }
+        }
+    }
+}
+
+/*-----Instructor-----*/
+.instructor-dashboard-wrapper-2 {
+    .customBrowseBtn {
+        .file-browse {
+            .browse {
+                right: auto;
+                left: 0;
+                margin: 0;
+            }
+            .file_field {
+                left: auto;
+                right: -34%;
+            }
+        }
+    }
+}
+
+/*-----Instructor Gradebook-----*/
+div {
+    &.gradebook-wrapper {
+        section {
+            &.gradebook-content {
+                .student-table {
+                    float: right;
+                    td {
+                        padding-right: 20px;
+                        padding-left: 10px;
+                        border-left: none;
+                        border-right: 1px solid #c8c8c8;
+                        @media (max-width: 767px) {
+                            padding-right: 10px;
+                        }
+                    }
+                }
+                .grades {
+                    float: right;
+                }
+            }
+        }
+    }
+}
