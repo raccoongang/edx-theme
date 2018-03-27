@@ -309,3 +309,20 @@ body .course-info .course-sidebar .important-dates {
         display: none;
     }
 }
+
+//hide organization name on course about page
+.course-info {
+    header {
+        &.course-profile {
+            .intro-inner-wrapper {
+                .intro {
+                    >.heading-group {
+                        button {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
