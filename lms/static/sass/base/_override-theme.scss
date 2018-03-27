@@ -13,6 +13,7 @@
 .theme-footer_wrapper {
     position: relative;
     padding-top: 65px;
+    padding-bottom: 30px;
 }
 
 //скрываем и показываем ссылки для языковых версий
@@ -118,6 +119,15 @@ body.lang_ar * {
     font-family: 'DinAlternate';
     text-transform: uppercase;
     font-size: 11px;
+    font-weight: 400;
+
+    .lang_ar & {
+        font-family: 'DinAlternate-arabic';
+    }
+}
+
+.footer-list {
+    margin-bottom: 27px;
 }
 
 //на странице логина скрыта кнопка логина
