@@ -75,6 +75,17 @@ $base-font: "DINNextLTArabic-Light";
     }
 }
 
+.empty-dashboard-message {
+    a {
+        color: $base-color;
+        &:hover,
+        &:focus {
+            color: #fff;
+            background: $base-color;
+        }
+    }
+}
+
 /*-----COMMON-----*/
 
 *:focus {
@@ -1679,6 +1690,96 @@ a{
     }
 }
 
+.accordion {
+    margin-bottom: 20px;
+    .section {
+        position: relative;
+        margin-bottom: 1px;
+        width: 100%;
+        overflow: hidden;
+        &:first-child .accordion-heading{
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+        &:last-child .accordion-heading {
+            margin-bottom: 0;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    .accordion-heading {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        margin-bottom: -1px;
+        color: #555;
+        font-weight: normal;
+        background-color: #fff;
+        border: 1px solid #ddd;
+    }
+    .section-content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        -webkit-transition: max-height .35s;
+        -o-transition: max-height .35s;
+        transition: max-height .35s;
+    }
+    .section-content-in {
+        padding: 15px;
+    }
+    input {
+        &:checked {
+            ~ .section-content {
+                max-height: 50em;
+            }
+        }
+    }
+    .accordion-heading {
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 3em;
+            height: 3em;
+            line-height: 3;
+            text-align: center;
+            -webkit-transition: all .35s;
+            -o-transition: all .35s;
+            transition: all .35s;
+        }
+    }
+    input[type=checkbox] + .accordion-heading::after {
+        content: "+";
+    }
+    input[type=radio] + .accordion-heading::after {
+        content: "\25BC";
+    }
+    input[type=checkbox]:checked + .accordion-heading::after {
+        content: "-";
+    }
+    input[type=radio]:checked + .accordion-heading::after {
+        transform: rotateX(180deg);
+    }
+}
+
+.rtl {
+    .accordion {
+        .accordion-heading {
+            &::after {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+}
+
 /*-----CONTACT-----*/
 .line-bottom,
 .line-bottom-theme-color {
@@ -2673,6 +2774,14 @@ table {
             .grade-detail-graph {
                 width: 773px;
             }
+        }
+    }
+    .pagination {
+        .fa-angle-left:before {
+            content: "\f105";
+        }
+        .fa-angle-right:before {
+            content: "\f104";
         }
     }
 }
