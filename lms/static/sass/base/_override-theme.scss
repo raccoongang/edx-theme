@@ -272,7 +272,7 @@ body .login-register {
         .course-name {
             position: relative;
             display: inline-block;
-            padding: 10px 30px;
+            padding: 10px 15px;
             color: #fff;
             font-weight: 700;
             text-align: center;
@@ -307,5 +307,22 @@ body .courses-container .courses .course .course-info .course-organization {
 body .course-info .course-sidebar .important-dates {
     li:nth-child(2) {
         display: none;
+    }
+}
+
+//hide organization name on course about page
+.course-info {
+    header {
+        &.course-profile {
+            .intro-inner-wrapper {
+                .intro {
+                    >.heading-group {
+                        button {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
