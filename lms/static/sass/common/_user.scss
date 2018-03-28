@@ -1,6 +1,12 @@
 .user {
     display: flex;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.user .primary {
+    margin-bottom: 0;
 }
 .user-link {
     display: flex;
@@ -12,7 +18,7 @@
     top: 100%;
     right: 0;
     background: #fff;
-    padding: 5px 10px;
+    padding: 5px 10px !important;
     min-width: 120px;
     border-radius: 4px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);

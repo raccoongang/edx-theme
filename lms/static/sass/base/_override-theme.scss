@@ -28,11 +28,12 @@
 
 .logo-en,.logo-ar {
     width: 250px;
+    height: auto;
 }
 
 .link-logo-en,
 .logo-en {
-    display: inline;
+    display: flex;
 
     .lang_ar & {
         display: none;
@@ -97,6 +98,11 @@ body.lang_ar * {
     margin: 0;
     margin-right: 15px;
     color: $header-nav-link-color;
+
+    .lang_ar & {
+        margin-right: 0;
+        margin-left: 15px;
+    }
 }
 
 //на странице прогресса выключаем график
