@@ -659,7 +659,6 @@ div {
 }
 
 /*-----Course-----*/
-
 .content-wrapper {
     .page-header {
         display: -webkit-flex;
@@ -910,6 +909,13 @@ div {
         padding: 0;
         @media (max-width: 1200px) {
             margin: 0 15px;
+        }
+    }
+    &.inline-discussion {
+        .new-post-article {
+            .add-post-cancel {
+                color: $base-color;
+            }
         }
     }
 }
@@ -1188,6 +1194,14 @@ div {
                         }
                     }
                 }
+                .choicegroup,
+                .choicetextgroup {
+                    label {
+                        &:hover {
+                            border-color: $base-color;
+                        }
+                    }
+                }
             }
             input {
                 &[type="email"],
@@ -1229,6 +1243,24 @@ div {
             }
         }
     }
+    &.xmodule_ConditionalModule {
+        div {
+            &.problem {
+                .xmodule_display {
+                    &.xmodule_CapaModule {
+                        .choicegroup,
+                        .choicetextgroup {
+                            label {
+                                &:hover {
+                                    border-color: $base-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .view-in-course {
@@ -1245,11 +1277,39 @@ div {
     }
     .discussion-module {
         .btn {
+            color: $secondary-color;
+            border-color: $secondary-color;
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $secondary-color !important;
+                background: $secondary-color !important;
+            }
+        }
+        .btn-brand {
             @extend %theme-btn;
             &:hover,
             &:focus,
             &:active {
                 background: $btn-bg-hover !important;
+            }
+        }
+    }
+    .discussion {
+        &.inline-discussion {
+            .new-post-article {
+                .add-post-cancel {
+                    color: $base-color;
+                }
+            }
+        }
+    }
+    .field-label {
+        .field-input {
+            &:checked {
+                & + .field-input-label {
+                    color: $base-color;
+                }
             }
         }
     }
@@ -1272,7 +1332,6 @@ div {
 }
 
 /*-----Popup-----*/
-
 #lean_overlay {
     z-index: 1001;
 }
@@ -1665,6 +1724,13 @@ h6,
                 .file-upload-form {
                     .action-submit {
                         @extend %theme-btn;
+                    }
+                }
+                .wrapper-tabs {
+                    .tab {
+                        .toggle-button {
+                            color: $base-color;
+                        }
                     }
                 }
             }
