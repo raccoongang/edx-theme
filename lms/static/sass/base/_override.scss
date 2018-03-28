@@ -1472,23 +1472,6 @@ button {
     @extend %theme-btn;
 }
 
-.header-global {
-    .primary {
-        &>a {
-            color: $base-color;
-        }
-    }
-    .user {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        .user-dropdown {
-            color: $base-color;
-            box-shadow: none !important;
-        }
-    }
-}
-
 /*-----Sign in-----*/
 .login-register {
     .action-primary {
