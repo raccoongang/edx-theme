@@ -1084,6 +1084,13 @@ div {
                 .input-prepend {
                     margin: 5px 0;
                 }
+                .well-small {
+                    a {
+                        @media (max-width: 479px) {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
             }
             .entry-title {
                 @media (max-width: 767px) {
@@ -1719,6 +1726,17 @@ h6,
                             }
                         }
                     }
+                    .cohort-management-nav-form {
+                        margin-bottom: 10px;
+                        @media (max-width: 479px) {
+                            width: 100%;
+                        }
+                    }
+                    .action-create {
+                        @media (max-width: 479px) {
+                            float: none;
+                        }
+                    }
                 }
                 .toggle-cohort-management-secondary,
                 .toggle-cohort-management-discussions {
@@ -1859,13 +1877,13 @@ h6,
                 height: auto;
             }
         }
-    }
-    .slick-header-column {
-        &.ui-state-default {
-            height: 24px;
-            width: 100% !important;
-            left: auto;
-            box-sizing: border-box;
+        .slick-header-column {
+            &.ui-state-default {
+                height: 24px;
+                width: 100% !important;
+                left: auto;
+                box-sizing: border-box;
+            }
         }
     }
 }
@@ -2168,6 +2186,12 @@ div {
     }
 }
 
+.progress-certificates-title {
+    @media (max-width: 479px) {
+        word-wrap: break-word;
+    }
+}
+
 /*-----Sysadmin-----*/
 input[type="text"],
 input[type="email"],
@@ -2266,6 +2290,26 @@ div {
         &:hover,
         &:focus {
             color: #ffe;
+        }
+    }
+}
+
+/*-----Static tab-----*/
+.view-statictab {
+    .container {
+        .container {
+            min-width: initial;
+            padding: 0;
+        }
+    }
+}
+
+body {
+    &.view-in-course {
+        .static_tab_wrapper {
+            @media (max-width: 767px) {
+                padding: 30px;
+            }
         }
     }
 }
