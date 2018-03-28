@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'DinAlternate';
-    src: url('../fonts/DINAlternate-Regular.woff2') format('woff2'),
-        url('../fonts/DINAlternate-Regular.woff') format('woff');
+    src: url('#{$font-path}/DINAlternate-Regular.woff2') format('woff2'),
+        url('#{$font-path}/DINAlternate-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DinAlternate-arabic';
-    src: url('../fonts/DINNextLTArabic-Medium.woff2') format('woff2'),
-        url('../fonts/DINNextLTArabic-Medium.woff') format('woff');
+    src: url('#{$font-path}/DINNextLTArabic-Medium.woff2') format('woff2'),
+        url('#{$font-path}/DINNextLTArabic-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Harmattan';
-    src: url('../fonts/Harmattan-Regular.woff2') format('woff2'),
-        url('../fonts/Harmattan-Regular.woff') format('woff');
+    src: url('#{$font-path}/Harmattan-Regular.woff2') format('woff2'),
+        url('#{$font-path}/Harmattan-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

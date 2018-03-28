@@ -15,6 +15,10 @@ from django.utils.translation import ugettext as _
       <li class="header-list_item">
         <a class="header-list_link" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
       </li>
+      <li class="header-list_item">
+        <a class="header-list_link btn-en" href="https://youngthinker.org/en/dashboard" target="_blank">${_('Back to YTP Dashboard')}</a>
+        <a class="header-list_link btn-ar" href="https://youngthinker.org/ar/dashboard" target="_blank">${_('Back to YTP Dashboard')}</a>
+      </li>
     % endif
     % if show_program_listing:
       <li class="header-list_item">
