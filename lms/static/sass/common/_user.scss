@@ -69,6 +69,10 @@
         }
     }
 }
+.user-image-frame {
+    max-width: 40px;
+    border-radius: 10%;
+}
 .user-menu {
     position: relative;
 }
@@ -78,6 +82,8 @@
     text-shadow: none;
     color: #000;
     box-shadow: none;
+    padding: 0 20px;
+    margin: -5px 0 0 0;
 
     &:hover:not(:disabled),
     &:focus,
@@ -95,4 +101,5 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 1.3;
+    margin: 0 5px;
 }
