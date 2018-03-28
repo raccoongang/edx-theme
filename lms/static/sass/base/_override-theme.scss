@@ -331,3 +331,14 @@ body .course-info .course-sidebar .important-dates {
         }
     }
 }
+
+//hide course info tab
+.wrapper-course-material {
+    .course-tabs {
+        li {
+            a[href$="info"] {
+                display: none;
+            }
+        }
+    }
+}
