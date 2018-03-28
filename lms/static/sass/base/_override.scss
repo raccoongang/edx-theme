@@ -1748,6 +1748,25 @@ h6,
                     max-width: 100%;
                 }
             }
+            &#send_email {
+                .list-fields {
+                    .field {
+                        .email-targets-secondary,
+                        .email-targets-primary {
+                            @media (max-width: 767px) {
+                                display: block;
+                                float: left;
+                                width: 50%;
+                                padding: 0;
+                            }
+                            @media (max-width: 479px) {
+                                float: none;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .customBrowseBtn {
@@ -2207,6 +2226,14 @@ input[type="password"] {
                 @media (max-width: 767px) {
                     padding: 4px;
                 }
+            }
+        }
+    }
+    .instructor-nav {
+        a {
+            display: inline-block;
+            @media (max-width: 576px) {
+                margin-right: 10px;
             }
         }
     }

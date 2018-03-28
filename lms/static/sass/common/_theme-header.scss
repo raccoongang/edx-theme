@@ -41,6 +41,9 @@
 
     .lang_ar & {
         padding: 0 40px 0 0;
+        @media screen and (max-width: 760px) {
+            padding: 0;
+        }
     }
 }
 .theme-header__block {

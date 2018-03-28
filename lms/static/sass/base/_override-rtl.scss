@@ -84,6 +84,10 @@
     }
 }
 
+.CodeMirror-scroll {
+    margin-right: 0;
+}
+
 /*-----Instructor-----*/
 .instructor-dashboard-wrapper-2 {
     .customBrowseBtn {
@@ -121,6 +125,19 @@ div {
                 .grades {
                     float: right;
                 }
+            }
+        }
+    }
+}
+
+/*-----Sysadmin-----*/
+.sysadmin-dashboard-content {
+    h2 {
+        a {
+            margin-right: 0;
+            margin-left: 1.2em;
+            @media (max-width: 576px) {
+                margin-left: 10px;
             }
         }
     }
