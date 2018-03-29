@@ -1535,7 +1535,13 @@ button {
                     &.message-status {
                         &.course-status-certavailable {
                             .actions-primary {
+                                @media (max-width: 479px) {
+                                    float: left;
+                                }
                                 .action-certificate {
+                                    @media (max-width: 479px) {
+                                        margin-left: 0;
+                                    }
                                     .btn {
                                         background: $secondary-color;
                                         border: none;
@@ -1546,6 +1552,13 @@ button {
                                             background: $btn-bg-hover;
                                         }
                                     }
+                                }
+                            }
+                            .message-copy {
+                                @media (max-width: 479px) {
+                                    float: none;
+                                    width: 100%;
+                                    margin-bottom: 10px;
                                 }
                             }
                         }
@@ -1777,11 +1790,18 @@ h6,
         margin-bottom: 10px;
         .enhanced-input-file {
             width: 100%;
-            padding: 20px 6px 9px;
+            height: 34px;
+            padding: 8px 20px 8px 60px;
+            font-size: 14px;
+            line-height: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 0;
             box-sizing: border-box;
         }
         .file-browse {
-            height: 31px;
+            height: 34px;
             margin: 0;
             padding-top: 0;
             &:hover,
@@ -1798,11 +1818,13 @@ h6,
                 }
             }
             .file_field {
+                opacity: 0;
                 top: 0;
-                left: -34%;
+                left: 0;
+                right: 0;
                 z-index: 4;
-                width: 134%;
-                height: 31px;
+                width: 100%;
+                height: 34px;
                 box-sizing: border-box;
             }
             .browse {
@@ -1810,10 +1832,12 @@ h6,
                 position: absolute;
                 top: 0;
                 right: -2px;
+                min-width: 50px;
                 margin: 0;
                 margin-left: 78%;
-                padding: 4px 10px 5px;
+                padding: 6px 10px;
                 z-index: 3;
+                text-align: center;
             }
         }
     }

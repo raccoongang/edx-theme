@@ -97,10 +97,6 @@
                 left: 0;
                 margin: 0;
             }
-            .file_field {
-                left: auto;
-                right: -34%;
-            }
         }
     }
     section {
@@ -162,3 +158,30 @@ div {
         }
     }
 }
+
+/*-----Dashboard-----*/
+.dashboard {
+    .my-courses {
+        .course {
+            .wrapper-messages-primary {
+                .message {
+                    &.message-status {
+                        &.course-status-certavailable {
+                            .actions-primary {
+                                @media (max-width: 479px) {
+                                    float: right;
+                                }
+                                .action-certificate {
+                                    @media (max-width: 479px) {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
