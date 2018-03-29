@@ -84,6 +84,10 @@
     }
 }
 
+.CodeMirror-scroll {
+    margin-right: 0;
+}
+
 /*-----Instructor-----*/
 .instructor-dashboard-wrapper-2 {
     .customBrowseBtn {
@@ -96,6 +100,25 @@
             .file_field {
                 left: auto;
                 right: -34%;
+            }
+        }
+    }
+    section {
+        &.idash-section {
+            &#send_email {
+                .list-fields {
+                    .field {
+                        .email-targets-secondary,
+                        .email-targets-primary {
+                            @media (max-width: 767px) {
+                                padding: 0 0 0 10px;
+                            }
+                            @media (max-width: 479px) {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -121,6 +144,20 @@ div {
                 .grades {
                     float: right;
                 }
+            }
+        }
+    }
+}
+
+/*-----Sysadmin-----*/
+.sysadmin-dashboard-content {
+    .instructor-nav {
+        a {
+            margin-right: 0;
+            margin-left: 1.2em;
+            @media (max-width: 576px) {
+                margin-right: 0;
+                margin-left: 10px;
             }
         }
     }
