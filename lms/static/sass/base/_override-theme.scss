@@ -28,7 +28,7 @@
 
 .logo-en,.logo-ar {
     width: 250px;
-    height: auto;
+    height: 70px;
 }
 
 .link-logo-en,
@@ -151,7 +151,8 @@ body.lang_ar * {
         .icon {
             background: $theme-btn-bg;
         }
-
+        
+        &:focus,
         &:hover {
             span {
                 color: $theme-btn-white-text-color-hover;
