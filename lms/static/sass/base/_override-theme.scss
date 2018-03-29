@@ -148,6 +148,10 @@ body.lang_ar * {
     }
 
     .login-provider {
+
+        &:focus {
+            background: $theme-btn-bg !important;
+        }
         .icon {
             background: $theme-btn-bg;
         }
