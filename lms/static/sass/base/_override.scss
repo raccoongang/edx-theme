@@ -1741,30 +1741,26 @@ a{
         }
     }
     .accordion-heading {
-        &::after {
-            position: absolute;
-            right: 0;
-            top: 0;
-            display: block;
-            width: 3em;
-            height: 3em;
-            line-height: 3;
+        &::before {
+            display: inline-block;
+            width: 27px;
+            margin-right: 10px;
             text-align: center;
             -webkit-transition: all .35s;
             -o-transition: all .35s;
             transition: all .35s;
         }
     }
-    input[type=checkbox] + .accordion-heading::after {
+    input[type=checkbox] + .accordion-heading::before {
         content: "+";
     }
-    input[type=radio] + .accordion-heading::after {
+    input[type=radio] + .accordion-heading::before {
         content: "\25BC";
     }
-    input[type=checkbox]:checked + .accordion-heading::after {
+    input[type=checkbox]:checked + .accordion-heading::before {
         content: "-";
     }
-    input[type=radio]:checked + .accordion-heading::after {
+    input[type=radio]:checked + .accordion-heading::before {
         transform: rotateX(180deg);
     }
 }
@@ -1772,9 +1768,9 @@ a{
 .rtl {
     .accordion {
         .accordion-heading {
-            &::after {
-                right: auto;
-                left: 0;
+            &::before {
+                margin-right: 0;
+                margin-left: 10px;
             }
         }
     }
