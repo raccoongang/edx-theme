@@ -1,17 +1,15 @@
-'use strict';
+$( document ).ready(function() {
 
-(function () {
-    var input = document.querySelector('#browseBtn-bulk-csv');
-    var label = document.querySelector('#bulk-exception-upload');
-    var labelVal = label.innerHTML;
+    (function () {
+        $(document).on('change', $('#browseBtn-bulk-csv'), function(e){
+            var fileName = e.target.value.split( '\\' ).pop();
+            var label = $('#bulk-exception-upload');
+            if (fileName) {
+                label.html(fileName);
+            } else {
+                label.html('');
+            }
+        });
+    }());
 
-    input.addEventListener('change', function(e){
-        var fileName = e.target.value.split( '\\' ).pop();
-
-        if(fileName)
-            label.innerHTML = fileName;
-        else
-            label.innerHTML = labelVal;
-    });
-
-}());
+});
