@@ -63,6 +63,11 @@ from django.core.urlresolvers import reverse
                                     <textarea name="message" class="input-block" rows="5" placeholder="الرجاء كتابة الرسالة هنا"></textarea>
                                     ${unicode(form['message'].errors) | n}
                                 </div>
+                                <div class="g-recaptcha" data-sitekey="${google_recaptcha_site_key}"></div>
+                                    %if captcha_error:
+                                    <ul class="errorlist"><li>${captcha_error | n}</li></ul>
+                                    % endif
+                                    <script src='https://www.google.com/recaptcha/api.js'></script>
                                 <div class="form-field">
                                     <input name="form_botcheck" class="form-control" type="hidden" value="" />
                                     <button type="submit" class="btn btn-dark btn-flat" data-loading-text="الرجاء الانتظار">إرسال الرسالة</button>
