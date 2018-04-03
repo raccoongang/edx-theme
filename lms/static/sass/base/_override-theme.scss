@@ -28,6 +28,7 @@
 
 .logo-en,.logo-ar {
     width: 250px;
+    min-width: 250px;
     height: 70px;
 }
 
@@ -307,6 +308,13 @@ body .login-register {
             }
         }
     }
+}
+
+//уменьшенные иконки в футере
+
+.icon-list_icon {
+    width: 25px;
+    height: 25px;
 }
 
 //убираем дату начала курсов
