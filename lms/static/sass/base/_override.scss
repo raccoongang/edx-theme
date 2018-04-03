@@ -2567,4 +2567,56 @@ table.stat_table {
 }
 //end sysadmin page responsive
 
-
+.logo img {
+    height: 60px;
+}
+.hamburger {
+    top: 29px !important;
+    &:before,
+    &:after {
+        background: #2c2a2f !important;
+    }
+    &:after {
+        box-shadow: 0 15px 0 0 #2c2a2f, 0 -15px 0 0 #2c2a2f !important;
+    }
+}
+.nav-holder {   
+    .nav-global li a {
+        // padding: 10px 20px !important;
+        &:hover {
+            border-bottom: 2px solid #006341;
+        }
+    }
+    .nav-courseware {
+        margin-top: 10px;
+    }
+}
+.heading-group {
+    background: #006341;
+    padding: 20px !important;
+}
+.home > header .title {
+    width: auto !important;
+    max-width: 730px !important;
+}
+.highlighted-courses .courses .course:hover,
+.highlighted-courses .courses .course:focus {
+    box-shadow: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.3), 0 1.5rem 1.2rem rgba(0, 0, 0, 0.22);
+}
+.courses-container .courses .course .course-image .cover-image:before {
+    background: #177152 !important;
+}
+.wrapper-footer {
+    background: #006341;
+    footer#footer-openedx .colophon .nav-colophon {
+        margin: 5px 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    .home > header .title > .heading-group {
+        h1,
+        span {
+            font-size: 25px;
+        }
+    }
+}
