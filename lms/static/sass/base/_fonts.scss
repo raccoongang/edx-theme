@@ -1,39 +1,39 @@
 @font-face {
     font-family: 'Neo Sans Std';
-    src: url('../fonts/NeoSansStd-Regular.woff2') format('woff2'),
-        url('../fonts/NeoSansStd-Regular.woff') format('woff');
+    src: url('#{$font-path}/NeoSansStd-Regular.woff2') format('woff2'),
+        url('#{$font-path}/NeoSansStd-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'NeoSans';
-    src: url('../fonts/NeoSans-Black.woff2') format('woff2'),
-        url('../fonts/NeoSans-Black.woff') format('woff');
+    src: url('#{$font-path}/NeoSans-Black.woff2') format('woff2'),
+        url('#{$font-path}/NeoSans-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'NeoSans';
-    src: url('../fonts/NeoSans-Light.woff2') format('woff2'),
-        url('../fonts/NeoSans-Light.woff') format('woff');
+    src: url('#{$font-path}/NeoSans-Light.woff2') format('woff2'),
+        url('#{$font-path}/NeoSans-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'NeoSans';
-    src: url('../fonts/NeoSans-LightItalic.woff2') format('woff2'),
-        url('../fonts/NeoSans-LightItalic.woff') format('woff');
+    src: url('#{$font-path}/NeoSans-LightItalic.woff2') format('woff2'),
+        url('#{$font-path}/NeoSans-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Neo Sans Std';
-    src: url('../fonts/NeoSansStd-Light.woff2') format('woff2'),
-        url('../fonts/NeoSansStd-Light.woff') format('woff');
+    src: url('#{$font-path}/NeoSansStd-Light.woff2') format('woff2'),
+        url('#{$font-path}/NeoSansStd-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
