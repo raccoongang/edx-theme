@@ -2567,6 +2567,11 @@ table.stat_table {
 }
 //end sysadmin page responsive
 
+// header
+
+.header-global .nav-courseware li .btn:focus, .header-global .nav-courseware div .btn:focus, .login .form-actions button[type="submit"]:focus, .register .form-actions button[type="submit"]:focus, .passwordreset .form-actions button[type="submit"]:focus, #forgot-password-modal #password-reset .form-actions button[type="submit"]:focus, .view-survey .action-primary:focus {
+    box-shadow: none;
+}
 .logo img {
     height: 60px;
 }
@@ -2580,38 +2585,90 @@ table.stat_table {
         box-shadow: 0 15px 0 0 #2c2a2f, 0 -15px 0 0 #2c2a2f !important;
     }
 }
-.nav-holder {   
-    .nav-global li a {
-        // padding: 10px 20px !important;
-        &:hover {
-            border-bottom: 2px solid #006341;
+.nav-holder .nav-global {
+    margin-top: 19px !important;
+    li {
+        margin: 0 10px !important;
+        a {
+            padding: 0 !important;
+            &:hover {
+                border-bottom: 2px solid #5e5a65;
+            }
         }
+    }
+}
+.header-global {
+    .flex {
+        padding-top: 7px;
     }
     .nav-courseware {
         margin-top: 10px;
+        li .btn {
+            text-transform: none;
+        }
     }
 }
-.heading-group {
+.home > header .title > .heading-group {
     background: #006341;
     padding: 20px !important;
+    opacity: 0.9;
 }
 .home > header .title {
     width: auto !important;
     max-width: 730px !important;
 }
+.course-info .heading-group {
+    background: #fff;
+}
+.course-info .course-sidebar .important-dates li .icon {
+    margin-top: 0;
+}
 .highlighted-courses .courses .course:hover,
 .highlighted-courses .courses .course:focus {
+    box-shadow: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.3), 0 1.5rem 1.2rem rgba(0, 0, 0, 0.22);
+}
+.highlighted-courses .courses .course:hover, .highlighted-courses .courses .course:focus, .find-courses .courses .course:hover, .find-courses .courses .course:focus {
     box-shadow: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.3), 0 1.5rem 1.2rem rgba(0, 0, 0, 0.22);
 }
 .courses-container .courses .course .course-image .cover-image:before {
     background: #177152 !important;
 }
+
+// wiki
+
+section.wiki {
+    .btn.btn-primary {
+        padding: 9px 18px 8px !important;
+    }
+    .wiki-wrapper .nav-tabs li {
+        margin-bottom: 5px !important;
+    }
+}
+
+// footer
+
 .wrapper-footer {
-    background: #006341;
+    background: #eee;
+    border-top: none;
     footer#footer-openedx .colophon .nav-colophon {
         margin: 5px 0;
     }
 }
+
+// Register page
+
+.login-register .action-primary:hover {
+    color: #2c2a2f;
+}
+.login-form + .toggle-form .nav-btn,
+.register-form + .toggle-form .nav-btn {
+    height: auto;
+}
+textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
+    box-shadow: none;
+    border: 1px solid #ffc627 !important;
+}
+
 @media screen and (max-width: 400px) {
     .home > header .title > .heading-group {
         h1,
