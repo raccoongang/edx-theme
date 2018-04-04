@@ -183,6 +183,7 @@ body .container.activation h1.valid {
         }
         .colophon {
             width: 100%;
+            position: relative;
 
             .nav-colophon {
                 .lang_ar & {
@@ -758,9 +759,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .footer-logo-holder {
     position: absolute;
-    top: -40px;
-    left: 50%;
-    margin-left: -35px;
+    right: 90px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .logo-ar {
     display: none;
@@ -1523,9 +1524,6 @@ section.wiki .wiki-wrapper .nav-tabs li {
 .xmodule_display.xmodule_HtmlModule img {
     max-width: 100%;
     height: auto;
-}
-.grade-detail-graph {
-    display: none;
 }
 body h2,
 body .home>header .title>.heading-group p,
