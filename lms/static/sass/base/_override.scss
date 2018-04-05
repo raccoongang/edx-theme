@@ -1,6 +1,8 @@
 .header-global {
     height: auto;
-    background: $header-color;
+    background: $header-bg;
+    border: none;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
@@ -116,14 +118,14 @@
             box-sizing: border-box;
         }
         .dropdown-menu li>a {
-            color: $dropdown-menu-color;
+            color: $dropdown-menu-link-color;
 
             &:focus {
-                color: $dropdown-menu-color;
+                color: $dropdown-menu-link-color;
                 text-decoration: none;
             }
             &:hover {
-                color: $dropdown-menu-color-hover;
+                color: $dropdown-menu-link-color-hover;
                 text-decoration: none;
             }
         }
@@ -171,7 +173,7 @@ body .container.activation h1.valid {
     }
 }
 .wrapper-footer {
-    background: $footer-color;
+    background: $footer-bg;
     position: relative;
     padding: 50px 10px;
 
@@ -187,7 +189,7 @@ body .container.activation h1.valid {
 
             .nav-colophon {
                 margin: 5px 0 25px 0;
-                
+
                 .lang_ar & {
                     direction: rtl;
                 }
@@ -301,9 +303,11 @@ body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:h
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:focus {
     text-decoration: none !important;
 }
-body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon,
-.courses-container .courses .course .course-info .course-title {
+body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon {
     color: $theme-link;
+}
+.courses-container .courses .course .course-info .course-title {
+    color: $course-link-color;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -341,7 +345,7 @@ body .discussion .post-label.post-label-following {
     color: $theme-link;
 }
 .courses-container .courses .course .course-image .cover-image:before {
-    background: $theme-link;
+    background: $course-hover-bg;
 }
 body .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
     &:hover,
@@ -724,10 +728,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
             h1 {
                 font-size: 32px;
                 line-height: 1.2;
-                color: #fff;
+                color: $promo-box-text-color;
                 text-align: center;
                 font-weight: bold;
-                text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
+                text-shadow: $promo-box-text-shadow;
                 margin-bottom: 50px;
                 @media screen and (min-width:760px ) { 
                     font-size: 52px;
@@ -738,21 +742,23 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 text-align: center;
                 font-size: 34px;
                 line-height: 1.3;
-                text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4);
-                color: #fff;
+                text-shadow: $promo-box-text-shadow;
+                color: $promo-box-text-color;
                 margin-bottom: 40px;
             }
             .link {
-                background: transparent;
-                border: 3px solid #fff;
+                background: $find-btn-bg;
+                border: 3px solid $find-btn-border;
                 text-shadow: none;
                 box-shadow: none;
-                color: #fff;
+                color: $find-btn-color;
                 border-radius: 2px;
                 padding: 10px 20px;
                 display: inline-block;
 
                 &:hover {
+                    background: $find-btn-bg-hover;
+                    color: $find-btn-color-hover;
                     text-decoration: none;
                 }
             }
@@ -790,7 +796,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding-bottom: 77px;
 
     .course a {
-        background: #fff;
+        background: $course-bg;
     }
 }
 .login-register {
@@ -922,10 +928,10 @@ body.view-profile .profile-image-field .image-wrapper .u-field-remove-button {
     color: #767676;
 }
 body .courses-container .courses .course .course-info {
-    background: #fff;
+    background: $course-bg;
 }
 html {
-    background: #eee;
+    background: $body-bg;
 }
 body .find-courses .search-facets .facet-option:hover, 
 body .find-courses .search-facets .facet-option:focus {
@@ -2577,7 +2583,7 @@ table.stat_table {
 .footer-support {
     font-size: 12px;
     line-height: 1.2px;
-    color: #fff;
+    color: $footer-support-text-and-logo;
     margin: 0;
     display: flex;
     align-items: center;
@@ -2599,4 +2605,7 @@ table.stat_table {
     width: 20px;
     margin: -5px 10px 0 5px;
 }
-
+#logo-raccoon path,
+#logo-edx path {
+    fill: $footer-support-text-and-logo;
+}
