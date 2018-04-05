@@ -2585,6 +2585,9 @@ table.stat_table {
         box-shadow: 0 15px 0 0 #2c2a2f, 0 -15px 0 0 #2c2a2f !important;
     }
 }
+.menu-open .hamburger:after {
+    box-shadow: none !important;
+}
 .nav-holder .nav-global {
     margin-top: 19px !important;
     li {
@@ -2634,6 +2637,13 @@ table.stat_table {
     background: #177152 !important;
 }
 
+// forum
+
+.forum-search input#search {
+    border: 1px solid #006341 !important;
+    border-radius: 3px 0 0 3px !important;
+}
+
 // wiki
 
 section.wiki {
@@ -2643,6 +2653,18 @@ section.wiki {
     .wiki-wrapper .nav-tabs li {
         margin-bottom: 5px !important;
     }
+}
+
+// profile 
+
+.wrapper-profile-sections {
+    padding: 30px !important;
+}
+
+#course_info .enrollment-wrapper table caption,
+#course_info .enrollment-wrapper table td,
+#course_info .enrollment-wrapper table th { 
+    padding: 5px !important;
 }
 
 // footer
@@ -2669,6 +2691,29 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
     border: 1px solid #ffc627 !important;
 }
 
+// courses
+
+.bookmark-button {
+    border: 1px solid #177152;
+    padding: 10px !important;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 759px) {
+    .nav-holder .nav-global li {
+        margin: 5px 0 !important;
+    }
+    .content-wrapper .course-license, .content-wrapper .xblock-license {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .find-courses .courses-container .courses:not(.no-course-discovery), .university-profile .courses-container .courses:not(.no-course-discovery) {
+        margin-right: 0 !important;
+        width: 100%;
+    }
+}
 @media screen and (max-width: 400px) {
     .home > header .title > .heading-group {
         h1,

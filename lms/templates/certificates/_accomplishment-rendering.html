@@ -68,14 +68,14 @@ course_mode_class = course_mode if course_mode else ''
                 <ul class="wrapper-orgs list-orgs">
                     <li class="wrapper-organization">
                         <div class="organization organization-edX">
-                            <img class="organization-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.png" alt="${platform_name}">
+                            <img class="organization-logo" src="/static/${settings.FEATURES.get('NRG_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.png" alt="${platform_name}" style="max-width: 300px;">
                         </div>
                     </li>
 
                     % if organization_logo:
                     <li class="wrapper-organization">
                         <div class="organization">
-                            <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}">
+                            <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}" style="max-width: 300px;">
                         </div>
                     </li>
                     % endif
