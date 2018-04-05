@@ -18,7 +18,7 @@
     % endif
   >
     <div class="colophon">
-      
+
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
@@ -46,6 +46,19 @@
       <a href="/" class="footer-logo-holder">
         <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
       </a>
+      <p class="footer-support">Built on 
+        <a target="_blank" href="https://www.edx.org">
+          <svg class="svg-edx"  viewBox="0 0 100 70">
+            <use xlink:href="#logo-edx" />
+          </svg>
+        </a>
+        by RACCOONGANG 
+        <a target="_blank" href="https://raccoongang.com">
+          <svg class="svg-raccoon"  viewBox="0 0 100 100">
+            <use xlink:href="#logo-raccoon" />
+          </svg>
+        </a>
+      </p>
   </footer>
 </div>
 % if include_dependencies:
