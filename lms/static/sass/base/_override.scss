@@ -173,7 +173,7 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-color;
     position: relative;
-    padding: 30px 10px;
+    padding: 50px 10px;
 
     footer#footer-openedx {
         a:hover,
@@ -183,8 +183,11 @@ body .container.activation h1.valid {
         }
         .colophon {
             width: 100%;
+            position: relative;
 
             .nav-colophon {
+                margin: 5px 0 25px 0;
+                
                 .lang_ar & {
                     direction: rtl;
                 }
@@ -757,10 +760,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .footer-logo-holder {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    margin-left: -35px;
+    display: block;
+    text-align: center;
+    padding: 30px 0 0;
+
+    @media screen and (min-width: 760px) {
+        display: inline;
+        position: absolute;
+        right: 90px;
+        bottom: 0;
+        padding: 0;
+    }
 }
 .logo-ar {
     display: none;
@@ -1523,9 +1533,6 @@ section.wiki .wiki-wrapper .nav-tabs li {
 .xmodule_display.xmodule_HtmlModule img {
     max-width: 100%;
     height: auto;
-}
-.grade-detail-graph {
-    display: none;
 }
 body h2,
 body .home>header .title>.heading-group p,
@@ -2566,6 +2573,32 @@ table.stat_table {
     }
 }
 //end sysadmin page responsive
+
+.footer-support {
+    font-size: 12px;
+    line-height: 1.2px;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 15px 0 0;
+    justify-content: center;
+
+    @media screen and (min-width: 760px) {
+        position: absolute;
+        padding: 0;
+        bottom: -16px;
+        justify-content: baseline;
+    }
+}
+.svg-edx {
+    width: 73px;
+    margin: -5px 10px 0 5px;
+}
+.svg-raccoon {
+    width: 20px;
+    margin: -5px 10px 0 5px;
+}
 
 // header
 
