@@ -763,13 +763,15 @@ body .wmd-prompt-dialog .btn-brand:focus {
     display: block;
     text-align: center;
     padding: 30px 0 0;
-
     @media screen and (min-width: 760px) {
         display: inline;
         position: absolute;
         right: 90px;
         bottom: 0;
         padding: 0;
+    }
+    img {
+        height: 30px;
     }
 }
 .logo-ar {
