@@ -16,6 +16,7 @@ from branding import api as branding_api
 # app that handles site status messages
 from status.status import get_site_status_msg
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
+from openedx.core.djangoapps.site_configuration.helpers import get_value, has_configuration_override
 %>
 
   ## Provide a hook for themes to inject branding on top.
@@ -87,7 +88,8 @@ site_status_msg = get_site_status_msg(course_id)
             <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
           % endif
           ## Course filtering
-          % if settings.FEATURES.get('COUNTRY_FILTER', False):
+
+            %if get_value('COUNTRY_FILTER', False):
           <ol class="user-filter">
             <li class="nav-global-02">
                 <form action="" method="get">
