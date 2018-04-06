@@ -2605,6 +2605,36 @@ table.stat_table {
     width: 20px;
     margin: -5px 10px 0 5px;
 }
+
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-value {
+    @media screen and (max-width: 507px) {
+        margin: 5px 0 0;
+    }
+}
+
+.discussion-response .response-header-content {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.edit-post-form .post-update,
+.edit-post-form .post-cancel {
+    @media screen and (max-width: 400px) {
+        float: none;
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.breadcrumbs .nav-item {
+    margin-left: 0;
+    span.fa {
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+        }
+    }
+}
+
 #logo-raccoon path,
 #logo-edx path {
     fill: $footer-support-text-and-logo;
