@@ -2500,6 +2500,9 @@ section.tool-wrapper div#graph-container {
     @media screen and (min-width: 760px) {
         width: 12%;
     }
+    @media screen and (max-width: 400px) {
+        padding-right: 15px;
+    }
 }
 
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-link {
@@ -2638,4 +2641,42 @@ table.stat_table {
 #logo-raccoon path,
 #logo-edx path {
     fill: $footer-support-text-and-logo;
+}
+
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown {
+    @media screen and (max-width: 420px) {
+        right: auto;
+        left: 19px;
+
+        .actions-dropdown-list:before,
+        .actions-dropdown-list:after {
+            right: auto;
+            left: 6px;
+        }
+        .actions-dropdown-list a {
+            float: left !important;
+        }
+
+    }
+}
+
+.modal,
+.leanModal_box {
+    @media screen and (max-width: 567px) {
+        left: 10px !important;
+        margin: 0 !important;
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+    }
+}
+
+#course-info-progress .msg-actions {
+    @media screen and (max-width: 600px) {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .btn {
+        display: block;
+    }
 }
