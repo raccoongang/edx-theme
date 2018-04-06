@@ -13,36 +13,25 @@
         display: block;
         width: 35px;
         height: 35px;
-        font-size: 0;
-        line-height: 0;
-        text-indent: -9999px;
-
-        &__facebook {
-            background: url('#{$img-path}/ico-facebook.svg');
-        }
-        &__instagramm {
-            background: url('#{$img-path}/ico-instagram.svg');
-        }
-        &__twitter {
-            background: url('#{$img-path}/ico-twitter.svg');
-        }
-        &__linkedin {
-            background: url('#{$img-path}/ico-linkedIn.svg');
-        }
-        &__youtube {
-            background: url('#{$img-path}/ico-youtube.svg');
-        }
-        &__vimeo {
-            background: url('#{$img-path}/ico-vimeo.svg');
-        }
-        &__behance {
-            background: url('#{$img-path}/ico-behance.svg');
-        }
-        &__odnoklassniki {
-            background: url('#{$img-path}/ico-odnoklassniki.svg');
-        }
-        &__vk {
-            background: url('#{$img-path}/ico-vk.svg');
+    }
+    &_svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+#ico-vk,
+#ico-odnoklassniki,
+#ico-behance,
+#ico-vimeo,
+#ico-youtube,
+#ico-linkedin,
+#ico-twitter,
+#ico-instagramm,
+#ico-facebook {
+    path {
+        fill: $footer-social-link-bg;
+        &:hover {
+            fill: $footer-social-link-bg-hover;
         }
     }
 }
