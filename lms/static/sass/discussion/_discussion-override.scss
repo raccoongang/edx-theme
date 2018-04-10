@@ -239,3 +239,40 @@ body .header-global .wrapper-header .wrapper-user-menu {
       }
   }
 }
+.dropdown-menu-container .menu-button {
+    color: #7b97ab;
+}
+@font-face {
+    font-family:'DINPro';
+    src: url('../../fonts/DINPro-Bold.woff2') format('woff2'),
+		url('../../fonts/DINPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'DINPro';
+    src: url('../../fonts/DINPro-Light.woff2') format('woff2'),
+		url('../../fonts/DINPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'DINPro';
+    src: url('../../fonts/DINPro-Regular.woff2') format('woff2'),
+		url('../../fonts/DINPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+* * {
+    font-family: 'DINPro', sans-serif !important;
+}
+
+.fa {
+    font-family: FontAwesome !important;
+}

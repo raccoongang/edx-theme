@@ -2680,3 +2680,84 @@ table.stat_table {
         display: block;
     }
 }
+
+
+//theme start
+
+.logo-en {
+    max-width: 170px;
+}
+
+@font-face {
+    font-family:'DINPro';
+    src: url('../fonts/DINPro-Bold.woff2') format('woff2'),
+		url('../fonts/DINPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'DINPro';
+    src: url('../fonts/DINPro-Light.woff2') format('woff2'),
+		url('../fonts/DINPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'DINPro';
+    src: url('../fonts/DINPro-Regular.woff2') format('woff2'),
+		url('../fonts/DINPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+* * {
+    font-family: 'DINPro', sans-serif !important;
+}
+
+.fa {
+    font-family: FontAwesome !important;
+}
+
+.footer-logo-holder img {
+    max-width: 170px;
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
+    text-align: left;
+}
+.header-global .wrapper-header {
+    max-width: 1200px;
+}
+
+.home>header .title {
+    background: rgba(255,255,255,0.7);
+}
+.footer-support,
+.wrapper.wrapper-footer .icon-list {
+    display: none;
+}
+.header-global .user .dropdown {
+    color: $theme-link;
+}
+.home>header .title>.heading-group h1,
+.home>header .title>.heading-group span {
+    color: $theme-link;
+    text-align: left;
+    text-transform: none;
+    text-shadow: none;
+}
+.right.nav-courseware.list-inline {
+    margin-top: 10px;
+}
+.wrapper-footer {
+    padding-bottom: 30px;
+}
+body .home>header .title,
+body .home>header .title:last-child {
+    margin: 0;
+}
