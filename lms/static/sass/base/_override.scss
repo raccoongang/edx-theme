@@ -2680,3 +2680,19 @@ table.stat_table {
         display: block;
     }
 }
+
+.wiki-wrapper {
+    @media screen and (max-width: 999px) {
+        .article-wrapper {
+            order: 2;
+        }
+        .article-functions {
+            order: 1;
+        }
+    }
+}
+
+.instructor-dashboard-content-2 .slickgrid .slick-cell {
+    height: auto;
+    padding: 5px;
+}
