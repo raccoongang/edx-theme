@@ -609,34 +609,30 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
     display: block;
     position: relative;
     &::before {
-        content: '\f071';
-        font-family: FontAwesome;
+        content: '';
+        background: url("../images/alert_fill.svg") no-repeat;
+        background-size: contain;
         position: absolute;
         left: 0;
+        top: 1px;
         color: red;
         font-style: normal;
-        font-size: 12px;
+        height: 12px;
+        width: 16px;
     }
     &--green {
-        &:after {
+        
+        &:before {
             content: '';
+            background: url("../images/alert_fill.svg") no-repeat;
+            background-size: contain;
             position: absolute;
             left: 0;
-            background: green;
-            height: 16px;
-            width: 16px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        &:before {
-            content: '\f141';
-            font-family: FontAwesome;
-            position: absolute;
-            left: 3px;
-            top: 1px;
+            top: 1px;  
             color: #fff;
             font-style: normal;
-            font-size: 12px;
+            height: 12px;
+            width: 16px;
             z-index: 2;
         }
     }

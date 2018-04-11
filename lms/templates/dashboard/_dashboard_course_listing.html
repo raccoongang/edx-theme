@@ -229,25 +229,25 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
             %>
             % if is_purshue_credit:
-                <p class="action-req">${_('Action required:')}</p>
-                <p>${_('Click the Pursue Credit button to complete your classes on the Credit Eligible Track')}</p>
+                <p class="action-req">${_('Action required')}</p>
+                <p>${_('Click the Pursue credit button to complete your courses on the Credit Eligible Track')}</p>
             %elif is_audit:
-                <p class="action-req">${_('Action required:')}</p>
+                <p class="action-req">${_('Action required')}</p>
                 <p>${_('It looks like you tried to verify your identity but were unsuccessful. The deadline to ID verify has now passed. Call us at 1-844-448-7707.')}</p>
             %elif is_id_verification_pending:
-                <p class="action-req" style="display:none">${_('Action required:')} </p>
+                <p class="action-req" style="display:none">${_('Action required')} </p>
                 <p>${_('ID Verify Status Pending. We are reviewing your ID information.')}</p>
             %elif is_credit_pending:
-              <p class="action-req action-req--green">${_('Action requiered:')} </p>
+              <p class="action-req action-req--green">${_('Action requiered')} </p>
               <p>${_('No action required; it may take up to 10 business days to process your credit.')}</p>
             %elif credit_btn_label:
-                <p class="action-req">${_('Action required:')} </p>   
+                <p class="action-req">${_('Action required')} </p>
                 <p>${_('Before you get your credit, check our')} <a class="action-req-link" href="https://ea.asu.edu/gpa-calculator">GPA calculator</a> ${_('to ensure the credit you’ve earned will help you gain admission to ASU; otherwise, you may consider repeating the course.')}</p>
             %elif is_credit_pending:
-                <p class="action-req action-req--green">${_('Action required:')} </p>
+                <p class="action-req action-req--green">${_('Action required')} </p>
                 <p>${_('ID Verify Status Pending. We are reviewing your ID information.')}</p>
             %else:
-              <p class="action-req" style="display:none" >${_('Action required:')} </p>
+              <p class="action-req" style="display:none" >${_('Action required')} </p>
               <p></p>
             %endif
 
@@ -256,7 +256,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
           <div class="course-actions">
               %if is_purshue_credit:
                    <a class="enter-course" href="${reverse('verify_student_upgrade_and_verify', kwargs={'course_id': unicode(course_overview.id)})}"  data-course-id="${course_overview.id}" data-user="${user.username}">
-                       <span>${_('Pursue Credit')}</span>
+                       <span>${_('Pursue credit')}</span>
                    </a>
               %elif is_audit:
                    <a class="enter-course" href="${course_target}"  data-course-id="${course_overview.id}" data-user="${user.username}">
