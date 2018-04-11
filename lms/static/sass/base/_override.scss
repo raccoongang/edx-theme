@@ -1152,7 +1152,7 @@ $i:0;
                 position: absolute;
                 top: 0;
                 right: 0;
-                z-index: 12;
+                z-index: 11;
                 display: inline-block;
                 vertical-align: middle;
                 width: 100%;
@@ -2785,4 +2785,17 @@ table {
 .g-recaptcha {
     overflow: hidden;
     width: 100%;
+}
+
+/*-----password reset page fixes-----*/
+.view-passwordreset {
+    .wrapper-footer footer,
+    .header-global nav {
+        width: 100%;
+    }
+    .container {
+        padding: inherit;
+        width: auto;
+        background: inherit;
+    }
 }
