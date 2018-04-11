@@ -108,9 +108,28 @@ from openedx.core.lib.courses import course_image_url
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
 
 <section class="course-info">
-  <header class="course-profile">
+  <header class="course-profile"">
+    <div class="blur-bg" style="background: url(${course_image_urls['large']});"></div>
     <div class="intro-inner-wrapper">
       <div class="table">
+
+
+      % if get_course_about_section(request, course, "video"):
+      <a href="#video-modal" class="media" rel="leanModal">
+        <div class="hero">
+          <img src="${course_image_urls['large']}" alt="" />
+          <div class="play-intro"></div>
+        </div>
+      </a>
+      %else:
+      <div class="media">
+        <div class="hero">
+          <img src="${course_image_urls['large']}" alt="" />
+        </div>
+      </div>
+      % endif
+
+
       <section class="intro">
         <div class="heading-group">
           <h1>
@@ -184,41 +203,17 @@ from openedx.core.lib.courses import course_image_url
         </div>
 
       </section>
-      % if get_course_about_section(request, course, "video"):
-      <a href="#video-modal" class="media" rel="leanModal">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-          <div class="play-intro"></div>
-        </div>
-      </a>
-      %else:
-      <div class="media">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
-        </div>
-      </div>
-      % endif
     </div>
       </div>
   </header>
 
   <div class="container">
-    <div class="details">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
-        </div>
-      % endif
 
-      <div class="inner-wrapper">
-        ${get_course_about_section(request, course, "overview")}
-      </div>
-  </div>
 
     <div class="course-sidebar">
       <div class="course-summary">
 
-        <%include file="course_about_sidebar_header.html" />
+        <!-- <%include file="course_about_sidebar_header.html" /> -->
 
         <ol class="important-dates">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
@@ -325,6 +320,20 @@ from openedx.core.lib.courses import course_image_url
       %endif
 
   </div>
+
+
+    <div class="details">
+      % if staff_access and studio_url is not None:
+        <div class="wrap-instructor-info studio-view">
+          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
+        </div>
+      % endif
+
+      <div class="inner-wrapper">
+        ${get_course_about_section(request, course, "overview")}
+      </div>
+    </div>
+
 
   </div>
 </div>

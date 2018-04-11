@@ -67,6 +67,12 @@ site_status_msg = get_site_status_msg(course_id)
 
         <div class="nav-holder">
       % if user.is_authenticated():
+
+      <div class="flex">
+        <%include file="user_dropdown.html"/>
+
+        <a href="${get_online_help_info(online_help_token)['doc_url']}" target="_blank" class="doc-link">${_("Help")}</a>
+
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
@@ -110,12 +116,7 @@ site_status_msg = get_site_status_msg(course_id)
           %endif
         </%block>
       </ol>
-      <div class="flex">
-        <%include file="user_dropdown.html"/>
 
-        <a href="${get_online_help_info(online_help_token)['doc_url']}" 
-          target="_blank"
-          class="doc-link">${_("Help")}</a>
       </div>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
@@ -127,7 +128,9 @@ site_status_msg = get_site_status_msg(course_id)
         </ol>
       % endif
     % else:
-      <ol class="left list-inline nav-global">
+      <!-- <ol class="left list-inline nav-global"> -->
+      <ol class="right nav-courseware list-inline">
+
         <%block name="navigation_global_links">
           % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
             <li class="item nav-global-01">
@@ -153,18 +156,16 @@ site_status_msg = get_site_status_msg(course_id)
             %endif
           % endif
         </%block>
-      </ol>
 
-      <ol class="right nav-courseware list-inline">
         <%block name="navigation_sign_in">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
               <li class="item nav-global-04">
-                <a class="btn btn-login" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+                <a class="btn btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
               </li>
             % else:
               <li class="item nav-global-04">
-                <a class="btn btn-login" href="/register${login_query()}">${_("Register")}</a>
+                <a class="btn btn-register" href="/register${login_query()}">${_("Register")}</a>
               </li>
             % endif
             <li class="item nav-courseware-01">

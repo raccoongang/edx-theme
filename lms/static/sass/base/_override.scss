@@ -1,3 +1,13 @@
+body h1, body h2, body h3, body h4 {
+    font-family: "Roboto";
+}
+
+.course-info .details h2 {
+    color: #006341 !important;
+    text-transform: none !important;
+    font-size: 26px !important;
+}
+
 .header-global {
     height: auto;
     background: $header-color;
@@ -11,6 +21,8 @@
     }
     .nav-global {
         width: 100%;
+        float: right !important;
+        margin-top: 6px !important;
         @media screen and (min-width:760px ) {
             width: auto;
         }
@@ -21,11 +33,13 @@
             text-transform: none;
             @media screen and (min-width:760px ) {
                 width: auto;
-                text-align: left;
+                text-align: left; 
+                margin-right: 15px !important;
             }
 
             a {
                 color: $header-nav-link-color;
+                font-weight: normal !important;
 
                 &:active,
                 &:focus {
@@ -98,6 +112,7 @@
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
+            font-weight: normal !important;
             color: $theme-user-link;
 
             &:hover {
@@ -141,7 +156,7 @@
 .course-info header.course-profile {
     height: auto;
     margin-top: 0;
-    padding: 20px 0;
+    padding: 50px 0;
 }
 body .container.activation h1.valid {
     background: $theme-link;
@@ -154,10 +169,14 @@ body .container.activation h1.valid {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    font-weight: normal !important;
     @media screen and (min-width:760px ) {
         width: auto;
         text-align: left;
         margin: 12px 15px;
+    }
+    @media screen and (max-width:759px ) {
+        float: left !important;
     }
 
     &:visited {
@@ -194,6 +213,9 @@ body .container.activation h1.valid {
                 ol {
                     width: 100%;
                     text-align: center;
+                    @media screen and (min-width:760px ) {
+                        text-align: right;
+                    }
                 }
                 li {
                     float: none;
@@ -766,7 +788,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     right: auto;
     @media screen and (min-width: 860px) {
         position: absolute;
-        right: 0;
+        left: 0;
         top: 50%;
         margin-top: -30px;
         padding: 0;
@@ -2210,10 +2232,33 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     padding-right: 15px;
     padding-left: 15px;
     box-sizing: border-box;
+    position: relative;
+    .blur-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: blur(50px);
+    }
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+    }
+
 }
 
 .course-info header.course-profile .intro-inner-wrapper {
     min-width: 290px;
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
 }
 
 .course-info header.course-profile .intro-inner-wrapper>div.table {
@@ -2243,6 +2288,8 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 {
     font-size: 1.5em;
+    color: #fff !important;
+    text-shadow: none !important;
     @media screen and (min-width: 760px) {
         font-size: 2em;
     }
@@ -2290,7 +2337,6 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     width: 100%;
     margin: 0 0 20px;
     @media screen and (min-width: 760px) {
-        margin-right: 2.35765%;
         margin-bottom: 0;
         width: 65.88078%;
     }
@@ -2302,6 +2348,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     @media screen and (min-width: 760px) {
         float: left;
         width: 31.76157%;
+        margin: 30px 2.35765% 0 0;
     }
 }
 .course-info .course-summary{
@@ -2605,8 +2652,57 @@ table.stat_table {
 
 // header
 
+.header-global .nav-courseware li {
+    margin-left: 50px;
+    .btn:focus:hover {
+        background: none !important;
+    }
+}
 .header-global .nav-courseware li .btn:focus, .header-global .nav-courseware div .btn:focus, .login .form-actions button[type="submit"]:focus, .register .form-actions button[type="submit"]:focus, .passwordreset .form-actions button[type="submit"]:focus, #forgot-password-modal #password-reset .form-actions button[type="submit"]:focus, .view-survey .action-primary:focus {
     box-shadow: none;
+}
+.header-global {
+    .flex {
+        padding-top: 7px;
+    }
+    .btn {
+        position: relative;
+        text-transform: none;
+        font-size: 14px !important;
+        background: none !important;
+        padding: 0 0 5px 0 !important;
+        text-transform: none !important;
+    }
+    .btn-register {
+        padding: 18px 20px !important;
+        background: #ffc627 !important;
+        &:before {
+            content: "";
+            width: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.15s ease-in-out 0s;
+        }
+        &:hover:before {
+            width: 100%;
+        }
+    }
+    .btn:not(.btn-register):before {
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #1d643f;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all 0.15s ease-in-out 0s;
+    }
+    .btn:not(.btn-register):hover:before {
+        width: 100%;
+    }
 }
 .logo img {
     height: 60px;
@@ -2624,37 +2720,36 @@ table.stat_table {
 .menu-open .hamburger:after {
     box-shadow: none !important;
 }
-.nav-holder .nav-global {
-    margin-top: 19px !important;
-    li {
-        margin: 0 10px !important;
-        a {
-            padding: 0 !important;
-            &:hover {
-                border-bottom: 2px solid #5e5a65;
-            }
-        }
-    }
-}
-.header-global {
-    .flex {
-        padding-top: 7px;
-    }
-    .nav-courseware {
-        margin-top: 10px;
-        li .btn {
-            text-transform: none;
-        }
-    }
-}
 .home > header .title > .heading-group {
-    background: #006341;
-    padding: 20px !important;
+    color: #fff;
     opacity: 0.9;
+    h1 {
+        background: #006341;
+        padding: 30px !important;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 52px;
+    }
+}
+.powered-by {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4 {
+        color: #fff;
+        font-family: "Open Sans";
+        font-size: 40px;
+    }
+    img {
+        height: 40px;
+        width: auto;
+        margin-left: 15px;
+    }
 }
 .home > header .title {
     width: auto !important;
-    max-width: 730px !important;
+    max-width: none !important;
 }
 .course-info .heading-group {
     background: #fff;
@@ -2708,6 +2803,7 @@ section.wiki {
 .wrapper-footer {
     background: #eee;
     border-top: none;
+    padding: 80px 10px !important;
     footer#footer-openedx .colophon .nav-colophon {
         margin: 5px 0;
     }
@@ -2757,4 +2853,16 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
             font-size: 25px;
         }
     }
+}
+
+// course info 
+
+.course-info header.course-profile .intro-inner-wrapper .media .hero {
+    border: none !important;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.75);
+}
+.course-info header.course-profile .intro-inner-wrapper .intro > .heading-group {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background: none !important;
 }

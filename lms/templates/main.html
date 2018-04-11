@@ -60,6 +60,9 @@ from pipeline_mako import render_require_js_path_overrides
 
   <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800&subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   <%static:css group='style-vendor'/>
   <%static:css group='${self.attr.main_css}'/>
 
