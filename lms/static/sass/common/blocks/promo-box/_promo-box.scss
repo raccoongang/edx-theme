@@ -122,9 +122,23 @@
     &_big-text {
         font: 28px/55px $font-bold;
         text-transform: uppercase;
-        color: #fff;
+        color: #fff !important;
         max-width: 330px;
         width: 100%;
         margin-bottom: 19px;
+    }
+}
+
+body {
+    .about {
+        h1 {
+            font: 28px/55px "robotobold", Arial, Helvetica, sans-serif;
+            color: #007db8;
+            text-transform: uppercase;
+        }
+        p {
+            line-height: 23px;
+            color: #7f848c;
+        }
     }
 }

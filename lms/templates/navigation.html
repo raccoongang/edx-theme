@@ -51,7 +51,7 @@ site_status_msg = get_site_status_msg(course_id)
     <div class="header-helper">
       <div class="header-helper_wrapper">
         <div class="header-helper_left-side">
-          <a class="header-helper_link" href="#">Have any question?</a>
+          <span class="header-helper_link">Have any questions?</a>
           <a class="header-helper_mail" href="mailto:elearning@scout.org"><span class="header-helper_ico-holder"><span class="ico-mail">mail</span></span>elearning@scout.org</a>
         </div>
         <div class="header-helper_right-side">
@@ -106,9 +106,6 @@ site_status_msg = get_site_status_msg(course_id)
               <a class="header-nav_link" href="${reverse('dashboard')}">
                 ${_("Dashboard")}
               </a>
-              <a class="header-nav_link" href="${reverse('program_listing_view')}">
-                ${_("Programs")}
-              </a>
             % else:
               % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
                 <a class="header-nav_link" href="${marketing_link('COURSES')}">${_('Courses')}</a>
@@ -116,9 +113,6 @@ site_status_msg = get_site_status_msg(course_id)
               % if show_program_listing:
                 <a class="header-nav_link" href="${reverse('dashboard')}">
                   ${_("Courses")}
-                </a>
-                <a class="header-nav_link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
                 </a>
               % endif
             % endif
@@ -158,9 +152,7 @@ site_status_msg = get_site_status_msg(course_id)
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
               % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
                   <a class="header-nav_link" href="/courses">${_("Courses")}</a>
-                  <a class="header-nav_link" href="/xseries">${_("Programs")}</a>
-                  <a class="header-nav_link" href="#">Organisations & Partners </a>
-                  <a class="header-nav_link" href="#">About</a>
+                  <a class="header-nav_link" href="/about">About</a>
               %endif
             % endif
           </%block>
@@ -185,6 +177,7 @@ site_status_msg = get_site_status_msg(course_id)
               <a class="link-login" href="/login${login_query()}">${_("Sign in")}</a>
             % endif
           % endif
+<!--
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                 <a class="btn-1" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
@@ -192,6 +185,7 @@ site_status_msg = get_site_status_msg(course_id)
                 <a class="btn-1" href="/register${login_query()}">${_("Register")}</a>
             % endif
           % endif
+-->
         </div>
     % endif
     % if static.show_language_selector():

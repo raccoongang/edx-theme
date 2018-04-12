@@ -8,14 +8,14 @@ from django.core.urlresolvers import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
-<main id="main" aria-label="Content" tabindex="-1">
+  <main id="main" aria-label="Content" tabindex="-1">
     <div class="promo-box">
       <div class="promo-box_left">
         <img class="promo-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/img-2.png" alt="promo img">
         <div class="promo-box_text-holder promo-box_text-holder__other">
           <div class="promo-box_text-wrapper">
             <span class="promo-box_text">Online learning is arriving to World Scouting</span>
-            <h2 class="promo-box_heading">Coming in 2017!</h2>
+            <h2 class="promo-box_heading">Coming in 2018!</h2>
             <a class="btn-2" href="/courses">FIND COURSES</a>
           </div>
         </div>
@@ -24,8 +24,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <img class="promo-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/img-1.png" alt="promo img">
         <div class="promo-box_text-holder">
           <div class="promo-box_text-wrapper">
-            <p class="promo-box_big-text">Register to receive updates</p>
-            <a class="btn-3" href="#">CHECK THIS COURSE</a>
+            <a class="promo-box_big-text" id="open-popup" href="#">Register to receive updates</a>
           </div>
         </div>
       </div>
@@ -35,22 +34,8 @@ from openedx.core.djangolib.markup import HTML, Text
       <%include file="${courses_list}" />
 
       <%include file="${programs_list}" />
-
-      <div class="courses-box">
-        <div class="courses-box_holder">
-          <p class="courses-box_text">You have lot’s of ideas on how to contribute to this project and want to share them with us?</p>
-          <strong class="courses-box_title">Engage with us</strong>
-          <div class="courses-box_time">
-            <span class="ico-clock">time</span><span class="courses-box_lable">Starts: TBD</span>
-          </div>
-          <a class="btn-1" href="https://www.scout.org/wsb" target="_blank">Contact us</a>
-        </div>
-        <div class="courses-box_img-holder">
-          <img class="courses-box_img" src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-box-img.jpg" alt="course img">
-        </div>
-      </div>
-
     </section>
+    
 </main>
 
 % if show_homepage_promo_video:
@@ -63,18 +48,41 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <%block name="js_extra">
    <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
-   </script>
+    $(window).load(function () {
+      if (getParameterByName('next')) {
+        $('#login').trigger("click");
+      }
+    })
+  </script>
+  <script>
+    $(window).load(function () {
+        var chimpPopupLoader = document.createElement("script");
+        chimpPopupLoader.src = '//downloads.mailchimp.com/js/signup-forms/popup/embed.js';
+        chimpPopupLoader.setAttribute('data-dojo-config', 'usePlainJson: true, isDebug: false');
+        document.body.appendChild(chimpPopupLoader);
+
+        $("#open-popup").on("click", showMailingPopUp);
+        function showMailingPopUp(event) {
+            if (event) {
+                event.preventDefault();
+            }
+            require(
+                ["mojo/signup-forms/Loader"],
+                function(L) {
+                    L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"2036eac60a14e6549e2c8f745","lid":"7460db3bab"})
+                }
+            );
+            document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+            document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+        }
+    })
+  </script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
   ## NOTE: This won't work in production, because anonymous views are cached, so it will
   ## show either with or without this extra js for 3 minutes at a time.
 <script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
+  $(window).load(function () { $('#signup_action').trigger("click"); });
 </script>
 % endif
