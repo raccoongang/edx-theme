@@ -650,6 +650,8 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
     }
     h3 {
         color: #fff;
+        font-family: "Open Sans" !important;
+        line-height: 27px !important;
     }
 }
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.disabled {
@@ -2305,7 +2307,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     padding: 10px;
     @media screen and (min-width: 760px) {
         width: 61.158%;
-        margin: 1px 3.57866% 0 0;
+        margin: 5px 3.57866% 0 0;
         padding: 10px 0px 8px;
     }
 }
@@ -2788,6 +2790,9 @@ section.wiki {
     .wiki-wrapper .nav-tabs li {
         margin-bottom: 5px !important;
     }
+    .breadcrumb {
+        width: auto !important;
+    }
 }
 
 // profile 
@@ -2861,12 +2866,23 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
 
 // course info 
 
-.course-info header.course-profile .intro-inner-wrapper .media .hero {
-    border: none !important;
-    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.75);
-}
-.course-info header.course-profile .intro-inner-wrapper .intro > .heading-group {
-    border-bottom: none !important;
-    box-shadow: none !important;
-    background: none !important;
+.course-info {
+    header.course-profile .intro-inner-wrapper .media .hero {
+        border: none !important;
+        box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.75);
+    }
+    header.course-profile .intro-inner-wrapper .intro > .heading-group {
+        border-bottom: none !important;
+        box-shadow: none !important;
+        background: none !important;
+    }
+    .wrap-instructor-info.studio-view {
+        margin: 0 0 -30px !important;
+    }
+    .about h2:first-child {
+        max-width: 50%;
+    }
+    .details {
+        font-family: "Open Sans" !important;
+    }
 }
