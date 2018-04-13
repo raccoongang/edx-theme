@@ -3,7 +3,7 @@ body h1, body h2, body h3, body h4 {
 }
 
 .course-info .details h2 {
-    color: #006341 !important;
+    color: #45b7f4 !important;
     text-transform: none !important;
     font-size: 26px !important;
 }
@@ -2658,6 +2658,9 @@ table.stat_table {
 
 // header
 
+.header-global .nav-courseware li .btn {
+    color: #2c2a2f !important;
+}
 .header-global .nav-courseware li {
     margin-left: 50px;
     .btn:focus:hover {
@@ -2678,10 +2681,11 @@ table.stat_table {
         background: none !important;
         padding: 0 0 5px 0 !important;
         text-transform: none !important;
+        color: #2c2a2f !important;
     }
     .btn-register {
         padding: 18px 20px !important;
-        background: #ffc627 !important;
+        background: #45b6f4 !important;
         &:before {
             content: "";
             width: 0;
@@ -2730,7 +2734,7 @@ table.stat_table {
     color: #fff;
     opacity: 0.9;
     h1 {
-        background: #006341;
+        background: #45b7f4;
         padding: 30px !important;
         font-family: 'Roboto';
         font-weight: normal;
@@ -2771,13 +2775,13 @@ table.stat_table {
     box-shadow: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.3), 0 1.5rem 1.2rem rgba(0, 0, 0, 0.22);
 }
 .courses-container .courses .course .course-image .cover-image:before {
-    background: #177152 !important;
+    background: #45b7f4 !important;
 }
 
 // forum
 
 .forum-search input#search {
-    border: 1px solid #006341 !important;
+    border: 1px solid #45b7f4 !important;
     border-radius: 3px 0 0 3px !important;
 }
 
@@ -2829,13 +2833,13 @@ section.wiki {
 }
 textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
     box-shadow: none;
-    border: 1px solid #ffc627 !important;
+    border: 1px solid #45b6f4 !important;
 }
 
 // courses
 
 .bookmark-button {
-    border: 1px solid #177152;
+    border: 1px solid #45b7f4;
     padding: 10px !important;
     border-radius: 3px;
 }
