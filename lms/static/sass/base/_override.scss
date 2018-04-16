@@ -4,140 +4,147 @@
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
+}
 
-    .wrapper-header {
-        height: auto;
-        padding: 0;
+@mixin sm {
+    @media screen and (max-width: 768px) {
+        @content;
     }
-    .nav-global {
-        width: 100%;
-        @media screen and (min-width:760px ) {
-            width: auto;
-        }
+}
 
-        li {
-            width: 100%;
-            text-align: center;
-            text-transform: none;
-            @media screen and (min-width:760px ) {
-                width: auto;
-                text-align: left;
-            }
-
-            a {
-                color: $header-nav-link-color;
-
-                &:active,
-                &:focus {
-                    color: $header-nav-link-color;
-                }
-                &:hover {
-                    color: $header-nav-link-color-hover;
-                }
-            }
-        } 
-        .tab-nav-item {
-            .active {
-                border: none !important;
-            }
-            .tab-nav-link {
-                color: $header-nav-link-color;
-                padding: 5px;
-                
-                &:focus,
-                &:hover {
-                    color: $header-nav-link-color-hover;
-                    border: none;
-                }
-            }
-        }
-    }
-    .nav-courseware {
-        width: 100%;
-        @media screen and (min-width:760px ) {
-            width: auto;
-        }
-
-        li {
-            width: 100%;
-            text-align: center;
-            margin: 0 0 3px;
-            @media screen and (min-width:760px ) {
-                width: auto;
-                text-align: left;
-            }
-
-            a {
-                width: 100%;
-            }
-            
-            // login and register btns on the header nav
-            .btn {
-                background: $theme-btn-bg;
-                box-shadow: none;
-                color: $theme-btn-text-color !important;
-                text-transform: uppercase;
-
-                &:active,
-                &:focus {
-                    background: $theme-btn-bg;
-                }
-                &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
-                }
-                &:hover {
-                    background: $theme-btn-bg-hover;
-                }
-            }
-        }
-    }
-    .user {
-        display: block;
+.wrapper-header {
+    height: auto;
+    padding: 0;
+}
+.nav-global {
+    width: 100%;
+    @media screen and (min-width:760px ) {
         width: auto;
-
-        .user-link .label-username {
-            text-shadow: none;
-            margin: 13px 5px 13px 15px;
-            color: $theme-user-link;
-
-            &:hover {
-                color: $theme-user-link-hover;
-            }
-
-            .fa {
-                color: $theme-user-link;
-            }
-        }
-        .dropdown {
-            background: none;
-            margin: 4px 0 0;
-            width: 29px;
-            height: 25px;
-            box-sizing: border-box;
-        }
-        .dropdown-menu li>a {
-            color: $dropdown-menu-color;
-
-            &:focus {
-                color: $dropdown-menu-color;
-                text-decoration: none;
-            }
-            &:hover {
-                color: $dropdown-menu-color-hover;
-                text-decoration: none;
-            }
-        }
     }
-    .primary>a {
-        box-shadow: none;
 
-        &:focus,
-        &:hover {
-            background: none;
-            color: #003655;
+    li {
+        width: 100%;
+        text-align: center;
+        text-transform: none;
+        @media screen and (min-width:760px ) {
+            width: auto;
+            text-align: left;
+        }
+
+        a {
+            color: $header-nav-link-color;
+
+            &:active,
+            &:focus {
+                color: $header-nav-link-color;
+            }
+            &:hover {
+                color: $header-nav-link-color-hover;
+            }
+        }
+    } 
+    .tab-nav-item {
+        .active {
+            border: none !important;
+        }
+        .tab-nav-link {
+            color: $header-nav-link-color;
+            padding: 5px;
+            
+            &:focus,
+            &:hover {
+                color: $header-nav-link-color-hover;
+                border: none;
+            }
         }
     }
 }
+.nav-courseware {
+    width: 100%;
+    @media screen and (min-width:760px ) {
+        width: auto;
+    }
+
+    li {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 3px;
+        @media screen and (min-width:760px ) {
+            width: auto;
+            text-align: left;
+        }
+
+        a {
+            width: 100%;
+        }
+        
+        // login and register btns on the header nav
+        .btn {
+            background: $theme-btn-bg;
+            box-shadow: none;
+            color: $theme-btn-text-color !important;
+            text-transform: uppercase;
+
+            &:active,
+            &:focus {
+                background: $theme-btn-bg;
+            }
+            &:focus:hover {
+                background: $theme-btn-bg-hover!important;
+            }
+            &:hover {
+                background: $theme-btn-bg-hover;
+            }
+        }
+    }
+}
+.user {
+    display: block;
+    width: auto;
+
+    .user-link .label-username {
+        text-shadow: none;
+        margin: 13px 5px 13px 15px;
+        color: $theme-user-link;
+
+        &:hover {
+            color: $theme-user-link-hover;
+        }
+
+        .fa {
+            color: $theme-user-link;
+        }
+    }
+    .dropdown {
+        background: none;
+        margin: 4px 0 0;
+        width: 29px;
+        height: 25px;
+        box-sizing: border-box;
+    }
+    .dropdown-menu li>a {
+        color: $dropdown-menu-color;
+
+        &:focus {
+            color: $dropdown-menu-color;
+            text-decoration: none;
+        }
+        &:hover {
+            color: $dropdown-menu-color-hover;
+            text-decoration: none;
+        }
+    }
+}
+.primary>a {
+    box-shadow: none;
+
+    &:focus,
+    &:hover {
+        background: none;
+        color: #003655;
+    }
+}
+
 .course-info header.course-profile {
     height: auto;
     margin-top: 0;
@@ -1360,5 +1367,62 @@ body .home>header {
         justify-content: center;
         align-items: center;
     }
+}
 
+
+.view-discussion-home .helpgrid-row .row-item-full, .view-discussion-home .helpgrid-row .row-item {
+    line-height: 1.3;
+    @include sm {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: top;
+    }    
+}
+body .view-discussion-home .helpgrid-row .row-item {
+    @include sm {
+        width: 33%;
+    }    
+}
+body .view-discussion-home .helpgrid-row .row-item-full {
+    @include sm {
+        display: table-cell;
+    }
+}
+body .view-discussion-home {
+    @include sm {
+        padding-left: 0;
+    } 
+}
+body .view-discussion-home .helpgrid-row .row-title {
+    @include sm {
+        width: 5%;
+    }
+}
+body .row-item > .icon {
+    @include sm {
+       margin-bottom: 8px;
+       margin-top: 8px;
+    }
+}
+.forum-nav.layout-col.layout-col-a {
+    @include sm {
+        height: 220px !important;
+    }
+}
+.forum-nav-browse-menu {
+    @include sm {
+        height: 178px !important;
+     }
+}
+body .page-header-secondary btn {
+    @include sm {
+        padding: 8px 12px;
+    }
+}
+.forum-search,
+.email-setting-checkbox {
+    @media screen and (max-width: 420px){
+        margin-top: 8px;
+    }
 }
