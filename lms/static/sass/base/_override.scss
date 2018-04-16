@@ -2890,3 +2890,19 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
         font-family: "Open Sans" !important;
     }
 }
+
+// Sysadmin Dashboard
+
+.sysadmin-dashboard-wrapper .instructor-nav {
+    text-transform: none;
+    a {
+        font-size: 14px;
+        padding: 10px 5px 13px;
+        border-bottom: 4px solid transparent;
+        color: #45b7f4 !important;
+        &:hover {
+            border-bottom: 4px solid #45b7f4;
+            color: #45b7f4 !important;
+        }
+    }
+}
