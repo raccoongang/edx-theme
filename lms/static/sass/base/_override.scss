@@ -2696,3 +2696,80 @@ table.stat_table {
     height: auto;
     padding: 5px;
 }
+
+// header
+
+.btn {
+    font-weight: normal !important;
+}
+
+.header-global {
+    padding: 25px 10px;;
+    .logo {
+        margin-top: 0;
+        img {
+            height: 45px;
+        }
+    }
+    .nav-global {
+        margin: 0 !important;
+        li a {
+            font-weight: normal !important;
+        }
+    }
+    .nav-courseware {
+        margin: 5px 0;
+        li {
+            margin: 0 !important;
+            vertical-align: top;
+            .btn-login {
+                background: #fff !important;
+                color: #e00b2d !important;
+                border: 2px solid #fff;
+                padding: 8px 20px !important;
+                margin: 0 !important;
+                &:hover {
+                    background: none !important;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
+
+// banner 
+
+.home > header {
+    display: flex;
+    align-items: center;
+}
+.home > header .outer-wrapper {
+    width: 100%;
+}
+.home > header .title > .heading-group {
+    h1 {
+        text-transform: uppercase !important;
+        text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34) !important;
+        margin-bottom: 45px;
+    }
+    span {
+        text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4) !important;
+    }
+}
+
+// courses overview
+
+.highlighted-courses .courses .course,
+.find-courses .courses .course {
+    &:hover,
+    &:focus {
+        border-bottom-color: $course-hover-border-color;
+        box-shadow: none !important;
+    }
+}
+.courses-container .courses .course .course-image .cover-image:before {
+    background: #000 !important;
+}
+.courses-container .courses .course:hover .cover-image:before, .courses-container .courses .course:focus .cover-image:before {
+    opacity: 0.5 !important;
+}
