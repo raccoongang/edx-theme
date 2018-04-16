@@ -138,17 +138,15 @@ body .footer-logo-holder {
     max-width: 150px;
     position: absolute;
     top: 0;
-    left: 30px;
+    position: relative;
+    left: 50% !important;
+    transform: translate(-50%) !important;
+    margin: 20px 0 !important;
+    display: block;
     img {
         width: 150px;
     }
-    @include sm {
-        position: relative;
-        left: 50% !important;
-        transform: translate(-50%) !important;
-        margin: 20px 0 !important;
-        display: block;
-    }
+        
 }
 
 body .header-global .nav-global {
@@ -355,10 +353,6 @@ body .header-global .wrapper-header .list-inline .item {
     }
 }
 
-* * {
-    font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
-}
-
 .fa {
     font-family: "FontAwesome" !important;
 }
@@ -391,6 +385,7 @@ body .content-wrapper .container {
 // course select hover 
 .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:hover, .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:focus {
     background-color: lighten($theme-link, 30%);
+    color: #fff;
 }
 
 
