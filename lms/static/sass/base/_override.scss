@@ -12,6 +12,11 @@ $footer-bg: $light-gray;
 $footer-text-color: $gray;
 $footer-links-color: $gray;
 
+@mixin sm {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
 $action-primary-bg: $base-color;
 
@@ -2797,5 +2802,58 @@ table {
         padding: inherit;
         width: auto;
         background: inherit;
+    }
+}
+
+
+.view-discussion-home .helpgrid-row .row-item-full, .view-discussion-home .helpgrid-row .row-item {
+    line-height: 1.3;
+    @include sm {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        vertical-align: top;
+    }    
+}
+body .view-discussion-home .helpgrid-row .row-item {
+    @include sm {
+        width: 33%;
+    }    
+}
+body .view-discussion-home .helpgrid-row .row-item-full {
+    @include sm {
+        display: table-cell;
+    }
+}
+body .view-discussion-home {
+    @include sm {
+        padding-left: 0;
+        margin-left: -20px;
+    } 
+}
+body .view-discussion-home .helpgrid-row .row-title {
+    @include sm {
+        width: 5%;
+    }
+}
+body .row-item > .icon {
+    @include sm {
+       margin-bottom: 8px;
+       margin-top: 8px;
+    }
+}
+.forum-nav.layout-col.layout-col-a {
+    @include sm {
+        height: 220px !important;
+    }
+}
+.forum-nav-browse-menu {
+    @include sm {
+        height: 178px !important;
+     }
+}
+body .page-header-secondary btn {
+    @include sm {
+        padding: 8px 12px;
     }
 }
