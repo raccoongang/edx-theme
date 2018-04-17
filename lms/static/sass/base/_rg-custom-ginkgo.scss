@@ -395,3 +395,8 @@ body .content-wrapper .container {
         width: 100%;
     }
 }
+body .header-global .nav-courseware li {
+    @include sm {
+        margin-top: 0;
+    }
+}
