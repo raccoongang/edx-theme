@@ -2711,10 +2711,23 @@ table.stat_table {
             height: 45px;
         }
     }
+    .flex {
+        float: right;
+        margin: 3px 0;
+    }
     .nav-global {
-        margin: 0 !important;
-        li a {
-            font-weight: normal !important;
+        margin: 10px 0 !important;
+        @media screen and (max-width: 759px) {
+            margin: 20px 0 !important;
+        }
+        li {
+            margin: 0 10px !important;
+            @media screen and (max-width: 759px) {
+                margin: 10px 0 !important;
+            }
+            a {
+                font-weight: normal !important;
+            }
         }
     }
     .nav-courseware {
@@ -2722,19 +2735,46 @@ table.stat_table {
         li {
             margin: 0 !important;
             vertical-align: top;
+
+            @media screen and (max-width: 759px) {
+                margin-bottom: 10px !important;
+            }
+
             .btn-login {
                 background: #fff !important;
                 color: #e00b2d !important;
                 border: 2px solid #fff;
                 padding: 8px 20px !important;
                 margin: 0 !important;
-                &:hover {
+                &:hover,
+                &:focus {
                     background: none !important;
                     color: #fff !important;
                 }
             }
+            .btn:focus:hover {
+                background: none !important;
+                box-shadow: none;
+            }
         }
     }
+    .user .user-link .label-username,
+    .doc-link {
+        color: #fff;
+        font-weight: normal !important;
+    }
+    .dropdown .fa {
+        color: #fff;
+    }
+}
+
+#hamburger.hamburger {
+    top: 31px !important;
+}
+
+.header-global.header-global__course h2 {
+    color: #fff;
+    padding: 20px 5px 0 !important;
 }
 
 // banner 
@@ -2756,9 +2796,19 @@ table.stat_table {
         text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4) !important;
     }
 }
+.home > header .title .course-search .search-button {
+    background: #e00b2d !important;
+    border-color: #e00b2d !important;
+}
+.home > header .title .course-search .search-input:focus {
+    border-color: #e00b2d !important;
+}
 
 // courses overview
 
+.courses-container {
+    padding: 0 15px;
+}
 .highlighted-courses .courses .course,
 .find-courses .courses .course {
     &:hover,
@@ -2773,3 +2823,72 @@ table.stat_table {
 .courses-container .courses .course:hover .cover-image:before, .courses-container .courses .course:focus .cover-image:before {
     opacity: 0.5 !important;
 }
+.courses-container .courses .course .course-info .course-title {
+    color: #1f1f1f;
+}
+
+// footer 
+
+.footer-logo-holder {
+    right: 0;
+    img {
+        display: block;
+        height: 42px;
+        margin: 0 auto;
+    }
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
+    margin: 2px 0 28px;;
+}
+
+// register and login form 
+
+.field-link {
+    color: #e00b2d;
+}
+#login-form,
+#register-form {
+    button {
+        font-weight: normal !important;
+    }
+    .nav-btn {
+        height: auto !important;
+    }
+}
+
+// My Courses
+
+.dashboard .my-courses .course .details .course-actions button.action {
+    border-color: $theme-btn-white-border !important;
+    .fa {
+        color: $theme-btn-white-border;
+    }
+}
+
+// Course 
+
+.wrapper-course-modes > div {
+    margin: 5px 0;
+}
+
+// discussion
+
+.forum-search input {
+    border-color: $theme-btn-white-border;
+}
+
+ // wiki
+
+ .section.wiki .breadcrumb {
+    width: auto;
+    float: left;
+ }
+
+ // Instructor Dashboard
+
+ .enrollment-wrapper table {
+    width: 100%;
+    th, td {
+        padding: 5px;
+    }
+ }
