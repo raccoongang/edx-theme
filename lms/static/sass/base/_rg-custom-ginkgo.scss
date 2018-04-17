@@ -139,9 +139,6 @@ body .footer-logo-holder {
     position: absolute;
     top: 0;
     position: relative;
-    left: 50% !important;
-    transform: translate(-50%) !important;
-    margin: 20px 0 !important;
     display: block;
     img {
         width: 150px;
@@ -192,6 +189,9 @@ body .header-global .user .dropdown {
 
 body .wrapper-footer footer#footer-openedx {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body .header-global .nav-courseware {
