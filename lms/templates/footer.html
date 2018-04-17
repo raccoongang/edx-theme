@@ -17,30 +17,23 @@
       dir=${bidi}
     % endif
   >
+    <a href="/" class="footer-logo-holder">
+      <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
+    </a>
     <div class="colophon">
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
+              <a href="https://www.scholarsbaobab.org/contracts/terms_of_service" target="_blank">${_("Terms of Service")}</a>
             </li>
             <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
+              <a href="https://www.scholarsbaobab.org/contracts/privacy_policy" target="_blank">${_("Privacy Policy")}</a>
             </li>
             <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
+              <a href="https://www.scholarsbaobab.org/contracts/acceptable_use_policy" target="_blank">${_("Acceptable Use Policy")}</a>
             </li>
         </ol>
-      </nav>
-      <ul class="icon-list">
-        <li class="icon-list_item"><a href=" https://www.facebook.com/alghurairfoundation" target="_blank" class="icon-list_link icon-list_link__facebook">facebook</a></li>
-        <li class="icon-list_item"><a href="https://www.instagram.com/alghurairfoundation/" target="_blank" class="icon-list_link icon-list_link__instagramm">instagramm</a></li>
-        <li class="icon-list_item"><a href="https://twitter.com/agfforE" target="_blank" class="icon-list_link icon-list_link__twitter">twitter</a></li>
-        <li class="icon-list_item"><a href="https://www.linkedin.com/company-beta/6641359/" target="_blank" class="icon-list_link icon-list_link__linkedin">linkedin</a></li>
-        <li class="icon-list_item"><a href="https://www.youtube.com/channel/UChsc1FpsAPEANu3R3AZ7Uhw" target="_blank" class="icon-list_link icon-list_link__youtube">youtube</a></li>
-      </ul>
-      <a href="/" class="footer-logo-holder">
-        <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
-      </a>
+      </nav>    
   </footer>
 </div>
 % if include_dependencies:
