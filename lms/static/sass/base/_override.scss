@@ -2699,6 +2699,12 @@ table.stat_table {
 
 // header
 
+html {
+    *:not(.fa) {
+        font-family: "Open Sans", Verdana, Geneva, sans-serif !important;
+    }
+}
+
 .btn {
     font-weight: normal !important;
 }
@@ -2869,6 +2875,9 @@ table.stat_table {
 
 .wrapper-course-modes > div {
     margin: 5px 0;
+}
+.course-info .course-sidebar .important-dates li .icon {
+    margin-top: 0 !important;
 }
 
 // discussion
