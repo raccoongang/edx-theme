@@ -3,7 +3,7 @@ body h1, body h2, body h3, body h4 {
 }
 
 .course-info .details h2 {
-    color: #45b7f4 !important;
+    color: #00aeef !important;
     text-transform: none !important;
     font-size: 26px !important;
 }
@@ -2683,9 +2683,10 @@ table.stat_table {
         text-transform: none !important;
         color: #2c2a2f !important;
     }
-    .btn-register {
+    ol li .btn.btn-register {
         padding: 18px 20px !important;
-        background: #45b6f4 !important;
+        background: #00aeef !important;
+        color: #fff !important;
         &:before {
             content: "";
             width: 0;
@@ -2700,19 +2701,23 @@ table.stat_table {
             width: 100%;
         }
     }
-    .btn:not(.btn-register):before {
+    ol li .btn:not(.btn-register):before {
         content: "";
         width: 0;
         height: 2px;
-        background: #1d643f;
+        background: #2c2a2f;
         position: absolute;
         left: 0;
         bottom: 0;
         transition: all 0.15s ease-in-out 0s;
     }
-    .btn:not(.btn-register):hover:before {
+    ol li .btn:not(.btn-register):hover:before {
         width: 100%;
     }
+}
+.home > header .title .course-search {
+    padding: 0 !important;
+    margin-top: 40px !important;
 }
 .logo img {
     height: 60px;
@@ -2734,7 +2739,7 @@ table.stat_table {
     color: #fff;
     opacity: 0.9;
     h1 {
-        background: #45b7f4;
+        background: #00aeef;
         padding: 30px !important;
         font-family: 'Roboto';
         font-weight: normal;
@@ -2746,6 +2751,7 @@ table.stat_table {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
     h4 {
         color: #fff;
         font-family: "Open Sans";
@@ -2757,6 +2763,22 @@ table.stat_table {
         margin-left: 15px;
     }
 }
+.home > header {
+    display: flex;
+    align-items: center;
+}
+.home > header .outer-wrapper {
+    width: 100%;
+}
+.home > header .title > .heading-group {
+    padding-bottom: 0 !important;
+    h1 {
+        margin-bottom: 0 !important;
+    }
+}
+
+
+
 .home > header .title {
     width: auto !important;
     max-width: none !important;
@@ -2775,13 +2797,13 @@ table.stat_table {
     box-shadow: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.3), 0 1.5rem 1.2rem rgba(0, 0, 0, 0.22);
 }
 .courses-container .courses .course .course-image .cover-image:before {
-    background: #45b7f4 !important;
+    background: #00aeef !important;
 }
 
 // forum
 
 .forum-search input#search {
-    border: 1px solid #45b7f4 !important;
+    border: 1px solid #00aeef !important;
     border-radius: 3px 0 0 3px !important;
 }
 
@@ -2825,7 +2847,7 @@ section.wiki {
 // Register page
 
 .login-register .action-primary:hover {
-    color: #2c2a2f;
+    color: #fff !important;
 }
 .login-form + .toggle-form .nav-btn,
 .register-form + .toggle-form .nav-btn {
@@ -2833,13 +2855,13 @@ section.wiki {
 }
 textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
     box-shadow: none;
-    border: 1px solid #45b6f4 !important;
+    border: 1px solid #00aeef !important;
 }
 
 // courses
 
 .bookmark-button {
-    border: 1px solid #45b7f4;
+    border: 1px solid #00aeef;
     padding: 10px !important;
     border-radius: 3px;
 }
@@ -2899,10 +2921,10 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
         font-size: 14px;
         padding: 10px 5px 13px;
         border-bottom: 4px solid transparent;
-        color: #45b7f4 !important;
+        color: #00aeef !important;
         &:hover {
-            border-bottom: 4px solid #45b7f4;
-            color: #45b7f4 !important;
+            border-bottom: 4px solid #00aeef;
+            color: #00aeef !important;
         }
     }
 }
