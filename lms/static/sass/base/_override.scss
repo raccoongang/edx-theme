@@ -2727,6 +2727,10 @@ table.stat_table {
     padding: 0 !important;
     margin-top: 40px !important;
     overflow: hidden;
+    position: relative;
+    .search-button {
+        right: 0 !important;
+    }
 }
 .logo img {
     height: 60px;
@@ -2743,6 +2747,12 @@ table.stat_table {
 }
 .menu-open .hamburger:after {
     box-shadow: none !important;
+}
+.home > header .outer-wrapper {
+    position: static !important;
+}
+.home > header .title {
+    position: static;
 }
 .home > header .title > .heading-group {
     color: #fff;
@@ -2762,17 +2772,22 @@ table.stat_table {
     justify-content: center;
     margin-top: 40px;
     clear: both;
-    position: relative;
-    top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
 
     @media screen and (max-width: 870px) {
-        top: 0;
+        bottom: 10px;
     }
 
     h4 {
         color: #fff;
         font-family: "Open Sans";
         font-size: 40px;
+        @media screen and (max-width: 870px) {
+            font-size: 27px;
+        }
     }
     img {
         height: 40px;
