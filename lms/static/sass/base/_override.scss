@@ -2730,6 +2730,7 @@ table.stat_table {
     position: relative;
     .search-button {
         right: 0 !important;
+        background: #00aeef !important;
     }
 }
 .logo img {
@@ -2978,4 +2979,10 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
             color: #00aeef !important;
         }
     }
+}
+
+// Account Settings
+
+.wrapper-account-settings .wrapper-header .account-nav button.active {
+    border-bottom: 4px solid #00aeef !important;
 }
