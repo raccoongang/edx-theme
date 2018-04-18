@@ -2710,6 +2710,11 @@ table.stat_table {
         left: 0;
         bottom: 0;
         transition: all 0.15s ease-in-out 0s;
+        
+        @media screen and (max-width: 759px) {
+            display: none !important;
+        }
+
     }
     ol li .btn:not(.btn-register):hover:before {
         width: 100%;
@@ -2757,6 +2762,13 @@ table.stat_table {
     justify-content: center;
     margin-top: 40px;
     clear: both;
+    position: relative;
+    top: 20px;
+
+    @media screen and (max-width: 870px) {
+        top: 0;
+    }
+
     h4 {
         color: #fff;
         font-family: "Open Sans";
@@ -2878,6 +2890,24 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
     .content-wrapper .course-license, .content-wrapper .xblock-license {
         text-align: center;
     }
+    .header-global .nav-courseware {
+        margin-top: 20px;
+        li {
+            margin: 0 0 15px 0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home > header .title > .heading-group {
+        h1,
+        span {
+            font-size: 36px;
+        }
+    }
+    .powered-by h4 {
+        font-size: 25px !important;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -2886,11 +2916,12 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
         width: 100%;
     }
 }
+
 @media screen and (max-width: 400px) {
     .home > header .title > .heading-group {
         h1,
         span {
-            font-size: 25px;
+            font-size: 26px;
         }
     }
 }
