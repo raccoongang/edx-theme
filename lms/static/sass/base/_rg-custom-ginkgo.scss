@@ -436,4 +436,28 @@ body .content-wrapper .container {
     font-family: 'FontAwesome' !important;
 }
 
+.wrapper-footer footer#footer-openedx .raccoon-block {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: #fff;
+    @media screen and (max-width: 760px){
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+    margin-left: 15px;
+    img {
+        height: 14px;
+        margin-top: -6px;
+    }
+    a {
+        color: #fff !important;
+        font-size: 12px;
+        &:last-child {
+            margin-left: 12px;
+        }
+    }
+}
 
