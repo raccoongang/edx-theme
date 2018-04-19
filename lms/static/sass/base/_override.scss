@@ -2986,3 +2986,26 @@ textarea:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="e
 .wrapper-account-settings .wrapper-header .account-nav button.active {
     border-bottom: 4px solid #00aeef !important;
 }
+
+// other buttons with beautiful hover
+
+.search-button,
+.register-button,
+.login-button {
+    background: #00aeef !important;
+    color: #fff !important;
+    position: relative;
+    &:before {
+        content: "";
+        width: 0;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.15s ease-in-out 0s;
+    }
+    &:hover:before {
+        width: 100%;
+    }
+}
