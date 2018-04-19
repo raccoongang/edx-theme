@@ -2829,6 +2829,7 @@ body .view-discussion-home {
     @include sm {
         padding: 0;
         margin-left: -20px;
+        width: 100%;
     } 
 }
 .view-discussion-home .helpgrid-row .row-item .row-description {
@@ -2836,7 +2837,8 @@ body .view-discussion-home {
         font-size: 10px;
     }
 }
-.forum-search {
+.forum-search,
+.email-setting-checkbox {
     @media screen and (max-width: 420px){
         margin-top: 8px;
     }
