@@ -17,22 +17,6 @@
       dir=${bidi}
     % endif
   >
-    <div class="raccoon-block">
-      <a href="http://code.edx.org" target="_blank">
-
-        <span class="raccoongang">
-
-          Built on <img class="openedx-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/Logo_edx.svg" />
-        </span>
-      </a>
-      <a href="http://raccoongang.com" target="_blank">
-
-        <span class="raccoongang">
-
-        by Raccoon Gang <img class="raccoon-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/Logo_raccoon.svg" />
-        </span>
-      </a>
-    </div>
     <div class="colophon">
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
@@ -57,6 +41,23 @@
       <a href="/" class="footer-logo-holder">
         <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
       </a>
+      <div class="raccoon-block">
+        <a href="http://code.edx.org" target="_blank">
+  
+          <span class="raccoongang">
+  
+            Built on <img class="openedx-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/Logo_edx.svg" />
+          </span>
+        </a>
+        <a href="http://raccoongang.com" target="_blank">
+  
+          <span class="raccoongang">
+  
+          by Raccoon Gang <img class="raccoon-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/Logo_raccoon.svg" />
+          </span>
+        </a>
+      </div>
+      <div>
   </footer>
 </div>
 % if include_dependencies:
