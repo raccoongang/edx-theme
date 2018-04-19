@@ -441,7 +441,7 @@ body .content-wrapper .container {
     right: 0;
     top: 50%;
     transform: translate(0,-50%);
-    color: #fff;
+    color: #003333;
     @media screen and (max-width: 760px){
         position: static;
         display: flex;
@@ -449,14 +449,22 @@ body .content-wrapper .container {
     }
     margin-left: 15px;
     img {
-        height: 14px;
+        height: 20px;
         margin-top: -6px;
     }
+    .openedx-logo {
+        height: auto;
+        width: 60px;
+    }
     a {
-        color: #fff !important;
+        color: #003333 !important;
         font-size: 12px;
         &:last-child {
             margin-left: 12px;
+        }
+        @include sm {
+            display: flex;
+            align-items: center;
         }
     }
 }
