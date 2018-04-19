@@ -42,10 +42,10 @@ course_mode_class = course_mode if course_mode else ''
     %endif
     <style>
         .rtl.layout-accomplishment .accomplishment-orgs .organization-logo {
-                position: relative;
-                top: 0;
-                right: 0;
-                transform: translate(0, 0);
+            position: relative;
+            top: 0;
+            right: 0;
+            transform: translate(0, 0);
         }
         .btn-link,
         .copy-meta a {
@@ -56,10 +56,17 @@ course_mode_class = course_mode if course_mode else ''
         .btn-link:focus,
         .copy-meta a:focus,
         .copy-meta a:hover {
-            color: #ccc;
+            color: #e00b2d;
             background: none;
             text-decoration: none;
             border: none;
+        }
+        .header-app .logo {
+            width: 192px !important;
+        }
+        .header-app .logo img {
+            width: 100% !important;
+            height: auto !important;
         }
         @media screen and (max-width: 479px) {
           .hd-1 {

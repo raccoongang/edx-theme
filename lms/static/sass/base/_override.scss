@@ -2772,6 +2772,9 @@ html {
     .dropdown .fa {
         color: #fff;
     }
+    .user .user-link .label-username:hover {
+        color: #fff !important;
+    }
 }
 
 #hamburger.hamburger {
@@ -2862,13 +2865,16 @@ html {
     }
 }
 
-// My Courses
+// Dashboard
 
 .dashboard .my-courses .course .details .course-actions button.action {
     border-color: $theme-btn-white-border !important;
     .fa {
         color: $theme-btn-white-border;
     }
+}
+.empty-dashboard-message a {
+    color: #fff !important;
 }
 
 // Course 
