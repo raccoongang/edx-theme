@@ -2836,6 +2836,11 @@ body .view-discussion-home {
         font-size: 10px;
     }
 }
+.forum-search {
+    @media screen and (max-width: 420px){
+        margin-top: 8px;
+    }
+}
 body .view-discussion-home .helpgrid-row .row-title {
     @include sm {
         width: 5%;
