@@ -2827,9 +2827,14 @@ body .view-discussion-home .helpgrid-row .row-item-full {
 }
 body .view-discussion-home {
     @include sm {
-        padding-left: 0;
+        padding: 0;
         margin-left: -20px;
     } 
+}
+.view-discussion-home .helpgrid-row .row-item .row-description {
+    @include sm {
+        font-size: 10px;
+    }
 }
 body .view-discussion-home .helpgrid-row .row-title {
     @include sm {
