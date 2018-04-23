@@ -161,8 +161,9 @@ body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
 }
 .wrapper-footer footer#footer-openedx a {
     top: 0;
-    left: 30px;
+    right: 30px;
     margin: 0;
+    left: auto;
 }
 
 .footer-logo-holder img {
@@ -173,7 +174,8 @@ body .wrapper-footer footer#footer-openedx .colophon .nav-colophon ol {
 body .footer-logo-holder {
     position: absolute;
     top: 0;
-    left: 30px;
+    right: 30px;
+    left: auto;
     img {
         height: 110px;
     }
@@ -347,7 +349,7 @@ body {
         border-bottom: 2px solid $hamburger-color;
     }
     .courses-container .courses .course {
-        border-bottom: 3px solid $hamburger-color;
+        border-bottom: 3px solid $theme-btn-bg-hover;
     }
     .login-register-content h2, .login-register-content .home>header .title>.heading-group p, .home>header .title>.heading-group .login-register-content p, .login-register-content section.outside-app h1, section.outside-app .login-register-content h1 {
         color: $theme-link;
@@ -419,6 +421,7 @@ body .content-wrapper .container {
 // course select hover 
 .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:hover, .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:focus {
     background-color: lighten($theme-link, 30%);
+    color: #fff;
 }
 
 
@@ -438,7 +441,7 @@ body .content-wrapper .container {
 
 .wrapper-footer footer#footer-openedx .raccoon-block {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 50%;
     transform: translate(0,-50%);
     color: #003333;

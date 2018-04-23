@@ -286,9 +286,7 @@ body .login a {
         text-decoration: none !important;
     }
 }
-body .discussion .user-label-staff {
-    background: $theme-link;
-}
+
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:hover,
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:focus {
     text-decoration: none !important;
@@ -733,10 +731,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
             }
             .link {
                 background: transparent;
-                border: 3px solid #fff;
+                border: 3px solid #003333;
                 text-shadow: none;
                 box-shadow: none;
-                color: #fff;
+                color: #003333;
                 border-radius: 2px;
                 padding: 10px 20px;
                 display: inline-block;
@@ -1333,4 +1331,25 @@ body .home>header {
 // }
 .home>header .title>.heading-group h1 {
     margin-bottom: 0;
+}
+.enroll-message a {
+    color: #003333;
+    &:hover,&:focus {
+        color: #66cc99;
+    }
+}
+
+.home>header .title>.heading-group h1,
+.home>header .title>.heading-group span {
+    color: #003333;
+}
+
+.home>header .title>.heading-group .link {
+    &:hover {
+        color: #fff;
+        background: #003333;
+    }
+}
+.home>header .title {
+    width: 100%;
 }
