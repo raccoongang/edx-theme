@@ -89,7 +89,7 @@ course_mode_class = course_mode if course_mode else ''
         -webkit-transform: translate(-50%, 0);
     }
     .wrapper-statement-and-signatories {
-        top: 25%;
+        top: 21%;
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
@@ -113,6 +113,7 @@ course_mode_class = course_mode if course_mode else ''
         margin-top: 5px;
         margin-bottom: 3px;
         display: block;
+        line-height: 1.1;
     }
     .rtl .certificates__owner-name {
         font-family: DinArabic !important;
@@ -121,7 +122,9 @@ course_mode_class = course_mode if course_mode else ''
     .wrapper-accomplishment-metadata{
         position: absolute;
     }
-
+    .hd-2, .accomplishment-rendering .accomplishment-statement-lead {
+        margin-bottom: 0.5rem;
+    }
     .certificates__course-name {
         background: #fc6a15;
         color: #fff;
@@ -137,7 +140,7 @@ course_mode_class = course_mode if course_mode else ''
         padding: 10px 40px 10px;
     }
     .certificate .accomplishment-rendering .accomplishment-statement {
-        width: 63%;
+        width: 80%;
         margin: 0 auto 10px;
         padding: 0;
     }
@@ -217,7 +220,7 @@ course_mode_class = course_mode if course_mode else ''
     }
     .accomplishment-rendering .accomplishment-orgs {
         position: absolute;
-        top: 80%;
+        top: 82%;
     }
     .accomplishment-rendering .accomplishment-orgs .organization-logo {
         max-height: 1000%;
