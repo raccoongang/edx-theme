@@ -469,3 +469,12 @@ body .content-wrapper .container {
     }
 }
 
+body .header-global .nav-courseware li {
+    @include sm {
+        margin-top: 0;
+    }
+}
+body .courses-container .courses .course {
+    z-index: 1;
+}
+
