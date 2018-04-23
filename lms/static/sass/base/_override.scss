@@ -2894,22 +2894,38 @@ html {
     border-color: $theme-btn-white-border;
 }
 
- // wiki
+// wiki
 
- .section.wiki .breadcrumb {
+.section.wiki .breadcrumb {
     width: auto;
     float: left;
- }
+}
 
- // Instructor Dashboard
+// Instructor Dashboard
 
- .enrollment-wrapper table {
+.enrollment-wrapper table {
     width: 100%;
     th, td {
         padding: 5px;
     }
- }
+}
 
- .container.about h1 a {
+.container.about h1 a {
     color: #3c3c3c;
- }
+}
+
+.main-cta {
+    margin: 0;
+    .register {
+        background: #ea0434 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        text-transform: none !important;
+        padding: 10px 30px !important;
+        &:hover {
+            background: #f75a73 !important;
+        }
+    }
+}
