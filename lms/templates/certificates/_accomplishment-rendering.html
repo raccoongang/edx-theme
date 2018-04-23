@@ -119,7 +119,7 @@ course_mode_class = course_mode if course_mode else ''
         font-family: DinArabic !important;
     }
     .accomplishment-orgs,
-    .wrapper-accomplishment-metadata{
+    .wrapper-accomplishment-metadata {
         position: absolute;
     }
     .hd-2, .accomplishment-rendering .accomplishment-statement-lead {
@@ -172,6 +172,11 @@ course_mode_class = course_mode if course_mode else ''
         max-height: 100%;
         margin: 0;
         padding: 1.25rem 0.325rem;
+    }
+    .accomplishment-rendering .accomplishment-signatories {
+        position: absolute;
+        width: 100%;
+        top: 68%;
     }
     .accomplishment-rendering .accomplishment-signatories .signatory-name {
         font-size: 22px;
@@ -338,8 +343,9 @@ course_mode_class = course_mode if course_mode else ''
                         <span class="certificates__static-text certificates__static-text--small">${_('a course of study offered by the<br>Al Ghurair Young Thinkers Program.')}</span>
                     </p>
                 </div>
+            </div>
 
-                % if mode != 'base':
+            % if mode != 'base':
                 <div class="accomplishment-signatories">
                     <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
 
@@ -362,8 +368,7 @@ course_mode_class = course_mode if course_mode else ''
                         </div>
                     </div>
                 </div>
-                % endif
-            </div>
+            % endif
 
             <div class="accomplishment-orgs">
                 <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
