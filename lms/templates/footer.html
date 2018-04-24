@@ -76,6 +76,9 @@
         
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
+              <li>
+                <a href="${marketing_link('ROOT')}">${_("Home")}</a>
+              </li>
               <li class="nav-colophon-01">
                 <a href="/about">${_("About Us")}</a>
               </li>
@@ -91,13 +94,13 @@
           </ol>
         </nav>
         <div class="footer-logo-holder">
-          <div class="wrapper-logo">
-            <p>
-              <a href="https://learn.camara.org/" target="_blank">
-                <img alt="organization logo" src="/static/${settings.FEATURES.get('ZAMBIA_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.png">
-              </a>
-            </p>
-          </div>
+          <!--<div class="wrapper-logo">-->
+            <!--<p>-->
+              <!--<a href="https://learn.camara.org/" target="_blank">-->
+                <!--<img alt="organization logo" src="/static/${settings.FEATURES.get('ZAMBIA_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.png">-->
+              <!--</a>-->
+            <!--</p>-->
+          <!--</div>-->
           <ul class="icon-list">
             <li class="icon-list_item"><a href="https://www.facebook.com/camarazambia/" target="_blank" class="icon-list_link icon-list_link__facebook">facebook</a></li>
             <li class="icon-list_item"><a href="https://www.instagram.com/camaraeducation" target="_blank" class="icon-list_link icon-list_link__instagramm">instagramm</a></li>
