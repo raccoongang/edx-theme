@@ -113,6 +113,11 @@ site_status_msg = get_site_status_msg(course_id)
       body.classList.toggle('menu-open');
     }
     btn.addEventListener('click', btnToggle);
+    window.onresize = () => {
+        if (window.innerWidth >= 760) {
+            body.classList.remove('menu-open');
+        }
+    }
   </script>
 % endif
 % if course:

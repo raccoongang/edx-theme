@@ -30,6 +30,17 @@ from django.utils.translation import ugettext as _
 </ol>
 
 <ol class="right nav-courseware list-inline">
+  <%block name="navigation_sign_in">
+    <li class="item nav-courseware-01">
+      % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+      % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+      <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+      % else:
+      <a class="btn btn-login" href="/login${login_query()}">${_("Sign in")}</a>
+      % endif
+      % endif
+    </li>
+  </%block>
   <%block name="navigation_other_global_links">
   % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
     % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -48,15 +59,5 @@ from django.utils.translation import ugettext as _
     % endif
   % endif
   </%block>
-  <%block name="navigation_sign_in">
-    <li class="item nav-courseware-01">
-      % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-        % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-          <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
-        % else:
-          <a class="btn btn-login" href="/login${login_query()}">${_("Sign in")}</a>
-        % endif
-      % endif
-    </li>
-  </%block>
+
 </ol>

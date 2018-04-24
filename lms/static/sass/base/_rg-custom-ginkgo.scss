@@ -35,7 +35,7 @@
 // Start Override
 
 @mixin sm {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
         @content;
     }
 }
@@ -205,7 +205,7 @@ body .header-global .nav-global li a {
     &:visitied {
         color: $theme-link;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
         width: 100%;
         background: $theme-link;
         color: #fff !important;
@@ -216,7 +216,7 @@ body .header-global .nav-global li a {
     }
 }
 body .header-global .nav-global li {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
         margin-bottom: 15px !important;
     }
 }
@@ -236,7 +236,7 @@ body .wrapper-footer footer#footer-openedx {
 
 body .header-global .nav-courseware {
     margin-top: 0;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
         margin-top: 0;
     }
 }
@@ -398,7 +398,7 @@ body.view-in-course .show-course-index {
     align-self: center;
 }
 body .container .course-index {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
         display: block;
     }
 }
@@ -445,7 +445,7 @@ body .content-wrapper .container {
     top: 50%;
     transform: translate(0,-50%);
     color: #003333;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 760px){
         position: static;
         display: flex;
         justify-content: center;
