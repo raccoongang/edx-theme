@@ -1826,6 +1826,16 @@ body {
         width: 80%;
     }
 }
+
+.forum-nav-thread-list {
+    @media screen and (max-width: 759px) {
+        height: 100px !important;
+    }
+}
+
+.forum-nav-browse-menu {
+    max-height: 500px;
+}
 //end responsive for forum page
 
 //responsive for course instructor pages
@@ -2703,7 +2713,7 @@ table.stat_table {
         position: relative;
         width: 40px;
         height: 36px;
-        margin: 14px 0 10px;
+        margin: 15px;
         padding: 5px;
         background: transparent;
         border: none;
@@ -2742,6 +2752,9 @@ table.stat_table {
         display: none;
         @media screen and (min-width: 760px) {
             display: block;
+        }
+        @media screen and (max-width: 759px) {
+            padding: 0 10px;
         }
     }
     .course-tabs {
