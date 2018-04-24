@@ -2141,13 +2141,23 @@ body.view-register .header-global nav, body.view-login .header-global nav {
     }
 }
 .wrapper-footer footer#footer-openedx .footer-about-openedx {
+    width: auto !important;
+    position: absolute;
+    right: 0;
     @media screen and (max-width: 768px) {
-        width: auto;
         margin-bottom: 1em;
+        position: relative;
     }
 }
 .footer-logo-holder {
     @media screen and (max-width: 768px) {
         flex-direction: column;
     }
+}
+.footer-logo-holder {
+    margin-bottom: 20px;
+    position: relative;
+}
+.wrapper-footer footer#footer-openedx .copyright {
+    text-align: center !important;
 }
