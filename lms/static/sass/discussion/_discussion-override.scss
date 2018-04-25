@@ -233,3 +233,14 @@ body .header-global .nav-global, body .header-global .wrapper-header .list-inlin
 body .doc-link {
     margin-top: 24px;
 }
+@media screen and (max-width: 760px) {
+    body .doc-link {
+        margin-top: 33px;
+    }
+    body .header-global .nav-global,
+    body .header-global .wrapper-header .list-inline.nav-global,
+    body .header-global .wrapper-header .wrapper-user-menu {
+        margin-top: 16px;
+    }
+}
+
