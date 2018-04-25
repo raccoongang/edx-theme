@@ -663,13 +663,13 @@ div.book-wrapper {
 .apps-links a {
     display: inline-block;
     vertical-align: middle;
-    width: 120px;
+    img {
+        display: block;
+        width: auto;
+        height: 42px;
+    }
 }
-.apps-links a img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+
 @media screen and (max-width: 960px) {
     .footer-holder {
         .footer-logo, .footer-social, .apps-links, .footer-raccoon {
