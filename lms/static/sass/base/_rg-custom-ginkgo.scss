@@ -480,4 +480,9 @@ body .header-global .nav-courseware li {
 body .courses-container .courses .course {
     z-index: 1;
 }
-
+body .header-global .nav-courseware li .btn {
+    background: $theme-link-hover;
+    &:hover {
+        background: $theme-btn-bg-hover;
+    }
+}
