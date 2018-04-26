@@ -413,3 +413,38 @@ input#generate-example-certificates-submit {
 body .about p {
     color: #e6e6e6;
 }
+.header-global .user .dropdown-menu {
+    right: auto;
+    left: 0;
+}
+.header-global .user .dropdown-menu::before {
+    right: 0;
+    left: 7px;
+}
+.course-info .details .inner-wrapper .faq .responses,
+.programs-info .details .inner-wrapper .faq .responses {
+    width: 100%;
+}
+.enrollment-wrapper {
+    overflow: hidden;
+
+    table {
+        float: right;
+    }
+}
+.list-input {
+    direction: rtl;
+}
+.dashboard .my-courses .course .details .wrapper-course-image {
+    float: right;
+    margin-left: 2.35765%;
+}
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status .message-copy {
+    text-align: right;
+}
+.wrapper-account-settings .wrapper-header .account-nav .account-nav-item {
+    float: right;
+}
+.footer_box, .account-settings-sections .section .account-settings-section-body .u-field {
+    display: inline-block;
+}

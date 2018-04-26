@@ -14,6 +14,10 @@
     .user {
         margin: 0 0 0 auto;
 
+        .rtl & {
+            margin: 0 auto 0 0;
+        }
+
         &>.primary>a {
             background: transparent;
             box-shadow: none;
