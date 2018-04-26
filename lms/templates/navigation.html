@@ -106,6 +106,9 @@ site_status_msg = get_site_status_msg(course_id)
               <a class="header-nav_link" href="${reverse('dashboard')}">
                 ${_("Dashboard")}
               </a>
+              <a class="header-nav_link" href="${reverse('program_listing_view')}">
+                ${_("Programs")}
+              </a>
             % else:
               % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
                 <a class="header-nav_link" href="${marketing_link('COURSES')}">${_('Courses')}</a>
@@ -113,6 +116,9 @@ site_status_msg = get_site_status_msg(course_id)
               % if show_program_listing:
                 <a class="header-nav_link" href="${reverse('dashboard')}">
                   ${_("Courses")}
+                </a>
+                <a class="header-nav_link" href="${reverse('program_listing_view')}">
+                  ${_("Programs")}
                 </a>
               % endif
             % endif
