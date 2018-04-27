@@ -422,7 +422,7 @@ body .content-wrapper .container {
 // course select hover 
 .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:hover, .course-outline .block-tree .section ol.outline-item .subsection a.outline-item:focus {
     background-color: lighten($theme-link, 30%);
-    color: #fff;
+    color: #003333;
 }
 
 
@@ -488,10 +488,10 @@ body .header-global .nav-courseware li .btn {
     }
 }
 body .header-global .user-dropdown {
-    background: none;
-    color: $header-nav-link-color;
+    background: none !important;
+    color: $header-nav-link-color !important;
     &:hover,&:focus {
-        color: $header-nav-link-color-hover;
+        color: $header-nav-link-color-hover !important;
     }
 }
 body .header-global .primary>a:hover, body .header-global .primary>a:focus, body .header-global .primary>a:active {
@@ -499,4 +499,7 @@ body .header-global .primary>a:hover, body .header-global .primary>a:focus, body
 }
 body .header-global {
     border: none;
+}
+body .header-global .user .user-link {
+    box-shadow: none;
 }
