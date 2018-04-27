@@ -489,4 +489,14 @@ body .header-global .nav-courseware li .btn {
 }
 body .header-global .user-dropdown {
     background: none;
+    color: $header-nav-link-color;
+    &:hover,&:focus {
+        color: $header-nav-link-color-hover;
+    }
+}
+body .header-global .primary>a:hover, body .header-global .primary>a:focus, body .header-global .primary>a:active {
+    background: none;
+}
+body .header-global {
+    border: none;
 }
