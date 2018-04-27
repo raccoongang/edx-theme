@@ -482,7 +482,7 @@ body .courses-container .courses .course {
 }
 body .header-global .nav-courseware li .btn {
     background: $theme-link-hover;
-    &:hover {
+    &:hover, &:focus, &:active {
         background: $theme-btn-bg-hover;
     }
 }
