@@ -72,13 +72,14 @@ body .icon-list {
 
 body .dropdown-menu-container .menu-title .label-username,
 .header-global .user .user-link .label-username {
-    color: $theme-link;
+    color: #fff;
     &:hover, &:focus {
         color: $theme-link-hover;
     }
 }
 body .dropdown-menu-container .menu-title .label-username:hover {
     color: $theme-link-hover;
+    background: none;
 }
 
 //Colors inside 'Add post' in Forum
@@ -296,7 +297,7 @@ body {
     .dropdown-menu-container .menu-title,
     .dropdown-menu-container .menu-button,
     .header-global .wrapper-header .list-inline .item a {
-        color: $theme-link;
+        color: $header-nav-link-color;
     }
     .doc-link {
         margin: 22px 15px 18px;
@@ -311,7 +312,7 @@ body {
     .header-global .user .user-link .label-username,
     .header-global .user-dropdown,
     .wiki-wrapper section.wiki .nav-tabs a {
-        color: $theme-link;
+        color: $header-nav-link-color;
     }
     .header-global .wrapper-header .list-inline .item {
         font-size: 0.875em;
@@ -444,7 +445,7 @@ body .content-wrapper .container {
     left: 0;
     top: 50%;
     transform: translate(0,-50%);
-    color: #003333;
+    color: #fff;
     @media screen and (max-width: 760px){
         position: static;
         display: flex;
@@ -460,7 +461,7 @@ body .content-wrapper .container {
         width: 60px;
     }
     a {
-        color: #003333 !important;
+        color: #fff !important;
         font-size: 12px;
         &:last-child {
             margin-left: 12px;
@@ -481,8 +482,11 @@ body .courses-container .courses .course {
     z-index: 1;
 }
 body .header-global .nav-courseware li .btn {
-    background: $theme-link-hover;
+    background: $theme-link;
     &:hover, &:focus, &:active {
         background: $theme-btn-bg-hover;
     }
+}
+body .header-global .user-dropdown {
+    background: none;
 }

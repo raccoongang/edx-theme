@@ -738,11 +738,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 margin-bottom: 40px;
             }
             .link {
-                background: transparent;
+                background: #003333;
                 border: 3px solid #003333;
                 text-shadow: none;
                 box-shadow: none;
-                color: #003333;
+                color: #fff;
                 border-radius: 2px;
                 padding: 10px 20px;
                 display: inline-block;
@@ -1349,13 +1349,26 @@ body .home>header {
 
 .home>header .title>.heading-group h1,
 .home>header .title>.heading-group span {
-    color: #003333;
+    color: #fff;
 }
-
+.home>header .title>.heading-group span {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+}
+.home>header .title>.heading-group h1 {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 30px;
+}
 .home>header .title>.heading-group .link {
+    padding: 20px 40px;
+    border-radius: 8px 30px;
     &:hover {
         color: #fff;
-        background: #003333;
+        background: $theme-link-hover;
+        border-color: $theme-link-hover;
     }
 }
 .home>header .title {
