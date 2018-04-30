@@ -562,15 +562,14 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     }
 }
 .heading-group button {
-    border-color: $theme-btn-bg;
+    background: $theme-btn-bg;
+    cursor: default !important;
+    border: none;
+    font-size: 14px;
+    padding: 5px 10px;
     &:hover {
-         border-color: $theme-btn-bg-hover;
+        background: $theme-btn-bg;
     }
-    &:active,
-    &:focus {
-        border-color: $theme-btn-bg;
-    }
-    
 }
 .button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
@@ -1826,6 +1825,16 @@ body {
         width: 80%;
     }
 }
+
+.forum-nav-thread-list {
+    @media screen and (max-width: 759px) {
+        height: 100px !important;
+    }
+}
+
+.forum-nav-browse-menu {
+    max-height: 500px;
+}
 //end responsive for forum page
 
 //responsive for course instructor pages
@@ -2500,6 +2509,9 @@ section.tool-wrapper div#graph-container {
     @media screen and (min-width: 760px) {
         width: 12%;
     }
+    @media screen and (max-width: 400px) {
+        padding-right: 15px;
+    }
 }
 
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-link {
@@ -2638,4 +2650,193 @@ table.stat_table {
 #logo-raccoon path,
 #logo-edx path {
     fill: $footer-support-text-and-logo;
+}
+
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown {
+    @media screen and (max-width: 420px) {
+        right: auto;
+        left: 19px;
+
+        .actions-dropdown-list:before,
+        .actions-dropdown-list:after {
+            right: auto;
+            left: 6px;
+        }
+        .actions-dropdown-list a {
+            float: left !important;
+        }
+
+    }
+}
+
+.modal,
+.leanModal_box {
+    @media screen and (max-width: 567px) {
+        left: 10px !important;
+        margin: 0 !important;
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+    }
+}
+
+#course-info-progress .msg-actions {
+    @media screen and (max-width: 600px) {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .btn {
+        display: block;
+    }
+}
+
+.wiki-wrapper {
+    @media screen and (max-width: 999px) {
+        .article-wrapper {
+            order: 2;
+        }
+        .article-functions {
+            order: 1;
+        }
+    }
+}
+
+.instructor-dashboard-content-2 .slickgrid .slick-cell {
+    height: auto;
+    padding: 5px;
+}
+
+.wrapper-course-material {
+    .hamburger-course {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 36px;
+        margin: 15px;
+        padding: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 0;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            &:not(:disabled) {
+                border: none;
+                background: none;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        @media screen and (min-width: 760px) {
+            display: none;
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            top: 16px;
+            left: 5px;
+            background-color: #009be0;
+            transition: all 0.3s;
+            
+        }
+        &:after {
+            box-shadow: 0 10px 0 0 $hamburger-color, 0 -10px 0 0 $hamburger-color;
+        }
+    }
+    .course-material {
+        display: none;
+        @media screen and (min-width: 760px) {
+            display: block;
+        }
+        @media screen and (max-width: 759px) {
+            padding: 0 10px;
+        }
+    }
+    .course-tabs {
+        li {
+            display: block;
+            float: none;
+            @media screen and (min-width: 760px) {
+                display: inline-block;
+            }
+            @media screen and (max-width: 759px) {
+                margin-bottom: 10px;
+            }
+            a {
+                padding: 1px 10px;
+                text-align: left;
+                font-weight: 400;
+                line-height: 20.72px;
+                @media screen and (min-width: 760px) {
+                    padding: 10px 15px 13px;
+                    text-align: center;
+                }
+            }
+        }   
+    }
+}
+
+.course-nav-open {
+    .hamburger-course {
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+            box-shadow: none;
+        }
+    }
+    .course-material {
+        display: block;
+    }
+}
+
+// Instructor Dashboard beautified
+
+.enrollment-wrapper table {
+    width: 100%;
+    caption {
+        padding: 10px;
+    }
+    th, td {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+    }
+}
+
+.instructor-dashboard-content-2 {
+    line-height: 1.5;
+    button:not(.btn-link),
+    .btn-blue,
+    input[type=button] {
+        margin: 10px 0;
+    }
+    p input {
+        margin-top: 0 !important;
+    }
+    ul li {
+        margin-bottom: 5px;
+    }
+    textarea {
+        width: 100% !important;
+        clear: both;
+        &#notes,
+        &#certificate-invalidation-notes {
+            height: 100px;
+        }
+    }
+    .add-certificate-invalidation {
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+    }
 }
