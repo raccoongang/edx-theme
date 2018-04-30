@@ -562,15 +562,14 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     }
 }
 .heading-group button {
-    border-color: $theme-btn-bg;
+    background: $theme-btn-bg;
+    cursor: default !important;
+    border: none;
+    font-size: 14px;
+    padding: 5px 10px;
     &:hover {
-         border-color: $theme-btn-bg-hover;
+        background: $theme-btn-bg;
     }
-    &:active,
-    &:focus {
-        border-color: $theme-btn-bg;
-    }
-    
 }
 .button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
