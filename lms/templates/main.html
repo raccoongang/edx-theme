@@ -42,18 +42,6 @@ from openedx.core.djangoapps.site_configuration.helpers import get_value
       </title>
   </%block>
 
-   %if not get_value('DISABLE_ONLY_IFRAME', False):
-      <script type="text/javascript">
-        /* immediately break out of an iframe if coming from the marketing website */
-        (function(window) {
-          if (window.location === window.top.location & window.location.pathname !== "/how_to_access") {
-            location = "/how_to_access";
-          }
-        })(this);
-      </script>
-  %endif
-
-
   <%
     jsi18n_path = "js/i18n/{language}/djangojs.js".format(language=LANGUAGE_CODE)
   %>
