@@ -22,11 +22,11 @@ from util.enterprise_helpers import get_enterprise_customer_logo_url
 
 ## Add UI Toolkit components if using the Pattern Library
 % if uses_pattern_library:
-<%block name="js_extra">
-<%static:require_module module_name="js/header_factory" class_name="HeaderFactory">
-HeaderFactory();
-</%static:require_module>
-</%block>
+    <%block name="js_extra">
+    <%static:require_module module_name="js/header_factory" class_name="HeaderFactory">
+    HeaderFactory();
+    </%static:require_module>
+    </%block>
 % endif
 
 <%block>
@@ -36,7 +36,7 @@ try:
 except:
 # can't figure out a better way to get at a possibly-defined course var
     course_id = None
-    site_status_msg = get_site_status_msg(course_id)
+site_status_msg = get_site_status_msg(course_id)
 %>
 % if site_status_msg:
 <div class="site-status">
@@ -71,8 +71,8 @@ except:
         display_name = course.display_name_with_default
         if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
             ccx = get_current_ccx(course.id)
-        if ccx:
-            display_name = ccx.display_name
+            if ccx:
+                display_name = ccx.display_name
         %>
         <span class="course-name">${display_name}</span></h2>
     % endif
