@@ -1366,3 +1366,27 @@ body .home>header .title {
 .home>header .title>.heading-group h1 {
     margin-bottom: 0;
 }
+
+//unbranded colors fix in wiki
+body .wiki-wrapper section.wiki .btn:not(.btn-danger) {
+    text-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: $theme-btn-bg;
+    color: $theme-btn-text-color;
+    &:focus:not(:disabled),
+    &:active,
+    &:focus {
+        background: $theme-btn-bg;
+        color: $theme-btn-text-color;
+        border: none;
+        box-shadow: none !important;
+    }
+    &:hover:not(:disabled),
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+        box-shadow: none;
+        cursor: pointer;
+        color: $theme-btn-text-color;
+    }
+}
