@@ -587,16 +587,18 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
         background: $theme-btn-bg-hover;
     }
 }
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover {
+    background: $theme-btn-bg-hover !important;
+}
 .heading-group button {
-    border-color: $theme-btn-bg;
+    background: $theme-btn-bg;
+    cursor: default !important;
+    border: none;
+    font-size: 14px;
+    padding: 5px 10px;
     &:hover {
-         border-color: $theme-btn-bg-hover;
+        background: $theme-btn-bg;
     }
-    &:active,
-    &:focus {
-        border-color: $theme-btn-bg;
-    }
-    
 }
 .button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
@@ -3027,8 +3029,15 @@ table.stat_table {
 
 .dashboard .my-courses .course .details .course-actions button.action {
     border-color: $theme-btn-white-border !important;
+    transition: all 0.25s;
     .fa {
         color: $theme-btn-white-border;
+    }
+    &:hover {
+        background: $theme-btn-bg;
+        .fa {
+            color: #fff;
+        }
     }
 }
 .wrapper-header-courses {
@@ -3123,8 +3132,51 @@ section.wiki .wiki-wrapper {
 
 .enrollment-wrapper table {
     width: 100%;
+    caption {
+        padding: 10px;
+    }
+    th {
+        text-align: left;
+    }
+    td {
+        text-align: center;
+    }
     th, td {
-        padding: 5px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+    }
+}
+
+.instructor-dashboard-content-2 {
+    line-height: 1.5;
+    button:not(.btn-link),
+    .btn-blue,
+    input[type=button] {
+        margin: 10px 0;
+    }
+    p input {
+        margin-top: 0 !important;
+    }
+    ul li {
+        margin-bottom: 5px;
+    }
+    textarea {
+        width: 100% !important;
+        clear: both;
+        &#notes,
+        &#certificate-invalidation-notes {
+            height: 100px;
+        }
+    }
+    .add-certificate-invalidation {
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
     }
 }
 
