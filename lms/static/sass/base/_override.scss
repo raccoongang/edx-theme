@@ -125,7 +125,7 @@
             color: $theme-user-link;
 
             &:hover {
-                color: $theme-user-link-hover;
+                color: $header-nav-link-color-hover;
             }
 
             .fa {
@@ -209,6 +209,7 @@ body .container.activation h1.valid {
             width: 100%;
 
             .nav-colophon {
+                margin-top: 30px;
                 .lang_ar & {
                     direction: rtl;
                 }
@@ -1368,7 +1369,8 @@ body .home>header .title {
 }
 
 //unbranded colors fix in wiki
-body .wiki-wrapper section.wiki .btn:not(.btn-danger) {
+body .wiki-wrapper section.wiki .btn:not(.btn-danger),
+button.delete-exception {
     text-shadow: none;
     box-shadow: none;
     border: none;
@@ -1389,4 +1391,29 @@ body .wiki-wrapper section.wiki .btn:not(.btn-danger) {
         cursor: pointer;
         color: $theme-btn-text-color;
     }
+}
+// end
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
+    position: relative;
+}
+.wrapper-footer footer#footer-openedx .colophon .nav-colophon li::before {
+    content: '';
+    position: absolute;
+    right: -19px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 1px;
+    height: 100%;
+    background: #fff;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+}
+
+.nav-colophon-03:before {
+    display: none;
+}
+body .header-global .user .user-dropdown:hover,
+body .header-global .user .user-link .label-username:hover {
+    color: #000;
 }
