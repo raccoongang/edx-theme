@@ -762,6 +762,34 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 }
             }
         }
+        .course-search {
+            max-width: 590px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            .search-input {
+                background: rgba(255,255,255,0.25);
+                border: 2px solid #fff;
+                color: #fff;
+                padding-left: 20px !important;
+                &:focus {
+                    border-color: #fff !important;
+                }
+                &::placeholder {
+                    color: #fff;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    color: #fff;
+                }
+            }
+            .search-button {
+                background: none !important;
+                border-color: #fff !important;
+                border-left: none !important;
+                right: 0;
+            }
+        }
     }
 }
 .footer-logo-holder {
