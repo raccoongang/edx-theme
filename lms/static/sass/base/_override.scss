@@ -26,3 +26,13 @@ body {
 body .about p {
     color: #e6e6e6;
 }
+input[type='submit']:not(:disabled):active, 
+input[type='submit']:not(:disabled):focus,
+input[type='button']:not(:disabled):active,
+input[type='button']:not(:disabled):focus,
+button:not(:disabled):active,
+button:not(:disabled):focus,
+:not(:disabled).button:active,
+:not(:disabled).button:focus {
+    box-shadow: none;
+}
