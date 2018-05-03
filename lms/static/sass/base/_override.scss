@@ -2869,3 +2869,20 @@ body .page-header-secondary .btn {
         padding: 8px 12px;
     }
 }
+//sticky footer start
+.window-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.content-wrapper {
+    flex: 1 0 auto;
+}
+.wrapper-preview-menu {
+    width: 100%;
+}
+//sticky footer end
+
+html,body {
+    height: 100%;
+}
