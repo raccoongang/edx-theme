@@ -188,7 +188,7 @@ body .container.activation h1.valid {
             position: relative;
 
             .nav-colophon {
-                margin: 5px 0 25px 0;
+                margin: 2px 0 28px 0;
 
                 .lang_ar & {
                     direction: rtl;
@@ -575,13 +575,16 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
-.courses-container .courses .course {
-    border-bottom: 3px solid $courses-border-color;
+.courses-container {
+    padding: 0 15px;
+    .courses .course {
+        border-bottom: 3px solid $courses-border-color;
 
-    .course-image .cover-image .learn-more {
-        background-color: transparent;
-        border: 3px solid #fff;
-        line-height: 45px;
+        .course-image .cover-image .learn-more {
+            background-color: transparent;
+            border: 3px solid #fff;
+            line-height: 45px;
+        }
     }
 }
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
@@ -2885,4 +2888,27 @@ table.stat_table {
             margin-bottom: 10px;
         }
     }
+}
+
+// register and login form
+
+.field-link {
+    color: $theme-link;
+}
+#login-form,
+#register-form {
+    button {
+        font-weight: normal !important;
+        font-size: 16px !important;
+        text-transform: uppercase;
+        &.forgot-password {
+            text-transform: none;
+        }
+    }
+    .nav-btn {
+        height: auto !important;
+    }
+}
+#register-mailing_address {
+    height: 32px !important;
 }
