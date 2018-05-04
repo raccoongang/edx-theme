@@ -2823,6 +2823,22 @@ table.stat_table {
     }
 }
 
+// Dashboard
+
+.dashboard .my-courses .course .details .course-actions button.action {
+    border-color: $theme-btn-white-border !important;
+    transition: all 0.25s;
+    .fa {
+        color: $theme-btn-white-border;
+    }
+    &:hover {
+        background: $theme-btn-bg;
+        .fa {
+            color: #fff;
+        }
+    }
+}
+
 // Instructor Dashboard beautified
 
 .enrollment-wrapper table {
