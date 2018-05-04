@@ -1390,6 +1390,10 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     .tip a {
         color: $theme-link;
     }
+
+    li .icon {
+        margin-top: 0;
+    }
 }
 .course-info .course-sidebar .important-dates a {
     color: $theme-link;
@@ -2114,7 +2118,7 @@ section.wiki .wiki-wrapper>header {
     padding-right: 30px;
     @media screen and (min-width: 760px) {
         height: 33px;
-        padding: 24px 0 26px;
+        padding: 24px 0;
     }
 }
 
@@ -2160,7 +2164,7 @@ section.wiki .wiki-wrapper .nav-tabs li {
         margin-bottom: 40px;
     }
     @media screen and (min-width: 1000px) {
-        margin: 0;
+        margin: 0 0 5px;
     }
 }
 
