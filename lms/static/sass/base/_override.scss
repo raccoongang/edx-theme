@@ -718,6 +718,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         width: 100%;
         margin: 0 auto;
         float: none;
+        padding: 20px;
 
         &:last-child {
             margin-right: auto;
@@ -2850,6 +2851,12 @@ table.stat_table {
     width: 100%;
     caption {
         padding: 10px;
+    }
+    th {
+        text-align: left;
+    }
+    td {
+        text-align: center;
     }
     th, td {
         padding: 5px 10px;
