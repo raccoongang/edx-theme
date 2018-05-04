@@ -2119,10 +2119,10 @@ section.wiki .wiki-wrapper>header {
 }
 
 section.wiki .breadcrumb {
-    width: 100%;
+    width: auto;
+    float: left;
     margin: 0 0 10px;
     @media screen and (min-width: 760px) {
-        width: initial;
         margin: 0 0 0 40px;
     }
 }
