@@ -454,7 +454,6 @@ body .about p {
 .footer_box, .account-settings-sections .section .account-settings-section-body .u-field {
     display: flex;
 }
-.instructor-dashboard-wrapper-2 section.idash-section#membership .membership-section legend,
 .account-settings-sections .section .account-settings-section-body .u-field .field select {
     direction: rtl;
 }
@@ -468,4 +467,8 @@ body .about p {
 .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-primary {
     display: block;
     float: right;
+}
+.instructor-dashboard-wrapper-2 section.idash-section#membership .membership-section legend {
+    display: block;
+    width: 100%;
 }
