@@ -195,9 +195,10 @@ body .container.activation h1.valid {
     }
 }
 .wrapper-footer {
-    background: $footer-color;
+    background: $footer-color url("#{$img-path}/footer_pattern.svg") repeat;
     position: relative;
     padding: 65px 10px 30px 10px;
+    background-size: 40px 40px;
 
     footer#footer-openedx {
         a:hover,
@@ -817,7 +818,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .home {
-    background: $theme-content-bg;
+    background: none;
 }
 section.wiki .main-article {
     .lang_ar & {
@@ -848,7 +849,8 @@ section.wiki .global-functions {
 }
 .content-wrapper {
     padding-bottom: 80px;
-    background: $theme-content-bg;
+    background: $theme-content-bg url("#{$img-path}/main_pattern.svg") repeat;
+    background-size: 40px 40px;
 }
 .main-article {
     h1 {
@@ -865,7 +867,7 @@ body.view-in-course,
 .university-profile,
 .wrapper-account-settings,
 .view-profile .content-wrapper {
-    background: $theme-content-bg;
+    background: none;
 }
 .account-settings-sections .section {
     padding: 10px;
@@ -1417,4 +1419,19 @@ button.delete-exception {
 body .header-global .user .user-dropdown:hover,
 body .header-global .user .user-link .label-username:hover {
     color: #000;
+}
+.dashboard .my-courses .listing-courses .course-item .course-container {
+    background: #fff;
+}
+body.view-in-course .wrapper-footer {
+    margin-top: 0;
+}
+.window-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content-wrapper {
+    flex: 1 0 auto;
+    max-width: 100%;
 }
