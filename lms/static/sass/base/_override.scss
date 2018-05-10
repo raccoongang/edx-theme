@@ -775,8 +775,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background-image: url("#{$img-path}/background.jpg");
     position: relative;
     background-color: #040404;
-    background-position: 50% 50%;
+    background-position: 0 50%;
     background-size: cover;
+
+    @media screen and (max-width: 567px) {
+        background-position: 15% 50%;
+    }
 
     .outer-wrapper {
         animation: none;
