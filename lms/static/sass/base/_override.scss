@@ -773,11 +773,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
 .home > header {
     background-image: url("#{$img-path}/background.jpg");
-    height: 420px;
-    background-position: center;
     position: relative;
     background-color: #040404;
-    background-position: 0 0;
+    background-position: 50% 50%;
+    background-size: cover;
 
     .outer-wrapper {
         animation: none;
@@ -803,6 +802,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         > .heading-group {
             text-align: center;
             width: 100%;
+            padding: 20px 0;
 
             h1 {
                 font-size: 32px;
@@ -811,7 +811,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 text-align: center;
                 font-weight: bold;
                 text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
-                margin-bottom: 50px;
+                //margin-bottom: 50px;
 
                 @media screen and (min-width: 760px) {
                     font-size: 52px;
@@ -1982,11 +1982,16 @@ body .wiki-wrapper section.wiki .btn:active:not(:disabled), body .wiki-wrapper s
 body .home>header {
     display: flex;
     align-items: center;
-    height: 520px;
+    @media screen and (min-width: 300px) {
+        min-height: 300px;
+    }
+    @media screen and (min-width: 760px) {
+        min-height: 520px;
+    }
 }
 .home>header .title>.heading-group h1 {
     padding: 30px;
-    margin: 84px 0 0;
+    //margin: 84px 0 0;
 }
 .home>header .title {
     width: 100%;
