@@ -2896,3 +2896,8 @@ html,body {
     position: absolute;
     height: 100%;
 }
+.wrap-instructor-info .instructor-info-action {
+    @include sm {
+        margin-bottom: 10px;
+    }
+}
