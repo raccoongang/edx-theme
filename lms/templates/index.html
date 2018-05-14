@@ -12,17 +12,6 @@ from openedx.core.djangolib.markup import HTML, Text
     <section class="home">
       <header>
         <div class="parallax-img"></div> <!-- index page banner parallax bg div -->
-
-        <!-- js for parallax -->
-        <script>
-          $(window).scroll(function () {
-            var scrollTop = $(window).scrollTop();
-            var imgPos = scrollTop / 2 + 'px';
-            $('.parallax-img').css('transform', 'translateY(' + imgPos + ')');
-          });
-        </script>
-        <!-- js for parallax end -->
-
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
@@ -79,6 +68,15 @@ from openedx.core.djangolib.markup import HTML, Text
               $('#login').trigger("click");
          }
       })
+
+      // js for parallax
+      $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        var imgPos = scrollTop / 2 + 'px';
+        $('.parallax-img').css('transform', 'translateY(' + imgPos + ')');
+      });
+      // js for parallax end
+
    </script>
 </%block>
 
