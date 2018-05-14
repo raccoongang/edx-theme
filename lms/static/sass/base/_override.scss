@@ -825,9 +825,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
     @media screen and (min-width: 760px) {
         display: inline;
         position: absolute;
-        right: 90px;
+        right: 0;
         bottom: 0;
         padding: 0;
+    }
+    img {
+        display: inline-block;
+        height: 50px;
     }
 }
 .logo-ar {
@@ -2358,6 +2362,9 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info .details {
     width: 100%;
     margin: 0 0 20px;
+    * {
+        font-family: "Open Sans", "Arial", sans-serif !important;
+    }
     @media screen and (min-width: 760px) {
         margin-right: 2.35765%;
         margin-bottom: 0;
@@ -2936,9 +2943,11 @@ table.stat_table {
     > .heading-group {
         h1 {
             text-transform: uppercase !important;
-            font-size: 48px;
             margin-bottom: 30px;
             font-family: 'SegoeuiBold' !important;
+            @media screen and (min-width:760px ) {
+                font-size: 48px;
+            }
         }
         span {
             font-size: 24px;
@@ -3050,4 +3059,113 @@ table.stat_table {
 }
 #register-mailing_address {
     height: 32px !important;
+}
+
+// Dashboard
+
+.wrapper-header-courses {
+    border-bottom: 1px solid #ccc !important;
+}
+.dashboard .my-courses .listing-courses .course-item .course-container {
+    border: 1px solid #ccc;
+}
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status {
+    border-color: #ccc;
+}
+.empty-dashboard-message a {
+    color: #fff !important;
+}
+.search-field-wrapper input {
+    border-color: $theme-btn-white-border !important;
+}
+.dashboard .my-courses .course .wrapper-messages-primary .message {
+    margin: 20px 0 0;
+    padding: 10px 0 0;
+}
+
+// Course > home
+
+body.view-in-course .home + .info-wrapper {
+    border-top: none !important;
+    .updates {
+        h4 {
+            margin-bottom: 15px;
+        }
+        .updates-article {
+            border: 1px solid #c8c8c8;
+        }
+    }
+}
+
+// Course > course
+
+.wrapper-course-modes > div {
+    margin: 5px 0;
+}
+
+// discussion
+
+.forum-search input {
+    border-color: $theme-btn-white-border;
+}
+
+// wiki
+
+ .section.wiki label {
+     display: inline-block;
+ }
+section.wiki .wiki-wrapper {
+    .article-functions .see-children {
+        margin: 15px 0 0;
+        a {
+            padding: 5px;
+            text-align: center;
+        }
+    }
+    .article-functions .timestamp {
+        text-align: center;
+    }
+    .form-actions .btn.btn-primary {
+        padding: 0;
+        height: 32px;
+    }
+    .article-wrapper p {
+        margin-bottom: 20px;
+    }
+}
+
+//.container.about h1 a {
+//    color: #3c3c3c;
+//}
+
+.main-cta {
+    margin: 0;
+    .register {
+        background: $theme-btn-bg !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        text-transform: none !important;
+        padding: 10px 30px !important;
+        &:hover {
+            background: $theme-btn-bg !important;
+        }
+    }
+    .register.disabled {
+        color: #fff !important;
+        margin-top: 6px;
+    }
+}
+
+//find courses
+
+.find-courses .discovery-input {
+    border-color: $theme-btn-bg;
+}
+.find-courses .courses-container .courses:not(.no-course-discovery),
+.university-profile .courses-container .courses:not(.no-course-discovery) {
+    @media screen and (max-width: 540px) {
+        width: 100%;
+    }
 }

@@ -41,30 +41,74 @@ course_mode_class = course_mode if course_mode else ''
         <%include file="_badges-modal.html" />
     %endif
     <style>
+        .logo {
+            display: block;
+            width: 150px !important;
+            margin: 0 auto;
+        }
+        .header-app .logo-img {
+            width: 100% !important;
+        }
         .rtl.layout-accomplishment .accomplishment-orgs .organization-logo {
-                position: relative;
-                top: 0;
-                right: 0;
-                transform: translate(0, 0);
+            position: relative;
+            top: 0;
+            right: 0;
+            transform: translate(0, 0);
         }
         .btn-link,
         .copy-meta a {
-            color: #842a97;
+            color: #1e4f92;
             border: none;
         }
         .btn-link:hover,
         .btn-link:focus,
         .copy-meta a:focus,
         .copy-meta a:hover {
-            color: #bb57d0;
+            color: #3f7fd7;
             background: none;
             text-decoration: none;
             border: none;
         }
         @media screen and (max-width: 479px) {
-          .hd-1 {
-            font-siZe: 1.5rem;
-          }
+            .hd-1 {
+                font-siZe: 1.5rem;
+            }
+        }
+        .wrapper-metadata {
+            align-items: center !important;
+        }
+        .wrapper-metadata dl {
+            padding: 20px !important;
+        }
+        .wrapper-metadata dl:first-child {
+            padding-left: 0 !important;
+        }
+        .wrapper-metadata dl:last-child {
+            padding-right: 0 !important;
+        }
+        .recipient-details p {
+            margin-bottom: 0 !important;
+        }
+        .metadata.accomplishment-id {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            text-align: center;
+        }
+        .metadata.accomplishment-date {
+            text-align: center;
+        }
+        @media screen and (max-width: 767px) {
+            .wrapper-metadata dl {
+                padding: 10px 0 !important;
+                border: none !important;
+            }
+            .accomplishment-recipient {
+                text-align: center !important;
+            }
+            .accomplishment-metadata .recipient-img {
+                display: block;
+                margin: 0 auto;
+            }
         }
     </style>
 </body>
