@@ -11,6 +11,14 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
+        <div class="parallax-img"></div>
+        <script>
+          $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            var imgPos = scrollTop / 2 + 'px';
+            $('.parallax-img').css('transform', 'translateY(' + imgPos + ')');
+          });
+        </script>
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
