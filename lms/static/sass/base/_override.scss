@@ -699,13 +699,23 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .home>header {
-    background-image: url('#{$img-path}/background.jpg');
+    //background-image: url('#{$img-path}/background.jpg');
     min-height: 420px;
     background-position: center;
     position: relative;
     background-color: #040404;
     display: flex;
     align-items: center;
+
+    .parallax-img {
+        position: absolute;
+        left: 0;
+        top: -100px;
+        width: 100%;
+        height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
+        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
+        background-size: cover;
+    }
 
     .outer-wrapper {
         animation: none;
