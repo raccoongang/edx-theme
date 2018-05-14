@@ -1,0 +1,34 @@
+.icon-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &_item {
+        margin: 0 5px;
+    }
+    &_link {
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
+    &_svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+#ico-vk,
+#ico-odnoklassniki,
+#ico-behance,
+#ico-vimeo,
+#ico-youtube,
+#ico-linkedin,
+#ico-twitter,
+#ico-instagramm,
+#ico-facebook {
+    path {
+        fill: $footer-social-link-bg;
+    }
+}
