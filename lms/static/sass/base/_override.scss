@@ -188,7 +188,7 @@ body .container.activation h1.valid {
             position: relative;
 
             .nav-colophon {
-                margin: 5px 0 25px 0;
+                margin: 2px 0 28px 0;
 
                 .lang_ar & {
                     direction: rtl;
@@ -575,13 +575,16 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
-.courses-container .courses .course {
-    border-bottom: 3px solid $courses-border-color;
+.courses-container {
+    padding: 0 15px;
+    .courses .course {
+        border-bottom: 3px solid $courses-border-color;
 
-    .course-image .cover-image .learn-more {
-        background-color: transparent;
-        border: 3px solid #fff;
-        line-height: 45px;
+        .course-image .cover-image .learn-more {
+            background-color: transparent;
+            border: 3px solid #fff;
+            line-height: 45px;
+        }
     }
 }
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
@@ -696,25 +699,36 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .home>header {
-    background-image: url('#{$img-path}/background.jpg');
-    height: 420px;
+    //background-image: url('#{$img-path}/background.jpg');
+    min-height: 420px;
     background-position: center;
     position: relative;
     background-color: #040404;
+    display: flex;
+    align-items: center;
+
+    .parallax-img {
+        position: absolute;
+        left: 0;
+        top: -100px;
+        width: 100%;
+        height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
+        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
+        background-size: cover;
+    }
 
     .outer-wrapper {
         animation: none;
         padding: 0;
-        @media screen and (min-width:760px ) {
-            padding: 30px;
-        }
     }
     .title {
         background: transparent;
         box-shadow: none;
         max-width: 1000px;
+        width: 100%;
         margin: 0 auto;
         float: none;
+        padding: 20px;
 
         &:last-child {
             margin-right: auto;
@@ -723,6 +737,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         >.heading-group {
             text-align: center;
             width: 100%;
+            padding: 15px 0;
 
             h1 {
                 font-size: 32px;
@@ -760,6 +775,35 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     color: $find-btn-color-hover;
                     text-decoration: none;
                 }
+            }
+        }
+        .course-search {
+            max-width: 590px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 15px 0;
+            .search-input {
+                background: rgba(255,255,255,0.25);
+                border: 2px solid #fff;
+                color: #fff;
+                padding-left: 20px !important;
+                &:focus {
+                    border-color: #fff !important;
+                }
+                &::placeholder {
+                    color: #fff;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    color: #fff;
+                }
+            }
+            .search-button {
+                background: none !important;
+                border-color: #fff !important;
+                border-left: none !important;
+                right: 0;
             }
         }
     }
@@ -1355,6 +1399,10 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 
     .tip a {
         color: $theme-link;
+    }
+
+    li .icon {
+        margin-top: 0;
     }
 }
 .course-info .course-sidebar .important-dates a {
@@ -2080,15 +2128,15 @@ section.wiki .wiki-wrapper>header {
     padding-right: 30px;
     @media screen and (min-width: 760px) {
         height: 33px;
-        padding: 24px 0 26px;
+        padding: 24px 0;
     }
 }
 
 section.wiki .breadcrumb {
-    width: 100%;
+    width: auto;
+    float: left;
     margin: 0 0 10px;
     @media screen and (min-width: 760px) {
-        width: initial;
         margin: 0 0 0 40px;
     }
 }
@@ -2126,7 +2174,7 @@ section.wiki .wiki-wrapper .nav-tabs li {
         margin-bottom: 40px;
     }
     @media screen and (min-width: 1000px) {
-        margin: 0;
+        margin: 0 0 5px;
     }
 }
 
@@ -2795,12 +2843,34 @@ table.stat_table {
     }
 }
 
+// Dashboard
+
+.dashboard .my-courses .course .details .course-actions button.action {
+    border-color: $theme-btn-white-border !important;
+    transition: all 0.25s;
+    .fa {
+        color: $theme-btn-white-border;
+    }
+    &:hover {
+        background: $theme-btn-bg;
+        .fa {
+            color: #fff;
+        }
+    }
+}
+
 // Instructor Dashboard beautified
 
 .enrollment-wrapper table {
     width: 100%;
     caption {
         padding: 10px;
+    }
+    th {
+        text-align: left;
+    }
+    td {
+        text-align: center;
     }
     th, td {
         padding: 5px 10px;
@@ -2839,4 +2909,27 @@ table.stat_table {
             margin-bottom: 10px;
         }
     }
+}
+
+// register and login form
+
+.field-link {
+    color: $theme-link;
+}
+#login-form,
+#register-form {
+    button {
+        font-weight: normal !important;
+        font-size: 16px !important;
+        text-transform: uppercase;
+        &.forgot-password {
+            text-transform: none;
+        }
+    }
+    .nav-btn {
+        height: auto !important;
+    }
+}
+#register-mailing_address {
+    height: 32px !important;
 }
