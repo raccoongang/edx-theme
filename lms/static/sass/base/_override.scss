@@ -1424,16 +1424,8 @@ body .row-item > .icon {
        margin-top: 8px;
     }
 }
-.forum-nav.layout-col.layout-col-a {
-    @include sm {
-        height: 220px !important;
-    }
-}
-.forum-nav-browse-menu {
-    @include sm {
-        height: 178px !important;
-     }
-}
+
+
 body .page-header-secondary btn {
     @include sm {
         padding: 8px 12px;
@@ -1445,3 +1437,20 @@ body .page-header-secondary btn {
         margin-top: 8px;
     }
 }
+// forum responsive fixes
+.discussion-thread-list-container {
+    height: 100%;
+    overflow: auto;
+}
+.forum-nav.layout-col.layout-col-a {
+    @include sm {
+        height: 220px !important;
+        overflow: auto;
+    }
+}
+.forum-nav-browse-menu {
+    @include sm {
+        height: 178px !important;
+    }
+}
+// end of forum responsive fixes
