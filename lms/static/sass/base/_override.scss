@@ -698,7 +698,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
     position: relative;
     background-color: #9DD0B6;
     background-position: 0 0;
-
+    @include sm {
+        height: auto;
+    }
     .outer-wrapper {
         animation: none;
         padding: 0;
