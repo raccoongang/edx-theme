@@ -2750,7 +2750,7 @@ table.stat_table {
 }
 .home>header .title>.heading-group h1,
 .home>header .title>.heading-group span {
-    color: $theme-link;
+    color: rgb(80,120,170);
     text-align: left;
     text-transform: none;
     text-shadow: none;
@@ -2782,5 +2782,6 @@ body .home>header .outer-wrapper {
     width: 100%;
 }
 .home>header .title:last-child {
-    width: 50%;
+    max-width: 700px;
+    width: 100%;
 }
