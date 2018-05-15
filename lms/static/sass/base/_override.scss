@@ -1485,6 +1485,21 @@ body .dashboard .my-courses {
 body .profile-wrapper .course-info {
     width: 100%;
 }
-body .wiki-wrapper section.wiki .nav-tabs a {
+body .wiki-wrapper main section.wiki .nav-tabs a {
     color: $theme-link;
+}
+body .wiki-wrapper section.wiki .btn {
+    border: none;
+    box-shadow: none;
+    background: $theme-link;
+    color: #fff;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: $theme-link-hover !important;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
 }
