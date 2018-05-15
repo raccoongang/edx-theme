@@ -1503,3 +1503,29 @@ body .wiki-wrapper section.wiki .btn {
         text-shadow: none;
     }
 }
+
+@include sm {
+    .instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"],
+    .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email,
+    .instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field,
+    .instructor-dashboard-wrapper-2 .customBrowseBtn,
+    .list-fields input[name="subject"]{
+        width: 100%;
+    }
+    .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
+        word-break: break-all;
+    }
+    .white-listed-students tr th,
+    .white-listed-students tr td {
+        &:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5) {
+            display: none;
+        }
+        &:last-child {
+            width: 100px;
+        }
+
+    }
+    .white-listed-students table {
+        max-width: 260px;
+    }
+}
