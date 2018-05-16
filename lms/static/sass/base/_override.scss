@@ -2933,3 +2933,17 @@ table.stat_table {
 #register-mailing_address {
     height: 32px !important;
 }
+
+//sticky footer
+
+#content {
+    flex: 1;
+}
+.window-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.wrapper-preview-menu {
+    width: 100%;
+}
