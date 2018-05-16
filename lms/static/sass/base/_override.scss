@@ -187,6 +187,7 @@ body .container.activation h1.valid {
     background: $footer-color;
     position: relative;
     padding: 65px 10px 30px 10px;
+    min-height: 100px;
 
     footer#footer-openedx {
         a:hover,
@@ -1501,7 +1502,9 @@ body .wiki-wrapper section.wiki .btn {
         text-shadow: none;
     }
 }
-
+body .enroll-message a {
+    color: $theme-link;
+}
 @include sm {
     body .instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"],
     body .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email,
@@ -1530,4 +1533,7 @@ body .wiki-wrapper section.wiki .btn {
     body .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment textarea {
         display: block;
     }
+}
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+    left: -100px;
 }
