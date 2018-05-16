@@ -187,6 +187,7 @@ body .container.activation h1.valid {
     background: $footer-color;
     position: relative;
     padding: 65px 10px 30px 10px;
+    min-height: 135px;
 
     footer#footer-openedx {
         a:hover,
@@ -1441,19 +1442,16 @@ body .page-header-secondary btn {
     }
 }
 // forum responsive fixes
-.discussion-thread-list-container {
-    height: 100%;
-    overflow: auto;
-}
+
 .forum-nav.layout-col.layout-col-a {
     @include sm {
-        height: 220px !important;
-        overflow: auto;
+        height: 500px !important;
     }
 }
+.forum-nav-thread-list,
 .forum-nav-browse-menu {
     @include sm {
-        height: 178px !important;
+        height: 471px !important;
     }
 }
 // end of forum responsive fixes
@@ -1504,13 +1502,16 @@ body .wiki-wrapper section.wiki .btn {
         text-shadow: none;
     }
 }
-
+body .enroll-message a {
+    color: $theme-link;
+}
 @include sm {
-    .instructor-dashboard-wrapper-2 section.idash-section#student_admin input,
-    .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email,
-    .instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field,
-    .instructor-dashboard-wrapper-2 .customBrowseBtn,
-    .list-fields input {
+    body .instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"],
+    body .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email,
+    body .instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field,
+    body .instructor-dashboard-wrapper-2 .customBrowseBtn,
+    body .list-fields input[name="subject"],
+    body .instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"] {
         width: 100%;
     }
     .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
@@ -1528,5 +1529,16 @@ body .wiki-wrapper section.wiki .btn {
     }
     .white-listed-students table {
         max-width: 260px;
+    }
+    body .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment textarea {
+        display: block;
+    }
+}
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+    left: -100px;
+}
+.handouts {
+    ol {
+        margin-left: 20px;
     }
 }
