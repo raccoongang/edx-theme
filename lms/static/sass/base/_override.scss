@@ -499,6 +499,7 @@ body .btn-blue,
 body .instructor-dashboard-wrapper-2 .btn-blue,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#discussions_management .form-submit,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
 body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
@@ -1505,11 +1506,10 @@ body .wiki-wrapper section.wiki .btn {
 }
 
 @include sm {
-    .instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"],
     .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email,
     .instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field,
     .instructor-dashboard-wrapper-2 .customBrowseBtn,
-    .list-fields input[name="subject"]{
+    .list-fields input {
         width: 100%;
     }
     .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
