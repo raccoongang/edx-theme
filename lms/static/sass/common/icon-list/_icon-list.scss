@@ -11,26 +11,28 @@
     }
     &_link {
         display: block;
-        width: 35px;
-        height: 35px;
+        width: 36px;
+        height: 36px;
         font-size: 0;
         line-height: 0;
         text-indent: -9999px;
+        background-repeat: no-repeat;
+        background-size: contain;
 
         &__facebook {
-            background: url('#{$img-path}/ico-facebook.svg');
+            background: url('#{$img-path}/ico-facebook.svg') no-repeat;
         }
         &__instagramm {
-            background: url('#{$img-path}/ico-instagram.svg');
+            background: url('#{$img-path}/ico-instagram.svg') no-repeat;
         }
         &__twitter {
-            background: url('#{$img-path}/ico-twitter.svg');
+            background: url('#{$img-path}/ico-twitter.svg') no-repeat;
         }
         &__linkedin {
-            background: url('#{$img-path}/ico-linkedIn.svg');
+            background: url('#{$img-path}/ico-linkedIn.svg') no-repeat;
         }
         &__youtube {
-            background: url('#{$img-path}/ico-youtube.svg');
+            background: url('#{$img-path}/ico-youtube.svg') no-repeat;
         }
     }
 }

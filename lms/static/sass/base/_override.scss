@@ -499,6 +499,7 @@ body .btn-blue,
 body .instructor-dashboard-wrapper-2 .btn-blue,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .form-submit,
+body .instructor-dashboard-wrapper-2 section.idash-section#discussions_management .form-submit,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create,
 body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
@@ -698,7 +699,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
     position: relative;
     background-color: #9DD0B6;
     background-position: 0 0;
-
+    @include sm {
+        height: auto;
+    }
     .outer-wrapper {
         animation: none;
         padding: 0;
@@ -1454,3 +1457,76 @@ body .page-header-secondary btn {
     }
 }
 // end of forum responsive fixes
+
+.file-browse .browse {
+    display: none;
+}
+
+.browse-file.enhanced-input-file {
+    border: 0;
+}
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+    height: 30px;
+    padding: 0;
+    top: -1px;
+}
+.course-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+body .dashboard .my-courses {
+    width: 100%;
+}
+
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions {
+    @include sm {
+        width: 85%;
+    }
+}
+body .profile-wrapper .course-info {
+    width: 100%;
+}
+body .wiki-wrapper main section.wiki .nav-tabs a {
+    color: $theme-link;
+}
+body .wiki-wrapper section.wiki .btn {
+    border: none;
+    box-shadow: none;
+    background: $theme-link;
+    color: #fff;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: $theme-link-hover !important;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+@include sm {
+    .instructor-dashboard-wrapper-2 section.idash-section#student_admin input,
+    .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email,
+    .instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field,
+    .instructor-dashboard-wrapper-2 .customBrowseBtn,
+    .list-fields input {
+        width: 100%;
+    }
+    .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
+        word-break: break-all;
+    }
+    .white-listed-students tr th,
+    .white-listed-students tr td {
+        &:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5) {
+            display: none;
+        }
+        &:last-child {
+            width: 100px;
+        }
+
+    }
+    .white-listed-students table {
+        max-width: 260px;
+    }
+}
