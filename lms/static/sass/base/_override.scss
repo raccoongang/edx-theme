@@ -1642,3 +1642,9 @@ body .enroll-message a {
         margin-bottom: 10px;
     }
 }
+
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
+    @include sm {
+        float: none;
+    }
+}
