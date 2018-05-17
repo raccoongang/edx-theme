@@ -2648,7 +2648,7 @@ html, body {
 }
 body .view-discussion-home .helpgrid-row .row-item {
     @include sm {
-        width: 33%;
+        width: 32%;
     }
 }
 body .view-discussion-home .helpgrid-row .row-item-full {
@@ -2661,11 +2661,7 @@ body .view-discussion-home {
         padding-left: 0;
     }
 }
-body .view-discussion-home .helpgrid-row .row-title {
-    @include sm {
-        width: 5%;
-    }
-}
+
 body .row-item > .icon {
     @include sm {
         margin-bottom: 8px;
@@ -2803,5 +2799,13 @@ body .enroll-message a {
 .wrap-instructor-info .instructor-info-action {
     @include sm {
         margin-bottom: 10px;
+    }
+}
+
+//
+
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
+    @include sm {
+        float: none;
     }
 }
