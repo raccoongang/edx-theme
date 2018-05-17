@@ -2788,3 +2788,20 @@ body .enroll-message a {
 }
 
 // end mobile responsive
+
+
+.grade-detail-graph-wrapper-outer {
+    position: relative;
+    min-height: 400px;
+}
+.grade-detail-graph-wrapper {
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    height: 100%;
+}
+.wrap-instructor-info .instructor-info-action {
+    @include sm {
+        margin-bottom: 10px;
+    }
+}
