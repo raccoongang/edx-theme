@@ -80,13 +80,3 @@ show_preview_menu = course and staff_access and supports_preview_menu
         PreviewFactory(${preview_options | n, dump_js_escaped_json});
     </%static:require_module_async>
 % endif
-
-% if course and not disable_courseware_header:
-    <div class="course-header preview-menu">
-        <div class="container">
-            <h2>
-                <span class="course-name">${course.display_name_with_default}</span>
-            </h2>
-        </div>
-    </div>
-% endif
