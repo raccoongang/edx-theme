@@ -1,0 +1,48 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:3000/css/styles.css" />
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about custom-page">
+        <h1>${_("Over 40 Years as a Proven Market Leader")}</h1>
+        <div class="blue-boxes">
+            <div class="blue">
+                <strong>Trusted Partner for 60,000+ Organizations</strong>
+                <p>Serving national and multinational corporations, government agencies, education and non-profits.</p>
+            </div>
+            <div class="blue">
+                <strong>600+ Expert Advisors</strong>
+                <p>Our instructors and associates serve our global customer footprint, and average 20+ years of diverse real world experience.</p>
+            </div>
+            <div class="blue">
+                <strong>Demonstrated Past Performance</strong>
+                <p>We have a solid reputation for end-to-end proven capabilities, and the ability to provide all facets of Workforce Optimization, resulting in improved organizational alignment.</p>
+            </div>
+        </div>
+
+        <h1>${_("A Message from our CEO")}</h1>
+        <div class="msg">
+            <p><strong>"We measure our success</strong> by the extent to which our customers perceive that Learning Tree has made a significant difference in their organization's performance."</p>
+            <p>&ndash; Richard A. Spires CEO</p>
+        </div>
+
+        <h1>${_("Most Trusted Training and Workforce Optimization Solutions Provider")}</h1>
+        <p><b>Established in 1974</b>, Learning Tree International is a leading provider of individual, team and organization-wide IT training and management training to business and government organizations worldwide.</p>
+        <p><b>Over 2.4 million professionals</b> have enhanced their skills through Learning Tree’s extensive library of proprietary and partner content on topics including: web development, cyber security, program and project management, Agile, operating systems, networking, cloud computing, leadership, and more.</p>
+        <p><b>We also go beyond training with Workforce Optimization Solutions</b> – a modern approach that improves the adoption of skills, and accelerates the implementation of technical and business processes required to improve IT service delivery.</p>
+        <p>To support both business and government organizations in their workforce optimization efforts, we develop structured learning paths prior to training, and provide implementation services that extend the value of training long after a training event has concluded.</p>
+        <ul>
+            <li><b>These custom services include:</b></li>
+            <li><b>Needs assessments</b></li>
+            <li><b>Skill gaps analyses</b></li>
+            <li><b>Blended learning solutions</b></li>
+            <li><b>Project acceleration and process implementation workshops</b></li>
+        </ul>
+
+        <p>${_("This page left intentionally blank. Feel free to add your own content. !!!")}</p>
+    </section>
+</main>
