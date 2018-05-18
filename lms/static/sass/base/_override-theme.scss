@@ -1,0 +1,358 @@
+.theme-footer {
+    border-bottom: 5px #ff6a13 solid;
+}
+
+//не стандартное расположение лого в футере
+.logo-footer__theme {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin: 0 0 0 -50px;
+}
+
+.theme-footer_wrapper {
+    position: relative;
+    padding-top: 65px;
+    padding-bottom: 30px;
+}
+
+//скрываем и показываем ссылки для языковых версий
+.link-logo-ar,
+.logo-ar {
+    display: none;
+
+    .lang_ar & {
+        display: inline;
+    }
+}
+
+.logo-en,.logo-ar {
+    width: 250px;
+    min-width: 250px;
+    height: 70px;
+}
+
+.link-logo-en,
+.logo-en {
+    display: flex;
+
+    .lang_ar & {
+        display: none;
+    }
+}
+
+.logo-footer__theme {
+    img {
+        height: 100px;
+        width: auto;
+    }
+}
+
+// добавленны ссылки для перехода на разные языки
+.language-nav {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    order: 2;
+    @media screen and (max-width: 760px) {
+        order: 1;
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width: 760px) {
+        width: auto;
+        margin-left: 10px;
+
+        .rtl & {
+            float: left;
+            margin-right: 10px;
+        }
+    }
+
+    &_item {
+        margin: 0 3px;
+        @media screen and (min-width: 760px) {
+            margin: 0 0 0 5px;
+        }
+    }
+    &_link {
+        font-size: 12px;
+        color: #5e5e5e !important;
+        font-weight: bold;
+
+        &__active,
+        &:hover {
+            color: $header-nav-link-color-hover !important;
+        }
+    }
+}
+
+.content-wrapper {
+    padding-bottom: 80px;
+    background: #eee;
+}
+
+body.lang_ar * {
+    letter-spacing: 0 !important;
+}
+
+.doc-link {
+    margin: 0;
+    margin-right: 15px;
+    color: $header-nav-link-color;
+
+    .lang_ar & {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+}
+
+//на странице прогресса выключаем график
+.grade-detail-graph {
+    display: none;
+}
+
+//убраем, показываем ссылки на английскую и ртл версию
+.lang_ar .btn-en,
+.lang_en .btn-ar {
+    display: none !important;
+}
+
+.header-list {
+    flex-direction: column;
+}
+
+//в футер добавлен специальный шрифт
+.footer-list_link {
+    font-family: 'DinAlternate';
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 400;
+
+    .lang_ar & {
+        font-family: 'DinAlternate-arabic';
+    }
+}
+
+.footer-list {
+    margin-bottom: 27px;
+}
+
+//на странице логина скрыта кнопка логина
+.header-global__login .login-btns-list_item .theme-btn{
+    display: none;
+}
+
+//на странице логина добавлена кнопка логина через SSO
+.login-register {
+    .form-type {
+        margin-bottom: 40px;
+    }
+
+    .login-provider {
+
+        &:focus {
+            background: $theme-btn-bg !important;
+        }
+        .icon {
+            background: $theme-btn-bg;
+        }
+        
+        &:focus,
+        &:hover {
+            span {
+                color: $theme-btn-white-text-color-hover;
+            }
+        }
+    }
+}
+//bg для страницы логина
+.login-page {
+    background: #eee;
+
+    body {
+        background: #eee;
+    }
+}
+
+//убираем лишние элементы из формы логина, должна быть только одна кнопка SSO
+
+.login-register-content h2,
+.login-register .login-provider .icon,
+.login-register .section-title.lines:after,
+.login-register .toggle-form,
+body .login-register .action-primary,
+.login-register .form-field {
+    display: none;
+}
+
+.login-register form {
+    border: none;
+}
+
+.login-register .section-title.lines .text {
+    color: #1a1d1c;
+    font-size: 36px;
+    line-height: 1.3;
+    font-weight: 300;
+    padding: 0;
+    letter-spacing: 0.6px;
+    background: transparent;
+}
+
+.login-register .section-title.lines {
+    margin-bottom: 30px;
+}
+
+body .login-register {
+    background: transparent;
+    max-width: none;
+}
+
+.login-register .form-type {
+    max-width: 680px;
+    box-shadow: 0 0 15px 0 rgba(50, 50, 50, 0.2);
+    padding: 0;
+    border-radius: 10px;
+}
+
+.login-register .form-wrapper {
+    background: #fafafc;
+    padding-top: 90px;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+.login-register form {
+    padding: 0 25px 20px 25px;
+}
+
+.login-register .login-provider {
+    max-width: 300px;
+    padding: 0;
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: $theme-btn-bg;
+    border-radius: 5px;
+
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+    }
+}
+
+.login-register .login-provider .login-icon {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        top: 4px;
+        left: -34px;
+        height: 18px;
+        width: 18px;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f090";
+    }
+}
+body .login-register {
+    background: none;
+}
+.login-register-content {
+    background-color: transparent;
+}
+.login-register {
+    width: 100%;
+}
+
+// Title added on course inner pages
+.course-header {
+    &.preview-menu {
+        overflow: hidden;
+        h2 {
+            margin: 0;
+            font-size: 1.2em;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .course-name {
+            position: relative;
+            display: inline-block;
+            padding: 10px 15px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            background: $secondary-color;
+            &:before,
+            &:after {
+                content: '';
+                width: 80px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -80px;
+                background: linear-gradient(to right, #fc6a15 0%, #eee 100%);
+            }
+            &:before {
+                transform: rotate(180deg);
+            }
+            &:after {
+                left: auto;
+                right: -80px;
+            }
+        }
+    }
+}
+
+//уменьшенные иконки в футере
+
+.icon-list_icon {
+    width: 28px;
+    height: 28px;
+}
+
+//убираем дату начала курсов
+body .courses-container .courses .course .course-info .course-date,
+body .course-info .course-date.localized_datetime,
+body .courses-container .courses .course .course-info .course-organization {
+    display: none;
+}
+body .course-info .course-sidebar .important-dates {
+    li:nth-child(2) {
+        display: none;
+    }
+}
+
+//hide organization name on course about page
+.course-info {
+    header {
+        &.course-profile {
+            .intro-inner-wrapper {
+                .intro {
+                    >.heading-group {
+                        button {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//hide course info tab
+.wrapper-course-material {
+    .course-tabs {
+        li {
+            a[href$="info"] {
+                display: none;
+            }
+        }
+    }
+}
