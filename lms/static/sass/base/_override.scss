@@ -3169,3 +3169,77 @@ section.wiki .wiki-wrapper {
         width: 100%;
     }
 }
+
+// "About us" and other custom pages
+
+.custom-page {
+    h1 {
+        max-width: 750px;
+        margin: 10px auto 30px;
+        @media screen and (max-width: 767px) {
+            font-size: 1.5em;
+        }
+    }
+    .blue-boxes {
+        display: flex !important;
+        margin: 0 0 50px -30px !important;
+        .blue {
+            box-sizing: border-box;
+            background: #2b5b9b;
+            padding: 30px 20px;
+            color: #fff;
+            width: calc(33.3333% - 30px);
+            margin-left: 30px;
+            text-align: center;
+            border-radius: 10px;
+            strong {
+                display: block;
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 20px;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+            margin-left: 0 !important;
+            .blue {
+                width: 100%;
+                margin: 0 0 20px;
+            }
+        }
+    }
+    .msg {
+        border-left: 5px solid #2b5b9b;
+        background: #e7eef4;
+        padding: 20px;
+        margin-bottom: 50px !important;
+    }
+    ul {
+        padding-left: 20px;
+        margin-bottom: 30px;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    .big-blue-btn {
+        border: 2px solid #1e4f92;
+        border-radius: 5px;
+        color: #1e4f92;
+        display: block;
+        padding: 12px 36px;
+        text-decoration: none;
+        transition: all 0.6s ease 0s;
+        width: 100%;
+        max-width: 410px;
+        margin: 0 auto 30px;
+        text-align: center;
+        box-sizing: border-box;
+        &:hover {
+            background: #1e4f92;
+            color: #fff !important;
+        }
+    }
+    p span {
+        text-transform: uppercase;
+    }
+}
