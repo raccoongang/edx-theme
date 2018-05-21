@@ -1921,6 +1921,12 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     float: none;
     margin: 0 0 10px;
     display: inline-block;
+    background: $theme-btn-bg !important;
+    color: $theme-btn-text-color !important;
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+    }
+
     @media screen and (min-width: 760px) {
         float: right;
         margin: 0 0 0 10px;
@@ -2163,6 +2169,14 @@ section.wiki .global-functions {
 
 section.wiki .add-article-btn {
     margin-left: 0;
+    background: $theme-btn-bg !important;
+    color: $theme-btn-text-color !important;
+    box-shadow: none !important;
+    border: none !important;
+    &:hover,
+    &:focus {
+        background: $theme-btn-bg-hover !important;
+    }
     @media screen and (min-width: 760px) {
         margin-left: 25px;
     }
@@ -2249,8 +2263,20 @@ section.wiki .alert .close {
     top: 8px;
 }
 
+section.wiki a.btn,
 section.wiki .btn {
     margin-bottom: 5px;
+    background: $theme-btn-bg !important;
+    color: $theme-btn-text-color !important;
+    box-shadow: none !important;
+    border: none !important;
+    height: 32px !important;
+    line-height: 32px;
+    padding: 0 18px !important;
+    &:hover,
+    &:focus {
+        background: $theme-btn-bg-hover !important;
+    }
 }
 
 section.wiki .btn.btn-danger {
