@@ -1921,6 +1921,12 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     float: none;
     margin: 0 0 10px;
     display: inline-block;
+    background: $theme-btn-bg !important;
+    color: $theme-btn-text-color !important;
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+    }
+
     @media screen and (min-width: 760px) {
         float: right;
         margin: 0 0 0 10px;
