@@ -126,6 +126,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                     container_string = _("Starts - {date}")
                     course_date = course_overview.dashboard_start_display
                 endif
+                if isinstance(course_date, datetime):
+                    course_date = course_date.strftime('%B %d, %Y')
             endif
           %>
 
@@ -232,7 +234,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
             %>
             % if is_purshue_credit:
                 <p class="action-req">${_('Action required')}</p>
-                <p>${_('Click the Pursue credit button to complete your courses on the Credit Eligible Track')}</p>
+                <p>${_('Click the Pursue credit button to complete your courses on the Credit Eligible Track.')}</p>
             %elif is_audit:
                 <p class="action-req">${_('Action required')}</p>
                 <p>${_('It looks like you tried to verify your identity but were unsuccessful. The deadline to ID verify has now passed. Call us at 1-844-448-7707.')}</p>
