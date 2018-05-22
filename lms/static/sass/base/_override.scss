@@ -1887,14 +1887,17 @@ body {
     }
 }
 
-.forum-nav-thread-list {
-    @media screen and (max-width: 759px) {
-        height: 100px !important;
+.forum-nav.layout-col.layout-col-a {
+    @media screen and (max-width: 768px) {
+        height: 500px !important;
     }
 }
 
+.forum-nav-thread-list,
 .forum-nav-browse-menu {
-    max-height: 500px;
+    @media screen and (max-width: 768px) {
+        height: 471px !important;
+    }
 }
 //end responsive for forum page
 
