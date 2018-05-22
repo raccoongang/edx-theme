@@ -182,9 +182,10 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                     credit_btn_class = "enter-course"
                     credit_btn_label = _("Get Credit")
                     ecommerce_url_root = static.get_value('ECOMMERCE_PUBLIC_URL_ROOT', settings.ECOMMERCE_PUBLIC_URL_ROOT)
-                    credit_btn_href = '{root}/credit/checkout/{course_id}/'.format(
+                    credit_btn_href = '{root}/credit/checkout/{course_id}/?is_pay_for_credit={is_pay_for_credit}'.format(
                         root=ecommerce_url_root,
-                        course_id=credit_status['course_key'])
+                        course_id=credit_status['course_key'],
+                        is_pay_for_credit=benefit_type!=1 and benefit_type!=3)
 
                     if credit_status["purchased"]:
                         request_status = credit_status["request_status"]
