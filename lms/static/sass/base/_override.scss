@@ -1703,3 +1703,116 @@ body .enroll-message a {
         margin-left: 20px;
     }
 }
+
+
+@mixin x-sm {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}
+@include x-sm {
+    .wiki-wrapper section.wiki .diff-container table {
+        width: 300px;
+    }
+    .wiki-wrapper section.wiki .diff-container th {
+        &:first-child {
+            width: 0;
+        }
+        &:nth-child(2) {
+            width: 20px;
+        }
+    }
+}
+@include sm {
+    body .course-info header.course-profile .intro-inner-wrapper>div.table,
+    .wiki-wrapper section.wiki .breadcrumbs-header,
+    .account-settings-sections .section .account-settings-section-body .u-field {
+        display: flex;
+        flex-direction: column;
+    }
+    body .course-info header.course-profile .intro-inner-wrapper .intro,
+    .course-info .details,
+    .course-info header.course-profile .intro-inner-wrapper .media,
+    .dashboard-search-results,
+    .search-bar.dashboard-search-bar,
+    .account-settings-sections .section .account-settings-section-body .u-field .field,
+    .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
+        width: 100%;
+    }
+    body .course-info header.course-profile .intro-inner-wrapper,
+    body .view-profile .wrapper-profile-sections{
+        min-width: 0;
+    }
+    body .content-wrapper .container {
+        padding: 40px 10px 120px;
+        display: flex;
+        flex-direction: column;
+    }
+    body .course-info .course-sidebar {
+        width: 100%;
+        display: block;
+    }
+    body.view-in-course .wrapper-course-material .course-material .course-tabs {
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions {
+        margin-top: 12px;
+    }
+    .wiki-wrapper section.wiki .breadcrumbs-header {
+        height: auto;
+    }
+    .wiki-wrapper section.wiki .main-article {
+        padding: 10px;
+    }
+    .wiki-wrapper section.wiki #hint_id_content {
+        position: static;
+    }
+    .dashboard-search-results {
+        height: auto;
+    }
+    .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
+        padding: 0;
+    }
+    .form-actions {
+        display: flex;
+    }
+    .hd.hd-2.progress-certificates-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .add-field {
+        width: 60%;
+    }
+}
+
+///
+
+.grade-detail-graph-wrapper-outer {
+    position: relative;
+    min-height: 400px;
+}
+.grade-detail-graph-wrapper {
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    height: 100%;
+}
+.wrap-instructor-info .instructor-info-action {
+    @include sm {
+        margin-bottom: 10px;
+    }
+}
+
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
+    @include sm {
+        float: none;
+    }
+}
+
+.bottom-bar .add-field {
+    @include sm {
+        width: 55%;
+    }
+}
+
