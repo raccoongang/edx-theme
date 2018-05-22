@@ -193,11 +193,11 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
                             # Translators: link_to_provider_site is a link to an external webpage. The text of the link will be the name of a  credit provider, such as 'State University' or 'Happy Fun Company'.
                             credit_msg = _("Thank you for your payment. To receive course credit, you must now request credit "
-                            "at the {link_to_provider_site} website. Select <b>Request Credit</b> to get started.").format(
+                            "at the {link_to_provider_site} website. Select <b>Request credit</b> to get started.").format(
                                 link_to_provider_site=provider_link,
                             )
                             credit_msg_class = "credit-request-not-started-msg"
-                            credit_btn_label = _("Request Credit")
+                            credit_btn_label = _("Request credit")
                             credit_btn_class = 'enter-course request-credit-btn'
                             credit_btn_href = None
                         elif request_status == 'pending':
