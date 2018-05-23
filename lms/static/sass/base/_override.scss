@@ -525,9 +525,14 @@ body.verification-process .carousel .requirements .requirement {
     color: #000;
     box-shadow: none !important;
 
-    &:hover,
-    &:focus {
+    &:hover {
         background: lighten($theme-color, 20%);
+        color: #000;
+    }
+    &:focus {
+        background: $theme-color;
+        border-color: $theme-color;
+        text-shadow: none;
         color: #000;
     }
 }
@@ -716,8 +721,14 @@ body.dashboard {
     display: none;
 }
 
-.wizard-step.step-proceed .next.action-primary.right {
+.wizard-step.step-proceed .next.action-primary.right,
+.verification-process .pay-and-verify .nav-wizard .right, 
+.verification-process .incourse-reverify .nav-wizard .right, 
+.verification-process .reverify .nav-wizard .right {
     color: #000 !important;
+    &.is-disabled {
+        color: #fff !important;
+    }
 }
 .content-main {
     .title,.instruction,.list-info {
@@ -758,7 +769,7 @@ body.dashboard {
 body .wrapper-footer {
     box-shadow: none;
     border-top: none;
-    background: #fafafa;
+    background: #f5f5f5;
     padding: 0;
 }
 
@@ -818,4 +829,12 @@ body, body h1, body h2, body h3, body h4, body h5, body h6, body p, body label {
 }
 .pagination .page-divider, .view-student-notes .title-search-container .wrapper-title .page-title, .view-teams .page-header .page-title, .course-wrapper .course-content .proctored-exam-skip-confirm-wrapper .msg-title, .course-wrapper .courseware-results-wrapper .proctored-exam-skip-confirm-wrapper .msg-title, .view-teams .card .card-title, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-title, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-edit .form-title, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-group-header .title-value, .dashboard-search-results .search-info h2, .view-student-notes .placeholder-title, .course-index .accordion .course-navigation .button-chapter .group-heading, .home .page-header-secondary .last-accessed-link, div.info-wrapper section.handouts .handouts-header, .view-student-notes .note-group .course-title, .view-student-notes .note-group .tags-title, .view-teams .create-team legend, .view-teams .team-actions .title, .idash-section .message-title, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-group-add .form-title, .view-student-notes .wrapper-tabs .tab-list .tabs-label, .idash-section .subsection-title, .wrapper-course-material .course-tabs li a, .wrapper-course-material .course-tabs li a:visited, .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control, .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr .vidtime, .content-wrapper .course-license, .content-wrapper .xblock-license, .view-student-notes .title-search-container .wrapper-title .page-title .page-subtitle, .view-student-notes .note-group .course-subtitle, .idash-section .section-title .description, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-fields .label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-edit .form-fields .label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-group-add .form-fields .label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .form-fields .label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-fields .form-label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-edit .form-fields .form-label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-group-add .form-fields .form-label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .form-fields .form-label, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-group-header .group-count, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-group-add .message-title, .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-file-upload .message-title, .nav-utilities .action-toggle-message, .view-student-notes .note-group .note .wrapper-note-excerpts .note-comments .note-comment .note-comment-title, .view-student-notes .note-group .note .reference .wrapper-reference-content .reference-title, div.info-wrapper section.updates>ol>li .date, div.info-wrapper section.updates>ol article .date, div.info-wrapper section.updates section>li .date, div.info-wrapper section.updates section article .date, div.info-wrapper section.updates div>li .date, div.info-wrapper section.updates div article .date, div.info-wrapper section.updates>ol>li .toggle-visibility-button, div.info-wrapper section.updates>ol article .toggle-visibility-button, div.info-wrapper section.updates section>li .toggle-visibility-button, div.info-wrapper section.updates section article .toggle-visibility-button, div.info-wrapper section.updates div>li .toggle-visibility-button, div.info-wrapper section.updates div article .toggle-visibility-button {
     font-family: 'Roboto', sans-serif;
+}
+body.verification-process .carousel .view .instruction,
+.verification-process p {
+    padding: 0;
+    color: #050505;
+    font-size: 16px;
+    line-height: 23.68px;
+    font-weight: 600;
 }
