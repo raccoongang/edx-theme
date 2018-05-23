@@ -1,0 +1,38 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about custom-page">
+        <h1>${_("ABOUT EXCEED")}</h1>
+        <p>${_("Exceed was established in Abu Dhabi, United Arab Emirates in 2001. What started out as five talented technical experts who wanted to sell training, has grown into a regional IT force. ")}</p>
+        <p>${_("Today, Exceed has nearly 400 employees in 11 countries including the UAE, Bahrain, Oman, Qatar, Kingdom of Saudi Arabia, Iraq, Jordan, Lebanon, Pakistan, Palestine, and Argentina. It continues to grow at an average rate of two new locations a year.")}</p>
+        <p>${_("We have had the privilige of working with over 900 customers in the region in nearly every single sector from government organizations to private companies.")}</p>
+        <h1>${_("MEET EXCEED")}</h1>
+        <div class="photos">
+            <div>
+                <a href="http://www.exceedgulf.com/our-people" target="_blank">
+                    <img src="/static/${settings.DEFAULT_SITE_THEME}/images/about-img1.jpg" alt="">
+                    <span>${_("Our People")}</span>
+                </a>
+                <p>${_("We pride ourselves in having a multinational team who are some of the best and brightest people in the region. ")}</p>
+            </div>
+            <div>
+                <a href="http://www.exceedgulf.com/our-partners" target="_blank">
+                    <img src="/static/${settings.DEFAULT_SITE_THEME}/images/about-img2.jpg" alt="">
+                    <span>${_("Our Partners")}</span>
+                </a>
+                <p>${_("Our partners can be found all over the world because the best innovations should not be limited by geography.")}</p>
+            </div>
+            <div>
+                <a href="" target="_blank">
+                    <img src="/static/${settings.DEFAULT_SITE_THEME}/images/about-img3.jpg" alt="">
+                    <span>${_("Our Customers")}</span>
+                </a>
+                <p>${_("With over 600 regional customers, we are lucky to have worked with the best organizations in the GCC.")}</p>
+            </div>
+        </div>
+    </section>
+</main>

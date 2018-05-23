@@ -3241,3 +3241,44 @@ section.wiki .wiki-wrapper {
         width: 100%;
     }
 }
+
+// about page
+
+.container.about {
+    h1 {
+        margin-top: 30px;
+    }
+    .photos {
+        display: flex;
+        justify-content: space-between;
+        & > div {
+            width: 33.3%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 15px;
+            @media screen and (max-width: 567px) {
+                width: 100%;
+            }
+        }
+        img {
+            display: block;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            width: 100%;
+            max-width: 220px;
+        }
+        a {
+            color: #000;
+            &:hover img {
+                opacity: 0.8;
+            }
+        }
+        span {
+            display: block;
+            font-size: 20px;
+        }
+        p {
+            margin: 10px 0;
+        }
+    }
+}
