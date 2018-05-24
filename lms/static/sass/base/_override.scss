@@ -100,14 +100,14 @@
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
-            color: $theme-user-link;
+            color: $header-nav-link-color;
 
             &:hover {
-                color: $theme-user-link-hover;
+                color: $header-nav-link-color-hover;
             }
 
             .fa {
-                color: $theme-user-link;
+                color: $header-nav-link-color;
             }
         }
         .dropdown {
@@ -173,7 +173,6 @@ body .container.activation h1.valid {
     }
 }
 .wrapper-footer {
-    background: $footer-bg;
     position: relative;
     padding: 50px 10px;
 
@@ -308,6 +307,7 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 }
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
+    font-size: 18px;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -2957,3 +2957,48 @@ html, body {
 .layout-1t2t.layout {
     width: 100%;
 }
+.icon-list_svg {
+    fill: $theme-link;
+}
+
+body main .container .wiki-wrapper .btn:not(.btn-danger) {
+    border: none;
+    box-shadow: none;
+    background: $theme-link;
+    color: #fff;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: $theme-link-hover;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+body section.wiki .btn.btn-danger {
+    color: $delete-button;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: lighten($delete-button, 20%);
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+body .enroll-message a {
+    color: $theme-link;
+}
+body {
+    .wrap-instructor-info .instructor-info-action,
+    .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action{
+        color: $theme-link;
+        &:hover,&:focus,&:active {
+            background-color: $theme-link-hover;
+            color: $white;
+        }
+    }
+}
+
