@@ -4,6 +4,8 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
+  from datetime import datetime
+  import pytz
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -40,7 +42,7 @@
         </ul>
     </div>
     <div class="theme-footer_row">
-      <p class="theme-footer_copyright">© RACCOON GANG 2017</p>
+      <p class="theme-footer_copyright">&copy; RACCOON GANG ${datetime.now(pytz.timezone(settings.TIME_ZONE)).year}</p>
       <p class="theme-footer_copyright">Built on <a class="theme-footer_platform-link" href="${footer['openedx_link']['url']}" target="_blank">OpenEdX</a></p>
     </div>
 
