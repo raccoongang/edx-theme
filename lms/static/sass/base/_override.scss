@@ -1667,6 +1667,7 @@ input[name="subject"] {
 section.wiki .main-article {
     width: 100%;
     padding: 10px 0 10px 10px;
+    word-break: break-all;
     @media screen and (min-width: 760px) {
         width: 74.57627%;
         padding: 40px 0 40px 40px;
@@ -2264,6 +2265,7 @@ section.wiki h1 {
 section.wiki .alert {
     margin: 20px;
     padding-right: 30px;
+    word-break: break-all;
 }
 
 section.wiki .alert .close {
