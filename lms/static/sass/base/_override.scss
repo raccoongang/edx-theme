@@ -2790,7 +2790,7 @@ table.stat_table {
             height: 3px;
             top: 16px;
             left: 5px;
-            background-color: #009be0;
+            background-color: $hamburger-color;
             transition: all 0.3s;
             
         }
@@ -2957,9 +2957,6 @@ html, body {
 .layout-1t2t.layout {
     width: 100%;
 }
-.icon-list_svg {
-    fill: $theme-link;
-}
 
 body main .container .wiki-wrapper .btn:not(.btn-danger) {
     border: none;
@@ -3001,4 +2998,19 @@ body {
         }
     }
 }
-
+@mixin sm {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin x-sm {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}
+@include sm {
+    .header-global .wrapper-header .list-inline li {
+        background-color: $theme-link;
+        margin-bottom: 8px;
+    }
+}

@@ -1,5 +1,8 @@
 //body background
 $body-bg: #eee;
+// link color
+$theme-link: #78a93e;
+$theme-link-hover: lighten($theme-link, 20%);
 //settings for header
 $header-bg: #fff;
 $header-nav-link-color: #002352;
@@ -24,7 +27,8 @@ $footer-bg: inherit;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
 $footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #fff;
+$footer-social-link-bg: $theme-link;
+$footer-social-link-bg-hover: lighten($theme-link, 20%);
 //btn
 $theme-btn-bg: #78a93e;
 $theme-btn-text-color: #ffe;
@@ -36,9 +40,7 @@ $theme-btn-white-border: #78a93e;
 $theme-btn-white-text-color: #78a93e;
 $theme-btn-white-text-color-hover: #fff;
 $theme-btn-white-bg-hover: #78a93e;
-// link color
-$theme-link: #78a93e;
-$theme-link-hover: lighten($theme-link, 20%);
+
 //settings for bg content pages
 $theme-content-bg: #eee;
 //settings for input icons
