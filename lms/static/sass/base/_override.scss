@@ -2957,3 +2957,26 @@ html, body {
 .layout-1t2t.layout {
     width: 100%;
 }
+.icon-list_svg {
+    fill: $theme-link;
+}
+
+body .container .wiki-wrapper section.wiki .btn {
+    border: none;
+    box-shadow: none;
+    background: $theme-link;
+    color: #fff;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: $theme-link-hover;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+body .enroll-message a {
+    color: $theme-link;
+}
