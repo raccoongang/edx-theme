@@ -1132,6 +1132,7 @@ body.view-in-course {
         section.handouts {
             border-top: 1px solid #c8c8c8;
             width: 100%;
+            word-break: break-all;
             @media screen and (min-width: 1000px) {
                 border-top: none;
                 width: 28%;
@@ -1899,6 +1900,7 @@ body {
 
 .forum-nav-thread-list,
 .forum-nav-browse-menu {
+    word-break: break-all;
     @media screen and (max-width: 768px) {
         height: 471px !important;
     }
