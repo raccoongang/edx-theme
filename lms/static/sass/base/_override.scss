@@ -946,10 +946,7 @@ section#wiki-content.wiki .delete {
 .forum-nav-thread-wrapper-1 {
     width: 100%;
 }
-.btn:focus:hover,
-.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button:focus:hover {
-    background: #fff !important;
-}
+
 body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
     border-top: 7px solid $theme-input-icon;
 }
@@ -1945,7 +1942,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 #membership .member-list-widget .add-field {
     width: 100%;
     @media screen and (min-width: 760px) {
-        width: initial;
+        width: 50%;
     }
 }
 
@@ -2997,6 +2994,23 @@ body {
             color: $white;
         }
     }
+    .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary, .view-teams .card .card-actions .action-view {
+        border-color: $theme-link;
+        color: $theme-link;
+        &:hover,&:focus,&:active {
+            background-color: $theme-link-hover;
+            color: $white;
+        }
+    }
+    .view-teams .page-content-nav .nav-item.is-active {
+        border-color: $theme-link;
+    }
+    .wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button:hover {
+        background-color: $theme-link-hover;
+    }
+    .wrapper-footer .footer-support {
+        color: $white
+    }
 }
 @mixin sm {
     @media screen and (max-width: 768px) {
@@ -3012,5 +3026,19 @@ body {
     .header-global .wrapper-header .list-inline li {
         background-color: $theme-link;
         margin-bottom: 8px;
+        a {
+            color: $white;
+        }
+    }
+    .view-teams .cards-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .view-teams .card {
+        width: 100%;
+    }
+    body .header-global.header-global__course {
+        flex: 1 0 auto;
     }
 }
+
