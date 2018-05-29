@@ -1,3 +1,14 @@
+@mixin sm {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin x-sm {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}
+
 .header-global {
     height: auto;
     background: $header-bg;
@@ -1941,7 +1952,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 #membership .member-list-widget .add-field {
     width: 100%;
     @media screen and (min-width: 760px) {
-        width: initial;
+        width: 50%;
     }
 }
 
@@ -2953,3 +2964,89 @@ html, body {
 .layout-1t2t.layout {
     width: 100%;
 }
+body main .container .wiki-wrapper .btn:not(.btn-danger) {
+    border: none;
+    box-shadow: none;
+    background: $theme-link;
+    color: #fff;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: $theme-link-hover;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+body section.wiki .btn.btn-danger {
+    color: $delete-button;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: lighten($delete-button, 20%);
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+body .enroll-message a {
+    color: $theme-link;
+}
+body {
+    .wrap-instructor-info .instructor-info-action,
+    .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action{
+        color: $theme-link;
+        &:hover,&:focus,&:active {
+            background-color: $theme-link-hover;
+            color: $white;
+        }
+    }
+    .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary,
+    &.view-teams .teams-main .card .card-actions .action-view {
+        border-color: $theme-link;
+        color: $theme-link;
+        &:hover,&:focus,&:active {
+            background-color: $theme-link-hover;
+            color: $white;
+        }
+    }
+    &.view-teams .teams-main .page-content-nav .nav-item.is-active {
+        border-color: $theme-link;
+        color: $theme-link;
+    }
+    &.view-teams .teams-main .page-content-nav .nav-item:hover,
+    &.view-teams .teams-main .page-content-nav .nav-item:focus {
+        border-color: $theme-link;
+        color: $theme-link;
+    }
+    .wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button:hover {
+        background-color: $theme-link-hover;
+    }
+    .wrapper-footer .footer-support {
+        color: $white
+    }
+}
+
+@include sm {
+    .header-global .wrapper-header .list-inline li {
+        background-color: $theme-link;
+        margin-bottom: 8px;
+        a {
+            color: $white;
+        }
+    }
+    .view-teams .cards-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .view-teams .card {
+        width: 100%;
+    }
+    body .header-global.header-global__course
+    body .header-global {
+        flex: 1 0 auto;
+    }
+}
+
