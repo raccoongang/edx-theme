@@ -1,3 +1,13 @@
+@mixin sm {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin x-sm {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}
 .header-global {
     height: auto;
     background: $header-bg;
@@ -50,6 +60,9 @@
                 &:hover {
                     color: $header-nav-link-color-hover;
                     border: none;
+                }
+                @include sm {
+                    color: $white;
                 }
             }
         }
@@ -2994,7 +3007,8 @@ body {
             color: $white;
         }
     }
-    .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary, .view-teams .card .card-actions .action-view {
+    .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary,
+    &.view-teams .teams-main .card .card-actions .action-view {
         border-color: $theme-link;
         color: $theme-link;
         &:hover,&:focus,&:active {
@@ -3002,8 +3016,14 @@ body {
             color: $white;
         }
     }
-    .view-teams .page-content-nav .nav-item.is-active {
+    &.view-teams .teams-main .page-content-nav .nav-item.is-active {
         border-color: $theme-link;
+        color: $theme-link;
+    }
+    &.view-teams .teams-main .page-content-nav .nav-item:hover,
+    &.view-teams .teams-main .page-content-nav .nav-item:focus {
+        border-color: $theme-link;
+        color: $theme-link;
     }
     .wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button:hover {
         background-color: $theme-link-hover;
@@ -3012,16 +3032,7 @@ body {
         color: $white
     }
 }
-@mixin sm {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-@mixin x-sm {
-    @media screen and (max-width: 450px) {
-        @content;
-    }
-}
+
 @include sm {
     .header-global .wrapper-header .list-inline li {
         background-color: $theme-link;
@@ -3037,7 +3048,8 @@ body {
     .view-teams .card {
         width: 100%;
     }
-    body .header-global.header-global__course {
+    body .header-global.header-global__course
+    body .header-global {
         flex: 1 0 auto;
     }
 }
