@@ -7,25 +7,20 @@
     @media screen and (min-width: 800px) {
         margin-bottom: 0;
     }
-}
-.icon-list_item {
-    margin: 0 4px;
-}
-.icon-list_icon {
-    width: 35px;
-    height: 35px;
-}
-
-#ico-vk,
-#ico-odnoklassniki,
-#ico-behance,
-#ico-vimeo,
-#ico-youtube,
-#ico-linkedin,
-#ico-twitter,
-#ico-instagramm,
-#ico-facebook {
-    path {
+    &_item {
+        margin: 0 4px;
+    }
+    &_link {
+        display: block;
+        width: 35px;
+        height: 35px;
+    }
+    &_icon {
+        width: 35px;
+        height: 35px;
         fill: $footer-social-link-bg;
+        &:hover {
+            fill: $footer-social-link-bg-hover;
+        }
     }
 }

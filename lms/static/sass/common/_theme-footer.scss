@@ -20,6 +20,13 @@
     width: 100%;
     justify-content: center;
     margin: 0 0 15px;
+    width: $logo-width;
+    height: $logo-height;
+    img {
+        display: block;
+        width: $logo-width;
+        height: $logo-height;
+    }
     @media screen and (min-width: 800px) {
         margin: 0;
         width: auto;
@@ -28,5 +35,6 @@
     }
     @media screen and (min-width: 1200px) {
         right: 0;
+        bottom: 0;
     }
 }
