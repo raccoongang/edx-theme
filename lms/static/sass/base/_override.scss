@@ -1358,6 +1358,7 @@ body .header-global .user .user-dropdown-menu {
 }
 body .header-global .wrapper-header .list-inline .item a {
     font-weight: 400;
+    text-transform: capitalize;
 }
 
 body .home>header {
@@ -1463,7 +1464,8 @@ body.view-in-course .wrapper-course-material, body.view-in-course .wrapper-previ
 .course-complete {
     color: #474747;
     font-size: 14px;
-    text-align: center;
+    text-align: left;
+    font-weight: 600;
 }
 body .header-global .nav-global .item {
     padding: 5px 0;
@@ -1816,3 +1818,11 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .co
     }
 }
 
+body .course-header.preview-menu h2 {
+    margin: 0;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
