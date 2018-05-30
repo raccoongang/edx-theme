@@ -1,0 +1,25 @@
+<%! from django.utils.translation import ugettext as _ %>
+
+<div class="wrapper-footer">
+
+    <footer class="footer-app" role="contentinfo" id="company-info">
+        <div class="footer-app-copyright">
+            <p class="copy copy-micro">${copyright_text}</p>
+        </div>
+        <nav class="footer-app-nav">
+            <ul class="list list-legal">
+                <li class="nav-item">
+                    <a class="action btn btn-small btn-link" href="${_("https://youngthinker.org/en/terms-of-service")}">${_("Terms of Service")}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="action btn btn-small btn-link" href="${_("https://youngthinker.org/en/privacy-policy")}">${_("Privacy Policy")}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="action btn btn-small btn-link" href="${_("https://youngthinker.org/en/code-of-conduct")}">${_("Code of Conduct")}</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+</div>
+
