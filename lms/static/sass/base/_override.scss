@@ -2937,8 +2937,27 @@ table.stat_table {
     height: 32px !important;
 }
 
-//sticky footer
+// correct modal window
+.course-wrapper .course-content .xqa-modal,
+.course-wrapper .course-content .staff-modal,
+.course-wrapper .course-content .history-modal,
+.course-wrapper .courseware-results-wrapper .xqa-modal,
+.course-wrapper .courseware-results-wrapper .staff-modal,
+.course-wrapper .courseware-results-wrapper .history-modal {
+    left: 50% !important;
+    top: 50% !important;
+    width: 640px;
+    height: auto;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    margin-left: 0 !important;
+    box-sizing: border-box;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
+//sticky footer
 #content {
     flex: 1 0 auto;
 }
