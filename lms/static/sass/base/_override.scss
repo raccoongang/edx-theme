@@ -3076,4 +3076,8 @@ body {
     body .header-global {
         flex: 1 0 auto;
     }
+    // ie11 fix - button for upload csv on cert page in instructor
+    body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+        height: 26px;
+    }
 }
