@@ -17,6 +17,8 @@
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
+    display: table;
+    min-height: 76px;
 
     .wrapper-header {
         height: auto;
@@ -61,6 +63,9 @@
                 &:hover {
                     color: $header-nav-link-color-hover;
                     border: none;
+                }
+                @include sm {
+                    color: $white;
                 }
             }
         }
@@ -111,14 +116,14 @@
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
-            color: $theme-user-link;
+            color: $header-nav-link-color;
 
             &:hover {
-                color: $theme-user-link-hover;
+                color: $header-nav-link-color-hover;
             }
 
             .fa {
-                color: $theme-user-link;
+                color: $header-nav-link-color;
             }
         }
         .dropdown {
