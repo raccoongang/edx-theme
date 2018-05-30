@@ -2983,6 +2983,12 @@ html, body {
 .layout-1t2t.layout {
     width: 100%;
 }
+
+.icon-list_svg {
+    fill: $theme-link;
+}
+
+body main .container .wiki-wrapper .btn,
 body main .container .wiki-wrapper .btn:not(.btn-danger) {
     border: none;
     box-shadow: none;
@@ -2998,6 +3004,7 @@ body main .container .wiki-wrapper .btn:not(.btn-danger) {
         text-shadow: none;
     }
 }
+
 body section.wiki .btn.btn-danger {
     color: $delete-button;
     &:hover,&:focus,&:active {
@@ -3013,6 +3020,7 @@ body section.wiki .btn.btn-danger {
 body .enroll-message a {
     color: $theme-link;
 }
+
 body {
     .wrap-instructor-info .instructor-info-action,
     .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action{
@@ -3068,4 +3076,3 @@ body {
         flex: 1 0 auto;
     }
 }
-
