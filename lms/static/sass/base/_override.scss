@@ -1874,14 +1874,17 @@ body {
     }
 }
 
-.forum-nav-thread-list {
-    @media screen and (max-width: 759px) {
-        height: 100px !important;
+.forum-nav.layout-col.layout-col-a {
+    @media screen and (max-width: 768px) {
+        height: 500px !important;
     }
 }
 
+.forum-nav-thread-list,
 .forum-nav-browse-menu {
-    max-height: 500px;
+    @media screen and (max-width: 768px) {
+        height: 471px !important;
+    }
 }
 //end responsive for forum page
 
@@ -2787,7 +2790,7 @@ table.stat_table {
             height: 3px;
             top: 16px;
             left: 5px;
-            background-color: #009be0;
+            background-color: $hamburger-color;
             transition: all 0.3s;
             
         }
@@ -2952,4 +2955,24 @@ table.stat_table {
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+//sticky footer
+#content {
+    flex: 1 0 auto;
+}
+.window-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}
+.wrapper-preview-menu {
+    width: 100%;
+}
+html, body {
+    height: 100%;
+}
+.layout-1t2t.layout {
+    width: 100%;
 }
