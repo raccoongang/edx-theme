@@ -1,3 +1,13 @@
+@mixin sm {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin x-sm {
+    @media screen and (max-width: 450px) {
+        @content;
+    }
+}
 .header-global {
     height: auto;
     background: $header-bg;
@@ -2784,4 +2794,307 @@ body .home>header .outer-wrapper {
 .home>header .title:last-child {
     max-width: 700px;
     width: 100%;
+}
+
+.wiki-wrapper {
+    @media screen and (max-width: 999px) {
+        .article-wrapper {
+            order: 2;
+        }
+        .article-functions {
+            order: 1;
+        }
+    }
+}
+
+.instructor-dashboard-content-2 .slickgrid .slick-cell {
+    height: auto;
+    padding: 5px;
+}
+
+.wrapper-course-material {
+    .hamburger-course {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 36px;
+        margin: 15px;
+        padding: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 0;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            &:not(:disabled) {
+                border: none;
+                background: none;
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        @media screen and (min-width: 760px) {
+            display: none;
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            top: 16px;
+            left: 5px;
+            background-color: $hamburger-color;
+            transition: all 0.3s;
+
+        }
+        &:after {
+            box-shadow: 0 10px 0 0 $hamburger-color, 0 -10px 0 0 $hamburger-color;
+        }
+    }
+    .course-material {
+        display: none;
+        @media screen and (min-width: 760px) {
+            display: block;
+        }
+        @media screen and (max-width: 759px) {
+            padding: 0 10px;
+        }
+    }
+    .course-tabs {
+        li {
+            display: block;
+            float: none;
+            @media screen and (min-width: 760px) {
+                display: inline-block;
+            }
+            @media screen and (max-width: 759px) {
+                margin-bottom: 10px;
+            }
+            a {
+                padding: 1px 10px;
+                text-align: left;
+                font-weight: 400;
+                line-height: 20.72px;
+                @media screen and (min-width: 760px) {
+                    padding: 10px 15px 13px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.course-nav-open {
+    .hamburger-course {
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+            box-shadow: none;
+        }
+    }
+    .course-material {
+        display: block;
+    }
+}
+
+// Dashboard
+
+.dashboard .my-courses .course .details .course-actions button.action {
+    border-color: $theme-btn-white-border !important;
+    transition: all 0.25s;
+    .fa {
+        color: $theme-btn-white-border;
+    }
+    &:hover {
+        background: $theme-btn-bg;
+        .fa {
+            color: #fff;
+        }
+    }
+}
+
+// Instructor Dashboard beautified
+
+.enrollment-wrapper table {
+    width: 100%;
+    caption {
+        padding: 10px;
+    }
+    th {
+        text-align: left;
+    }
+    td {
+        text-align: center;
+    }
+    th, td {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+    }
+}
+
+.instructor-dashboard-content-2 {
+    line-height: 1.5;
+    button:not(.btn-link),
+    .btn-blue,
+    input[type=button] {
+        margin: 10px 0;
+    }
+    p input {
+        margin-top: 0 !important;
+    }
+    ul li {
+        margin-bottom: 5px;
+    }
+    textarea {
+        width: 100% !important;
+        clear: both;
+        &#notes,
+        &#certificate-invalidation-notes {
+            height: 100px;
+        }
+    }
+    .add-certificate-invalidation {
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// register and login form
+
+.field-link {
+    color: $theme-link;
+}
+#login-form,
+#register-form {
+    button {
+        font-weight: normal !important;
+        font-size: 16px !important;
+        text-transform: uppercase;
+        &.forgot-password {
+            text-transform: none;
+        }
+    }
+    .nav-btn {
+        height: auto !important;
+    }
+}
+#register-mailing_address {
+    height: 32px !important;
+}
+
+//sticky footer
+
+#content {
+    flex: 1 0 auto;
+}
+.window-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}
+.wrapper-preview-menu {
+    width: 100%;
+}
+html, body {
+    height: 100%;
+}
+.layout-1t2t.layout {
+    width: 100%;
+}
+
+body main .container .wiki-wrapper .btn:not(.btn-danger) {
+    border: none;
+    box-shadow: none;
+    background: $theme-link;
+    color: #fff;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: $theme-link-hover;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+body section.wiki .btn.btn-danger {
+    color: $delete-button;
+    &:hover,&:focus,&:active {
+        background-image: none;
+        background: lighten($delete-button, 20%);
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+body .enroll-message a {
+    color: $theme-link;
+}
+body {
+    .wrap-instructor-info .instructor-info-action,
+    .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action{
+        color: $theme-link;
+        &:hover,&:focus,&:active {
+            background-color: $theme-link-hover;
+            color: $white;
+        }
+    }
+    .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary,
+    &.view-teams .teams-main .card .card-actions .action-view {
+        border-color: $theme-link;
+        color: $theme-link;
+        &:hover,&:focus,&:active {
+            background-color: $theme-link-hover;
+            color: $white;
+        }
+    }
+    &.view-teams .teams-main .page-content-nav .nav-item.is-active {
+        border-color: $theme-link;
+        color: $theme-link;
+    }
+    &.view-teams .teams-main .page-content-nav .nav-item:hover,
+    &.view-teams .teams-main .page-content-nav .nav-item:focus {
+        border-color: $theme-link;
+        color: $theme-link;
+    }
+    .wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button:hover {
+        background-color: $theme-link-hover;
+    }
+    .wrapper-footer .footer-support {
+        color: $white
+    }
+}
+
+@include sm {
+    .header-global .wrapper-header .list-inline li {
+        background-color: $theme-link;
+        margin-bottom: 8px;
+        a {
+            color: $white !important;
+        }
+    }
+    .view-teams .cards-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .view-teams .card {
+        width: 100%;
+    }
+    body .header-global.header-global__course,
+    body .header-global {
+        flex: 1 0 auto;
+    }
 }
