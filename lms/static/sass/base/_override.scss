@@ -3080,4 +3080,8 @@ body {
     body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
         height: 26px;
     }
+    // ie11 fix - course tab responsive fixes
+    body.view-in-course .container .course-index {
+        display: table;
+    }
 }
