@@ -80,7 +80,7 @@ show_signatory = request.GET.get('signatory', 'true')
                               % if show_signatory != 'false':
                                 <div class="signatory-col" id="sign1">
                                     <div class="signatory-holder signatory-holder__left">
-                                        <img class="signatory-col_img" height="40" src="/static/${settings.DEFAULT_SITE_THEME}/images/signnew.png" alt="${signatories[1]['name']}">
+                                        <img class="signatory-col_img" height="40" src="${static.url(signatories[1]['signature_image_path'])}" alt="${signatories[1]['name']}">
                                         <hr id="line">
                                         <p class="signatory-credentials copy copy-micro">
                                             <span class="role">${signatories[1]['name']}</span>,  
