@@ -44,7 +44,7 @@ from django.utils.translation import ugettext as _
         % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
           <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
         % else:
-          <a class="btn btn-login" href="/login${login_query()}">${_("Sign in")}</a>
+          <a class="btn btn-login" href="${settings.LOGIN_URL}&next=/dashboard">${_("Sign in")}</a>
         % endif
       
     </li>
