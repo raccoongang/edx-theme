@@ -1746,11 +1746,6 @@ body .enroll-message a {
     body .view-profile .wrapper-profile-sections{
         min-width: 0;
     }
-    body .content-wrapper .container {
-        padding: 40px 10px 120px;
-        display: flex;
-        flex-direction: column;
-    }
     body .course-info .course-sidebar {
         width: 100%;
         display: block;
@@ -1828,3 +1823,7 @@ body .course-header.preview-menu h2 {
     font-weight: 600;
 }
 
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
+    width: 100%;
+    display: inline-block;
+}
