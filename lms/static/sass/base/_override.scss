@@ -17,6 +17,7 @@
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
+    min-height: 76px;
 
     .wrapper-header {
         height: auto;
@@ -61,6 +62,9 @@
                 &:hover {
                     color: $header-nav-link-color-hover;
                     border: none;
+                }
+                @include sm {
+                    color: $white;
                 }
             }
         }
@@ -111,14 +115,14 @@
         .user-link .label-username {
             text-shadow: none;
             margin: 13px 5px 13px 15px;
-            color: $theme-user-link;
+            color: $header-nav-link-color;
 
             &:hover {
-                color: $theme-user-link-hover;
+                color: $header-nav-link-color-hover;
             }
 
             .fa {
-                color: $theme-user-link;
+                color: $header-nav-link-color;
             }
         }
         .dropdown {
@@ -3075,5 +3079,13 @@ body {
     body .header-global.header-global__course
     body .header-global {
         flex: 1 0 auto;
+    }
+    // ie11 fix - button for upload csv on cert page in instructor
+    body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
+        height: 26px;
+    }
+    // ie11 fix - course tab responsive fixes
+    body.view-in-course .container .course-index {
+        display: table;
     }
 }
