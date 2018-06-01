@@ -54,7 +54,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-            <img id="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/raccoon_university.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img id="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -85,11 +85,11 @@ site_status_msg = get_site_status_msg(course_id)
                     ${_("Courses")}
                   </a>
                 </li>
-                <li class="tab-nav-item">
-                  <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                    ${_("Programs")}
-                  </a>
-                </li>
+                <!--<li class="tab-nav-item">-->
+                  <!--<a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">-->
+                    <!--${_("Programs")}-->
+                  <!--</a>-->
+                <!--</li>-->
             % else:
               % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
                 <li class="item nav-global-01">
@@ -102,11 +102,11 @@ site_status_msg = get_site_status_msg(course_id)
                     ${_("Courses")}
                   </a>
                 </li>
-                <li class="tab-nav-item">
-                  <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                    ${_("Programs")}
-                  </a>
-                </li>
+                <!--<li class="tab-nav-item">-->
+                  <!--<a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">-->
+                    <!--${_("Programs")}-->
+                  <!--</a>-->
+                <!--</li>-->
               % endif
             % endif
             %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
@@ -155,11 +155,11 @@ site_status_msg = get_site_status_msg(course_id)
                   <a class="tab-nav-link" href="/courses">${_("Explore Courses")}</a>
                 </li>
               %endif
-              <li class="tab-nav-item">
-                <a class="tab-nav-link" href="/xseries">
-                  ${_("Programs")}
-                </a>
-              </li>
+              <!--<li class="tab-nav-item">-->
+                <!--<a class="tab-nav-link" href="/xseries">-->
+                  <!--${_("Programs")}-->
+                <!--</a>-->
+              <!--</li>-->
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                 <li class="item nav-global-04">
                   <a class="tab-nav-link" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Log in")}</a>

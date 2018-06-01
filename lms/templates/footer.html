@@ -23,14 +23,14 @@
               <a href="${marketing_link('ABOUT')}">${_('About')}</a>
           </li>
           <li class="nav-legal-01">
-              <a href="mailto:info@raccoongang.com">${_('Contact')}</a>
+              <a href="mailto:info@demingway.com">${_('Contact')}</a>
           </li>
-          <li class="nav-legal-03">
-              <a href="${marketing_link('HOW_IT_WORKS')}">${_('How to use?')}</a>
-          </li>
-          <li class="nav-legal-04">
-              <a href="${marketing_link('FAQ')}">${_('FAQ')}</a>
-          </li>
+          <!--<li class="nav-legal-03">-->
+              <!--<a href="${marketing_link('HOW_IT_WORKS')}">${_('How to use?')}</a>-->
+          <!--</li>-->
+          <!--<li class="nav-legal-04">-->
+              <!--<a href="${marketing_link('FAQ')}">${_('FAQ')}</a>-->
+          <!--</li>-->
 ##            % for item_num, link in enumerate(footer['navigation_links'], start=1):
 ##            <li class="nav-colophon-0${item_num}">
 ##              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
@@ -51,16 +51,16 @@
 ##            % endfor
         </ul>
         <ul class="theme-footer_social-list">
+          <!--<li class="theme-footer_social-list-item">-->
+            <!--<a class="theme-footer_social-list-facebook" target="_blank" href="https://www.facebook.com/raccoongangco"></a>-->
+          <!--</li>-->
           <li class="theme-footer_social-list-item">
-            <a class="theme-footer_social-list-facebook" target="_blank" href="https://www.facebook.com/raccoongangco"></a>
-          </li>
-          <li class="theme-footer_social-list-item">
-            <a class="theme-footer_social-list-twitter" target="_blank" href=" https://twitter.com/raccoongangcom"></a>
+            <a class="theme-footer_social-list-twitter" target="_blank" href="https://twitter.com/WayDeming"></a>
           </li>
         </ul>
     </div>
     <div class="theme-footer_row">
-      <p class="theme-footer_copyright">© RACCOON GANG 2017</p>
+      <p class="theme-footer_copyright">© DEMING WAY 2018</p>
       <p class="theme-footer_copyright">Built on <a class="theme-footer_platform-link" href="${footer['openedx_link']['url']}" target="_blank">OpenEdX</a></p>
     </div>
 
