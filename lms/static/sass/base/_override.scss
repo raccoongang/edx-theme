@@ -2222,6 +2222,10 @@ div {
 }
 
 /*-----Discussion-----*/
+
+.discussion-post {
+    word-break: break-all;
+}
 .discussion {
     &.inline-discussion {
         .new-post-article {
@@ -2711,6 +2715,7 @@ body .page-header-secondary .btn {
 }
 .forum-nav-thread-list,
 .forum-nav-browse-menu {
+    word-break: break-all;
     height: 471px !important;
 }
 // end of forum responsive fixes
