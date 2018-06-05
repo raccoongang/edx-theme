@@ -10,7 +10,7 @@ from django.utils import timezone
   <a href=${reverse('course_root', kwargs={'course_id': course.id})}>
     <header class="course-image">
       <div class="cover-image">
-        <i.0003_auto_20180604_1350mg src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
+        <img src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
         <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
       </div>
     </header>
