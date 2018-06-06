@@ -913,7 +913,7 @@ section#wiki-content.wiki .delete {
 .forum-nav-thread-wrapper-1 {
     width: 100%;
 }
-.btn:focus:hover,
+
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button:focus:hover {
     background: #fff !important;
 }
@@ -3106,3 +3106,14 @@ body {
         display: table;
     }
 }
+
+// forum responsive fixes
+
+.forum-nav.layout-col.layout-col-a {
+    height: 500px !important;
+}
+.forum-nav-thread-list,
+.forum-nav-browse-menu {
+    height: 471px !important;
+}
+// end of forum responsive fixes
