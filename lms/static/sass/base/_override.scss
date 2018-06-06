@@ -5,6 +5,10 @@
 // @media (max-width: 540px) {}
 // @media (max-width: 479px) {}
 
+*:focus {
+    outline-color: $base-color !important;
+}
+
 @font-face {
     font-weight: normal;
     font-style: normal;
