@@ -3103,8 +3103,7 @@ body {
 }
 body .header-global.header-global__course,
 body .header-global {
-    flex: 0 1 auto;
-    min-height: 84px;
+    display: table;
 }
 // ie11 fix - button for upload csv on cert page in instructor
 body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
