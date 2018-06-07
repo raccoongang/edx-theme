@@ -2672,13 +2672,27 @@ table.stat_table {
         justify-content: baseline;
     }
 }
+
+#content {
+    flex: 1 1 auto;
+}
+.window-wrap {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
 .svg-edx {
     width: 73px;
     margin: -5px 10px 0 5px;
 }
+
 .svg-raccoon {
     width: 20px;
     margin: -5px 10px 0 5px;
+}
+body {
+    margin: 0;
 }
 
 .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-value {
@@ -2969,28 +2983,12 @@ table.stat_table {
     transform: translate(-50%, -50%);
 }
 
-//sticky footer
-#content {
-    flex: 1 0 auto;
-}
-.window-wrap {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
-}
 .wrapper-preview-menu {
     width: 100%;
 }
-html, body {
-    height: 100%;
-}
+
 .layout-1t2t.layout {
     width: 100%;
-}
-
-.icon-list_svg {
-    fill: $theme-link;
 }
 
 body main .container .wiki-wrapper .btn,
@@ -3088,4 +3086,37 @@ body {
     body.view-in-course .container .course-index {
         display: table;
     }
+    body .wrapper-course-material .course-tabs li a {
+        display: inline-block;
+    }
+    .view-teams .cards-list .card {
+        width: 100%;
+    }
+}
+body .doc-link {
+    color: $theme-link;
+    &:hover,&:focus,&:active {
+        color: $header-nav-link-color-hover;
+    }
+}
+body .user-dropdown {
+    color: $header-nav-link-color;
+    &:hover,&:focus,&:active {
+        color: $header-nav-link-color-hover;
+    }
+}
+main#main .container.dashboard {
+    display: flex;
+}
+body .dashboard .my-courses {
+    width: auto;
+    flex: 1 1 75%;
+}
+.dashboard-search-bar {
+    width: auto;
+    flex: 1 1 25%;
+}
+
+body .teams-content .teams-main .team-edit-fields .team-required-fields {
+    width: 100%;
 }
