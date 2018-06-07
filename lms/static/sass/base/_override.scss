@@ -65,6 +65,10 @@
                 }
                 @include sm {
                     color: $white;
+                    &:hover {
+                        color: $white;
+                        border: none;
+                    }
                 }
             }
         }
@@ -131,6 +135,10 @@
             width: 29px;
             height: 25px;
             box-sizing: border-box;
+            color: $header-nav-link-color;
+            &:hover {
+                color: $header-nav-link-color-hover;
+            }
         }
         .dropdown-menu li>a {
             color: $dropdown-menu-link-color;
@@ -328,10 +336,18 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel,
-body .link-to-group-settings,
-body .wrapper-course-material .course-tabs li a {
+body .link-to-group-settings {
     color: $theme-link !important;
     
+    &:focus,
+    &:hover,
+    &.active {
+        color: $theme-link !important;
+        border-color: $theme-link !important;
+    }
+}
+
+body .wrapper-course-material .course-tabs li a {
     &:focus,
     &:hover,
     &.active {
@@ -832,7 +848,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     @media screen and (min-width: 760px) {
         display: inline;
         position: absolute;
-        right: 90px;
+        right: 0;
         bottom: 0;
         padding: 0;
     }
@@ -1430,7 +1446,7 @@ body.view-login #forgot-password-modal #password-reset header h2 {
         order: 2;
         padding-right: 10px;
         padding-left: 10px;
-        width: 23.23176%;
+        flex: 1 1 24%;
     }
 
     form {
@@ -1441,7 +1457,7 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     width: 100%;
     order: 2;
     @media screen and (min-width: 1200px) {
-        width: 74.41059%;
+        flex: 1 1 75%;
         order: 1;
     }
 }
@@ -1462,6 +1478,7 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     order: 3;
     min-height: auto;
     width: 100%;
+    padding-top: 24px;
 }
 #profile-sidebar {
     order: 4;
@@ -2374,6 +2391,8 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info .course-sidebar {
     float: none;
     width: 100%;
+    display: flex;
+    justify-content: center;
     @media screen and (min-width: 760px) {
         float: left;
         width: 31.76157%;
@@ -2655,7 +2674,7 @@ table.stat_table {
 }
 //end sysadmin page responsive
 
-.footer-support {
+footer .footer-support {
     font-size: 12px;
     line-height: 1.2px;
     color: $footer-support-text-and-logo;
@@ -2668,7 +2687,7 @@ table.stat_table {
     @media screen and (min-width: 760px) {
         position: absolute;
         padding: 0;
-        bottom: -16px;
+        bottom: -33px;
         justify-content: baseline;
     }
 }
@@ -3061,10 +3080,17 @@ body {
 
 @include sm {
     .header-global .wrapper-header .list-inline li {
-        background-color: $theme-link;
+        width: 100%;
         margin-bottom: 8px;
         a {
+            width: 100%;
+            text-align: center;
             color: $white;
+            background-color: $theme-link;
+            &:hover {
+                background-color: $theme-link-hover;
+                color: $white;
+            }
         }
     }
     .view-teams .cards-list {
@@ -3119,4 +3145,7 @@ body .dashboard .my-courses {
 
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
     width: 100%;
+}
+.view-teams .theme-footer p, .view-teams .theme-footer span {
+    color: $footer-support-text-and-logo;
 }
