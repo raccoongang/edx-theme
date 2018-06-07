@@ -1726,6 +1726,7 @@ h6,
                 text-align: left;
                 font-weight: 400;
                 line-height: 20.72px;
+                color: #5e5e5e !important;
                 @media screen and (min-width: 760px) {
                     padding: 10px 15px 13px;
                     text-align: center;
@@ -2544,6 +2545,7 @@ body {
 
 .doc-link {
     margin-left: auto;
+    color: $base-color !important;
 }
 
 /*-----Register page-----*/
@@ -2563,6 +2565,7 @@ body {
         margin: -1px 0 0;
         padding: 0 0 0 10px;
         vertical-align: top;
+        color: $base-color !important;
     }
     .user-dropdown-menu {
         z-index: 200;

@@ -22,17 +22,17 @@ $pink: red;
 //body background
 $body-bg: #eee;
 //settings for header
-$header-nav-link-color: #2d2837;
-$header-nav-link-color-hover: #ec3a49;
+$header-nav-link-color: #ec3a49;
+$header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $header-background: #fff;
 $dropdown-menu-background: #9da5ac;
-$dropdown-menu-color: #2d2837;
-$dropdown-menu-color-hover: #ec3a49;
+$dropdown-menu-color: #ec3a49;
+$dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
 //logo
 $logo-width: 131px;
 $logo-height: 50px;
 //settings for hamburger
-$hamburger-color: $base-color;
+$hamburger-color: #ec3a49;
 $hamburger-width: 40px;
 $hamburger-height: 30px;
 $hamburger-height-line: 3px;
@@ -75,7 +75,7 @@ $theme-link-hover: lighten($base-color, 20%);
 $theme-content-bg: #eee;
 //settings for input icons
 $theme-input-icon: #ec3a49;
-//user link color 
+//user link color
 $theme-user-link: #ec3a49;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
