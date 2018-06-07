@@ -2852,3 +2852,9 @@ body .enroll-message a {
 body .doc-link {
     color: $theme-link;
 }
+body .user-dropdown {
+    color: $theme-link;
+    &:hover,&:focus,&:active {
+        color: $theme-link-hover;
+    }
+}
