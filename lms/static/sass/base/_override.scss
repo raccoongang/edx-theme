@@ -2215,6 +2215,17 @@ body .course-info .course-sidebar {
     }
     .shopping-cart .user-data .data-input {
         width: 100%;
+        margin-left: 0;
+    }
+    .shopping-cart .container {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    body .course-info .course-sidebar {
+        width: 100%;
+        .course-summary {
+            width: 100%;
+        }
     }
 }
 .mpesa_payment {
@@ -2228,7 +2239,7 @@ body .course-info .course-sidebar {
 }
 .window-wrap {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     min-height: 100vh;
 }
 html, body {
@@ -2236,4 +2247,7 @@ html, body {
 }
 .content-wrapper {
     flex: 1 0 auto;
+}
+.shopping-cart .discount .code-text span {
+    margin-right: 0;
 }
