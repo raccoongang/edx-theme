@@ -2186,6 +2186,7 @@ body .course-info .course-sidebar {
         .col-1,.col-2 {
             width: auto;
             margin-right: 14px;
+            order: 2;
         }
     }
     .shopping-cart .user-data > .clearfix {
@@ -2229,6 +2230,14 @@ body .course-info .course-sidebar {
     }
     .mpesa_payment {
         padding: 20px;
+    }
+    .three-col {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-3 {
+        order: 1;
+        align-self: flex-end;
     }
 }
 .mpesa_payment {
