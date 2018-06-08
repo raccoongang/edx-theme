@@ -2883,11 +2883,12 @@ main#main .container.dashboard {
 }
 body .dashboard .my-courses {
     width: auto;
-    flex: 1 1 74%;
+    flex: 1 1 70%;
+    // 70% and 25% - are blocks width , and 5% is left for gap between them
 }
 .dashboard-search-bar {
     width: auto;
-    flex: 1 1 24%;
+    flex: 1 1 25%;
 }
 
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
