@@ -1,0 +1,12 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Terms & Conditions:")}</h1>
+        <p>${_("We accept VISA, Mastercard, Discover, and American Express. All orders will require you to provide your email address and telephone number in the event that we need to contact you regarding your order.")}</p>
+    </section>
+</main>

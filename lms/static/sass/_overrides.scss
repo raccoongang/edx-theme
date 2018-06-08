@@ -29,8 +29,8 @@ $dropdown-menu-background: #9da5ac;
 $dropdown-menu-color: #009be0;
 $dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
 //logo
-$logo-width: 37px;
-$logo-height: 37px;
+$logo-width: 175px;
+$logo-height: 65px;
 //settings for hamburger
 $hamburger-color: #009be0;
 $hamburger-width: 40px;
@@ -50,11 +50,12 @@ $search-input-color: #fff;
 $search-input-border: #fff;
 $search-button-color: #fff;
 //settings for footer
-$footer-bg: #009289;
+$footer-bg: #555;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
 $footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #fff;
+$footer-social-link-bg: #009be0;
+$footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
 //btn
 $theme-btn-bg: #009be0;
 $theme-btn-text-color: #fff;
@@ -63,17 +64,17 @@ $theme-btn-text-color-hover: #fff;
 $theme-btn-shadow: darken($theme-btn-bg, 20%);
 //btn-white
 $theme-btn-white-bg: #fff;
-$theme-btn-white-border: #fc6a15;
-$theme-btn-white-text-color: #fc6a15;
+$theme-btn-white-border: #009be0;
+$theme-btn-white-text-color: #009be0;
 $theme-btn-white-text-color-hover: #fff;
-$theme-btn-white-bg-hover: #fc6a15;
+$theme-btn-white-bg-hover: #009be0;
 // link color
 $theme-link: $base-color;
 $theme-link-hover: lighten($base-color, 20%);
 //settings for bg content pages
 $theme-content-bg: #eee;
 //settings for input icons
-$theme-input-icon: #fc6a15;
+$theme-input-icon: #009be0;
 //user link color
 $theme-user-link: #3c3c3c;
 $theme-user-link-hover: lighten($theme-user-link, 20%);

@@ -1,0 +1,12 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Blog")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Site Registration & Course Purchases:")}</h1>
+        <p>${_("All purchases with American Continuing Education Institute, Ltd dba Calypso Continuing Education are protected by Comodo SSL. We use Authorize.net to process payments. Once payment is approved our system automatically generates an email with log in information that you will use to access and begin your course.")}</p>
+    </section>
+</main>

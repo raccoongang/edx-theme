@@ -1,0 +1,12 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Honor Code")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Refunds Policy:")}</h1>
+        <p>${_("There are no refunds once you have enrolled in a course. All purchases are final.")}</p>
+    </section>
+</main>

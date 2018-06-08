@@ -39,7 +39,7 @@ h1 {
             width: 100%;
             height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
             background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-            background-size: cover;
+            background-size: auto;
         }
 
         .outer-wrapper {
@@ -2500,7 +2500,7 @@ body {
     }
 }
 
-.logo-en,.logo-ar {
+.logo-en, .logo-ar, .logo-footer img {
     width: $logo-width;
     min-width: $logo-width;
     height: $logo-height;
@@ -2854,6 +2854,7 @@ body .enroll-message a {
         color: #fff;
         &:hover,&:focus,&:active {
             background: $header-nav-link-color-hover;
+            color: #fff;
         }
     }
     .doc-link {
@@ -2883,7 +2884,7 @@ main#main .container.dashboard {
 }
 body .dashboard .my-courses {
     width: auto;
-    flex: 1 1 74%;
+    flex: 1 1 auto;
 }
 .dashboard-search-bar {
     width: auto;
