@@ -1,0 +1,15 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Privacy Policy")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Privacy Policy")}</h1>
+        <p>${_("We know how important your privacy is to you. We do not store your information on our website. We never sell or share customer information. The information we collect from you allows us to process and track your order, contact you if necessary, send related information and sale notices to you, and improve our customer service.")}</p>
+        <p>${_("If products are required to augment your online educational experience, we may use other companies to provide these products. Certain services, including credit card processing and shipping, are provided by other companies. In these instances, we will only provide these companies with information necessary for them to perform their services.")}</p>
+        <p>${_("On rare occasions, we may be required to disclose specific information upon request of certain government or law enforcement agencies, in response to a court order, or when required to do so by law, or while assisting in fraud protection/investigations. We will not provide information to these agencies or companies for marketing or commercial purposes.")}</p>
+    </section>
+</main>
