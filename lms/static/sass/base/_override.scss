@@ -1,19 +1,18 @@
 @font-face {
-    font-weight: normal;
+    font-family: 'SegoeuiBold';
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
-    font-family: 'Segoeui';
-    src: url('../fonts/segoeui.eot');
-    src: local('☺'), url('../fonts/segoeui.woff') format('woff'), url('../fonts/segoeui.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'SegoeuiBold';
-    src: url('../fonts/segoeuib.eot');
-    src: local('☺'), url('../fonts/segoeuib.woff') format('woff'), url('../fonts/segoeuib.ttf') format('truetype');
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI.woff2') format('woff2'),
+    url('../fonts/SegoeUI.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
 
 @mixin sm {
     @media screen and (max-width: 768px) {
