@@ -260,7 +260,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         <div class="wrapper-course-actions">
           <div class="course-actions">
               %if is_purshue_credit:
-                   <a class="enter-course" href="${reverse('verify_student_upgrade_and_verify', kwargs={'course_id': unicode(course_overview.id)})}"  data-course-id="${course_overview.id}" data-user="${user.username}">
+                   <a class="enter-course" href="${reverse('ospp_api_v0:enrollments_status_update', kwargs={'course_id': unicode(course_overview.id)})}"  data-course-id="${course_overview.id}" data-user="${user.username}">
                        <span>${_('Pursue credit')}</span>
                    </a>
               %elif is_audit:
