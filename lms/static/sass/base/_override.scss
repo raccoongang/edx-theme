@@ -1438,11 +1438,10 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 }
 #dashboard-search-bar {
     width: 100%;
-    order: 1;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px) {
-        margin-bottom: 0;
+    @media screen and (min-width: 900px) {
+        margin: 0 0 20px;
         order: 2;
         padding-right: 10px;
         padding-left: 10px;
@@ -1455,20 +1454,22 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 }
 .dashboard .my-courses {
     width: 100%;
-    order: 2;
-    @media screen and (min-width: 1200px) {
-        flex: 1 1 75%;
+    @media screen and (min-width: 900px) {
+        flex: 1 1 74%;
         order: 1;
     }
 }
 .container.dashboard {
+    display: block;
+    @media screen and (min-width: 900px) {
     min-width: auto;
     display: flex;
     flex-wrap: wrap;
     padding-right: 10px;
     padding-left: 10px;
     align-items: flex-start;
-    
+
+    }
     @media screen and (min-width: 1200px) {
         padding-right: 0;
         padding-left: 0;
@@ -3131,18 +3132,6 @@ body .user-dropdown {
         color: $header-nav-link-color-hover;
     }
 }
-main#main .container.dashboard {
-    display: flex;
-}
-body .dashboard .my-courses {
-    width: auto;
-    flex: 1 1 75%;
-}
-.dashboard-search-bar {
-    width: auto;
-    flex: 1 1 25%;
-}
-
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
     width: 100%;
 }
