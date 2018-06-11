@@ -5,6 +5,22 @@
 // @media (max-width: 540px) {}
 // @media (max-width: 479px) {}
 
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI.woff2') format('woff2'),
+    url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *:focus {
     outline-color: $base-color !important;
 }
@@ -64,16 +80,18 @@ h1 {
                 h1 {
                     margin-bottom: 50px;
                     font-size: 52px;
+                    font-family: "Segoeui", sans-serif;
+                    font-weight: bold;
                     line-height: 1.2;
                     color: $promo-box-text-color;
                     text-align: center;
-                    font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     @media (max-width: 767px) { 
                         font-size: 32px;
                     }
                 }
                 span {
+                    font-family: "Segoeui", sans-serif;
                     text-align: center;
                     font-size: 34px;
                     line-height: 1.3;
