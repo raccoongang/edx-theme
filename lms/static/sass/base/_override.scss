@@ -3350,6 +3350,18 @@ body .teams-content .teams-main .team-edit-fields .team-required-fields {
 .view-teams .theme-footer p, .view-teams .theme-footer span {
     color: $footer-support-text-and-logo;
 }
-.custom-page ul li {
+.custom-page ul li,
+.custom-page ol li {
     margin-bottom: 5px;
+}
+.custom-page {
+    img,
+    iframe {
+        display: block;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    p {
+        margin-bottom: 20px;
+    }
 }
