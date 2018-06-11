@@ -1,0 +1,14 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about custom-page">
+        <h1>${_("About New Horizons Ireland")}</h1>
+        <p>${_("With a very convenient location next to Jervis street in Dublin 1, we offer a wide range of IT and business skills courses and we can also send our instructors to your location.")}</p>
+        <p>${_("We are 100% Irish owned, but we are also part of the largest independent IT Training Provider, New Horizons Computer Learning Centres who deliver more courses than any other IT training company.")}</p>
+        <p>${_("Because we're local, we understand the needs of business and individuals in our community. Whether you choose to take classes in person or online, you're always welcome to call or stop by.")}</p>
+    </section>
+</main>

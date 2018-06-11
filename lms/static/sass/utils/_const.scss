@@ -2,12 +2,12 @@
 $body-bg: #eee;
 //settings for header
 $header-bg: #fff;
-$header-nav-link-color: #009be0;
+$header-nav-link-color: #00539b;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
-$dropdown-menu-link-color: #009be0;
+$dropdown-menu-link-color: #00539b;
 $dropdown-menu-link-color-hover: lighten($dropdown-menu-link-color, 20%);
 //settings for hamburger
-$hamburger-color: #009be0;
+$hamburger-color: #00539b;
 $hamburger-width: 40px;
 $hamburger-height: 30px;
 $hamburger-height-line: 3px;
@@ -27,36 +27,37 @@ $search-button-background: none;
 $search-button-border: #fff;
 $search-button-color: #fff;
 //settings for footer
-$footer-bg: #009289;
+$footer-bg: #1d1d1d;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
 $footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #fff;
+$footer-social-link-bg: #00539b;
+$footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
 //btn
-$theme-btn-bg: #009be0;
+$theme-btn-bg: #00539b;
 $theme-btn-text-color: #ffe;
 $theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
 $theme-btn-shadow: darken($theme-btn-bg, 20%);
 //btn-white
 $theme-btn-white-bg: #fff;
-$theme-btn-white-border: #009be0;
-$theme-btn-white-text-color: #009be0;
+$theme-btn-white-border: #00539b;
+$theme-btn-white-text-color: #00539b;
 $theme-btn-white-text-color-hover: #fff;
-$theme-btn-white-bg-hover: #009be0;
+$theme-btn-white-bg-hover: #00539b;
 // link color
-$theme-link: #009be0;
+$theme-link: #00539b;
 $theme-link-hover: lighten($theme-link, 20%);
 //settings for bg content pages
 $theme-content-bg: #eee;
 //settings for input icons
-$theme-input-icon: #009be0;
+$theme-input-icon: #00539b;
 //user link color 
-$theme-user-link: #009be0;
+$theme-user-link: #00539b;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
-$courses-border-color: #009be0;
-$course-hover-bg: rgba(0, 0, 0, .5);
-$course-link-color: $theme-link;
+$courses-border-color: #e2070f;
+$course-hover-bg: rgba(29, 56, 97, .7);
+$course-link-color: #1f1f1f;
 $course-bg: #fff;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
