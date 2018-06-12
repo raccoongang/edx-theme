@@ -2922,8 +2922,11 @@ body .wrapper-course-material .course-tabs li a {
 body .theme-header .list-inline {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     li {
-        margin: 0;
+        margin: 0 0 10px;
+        &:last-child {
+            margin: 0;
+        }
     }
 }
