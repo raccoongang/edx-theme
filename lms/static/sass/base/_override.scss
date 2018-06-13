@@ -2166,3 +2166,101 @@ body.view-register .header-global nav, body.view-login .header-global nav {
 .wrapper-footer footer#footer-openedx .copyright {
     text-align: center !important;
 }
+
+body .course-info .container {
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+body .course-info .details {
+    margin: 0;
+    width: auto;
+}
+body .course-info .course-sidebar {
+    width: auto;
+}
+@media screen and (max-width: 768px) {
+    .shopping-cart .user-data .data-input .three-col {
+        .col-1,.col-2 {
+            width: auto;
+            margin-right: 14px;
+            order: 2;
+        }
+    }
+    .shopping-cart .user-data > .clearfix {
+        display: flex;
+        flex-direction: column;
+    }
+    body .container {
+        min-width: 0;
+    }
+    .shopping-cart .steps li:after {
+        right: -15px;
+    }
+    .shopping-cart .steps li {
+        margin: 0 5px;
+        font-size: 14px;
+        padding: 26px 15px;
+    }
+    .shopping-cart .discount .code-input input[type="text"] {
+        width: 220px;
+    }
+    .shopping-cart .col-two .col-2 {
+        width: 100%;
+    }
+    .col-2.relative > div {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .shopping-cart .user-data .data-input {
+        width: 100%;
+        margin-left: 0;
+    }
+    .shopping-cart .container {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    body .course-info .course-sidebar {
+        width: 100%;
+        .course-summary {
+            width: 100%;
+        }
+    }
+    .mpesa_payment {
+        padding: 20px;
+    }
+    .three-col {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-3 {
+        order: 1;
+        align-self: flex-end;
+    }
+}
+.mpesa_payment {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    h3 {
+        margin-bottom: 12px;
+    }
+}
+.window-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+html, body {
+    height: 100%;
+}
+.content-wrapper {
+    flex: 1 0 auto;
+}
+.shopping-cart .discount .code-text span {
+    margin-right: 0;
+}
