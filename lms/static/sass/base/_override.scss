@@ -3151,7 +3151,7 @@ section.wiki .wiki-wrapper {
         text-align: center;
     }
     .form-actions .btn.btn-primary {
-        padding: 0;
+        padding: 0 10px;
         height: 32px;
     }
     .article-wrapper p {
@@ -3241,12 +3241,12 @@ body main .container .wiki-wrapper .btn:not(.btn-danger) {
 }
 
 body section.wiki .btn.btn-danger {
-    color: $delete-button;
+    background: $delete-button;
     &:hover,&:focus,&:active {
         background-image: none;
-        background: lighten($delete-button, 20%);
-        border: none;
-        box-shadow: none;
+        background: lighten($delete-button, 20%) !important;
+        border: none !important;
+        box-shadow: none !important;
         color: #fff;
         text-shadow: none;
     }
