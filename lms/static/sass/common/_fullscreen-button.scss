@@ -1,0 +1,40 @@
+.fullscreen-button {
+  color: $theme-link;
+  transition: 0.2s;
+  font-size: 22px;
+  line-height: 1.3;
+  &:hover,&:focus,&:active {
+    cursor: pointer;
+    color: $theme-link-hover;
+    transition: 0.2s;
+  }
+}
+
+.has-breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course-content {
+  &:-webkit-full-screen {
+    overflow: auto;
+    width: 100%;
+    display: block;
+  }
+  &:-moz-full-screen {
+    overflow: auto;
+    width: 100%;
+    display: block;
+  }
+  &:-ms-fullscreen {
+    overflow: auto;
+    width: 100% !important;
+    display: block !important;
+    background: #fff !important;
+  }
+  &:fullscreen {
+    overflow: auto;
+    width: 100%;
+    display: block;
+  }
+}
