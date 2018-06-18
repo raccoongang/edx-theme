@@ -63,6 +63,15 @@
           </ul>
         </div>
 
+
+        % if course_discovery_enabled:
+        <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
+          <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
+          <section class="search-facets-lists">
+          </section>
+        </aside>
+        % endif
+
       </section>
     </section>
 </main>
