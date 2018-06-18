@@ -1,11 +1,16 @@
 .fullscreen-button {
-  color: $theme-link;
+  fill: $theme-link;
   transition: 0.2s;
-  font-size: 22px;
+  height: 22px;
+  width: 22px;
   line-height: 1.3;
+  svg {
+    height: 22px;
+    width: 22px;
+  }
   &:hover,&:focus,&:active {
     cursor: pointer;
-    color: $theme-link-hover;
+    fill: $theme-link-hover;
     transition: 0.2s;
   }
 }

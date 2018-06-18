@@ -179,7 +179,11 @@ ${HTML(fragment.foot_html())}
                             % endif
                             <span class="nav-item nav-item-sequence">${sequence_title}</span>
                         </div>
-                        <i class="fa fa-arrows-alt fullscreen-button" aria-hidden="true" id="fullscreen"></i>
+                        <i class="fullscreen-button fs-expand" aria-hidden="true" id="fullscreen">
+                            <svg>
+                                <use xlink:href="#ico-fs-expand" />
+                            </svg>
+                        </i>
                     </div>
                 </nav>
             </div>
