@@ -150,13 +150,21 @@ ${HTML(fragment.foot_html())}
           % else:
             <div class="chapter">${_("No content has been added to this course")}</div>
           % endif
+
         </nav>
       </div>
     </div>
     <span class="show-course-index">Toggle course content navigation</span>
 % endif
     <section class="course-content" id="course-content">
-        <div class="path"></div>
+        <div class="path-holder">
+            <div class="path"></div>
+            <i class="fullscreen-button fs-expand" aria-hidden="true" id="fullscreen">
+                <svg>
+                    <use xlink:href="#ico-fs-expand" />
+                </svg>
+            </i>
+        </div>
         <main id="main" aria-label="Content" tabindex="-1">
         % if getattr(course, 'entrance_exam_enabled') and \
            getattr(course, 'entrance_exam_minimum_score_pct') and \

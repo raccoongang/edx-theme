@@ -93,6 +93,7 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
                 <%include file="${tabs_tmpl}" args="tab_list=tab_list,active_page=active_page,default_tab=default_tab,tab_image=tab_image" />
                 <%block name="extratabs" />
             </ol>
+
         </div>
     </nav>
 %endif
@@ -119,3 +120,4 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
         PreviewFactory(${preview_options | n, dump_js_escaped_json});
     </%static:require_module_async>
 % endif
+<script src="${static.url('js/fullscreenButton.js')}"></script>
