@@ -3103,7 +3103,11 @@ body {
     }
     body .header-global.header-global__course,
     body .header-global {
-        flex: 1 0 auto;
+    flex: 1 0 auto;
+    }
+    .nav-global li {
+        width: 100%;
+        margin: 0 0 12px;
     }
     // ie11 fix - button for upload csv on cert page in instructor
     body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
@@ -3119,6 +3123,13 @@ body {
     .view-teams .cards-list .card {
         width: 100%;
     }
+    body.view-teams .card.list-card .card-actions {
+        width: auto;
+    }
+}
+body .theme-header .list-inline {
+    display: flex;
+    flex-direction: column;
 }
 body .doc-link {
     color: $theme-link;
@@ -3140,4 +3151,12 @@ body .teams-content .teams-main .team-edit-fields .team-required-fields {
 }
 .wmd-preview {
     word-break: break-all;
+}
+body .theme-header .list-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+        margin: 0;
+    }
 }
