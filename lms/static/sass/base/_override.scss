@@ -2872,3 +2872,17 @@ body .enroll-message a {
 .wmd-preview-container {
     word-break: break-all;
 }
+
+body {
+    .theme-header__wrapper {
+        padding-left: 0;
+    }
+    @media (max-width: 760px) {
+        .theme-header {
+            min-height: 33px;
+        }
+        .theme-header__block {
+            margin: 15px 0 0;
+        }
+    }
+}
