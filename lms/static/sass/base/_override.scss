@@ -133,11 +133,15 @@ h1 {
                  padding-bottom: 0;
                  .search-input {
                      background: $search-input-background;
-                     border: 2px solid $base-color;
+                     border: 2px solid $search-input-border;
                      color: $search-input-color;
                      padding-left: 20px !important;
                      &:focus {
                          border-color: $base-color !important;
+                         + .search-button {
+                             color: $base-color;
+                             border-color: $base-color !important;
+                         }
                      }
                      &::placeholder {
                          color: $search-input-color;
@@ -150,7 +154,7 @@ h1 {
                  .search-button {
                      color: $search-button-color;
                      background: $search-input-background !important;
-                     border-color: $base-color !important;
+                     border-color: #5c5c5c !important;
                      border-left: none !important;
                      right: 0;
                  }
