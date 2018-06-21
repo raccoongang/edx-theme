@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'SegoeuiBold';
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI.woff2') format('woff2'),
+    url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @mixin sm {
     @media screen and (max-width: 768px) {
         @content;
@@ -120,6 +136,7 @@
             text-shadow: none;
             margin: 13px 5px 13px 15px;
             color: $header-nav-link-color;
+            font-weight: normal !important;
 
             &:hover {
                 color: $header-nav-link-color-hover;
@@ -179,6 +196,7 @@ body .container.activation h1.valid {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    font-weight: normal !important;
     @media screen and (min-width:760px ) {
         width: auto;
         text-align: left;
@@ -331,6 +349,7 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 }
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
+    text-transform: uppercase;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -755,7 +774,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     .title {
         background: transparent;
         box-shadow: none;
-        max-width: 1000px;
+        max-width: none;
         width: 100%;
         margin: 0 auto;
         float: none;
@@ -771,13 +790,15 @@ body .wmd-prompt-dialog .btn-brand:focus {
             padding: 15px 0;
 
             h1 {
+                font-family: 'SegoeuiBold' !important;
                 font-size: 32px;
                 line-height: 1.2;
                 color: $promo-box-text-color;
                 text-align: center;
                 font-weight: bold;
                 text-shadow: $promo-box-text-shadow;
-                margin-bottom: 50px;
+                margin-bottom: 12px;
+                text-transform: uppercase;
                 @media screen and (min-width:760px ) { 
                     font-size: 52px;
                 }
@@ -785,11 +806,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
             span {
                 display: block;
                 text-align: center;
-                font-size: 34px;
+                font-size: 30px;
                 line-height: 1.3;
                 text-shadow: $promo-box-text-shadow;
                 color: $promo-box-text-color;
-                margin-bottom: 40px;
+                margin-bottom: 33px;
+                font-family: 'Segoeui' !important;
+                text-transform: uppercase;
             }
             .link {
                 background: $find-btn-bg;
@@ -813,12 +836,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
             margin: 0 auto;
             overflow: hidden;
             position: relative;
-            padding: 15px 0;
+            padding: 45px 0 30px;
             .search-input {
                 background: $search-input-background;
                 border: 2px solid $search-input-border;
                 color: $search-input-color;
                 padding-left: 20px !important;
+                height: 44px;
                 &:focus {
                     border-color: $search-input-border !important;
                 }
@@ -836,6 +860,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 color: $search-button-color;
                 border-left: none !important;
                 right: 0;
+                height: 44px;
             }
         }
     }
@@ -851,6 +876,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
         right: 0;
         bottom: 0;
         padding: 0;
+    }
+    img {
+        display: inline-block;
+        height: 50px;
     }
 }
 .logo-ar {
@@ -1441,12 +1470,12 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     order: 1;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px) {
-        margin-bottom: 0;
+    @media screen and (min-width: 900px) {
+        margin: 0 0 0 20px;
         order: 2;
         padding-right: 10px;
         padding-left: 10px;
-        flex: 1 1 24%;
+        flex: 1 1 22%;
     }
 
     form {
@@ -1456,19 +1485,22 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 .dashboard .my-courses {
     width: 100%;
     order: 2;
-    @media screen and (min-width: 1200px) {
-        flex: 1 1 75%;
+    @media screen and (min-width: 900px) {
+        flex: 1 1 74%;
         order: 1;
     }
 }
 .container.dashboard {
-    min-width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 10px;
-    padding-left: 10px;
-    align-items: flex-start;
-    
+    display: block;
+    @media screen and (min-width: 900px) {
+        min-width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 10px;
+        padding-left: 10px;
+        align-items: flex-start;
+
+    }
     @media screen and (min-width: 1200px) {
         padding-right: 0;
         padding-left: 0;
@@ -1683,6 +1715,7 @@ input[name="subject"] {
 section.wiki .main-article {
     width: 100%;
     padding: 10px 0 10px 10px;
+    word-break: break-all;
     @media screen and (min-width: 760px) {
         width: 74.57627%;
         padding: 40px 0 40px 40px;
@@ -1823,6 +1856,9 @@ body {
 
 
 //responsive for forum page
+.discussion-post .post-header {
+    word-break: break-all;
+}
 .view-discussion-home {
     padding: 0;
     @media screen and (min-width: 768px) {
@@ -2262,6 +2298,7 @@ section.wiki h1 {
 section.wiki .alert {
     margin: 20px;
     padding-right: 30px;
+    word-break: break-all;
 }
 
 section.wiki .alert .close {
@@ -2381,6 +2418,9 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info .details {
     width: 100%;
     margin: 0 0 20px;
+    * {
+        font-family: "Open Sans", "Arial", sans-serif !important;
+    }
     @media screen and (min-width: 760px) {
         margin-right: 2.35765%;
         margin-bottom: 0;
@@ -2675,19 +2715,20 @@ table.stat_table {
 //end sysadmin page responsive
 
 footer .footer-support {
+    height: 16px;
     font-size: 12px;
     line-height: 1.2px;
     color: $footer-support-text-and-logo;
     margin: 0;
     display: flex;
     align-items: center;
-    padding: 15px 0 0;
+    padding: 25px 0 0;
     justify-content: center;
 
     @media screen and (min-width: 760px) {
         position: absolute;
         padding: 0;
-        bottom: -33px;
+        bottom: 0;
         justify-content: baseline;
     }
 }
@@ -2891,6 +2932,72 @@ body {
     }
 }
 
+// header
+
+.header-global {
+    padding: 21px 10px;
+    .logo {
+        margin-top: 0 !important;
+        img {
+            height: 50px;
+        }
+    }
+    .flex {
+        float: right;
+        margin: 7px 0;
+    }
+    .nav-global {
+        margin: 14px 0 !important;
+        @media screen and (max-width: 759px) {
+            margin: 10px 0 0 !important;
+        }
+        li {
+            margin: 0 10px !important;
+            @media screen and (max-width: 759px) {
+                margin: 10px 0 !important;
+            }
+            a {
+                font-weight: normal !important;
+            }
+        }
+    }
+    .nav-courseware {
+        margin: 9px 0;
+        li {
+            margin: 0 !important;
+            vertical-align: top;
+
+            @media screen and (max-width: 759px) {
+                margin-bottom: 10px !important;
+            }
+
+            .btn:focus:hover {
+                background: $theme-btn-bg !important;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+#hamburger.hamburger {
+    top: 31px !important;
+}
+
+.header-global.header-global__course h2 {
+    color: #000;
+    padding: 20px 5px 0 !important;
+}
+
+// courses overview (courses on main page)
+
+.highlighted-courses .courses .course,
+.find-courses .courses .course {
+    &:hover,
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
 // Dashboard
 
 .dashboard .my-courses .course .details .course-actions button.action {
@@ -2905,6 +3012,26 @@ body {
             color: #fff;
         }
     }
+}
+
+.wrapper-header-courses {
+    border-bottom: 1px solid #ccc !important;
+}
+.dashboard .my-courses .listing-courses .course-item .course-container {
+    border: 1px solid #ccc;
+}
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status {
+    border-color: #ccc;
+}
+.empty-dashboard-message a {
+    color: #fff !important;
+}
+.search-field-wrapper input {
+    border-color: $theme-btn-white-border !important;
+}
+.dashboard .my-courses .course .wrapper-messages-primary .message {
+    margin: 20px 0 0;
+    padding: 10px 0 0;
 }
 
 // Instructor Dashboard beautified
@@ -2982,6 +3109,93 @@ body {
     height: 32px !important;
 }
 
+// Course > home
+
+body.view-in-course .home + .info-wrapper {
+    border-top: none !important;
+    .updates {
+        h4 {
+            margin-bottom: 15px;
+        }
+        .updates-article {
+            border: 1px solid #c8c8c8;
+        }
+    }
+}
+
+// Course > course
+
+.wrapper-course-modes > div {
+    margin: 5px 0;
+}
+
+// discussion
+
+.forum-search input {
+    border-color: $theme-btn-white-border;
+}
+
+// wiki
+
+.section.wiki label {
+    display: inline-block;
+}
+section.wiki .wiki-wrapper {
+    .article-functions .see-children {
+        margin: 15px 0 0;
+        a {
+            padding: 5px;
+            text-align: center;
+        }
+    }
+    .article-functions .timestamp {
+        text-align: center;
+    }
+    .form-actions .btn.btn-primary {
+        padding: 0 10px;
+        height: 32px;
+    }
+    .article-wrapper p {
+        margin-bottom: 20px;
+    }
+}
+
+//.container.about h1 a {
+//    color: #3c3c3c;
+//}
+
+.main-cta {
+    margin: 0;
+    .register {
+        background: $theme-btn-bg !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        text-transform: none !important;
+        padding: 10px 30px !important;
+        &:hover {
+            background: $theme-btn-bg !important;
+        }
+    }
+    .register.disabled {
+        color: #fff !important;
+        margin-top: 6px;
+    }
+}
+
+//find courses
+
+.find-courses .discovery-input {
+    border-color: $theme-btn-bg;
+}
+.find-courses .courses-container .courses:not(.no-course-discovery),
+.university-profile .courses-container .courses:not(.no-course-discovery) {
+    @media screen and (max-width: 540px) {
+        width: 100%;
+    }
+}
+
 // correct modal window
 .course-wrapper .course-content .xqa-modal,
 .course-wrapper .course-content .staff-modal,
@@ -3028,12 +3242,12 @@ body main .container .wiki-wrapper .btn:not(.btn-danger) {
 }
 
 body section.wiki .btn.btn-danger {
-    color: $delete-button;
+    background: $delete-button;
     &:hover,&:focus,&:active {
         background-image: none;
-        background: lighten($delete-button, 20%);
-        border: none;
-        box-shadow: none;
+        background: lighten($delete-button, 20%) !important;
+        border: none !important;
+        box-shadow: none !important;
         color: #fff;
         text-shadow: none;
     }
@@ -3131,21 +3345,35 @@ body .user-dropdown {
         color: $header-nav-link-color-hover;
     }
 }
-main#main .container.dashboard {
-    display: flex;
-}
-body .dashboard .my-courses {
-    width: auto;
-    flex: 1 1 75%;
-}
-.dashboard-search-bar {
-    width: auto;
-    flex: 1 1 25%;
-}
-
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
     width: 100%;
 }
 .view-teams .theme-footer p, .view-teams .theme-footer span {
     color: $footer-support-text-and-logo;
+}
+.view-teams .wrapper-card-core {
+    @include sm {
+        .card-core,
+        .card-actions {
+            width: 100%;
+            .action-view {
+                float: none;
+            }
+        }
+    }
+}
+.custom-page ul li,
+.custom-page ol li {
+    margin-bottom: 5px;
+}
+.custom-page {
+    img,
+    iframe {
+        display: block;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    p {
+        margin-bottom: 20px;
+    }
 }

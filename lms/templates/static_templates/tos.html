@@ -1,0 +1,76 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about custom-page">
+        <h1>${_("New Horizons Ireland - Terms & Conditions")}</h1>
+        <p><b>${_("General Policies")}</b></p>
+        <p>${_("Failure to pay will result in cancellation of any current and future company enrollments and the case will be sent to collections.")}</p>
+        <p>${_("Coupons are valid for 12 months from invoice date, and are non-transferable.")}</p>
+        <p>${_("All pricing is correct at time of publishing but may be subject to change.")}</p>
+        <p>${_("Quoted pricing is not guaranteed until order is accepted by New Horizons Ireland and an official invoice is issued.")}</p>
+        <p>${_("Clubs are limited to the individual on the invoice, are non-transferable and start on the date of invoice.")}</p>
+        <p>${_("Premium classes will have multiple coupons pulled for enrollment.")}</p>
+        <p>${_("The client understands that signed order agreements shall be an agreement between New Horizons and their company, and as a qualified signature for said company, is responsible for the tuition, and shall make all personnel/employees aware that refunds will be made to the company. All reasonable discounts per New Horizons are void if portions of the above training are cancelled. New Horizons guarantees only those services set forth in the agreement.")}</p>
+        <p>${_("Client agrees not to hire any New Horizons employee for (1) year after the completion of the training ordered an Order Agreement.")}</p>
+        <p>${_("As a training company, the Client acknowledges that New Horizons Ireland incurs substantial investment and expenses in advertising for, testing, recruiting, training and retaining its employees. Therefore, in consideration of this investment, the Client agrees that if it wishes to offer employment on any basis to one of New Horizons Employees or Partner Instructors to an employment agency, (including where such a transfer is pursuant to a ‘transfer’ within the meaning of the European Communities (Protection of Employees on Transfer of Undertakings) Regulations 2003, or other business by hiring them (known as a “conversion”), or by secondment, arrangement or contract from another source (known as a “transition”) the Client will compensate New Horizons Ireland at the rates set forth below. For the purposes of calculating the fee payable under this Clause, in determining the first day on which a New Horizons Ireland Employee worked for the Client, no account shall be taken of any supply that occurred prior to a break in the employee’s service for that the Client of 42 days or more except where such break in service is by reason of a period of statutory leave. The Client may, in lieu of paying the fee detailed below, by written notice to New Horizons Ireland, elect for an additional hire period of 14 weeks during which time the New Horizons Ireland worker will be seconded to the Client on the same conditions as those already in force for the most recent assignment.")}</p>
+        <p>${_("If an Employee has been introduced to the Client but has not worked for that the Client and that the Client introduces the Employee to a third party, whether an individual employer, subsidiary or a parent company of another employment agency, the fees detailed in this section of these Terms shall apply, and no rebate shall be payable:")}</p>
+        <p>${_("The % fee of salary and tangible benefits is @ 20%")}</p>
+        <p>${_("From initial contact through to completion of any training delivery and for 6 months after termination by either party of this Agreement, a party must not employ or solicit for employment any person who is an employee of or contractor to the other party who was involved during the most recent 6-month period of this Agreement in the matters covered by this Agreement.")}</p>
+        <p>${_("This clause does not apply where the employment is agreed to by the parties.")}</p>
+        <p>${_("Each party acknowledges that the restriction specified in this clause is in the circumstances reasonable and necessary to protect each party’s legitimate interests.")}</p>
+
+        <p><b>${_("Booking & Payment")}</b></p>
+        <ol>
+            <li>${_("No bookings can be confirmed until the training contract has been duly signed and received by New Horizons.")}</li>
+            <li>${_("All Invoices are payable within 14 days after the signature date on the Order, or 14 days prior to the start of the course, whichever occurs first, or by the payment date stated on the order.")}</li>
+            <li>${_("When booking and confirming a Closed Class, Room Rental, or Client Site the names of all attendees must be received by New Horizons 24 Hours before the start of the class. Failure to do so will result in the course being cancelled and no refund being issued.")}</li>
+            <li>${_("Attendance on a course will be refused if full payment has not been received prior to the start of the course.")}</li>
+            <li>${_("Goods for purchase will be dispatched/available only after payment in full has been received.")}</li>
+            <li>${_("In breach of these conditions, interest will be charged from the due date of the invoice to the date of payment, at the rate of 2.5% per annum. and will be compounded monthly.")}</li>
+        </ol>
+        <p><b>${_("Cancellation/Reschedule Policy")}</b></p>
+        <ol>
+            <li>${_("All notifications from the customer must be received in writing.")}</li>
+            <li>
+                ${_("The designated periods for cancellation is dependent on the type of course or service as follows:")}
+                <ul>
+                    <li>${_("Scheduled Course: Up to 14 days prior to the start of the course.")}</li>
+                    <li>${_("Room Rentals/Closed Classes/Client Site Courses: Within 30 days after the signature date on the Order, or up to 30 days prior to the start of the course or service, whichever occurs first. Where a group of such courses have been booked, 30 days prior to the start of the course or service shall mean the start of the first course of the group of courses, and not the individual start dates of courses within the group.")}</li>
+                    <li>${_("Club Members or Voucher Holders: 7 days prior to the start of the class.")}</li>
+                </ul>
+            </li>
+            <li>
+                ${_("TIn the event of a cancellation by the customer, the following refunds will apply, except for Club Members and Voucher Holders: and only if full payment has been received.")}
+                <ul>
+                    <li>${_("Notice received from the customer within the designated period: 50% refund")}</li>
+                    <li>${_("Notice received from the customer outside the designated period: 0% refund")}</li>
+                    <li>${_("There is no refund handling charge for payments using Laser, Cheque or Wire Transfer but unfortunately, due to Bank charges, there is a 4% handling charge on refunds of Credit Card payments.")}</li>
+                </ul>
+            </li>
+            <li>${_("In the event of a cancellation, by the customer, within the designated period, where payment has not been received, the amount outstanding as per the above terms and conditions will be due by the customer.")}</li>
+            <li>${_("In the event of a cancellation of a course by a Club Member outside the designated period, a €50.00 cancellation fee will be charged. The €50.00 fee must be paid before taking any other class.")}</li>
+            <li>${_("In the event of a cancellation by a Voucher Holder outside the designated period, the Training Voucher(s) will be voided. The voided vouchers must be returned to New Horizons before taking any other class.")}</li>
+        </ol>
+        <p><b>${_("Dedicated Class, Onsite Class, or Room Rent Cancellation/Reschedule Policy")}</b></p>
+        <p>${_("Notify New Horizons ASAP at 01 8898700 or Written notification: info@nhireland.ie to avoid penalties.")}</p>
+        <p>${_("If rescheduled with no fewer than fifteen (15) business days before scheduled date, an administration fee of 10% will be added to the purchase amount. If rescheduled with fewer than 15 days in advance of scheduled date, 100% of the class price will be due by date of originally scheduled class.")}</p>
+        <p><b>${_("Red Hat Cancellation/Reschedule Policy")}</b></p>
+        <p>${_("Red Hat policy dictates that fifteen (15) business days' notice is required to reschedule with no additional fees. Only one (1) reschedule is permitted. Rescheduling with less than fifteen (15) business days' notice will incur a processing fee equivalent to fifty percent (50%) of the published course price (MSRP). New class date must be given at time of reschedule, and class must be completed within one (1) year of original invoice date.")}</p>
+        <p>${_("Student substitutions can be made no less than 48 hours before the start of the class.")}</p>
+        <p>${_("In case of a no-show, no refund or reschedule will be provided, and payment will be forfeited.")}</p>
+        <p><b>${_("Microsoft Software Assurance Training Voucher (SATV) Cancellation/Reschedule Policy")}</b></p>
+        <p>${_("If class is paid for using Microsoft Software Assurance Training Vouchers (SATVs), ten (10) business days' notice is required to reschedule without additional fees.")}</p>
+        <p>${_("In case of a no-show or cancellation with less than ten (10) business days' notice, 100% of class price ($495 per day per student) will be due according to date of original invoice or date of Term Net 30. Any coupons used will not be returned to the coupon pool. If a seat license was used, the client will forfeit those days. For premium classes, multiple coupons will be pulled.")}</p>
+        <p>${_("Students are allowed up to One (1) reschedule per class up until 48-hours before course start date. Any reschedules after that point will incur a processing fee equal to 50% of the published course price (MSRP). The new session date must be given at the time of the reschedule notification and rescheduled classes must be taken within six-months of original invoice date.")}</p>
+        <p><b>${_("Online Anytime (OLA) Cancellation/Enrollment Policy")}</b></p>
+        <p>${_("Online Anytime (OLA) keys are activated upon receipt of payment, and are valid for one (1) year. Once a key has been activated, it cannot be cancelled. Keys are valid only for the individual on the invoice, and are non-transferrable. Enrollment begins on date of invoice and ends twelve (12) months from invoice date.")}</p>
+        <p><b>${_("No-Show")}</b></p>
+        <p>${_("Failure to notify of student's intent to cancel will result in the company being charged in-full for the class. If the class was paid for with coupons, they will NOT be returned to the coupon pool, if paid with a seat license, a day will be removed.")}</p>
+        <p><b>${_("Refund Policy")}</b></p>
+        <p>${_("It is New Horizons Computer Learning Centers of Dublin’s policy that all sales are final.")}</p>
+    </section>
+</main>
