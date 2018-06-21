@@ -1,0 +1,20 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h3>${_("Content Rights")}</h3>
+        <p>${_("Your use of this Arrow ECS website is subject to the following Terms of Use. By using this Site you signify your agreement to the Terms of Use. If you do not agree to use these Terms of Use, please do not use this Site. Arrow ECS reserves the right to change these Terms of Use from time to time, therefore please check the Terms of Use periodically for changes. Your continued use of the Site will constitute acceptance of any changes to these Terms of Use. All material in whatever form contained in the Site (save for any trade marks owned by third parties) are the property of Arrow ECS. In particular your attention is drawn to the fact that Arrow ECS asserts its copyright ownership over all of the materials and provides no license or other rights to use any of its trademarks appearing on the Site. You are not permitted to copy any of the materials on the Site without first seeking and obtaining the prior written consent of Arrow ECS.")}</p>
+        <h3>${_("Links to other Websites")}</h3>
+        <p>${_("Arrow ECS is not responsible for any goods or services advertised by third parties on the Site. The Site may also include hypertext links to third party sites. Arrow ECS has no control over the content of those sites and does not accept any responsibility or liability in relation to those third party sites, the owners of which do not necessarily have any commercial or other link with Arrow ECS. Arrow ECS provides no license or other rights to use any third party-owned trademarks appearing on the Site.")}</p>
+        <h3>${_("Purchase of Goods and Services")}</h3>
+        <p>${_("Nothing appearing on this Site constitutes an offer. In particular any order placed by you will subsequently be accepted or rejected entirely at the discretion of Arrow ECS. In considering the placing of an order your attention is drawn to Arrow ECS' terms and conditions. This Site may provide links to enable you to buy products or services. By using this Service you acknowledge and accept that Arrow ECS does not accept any responsibility or liability for any losses you may suffer as a result of your booking or purchasing any goods or services from third parties through this Site.")}</p>
+        <h3>${_("The Information on this Site")}</h3>
+        <p>${_("Whilst Arrow ECS tries to ensure the information on this Site is accurate, Arrow ECS is not always able to check the accuracy or completeness of that information and Arrow ECS does not accept any liability arising from any inaccuracy or omissions in the information on this Site. You are advised to verify the accuracy of any information before relying on it.")}</p>
+        <h3>${_("Data Protection")}<h3>
+        <p>${_("Your privacy is protected in accordance with our Data Protection Statement.")}</p>
+    </section>
+</main>
