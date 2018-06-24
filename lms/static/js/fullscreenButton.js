@@ -35,8 +35,9 @@ $(function () {
     var cahngeXlink = function cahngeXlink(val) {
         document.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', val);
     };
-
-    fs.addEventListener('click', function () {
-        toggleFullScreen();
-    });
+    if (fs) {
+        fs.addEventListener('click', function () {
+            toggleFullScreen();
+        });
+    }
 })
