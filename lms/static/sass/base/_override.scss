@@ -2136,7 +2136,17 @@ h6,
 /*-----Course home-----*/
 .home {
     .page-header-secondary {
-        background: $base-color;
+        padding: 0;
+        background: none;
+        .last-accessed-link {
+            background: $theme-btn-bg;
+            padding: 10px 15px;
+            border-radius: 3px;
+            display: block;
+            &:hover {
+                background: $theme-btn-bg-hover;
+            }
+        }
         @media (max-width: 991px) {
             float: none;
             margin-left: 0;
