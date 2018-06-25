@@ -3162,3 +3162,19 @@ body .theme-header .list-inline {
 .discussion-post .post-header {
     word-break: break-all;
 }
+
+.view-teams .page-header-search .action-search:hover,
+.view-teams .page-header-search .action-search:focus {
+    background-color: $theme-link-hover;
+}
+.btn-blue, .view-teams .action-primary, .instructor-dashboard-wrapper-2 .btn-blue {
+    background-color: $theme-link-hover;
+    box-shadow: $theme-link-hover;
+}
+.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
+    width: 50%;
+}
