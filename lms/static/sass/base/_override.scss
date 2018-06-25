@@ -1170,7 +1170,7 @@ body.view-in-course {
         .course-index {
             width: 100%;
             @media screen and (min-width: 1000px) {
-                width: auto;
+                width: 23%;
                 display: block !important;
             }
         }
@@ -3177,4 +3177,11 @@ body .theme-header .list-inline {
 .btn-blue, .view-teams .action-primary, .instructor-dashboard-wrapper-2 .btn-blue {
     background-color: $theme-link-hover;
     box-shadow: $theme-link-hover;
+}
+.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
+    width: 50%;
 }
