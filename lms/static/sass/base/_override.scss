@@ -49,7 +49,7 @@
                     color: $header-nav-link-color-hover;
                 }
             }
-        } 
+        }
         .tab-nav-item {
             .active {
                 border: none !important;
@@ -57,7 +57,7 @@
             .tab-nav-link {
                 color: $header-nav-link-color;
                 padding: 5px;
-                
+
                 &:focus,
                 &:hover {
                     color: $header-nav-link-color-hover;
@@ -91,7 +91,7 @@
             a {
                 width: 100%;
             }
-            
+
             // login and register btns on the header nav
             .btn {
                 background: $theme-btn-bg;
@@ -235,7 +235,7 @@ body .container.activation h1.valid {
 
                      a {
                         color: $footer-nav-link-color;
-                        
+
                         &:focus,
                         &:hover {
                             border: none !important;
@@ -338,7 +338,7 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel,
 body .link-to-group-settings {
     color: $theme-link !important;
-    
+
     &:focus,
     &:hover,
     &.active {
@@ -363,7 +363,7 @@ body section.wiki .article-functions .see-children a,
 body .updates a,
 body .message a{
     color: $theme-link;
-    
+
     &:focus,
     &:hover {
         color: $theme-link-hover;
@@ -393,7 +393,7 @@ body .login .form-actions button[type="submit"] {
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
     border: 2px solid $theme-btn-white-border !important;
-    
+
     &:active,
     &:focus {
         border-color: $theme-btn-white-border;
@@ -450,7 +450,7 @@ body .login .form-actions button[type="submit"] {
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
     border: 2px solid $theme-btn-white-border !important;
-    
+
     &:active,
     &:focus {
         border-color: $theme-btn-white-border;
@@ -471,7 +471,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
-    
+
     &:active,
     &:focus {
         border-color: $theme-btn-white-border;
@@ -489,7 +489,7 @@ body .discussion-module .btn {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
-    
+
     &:active,
     &:focus {
         background: $theme-btn-white-bg !important;
@@ -507,7 +507,7 @@ body .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
-    
+
     &:active,
     &:focus {
         background: $theme-btn-white-bg;
@@ -582,7 +582,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     color: $theme-btn-text-color;
     text-shadow: none;
     border-radius: 2px;
-    
+
     &:active,
     &:focus {
         background: $theme-btn-bg;
@@ -679,9 +679,9 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 }
 .light-button:hover:not(:disabled),
 div.history-controls input[type="submit"]:hover:not(:disabled),
-a.light-button:hover:not(:disabled), 
-div.info-wrapper section.handouts ol li div.hitarea:hover+h4.light-button:not(:disabled), 
-div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:disabled), 
+a.light-button:hover:not(:disabled),
+div.info-wrapper section.handouts ol li div.hitarea:hover+h4.light-button:not(:disabled),
+div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:disabled),
 .gray-button:hover:not(:disabled),
 .button:hover:not(:disabled),
 .xmodule_display.xmodule_LTIModule div.lti .wrapper-lti-link .lti-link .link_lti_new_window:hover:not(:disabled) {
@@ -722,7 +722,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .view-profile .profile-image-field .image-wrapper .u-field-upload-button {
     color: $theme-link;
-    
+
     &:focus,
     &:hover {
         border-color: $theme-link;
@@ -778,7 +778,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 font-weight: bold;
                 text-shadow: $promo-box-text-shadow;
                 margin-bottom: 50px;
-                @media screen and (min-width:760px ) { 
+                @media screen and (min-width:760px ) {
                     font-size: 52px;
                 }
             }
@@ -954,16 +954,16 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-book
 }
 .u-field.editable-toggle.mode-display {
     border: 2px dashed transparent;
-    
+
     .u-field-icon,
     .u-field-value-readonly {
         color: #767676;
     }
-    
+
     &:hover {
         background-color: transparent;
         border: 2px dashed $theme-btn-bg;
-        
+
         .u-field-icon,
         .message-can-edit,
         .u-field-value-readonly,
@@ -1004,7 +1004,7 @@ body .courses-container .courses .course .course-info {
 html {
     background: $body-bg;
 }
-body .find-courses .search-facets .facet-option:hover, 
+body .find-courses .search-facets .facet-option:hover,
 body .find-courses .search-facets .facet-option:focus {
     background: $theme-link;
 }
@@ -1053,7 +1053,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     left: 10px;
 }
 .flex {
-    display: block; 
+    display: block;
     .doc-link {
         width: auto;
         margin: 12px 10px;
@@ -1084,11 +1084,11 @@ body div.info-wrapper section.updates div article .date {
 .discussion-article .posted-details .username:visited {
     color: $theme-link;
 }
-body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover, 
-body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active, 
-body .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active, 
-body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover, 
-body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active, 
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
         border-bottom: 3px solid $theme-btn-bg;
 }
@@ -1170,7 +1170,7 @@ body.view-in-course {
         .course-index {
             width: 100%;
             @media screen and (min-width: 1000px) {
-                width: auto;
+                width: 23%;
                 display: block !important;
             }
         }
@@ -1233,7 +1233,7 @@ section.wiki .wiki-wrapper .article-functions {
         width: 23%;
         display: block;
     }
-    
+
     .see-children,
     .timestamp {
         margin-top: 0;
@@ -1535,7 +1535,7 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     .result-link {
         top: 10px;
         color: $theme-link;
-        
+
         &:visited,
         &:focus,
         &:hover {
@@ -1754,7 +1754,7 @@ section.wiki .table.table-striped {
                         @media screen and (min-width: 760px) {
                             float: left;
                             margin: 0 2.35765% 0 0;
-                            width: 23.23176%; 
+                            width: 23.23176%;
                         }
                         .cover {
                             float: none;
@@ -2196,7 +2196,7 @@ section.wiki .wiki-wrapper .article-functions {
 }
 
 section.wiki .wiki-wrapper .nav-tabs {
-    -webkit-flex-wrap: wrap; 
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -2838,7 +2838,7 @@ body {
             left: 5px;
             background-color: $hamburger-color;
             transition: all 0.3s;
-            
+
         }
         &:after {
             box-shadow: 0 10px 0 0 $hamburger-color, 0 -10px 0 0 $hamburger-color;
@@ -2873,7 +2873,7 @@ body {
                     text-align: center;
                 }
             }
-        }   
+        }
     }
 }
 
@@ -3162,4 +3162,20 @@ body .theme-header .list-inline {
 .wmd-preview,
 .discussion-post .post-header {
     word-break: break-all;
+}
+
+.view-teams .page-header-search .action-search:hover,
+.view-teams .page-header-search .action-search:focus {
+    background-color: $theme-link-hover;
+}
+.btn-blue, .view-teams .action-primary, .instructor-dashboard-wrapper-2 .btn-blue {
+    background-color: $theme-link-hover;
+    box-shadow: $theme-link-hover;
+}
+.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
+    width: 50%;
 }
