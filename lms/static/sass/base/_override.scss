@@ -1171,7 +1171,6 @@ body.view-in-course {
             width: 100%;
             @media screen and (min-width: 1000px) {
                 width: 23%;
-                display: block !important;
             }
         }
     }
@@ -3058,7 +3057,7 @@ body {
         }
     }
     .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary,
-    &.view-teams .teams-main .card .card-actions .action-view {
+    &.view-teams .window-wrap .teams-main .card .card-actions .action-view {
         border-color: $theme-link;
         color: $theme-link;
         background: none;
@@ -3067,12 +3066,12 @@ body {
             color: $white;
         }
     }
-    &.view-teams .teams-main .page-content-nav .nav-item.is-active {
+    &.view-teams .window-wrap .teams-main .page-content-nav .nav-item.is-active {
         border-color: $theme-link;
         color: $theme-link;
     }
-    &.view-teams .teams-main .page-content-nav .nav-item:hover,
-    &.view-teams .teams-main .page-content-nav .nav-item:focus {
+    &.view-teams .window-wrap .teams-main .page-content-nav .nav-item:hover,
+    &.view-teams .window-wrap .teams-main .page-content-nav .nav-item:focus {
         border-color: $theme-link;
         color: $theme-link;
     }
@@ -3170,18 +3169,37 @@ body .theme-header .list-inline {
 }
 
 //to base theme
-.view-teams .page-header-search .action-search:hover,
-.view-teams .page-header-search .action-search:focus {
-    background-color: $theme-link-hover;
-}
-.btn-blue, .view-teams .action-primary, .instructor-dashboard-wrapper-2 .btn-blue {
-    background-color: $theme-link-hover;
-    box-shadow: $theme-link-hover;
-}
-.course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
-    margin: 0;
-    transform: translate(-50%, -50%);
-}
-body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
-    width: 50%;
+body {
+    .view-teams .window-wrap .page-header-search .action-search:hover,
+    .view-teams .window-wrap .page-header-search .action-search:focus {
+        background-color: $theme-link-hover;
+    }
+    .view-teams .window-wrap .action-cancel {
+        &:hover,&:focus,&:active {
+            color: $theme-link-hover;
+            border-color: $theme-link-hover;
+        }
+    }
+    .window-wrap .btn-secondary {
+        &:hover,&:focus,&:active {
+            background: $theme-link-hover;
+        }
+    }
+    .btn-blue,
+    .view-teams .window-wrap .action-primary,
+    .instructor-dashboard-wrapper-2 .btn-blue {
+        background-color: $theme-link;
+        box-shadow: $theme-link;
+        &:hover,&:focus,&:active {
+            background-color: $theme-link-hover;
+        box-shadow: $theme-link-hover;
+        }
+    }
+    .course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
+        margin: 0;
+        transform: translate(-50%, -50%);
+    }
+    .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type='button'].add {
+        top: 13px;
+    }
 }
