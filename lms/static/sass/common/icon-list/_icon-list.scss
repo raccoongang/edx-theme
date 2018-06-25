@@ -18,6 +18,15 @@
         width: 35px;
         height: 35px;
     }
+    li {
+        img {
+            display: block;
+            width: 100%;
+        }
+        &:hover img {
+            opacity: 0.8;
+        }
+    }
 }
 #ico-vk,
 #ico-odnoklassniki,
