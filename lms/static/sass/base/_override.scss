@@ -2583,20 +2583,21 @@ table.stat_table {
 }
 //end sysadmin page responsive
 
-.footer-support {
+footer .footer-support {
+    height: 16px;
     font-size: 12px;
     line-height: 1.2px;
     color: $footer-support-text-and-logo;
     margin: 0;
     display: flex;
     align-items: center;
-    padding: 15px 0 0;
+    padding: 25px 0 0;
     justify-content: center;
 
     @media screen and (min-width: 760px) {
         position: absolute;
         padding: 0;
-        bottom: -16px;
+        bottom: 0;
         justify-content: baseline;
     }
 }
