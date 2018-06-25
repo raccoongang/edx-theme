@@ -5,6 +5,22 @@
 // @media (max-width: 540px) {}
 // @media (max-width: 479px) {}
 
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI.woff2') format('woff2'),
+    url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *:focus {
     outline-color: $base-color !important;
 }
@@ -39,7 +55,7 @@ h1 {
             width: 100%;
             height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
             background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-            background-size: cover;
+            background-size: auto;
         }
 
         .outer-wrapper {
@@ -64,16 +80,18 @@ h1 {
                 h1 {
                     margin-bottom: 50px;
                     font-size: 52px;
+                    font-family: "Segoeui", sans-serif;
+                    font-weight: bold;
                     line-height: 1.2;
                     color: $promo-box-text-color;
                     text-align: center;
-                    font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     @media (max-width: 767px) { 
                         font-size: 32px;
                     }
                 }
                 span {
+                    font-family: "Segoeui", sans-serif;
                     text-align: center;
                     font-size: 34px;
                     line-height: 1.3;
@@ -2500,7 +2518,7 @@ body {
     }
 }
 
-.logo-en,.logo-ar {
+.logo-en, .logo-ar, .logo-footer img {
     width: $logo-width;
     min-width: $logo-width;
     height: $logo-height;
@@ -2839,12 +2857,10 @@ body .enroll-message a {
     }
     .theme-header .list-inline {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     .nav-global li {
         width: 100%;
+        margin: 0 0 12px;
     }
     .nav-global > li > a {
         display: block;
@@ -2854,6 +2870,7 @@ body .enroll-message a {
         color: #fff;
         &:hover,&:focus,&:active {
             background: $header-nav-link-color-hover;
+            color: #fff;
         }
     }
     .doc-link {
@@ -2864,6 +2881,9 @@ body .enroll-message a {
     }
     .view-teams .cards-list .card {
         width: 100%;
+    }
+    body.view-teams .card.list-card .card-actions {
+        width: auto;
     }
 }
 body .doc-link {
@@ -2880,10 +2900,11 @@ body .user-dropdown {
 }
 main#main .container.dashboard {
     display: flex;
+    flex-wrap: nowrap;
 }
 body .dashboard .my-courses {
     width: auto;
-    flex: 1 1 74%;
+    flex: 1 1 auto;
 }
 .dashboard-search-bar {
     width: auto;
@@ -2898,3 +2919,14 @@ body .wrapper-course-material .course-tabs li a {
     color: #5e5e5e;
 }
 
+body .theme-header .list-inline {
+    display: flex;
+    flex-direction: column;
+
+    li {
+        margin: 0 0 10px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
