@@ -3170,11 +3170,12 @@ body .theme-header .list-inline {
 
 //to base theme
 body {
-    .view-teams .window-wrap .page-header-search .action-search:hover,
-    .view-teams .window-wrap .page-header-search .action-search:focus {
+
+    &.view-teams .window-wrap .page-header-search .action-search:hover,
+    &.view-teams .window-wrap .page-header-search .action-search:focus {
         background-color: $theme-link-hover;
     }
-    .view-teams .window-wrap .action-cancel {
+    &.view-teams .window-wrap .action-cancel {
         &:hover,&:focus,&:active {
             color: $theme-link-hover;
             border-color: $theme-link-hover;
@@ -3182,11 +3183,11 @@ body {
     }
     .window-wrap .btn-secondary {
         &:hover,&:focus,&:active {
-            background: $theme-link-hover;
+            color: $theme-link-hover;
         }
     }
     .btn-blue,
-    .view-teams .window-wrap .action-primary,
+    &.view-teams .window-wrap .action-primary,
     .instructor-dashboard-wrapper-2 .btn-blue {
         background-color: $theme-link;
         box-shadow: $theme-link;
