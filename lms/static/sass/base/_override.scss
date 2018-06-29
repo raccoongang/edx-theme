@@ -214,6 +214,9 @@ body .container.activation h1.valid {
                 ol {
                     width: 100%;
                     text-align: center;
+                    & + ol {
+                        margin-top: 20px;
+                    }
                 }
                 li {
                     float: none;
