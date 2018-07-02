@@ -37,7 +37,7 @@ h1 {
     }
 }
 
-/*-----Home promo block-----*/  
+/*-----Home promo block-----*/
 .home {
     >header {
         position: relative;
@@ -86,7 +86,7 @@ h1 {
                     color: $promo-box-text-color;
                     text-align: center;
                     text-shadow: $promo-box-text-shadow;
-                    @media (max-width: 767px) { 
+                    @media (max-width: 767px) {
                         font-size: 32px;
                     }
                 }
@@ -556,7 +556,7 @@ body {
                         }
                     }
                 }
-            }  
+            }
             .u-field-social {
                 margin: 0;
                 @media (max-width: 767px) {
@@ -854,7 +854,7 @@ div {
                                 .add-field {
                                     @media (max-width: 576px) {
                                         display: block;
-                                    } 
+                                    }
                                 }
                             }
                             input[type="button"] {
@@ -1192,7 +1192,7 @@ div {
                 }
             }
         }
-        
+
     }
     &.xmodule_VideoModule {
         .video {
@@ -2317,7 +2317,7 @@ div {
                 display: -webkit-flex;
                 display: flex;
                 @media (max-width: 767px) {
-                   display: block; 
+                   display: block;
                 }
                 .msg-content {
                     -webkit-flex: 1 1 auto;
@@ -2929,4 +2929,10 @@ body .theme-header .list-inline {
             margin: 0;
         }
     }
+}
+.numbers-row .fa {
+    color: #999;
+}
+.grade-detail-graph-wrapper {
+    padding-top: 5px;
 }
