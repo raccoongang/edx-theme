@@ -52,8 +52,8 @@ body .course-info .details {
     display: flex;
     align-items: center;
 }
-.header-global .primary>a:hover, 
-.header-global .primary>a:focus, 
+.header-global .primary>a:hover,
+.header-global .primary>a:focus,
 .header-global .primary>a:active {
     background: none;
 }
@@ -112,7 +112,7 @@ body a.doc-link {
             background-color: transparent;
             color: $active-color;
             text-decoration: none;
-        }     
+        }
     }
 }
 .header-global .theme-btn__active {
@@ -320,11 +320,11 @@ html body.view-in-course .header-global .wrapper-header {
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li {
     min-width: 58.1px;
 }
-.nav-holder .dropdown-menu-container .menu-title { 
-    margin: 15px 5px 15px 0; 
-} 
-body a.doc-link::-moz-focus-inner{ 
-    border: none; 
+.nav-holder .dropdown-menu-container .menu-title {
+    margin: 15px 5px 15px 0;
+}
+body a.doc-link::-moz-focus-inner{
+    border: none;
 }
 .courses-listing {
     display: flex;
@@ -359,11 +359,11 @@ body .xmodule_display.xmodule_HtmlModule h5:after {
     display: table;
     clear: both;
 }
-.course-wrapper .course-content .edx-notes-wrapper-content ul, 
+.course-wrapper .course-content .edx-notes-wrapper-content ul,
 .course-wrapper .courseware-results-wrapper .edx-notes-wrapper-content ul {
     p,li {
         margin-bottom: 0;
-    } 
+    }
 }
 .sticky {
     position: -webkit-sticky;
@@ -692,4 +692,15 @@ div.book-wrapper {
 
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button.seq_problem .icon:before {
     content: "\f044";
+}
+body .menu-action {
+    display: none;
+}
+@media screen and (max-width: 850px) {
+    .header-global .wrapper-header {
+        width: 100%;
+        .menu-action {
+            display: block;
+        }
+    }
 }
