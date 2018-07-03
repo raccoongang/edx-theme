@@ -644,10 +644,17 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
     }
 
 }
-.container {
+body main .container {
     background: #fff;
     height: 100%;
     flex: 1;
+    max-width: 1180px;
+    .home {
+        padding: 0;
+    }
+}
+body .home .page-header-main {
+    margin: 20px;
 }
 main#main {
     background: #fff;
@@ -842,5 +849,13 @@ body.verification-process .carousel .view .instruction,
     &:hover,&:focus,&:active {
         background: inherit !important;
         color: inherit !important;
+        border-color: inherit !important;
     }
+}
+body .wrapper-footer footer#footer-openedx .footer-questions a {
+    color: #0075b4;
+}
+
+body.view-in-course .container {
+    background: none;
 }
