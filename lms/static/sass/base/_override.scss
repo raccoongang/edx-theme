@@ -3227,7 +3227,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 
 .greeting {
     max-width: 1200px;
-    margin: -83px auto 0;
+    margin: -83px auto 60px;
     background: #fff;
     color: #1f1f1f;
     padding: 60px 0 42px;
@@ -3269,11 +3269,13 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
     text-align: center;
     color: #979797;
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 43px;
 }
 
 .courses-list {
-    li {
+    margin: 0;
+    padding: 0;
+    > li {
         display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
@@ -3281,10 +3283,13 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
     .left-full-info {
         padding: 40px;
         background: #fff;
+        color: #1f1f1f;
         strong {
             display: block;
             position: relative;
             padding-bottom: 15px;
+            font-size: 20px;
+            margin-bottom: 12px;
             &:before {
                 content: "";
                 width: 220px;
@@ -3295,9 +3300,56 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
                 bottom: 0;
             }
         }
+        p {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .view-more {
+            display: block;
+            width: 150px;
+            height: 40px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 40px;
+            text-align: center;
+            background: $theme-btn-bg;
+            color: $theme-btn-text-color;
+        }
     }
     .right-short-info {
         background: #ea5324;
-        width: 280px;
+        padding: 15px;
+        width: 310px;
+        ol {
+            margin: 0;
+            padding: 0;
+            li {
+                display: flex;
+                align-items: flex-start;
+                font-size: 14px;
+                color: #fff;
+                margin-bottom: 25px;
+                img {
+                    width: 24px;
+                    margin-right: 15px;
+                }
+                .text {
+                    border-bottom: 1px solid #fff;
+                    width: 100%;
+                    padding-bottom: 22px;
+                }
+                &:last-child .text {
+                    border-bottom: none;
+                }
+                strong {
+                    display: block;
+                    margin-bottom: 7px;
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
     }
 }
