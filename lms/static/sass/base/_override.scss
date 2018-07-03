@@ -7,11 +7,12 @@ body {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        background-color: #f5f5f5;
     }
 
     .content-wrapper {
         flex: 1;
-        background-color: #fafafa;
+        background-color: #f5f5f5;
     }
 
     .home > header {
@@ -357,7 +358,7 @@ body {
     .fa {
         font-family: 'FontAwesome' !important;
     }
-    
+
     footer#footer-openedx.grid-container {
         display: flex;
         flex-direction: column;
@@ -626,14 +627,14 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
         width: 16px;
     }
     &--green {
-        
+
         &:before {
             content: '';
             background: url("../images/alert_fill.svg") no-repeat;
             background-size: contain;
             position: absolute;
             left: 0;
-            top: 1px;  
+            top: 1px;
             color: #fff;
             font-style: normal;
             height: 12px;
@@ -657,7 +658,6 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
             z-index: 2;
         }
     }
-    
 }
 
 
@@ -667,7 +667,7 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
     flex: 1;
 }
 main#main {
-    background: #f5f5f5;
+    background: #fff;
     height: 100%;
     flex: 1;
     display: flex;
@@ -739,8 +739,8 @@ body.dashboard {
 }
 
 .wizard-step.step-proceed .next.action-primary.right,
-.verification-process .pay-and-verify .nav-wizard .right, 
-.verification-process .incourse-reverify .nav-wizard .right, 
+.verification-process .pay-and-verify .nav-wizard .right,
+.verification-process .incourse-reverify .nav-wizard .right,
 .verification-process .reverify .nav-wizard .right {
     color: #000 !important;
     &.is-disabled {
@@ -822,7 +822,7 @@ body .header-link {
             transition: 0.2s;
         }
     }
-    
+
 }
 
 .studio-home {
@@ -854,4 +854,10 @@ body.verification-process .carousel .view .instruction,
     font-size: 16px;
     line-height: 23.68px;
     font-weight: 600;
+}
+.archived {
+    &:hover,&:focus,&:active {
+        background: inherit !important;
+        color: inherit !important;
+    }
 }
