@@ -1,67 +1,43 @@
 <%page expression_filter="h"/>
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
+<%
+from xmodule.modulestore.django import modulestore
+from course_modes.models import CourseMode
+%>
+% if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+    <section class="courses-container">
+        <ul class="courses-list">
+            ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+            <%
+                visible_courses = []
+                for course in courses:
+                    mongo_course = modulestore().get_course(course.id, depth=0)
+                    if getattr(mongo_course, 'index_visible'):
+                        # add `vendor` attr to course:
+                        course_vendor = mongo_course.course_vendor if hasattr(mongo_course, 'course_vendor')  else ''
+                        course.vendor = course_vendor
+                        # add `certified` bool attr to course:
+                        mode_slugs = [mode.slug for mode in CourseMode.modes_for_course(course.id)]
+                        certified = bool(set(mode_slugs) & {CourseMode.AUDIT, CourseMode.HONOR, CourseMode.VERIFIED})
+                        course.certified = certified
 
-<span class="courses-title">Popular E-Learning</span>
+                        visible_courses.append(course)
 
-<section class="courses-container">
-  <ul class="courses-list">
-    <li>
-      <div class="left-full-info">
-        <strong>Introduction to DevOps Practices</strong>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.... </p>
-        <a href="#" class="btn view-more">view more</a>
-      </div>
-      <div class="right-short-info">
-        <ol>
-          <li>
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/vendor-icon.svg">
-            <div class="text">
-              <strong>Vendor</strong>
-              <span>Online Course</span>
-            </div>
-          </li>
-          <li>
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/duration-icon.svg">
-            <div class="text">
-              <strong>Duration</strong>
-              <span>20-25 Hours</span>
-            </div>
-          </li>
-          <li>
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/certificate-icon.svg">
-            <div class="text">
-              <strong>Verified Certificate Available</strong>
-              <span>Yes</span>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </li>
-  </ul>
-</section>
-
-<section class="courses-container">
-  <section class="highlighted-courses">
-
-    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-      <section class="courses">
-        <ul class="courses-listing">
-          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
-          %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
-          <li class="courses-listing-item">
-              <%include file="course.html" args="course=course" />
-          </li>
-        %endfor
+                    if len(visible_courses) == settings.HOMEPAGE_COURSE_MAX:
+                        break
+            %>
+            % for course in visible_courses:
+            <li class="courses-listing-item">
+                <%include file="course.html" args="course=course" />
+            </li>
+            % endfor
         </ul>
-      </section>
+    </section>
     ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
-      % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
-      <div class="courses-more">
-        <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
-      </div>
+    % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
+        <div class="courses-more">
+            <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
+        </div>
     % endif
-    % endif
-
-  </section>
-</section>
+% endif

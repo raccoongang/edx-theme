@@ -90,7 +90,7 @@
 }
 .dropdown-menu-container {
     .menu-button {
-        color: #000;
+        color: #fff;
         box-shadow: none;
         float: left;
         width: 29px;
@@ -238,4 +238,37 @@ body .header-global .wrapper-header .wrapper-user-menu {
           padding-right: 20px;
       }
   }
+}
+
+// custom theme
+
+.tabs.course-tabs li a {
+    color: #5e5e5e;
+}
+.user-links > .container {
+    margin: 0 auto;
+}
+.user-links {
+    ol {
+        float: right;
+        margin: 7px 0 !important;
+    }
+}
+.header-global .nav-global {
+    margin: 20px 0 !important;
+}
+.header-global .wrapper-header .logo {
+    margin: 24px 90px 20px 0;
+}
+.header-global .wrapper-header > .container {
+    margin: 0 auto;
+}
+.course-header {
+    margin-bottom: 15px !important;
+}
+.dropdown-menu-container .menu-title .label-username, .header-global .user .user-link .label-username {
+    color: #fff;
+}
+.wrapper-footer footer#footer-openedx {
+    display: block;
 }
