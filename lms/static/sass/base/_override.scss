@@ -28,9 +28,10 @@
         padding: 0;
         background: #ea5324;
         max-width: 1200px;
-        > .container {
+        > .new-container {
             max-width: 1000px;
-            padding: 0 10px;
+            padding: 0 15px;
+            margin: 0 auto;
         }
     }
     .nav-global {
@@ -87,19 +88,13 @@
     }
     .nav-courseware {
         width: 100%;
-        @media screen and (min-width:760px ) {
-            width: auto;
-        }
+        text-align: right;
+        //@media screen and (min-width:760px ) {
+        //    width: auto;
+        //}
 
         li {
-            width: 100%;
-            text-align: center;
-            margin: 0 0 3px;
-            @media screen and (min-width:760px ) {
-                width: auto;
-                text-align: left;
-            }
-
+            width: auto;
             a {
                 width: 100%;
             }
@@ -743,9 +738,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .home>header {
-    //background-image: url('#{$img-path}/background.jpg');
+    background: url('#{$img-path}/background.jpg') no-repeat 50% 50%;
     min-height: 516px;
     background-position: center;
+    background-size: cover;
     position: relative;
     background-color: #040404;
     display: flex;
@@ -754,16 +750,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
         min-height: 0;
         padding: 50px 0;
     }
-    .parallax-img {
-        position: absolute;
-        left: 0;
-        top: -100px;
-        width: 100%;
-        height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-        background-size: cover;
-    }
-
     .outer-wrapper {
         animation: none;
         padding: 0;
@@ -771,12 +757,16 @@ body .wmd-prompt-dialog .btn-brand:focus {
     .title {
         background: transparent;
         box-shadow: none;
-        max-width: 670px;
+        max-width: 680px;
         width: 100%;
         margin: 62px auto 0;
         float: none;
         padding: 0;
-
+        box-sizing: border-box;
+        padding: 0 15px;
+        @media screen and (max-width: 759px) {
+            margin: 0 auto;
+        }
         &:last-child {
             margin-right: auto;
             margin-left: auto;
@@ -3229,9 +3219,11 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
     margin: 0 auto;
     background: #d24d1a;
     overflow: hidden;
-    > .container {
+    > .new-container {
         max-width: 1000px !important;
-        padding: 0 10px !important;
+        padding: 0 15px !important;
+        margin: 0 auto;
+        overflow: hidden;
     }
     ol {
         float: right;
@@ -3261,7 +3253,11 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
     color: #1f1f1f;
     padding: 60px 0 42px;
     position: relative;
-    .container {
+    @media screen and (max-width: 759px) {
+        margin: 0 auto 40px;
+        padding: 42px 0;
+    }
+    .new-container {
         max-width: 1000px;
         padding: 0 15px;
         margin: 0 auto;
@@ -3289,7 +3285,8 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
         span {
             display: block;
             font-size: 22px;
-            margin-bottom: 30px;
+            line-height: 1.2;
+            margin-bottom: 25px;
         }
         p {
             font-size: 16px;
