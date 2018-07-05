@@ -750,7 +750,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background-color: #040404;
     display: flex;
     align-items: center;
-
+    @media screen and (max-width: 759px) {
+        min-height: 0;
+        padding: 50px 0;
+    }
     .parallax-img {
         position: absolute;
         left: 0;
@@ -862,6 +865,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         display: block;
         width: 150px;
         height: 22px;
+        margin: 0 auto;
     }
 
     @media screen and (min-width: 760px) {
@@ -3204,7 +3208,9 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 // custom theme
 
 body.index-page .header-global {
-    position: absolute;
+    @media screen and (min-width: 760px) {
+        position: absolute;
+    }
 }
 
 body .header-global.header-global__course,
@@ -3257,7 +3263,7 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
     position: relative;
     .container {
         max-width: 1000px;
-        padding: 0 10px;
+        padding: 0 15px;
         margin: 0 auto;
         display: flex;
         @media screen and (max-width: 767px) {
@@ -3270,12 +3276,13 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
         line-height: 33px;
         text-transform: uppercase;
         margin-right: 50px;
+        display: block;
         @media screen and (min-width: 1200px) {
             width: 400px;
             margin-right: 100px;
         }
         @media screen and (max-width: 767px) {
-            margin: 0 0 20px;
+            margin: 0 0 30px;
         }
     }
     .greeting-text {
@@ -3361,6 +3368,9 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
             background: $theme-btn-bg;
             color: $theme-btn-text-color;
             margin-top: 20px;
+            &:hover {
+                background: $theme-btn-bg-hover;
+            }
         }
     }
     .right-short-info {
