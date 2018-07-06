@@ -3381,11 +3381,18 @@ body .teams-content .teams-main .team-edit-fields .team-required-fields {
 #ccx-coach-dashboard-content {
     overflow: hidden;
     .batch-enrollment {
-        float: left;
+        float: left !important;
         width: 48%;
     }
     .member-lists-management {
-        float: right;
-        width: 48px;
+        float: right !important;
+        width: 48% !important;
+    }
+    @media screen and (max-width: 991px) {
+        .batch-enrollment,
+        .member-lists-management {
+            float: none !important;
+            width: 100% !important;
+        }
     }
 }
