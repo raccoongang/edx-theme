@@ -812,6 +812,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 margin-bottom: 33px;
                 font-family: 'Segoeui' !important;
                 text-transform: uppercase;
+                a {
+                    color: #f56eb2;
+                    &:hover {
+                        color: #ed83b8;
+                    }
+                }
             }
             .link {
                 background: $find-btn-bg;
