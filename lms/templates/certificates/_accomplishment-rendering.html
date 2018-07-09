@@ -170,9 +170,6 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
         line-height: 1.3;
         margin-bottom: 28px;
     }
-    .certificates_oklahoma-note:last-child {
-        margin-bottom: 0;
-    }
     .certificates_oklahoma-note-centered {
         flex: 0 0 100%;
         text-align: center;
@@ -186,7 +183,36 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
     }
     .certificates_oklahoma-note-solo {
         margin-left: 27%;
+        margin-bottom: 38px
     }
+    .certificates_oklahoma-table-row {
+        display: flex;
+    }
+    .certificates_oklahoma-table-cell {
+        flex: 1 1 100%;
+        border: 1px solid #000;
+        min-height: 103px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .certificates_oklahoma-table-cell p {
+        font-size: 20px;
+    }
+    .certificates_oklahoma-table-cell:last-child:not(:first-child) {
+        flex: 0 0 20%;
+    }
+    .certificates_oklahoma-table-cell > div {
+        display: flex;
+    }
+    .certificates_oklahoma-table-cell .sign-holder {
+        flex: 0 0 70%;
+    }
+    .certificates_oklahoma-table-cell .date-holder {
+        flex: 0 0 30%;
+    }
+
 </style>
 <main class="accomplishment accomplishment-main">
 
@@ -212,7 +238,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                         <table border="1">
                             <tr>
                                 <td>Name of participant & Certificate #</td>
-                                <td></td>
+                                <td>${accomplishment_copy_name}</td>
                             </tr>
                             <tr>
                                 <td>Number of Program Hours</td>
@@ -312,28 +338,76 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                 </div>
                 <div class="certificates_oklahoma-table">
                     <div class="certificates_oklahoma-table-row">
-                        <div class="certificates_oklahoma-table-cell"></div>
-                        <div class="certificates_oklahoma-table-cell"></div>
-                        <div class="certificates_oklahoma-table-cell"></div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Students Name (Typed or Printed)</span>
+                            <p>${accomplishment_copy_name | h}</p>
+                        </div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Telephone</span>
+                            <p>${user_phone}</p>
+                        </div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>License number</span>
+                        </div>
                     </div>
                     <div class="certificates_oklahoma-table-row">
-                        <div class="certificates_oklahoma-table-cell"></div>
-                        <div class="certificates_oklahoma-table-cell"></div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Address</span>
+                            <p>${user_address}</p>
+                        </div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Appraiser Board Provider Number</span>
+                        </div>
                     </div>
                     <div class="certificates_oklahoma-table-row">
-                        <div class="certificates_oklahoma-table-cell"></div>
-                        <div class="certificates_oklahoma-table-cell"></div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>City, State, ZIP</span>
+                        </div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Appraiser Board Course Number</span>
+                        </div>
                     </div>
                     <div class="certificates_oklahoma-table-row">
-                        <div class="certificates_oklahoma-table-cell"></div>
-                        <div class="certificates_oklahoma-table-cell"></div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>School/Sponsoring Entity / Instructor’s Name if USPAP</span>
+                        </div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Course Ending Date</span>
+                            <p>${user_certificate_create}</p>
+                        </div>
                     </div>
                     <div class="certificates_oklahoma-table-row">
-                        <div class="certificates_oklahoma-table-cell"></div>
-                        <div class="certificates_oklahoma-table-cell"></div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Course Title</span>
+                            <p></p>
+                        </div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Number Hours</span>
+                            <p>7 Hours</p>
+                        </div>
                     </div>
                     <div class="certificates_oklahoma-table-row">
-                        <div class="certificates_oklahoma-table-cell"></div>
+                        <div class="certificates_oklahoma-table-cell">
+                            <span>Authentication</span>
+                            <div>
+                                <div class="sign-holder">
+                                        % if mode != 'base':
+                                        % if certificate_data:
+                                            % for ind, signatory in enumerate(certificate_data.get('signatories', [])):
+                                                % if ind == 4:
+                                                    <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                                %endif
+                                            % endfor
+                                        % endif
+                                    % endif
+                                    <span>Coordinator`s Signature</span>
+                                </div>
+                                <div class="date-holder">
+                                    <p>${certificate_date_issued}</p>
+                                    <span>Date</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
