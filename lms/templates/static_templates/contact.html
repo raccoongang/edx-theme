@@ -18,6 +18,7 @@
              </div>
         % endif
         <div class="group group-form group-form-requiredinformation">
+        	%if form:
             <form action="${reverse('contact_form')}" method="post" id="webform-client-form-285" accept-charset="UTF-8">
                 <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}">
                 <ol class="list-input">
@@ -30,6 +31,7 @@
                     </li>
                 </ol>
             </form>
+            % endif
         </div>
     </section>
 </main>
