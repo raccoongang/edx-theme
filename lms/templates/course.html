@@ -10,36 +10,36 @@ from openedx.core.djangoapps.models.course_details import CourseDetails
 
 
 <div class="left-full-info">
-    <strong class="course-title"><a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">${course.display_name_with_default}</a></strong>
+    <strong class="left-full-info__title"><a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">${course.display_name_with_default}</a></strong>
     % if details.short_description:
     <p class="course-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nostrum mollitia esse fugiat! Ab omnis voluptatum consequatur temporibus nostrum laboriosam, voluptatibus quidem iure iste doloremque doloribus, hic itaque magni quas.</p>
     % endif
     <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="btn view-more">view more</a>
 </div>
 <div class="right-short-info">
-    <ol>
+    <ol class="short-info-list">
         % if course.vendor:
-        <li>
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/vendor-icon.svg">
-            <div class="text">
+        <li class="short-info-list__item">
+            <img class="short-info-list__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/vendor-icon.svg">
+            <div class="short-info-list__text">
                 <strong class="custom-param-name">${_("Vendor")}</strong>
                 <span class="custom-param-value">${course.vendor}</span>
             </div>
         </li>
         % endif
         % if details.duration:
-        <li>
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/duration-icon.svg">
-            <div class="text">
+        <li class="short-info-list__item">
+            <img class="short-info-list__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/duration-icon.svg">
+            <div class="short-info-list__text">
                 <strong class="custom-param-name">${_("Duration")}</strong>
                 <span class="custom-param-value">${details.duration}</span>
             </div>
         </li>
         % endif
         % if course.certified:
-        <li>
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/certificate-icon.svg">
-            <div class="text">
+        <li class="short-info-list__item">
+            <img class="short-info-list__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/certificate-icon.svg">
+            <div class="short-info-list__text">
                 <strong class="custom-param-name">${_("Verified Certificate Available")}</strong>
                 <span class="custom-param-value">${_("Yes") if course.certified else _("No")}</span>
             </div>
