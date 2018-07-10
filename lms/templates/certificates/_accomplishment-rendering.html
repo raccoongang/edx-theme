@@ -372,8 +372,6 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
     <div class="wrapper-accomplishment-rendering">
         <div class="accomplishment-rendering">
             % for user_state in user_states:
-                % for state_key, state_values in us_state.items():
-                    % if user_state.get('state') == state_key:
                     <div class="certificates_wrapper">
                             <div class="certificates_top-part">
                                     <img src="/static/certificates/images/PA.jpg" alt="">
@@ -407,7 +405,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                                     </tr>
                                     <tr>
                                         <td>${_("Provider #")}</td>
-                                        <td>${state_values.get('provider', 'NA') or 'NA'}</td>
+                                        <td>${us_state.get(user_state.get('state', ''), {}).get('provider', 'NA') or 'NA'}</td>
                                     </tr>
                                     <tr>
                                         <td>${_("Title of Program")}</td>
@@ -456,13 +454,9 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                                     </div>
                                 </div>
             </div>
-            % endif
-            % endfor
             % endfor
 
             % for user_state in user_states:
-            % for state_key, state_values in us_state.items():
-            % if user_state.get('state') == state_key:
             <div class="certificates_wrapper">
                 <div class="certificates_oklahoma-top-holder">
                     <div class="certificates_oklahoma-crest">
@@ -514,7 +508,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                         </div>
                         <div class="certificates_oklahoma-table-cell">
                             <span>${_("Appraiser Board Provider Number")}</span>
-                            <p>${state_values.get('provider', 'NA') or 'NA'}</p>
+                            <p>${us_state.get(user_state.get('state', ''), {}).get('provider', 'NA') or 'NA'}</p>
                         </div>
                     </div>
                     <div class="certificates_oklahoma-table-row">
@@ -569,12 +563,8 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-            % endif
-            % endfor
             % endfor
 
             % for user_state in user_states:
