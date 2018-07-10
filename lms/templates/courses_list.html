@@ -28,7 +28,7 @@ from course_modes.models import CourseMode
                         break
             %>
             % for course in visible_courses:
-            <li class="courses-listing-item">
+            <li class="courses-list__item">
                 <%include file="course.html" args="course=course" />
             </li>
             % endfor

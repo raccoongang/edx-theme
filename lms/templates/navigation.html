@@ -49,7 +49,7 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
   <header id="global-navigation" class="header-global ${"header-global__course" if course else ""}" >
     <div class="user-links">
-        <div class="new-container">
+        <div class="user-links__container">
             % if user.is_authenticated():
             <div class="border"></div>
             % else:
