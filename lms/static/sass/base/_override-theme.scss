@@ -29,7 +29,7 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
 		overflow: hidden;
 	}
 
-	ol {
+	.nav-courseware {
 		float: right;
 		margin: 7px 0 !important;
 		li {
@@ -96,14 +96,14 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
 	}
 }
 
-.greeting-text {
-	.greeting-title {
+.greeting-right {
+	&__title {
 		display: block;
 		font-size: 22px;
 		line-height: 1.2;
 		margin-bottom: 25px;
 	}
-	.greeting-text {
+	&__text {
 		font-size: 16px;
 		line-height: 22px;
 	}
@@ -190,7 +190,7 @@ body .left-full-info {
 		}
 	}
 }
-.right-short-info {
+body .right-short-info {
 	background: #ea5324;
 	padding: 15px;
 	width: 320px;
@@ -237,15 +237,17 @@ body .left-full-info {
 	}
 }
 
-.all-elearnings {
+body .all-elearnings {
 	width: 166px;
+	padding: 0 15px;
 	height: 40px;
+	line-height: 40px;
 	display: block;
 	margin: 20px auto 40px;
 	text-align: center;
 	text-transform: uppercase;
 	background: $theme-btn-bg;
-	color: $theme-btn-text-color;
+	color: $theme-btn-text-color !important;
 	&:hover {
 		background: $theme-btn-bg-hover;
 	}
