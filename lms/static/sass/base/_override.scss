@@ -3102,6 +3102,7 @@ body {
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
+                text-decoration: none;
             }
         }
     }
@@ -3189,4 +3190,37 @@ body .theme-header .list-inline {
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
     width: 50%;
+}
+
+.find-courses {
+    .search-facets {
+        width: 100%;
+        margin-bottom: 0;
+        .facet-list {
+            padding: 0 10px 10px;
+            li {
+                display: inline-block;
+            }
+        }
+        .facet-option .count {
+            position: relative;
+            right: auto;
+            padding: 0 5px;
+            background: $theme-btn-bg;
+            color: #fff;
+        }
+    }
+}
+
+.find-courses .search-facets .facet-option.selected .count:before,
+.find-courses .search-facets .facet-option.selected:hover .count:before,
+.find-courses .search-facets .facet-option.selected:focus .count:before {
+    color: #fff;
+    position: relative;
+    left: auto;
+}
+.find-courses .search-facets .facet-option.selected .count,
+.find-courses .search-facets .facet-option.selected:hover .count,
+.find-courses .search-facets .facet-option.selected:focus .count {
+    top: 1px;
 }
