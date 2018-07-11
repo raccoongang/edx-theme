@@ -49,7 +49,10 @@ site_status_msg = get_site_status_msg(course_id)
 </%block>
   <header id="global-navigation" class="header-global ${"header-global__course" if course else ""}" >
     <div class="user-links">
-        <div class="container">
+        <div class="user-links__container">
+            % if user.is_authenticated():
+            <div class="border"></div>
+            % else:
             <ol class="right nav-courseware list-inline">
                 <%block name="navigation_sign_in">
                 % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
@@ -72,10 +75,11 @@ site_status_msg = get_site_status_msg(course_id)
                 % endif
             </%block>
             </ol>
+            % endif
         </div>
     </div>
     <nav class="wrapper-header" aria-label="${_('Global')}">
-        <div class="container">
+        <div class="new-container">
             <h1 class="logo">
               <a href="${marketing_link('ROOT')}">
                 <%block name="navigation_logo">
