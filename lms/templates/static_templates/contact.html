@@ -1,5 +1,6 @@
 <%page expression_filter="h"/>
 <%! from django.utils.translation import ugettext as _ %>
+<%! from django.core.urlresolvers import reverse %>
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Contact")}</%block>
@@ -11,68 +12,26 @@
         <p>Not a student yet and have a general question about edX? Please visit our FAQ’s. Still need help or
             want to give us general feedback (which we want), contact us below.</p>
         <p></p>
+        % if sent_mail:
+            <div class="group group-form group-form-requiredinformation">
+                <h4>Your message was successfully sent.</h4>
+             </div>
+        % endif
         <div class="group group-form group-form-requiredinformation">
-            <form action="" method="post" id="webform-client-form-285" accept-charset="UTF-8">
+        	%if form:
+            <form action="${reverse('contact_form')}" method="post" id="webform-client-form-285" accept-charset="UTF-8">
                 <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}">
                 <ol class="list-input">
 
-                    <li class="field required text">
-                        <label for="id_email">Your Email:</label>
-                        <input type="text" name="email" id="id_email">
-                    </li>
+                    ${form.as_ul_with_class('field required text') | n}
 
-                    <li class="field required text">
-                        <label for="id_full_name">Full name:</label>
-                        <input id="id_full_name" type="text" name="full_name" maxlength="255">
-                    </li>
-
-                    <li class="field text">
-                        <label for="id_phone">Phone:</label>
-                        <input id="id_phone" type="text" name="phone" maxlength="255">
-                    </li>
-
-                    <li class="field text">
-                        <label for="id_i_am_a">I am a: </label>
-                        <select name="i_am_a" id="id_i_am_a">
-                            <option value="" selected="selected">-- select --</option>
-                            <option value="student">Student</option>
-                            <option value="professor">Professor</option>
-                            <option value="journalist">Journalist</option>
-                            <option value="administrator">University Administrator</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </li>
-
-                    <li class="field required text">
-                        <label for="id_inquiry_type">Inquiry type: </label>
-                        <select name="inquiry_type" id="id_inquiry_type">
-                            <option value="" selected="selected">-- select --</option>
-                            <option value="registration">Question about Registration and Activation</option>
-                            <option value="technical">I am having a Technology Problem</option>
-                            <option value="accessibility">Question about Accessibility for students with disabilities
-                            </option>
-                            <option value="exams">Question about Certification and Exams</option>
-                            <option value="account">My account details need changing</option>
-                            <option value="university">Business development / Institutional inquiry</option>
-                            <option value="harrassment">Report unethical or harassing conduct</option>
-                            <option value="other">Other...</option>
-                        </select>
-                    </li>
-
-                    <li class="field required text">
-                        <label for="id_message">Message: </label>
-                        <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
-                            <textarea id="id_message" rows="5" name="message"></textarea>
-                            <div class="grippie"></div>
-                        </div>
-                    </li>
                     <li class="form-actions">
                         <button type="submit" class="action action-primary action-update" aria-disabled="false">Submit
                         </button>
                     </li>
                 </ol>
-
-
             </form>
+            % endif
+        </div>
     </section>
 </main>
