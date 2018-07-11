@@ -385,11 +385,11 @@ body {
         background: none;
     }
     .dashboard .my-courses .wrapper-header-courses {
-        border-bottom: 1px solid rgb(211,211,211);
         margin: 0 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border: none;
     }
     .header-global .user .user-link .user-image-frame {
         max-width: 30px;
@@ -442,10 +442,13 @@ body {
         color: $theme-color;
     }
     .dashboard .my-courses .listing-courses .course-item {
-        border-bottom: 1px solid #d3d3d3;
+        border-top: 1px solid #d3d3d3;
+        &:first-child:not(.archives-course) {
+            border-top: none;
+        }
     }
     .listing-courses {
-        margin: 30px !important;
+        margin: 0 30px 30px !important;
     }
 }
 
@@ -873,4 +876,52 @@ body .wrapper-footer footer#footer-openedx .footer-questions a {
 
 body.view-in-course .container {
     background: none;
+}
+
+.listing-courses {
+    display: flex;
+    flex-direction: column;
+}
+body .dashboard .my-courses .listing-courses .course-item {
+    order: 1;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    &:last-child:not(.archives-course) {
+        border-bottom: 0;
+    }
+    &::first-child:not(.archives-course) {
+        border-top: 1px solid #d3d3d3;
+    }
+}
+body .dashboard .my-courses .listing-courses .active-course {
+    &:first-child {
+        border-top: none;
+    }
+}
+body .dashboard .my-courses .listing-courses .course-item.archives-course {
+    position: relative;
+    order: 2;
+    margin-top: 30px;
+    &:last-child {
+        border-bottom: 1px solid #d3d3d3;
+    }
+    &:first-child {
+        padding: 30px 0 0;
+        margin: 60px 0 0;
+        &:after {
+            content: 'Completed courses';
+            position: absolute;
+            top: -27px;
+            font-size: 18px;
+            color: #646464;
+            padding: 0 10px 15px;
+            font-weight: 300;
+        }
+    }
+}
+.helper {
+    order: 3;
+}
+body .window-wrap .content-wrapper.main-container#content main .container .home {
+    max-width: 1180px;
 }
