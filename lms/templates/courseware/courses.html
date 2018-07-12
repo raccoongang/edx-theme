@@ -64,9 +64,9 @@
         % endif
 
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-          <ul class="courses-listing">
+          <ul class="courses-listing courses-list">
             %for course in courses:
-            <li class="courses-listing-item">
+            <li class="courses-listing-item courses-list__item">
               <%include file="../course.html" args="course=course" />
             </li>
             %endfor
