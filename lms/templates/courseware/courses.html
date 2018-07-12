@@ -51,21 +51,6 @@
           </form>
         </div>
 
-        <div id="filter-bar" class="filters hide-phone is-collapsed">
-        </div>
-        % endif
-
-        <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-          <ul class="courses-listing">
-            %for course in courses:
-            <li class="courses-listing-item">
-              <%include file="../course.html" args="course=course" />
-            </li>
-            %endfor
-          </ul>
-        </div>
-
-
         % if course_discovery_enabled:
         <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
           <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
@@ -73,6 +58,20 @@
           </section>
         </aside>
         % endif
+
+        <div id="filter-bar" class="filters hide-phone is-collapsed">
+        </div>
+        % endif
+
+        <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
+          <ul class="courses-listing courses-list">
+            %for course in courses:
+            <li class="courses-listing-item courses-list__item">
+              <%include file="../course.html" args="course=course" />
+            </li>
+            %endfor
+          </ul>
+        </div>
 
       </section>
     </section>

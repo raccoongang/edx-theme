@@ -20,7 +20,7 @@
     background: none;
 
     h1.logo {
-        margin: 24px 90px 20px 0;
+        margin: 24px 50px 20px 0;
     }
 
     .wrapper-header {
@@ -46,6 +46,7 @@
             text-align: center;
             text-transform: none;
             font-size: 16px;
+            margin: 0 0 0 20px !important;
             @media screen and (min-width:760px ) {
                 width: auto;
                 text-align: left;
@@ -3102,6 +3103,7 @@ body {
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
+                text-decoration: none;
             }
         }
     }
@@ -3189,4 +3191,54 @@ body .theme-header .list-inline {
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
     width: 50%;
+}
+
+.find-courses {
+    .search-facets {
+        width: 100%;
+        margin-bottom: 0;
+        .facet-list {
+            padding: 0 10px 10px;
+            li {
+                display: inline-block;
+            }
+        }
+        .facet-option .count {
+            position: relative;
+            right: auto;
+            padding: 0 5px;
+            background: $theme-btn-bg;
+            color: #fff;
+        }
+    }
+}
+
+.find-courses .search-facets .facet-option.selected .count:before,
+.find-courses .search-facets .facet-option.selected:hover .count:before,
+.find-courses .search-facets .facet-option.selected:focus .count:before {
+    color: #fff;
+    position: relative;
+    left: auto;
+}
+.find-courses .search-facets .facet-option.selected .count,
+.find-courses .search-facets .facet-option.selected:hover .count,
+.find-courses .search-facets .facet-option.selected:focus .count {
+    top: 1px;
+}
+
+.find-courses .courses-container .courses {
+    width: 100% !important;
+}
+
+body.view-in-course .header-global {
+    background: #eeeeee;
+}
+
+.course-info {
+    margin-top: 30px;
+}
+
+.main-cta .register.disabled {
+    display: block;
+    margin-top: 25px;
 }

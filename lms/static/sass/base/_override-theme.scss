@@ -44,7 +44,7 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
 		}
 	}
 	.border {
-		height: 15px;
+		height: 31px;
 	}
 }
 
@@ -125,7 +125,7 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
 	&__item {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 40px;
+		margin-bottom: 40px !important;
 		@media screen and (max-width: 767px) {
 			display: block;
 		}
@@ -170,6 +170,7 @@ body .left-full-info {
 	&__btn-more {
 		display: block;
 		width: 150px;
+		padding: 0 15px;
 		height: 40px;
 		font-weight: bold;
 		font-size: 14px;
@@ -202,7 +203,7 @@ body .right-short-info {
 			font-size: 14px;
 			color: #fff;
 			& + li {
-				margin-top: 25px;
+				margin-top: 25px !important;
 			}
 			&:last-child .short-info-list__text {
 				border-bottom: none;
