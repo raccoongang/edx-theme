@@ -366,6 +366,85 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
         border-right: 1px solid rgb(100,145,150);
         border-left: none;
     }
+    @media print, all {
+        @page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0 !important;
+            padding: 0;
+        }
+        .accomplishment-rendering {
+            border: none;
+        }
+        .certificates_wrapper {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            page-break-before: always;
+            page-break-after: always;
+            page-break-inside: avoid;
+            margin-bottom: 30px;
+        }
+        .certificates_under-text {
+            font-size: 16px;
+        }
+        .accomplishment td {
+            font-size: 16px;
+        }
+        .layout-accomplishment .accomplishment-rendering {
+            padding: 0;
+        }
+        .accomplishment table {
+            margin-bottom: 20px;
+        }
+        .certificates_bordered-table-cell {
+            padding-bottom: 10px;
+        }
+        .accomplishment h2, .accomplishment h3,
+        .certificates_bold-text,
+        .certificates_bordered-text,
+        .certificates_bordered-table-cell:last-child>div {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+        .certificates_under-text {
+            margin-bottom: 0;
+        }
+        .certificates_bordered-table-cell:last-child {
+            padding: 5px;
+        }
+        .certificates_bordered-table-cell:last-child {
+            padding: 10px 5px 30px;
+        }
+        .certificates_bordered-table-cell {
+            margin-bottom: 5px;
+        }
+        .certificates_oklahoma-title h1 {
+            font-size: 25px;
+        }
+        .certificates_oklahoma-title p {
+            font-size: 18px;
+        }
+        .certificates_oklahoma-top-holder,
+        .certificates_oklahoma-title-center {
+            margin-bottom: 10px;
+        }
+        .certificates_oklahoma-table-cell {
+            min-height: 50px;
+            padding: 4px;
+        }
+        .certificates_oklahoma-table-cell p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        .signatory-signature {
+            max-width: 100px !important;
+        }
+    }
 </style>
 <main class="accomplishment accomplishment-main">
 
