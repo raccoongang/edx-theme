@@ -694,7 +694,19 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button.seq_prob
     content: "\f044";
 }
 
+
 body .window-wrap div.info-wrapper table ul,
 body .window-wrap div.info-wrapper table ol {
     padding-left: 30px;
+}
+body .menu-action {
+    display: none;
+}
+@media screen and (max-width: 850px) {
+    .header-global .wrapper-header {
+        width: 100%;
+        .menu-action {
+            display: block;
+        }
+    }
 }
