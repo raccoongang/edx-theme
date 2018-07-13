@@ -2820,4 +2820,10 @@ body .enroll-message a {
 .view-profile .profile-image-field .image-wrapper .upload-button-input {
     display: none;
 }
-
+.sysadmin-dashboard-content .instructor-nav a {
+    @include sm {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}
