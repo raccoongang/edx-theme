@@ -123,11 +123,14 @@ body.view-in-course .header-global .wrapper-header, body.view-in-course .header-
 	padding: 0;
 
 	&__item {
-		display: flex;
+		display: flex !important;
 		justify-content: space-between;
-		margin-bottom: 40px !important;
+		margin: 0 0 40px !important;
+		float: none !important;
+		width: 100% !important;
+		max-height: none !important;
 		@media screen and (max-width: 767px) {
-			display: block;
+			display: block !important;
 		}
 	}
 }
@@ -145,6 +148,7 @@ body .left-full-info {
 		position: relative;
 		padding-bottom: 15px;
 		font-size: 20px;
+		line-height: 22px;
 		margin-bottom: 12px;
 		color: #1f1f1f !important;
 		font-weight: bold;
