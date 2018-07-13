@@ -6,6 +6,7 @@ from courseware.courses import get_course_about_section
 from django.conf import settings
 from edxmako.shortcuts import marketing_link
 from openedx.core.lib.courses import course_image_url
+from course_modes.models import CourseMode
 %>
 
 <%inherit file="../main.html" />
@@ -113,7 +114,7 @@ from openedx.core.lib.courses import course_image_url
       <li class="courses-list__item">
         <div class="left-full-info">
           <a class="left-full-info__title" href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">${course.display_name_with_default}</a>
-          <p class="left-full-info__description">Test test test</p>
+          <p class="left-full-info__description">${get_course_about_section(request, course, 'short_description')}</p>
           <div class="main-cta">
             %if user.is_authenticated() and registered:
             %if show_courseware_link:
@@ -174,25 +175,33 @@ from openedx.core.lib.courses import course_image_url
         </div>
         <div class="right-short-info">
           <ol class="short-info-list">
+            %if course.course_vendor and registered:
             <li class="short-info-list__item">
               <img class="short-info-list__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/vendor-icon.svg">
               <div class="short-info-list__text">
                 <strong class="custom-param-name">${_("Vendor")}</strong>
-                <span class="custom-param-value">Vendor</span>
+                <span class="custom-param-value">${course.course_vendor}</span>
               </div>
             </li>
+            %endif
+            %if course_details.duration:
             <li class="short-info-list__item">
               <img class="short-info-list__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/duration-icon.svg">
               <div class="short-info-list__text">
                 <strong class="custom-param-name">${_("Duration")}</strong>
-                <span class="custom-param-value">Duration</span>
+                <span class="custom-param-value">${course_details.duration}</span>
               </div>
             </li>
+            %endif
             <li class="short-info-list__item">
               <img class="short-info-list__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/certificate-icon.svg">
               <div class="short-info-list__text">
                 <strong class="custom-param-name">${_("Verified Certificate Available")}</strong>
-                <span class="custom-param-value">Yes or No</span>
+                <%
+                  mode_slugs = [mode.slug for mode in CourseMode.modes_for_course(course.id)]
+                  certified = bool(set(mode_slugs) & {CourseMode.AUDIT, CourseMode.HONOR, CourseMode.VERIFIED})
+                %>
+                <span class="custom-param-value">${_("Yes") if certified else _("No")}</span>
               </div>
             </li>
           </ol>
