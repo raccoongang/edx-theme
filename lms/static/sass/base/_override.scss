@@ -398,7 +398,7 @@ body .login .form-actions button[type="submit"] {
     &:focus {
         border-color: $theme-btn-white-border;
         background: $theme-btn-white-bg;
-        color: $theme-btn-white-text-color;
+        color: $theme-btn-white-text-color-hover;
         box-shadow: none;
     }
     &:hover {
@@ -3197,4 +3197,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 }
 .home > header .title .course-search .search-input::-webkit-input-placeholder {
     color: $white;
+}
+body .view-teams .action-cancel:hover {
+    background: none;
 }
