@@ -3163,6 +3163,14 @@ body .theme-header .list-inline {
     word-break: break-all;
 }
 
+body .slick-header-column.ui-state-default,
+body .slick-cell {
+    font-size: 10px;
+}
+body .slick-header-column.ui-state-default {
+    height: auto;
+
+
 .view-teams .page-header-search .action-search:hover,
 .view-teams .page-header-search .action-search:focus {
     background-color: $theme-link-hover;
@@ -3177,4 +3185,5 @@ body .theme-header .list-inline {
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
     width: 50%;
+
 }
