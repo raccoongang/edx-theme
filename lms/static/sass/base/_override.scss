@@ -1190,12 +1190,14 @@ body.view-in-course {
         .course-wrapper {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             @media screen and (min-width: 1000px) {
 
             }
 
             .course-content {
                 width: 100%;
+                display: block;
                 @media screen and (min-width: 1000px) {
                     width: 76%;
                 }
@@ -2740,6 +2742,7 @@ footer .footer-support {
         position: relative;
         top: -2px;
         width: 80px;
+        margin-left: 12px;
     }
 }
 
@@ -3333,4 +3336,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 }
 .login-register .form-field .tip {
     color: #fff;
+}
+.courseware-search-bar {
+    width: 57%;
 }
