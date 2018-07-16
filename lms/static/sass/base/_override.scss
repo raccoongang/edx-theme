@@ -3201,3 +3201,35 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 body .view-teams .action-cancel:hover {
     background: none;
 }
+body .instructor-dashboard-wrapper-2 main .instructor-dashboard-content-2 {
+    overflow: hidden;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
+body form.ccx-form button {
+    border: none;
+    box-shadow: none;
+    color: $white;
+    background: $theme-link;
+    text-decoration: none;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background: $theme-link-hover;
+    }
+}
+body form.ccx-form select {
+    color: $theme-link;
+}
+@media (max-width: 767px) {
+    .member-lists-management,
+    .batch-enrollment {
+        width: 100% !important;
+    }
+}
+button.ccx-button-link {
+    color: $theme-link;
+}
+body .ccx-schedule-container {
+    width: auto;
+}
