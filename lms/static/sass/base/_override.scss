@@ -3022,3 +3022,12 @@ section.wiki #cheatsheetModal {
     width: 100%;
     left: 0 !important;
 }
+@media screen and (max-width: 760px) {
+    .instructor-nav {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-bottom: 10px;
+        }
+    }
+}
