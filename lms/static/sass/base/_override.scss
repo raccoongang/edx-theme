@@ -21,7 +21,7 @@ h1 {
     }
 }
 
-/*-----Home promo block-----*/  
+/*-----Home promo block-----*/
 .home {
     >header {
         position: relative;
@@ -69,7 +69,7 @@ h1 {
                     text-align: center;
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
-                    @media (max-width: 767px) { 
+                    @media (max-width: 767px) {
                         font-size: 32px;
                     }
                 }
@@ -538,7 +538,7 @@ body {
                         }
                     }
                 }
-            }  
+            }
             .u-field-social {
                 margin: 0;
                 @media (max-width: 767px) {
@@ -836,7 +836,7 @@ div {
                                 .add-field {
                                     @media (max-width: 576px) {
                                         display: block;
-                                    } 
+                                    }
                                 }
                             }
                             input[type="button"] {
@@ -1174,7 +1174,7 @@ div {
                 }
             }
         }
-        
+
     }
     &.xmodule_VideoModule {
         .video {
@@ -2299,7 +2299,7 @@ div {
                 display: -webkit-flex;
                 display: flex;
                 @media (max-width: 767px) {
-                   display: block; 
+                   display: block;
                 }
                 .msg-content {
                     -webkit-flex: 1 1 auto;
@@ -2972,5 +2972,13 @@ body .btn-secondary {
     .footer-support {
         justify-content: flex-start;
         flex: 0 0 34%;
+        align-items: center;
     }
+}
+raccoon__logo {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: $footer-nav-link-color;
+    margin-left: 8px;
 }
