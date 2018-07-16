@@ -38,9 +38,9 @@ from course_modes.models import CourseMode
     <a class="all-elearnings" href="${marketing_link('COURSES')}">ALL E-LEARNINGS</a>
 
     ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
-    % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
-        <div class="courses-more">
-            <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
-        </div>
-    % endif
+    #% if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
+    #    <div class="courses-more">
+    #        <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
+    #    </div>
+    #% endif
 % endif
