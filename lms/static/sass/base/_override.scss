@@ -2989,7 +2989,8 @@ body .slick-header-column.ui-state-default {
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke,
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
-.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input {
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
+body form.ccx-form button {
     border: none;
     box-shadow: none;
     color: $white;
@@ -3000,4 +3001,10 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
         background: $theme-link-hover;
     }
 }
+body form.ccx-form select {
+    color: $theme-link;
+}
 
+body .ccx-schedule-container {
+    width: auto;
+}
