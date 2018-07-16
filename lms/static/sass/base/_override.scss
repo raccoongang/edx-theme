@@ -2737,6 +2737,9 @@ body {
 
 .breadcrumbs .nav-item {
     margin-left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
     span.fa {
         @media screen and (max-width: 767px) {
             margin-left: 0;
@@ -3153,9 +3156,8 @@ body .teams-content .teams-main .team-edit-fields .team-required-fields {
 body .theme-header .list-inline {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    li {
-        margin: 0;
+    @media screen and (max-width: 760px) {
+        align-items: center;
     }
 }
 
@@ -3178,4 +3180,9 @@ body .theme-header .list-inline {
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
     width: 50%;
+}
+
+.view-profile .profile-section-two-fields .u-field-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
