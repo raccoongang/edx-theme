@@ -2987,3 +2987,17 @@ body .slick-header-column.ui-state-default {
         width: 100% !important;
     }
 }
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input {
+    border: none;
+    box-shadow: none;
+    color: $white;
+    background: $theme-link;
+    text-decoration: none;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background: $theme-link-hover;
+    }
+}
+
