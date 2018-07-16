@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'NeueHaasUnicaPro-Black';
+    src: url('../fonts/NeueHaasUnicaPro-Black.woff2') format('woff2'),
+    url('../fonts/NeueHaasUnicaPro-Black.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasUnicaPro-Light';
+    src: url('../fonts/NeueHaasUnicaPro-Light.woff2') format('woff2'),
+    url('../fonts/NeueHaasUnicaPro-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasUnicaPro-Bold';
+    src: url('../fonts/NeueHaasUnicaPro-Bold.woff2') format('woff2'),
+    url('../fonts/NeueHaasUnicaPro-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "NeueHaasUnicaPro-Light";
+}
+
 @mixin sm {
     @media screen and (max-width: 768px) {
         @content;
