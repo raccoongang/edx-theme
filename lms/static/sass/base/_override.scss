@@ -2981,3 +2981,9 @@ body .slick-cell {
 body .slick-header-column.ui-state-default {
     height: auto;
 }
+@media (max-width: 767px) {
+    .member-lists-management,
+    .batch-enrollment {
+        width: 100% !important;
+    }
+}
