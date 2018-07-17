@@ -398,7 +398,7 @@ body .login .form-actions button[type="submit"] {
     &:focus {
         border-color: $theme-btn-white-border;
         background: $theme-btn-white-bg;
-        color: $theme-btn-white-text-color;
+        color: $theme-btn-white-text-color-hover;
         box-shadow: none;
     }
     &:hover {
@@ -1161,13 +1161,16 @@ body.view-in-course {
 
             .course-content {
                 width: 100%;
+                display: block;
                 @media screen and (min-width: 1000px) {
                     width: 76%;
+                    display: block;
                 }
             }
         }
         .course-index {
             width: 100%;
+            display: block !important;
             @media screen and (min-width: 1000px) {
                 width: 23%;
                 display: block !important;
@@ -1227,6 +1230,7 @@ section.wiki .wiki-wrapper .article-functions {
     display: flex;
     border-bottom: 1px solid #c8c8c8;
     flex-wrap: wrap;
+    justify-content: space-between;
     @media screen and (min-width: 1000px) {
         border: none;
         width: 23%;
@@ -2736,6 +2740,9 @@ body {
 
 .breadcrumbs .nav-item {
     margin-left: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
     span.fa {
         @media screen and (max-width: 767px) {
             margin-left: 0;
@@ -3076,6 +3083,9 @@ body {
     .wrapper-footer .footer-support {
         color: $white;
     }
+    .btn-secondary:hover {
+        color: $theme-link-hover;
+    }
 }
 
 @include sm {
@@ -3087,6 +3097,7 @@ body {
             text-align: center;
             color: $white;
             background-color: $theme-link;
+            display: inline-block;
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
@@ -3152,9 +3163,8 @@ body .teams-content .teams-main .team-edit-fields .team-required-fields {
 body .theme-header .list-inline {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    li {
-        margin: 0;
+    @media screen and (max-width: 760px) {
+        align-items: center;
     }
 }
 
@@ -3177,4 +3187,50 @@ body .theme-header .list-inline {
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
     width: 50%;
+}
+
+.view-profile .profile-section-two-fields .u-field-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.my-courses .empty-dashboard-message a {
+    color: $white;
+}
+.home > header .title .course-search .search-input::-webkit-input-placeholder {
+    color: $white;
+}
+body .view-teams .action-cancel:hover {
+    background: none;
+}
+body .instructor-dashboard-wrapper-2 main .instructor-dashboard-content-2 {
+    overflow: hidden;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
+body form.ccx-form button {
+    border: none;
+    box-shadow: none;
+    color: $white;
+    background: $theme-link;
+    text-decoration: none;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background: $theme-link-hover;
+    }
+}
+body form.ccx-form select {
+    color: $theme-link;
+}
+@media (max-width: 767px) {
+    .member-lists-management,
+    .batch-enrollment {
+        width: 100% !important;
+    }
+}
+button.ccx-button-link {
+    color: $theme-link;
+}
+body .ccx-schedule-container {
+    width: auto;
 }
