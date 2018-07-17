@@ -3173,6 +3173,18 @@ body .theme-header .list-inline {
     word-break: break-all;
 }
 
+body footer {
+    .footer-support {
+        align-items: center;
+    }
+    .raccoon__logo {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        color: $footer-nav-link-color;
+        margin-left: 8px;
+    }
+
 .view-teams .page-header-search .action-search:hover,
 .view-teams .page-header-search .action-search:focus {
     background-color: $theme-link-hover;
