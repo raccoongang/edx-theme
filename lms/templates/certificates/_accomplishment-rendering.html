@@ -632,7 +632,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                             </div>
                             <div class="certificates_oklahoma-table-cell">
                                 <span>${_("Course Ending Date")}</span>
-                                <p>${user_certificate_create}</p>
+                                <p>${user_certificate_create.strftime("%B %d, %Y")}</p>
                             </div>
                         </div>
                         <div class="certificates_oklahoma-table-row">
@@ -698,7 +698,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                                 <div><span>${_("Student Name:")}</span> ${accomplishment_copy_name}</div>
                                 <div><span>${_("Student Address:")}</span> ${user_address}</div>
                                 <div><span>${_("Student License Number:")}</span>${user_state['license']}</div>
-                                <div><span>${_("Course Completion")}/<br>${_("Presentation Date:")}</span> ${user_certificate_create}</div>
+                                <div><span>${_("Course Completion")}/<br>${_("Presentation Date:")}</span> ${user_certificate_create.strftime("%B %d, %Y")}</div>
                             </div>
                             <div class="certificates_uspap-signs-holder">
                                 <div class="certificates_uspap-sign-dir">
