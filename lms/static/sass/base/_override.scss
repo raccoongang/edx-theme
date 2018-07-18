@@ -3281,3 +3281,24 @@ body.view-in-course .header-global {
 .forum-new-post-form .post-type-label {
     margin-bottom: 10px;
 }
+
+section.wiki #cheatsheetModal {
+    left: 50% !important;
+    margin: 0 !important;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 960px;
+}
+
+section.wiki #cheatsheetModal .left-column,
+section.wiki #cheatsheetModal .right-column {
+    width: 48%;
+    margin: 0;
+    @media screen and (max-width: 650px) {
+        float: none;
+        width: 100%;
+    }
+}
+section.wiki #cheatsheetModal .right-column {
+    float: right;
+}
