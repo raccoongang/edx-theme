@@ -241,7 +241,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                 <p class="action-req">${_('Action required')} </p>
                 <p>${_('Before you get your credit, check our')} <a class="action-req-link" href="https://ea.asu.edu/gpa-calculator">GPA calculator</a> ${_('to ensure the credit you’ve earned will help you gain admission to ASU; otherwise, you may consider repeating the course.')}</p>
             %elif is_credit_pending:
-                <p class="action-req action-req--greRequest crediten">${_('Action required')} </p>
+                <p class="action-req action-req--green">${_('Action required')} </p>
                 <p>${_('ID Verify Status Pending. We are reviewing your ID information.')}</p>
             %else:
               <p class="action-req" style="display:none" >${_('Action required')} </p>
