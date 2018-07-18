@@ -3306,3 +3306,17 @@ section.wiki #cheatsheetModal .right-column {
 .empty-dashboard-message a {
     color: $theme-btn-text-color !important;
 }
+
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel {
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 8px 15px;
+    color: $theme-btn-text-color !important;
+    background: $theme-btn-bg;
+    font-weight: bold;
+    &:hover {
+        color: $theme-btn-text-color !important;
+        background: $theme-btn-bg-hover !important;
+    }
+}
