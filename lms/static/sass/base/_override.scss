@@ -3333,3 +3333,23 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .co
         background: $theme-btn-bg-hover !important;
     }
 }
+
+.teams-main .create-team {
+    .action-primary {
+        background: $theme-btn-white-bg-hover !important;
+        box-shadow: none !important;
+        &:hover {
+            background: $theme-btn-bg-hover !important;
+        }
+    }
+    .action-cancel {
+        border: 1px solid $theme-btn-white-border !important;
+        border-radius: 3px;
+        color: $theme-btn-white-text-color !important;
+        padding: 8px 20px;
+        &:hover {
+            background: $theme-btn-white-bg-hover !important;
+            color: $theme-btn-white-text-color-hover !important;
+        }
+    }
+}
