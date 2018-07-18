@@ -3320,3 +3320,16 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .co
         background: $theme-btn-bg-hover !important;
     }
 }
+
+.teams-header .action-edit-team:hover {
+    background: $theme-btn-white-bg-hover !important;
+    border-color: $theme-btn-white-border !important;
+}
+.teams-header .action-primary {
+    background: $theme-btn-bg;
+    box-shadow: none !important;
+    border-radius: 3px;
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+    }
+}
