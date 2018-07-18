@@ -268,7 +268,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                 </a>
               % elif is_credit_pending:
                 <span class="enter-course enter-course--disabled" data-course-key="${credit_status['course_key'] | h}" data-user="${user.username | h}" data-provider="${credit_status['provider_id'] | h}">
-                    <span>${_('Get credit')}</span>djangoapps/credit/api/provider.py
+                    <span>${_('Get credit')}</span>
                 </span>
               %elif show_courseware_link:
                       % if course_overview.has_ended():
