@@ -1,5 +1,5 @@
 @mixin sm {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
         @content;
     }
 }
@@ -201,6 +201,9 @@ body .container.activation h1.valid {
     padding: 50px 10px;
 
     footer#footer-openedx {
+        a {
+            color: $footer-nav-link-color;
+        }
         a:hover,
         a:focus {
             text-decoration: none !important;
@@ -1851,7 +1854,6 @@ body {
         margin: 0 0 0 20px;
     }
 }
-
 .content-wrapper .page-header.has-secondary .page-header-secondary  .forum-search{
     margin: 0 0 16px;
     @media screen and (min-width: 760px) {
@@ -2738,11 +2740,12 @@ body {
     }
 }
 
-.breadcrumbs .nav-item {
+body .breadcrumbs .nav-item {
     margin-left: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
+    display: inline;
     span.fa {
         @media screen and (max-width: 767px) {
             margin-left: 0;
@@ -3064,8 +3067,9 @@ body {
         border-color: $theme-link;
         color: $theme-link;
         &:hover,&:focus,&:active {
-            background-color: $theme-link-hover;
+            background-color: $theme-link-hover !important;
             color: $white;
+            box-shadow: none;
         }
     }
     &.view-teams .teams-main .page-content-nav .nav-item.is-active {
@@ -3211,7 +3215,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 .home > header .title .course-search .search-input::-webkit-input-placeholder {
     color: $white;
 }
-body .view-teams .action-cancel:hover {
+body.view-teams .teams-wrapper .action-cancel:hover {
     background: none;
 }
 body .instructor-dashboard-wrapper-2 main .instructor-dashboard-content-2 {
@@ -3220,7 +3224,8 @@ body .instructor-dashboard-wrapper-2 main .instructor-dashboard-content-2 {
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke,
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
-body form.ccx-form button {
+body form.ccx-form button,
+body .idash-section form button {
     border: none;
     box-shadow: none;
     color: $white;
@@ -3234,7 +3239,11 @@ body form.ccx-form button {
 body form.ccx-form select {
     color: $theme-link;
 }
-@media (max-width: 760px) {
+.batch-enrollment {
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+@media (max-width: 767px) {
     .member-lists-management,
     .batch-enrollment {
         width: 100% !important;
@@ -3289,4 +3298,18 @@ body section.wiki #cheatsheetModal {
     width: 100%;
     transform: translate(-50%);
     left: 50% !important;
+@media (max-width: 767px) {
+    .view-teams .team-profile .page-content-main,
+    .view-teams .team-profile .page-content-secondary {
+        width: 100%;
+    }
+}
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn:hover {
+    color: $footer-nav-link-color !important;
+}
+.wrapper-msg .msg {
+    min-width: 0;
+}
+body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section {
+    background: none;
 }
