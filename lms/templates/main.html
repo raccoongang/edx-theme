@@ -153,7 +153,8 @@ from pipeline_mako import render_require_js_path_overrides
              src="https://www.facebook.com/tr?id=628468940589269&ev=PageView&noscript=1"/>
     </noscript>
     <!– End Facebook Pixel Code –>
-    
+
+     <%block name="additional_head"/>
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
