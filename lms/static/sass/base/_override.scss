@@ -3248,6 +3248,27 @@ body form.ccx-form select {
     .batch-enrollment {
         width: 100% !important;
     }
+    .view-teams .page-header.has-secondary .page-header-secondary {
+        width: 100%;
+    }
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+    }
+    .wiki-wrapper section.wiki #article_edit_form .btn {
+        box-sizing: border-box;
+    }
+    .instructor-nav {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-bottom: 10px;
+        }
+    }
+    section.wiki .wiki-wrapper .article-functions .see-children {
+        width: 100%;
+        text-align: center;
+    }
 }
 button.ccx-button-link {
     color: $theme-link;
@@ -3255,6 +3276,28 @@ button.ccx-button-link {
 body .ccx-schedule-container {
     width: auto;
 }
+
+.view-profile .profile-section-two-fields .u-field-value,
+section.wiki .main-article .wiki-article p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.teams-wrapper main {
+    width: 100%;
+}
+.view-teams .team-profile .page-content-secondary {
+    width: 30%;
+}
+body .page-header-secondary .action-edit-team {
+    &:hover {
+        color: $white;
+    }
+}
+body section.wiki #cheatsheetModal {
+    max-width: 972px;
+    width: 100%;
+    transform: translate(-50%);
+    left: 50% !important;
 @media (max-width: 767px) {
     .view-teams .team-profile .page-content-main,
     .view-teams .team-profile .page-content-secondary {
