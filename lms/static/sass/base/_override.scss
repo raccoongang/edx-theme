@@ -661,6 +661,23 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
             z-index: 2;
         }
     }
+    &--pending {
+
+        &:before {
+            content: '';
+            background: url("../images/pending.svg") no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: #fff;
+            font-style: normal;
+            height: 12px;
+            width: 16px;
+            z-index: 2;
+        }
+    }
+    
 }
 body main .container {
     background: #fff;

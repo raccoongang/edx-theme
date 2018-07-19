@@ -264,33 +264,3 @@ from openedx.core.djangolib.markup import HTML, Text
     </form>
   </div>
 </div>
-
-
-
-<script>
-    $( document ).ready(function() {
-        $('.request-credit-btn').click(function (e) {
-            const msg = "${_('This will add your grade and ASU credit to your transcript. Please click OK to continue')}";
-            const courseInformation =  e.target.closest('.request-credit-btn').dataset;
-            const data = {
-                course_id:courseInformation.courseKey
-            };
-            if( confirm(msg)){
-                $.ajax({
-                    type: "POST",
-                    url: "${reverse('ospp_api_v0:send_credit_request')}",
-                    data: JSON.stringify(data),
-                    success: function (){
-                        location.reload(true)
-                    },
-                    failure:function (){
-                        alert("${_('We have some problem with sending credit request. Please try again later.')}");
-                    },
-                    contentType: "application/json; charset=utf-8",
-                });
-            }
-            return false;
-        })
-
-    });
-</script>
