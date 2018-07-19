@@ -182,7 +182,7 @@
         border-color: $theme-btn-white-border !important;
     }
     &:hover {
-        color: $theme-btn-white-text-color-hover;
+        color: $theme-btn-white-text-color-hover !important;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
@@ -224,6 +224,9 @@ body .header-global .wrapper-header .wrapper-user-menu {
 }
 .header-global .wrapper-header .list-inline .item {
     float: left;
+    @media screen and (min-width:760px ) {
+        margin-bottom: 10px;
+    }
 }
 .header-global.header-global__course {
   h2 {
@@ -238,4 +241,23 @@ body .header-global .wrapper-header .wrapper-user-menu {
           padding-right: 20px;
       }
   }
+}
+@media screen and (min-width:760px ) {
+    body .header-global .wrapper-header .list-inline li a {
+        padding: 5px;
+    }
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+    }
+    .wiki-wrapper section.wiki #article_edit_form .btn {
+        box-sizing: border-box;
+    }
+    .instructor-nav {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-bottom: 10px;
+        }
+    }
 }
