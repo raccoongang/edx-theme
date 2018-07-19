@@ -889,7 +889,7 @@ body .dashboard .my-courses .listing-courses .course-item {
     &:last-child:not(.archives-course) {
         border-bottom: 0;
     }
-    &::first-child:not(.archives-course) {
+    &:first-child:not(.archives-course) {
         border-top: 1px solid #d3d3d3;
     }
 }
@@ -898,7 +898,7 @@ body .dashboard .my-courses .listing-courses .active-course {
         border-top: none;
     }
 }
-body .dashboard .my-courses .listing-courses .course-item.archives-course {
+body .dashboard .my-courses .listing-courses .archives-course {
     position: relative;
     order: 2;
     margin-top: 30px;
@@ -919,7 +919,9 @@ body .dashboard .my-courses .listing-courses .course-item.archives-course {
         }
     }
 }
-.helper {
+body .dashboard .my-courses .listing-courses .helper {
+    border-top: 1px solid #d3d3d3;
+    padding-top: 20px;
     order: 3;
 }
 body .window-wrap .content-wrapper.main-container#content main .container .home {
