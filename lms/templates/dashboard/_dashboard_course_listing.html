@@ -168,6 +168,8 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
                 is_credit_converted = credit_status and credit_status["request_status"] == 'approved'
 
+
+
                 credit_btn_label = None
                 if credit_status and credit_status["eligible"]:
                     provider_link = '<a href="{href}" target="_blank">{name}</a>'.format(
@@ -192,25 +194,15 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
 
                     if credit_status["purchased"]:
                         request_status = credit_status["request_status"]
-                        if request_status is None:
-                            # Learner must initiate the credit request
-
-                            # Translators: link_to_provider_site is a link to an external webpage. The text of the link will be the name of a  credit provider, such as 'State University' or 'Happy Fun Company'.
-                            credit_msg = _("Thank you for your payment. To receive course credit, you must now request credit "
-                            "at the {link_to_provider_site} website. Select <b>Request credit</b> to get started.").format(
-                                link_to_provider_site=provider_link,
-                            )
-                            credit_msg_class = "credit-request-not-started-msg"
-                            credit_btn_label = _("Request credit")
-                            credit_btn_class = 'enter-course request-credit-btn'
-                            credit_btn_href = None
-                        elif request_status == 'pending':
+                        if (not request_status) or (request_status == 'pending'):
                             # Request received but not reviewed
                             ## Translators: provider_name is the name of a credit provider or university (e.g. State University)
                             credit_msg = _("{provider_name} has received your course credit request. We will update you when credit processing is complete.").format(provider_name=credit_status["provider_name"])
                             credit_msg_class = "credit-request-pending-msg"
                             credit_btn_label = _("View Details")
                             credit_btn_class = 'pending-credit-btn'
+                            if request_status is None:
+                                credit_btn_class = "pending-credit-btn credit-request-must-be-send"
                         elif request_status == 'approved':
                             # Credit granted!
                             # Translators: link_to_provider_site is a link to an external webpage. The text of the link will be the name of a credit provider, such as 'State University' or 'Happy Fun Company'. provider_name is the name of credit provider.
@@ -255,7 +247,6 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
               <p class="action-req" style="display:none" >${_('Action required')} </p>
               <p></p>
             %endif
-
         </div>
         <div class="wrapper-course-actions">
           <div class="course-actions">
