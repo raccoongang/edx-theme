@@ -677,7 +677,7 @@ body .dashboard .my-courses .course .details .wrapper-course-details {
             z-index: 2;
         }
     }
-    
+
 }
 body main .container {
     background: #fff;
@@ -943,4 +943,85 @@ body .dashboard .my-courses .listing-courses .helper {
 }
 body .window-wrap .content-wrapper.main-container#content main .container .home {
     max-width: 1180px;
+}
+@media screen and (max-width: 760px) {
+
+}
+.progress-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    position: relative;
+    @media screen and (max-width: 760px) {
+        width: 100%;
+    }
+    &:before {
+        top: 12px;
+        left: 80px;
+        content: '';
+        position: absolute;
+        width: 77%;
+        height: 2px;
+        background: #D8D8D8;
+        z-index: 1;
+        @media screen and (max-width: 1040px) {
+            width: 73%;
+        }
+        @media screen and (max-width: 900px) {
+            width: 69%;
+        }
+        @media screen and (max-width: 760px) {
+            display: none;
+        }
+    }
+
+    &--third-step:before {
+        background: #ffc627;
+    }
+
+    &--second-step:before {
+        background: linear-gradient(to left, #d8d8d8 0%,#d8d8d8 50%,#ffc627 51%,#ffc627 100%);
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        @media screen and (max-width: 760px) {
+            font-size: 14px;
+        }
+    }
+    li svg:last-child {
+        filter: opacity(0.5);
+    }
+    li.active span,
+    li.active svg:last-child {
+        filter: none;
+    }
+    li span {
+        margin: 20px 0;
+        filter: opacity(0.5);
+    }
+    li svg {
+        position: relative;
+        z-index: 2;
+        @media screen and (max-width: 760px) {
+            height: 30px;
+        }
+        &:first-child {
+            @media screen and (max-width: 760px) {
+                display: none;
+            }
+        }
+    }
+    .active-pill {
+        margin-top: -8px;
+        margin-bottom: -7px;
+    }
 }
