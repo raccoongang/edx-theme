@@ -3079,7 +3079,7 @@ body section.wiki .btn.btn-danger {
     color: #fff;
     &:hover,&:focus,&:active {
         background-image: none;
-        background: lighten($delete-button, 20%);
+        background: $theme-btn-bg-hover !important;
         border: none !important;
         box-shadow: none !important;
         color: #fff;
