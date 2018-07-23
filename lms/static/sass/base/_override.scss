@@ -2530,7 +2530,7 @@ body {
     }
 }
 
-.logo-en,.logo-ar, .logo-footer img  {
+.logo-en,.logo-ar {
     width: $logo-width;
     min-width: $logo-width;
     height: $logo-height;
@@ -2867,7 +2867,7 @@ body .enroll-message a {
     .theme-header .list-inline {
         width: 100%;
     }
-    .nav-global li {
+    .theme-header__wrapper .nav-global li {
         width: 100%;
         margin: 0 0 12px;
     }
@@ -2997,7 +2997,7 @@ body .teams-content .btn-secondary {
         justify-content: flex-start;
         flex: 0 0 34%;
         align-items: center;
-        color: #fff;
+        color: $footer-nav-link-color;
     }
 }
 body .slick-header-column.ui-state-default,
@@ -3114,3 +3114,12 @@ section.wiki #cheatsheetModal {
     margin-left: 8px;
 }
 
+.logo-footer img {
+    width: 50px;
+    height: 40px;
+}
+
+body .content-wrapper,
+body .highlighted-courses .courses {
+    background: #eee;
+}
