@@ -619,6 +619,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                         <div class="certificates_oklahoma-table-row">
                             <div class="certificates_oklahoma-table-cell">
                                 <span>${_("City, State, ZIP")}</span>
+                                <p>${', '.join((user_city, user_usa_state, user_zip,))}</p>
                             </div>
                             <div class="certificates_oklahoma-table-cell">
                                 <span>${_("Appraiser Board Course Number")}</span>
