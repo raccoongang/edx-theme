@@ -2530,7 +2530,7 @@ body {
     }
 }
 
-.logo-en,.logo-ar, .logo-footer img  {
+.logo-en,.logo-ar {
     width: $logo-width;
     min-width: $logo-width;
     height: $logo-height;
@@ -3114,3 +3114,12 @@ section.wiki #cheatsheetModal {
     margin-left: 8px;
 }
 
+.logo-footer img {
+    width: 50px;
+    height: 40px;
+}
+
+body .content-wrapper,
+body .highlighted-courses .courses {
+    background: #eee;
+}
