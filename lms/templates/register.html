@@ -46,7 +46,6 @@ import calendar
 
       $('#register-form').on('submit', function() {
         toggleSubmitButton(false);
-        fbq('track', 'CompleteRegistration');
         setTimeout(function() { toggleSubmitButton(true); }, 5000);
       });
 
@@ -59,6 +58,7 @@ import calendar
         if (json.redirect_url) {
           nextUrl = json.redirect_url; // Most likely third party auth completion. This trumps 'nextUrl' above.
         }
+        fbq('track', 'CompleteRegistration');
         if (!isExternal(nextUrl)) {
           location.href=nextUrl;
         } else {
