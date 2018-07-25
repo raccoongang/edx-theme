@@ -2807,11 +2807,6 @@ body .breadcrumbs .nav-item {
     }
 }
 
-.instructor-dashboard-content-2 .slickgrid .slick-cell {
-    height: auto;
-    padding: 5px;
-}
-
 .wrapper-course-material {
     .hamburger-course {
         display: block;
@@ -3254,6 +3249,9 @@ body form.ccx-form select {
     .form-actions {
         display: flex;
         flex-direction: column;
+        .button {
+            margin: 0 0 10px;
+        }
     }
     .wiki-wrapper section.wiki #article_edit_form .btn {
         box-sizing: border-box;
@@ -3298,6 +3296,7 @@ body section.wiki #cheatsheetModal {
     width: 100%;
     transform: translate(-50%);
     left: 50% !important;
+    margin: 0 !important;
 }
 @media (max-width: 767px) {
     .view-teams .team-profile .page-content-main,
@@ -3313,4 +3312,30 @@ body section.wiki #cheatsheetModal {
 }
 body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section {
     background: none;
+}
+@media screen and (min-width:760px ) {
+    body .header-global .wrapper-header .list-inline li a {
+        padding: 5px;
+    }
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+    }
+    .wiki-wrapper section.wiki #article_edit_form .btn {
+        box-sizing: border-box;
+    }
+    .instructor-nav {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-bottom: 10px;
+        }
+    }
+    .ccx-sidebar-panel {
+        padding-left: 0;
+    }
+    .ccx-schedule-sidebar {
+        margin-left: 0;
+        width: 100%;
+    }
 }
