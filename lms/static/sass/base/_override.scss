@@ -3313,7 +3313,7 @@ body section.wiki #cheatsheetModal {
 body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section {
     background: none;
 }
-@media screen and (min-width:760px ) {
+@media screen and (max-width:760px ) {
     body .header-global .wrapper-header .list-inline li a {
         padding: 5px;
     }
@@ -3338,4 +3338,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
         margin-left: 0;
         width: 100%;
     }
+}
+.instructor-dashboard-wrapper-2 section.idash-section#data_download .reports-download-container .data-display-table .slickgrid {
+    font-size: 10px;
 }
