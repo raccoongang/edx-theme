@@ -3314,3 +3314,21 @@ body section.wiki #cheatsheetModal {
 body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section {
     background: none;
 }
+
+body .courses-container .courses-more {
+    clear: both;
+    text-align: center;
+    margin: 0;
+    .courses-more-cta {
+        margin: 0;
+        display: inline-block;
+        background: $theme-btn-bg;
+        color: $theme-btn-text-color !important;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 15px;
+        &:hover {
+            background: $theme-btn-bg-hover;
+        }
+    }
+}
