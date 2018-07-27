@@ -1,7 +1,8 @@
 .header-global {
     height: auto;
     .user > .primary > a {
-        color: #fff;
+        // color: #fff;
+        color: #666;
         box-shadow: none;
         text-shadow: none;
             
@@ -39,6 +40,7 @@
         margin-top: -2px;
         img {
             max-width: 150px;
+            -ms-interpolation-mode: bicubic;
         }
     }
     .wrapper-header .tab-nav-item .active {
@@ -81,7 +83,8 @@
         }
     }
     .nav-global .tab-nav-item .tab-nav-link {
-        color: #fff !important;
+        // color: #fff !important;
+        color: #666 !important;
         text-transform: none;
         line-height: 60px;
         font-size: 18px;
@@ -112,7 +115,8 @@
 
         .fa {
             display: block;
-            color: #fff;
+            // color: #fff;
+            color: #666;
         }
     }
     .nav-courseware {

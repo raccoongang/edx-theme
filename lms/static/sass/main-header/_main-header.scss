@@ -20,7 +20,8 @@
     }
     .nav-global li a, 
     .nav-global div a {
-        color: #fff;
+        // color: #fff;
+        color: #666;
         text-transform: none;
         line-height: 60px;
         font-size: 18px;
@@ -37,7 +38,8 @@
        
         &:focus, 
         &:hover {
-            color: lighten(#dd4628, 10%) !important;
+            // color: lighten(#dd4628, 10%) !important;
+            color: lighten(#70b73c, 10%) !important;
             border: none;
         }
     }
@@ -49,11 +51,11 @@
         position: relative;
     }
     &__black {
-        background: #45a2d6;
+        //background: #45a2d6;
     }
     &_wrapper {
         width: 100%;
-        background: rgba(17, 50, 101, 0.3);
+        background: rgb(211, 227, 206);
         max-height: none;
 
         &__fixed {
@@ -62,7 +64,7 @@
             height: 100px;
         }
         &__black {
-            background: #45a2d6;
+            //background: #45a2d6;
         }
     }
 }

@@ -25,10 +25,12 @@
 
         a {
             font: 16px/1.3 font-regular;
-            color: #fff !important;
+            // color: #fff !important;
+            color: #666 !important;
 
             &:hover {
-                color: #fff !important;
+                // color: #fff !important;
+                color: #666 !important;
                 text-decoration: none;
                 border: none !important;
             }
@@ -44,7 +46,7 @@
     }
     &_copyright {
         font: 16px/1.3 $font-regular;
-        color: #a2d1eb;
+        // color: #a2d1eb;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -57,10 +59,12 @@
     }
     &_platform-link {
         font-family: $font-bold !important;
-        color: #a2d1eb !important;
+        // color: #a2d1eb !important;
+        color: #666 !important;
 
         &:hover {
-            color: darken(#a2d1eb, 10%) !important;
+            // color: darken(#a2d1eb, 10%) !important;
+            color: darken(#666, 10%) !important;
         }
     }
     &_social-list {

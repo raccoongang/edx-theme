@@ -5,86 +5,86 @@ course_mode_class = course_mode if course_mode else ''
 %>
 
 <main class="accomplishment accomplishment-main">
-
     <div class="wrapper-accomplishment-rendering">
-        <div class="accomplishment-rendering">
+        <div class="accomplishment-rendering" style="border: 3px solid #ffc000">
             <span class="deco-corner deco-corner-tl"></span>
             <span class="deco-corner deco-corner-tr"></span>
             <span class="deco-corner deco-corner-bl"></span>
             <span class="deco-corner deco-corner-br"></span>
+            <div class="accomplishment-type" style="margin-bottom: 0rem">
+                <div style="display: flex; flex-wrap: nowrap; justify-content: space-between; align-content: center">
+                    <div>
+                        <img class="src" src="/static/${settings.DEFAULT_SITE_THEME}/images/cartificate-logo.png" alt="etc - Logo" style="height: 50%">
+                    </div>
+                    <div>
+                        <img class="src" src="/static/${settings.DEFAULT_SITE_THEME}/images/reaktiv_logo.jpg" alt="reaktiv - Logo" style="position: relative; height: 50%">
+                    </div>
+                </div>
 
-            <div class="accomplishment-type">
-                <span class="accomplishment-type-symbol">
-                    <img class="src" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-etc.png" alt="">
-                </span>
+                <span class="accomplishment-type-label" style="font-size: 5em">Z E R T I F I K A T</span>
 
-                <span class="accomplishment-type-label hd-4">${document_title}</span>
             </div>
-
             <div class="wrapper-statement-and-signatories">
-                <div class="accomplishment-statement">
+                <div class="accomplishment-statement" style="padding-bottom: 0rem; margin-bottom: 0rem; border-bottom: 0rem">
                     <p class="accomplishment-statement-lead">
                         <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name | h}</strong>
-                        <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
-
-                        <span class="accomplishment-course hd-1 emphasized">
-                            <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
-                            <span class="accomplishment-course-number">${course_number}</span>:
+                        <span class="accomplishment-summary copy copy-lead hd-3">hat die videobasierten Kurse</span>
+                        <span class="accomplishment-course hd-2 emphasized">
+                            <!--<span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
+        <span class="accomplishment-course-number">${course_number}</span>:-->
                             <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
                         </span>
                     </p>
 
-                    <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p>
+                    <p class="accomplishment-statement-detail copy copy-lead hd-3">erfolgreich abgeschlossen.</p>
                 </div>
 
                 % if mode != 'base':
-                <div class="accomplishment-signatories">
+                <div class="accomplishment-signatories" style="margin-bottom: 0rem; border-bottom: 0rem">
                     <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
-
                     <div class="wrapper-signatories">
                         <div class="list-signatories">
                             % if certificate_data:
-                                % for signatory in certificate_data.get('signatories', []):
-                                <div class="signatory">
-                                    <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
-
-                                    <h4 class="signatory-name hd-5">${signatory['name']}</h4>
-                                    <p class="signatory-credentials copy copy-micro">
-                                        <span class="role">${signatory['title']}</span>
-                                        <span class="organization">${signatory['organization']}</span>
-                                    </p>
-                                </div>
-                                % endfor
+                            % for signatory in certificate_data.get('signatories', []):
+                            <div class="signatory">
+                                <!--<img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">-->
+                                <!--<h4 class="signatory-name hd-5">${signatory['name']}</h4>
+                                <p class="signatory-credentials copy copy-micro">
+                                    <span class="role">${signatory['title']}</span>
+                                    <span class="organization">${signatory['organization']}</span>
+                                </p>-->
+                            </div>
+                            % endfor
                             % endif
                         </div>
                     </div>
                 </div>
                 % endif
-            </div>
 
-            <div class="accomplishment-orgs">
+
+            </div>
+            <div class="accomplishment-orgs" style="margin-bottom: 0rem">
                 <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
 
-                <ul class="wrapper-orgs list-orgs">
-                    <li class="wrapper-organization">
-                        <div class="organization organization-edX">
-                            <img class="organization-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/cartificate-logo.png" alt="${platform_name}">
-                        </div>
-                    </li>
-                    <li class="wrapper-organization">
-                        <div class="organization organization-edX">
-                            <img class="organization-logo" src="${static.url(signatory['signature_image_path'])}" alt="${platform_name}">
-                        </div>
-                    </li>
-                </ul>
+                <div style="display: flex; flex-wrap: nowrap; justify-content: space-between; align-content: center">
+                    <div>
+                        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/MP_Gold_logo.jpg" alt="${platform_name}" style="position: relative; top: 60%">
+                    </div>
+
+                    <div>
+                        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/signature_small.jpg" alt="${platform_name}" style="position: relative; top: 0%">
+                    </div>
+
+                    <div>
+                        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/qualityAustria_system_logo.png" alt="${platform_name}" style="height: 50%; position: relative; top: 50%;">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="wrapper-accomplishment-metadata">
         <div class="accomplishment-metadata">
             <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about | h}</h2>
-
             <div class="wrapper-metadata">
                 <dl class="metadata accomplishment-recipient">
                     <dt class="label sr-only">Awarded to:</dt>
@@ -109,5 +109,5 @@ course_mode_class = course_mode if course_mode else ''
             </div>
         </div>
     </div>
-
 </main>
+
