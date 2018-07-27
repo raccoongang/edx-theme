@@ -88,7 +88,8 @@ from openedx.core.djangolib.markup import HTML, Text
 
       // js for show more btn
       $( document ).ready(function() {
-        $('.show-more').click(function () {
+        if ($('.show-more').length > 0) {
+          $('.show-more').click(function () {
             $('.fa-spinner').css('visibility', 'visible');
             setTimeout(function() {
               $('.fa-spinner').css('visibility', 'hidden');
@@ -101,7 +102,8 @@ from openedx.core.djangolib.markup import HTML, Text
                 $('.show-more').hide();
               }
             }, 300);
-        });
+          });
+        }
       });
 
    </script>
