@@ -3246,11 +3246,15 @@ body form.ccx-form select {
     .view-teams .page-header.has-secondary .page-header-secondary {
         width: 100%;
     }
-    .form-actions {
+    .window-wrap .form-actions {
         display: flex;
         flex-direction: column;
-        .button {
+        button {
             margin: 0 0 10px;
+            box-shadow: none;
+            &:hover, &:focus, &:action {
+                box-shadow: none;
+            }
         }
     }
     .wiki-wrapper section.wiki #article_edit_form .btn {
@@ -3389,6 +3393,7 @@ body .courses-container .courses-more {
 @media screen and (max-width:760px ) {
     body .header-global .wrapper-header .list-inline li a {
         padding: 5px;
+        box-sizing: border-box;
     }
     .form-actions {
         display: flex;
@@ -3404,9 +3409,6 @@ body .courses-container .courses-more {
             margin-bottom: 10px;
         }
     }
-    .ccx-sidebar-panel {
-        padding-left: 0;
-    }
     .ccx-schedule-sidebar {
         margin-left: 0;
         width: 100%;
@@ -3414,4 +3416,10 @@ body .courses-container .courses-more {
 }
 .instructor-dashboard-wrapper-2 section.idash-section#data_download .reports-download-container .data-display-table .slickgrid {
     font-size: 10px;
+}
+.teams-header .breadcrumbs {
+    display: flex;
+}
+div.gradebook-wrapper section.gradebook-content .grade-table {
+    width: 100%;
 }
