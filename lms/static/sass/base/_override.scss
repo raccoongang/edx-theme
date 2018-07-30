@@ -723,9 +723,9 @@ div {
         flex-wrap: wrap;
         &.has-secondary {
             .page-header-main {
-                -webkit-flex: 1 1 auto;
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto;
+                -webkit-flex: 1 1 100%;
+                -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
             }
             .page-header-secondary {
                 text-align: left;
@@ -2656,9 +2656,12 @@ body {
     .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
         padding: 0;
     }
-    .form-actions {
+    body .form-actions {
         display: flex;
         flex-direction: column;
+        button {
+            margin: 0 0 10px;
+        }
     }
     .hd.hd-2.progress-certificates-title {
         overflow: hidden;
@@ -2670,6 +2673,10 @@ body {
     section.wiki .wiki-wrapper .article-functions .see-children {
         width: 100%;
         text-align: center;
+    }
+    .view-teams .page-header.has-secondary .page-header-secondary {
+        width: 100%;
+        float: none;
     }
 }
 
@@ -2869,7 +2876,7 @@ body .enroll-message a {
     }
     .nav-global li {
         width: 100%;
-        margin: 0 0 12px;
+        margin: 0 0 12px !important;
     }
     .nav-global > li > a {
         display: block;
@@ -3023,7 +3030,7 @@ body .slick-header-column.ui-state-default {
 body .page-header-secondary .action-edit-team {
     &:hover {
         color: $white;
-        background: $theme-link;
+        background: $theme-link !important;
     }
 }
 
@@ -3130,4 +3137,19 @@ section.wiki #cheatsheetModal {
 .profile-wrapper .course-info>.chapters>section {
     display: block;
     width: 100%;
+}
+
+body .course-outline .block-tree .section .section-name h3,
+body .course-outline .block-tree .section ol.outline-item .subsection a.outline-item .subsection-title {
+    word-break: break-all;
+}
+.view-teams .window-wrap .page-header.has-secondary .page-header-secondary {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .view-teams .window-wrap .join-team.form-actions .action {
+        margin-right: 0;
+    }
 }
