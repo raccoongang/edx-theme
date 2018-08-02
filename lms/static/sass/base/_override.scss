@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'NeueHaasUnicaPro-Black';
+    src: url('../fonts/NeueHaasUnicaPro-Black.woff2') format('woff2'),
+    url('../fonts/NeueHaasUnicaPro-Black.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasUnicaPro-Light';
+    src: url('../fonts/NeueHaasUnicaPro-Light.woff2') format('woff2'),
+    url('../fonts/NeueHaasUnicaPro-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueHaasUnicaPro-Bold';
+    src: url('../fonts/NeueHaasUnicaPro-Bold.woff2') format('woff2'),
+    url('../fonts/NeueHaasUnicaPro-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "NeueHaasUnicaPro-Light";
+}
+
 @mixin sm {
     @media screen and (max-width: 768px) {
         @content;
@@ -11,20 +39,32 @@
 
 .header-global {
     height: auto;
-    background: $header-bg;
     border: none;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
-    padding: 18px 10px;
+    padding: 0;
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
+    box-shadow: none;
+    background: none;
+
+    h1.logo {
+        margin: 24px 50px 20px 0;
+    }
 
     .wrapper-header {
         height: auto;
         padding: 0;
+        background: #ea5324;
+        max-width: 1200px;
+        > .new-container {
+            max-width: 1000px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
     }
     .nav-global {
         width: 100%;
+        margin: 20px 0;
         @media screen and (min-width:760px ) {
             width: auto;
         }
@@ -33,7 +73,10 @@
             width: 100%;
             text-align: center;
             text-transform: none;
+            font-size: 16px;
+            margin: 0 0 8px !important;
             @media screen and (min-width:760px ) {
+                margin: 0 0 0 20px !important;
                 width: auto;
                 text-align: left;
             }
@@ -75,19 +118,9 @@
     }
     .nav-courseware {
         width: 100%;
-        @media screen and (min-width:760px ) {
-            width: auto;
-        }
-
+        text-align: right;
         li {
-            width: 100%;
-            text-align: center;
-            margin: 0 0 3px;
-            @media screen and (min-width:760px ) {
-                width: auto;
-                text-align: left;
-            }
-
+            width: auto;
             a {
                 width: 100%;
             }
@@ -198,7 +231,7 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-bg;
     position: relative;
-    padding: 50px 10px;
+    padding: 50px 10px 40px;
 
     footer#footer-openedx {
         a:hover,
@@ -209,6 +242,7 @@ body .container.activation h1.valid {
         .colophon {
             width: 100%;
             position: relative;
+            margin-bottom: 50px;
 
             .nav-colophon {
                 margin: 2px 0 28px 0;
@@ -730,24 +764,18 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .home>header {
-    //background-image: url('#{$img-path}/background.jpg');
-    min-height: 420px;
+    background: url('#{$img-path}/background.jpg') no-repeat 50% 50%;
+    min-height: 516px;
     background-position: center;
+    background-size: cover;
     position: relative;
     background-color: #040404;
     display: flex;
     align-items: center;
-
-    .parallax-img {
-        position: absolute;
-        left: 0;
-        top: -100px;
-        width: 100%;
-        height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-        background-size: cover;
+    @media screen and (max-width: 759px) {
+        min-height: 0;
+        padding: 50px 0;
     }
-
     .outer-wrapper {
         animation: none;
         padding: 0;
@@ -755,12 +783,16 @@ body .wmd-prompt-dialog .btn-brand:focus {
     .title {
         background: transparent;
         box-shadow: none;
-        max-width: 1000px;
+        max-width: 680px;
         width: 100%;
-        margin: 0 auto;
+        margin: 62px auto 0;
         float: none;
-        padding: 20px;
-
+        padding: 0;
+        box-sizing: border-box;
+        padding: 0 15px;
+        @media screen and (max-width: 759px) {
+            margin: 0 auto;
+        }
         &:last-child {
             margin-right: auto;
             margin-left: auto;
@@ -771,25 +803,24 @@ body .wmd-prompt-dialog .btn-brand:focus {
             padding: 15px 0;
 
             h1 {
-                font-size: 32px;
+                font-size: 18px;
                 line-height: 1.2;
                 color: $promo-box-text-color;
                 text-align: center;
                 font-weight: bold;
                 text-shadow: $promo-box-text-shadow;
-                margin-bottom: 50px;
-                @media screen and (min-width:760px ) {
-                    font-size: 52px;
-                }
+                margin-bottom: 10px;
+                text-transform: uppercase;
             }
             span {
                 display: block;
                 text-align: center;
-                font-size: 34px;
-                line-height: 1.3;
+                font-size: 32px;
+                line-height: 46px;
+                font-weight: 300;
                 text-shadow: $promo-box-text-shadow;
                 color: $promo-box-text-color;
-                margin-bottom: 40px;
+                margin-bottom: 0;
             }
             .link {
                 background: $find-btn-bg;
@@ -817,8 +848,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
             .search-input {
                 background: $search-input-background;
                 border: 2px solid $search-input-border;
-                color: $search-input-color;
+                color: #000;
                 padding-left: 20px !important;
+                height: 43px;
                 &:focus {
                     border-color: $search-input-border !important;
                 }
@@ -836,6 +868,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 color: $search-button-color;
                 border-left: none !important;
                 right: 0;
+                height: 43px;
             }
         }
     }
@@ -844,6 +877,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
     display: block;
     text-align: center;
     padding: 30px 0 0;
+    img {
+        display: block;
+        width: 150px;
+        height: 22px;
+        margin: 0 auto;
+    }
 
     @media screen and (min-width: 760px) {
         display: inline;
@@ -861,7 +900,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .logo-en {
-    display: inline;
+    display: block;
+    width: 150px;
+    height: 22px;
 
     .lang_ar & {
         display: none;
@@ -1705,6 +1746,7 @@ section.wiki .main-article {
 }
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    color: #fff;
 }
 body.lang_ar {
     * {
@@ -2690,6 +2732,12 @@ footer .footer-support {
         bottom: -16px;
         justify-content: baseline;
     }
+
+    .byraccoongang {
+        color: $footer-support-text-and-logo;
+        position: relative;
+        top: -3px;
+    }
 }
 
 #content {
@@ -3028,12 +3076,12 @@ body main .container .wiki-wrapper .btn:not(.btn-danger) {
 }
 
 body section.wiki .btn.btn-danger {
-    color: $delete-button;
+    color: #fff;
     &:hover,&:focus,&:active {
         background-image: none;
-        background: lighten($delete-button, 20%);
-        border: none;
-        box-shadow: none;
+        background: $theme-btn-bg-hover !important;
+        border: none !important;
+        box-shadow: none !important;
         color: #fff;
         text-shadow: none;
     }
@@ -3057,7 +3105,7 @@ body {
         border-color: $theme-link;
         color: $theme-link;
         &:hover,&:focus,&:active {
-            background-color: $theme-link-hover;
+            background-color: $theme-btn-white-bg-hover;
             color: $white;
         }
     }
@@ -3090,6 +3138,7 @@ body {
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
+                text-decoration: none;
             }
         }
     }
@@ -3177,4 +3226,135 @@ body .theme-header .list-inline {
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
     width: 50%;
+}
+
+.find-courses {
+    .search-facets {
+        width: 100%;
+        margin-bottom: 0;
+        .facet-list {
+            padding: 0 10px 10px;
+            li {
+                display: inline-block;
+            }
+        }
+        .facet-option .count {
+            position: relative;
+            right: auto;
+            padding: 0 5px;
+            background: $theme-btn-bg;
+            color: #fff;
+        }
+    }
+}
+
+.find-courses .search-facets .facet-option.selected .count:before,
+.find-courses .search-facets .facet-option.selected:hover .count:before,
+.find-courses .search-facets .facet-option.selected:focus .count:before {
+    color: #fff;
+    position: relative;
+    left: auto;
+}
+.find-courses .search-facets .facet-option.selected .count,
+.find-courses .search-facets .facet-option.selected:hover .count,
+.find-courses .search-facets .facet-option.selected:focus .count {
+    top: 1px;
+}
+
+.find-courses .courses-container .courses {
+    width: 100% !important;
+}
+
+body.view-in-course .header-global {
+    background: #eeeeee;
+}
+
+.course-info {
+    margin-top: 30px;
+}
+
+.main-cta .register.disabled {
+    display: block;
+    margin-top: 25px;
+}
+
+.forum-new-post-form .post-type-label {
+    margin-bottom: 10px;
+}
+
+section.wiki #cheatsheetModal {
+    left: 50% !important;
+    margin: 0 !important;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 960px;
+}
+
+section.wiki #cheatsheetModal .left-column,
+section.wiki #cheatsheetModal .right-column {
+    width: 48%;
+    margin: 0;
+    @media screen and (max-width: 650px) {
+        float: none;
+        width: 100%;
+    }
+}
+section.wiki #cheatsheetModal .right-column {
+    float: right;
+}
+
+.empty-dashboard-message a {
+    color: $theme-btn-text-color !important;
+}
+
+body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-settings .form-cancel {
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 3px;
+    padding: 8px 15px;
+    color: $theme-btn-text-color !important;
+    background: $theme-btn-bg;
+    font-weight: bold;
+    &:hover {
+        color: $theme-btn-text-color !important;
+        background: $theme-btn-bg-hover !important;
+    }
+}
+
+.teams-header .action-edit-team:hover {
+    background: $theme-btn-white-bg-hover !important;
+    border-color: $theme-btn-white-border !important;
+}
+.teams-header .action-primary {
+    background: $theme-btn-bg;
+    box-shadow: none !important;
+    border-radius: 3px;
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+    }
+}
+
+.teams-main .create-team {
+    .action-primary {
+        background: $theme-btn-white-bg-hover !important;
+        box-shadow: none !important;
+        &:hover {
+            background: $theme-btn-bg-hover !important;
+        }
+    }
+    .action-cancel {
+        border: 1px solid $theme-btn-white-border !important;
+        border-radius: 3px;
+        color: $theme-btn-white-text-color !important;
+        padding: 8px 20px;
+        &:hover {
+            background: $theme-btn-white-bg-hover !important;
+            color: $theme-btn-white-text-color-hover !important;
+        }
+    }
+}
+
+.certificates-wrapper button {
+    font-size: 13px;
+    font-weight: bold !important;
 }
