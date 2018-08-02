@@ -18,7 +18,7 @@ from django.core.urlresolvers import reverse
       </strong>
       <h2 class="theme-course_title">${course.display_name_with_default}</h2>
       <div class="theme-course_btn-holder">
-        <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="theme-btn-2">Take Free 60 Minute Course</a>
+        <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="theme-btn-2">${_("Take Free 60 Minute Course")}</a>
       </div>
     </div>
   </div>
