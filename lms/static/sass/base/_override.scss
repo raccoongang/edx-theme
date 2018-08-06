@@ -3176,6 +3176,9 @@ body .theme-header .list-inline {
 body footer {
     .footer-support {
         align-items: center;
+        a:hover {
+            opacity: 0.8;
+        }
     }
     .raccoon__logo {
         font-size: 12px;
@@ -3423,4 +3426,12 @@ body .courses-container .courses-more {
 }
 div.gradebook-wrapper section.gradebook-content .grade-table {
     width: 100%;
+}
+
+.wrapper-course-modes>div {
+    width: 100%;
+    margin-bottom: 5px;
+
+body .container .wiki-wrapper section.wiki .btn {
+    text-align: center;
 }
