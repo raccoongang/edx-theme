@@ -231,10 +231,16 @@ course_mode_class = course_mode if course_mode else ''
     .issued-on strong {
         font-size: 29px;
     }
-    .accomplishment-rendering .accomplishment-orgs {
+    .accomplishment-rendering .organization-logo {
         position: absolute;
-        top: 82%;
+        top: 79%;
+        left: 50%;
+        width: 42%;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
     }
+
     .accomplishment-rendering .accomplishment-orgs .organization-logo {
         max-height: 1000%;
         max-width: 1000% !important;
@@ -255,7 +261,7 @@ course_mode_class = course_mode if course_mode else ''
     }
     @media print {
         @page {
-            size: landscape;
+            size: A4 landscape;
             margin: 0;
             border: 0;
         }
@@ -264,16 +270,18 @@ course_mode_class = course_mode if course_mode else ''
             margin: 0 !important;
         }
         .certificates {
-            /*width: 20.4cm !important;*/
-            height: 20.9cm !important;
+            /* width: 29.4cm !important; */
+            height: 21cm !important;
             margin: 0 !important;
+            box-sizing: border-box;
+            max-width: 100%;
         }
         .certificates__title span {
             top: 30%;
             font-size: 114.2%;
         }
         .certificates__background {
-            width: auto;
+            width: 100%;
             height: 100%;
             margin: 0 auto;
         }
@@ -326,6 +334,9 @@ course_mode_class = course_mode if course_mode else ''
         }
         .certificates__sign-image {
             max-height: 50px;
+        }
+        .accomplishment-rendering .accomplishment-orgs .wrapper-organization {
+            width: 100%;
         }
     }
 </style>
@@ -382,18 +393,10 @@ course_mode_class = course_mode if course_mode else ''
                 </div>
             % endif
 
-            <div class="accomplishment-orgs">
-                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
 
-                <ul class="wrapper-orgs list-orgs">
-                    <li class="wrapper-organization">
-                        <div class="organization organization-edX">
-                            <img class="organization-logo logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/Agfelofowide-01.png" alt="${platform_name}">
-                            <img class="organization-logo logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/Agfelofowide_arabic-01.png" alt="${platform_name}">
-                        </div>
-                    </li>
-                </ul>
-            </div>
+                <img class="organization-logo logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/Agfelofowide-01.png" alt="${platform_name}">
+                <img class="organization-logo logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/certificates/images/Agfelofowide_arabic-01.png" alt="${platform_name}">
+
             <div class="wrapper-accomplishment-metadata">
                 <div class="accomplishment-metadata">
                     <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about | h}</h2>
