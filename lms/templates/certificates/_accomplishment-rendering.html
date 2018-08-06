@@ -61,7 +61,8 @@ course_mode_class = course_mode if course_mode else ''
         position: absolute;
         left: 50%;
         top: 6%;
-        transform: translate(-51%, 0);
+        -ms-transform: translate(-51%, 0);
+            transform: translate(-51%, 0);
         -webkit-transform: translate(-51%, 0);
         color: #8f6c29;
         font: 80px/80px Avenir;
@@ -76,7 +77,8 @@ course_mode_class = course_mode if course_mode else ''
     .certificates__title span {
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
         -webkit-transform: translate(-50%, 0);
         top: 33%;
         font-size: 156.2%;
@@ -85,14 +87,16 @@ course_mode_class = course_mode if course_mode else ''
         width: 42%;
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
         -webkit-transform: translate(-50%, 0);
     }
     .wrapper-statement-and-signatories {
         top: 21%;
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
         -webkit-transform: translate(-50%, 0);
     }
     .certificates__static-text {
@@ -145,6 +149,8 @@ course_mode_class = course_mode if course_mode else ''
         padding: 0;
     }
     .signatory {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
         width: 380px !important;
     }
@@ -165,6 +171,8 @@ course_mode_class = course_mode if course_mode else ''
     .list-signatories {
         width: 53%;
         margin: 0 auto !important;
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
     }
     .layout-accomplishment .accomplishment-signatories .signatory .signatory-signature {
@@ -233,10 +241,14 @@ course_mode_class = course_mode if course_mode else ''
         width: 490px;
     }
     .list-signatories {
-        transform: translate(7%);
+        -webkit-transform: translate(7%);
+            -ms-transform: translate(7%);
+                transform: translate(7%);
     }
     .rtl .list-signatories {
-        transform: translate(-7%);
+        -webkit-transform: translate(-7%);
+            -ms-transform: translate(-7%);
+                transform: translate(-7%);
     }
     .wrapper-signatories {
         margin-top: -10px;
