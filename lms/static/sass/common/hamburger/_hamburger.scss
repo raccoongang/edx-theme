@@ -10,7 +10,7 @@
     border-radius: 0;
     box-shadow: none;
     position: absolute;
-    top: 18px;
+    top: 30px;
     right: 10px;
     &:after,
     &:before {
@@ -49,4 +49,7 @@
 }
 .menu-open .hamburger:before {
     transform: rotate(-45deg);
+}
+.window-wrap {
+    background: none !important;
 }

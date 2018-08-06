@@ -1,0 +1,15 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About")}</h1>
+        <p><b>${_("OSTC will be the global leader within its chosen markets by maximising the potential of every trader and every trading opportunity.")}</b></p>
+        <p>${_("Our ambition is simple, though quite a challenge.")}</p>
+        <p>${_("To be recognised as the global leader in what we do – and to bring out the best in everyone who works for us and in every trading opportunity.  The two are, of course, inextricably linked.")}</p>
+        <p>${_("By doing everything that we are capable of, both individually and as a company, we will naturally assume and maintain a leadership position, both in the market and in terms of our reputation.")}</p>
+    </section>
+</main>

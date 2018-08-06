@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'SegoeuiBold';
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI.woff2') format('woff2'),
+    url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @mixin sm {
     @media screen and (max-width: 760px) {
         @content;
@@ -25,6 +41,7 @@
     }
     .nav-global {
         width: 100%;
+        margin: 34px 0 0;
         @media screen and (min-width:760px ) {
             width: auto;
         }
@@ -51,6 +68,7 @@
             }
         }
         .tab-nav-item {
+            margin: 0 5px !important;
             .active {
                 border: none !important;
             }
@@ -77,6 +95,7 @@
         width: 100%;
         @media screen and (min-width:760px ) {
             width: auto;
+            margin-top: 27px;
         }
 
         li {
@@ -98,6 +117,8 @@
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
+                border-radius: 50px;
+                font-weight: normal;
 
                 &:active,
                 &:focus {
@@ -202,7 +223,7 @@ body .container.activation h1.valid {
 
     footer#footer-openedx {
         a {
-            color: $footer-nav-link-color;
+            color: #898989;
         }
         a:hover,
         a:focus {
@@ -759,7 +780,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     .title {
         background: transparent;
         box-shadow: none;
-        max-width: 1000px;
+        max-width: none;
         width: 100%;
         margin: 0 auto;
         float: none;
@@ -775,8 +796,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
             padding: 15px 0;
 
             h1 {
+                font-family: 'SegoeuiBold' !important;
                 font-size: 32px;
-                line-height: 1.2;
+                line-height: 1;
+                padding: 0 15px 7px;
+                display: inline-block;
+                vertical-align: top;
                 color: $promo-box-text-color;
                 text-align: center;
                 font-weight: bold;
@@ -791,22 +816,23 @@ body .wmd-prompt-dialog .btn-brand:focus {
             span {
                 display: block;
                 text-align: center;
-                font-size: 34px;
+                font-size: 26px;
                 line-height: 1.3;
                 text-shadow: $promo-box-text-shadow;
                 color: $promo-box-text-color;
                 margin-bottom: 40px;
                 text-transform: uppercase;
+                font-family: 'Segoeui' !important;
             }
             .link {
                 background: $find-btn-bg;
-                border: 3px solid $find-btn-border;
                 text-shadow: none;
                 box-shadow: none;
                 color: $find-btn-color;
                 border-radius: 2px;
                 padding: 10px 20px;
                 display: inline-block;
+                border-radius: 50px;
 
                 &:hover {
                     background: $find-btn-bg-hover;
@@ -840,9 +866,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
             }
             .search-button {
                 background: $search-button-background !important;
-                border-color: $search-button-border !important;
                 color: $search-button-color;
-                border-left: none !important;
+                border: none !important;
                 right: 0;
             }
         }
@@ -852,6 +877,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
     display: block;
     text-align: center;
     padding: 30px 0 0;
+    img {
+        height: 96px;
+    }
 
     @media screen and (min-width: 760px) {
         display: inline;
@@ -1063,6 +1091,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
 }
 .flex {
     display: block;
+    padding-top: 27px;
     .doc-link {
         width: auto;
         margin: 12px 10px;
@@ -2377,6 +2406,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     display: inline-block;
     width: auto;
     padding: 10px 16px;
+    border-radius: 50px;
     @media screen and (min-width: 760px) {
         display: block;
         width: 48.82117%;
@@ -2689,7 +2719,7 @@ table.stat_table {
 footer .footer-support {
     font-size: 12px;
     line-height: 1.2px;
-    color: $footer-support-text-and-logo;
+    color: $footer-support-text-and-logo !important;
     margin: 0;
     display: flex;
     align-items: center;
@@ -2707,6 +2737,8 @@ footer .footer-support {
 
 #content {
     flex: 1 1 auto;
+}
+.index-page #content {
     margin-top: -96px;
 }
 .window-wrap {
@@ -3384,6 +3416,7 @@ body .courses-container .courses-more {
         padding: 0 10px;
         width: 180px;
         font-weight: normal;
+        border-radius: 50px;
         &:hover {
             background: $theme-btn-bg-hover;
         }
@@ -3436,4 +3469,10 @@ div.gradebook-wrapper section.gradebook-content .grade-table {
 }
 body .container .wiki-wrapper section.wiki .btn {
     text-align: center;
+}
+#login-form button, #register-form button {
+    border-radius: 50px;
+}
+.wrapper-course-modes .courseware-search-bar {
+    width: 56%;
 }
