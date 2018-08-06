@@ -1,18 +1,21 @@
 .icon-list {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
-
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+    }
     &_item {
         margin: 0 5px;
     }
     &_link {
         display: block;
-        width: 35px;
-        height: 35px;
+        width: auto;
+        height: auto;
     }
     &_svg {
         width: 35px;
