@@ -2738,8 +2738,10 @@ footer .footer-support {
 #content {
     flex: 1 1 auto;
 }
-.index-page #content {
-    margin-top: -96px;
+@media screen and (min-width: 760px) {
+    .index-page #content {
+        margin-top: -96px;
+    }
 }
 .window-wrap {
     flex: 1 1 auto;
@@ -3438,6 +3440,7 @@ body .courses-container .courses-more {
     body .header-global .wrapper-header .list-inline li a {
         padding: 5px;
         box-sizing: border-box;
+        border-radius: 50px;
     }
     .form-actions {
         display: flex;
