@@ -446,6 +446,15 @@ body .login-register {
             box-shadow: none;
         }
     }
+    .select-gender {
+        clear: none;
+        float: left;
+    }
+    .select-year_of_birth {
+        clear: none;
+        float: right;
+        margin-left: 0;
+    }
 }
 body .view-login .form-actions button[type="submit"],
 body .login .form-actions button[type="submit"] {
@@ -3220,7 +3229,9 @@ body.view-teams .teams-wrapper .action-cancel:hover {
 body .instructor-dashboard-wrapper-2 main .instructor-dashboard-content-2 {
     overflow: hidden;
 }
-body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke,
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke {
+    color: $theme-link;
+}
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
 body form.ccx-form button,
@@ -3434,4 +3445,19 @@ div.gradebook-wrapper section.gradebook-content .grade-table {
 }
 body .container .wiki-wrapper section.wiki .btn {
     text-align: center;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: 1px #c6c6c6 solid;
+    height: 32px;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    color: #222;
+    background: #fff url(../images/down-up-arrow.svg) no-repeat calc(100% - 10px) 50%;
+    background-size: 10px 7px;
 }
