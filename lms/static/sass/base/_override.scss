@@ -1418,9 +1418,11 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     }
     a {
         color: $theme-link;
+        text-decoration: underline;
 
         &:hover {
             color: $theme-link-hover;
+            text-decoration: underline !important;
         }
     }
 }
