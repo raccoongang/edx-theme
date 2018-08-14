@@ -1160,6 +1160,8 @@ div {
 .xmodule_display {
     &.xmodule_SequenceModule {
         .sequence-nav {
+            height: 44px;
+            min-height: 44px;
             @media (max-width: 767px) {
                 display: block;
                 margin-bottom: 70px;
