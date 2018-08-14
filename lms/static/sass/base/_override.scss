@@ -1165,12 +1165,14 @@ div {
                 margin-bottom: 70px;
             }
             ol {
+                flex-wrap: wrap;
                 @media (max-width: 767px) {
                     border: 1px solid #c8c8c8;
                     border-width: 0 1px;
                 }
             }
             .sequence-nav-button {
+                height: 44px;
                 @media (max-width: 767px) {
                     position: absolute;
                     top: 100%;
@@ -1191,8 +1193,14 @@ div {
                     }
                 }
             }
+            .sequence-list-wrapper {
+                height: auto;
+                width: 80%;
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+            }
         }
-
     }
     &.xmodule_VideoModule {
         .video {
