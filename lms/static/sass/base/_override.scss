@@ -845,7 +845,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     text-align: center;
     padding: 30px 0 0;
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 1180px) {
         display: inline;
         position: absolute;
         right: 0;
@@ -1418,9 +1418,11 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     }
     a {
         color: $theme-link;
+        text-decoration: underline;
 
         &:hover {
             color: $theme-link-hover;
+            text-decoration: underline !important;
         }
     }
 }
@@ -2689,7 +2691,7 @@ footer .footer-support {
     justify-content: center;
     height: 46px;
 
-    @media screen and (min-width: 760px) {
+    @media screen and (min-width: 1180px) {
         position: absolute;
         padding: 0;
         bottom: -16px;
