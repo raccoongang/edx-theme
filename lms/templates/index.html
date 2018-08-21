@@ -11,16 +11,15 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
-        <div class="parallax-img"></div> <!-- index page banner parallax bg div -->
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-                <span>${_("STUDENT SUCCESS")}</span>
-                <a href="/courses" class="link">${_("FIND COURSES")}</a>
+                <h1>${_("Training+Academy")}</h1>
+                <span>${_("Your productivity portal")}</span>
+                <!--<a href="/courses" class="link">${_("FIND COURSES")}</a>-->
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -73,16 +72,11 @@ from openedx.core.djangolib.markup import HTML, Text
 
       // js for parallax
       $(window).scroll(function () {
-        var scrollTop = $(window).scrollTop();
-        var imgPos = scrollTop / 2 + 'px';
-        $('.parallax-img').css('transform', 'translate3d(0, '  + imgPos + ', 0)');
-
         if ($(window).scrollTop() > 100) {
           $('.arrow-up').addClass('active');
         } else if ($(window).scrollTop() <= 100) {
           $('.arrow-up').removeClass('active');
         }
-
       });
       // js for parallax end
 
