@@ -74,6 +74,7 @@
 .certificate-logo {
 	display: inline-block;
 	margin-bottom: 26px;
+	height: 30px;
 }
 .ribbon {
 	position: relative;
@@ -182,7 +183,7 @@
 }
 .certificate-bottom {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	margin-top: 40px;
 }
 .date {
@@ -204,14 +205,23 @@
 		font-size: 10px;
 	}
 }
-.medal img {
+.medal {
+	text-align: center;
+	margin: 0 30px;
+	img {
 	display: inline-block;
 	vertical-align: top;
 	width: 70px;
+	}
 }
 .signature {
 	text-align: center;
 	margin-top: 20px;
+	&-item {
+		display: inline-block !important;
+		vertical-align: top;
+		padding: 0 20px;
+	}
 	* {
 		display: block;
 	}

@@ -19,6 +19,7 @@ course_mode_class = course_mode if course_mode else ''
             <strong class="user-name">${accomplishment_copy_username}</strong>
             <p class="certificate-text">${accomplishment_copy_description_full}</p>
             <strong class="course-name">${accomplishment_copy_course_org} ${course_number}: ${accomplishment_copy_course_name}</strong>
+        </div>
             <div class="certificate-bottom">
                 <div class="date">
                     <strong>${certificate_date_issued}</strong>
@@ -31,14 +32,15 @@ course_mode_class = course_mode if course_mode else ''
                 <div class="signature">
                     % if certificate_data:
                     % for signatory in certificate_data.get('signatories', []):
+                <div class="signature-item">
                         <strong><img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}"></strong>
                         <span>${signatory['name']}</span>
+                </div>
                     % endfor
                     % endif
                 </div>
                 % endif
             </div>
-        </div>
         <span class="certificate-number">Certificate ID Number: ${certificate_id_number}</span>
     </div>
 </div>
