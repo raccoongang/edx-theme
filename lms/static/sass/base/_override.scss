@@ -5,6 +5,22 @@
 // @media (max-width: 540px) {}
 // @media (max-width: 479px) {}
 
+@font-face {
+    font-family: 'SegoeuiBold';
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI.woff2') format('woff2'),
+    url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @mixin sm {
     @media screen and (max-width: 768px) {
         @content;
@@ -49,6 +65,8 @@ h1 {
         min-height: 420px;
         //background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%;
         //background-size: cover;
+        display: flex;
+        align-items: center;
         @media (max-width: 767px) {
             min-height: initial;
         }
@@ -83,7 +101,9 @@ h1 {
                 text-align: center;
                 width: 100%;
                 h1 {
-                    margin-bottom: 50px;
+                    font-family: 'SegoeuiBold' !important;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
                     font-size: 52px;
                     line-height: 1.2;
                     color: $promo-box-text-color;
@@ -95,8 +115,10 @@ h1 {
                     }
                 }
                 span {
+                    font-family: 'Segoeui' !important;
+                    text-transform: uppercase;
                     text-align: center;
-                    font-size: 34px;
+                    font-size: 28px;
                     line-height: 1.3;
                     text-shadow: $promo-box-text-shadow;
                     color: $promo-box-text-color;
@@ -132,15 +154,16 @@ h1 {
                      border: 2px solid $search-input-border;
                      color: $search-input-color;
                      padding-left: 20px !important;
+                     height: 45px;
                      &:focus {
                          border-color: $search-input-border !important;
                      }
                      &::placeholder {
-                         color: $search-input-color;
+                         color: $search-input-color !important;
                          opacity: 1;
                      }
                      &:-ms-input-placeholder {
-                         color: $search-input-color;
+                         color: $search-input-color !important;
                      }
                  }
                  .search-button {
@@ -149,6 +172,7 @@ h1 {
                      border-color: $search-input-border !important;
                      border-left: none !important;
                      right: 0;
+                     height: 45px;
                  }
              }
 
@@ -2975,39 +2999,6 @@ body .teams-content .btn-secondary {
     }
 }
 
-// footer on flex
-.theme-footer_holder {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    @media all and (max-width: 768px){
-        flex-direction: column;
-        align-items: center;
-        height: 120px;
-    }
-    .logo-footer,
-    .icon-list,
-    .footer-support {
-        position: static;
-        flex: 0 0 33%;
-        margin: 0;
-        width: auto;
-    }
-    .icon-list {
-        justify-content: center;
-        order: 2;
-    }
-    .logo-footer {
-        justify-content: flex-end;
-        order: 3;
-    }
-    .footer-support {
-        justify-content: flex-start;
-        flex: 0 0 34%;
-        align-items: center;
-        color: #fff;
-    }
-}
 body .slick-header-column.ui-state-default,
 body .slick-cell {
     font-size: 10px;
@@ -3228,3 +3219,6 @@ body .container .wiki-wrapper section.wiki .btn {
     text-align: center;
 }
 
+.courses-container .courses .course .course-info .course-title {
+    color: $course-link-color;
+}
