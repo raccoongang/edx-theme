@@ -3463,6 +3463,12 @@ select {
     background: #fff url(../images/down-up-arrow.svg) no-repeat calc(100% - 10px) 50%;
     background-size: 10px 7px;
 }
+@supports (-ms-ime-align:auto) {
+    select {
+        background: #fff url(../images/down-up-arrow.svg) no-repeat 98% 50%;
+        background-size: 10px 7px;
+    }
+}
 .teams-main select {
     min-width: 120px;
 }
