@@ -3491,3 +3491,9 @@ select {
 .teams-main select {
     min-width: 120px;
 }
+body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down::after {
+    display: none;
+}
+.account-settings-sections .section .account-settings-section-body .u-field .field select {
+    padding: 0 10px !important;
+}
