@@ -1,16 +1,18 @@
 .nav-holder {
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
     display: none;
+    flex-grow: 1;
+    padding-top: 10px;
 
     .menu-open & {
         display: flex;
         justify-content: center;
     }
-    @media (min-width: 760px) {
+    @media (min-width: 761px) {
         width: auto;
         display: block;
+        padding: 0;
     }
 
     &:after {
