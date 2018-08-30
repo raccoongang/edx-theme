@@ -1877,7 +1877,7 @@ body {
     text-align: left;
     @media screen and (min-width: 760px) {
         float: right;
-        width: initial;
+        width: auto;
         text-align: right;
     }
 }
@@ -2002,12 +2002,20 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     }
 }
 
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar {
+    @media screen and (min-width: 760px) {
+        display: flex;
+    }
+}
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar>label {
     display: block;
     margin-bottom: 12px;
     @media screen and (min-width: 760px) {
         display: initial;
         margin: 0;
+    }
+    @media screen and (max-width: 759px) {
+        width: 100% !important;
     }
 }
 
