@@ -108,7 +108,7 @@
 
             // login and register btns on the header nav
             .btn {
-                background: $theme-btn-bg;
+                background: #2a92fa;
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
@@ -118,10 +118,10 @@
                     background: $theme-btn-bg;
                 }
                 &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
+                    background: #489ff7 !important;
                 }
                 &:hover {
-                    background: $theme-btn-bg-hover;
+                    background: #489ff7;
                 }
             }
         }
@@ -805,7 +805,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 text-shadow: $promo-box-text-shadow;
                 margin-bottom: 50px;
                 @media screen and (min-width:760px ) {
-                    font-size: 52px;
+                    font-size: 42px;
                 }
             }
             span {
@@ -874,7 +874,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 50px;
         margin: 0 auto;
     }
 
@@ -895,6 +895,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .logo-en {
     display: inline;
+    height: 50px;
 
     .lang_ar & {
         display: none;
@@ -1742,6 +1743,7 @@ section.wiki .main-article {
 }
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    color: #fff;
 }
 body.lang_ar {
     * {
