@@ -697,7 +697,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                             </div>
                             <div class="certificates_uspap-student-details">
                                 <div><span>${_("Student Name:")}</span> ${accomplishment_copy_name}</div>
-                                <div><span>${_("Student Address:")}</span> ${user_address}</div>
+                                <div><span>${_("Student Address:")}</span> ${user_address} ${‘, ’.join((user_city, user_usa_state, user_zip,))}</div>
                                 <div><span>${_("Student License Number:")}</span>${user_state['license']}</div>
                                 <div><span>${_("Course Completion")}/<br>${_("Presentation Date:")}</span> ${user_certificate_create.strftime("%B %d, %Y")}</div>
                             </div>
