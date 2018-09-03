@@ -13,18 +13,18 @@ from django.utils.translation import ugettext as _
   <%block name="navigation_global_links_authenticated">
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <li class="item nav-global-01">
-        <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+        <a href="${marketing_link('COURSES')}">${_('Begin Courses')}</a>
       </li>
     % endif
     % if show_program_listing:
       <li class="tab-nav-item">
         <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
-          ${_("Courses")}
+          ${_("My Courses")}
         </a>
       </li>
       <li class="tab-nav-item">
         <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-          ${_("Programs")}
+          ${_("Multi-course Bundles")}
         </a>
       </li>
     % endif
