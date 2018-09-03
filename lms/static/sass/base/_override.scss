@@ -2951,24 +2951,36 @@ body .theme-header .list-inline {
 // programs
 
 .program-title {
-    background: #000 !important;
+    background: #ccc !important;
 }
 
-    .view-course-button,
-    .enroll-button .btn {
-        background: $theme-btn-bg !important;
-        color: $theme-btn-text-color !important;
-        &:hover {
-            background: $theme-btn-bg-hover !important;
-            color: $theme-btn-text-color-hover !important;
-        }
+.view-course-button,
+.enroll-button .btn {
+    background: $theme-btn-bg !important;
+    color: $theme-btn-text-color !important;
+    border: none !important;
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+        color: $theme-btn-text-color-hover !important;
     }
-    .btn.buy-program {
-        background: $theme-btn-white-bg !important;
-        border: 1px solid $theme-btn-white-border !important;
-        color: $theme-btn-white-text-color !important;
-        &:hover {
-            color: $theme-btn-white-text-color-hover !important;
-            background: $theme-btn-white-bg-hover !important;
-        }
+}
+.btn.buy-program {
+    background: $theme-btn-white-bg !important;
+    border: 1px solid $theme-btn-white-border !important;
+    color: $theme-btn-white-text-color !important;
+    text-shadow: none !important;
+    &:hover {
+        color: $theme-btn-white-text-color-hover !important;
+        background: $theme-btn-white-bg-hover !important;
     }
+}
+
+.progress-circle-wrapper {
+    .numbers {
+        margin-bottom: 20px;
+    }
+    .progress-label {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
