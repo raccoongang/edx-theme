@@ -859,7 +859,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .logo-en {
     display: inline;
-    height: 50px;
+    height: 70px;
     .lang_ar & {
         display: none;
     }
@@ -2780,5 +2780,18 @@ body {
     font-size: 46px;
     @media all and (max-width: 1500px) {
         font-size: 30px;
+    }
+}
+.header-global h1.logo a {
+    display: flex;
+    flex-direction: column;
+
+    i {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: 10px;
+        text-align: left;
     }
 }
