@@ -2951,10 +2951,6 @@ body .theme-header .list-inline {
 
 // programs
 
-.program-title {
-    background: #000 !important;
-}
-
 .view-course-button,
 .enroll-button .btn {
     background: $theme-btn-bg !important;
@@ -2987,9 +2983,12 @@ body .theme-header .list-inline {
     }
 }
 
-.course-title .course-title-link {
-    color: $theme-link !important;
-    &:hover {
-        color: $theme-link-hover !important;
+.course-title {
+    text-decoration: none !important;
+    .course-title-link {
+        color: $theme-link !important;
+        &:hover {
+            color: $theme-link-hover !important;
+        }
     }
 }
