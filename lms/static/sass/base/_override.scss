@@ -2545,6 +2545,7 @@ body {
 
 .doc-link {
     margin-left: auto;
+    float: none;
 }
 
 /*-----Register page-----*/
@@ -2946,4 +2947,48 @@ body .theme-header .list-inline {
 }
 .grade-detail-graph-wrapper {
     padding-top: 5px;
+}
+
+// programs
+
+.view-course-button,
+.enroll-button .btn {
+    background: $theme-btn-bg !important;
+    color: $theme-btn-text-color !important;
+    border: none !important;
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+        color: $theme-btn-text-color-hover !important;
+    }
+}
+.btn.buy-program,
+.ad-link .new-programs-btn {
+    background: $theme-btn-white-bg !important;
+    border: 1px solid $theme-btn-white-border !important;
+    color: $theme-btn-white-text-color !important;
+    text-shadow: none !important;
+    &:hover {
+        color: $theme-btn-white-text-color-hover !important;
+        background: $theme-btn-white-bg-hover !important;
+    }
+}
+
+.progress-circle-wrapper {
+    .numbers {
+        margin-bottom: 20px;
+    }
+    .progress-label {
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+}
+
+.course-title {
+    text-decoration: none !important;
+    .course-title-link {
+        color: $theme-link !important;
+        &:hover {
+            color: $theme-link-hover !important;
+        }
+    }
 }
