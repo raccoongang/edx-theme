@@ -22,43 +22,31 @@
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
-              <a target="_blank" href="https://consulting.qa.com/about">${_("About")}</a>
+              <a href="/about">${_("About")}</a>
             </li>
             <li class="nav-colophon-02">
-              <a target="_blank" href="https://consulting.qa.com/graduate-programme">${_("The Programme")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a target="_blank" href="https://consulting.qa.com/contact">${_("Contact")}</a>
-            </li>
-            <li class="nav-colophon-04">
               <a target="_blank" href="https://www.qa.com/legal/privacy-notice">${_("Privacy Policy")}</a>
             </li>
-            <li class="nav-colophon-05">
+            <li class="nav-colophon-03">
               <a target="_blank" href="https://www.qa.com/legal/terms-and-conditions">${_("Terms of Service")}</a>
             </li>
         </ol>
       </nav>
       <ul class="icon-list">
-        <li class="icon-list_item"><a href="https://www.linkedin.com/company/qaconsulting" target="_blank" class="icon-list_link">
+        <li class="icon-list_item"><a href="https://www.linkedin.com/company/qa-apprenticeships/" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
             <use xlink:href="#ico-linkedin" />
           </svg></a>
         </li>
-        <li class="icon-list_item"><a href="https://www.facebook.com/QAConsultingUK/" target="_blank" class="icon-list_link">
+        <li class="icon-list_item"><a href="https://www.facebook.com/QALtd" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
             <use xlink:href="#ico-facebook" />
           </svg>
           </a>
         </li>
-        <li class="icon-list_item"><a href="https://twitter.com/QAConsultingUK" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-twitter" />
-          </svg>
-          </a>
-        </li>
       </ul>
       <a href="/" class="footer-logo-holder">
-        <img alt="organization logo" src="/static/${settings.FEATURES.get('QAC_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.png">
+        <img alt="organization logo" src="/static/${settings.FEATURES.get('QAA_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.png">
       </a>
       <p class="footer-support">Built on
         <a target="_blank" href="${footer['openedx_link']['url']}">
