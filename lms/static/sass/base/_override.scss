@@ -1875,7 +1875,7 @@ body {
     text-align: left;
     @media screen and (min-width: 761px) {
         float: right;
-        width: initial;
+        width: auto;
         text-align: right;
     }
 }
@@ -2000,12 +2000,20 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     }
 }
 
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar {
+    @media screen and (min-width: 760px) {
+        display: flex;
+    }
+}
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar>label {
     display: block;
     margin-bottom: 12px;
     @media screen and (min-width: 761px) {
         display: initial;
         margin: 0;
+    }
+    @media screen and (max-width: 760px) {
+        width: 100% !important;
     }
 }
 
@@ -3346,7 +3354,7 @@ body section.wiki #cheatsheetModal {
     }
 }
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn:hover {
-    color: $footer-nav-link-color !important;
+    color: $theme-btn-white-text-color-hover !important;
 }
 .wrapper-msg .msg {
     min-width: 0;
@@ -3478,9 +3486,21 @@ select {
     box-sizing: border-box;
     padding: 0 10px;
     color: #222;
-    background: #fff url(../images/down-up-arrow.svg) no-repeat calc(100% - 10px) 50%;
-    background-size: 10px 7px;
+    background: #fff url(../images/select-arrow.png) no-repeat 100% 50%;
+    background-size: 27px 7px;
+}
+@supports (-ms-ime-align:auto) {
+    select {
+        background: #fff url(../images/down-up-arrow.svg) no-repeat 98% 50%;
+        background-size: 10px 7px;
+    }
 }
 .teams-main select {
     min-width: 120px;
+}
+body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down::after {
+    display: none;
+}
+.account-settings-sections .section .account-settings-section-body .u-field .field select {
+    padding: 0 10px !important;
 }

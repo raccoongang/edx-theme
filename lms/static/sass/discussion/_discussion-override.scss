@@ -13,6 +13,7 @@
           display: block;
           text-transform: uppercase;
           float: none;
+            margin: 0 0 15px;
         }
         @media screen and (min-width:760px ) {
           padding-right: 20px;
@@ -30,6 +31,7 @@
 
         span {
             font-size: 14px;
+            color: $header-nav-link-color;
         }
     }
     .list-inline {
@@ -116,6 +118,10 @@
             margin: 11px 5px 11px 15px;
             font-size: 14px;
             line-height: 1.3;
+            color: $header-nav-link-color !important;
+            &:hover {
+                color: $header-nav-link-color-hover !important;
+            }
         }
     }
     .dropdown-menu {
@@ -263,4 +269,14 @@ body .header-global .wrapper-header .wrapper-user-menu {
 }
 body .dropdown-menu-container .menu-button {
     color: $theme-link;
+}
+body .wrapper-course-material .course-tabs li a {
+    color: #5e5e5e !important;
+    border-color: transparent !important;
+    &:focus,
+    &:hover,
+    &.active {
+        color: $theme-link !important;
+        border-color: $theme-link !important;
+    }
 }
