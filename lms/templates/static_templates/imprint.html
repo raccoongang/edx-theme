@@ -1,0 +1,37 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")} MBSx</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>Imprint</h1>
+        <address>
+            Mannheim Business School GmbH<br>
+            L 5, 6<br>
+            68131 Mannheim<br>
+            Deutschland
+        </address>
+
+        <br>
+
+        <p>
+            <a href="mailto:info@mannheim-business-school.com">info@mannheim-business-school.com</a>
+        </p>
+
+        <p>
+            Tel.: +49 621 181 1281<br>
+            Fax: +49 621 181 1278
+        </p>
+        
+        <br>
+
+        <address>
+            Sitz Mannheim. Amtsgericht Mannheim HRB 10262.<br>
+            Geschäftsführer: Prof. Dr. Jens Wüstemann<br>
+            SteuerNr. 38107/03995<br>
+            Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV: Prof. Dr. Jens Wüstemann
+        </address>
+    </section>
+</main>

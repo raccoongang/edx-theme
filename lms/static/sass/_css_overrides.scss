@@ -1,0 +1,10 @@
+// Our CSS overrides should go here
+
+.form-field label {
+  &[for="register-privacy"]{
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      width: 90%;
+      vertical-align: top;
+    }
+}
