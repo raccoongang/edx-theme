@@ -862,6 +862,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
     img {
         display: block;
         height: 50px;
+        @media screen and (max-width: 759px) {
+            margin: 0 auto;
+        }
     }
 
     @media screen and (min-width: 760px) {
