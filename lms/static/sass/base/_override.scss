@@ -847,14 +847,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 color: $search-input-color;
                 padding-left: 20px !important;
                 height: $search-height;
+                font-size: 16px;
                 &:focus {
                     border-color: $search-input-border !important;
                 }
                 &::placeholder {
-                    color: $search-input-color;
+                    color: $search-input-color !important;
+                    font-style: italic;
                     opacity: 1;
                 }
                 &:-ms-input-placeholder {
+                    font-style: italic;
                     color: $search-input-color;
                 }
             }
