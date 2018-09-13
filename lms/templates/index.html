@@ -19,16 +19,16 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>TIPS FOR BETTER TIME MANAGEMENT</h1>
+                  <h1>Welcome to Starbucks Global Academy</h1>
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <span>STUDENT SUCCESS</span>
+                  <p class="description">Powered by <img src="/static/${settings.FEATURES.get('BASE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/title-logo.png" alt=""></p>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <div class="course-search">
                 <form method="get" action="/courses">
                   <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search...")}"></input>
                   </label>
                   <button class="search-button" type="submit">
                     <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>

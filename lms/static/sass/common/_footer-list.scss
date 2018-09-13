@@ -1,7 +1,7 @@
 .footer-list {
     display: flex;
     align-items: center;
-    margin: 0 0 20px;
+    margin: 0 0 5px;
     padding: 0;
     list-style: none;
     justify-content: center;
@@ -24,7 +24,7 @@
     }
 }
 .footer-list_item {
-    margin: 0 8px;
+    margin: 0 15px;
     text-align: center;
 
     @media screen and (max-width: 576px) {
@@ -36,8 +36,10 @@
     height: 35px;
 }
 .svg-edx {
-    width: 58px;
-    height: 36px;
+    width: 90px;
+    height: 55px;
+    position: relative;
+    top: -2px;
 }
 .svg-raccoon {
     width: 20px;

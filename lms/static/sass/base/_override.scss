@@ -5,6 +5,13 @@
 // @media (max-width: 540px) {}
 // @media (max-width: 479px) {}
 
+
+
+@mixin md {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
 @mixin sm {
     @media screen and (max-width: 768px) {
         @content;
@@ -74,7 +81,6 @@ h1 {
         .title {
             float: none;
             width: 100%;
-            max-width: 1000px;
             margin: 0 auto;
             background: none;
             box-shadow: none;
@@ -85,13 +91,14 @@ h1 {
                 text-align: center;
                 width: 100%;
                 h1 {
-                    margin-bottom: 50px;
-                    font-size: 52px;
+                    margin-bottom: 10px;
+                    font-size: 42px;
                     line-height: 1.2;
                     color: $promo-box-text-color;
                     text-align: center;
-                    font-weight: bold;
-                    text-shadow: $promo-box-text-shadow;
+                    font-weight: 900;
+                    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+                    text-transform: uppercase;
                     @media (max-width: 767px) {
                         font-size: 32px;
                     }
@@ -105,6 +112,23 @@ h1 {
                     margin-bottom: 40px;
                     @media (max-width: 767px) {
                         font-size: 26px;
+                    }
+                }
+                .description{
+                    color: $promo-box-text-descr;
+                    font-size: 28px;
+                    font-style: normal;
+                    margin-bottom: 60px;
+                    text-align: center;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    line-height: 20px;
+                    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+                    img{
+                        display: inline-block;
+                        margin-left: 15px;
                     }
                 }
                 .link {
@@ -124,7 +148,7 @@ h1 {
                 }
             }
              .course-search {
-                 max-width: 590px;
+                 max-width: 585px;
                  margin: 0 auto;
                  overflow: hidden;
                  position: relative;
@@ -133,12 +157,14 @@ h1 {
                      background: $search-input-background;
                      border: 2px solid $search-input-border;
                      color: $search-input-color;
-                     padding-left: 20px !important;
+                     padding-left: 15px !important;
+                     height: 45px;
+                     font-size: 16px;
                      &:focus {
                          border-color: $search-input-border !important;
                      }
                      &::placeholder {
-                         color: $search-input-color;
+                         color: $search-input-color !important;
                          opacity: 1;
                      }
                      &:-ms-input-placeholder {
@@ -151,6 +177,7 @@ h1 {
                      border-color: $search-input-border !important;
                      border-left: none !important;
                      right: 0;
+                     height: 45px;
                  }
              }
 
@@ -1560,6 +1587,10 @@ button {
     .courses {
         .course {
             border-bottom: 3px solid $courses-border-color;
+            &:hover,
+            &:focus{
+                border-bottom-color: $courses-border-color-hover;
+            }
 
             .course-image {
                 .cover-image {
@@ -2536,11 +2567,28 @@ body {
     width: $logo-width;
     min-width: $logo-width;
     height: $logo-height;
+    @include md {
+        width: 295px;
+    }
+    @include sm{
+        width: auto;
+        max-width: calc(100% - 50px);
+    }
+}
+
+.logo-footer img{
+    @include md {
+        width: auto;
+    }
 }
 
 .link-logo-en,
 .logo-en {
     display: flex;
+    align-items: center;
+    @include md {
+        align-items: center;
+    }
 
     .lang_ar & {
         display: none;
@@ -2813,6 +2861,11 @@ body .enroll-message a {
     }
     .theme-header__holder .theme-logo {
         margin-bottom: 12px;
+        @include sm {
+            display: flex;
+            height: 34px;
+            margin-bottom: 0;
+        }
     }
     .section.section-handouts {
         ol {
@@ -3036,6 +3089,7 @@ body footer {
         align-items: center;
         color: $footer-nav-link-color !important;
         margin-left: 8px;
+        text-transform: uppercase;
     }
 }
 .teams-main .create-team .action-cancel {
@@ -3123,7 +3177,11 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 // "show more" button
 
 .home .highlighted-courses {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+
+    .courses{
+        padding: 85px 0 14px;
+    }
 }
 
 .arrow-up {
@@ -3134,8 +3192,8 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
     border-radius: 50%;
     background: $theme-btn-bg;
     color: $theme-btn-text-color !important;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     text-align: center;
     line-height: 36px;
     transition: all 0.2s ease;
@@ -3166,15 +3224,16 @@ body .courses-container .courses-more {
     position: relative;
     .btn {
         cursor: pointer;
-        margin: 5px 10px;
+        margin: 0 10px;
         display: inline-block;
         background: $theme-btn-bg;
         color: $theme-btn-text-color !important;
         height: 40px;
         line-height: 40px;
         padding: 0 10px;
-        width: 180px;
+        width: 190px;
         font-weight: normal;
+        text-transform: uppercase;
         &:hover {
             background: $theme-btn-bg-hover;
             border: none !important;
@@ -3197,6 +3256,13 @@ body .container .wiki-wrapper section.wiki .btn {
     text-align: center;
 }
 
+.courses-container .courses .course .course-info .course-code {
+    line-height: 18.68px;
+    text-transform: uppercase;
+}
+
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
+    text-transform: uppercase;
+    margin-bottom: 40px;
 }
