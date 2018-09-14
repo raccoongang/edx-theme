@@ -1194,19 +1194,19 @@ body.view-in-course {
 
             .course-content {
                 width: 100%;
-                display: block;
+                display: table-cell;
                 @media screen and (min-width: 1000px) {
                     width: 76%;
-                    display: block;
+                    display: table-cell;
                 }
             }
         }
         .course-index {
             width: 100%;
-            display: block !important;
+            display: table-cell !important;
             @media screen and (min-width: 1000px) {
                 width: 23%;
-                display: block !important;
+                display: table-cell !important;
             }
         }
     }
