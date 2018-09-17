@@ -7,6 +7,7 @@
 
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <section class="courses">
+        <div class="couses-title">${_("Our Latest Academy Courses:")}</div>
         <ul class="courses-listing">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:

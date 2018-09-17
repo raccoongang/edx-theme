@@ -77,6 +77,7 @@ h1 {
             padding: 30px 15px;
             animation: none;
             box-sizing: border-box;
+            width: 100%;
         }
         .title {
             float: none;
@@ -91,16 +92,21 @@ h1 {
                 text-align: center;
                 width: 100%;
                 h1 {
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
                     font-size: 42px;
                     line-height: 1.2;
-                    color: $promo-box-text-color;
+                    color: #fff;
                     text-align: center;
                     font-weight: 900;
                     text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
                     text-transform: uppercase;
+                    background: $promo-box-text-color;
+                    padding: 25px;
+                    width: 100%;
+                    box-sizing: border-box;
                     @media (max-width: 767px) {
                         font-size: 32px;
+                        padding: 15px;
                     }
                 }
                 span {
@@ -3181,6 +3187,18 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 
     .courses{
         padding: 85px 0 14px;
+    }
+
+    .couses-title{
+        text-align: center;
+        font-size: 32px;
+        margin: 0 0 70px;
+        color: $promo-box-text-color;
+        font-weight: normal;
+        line-height: normal;
+        @media screen and (min-width: 991px) {
+            font-size: 42px;
+        }
     }
 }
 

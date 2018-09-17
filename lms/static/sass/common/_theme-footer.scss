@@ -10,11 +10,11 @@
     }
 
     .footer-center{
-        order: 0;
+        order: 2;
         flex: 0 0 100%;
         @media screen and (min-width: 991px) {
-            flex: auto;
-            order: 2;
+            flex: 0 0 auto;
+            order: 3;
         }
     }
 
@@ -40,7 +40,7 @@
         width: auto;
     }
     .icon-list {
-        justify-content: center;
+        justify-content: flex-end;
         order: 2;
         @media screen and (max-width: 779px) {
             margin: 10px 0;
@@ -48,11 +48,11 @@
     }
     .logo-footer {
         justify-content: center;
-        order: 3;
+        order: 1;
         padding-bottom: 15px;
-        flex: 0 0 25%;
-        @media screen and (min-width: 800px) {
-            justify-content: flex-end;
+        flex: 0 0 100%;
+        @media screen and (min-width: 991px) {
+            flex: 0 0 auto;
         }
         @media screen and (max-width: 779px) {
             margin: 20px 0;
