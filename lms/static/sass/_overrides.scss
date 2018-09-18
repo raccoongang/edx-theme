@@ -1,10 +1,10 @@
 //----------platform variables----------//
 $blue: #009be0;
-$base-color: $blue;
-$btn-bg-hover: lighten($base-color, 20%);
+$base-color: #259d1f;
+$btn-bg-hover: #40b23b;
 
 $link-color: $base-color;
-$link-hover: lighten($base-color, 20%);
+$link-hover: #40b23b;
 $shadow-color: $base-color;
 $button-color: $base-color;
 $action-primary-bg: $base-color;
@@ -22,23 +22,24 @@ $pink: red;
 //body background
 $body-bg: #eee;
 //settings for header
-$header-nav-link-color: #009be0;
-$header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
+$header-nav-link-color: $base-color;
+$header-nav-link-color-hover: #40b23b;
 $header-background: #fff;
 $dropdown-menu-background: #9da5ac;
 $dropdown-menu-color: #009be0;
 $dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
 //logo
-$logo-width: 37px;
-$logo-height: 37px;
+$logo-width: auto;
+$logo-height: auto;
 //settings for hamburger
 $hamburger-color: #009be0;
 $hamburger-width: 40px;
 $hamburger-height: 30px;
 $hamburger-height-line: 3px;
 //settings on promo box
-$promo-box-text-color: #fff;
+$promo-box-text-color: #006341;
 $promo-box-text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4);
+$promo-box-text-descr: #54555a;
 $find-btn-bg: transparent;
 $find-btn-bg-hover: rgba(0, 0, 0, .2);
 $find-btn-border: #fff;
@@ -46,21 +47,21 @@ $find-btn-color: #fff;
 $find-btn-color-hover: $find-btn-color;
 //search input on promo box
 $search-input-background: rgba(255,255,255,0.25);
-$search-input-color: #fff;
+$search-input-color: #524e57;
 $search-input-border: #fff;
-$search-button-color: #fff;
+$search-button-color: #8e8897;
 //settings for footer
-$footer-bg: #009289;
-$footer-nav-link-color: #fff;
-$footer-nav-link-color-hover: rgba(255,255,255, .8);
-$footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #fff;
-$footer-social-link-bg-hover: rgba(255,255,255, .8);
+$footer-bg: #dfdfdf;
+$footer-nav-link-color: #524e57;
+$footer-nav-link-color-hover: rgba(0,0,0, .8);
+$footer-support-text-and-logo: #524e57;
+$footer-social-link-bg: #524e57;
+$footer-social-link-bg-hover: rgba(0,0,0, .8);
 //btn
-$theme-btn-bg: #009be0;
-$theme-btn-text-color: #fff;
+$theme-btn-bg: #ffc627;
+$theme-btn-text-color: #2c2a2f;
 $theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
-$theme-btn-text-color-hover: #fff;
+$theme-btn-text-color-hover: #2c2a2f;
 $theme-btn-shadow: darken($theme-btn-bg, 20%);
 //btn-white
 $theme-btn-white-bg: #fff;
@@ -69,7 +70,7 @@ $theme-btn-white-text-color: #fc6a15;
 $theme-btn-white-text-color-hover: #fff;
 $theme-btn-white-bg-hover: #fc6a15;
 // link color
-$theme-link: $base-color;
+$theme-link: #259d1f;
 $theme-link-hover: lighten($base-color, 20%);
 //settings for bg content pages
 $theme-content-bg: #eee;
@@ -79,9 +80,10 @@ $theme-input-icon: #fc6a15;
 $theme-user-link: #3c3c3c;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
-$courses-border-color: #009be0;
+$courses-border-color: #ffc627;
+$courses-border-color-hover: #c0c0c0;
 $course-hover-bg: rgba(0, 0, 0, .5);
-$course-link-color: $theme-link;
+$course-link-color: #1f1f1f;
 $course-bg: #fff;
 //certificate
 $ribbon-corners-color: #3d7fbe;
