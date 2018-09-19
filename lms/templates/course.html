@@ -16,10 +16,11 @@ from django.core.urlresolvers import reverse
     <div class="course-info" aria-hidden="true">
 
       <h2 class="course-name">
-        <span class="course-organization">${course.display_org_with_default}</span>
-        <span class="course-code">${course.display_number_with_default}</span>
-        <span class="course-title">${course.display_name_with_default}</span>
+          <span class="course-code">${course.display_number_with_default}</span>
+          <span class="course-title">${course.display_name_with_default}</span>
       </h2>
+      <div class="course-bottom">
+            <span class="course-organization">${course.display_org_with_default}</span>
       <%
       if course.start is not None:
           course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -33,6 +34,8 @@ from django.core.urlresolvers import reverse
           <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate">${_("Course starts: ")}${course_date_string_format}</div>
           <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
       % endif
+      </div>
+
     </div>
     <div class="sr">
       <ul>

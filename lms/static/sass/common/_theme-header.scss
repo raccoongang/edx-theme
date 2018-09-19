@@ -1,12 +1,13 @@
 .theme-header {
     background: $header-background;
-    padding: 31px 0;
-    border-bottom: 1px solid #919191;
-    box-shadow: 0 0 6px 0 rgba(0,0,0,.75);
+    padding: 36px 0 34px;
     z-index: 1;
+    @media screen and (max-width: 760px) {
+        padding: 20px 0;
+    }
 }
 .theme-header__holder {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -17,13 +18,14 @@
         padding: 0 10px;
     }
     @media screen and (min-width: 1240px) {
-        padding: 0;
+        padding: 0 30px;
+        box-sizing: border-box;
     }
 }
 .theme-header__wrapper {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     box-sizing: border-box;
     padding: 0 0 0 40px;
     align-items: center;
@@ -37,6 +39,7 @@
 
         .menu-open & {
             display: flex;
+            margin-top: 15px;
         }
     }
 
@@ -48,7 +51,7 @@
     }
 }
 .theme-header__block {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 35px;
     display: flex;
     align-items: center;
     @media screen and (max-width: 760px) {

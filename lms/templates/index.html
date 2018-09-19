@@ -11,7 +11,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
-        <div class="parallax-img"></div>
+        <!--<div class="parallax-img"></div>-->
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
@@ -25,16 +25,16 @@ from openedx.core.djangolib.markup import HTML, Text
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search...")}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
+              ##<div class="course-search">
+              ##  <form method="get" action="/courses">
+              ##   <label><span class="sr">${_("Search for a course")}</span>
+              ##      <input class="search-input" name="search_query" type="text" placeholder="${_("Search...")}"></input>
+              ##    </label>
+              ##    <button class="search-button" type="submit">
+              ##      <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+              ##    </button>
+              ##  </form>
+              ##</div>
             % endif
 
           </div>

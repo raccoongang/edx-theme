@@ -13,10 +13,38 @@
 
     &:last-child {
         margin-right: 0;
+        margin-left: 55px;
+        .theme-btn{
+            background: none;
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+
+            &:hover, &:focus{
+                &:after{
+                    width: 100%;
+                }
+            }
+
+            &:after{
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                border-radius: .5px;
+                background-color: $course-img-border;
+                content: "";
+                transition: 0.2s all ease-in-out;
+            }
+        }
     }
 
     .theme-btn{
-        padding: 8px 20px;
+        padding: 15px 20px;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: none;
     }
 
     @media screen and (max-width: 760px) {

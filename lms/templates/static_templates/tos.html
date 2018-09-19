@@ -1,0 +1,86 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Terms of Use")}</h1>
+        <div class="about-block">
+            <p><b>${_("THESE TERMS OF USE FORM A BINDING AGREEMENT BETWEEN ASU AND YOU. BY USING ASU'S COMPUTING, INTERNET, AND COMMUNICATION RESOURCES, YOU AGREE TO BE BOUND BY THESE TERMS OF USE. THIS AGREEEMENT IS WRITTEN IN ENGLISH (US). TO THE EXTENT ANY TRANSLATED VERSION OF THIS AGREEMENT CONFLICTS WITH THIS ENGLISH VERSION, THIS ENGLISH VERSION CONTROLS.")}</b></p>
+            <p>${_("If you are in the European Union, please also review ASU's ")}<a href="https://www.asu.edu/privacy/" target="_blank">${_("Supplemental Privacy Provisions for Persons in the European Union")}</a>${_(". These Supplemental Privacy Provisions provide additional information regarding ASU's processing of personal data you submit or disclose to ASU (or to a third party that transfers it to ASU for processing) while you are in the European Union.")}</p>
+            <p>${_("Date of last revision: May 22, 2018")}</p>
+            <h3>${_("Company Information")}</h3>
+            <p>${_("The website under https://starbucksglobalacademy.com is being offered to you by:")}</p>
+            <p>${_("EdPlus at Arizona State University")}</p>
+            <p>${_("1365 North Scottsdale Road")}</p>
+            <p>${_("Suite 200")}</p>
+            <p>${_("Scottsdale, AZ 85257-3538")}</p>
+            <p>${_("Phone: 480-884-1860  Fax: 480-884-1888")}</p>
+            <p>${_("Starbucks Global Academy (\"SGA\") is powered by Arizona State University (\"ASU\") and managed by EdPlus at Arizona State University in Scottsdale, Arizona, U.S.A.")}</p>
+            <h3>${_("Statement of Rights and Responsibilities")}</h3>
+            <p>${_("This Statement of Rights and Responsibilities (\"Statement\" or \"Terms\") is our terms of service that governs our relationship with users and others who interact with Starbucks Global Academy (the \"Program\").")}</p>
+            <p>${_("By using or accessing Starbucks Global Academy, you agree to this Statement, as updated from time to time in accordance below, and ASU's ")}<a href="https://www.asu.edu/tou/" target="_blank">${_("Terms of Use")}</a>${_(" and")}<a href="https://www.asu.edu/privacy/" target="_blank">${_("Privacy Statement")}</a>${_(" for its computing, internet, and communication resources. Additionally, you will find resources at the end of this document that help you understand how Starbucks Global Academy works.")}</p>
+            <p>${_("Your privacy is very important to us. We agree to use the personal information that you provide Starbucks Global Academy in accordance with our Privacy Statement, for purposes related to Starbucks Global Academy's program, for data collection about Starbucks Global Academy and program efficacy for purposes of learning how Starbucks Global Academy is affecting user populations and groups, and to improve the Program. For more information regarding how ASU collects data from users and how we use it, including disclosure of information to third parties, please see ASU's ")}<a href="https://www.asu.edu/privacy/" target="_blank">${_("Privacy Statement")}</a>${_(".")}</p>
+            <p><b>${_("Enrollment Sponsors.")}</b>${_(" ASU may share information provided by you with your employer, government programs, institutions, or other enterprises that sponsor your enrollment in a course for training or other educational purposes. If an entity pays for or otherwise sponsors your course or program participation, ASU will share information with the entity as needed to confirm your enrollment, participation, progress, and completion status in that course.")}</p>
+            <p><b>${_("Your Content.")}</b>${_(" Your own the content and information you post on Starbucks Global Academy, and you can control how some of the content is shared in your settings on the learning management system.")}</p>
+            <p>${_("For content that is covered by intellectual property rights, like photos and videos (\"IP content\"), you specifically give us the following permissions: you grant ASU a non-exclusive, transferable, sub-licensable, royalty-free, worldwide, perpetual, license to use any IP content that you post on or in connection with Starbucks Global Academy (\"IP License\") throughout the universe, in any and all media, for all purposes related to the operation and administration of the Program and for providing services to users or ASU students.")}</p>
+            <p>${_("We always appreciate your feedback or other suggestions about Starbucks Global Academy, but you understand and agree that we may use them without any obligation to compensate you for them (just as you have no obligation to offer them).")}</p>
+            <h3>${_("Prohibited Uses")}</h3>
+            <p>${_("We do our best to keep Starbucks Global Academy safe, but we cannot guarantee it. We need your help to keep Starbucks Global Academy safe, which includes the following commitments by you:")}</p>
+            <ul>
+                <li>${_("You will not use the Starbucks Global Academy for any unlawful communications, including threats of violence, obscenity, child pornography, or harassing communications.")}</li>
+                <li>${_("You will not post unauthorized commercial communications (such as spam) onStarbucks Global Academy.")}</li>
+                <li>${_("You will not collect users' content or information, or otherwise access Starbucks Global Academy, using automated means (such as harvesting bots, robots, spiders, or scrapers) withoutour express prior written permission.")}</li>
+                <li>${_("You will not engage in unlawful multi-level marketing, such as a pyramid scheme,on Starbucks Global Academy.")}</li>
+                <li>${_("You will not upload viruses or other malicious code.")}</li>
+                <li>${_("You will not solicit login information or access an account belonging to someone else.")}</li>
+                <li>${_("You will not bully, intimidate, or harass any user.")}</li>
+                <li>${_("You will not post content that is: harassing, threatening, illegally discriminatory, sexually explicit or pornographic; violent; or contains nudity or graphic or gratuitous violence or condones or advocates the use of alcohol or illegal drugs or controlled substances.")}</li>
+                <li>${_("You will not use the Starbucks Global Academy for private business or commercial activities, or for fund-raising or advertising on behalf of non-ASU organizations.")}</li>
+                <li>${_("You will not use Starbucks Global Academy to do anything unlawful, misleading, malicious,or discriminatory.")}</li>
+                <li>${_("You will not do anything that could disable, overburden, or impair the proper working or appearance of Starbucks Global Academy, such as a denial of service attack or interference with page rendering or other Starbucks Global Academy functionality.")}</li>
+                <li>${_("You will not facilitate or encourage any violations of this Statement or ASU policies.")}</li>
+                <li>${_("You will not engage in unauthorized use of ASU's trademarks or logos or other protected trademarks and logos.")}</li>
+                <li>${_("You agree to comply with the Arizona Board of Regents Code of Conduct and all policies, procedures and instructions from Starbucks Global Academy related to the use of the Starbucks Global Academy system and participation in the Starbucks Global Academy program.")}</li>
+            </ul>
+            <h3>${_("Registration and Account Security")}</h3>
+            <p>${_("Starbucks Global Academy users provide their real names and information, and we need your help to keep it that way. Here are some commitments you make to us relating to registering and maintaining the security of your account:")}</p>
+            <ul>
+                <li>${_("You will not provide any false personal information on Starbucks Global Academy, or create an account for anyone other than yourself without permission.")}</li>
+                <li>${_("You will not create more than one personal account.")}</li>
+                <li>${_("If we disable your account, you will not create another one without our permission.")}</li>
+                <li>${_("You will not use Starbucks Global Academy if you are under 13.")}</li>
+                <li>${_("You will not share your password (or in the case of developers, your secret key), let anyone else access your account, or do anything else that might jeopardize the security of your account.")}</li>
+                <li>${_("You will not transfer your account (including any Page or application you administer) to anyone without first getting our written permission.")}</li>
+                <li>${_("If you select a username or similar identifier for your account or Page, we reserve the right to remove or reclaim it if we believe it is appropriate (such as when a trademark owner complains about a username that does not closely relate to a user's actual name).")}</li>
+                <li>${_("You will not misrepresent or forge the identity of the sender or the source of an electronic communication.")}</li>
+                <li>${_("You will not attempt to acquire and use passwords of other users.")}</li>
+                <li>${_("You will not alter the content of a message originating from another person or computer.")}</li>
+                <li>${_("You will not modify or delete another person's files, account, or postings.")}</li>
+            </ul>
+            <h3>${_("Protecting Other People's Rights")}</h3>
+            <p>${_("We respect other people's rights, and expect you to do the same.")}</p>
+            <p>${_("You will not post content or take any action on Starbucks Global Academy that infringes or violates someone else's rights or otherwise violates the law.")}</p>
+            <p>${_("We can remove any content or information you post on Starbucks Global Academy if we believe that it violates this Statement or our policies.")}</p>
+            <p>${_("If we remove your content for infringing someone else's copyright and you believe we removed it by mistake, you will have the opportunity to request that it be restored.")}</p>
+            <p>${_("If you repeatedly violate the Statement of Rights and Responsibilities or any other Starbucks")}</p>
+            <p>${_("Global Academy rules, policies or procedures, we may suspend or terminate your account.")}</p>
+            <p>${_("You will not use our copyrights or trademarks or any confusingly similar marks, except as expressly permitted by our Brand Usage Guidelines or with our prior written permission.")}</p>
+            <p>${_("You will not post anyone's identification documents or sensitive financial information on Starbucks Global Academy.")}</p>
+            <p>${_("You agree to abide by all applicable Federal, State, Local, Arizona Board of Regents and Arizona State University laws, rules, regulations, policies, protocols and procedures. Amendments")}</p>
+            <p>${_("You will be provided notice of any changes to this Statement.")}</p>
+            <p>${_("Your continued use of Starbucks Global Academy following changes to our Terms constitutes your acceptance of our amended Terms.")}</p>
+            <h3>${_("Termination")}</h3>
+            <p>${_("Starbucks Global Academy reserves the right to terminate or suspend access to all or part of Starbucks Global Academy in the event of any violation of this Statement or if, in its sole judgment, it determines that it is necessary and appropriate to do so for any purpose, including system maintenance, safety, security, or violations of Starbucks Global Academy policies or procedures. We will take reasonable efforts to notify you by email or at the next time you attempt to access your account of any such suspension or termination. You may also delete your account or disable your application at any time.")}</p>
+            <h3>${_("Disputes")}</h3>
+            <p>${_("You will resolve any claim, cause of action or dispute (claim) you have with us arising out of or relating to this Statement or Starbucks Global Academy exclusively in a state or federal court located in Maricopa County, State of Arizona.")}</p>
+            <p>${_("If anyone brings a claim against us related to your actions, content or information on Starbucks Global Academy, you will indemnify and hold us harmless from and against all damages, losses, and expenses of any kind (including reasonable legal fees and costs) related to such claim. Although we provide rules for user conduct, we do not control or direct users' actions on Starbucks Global Academy and you understand and agree that we are not responsible for the content or information users transmit or share on Starbucks Global Academy. We are not responsible for any offensive, inappropriate, obscene, unlawful or otherwise objectionable content or information you may encounter on Starbucks Global Academy. We are not responsible for the conduct, whether online or offline, or any user of Starbucks Global Academy.")}</p>
+            <p>${_("WE TRY TO KEEP STARBUCKS GLOBAL ACADEMY, BUG-FREE, AND SAFE, BUT YOU USE IT AT YOUR OWN RISK. WE ARE PROVIDING STARBUCKS GLOBAL ACADEMY AS IS, WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT STARBUCKS GLOBAL ACADEMY WILL ALWAYS BE SAFE, SECURE OR ERROR-FREE OR THAT STARBUCKS GLOBAL ACADEMY WILL ALWAYS FUNCTION WITHOUT DISRUPTIONS, DELAYS OR IMPERFECTIONS. STARBUCKS GLOBAL ACADEMY IS NOT RESPONSIBLE FOR THE ACTIONS, CONTENT, INFORMATION, OR DATA OF THIRD PARTIES, AND YOU RELEASE US, OUR DIRECTORS, OFFICERS, EMPLOYEES, AND AGENTS FROM ANY CLAIMS AND DAMAGES, KNOWN AND UNKNOWN, ARISING OUT OF OR IN ANY WAY CONNECTED WITH ANY CLAIM YOU HAVE AGAINST ANY SUCH THIRD PARTIES.")}</p>
+            <h3>${_("Definitions")}</h3>
+            <p>${_("By \"Starbucks Global Academy\" we mean the features and services we make available, including through (a) our website at starbucksglobalacademy.com and any other Starbucks Global Academy, ASU branded or co-branded websites (including sub-domains, international versions, widgets, and mobile versions); (b) our Platform; (c) other media, software (such as a toolbar), devices, or networks now existing or later developed.")}</p>
+            <p>${_("Starbucks is a registered trademark of Starbucks Corporation (the \"Starbucks Mark\"). The Starbucks Mark cannot be copied, imitated, or used, in whole or in part, without the prior written permission of Starbucks Corporation.")}</p>
+        </div>
+    </section>
+</main>

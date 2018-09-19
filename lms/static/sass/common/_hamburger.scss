@@ -1,17 +1,16 @@
 .hamburger {
     display: block;
-    position: relative;
     width: $hamburger-width;
     height: $hamburger-height + 6;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
-    border-radius: 0;
+    border-radius: 4px;
     box-shadow: none;
     position: absolute;
-    top: 18px;
-    right: 10px;
+    top: 20px;
+    right: 15px;
     &:after,
     &:before {
         content: '';
@@ -21,11 +20,12 @@
         top: ($hamburger-height / 2);
         left: 0;
         background-color: $hamburger-color;
-        transition: all 0.3s;  
+        transition: all 0.3s;
+        border-radius: 4px;
     }
     &:after {
-       box-shadow: 0 $hamburger-height / 2 0 0 $hamburger-color,
-                   0 $hamburger-height / -2 0 0 $hamburger-color; 
+       box-shadow: 0 $hamburger-height / 3  0 0 $hamburger-color,
+                   0 $hamburger-height / -3 0 0 $hamburger-color;
     }
     &:focus,
     &:active,
