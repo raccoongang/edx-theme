@@ -1,7 +1,7 @@
 .footer-list {
     display: flex;
     align-items: center;
-    margin: 0 0 5px;
+    margin: 0;
     padding: 0;
     list-style: none;
     justify-content: center;
@@ -19,16 +19,23 @@
     &:focus {
         color: $footer-nav-link-color !important;
     }
+
     &:hover {
         color: $footer-nav-link-color-hover !important;
     }
 }
 .footer-list_item {
-    margin: 0 15px;
+    margin: 5px 15px 5px 0;
     text-align: center;
 
-    @media screen and (max-width: 576px) {
-        width: 100%;
+    .footer-list_link{
+        font-size: 14px;
+        line-height: 21px;
+
+        &:hover,
+        &:focus{
+            color: $footer-nav-link-color-hover !important;
+        }
     }
 }
 .svg-footer {
