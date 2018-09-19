@@ -20,13 +20,14 @@
     color: $theme-btn-text-color !important;
     position: relative;
 
-    &:hover, &:focus{
+    &:hover, &:focus {
         color: $theme-btn-text-color !important;
-        &:after{
+
+        &:after {
             width: 100%;
         }
     }
-    &:after{
+    &:after {
         position: absolute;
         bottom: -10px;
         left: 0;
