@@ -53,9 +53,9 @@ h1 {
 .home {
     >header {
         position: relative;
-        min-height: 420px;
-        //background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%;
-        //background-size: cover;
+        min-height: 543px;
+        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%;
+        background-size: cover;
         display: flex;
         align-items: center;
         @media (max-width: 767px) {
@@ -74,10 +74,11 @@ h1 {
 
         .outer-wrapper {
             min-width: 320px;
-            padding: 30px 15px;
+            padding: 30px 30px;
             animation: none;
             box-sizing: border-box;
             width: 100%;
+            max-width: 1280px;
         }
         .title {
             float: none;
@@ -85,6 +86,7 @@ h1 {
             margin: 0 auto;
             background: none;
             box-shadow: none;
+            padding: 0;
             @media (max-width: 767px) {
                 padding: 20px 0;
             }
@@ -92,20 +94,23 @@ h1 {
                 text-align: center;
                 width: 100%;
                 h1 {
-                    margin-bottom: 20px;
-                    font-size: 42px;
-                    line-height: 1.2;
+                    margin-bottom: 40px;
+                    font-size: 56px;
+                    line-height: 72.8px;
                     color: #fff;
                     text-align: center;
-                    font-weight: 900;
+                    font-weight: 400;
                     text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-                    text-transform: uppercase;
                     background: $promo-box-text-color;
-                    padding: 25px;
+                    padding: 27px;
                     width: 100%;
+                    letter-spacing: 1px;
                     box-sizing: border-box;
+                    opacity: .9;
+                    font-family: "Roboto", "Open Sans", Verdana, Geneva, sans-serif;
                     @media (max-width: 767px) {
                         font-size: 32px;
+                        line-height: 1.2;
                         padding: 15px;
                     }
                 }
@@ -120,21 +125,28 @@ h1 {
                         font-size: 26px;
                     }
                 }
-                .description{
-                    color: $promo-box-text-descr;
-                    font-size: 28px;
+                .description {
+                    color: $theme-btn-text-color;
+                    font-size: 40px;
                     font-style: normal;
-                    margin-bottom: 60px;
                     text-align: center;
                     font-weight: 700;
+                    line-height: 42px;
                     display: flex;
                     align-items: flex-end;
                     justify-content: center;
-                    line-height: 20px;
                     text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-                    img{
+                    @media (max-width: 767px) {
+                        font-size: 26px;
+                        line-height: 26px;
+                    }
+                    img {
                         display: inline-block;
-                        margin-left: 15px;
+                        margin-left: 8px;
+                        width: 100px;
+                        @media (max-width: 767px) {
+                            width: 60px;
+                        }
                     }
                 }
                 .link {
@@ -206,6 +218,45 @@ h1 {
     &.about {
         padding-right: 15px;
         padding-left: 15px;
+        .about-block {
+            margin: 60px 0;
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        h1 {
+            margin: 30px 0 0;
+            padding: 27px;
+            font-size: 56px;
+            opacity: .9;
+            font-weight: 700;
+            @media (max-width: 768px){
+                font-size: 32px;
+            }
+        }
+        h2 {
+            font-size: 32px;
+            margin: 40px 0 30px;
+            color: $promo-box-text-color;
+            text-transform: none;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 18px;
+            margin: 40px 0 30px;
+            color: $theme-btn-text-color;
+            opacity: .8;
+            text-transform: none;
+        }
+        p, li {
+            font-size: 14px;
+            line-height: 150%;
+            margin: 5px 0;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding: 0 0 0 40px;
+        }
     }
 }
 
@@ -325,6 +376,10 @@ body {
     padding-right: 15px;
     padding-left: 15px;
     box-sizing: border-box;
+    max-width: 1280px;
+    @media (min-width: 991px) {
+        padding: 0 30px;
+    }
 }
 
 .find-courses,
@@ -1592,14 +1647,28 @@ button {
 .courses-container {
     .courses {
         .course {
-            border-bottom: 3px solid $courses-border-color;
+            border-bottom: 1px solid $courses-border-color;
+            transition: all 0.3s ease-in-out;
+            box-shadow: none;
             &:hover,
-            &:focus{
-                border-bottom-color: $courses-border-color-hover;
+            &:focus {
+                box-shadow: 0 19px 38px rgba(0,0,0,0.3), 0 15px 12px rgba(0,0,0,0.22);
+                .cover-image {
+                    &:before {
+                        opacity: 0;
+                    }
+                    .learn-more {
+                        opacity: 0;
+                    }
+                }
             }
 
             .course-image {
+                height: 175px;
                 .cover-image {
+                    height: 175px;
+                    box-sizing: border-box;
+                    border-bottom: 4px solid $course-img-border;
                     &:before {
                         background: $course-hover-bg;
                     }
@@ -2871,6 +2940,7 @@ body .enroll-message a {
             display: flex;
             height: 34px;
             margin-bottom: 0;
+            align-items: center;
         }
     }
     .section.section-handouts {
@@ -3183,10 +3253,10 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 // "show more" button
 
 .home .highlighted-courses {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 
-    .courses{
-        padding: 85px 0 14px;
+    .courses {
+        padding: 50px 0 14px;
     }
 
     .couses-title{
@@ -3196,6 +3266,7 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
         color: $promo-box-text-color;
         font-weight: normal;
         line-height: normal;
+        font-family: "Roboto", "Open Sans", Verdana, Geneva, sans-serif;
         @media screen and (min-width: 991px) {
             font-size: 42px;
         }
@@ -3227,6 +3298,43 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 
 .home .courses-container .courses .courses-listing .courses-listing-item {
     display: none;
+    width: 100%;
+    margin-right: 0;
+    max-height: 100%;
+    @media screen and (min-width: 772px) {
+        margin-right: 3.57866%;
+        width: 48.21067%;
+        &:nth-child(3n) {
+            margin-right: 3.57866%;
+        }
+        &:nth-child(4n+1) {
+            clear: none;
+        }
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+    @media screen and (min-width: 991px) {
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        &:nth-child(2n) {
+            margin-right: 2.35765%;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        &:nth-child(2n),
+        &:nth-child(3n) {
+            margin-right: 2.35765%;
+        }
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
 }
 
 .home .courses-container .courses .courses-listing .courses-listing-item {
@@ -3274,13 +3382,71 @@ body .container .wiki-wrapper section.wiki .btn {
     text-align: center;
 }
 
-.courses-container .courses .course .course-info .course-code {
-    line-height: 18.68px;
-    text-transform: uppercase;
-}
-
-.courses-container .courses .course .course-info .course-title {
-    color: $course-link-color;
-    text-transform: uppercase;
-    margin-bottom: 40px;
+.courses-container {
+    .courses {
+        .courses-listing-item {
+            margin-bottom: 15px;
+        }
+        .courses-listing {
+            display: flex;
+            flex-wrap: wrap;
+            .courses-listing-item {
+                max-height: 100% !important;
+            }
+        }
+        .course {
+            height: 100%;
+            margin: 0;
+            & > a {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .course-info {
+                text-align: center;
+                padding: 30px 20px;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+                .course-name {
+                    margin-bottom: 0;
+                }
+                .course-code {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: $theme-btn-text-color;
+                    opacity: .8;
+                    margin: 0 0 5px;
+                    line-height: 21px;
+                }
+                .course-title {
+                    color: $course-img-border;
+                    font-size: 20px;
+                    margin: 0 0 15px;
+                    display: block;
+                    line-height: 30px;
+                    text-transform: none;
+                    height: auto;
+                }
+                .course-organization {
+                    border-top: 1px solid rgba(44,42,47,0.1);
+                    padding-top: 15px;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: rgba(44,42,47,0.8);
+                    margin: 0 0 5px;
+                }
+                .course-date {
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin: 0;
+                    color: $course-data-color;
+                }
+            }
+        }
+    }
 }
