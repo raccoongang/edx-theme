@@ -1603,6 +1603,10 @@ section.wiki .global-functions {
 section.wiki a.btn {
     float: none;
 
+    &.back {
+        text-align: center;
+    }
+
     @media screen and (min-width: 761px) {
         float: left;
     }
