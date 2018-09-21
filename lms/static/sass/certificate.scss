@@ -48,6 +48,15 @@
 		margin: 0 !important;
 	}
 }
+
+.certificate {
+	.btn-link, .copy-meta a {
+		color: $theme-link;
+		&:hover, &:focus {
+			color: darken($theme-link,20%);
+		}
+	}
+}
 .certificate-wrapper {
 	position: relative;
 	width: 29.7cm;
@@ -74,7 +83,6 @@
 .certificate-logo {
 	display: inline-block;
 	margin-bottom: 26px;
-	height: 30px;
 }
 .ribbon {
 	position: relative;

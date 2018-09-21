@@ -112,6 +112,7 @@
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
+                padding: 10px 28px;
 
                 &:active,
                 &:focus {
@@ -216,7 +217,7 @@ body .container.activation h1.valid {
 
     footer#footer-openedx {
         a {
-            color: $footer-nav-link-color;
+            color: $footer-support-text-and-logo;
         }
         a:hover,
         a:focus {
@@ -378,7 +379,7 @@ body .wrapper-account-settings .wrapper-header .account-nav button:hover {
 section.wiki .table.table-striped a,
 body section.wiki .article-functions .see-children a,
 body .updates a,
-body .message a{
+body .message a {
     color: $theme-link;
 
     &:focus,
@@ -637,6 +638,11 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     .courses .course {
         border-bottom: 3px solid $courses-border-color;
 
+        &:focus,
+        &:hover {
+            border-color: $courses-border-hover-color !important;
+        }
+
         .course-image .cover-image .learn-more {
             background-color: transparent;
             border: 3px solid #fff;
@@ -757,12 +763,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .home>header {
     //background-image: url('#{$img-path}/background.jpg');
-    min-height: 420px;
+    min-height: 390px;
     background-position: center;
     position: relative;
     background-color: #040404;
     display: flex;
     align-items: center;
+    border-bottom: 30px solid $promo-box-border-color;
 
     .parallax-img {
         position: absolute;
@@ -804,6 +811,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 font-weight: bold;
                 text-shadow: $promo-box-text-shadow;
                 margin-bottom: 50px;
+                text-transform: uppercase;
+                letter-spacing: 2.2px;
                 @media screen and (min-width:760px ) {
                     font-size: 52px;
                 }
@@ -835,7 +844,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             }
         }
         .course-search {
-            max-width: 590px;
+            max-width: 645px;
             margin: 0 auto;
             overflow: hidden;
             position: relative;
@@ -902,6 +911,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .highlighted-courses .courses {
     padding-bottom: 30px;
+    padding-top: 85px;
 
     .course a {
         background: $course-bg;
@@ -1033,6 +1043,14 @@ body.view-profile .profile-image-field .image-wrapper .u-field-remove-button {
 }
 body .courses-container .courses .course .course-info {
     background: $course-bg;
+
+    .course-code {
+        text-transform: uppercase;
+    }
+
+    .course-title {
+        text-transform: uppercase;
+    }
 }
 html {
     background: $body-bg;
@@ -1849,6 +1867,9 @@ section.wiki .table.table-striped {
 }
 
 body {
+    *:not(.fa) {
+        font-family: "TrebuchetMS","Open Sans",Verdana,Geneva,sans-serif,sans-serif !important;
+    }
     .container {
         .dashboard-search-bar {
             margin-bottom: 20px;
@@ -1884,7 +1905,7 @@ body {
         margin: 0 0 0 20px;
     }
 }
-.content-wrapper .page-header.has-secondary .page-header-secondary  .forum-search{
+.content-wrapper .page-header.has-secondary .page-header-secondary  .forum-search {
     margin: 0 0 16px;
     @media screen and (min-width: 761px) {
         margin: 0 0 0 20px;
@@ -1905,7 +1926,7 @@ body {
     }
 }
 
-.view-discussion-home .helpgrid-row .row-title{
+.view-discussion-home .helpgrid-row .row-title {
     display: block;
     padding: 16px 20px;
     @media screen and (min-width: 761px) {
@@ -2189,7 +2210,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     }
 }
 
-.instructor-dashboard-wrapper-2 section.idash-section#certificates .white-listed-students table td{
+.instructor-dashboard-wrapper-2 section.idash-section#certificates .white-listed-students table td {
     padding: 5px 10px;
     @media screen and (min-width: 761px) {
         padding: 10px;
@@ -2442,7 +2463,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
         width: 31.76157%;
     }
 }
-.course-info .course-summary{
+.course-info .course-summary {
     width: 290px;
     max-width: 100%;
     @media screen and (min-width: 1000px) {
@@ -2548,7 +2569,7 @@ section.tool-wrapper div#graph-container {
     margin-left: 0;
 }
 
-.view-profile .profile-section-two-fields .u-field-title{
+.view-profile .profile-section-two-fields .u-field-title {
     float: left;
     width: initial;
 }
@@ -2598,7 +2619,7 @@ section.tool-wrapper div#graph-container {
     }
 }
 
-.account-settings-sections .section .account-settings-section-body .u-field-orderHistory .field{
+.account-settings-sections .section .account-settings-section-body .u-field-orderHistory .field {
     width: auto;
     max-width: 100%;
 }
@@ -2678,7 +2699,7 @@ section.tool-wrapper div#graph-container {
     white-space: nowrap;
 }
 
-.sysadmin-dashboard-content ol{
+.sysadmin-dashboard-content ol {
     word-break: break-all;
     @media screen and (min-width: 761px) {
         word-break: normal;
@@ -3089,7 +3110,7 @@ body .enroll-message a {
 
 body {
     .wrap-instructor-info .instructor-info-action,
-    .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action{
+    .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action {
         color: $theme-link;
         &:hover,&:focus,&:active {
             background-color: $theme-link-hover;
@@ -3119,7 +3140,11 @@ body {
         background-color: $theme-link-hover;
     }
     .wrapper-footer .footer-support {
-        color: $white;
+        color: $footer-support-text-and-logo;
+
+        path {
+            color: $footer-support-text-and-logo !important;
+        }
     }
     .btn-secondary:hover {
         color: $theme-link-hover;
@@ -3133,8 +3158,8 @@ body {
         a {
             width: 100%;
             text-align: center;
-            color: $white;
-            background-color: $theme-link;
+            color: $theme-link;
+            background-color: $white;
             display: inline-block;
             &:hover {
                 background-color: $theme-link-hover;
@@ -3416,6 +3441,7 @@ body .courses-container .courses-more {
         padding: 0 10px;
         width: 180px;
         font-weight: normal;
+        text-transform: uppercase;
         &:hover {
             background: $theme-btn-bg-hover;
         }
