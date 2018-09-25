@@ -1,10 +1,10 @@
 //----------platform variables----------//
 $blue: #009be0;
-$base-color: #259d1f;
+$base-color: #006341;
 $btn-bg-hover: #40b23b;
 
 $link-color: $base-color;
-$link-hover: #40b23b;
+$link-hover: $btn-bg-hover;
 $shadow-color: $base-color;
 $button-color: $base-color;
 $action-primary-bg: $base-color;
@@ -23,7 +23,7 @@ $pink: red;
 $body-bg: #eee;
 //settings for header
 $header-nav-link-color: $base-color;
-$header-nav-link-color-hover: #40b23b;
+$header-nav-link-color-hover: $btn-bg-hover;
 $header-background: #fff;
 $dropdown-menu-background: #9da5ac;
 $dropdown-menu-color: #009be0;
@@ -37,7 +37,7 @@ $hamburger-width: 36px;
 $hamburger-height: 30px;
 $hamburger-height-line: 4px;
 //settings on promo box
-$promo-box-text-color: #006341;
+$promo-box-text-color: $base-color;
 $promo-box-text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4);
 $find-btn-bg: transparent;
 $find-btn-bg-hover: rgba(0, 0, 0, .2);
@@ -69,7 +69,7 @@ $theme-btn-white-text-color: #fc6a15;
 $theme-btn-white-text-color-hover: #fff;
 $theme-btn-white-bg-hover: #fc6a15;
 // link color
-$theme-link: #259d1f;
+$theme-link: $base-color;
 $theme-link-hover: lighten($base-color, 20%);
 //settings for bg content pages
 $theme-content-bg: #eee;
@@ -84,10 +84,10 @@ $courses-border-color-hover: #c0c0c0;
 $course-hover-bg: rgba(0, 0, 0, .5);
 $course-link-color: #1f1f1f;
 $course-bg: #fff;
-$course-img-border: #006341;
-$course-data-color: #FFC627;
+$course-img-border: $base-color;
+$course-data-color: #ffc627;
 //certificate
-$certificate-borders-color: #006341;
+$certificate-borders-color: $base-color;
 $ribbon-corners-color: lighten($certificate-borders-color, 5%);
 $ribbon-triangle-color: darken($certificate-borders-color, 5%);
 //our overrides for settings we want to change
