@@ -1447,18 +1447,20 @@ div {
 
 
 %theme-btn {
-    color: #ffe;
+    color: $theme-btn-text-color;
     text-shadow: none;
-    background: $base-color;
+    background: $theme-btn-bg;
     border: none;
     box-shadow: none;
+    border-radius: 0;
     &:hover,
     &:focus,
     &:active {
         &:not(:disabled) {
             box-shadow: none;
             border: none;
-            background: $btn-bg-hover;
+            background: $theme-btn-bg-hover;
+            color: $theme-btn-text-color-hover;
         }
     }
 }
@@ -2103,7 +2105,7 @@ h6,
 
 .open-response-assessment-block {
     .ora-summary-title {
-        color: $base-color;
+        color: $base-color !important;
     }
 }
 
