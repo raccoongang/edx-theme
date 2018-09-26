@@ -1,16 +1,16 @@
 .btn {
-	color: $base-color;
-	border-color: $base-color;
+	color: $theme-btn-text-color;
+	border-color: $theme-btn-bg;
 	&:hover,
 	&:active {
 		&:not(:disabled) {
-			color: #fff;
-			background: $btn-bg-hover;
-			border-color: $btn-bg-hover;
+			color: $theme-btn-text-color-hover;
+			background: $theme-btn-bg-hover;
+			border-color: $theme-btn-bg-hover;
 		}
 	}
 	&:focus {
-		border-color: $btn-bg-hover;
+		border-color: $theme-btn-bg-hover;
 	}
 }
 
