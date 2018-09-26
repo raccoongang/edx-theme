@@ -24,7 +24,7 @@
 }
 
 *:focus {
-    outline-color: $base-color !important;
+    outline-color: $theme-btn-bg !important;
 }
 @mixin sm {
     @media screen and (max-width: 768px) {
@@ -1447,18 +1447,20 @@ div {
 
 
 %theme-btn {
-    color: #ffe;
+    color: $theme-btn-text-color;
     text-shadow: none;
-    background: $base-color;
+    background: $theme-btn-bg;
     border: none;
     box-shadow: none;
+    border-radius: 0;
     &:hover,
     &:focus,
     &:active {
         &:not(:disabled) {
             box-shadow: none;
             border: none;
-            background: $btn-bg-hover;
+            background: $theme-btn-bg-hover;
+            color: $theme-btn-text-color-hover;
         }
     }
 }
@@ -1494,15 +1496,15 @@ button {
 }
 
 .btn {
-    color: $base-color;
-    border-color: $base-color;
+    color: $theme-btn-text-color;
+    border-color: $theme-btn-bg;
     &:hover,
     &:focus,
     &:active {
         &:not(:disabled) {
-            color: #fff;
-            background: $btn-bg-hover;
-            border: 1px solid $btn-bg-hover;
+            color: $theme-btn-text-color-hover;
+            background: $theme-btn-bg-hover;
+            border: 1px solid $theme-btn-bg-hover;
         }
     }
 }
@@ -1601,8 +1603,18 @@ button {
         .course {
             .details {
                 .enter-course {
-                    background-color: $action-primary-fg;
-                    color: $action-primary-bg;
+                    background-color: $theme-btn-bg !important;
+                    color: $theme-btn-text-color !important;
+                    border-color: $theme-btn-bg;
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        &:not(:disabled) {
+                            color: $theme-btn-text-color-hover !important;
+                            background: $theme-btn-bg-hover !important;
+                            border-color: $theme-btn-bg-hover;
+                        }
+                    }
                 }
             }
             .wrapper-messages-primary {
@@ -1618,13 +1630,15 @@ button {
                                         margin-left: 0;
                                     }
                                     .btn {
-                                        background: $base-color;
+                                        background: $theme-btn-bg;
+                                        color: $theme-btn-text-color;
                                         border: none;
                                         &:hover,
                                         &:focus,
                                         &:active {
                                             box-shadow: none;
-                                            background: $btn-bg-hover;
+                                            color: $theme-btn-text-color-hover;
+                                            background: $theme-btn-bg-hover;
                                         }
                                     }
                                 }
@@ -1700,17 +1714,19 @@ button {
         }
     }
     .discovery-submit {
-        border-color: $base-color;
-        background: $base-color;
+        border-color: $theme-btn-bg;
+        background: $theme-btn-bg;
+        color: $theme-btn-text-color;
         &:hover,
         &:active,
         &:focus {
-            border: 2px solid $base-color;
-            background: rgba($base-color, 0.8);
+            border: 2px solid $theme-btn-bg-hover;
+            background: rgba($theme-btn-bg-hover, 0.8);
+            color: $theme-btn-text-color-hover;
         }
     }
    .loading-spinner {
-        background: $base-color;
+        background: $theme-btn-bg;
    }
 }
 
@@ -1758,11 +1774,13 @@ h6,
     .cancel-button,
     .search-button:hover,
     .cancel-button:hover {
-        background: $base-color;
+        background: $theme-btn-bg;
+        color: $theme-btn-text-color;
         &:hover,
         &:focus,
         &:active {
-            background: $btn-bg-hover;
+            background: $theme-btn-bg-hover;
+            color: $theme-btn-text-color-hover;
         }
     }
 }
@@ -1998,7 +2016,7 @@ h6,
                     &:hover,
                     &:active,
                     &:focus {
-                        background: $btn-bg-hover;
+                        background: $theme-btn-bg-hover;
                     }
                 }
             }
@@ -2042,7 +2060,8 @@ h6,
         &:hover {
             &:not(:disabled) {
                 box-shadow: none;
-                background: $btn-bg-hover;
+                background: $theme-btn-bg-hover;
+                color: $theme-btn-text-color-hover;
             }
         }
         &:active,
@@ -2103,7 +2122,7 @@ h6,
 
 .open-response-assessment-block {
     .ora-summary-title {
-        color: $base-color;
+        color: $base-color !important;
     }
 }
 
@@ -2188,7 +2207,7 @@ h6,
                     &:active,
                     &:focus {
                         &:not(:disabled) {
-                            background: $btn-bg-hover;
+                            background: $theme-btn-bg-hover;
                             border: none;
                             box-shadow: none;
                         }
@@ -2216,10 +2235,11 @@ h6,
             .u-field {
                 .field {
                     .u-field-link {
-                        color: $base-color;
-                        border: 1px solid $base-color;
+                        color: $theme-btn-text-color;
+                        border: 1px solid $theme-btn-bg;
                         &:hover {
-                            background: $btn-bg-hover;
+                            background: $theme-btn-bg-hover;
+                            border-color: $theme-btn-bg-hover;
                         }
                     }
                     select {
@@ -2278,7 +2298,7 @@ div {
                             &.outline-item {
                                 &:hover,
                                 &:focus {
-                                    background: rgba($shadow-color, 0.4);
+                                    background: rgba($shadow-color, 0.1);
                                 }
                             }
                         }
@@ -2309,7 +2329,7 @@ div {
             button {
                 &.btn-brand {
                     &:hover {
-                        background: $btn-bg-hover;
+                        background: $theme-btn-bg-hover;
                     }
                 }
             }
@@ -2359,13 +2379,14 @@ div {
 .view-in-course {
     .discussion-module {
         .btn {
-            color: $base-color;
-            border-color: $base-color;
+            color: $theme-btn-text-color;
+            border-color: $theme-btn-bg;
             &:hover,
             &:focus,
             &:active {
-                border-color: $base-color !important;
-                background: $base-color !important;
+                color: $theme-btn-text-color-hover !important;
+                border-color: $theme-btn-bg-hover !important;
+                background: $theme-btn-bg-hover !important;
             }
         }
         .btn-brand {
@@ -2891,15 +2912,15 @@ body .wiki-wrapper main section.wiki .nav-tabs a {
 body .container .wiki-wrapper section.wiki .btn {
     border: none;
     box-shadow: none;
-    background: $theme-link;
-    color: #fff;
+    background: $theme-btn-bg;
+    color: $theme-btn-text-color;
     text-shadow: none;
     &:hover,&:focus,&:active {
         background-image: none;
-        background: $theme-link-hover;
+        background: $theme-btn-bg-hover;
         border: none;
         box-shadow: none;
-        color: #fff;
+        color: $theme-btn-text-color-hover;
         text-shadow: none;
     }
 }
@@ -3142,12 +3163,13 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 body form.ccx-form button {
     border: none;
     box-shadow: none;
-    color: $white;
-    background: $theme-link;
+    color: $theme-btn-text-color;
+    background: $theme-btn-bg;
     text-decoration: none;
     text-shadow: none;
     &:hover,&:focus,&:active {
-        background: $theme-link-hover;
+        background: $theme-btn-bg-hover;
+        color: $theme-btn-text-color-hover;
     }
 }
 
@@ -3448,5 +3470,45 @@ body .container .wiki-wrapper section.wiki .btn {
                 }
             }
         }
+    }
+}
+
+
+.btn-brand,
+.modal .inner-wrapper form .submit input[type="submit"],
+.leanModal_box .inner-wrapper form .submit input[type="submit"],
+.confirm-enrollment button[type="submit"]{
+    background: $theme-btn-bg;
+    color: $theme-btn-text-color;
+    border-color: $theme-btn-bg;
+    &:hover,
+    &:focus,
+    &:active{
+        &:not(:disabled) {
+            background: $theme-btn-bg-hover;
+            color: $theme-btn-text-color-hover;
+            border-color: $theme-btn-bg-hover;
+        }
+    }
+}
+
+.confirm-enrollment button[type="submit"] {
+    text-shadow: none;
+    border-top: none;
+    box-shadow: none;
+    span{
+        color: inherit !important;
+    }
+}
+
+.shopping-cart .col-two .col-2 button[type="submit"]:hover{
+    background: $theme-btn-bg-hover;
+}
+
+.wrap-instructor-info .instructor-info-action{
+    color: $theme-btn-text-color;
+    &:hover{
+        background: $theme-btn-bg-hover;
+        color: $theme-btn-text-color-hover;
     }
 }
