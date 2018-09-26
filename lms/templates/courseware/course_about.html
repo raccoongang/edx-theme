@@ -193,17 +193,19 @@ from course_modes.models import CourseMode
               </div>
             </li>
             %endif
+            <%
+              mode_slugs = [mode.slug for mode in CourseMode.modes_for_course(course.id)]
+              certified = bool(set(mode_slugs) & {CourseMode.AUDIT, CourseMode.VERIFIED})
+            %>
+            % if certified:
             <li class="short-info-list__item">
               <img class="short-info-list__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/certificate-icon.svg">
               <div class="short-info-list__text">
                 <strong class="custom-param-name">${_("Verified Certificate Available")}</strong>
-                <%
-                  mode_slugs = [mode.slug for mode in CourseMode.modes_for_course(course.id)]
-                  certified = bool(set(mode_slugs) & {CourseMode.AUDIT, CourseMode.HONOR, CourseMode.VERIFIED})
-                %>
                 <span class="custom-param-value">${_("Yes") if certified else _("No")}</span>
               </div>
             </li>
+            %endif
           </ol>
         </div>
       </li>
