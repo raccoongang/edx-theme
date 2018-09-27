@@ -1,1 +1,16 @@
 // add all specific styles there
+.home {
+   >header {
+    .title {
+      >.heading-group {
+        h1 {
+          mark {
+            font: inherit;
+            background: transparent;
+            color: $promo-box-text--mark-color;
+          }
+        }
+      }
+    }
+  }
+}
