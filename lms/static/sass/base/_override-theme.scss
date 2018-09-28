@@ -1,0 +1,26 @@
+.wrapper-footer {
+  footer#footer-openedx {
+    .footer-text {
+      font-size: 12px;
+      margin-top: 15px;
+      text-align: center;
+      color: #565656;
+
+      p {
+        margin: 5px 0;
+
+        &:first-child {
+          font-size: 16px;
+        }
+
+        &:last-child {
+          line-height: 2;
+        }
+      }
+
+      hr {
+        margin: 5px 0;
+      }
+    }
+  }
+}

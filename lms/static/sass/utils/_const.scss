@@ -30,8 +30,8 @@ $search-button-color: #fff;
 $search-height: 50px;
 //settings for footer
 $footer-bg: #dfdfdf;
-$footer-nav-link-color: #fff;
-$footer-nav-link-color-hover: rgba(255,255,255, .8);
+$footer-nav-link-color: #565656;
+$footer-nav-link-color-hover: lighten($footer-nav-link-color, 20%);
 $footer-support-text-and-logo: #565656;
 $footer-social-link-bg: #fff;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
@@ -63,9 +63,9 @@ $course-hover-bg: rgba(0, 0, 0, .5);
 $course-link-color: #cc0000;
 $course-bg: #fff;
 //certificate
-$ribbon-corners-color: #3d7fbe;
-$ribbon-triangle-color: #24659a;
-$certificate-borders-color: #5a8cc6;
+$ribbon-corners-color: lighten(#e00000, 10%);
+$ribbon-triangle-color: darken(#e00000, 10%);
+$certificate-borders-color: #e00000;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;
