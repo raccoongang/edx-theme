@@ -134,6 +134,7 @@ h1 {
                      border: 2px solid $search-input-border;
                      color: $search-input-color;
                      padding-left: 20px !important;
+                     height: $search-height;
                      &:focus {
                          border-color: $search-input-border !important;
                      }
@@ -151,6 +152,7 @@ h1 {
                      border-color: $search-input-border !important;
                      border-left: none !important;
                      right: 0;
+                     height: $search-height;
                  }
              }
 
