@@ -3400,14 +3400,8 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     }
 }
 
-.home .courses-container .courses .courses-listing .courses-listing-item {
-    display: none;
-}
-
-.home .courses-container .courses .courses-listing .courses-listing-item {
-    &:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
-        display: block;
-    }
+.home .courses-container .courses .courses-listing .courses-listing-item {  
+    display: block;
 }
 
 body .courses-container .courses-more {
