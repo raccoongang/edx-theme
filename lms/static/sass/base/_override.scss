@@ -2804,9 +2804,6 @@ body .enroll-message a {
     body .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment textarea {
         display: block;
     }
-    .theme-header__holder .theme-logo {
-        margin-bottom: 12px;
-    }
     .section.section-handouts {
         ol {
             margin-left: 20px;
@@ -2930,14 +2927,26 @@ body .wrapper-course-material .course-tabs li a {
     color: #5e5e5e;
 }
 
-body .theme-header .list-inline {
-    display: flex;
-    flex-direction: column;
+body .theme-header {
+    .list-inline {
+        display: flex;
+        flex-direction: column;
 
-    li {
-        margin: 0 0 10px;
-        &:last-child {
-            margin: 0;
+        li {
+            margin: 0 0 10px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    &__left-links {
+        @include sm {
+            display: none;
+        }
+        a {
+            display: inline-block;
+            vertical-align: top;
+            padding: 3px 0;
         }
     }
 }
@@ -2999,4 +3008,11 @@ body .theme-header .list-inline {
 
 .cart-view .discount span.fa-check-square-o {
     margin: 0 5px 0 0 !important;
+}
+
+#payment-popup.white-popup {
+    max-width: 800px !important;
+    .mfp-close {
+        background: none !important;
+    }
 }
