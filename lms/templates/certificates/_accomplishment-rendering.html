@@ -1,4 +1,7 @@
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+    from django.utils.translation import ugettext as _
+    from django.conf import settings
+%>
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
