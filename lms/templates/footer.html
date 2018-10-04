@@ -3,6 +3,7 @@
 <%!
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
+  from django.conf import settings
   from branding.api import get_footer
 %>
 <% footer = get_footer(is_secure=is_secure) %>
