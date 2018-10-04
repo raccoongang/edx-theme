@@ -1483,8 +1483,6 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     @media screen and (min-width: 900px) {
         margin: 0 0 20px;
         order: 2;
-        padding-right: 10px;
-        padding-left: 10px;
         flex: 1 1 24%;
     }
 
@@ -1493,22 +1491,31 @@ body.view-login #forgot-password-modal #password-reset header h2 {
     }
 }
 .dashboard .my-courses {
-    width: 100%;
-    @media screen and (min-width: 900px) {
-        flex: 1 1 74%;
-        order: 1;
+    width: 100% !important;
+    .listing-courses {
+        .course-item {
+            background: #fff;
+            border: none;
+            padding-bottom: 0 !important;
+            @media screen and (min-width: 900px) {
+                display: flex;
+                .course-container {
+                    width: 100%;
+                }
+            }
+            .right-short-info {
+                @media screen and (max-width: 899px) {
+                    width: 100% !important;
+                }
+            }
+        }
     }
 }
 .container.dashboard {
-    display: block;
     @media screen and (min-width: 900px) {
-    min-width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 10px;
-    padding-left: 10px;
-    align-items: flex-start;
-
+        min-width: auto;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     @media screen and (min-width: 1200px) {
         padding-right: 0;
@@ -1558,11 +1565,9 @@ body.view-login #forgot-password-modal #password-reset header h2 {
         }
     }
     .wrapper-course-details {
-        width: 100%;
-
-        @media screen and (min-width: 760px) {
-            width: 74.41059%;
-        }
+        width: 100% !important;
+        float: none !important;
+        height: 100% !important;
     }
 }
 .dashboard-search-results .search-info {
@@ -1786,6 +1791,13 @@ section.wiki .table.table-striped {
             width: 100%;
         }
         .course {
+            height: 100%;
+            margin: 0 !important;
+            padding: 38px 40px 32px;
+            box-sizing: border-box;
+            @media screen and (max-width: 567px) {
+                padding: 20px;
+            }
             .details {
                 .wrapper-course {
                     &-image {
@@ -1814,11 +1826,61 @@ section.wiki .table.table-striped {
                             float: left;
                             width: 74.41059%;
                         }
+                        h3.course-title {
+                            font-family: 'NeueHaasUnicaPro-Light' !important;
+                            a {
+                                font-family: 'NeueHaasUnicaPro-Light' !important;
+                                color: #1f1f1f !important;
+                                display: block;
+                                font-size: 20px !important;
+                                font-weight: bold !important;
+                                line-height: 22px !important;
+                                margin-bottom: 12px !important;
+                                padding-bottom: 10px !important;
+                                position: relative !important;
+                                &:hover {
+                                    color: #ea5324 !important;
+                                }
+                                &:before {
+                                    content: "";
+                                    width: 220px;
+                                    height: 1px;
+                                    background-image: linear-gradient(to right, #fec04a 0%, #e3221f 100%);
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                }
+                            }
+                        }
                     }
                     &-actions {
                         width: initial;
-                        @media screen and (min-width: 760px) {
-                            width: 65.88078%;
+                        margin-top: 20px !important;
+                        float: left !important;
+                        width: 50% !important;
+                        @media screen and (max-width: 567px) {
+                            width: 100% !important;
+                            margin-bottom: 10px !important;
+                        }
+                        .enter-course {
+                            text-transform: uppercase;
+                            border-radius: 0;
+                            background: $theme-btn-bg;
+                            color: $theme-btn-text-color;
+                            font-family: 'NeueHaasUnicaPro-Light' !important;
+                            font-size: 14px !important;
+                            float: left !important;
+                            margin-right: 15px;
+                            &:hover {
+                                background: $theme-btn-bg-hover !important;
+                                border: 1px solid $theme-btn-bg-hover !important;
+                            }
+                        }
+                        .wrapper-action-more {
+                            float: left !important;
+                        }
+                        .action-more {
+                            border-radius: 0 !important;
                         }
                     }
                 }
@@ -1834,11 +1896,19 @@ section.wiki .table.table-striped {
                         }
                     }
                     &-info {
-                        float: none;
-                        width: 100%;
-                        @media screen and (min-width: 760px) {
-                            float: left;
-                            width: 31.76157%;
+                        float: right !important;
+                        width: 50% !important;
+                        margin-top: 20px !important;
+                        text-align: right;
+                        font-family: 'NeueHaasUnicaPro-Light' !important;
+                        @media screen and (max-width: 567px) {
+                            width: 100% !important;
+                            text-align: left;
+                            float: none !important;
+                            overflow: hidden;
+                        }
+                        span {
+                            font-family: 'NeueHaasUnicaPro-Light' !important;
                         }
                     }
                 }
@@ -1851,6 +1921,35 @@ section.wiki .table.table-striped {
             min-height: 300px;
         }
     }
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message {
+    margin: 20px 0 0 !important;
+    padding: 15px 0 0 !important;
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .message-copy {
+    @media screen and (max-width: 567px) {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary {
+    @media screen and (max-width: 567px) {
+        width: 100%;
+        float: left !important;
+        li {
+            margin: 0 0 5px 0 !important;
+        }
+    }
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action .btn {
+    font-family: 'NeueHaasUnicaPro-Light' !important;
+    text-shadow: none !important;
+    border-radius: 0 !important;
+    text-transform: uppercase;
 }
 
 body {
