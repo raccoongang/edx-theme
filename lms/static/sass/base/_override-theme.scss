@@ -1,1 +1,457 @@
 // add all specific styles there
+.banner {
+    width: 100%;
+
+    .slider-text {
+        position: absolute;
+        top: 50%;
+        #{$bi-app-left}:7%;
+        // width: 100%;
+        z-index: 3;
+        transform: translateY(-50%);
+
+        .slider-innerText {
+            width: 100%;
+            margin-left: 45px;
+            max-width: 601px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 17px 20px 22px 17px;
+
+            h2 {
+                display: block;
+                width: 100%;
+                color: #fff;
+                font-weight: 500;
+                font-size: 42px;
+                letter-spacing: 1px;
+                line-height: 56px;
+                margin: 0 0 5px 0;
+                text-transform: uppercase;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+            span {
+                display: block;
+                line-height: 26px;
+                font-size: 18px;
+                color: #f1f1f3;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+        }
+    }
+
+    .carousel-control {
+        height: 40px;
+        width: 40px;
+        top: 50%;
+        margin-top: -20px;
+        opacity: 1;
+
+        span {
+            display: none;
+        }
+    }
+
+    .carousel-control.left {
+        left: 3%;
+        background: url('../images/left_round_arrow.png') 0 0 no-repeat;
+    }
+
+    .carousel-control.right {
+        right: 3%;
+        background: url('../images/right_round_arrow.png') 0 0 no-repeat;
+    }
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    width: 100%;
+}
+
+.course-search__theme {
+    position: relative;
+    width: 280px;
+    margin-right: 24px;
+
+    .search-button {
+        position: absolute;
+        right: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        top: 0px;
+        padding: 4px 12px;
+        font-size: 14px;
+        
+        &:hover,
+        &:focus {
+            background: transparent;
+        }
+
+        .fa {
+            color: $base-color;
+            text-shadow: none;
+        }
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    label {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.learn-part {
+    background: url(../images/learn-bg.jpg) no-repeat top left;
+    padding: 39px 0 49px 0;
+    text-align: center;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    .title {
+        display: inline-block;
+        width: auto;
+        min-width: 600px;
+        border-bottom: solid 1px #242331;
+    }
+
+    .title h2 {
+        display: inline-block;
+        line-height: 52px;
+        font-size: 42px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin: 0px;
+        padding-bottom: 11px;
+        position: relative;
+        text-transform: uppercase;
+        position: relative;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: rgb(51, 51, 51);
+    }
+
+    .title h2:after {
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        width: 100%;
+        background: #de142a;
+        height: 3px;
+        width: 100%;
+        content: "";
+    }
+
+    .box-view {
+        display: inline-block;
+        padding: 66px 0 0 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .box-view .box {
+        float: $bi-app-left;
+        width: 19.28%;
+    }
+
+    .box-view .box .icon {
+        display: block;
+        text-align: center;
+        margin: 0 0 16px 0;
+    }
+
+    .box-view .box .text {
+        display: block;
+        text-align: center;
+        line-height: 24px;
+        color: #242331;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .center {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+.success_story {
+    padding: 70px 0px 50px 0px;
+    text-align: center;
+    background: #ffffff;
+
+    .center {
+        margin: 0 auto;
+        width: 1170px;
+    }
+
+    .success_header h2 {
+        font-weight: bold;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 30px;
+        line-height: 33px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        color: rgb(51, 51, 51);
+    }
+
+    .success_header hr {
+        position: relative;
+        width: 18%;
+        border: none;
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 1px;
+        background-color: #242331;
+    }
+
+    .success_header hr:after {
+        position: absolute;
+        bottom: -1px;
+        left: 20%;
+        background: #de142a;
+        height: 3px;
+        width: 59%;
+        content: "";
+    }
+
+    .success_body {
+
+        .story_quote {
+            color: #323333;
+            float: left;
+            width: 50px;
+            height: 35%;
+            padding: 42px 0;
+            text-align: right;
+            font-size: 25px;
+        }
+
+        .story_text {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #838383;
+        }
+
+        .story_content {
+            padding: 29px 20px 31px;
+            border-radius: 8px;
+            overflow: hidden;
+            line-height: 21px;
+            color: #838383;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        .story_author {
+            padding-left: 70px;
+            float: left;
+            width: 100%;
+
+            .story_author_image{
+                float: left;
+                width: 50px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                }
+            }
+
+            .story_author_details {
+                float: left;
+                padding: 0 20px;
+                width: 82%;
+                overflow: hidden;
+                text-align: left;
+
+                .story_author_name {
+                    text-transform: capitalize;
+                    font-size: 18px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                    margin: 1px 0 4px;
+                    font-weight: bold;
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                }
+
+                .story_author_desg {
+                    margin-top: 0;
+                    font-style: italic;
+                    font-size: 18px;
+                    color: #838383;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                    margin: 0;
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                }
+            }
+        }
+    }
+}
+
+.footer-distributed{
+    /*background-color: #292c2f;*/
+    /*box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);*/
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+
+    /*padding: 40px 40px;*/
+    /*margin-top: 80px;*/
+}
+
+
+.footer-distributed .footer-col{
+    width: 22%;
+    display: inline-block;
+    margin: 1%;
+    vertical-align: top;
+    font-size: smaller;
+}
+.footer-distributed .footer-col .header-title {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: larger;
+}
+address{
+    color: #FFFFFF;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+    padding: 0;
+    list-style-type: none;
+    margin: 9px 0 0 -2px;
+    
+    a {
+        color: $footer-nav-link-color;
+        font-weight: normal;
+    }
+
+    li {
+        margin-bottom: 0;
+    }
+}
+
+.footer-distributed .footer-links p {
+    color: #FFFFFF;
+    font-weight: initial;
+    font-style: initial;
+    display: inline;    
+    padding-left: 3%;
+    line-height: 2;
+}
+.mobile-app-wrapper {
+    padding-bottom: 7%;
+}
+.mobile-app-wrapper img {
+    margin-bottom: 4%; 
+}
+.footer-follow-links {
+    display: flex;
+    justify-content: center;
+    margin-top: -21px;
+
+    a {
+        color: $footer-nav-link-color;
+        margin-right: 12px;
+    }
+}
+.openedx-copyright a {
+    margin: -6px 10px 0 25%;
+}
+.openedx-copyright p {
+    font-size: small;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+/*@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-col{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+}*/
+
+
+.wrapper-footer {
+    background: #de142a;
+}
+
+.wrapper-footer footer#footer-openedx a, .wrapper-footer footer#footer-openedx a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: none;
+    font-weight:500;
+}
+
+.openedx-copyright {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-logo {
+    background: #fff;
+    padding: 33px 0;
+    text-align: center;
+    .logo-box {
+        display: inline-block;
+        width: auto;
+        padding: 0 6px;
+    }
+}
+
+.courses-container {
+    .courses {
+        .courses-innerView {
+            margin:0 70px !important; 
+            position: relative;
+            .level{
+             position:absolute;    
+             left:-92px;
+             top:44px;
+             background:#de142a;
+             color:#fff;
+             font-size:30px; 
+             line-height:50px; 
+             margin:0px;
+             padding:0px 20px; 
+             z-index:99;
+             border:none;
+             -moz-transform: rotate(-90deg);
+             -o-transform: rotate(-90deg);
+             -ms-transform: rotate(-90deg);
+             -webkit-transform: rotate(-90deg);
+             transform: rotate(-90deg);
+            } 
+            .courses-listing {
+                margin:0px !important;
+            }
+        }
+    }
+}

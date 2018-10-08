@@ -46,13 +46,17 @@ h1 {
 .home {
     >header {
         position: relative;
-        min-height: 420px;
+        // min-height: 420px;
         //background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%;
         //background-size: cover;
         display: flex;
         align-items: center;
         @media (max-width: 767px) {
             min-height: initial;
+        }
+
+        &:after {
+            display: none;
         }
 
         .parallax-img {
@@ -3125,7 +3129,16 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 // "show more" button
 
 .home .highlighted-courses {
-    margin-bottom: 100px;
+    margin-bottom: 0;
+}
+
+.courses-container {
+    max-width: 1440px !important;
+    background: #f1f1f1;
+}
+
+.highlighted-courses .courses {
+    background: #f1f1f1;
 }
 
 .arrow-up {
@@ -3144,7 +3157,7 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
     z-index: 100;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     &_active {
-        bottom: 30px;
+        bottom: 18px;
     }
     &:hover {
         background: $theme-btn-bg-hover;
@@ -3200,5 +3213,25 @@ body .container .wiki-wrapper section.wiki .btn {
 }
 
 .courses-container .courses .course .course-info .course-title {
-    color: $course-link-color;
+    color: #666666 !important;
+    text-transform: uppercase;
+    margin: 3px 0 48px 0;
+}
+
+.highlighted-courses .courses .course, .find-courses .courses .course {
+    border-color: #000;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.125), inset 0 0 0 1px rgba(255,255,255,0.75);
+    background: #fafafa;
+
+    &:hover {
+        border-color: #000;
+        box-shadow: 0 1px 10px 0 rgba(0,0,0,0.125), inset 0 0 0 1px rgba(255,255,255,0.75);
+        background: #fafafa;
+    }
+}
+
+.courses-container .courses .course .course-info .course-date {
+    background: #242331;
+    color: #fff;
+    padding: 4px 15px 2px;
 }

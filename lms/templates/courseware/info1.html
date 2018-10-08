@@ -1,0 +1,118 @@
+<%page expression_filter="h"/>
+<%inherit file="../main.html" />
+<%def name="online_help_token()"><% return "courseinfo" %>
+  </%def>
+  <%namespace name='static' file='../static_content.html'/>
+<%!
+from datetime import datetime
+from pytz import timezone, utc
+
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+
+from courseware.courses import get_course_info_section, get_course_date_blocks
+from openedx.core.djangoapps.self_paced.models import SelfPacedConfiguration
+from openedx.core.djangolib.markup import HTML, Text
+from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
+%>
+
+    <%block name="pagetitle">${_("{course_number} Course Info").format(course_number=course.display_number_with_default)}</%block>
+
+<%block name="headextra">
+<%static:css group='style-course-vendor'/>
+<%static:css group='style-course'/>
+</%block>
+
+% if show_enroll_banner:
+<div class="wrapper-msg urgency-low" id="failed-verification-banner">
+  <div class="msg msg-reverify is-dismissable">
+    <div class="msg-content">
+      <h2 class="title">${_("You are not enrolled yet")}</h2>
+      <div class="copy">
+        <p class='enroll-message'>
+          ${Text(_("You are not currently enrolled in this course. {link_start}Enroll now!{link_end}")).format(
+                link_start=HTML("<a href={}>").format(url_to_enroll),
+                link_end=HTML("</a>")
+          )}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+% endif
+
+<%include file="/courseware/course_navigation.html" args="active_page='info'" />
+
+<%static:require_module_async module_name="js/courseware/toggle_element_visibility" class_name="ToggleElementVisibility">
+        ToggleElementVisibility();
+</%static:require_module_async>
+<%static:require_module_async module_name="js/courseware/course_home_events" class_name="CourseHomeEvents">
+        CourseHomeEvents();
+</%static:require_module_async>
+
+<%block name="bodyclass">view-in-course view-course-info ${course.css_class or ''}</%block>
+<main id="main" aria-label="Content" tabindex="-1">
+    <div class="container" style="margin-bottom: 180px"
+    % if getattr(course, 'language'):
+      lang="${course.language}"
+    % endif
+    >
+        <div class="row">
+          <section class="col-xs-12 offset-xs-0 col-md-10 offset-md-1">
+            
+            <div class="white-box clearfix home">
+              <div class="top-content module-title"><img src="${course_image}" alt="" class="icon-img" />
+              <p>
+                ${_("Welcome to your {course_name}!").format(course_name=course.display_name_with_default)}
+              </p>
+              <div class="page-header-secondary">
+                <a href="${resume_course_url}" class="last-accessed-link">${_("Go to Module")}</a>
+              </div>
+            </div>
+            
+            <div class="row module-overview">
+              
+              
+                <div class=" col-xs-12 col-xl-8">
+              <section class="updates">
+                % if studio_url is not None and masquerade and masquerade.role == 'staff':
+                  <div class="wrap-instructor-info studio-view">
+                    <a class="instructor-info-action" href="${studio_url}">
+                      ${_("View Updates in Studio")}
+                    </a>
+                  </div>
+                % endif
+
+                ${HTML(get_course_info_section(request, masquerade_user, course, 'updates'))}
+
+              </section>
+            </div>
+            
+            <div class=" col-xs-12 col-xl-4">
+              <section aria-label="${_('Handout Navigation')}" class="handouts">
+                <h3 class="hd hd-3 handouts-header">${_("Course Tools")}</h3>
+                <div>
+                    <a class="action-show-bookmarks" href="${reverse('openedx.course_bookmarks.home', args=[course.id])}">
+                        <span class="icon fa fa-bookmark" aria-hidden="true"></span>
+                        ${_("Bookmarks")}
+                    </a>
+                </div>
+
+              % if SelfPacedConfiguration.current().enable_course_home_improvements:
+                ${HTML(dates_fragment.body_html())}
+              % endif
+              </section>
+            </div>
+              
+            </div>
+            
+            
+          </div>
+        </section>
+      </div>
+  </div>
+</main>
+
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+    DateUtilFactory.transform(iterationKey=".localized-datetime");
+</%static:require_module_async>

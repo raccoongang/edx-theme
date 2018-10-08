@@ -60,7 +60,7 @@
   </div>
 % else:
   <div class="theme-footer">
-    <footer id="footer-openedx" class="theme-footer_wrapper"
+    <footer id="footer-openedx" class="theme-footer_wrapper footer-distributed"
       ## When rendering the footer through the branding API,
       ## the direction may not be set on the parent element,
       ## so we set it here.
@@ -68,82 +68,82 @@
         dir=${bidi}
       % endif
     >
-    <ul class="footer-list">
-      <li class="footer-list_item">
-        <a href="/about" class="footer-list_link">${_('About')}</a>
-      </li>
-      <li class="footer-list_item">
-        <a href="/privacy" class="footer-list_link">${_('Privacy Policy')}</a>
-      </li>
-      <li class="footer-list_item">
-        <a href="/tos" class="footer-list_link">${_('Terms of Service')}</a>
-      </li>
-    </ul>
-    <div class="theme-footer_holder">
-      <ul class="icon-list">
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-facebook" />
-            </svg>
-          </a></li>
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-twitter" />
-            </svg>
-          </a></li>
-        <!-- <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon">
-              <use xlink:href="#ico-youtube" />
-            </svg>
-          </a></li>
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-linkedin" />
-            </svg>
-          </a></li>
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-behance" />
-            </svg>
-          </a></li>
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-instagram" />
-            </svg>
-          </a></li>
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-odnoklassniki" />
-            </svg>
-          </a></li>
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-vimeo" />
-            </svg>
-          </a></li>
-        <li class="icon-list_item"><a href="#" class="icon-list_link">
-            <svg class="icon-list_icon" viewBox="0 0 35 35">
-              <use xlink:href="#ico-vk" />
-            </svg>
-          </a></li> -->
-      </ul>
-      <a class="logo-footer" href="/">
-        <img src="/static/${settings.FEATURES.get('BASE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.png" alt="footer logo">
+      <div class="footer-col">
+          <h3 class="header-title">About us</h3>
+          <p class="footer-links">
+            <ul class="footer-links">
+              <!-- <li><a href="#">> FAQ</a></li> -->
+              <!-- <li><a href="#">> Blog</a></li> -->
+              <li><a href="#">> Terms &amp; Conditions</a></li>
+              <li><a href="/privacy">> Privacy Policy</a></li>
+              <li><a href="#">> Contact Us</a></li>
+            </ul>
+          </p>
+      </div>
+      <div class="footer-col">
+          <h3 class="header-title">What We Offer</h3>
+          <p class="footer-links">
+            <ul class="footer-links">
+              <!-- <li><a href="#">> Subscription Plans</a></li> -->
+              <li><a href="#">> Corporates Solution</a></li>
+              <li><a href="#">> Academic Solution</a></li>
+            </ul>
+          </p>
+      </div>
+      <div class="footer-col">
+          <h3 class="header-title">Contact Us</h3>
+            <address>
+              <ul class="footer-links">
+                <li><span class="icon fa fa-map-marker"></span>
+                <p>Golden Enclave, Commercial Block
+              A 1 Tower, 4th Floor, Old Airport Road
+              Bangalore 560017</p>
+                </li>
+                <li><span class="icon fa fa-phone"></span>
+                <p>+91 88800 67849</p>
+                </li>
+                <li>
+                  <span class="icon fa fa-envelope"></span>
+                  <p><a href="mailto:enquiries@laqsh.com">enquiries@laqsh.com</a></p>
+                </li>
+              </ul>
+            </address>
+      </div>
+      <div class="footer-col">
+      % if settings.FEATURES.get('ENABLE_FOOTER_MOBILE_APP_LINKS'):
+      <div class="footer-mobile-apps">
+         <div class="mobile-app-wrapper">
+            <a href="${settings.MOBILE_STORE_URLS.get('apple', '#')}">
+            <img class="app-store" alt="${_("Apple app on Apple Store")}" src="${static.url('images/app/app_store_badge_135x40.svg')}" height="50px" width="150px">
+            </a>
+            <a href="${settings.MOBILE_STORE_URLS.get('google', '#')}">
+            <img class="google-play" alt="${_("Android app on Google Play")}" src="${static.url('images/app/google_play_badge_45.png')}" height="50px" width="150px">
+            </a>
+         </div>
+      </div>
+      % endif
+
+      <div class="footer-follow-links">
+        % for social_name in settings.SOCIAL_MEDIA_FOOTER_NAMES:
+        <%  social_url, social_title, social_icon = (
+        settings.SOCIAL_MEDIA_FOOTER_URLS.get(social_name,""),
+        unicode(settings.SOCIAL_MEDIA_FOOTER_DISPLAY.get(social_name, {}).get("title", "")),
+        settings.SOCIAL_MEDIA_FOOTER_DISPLAY.get(social_name).get("icon", "")
+        )
+        %>
+      <a href="${social_url}" title="${social_title}" rel="noreferrer">
+        <i class="icon fa ${social_icon} element-invisible"></i>
       </a>
-      <p class="footer-support">Built on
-        <a target="_blank" href="${footer['edx_org_link']['url']}">
-          <svg class="svg-edx"  viewBox="0 0 100 70">
-            <use xlink:href="#logo-edx" />
-          </svg>
+        % endfor
+      </div>
+      </div>
+
+      <div class="openedx-copyright">
+        <a href="${footer['openedx_link']['url']}">
+          <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
         </a>
-        <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-          Raccoon Gang
-          <svg class="svg-raccoon"  viewBox="0 0 100 100">
-            <use xlink:href="#logo-raccoon" />
-          </svg>
-        </a>
-      </p>
-    </div>
+        <p>${footer['copyright']}</p>
+      </div>
     </footer>
   </div>
 % endif

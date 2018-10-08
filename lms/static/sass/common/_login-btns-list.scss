@@ -9,10 +9,21 @@
 }
 .login-btns-list_item {
     margin: 0;
-    margin-right: 3px;
+    margin-right: 14px;
 
     &:last-child {
         margin-right: 0;
+    }
+
+    .theme-btn {
+        text-transform: none;
+        font-size: 14px;
+        box-shadow: 0 2px 1px 0 #de142a;
+        padding: 9px 19px 9px 20px;;
+        
+        .icon {
+            margin-right: 4px;
+        }
     }
 
     @media screen and (max-width: 760px) {

@@ -37,25 +37,40 @@ from django.utils.translation import ugettext as _
   </%block>
 </ol>
 <div class="theme-header__block">
+  %if request.path == "/":
+    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+      <div class="course-search__theme course-search">
+        <form method="get" action="/courses">
+          <label><span class="sr">${_("Search for a course")}</span>
+            <input class="search-input" name="search_query" type="text" placeholder="${_("I want to learn about...")}"></input>
+          </label>
+          <button class="search-button" type="submit">
+            <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+          </button>
+        </form>
+      </div>
+    % endif
+  % endif
+
   <ol class="login-btns-list">
     <%block name="navigation_sign_in">
       <li class="login-btns-list_item">
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-              <a class="theme-btn" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-            % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
-              <a class="theme-btn" href="/register${login_query()}">${_("Register")}</a>
-            % endif
-          % endif
-      </li>
-      <li class="login-btns-list_item">
         % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
           % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-            <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+            <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}"> <i class="icon fa fa-key"></i>${_("Login")}</a>
           % else:
-            <a class="theme-btn" href="/login${login_query()}">${_("Sign in")}</a>
+            <a class="theme-btn" href="/login${login_query()}"><i class="icon fa fa-key"></i>${_("Login")}</a>
           % endif
         % endif
+      </li>
+      <li class="login-btns-list_item">
+          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+            % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+              <a class="theme-btn" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}"> <i class="icon fa fa-user"></i> ${_("Register")}</a>
+            % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
+              <a class="theme-btn" href="/register${login_query()}"><i class="icon fa fa-user"></i>${_("Register")}</a>
+            % endif
+          % endif
       </li>
     </%block>
   </ol>

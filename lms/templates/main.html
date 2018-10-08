@@ -43,7 +43,9 @@ from pipeline_mako import render_require_js_path_overrides
        ${static.get_page_title_breadcrumbs(self.pagetitle())}
       </title>
   </%block>
-
+%if request.path == "/":
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+%endif
   % if not allow_iframing:
       <script type="text/javascript">
         /* immediately break out of an iframe if coming from the marketing website */
@@ -125,7 +127,9 @@ from pipeline_mako import render_require_js_path_overrides
     })();
     </script>
 % endif
-
+%if request.path == "/":
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+%endif
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">

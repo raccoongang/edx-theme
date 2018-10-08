@@ -11,49 +11,132 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
-        <div class="parallax-img"></div>
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-                ${homepage_overlay_html | n, decode.utf8}
-              % else:
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>TIPS FOR BETTER TIME MANAGEMENT</h1>
-                  ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <span>STUDENT SUCCESS</span>
-              % endif
-            </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
-
+        <div class="banner">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+             <!-- Indicators -->
+             <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+             </ol>
+             <!-- Wrapper for slides -->
+             <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                   <img src="${static.url('images/slider-img1.png')}" alt="img" width="460" height="345">
+                   <div class="slider-text">
+                      <div class="slider-innerText">
+                         <h2>${_("Multi-Station Learning")}</h2>
+                         <span>${_("Digital Education Beyond the Classroom")}</span>
+                      </div>
+                   </div>
+                </div>
+                <div class="item">
+                   <img src="${static.url('images/slider-img2.png')}" alt="img" width="460" height="345">
+                   <div class="slider-text">
+                      <div class="slider-innerText">
+                         <h2>${_("Multi-Station Learning")}</h2>
+                         <span>${_("Digital Education Beyond the Classroom")}</span>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <!-- Left and right controls -->
+             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+             <span class="sr-only">${_("Previous")}</span>
+             </a>
+             <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+             <span class="sr-only">${_("Next")}</span>
+             </a>
           </div>
-
-          % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
         </div>
 
       </header>
+      <div class="learn-part">
+            <div class="center">
+               <div class="title">
+                  <h2>${_("Discover Through")}</h2>
+               </div>
+               <div class="box-view">
+                  <div class="box">
+                     <div class="icon"><img src="${static.url('images/video-icon.png')}" alt="" /></div>
+                     <div class="text">${_("Video")}<br />${_("Lectures")}</div>
+                  </div>
+                  <div class="box">
+                     <div class="icon"><img src="${static.url('images/assignments-icon.png')}" alt="" /></div>
+                     <div class="text">${_("Assignments")}<br />& ${_("Exams")}</div>
+                  </div>
+                  <div class="box">
+                     <div class="icon"><img src="${static.url('images/discussions-icon.png')}" alt="" /></div>
+                     <div class="text">${_("Course")}<br />${_("Discussions")}</div>
+                  </div>
+                  <div class="box">
+                     <div class="icon"><img src="${static.url('images/experts-icon.png')}" alt="" /></div>
+                     <div class="text">${_("Top")}<br />${_("Experts")}</div>
+                  </div>
+                  <div class="box">
+                     <div class="icon"><img src="${static.url('images/certificate-icon.png')}" alt="" /></div>
+                     <div class="text">${_("Certificate of")}<br />${_("Completion")}</div>
+                  </div>
+               </div>
+            </div>
+         </div>
       <%include file="${courses_list}" />
 
     </section>
 </main>
-
+<section class="main success_story">
+  <div class="center">
+      <div class="success_header" align="center">
+       <h2 class="success_header_text">${_("WHAT PEOPLE SAY ABOUT US")}</h2>
+       <hr />
+      </div>
+      <div class="container success_body">
+       <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+         <div class="story_quote"><img class="cst_quote" src="${static.url('images/quote.png')}"></div>
+         <div class="story_content">
+          <span class="story_text">I thoroughly enjoyed this course and hope to expand on my gained knowledge about building websites. The course was well presented, easy to follow and engaging. The interactive examples make the course easier to grasp. I definitely recommend this course to learn about HTML or CSS.
+         </span></div>
+         <div class="story_author">
+          <div class="story_author_image">
+           <img src="${static.url('images/image-passport1.jpg')}" alt="a_image">
+          </div>
+          <div class="story_author_details">
+           <p class="story_author_name">Edward Hall</p>
+           <p class="story_author_desg">Software Engineer</p>
+          </div>
+         </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+         <div class="story_quote"><img class="cst_quote" src="${static.url('images/quote.png')}"></div>
+         <div class="story_content">
+             <span class="story_text">The course exceeded my expectations in many regards -- especially in the depth of information supplied and the access to the instructor for feedback on work in progress. In a very non-threatening environment, I learned key principles of design that I can implement immediately.
+         </span></div>
+         <div class="story_author">
+          <div class="story_author_image">
+           <img src="${static.url('images/image-passport2.jpg')}" alt="a_image">
+          </div>
+          <div class="story_author_details">
+           <p class="story_author_name">Peter Pinch</p>
+           <p class="story_author_desg">Software Engineer</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+  </div>
+</section>
+<div class="bottom-logo">
+         <div class="center">
+            <div class="logo-box"><a href="#"><img class="bottom-logo-img" src="${static.url('images/bottom-logo1.jpg')}" alt="" /></a></div>
+            <div class="logo-box"><a href="#"><img class="bottom-logo-img" src="${static.url('images/bottom-logo2.jpg')}" alt="" /></a></div>
+            <div class="logo-box"><a href="#"><img class="bottom-logo-img" src="${static.url('images/bottom-logo3.jpg')}" alt="" /></a></div>
+            <div class="logo-box"><a href="#"><img class="bottom-logo-img" src="${static.url('images/bottom-logo4.jpg')}" alt="" /></a></div>
+            <div class="logo-box"><a href="#"><img class="bottom-logo-img" src="${static.url('images/bottom-logo5.jpg')}" alt="" /></a></div>
+            <div class="logo-box"><a href="#"><img class="bottom-logo-img" src="${static.url('images/bottom-logo6.jpg')}" alt="" /></a></div>
+         </div>
+      </div>
 <a class="arrow-up" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
 % if show_homepage_promo_video:

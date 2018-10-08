@@ -36,6 +36,20 @@ from django.utils.translation import ugettext as _
     %endif
   </%block>
 </ol>
+%if request.path == "/":
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+    <div class="course-search__theme course-search">
+      <form method="get" action="/courses">
+        <label><span class="sr">${_("Search for a course")}</span>
+          <input class="search-input" name="search_query" type="text" placeholder="${_("I want to learn about...")}"></input>
+        </label>
+        <button class="search-button" type="submit">
+          <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+        </button>
+      </form>
+    </div>
+  % endif
+% endif
 
 <a href="${get_online_help_info(online_help_token)['doc_url']}"
          target="_blank"
