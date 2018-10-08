@@ -3017,3 +3017,32 @@ body .theme-header {
     }
 }
 
+// programs filters
+
+.programs-filter {
+    float: left;
+    width: 250px;
+    ul {
+        list-style: none;
+        padding: 0 0 15px;
+        margin: 0;
+        li {
+            input.filter-type {
+                margin-right: 10px;
+                &:disabled {
+                    opacity: 0.7;
+                    & + label {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.programs-wrapper {
+    overflow: hidden;
+    .program-cards-container {
+        width: auto;
+    }
+}
