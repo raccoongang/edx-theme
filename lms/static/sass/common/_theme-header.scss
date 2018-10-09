@@ -11,12 +11,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    box-sizing: border-box;
     @media screen and (max-width: 760px) {
         flex-wrap: wrap;
         padding: 0 10px;
     }
     @media screen and (min-width: 1240px) {
-        padding: 0;
+        padding: 0 15px;
     }
 }
 .theme-header__wrapper {
