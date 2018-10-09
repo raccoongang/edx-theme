@@ -3022,12 +3022,13 @@ body .theme-header {
 .programs-filter {
     float: left;
     width: 250px;
+    padding-left: 20px;
     ul {
         list-style: none;
         padding: 0 0 15px;
         margin: 0;
         li {
-            input.filter-type {
+            input[type="checkbox"] {
                 margin-right: 10px;
                 &:disabled {
                     opacity: 0.7;

@@ -8,7 +8,7 @@ from django.conf import settings
   <form methot="GET" id="programs-filter">
   <ul class="type">
   % for k, v in settings.PROGRAMS_FILTER:
-    <li><input name="type" value="${k}" type="checkbox" class="filter-type">${v}</input></li>
+    <li><input name="type" value="${k}" type="checkbox" class="filter-type"><label>${v}</label></input></li>
   % endfor
   </ul>
   <ul class="course">
