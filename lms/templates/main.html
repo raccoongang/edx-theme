@@ -281,10 +281,13 @@ from pipeline_mako import render_require_js_path_overrides
   <script type="text/javascript" src="${static.url('js/vendor/noreferrer.js')}" charset="utf-8"></script>
   <script type="text/javascript" src="${static.url('js/utils/navigation.js')}" charset="utf-8"></script>
   <script src="${static.url('js/custom-input-type-file.js')}"></script>
-  <script src="/static/${settings.DEFAULT_SITE_THEME}/js/sticky-sidebar.min.js"></script>
+  <script src="/static/${settings.DEFAULT_SITE_THEME}/js/jquery.sticky-sidebar.min.js"></script>
   <%static:optional_include_mako file="body-extra.html" is_theming_enabled="True" />
   <script type="text/javascript">
-      var sidebar = new StickySidebar('.programs-filter', {topSpacing: 20});
+    $('.programs-filter').stickySidebar({
+      topSpacing: 60,
+      bottomSpacing: 60
+    });
   </script>
 </body>
 </html>
