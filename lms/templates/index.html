@@ -69,7 +69,6 @@ from openedx.core.djangolib.markup import HTML, Text
               $('#login').trigger("click");
          }
       })
-
       // js for parallax
       $(window).scroll(function () {
         var scrollTop = $(window).scrollTop();
@@ -77,15 +76,6 @@ from openedx.core.djangolib.markup import HTML, Text
         $('.parallax-img').css('transform', 'translate3d(0, '  + imgPos + ', 0)');
       });
       // js for parallax end
-
-      // js for sticky filters for programs
-      var sidebar = new StickySidebar('.programs-filter', {
-          topSpacing: 20,
-          bottomSpacing: 20,
-          containerSelector: '.content-wrapper',
-          innerWrapperSelector: '#programs-filter'
-      });
-      // js for sticky filters for programs
    </script>
 </%block>
 
