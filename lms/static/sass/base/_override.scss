@@ -3023,6 +3023,11 @@ body .theme-header {
     float: left;
     width: 250px;
     padding: 20px 0 0 20px;
+    box-sizing: border-box;
+    @media screen and (max-width: 991px) {
+        float: none;
+        width: 100%;
+    }
     .list-name {
         display: block;
         margin-bottom: 15px;
@@ -3032,6 +3037,11 @@ body .theme-header {
         padding: 0 0 25px;
         margin: 0;
         li {
+            @media screen and (max-width: 991px) {
+                display: inline-block;
+                vertical-align: top;
+                margin: 10px;
+            }
             input[type="checkbox"] {
                 margin-right: 10px;
                 position: relative;
@@ -3046,6 +3056,9 @@ body .theme-header {
             label {
                 font-style: normal;
                 margin: 0 !important;
+                font-family: "Open Sans";
+                font-weight: 400;
+                font-size: 15px;
             }
         }
     }
