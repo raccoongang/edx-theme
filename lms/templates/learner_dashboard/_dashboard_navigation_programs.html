@@ -6,11 +6,13 @@ from django.conf import settings
 % if is_marketing:
 <div class="programs-filter">
   <form methot="GET" id="programs-filter">
+    <strong class="list-name">Program type</strong>
   <ul class="type">
   % for k, v in settings.PROGRAMS_FILTER:
     <li><input name="type" value="${k}" type="checkbox" class="filter-type"><label>${v}</label></input></li>
   % endfor
   </ul>
+    <strong class="list-name">Must include following courses</strong>
   <ul class="course">
   % for c in courses:
     <li><input name="course" value="${c.id.to_deprecated_string()}" type="checkbox" ${c.id.to_deprecated_string() not in active_courses and 'disabled'} class="filter-course"><label>${c.display_name_with_default}</label></input></li>
