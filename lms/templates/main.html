@@ -286,6 +286,8 @@ from pipeline_mako import render_require_js_path_overrides
   <script type="text/javascript">
     $( document ).ready(function() {
       $('.programs-filter').stickySidebar({
+        containerSelector: '#content',
+        innerWrapperSelector: '.programs-filter-inner',
         topSpacing: 60,
         bottomSpacing: 60
       });
