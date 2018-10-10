@@ -55,3 +55,28 @@ div.info-wrapper section.handouts {
 .header-global nav:after {
     display: none;
 }
+
+#header-course_info,
+#header-membership,
+#header-cohort_management,
+#header-student_admin,
+#header-send_email,
+#header-certificates,
+#white-listed-students legend {
+    display: none;
+}
+
+#course_info {
+    .enrollment-wrapper {
+        table {
+            width: 100%;
+            caption {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+            tbody {
+                display: inherit;
+            }
+        }
+    }
+}
