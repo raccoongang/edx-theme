@@ -3021,8 +3021,8 @@ body .theme-header {
 
 .programs-filter {
     float: left;
-    width: 250px;
-    //padding: 20px 0 0 20px;
+    width: 280px;
+    padding: 20px 0 0 20px;
     box-sizing: border-box;
     @media screen and (max-width: 991px) {
         float: none;
@@ -3035,7 +3035,7 @@ body .theme-header {
     ul {
         list-style: none;
         padding: 0 0 25px;
-        margin: 0;
+        margin-bottom: 12px;
         li {
             @media screen and (max-width: 991px) {
                 display: inline-block;
@@ -3043,9 +3043,8 @@ body .theme-header {
                 margin: 10px;
             }
             input[type="checkbox"] {
-                margin-right: 10px;
-                position: relative;
-                top: -1px;
+                margin: 4px 10px 0 0;
+                float: left;
                 &:disabled {
                     opacity: 0.5;
                     & + label {
@@ -3059,6 +3058,7 @@ body .theme-header {
                 font-family: "Open Sans";
                 font-weight: 400;
                 font-size: 15px;
+                line-height: 20px;
             }
         }
     }
