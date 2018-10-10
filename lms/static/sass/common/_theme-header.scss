@@ -4,18 +4,19 @@
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
 }
 .theme-header__holder {
-    max-width: 1128px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    box-sizing: border-box;
     @media screen and (max-width: 760px) {
         flex-wrap: wrap;
         padding: 0 10px;
     }
     @media screen and (min-width: 1240px) {
-        padding: 0;
+        padding: 0 15px;
     }
 }
 .theme-header__wrapper {

@@ -657,6 +657,7 @@ body {
 
 .home {
     max-width: 100%;
+    overflow: hidden;
     .page-header-main {
         @media (max-width: 991px) {
             width: 100%;
@@ -737,6 +738,9 @@ div {
             }
             .page-header-secondary {
                 text-align: left;
+                width: 100%;
+                justify-content: space-between;
+                display: flex;
                 @media (max-width: 479px) {
                     width: 100%;
                 }
@@ -2646,6 +2650,17 @@ body {
         white-space: nowrap;
         overflow-x: auto;
     }
+    body .content-wrapper .page-header.has-secondary .page-header-secondary {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: -44px 0 0;
+    }
+    body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions:not(:last-child) {
+        margin: 0 27px 10px 0;
+    }
     body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions {
         margin-top: 12px;
     }
@@ -2933,12 +2948,8 @@ main#main .container.dashboard {
     display: flex;
 }
 body .dashboard .my-courses {
-    width: auto;
+    max-width: 74%;
     flex: 1 1 auto;
-}
-.dashboard-search-bar {
-    width: auto;
-    flex: 1 1 24%;
 }
 
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
@@ -3130,11 +3141,44 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 
 .home .highlighted-courses {
     margin-bottom: 0;
+    overflow: hidden;
 }
 
 .courses-container {
     max-width: 1440px !important;
     background: #f1f1f1;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        right: -100%;
+        top: 0;
+        height: 100%;
+        background: #f1f1f1;
+        display: block;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        background: #f1f1f1;
+        display: block;
+    }
+
+    .find-courses & {
+        background-color: transparent;
+
+        &:after,
+        &:before {
+            display: none;
+        }
+    }
 }
 
 .highlighted-courses .courses {
@@ -3239,8 +3283,44 @@ body .container .wiki-wrapper section.wiki .btn {
 .user:last-child {
     margin-left: 20px;
 }
+
 body .shopping-cart .col-two .col-2 button[type="submit"],
 body .shopping-cart .user-data .data-input .three-col .col-3 button.btn-remove,
 body .shopping-cart .discount button[type="submit"] {
     @extend %theme-btn;
+}
+
+.dashboard-search-results {
+    width: 100%;
+}
+
+.theme-header__wrapper .item a {
+    color: $link-color;
+
+    &:visited {
+        color: $link-color;
+    }
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+.doc-link + .user {
+    margin-left: 0;
+}
+
+.home .page-header-secondary .last-accessed-link:hover {
+    cursor: pointer;
+}
+
+.sidebar-holder {
+    max-width: 23%;
+    flex: 1 1 24%;
+    margin-left: auto;
+    flex-direction: column;
+}
+
+.dashboard .profile-sidebar {
+    width: 100%;
+    margin: 40px 0 0;
 }
