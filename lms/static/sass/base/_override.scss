@@ -123,7 +123,7 @@ h1 {
                     }
                 }
             }
-             .course-search {
+            .course-search {
                  max-width: 590px;
                  margin: 0 auto;
                  overflow: hidden;
@@ -3285,4 +3285,13 @@ body .container .wiki-wrapper section.wiki .btn {
     &:hover {
         color: $link-hover;
     }
+}
+
+.user:last-child {
+    margin-left: 20px;
+}
+body .shopping-cart .col-two .col-2 button[type="submit"],
+body .shopping-cart .user-data .data-input .three-col .col-3 button.btn-remove,
+body .shopping-cart .discount button[type="submit"] {
+    @extend %theme-btn;
 }
