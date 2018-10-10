@@ -1,1 +1,12 @@
 // add all specific styles there
+
+.login-btns-list {
+    .theme-btn {
+        background: none;
+        color: #967e30 !important;
+
+        &:hover {
+            color: lighten(#967e30, 20%) !important;
+        }
+    }
+}

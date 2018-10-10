@@ -22,15 +22,15 @@ $pink: red;
 //body background
 $body-bg: #eee;
 //settings for header
-$header-nav-link-color: #000;
+$header-nav-link-color: $base-color;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $header-background: #fff;
 $dropdown-menu-background: #9da5ac;
-$dropdown-menu-color: #000;
+$dropdown-menu-color: $base-color;
 $dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
 //logo
-$logo-width: 37px;
-$logo-height: 37px;
+$logo-width: 220px;
+$logo-height: 66px;
 //settings for hamburger
 $hamburger-color: #957e30;
 $hamburger-width: 40px;
@@ -86,9 +86,9 @@ $course-link-color: #000;
 $course-bg: #fff;
 //certificate
 $certificate-logo-height: 30px;
-$ribbon-corners-color: #3d7fbe;
-$ribbon-triangle-color: #24659a;
-$certificate-borders-color: #5a8cc6;
+$ribbon-corners-color: #957e30;
+$ribbon-triangle-color: #957e30;
+$certificate-borders-color: #957e30;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;

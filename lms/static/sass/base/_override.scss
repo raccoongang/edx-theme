@@ -2534,10 +2534,16 @@ body {
     }
 }
 
-.logo-en,.logo-ar, .logo-footer img  {
+.logo-en,.logo-ar {
     width: $logo-width;
     min-width: $logo-width;
     height: $logo-height;
+}
+
+.logo-footer img {
+    width: 132px;
+    height: 80px;
+    min-width: 132px;
 }
 
 .link-logo-en,
@@ -3201,4 +3207,5 @@ body .container .wiki-wrapper section.wiki .btn {
 
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
+    text-transform: uppercase;
 }
