@@ -3035,8 +3035,9 @@ body .theme-header {
     ul {
         list-style: none;
         padding: 0 0 25px;
-        margin-bottom: 12px;
+        margin: 0;
         li {
+            margin-bottom: 12px;
             @media screen and (max-width: 991px) {
                 display: inline-block;
                 vertical-align: top;
@@ -3059,6 +3060,8 @@ body .theme-header {
                 font-weight: 400;
                 font-size: 15px;
                 line-height: 20px;
+                display: block;
+                overflow: hidden;
             }
         }
     }

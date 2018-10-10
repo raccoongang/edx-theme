@@ -5,6 +5,25 @@ from django.conf import settings
 <%page expression_filter="h"/>
 % if is_marketing:
 
+<div class="programs-filter">
+  <div class="programs-filter-inner">
+    <form methot="GET" id="programs-filter">
+      <strong class="list-name">Program type</strong>
+      <ul class="type">
+        % for k, v in settings.PROGRAMS_FILTER:
+        <li><input name="type" value="${k}" type="checkbox" class="filter-type"><label>${v}</label></input></li>
+        % endfor
+      </ul>
+      <strong class="list-name">Must include following courses</strong>
+      <ul class="course">
+        % for c in courses:
+        <li><input name="course" value="${c.id.to_deprecated_string()}" type="checkbox" ${c.id.to_deprecated_string() not in active_courses and 'disabled'} class="filter-course"><label>${c.display_name_with_default}</label></input></li>
+        % endfor
+      </ul>
+    </form>
+  </div>
+</div>
+
 <div class="modal-loader"><div>Please wait...</div></div>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -30,36 +49,6 @@ from django.conf import settings
             });
             $("body").addClass("answer-loading");
             window.location.search = "?type=" + types.join(',') + "&course=" + courses.join(',');
-        });
-    });
-</script>
-<div class="programs-filter">
-  <div class="programs-filter-inner">
-    <form methot="GET" id="programs-filter">
-      <strong class="list-name">Program type</strong>
-      <ul class="type">
-        % for k, v in settings.PROGRAMS_FILTER:
-        <li><input name="type" value="${k}" type="checkbox" class="filter-type"><label>${v}</label></input></li>
-        % endfor
-      </ul>
-      <strong class="list-name">Must include following courses</strong>
-      <ul class="course">
-        % for c in courses:
-        <li><input name="course" value="${c.id.to_deprecated_string()}" type="checkbox" ${c.id.to_deprecated_string() not in active_courses and 'disabled'} class="filter-course"><label>${c.display_name_with_default}</label></input></li>
-        % endfor
-      </ul>
-    </form>
-  </div>
-</div>
-
-<script src="/static/${settings.DEFAULT_SITE_THEME}/js/jquery.sticky-sidebar.min.js"></script>
-<script type="text/javascript">
-    $( document ).ready(function() {
-        $('.programs-filter').stickySidebar({
-            containerSelector: '#content',
-            innerWrapperSelector: '.programs-filter-inner',
-            topSpacing: 0,
-            bottomSpacing: 0
         });
     });
 </script>
