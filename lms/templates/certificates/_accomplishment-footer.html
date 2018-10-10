@@ -1,0 +1,22 @@
+<%!
+from django.utils.translation import ugettext as _
+%>
+<div class="wrapper-footer">
+
+    <footer class="footer-app" role="contentinfo" id="company-info">
+        <div class="footer-app-copyright">
+            <p class="copy copy-micro">${copyright_text}</p>
+        </div>
+        <nav class="footer-app-nav">
+            <ul class="list list-legal">
+                <li class="nav-item">
+                    <a class="action btn btn-small btn-link" href="https://firebrand.training/uk/who-are-firebrand" target="_blank">${_("About")}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="action btn btn-small btn-link" href="https://firebrand.training/uk/terms-and-conditions" target="_blank">${_("Terms of Service")}</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+</div>

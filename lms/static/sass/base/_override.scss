@@ -3161,13 +3161,14 @@ body {
         margin-bottom: 8px;
         a {
             width: 100%;
+            box-sizing: border-box;
             text-align: center;
-            color: $theme-link;
-            background-color: $white;
+            color: $theme-btn-text-color;
+            background-color: $theme-btn-bg;
             display: inline-block;
             &:hover {
-                background-color: $theme-link-hover;
-                color: $white;
+                background-color: $theme-btn-bg-hover;
+                color: $theme-btn-text-color;
             }
         }
     }
