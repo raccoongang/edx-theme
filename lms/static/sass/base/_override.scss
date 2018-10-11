@@ -3326,12 +3326,8 @@ body .shopping-cart .discount button[type="submit"] {
 body .content-wrapper .page-header.has-secondary .page-header-secondary {
     text-align: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-end;
-}
-
-.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions:not(:last-child) {
-    margin: 0 24px 15px 0;
 }
 
 .dashboard-search-bar {
