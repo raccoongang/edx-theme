@@ -499,7 +499,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                     <table border="1">
                         <tr>
                             <td>${_("Name of participant & Certificate #")}</td>
-                            <td>${accomplishment_copy_name}, ${certificate_id_number}</td>
+                            <td>${accomplishment_copy_name}, ${user_state.get('license', '')}</td>
                         </tr>
                         <tr>
                             <td>${_("Number of Program Hours")}</td>
