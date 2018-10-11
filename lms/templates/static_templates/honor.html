@@ -1,0 +1,112 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Honor Code")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Terms of Service and Honor Code")}</h1>
+        <p>${_("These Terms of Business (\"Terms\") govern the relationship between the Student and the Company. By submitting the Registration Form the Student has agreed to be bound by these Terms:")}</p>
+        <ol>
+            <li>
+                <b>${_("Interpretation")}</b>
+                <ol>
+                    <li>
+                        <p>${_("In these Terms:")}</p>
+                        <p>${_("\"CERTIFICATION GUARANTEE\" means the Student's right to attend further Courses as set out in Clause 8 hereof.")}</p>
+                        <p>${_("\"CONTRACT\" means the contract for the provision of the Course, comprising the Agreement and Registration Form and these Terms.")}</p>
+                        <p>${_("\"COMPANY\" means Firebrand Training Ltd. of Langham House, 308 Regent Street, London, W1B 3AT.")}</p>
+                        <p>${_("\"CONTRACTING PARTY\" means the individual or organisation named on the Registration Form as being responsible for payment of Course Fees.")}</p>
+                        <p>${_("\"COURSE\" means the service to be provided by the Company for the Student and referred to by course title or course reference code in the Registration Form and more particularly described in the Published Literature.")}</p>
+                        <p>${_("\"COURSE FEES\" means the price of the Course plus accommodation and any other expenses and incidentals as set out in the Published Literature from time to time.")}</p>
+                        <p>${_("\"COURSE MATERIALS\" means any Documents, vouchers or other materials, and any data or other information provided by the Company relating to the Course.")}</p>
+                        <p>${_("\"DOCUMENT\" includes, in addition to a document in writing, any plan, design, drawing, picture or other image, or any other record of any information in any form.")}</p>
+                        <p>${_("\"PUBLISHED LITERATURE\" means the Company's website, brochures and other information documents containing details of the Company, Courses being offered and any other information that may be relevant to Students and Prospective Students from time to time.")}</p>
+                        <p>${_("\"REGISTRATION FORM\" means the registration form completed by the Student.")}</p>
+                        <p>${_("\"STUDENT\" means the person named on the Registration Form or in other communication from the Contracting Party, submitted to the Company for whom the Company has agreed to provide the Course in accordance with these Terms.")}</p>
+                    </li>
+                    <li>${_("The headings in these Terms are for convenience only and shall not affect their interpretation")}</li>
+                    <li>${_("Where the Contracting Party is not the Student, the Contracting Party will ensure that the Student complies with any obligations in these Terms that are specific to the Student")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("Supply of the Course")}</b>
+                <ol>
+                    <li>${_("The Company shall provide the Course to the Student subject to these Terms. Any changes or additions to the Course or these Terms must be agreed in writing by the Company and the Contracting Party.")}</li>
+                    <li>${_("The Course shall be provided in accordance Published Literature relating to the Course from time to time, subject to these Terms.")}</li>
+                    <li>${_("Further details about the Course, and advice or recommendations about its provision, which are not given in the Promotional Literature, may be made available on written request.")}</li>
+                    <li>${_("The Company may correct any typographical or other errors or omissions in any Promotional Literature, quotation or other document relating to the provision of the Course without any liability to the Contracting Party.")}</li>
+                    <li>${_("The Company may at any time without notifying the Student or the Contracting Party (if different) make any changes to the Course which are necessary to comply with any applicable safety or other statutory requirements, or which do not materially affect the nature or quality of the Course. In particular the Company reserves the right to switch examining bodies in relation to a particular Course or to alter the curriculum of a particular course in response to alterations made by the examining body provided that such alterations shall not materially affect the nature or the quality of the Course or the qualification to be gained at the end of the Course.")}</li>
+                    <li>${_("Please note that filming and photography may take place at the training centre. This media may be used by the Company and its affiliate organisations for both security and promotional reasons. By entering the training centre you hereby acknowledge and consent to such recordings being made. Please note that we are entitled to make full use of any film and\/or recording in all current and future media worldwide without any liability or payment to you. If you have any issues or concerns regarding this, please speak to a member of the reception team on site to discuss further.")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("Fees and Charges")}</b>
+                <ol>
+                    <li>${_("Subject to any special terms agreed or loan arrangements between the Company and the Contracting Party, the Contracting Party shall pay the Course Fees as to 100% on submission of the Registration Form.")}</li>
+                    <li>${_("If the Registration Form is submitted less than 21 days prior to the commencement of the Course then the Course Fees shall be payable in full at the time of submission of the Registration Form.")}</li>
+                    <li>${_("The Company is not obliged to hold a place for a Student on a particular Course where the Contracting Party has not paid any sums due by the times for payment set out in Clause 3.1 or 3.2 as the case may be.")}</li>
+                    <li>${_("All charges quoted to the Contracting Party for the provision of the Course are exclusive of any Value Added Tax, for which the Contracting Party shall be additionally liable at the applicable rate from time to time.")}</li>
+                    <li>${_("The Company shall be entitled to invoice the Contracting Party immediately following completion of the Course for expenses or charges (if any) incurred by the Student which are not part of the Course Fees.")}</li>
+                    <li>${_("The Company reserves the right to refuse the Student admission to the specific Course booked where all Course Fees have not been paid in full by the times set out in this Clause.")}</li>
+                    <li>${_("If the Student attends any part of the Course then the Course Fees in full shall be due and payable and no refunds shall be payable except as specifically set out herein.")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("Rights in Course Materials")}</b>
+                <ol>
+                    <li>${_("The property and any copyright or other intellectual property rights in any Course Materials shall belong to the Company, subject only to the right of the Student to use the Course Materials for the purposes of the Course and for the Student's own personal use and information.")}</li>
+                    <li>${_("The Student and Contracting Party (if different) shall not be entitled to copy the Course Materials or any part thereof without the express permission of the Company.")}</li>
+                    <li>${_("Unauthorised training material. Students should be aware that any unauthorised training material including practice exam questions should not be used during the course. Students may be asked to leave should the instructor find continued use of or distribution of unauthorised practice exams has taken place, in particular practice exam questions which have not been approved by the test vendor.")}</li>
+                    <li>${_("The Contracting Party undertakes that it shall not at any time disclose to any person any confidential information concerning the business, affairs, customers, clients or suppliers of the Company, except as may be required by law, a court of competent jurisdiction or any governmental or regulatory authority. The Contracting Party shall not use the Company's confidential information for any purpose other than to perform its obligations under this Contract.")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("Accommodation")}</b>
+                <ol>
+                    <li>${_("The Course Fees include the Student's accommodation for the duration of the Course more details of which are available in the Company's published literature or on request. Students will be required to abide by the rules laid down by the Company from time to time in relation to the accommodation. The Company reserves the right to exclude any Student from the Course in the event that the Student shall seriously breach such rules in any manner that may compromise the safety or quiet enjoyment of other Students or occupiers. In such circumstances no refunds of course fees shall be made.")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("Warranties and Liability")}</b>
+                <ol>
+                    <li>${_("The Company warrants to the Contracting Party that the Course will be provided using reasonable care and skill and, as far as reasonably possible, in accordance with the Registration Form and other published literature and at the time or times referred to in the Registration Form.")}</li>
+                    <li>${_("Except in respect of death or personal injury caused by the Company's negligence, or as expressly provided in these Terms, the Company shall not be liable to the Contracting Party by reason of any representation (unless fraudulent), or any implied warranty, condition or other term, or any duty at common law, or under the express terms of the Contract, for any loss of profit or any indirect, special or consequential loss, damage, costs, expenses or other claims (whether caused by the negligence of the Company, its servants or agents or otherwise) which arise out of or in connection with the provision of the Course or its attendance by the Student, and the entire liability of the Company under or in connection with the Contract shall not exceed the amount of the Course Fees, except as expressly provided in these Terms.")}</li>
+                    <li>${_("The Company shall not be liable to the Contracting Party or be deemed to be in breach of the Contract by reason of any delay in performing, or any failure to perform, any of the Company's obligations in relation to the Course, if the delay or failure was due to any cause beyond the Company's reasonable control.")}</li>
+                    <li>${_("The Student shall be deemed to have satisfied him\/herself that the Course described in Published Literature accords with the Student's requirements. Subject to Clause 2.5 above the content of the Course is limited to those matters and subjects as are specifically set out in the Published Literature or other information that may be supplied to the Student by the Company in relation to the Course.")}</li>
+                    <li>${_("The Company warrants that the Course is structured for and contains the appropriate information to achieve the specific standards or qualifications as are specifically described in the Published Literature (or as amended in accordance with Clause 2.5) in relation to the Course but the Company does not warrant that such standards or qualifications will be achieved by any Student.")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("Cancellation, Rescheduling and Refunds")}</b>
+                <ol>
+                    <li>${_("At any time up to 21 days prior to the commencement date of the Course for which a Student is registered the Contracting Party shall be entitled to reschedule without penalty to a future course, subject to availability. The Contracting Party shall not be entitled to reschedule to any course commencing more than 12 months after the commencement date of the Course for which the Contracting Party originally registered. All future reschedules for the same course will carry a fee of £500 +VAT, as long as they're communicated at least 21 days prior to course commencement.")}</li>
+                    <li>${_("If a Student or Contracting Party (if different) wishes to reschedule less than 21 days prior to the commencement of the Course for which the Student is registered then that will be considered a cancellation as per 7.4.")}</li>
+                    <li>${_("At any time up to 21 days prior to the commencement date of the Course for which a Student is registered the Contracting Party shall be entitled to cancel that registration subject only to the Company's right to charge a maximum of £500 +VAT in respect of administration costs plus the cost of any Course Materials already supplied by the Company to the Student.")}</li>
+                    <li>${_("If the Contracting Party wishes to cancel less than 21 days prior to the commencement date for the Course for which the Student is registered then all Course Fees already paid by the Contracting Party shall be forfeited and those Course Fees which were due but unpaid at the date of cancellation shall remain due and payable.")}</li>
+                    <li>${_("If the Contracting Party has paid all or any part of the Course Fees but the Student fails to attend the Course to which such Course Fees relate or any rescheduled Course (in accordance with Clause 7.1) within the period of 12 months after the commencement date of the Course for which the Student registered then at the expiry the 12 month period the Company shall be entitled to retain any Course Fees already paid and to require payment of any Course Fees due but unpaid.")}</li>
+                    <li>${_("The Company reserves the right to reschedule or cancel any Course where the Company reasonably believes that it is impractical to run a particular Course or where the number of Students enrolled for a particular Course makes it uneconomical for the Company to run that Course at that time or at all. In any such case the Company shall endeavour to notify the Student of any such rescheduling or cancellation at the earliest opportunity and the Company shall bear no liability in respect of such rescheduling or cancellation save that the Company shall reimburse all Course Fees already paid if the Student does not wish to attend any future Course, less the cost of any materials already supplied to the Student.")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("Certification Guarantee")}</b>
+                <ol>
+                    <li>${_("If the Student fails to achieve the relevant certification after initial completion of the Course then the Student shall be permitted to return to the same Course as many times as required during the 12 month period commencing on the date of commencement of the Student's first attendance on the Course subject only to availability of Courses and payment by the Contracting Party of accommodation fees, any exam fees and such other incidental expenses or charges (if any) that may be incurred by the Student or which may reasonably be levied by the Company.")}</li>
+                    <li>${_("The Company reserves the right to refuse to offer the Certification Guarantee if the Contracting Party is in breach of any of these terms, if the Student fails to complete the Course without reasonable excuse or if, in the reasonable opinion of the Company, the Student's own lack of diligence has been the primary reason for failure to achieve certification or if the Student has been offensive or disruptive to other Students or instructors.")}</li>
+                </ol>
+            </li>
+            <li>
+                <b>${_("General")}</b>
+                <ol>
+                    <li>${_("These Terms (together with the terms, if any, set out in the Registration Form) constitute the entire agreement between the parties, supersede any previous agreement or understanding and may not be varied except in writing between the parties. All other terms, express or implied by statute or otherwise, are excluded to the fullest extent permitted by law.")}</li>
+                    <li>${_("A notice required or permitted to be given by either party to the other under these Terms shall be in writing addressed to the other party at its registered office or principal place of business or such other address as may at the relevant time have been notified pursuant to this provision to the party giving the notice.")}</li>
+                    <li>${_("No failure or delay by either party in exercising any of its rights under the Contract shall be deemed to be a waiver of that right, and no waiver by either party of any breach of the Contract by the other shall be considered as a waiver of any subsequent breach of the same or any other provision.")}</li>
+                    <li>${_("If any provision of these Terms is held by any court or other competent authority to be invalid or unenforceable in whole or in part, the validity of the other provisions of these Terms and the remainder of the provision in question shall not be affected.")}</li>
+                    <li>${_("English law shall apply to the Contract and the parties agree to submit to the exclusive jurisdiction of the English courts.")}</li>
+                    <li>${_("No one other than a party to this Contract shall have any right to enforce any of its terms.")}</li>
+                </ol>
+            </li>
+        </ol>
+    </section>
+</main>
