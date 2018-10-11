@@ -724,21 +724,18 @@ div {
     .page-header {
         display: -webkit-flex;
         display: flex;
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &:after {
+            display: none;
+        }
         &.has-secondary {
-            .page-header-main {
-                -webkit-flex: 1 1 100%;
-                -ms-flex: 1 1 100%;
-                flex: 1 1 100%;
-            }
             .page-header-secondary {
                 text-align: left;
-                width: 100%;
                 justify-content: space-between;
                 display: flex;
                 @media (max-width: 479px) {
-                    width: 100%;
+                    
                 }
                 .page-header-search {
                     margin: 0 10px 10px 0;
@@ -2139,6 +2136,10 @@ h6,
 .home {
     .page-header-secondary {
         background: $base-color;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -2645,14 +2646,6 @@ body {
     body.view-in-course .wrapper-course-material .course-material .course-tabs {
         white-space: nowrap;
         overflow-x: auto;
-    }
-    body .content-wrapper .page-header.has-secondary .page-header-secondary {
-     text-align: left;
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: flex-end;
-     margin: -44px 0 0;
     }
     body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions:not(:last-child) {
      margin: 0 27px 10px 0;
@@ -3304,6 +3297,7 @@ body .shopping-cart .discount button[type="submit"] {
     margin-left: 0;
 }
 
+.home .page-header-secondary
 .home .page-header-secondary .last-accessed-link:hover {
     cursor: pointer;
 }
@@ -3318,4 +3312,20 @@ body .shopping-cart .discount button[type="submit"] {
 .dashboard .profile-sidebar {
     width: 100%;
     margin: 40px 0 0;
+}
+
+body .content-wrapper .page-header.has-secondary .page-header-secondary {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions:not(:last-child) {
+    margin: 0 24px 15px 0;
+}
+
+.dashboard-search-bar {
+    width: 100%;
+    margin-left: 0;
 }
