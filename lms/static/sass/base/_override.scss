@@ -9,6 +9,26 @@
     }
 }
 
+@font-face {
+    font-family: 'SegoeuiBold';
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+    url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoeui';
+    src: url('../fonts/SegoeUI.woff2') format('woff2'),
+    url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*:not(.fa) {
+    font-family: "Segoeui", sans-serif !important;
+}
+
 .header-global {
     height: auto;
     background: $header-bg;
@@ -763,20 +783,32 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background-color: #040404;
     display: flex;
     align-items: center;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,0.3);
+        z-index: 100;
+    }
 
     .parallax-img {
         position: absolute;
         left: 0;
-        top: -100px;
+        top: -50px;
         width: 100%;
         height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
+        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 0; /* высота картинки - желательно не меньше 600px по высоте */
         background-size: cover;
     }
 
     .outer-wrapper {
         animation: none;
         padding: 0;
+        position: relative;
+        z-index: 150;
     }
     .title {
         background: transparent;
@@ -801,7 +833,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 line-height: 1.2;
                 color: $promo-box-text-color;
                 text-align: center;
-                font-weight: bold;
+                font-family: 'SegoeuiBold' !important;
                 text-shadow: $promo-box-text-shadow;
                 margin-bottom: 50px;
                 @media screen and (min-width:760px ) {
@@ -874,7 +906,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 20px;
         margin: 0 auto;
     }
 
@@ -894,7 +926,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .logo-en {
-    display: inline;
+    display: block;
+    width: 300px;
+    @media screen and (max-width: 400px) {
+        width: 200px;
+        margin-top: 8px;
+    }
 
     .lang_ar & {
         display: none;
@@ -1746,6 +1783,7 @@ section.wiki .main-article {
 }
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    color: #fff;
 }
 body.lang_ar {
     * {
@@ -2948,9 +2986,34 @@ body .breadcrumbs .nav-item {
         color: $theme-btn-white-border;
     }
     &:hover {
-        background: $theme-btn-bg;
+        background: $tourque-blue;
         .fa {
             color: #fff;
+        }
+    }
+}
+
+.find-courses .courses-container .courses {
+    width: 100% !important;
+    .courses-listing {
+        margin-left: -20px;
+        @media screen and (max-width: 540px) {
+            margin-left: 0 !important;
+        }
+        .courses-listing-item {
+            clear: none !important;
+            width: calc(25% - 20px) !important;
+            margin: 0 0 20px 20px !important;
+            @media screen and (max-width: 1100px) {
+                width: calc(33.3333% - 20px) !important;
+            }
+            @media screen and (max-width: 760px) {
+                width: calc(50% - 20px) !important;
+            }
+            @media screen and (max-width: 540px) {
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
         }
     }
 }
@@ -3377,7 +3440,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     right: 30px;
     bottom: -100px;
     border-radius: 50%;
-    background: $theme-btn-bg;
+    background: $tourque-blue;
     color: $theme-btn-text-color !important;
     width: 40px;
     height: 40px;
@@ -3388,9 +3451,6 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     &.active {
         bottom: 30px;
-    }
-    &:hover {
-        background: $theme-btn-bg-hover;
     }
 }
 
@@ -3505,4 +3565,235 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 }
 .account-settings-sections .section .account-settings-section-body .u-field .field select {
     padding: 0 10px !important;
+}
+
+// custom boxes on index page
+
+//.programs {
+//    max-width: 1080px;
+//    margin: 0 auto 30px;
+//    width: 90%;
+//}
+
+.homepage-boxes {
+    display: block;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.homepage-boxes-container {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.homepage-boxes-item {
+    display: block;
+    background: #ffffff;
+    padding: 30px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+    .homepage-boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .homepage-boxes-item {
+        display: inline-block;
+        width: 49%;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .homepage-boxes-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .homepage-boxes-item {
+        display: inline-block;
+        width: 23%;
+        margin-top: 20px;
+    }
+}
+
+.homepage-boxes-item img {
+    display:block;
+    margin: 0 auto;
+    max-width: 80px;
+}
+
+.homepage-boxes-item h1 {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #4a4a4a;
+}
+
+.homepage-boxes-item p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    margin-top: 20px;
+}
+
+.homepage-boxes-item a {
+    text-decoration: none;
+    color: #f05a23;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.homepage-boxes-item a:hover {
+    text-decoration: underline;
+    color: #e64814;
+}
+
+.homepage-course-boxes-image-holder {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.homepage-course-boxes-image-holder img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.homepage-course-boxes-description {
+    padding: 20px;
+    background: #ffffff;
+}
+
+.homepage-course-boxes-container {
+    padding: 0;
+    list-style: none;
+    margin: 0 0 20px;
+}
+
+.homepage-course-boxes-item {
+    margin: 0 0 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .homepage-course-boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .homepage-course-boxes-item {
+        display: inline-block;
+        width: 49%;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .homepage-course-boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin: 0 -30px 20px 0;
+    }
+    .homepage-course-boxes-item {
+        display: inline-block;
+        width: 249px;
+        margin-right: 28px;
+    }
+}
+
+.homepage-course-boxes-item img {
+    display:block;
+    margin: 0 auto;
+}
+
+.homepage-course-boxes-item h1 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    color: #4a4a4a;
+    margin-top: 20px;
+}
+
+.homepage-course-boxes-item h3 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #a3a3a3;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.homepage-course-boxes-item p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    margin-top: 20px;
+}
+
+.homepage-course-boxes-item a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px; //these two lines are to hide my actual link text.
+    overflow: hidden; //these two lines are to hide my actual link text.
+}
+
+.homepage-course-boxes-item_helper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+}
+
+.theme-content {
+    &_heading {
+        font: 36px/1.3 'SegoeuiBold';
+        color: $tourque-blue;
+        text-align: center;
+        padding: 38px 0;
+        margin: 0;
+    }
+
+    .courses-container {
+        max-width: 1080px;
+        //width: 90%;
+    }
+}
+
+.find-courses .discovery-input:focus {
+    border-color: #f05a23 !important;
+}
+
+.dashboard .my-courses .listing-courses .course-item .course-container {
+    border: none !important;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.9) !important;
+    background: #fff !important;
+    padding: 10px 5px;
+}
+
+.dashboard .my-courses .course .details .course-title a:hover {
+    color: $tourque-orange;
+}
+
+.dashboard .my-courses .course .wrapper-messages-primary .message {
+    padding: 10px 0 !important;
 }
