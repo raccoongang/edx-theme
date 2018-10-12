@@ -1,0 +1,14 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<main id="main" aria-label="Content Us" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Contact Us")}</h1>
+        <p>${_("Hi, already an edX student? Do you have questions, suggestions, or issues about a specific course? Please post it on your course’s discussion forum.")}</p>
+        <p>${_("Not a student yet and have a general question about edX? Please visit our FAQ’s. Still need help or want to give us general feedback (which we want), contact us below.")}</p>
+        <p>Email: <a href="mailto:edx@torque-it.com">edx@torque-it.com</a></p>
+    </section>
+</main>

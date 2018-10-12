@@ -18,9 +18,7 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-                <span>${_("STUDENT SUCCESS")}</span>
-                <a href="/courses" class="link">${_("FIND COURSES")}</a>
+                <h1>${_("Connecting In-Class to On-Line")}</h1>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -48,7 +46,40 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
 
       </header>
-      <%include file="${courses_list}" />
+
+      <div class="homepage-boxes">
+        <div class="homepage-boxes-container">
+          <div class="homepage-boxes-item">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-04.png">
+            <h1>Torque IT</h1>
+            <p>Torque IT is an industry-leading, vendor-aligned delivery partner that specialises in ICT training, enablement and international certification. Some of our training methodologies include in class, virtual, digital and self-paced.</p>
+            <a href="http://www.torque-it.com/" target="_blank">Learn more</a>
+          </div>
+
+          <div class="homepage-boxes-item">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-03.png">
+            <h1>MOC On-Demand</h1>
+            <p>Microsoft in-class &amp; certification training is now accessible online, 24/7, at your own pace, in your own time. Keep your skills and certifications current through MOD.</p>
+            <a href="http://www.mocondemand.co/" target="_blank">Learn more</a>
+          </div>
+
+          <div class="homepage-boxes-item">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-01.png">
+            <h1>Professional Programs</h1>
+            <p>Earn your Professional Program certificate through specialised Microsoft programs on unique and in demand skills.</p>
+            <a href="https://edx.torque-it.com/xseries/" target="_blank">Learn more</a>
+          </div>
+
+          <div class="homepage-boxes-item">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-block-icon-02.png">
+            <h1>Onsite Training</h1>
+            <p>With a track record of successful training deliveries around the world, Torque IT is your trusted and experienced training delivery partner. Reach out to us regarding your specific requirement.</p>
+            <a href="http://www.torque-it.com/" target="_blank">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      ## <%include file="${courses_list}" />
 
     </section>
 </main>
@@ -69,7 +100,7 @@ from openedx.core.djangolib.markup import HTML, Text
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
-      })
+      });
 
       // js for parallax
       $(window).scroll(function () {
