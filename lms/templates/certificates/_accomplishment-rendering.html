@@ -7,18 +7,18 @@ course_mode_class = course_mode if course_mode else ''
 <div class="certificate-wrapper">
     <img class="main-bg" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg.svg">
     <div class="certificate-body">
-        <img class="certificate-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.png">
+        <img class="certificate-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-logo.png">
         <div class="ribbon">
             <span class="ribbon-text">
                 <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/dot.png">
-                <b>c e r t i f i c a t e</b>
+                <b>${_("c e r t i f i c a t e")}</b>
             </span>
-            <strong class="general-text">THIS CERTIFICATE IS PROUDLY PRESENTED TO</strong>
+            <strong class="general-text">${_("THIS CERTIFICATE IS PROUDLY PRESENTED TO")}</strong>
         </div>
         <div class="inner">
             <strong class="user-name">${accomplishment_copy_username}</strong>
             <p class="certificate-text">${accomplishment_copy_description_full}</p>
-            <strong class="course-name">${accomplishment_copy_course_org} ${course_number}: ${accomplishment_copy_course_name}</strong>
+            <strong class="course-name">${accomplishment_copy_course_name}</strong>
         </div>
         <div class="certificate-bottom">
             <div class="date">
