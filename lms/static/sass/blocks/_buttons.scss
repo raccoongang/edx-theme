@@ -7,19 +7,23 @@
 	display: inline-block;
 	background: $theme-btn-bg !important;
 	color: $theme-btn-text-color !important;
-	border: none !important;
 	text-transform: uppercase;
-	border-radius: 0 !important;
+	border-radius: 40px !important;
 	text-shadow: none !important;
 	box-shadow: none !important;
+	border: 3px solid $base-color !important;
+	text-transform: uppercase !important;
 	&:active,
 	&:focus {
 		background: $theme-btn-bg !important;
+		color: $base-color !important;
 	}
 	&:focus:hover {
 		background: $theme-btn-bg-hover !important;
+		color: $base-color !important;
 	}
 	&:hover {
 		background: $theme-btn-bg-hover !important;
+		color: $base-color !important;
 	}
 }

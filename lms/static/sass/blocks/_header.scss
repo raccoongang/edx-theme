@@ -127,9 +127,9 @@
 		display: inline-block;
 		background: $theme-btn-bg !important;
 		color: $theme-btn-text-color !important;
-		border: none !important;
+		border: 3px solid $theme-btn-bg !important;
 		text-transform: uppercase;
-		border-radius: 0 !important;
+		border-radius: 40px !important;
 		&:active,
 		&:focus {
 			background: $theme-btn-bg !important;
