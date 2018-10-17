@@ -4,11 +4,13 @@
 @import "blocks/footer";
 @import "blocks/courses-index-page";
 @import "blocks/dashboard";
+@import "blocks/search";
 @import "blocks/about";
 @import "blocks/course-main";
 @import "blocks/wiki";
 @import "blocks/discussion";
 @import "blocks/instructor";
+@import "blocks/progress";
 @import "blocks/sysadmin";
 @import "blocks/login-register";
 
@@ -46,6 +48,7 @@ body.view-in-course .wiki-wrapper {
 	background: #eeeeee;
 }
 
+.view-profile .window-wrap,
 .window-wrap {
 	background: none;
 	position: relative;

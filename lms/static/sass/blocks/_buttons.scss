@@ -1,8 +1,14 @@
+// button type 1
+
 .register-button, /* register page */
 .login-button, /* login page */
 .wiki-wrapper section.wiki .settings-form .btn, /* wiki settings page */
 .course-view .page-header-secondary .form-actions .btn,
-.instructor-dashboard-wrapper-2 .bottom-bar input.add[type="button"] {
+.instructor-dashboard-wrapper-2 .bottom-bar input.add[type="button"],
+.dashboard .main-container .my-courses .course .details .enter-course,
+.wrapper-action-more button.action-more,
+.btn-link.all-topics,
+.wiki-wrapper section.wiki .btn {
 	transition: all 0.2s ease;
 	display: inline-block;
 	background: $theme-btn-bg !important;
@@ -13,17 +19,43 @@
 	box-shadow: none !important;
 	border: 3px solid $base-color !important;
 	text-transform: uppercase !important;
+	cursor: pointer;
+	font-size: 15px !important;
 	&:active,
-	&:focus {
-		background: $theme-btn-bg !important;
-		color: $base-color !important;
-	}
-	&:focus:hover {
-		background: $theme-btn-bg-hover !important;
-		color: $base-color !important;
-	}
+	&:focus,
+	&:focus:hover,
 	&:hover {
 		background: $theme-btn-bg-hover !important;
 		color: $base-color !important;
 	}
+}
+
+.wrapper-messages-primary .message.message-upsell .action-upgrade {
+	border-radius: 40px;
+}
+
+//button type 2
+
+#expand-collapse-outline-all-button,
+.new-post-btn,
+section.discussion .search-button  {
+	border: 3px solid $base-color !important;
+	border-radius: 40px !important;
+	color: $base-color !important;
+	line-height: 1.1;
+	text-transform: uppercase !important;
+	cursor: pointer;
+	font-size: 15px !important;
+	&:active,
+	&:focus,
+	&:focus:hover,
+	&:hover {
+		background: $theme-btn-bg !important;
+		color: #fff !important;
+	}
+}
+
+.btn {
+	font-weight: normal !important;
+	font-size: 15px !important;
 }

@@ -82,6 +82,7 @@
 	.dropdown-user-menu {
 		background: #e6eaed !important;
 		border: 5px solid #fff !important;
+		width: 200px;
 		a {
 			color: #28507d !important;
 			&:hover {
@@ -279,6 +280,7 @@ section.home {
 						color: $search-input-color;
 						padding-left: 20px !important;
 						height: $search-height;
+						border-radius: 40px;
 						&:focus {
 							border-color: $search-input-border !important;
 						}
@@ -292,11 +294,11 @@ section.home {
 					}
 					.search-button {
 						background: $search-button-background !important;
-						border-color: $search-button-border !important;
 						color: $search-button-color;
 						border-left: none !important;
 						right: 0;
 						height: $search-height;
+						border: none !important;
 					}
 				}
 			}
