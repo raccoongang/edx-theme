@@ -3140,6 +3140,8 @@ body {
             color: $white;
             background-color: $theme-link;
             display: inline-block;
+            max-width: 100%;
+            box-sizing: border-box;
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
