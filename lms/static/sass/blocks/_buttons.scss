@@ -8,7 +8,9 @@
 .dashboard .main-container .my-courses .course .details .enter-course,
 .wrapper-action-more button.action-more,
 .btn-link.all-topics,
-.wiki-wrapper section.wiki .btn {
+.wiki-wrapper section.wiki .btn,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register,
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
 	transition: all 0.2s ease;
 	display: inline-block;
 	background: $theme-btn-bg !important;
@@ -38,7 +40,8 @@
 
 #expand-collapse-outline-all-button,
 .new-post-btn,
-section.discussion .search-button  {
+section.discussion .search-button,
+.course-info .container .wrap-instructor-info .instructor-info-action {
 	border: 3px solid $base-color !important;
 	border-radius: 40px !important;
 	color: $base-color !important;
@@ -46,6 +49,7 @@ section.discussion .search-button  {
 	text-transform: uppercase !important;
 	cursor: pointer;
 	font-size: 15px !important;
+	text-decoration: none !important;
 	&:active,
 	&:focus,
 	&:focus:hover,
