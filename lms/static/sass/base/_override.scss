@@ -1546,6 +1546,39 @@ body.view-login #forgot-password-modal #password-reset header h2 {
             color: $theme-link-hover;
         }
     }
+
+    .statistic-block {
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 30px;
+        margin: 20px 0;
+        .statistic-item {
+            text-align: center;
+            width: 25%;
+            @media screen and (max-width: 990px){
+                width: 50%;
+                margin: 20px 0;
+            }
+            @media screen and (max-width: 768px){
+                width: 100%;
+            }
+            img {
+                display: block;
+                max-height: 99px;
+                margin: 0 auto;
+            }
+            .statistic-item-count {
+                color: #82BB01;
+                font-size: 42px;
+                margin: 5px 0 10px;
+            }
+            .statistic-item-title {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 .course-info .course-sidebar .important-dates,
