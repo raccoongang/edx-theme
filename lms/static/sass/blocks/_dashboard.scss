@@ -6,28 +6,3 @@
 		padding: 40px 0 40px 20px;
 	}
 }
-
-.dashboard .main-container .my-courses .course .details .enter-course {
-	transition: all 0.2s ease;
-	display: inline-block;
-	background: $theme-btn-white-bg !important;
-	color: $theme-btn-white-text-color !important;
-	border: 1px solid $theme-btn-white-border;
-	text-transform: uppercase;
-	border-radius: 0 !important;
-	&:active,
-	&:focus {
-		background: $theme-btn-white-bg !important;
-	}
-	&:focus:hover {
-		background: $theme-btn-white-bg-hover !important;
-	}
-	&:hover {
-		background: $theme-btn-white-bg-hover !important;
-		color: $theme-btn-white-text-color-hover !important;
-	}
-}
-
-.wrapper-action-more button.action-more {
-	border: 1px solid $theme-btn-white-border !important;
-}

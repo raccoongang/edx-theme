@@ -17,22 +17,10 @@
       dir=${bidi}
     % endif
   >
-    <div class="colophon">
 
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
-            </li>
-            <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
-            </li>
-        </ol>
-      </nav>
-      <div class="footer-flex">
+    <div class="smarted-footer">
+      <div class="smarted-footer_footer-left">
+        <a href="http://smarted.online/" class="smarted-footer_logo"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png"></a>
         <p class="footer-support">
           <span>Built on</span>
           <a target="_blank" href="${footer['openedx_link']['url']}">
@@ -48,12 +36,38 @@
             </svg>
           </a>
         </p>
+      </div>
+      <div class="smarted-footer_cources-catalog">
+        <strong class="smarted-footer_title">КАТАЛОГ КУРСОВ</strong>
+        <ul>
+          <li><a href="http://smarted.online/catalogue/business/">Бизнес образование</a></li>
+          <li><a href="http://smarted.online/catalogue/transport/">Транспортное образование</a></li>
+          <li><a href="http://smarted.online/catalogue/languages/">Иностранные языки</a></li>
+          <li><a href="http://smarted.online/catalogue/selfdevelopment/">Личностное развитие</a></li>
+          <li><a href="http://smarted.online/catalogue/psychology/">Психология</a></li>
+          <li><a href="http://smarted.online/catalogue/it/">Информационные технологии</a></li>
+        </ul>
+      </div>
+      <div class="smarted-footer_general-info">
+        <strong class="smarted-footer_title">ОБЩАЯ ИНФОРМАЦИЯ</strong>
+        <ul>
+          <li><a href="http://smarted.online/about/">О проекте</a></li>
+          <li><a href="http://smarted.online/cooperation/">Сотрудничество</a></li>
+          <li><a href="http://smarted.online/agreement/">Пользовательское соглашение</a></li>
+          <li><a href="http://smarted.online/personal/">Защита персональных данных</a></li>
+          <li><a href="http://smarted.online/tech/">Техническая поддержка</a></li>
+        </ul>
+      </div>
+      <div class="smarted-footer_footer-right">
+        <strong class="smarted-footer_title">КОНТАКТНАЯ ИНФОРМАЦИЯ</strong>
+        <span class="smarted-footer_phone"><em>8 800 350 40 79</em></span>
+        <a href="mailto:public@smarted.online" class="smarted-footer_email">public@smarted.online</a>
         <ul class="icon-list">
           <li class="icon-list_item"><a href="https://www.facebook.com/smarted.online" target="_blank" class="icon-list_link">
             <svg class="icon-list_svg" viewBox="0 0 35 35">
               <use xlink:href="#ico-facebook" />
             </svg>
-            </a>
+          </a>
           </li>
           <li class="icon-list_item"><a href="https://www.instagram.com/smarted.online/" target="_blank" class="icon-list_link">
             <svg class="icon-list_svg" viewBox="0 0 35 35">
@@ -66,9 +80,7 @@
             </svg></a>
           </li>
         </ul>
-        <div class="footer-logo-holder">
-          <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png"></a>
-        </div>
+        <span class="smarted-footer_copyright">© 2018 ООО «СМАРТЭД»</span>
       </div>
     </div>
   </footer>

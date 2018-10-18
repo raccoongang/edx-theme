@@ -1,33 +1,26 @@
 .btn-link.all-topics {
-	transition: all 0.2s ease;
-	display: inline-block;
-	background: $theme-btn-bg !important;
-	color: $theme-btn-text-color !important;
-	border: none !important;
 	text-transform: uppercase;
-	border-radius: 0 !important;
 	height: 40px;
+	text-decoration: none !important;
+	cursor: pointer;
 	padding: 0 20px;
-	&:active,
-	&:focus {
-		background: $theme-btn-bg !important;
-	}
-	&:focus:hover {
-		background: $theme-btn-bg-hover !important;
-	}
-	&:hover {
-		background: $theme-btn-bg-hover !important;
-		text-decoration: none;
-	}
-	@media screen and (max-width: 600px) {
-		margin-bottom: 20px;
-		width: 100%;
-	}
 }
 
 section.discussion {
+	.search-input {
+		border-radius: 40px 0 0 40px !important;
+		border-left: 3px solid $base-color;
+		border-top: 3px solid $base-color;
+		border-bottom: 3px solid $base-color;
+		border-right: none;
+		box-shadow: none;
+	}
+	.search-button {
+		border-radius: 0 40px 40px 0 !important;
+	}
 	.page-header {
 		align-items: center;
+		padding: 20px;
 	}
 	.page-header .page-header-secondary {
 		@media screen and (max-width: 600px) {
@@ -40,15 +33,6 @@ section.discussion {
 	.page-content {
 		padding: 20px;
 	}
-	.search-button {
-		border: 1px solid $theme-btn-white-border;
-		color: $theme-btn-white-text-color;
-		cursor: pointer;
-		&:hover {
-			background: $theme-btn-white-bg-hover;
-			color: $theme-btn-white-text-color-hover;
-		}
-	}
 }
 
 #discussion-container {
@@ -57,20 +41,6 @@ section.discussion {
 
 .discussion-board >.page-header .has-breadcrumbs .breadcrumbs {
 	margin: 0;
-}
-
-.new-post-btn {
-	border: 1px solid $theme-btn-white-border;
-	color: $theme-btn-white-text-color;
-	&:hover {
-		background: $theme-btn-white-bg-hover;
-		color: $theme-btn-white-text-color-hover;
-	}
-	@media screen and (max-width: 420px) {
-		display: block;
-		width: 100%;
-		margin-bottom: 20px;
-	}
 }
 
 .page-header {
@@ -94,4 +64,18 @@ section.discussion {
 	@media screen and (max-width: 420px) {
 
 	}
+}
+
+//.forum-new-post-form {
+//	.btn {
+//		border-radius: 40px !important;
+//		padding-left: 20px;
+//		padding-right: 20px;
+//		cursor: pointer;
+//	}
+//}
+
+.btn {
+	font-size: 15px !important;
+	cursor: pointer;
 }
