@@ -3200,3 +3200,26 @@ body .container .wiki-wrapper section.wiki .btn {
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
 }
+
+// styles for IE10+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+        display: flex;
+    }
+
+    body,
+    .window-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100vh;
+    }
+
+    #content {
+        flex: 1 1 auto;
+    }
+
+    .wrapper-footer {
+        overflow: hidden;
+    }
+}
