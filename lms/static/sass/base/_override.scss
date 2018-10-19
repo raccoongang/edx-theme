@@ -3508,20 +3508,20 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 // styles for IE10+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    html,
     body {
-        height: 100%;
+        display: flex;
     }
 
+    body,
     .window-wrap {
-        display: table;
-        height: 100%;
-        width: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100vh;
     }
 
     #content {
-        display: table-row;
-        height: 100%;
+        flex: 1 1 auto;
     }
 
     .wrapper-footer {
