@@ -19,9 +19,9 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>${_("Welcome part - Sərbəst Öyrənmə Portalına xoş gəlmisiniz!")}</h1>
+                  <h1>${_("Sərbəst Öyrənmə Portalına xoş gəlmisiniz!")}</h1>
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <span>${_("Motto - Sərbəst Təhsil - hər zaman və hər yerdə")}</span>
+                  <span>${_("Sərbəst Təhsil - hər zaman və hər yerdə")}</span>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
