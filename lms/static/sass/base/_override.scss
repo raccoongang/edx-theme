@@ -653,6 +653,7 @@ body {
 
 .home {
     max-width: 100%;
+    overflow: hidden;
     .page-header-main {
         @media (max-width: 991px) {
             width: 100%;
@@ -2645,6 +2646,17 @@ body {
         white-space: nowrap;
         overflow-x: auto;
     }
+    body .content-wrapper .page-header.has-secondary .page-header-secondary {
+     text-align: left;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     margin: -44px 0 0;
+    }
+    body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions:not(:last-child) {
+     margin: 0 27px 10px 0;
+    }
     body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions {
         margin-top: 12px;
     }
@@ -2932,13 +2944,8 @@ main#main .container.dashboard {
     display: flex;
 }
 body .dashboard .my-courses {
-    max-width: 74%;
+    width: 74%;
     flex: 1 1 auto;
-}
-.dashboard-search-bar {
-    max-width: 23%;
-    flex: 1 1 24%;
-    margin-left: auto;
 }
 
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
@@ -3272,6 +3279,12 @@ body .container .wiki-wrapper section.wiki .btn {
     }
 }
 
+body .shopping-cart .col-two .col-2 button[type="submit"],
+body .shopping-cart .user-data .data-input .three-col .col-3 button.btn-remove,
+body .shopping-cart .discount button[type="submit"] {
+    @extend %theme-btn;
+}
+
 .dashboard-search-results {
     width: 100%;
 }
@@ -3287,12 +3300,22 @@ body .container .wiki-wrapper section.wiki .btn {
     }
 }
 
-.user:last-child {
-    margin-left: 20px;
+.doc-link + .user {
+    margin-left: 0;
 }
 
-body .shopping-cart .col-two .col-2 button[type="submit"],
-body .shopping-cart .user-data .data-input .three-col .col-3 button.btn-remove,
-body .shopping-cart .discount button[type="submit"] {
-    @extend %theme-btn;
+.home .page-header-secondary .last-accessed-link:hover {
+    cursor: pointer;
+}
+
+.sidebar-holder {
+    max-width: 23%;
+    flex: 1 1 24%;
+    margin-left: auto;
+    flex-direction: column;
+}
+
+.dashboard .profile-sidebar {
+    width: 100%;
+    margin: 40px 0 0;
 }
