@@ -3209,3 +3209,26 @@ body .container .wiki-wrapper section.wiki .btn {
     color: $course-link-color;
     text-transform: uppercase;
 }
+
+// styles for IE10+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+        display: flex;
+    }
+
+    body,
+    .window-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100vh;
+    }
+
+    #content {
+        flex: 1 1 auto;
+    }
+
+    .wrapper-footer {
+        overflow: hidden;
+    }
+}
