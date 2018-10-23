@@ -3133,6 +3133,7 @@ body {
             color: $white;
             background-color: $theme-link;
             display: inline-block;
+            box-sizing: border-box;
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
@@ -3486,4 +3487,27 @@ select {
 }
 .teams-main select {
     min-width: 120px;
+}
+
+// styles for IE10+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+        display: flex;
+    }
+
+    body,
+    .window-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100vh;
+    }
+
+    #content {
+        flex: 1 1 auto;
+    }
+
+    .wrapper-footer {
+        overflow: hidden;
+    }
 }
