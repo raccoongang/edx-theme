@@ -27,3 +27,14 @@
 .container .profile-wrapper .course-info>.chapters>section {
   width: 100%;
 }
+
+.account-settings-sections .section .account-settings-section-body .u-field .field {
+  select {
+    height: 48px;
+    padding: 0 10px;
+  }
+
+  .icon-caret-down:after {
+      display: none;
+    }
+}
