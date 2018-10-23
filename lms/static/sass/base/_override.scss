@@ -2939,6 +2939,7 @@ main#main .container.dashboard {
 body .dashboard .my-courses {
     width: 74%;
     flex: 1 1 auto;
+    order: 2;
 }
 
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
@@ -3280,6 +3281,7 @@ body .shopping-cart .discount button[type="submit"] {
 
 .dashboard-search-results {
     width: 100%;
+    order: 3;
 }
 
 .theme-header__wrapper .item a {
@@ -3317,15 +3319,12 @@ body .shopping-cart .discount button[type="submit"] {
 body .content-wrapper .page-header.has-secondary .page-header-secondary {
     text-align: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-end;
-}
-
-.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions:not(:last-child) {
-    margin: 0 24px 15px 0;
 }
 
 .dashboard-search-bar {
     width: 100%;
     margin-left: 0;
+    order: 1;
 }
