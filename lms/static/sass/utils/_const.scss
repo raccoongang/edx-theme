@@ -2,12 +2,12 @@
 $body-bg: #eee;
 //settings for header
 $header-bg: #fff;
-$header-nav-link-color: #009be0;
+$header-nav-link-color: #967c4d;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
-$dropdown-menu-link-color: #009be0;
+$dropdown-menu-link-color: #967c4d;
 $dropdown-menu-link-color-hover: lighten($dropdown-menu-link-color, 20%);
 //settings for hamburger
-$hamburger-color: #009be0;
+$hamburger-color: #967c4d;
 $hamburger-width: 40px;
 $hamburger-height: 30px;
 $hamburger-height-line: 3px;
@@ -28,25 +28,25 @@ $search-button-border: #fff;
 $search-button-color: #fff;
 $search-height: 55px;
 //settings for footer
-$footer-bg: #009289;
-$footer-nav-link-color: #fff;
+$footer-bg: #967c4d;
+$footer-nav-link-color: #ead5ae;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
-$footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #fff;
+$footer-support-text-and-logo: #ead5ae;
+$footer-social-link-bg: #ead5ae;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
 //btn
-$theme-btn-bg: #009be0;
+$theme-btn-bg: #967c4d;
 $theme-btn-text-color: #ffe;
 $theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
 $theme-btn-shadow: darken($theme-btn-bg, 20%);
 //btn-white
 $theme-btn-white-bg: #fff;
-$theme-btn-white-border: #009be0;
-$theme-btn-white-text-color: #009be0;
+$theme-btn-white-border: #967c4d;
+$theme-btn-white-text-color: #967c4d;
 $theme-btn-white-text-color-hover: #fff;
-$theme-btn-white-bg-hover: #009be0;
+$theme-btn-white-bg-hover: #967c4d;
 // link color
-$theme-link: #009be0;
+$theme-link: #4c4c4c;
 $theme-link-hover: lighten($theme-link, 20%);
 //settings for bg content pages
 $theme-content-bg: #eee;
@@ -56,14 +56,14 @@ $theme-input-icon: #009be0;
 $theme-user-link: #009be0;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
-$courses-border-color: #009be0;
+$courses-border-color: #967c4d;
 $course-hover-bg: rgba(0, 0, 0, .5);
 $course-link-color: $theme-link;
 $course-bg: #fff;
 //certificate
-$ribbon-corners-color: #3d7fbe;
-$ribbon-triangle-color: #24659a;
-$certificate-borders-color: #5a8cc6;
+$ribbon-corners-color: #967c4d;
+$ribbon-triangle-color: darken($ribbon-corners-color, 20%);;
+$certificate-borders-color: #967c4d;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;
