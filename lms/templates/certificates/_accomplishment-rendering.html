@@ -72,11 +72,9 @@ show_signatory = request.GET.get('signatory', 'true')
                                     </div>
                                 </div>
                               % endif
-                                % if organization_logo:
-                                    <div class="organization-row">
-                                        <img class="organization-img" width="124" height="149" src="${organization_logo.url}" alt="${platform_name}">
-                                    </div>
-                                % endif
+                                <div class="organization-row">
+                                    <img class="organization-img" width="124" height="149" src="/static/${settings.DEFAULT_SITE_THEME}/images/Sigill.png" alt="${platform_name}">
+                                </div>
                               % if show_signatory != 'false':
                                 <div class="signatory-col" id="sign1">
                                     <div class="signatory-holder signatory-holder__left">
