@@ -2519,6 +2519,10 @@ body {
 }
 
 /*-----Show and hide logo for en and ar version-----*/
+.link-logo-en,
+.logo-footer {
+    display: block !important;
+}
 .link-logo-ar,
 .logo-ar {
     display: none;
@@ -2531,7 +2535,6 @@ body {
 .logo-en, .logo-ar, .logo-footer img {
     width: $logo-width;
     min-width: $logo-width;
-    height: $logo-height;
 }
 
 .link-logo-en,
@@ -3070,6 +3073,13 @@ body .theme-header {
 .programs-wrapper {
     overflow: hidden;
     .program-cards-container {
-        width: auto;
+        width: 100%;
+    }
+}
+
+.empty-programs-message {
+    padding: 40px 20px !important;
+    .btn-brand {
+        color: #fff !important;
     }
 }
