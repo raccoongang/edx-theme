@@ -3418,8 +3418,12 @@ body section.wiki #cheatsheetModal {
         width: 100%;
     }
 }
-.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn:hover {
-    color: $theme-btn-white-text-color-hover !important;
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn {
+    padding: 0 10px !important;
+    height: 37px !important;
+    &:hover {
+        color: $theme-btn-white-text-color-hover !important;
+    }
 }
 .wrapper-msg .msg {
     min-width: 0;
@@ -3537,7 +3541,8 @@ body .container .wiki-wrapper section.wiki .btn {
 
 // all selects
 
-select {
+select,
+.forum-new-post-form .post-field .field-label .field-input select.post-topic {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -3552,7 +3557,8 @@ select {
     background-size: 27px 7px;
 }
 @supports (-ms-ime-align:auto) {
-    select {
+    select,
+    .forum-new-post-form .post-field .field-label .field-input select.post-topic {
         background: #fff url(../images/down-up-arrow.svg) no-repeat 98% 50%;
         background-size: 10px 7px;
     }
