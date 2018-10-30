@@ -3541,7 +3541,7 @@ body .container .wiki-wrapper section.wiki .btn {
 
 // all selects
 
-select,
+select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
 .forum-new-post-form .post-field .field-label .field-input select.post-topic {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -3557,7 +3557,7 @@ select,
     background-size: 27px 7px;
 }
 @supports (-ms-ime-align:auto) {
-    select,
+    select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
     .forum-new-post-form .post-field .field-label .field-input select.post-topic {
         background: #fff url(../images/down-up-arrow.svg) no-repeat 98% 50%;
         background-size: 10px 7px;
