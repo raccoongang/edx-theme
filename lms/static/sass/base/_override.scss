@@ -3418,8 +3418,12 @@ body section.wiki #cheatsheetModal {
         width: 100%;
     }
 }
-.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn:hover {
-    color: $theme-btn-white-text-color-hover !important;
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn {
+    padding: 0 10px !important;
+    height: 37px !important;
+    &:hover {
+        color: $theme-btn-white-text-color-hover !important;
+    }
 }
 .wrapper-msg .msg {
     min-width: 0;
@@ -3537,7 +3541,8 @@ body .container .wiki-wrapper section.wiki .btn {
 
 // all selects
 
-select {
+select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
+.forum-new-post-form .post-field .field-label .field-input select.post-topic {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -3546,13 +3551,14 @@ select {
     height: 32px;
     font-size: 18px;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 30px 0 10px;
     color: #222;
     background: #fff url(../images/select-arrow.png) no-repeat 100% 50%;
     background-size: 27px 7px;
 }
 @supports (-ms-ime-align:auto) {
-    select {
+    select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
+    .forum-new-post-form .post-field .field-label .field-input select.post-topic {
         background: #fff url(../images/down-up-arrow.svg) no-repeat 98% 50%;
         background-size: 10px 7px;
     }
@@ -3584,4 +3590,39 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .dashboard .my-courses .course .wrapper-messages-primary .message {
     padding: 10px 0 !important;
+}
+
+.article-wrapper .btn-danger {
+    background: #d2430e !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.instructor-dashboard-wrapper-2 section#cohort_management.idash-section .cohort-management-settings .form-cancel {
+    background: $theme-btn-bg !important;
+    color: #fff !important;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-weight: bold !important;
+    padding: 8px 15px !important;
+    &:hover {
+        background: $theme-btn-bg-hover !important;
+        color: #fff !important;
+    }
+}
+
+.idash-section .message-warning {
+    border-top: 2px solid red !important;
+    background: #f4f4f4 !important;
+    .message-title {
+        color: #000 !important;
+    }
+}
+
+.instructor-dashboard-wrapper-2 section#cohort_management.idash-section .cohort-management-nav .cohort-management-nav-form {
+    margin: 5px 0;
 }
