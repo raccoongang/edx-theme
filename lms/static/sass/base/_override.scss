@@ -3532,3 +3532,30 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         overflow: hidden;
     }
 }
+
+// cohort tab
+
+.instructor-dashboard-wrapper-2 section#cohort_management.idash-section {
+    .cohort-management-settings .form-cancel {
+        background: $theme-btn-bg !important;
+        color: #fff !important;
+        margin-top: 10px;
+        border-radius: 3px;
+        font-weight: bold !important;
+        padding: 8px 15px !important;
+        &:hover {
+            background: $theme-btn-bg-hover !important;
+            color: #fff !important;
+        }
+    }
+    .message-warning {
+        border-top: 2px solid red !important;
+        background: #f4f4f4 !important;
+        .message-title {
+            color: #000 !important;
+        }
+    }
+    .cohort-management-nav .cohort-management-nav-form {
+        margin: 5px 0;
+    }
+}
