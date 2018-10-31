@@ -2848,6 +2848,31 @@ body .breadcrumbs .nav-item {
             order: 1;
         }
     }
+    h3.page-header {
+        margin-bottom: 15px;
+    }
+    #div_id_locked,
+    #div_id_recursive {
+        .controls {
+            display: flex;
+            input {
+                margin: 2px 10px 0 0;
+            }
+        }
+    }
+    #div_id_group_read,
+    #div_id_group_write,
+    #div_id_other_read,
+    #div_id_other_write {
+        display: flex;
+        label {
+            order: 2;
+        }
+        .controls {
+            order: 1;
+            margin: 3px 10px 0 0;
+        }
+    }
 }
 
 .wrapper-course-material {
