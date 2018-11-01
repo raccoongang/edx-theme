@@ -367,6 +367,7 @@ body {
     padding-left: 15px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     @media (max-width: 991px) {
         flex-direction: column-reverse !important;
     }
@@ -2849,7 +2850,7 @@ body .enroll-message a {
 }
 .grade-detail-graph-wrapper {
     width: 100%;
-    overflow-y: auto;
+    overflow: visible;
     position: absolute;
     height: 100%;
 }
@@ -2920,7 +2921,6 @@ body .enroll-message a {
 }
 body .theme-header .list-inline {
     display: flex;
-    flex-direction: column;
 }
 body .doc-link {
     color: $theme-link;
@@ -2938,7 +2938,7 @@ main#main .container.dashboard {
     display: flex;
 }
 body .dashboard .my-courses {
-    width: 74%;
+    width: 100%;
     flex: 1 1 auto;
     order: 2;
 }
@@ -3136,8 +3136,7 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 }
 
 .courses-container {
-    max-width: 1440px !important;
-
+    max-width: 1200px !important;
     background: $theme-content-bg;
     position: relative;
 
@@ -3306,13 +3305,6 @@ body .shopping-cart .discount button[type="submit"] {
     cursor: pointer;
 }
 
-.sidebar-holder {
-    max-width: 23%;
-    flex: 1 1 24%;
-    margin-left: auto;
-    flex-direction: column;
-}
-
 .dashboard .profile-sidebar {
     width: 100%;
     margin: 40px 0 0;
@@ -3385,8 +3377,8 @@ body .shopping-cart .discount button[type="submit"] {
 }
 
 .sidebar-holder {
-    max-width: 23%;
-    flex: 1 1 24%;
+    width: 100%;
+    flex: 1 1 100%;
     margin-left: auto;
     flex-direction: column;
 }
