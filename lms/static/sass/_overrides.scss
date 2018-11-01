@@ -86,9 +86,9 @@ $course-link-color: $theme-link;
 $course-bg: #fff;
 //certificate
 $certificate-logo-height: 30px;
-$ribbon-corners-color: #3d7fbe;
-$ribbon-triangle-color: #24659a;
-$certificate-borders-color: #5a8cc6;
+$ribbon-corners-color: #de142a;
+$ribbon-triangle-color: darken($ribbon-corners-color, 20%);;
+$certificate-borders-color: #de142a;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;
