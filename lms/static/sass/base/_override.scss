@@ -688,10 +688,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .home>header {
     background-image: url('#{$img-path}/background.jpg');
     height: 420px;
-    background-position: center;
     position: relative;
     background-color: #040404;
     background-position: 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .outer-wrapper {
         animation: none;
@@ -714,6 +717,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
         >.heading-group {
             text-align: center;
             width: 100%;
+            padding-top: 20px;
+
+            @media screen and (min-width:760px ) {
+                padding-top: 40px;
+            }
 
             h1 {
                 font-size: 32px;
@@ -721,20 +729,34 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 color: #fff;
                 text-align: center;
                 font-weight: bold;
-                text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.34);
-                margin-bottom: 50px;
-                @media screen and (min-width:760px ) { 
-                    font-size: 52px;
+                text-shadow: 0 2px 0 rgba(77, 77, 77, 0.34);
+                margin-bottom: 30px;
+
+                @media screen and (min-width:760px ) {
+                    font-size: 40px;
+                }
+
+                @media screen and (min-width:1040px ) {
+                    font-size: 44px;
+                }
+
+                @media screen and (min-width:1120px ) {
+                    font-size: 48px;
                 }
             }
             span {
                 display: block;
                 text-align: center;
-                font-size: 34px;
+                font-size: 30px;
                 line-height: 1.3;
-                text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4);
+                text-shadow: 0 2px 0 rgba(77, 77, 77, 0.4);
                 color: #fff;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
+
+                @media screen and (min-width:760px ) {
+                    font-size: 34px;
+                    margin-bottom: 40px;
+                }
             }
             .link {
                 background: transparent;
@@ -1443,6 +1465,40 @@ body .wrapper-account-settings .wrapper-header .account-nav button.active {
 .home>header {
     background-image: url("../images/background.png");
     background-position: center;
+
+    .title {
+        .course-search {
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 15px 0 0;
+            .search-input {
+                background: $search-input-background;
+                border: 2px solid $search-input-border;
+                color: $search-input-color;
+                padding-left: 20px !important;
+                height: $search-height;
+                &:focus {
+                    border-color: $search-input-border !important;
+                }
+                &::placeholder {
+                    color: $search-input-color;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    color: $search-input-color;
+                }
+            }
+            .search-button {
+                background: $search-button-background !important;
+                border-color: $search-button-border !important;
+                color: $search-button-color;
+                border-left: none !important;
+                right: 0;
+                height: $search-height;
+            }
+        }
+    }
 }
 .home>header .title>.heading-group h1,
 .home>header .title>.heading-group span {
@@ -1472,4 +1528,4 @@ body .content-wrapper .container {
     &:first-child {
         display: block !important;
     }
-} 
+}
