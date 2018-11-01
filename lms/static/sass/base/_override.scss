@@ -2921,12 +2921,17 @@ body .enroll-message a {
 }
 body .theme-header .list-inline {
     display: flex;
+    order: 1;
 }
 body .doc-link {
     color: $theme-link;
+    order: 2;
     &:hover,&:focus,&:active {
         color: $header-nav-link-color-hover;
     }
+}
+body .doc-link+.user {
+    order: 4;
 }
 body .user-dropdown {
     color: $header-nav-link-color;
@@ -3272,7 +3277,8 @@ body .container .wiki-wrapper section.wiki .btn {
 }
 
 .user:last-child {
-    margin-left: 20px;
+    margin-right: 20px;
+    order: 3;
 }
 
 body .shopping-cart .col-two .col-2 button[type="submit"],
