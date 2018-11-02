@@ -2916,13 +2916,21 @@ body .enroll-message a {
 }
 body .theme-header .list-inline {
     display: flex;
-    flex-direction: column;
+    order: 1;
 }
 body .doc-link {
     color: $theme-link;
+    order: 2;
     &:hover,&:focus,&:active {
         color: $header-nav-link-color-hover;
     }
+}
+body .doc-link+.user {
+     order: 4;
+}
+.user:last-child {
+    margin-right: 20px;
+    order: 3;
 }
 body .user-dropdown {
     color: $header-nav-link-color;
