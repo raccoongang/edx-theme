@@ -3025,7 +3025,6 @@ body .page-header-secondary .action-edit-team {
     width: 100%;
 }
 
-body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke,
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
 body form.ccx-form button {
@@ -3033,6 +3032,18 @@ body form.ccx-form button {
     box-shadow: none;
     color: $white;
     background: $theme-link;
+    text-decoration: none;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background: $theme-link-hover;
+    }
+}
+
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke {
+    border: none;
+    box-shadow: none;
+    color: inherit;
+    background: inherit;
     text-decoration: none;
     text-shadow: none;
     &:hover,&:focus,&:active {
@@ -3333,6 +3344,8 @@ body .content-wrapper .page-header.has-secondary .page-header-secondary {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .dashboard-search-bar {
@@ -3343,4 +3356,8 @@ body .content-wrapper .page-header.has-secondary .page-header-secondary {
 
 .page-header-main {
     width: 100%;
+}
+
+.instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
+    margin: 0;
 }
