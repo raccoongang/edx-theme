@@ -2916,13 +2916,21 @@ body .enroll-message a {
 }
 body .theme-header .list-inline {
     display: flex;
-    flex-direction: column;
+    order: 1;
 }
 body .doc-link {
     color: $theme-link;
+    order: 2;
     &:hover,&:focus,&:active {
         color: $header-nav-link-color-hover;
     }
+}
+body .doc-link+.user {
+     order: 4;
+}
+.user:last-child {
+    margin-right: 20px;
+    order: 3;
 }
 body .user-dropdown {
     color: $header-nav-link-color;
@@ -3132,7 +3140,7 @@ body .course-outline .block-tree .section ol.outline-item .subsection a.outline-
 }
 
 .courses-container {
-    max-width: 1440px !important;
+    max-width: 1200px !important;
     background: $theme-content-bg;
     position: relative;
 
@@ -3324,4 +3332,8 @@ body .content-wrapper .page-header.has-secondary .page-header-secondary {
     width: 100%;
     margin-left: 0;
     order: 1;
+}
+
+.page-header-main {
+    width: 100%;
 }
