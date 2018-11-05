@@ -140,8 +140,8 @@
 
         <!--<p class="instructions">-->
           <!--${_('Create your own {platform_name} account below').format(platform_name=platform_name)}-->
-          <!--<span class="note">${_('Required fields are noted by <strong class="indicator">bold text and an asterisk (*)</strong>.')}</span>-->
-        <!--</p>-->
+          <span class="note">${_('Required fields are noted by <strong class="indicator">bold text and an asterisk (*)</strong>.')}</span>
+        </p>
 
 
         % else:
@@ -169,9 +169,9 @@
         % if has_extauth_info is UNDEFINED:
 
         <ol class="list-input">
-          <li class="field required text" id="field-email">
+          <li class="field required text" id="field-email" style="display:none"> 
             <label for="email">${_('E-mail')}</label>
-            <input class="" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" required aria-required="true"
+            <input class="" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" required aria-required="fale"
             readonly="readonly"/>
           </li>
 
@@ -190,14 +190,14 @@
 
           <li class="is-disabled field optional password" id="field-password" hidden>
             <label for="password">${_('Password')}</label>
-            <input id="password" type="password" name="password" value="" disabled required aria-required="true" />
+            <input id="password" type="password" name="password" value="" disabled required aria-required="false" />
           </li>
 
           % else:
 
-          <li class="field required password" id="field-password">
+          <li class="field required password" id="field-password" style="display:none">
             <label for="password">${_('Password')}</label>
-            <input id="password" type="password" name="password" value="" required aria-required="true" />
+            <input id="password" type="password" name="password" value="" required aria-required="false" />
           </li>
 
           % endif
