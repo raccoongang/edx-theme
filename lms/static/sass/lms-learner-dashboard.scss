@@ -1,17 +1,38 @@
 //import the original styles from edx-platform
 @import "lms/static/sass/lms-learner-dashboard";
+@import "utils/const";
+@import "discussion/discussion-override";
 
 
 header.header-global .wrapper-header .list-inline.nav-global,
 .header-global .wrapper-header .list-inline.nav-global {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .header-global .wrapper-header .list-inline .item {
-  text-transform: none;
+    text-transform: none;
 }
 
 .header-global .wrapper-header .logo {
-  margin-top: 0;
-  margin-left: 0;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+body .header-global .wrapper-header .wrapper-user-menu span {
+  text-shadow: none;
+}
+
+.dropdown-menu-container .menu-button:focus {
+    background: none;
+    box-shadow: none;
+}
+
+.sidebar .program-advertise .new-programs-btn {
+    color: $header-nav-link-color;
+    border-color: $header-nav-link-color;
+
+    &:hover{
+        color: #fff;
+        background-color: $header-nav-link-color;
+    }
 }
