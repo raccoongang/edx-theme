@@ -2874,6 +2874,8 @@ body .breadcrumbs .nav-item {
     }
     .btn {
         display: block;
+        width: 100%;
+        font-size: 15px !important;
     }
 }
 
@@ -3625,4 +3627,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .instructor-dashboard-wrapper-2 section#cohort_management.idash-section .cohort-management-nav .cohort-management-nav-form {
     margin: 5px 0;
+}
+
+#course-info-progress .msg-actions .btn {
+    width: 100%;
 }
