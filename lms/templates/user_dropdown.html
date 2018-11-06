@@ -15,8 +15,8 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
 %>
 
 % if uses_pattern_library:
-    <div class="wrapper-user-menu dropdown-menu-container logged-in js-header-user-menu">
-        <a href="${reverse('dashboard')}" class="menu-title">
+<div class="wrapper-user-menu dropdown-menu-container logged-in js-header-user-menu">
+    <a href="${reverse('dashboard')}" class="menu-title">
             <span class="sr-only">${_("Dashboard for:")}</span>
             <%
             username = self.real_user.username
@@ -27,8 +27,8 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
         </a>
         <div role="group" aria-label="User menu" class="user-menu">
             <button type="button" class="menu-button button-more has-dropdown js-dropdown-button" aria-expanded="false" aria-controls="${_("Usermenu")}">
-                  <span class="icon fa fa-caret-down" aria-hidden="true"></span>
-                  <span class="sr-only">${_("Usermenu dropdown")}</span>
+                <span class="icon fa fa-caret-down" aria-hidden="true"></span>
+                <span class="sr-only">${_("Usermenu dropdown")}</span>
             </button>
             <ul class="dropdown-menu list-divided is-hidden" id="${_("Usermenu")}" tabindex="-1">
                 <%block name="navigation_dropdown_menu_links" >
@@ -39,7 +39,8 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
                 <li class="dropdown-item item has-block-link"><a href="${reverse('logout')}" role="menuitem" class="action dropdown-menuitem">${_("Sign Out")}</a></li>
             </ul>
         </div>
-    </div>
+</div>
+
 % else:
     <ol class="user">
         <li class="primary">
