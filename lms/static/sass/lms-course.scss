@@ -4,3 +4,52 @@
 // @import "../css/time-lms-course.css";
 
 @import "main";
+
+.batch-enrollment {
+    @media screen and (min-width: 768px){
+        padding-right: 10px;
+    }
+}
+
+.ccx-schedule-sidebar {
+    max-width: 100%;
+    @media screen and (max-width: 767px){
+        margin-left: 0;
+    }
+}
+
+div.gradebook-wrapper section.gradebook-content {
+    h1 {
+      @media screen and (max-width: 560px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .student-table {
+      position: relative;
+
+      td {
+        text-overflow: ellipsis;
+        padding-right: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .student-search {
+      @media screen and (max-width: 560px) {
+        position: absolute;
+        top: 0;
+        transform: translateY(calc(-100% - 10px));
+        width: 100%;
+        padding: 0;
+        min-width: 200px;
+      }
+    }
+
+    .student-search-field {
+        @media screen and (max-width: 767px) {
+            padding: 0 15px 0 30px;
+        }
+    }
+}
