@@ -20,7 +20,7 @@
 
 div.gradebook-wrapper section.gradebook-content {
     h1 {
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 600px) {
         margin-bottom: 50px;
       }
     }
@@ -37,10 +37,9 @@ div.gradebook-wrapper section.gradebook-content {
     }
 
     .student-search {
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 600px) {
         position: absolute;
-        top: 0;
-        transform: translateY(calc(-100% - 10px));
+        top: -35px;
         width: 100%;
         padding: 0;
         min-width: 200px;
@@ -50,6 +49,10 @@ div.gradebook-wrapper section.gradebook-content {
     .student-search-field {
         @media screen and (max-width: 767px) {
             padding: 0 15px 0 30px;
+        }
+
+        &::-ms-clear {
+          display: none;
         }
     }
 }
