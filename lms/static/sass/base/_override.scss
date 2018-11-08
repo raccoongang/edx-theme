@@ -25,6 +25,11 @@
     font-style: normal;
 }
 
+body {
+    -webkit-font-smoothing: unset !important;
+    -moz-osx-font-smoothing: unset !important;
+}
+
 *:not(.fa) {
     font-family: "Segoeui", sans-serif !important;
 }
@@ -53,7 +58,7 @@
     }
     .nav-global {
         width: 100%;
-        margin-top: 0;
+        margin: 0 !important;
         @media screen and (min-width:761px ) {
             width: auto;
         }
@@ -1126,7 +1131,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     display: block;
     .doc-link {
         width: auto;
-        margin: 12px 10px;
+        margin: 12px 10px !important;
     }
 }
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary:after {
@@ -3220,7 +3225,9 @@ body {
     }
     body .header-global.header-global__course,
     body .header-global {
-    flex: 1 0 auto;
+        @media screen and (min-width: 761px) {
+            flex: 1 0 auto;
+        }
     }
     .nav-global li {
         width: 100%;
@@ -3627,4 +3634,76 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .instructor-dashboard-wrapper-2 section#cohort_management.idash-section .cohort-management-nav .cohort-management-nav-form {
     margin: 5px 0;
+}
+
+.header-global .wrapper-header .list-inline .item {
+    text-transform: none !important;
+}
+
+.header-global .wrapper-header .wrapper-user-menu {
+    margin: 0 !important;
+}
+
+.dropdown-menu-container .menu-image {
+    float: left;
+}
+
+.header-global .wrapper-header .wrapper-user-menu .label-username {
+    float: left;
+    padding-right: 10px !important;
+    color: #fff;
+}
+
+.dropdown-menu-container .menu-button {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropdown-menu-container .menu-image {
+    margin-right: 10px !important;
+}
+
+.header-global .wrapper-header .wrapper-user-menu .dropdown-menu {
+    right: -16px !important;
+    top: 45px !important;
+    .dropdown-item {
+        border-bottom: 1px solid #c8c8c8 !important;
+        &:last-of-type {
+            border-bottom: none !important;
+        }
+    }
+}
+
+.dropdown-menu-container .menu-button {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 0 !important;
+}
+
+.program-list-wrapper {
+    padding: 20px 0 !important;
+}
+
+.sidebar .program-advertise .new-programs-btn {
+    background: $theme-btn-bg !important;
+    &:hover {
+        background: $theme-btn-bg-hover;
+    }
+}
+
+.program-details-content .course-card {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.course-card .course-actions .enrollment-info,
+.course-card .course-actions .view-course-link,
+.course-card .cta-secondary {
+    @media screen and (min-width: 992px) {
+        float: right;
+    }
 }
