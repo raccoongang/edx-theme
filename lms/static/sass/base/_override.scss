@@ -3054,6 +3054,12 @@ body .breadcrumbs .nav-item {
     transform: translate(-50%, -50%);
 }
 
+.course-wrapper .courseware-results-wrapper {
+    @media screen and (min-width:999px ) {
+        width: 100%;
+    }
+}
+
 .wrapper-preview-menu {
     width: 100%;
 }
@@ -3535,4 +3541,10 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     .wrapper-footer {
         overflow: hidden;
     }
+}
+
+.paging-footer .pagination.pagination-full {
+    display: flex;
+    justify-content: center;
+    width: auto;
 }
