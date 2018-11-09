@@ -3589,3 +3589,16 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         margin: 5px 0;
     }
 }
+
+.view-teams .edit-members .action-remove-member,
+.view-teams .action-cancel {
+    color: $theme-btn-white-border;
+    border-color: $theme-btn-white-border;
+    background: $theme-btn-white-bg;
+    transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+
+    &:hover {
+        color: $theme-btn-white-bg !important;
+        background: $theme-btn-white-border !important;
+    }
+}
