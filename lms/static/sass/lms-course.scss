@@ -56,3 +56,20 @@ div.gradebook-wrapper section.gradebook-content {
         }
     }
 }
+
+.view-teams .page-content {
+    .team-profile {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 760px){
+            flex-direction: column;
+        }
+
+      .page-content-secondary {
+          @media screen and (max-width: 760px){
+              margin-top: 30px;
+          }
+      }
+    }
+}
