@@ -44,15 +44,21 @@ h1 {
 
 /*-----Home promo block-----*/
 .home {
-    >header {
+    >header,
+    .slider {
         position: relative;
         min-height: 420px;
         //background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%;
         //background-size: cover;
         display: flex;
+        justify-content: center;
         align-items: center;
         @media (max-width: 767px) {
             min-height: initial;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: block;
         }
 
         .parallax-img {
@@ -70,6 +76,11 @@ h1 {
             padding: 30px 15px;
             animation: none;
             box-sizing: border-box;
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display: table;
+                min-height: 450px;
+                box-sizing: border-box;
+            }
         }
         .title {
             float: none;
@@ -80,6 +91,10 @@ h1 {
             box-shadow: none;
             @media (max-width: 767px) {
                 padding: 20px 0;
+            }
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display: table-cell;
+                vertical-align: middle;
             }
             >.heading-group {
                 text-align: center;
@@ -144,6 +159,9 @@ h1 {
                      }
                      &:-ms-input-placeholder {
                          color: $search-input-color;
+                     }
+                     &::-webkit-input-placeholder{
+                         color: $search-input-color !important;
                      }
                  }
                  .search-button {
@@ -3091,9 +3109,6 @@ body .ccx-schedule-container {
 
 .wrapper-msg .msg {
     min-width: 0;
-}
-.home > header .title .course-search .search-input::-webkit-input-placeholder {
-    color: $white;
 }
 button.ccx-button-link {
     color: $theme-link
