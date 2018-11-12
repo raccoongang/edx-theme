@@ -755,115 +755,133 @@ body .wmd-prompt-dialog .btn-brand:focus {
         background: rgba($theme-link-hover, 0.8);
     }
 }
-.home>header {
-    //background-image: url('#{$img-path}/background.jpg');
-    min-height: 420px;
-    background-position: center;
-    position: relative;
-    background-color: #040404;
-    display: flex;
-    align-items: center;
+.home {
+    > header,
+    .slider {
+        //background-image: url('#{$img-path}/background.jpg');
+        min-height: 420px;
+        background-position: center;
+        position: relative;
+        background-color: #040404;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    .parallax-img {
-        position: absolute;
-        left: 0;
-        top: -100px;
-        width: 100%;
-        height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-        background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-        background-size: cover;
-    }
-
-    .outer-wrapper {
-        animation: none;
-        padding: 0;
-    }
-    .title {
-        background: transparent;
-        box-shadow: none;
-        max-width: 1000px;
-        width: 100%;
-        margin: 0 auto;
-        float: none;
-        padding: 20px;
-
-        &:last-child {
-            margin-right: auto;
-            margin-left: auto;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: block;
         }
-        >.heading-group {
-            text-align: center;
+
+        .parallax-img {
+            position: absolute;
+            left: 0;
+            top: -100px;
             width: 100%;
-            padding: 15px 0;
+            height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
+            background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
+            background-size: cover;
+        }
 
-            h1 {
-                font-size: 32px;
-                line-height: 1.2;
-                color: $promo-box-text-color;
-                text-align: center;
-                font-weight: bold;
-                text-shadow: $promo-box-text-shadow;
-                margin-bottom: 50px;
-                @media screen and (min-width:760px ) {
-                    font-size: 52px;
-                }
-            }
-            span {
-                display: block;
-                text-align: center;
-                font-size: 34px;
-                line-height: 1.3;
-                text-shadow: $promo-box-text-shadow;
-                color: $promo-box-text-color;
-                margin-bottom: 40px;
-            }
-            .link {
-                background: $find-btn-bg;
-                border: 3px solid $find-btn-border;
-                text-shadow: none;
-                box-shadow: none;
-                color: $find-btn-color;
-                border-radius: 2px;
-                padding: 10px 20px;
-                display: inline-block;
+        .outer-wrapper {
+            animation: none;
+            padding: 0;
 
-                &:hover {
-                    background: $find-btn-bg-hover;
-                    color: $find-btn-color-hover;
-                    text-decoration: none;
-                }
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display: table;
+                min-height: 450px;
+                box-sizing: border-box;
             }
         }
-        .course-search {
-            max-width: 590px;
+
+        .title {
+            background: transparent;
+            box-shadow: none;
+            max-width: 1000px;
+            width: 100%;
             margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-            padding: 15px 0;
-            .search-input {
-                background: $search-input-background;
-                border: 2px solid $search-input-border;
-                color: $search-input-color;
-                padding-left: 20px !important;
-                height: $search-height;
-                &:focus {
-                    border-color: $search-input-border !important;
+            float: none;
+            padding: 20px;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            &:last-child {
+                margin-right: auto;
+                margin-left: auto;
+            }
+            > .heading-group {
+                text-align: center;
+                width: 100%;
+                padding: 15px 0;
+
+                h1 {
+                    font-size: 32px;
+                    line-height: 1.2;
+                    color: $promo-box-text-color;
+                    text-align: center;
+                    font-weight: bold;
+                    text-shadow: $promo-box-text-shadow;
+                    margin-bottom: 50px;
+                    @media screen and (min-width: 760px) {
+                        font-size: 52px;
+                    }
                 }
-                &::placeholder {
-                    color: $search-input-color;
-                    opacity: 1;
+                span {
+                    display: block;
+                    text-align: center;
+                    font-size: 34px;
+                    line-height: 1.3;
+                    text-shadow: $promo-box-text-shadow;
+                    color: $promo-box-text-color;
+                    margin-bottom: 40px;
                 }
-                &:-ms-input-placeholder {
-                    color: $search-input-color;
+                .link {
+                    background: $find-btn-bg;
+                    border: 3px solid $find-btn-border;
+                    text-shadow: none;
+                    box-shadow: none;
+                    color: $find-btn-color;
+                    border-radius: 2px;
+                    padding: 10px 20px;
+                    display: inline-block;
+
+                    &:hover {
+                        background: $find-btn-bg-hover;
+                        color: $find-btn-color-hover;
+                        text-decoration: none;
+                    }
                 }
             }
-            .search-button {
-                background: $search-button-background !important;
-                border-color: $search-button-border !important;
-                color: $search-button-color;
-                border-left: none !important;
-                right: 0;
-                height: $search-height;
+            .course-search {
+                max-width: 590px;
+                margin: 0 auto;
+                overflow: hidden;
+                position: relative;
+                padding: 15px 0;
+                .search-input {
+                    background: $search-input-background;
+                    border: 2px solid $search-input-border;
+                    color: $search-input-color;
+                    padding-left: 20px !important;
+                    height: $search-height;
+                    &:focus {
+                        border-color: $search-input-border !important;
+                    }
+                    &::placeholder,
+                    &:-ms-input-placeholder {
+                        color: $search-input-color;
+                        opacity: 1;
+                    }
+                }
+                .search-button {
+                    background: $search-button-background !important;
+                    border-color: $search-button-border !important;
+                    color: $search-button-color;
+                    border-left: none !important;
+                    right: 0;
+                    height: $search-height;
+                }
             }
         }
     }
@@ -3280,9 +3298,6 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
     word-break: break-all;
 }
 .my-courses .empty-dashboard-message a {
-    color: $white;
-}
-.home > header .title .course-search .search-input::-webkit-input-placeholder {
     color: $white;
 }
 body.view-teams .teams-wrapper .action-cancel:hover {
