@@ -3374,3 +3374,13 @@ body .content-wrapper .page-header.has-secondary .page-header-secondary {
 .page-header-main {
     width: 100%;
 }
+
+.wrapper-msg.warning {
+    margin-top: 10px;
+    border-top-color: $base-color;
+    background: lighten($base-color, 50%);
+}
+
+.wrapper-msg.urgency-high .msg {
+    color: #474747;
+}
