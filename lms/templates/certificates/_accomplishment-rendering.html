@@ -471,11 +471,160 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
             background: #fff;
         }
     }
+
+    @font-face {
+        font-family: 'CenturyGothic';
+        src: url('../static/edx-theme/fonts/CenturyGothic.woff2') format('woff2'),
+        url('../static/edx-theme/fonts/CenturyGothic.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'CenturyGothicItalic';
+        src: url('../static/edx-theme/fonts/CenturyGothic-Italic.woff2') format('woff2'),
+        url('../static/edx-theme/fonts/CenturyGothic-Italic.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+    .vermont-mandatory {
+        border: 2px solid #000;
+        padding: 20px 50px 50px;
+    }
+    .certificates_logos {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin: 0 -40px 50px;
+    }
+    .certificates_logos img {
+        display: block;
+    }
+    .certificates_cooperation {
+        font-family: 'CenturyGothicItalic';
+        width: 600px;
+        text-align: center;
+        display: block;
+    }
+    .certificates_real-estate {
+        display: block;
+        text-align: center;
+        font-size: 35px;
+        line-height: 37px;
+        font-family: 'CenturyGothic';
+    }
+    .certificates_this-certifies {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        line-height: 32px;
+        margin-bottom: 80px;
+        font-family: 'CenturyGothic';
+    }
+    .certificates_long-studen-name {
+        border-bottom: 2px solid #000;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .certificates_fully-completed {
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-family: 'CenturyGothic';
+    }
+    .certificates_renewal-cycle {
+        display: block;
+        font-size: 36px;
+        line-height: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .certificates_completed-online {
+        text-align: center;
+        font-size: 20px;
+        font-family: 'CenturyGothicItalic';
+    }
+    .certificates_completed-online i {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 5px;
+        font-style: normal;
+    }
+    .certificates_completed-online em {
+        display: inline-block;
+        vertical-align: top;
+        width: 300px;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        position: relative;
+        top: -2px;
+        font-style: normal;
+        font-family: 'CenturyGothic';
+    }
+    .certificates_instructor {
+        display: block;
+        text-align: center;
+        margin-bottom: 50px;
+        font-style: normal;
+        font-family: 'CenturyGothicItalic';
+    }
+    .certificates_education-director-signature {
+        border-bottom: 1px solid #000;
+        width: 300px;
+        margin: 0 auto;
+    }
+    .certificates_education-director-signature img {
+        display: block;
+        max-width: 220px;
+        margin: 0 auto;
+    }
+    .certificates_education-director-name {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: 'CenturyGothic';
+    }
+    .certificates_official-record {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .certificates_important-information {
+        display: block;
+        margin-bottom: 15px;
+    }
 </style>
 <main class="accomplishment accomplishment-main">
 
     <div class="wrapper-accomplishment-rendering">
         <div class="accomplishment-rendering">
+
+            <div class="certificates_wrapper vermont-mandatory">
+                <div class="certificates_logos">
+                    <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/vermont-sert-logo.jpg" alt="">
+                    <span class="certificates_cooperation">In cooperation with</span>
+                    <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/calypso-cert-logo.jpg" alt="">
+                </div>
+                <span class="certificates_real-estate">${_("Real Estate Education")}</span>
+                <span class="certificates_this-certifies">${_("This certifies that")}</span>
+                <div class="certificates_long-studen-name">${_("Hardcoded Name")}</div>
+                <span class="certificates_fully-completed">${_("Has fully completed the 4 hours continuing education")} <br> ${_("course entitled")}</span>
+                <span class="certificates_renewal-cycle">2016 - 2018 ${_("Renewal cycle")} <br> ${_("Mandatory Course")}</span>
+                <div class="certificates_completed-online"><i>${_("Completed online")}</i><em>hardcoded 10.12.2018</em></div>
+                <i class="certificates_instructor">${_("Instructor: Kristin Chandler")}</i>
+                <div class="certificates_education-director">
+                    <div class="certificates_education-director-signature">
+                        <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/signature-helen.png" alt="">
+                    </div>
+                    <span class="certificates_education-director-name">${_("Helen Hossley, Education Director")} <br> ${_("Vermont Association of REALTORS")}®</span>
+                </div>
+                <span class="certificates_official-record">${_("This official record verifies your attendance and completion of course presented by the Vermont REALTORS ®. VR offers qualifying and continuing education to real estate professionals in Vermont and New Hampshire. We also offer instructor development workshops and certification classes for professionals seeking teaching accreditation for real estate courses.")}</span>
+                <strong class="certificates_important-information">${_("Important information for Student/Licen see: You must retain this Certificate in your personal records for a minimum of four years from the date of issue.")}</strong>
+            </div>
 
             % for user_state in user_states:
             % if 'PA' == user_state.get('state'):
