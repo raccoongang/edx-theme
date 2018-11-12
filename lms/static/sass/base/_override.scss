@@ -868,10 +868,15 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     &:focus {
                         border-color: $search-input-border !important;
                     }
-                    &::placeholder,
-                    &:-ms-input-placeholder {
+                    &::placeholder {
                         color: $search-input-color;
                         opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $search-input-color;
+                    }
+                    &::-webkit-input-placeholder {
+                        color: $search-input-color !important;
                     }
                 }
                 .search-button {
