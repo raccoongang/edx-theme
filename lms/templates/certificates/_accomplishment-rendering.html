@@ -518,7 +518,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
         text-align: center;
         font-size: 30px;
         line-height: 32px;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
         font-family: 'CenturyGothic';
     }
     .certificates_long-studen-name {
@@ -533,7 +533,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
         display: block;
         text-align: center;
         font-size: 25px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         font-family: 'CenturyGothic';
     }
     .certificates_renewal-cycle {
@@ -571,13 +571,23 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
     .certificates_instructor {
         display: block;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-style: normal;
         font-family: 'CenturyGothicItalic';
     }
+    .certificates_signatures-holder {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .certificates_education-director {
+        width: 30%;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
     .certificates_education-director-signature {
         border-bottom: 1px solid #000;
-        width: 300px;
         margin: 0 auto;
     }
     .certificates_education-director-signature img {
@@ -615,20 +625,20 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                 <span class="certificates_real-estate">${_("Real Estate Education")}</span>
                 <span class="certificates_this-certifies">${_("This certifies that")}</span>
                 <div class="certificates_long-studen-name">${accomplishment_copy_name or accomplishment_copy_username}</div>
-                <span class="certificates_fully-completed">${_("Has fully completed the 4 hours continuing education")} <br> ${_("course entitled")}</span>
+                <span class="certificates_fully-completed">${_("Has fully completed the 4 hours continuing education course entitled")}</span>
                 <span class="certificates_renewal-cycle">${accomplishment_copy_course_name}</span>
                 <div class="certificates_completed-online"><i>${_("Completed online")}</i><em>${user_certificate_create.strftime("%B %d, %Y")}</em></div>
                 <i class="certificates_instructor">${_("Instructor: Kristin Chandler")}</i>
-
-                % for signatory in certificate_data.get('signatories', []):
-                <div class="certificates_education-director">
-                    <div class="certificates_education-director-signature">
-                        <img src="${static.url(signatory['signature_image_path'])}" alt="">
+                <div class="certificates_signatures-holder">
+                    % for signatory in certificate_data.get('signatories', []):
+                    <div class="certificates_education-director">
+                        <div class="certificates_education-director-signature">
+                            <img src="${static.url(signatory['signature_image_path'])}" alt="">
+                        </div>
+                        <span class="certificates_education-director-name">${signatory['name']} <br> ${signatory['organization']}</span>
                     </div>
-                    <span class="certificates_education-director-name">${signatory['name']} <br> ${signatory['organization']}</span>
+                    % endfor
                 </div>
-                % endfor
-
                 <span class="certificates_official-record">${_("This official record verifies your attendance and completion of course presented by the Vermont REALTORS ®. VR offers qualifying and continuing education to real estate professionals in Vermont and New Hampshire. We also offer instructor development workshops and certification classes for professionals seeking teaching accreditation for real estate courses.")}</span>
                 <strong class="certificates_important-information">${_("Important information for Student/Licen see: You must retain this Certificate in your personal records for a minimum of four years from the date of issue.")}</strong>
             </div>
