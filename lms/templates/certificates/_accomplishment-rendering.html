@@ -474,15 +474,15 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
 
     @font-face {
         font-family: 'CenturyGothic';
-        src: url('../static/edx-theme/fonts/CenturyGothic.woff2') format('woff2'),
-        url('../static/edx-theme/fonts/CenturyGothic.woff') format('woff');
+        src: url('/static/edx-theme/fonts/CenturyGothic.woff2') format('woff2'),
+        url('/static/edx-theme/fonts/CenturyGothic.woff') format('woff');
         font-weight: bold;
         font-style: normal;
     }
     @font-face {
         font-family: 'CenturyGothicItalic';
-        src: url('../static/edx-theme/fonts/CenturyGothic-Italic.woff2') format('woff2'),
-        url('../static/edx-theme/fonts/CenturyGothic-Italic.woff') format('woff');
+        src: url('/static/edx-theme/fonts/CenturyGothic-Italic.woff2') format('woff2'),
+        url('/static/edx-theme/fonts/CenturyGothic-Italic.woff') format('woff');
         font-weight: bold;
         font-style: normal;
     }
@@ -498,6 +498,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
     }
     .certificates_logos img {
         display: block;
+        width: 100%;
     }
     .certificates_cooperation {
         font-family: 'CenturyGothicItalic';
@@ -537,12 +538,13 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
     }
     .certificates_renewal-cycle {
         display: block;
+        max-width: 700px;
         font-size: 36px;
         line-height: 40px;
         text-transform: uppercase;
         font-weight: bold;
         text-align: center;
-        margin-bottom: 40px;
+        margin: 0 auto 40px;
     }
     .certificates_completed-online {
         text-align: center;
@@ -605,9 +607,9 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
 
             <div class="certificates_wrapper vermont-mandatory">
                 <div class="certificates_logos">
-                    <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/vermont-sert-logo.jpg" alt="">
+                    <div><img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/vermont-sert-logo.jpg" alt=""></div>
                     <span class="certificates_cooperation">In cooperation with</span>
-                    <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/calypso-cert-logo.jpg" alt="">
+                    <div><img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/calypso-cert-logo.jpg" alt=""></div>
                 </div>
                 <span class="certificates_real-estate">${_("Real Estate Education")}</span>
                 <span class="certificates_this-certifies">${_("This certifies that")}</span>
