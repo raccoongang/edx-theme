@@ -1,7 +1,7 @@
 <%def name="online_help_token()"><% return "course" %></%def>
 <%namespace name='static' file='static_content.html'/>
 <%!
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext as _, get_language
 from django.core.urlresolvers import reverse
 %>
 <%page args="course" expression_filter="h"/>
@@ -28,10 +28,9 @@ from django.core.urlresolvers import reverse
           course_date_string = ''
       %>
       % if course.advertised_start is not None:
-          <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
+          <div class="course-date" aria-hidden="true">${_("Course Starts")}: ${course.advertised_start}</div>
       % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate">${_("Course starts: ")}${course_date_string_format}</div>
-          <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
+          <div class="course-date localized_datetime" aria-hidden="true" data-language="${get_language()}" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Course Starts")}: {date}"></div>
       % endif
     </div>
     <div class="sr">
@@ -41,7 +40,7 @@ from django.core.urlresolvers import reverse
         % if course.advertised_start is not None:
             <li>${_("Starts")}: <time itemprop="startDate">${course.advertised_start}</time></li>
         % else:
-            <li>${_("Starts")}: <time class="localized_datetime" itemprop="startDate" data-format="shortDate" data-datetime="${course_date_string}"></time></li>
+            <li>${_("Starts")}: <time class="localized_datetime" itemprop="startDate" data-language="${get_language()}" data-format="shortDate" data-datetime="${course_date_string}"></time></li>
         % endif
       </ul>
     </div>
