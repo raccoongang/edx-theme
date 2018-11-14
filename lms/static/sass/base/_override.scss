@@ -1881,9 +1881,12 @@ body {
 
 .content-wrapper .page-header.has-secondary .page-header-secondary {
     float: none;
+    display: flex;
     width: 100%;
+    flex-wrap: wrap;
     text-align: left;
     @media screen and (min-width: 761px) {
+        flex-wrap: nowrap;
         float: right;
         width: auto;
         text-align: right;
