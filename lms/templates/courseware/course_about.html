@@ -262,7 +262,9 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
             % endif
 
           <%
-              estimation_effort_string = settings.ESTIMATION_EFFORT_STRING
+              estimation_effort_string = (
+                  settings.ESTIMATION_EFFORT_STRING if hasattr(settings, 'ESTIMATION_EFFORT_STRING') else ''
+              )
               course_effort = get_course_about_section(request, course, "effort")
               course_about_section_effort = (estimation_effort_string or (course_effort and course_effort!=u'\n\n\n\n'))
           %>
