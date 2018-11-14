@@ -823,6 +823,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 50px;
+                    font-family: 'SegoeUI';
+                    text-transform: uppercase;
                     @media screen and (min-width: 760px) {
                         font-size: 52px;
                     }
@@ -897,7 +899,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        max-height: 50px;
         margin: 0 auto;
     }
 
@@ -3172,9 +3174,6 @@ body {
     .wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button:hover {
         background-color: $theme-link-hover;
     }
-    .wrapper-footer .footer-support {
-        color: $white;
-    }
     .btn-secondary:hover {
         color: $theme-link-hover;
     }
@@ -3465,11 +3464,12 @@ body .courses-container .courses-more {
         display: inline-block;
         background: $theme-btn-bg;
         color: $theme-btn-text-color !important;
-        height: 40px;
-        line-height: 40px;
-        padding: 0 10px;
-        width: 180px;
+        height: auto;
+        line-height: normal;
+        padding: 11px 10px;
+        width: 190px;
         font-weight: normal;
+        text-transform: uppercase;
         &:hover {
             background: $theme-btn-bg-hover;
         }
