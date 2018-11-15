@@ -14,10 +14,10 @@
     background: $header-bg;
     border: none;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
-    padding: 18px 10px;
+    padding: 22px 10px;
     position: relative;
     box-sizing: border-box;
-    min-height: 76px;
+    min-height: 96px;
     .wrapper-header {
         height: auto;
         padding: 0;
@@ -108,14 +108,25 @@
 
             // login and register btns on the header nav
             .btn {
-                background: $theme-btn-bg;
+                padding: 5px 20px;
+                line-height: 1.2;
+                text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+                background: transparent;
                 box-shadow: none;
-                color: $theme-btn-text-color !important;
+                color: #ffbf10 !important;
+                text-transform: uppercase;
+                border-radius: 20px;
+                border: 2px solid #ffbf10;
+                min-width: 119px;
+                text-align: center;
+                box-sizing: border-box;
+                font-family: phenomenaextrabold, sans-serif;
+                font-size: 18px;
                 text-transform: uppercase;
 
                 &:active,
                 &:focus {
-                    background: $theme-btn-bg;
+                    background: transparent;
                 }
                 &:focus:hover {
                     background: $theme-btn-bg-hover!important;
@@ -212,7 +223,10 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-bg;
     position: relative;
-    padding: 50px 10px;
+    padding: 55px 10px 0;
+    @media screen and (min-width:760px ) {
+        padding: 98px 10px 0;
+    }
 
     footer#footer-openedx {
         a {
@@ -224,11 +238,14 @@ body .container.activation h1.valid {
             border: none !important;
         }
         .colophon {
+            float: none;
+            margin-bottom: 39px;
             width: 100%;
             position: relative;
 
             .nav-colophon {
                 margin: 2px 0 28px 0;
+                display: none;
 
                 .lang_ar & {
                     direction: rtl;
@@ -897,7 +914,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 50px;
         margin: 0 auto;
     }
 
@@ -1783,6 +1800,8 @@ section.wiki .table.table-striped {
 }
 #main {
     max-width: 100%;
+    background: #f7f7f7;
+    overflow: hidden;
 }
 
 //responsive for dashboard page
@@ -2753,18 +2772,21 @@ footer .footer-support {
     font-size: 12px;
     line-height: 1.2px;
     color: $footer-support-text-and-logo;
-    margin: 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 15px 0 0;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
 
     @media screen and (min-width: 761px) {
         position: absolute;
         padding: 0;
-        bottom: 0;
+        bottom: 22px;
         height: 16px;
         justify-content: baseline;
+        align-items: flex-start;
+        margin: 0;
     }
 }
 
@@ -3267,12 +3289,6 @@ body .theme-header .list-inline {
 }
 
 body footer {
-    .footer-support {
-        align-items: center;
-        a:hover {
-            opacity: 0.8;
-        }
-    }
     .raccoon__logo {
         font-size: 12px;
         display: flex;
