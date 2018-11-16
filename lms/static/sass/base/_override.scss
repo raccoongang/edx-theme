@@ -3565,6 +3565,11 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     padding: 0 10px !important;
     height: 48px;
 }
+.login-register .form-field label[for="register-honor_code"] {
+    @media (max-width: 400px) {
+        width: 80%;
+    }
+}
 
 // styles for IE10+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
