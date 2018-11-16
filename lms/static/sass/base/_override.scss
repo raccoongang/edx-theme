@@ -30,6 +30,9 @@
             margin-top: 0;
             flex-grow: 0;
         }
+        .list-inline.nav-courseware {
+            margin-top: 0;
+        }
     }
     .nav-global {
         width: 100%;
@@ -51,7 +54,7 @@
 
             a {
                 color: $header-nav-link-color;
-                padding: 10px !important;
+                padding: 12px 10px !important;
 
                 &:active,
                 &:focus {
