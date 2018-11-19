@@ -1,4 +1,6 @@
 @import "const";
+@import "blocks/common";
+@import "blocks/fonts";
 @import "blocks/buttons";
 @import "blocks/form-elements";
 @import "blocks/header";
@@ -16,6 +18,7 @@
 @import "blocks/progress";
 @import "blocks/profile-account";
 @import "blocks/slider";
+@import "blocks/custom-blocks";
 
 html, body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -48,7 +51,6 @@ body.view-in-course .wiki-wrapper {
 .content-wrapper {
 	margin: 0 auto;
 	padding: 0;
-	background: #eeeeee;
 }
 
 .window-wrap,
@@ -56,8 +58,10 @@ body.view-in-course .wiki-wrapper {
 	background: none;
 	position: relative;
 	box-sizing: border-box;
+	overflow: hidden;
 	@media screen and (min-width: 1200px) {
 		min-height: 100vh;
-		padding-bottom: 250px;
+		//padding-bottom: 250px;
 	}
 }
+

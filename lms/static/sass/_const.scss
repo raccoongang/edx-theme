@@ -1,23 +1,23 @@
 //body background
-$body-bg: #eee;
-$base-color: #009be0;
+$body-bg: #fff;
+$base-color: #a0ce4e;
 //settings for header
 $header-bg: #fff;
-$header-nav-link-color: #000;
+$header-nav-link-color: #333;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
-$dropdown-menu-link-color: #009be0;
+$dropdown-menu-link-color: $base-color;
 $dropdown-menu-link-color-hover: lighten($dropdown-menu-link-color, 20%);
 //settings for hamburger
-$hamburger-color: #009be0;
-$hamburger-width: 30px;
-$hamburger-height: 20px;
-$hamburger-height-line: 5px;
+$hamburger-color: #dadada;
+$hamburger-width: 21px;
+$hamburger-height: 21px;
+$hamburger-height-line: 4px;
 //settings on promo box
 $promo-box-text-color: #fff;
 $promo-box-text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4);
-$find-btn-bg: transparent;
-$find-btn-bg-hover: rgba(0, 0, 0, .2);
-$find-btn-border: #fff;
+$find-btn-bg: #D0D8DF;
+$find-btn-bg-hover: #898BC7;
+$find-btn-border: transparent;
 $find-btn-color: #fff;
 $find-btn-color-hover: $find-btn-color;
 //search input on promo box
@@ -29,15 +29,21 @@ $search-button-border: #fff;
 $search-button-color: #fff;
 $search-height: 55px;
 //settings for footer
-$footer-bg: #009289;
-$footer-nav-link-color: #fff;
-$footer-nav-link-color-hover: rgba(255,255,255, .8);
+$footer-bg: #363839;
+$footer-text-color: #8c8989;
+$footer-text-title-color: #ddd;
+$footer-nav-link-color: #bfbfbf;
+$footer-nav-link-color-hover: $base-color;
 $footer-support-text-and-logo: #fff;
 $footer-social-link-bg: #fff;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
+$footer-copyright-bg: #282a2b;
+$footer-copyright-border: #4b4c4d;
+$footer-copyright-color: #8c8989;
 //btn
-$theme-btn-bg: #009be0;
-$theme-btn-text-color: #ffe;
+$theme-btn-bg: $base-color;
+$theme-btn-text-color: #333;
+$theme-btn-text-color-hover: $base-color;
 $theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
 $theme-btn-shadow: darken($theme-btn-bg, 20%);
 //btn-red
@@ -46,31 +52,91 @@ $theme-btn-red-text-color: #ffe;
 $theme-btn-red-bg-hover: lighten($theme-btn-red-bg, 10%);
 //btn-white
 $theme-btn-white-bg: #fff;
-$theme-btn-white-border: #009be0;
-$theme-btn-white-text-color: #009be0;
+$theme-btn-white-border: $base-color;
+$theme-btn-white-text-color: $base-color;
 $theme-btn-white-text-color-hover: #fff;
-$theme-btn-white-bg-hover: #009be0;
+$theme-btn-white-bg-hover: $base-color;
 // link color
-$theme-link: #009be0;
+$theme-link: $base-color;
 $theme-link-hover: lighten($theme-link, 20%);
 //settings for bg content pages
 $theme-content-bg: #eee;
 //settings for input icons
-$theme-input-icon: #009be0;
+$theme-input-icon: $base-color;
 //user link color
-$theme-user-link: #009be0;
+$theme-user-link: $base-color;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
-$courses-border-color: #009be0;
+$courses-border-color: $base-color;
 $course-hover-bg: rgba(0, 0, 0, .5);
 $course-link-color: $theme-link;
 $course-bg: #fff;
 //certificate
-$ribbon-corners-color: #3d7fbe;
-$ribbon-triangle-color: #24659a;
-$certificate-borders-color: #5a8cc6;
+$ribbon-corners-color: lighten($base-color,5%);
+$ribbon-triangle-color: darken($base-color,5%);
+$certificate-borders-color: lighten($base-color,8%);
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;
 $delete-button: red;
 $white: #fff;
+
+
+//custom blocks
+$title-block-color: #333;
+$title-border-line-color: #cdcdcd;
+$main-text-color: #747474;
+
+//media types
+$screen-m: 990px;
+$screen-s: 760px;
+
+//flip box
+$flip-box-front-bg: #f6f6f6;
+$flip-box-front-color: $main-text-color;
+$flip-box-back-bg: $base-color;
+$flip-box-circle-bg: #333;
+$flip-box-back-color: #fff;
+$flip-box-circle-color: #fff;
+$flip-box-front-title-color: #333;
+
+//why us block
+$slider-default-bg: $main-text-color;
+$slider-text-bg: rgba(0,0,0, 0.4);
+$slider-text-color: #fff;
+$why-us-list-border-color: #e0dede;
+
+//curriculum structure
+$curriculum-structure-item-bg1:#74badb;
+$curriculum-structure-item-color1:#ccffcc;
+$curriculum-structure-item-icon-bg1:#4f95bf;
+$curriculum-structure-item-icon-color1:#fff;
+
+$curriculum-structure-item-bg2:#a2cc55;
+$curriculum-structure-item-color2:#747474;
+$curriculum-structure-item-icon-bg2:#fff;
+$curriculum-structure-item-icon-color2:#a2cc55;
+
+$curriculum-structure-item-bg3:#d5962c;
+$curriculum-structure-item-color3:#ffe5b7;
+$curriculum-structure-item-icon-bg3:#c98300;
+$curriculum-structure-item-icon-color3:#fff;
+
+//testimonial block
+$testimonial-bg:#f6faff;
+$testimonial-blockquote-bg:#f6f3f3;
+
+//callback block
+$callback-block-bg:#333c4e;
+$callback-block-title-color:#fff;
+$callback-block-title-mark-color:#f09a3e;
+$callback-block-input-bg:#fff;
+$callback-block-input-color:#aaa9a9;
+$callback-block-submit-bg:$base-color;
+$callback-block-submit-color:#fff;
+$callback-block-submit-bg-hover:darken($callback-block-submit-bg, 10%);
+
+//to top btn
+$toTop-bg: #333;
+$toTop-color: #fff;
+$toTop-bg-hover: $base-color;

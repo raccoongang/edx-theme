@@ -17,57 +17,27 @@
       dir=${bidi}
     % endif
   >
-    <div class="colophon">
-
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
-            </li>
-            <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
-            </li>
-        </ol>
-      </nav>
-      <div class="footer-flex">
-        <p class="footer-support">
-          <span>${_("Built on")}</span>
-          <a target="_blank" href="${footer['openedx_link']['url']}">
-            <svg class="svg-edx"  viewBox="0 0 100 70">
-              <use xlink:href="#logo-edx" />
-            </svg>
-          </a>
-          <span>${_("by")}</span>
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            <em>Raccoon Gang</em>
-            <svg class="svg-raccoon"  viewBox="0 0 100 100">
-              <use xlink:href="#logo-raccoon" />
-            </svg>
-          </a>
-        </p>
-        <ul class="icon-list">
-          <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-            <svg class="icon-list_svg" viewBox="0 0 35 35">
-              <use xlink:href="#ico-facebook" />
-            </svg>
-            </a>
-          </li>
-          <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-            <svg class="icon-list_svg" viewBox="0 0 35 35">
-              <use xlink:href="#ico-twitter" />
-            </svg></a>
-          </li>
-        </ul>
-        <div class="footer-logo-holder">
-          <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png"></a>
-        </div>
-      </div>
+    <div class="footer-column">
+      <img class="footer-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png" alt="">
+      <p>海马教育科技（上海）有限公司旗下的海马编程，致力于为国内青少儿提供一套专业、系统性且具全球视野的前沿科学技术教育。团队来自于海外计算机名校毕业大神们，已自主开发包括Python基础编程语言课程、创客、机器人、科研等深度延伸领域项目，并与海外各类优质STEM教育机构和名校合作。</p>
+    </div>
+    <div class="footer-column">
+      <div class="footer-title">关注我们</div>
+      <div class="footer-contacts-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, suscipit?</div>
+      <div class="footer-contacts-line">地址: 上海市普陀区千阳南路99弄</div>
+      <div class="footer-contacts-line">Phone: 13162513176</div>
+      <div class="footer-contacts-line">Email: <a href="mailto:mkt@codingcity.cn">mkt@codingcity.cn</a></div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-title">微信公众号</div>
+      <img class="footer-qrcode" src="/static/${settings.DEFAULT_SITE_THEME}/images/qrcode.jpg" alt="">
     </div>
   </footer>
 </div>
+<div class="footer-copyright">
+  <div class="holder">© Copyright 2017 - 2018 | All Rights Reserved | </div>
+</div>
+<div id="toTop"></div>
 % if include_dependencies:
   <%static:js group='base_vendor'/>
   <%static:css group='style-vendor'/>

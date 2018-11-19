@@ -8,136 +8,350 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
+<%block name="bodyclass">view-homepage</%block>
+
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
-      <header>
-        <div class="parallax-img"></div>
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-                ${homepage_overlay_html | n, decode.utf8}
-              % else:
-                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-                <span>${_("STUDENT SUCCESS")}</span>
-                <a href="/courses" class="link">${_("FIND COURSES")}</a>
-              % endif
+        <header>
+            <div class="outer-wrapper">
+                <div class="title">
+                    <div class="heading-group">
+                        % if homepage_overlay_html:
+                        ${homepage_overlay_html | n, decode.utf8}
+                        % else:
+                        <h1>${_("CodingCity is Here")}</h1>
+                        <span>${_("Make this world a better place through coding")}</span>
+                        <a href="/courses" class="link"><i class="fa fa-paper-plane" aria-hidden="true"></i> ${_("Enter the learning center")}</a>
+                        % endif
+                    </div>
+                    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+                    <div class="course-search">
+                        <form method="get" action="/courses">
+                            <label><span class="sr">${_("Search for a course")}</span>
+                                <input class="search-input" name="search_query" type="text"
+                                       placeholder="${_('Search for a course')}"></input>
+                            </label>
+                            <button class="search-button" type="submit">
+                                <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+                            </button>
+                        </form>
+                    </div>
+                    % endif
+
+                </div>
+
+                <%include file="index_promo_video.html" />
             </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_('Search for a course')}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
+        </header>
 
-          </div>
-
-          <%include file="index_promo_video.html" />
+        <div id="fallback-slide">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/background2.jpg" alt="">
         </div>
-      </header>
-      <script src="${static.url('js/parallax.js')}"></script>
 
-      <!--
-      Slider modes:
-        class = 'slider'                    - common background image
-        class = 'slider slider-separate'    - separate backgrounds for each slide
-      -->
-      <!--
-      <div class="slider slider-separate">
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-              ${homepage_overlay_html | n, decode.utf8}
-              % else:
-              <h1>${_("TIPS FOR BETTER TIME MANAGEMENT 1")}</h1>
-              <span>${_("STUDENT SUCCESS")}</span>
-              <a href="/courses" class="link">${_("FIND COURSES")}</a>
-              % endif
-            </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-            <div class="course-search">
-              <form method="get" action="/courses">
-                <label><span class="sr">${_("Search for a course")}</span>
-                  <input class="search-input" name="search_query" type="text" placeholder="${_('Search for a course')}"></input>
-                </label>
-                <button class="search-button" type="submit">
-                  <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                </button>
-              </form>
-            </div>
-            % endif
-
-          </div>
-
-          <%include file="index_promo_video.html" />
+        <div class="main-content">
+            <section class="content-block why-learn">
+                <div class="holder">
+                    <div class="title-block">Why learn programming</div>
+                    <div class="flip-boxes">
+                        <div class="flip-box-wrapper">
+                            <div class="flip-box-front">
+                                <div class="flip-box-grafix flip-box-circle">
+                                    <i class="fa-compress fas"></i>
+                                </div>
+                                <h2 class="flip-box-heading">计算思维</h2>
+                                <p>提高孩子的逻辑推理能力</p>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-back-inner">
+                                    <p>Avada includes the Layer Slider, Revolution Slider, Fusion Slider and Elastic
+                                        Slider.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-wrapper">
+                            <div class="flip-box-front">
+                                <div class="flip-box-grafix flip-box-circle">
+                                    <i class="fa-rocket fas"></i>
+                                </div>
+                                <h2 class="flip-box-heading">计算思维</h2>
+                                <p>提高孩子的逻辑推理能力</p>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-back-inner">
+                                    <p>Avada includes the Layer Slider, Revolution Slider, Fusion Slider and Elastic
+                                        Slider.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-wrapper">
+                            <div class="flip-box-front">
+                                <div class="flip-box-grafix flip-box-circle">
+                                    <i class="fa-globe fas"></i>
+                                </div>
+                                <h2 class="flip-box-heading">计算思维</h2>
+                                <p>提高孩子的逻辑推理能力</p>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-back-inner">
+                                    <p>Avada includes the Layer Slider, Revolution Slider, Fusion Slider and Elastic
+                                        Slider.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-wrapper">
+                            <div class="flip-box-front">
+                                <div class="flip-box-grafix flip-box-circle">
+                                    <i class="fa-trophy fas"></i>
+                                </div>
+                                <h2 class="flip-box-heading">计算思维</h2>
+                                <p>提高孩子的逻辑推理能力</p>
+                            </div>
+                            <div class="flip-box-back">
+                                <div class="flip-box-back-inner">
+                                    <ol>
+                                        <li>不少学校在录取学生时，会将编程作为考量孩子能力的重要指标</li>
+                                        <li>浙江省2017年新高考方案已将python数据分析纳入高考科目</li>
+                                        <li>若孩子在编程方面有特长，申请留学出国占很大优势</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-block why-us">
+                <div class="holder">
+                    <div class="title-block">Why Us?</div>
+                    <div class="why-us-wrap">
+                        <div class="why-us-slider">
+                            <div class="slide1">
+                                <div class="title">Create Beauty 1</div>
+                                <p class="caption">Like Martin Grohs Has Done</p>
+                            </div>
+                            <div class="slide2">
+                                <div class="title">Create Beauty 2</div>
+                                <p class="caption">Like Martin Grohs Has Done</p>
+                            </div>
+                            <div class="slide3">
+                                <div class="title">Create Beauty 3</div>
+                                <p class="caption">Like Martin Grohs Has Done</p>
+                            </div>
+                            <div class="slide4">
+                                <div class="title">Create Beauty 4</div>
+                                <p class="caption">Like Martin Grohs Has Done</p>
+                            </div>
+                            <div class="slide5">
+                                <div class="title">Create Beauty 5</div>
+                                <p class="caption">Like Martin Grohs Has Done</p>
+                            </div>
+                        </div>
+                        <ul class="why-us-list">
+                            <li class="why-us-list-item why-us-list-item-icon1" data-slide="1"><p>团队成员比例： 博士，硕士。。。</p>
+                            </li>
+                            <li class="why-us-list-item why-us-list-item-icon2" data-slide="2"><p>强大的平台互动学习</p></li>
+                            <li class="why-us-list-item why-us-list-item-icon3" data-slide="3"><p>主流python</p></li>
+                            <li class="why-us-list-item why-us-list-item-icon4" data-slide="4"><p>5000+用户</p></li>
+                            <li class="why-us-list-item why-us-list-item-icon5" data-slide="5"><p>在线学习与助教答疑结合</p></li>
+                        </ul>
+                    </div>
+                    <div class="counter-block">
+                        <div class="counter-box-wrap" data-animationoffset="100%">
+                            <span class="content-box-percentage display-counter" data-value="70000" data-direction="up"
+                                  data-decimals="0">0</span>
+                            <div class="counter-box-content">Wonderful Users &amp; Counting</div>
+                        </div>
+                        <div class="counter-box-wrap" data-animationoffset="100%">
+                            <span class="content-box-percentage display-counter" data-value="25000" data-direction="up"
+                                  data-decimals="0">0</span>
+                            <div class="counter-box-content">Support Threads Resolved</div>
+                        </div>
+                        <div class="counter-box-wrap" data-animationoffset="100%">
+                            <span class="content-box-percentage display-counter" data-value="8000" data-direction="up"
+                                  data-decimals="0">0</span>
+                            <div class="counter-box-content">Hours of Development</div>
+                        </div>
+                        <div class="counter-box-wrap" data-animationoffset="100%">
+                            <span class="content-box-percentage display-counter" data-value="11000" data-direction="up"
+                                  data-decimals="0">0</span>
+                            <div class="counter-box-content">Cups of Coffee</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-block curriculum-structure">
+                <div class="holder">
+                    <div class="title-block">Curriculum structure</div>
+                    <div class="curriculum-structure-wrap">
+                        <div class="curriculum-structure-item">
+                            <a href="#" target="_self" class="curriculum-structure-item-head">
+                                <span class="curriculum-structure-item-icon"><i class="fa-pencil-alt fas"></i></span>
+                                <div class="curriculum-structure-item-title">初级</div>
+                            </a>
+                            <div class="curriculum-structure-item-descr">
+                                Python语法知识的学习，为后续学习打下坚实的基础。同时学习pygame制作游戏，体验编程的乐趣
+                            </div>
+                            <a class="curriculum-structure-item-more" href="#" target="_self">Learn More</a>
+                        </div>
+                        <div class="curriculum-structure-item">
+                            <a href="#" target="_self" class="curriculum-structure-item-head">
+                                <span class="curriculum-structure-item-icon"><i class="fa-square far"></i></span>
+                                <div class="curriculum-structure-item-title">初级</div>
+                            </a>
+                            <div class="curriculum-structure-item-descr">
+                                Python语法知识的学习，为后续学习打下坚实的基础。同时学习pygame制作游戏，体验编程的乐趣
+                            </div>
+                            <a class="curriculum-structure-item-more" href="#" target="_self">Learn More</a>
+                        </div>
+                        <div class="curriculum-structure-item">
+                            <a href="#" target="_self" class="curriculum-structure-item-head">
+                                <span class="curriculum-structure-item-icon"><i class="fa-sync fas"></i></span>
+                                <div class="curriculum-structure-item-title">初级</div>
+                            </a>
+                            <div class="curriculum-structure-item-descr">
+                                Python语法知识的学习，为后续学习打下坚实的基础。同时学习pygame制作游戏，体验编程的乐趣
+                            </div>
+                            <a class="curriculum-structure-item-more" href="#" target="_self">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-block teacher-team">
+                <div class="holder">
+                    <div class="title-block">Teacher team</div>
+                    <div class="teacher-team-wrap">
+                        <div class="teacher-team-item">
+                            <figure><img src="/static/${settings.DEFAULT_SITE_THEME}/images/teacher-photo.jpg" alt="">
+                            </figure>
+                            <div class="teacher-team-content">
+                                <div class="teacher-team-name">Josh</div>
+                                <div class="teacher-team-title">首席技术顾问</div>
+                                <div class="teacher-team-descr">
+                                    Redantium, totam rem aperiam, eaque ipsa qu ab illo un inventore veritatis et quasi
+                                    architectos beatae vitae dicta sunt est sadips ipsums dolores uns explicabo.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teacher-team-item">
+                            <figure><img src="/static/${settings.DEFAULT_SITE_THEME}/images/teacher-photo.jpg" alt="">
+                            </figure>
+                            <div class="teacher-team-content">
+                                <div class="teacher-team-name">Josh</div>
+                                <div class="teacher-team-title">首席技术顾问</div>
+                                <div class="teacher-team-descr">
+                                    Redantium, totam rem aperiam, eaque ipsa qu ab illo un inventore veritatis et quasi
+                                    architectos beatae vitae dicta sunt est sadips ipsums dolores uns explicabo.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teacher-team-item">
+                            <figure><img src="/static/${settings.DEFAULT_SITE_THEME}/images/teacher-photo.jpg" alt="">
+                            </figure>
+                            <div class="teacher-team-content">
+                                <div class="teacher-team-name">Josh</div>
+                                <div class="teacher-team-title">首席技术顾问</div>
+                                <div class="teacher-team-descr">
+                                    Redantium, totam rem aperiam, eaque ipsa qu ab illo un inventore veritatis et quasi
+                                    architectos beatae vitae dicta sunt est sadips ipsums dolores uns explicabo.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="testimonial-block">
+                <div class="holder">
+                    <div class="testimonial-block-title">Over 70,000 Users, Let’s See What Some Have To Say?</div>
+                    <div class="testimonial-block-descr">We love our users and are fully dedicated to keeping their
+                        trust by offering amazing updates and
+                        <mark>outstanding</mark>
+                        after sale support!
+                    </div>
+                    <div class="testimonial-block-slider">
+                        <div>
+                            <figure class="testimonial-thumbnail"><img
+                                    src="/static/${settings.DEFAULT_SITE_THEME}/images/testimonial-photo1.jpg" alt="">
+                            </figure>
+                            <blockquote>
+                                <p>1) I bought this theme and i would like to recommend it to every one interested in
+                                    building a website without knowledge of php or html. It is very convenient and the
+                                    customer service is very reactive. I will say it in French “Bravo” for this
+                                    work!</p>
+                            </blockquote>
+                            <div class="testimonial-author"><strong>刘圆圆</strong>, 家长，安徽淮南</div>
+                        </div>
+                        <div>
+                            <figure class="testimonial-thumbnail"><img
+                                    src="/static/${settings.DEFAULT_SITE_THEME}/images/testimonial-photo2.png" alt="">
+                            </figure>
+                            <blockquote>
+                                <p>2) I bought this theme and i would like to recommend it to every one interested in
+                                    building a website without knowledge of php or html. It is very convenient and the
+                                    customer service is very reactive. I will say it in French “Bravo” for this
+                                    work!</p>
+                            </blockquote>
+                            <div class="testimonial-author"><strong>刘圆圆</strong>, 家长，安徽淮南</div>
+                        </div>
+                        <div>
+                            <figure class="testimonial-thumbnail"><img
+                                    src="/static/${settings.DEFAULT_SITE_THEME}/images/teacher-photo.jpg" alt="">
+                            </figure>
+                            <blockquote>
+                                <p>3) I bought this theme and i would like to recommend it to every one interested in
+                                    building a website without knowledge of php or html. It is very convenient and the
+                                    customer service is very reactive. I will say it in French “Bravo” for this
+                                    work!</p>
+                            </blockquote>
+                            <div class="testimonial-author"><strong>刘圆圆</strong>, 家长，安徽淮南</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="callback-block">
+                <div class="holder">
+                    <div class="callback-block-title">Join Over <mark>500,000 Students</mark> Enjoying Avada Education Now</div>
+                    <div class="callback-block-descr">Become Part of Avada University to Further Your Career.</div>
+                    <form action="/" class="callback-block-form">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="E-mail">
+                        <input type="text" placeholder="Phone">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
         </div>
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-              ${homepage_overlay_html | n, decode.utf8}
-              % else:
-              <h1>${_("TIPS FOR BETTER TIME MANAGEMENT 2")}</h1>
-              <span>${_("STUDENT SUCCESS")}</span>
-              <a href="/courses" class="link">${_("FIND COURSES")}</a>
-              % endif
-            </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-            <div class="course-search">
-              <form method="get" action="/courses">
-                <label><span class="sr">${_("Search for a course")}</span>
-                  <input class="search-input" name="search_query" type="text" placeholder="${_('Search for a course')}"></input>
-                </label>
-                <button class="search-button" type="submit">
-                  <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_('Search')}</span>
-                </button>
-              </form>
-            </div>
-            % endif
-
-          </div>
-
-          <%include file="index_promo_video.html" />
-        </div>
-      </div>
-      <script src="${static.url('js/slick.min.js')}"></script>
-      <script src="${static.url('js/slider.js')}"></script>
-      -->
-
-      <%include file="${courses_list}" />
 
     </section>
 </main>
 
 % if show_homepage_promo_video:
-  <section id="video-modal" class="modal home-page-video-modal video-modal">
+<section id="video-modal" class="modal home-page-video-modal video-modal">
     <div class="inner-wrapper">
-      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe title="YouTube Video" width="640" height="360"
+                src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0"
+                allowfullscreen></iframe>
     </div>
-  </section>
+</section>
 % endif
 
 <%block name="js_extra">
-   <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
-   </script>
+<script src="${static.url('js/slick.min.js')}"></script>
+<script src="${static.url('js/jquery.waypoints.js')}"></script>
+<script src="${static.url('js/common.js')}"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        if (getParameterByName('next')) {
+            $('#login').trigger("click");
+        }
+    })
+</script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
-  ## NOTE: This won't work in production, because anonymous views are cached, so it will
-  ## show either with or without this extra js for 3 minutes at a time.
+## NOTE: This won't work in production, because anonymous views are cached, so it will
+## show either with or without this extra js for 3 minutes at a time.
 <script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
+    $(window).load(function () {
+        $('#signup_action').trigger("click");
+    });
 </script>
 % endif

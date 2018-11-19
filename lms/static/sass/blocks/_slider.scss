@@ -101,7 +101,7 @@
 
 // Default Variables
 
-$slick-dot-background: #fff !default;
+$slick-dot-background: #000 !default;
 $slick-dot-background-border-color: #000 !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
@@ -122,14 +122,14 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 63px;
+    width: 63px;
     z-index: 10;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
-    background: url('#{$img-path}/slider-arrow.png') no-repeat center center !important;
-    background-size: contain !important;
+    background: rgba(0,0,0,.5) url('#{$img-path}/slider-arrow.png') no-repeat center center !important;
+    background-size: 12px auto !important;
     color: transparent;
     top: 50%;
     transform: translate(0, -50%);
@@ -139,6 +139,7 @@ $slick-opacity-not-active: 0.25 !default;
     outline: none;
     opacity: 0;
     transition: opacity .2s linear;
+    border-radius: 0;
 
     &:hover, &:focus {
         outline: none;
@@ -156,20 +157,20 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: 25px;
+    left: 0;
     transform: scale(-1) translateY(50%);
 
     [dir="rtl"] & {
         left: auto;
-        right: 25px;
+        right: 0;
     }
 }
 
 .slick-next {
-    right: 25px;
+    right: 0;
 
     [dir="rtl"] & {
-        left: 25px;
+        left: 0;
         right: auto;
     }
 }
@@ -194,7 +195,7 @@ $slick-opacity-not-active: 0.25 !default;
         position: relative;
         display: inline-block;
         height: 20px;
-        width: 20px;
+        width: 17px;
         margin: 0 5px;
         padding: 0;
         cursor: pointer;
@@ -245,7 +246,7 @@ section.home > .slider {
   &:hover {
     .slick-prev,
     .slick-next {
-      opacity: .5;
+      opacity: .8;
     }
   }
 
