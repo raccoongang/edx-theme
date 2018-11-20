@@ -2499,8 +2499,22 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
         width: auto;
     }
 }
-.course-info .course-sidebar .important-dates li .important-dates-item-title {
-    padding-right: 10px;
+.course-info .course-sidebar .important-dates li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+    }
+
+    &:after {
+        display: none;
+    }
+
+    .important-dates-item-title {
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
 }
 
 .xmodule_display.xmodule_CapaModule div.problem input[type="email"],
