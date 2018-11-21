@@ -107,6 +107,7 @@ h1 {
                     text-align: center;
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
+                    text-transform: uppercase;
                     @media (max-width: 767px) {
                         font-size: 32px;
                     }
@@ -3281,6 +3282,7 @@ body .container .wiki-wrapper section.wiki .btn {
 
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
+    text-transform: uppercase;
 }
 
 // styles for IE10+
