@@ -3085,5 +3085,20 @@ body .theme-header {
 }
 
 .ui-dialog.ui-widget {
-    z-index: 1000;
+    z-index: 1010;
+}
+
+body.dialog-modal-open:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+	background: rgba(255, 255, 255, 0.7);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1005;
+}
+
+.dialog-modal-open .ui-dialog-titlebar-close {
+    display: none;
 }
