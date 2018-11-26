@@ -423,6 +423,14 @@ $color-1: #ffbf10;
     padding: 0 76px;
     box-sizing: border-box;
     margin: 0 auto 40px;
+
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-slide {
+        height: auto;
+    }
 }
 
 .partners .slick-prev,
@@ -494,6 +502,7 @@ $color-1: #ffbf10;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
+    height: 100%;
 }
 
 .company-box__slide-wrapper {
@@ -519,7 +528,6 @@ $color-1: #ffbf10;
 
 .company-box__company-info {
     font: 300 16px/20px Roboto, sans-serif;
-    height: 160px;
 }
 
 .schools-box {
@@ -567,6 +575,14 @@ $color-1: #ffbf10;
     padding: 0 76px;
     box-sizing: border-box;
     margin: 0 auto 40px;
+
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-slide {
+        height: auto;
+    }
 }
 
 .schools-box__slide {
@@ -580,6 +596,8 @@ $color-1: #ffbf10;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     min-height: 288px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .schools-box__slide-wrapper {
