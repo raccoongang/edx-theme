@@ -881,6 +881,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 overflow: hidden;
                 position: relative;
                 padding: 15px 0;
+                form {
+                    overflow: hidden;
+                    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+                }
                 .search-input {
                     background: $search-input-background;
                     border: 2px solid $search-input-border;
