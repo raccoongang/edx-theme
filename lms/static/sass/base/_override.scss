@@ -845,8 +845,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 25px;
+                    text-transform: uppercase;
                     @media screen and (min-width: 760px) {
                         font-size: 52px;
+                    }
+
+                    .select {
+                        color: #f1672e;
                     }
                 }
                 span {
