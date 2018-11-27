@@ -1,0 +1,18 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About")}</h1>
+        <p>${_("Netcampus is a 100% Black and Women-owned interest and a Level 1 BBBEE contributor with a collective track record of more than 25 years in the Learning and Development Industry. We are a fully accredited MICT SETA learning provider with a core focus on cross industry, cross modular, technical and soft skills learning solutions.")}</p>
+        <p>${_("Our services include Classroom-based ILT, Blended Learning Solutions, e-Learning Courseware Development, Standard Catalogue courses, Specialised courses and a fully-fledged Learning Management System. Our Blended Learning approach enables organisations to up-skill their staff on the latest technologies easily, effectively and efficiently using multiple training methods and our training solutions are focussed on helping employees gain the knowledge that is necessary in becoming effective contributing members of your workforce.")}</p>
+        <p>${_("We have an onsite accredited exam centre for PearsonVUE and Prometric and we offer exams for various product types, including Microsoft, Cisco, Oracle, IBM, Huawei, CompTIA, EC-Council, CIMA, ITIL, Prince 2 and many more.")}</p>
+        <p>${_("Netcampus is a long-term SAP Education Partner delivering specialized service offerings that include customised SAP training for customer specific implementations, re-implementations, upgrades and support. We also offer SAP certification training through the SAP Academy in Woodmead, Gauteng to assist implementation consultants gain the necessary training to knowledge and skills required to become certified SAP consultants.")}</p>
+        <p>${_("We are an Oracle Platinum Partner which enables us to provide our customers with any training certification programs offered by the Oracle University. These programs can be attended at our premises or through the Public Schedule offered by Oracle.")}</p>
+        <p>${_("We develop and deliver customised learning material, Instructor-led and e-Learning, that is aligned to Adult Learning Principles. We follow the ADDIE methodology to develop learning content. Our development principles adhere to SAQA quality standards, as maintained through our QMS and we can develop learning material that is aligned to Unit Standards, if there is a specific requirement.")}</p>
+        <p>${_("Netcampus also developed a robust home-grown Learner Management System. The Netcampus LMS is a highly innovative and customisable software platform specifically suited for the South African market.")}</p>
+    </section>
+</main>
