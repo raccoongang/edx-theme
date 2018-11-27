@@ -63,7 +63,8 @@ $(window).load(function () {
     });
     $('.partners__slick').slick({
         arrows: true,
-        infinite: true,
-        variableWidth: true
+        infinite: false,
+        variableWidth: true,
+        centerMode: true
     });
 });

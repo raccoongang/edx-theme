@@ -715,8 +715,7 @@ $color-1: #ffbf10;
 }
 
 .partners__slick {
-    max-width: 100%;
-    width: 1200px;
+    max-width: 1200px;
     padding: 0 100px;
     box-sizing: border-box;
     margin: 0 auto 40px;
@@ -725,7 +724,18 @@ $color-1: #ffbf10;
 .partners .partners__slick-img {
     height: 30px;
     display: block;
+    filter: grayscale(100%);
+}
+
+.partners .partners__slick-link {
+    display: block;
     margin: 0 18px;
+
+    &:hover {
+        .partners__slick-img {
+            filter: grayscale(0);
+        }
+    }
 }
 
 .footer__logo-holder {
