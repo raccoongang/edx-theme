@@ -79,3 +79,14 @@ div.gradebook-wrapper section.gradebook-content {
   }
 }
 
+section.wiki .modal {
+  max-width: 960px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 0 !important;
+  
+  @media screen and (max-width: 567px) {
+      left: 50% !important;
+  }
+}
