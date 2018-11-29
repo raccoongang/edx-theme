@@ -156,6 +156,10 @@
             transform: rotateY(-180deg);
             z-index: -1;
             box-sizing: border-box;
+
+            .flip-box-back-inner {
+                max-width: 100%;
+            }
         }
     }
 }
@@ -466,6 +470,7 @@
         font-size: 13px;
         line-height: 22px;
         font-family: "PTSans", Arial, Helvetica, sans-serif;
+        max-width: 100%;
     }
 
     .curriculum-structure-item-more {
@@ -672,7 +677,7 @@
         }
 
         input[type="text"] {
-            width: 270px;
+            width: 23%;
             font-size: 14px;
             line-height: normal;
             font-style: normal;
