@@ -967,7 +967,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .login-register {
     .form-type {
-        margin-bottom: 40px;
+        padding-bottom: 0;
     }
     .login-provider {
         .icon {
@@ -1713,7 +1713,6 @@ section.wiki .wiki-wrapper .nav-tabs li {
     width: auto;
 }
 .instructor-dashboard-wrapper-2 section.idash-section#data_download input {
-    word-break: break-all;
     white-space: normal;
 }
 .xmodule_display.xmodule_HtmlModule img {
@@ -3678,4 +3677,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     display: flex;
     justify-content: center;
     width: auto;
+}
+
+.static-page h2 {
+    font-family: "Open Sans", Verdana, Geneva, sans-serif;
 }
