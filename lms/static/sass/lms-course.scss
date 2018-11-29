@@ -79,6 +79,18 @@ div.gradebook-wrapper section.gradebook-content {
   }
 }
 
+section.wiki .modal {
+  max-width: 960px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 0 !important;
+  
+  @media screen and (max-width: 567px) {
+      left: 50% !important;
+  }
+}
+
 .course-wrapper .course-content .vert-mod {
   max-width: 100%
 }
@@ -86,4 +98,3 @@ div.gradebook-wrapper section.gradebook-content {
 .course-wrapper .course-content .vert-mod .vert>.xblock-student_view {
   max-width: 850px;
 }
-
