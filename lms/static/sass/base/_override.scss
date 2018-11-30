@@ -793,6 +793,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
         .parallax-img__left {
             left: 0;
+
+            @media screen and (max-width: 720px) {
+                display: none;
+            }
         }
 
         .parallax-img__right {
