@@ -943,7 +943,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .login-register {
     .form-type {
-        margin-bottom: 40px;
+        padding-bottom: 0;
     }
     .login-provider {
         .icon {
@@ -1689,7 +1689,6 @@ section.wiki .wiki-wrapper .nav-tabs li {
     width: auto;
 }
 .instructor-dashboard-wrapper-2 section.idash-section#data_download input {
-    word-break: break-all;
     white-space: normal;
 }
 .xmodule_display.xmodule_HtmlModule img {
@@ -3233,7 +3232,7 @@ body {
     }
     body .header-global.header-global__course,
     body .header-global {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
     }
     .nav-global li {
         width: 100%;
@@ -3328,9 +3327,14 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
     text-overflow: ellipsis;
     word-break: break-all;
 }
-.my-courses .empty-dashboard-message a {
-    color: $white;
-}
+.my-courses .empty-dashboard-message {
+    a {
+        color: $white;
+    }
+    p {
+        line-height: 1.3;
+    }
+} 
 body.view-teams .teams-wrapper .action-cancel:hover {
     background: none;
 }
