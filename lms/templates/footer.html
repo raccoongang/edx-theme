@@ -17,53 +17,22 @@
       dir=${bidi}
     % endif
   >
-    <div class="colophon">
-
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
-            </li>
-            <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
-            </li>
+    <div class="footer-flex">
+      <div class="footer-menu">
+        <ol class="footer-menu__list">
+          <li class="footer-menu__item"><a class="footer-menu__link" href="/about">${_("About")}</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="/privacy">${_("Privacy Policy")}</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="/tos">${_("Terms of Service")}</a></li>
         </ol>
-      </nav>
-      <div class="footer-flex">
-        <p class="footer-support">
-          <span>${_("Built on")}</span>
-          <a target="_blank" href="${footer['openedx_link']['url']}">
-            <svg class="svg-edx"  viewBox="0 0 100 70">
-              <use xlink:href="#logo-edx" />
-            </svg>
-          </a>
-          <span>${_("by")}</span>
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            <em>Raccoon Gang</em>
-            <svg class="svg-raccoon"  viewBox="0 0 100 100">
-              <use xlink:href="#logo-raccoon" />
-            </svg>
-          </a>
-        </p>
-        <ul class="icon-list">
-          <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-            <svg class="icon-list_svg" viewBox="0 0 35 35">
-              <use xlink:href="#ico-facebook" />
-            </svg>
-            </a>
-          </li>
-          <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-            <svg class="icon-list_svg" viewBox="0 0 35 35">
-              <use xlink:href="#ico-twitter" />
-            </svg></a>
-          </li>
-        </ul>
-        <div class="footer-logo-holder">
-          <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png"></a>
-        </div>
+        <p class="footer-menu__text">2018. NTNU. All rights reserved</p>
+      </div>
+      <ul class="icon-list">
+        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link"><i class="fa fa-facebook"></i></a></li>
+        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link"><i class="fa fa-twitter"></i></a></li>
+        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+      <div class="footer-logo-holder">
+        <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png"></a>
       </div>
     </div>
   </footer>

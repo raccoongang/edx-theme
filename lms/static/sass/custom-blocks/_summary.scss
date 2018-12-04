@@ -1,0 +1,111 @@
+.summary {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 80px 190px 0;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #f58025;
+        background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
+        position: absolute;
+        left: 0;
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+    }
+
+    &__title {
+        text-align: center;
+        color: #86aad2;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 33px;
+
+        span {
+            display: block;
+            font-size: 20px;
+            text-transform: none;
+            font-weight: normal;
+            margin-top: 7px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        &:nth-child(even) {
+            .summary__img {
+                order: 2;
+            }
+            .summary__text {
+                order: 1;
+            }
+        }
+    }
+
+    &__img {
+        border-radius: 5px;
+        display: block;
+        width: 48%;
+    }
+
+    &__text {
+        width: 48%;
+    }
+
+    &__icon {
+        background: #fff;
+        width: 96px;
+        height: 96px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+
+        img {
+            display: block;
+            height: 44px;
+        }
+    }
+
+    &__caption {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 24px;
+        margin-bottom: 7px;
+
+        &_color1 {
+            color: #ad208e;
+        }
+        &_color2 {
+            color: #f58025;
+        }
+        &_color3 {
+            color: #63c0bc;
+        }
+    }
+
+    &__description {
+        color: #333333;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

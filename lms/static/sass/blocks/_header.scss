@@ -1,10 +1,10 @@
 .global-header {
-	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
+	box-shadow: none;
 	padding: 0;
 	border-bottom: none;
 	position: relative;
 	overflow: visible;
-	background: $header-bg;
+	background: none;
 	.main-header {
 		display: flex;
 		justify-content: space-between;
@@ -27,6 +27,8 @@
 				.logo {
 					display: block;
 					margin: 0 !important;
+					width: 222px;
+					height: 39px;
 				}
 			}
 			.course-header {
@@ -117,7 +119,6 @@
 		color: $theme-btn-text-color !important;
 		border: none !important;
 		text-transform: uppercase;
-		border-radius: 0 !important;
 		&:active,
 		&:focus {
 			background: $theme-btn-bg !important;

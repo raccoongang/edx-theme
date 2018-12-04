@@ -1,9 +1,10 @@
 .wrapper-footer {
 	padding: 50px 0 !important;
-	text-align: center;
-	background: $footer-bg;
+	background: none;
 	color: #fff;
 	margin: 0 !important;
+	box-shadow: none !important;
+	border: none !important;
 	@media screen and (min-width: 1200px) {
 		position: absolute;
 		left: 0;
@@ -17,41 +18,6 @@
 		width: 100%;
 		max-width: 1200px !important;
 		padding: 0 15px;
-		a {
-			border: none !important;
-		}
-		.colophon {
-			float: none;
-			width: 100%;
-			text-align: center;
-			.nav-colophon {
-				text-align: center;
-				margin: 0 0 30px;
-				ol {
-					margin: 0;
-					padding: 0;
-					li {
-						float: none;
-						display: inline-block;
-						vertical-align: top;
-						font-size: 16px;
-						margin: 0 10px;
-						@media screen and (max-width: 567px) {
-							display: block;
-							margin: 5px 0;
-						}
-						a {
-							color: $footer-nav-link-color;
-							&:focus,
-							&:hover {
-								border: none !important;
-								color: $footer-nav-link-color-hover;
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 	.footer-flex {
 		display: flex;
@@ -65,46 +31,6 @@
 			}
 		}
 	}
-	.icon-list {
-		width: auto !important;
-		@media screen and (max-width: 991px) {
-			width: 100% !important;
-			order: 1;
-		}
-	}
-	.footer-support {
-		display: flex;
-		align-items: center;
-		font-size: 12px;
-		margin: 0 !important;
-		@media screen and (max-width: 991px) {
-			justify-content: center;
-			order: 3;
-		}
-		span {
-			margin: 0 5px
-		}
-		a {
-			display: inline-block;
-			vertical-align: top;
-			color: #fff !important;
-		}
-		em {
-			display: inline-block;
-			vertical-align: top;
-			font-style: normal;
-			line-height: 20px;
-		}
-		.svg-edx {
-			width: 66px;
-			height: 50px;
-		}
-
-		.svg-raccoon {
-			width: 20px;
-			height: 20px;
-		}
-	}
 	.footer-logo-holder {
 		@media screen and (max-width: 991px) {
 			order: 2;
@@ -112,13 +38,15 @@
 		}
 		a {
 			float: right;
+			text-decoration: none !important;
+			border: none !important;
 			@media screen and (max-width: 991px) {
 				float: none;
 				display: inline-block;
 			}
 		}
 		img {
-			height: 50px;
+			height: 31px;
 		}
 	}
 	.icon-list {
@@ -126,26 +54,68 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		width: auto !important;
+
 		@media screen and (max-width: 991px) {
 			margin-bottom: 15px;
+			width: 100% !important;
+			order: 1;
 		}
+
 		&_item {
 			margin: 0 5px;
 			display: inline-block;
 		}
+
 		&_link {
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 35px;
 			height: 35px;
-		}
-		&_svg {
-			width: 35px;
-			height: 35px;
-			fill: $footer-social-link-bg;
+			border: 2px solid #63c0bc !important;
+			color: #63c0bc !important;
+			font-size: 20px;
+			border-radius: 50%;
+			transition: all 0.2s ease;
+			
 			&:hover {
-				fill: $footer-social-link-bg-hover;
-				opacity: 0.8;
+				background: #86aad2;
+				border: 2px solid #86aad2 !important;
+				color: #fff !important;
 			}
+		}
+	}
+
+	.footer-menu {
+		&__list {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 5px;
+			overflow: hidden;
+		}
+
+		&__item {
+			float: left;
+			font-size: 14px;
+			line-height: 16px;
+			margin-right: 20px;
+		}
+
+		&__link {
+			color: #86aad2;
+
+			&:hover {
+				color: #63c0bc;
+				text-decoration: underline !important;
+			}
+		}
+
+		&__text {
+			font-size: 14px;
+			color: #333333;
+			clear: both;
+			margin: 0;
 		}
 	}
 }
