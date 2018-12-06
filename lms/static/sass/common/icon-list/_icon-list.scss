@@ -1,13 +1,15 @@
 .icon-list {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    max-width: 35%;
     justify-content: center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
 
     &_item {
-        margin: 0 5px;
+        margin: 0 5px 5px;
     }
     &_link {
         display: block;
