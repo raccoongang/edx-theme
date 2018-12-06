@@ -1036,6 +1036,14 @@ body .bookmarks-results-list .bookmarks-results-list-item:before,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark {
     color: $theme-btn-bg;
 }
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol {
+    display: flex;
+    flex-wrap: wrap;
+}
+body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li {
+    border-right-style: solid;
+    border-left-style: solid;
+}
 .u-field.editable-toggle.mode-display {
     border: 2px dashed transparent;
 
@@ -1239,9 +1247,6 @@ body.view-in-course {
         .course-wrapper {
             display: flex;
             flex-wrap: wrap;
-            @media screen and (min-width: 1000px) {
-
-            }
 
             .course-content {
                 width: 100%;
@@ -1251,13 +1256,14 @@ body.view-in-course {
                     display: table-cell;
                 }
             }
-        }
-        .course-index {
-            width: 100%;
-            display: table-cell !important;
-            @media screen and (min-width: 1000px) {
-                width: 23%;
-                display: table-cell !important;
+
+            .course-index {
+                width: 100%;
+                display: table-cell;
+                @media screen and (min-width: 1000px) {
+                    width: 23%;
+                    display: table-cell;
+                }
             }
         }
     }
@@ -1278,8 +1284,10 @@ body.view-in-course {
         }
     }
 }
-.xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-nav-button {
+body .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-nav-button {
     min-width: 60px;
+    min-height: 44px;
+    padding: 0;
     @media screen and (min-width: 1000px) {
         min-width: 120px;
     }
@@ -1812,6 +1820,10 @@ section.wiki .table.table-striped {
     max-width: 100%;
     background: #f7f7f7;
     overflow: hidden;
+
+    .course-content & {
+        background: #fff;
+    }
 }
 
 //responsive for dashboard page
@@ -3682,4 +3694,9 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     display: flex;
     justify-content: center;
     width: auto;
+}
+
+body .xmodule_display.xmodule_SequenceModule .sequence-nav {
+    height: auto;
+    min-height: 44px;
 }
