@@ -28,7 +28,11 @@ from openedx.core.djangolib.markup import HTML, Text
                     <div class="course-section__description">
                         <span class="course-section__stat">new course!</span>
                         <strong class="course-section__name">
-                            ${course.display_name[:10]}
+                            % if len(course.display_name) < 30:
+                                ${course.display_name}
+                            % else:
+                                ${course.display_name[:30]}...
+                            % endif
                         </strong>
                         <span class="course-section__school">${course.display_organization}</span>
                     </div>
