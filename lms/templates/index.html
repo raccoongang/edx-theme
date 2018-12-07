@@ -14,37 +14,26 @@ from openedx.core.djangolib.markup import HTML, Text
             <div class="video-box__wrapper">
                 <p class="video-box__text"><strong>Lorem ipsum</strong> dolor sit amet, <br> eiusmod tempor incididunt ut labore</p>
                 <a href="/courses" class="btn">found courses</a>
-                <!--<iframe class="video-box__video" id="player" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/S5G8zuIL4Q4?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=0&amp;playlist=S5G8zuIL4Q4&amp;vq=hd1080&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fintellectuale.ru&amp;widgetid=1" width="100%" height="100%" frameborder="0"></iframe>-->
+                <!--<iframe class="video-box__video" id="player" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="${custom_video.link}?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=0&amp;playlist=S5G8zuIL4Q4&amp;vq=hd1080&amp;enablejsapi=1&amp;widgetid=1" width="100%" height="100%" frameborder="0""></iframe>-->
             </div>
         </div>
         <div class="course-section">
-            <a class="course-section__item" href="#">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg" alt="course img">
-            <div class="course-section__description">
-              <span class="course-section__stat">new course!</span>
-              <strong class="course-section__name">Lorem Ipsum</strong>
-              <span class="course-section__school">Your school</span>
-            </div>
-          </a>
-            <a class="course-section__item" href="#">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img2.jpg" alt="course img">
-            <div class="course-section__description">
-              <span class="course-section__stat">new course!</span>
-              <strong class="course-section__name">Lorem Ipsum</strong>
-              <span class="course-section__school">Your school</span>
-            </div>
-          </a>
-            <a class="course-section__item" href="#">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/img3.jpg" alt="course img">
-            <div class="course-section__description">
-              <span class="course-section__stat">popular course!</span>
-              <strong class="course-section__name">Lorem Ipsum</strong>
-              <span class="course-section__school">Your school</span>
-            </div>
-          </a>
-            <!--<div class="course-section__item course-section__item_mobile">-->
-                <!--<a href="/courses" class="login-theme">найти курс</a>-->
-            <!--</div>-->
+            % for course in visible_courses:
+                <a class="course-section__item" href="#">
+                    % if course.course_image:
+                    <div class="course-section__image-holder" style="background: url('${MEDIA_URL}${course.course_image}')"></div>
+                    % else:
+                    <div class="course-section__image-holder" style="background: url('/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg')"></div>
+                    % endif
+                    <div class="course-section__description">
+                        <span class="course-section__stat">new course!</span>
+                        <strong class="course-section__name">
+                            ${course.display_name[:10]}
+                        </strong>
+                        <span class="course-section__school">${course.display_organization}</span>
+                    </div>
+                </a>
+            % endfor
         </div>
     </div>
     <div class="advantages">
@@ -88,78 +77,22 @@ from openedx.core.djangolib.markup import HTML, Text
     </div>
 
     <div class="main-slider">
+        % for slide in custom_slider:
         <div>
             <div class="main-slider__item">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg">
+                <img src="${MEDIA_URL}${slide.image}">
                 <div class="blur" style="background-image: url('/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg')"></div>
                 <div class="slide-info">
-                    <strong class="slide-info__title">Lorem ipsum</strong>
+                    <strong class="slide-info__title">${slide.title}</strong>
                     <strong class="slide-info__small">dolor sit amet</strong>
-                    <p class="slide-info__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <a href="#" class="slide-info__btn">Learn more</a>
+                    <p class="slide-info__text">${slide.description}</p>
+                    % if slide.link:
+                    <a href="${slide.link}" class="slide-info__btn">${_("Learn more")}</a>
+                    % endif
                 </div>
             </div>
         </div>
-        <div>
-            <div class="main-slider__item">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg">
-                <div class="blur" style="background-image: url('/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg')"></div>
-                <div class="slide-info">
-                    <strong class="slide-info__title">Lorem ipsum</strong>
-                    <strong class="slide-info__small">dolor sit amet</strong>
-                    <p class="slide-info__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <a href="#" class="slide-info__btn">Learn more</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="main-slider__item">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg">
-                <div class="blur" style="background-image: url('/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg')"></div>
-                <div class="slide-info">
-                    <strong class="slide-info__title">Lorem ipsum</strong>
-                    <strong class="slide-info__small">dolor sit amet</strong>
-                    <p class="slide-info__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <a href="#" class="slide-info__btn">Learn more</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="main-slider__item">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg">
-                <div class="blur" style="background-image: url('/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg')"></div>
-                <div class="slide-info">
-                    <strong class="slide-info__title">Lorem ipsum</strong>
-                    <strong class="slide-info__small">dolor sit amet</strong>
-                    <p class="slide-info__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <a href="#" class="slide-info__btn">Learn more</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="main-slider__item">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg">
-                <div class="blur" style="background-image: url('/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg')"></div>
-                <div class="slide-info">
-                    <strong class="slide-info__title">Lorem ipsum</strong>
-                    <strong class="slide-info__small">dolor sit amet</strong>
-                    <p class="slide-info__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <a href="#" class="slide-info__btn">Learn more</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="main-slider__item">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg">
-                <div class="blur" style="background-image: url('/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg')"></div>
-                <div class="slide-info">
-                    <strong class="slide-info__title">Lorem ipsum</strong>
-                    <strong class="slide-info__small">dolor sit amet</strong>
-                    <p class="slide-info__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <a href="#" class="slide-info__btn">Learn more</a>
-                </div>
-            </div>
-        </div>
+        % endfor
     </div>
 
     <script src="${static.url('js/slick.min.js')}"></script>

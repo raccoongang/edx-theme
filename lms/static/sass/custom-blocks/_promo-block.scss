@@ -82,12 +82,19 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         overflow: hidden;
+    }
+    &__image-holder {
+        width: 132px;
+        height: 100%;
+        overflow: hidden;
+        background-size: cover !important;
+        background-position: center center !important;
+        min-width: 132px;
 
         img {
             display: block;
-            width: auto;
-            width: 132px;
-            height: 132px;
+            width: 100%;
+            height: auto;
         }
     }
     &__description {
