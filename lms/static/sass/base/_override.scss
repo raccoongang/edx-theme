@@ -430,6 +430,8 @@ body .login .form-actions button[type="submit"] {
     }
 }
 body .login-register {
+    background: transparent;
+
     .action-primary {
         background: $theme-btn-bg;
         box-shadow: none;
@@ -473,6 +475,15 @@ body .login-register {
         clear: none;
         float: right;
         margin-left: 0;
+    }
+    form {
+        border: none;
+    }
+    .section-title.lines:after {
+        display: none;
+    }
+    .section-title.lines .text {
+        background: transparent;
     }
 }
 body .view-login .form-actions button[type="submit"],
