@@ -48,6 +48,7 @@ section.courses {
 .subject {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 
 	a {
 		display: block;
@@ -55,7 +56,6 @@ section.courses {
 
 	&__item {
 		display: block;
-		width: 100%;
 		height: auto;
 		width: calc(25% - 23px);
 		position: relative;
@@ -65,6 +65,13 @@ section.courses {
 		background: #fff;
 		overflow: hidden;
 		position: relative;
+
+		@media screen and (max-width: 767px) {
+			width: 48%;
+			height: 100px;
+			overflow: hidden;
+			margin-bottom: 15px;
+		}
 
 		&:hover:before {
 			opacity: 0;

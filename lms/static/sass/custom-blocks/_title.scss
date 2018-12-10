@@ -18,6 +18,10 @@
             position: absolute;
             top: 0;
         }
+
+        @media screen and (max-width: 1200px) {
+            margin: 0 !important;
+        }
     }
 
     &.title-right {
@@ -31,10 +35,18 @@
                 left: 0;
                 background-image: linear-gradient(to left, #5cbec9 0%, #552988 100%), linear-gradient(to right, #000000 0%, #ffffff 100%);
             }
+
+            @media screen and (max-width: 1200px) {
+                left: 20px;
+            }
         }
 
         h2 {
             padding: 26px 30px 26px 500px;
+
+            @media screen and (max-width: 1200px) {
+                padding: 26px 30px 20px 70px;
+            }
         }
     }
 
@@ -49,10 +61,18 @@
                 right: 0;
                 background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%), linear-gradient(to right, #000000 0%, #ffffff 100%);
             }
+
+            @media screen and (max-width: 1200px) {
+                right: 20px;
+            }
         }
 
         h2 {
             padding: 26px 500px 26px 30px;
+
+            @media screen and (max-width: 1200px) {
+                padding: 26px 70px 20px 30px;
+            }
         }
     }
 

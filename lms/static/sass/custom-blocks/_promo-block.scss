@@ -8,6 +8,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 1200px) {
+            display: block;
+        }
     }
 }
 
@@ -19,6 +23,12 @@
     background-image: linear-gradient(to right, #79a2ce 0%, #5cbec9 51%, #7b57a4 100%);
     overflow: hidden;
     position: relative;
+
+    @media screen and (max-width: 1200px) {
+        margin: 0 auto 30px;
+        width: 100%;
+        max-width: 600px;
+    }
 
     &__wrapper {
         height: 0;
@@ -48,6 +58,10 @@
         strong {
             font-weight: bold;
         }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 
     .btn {
@@ -63,6 +77,10 @@
         background-color: #f58025;
         line-height: 40px;
         text-align: center;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 }
 
@@ -73,6 +91,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: column;
+
+    @media screen and (max-width: 1200px) {
+        width: auto;
+        flex-direction: row;
+        margin-left: 0;
+    }
+
     &__item {
         display: block;
         height: 132px;
@@ -82,6 +107,36 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
         overflow: hidden;
+
+        @media screen and (max-width: 1200px) {
+            width: 49%;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    &__item-find-courses {
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        @media screen and (min-width: 1201px) {
+            display: none !important;
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none !important;
+        }
+
     }
     &__image-holder {
         width: 132px;
@@ -130,6 +185,7 @@
 
 .advantages {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
     background: #fff;
@@ -149,6 +205,8 @@
         width: 23%;
         text-align: center;
         padding: 0 15px;
+        box-sizing: border-box;
+
         &_color1 {
             color: #63c0bc !important;
         }
@@ -160,6 +218,15 @@
         }
         &_color4 {
             color: #ad208e !important;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 48%;
+            padding: 15px;
+        }
+
+        @media screen and (max-width: 479px) {
+            width: 100%;
         }
     }
     &__name {

@@ -38,6 +38,9 @@ from openedx.core.djangolib.markup import HTML, Text
                     </div>
                 </a>
             % endfor
+            <div class="course-section__item course-section__item-find-courses" href="#">
+                <a href="#" class="btn">Find Courses</a>
+            </div>
         </div>
     </div>
     <div class="advantages">
@@ -85,7 +88,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <div>
             <div class="main-slider__item">
                 <img src="${MEDIA_URL}${slide.image}">
-                <div class="blur" style="background-image: url('/static/${settings.DEFAULT_SITE_THEME}/images/slider-img1.jpg')"></div>
+                <div class="blur" style="background: url('${MEDIA_URL}${slide.image}')"></div>
                 <div class="slide-info">
                     <strong class="slide-info__title">${slide.title}</strong>
                     <strong class="slide-info__small">dolor sit amet</strong>
@@ -105,7 +108,7 @@ from openedx.core.djangolib.markup import HTML, Text
     <div class="summary">
         <h2 class="summary__title">Lorem ipsum <span>Consectetur adipisicing elit, sed do eiusmod </span></h2>
         <div class="summary__row">
-            <img class="summary__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-img1.png">
+            <div class="summary__img-holder"><img class="summary__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-img1.png"></div>
             <div class="summary__text">
                 <div class="summary__icon"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-icon1.png"></div>
                 <h3 class="summary__caption summary__caption_color1">Lorem ipsum dolorem</h3>
@@ -113,7 +116,7 @@ from openedx.core.djangolib.markup import HTML, Text
             </div>
         </div>
         <div class="summary__row">
-            <img class="summary__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-img2.png">
+            <div class="summary__img-holder"><img class="summary__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-img2.png"></div>
             <div class="summary__text">
                 <div class="summary__icon"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-icon2.png"></div>
                 <h3 class="summary__caption summary__caption_color2">Lorem ipsum dolorem</h3>
@@ -121,7 +124,7 @@ from openedx.core.djangolib.markup import HTML, Text
             </div>
         </div>
         <div class="summary__row">
-            <img class="summary__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-img3.png">
+            <div class="summary__img-holder"><img class="summary__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-img3.png"></div>
             <div class="summary__text">
                 <div class="summary__icon"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/summary-icon3.png"></div>
                 <h3 class="summary__caption summary__caption_color3">Lorem ipsum dolorem</h3>

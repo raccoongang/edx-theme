@@ -12,7 +12,7 @@
 		width: 100%;
 	}
 	@media screen and (max-width: 991px) {
-		padding: 30px 0 10px;
+		padding: 30px 0 20px !important;
 	}
 	footer#footer-openedx {
 		width: 100%;
@@ -28,21 +28,20 @@
 			width: 33.3333%;
 			@media screen and (max-width: 991px) {
 				width: 100%;
+				text-align: center;
 			}
 		}
 	}
 	.footer-logo-holder {
-		@media screen and (max-width: 991px) {
-			order: 2;
-			margin-bottom: 10px;
-		}
 		a {
 			float: right;
 			text-decoration: none !important;
 			border: none !important;
+
 			@media screen and (max-width: 991px) {
 				float: none;
 				display: inline-block;
+				margin-bottom: 30px;
 			}
 		}
 		img {
@@ -57,9 +56,8 @@
 		width: auto !important;
 
 		@media screen and (max-width: 991px) {
-			margin-bottom: 15px;
+			margin-bottom: 30px;
 			width: 100% !important;
-			order: 1;
 		}
 
 		&_item {
@@ -88,6 +86,11 @@
 	}
 
 	.footer-menu {
+		@media screen and (max-width: 991px) {
+			margin-bottom: 0;
+			order: 3;
+		}
+
 		&__list {
 			list-style: none;
 			padding: 0;
@@ -100,6 +103,11 @@
 			font-size: 14px;
 			line-height: 16px;
 			margin-right: 20px;
+
+			@media screen and (max-width: 991px) {
+				float: none;
+				display: inline-block;
+			}
 		}
 
 		&__link {

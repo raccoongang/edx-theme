@@ -5,6 +5,10 @@
 	position: relative;
 	overflow: visible;
 	background: none;
+	margin-bottom: 50px;
+	@media screen and (max-width: 991px) {
+		margin-bottom: 20px;
+	}
 	.main-header {
 		display: flex;
 		justify-content: space-between;
@@ -108,6 +112,9 @@
 	}
 	.hamburger-menu {
 		top: 28px;
+		.line {
+			background: #fff;
+		}
 	}
 
 	// header buttons
@@ -140,7 +147,7 @@
 	border-top: 1px solid #e7e7e7;
 	.mobile-nav-link a {
 		background: none !important;
-		color: #000 !important;
+		color: #fff !important;
 		border-bottom: 1px solid #e7e7e7 !important;
 		font-size: 16px;
 		&:focus:hover,
