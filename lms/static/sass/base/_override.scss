@@ -3691,3 +3691,23 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 .static-page h2 {
     font-family: "Open Sans", Verdana, Geneva, sans-serif;
 }
+
+.modal.video-modal {
+    max-width: 582px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 !important;
+    transform: translateX(-50%);
+    left: 50% !important;
+
+    iframe {
+        width: 100%;
+    }
+}
+
+.modal.video-modal .inner-wrapper {
+    height: 325px;
+    max-width: 560px;
+    width: 100%;
+    box-sizing: border-box;
+}
