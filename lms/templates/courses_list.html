@@ -3,12 +3,6 @@
 <%! from django.utils.translation import ugettext as _ %>
 
 <section class="holder courses-container">
-  <div class="subject">
-    <a href="/courses" class="subject__item subject__item_color1"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/s1.jpg" class="subject__img"><span class="subject__text">Your article</span></a>
-    <a href="/courses" class="subject__item subject__item_color2"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/s2.jpg" class="subject__img"><span class="subject__text">Your article</span></a>
-    <a href="/courses" class="subject__item subject__item_color3"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/s3.jpg" class="subject__img"><span class="subject__text">Your article</span></a>
-    <a href="/courses" class="subject__item subject__item_color4"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/s4.jpg" class="subject__img"><span class="subject__text">Show all articles</span></a>
-  </div>
   <section class="highlighted-courses">
 
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
