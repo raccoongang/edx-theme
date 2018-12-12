@@ -5,12 +5,26 @@ $(window).load(function () {
         infinite: true,
         centerMode: true,
         variableWidth: true,
-        draggable: false
-        // slidesToShow: 3,
-        // slidesToScroll: 1
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false
+                }
+            }
+        ]
     });
 });
-
-// $(window).on('resize orientationchange', function () {
-//     $('section.home > .slider').slick('resize');
-// });

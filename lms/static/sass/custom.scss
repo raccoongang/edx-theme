@@ -52,17 +52,18 @@ body {
 	line-height: 1.2;
 	position: relative;
 	overflow-x: hidden;
-	&:before {
-		content: '';
-		position: absolute;
-		top: -1210px;
-		left: 50%;
-		margin-left: -850px;
-		width: 1700px;
-		height: 1700px;
-		background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
-		border-radius: 50%;
-	}
+}
+
+#body-index:before {
+	content: '';
+	position: absolute;
+	top: -1210px;
+	left: 50%;
+	margin-left: -850px;
+	width: 1700px;
+	height: 1700px;
+	background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
+	border-radius: 50%;
 }
 
 .holder,

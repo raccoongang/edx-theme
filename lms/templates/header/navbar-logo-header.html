@@ -30,7 +30,7 @@ from branding import api as branding_api
         if ccx:
           display_name = ccx.display_name
       %>
-      <span class="course-name">${display_name}</span>
+      <span class="course-name">${display_name[:30]}</span>
     </div>
   % endif
 </h1>

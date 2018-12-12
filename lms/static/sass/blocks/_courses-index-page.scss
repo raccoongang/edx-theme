@@ -6,10 +6,15 @@
 	box-sizing: border-box;
 }
 
-.highlighted-courses .courses .course {
-	border-bottom-color: $courses-border-color;
+.highlighted-courses .courses .course,
+.courses-container .courses .course {
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+	border: 1px solid #c6c6c6 !important;
 }
-.highlighted-courses .courses .course:hover {
+.highlighted-courses .courses .course:hover,
+.courses-container .courses .course:hover {
 	background: none;
 }
 
@@ -65,6 +70,13 @@ section.courses {
 		background: #fff;
 		overflow: hidden;
 		position: relative;
+
+		&.active {
+			transform: scale(1.1);
+			&:before {
+				opacity: 0;
+			}
+		}
 
 		@media screen and (max-width: 767px) {
 			width: 48%;
@@ -123,14 +135,72 @@ section.courses {
 		font-weight: bold;
 		box-sizing: border-box;
 		text-align: center;
+
+		@media screen and (max-width: 567px) {
+			font-size: 18px;
+		}
 	}
 }
-.wrapper-index-page .find-courses .wrapper-search-context {
-    display: none;
-}
-.wrapper-index-page .find-courses .search-facets.phone-menu {
-    display: none;
-}
-.wrapper-index-page .find-courses .filters.is-animated {
-    display: none;
+
+// styles for custom index page
+
+.wrapper-index-page .find-courses {
+	background: none !important;
+	padding: 0 5px;
+	position: relative;
+	margin-bottom: 25px;
+
+	.wrapper-search-context,
+	.search-facets.phone-menu,
+	.filters.is-animated {
+		display: none;
+	}
+
+	.courses-container {
+		.courses {
+			float: none;
+			width: 100%;
+			margin: 0;
+			padding: 0 0 15px;
+			position: relative;
+
+			&:before {
+				content: "";
+				width: 100%;
+				height: 3px;
+				background-color: #f58025;
+				background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+
+			.courses-listing {
+				margin-left: -30px;
+
+				@media screen and (max-width: 567px) {
+					margin-left: 0;
+				}
+
+				.courses-listing-item {
+					width: calc(25% - 30px);
+					clear: none !important;
+					margin: 0 0 30px 30px !important;
+
+					@media screen and (max-width: 1100px) {
+						width: calc(33.3333% - 30px);
+					}
+
+					@media screen and (max-width: 767px) {
+						width: calc(50% - 30px);
+					}
+
+					@media screen and (max-width: 567px) {
+						width: 100%;
+						margin-left: 0 !important;
+					}
+				}
+			}
+		}
+	}
 }

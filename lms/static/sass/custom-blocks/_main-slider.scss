@@ -4,6 +4,10 @@
     .slick-dots {
         bottom: 12px;
 
+        @media screen and (max-width: 991px) {
+            bottom: -33px;
+        }
+
         li {
             margin: 0;
 
@@ -40,6 +44,18 @@
         transform: translate(80px, 57px) scale(0.75);
         transition: all 0.3s ease 0s;
 
+        @media screen and (max-width: 991px) {
+            transform: none;
+        }
+
+        img {
+            min-width: 840px;
+
+            @media screen and (max-width: 991px) {
+                min-width: 0;
+            }
+        }
+
         .blur {
             display: none;
         }
@@ -66,6 +82,10 @@
         border-radius: 4px;
         position: relative;
         overflow: hidden;
+
+        @media screen and (max-width: 991px) {
+            padding: 0 10px;
+        }
 
         img {
             display: block;

@@ -1,5 +1,5 @@
 .wrapper-footer {
-	padding: 50px 0 !important;
+	padding: 0 !important;
 	background: none;
 	color: #fff;
 	margin: 0 !important;
@@ -17,7 +17,18 @@
 	footer#footer-openedx {
 		width: 100%;
 		max-width: 1200px !important;
-		padding: 0 15px;
+		padding: 50px 15px;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 15px;
+			top: 0;
+			width: calc(100% - 30px);
+			height: 3px;
+			background-color: #f58025;
+			background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
+		}
 	}
 	.footer-flex {
 		display: flex;
@@ -126,4 +137,8 @@
 			margin: 0;
 		}
 	}
+}
+
+.footer-index #footer-openedx:before {
+	display: none;
 }

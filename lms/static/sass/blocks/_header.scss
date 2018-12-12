@@ -4,8 +4,7 @@
 	border-bottom: none;
 	position: relative;
 	overflow: visible;
-	background: none;
-	margin-bottom: 50px;
+	background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
 	@media screen and (max-width: 991px) {
 		margin-bottom: 20px;
 	}
@@ -37,6 +36,7 @@
 			}
 			.course-header {
 				margin-top: 0;
+				color: $header-nav-link-color;
 			}
 		}
 		.nav-links {
@@ -99,7 +99,7 @@
 			position: absolute;
 			left: 0;
 			bottom: -5px;
-			background: $base-color;
+			background: $header-nav-link-color;
 			transition: all 0.2s ease;
 		}
 		&.active:before,
@@ -139,6 +139,10 @@
 	}
 }
 
+#body-index .global-header {
+	margin-bottom: 50px;
+	background: none;
+}
 
 // mobile menu
 
