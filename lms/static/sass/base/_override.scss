@@ -1265,13 +1265,14 @@ body.view-in-course {
                     display: table-cell;
                 }
             }
-        }
-        .course-index {
-            width: 100%;
-            display: table-cell !important;
-            @media screen and (min-width: 1000px) {
-                width: 23%;
-                display: table-cell !important;
+
+            .course-index {
+                width: 100%;
+                display: table-cell;
+                @media screen and (min-width: 1000px) {
+                    width: 23%;
+                    display: table-cell;
+                }
             }
         }
     }
@@ -1793,11 +1794,6 @@ section.wiki .main-article {
     @media screen and (min-width: 761px) {
         width: 74.57627%;
         padding: 40px 0 40px 40px;
-    }
-}
-.course-info {
-    .hd-3 {
-        word-break: break-all;
     }
 }
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
@@ -3310,11 +3306,6 @@ body .theme-header .list-inline {
     }
 }
 
-.wmd-preview,
-.discussion-post .post-header {
-    word-break: break-all;
-}
-
 body footer {
     .footer-support {
         align-items: center;
@@ -3349,7 +3340,6 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 .view-profile .profile-section-two-fields .u-field-value {
     overflow: hidden;
     text-overflow: ellipsis;
-    word-break: break-all;
 }
 .my-courses .empty-dashboard-message {
     a {
@@ -3710,4 +3700,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     max-width: 560px;
     width: 100%;
     box-sizing: border-box;
+}
+
+.u-field-country {
+    display: flex;
 }
