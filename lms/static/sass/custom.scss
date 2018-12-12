@@ -1,4 +1,5 @@
 @import "const";
+@import "blocks/fonts";
 @import "blocks/links";
 @import "blocks/buttons";
 @import "blocks/form-elements";
@@ -17,6 +18,14 @@
 @import "blocks/progress";
 @import "blocks/profile-account";
 @import "blocks/slider";
+@import "custom-blocks/promo-block";
+@import "custom-blocks/title";
+@import "custom-blocks/main-slider";
+@import "custom-blocks/summary";
+
+*:not(.fa) {
+	font-family: 'DIN 2014';
+}
 
 html, body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,6 +35,20 @@ body {
 	background: $body-bg !important;
 	position: relative;
 	line-height: 1.2;
+	position: relative;
+	overflow-x: hidden;
+}
+
+#body-index:before {
+	content: '';
+	position: absolute;
+	top: -1210px;
+	left: 50%;
+	margin-left: -850px;
+	width: 1700px;
+	height: 1700px;
+	background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
+	border-radius: 50%;
 }
 
 .holder,
@@ -49,7 +72,8 @@ body.view-in-course .wiki-wrapper {
 .content-wrapper {
 	margin: 0 auto;
 	padding: 0;
-	background: #eeeeee;
+	background: none;
+	max-width: none;
 }
 
 .window-wrap,
@@ -59,6 +83,7 @@ body.view-in-course .wiki-wrapper {
 	box-sizing: border-box;
 	@media screen and (min-width: 1200px) {
 		min-height: 100vh;
-		padding-bottom: 250px;
+		padding-bottom: 150px;
 	}
 }
+

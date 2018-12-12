@@ -1,15 +1,32 @@
 $(window).load(function () {
-    $('section.home > .slider').slick({
+    $('.main-slider').slick({
         dots: true,
+        arrows: true,
         infinite: true,
-        speed: 700,
-        fade: true,
-        cssEase: 'linear',
+        centerMode: true,
+        variableWidth: true,
+        draggable: false,
         autoplay: true,
-        autoplaySpeed: 7000
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: false
+                }
+            }
+        ]
     });
-});
-
-$(window).on('resize orientationchange', function () {
-    $('section.home > .slider').slick('resize');
 });

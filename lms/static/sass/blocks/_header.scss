@@ -1,10 +1,13 @@
 .global-header {
-	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
+	box-shadow: none;
 	padding: 0;
 	border-bottom: none;
 	position: relative;
 	overflow: visible;
-	background: $header-bg;
+	background-image: linear-gradient(to right, #5cbec9 0%, #552988 100%);
+	@media screen and (max-width: 991px) {
+		margin-bottom: 20px;
+	}
 	.main-header {
 		display: flex;
 		justify-content: space-between;
@@ -27,10 +30,13 @@
 				.logo {
 					display: block;
 					margin: 0 !important;
+					width: 222px;
+					height: 39px;
 				}
 			}
 			.course-header {
 				margin-top: 0;
+				color: $header-nav-link-color;
 			}
 		}
 		.nav-links {
@@ -93,7 +99,7 @@
 			position: absolute;
 			left: 0;
 			bottom: -5px;
-			background: $base-color;
+			background: $header-nav-link-color;
 			transition: all 0.2s ease;
 		}
 		&.active:before,
@@ -106,6 +112,9 @@
 	}
 	.hamburger-menu {
 		top: 28px;
+		.line {
+			background: #fff;
+		}
 	}
 
 	// header buttons
@@ -117,7 +126,7 @@
 		color: $theme-btn-text-color !important;
 		border: none !important;
 		text-transform: uppercase;
-		border-radius: 0 !important;
+		padding: 7px 20px 4px !important;
 		&:active,
 		&:focus {
 			background: $theme-btn-bg !important;
@@ -131,6 +140,10 @@
 	}
 }
 
+#body-index .global-header {
+	margin-bottom: 50px;
+	background: none;
+}
 
 // mobile menu
 
@@ -139,7 +152,7 @@
 	border-top: 1px solid #e7e7e7;
 	.mobile-nav-link a {
 		background: none !important;
-		color: #000 !important;
+		color: #fff !important;
 		border-bottom: 1px solid #e7e7e7 !important;
 		font-size: 16px;
 		&:focus:hover,
