@@ -1,11 +1,13 @@
 $(window).load(function () {
     $('.main-slider').slick({
         dots: true,
-        arrows: false,
+        arrows: true,
         infinite: true,
         centerMode: true,
         variableWidth: true,
         draggable: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
         responsive: [
             {
                 breakpoint: 991,

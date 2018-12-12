@@ -1,6 +1,15 @@
 .main-slider {
     margin: 80px 0 40px !important;
 
+    .slick-arrow {
+        opacity: 1 !important;
+        margin-top: 55px;
+        display: block !important;
+        @media screen and (max-width: 991px) {
+            margin-top: 0;
+        }
+    }
+    
     .slick-dots {
         bottom: 12px;
 
@@ -132,7 +141,7 @@
         &__btn {
             width: calc(100% - 40px);
             height: 40px;
-            line-height: 40px;
+            line-height: 42px;
             display: block;
             position: absolute;
             left: 20px;
@@ -145,7 +154,7 @@
 .blur {
     background-color: rgba(99, 192, 188, 0.5);
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: right center !important;
     filter: blur(5px);
     height: 100%;
     position: absolute;

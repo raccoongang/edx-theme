@@ -1,4 +1,5 @@
 @import "const";
+@import "blocks/fonts";
 @import "blocks/links";
 @import "blocks/buttons";
 @import "blocks/form-elements";
@@ -21,22 +22,6 @@
 @import "custom-blocks/title";
 @import "custom-blocks/main-slider";
 @import "custom-blocks/summary";
-
-@font-face {
-    font-family: 'DIN 2014';
-    src: url('../fonts/DIN2014-Regular.woff2') format('woff2'),
-		url('../fonts/DIN2014-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'DIN 2014';
-    src: url('../fonts/DIN2014-Bold.woff2') format('woff2'),
-        url('../fonts/DIN2014-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
 
 *:not(.fa) {
 	font-family: 'DIN 2014';
