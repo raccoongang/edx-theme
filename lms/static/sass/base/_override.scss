@@ -1237,13 +1237,14 @@ body.view-in-course {
                     display: table-cell;
                 }
             }
-        }
-        .course-index {
-            width: 100%;
-            display: table-cell !important;
-            @media screen and (min-width: 1000px) {
-                width: 23%;
-                display: table-cell !important;
+
+            .course-index {
+                width: 100%;
+                display: table-cell;
+                @media screen and (min-width: 1000px) {
+                    width: 23%;
+                    display: table-cell;
+                }
             }
         }
     }
@@ -3286,11 +3287,6 @@ body .theme-header .list-inline {
     }
 }
 
-.wmd-preview,
-.discussion-post .post-header {
-    word-break: break-all;
-}
-
 body footer {
     .footer-support {
         align-items: center;
@@ -3325,7 +3321,6 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
 .view-profile .profile-section-two-fields .u-field-value {
     overflow: hidden;
     text-overflow: ellipsis;
-    word-break: break-all;
 }
 .my-courses .empty-dashboard-message {
     a {
@@ -3663,4 +3658,28 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     display: flex;
     justify-content: center;
     width: auto;
+}
+
+.modal.video-modal {
+    max-width: 582px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 !important;
+    transform: translateX(-50%);
+    left: 50% !important;
+
+    iframe {
+        width: 100%;
+    }
+}
+
+.modal.video-modal .inner-wrapper {
+    height: 325px;
+    max-width: 560px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.u-field-country {
+    display: flex;
 }
