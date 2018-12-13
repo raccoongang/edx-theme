@@ -5,6 +5,8 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.conf import settings
+from courseware.tabs import get_course_tab_list
+from django.core.urlresolvers import reverse
 
 from edxnotes.helpers import is_feature_enabled as is_edxnotes_enabled
 from openedx.core.djangolib.markup import HTML
@@ -97,14 +99,6 @@ ${static.get_page_title_breadcrumbs(course_name())}
     var $$course_id = "${course.id | n, js_escaped_string}";
     $( ".show-course-index" ).click(function() {
       $( ".course-index" ).toggle();
-    });
-
-    $('body').addClass('body-blur');
-    $('.fulscreen-popup-open').click(function () {
-        $('.xblock-student_view-scormxblock')
-            .addClass('scormxblock-popup')
-            .append('<a href="http://localhost:8000/courses/course-v1:test+test2+test2/info" class="fullscreen-btn">Home</a>');
-        $('.fullscreen-btn').addClass('fullscreen-btn_show');
     });
   </script>
 
@@ -241,13 +235,34 @@ ${HTML(fragment.foot_html())}
   % endif
 </nav>
 
+<%
+home_link = ""
+%>
+% for tab in get_course_tab_list(request, course):
+% if tab.tab_id == "info":
+<%
+home_link = tab.link_func(course, reverse)
+%>
+% endif
+% endfor
+
 <div class="fulscreen-popup-wrapp"></div>
 <div class="fulscreen-popup">
     <div class="fulscreen-popup-title">Lorem text Lorem text Lorem text Lorem text?</div>
     <div class="fulscreen-popup-btn-wrap">
-        <a href="http://localhost:8000/courses/course-v1:test+test2+test2/info" class="fulscreen-popup-btn">No</a>
+        <a href="${home_link}" class="fulscreen-popup-btn">No</a>
         <button class="fulscreen-popup-btn fulscreen-popup-open">Yes</button>
     </div>
 </div>
+
+<script>
+    $('body').addClass('body-blur');
+    $('.fulscreen-popup-open').click(function () {
+        $('.xblock-student_view-scormxblock')
+            .addClass('scormxblock-popup')
+            .append('<a href="${home_link}" class="fullscreen-btn">Home</a>');
+        $('.fullscreen-btn').addClass('fullscreen-btn_show');
+    });
+</script>
 
 <%include file="../modal/accessible_confirm.html" />
