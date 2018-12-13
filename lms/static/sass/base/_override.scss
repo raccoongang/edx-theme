@@ -3087,6 +3087,9 @@ body .theme-header {
 .ui-dialog.ui-widget {
     z-index: 1010;
 }
+body.dialog-modal-open {
+    position: relative;
+}
 
 body.dialog-modal-open:before {
     content: "";
