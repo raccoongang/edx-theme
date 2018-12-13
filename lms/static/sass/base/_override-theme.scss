@@ -1,0 +1,151 @@
+.fulscreen-popup-wrapp {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background: rgba(0, 0, 0, .5);
+}
+
+.fulscreen-popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #c8c8c8;
+    z-index: 31;
+}
+
+.fulscreen-popup-title {
+    font-size: 18px;
+    line-height: 20.72px;
+    color: #5e5e5e;
+    margin-bottom: 15px;
+}
+
+.fulscreen-popup-btn-wrap {
+    text-align: center;
+}
+
+.fulscreen-popup-btn,
+.fullscreen-btn {
+    background: #76bd1d;
+    box-shadow: none;
+    color: #ffe !important;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 2px;
+    box-sizing: border-box;
+    transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    line-height: normal;
+    margin: 0 15px;
+}
+
+.fulscreen-popup-btn:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+.fulscreen-popup-btn:hover {
+    background: #a8e65a !important;
+}
+
+.fulscreen-popup-wrapp,
+.body-blur .header-global,
+.body-blur .wrapper-footer,
+.body-blur .content-wrapper > *:not(.course-content):not(.fulscreen-popup),
+body.view-in-course.body-blur .container .course-index,
+.body-blur a.instructor-info-action,
+body .course-wrapper .course-content .path,
+.scormxblock_block,
+.xblock-student_view-scormxblock {
+    filter: blur(3px);
+}
+
+body.view-in-course.body-blur .container .course-index {
+    filter: blur(3px) !important;
+}
+
+/*
+ * fullscreen mode
+ */
+
+.fullscreen-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.fullscreen-btn:hover {
+    background: #a8e65a !important;
+}
+
+.path-holder,
+.xmodule_display.xmodule_SequenceModule .sequence-nav,
+.course-content .bookmark-button-wrapper,
+.xblock .xblock h3.unit-title,
+.wrap-instructor-info,
+.xmodule_display.xmodule_SequenceModule nav.sequence-bottom,
+.fullscreen-button {
+    display: none;
+}
+
+.xblock.xblock-student_view.xblock-student_view-scormxblock.xblock-initialized {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+/**
+ * scormblock in popup
+ */
+
+.scormxblock_block {
+    height: 663px;
+}
+
+.xblock-student_view-scormxblock.scormxblock-popup {
+    position: fixed;
+    filter: none !important;
+    z-index: 99;
+    height: auto;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    max-height: 95vh;
+    width: 980px;
+    overflow: auto;
+    border: none !important;
+}
+
+.scormxblock_block.scormxblock-popup {
+    padding-bottom: 45px;
+    position: static;
+    transform: none;
+}
+
+.scormxblock_block.scormxblock-popup .scorm_object {
+    height: 658px;
+}
+
+
+.fullscreen-btn_show {
+    position: static;
+    float: right;
+    margin-top: 6px;
+
+}
+
+.content-wrapper .container,
+.scormxblock_block.scormxblock-popup,
+.scormxblock_block {
+    filter: none !important;
+}
