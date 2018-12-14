@@ -699,12 +699,12 @@ body .window-wrap div.info-wrapper table ol {
 }
 body .menu-action {
     display: none;
+    @media screen and (max-width: 850px) {
+        display: block;
+    }
 }
 @media screen and (max-width: 850px) {
     .header-global .wrapper-header {
         width: 100%;
-        .menu-action {
-            display: block;
-        }
     }
 }
