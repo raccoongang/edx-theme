@@ -50,8 +50,8 @@
         <div class="course-section">
             % for course in visible_courses:
                 <a class="course-section__item" href="${reverse('about_course', args=[text_type(course.id)])}">
-                    % if course.course_image:
-                    <div class="course-section__image-holder" style="background: url('${MEDIA_URL}${course.course_image}')"></div>
+                    % if course.course_image_url:
+                    <div class="course-section__image-holder" style="background: url('${course.course_image_url}')"></div>
                     % else:
                     <div class="course-section__image-holder" style="background: url('/static/${settings.DEFAULT_SITE_THEME}/images/img1.jpg')"></div>
                     % endif
