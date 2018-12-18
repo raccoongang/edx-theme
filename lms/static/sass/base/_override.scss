@@ -935,11 +935,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
     display: none;
 
     .lang_ar & {
-        display: inline;
+        display: inline-block;
     }
 }
 .logo-en {
-    display: inline;
+    display: inline-block;
+    height: 61px;
 
     .lang_ar & {
         display: none;
