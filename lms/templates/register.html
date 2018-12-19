@@ -81,7 +81,22 @@ import calendar
     }
 
     function toggleSubmitButton(enable) {
-      return false;
+      var $submitButton = $('form .form-actions #submit');
+
+      if(enable) {
+        $submitButton.
+          removeClass('is-disabled').
+          attr('aria-disabled', false).
+          prop('disabled', false).
+          removeProp('disabled').
+          html("${_('Create My Digital Skills Lab Data Science Account')}");
+      }
+      else {
+        $submitButton.
+          addClass('is-disabled').
+          prop('disabled', true).
+          text("${_('Processing your account information')}");
+      }
     }
   </script>
 </%block>
