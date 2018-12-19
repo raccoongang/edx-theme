@@ -1449,6 +1449,13 @@ body section.wiki .wiki-wrapper>header {
     .deco-divider {
         display: none;
     }
+    .orn-plus {
+        color: $theme-btn-white-text-color;
+
+        #submit:hover & {
+            color: $theme-btn-white-text-color-hover;
+        }
+    }
 }
 .view-login .introduction {
     display: none;
