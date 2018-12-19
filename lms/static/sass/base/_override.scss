@@ -27,8 +27,11 @@
             align-items: center;
         }
         h1.logo {
-            margin: -18px 39px -40px 0;
+            margin: -18px 39px 0 0;
             flex-grow: 0;
+            @media (min-width: 761px) {
+                margin: -18px 39px -40px 0;
+            }
         }
         .list-inline.nav-courseware {
             margin-top: 0;
