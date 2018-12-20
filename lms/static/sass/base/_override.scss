@@ -1595,20 +1595,30 @@ body.view-login #forgot-password-modal #password-reset header h2 {
             width: 31.76157%;
         }
     }
-    .wrapper-course-actions {
-        width: 100%;
-
-        @media screen and (min-width: 761px) {
-            width: 65.88078%;
-        }
-    }
     .wrapper-course-details {
         width: 100%;
 
         @media screen and (min-width: 761px) {
             width: 74.41059%;
         }
+
+        .wrapper-course-actions {
+            width: 100%;
+    
+            @media screen and (min-width: 761px) {
+                width: 65.88078%;
+            }
+
+            .wrapper-action-more {
+                float: left;
+    
+                @media screen and (min-width: 761px) {
+                    float: right;
+                }   
+            }
+        }
     }
+
 }
 .dashboard-search-results .search-info {
     width: 100%;
