@@ -366,6 +366,22 @@ button.prerequisite-button .fa {
 	border-color: $base-color;
 }
 
+.highlighted-courses .courses .course,
 .courses-container .courses .course {
-	border-bottom-color: $base-color;
+	border-bottom-color: $courses-border-color;
+}
+
+.courses-container .courses .course .course-info {
+	background: green;
+}
+
+.courses-container .courses .course .course-info .course-date,
+.courses-container .courses .course .course-info .course-title,
+.courses-container .courses .course .course-info .course-code,
+.courses-container .courses .course .course-info .course-organization {
+	color: #fff;
+}
+
+.courses-container .courses .course .course-image .cover-image img {
+	display: none;
 }

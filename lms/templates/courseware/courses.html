@@ -10,6 +10,10 @@
 
 <%namespace name='static' file='../static_content.html'/>
 
+<style type="text/css">
+  ${web_science_css}
+</style>
+
 % if course_discovery_enabled:
 <%block name="header_extras">
   % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option"]:
@@ -29,6 +33,8 @@
 % endif
 
 <%block name="pagetitle">${_("Courses")}</%block>
+
+<h1>hello world!!!</h1>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="find-courses">
@@ -58,7 +64,7 @@
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
           <ul class="courses-listing">
             %for course in courses:
-            <li class="courses-listing-item">
+            <li class="courses-listing-item" id="web_science_${course.web_science.course_hash or 'default'}">
               <%include file="../course.html" args="course=course" />
             </li>
             %endfor
