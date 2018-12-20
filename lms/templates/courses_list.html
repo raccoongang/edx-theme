@@ -2,6 +2,10 @@
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
 
+<style type="text/css">
+  ${web_science_css}
+</style>
+
 <section class="holder courses-container">
   <section class="highlighted-courses">
 
@@ -10,7 +14,7 @@
         <ul class="courses-listing">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses[:homepage_course_max]:
-          <li class="courses-listing-item">
+          <li class="courses-listing-item" id="web_science_${course.web_science.course_hash or 'default'}">
               <%include file="course.html" args="course=course" />
           </li>
         %endfor
