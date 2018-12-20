@@ -690,16 +690,22 @@ body .wmd-prompt-dialog .btn-brand:focus {
     top: -40px;
     left: 50%;
     margin-left: -35px;
+    img {
+        display: inline-block;
+        max-height: 85px;
+    }
 }
 .logo-ar {
     display: none;
 
     .lang_ar & {
-        display: inline;
+        display: inline-block;
+        max-height: 85px;
     }
 }
 .logo-en {
-    display: inline;
+    display: inline-block;
+    max-height: 85px;
 
     .lang_ar & {
         display: none;
@@ -966,26 +972,26 @@ body {
 
     .header-global .user .user-link .label-username,
     .header-global .nav-global li a {
-        color: #f5f5f5;
+        color: $dropdown-menu-color;
         &:hover {
-            color: rgba(255, 255, 255, 0.8);
+            color: $dropdown-menu-color-hover;
         }
     }
     .header-global .user .dropdown {
-        color: #f5f5f5;
+        color: $dropdown-menu-color;
         &:hover {
-            color: rgba(255, 255, 255, 0.8);
+            color: $dropdown-menu-color-hover;
         }
     }
     .header-global .nav-global .tab-nav-item .tab-nav-link {
-        color: #f5f5f5;
+        color: $dropdown-menu-color;
         &:hover {
-            color: rgba(255, 255, 255, 0.8);
+            color: $dropdown-menu-color-hover;
         }
     }
     .doc-link {
         &:hover {
-            color: rgba(255, 255, 255, 0.8) !important;
+            color: $dropdown-menu-color !important;
         }
     }
     .courses-container .courses .course {
