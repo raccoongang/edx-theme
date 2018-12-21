@@ -62,3 +62,45 @@ body.view-in-course .wiki-wrapper {
 		padding-bottom: 250px;
 	}
 }
+
+.courses-container .courses .course .course-info {
+	background: #f29f5d;
+}
+
+body .breadcrumbs .nav-item:last-child {
+	color: #f29f5d;
+}
+
+body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon.fa{
+	color: #f29f5d;
+}
+body .xblock .xblock h2 {
+	color: #f29f5d;
+}
+
+.course-box {
+	max-width: 1180px;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.course-box__name {
+	font-size: 50px;
+	line-height: 1.2;
+	font-weight: bold;
+	color: #f29f5d;
+}
+
+.course-box__img {
+	width: 300px;
+	height: 300px;
+	background: url('../images/img.jpg');
+	background-size: cover;
+}
+
+.courses-container .courses .course .course-image .cover-image {
+	background: url('../images/img.jpg');
+	background-size: cover;
+}

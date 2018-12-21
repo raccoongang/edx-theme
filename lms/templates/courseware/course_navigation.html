@@ -31,9 +31,14 @@ if course is not None:
 
 % if disable_tabs is UNDEFINED or not disable_tabs:
     <%
-    tab_list = get_course_tab_list(request, course)
+        tab_list = get_course_tab_list(request, course)
     %>
     % if uses_bootstrap:
+        <div class="course-box">
+            <h2 class="course-box__name">Course name</h2>
+            <span class="course-box__img"></span>
+        </div>   
+        
         <nav class="navbar course-tabs pb-0 navbar-expand" aria-label="${_('Course')}">
             <div class="holder">
                 <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
@@ -65,6 +70,10 @@ if course is not None:
             </div>
         </nav>
     % else:
+        <div class="course-box">
+            <h2 class="course-box__name">Course name</h2>
+            <span class="course-box__img"></span>
+        </div>   
         <nav class="${active_page} wrapper-course-material" aria-label="${_('Course Material')}">
             <div class="holder">
                 <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
