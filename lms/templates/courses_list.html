@@ -11,7 +11,13 @@
         <ul class="courses-listing">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses[:homepage_course_max]:
-          <li class="courses-listing-item">
+
+          <%
+              from web_science.models import WebScienceCourseOverview
+              course_hash = WebScienceCourseOverview.get_from_key(course.id).course_hash
+          %>
+
+          <li class="courses-listing-item" id="web_science_${course_hash}">
               <%include file="course.html" args="course=course" />
           </li>
         %endfor

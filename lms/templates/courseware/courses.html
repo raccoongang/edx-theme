@@ -58,7 +58,11 @@
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
           <ul class="courses-listing">
             %for course in courses:
-            <li class="courses-listing-item">
+              <%
+                  from web_science.models import WebScienceCourseOverview
+                  course_hash = WebScienceCourseOverview.get_from_key(course.id).course_hash
+              %>
+            <li class="courses-listing-item" id="web_science_${course_hash}">
               <%include file="../course.html" args="course=course" />
             </li>
             %endfor

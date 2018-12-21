@@ -113,12 +113,24 @@ ${HTML(fragment.foot_html())}
 <%include file="/courseware/course_navigation.html" args="active_page='courseware'" />
 % endif
 
+<style type="text/css">
+    <%
+        from django.template import Template, Context
+        web_science_css = Template("{% load web_science_tags %}{% web_science_generate_css %}").render(Context())
+    %>
+    ${web_science_css}
+</style>
+
 <div class="container"
      % if getattr(course, 'language'):
 lang="${course.language}"
 % endif
 >
-<div class="course-wrapper" role="presentation">
+<%
+    from web_science.models import WebScienceCourseOverview
+    course_hash = WebScienceCourseOverview.get_from_key(course.id).course_hash
+%>
+<div class="course-wrapper" role="presentation" id="web_science_${course_hash}">
 
     % if disable_accordion is UNDEFINED or not disable_accordion:
     <div class="course-index">

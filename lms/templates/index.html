@@ -7,6 +7,13 @@ from django.urls import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
+<style type="text/css">
+  <%
+      from django.template import Template, Context
+      web_science_css = Template("{% load web_science_tags %}{% web_science_generate_css %}").render(Context())
+  %>
+  ${web_science_css}
+</style>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">

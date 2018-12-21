@@ -34,8 +34,12 @@ if course is not None:
         tab_list = get_course_tab_list(request, course)
     %>
     % if uses_bootstrap:
-        <div class="course-box">
-            <h2 class="course-box__name">Course name</h2>
+        <%
+              from web_science.models import WebScienceCourseOverview
+              course_hash = WebScienceCourseOverview.get_from_key(course.id).course_hash
+          %>
+        <div class="course-box" id="web_science_${course_hash}">
+            <h2 class="course-box__name">${course.display_name_with_default}</h2>
             <span class="course-box__img"></span>
         </div>   
         
@@ -70,10 +74,14 @@ if course is not None:
             </div>
         </nav>
     % else:
-        <div class="course-box">
-            <h2 class="course-box__name">Course name</h2>
-            <span class="course-box__img"></span>
-        </div>   
+        <%
+            from web_science.models import WebScienceCourseOverview
+            course_hash = WebScienceCourseOverview.get_from_key(course.id).course_hash
+        %>
+        <div class="course-box" id="web_science_${course_hash}">
+        <h2 class="course-box__name">${course.display_name_with_default}</h2>
+        <span class="course-box__img"></span>
+        </div>    
         <nav class="${active_page} wrapper-course-material" aria-label="${_('Course Material')}">
             <div class="holder">
                 <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
