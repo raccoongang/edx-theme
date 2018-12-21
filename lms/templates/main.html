@@ -137,7 +137,7 @@ from pipeline_mako import render_require_js_path_overrides
   <%include file="widgets/segment-io.html" />
 
   <meta name="path_prefix" content="${EDX_ROOT_URL}">
-  
+
   <% google_site_verification_id = configuration_helpers.get_value('GOOGLE_SITE_VERIFICATION_ID', settings.GOOGLE_SITE_VERIFICATION_ID) %>
   % if google_site_verification_id:
     <meta name="google-site-verification" content="${google_site_verification_id}" />
@@ -168,14 +168,7 @@ from pipeline_mako import render_require_js_path_overrides
     </script>
 % endif
 
-<style type="text/css">
-    <%
-        from django.template import Template, Context
-        web_science_css = Template("{% load web_science_tags %}{% web_science_generate_css %}").render(Context())
-    %>
-    ${web_science_css}
-</style>
-
+    <link rel="stylesheet" type="text/css" href="${reverse('web_science.css')}" />
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
