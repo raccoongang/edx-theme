@@ -1,0 +1,15 @@
+{% if web_science.color %}
+    #web_science_{{ web_science.course_hash }} .course-title {
+        color: {{ web_science.color }};
+    }
+
+    #web_science_{{ web_science.course_hash }} article.course {
+        border-bottom: 3px solid {{ web_science.color }};
+    }
+{% endif %}
+
+{% if web_science.image %}
+    #web_science_{{ web_science.course_hash }} .cover-image {
+        background-image: url({{ web_science.image }});
+    }
+{% endif %}
