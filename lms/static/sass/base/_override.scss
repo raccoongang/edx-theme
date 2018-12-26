@@ -2873,19 +2873,16 @@ body .breadcrumbs .nav-item {
 }
 
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown {
-    @media screen and (max-width: 420px) {
+    left: 0;
+    right: auto;
+    
+    .actions-dropdown-list:before,
+    .actions-dropdown-list:after {
         right: auto;
-        left: 19px;
-
-        .actions-dropdown-list:before,
-        .actions-dropdown-list:after {
-            right: auto;
-            left: 6px;
-        }
-        .actions-dropdown-list a {
-            float: left !important;
-        }
-
+        left: 11px;
+    }
+    .actions-dropdown-list a {
+        float: left !important;
     }
 }
 
