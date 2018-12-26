@@ -196,7 +196,7 @@ body .container.activation h1.valid {
                     }
                     @media screen and (min-width:760px ) {
                         display: inline-block;
-                        margin: 0 15px;
+                        margin: 5px 15px;
                     }
 
                      a {
@@ -701,11 +701,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
     .lang_ar & {
         display: inline-block;
         max-height: 85px;
+        max-width: 260px;
     }
 }
 .logo-en {
     display: inline-block;
     max-height: 85px;
+    max-width: 260px;
 
     .lang_ar & {
         display: none;
@@ -949,6 +951,10 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 footer .icon-list {
     display: none;
