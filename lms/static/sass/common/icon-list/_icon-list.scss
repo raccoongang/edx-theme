@@ -7,6 +7,11 @@
     list-style: none;
     flex-wrap: wrap;
 
+    @media screen and (max-width: 950px){
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
     &_item {
         margin: 0 5px 5px;
     }
