@@ -1,15 +1,28 @@
 {% if web_science.color %}
-    #web_science_{{ web_science.course_hash }} .course-title {
+    #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon.fa,
+    #web_science_{{ web_science.course_hash }} .xblock .xblock h2,
+    #web_science_{{ web_science.course_hash }} .breadcrumbs .nav-item:last-child,
+    #web_science_{{ web_science.course_hash }} .course-box__name
         color: {{ web_science.color }};
     }
 
-    #web_science_{{ web_science.course_hash }} article.course {
-        border-bottom: 3px solid {{ web_science.color }};
+    #web_science_{{ web_science.course_hash }} .course .course-info,
+    #web_science_{{ web_science.course_hash }} .course .course-info {
+        background: {{ web_science.color }};
     }
+    #web_science_{{ web_science.course_hash }} article.course {
+        border-bottom: none;
+    }
+
 {% endif %}
 
 {% if web_science.image %}
-    #web_science_{{ web_science.course_hash }} .cover-image {
+    #web_science_{{ web_science.course_hash }}  .cover-image {
         background-image: url({{ web_science.image }});
     }
+    #web_science_{{ web_science.course_hash }} .course-box__img,
+    #web_science_{{ web_science.course_hash }} .course .course-image .cover-image {
+        background-image: url({{ web_science.image }});
+    }
+    
 {% endif %}

@@ -1,4 +1,5 @@
 @import "const";
+@import "blocks/fonts";
 @import "blocks/links";
 @import "blocks/buttons";
 @import "blocks/form-elements";
@@ -83,7 +84,9 @@ body .xblock .xblock h2 {
     margin: 0 auto;
     justify-content: space-between;
     display: flex;
-    align-items: center;
+	align-items: center;
+	position: relative;
+	min-height: 215px;
 }
 
 .course-box__name {
@@ -91,13 +94,21 @@ body .xblock .xblock h2 {
 	line-height: 1.2;
 	font-weight: bold;
 	color: #f29f5d;
+	font-family: 'Baloo-Regular';
+	width: 60%;
+	box-sizing: border-box;
+	padding: 0 10px 0 0;
 }
 
 .course-box__img {
-	width: 300px;
-	height: 300px;
-	background: url('../images/img.jpg');
-	background-size: cover;
+	width: 40%;
+	height: 240px;
+	background: url('../images/img.jpg') no-repeat 100% 0;
+	background-size: contain;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .courses-container .courses .course .course-image .cover-image {
