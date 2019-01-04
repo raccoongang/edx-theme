@@ -957,6 +957,21 @@ body .wmd-prompt-dialog .btn-brand:focus {
     label[for="register-terms_of_service"] {
         margin: 3px 5px 0 0 !important;
     }
+
+    ul.message-copy li > div,
+    ul.message-copy li > div img {
+        max-width: 100%;
+    }
+
+    ul.message-copy li > div p {
+        max-width: 100%;
+    }
+
+    ul.message-copy li h1 {
+        @media screen and (max-width:760px ) {
+            font-size: 22px;
+        }
+    }
 }
 .home {
     background: $theme-content-bg;
@@ -3663,5 +3678,3 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 *:not(.fa):not([class^="icon-cc"]):not([class*=" icon-cc"]) {
   font-family: "Rubik", "Open Sans", Verdana, Geneva, sans-serif !important;
 }
-
-
