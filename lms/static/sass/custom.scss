@@ -104,11 +104,14 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon.f
 	background-size: contain;
 	position: absolute;
 	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 17px;
 }
 
 .courses-container .courses .course .course-image .cover-image {
 	background: url('../images/img.jpg');
 	background-size: cover;
+}
+.xblock .xblock .unit-title,
+.xblock .xblock .problem-header {
+	font-family: 'Baloo-Regular';
 }
