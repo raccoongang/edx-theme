@@ -3328,9 +3328,24 @@ body footer {
 .view-teams .page-header-search .action-search:focus {
     background-color: $theme-link-hover;
 }
-.btn-blue, .view-teams .action-primary, .instructor-dashboard-wrapper-2 .btn-blue {
+.btn-blue, .instructor-dashboard-wrapper-2 .btn-blue {
     background-color: $theme-link-hover;
     box-shadow: $theme-link-hover;
+}
+.view-teams .action-primary {
+    box-shadow: none;
+    text-shadow: none;
+    background-color: $theme-link;
+    border: 1px solid $theme-link;
+    transition: all 0.25s ease-in-out;;
+
+    &:hover {
+        border-color: $theme-link-hover;
+        background-color: $theme-link-hover;
+    }
+}
+.view-teams .action-cancel {
+    border-radius: 2px;
 }
 .course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
     margin: 0;
@@ -3665,14 +3680,18 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .view-teams .edit-members .action-remove-member,
 .view-teams .action-cancel {
+    text-shadow: none;
+    box-shadow: none;
     color: $theme-btn-white-border;
     border-color: $theme-btn-white-border;
     background: $theme-btn-white-bg;
-    transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
+        text-shadow: none;
         color: $theme-btn-white-bg !important;
         background: $theme-btn-white-border !important;
+        border-color: $theme-btn-white-border !important;
     }
 }
 
@@ -3704,4 +3723,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .u-field-country {
     display: flex;
+}
+
+.team-optional-fields .u-field-country {
+    display: block;
 }
