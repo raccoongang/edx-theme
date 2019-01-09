@@ -3343,9 +3343,21 @@ body footer {
         border-color: $theme-link-hover;
         background-color: $theme-link-hover;
     }
+
+    &:focus {
+        background-color: $theme-link;
+        border-color: $theme-link;
+        box-shadow: none;
+    }
 }
 .view-teams .action-cancel {
     border-radius: 2px;
+
+    &:focus {
+        box-shadow: none;
+        border-color: $theme-link;
+        color: $theme-link;
+    }
 }
 .course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
     margin: 0;
@@ -3727,4 +3739,16 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .team-optional-fields .u-field-country {
     display: block;
+}
+
+.progress-certificates-title {
+    word-break: normal !important;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 400px) {
+        font-size: .8em;
+    }
 }
