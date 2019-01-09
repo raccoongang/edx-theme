@@ -95,8 +95,7 @@ body.view-in-course .wiki-wrapper {
 	background-size: contain;
 	position: absolute;
 	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 17px;
 }
 
 .courses-container .courses .course .course-image .cover-image {
@@ -283,4 +282,9 @@ body.view-in-course .course-wrapper {
 		padding: 5px 0 0;
 		text-transform: uppercase;
 	}	
+}
+
+.xblock .xblock .unit-title,
+.xblock .xblock .problem-header {
+	font-family: 'Baloo-Regular';
 }
