@@ -3705,3 +3705,13 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 .u-field-country {
     display: flex;
 }
+
+.progress-certificates-title {
+    @media screen and (max-width: 500px) {
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 400px) {
+        font-size: .8em;
+    }
+}
