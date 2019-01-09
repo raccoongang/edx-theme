@@ -50,7 +50,7 @@ body.view-in-course .wiki-wrapper {
 .content-wrapper {
 	margin: 0 auto;
 	padding: 0;
-	background: #eeeeee;
+	background: $body-bg;
 }
 
 .window-wrap,
@@ -65,15 +65,7 @@ body.view-in-course .wiki-wrapper {
 }
 
 .courses-container .courses .course .course-info {
-	background: #f29f5d;
-}
-
-body .breadcrumbs .nav-item:last-child {
-	color: #f29f5d;
-}
-
-body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon.fa{
-	color: #f29f5d;
+	background: #4c4c4c;
 }
 
 .course-box {
@@ -90,7 +82,6 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon.f
 	font-size: 50px;
 	line-height: 1.2;
 	font-weight: bold;
-	color: #f29f5d;
 	font-family: 'Baloo-Regular';
 	width: 60%;
 	box-sizing: border-box;
@@ -111,6 +102,188 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon.f
 	background: url('../images/img.jpg');
 	background-size: cover;
 }
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous {
+	border-color: transparent;
+	border-bottom: none !important;
+	text-align: center;
+	white-space: normal;
+	overflow-x: visible;
+	padding-top: 0;
+	min-width: auto;
+	width: 110px;
+	height: 85px;
+	font-size: 13px;
+	line-height: 1.3;
+	background: none;
+
+	&:hover {
+		padding-top: 0;
+		border-bottom: none !important;
+		background: none;
+	}
+
+	svg {
+		height: 30px;
+	}
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav {
+	height: auto;
+	background: #f3f3f3;
+	padding: 45px 50px 18px;
+	display: flex;
+	align-items: center;
+	
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+body.view-in-course .course-wrapper {
+	border: none;
+	box-shadow: none;
+}
+
+.course-wrapper main {
+	padding: 0;
+}
+
+.page-header {
+	border-bottom: none;
+}
+
+.sequence_icon {
+	height: 53px;
+	display: none;
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
+
+.sequence_icon__text {
+	.seq_other & {
+		display: block;
+	}
+}
+
+.sequence_icon__video {
+	.seq_video & {
+		display: block;
+	}
+}
+
+.sequence_icon__check {
+	.seq_problem & {
+		display: block;
+	}
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav ol {
+	position: relative;
+	top: -26px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		height: 3px;
+		box-shadow: -1px 1px 1px 0px #fff;
+		background: #1D1A17;
+		border-radius: 3px;
+		bottom: 5px;
+		left: -14px;
+		z-index: -1;
+		width: 104%;
+	}
+
+	li {
+		border: none !important;
+	
+		button {
+			height: 53px;
+			border: none;
+			position: relative;
+			overflow: visible;
+	
+			&:hover {
+				border: none;
+				background: transparent;
+				padding: 0;
+			}
+	
+			&.active {
+				border: none;
+				background: transparent;
+				padding: 0;
+	
+				&:hover {
+					border: none;
+					background: transparent;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button .sequence-nav-button-label {
+	display: inline-block;
+    padding: 10px 0 0;
+    text-shadow: -1px 1px 1px #fff;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next {
+	transition: color .2s;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous svg,
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next svg {
+	transition: fill .2s;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav ol li button.tab svg {
+	fill: #1D1A17;
+	transition: fill .2s, height .2s, bottom .2s;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav ol li button.tab.active svg {
+	height: 74px;
+	bottom: -2px;
+}
+
+.course-wrapper .course-content .xblock.xblock-student_view-vertical,
+.course-wrapper .courseware-results-wrapper .xblock.xblock-student_view-vertical {
+	max-width: 980px;
+	background: #fff;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-bottom {
+	max-width: 980px;
+	justify-content: left;
+}
+
+.wrap-instructor-info.studio-view {
+	margin: 0 auto;
+    display: block;
+    max-width: 980px;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button.sequence-nav-button__bottom {
+	max-width: 70px;
+	
+	.sequence-nav-button-label {
+		font-weight: bold;
+		font-size: 11px;
+		padding: 5px 0 0;
+		text-transform: uppercase;
+	}	
+}
+
 .xblock .xblock .unit-title,
 .xblock .xblock .problem-header {
 	font-family: 'Baloo-Regular';
