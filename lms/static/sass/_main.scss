@@ -348,3 +348,80 @@ body {
         margin-right: 350px;
     }
 }
+
+#login-form .section-title.lines,
+#register .section-title.lines {
+    display: none;
+}
+
+.login-register {
+    background: transparent;
+}
+
+.login-register .form-wrapper {
+    background: #fff;
+    padding-top: 0;
+    border-radius: 5px;
+}
+
+#content {
+    flex: 1 1 auto;
+}
+
+.window-wrap {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+.header__login ~ #content {
+    flex-flow: column;
+    display: flex;
+    justify-content: center;
+}
+
+// styles for IE10+ [sticky footer]
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+        display: flex;
+    }
+
+    body,
+    .window-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100vh;
+    }
+
+    #content {
+        flex: 1 1 auto;
+    }
+
+    .wrapper-footer {
+        overflow: hidden;
+    }
+}
+
+.dashboard .my-courses {
+    width: 100%;
+}
+
+.dashboard-search-bar {
+    display: none;
+}
+
+.wrapper-footer footer#footer-openedx .footer_list-item:after {
+    top: 7px;
+    margin-top: 0;
+}
+
+.courseware-bookmarks-button,
+.courseware-search-bar {
+    width: 100%;
+}
+
+.courseware-search-bar {
+    margin-top: 5px;
+}
