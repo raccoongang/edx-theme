@@ -772,6 +772,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
             display: block;
         }
 
+        @media screen and (max-width: 1015px) and (min-width: 720px){
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
         .parallax-img {
             position: absolute;
             left: 0;
@@ -816,6 +821,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 min-height: 450px;
                 box-sizing: border-box;
             }
+
+            @media screen and (max-width: 1015px) and (min-width: 720px){
+                margin-right: 5%;
+            }
         }
 
         .title {
@@ -854,6 +863,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
                         font-size: 52px;
                     }
 
+                    @media screen and (max-width: 1015px) and (min-width: 720px){
+                        font-size: 32px;
+                        line-height: 1.2;
+                    }
+
                     .select {
                         color: #f1672e;
                     }
@@ -863,9 +877,14 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-align: center;
                     font-size: 34px;
                     line-height: 1.3;
-                    text-shadow: $promo-box-text-shadow;
+                    text-shadow: 0 0 2px #fff;
                     color: #999;
                     margin-bottom: 40px;
+
+                    @media screen and (max-width: 1015px) and (min-width: 720px){
+                        font-size: 34px;
+                        line-height: 1.3;
+                    }
                 }
                 .link {
                     background: $find-btn-bg;
