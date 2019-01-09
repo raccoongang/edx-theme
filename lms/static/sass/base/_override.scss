@@ -2050,8 +2050,30 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar {
     @media screen and (min-width: 760px) {
         display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    input.add[name="student-action"] {
+        margin: 10px 0 0;
+        @media screen and (min-width: 760px) {
+            position: static;
+            margin: 0 5px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+    }
+
+    .add-field {
+        min-width: 216px;
+        margin-bottom: 5px;
+    }
+
+    .enroll-option {
+        margin-right: 5px;
     }
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar>label {
     display: block;
     margin-bottom: 12px;
