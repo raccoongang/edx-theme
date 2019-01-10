@@ -628,9 +628,16 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                 <span class="certificates_fully-completed">${_("Has fully completed the 4 hours continuing education course entitled")}</span>
                 <span class="certificates_renewal-cycle">${accomplishment_copy_course_name}</span>
                 <div class="certificates_completed-online"><i>${_("Completed online")}</i><em>${user_certificate_create.strftime("%B %d, %Y")}</em></div>
-                <i class="certificates_instructor">${_("Instructor: Kristin Chandler")}</i>
+                <i class="certificates_instructor">
+                    ${_("Instructor: ")}
+                    % if certificate_data.get('signatories', []):
+                        ${certificate_data.get('signatories')[0]['name']}
+                    % else:
+                        Kristin Chandler
+                    % endif
+                </i>
                 <div class="certificates_signatures-holder">
-                    % for signatory in certificate_data.get('signatories', []):
+                    % for signatory in certificate_data.get('signatories', [])[1:]:
                     <div class="certificates_education-director">
                         <div class="certificates_education-director-signature">
                             <img src="${static.url(signatory['signature_image_path'])}" alt="">
