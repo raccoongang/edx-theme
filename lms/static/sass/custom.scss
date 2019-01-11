@@ -79,6 +79,7 @@ body.view-in-course .wiki-wrapper {
 }
 
 .course-box__name {
+	color: #1D1A17;
 	font-size: 50px;
 	line-height: 1.2;
 	font-weight: bold;
@@ -91,7 +92,8 @@ body.view-in-course .wiki-wrapper {
 .course-box__img {
 	width: 40%;
 	height: 240px;
-	background: url('../images/img.jpg') no-repeat 100% 0;
+	background-repeat: no-repeat;
+	background-position: 100% 0;
 	background-size: contain;
 	position: absolute;
 	right: 0;
