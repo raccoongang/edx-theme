@@ -15,19 +15,19 @@
   % endif
 
   <div class="sequence-nav">
-    <button class="sequence-nav-button button-previous">
+    <button class="sequence-nav-button button-previous sequence-nav-button__bottom">
       <svg class="icon-list_icon" viewBox="0 0 34.4 56.7">
         <use xlink:href="#ico-prev" />
       </svg>
       <br>
-      <span class="sequence-nav-button-label">${_('go back to previous content')}</span>
+      <span class="sequence-nav-button-label">${_('PREV')}</span>
     </button>
-    <button class="sequence-nav-button button-next">
+    <button class="sequence-nav-button button-next sequence-nav-button__bottom">
       <svg class="icon-list_icon" viewBox="0 0 34.4 56.7">
         <use xlink:href="#ico-next" />
       </svg>
       <br>
-      <span class="sequence-nav-button-label">${_('go to')} <br> ${_('next content')}</span>
+      <span class="sequence-nav-button-label">${_('NEXT')}</span>
     </button>
     <nav class="sequence-list-wrapper" aria-label="${_('Sequence')}">
       <ol id="sequence-list" role="tablist">
