@@ -102,6 +102,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
                 ${HTML(outline_fragment.body_html())}
             % endif
         </div>
+        <img class="course-page-decore" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/course-decore.png" alt="">
         <aside class="page-content-secondary course-sidebar">
             % if has_goal_permission:
                 <div class="section section-goals ${'' if current_goal else 'hidden'}">
