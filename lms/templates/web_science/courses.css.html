@@ -2,8 +2,12 @@
     #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav button.active .icon.fa,
     #web_science_{{ web_science.course_hash }} .xblock .xblock .unit-title,
     #web_science_{{ web_science.course_hash }} .xblock .xblock .problem-header,
+    #web_science_{{ web_science.course_hash }} .xblock .problem-title,
     #web_science_{{ web_science.course_hash }} .breadcrumbs .nav-item:last-child,
-    #web_science_{{ web_science.course_hash }} .course-box__name {
+    #web_science_{{ web_science.course_hash }} .xblock .openassessment__title.problem__header,
+    #web_science_{{ web_science.course_hash }} .course-box__name,
+    #web_science_{{ web_science.course_hash }} .xblock .discussion-module-title,
+    #web_science_{{ web_science.course_hash }} .xblock .hd.hd-2 {
         color: {{ web_science.color }};
     }
 
@@ -11,6 +15,24 @@
     #web_science_{{ web_science.course_hash }} .course .course-info {
         background: {{ web_science.color }};
     }
+
+    #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next:hover,
+    #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous:hover {
+        transition: color .2s;
+        color: {{ web_science.color }};
+    }
+    #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button.tab.active svg,
+    #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button.tab:hover svg{
+        transition: fill .2s, height .2s, bottom .2s;
+        fill: {{ web_science.color }};
+    }
+
+    #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next:hover svg,
+    #web_science_{{ web_science.course_hash }} .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous:hover svg {
+        transition: fill .2s;
+        fill: {{ web_science.color }};
+    }
+
     #web_science_{{ web_science.course_hash }} article.course {
         border-bottom: none;
     }
