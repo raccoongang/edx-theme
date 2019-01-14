@@ -3477,8 +3477,17 @@ section.wiki .main-article .wiki-article p {
     width: 30%;
 }
 body .page-header-secondary .action-edit-team {
+    transition: all 0.25s ease-in-out;
     &:hover {
         color: $white;
+        text-shadow: none;
+        border-color: $theme-btn-white-border;
+        background: $theme-btn-white-bg-hover !important;
+    }
+    &:focus {
+        background: $theme-btn-white-bg !important;
+        border-color: $theme-btn-white-border !important;
+        color: $theme-btn-white-text-color !important;
     }
 }
 body section.wiki #cheatsheetModal {
