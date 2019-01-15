@@ -761,6 +761,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .home {
+    > header:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(37,37,37,0.4);
+        z-index: 10;
+    }
+
     > header,
     .slider {
         //background-image: url('#{$img-path}/background.jpg');
@@ -781,14 +792,23 @@ body .wmd-prompt-dialog .btn-brand:focus {
             left: 0;
             top: -100px;
             width: 100%;
-            height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-            background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-            background-size: cover;
+            height: calc(100% + 200px);
+            background: #040404 url('#{$img-path}/background.jpg') no-repeat -70px 50%;
+            background-size: cover !important;
+
+            @media screen and (max-width:1600px ) {
+                background-position: -120px 50% !important;
+            }
+
+            @media screen and (max-width:1100px ) {
+                background-position: -665px 50% !important
+            }
         }
 
         .outer-wrapper {
             animation: none;
             padding: 0;
+            z-index: 100;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table;
@@ -800,7 +820,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .title {
             background: transparent;
             box-shadow: none;
-            max-width: 1000px;
+            max-width: none;
             width: 100%;
             margin: 0 auto;
             float: none;
@@ -827,21 +847,22 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-align: center;
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
-                    margin-bottom: 50px;
-                    text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
+                    margin-bottom: 20px;
                     @media screen and (min-width: 760px) {
-                        font-size: 52px;
+                        font-size: 55px;
                     }
                 }
                 span {
                     display: block;
                     text-align: center;
-                    font-size: 34px;
+                    font-size: 30px;
                     line-height: 1.3;
                     text-shadow: $promo-box-text-shadow;
-                    color: $promo-box-text-color;
+                    color: #fff;
                     margin-bottom: 40px;
+                    @media screen and (min-width: 760px) {
+                        font-size: 45px;
+                    }
                 }
                 .link {
                     background: $find-btn-bg;
@@ -929,6 +950,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .logo-en {
     display: inline;
+    height: 43px;
 
     .lang_ar & {
         display: none;
@@ -3522,7 +3544,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
 .arrow-up {
     cursor: pointer;
     position: fixed;
-    right: 30px;
+    right: 20px;
     bottom: -100px;
     border-radius: 50%;
     background: $theme-btn-bg;
@@ -3535,7 +3557,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     z-index: 100;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     &.active {
-        bottom: 200px;
+        bottom: 20px;
     }
     &:hover {
         background: $theme-btn-bg-hover;
@@ -3565,8 +3587,8 @@ body .courses-container .courses-more {
         color: $theme-btn-text-color !important;
         height: 40px;
         line-height: 40px;
-        padding: 0 10px;
-        width: 180px;
+        padding: 0 15px;
+        min-width: 180px;
         font-weight: normal;
         text-transform: uppercase;
         &:hover {
@@ -3774,5 +3796,17 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
     @media screen and (max-width: 400px) {
         font-size: .8em;
+    }
+}
+
+.container.about {
+    h1 {
+        margin: 30px 0;
+    }
+    ul {
+        padding-left: 30px;
+        li {
+            margin-bottom: 5px;
+        }
     }
 }
