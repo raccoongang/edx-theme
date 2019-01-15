@@ -48,7 +48,8 @@ from openedx.core.djangolib.markup import HTML, Text
 
       </header>
       <p class="main-page-text">
-          Your Learning Team will register you for courses in one of these learning pathways aligned with your job role. Take the certificate exam after completing the courses to begin to earn a Microsoft role-based certificate.
+          ${_("Your Learning Team will register you for courses in one of these learning pathways aligned with your job role. Take the certificate exam after completing the courses to begin to earn a")} Microsoft ${_("role-based certificate.")}
+          <p class="main-page-text" style="font-size: 14px">${_("(NOTE: Courses subject to change based on ")}Microsoft  ${_("program updates)")}</p>
       </p>
       % if not courses_data:
           <%include file="${courses_list}" />
