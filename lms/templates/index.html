@@ -11,123 +11,36 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
 
-      <header>
-        <div class="parallax-img"></div>
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-                ${homepage_overlay_html | n, decode.utf8}
-              % else:
-                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-                <span>${_("STUDENT SUCCESS")}</span>
-                <a href="/courses" class="link">${_("FIND COURSES")}</a>
-              % endif
-            </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search")}..."></input>
-                  </label>
-                  <button class="search-button" type="submit">
+        <header>
+            <div class="parallax-img"></div>
+        </header>
+
+        <h1 class="heading-title">${_("Let's write the future, together.")}</h1>
+
+        % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+        <div class="course-search">
+            <form method="get" action="/courses">
+                <label><span class="sr">${_("Search for a course")}</span>
+                    <input class="search-input" name="search_query" type="text" placeholder='${_("Search")}...'>
+                </label>
+                <button class="search-button" type="submit">
                     <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
-
-          </div>
-
-          % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
-        </div>
-      </header>
-
-      <!-- Slider modes:
-          class = 'slider'                    - common background image
-          class = 'slider slider-separate'    - separate backgrounds for each slide
-      -->
-      <!--
-      <div class="slider slider-separate">
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-              ${homepage_overlay_html | n, decode.utf8}
-              % else:
-              <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-              <span>${_("STUDENT SUCCESS")}</span>
-              <a href="/courses" class="link">${_("FIND COURSES")}</a>
-              % endif
-            </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-            <div class="course-search">
-              <form method="get" action="/courses">
-                <label><span class="sr">${_("Search for a course")}</span>
-                  <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                </label>
-                <button class="search-button" type="submit">
-                  <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
                 </button>
-              </form>
-            </div>
-            % endif
-
-          </div>
-
-          % if show_homepage_promo_video:
-          <a href="#video-modal" class="media" rel="leanModal">
-            <div class="hero">
-              <div class="play-intro"></div>
-            </div>
-          </a>
-          % endif
+            </form>
         </div>
-        <div class="outer-wrapper">
-          <div class="title">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-              ${homepage_overlay_html | n, decode.utf8}
-              % else:
-              <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-              <span>${_("STUDENT SUCCESS")}</span>
-              <a href="/courses" class="link">${_("FIND COURSES")}</a>
-              % endif
-            </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-            <div class="course-search">
-              <form method="get" action="/courses">
-                <label><span class="sr">${_("Search for a course")}</span>
-                  <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                </label>
-                <button class="search-button" type="submit">
-                  <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                </button>
-              </form>
-            </div>
-            % endif
+        % endif
 
-          </div>
-
-          % if show_homepage_promo_video:
-          <a href="#video-modal" class="media" rel="leanModal">
-            <div class="hero">
-              <div class="play-intro"></div>
-            </div>
-          </a>
-          % endif
+        <div class="main-page-text">
+            <p>Your Learning Team will register you for courses in one of these learning pathways
+                aligned with your job role.</p>
+            <p>Take the certificate exam after completing the courses to begin to earn a
+                Microsoft role-based certificate.</p>
+            <p class="small">(NOTE: Courses subject to change based on Microsoft program updates)</p>
         </div>
-      </div>
-      <script src="${static.url('js/slick.min.js')}"></script>
-      <script src="${static.url('js/slider.js')}"></script>
-      -->
-      <%include file="${courses_list}" />
+
+        <%include file="${courses_list}" />
+
+        <%include file="${courses_list}" />
 
     </section>
 </main>
@@ -135,60 +48,62 @@ from openedx.core.djangolib.markup import HTML, Text
 <a class="arrow-up" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
 % if show_homepage_promo_video:
-  <section id="video-modal" class="modal home-page-video-modal video-modal">
+<section id="video-modal" class="modal home-page-video-modal video-modal">
     <div class="inner-wrapper">
-      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
-  </section>
+</section>
 % endif
 
 <%block name="js_extra">
-   <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
+<script type="text/javascript">
+  $(window).load(function () {
+    if (getParameterByName('next')) {
+      $('#login').trigger("click");
+    }
+  })
 
-      // js for parallax
-      $(window).scroll(function () {
-        var scrollTop = $(window).scrollTop();
-        var imgPos = scrollTop / 2 + 'px';
-        $('.parallax-img').css('transform', 'translate3d(0, '  + imgPos + ', 0)');
+  // js for parallax
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var imgPos = scrollTop / 2 + 'px';
+    $('.parallax-img').css('transform', 'translate3d(0, ' + imgPos + ', 0)');
 
-        if ($(window).scrollTop() > 100) {
-          $('.arrow-up').addClass('active');
-        } else if ($(window).scrollTop() <= 100) {
-          $('.arrow-up').removeClass('active');
-        }
+    if ($(window).scrollTop() > 100) {
+      $('.arrow-up').addClass('active');
+    } else if ($(window).scrollTop() <= 100) {
+      $('.arrow-up').removeClass('active');
+    }
 
-      });
-      // js for parallax end
+  });
+  // js for parallax end
 
-      // js for show more btn
-      $('.show-more').click(function () {
-        $('.fa-spinner').css('visibility', 'visible');
-        setTimeout(function() {
-          $('.fa-spinner').css('visibility', 'hidden');
-          $('.courses-listing-item:visible:last').nextAll(':lt(8)').show().addClass('newElements');
-          if ($('.courses-listing-item').is(':hidden')) {
-            $('html, body').animate({ scrollTop: $('.newElements:first').offset().top - 20}, 1000);
-            $('.courses-listing-item').removeClass('newElements');
-          } else {
-            $('html, body').animate({ scrollTop: $('.newElements:first').offset().top - 20}, 1000);
-            $('.show-more').hide();
-          }
-        }, 300);
-      });
-      // js for show more btn end
+  // js for show more btn
+  $('.show-more').click(function () {
+    $('.fa-spinner').css('visibility', 'visible');
+    setTimeout(function () {
+      $('.fa-spinner').css('visibility', 'hidden');
+      $('.courses-listing-item:visible:last').nextAll(':lt(8)').show().addClass('newElements');
+      if ($('.courses-listing-item').is(':hidden')) {
+        $('html, body').animate({scrollTop: $('.newElements:first').offset().top - 20}, 1000);
+        $('.courses-listing-item').removeClass('newElements');
+      } else {
+        $('html, body').animate({scrollTop: $('.newElements:first').offset().top - 20}, 1000);
+        $('.show-more').hide();
+      }
+    }, 300);
+  });
+  // js for show more btn end
 
-   </script>
+</script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
-  ## NOTE: This won't work in production, because anonymous views are cached, so it will
-  ## show either with or without this extra js for 3 minutes at a time.
+ ## NOTE: This won't work in production, because anonymous views are cached, so it will
+ ## show either with or without this extra js for 3 minutes at a time.
 <script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
+  $(window).load(function () {
+    $('#signup_action').trigger("click");
+  });
 </script>
 % endif

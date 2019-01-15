@@ -1,4 +1,4 @@
-$base-color: #009be0;
+$base-color: #ff000f;
 //body background
 $body-bg: #eee;
 //settings for header
@@ -22,19 +22,19 @@ $find-btn-color: #fff;
 $find-btn-color-hover: $find-btn-color;
 //search input on promo box
 $search-input-background: rgba(255,255,255,0.25);
-$search-input-border: #fff;
-$search-input-color: #fff;
+$search-input-border: #505050;
+$search-input-color: #4b4b4b;
 $search-button-background: none;
-$search-button-border: #fff;
-$search-button-color: #fff;
-$search-height: 55px;
+$search-button-border: transparent;
+$search-button-color: $base-color;
+$search-height: 45px;
 //settings for footer
-$footer-bg: #009289;
-$footer-nav-link-color: #fff;
-$footer-nav-link-color-hover: rgba(255,255,255, .8);
-$footer-support-text-and-logo: #fff;
+$footer-bg: #505050;
+$footer-nav-link-color: #d0d0d0;
+$footer-nav-link-color-hover: lighten($footer-nav-link-color, 20%);
+$footer-support-text-and-logo: #d0d0d0;
 $footer-social-link-bg: #fff;
-$footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
+$footer-social-link-bg-hover: darken($footer-social-link-bg, 20%);
 //btn
 $theme-btn-bg: $base-color;
 $theme-btn-text-color: #ffe;
