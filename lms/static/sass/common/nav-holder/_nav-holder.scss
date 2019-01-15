@@ -1,6 +1,7 @@
 .nav-holder {
     width: 100%;
     flex-wrap: wrap;
+    align-items: center;
     display: none;
     flex-grow: 1;
     padding-top: 10px;
@@ -11,7 +12,7 @@
     }
     @media (min-width: 761px) {
         width: auto;
-        display: block;
+        display: flex;
         padding: 0;
     }
 
