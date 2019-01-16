@@ -1,0 +1,18 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About Us")}</h1>
+        <p>${_("LRS® Education Services offers comprehensive IT training solutions and certifications.")}</p>
+        <p>${_("We are dedicated to ensuring that every student who walks through our doors comes away with the knowledge, skills, and expertise they need to do their best work. Having the right training makes all the difference.")}</p>
+        <p>${_("We focus on the individuals who come to us for training--they are our number one priority.")}</p>
+        <p>${_("Since 1994, LRS Education Services has helped more than 30,000 people become more proficient and productive in their computing environments. Our instructors continually receive high marks and positive feedback from our students. They keep up with the latest information and product releases, receive continuing education to stay at the forefront of their respective areas and incorporate that knowledge into their classes.")}</p>
+        <p>${_("With years of experience, we know the ins and outs of creating the best learning environment. Our classrooms are equipped with the latest technology and offer students a superior place to further their knowledge and grow their skills.")}</p>
+        <p>${_("LRS Education Services is a Microsoft® Gold Certified Partner for Learning, offers CompTIA, Cisco, and VMware Certification Training, is a certified EC-Council Training Partner, and a Pearson VUE® Authorized Test Center.")}</p>
+        <p>${_("LRS provides training only to individuals sponsored by an employer (business, government agency, non-profit, etc.). Individual members of the public are not allowed to register directly with LRS for classes.")}</p>
+    </section>
+</main>
