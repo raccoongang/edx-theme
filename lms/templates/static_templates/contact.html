@@ -25,6 +25,18 @@
 
                         ${form.as_ul_with_class('field required text') | n}
 
+                        %if google_recaptcha_site_key:
+                            <li class="field required text">
+                                %if not recaptcha_is_valid:
+                                    <ul class="errorlist">
+                                        <li>This field is required.</li>
+                                    </ul>
+                                %endif
+                                <div class="g-recaptcha" data-sitekey="${google_recaptcha_site_key}"></div>
+                                <script src='https://www.google.com/recaptcha/api.js'></script>
+                            </li>
+                        %endif
+
                         <li class="form-actions">
                             <button type="submit" class="action action-primary action-update" aria-disabled="false">Submit
                             </button>
