@@ -286,9 +286,14 @@ body.view-in-course .course-wrapper {
 	}	
 }
 
+.xblock .openassessment__title.problem__header,
+.xblock .problem-title,
+.xblock .discussion-module-title,
+.xblock .hd.hd-2,
 .xblock .xblock .unit-title,
 .xblock .xblock .problem-header {
 	font-family: 'Baloo-Regular';
+	color: #1D1A17;
 }
 
 .course-promo-box {
@@ -322,4 +327,13 @@ body.view-in-course .course-wrapper {
 
 .profile-wrapper .course-info {
 	padding-top: 0;
+}
+
+.page-content-container {
+	border: none;
+}
+
+.course-page-decore {
+	height: 500px;
+	margin-left: 40px;
 }
