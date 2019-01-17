@@ -975,6 +975,45 @@ div {
             margin: 0 15px;
         }
     }
+
+    .page-header-secondary {
+        .forum-search {
+            @media screen and (max-width: 768px){
+                margin-bottom: 10px !important;
+            }
+        }
+    }
+
+    .content-wrapper .page-header.has-secondary .page-header-main {
+        flex: 1 1 auto;
+    }
+
+    .forum-nav-refine-bar {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (min-width: 768px) and (max-width: 900px), screen and (max-width: 380px) {
+            flex-direction: column;
+
+            .forum-nav-filter-main,
+            .forum-nav-sort {
+                float: none;
+                text-align: left;
+                width: 100%;
+            }
+        }
+    }
+
+    .has-breadcrumbs {
+        margin-right: 5px;
+    }
+
+    @include sm {
+        .content-wrapper .container {
+            padding: 10px 10px 60px;
+        }
+    }
+
 }
 
 .view-discussion-home {
