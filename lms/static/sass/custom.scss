@@ -509,3 +509,40 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
 body.view-in-course .container {
 	overflow: hidden;
 }
+
+.course-outline .block-tree {
+	max-width: 586px;
+	width: 100%;
+}
+
+.course-outline .block-tree .section .subsection-text,
+.course-outline .block-tree .section .section-name {
+	display: flex;
+}
+
+.course-outline .block-tree .section ol.outline-item .subsection .subsection-title,
+.course-outline .block-tree .section .section-name .section-title {
+	font-size: 15px;
+	white-space: nowrap;
+	max-width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.course-outline .block-tree .section ol.outline-item .subsection .vertical .vertical-title {
+	white-space: nowrap;
+	max-width: 40%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.course-outline .block-tree .section ol.outline-item .subsection .vertical .vertical-details {
+	float: none;
+    display: block;
+    width: 100%;
+}
+button.accordion-trigger .fa.fa-rotate-90 + h3 {
+	font-weight: bold !important;
+}
