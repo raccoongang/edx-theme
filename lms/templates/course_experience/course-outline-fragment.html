@@ -41,10 +41,6 @@ course_sections = blocks.get('children')
             % if section.get('complete'):
                             <span class="complete-checkmark fa fa-check"></span>
             % endif
-                        <span class="outline-item__status outline-item__status_complite"> 
-                            <span class="outline-item__bullet"></span>
-                            <span class="outline-item__text">complite on</span>
-                        </span>
                     </button>
                     <ol class="outline-item accordion-panel ${ '' if section_is_auto_opened else 'is-hidden' }"
                         id="${ section['id'] }_contents"
@@ -145,16 +141,8 @@ course_sections = blocks.get('children')
                                             </span>
                 % endif
                                         </div> <!-- /details -->
-                                        <span class="outline-item__status outline-item__status_last-visit"> 
-                                            <span class="outline-item__bullet"></span>
-                                            <span class="outline-item__text">last visit on 1.10.2019</span>
-                                        </span>
                                     </button> <!-- /subsection-text -->
                 % if gated_subsection and not completed_prereqs:
-                                    <span class="outline-item__status outline-item__status_last-visit"> 
-                                        <span class="outline-item__bullet"></span>
-                                        <span class="outline-item__text">last visit on 1.10.2019</span>
-                                    </span>
                                 </a>
                 % endif
                 % if not gated_subsection or (gated_subsection and completed_prereqs):
@@ -175,6 +163,8 @@ course_sections = blocks.get('children')
                         % if vertical.get('complete'):
                                                 <span class="complete-checkmark fa fa-check"></span>
                         % endif
+                                            <!-- <span class="outline-item__status outline-item__status_complite">  -->
+                                            <!-- <span class="outline-item__status outline-item__status_last-visit"> -->
                                             <span class="outline-item__status"> 
                                                 <span class="outline-item__bullet"></span>
                                                 <span class="outline-item__text"></span>
