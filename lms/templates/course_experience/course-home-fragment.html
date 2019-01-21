@@ -104,6 +104,25 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
         </div>
         <img class="course-page-decore" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/course-decore.png" alt="">
         <aside class="page-content-secondary course-sidebar">
+            <div class="countdown">
+                <p class="countdown__text">${_("You've been taking the course for:")}</p>
+                <div class="countdown__progress">
+                        % if counter_delta is not None:        
+                            <%
+                                count_width = round(float(counter_delta) / end_counter_number * 100, 1)
+                            %>
+                        % endif
+                        <div class="countdown__progress-line" style="width: ${count_width}%"></div>
+                
+                </div>
+                % if counter_delta is not None:
+                    <span class="countdown__days">
+                        <span class="countdown__bold">${counter_delta}</span>
+                        ${_("days out of")} ${end_counter_number}
+                    </span>
+                % endif
+                
+            </div>
             % if has_goal_permission:
                 <div class="section section-goals ${'' if current_goal else 'hidden'}">
                     <div class="current-goal-container">
