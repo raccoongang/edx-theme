@@ -2945,6 +2945,12 @@ body .breadcrumbs .nav-item {
 }
 
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown {
+    .actions-item .action {
+        float: none;
+        display: block;
+        padding: 5px;
+    }
+
     @media screen and (max-width: 420px) {
         right: auto;
         left: 19px;
