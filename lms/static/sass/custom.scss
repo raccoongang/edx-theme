@@ -549,3 +549,43 @@ body.view-in-course .container {
 button.accordion-trigger .fa.fa-rotate-90 + h3 {
 	font-weight: bold !important;
 }
+
+.countdown {
+	margin: 0 0 40px;
+}
+
+.countdown__text {
+	text-align: center;
+	margin: 0 0 20px;
+}
+
+.countdown__progress {
+	width: 100%;
+	border-radius: 9px;
+	height: 18px;
+	background: #d6ecf9;
+	position: relative;
+	margin: 0 0 20px;
+	overflow: hidden;
+}
+
+.countdown__progress-line {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 10%;
+	border-radius: 9px;
+	background: #61abdb;
+}
+
+.countdown__days {
+	color: #61abdb;
+	font-size: 22px;
+	text-align: center;
+	display: block;
+}
+
+.countdown__bold {
+	font-weight: bold;
+}
