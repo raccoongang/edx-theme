@@ -662,6 +662,22 @@ body .discussion.inline-discussion .new-post-article .add-post-cancel {
 body .edit-post-form .post-type-input:checked+.post-type-label {
     background-color: $theme-btn-bg;
 }
+
+.forum-new-post-form .post-type-input {
+    &:checked+.post-type-label {
+        border: 1px solid $theme-btn-bg !important;
+
+        &:hover {
+            border-color: $theme-btn-bg-hover !important;
+        }
+    }
+
+    & + .post-type-label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
 body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 .rtl .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 .date-summary-container .date-summary-todays-date {
