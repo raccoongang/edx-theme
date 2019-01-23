@@ -1814,6 +1814,10 @@ section.wiki .table.table-striped {
 }
 #main {
     max-width: 100%;
+
+    &:first-child {
+        width: 100%;
+    }
 }
 
 //responsive for dashboard page
