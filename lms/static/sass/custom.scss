@@ -100,11 +100,6 @@ body.view-in-course .wiki-wrapper {
 	top: 17px;
 }
 
-.courses-container .courses .course .course-image .cover-image {
-	background: url('../images/img.jpg');
-	background-size: cover;
-}
-
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next,
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous {
 	border-color: transparent;
@@ -306,7 +301,7 @@ body.view-in-course .course-wrapper {
 	align-items: center;
 	background-color: #fff;
 	margin: 0 -9999px;
-	padding: 30px 9999px 0;
+	padding: 30px 9999px 30px;
 }
 
 .course-promo-box__img {
@@ -588,4 +583,10 @@ button.accordion-trigger .fa.fa-rotate-90 + h3 {
 
 .countdown__bold {
 	font-weight: bold;
+}
+
+body.view-in-course .profile-wrapper {
+	border: none;
+    background: transparent;
+    box-shadow: none;
 }

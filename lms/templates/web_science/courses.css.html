@@ -40,11 +40,8 @@
 {% endif %}
 
 {% if web_science.image %}
-    #web_science_{{ web_science.course_hash }}  .cover-image {
-        background-image: url({{ web_science.image }});
-    }
-    #web_science_{{ web_science.course_hash }} .course-box__img,
-    #web_science_{{ web_science.course_hash }} .course .course-image .cover-image {
+
+    #web_science_{{ web_science.course_hash }} .course-box__img {
         background-image: url({{ web_science.image }});
     }
     
