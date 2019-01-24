@@ -133,7 +133,7 @@ body.view-in-course .wiki-wrapper {
 	display: flex;
 	align-items: center;
 	margin-bottom: 0;
-	
+
 	&:before,
 	&:after {
 		display: none;
@@ -161,6 +161,10 @@ body.view-in-course .course-wrapper {
 	left: 50%;
 	bottom: 0;
 	transform: translateX(-50%);
+
+	.check-circle {
+		display: none;
+	}
 }
 
 .sequence_icon__text {
@@ -200,24 +204,24 @@ body.view-in-course .course-wrapper {
 
 	li {
 		border: none !important;
-	
+
 		button {
 			height: 53px;
 			border: none;
 			position: relative;
 			overflow: visible;
-	
+
 			&:hover {
 				border: none;
 				background: transparent;
 				padding: 0;
 			}
-	
+
 			&.active {
 				border: none;
 				background: transparent;
 				padding: 0;
-	
+
 				&:hover {
 					border: none;
 					background: transparent;
@@ -274,13 +278,13 @@ body.view-in-course .course-wrapper {
 
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.sequence-nav-button__bottom {
 	max-width: 70px;
-	
+
 	.sequence-nav-button-label {
 		font-weight: bold;
 		font-size: 11px;
 		padding: 5px 0 0;
 		text-transform: uppercase;
-	}	
+	}
 }
 
 .xblock .openassessment__title.problem__header,
@@ -340,7 +344,7 @@ body.view-in-course .course-wrapper {
 }
 
 .page-header.has-secondary {
-	
+
 }
 
 #expand-collapse-outline-all-button {
