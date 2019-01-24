@@ -516,6 +516,22 @@ body .dashboard .my-courses .course .details .enter-course.archived,
         border-color: $theme-btn-white-border;
     }
 }
+.dashboard .my-courses .course .details .course-actions {
+    .wrapper-action-more:first-child {
+        .actions-dropdown {
+            @media screen and (max-width: 420px) {
+                right: 19px;
+                left: auto;
+
+                .actions-dropdown-list:before,
+                .actions-dropdown-list:after {
+                    right: 6px;
+                    left: auto;
+                }
+            }
+        }
+    }
+}
 body .discussion-module .btn {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
