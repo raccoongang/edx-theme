@@ -22,4 +22,18 @@
 	}
 }
 
+.forum-nav.layout-col.layout-col-a {
+	overflow: hidden;
 
+	@media screen and (max-width: 760px) {
+		margin-bottom: 15px;
+	}
+}
+
+.forum-new-post-form .post-type-label {
+	&:first-of-type {
+		@media screen and (max-width: 760px) {
+			margin-bottom: 10px;
+		}
+	}
+}
