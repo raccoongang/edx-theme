@@ -20,11 +20,21 @@
 			}
 		}
 		.file-browse {
+			background: none !important;
+
 			.browse {
 				position: relative;
 				z-index: 10;
 				pointer-events: none;
 				padding: 5px 10px;
+				background-color: #eeeeee;
+				background-image: linear-gradient(#eeeeee, #d6cece);
+				border: 1px solid #cfc6c6;
+				border-radius: 4px;
+				box-shadow: 0 1px 0 0 #ffffff inset;
+				color: #333333;
+				text-shadow: 0 1px 0 #f9f8f8;
+
 				@media screen and (max-width: 400px){
 					margin-left: 181px;
 				}
