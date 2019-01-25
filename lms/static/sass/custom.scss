@@ -268,6 +268,27 @@ body.view-in-course .course-wrapper {
 	max-width: 980px;
 	height: 80px;
 	justify-content: center;
+	position: relative;
+	margin: 0 auto;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background: #fff;
+		height: 100%;
+		width: 9999px;
+		top: 0;
+		left: 100%;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		background: #fff;
+		height: 100%;
+		width: 9999px;
+		top: 0;
+		right: 100%;
+	}
 }
 
 .wrap-instructor-info.studio-view {
@@ -298,6 +319,7 @@ body.view-in-course .course-wrapper {
 	color: #1D1A17;
 	text-transform: none;
 	letter-spacing: normal;
+	font-weight: 400;
 }
 
 .course-promo-box {
@@ -341,10 +363,6 @@ body.view-in-course .course-wrapper {
 .course-page-decore {
 	height: 500px;
 	margin-left: 40px;
-}
-
-.page-header.has-secondary {
-
 }
 
 #expand-collapse-outline-all-button {
@@ -440,7 +458,6 @@ body.view-in-course .course-wrapper {
 	}
 }
 
-.page-header .page-header-secondary,
 .page-header .page-header-main .page-title {
 	display: none;
 }
@@ -494,12 +511,15 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
 	display: flex;
 }
 
-.xmodule_display.xmodule_SequenceModule .sequence-bottom,
 #seq_content,
 .page-header {
     background: #fff;
     margin: 0 -9999px;
     padding: 20px 9999px;
+}
+
+.page-header {
+	padding: 20px 9999px !important;
 }
 
 .breadcrumbs {
@@ -588,6 +608,52 @@ button.accordion-trigger .fa.fa-rotate-90 + h3 {
 .countdown__bold {
 	font-weight: bold;
 }
+
+.circle-chart__circle {
+	animation: circle-chart-fill 2s reverse;
+	transform: rotate(-90deg);
+	transform-origin: center;
+}
+
+.circle-chart__percent {
+	font-size: 22px;
+	font-size: 9px;
+	font-weight: bold;
+	color: #61abdb;
+}
+	
+.circle-chart__info {
+	animation: circle-chart-appear 2s forwards;
+	opacity: 0;
+	transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 100; }
+}
+	
+@keyframes circle-chart-appear {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.chart-holder {
+	display: flex;
+	margin-bottom: 30px;
+	justify-content: space-around;
+}
+
+.chart {
+	display: flex;
+	align-items: center;
+}
+
+.chart__text {
+	margin-left: 20px;
+}
+	
 
 body.view-in-course .profile-wrapper {
 	border: none;
