@@ -5,15 +5,7 @@
 	margin: 0 !important;
 	box-shadow: none !important;
 	border: none !important;
-	@media screen and (min-width: 1200px) {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-	}
-	@media screen and (max-width: 991px) {
-		padding: 30px 0 20px !important;
-	}
+
 	footer#footer-openedx {
 		width: 100%;
 		max-width: 1200px !important;
@@ -105,7 +97,7 @@
 		&__list {
 			list-style: none;
 			padding: 0;
-			margin: 0 0 5px;
+			margin: 0 0 10px;
 			overflow: hidden;
 		}
 
@@ -125,7 +117,7 @@
 			color: #86aad2;
 
 			&:hover {
-				color: #63c0bc;
+				color: #63c0bc !important;
 				text-decoration: underline !important;
 			}
 		}
@@ -135,10 +127,63 @@
 			color: #333;
 			clear: both;
 			margin: 0;
+
+			@media screen and (max-width: 991px) {
+				text-align: center;
+			}
 		}
 	}
 }
 
 .footer-index #footer-openedx:before {
 	display: none;
+}
+
+.footer-support {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	color: #333;
+	margin-top: 0;
+
+	@media screen and (max-width: 991px) {
+		justify-content: center;
+	}
+
+	a {
+		text-decoration: none;
+		border: none !important;
+	}
+
+	span {
+		margin-right: 5px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.openedx__logo {
+		margin-right: 5px;
+	}
+
+	.svg-edx {
+		width: 55px;
+	}
+
+	.svg-raccoon {
+		width: 20px;
+		position: relative;
+		top: -1px;
+	}
+
+	.raccoon__logo {
+		display: flex;
+		align-items: center;
+		color: #333;
+
+		em {
+			font-style: normal;
+			margin-right: 5px;
+			color: #333;
+		}
+	}
 }
