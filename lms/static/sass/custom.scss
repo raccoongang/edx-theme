@@ -76,14 +76,22 @@ body.view-in-course .wiki-wrapper {
 	max-width: none;
 }
 
+.window-wrap {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+
+#content {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
 .window-wrap,
 .view-profile .window-wrap {
 	background: none;
 	position: relative;
 	box-sizing: border-box;
-	@media screen and (min-width: 1200px) {
-		min-height: 100vh;
-		padding-bottom: 150px;
-	}
 }
 

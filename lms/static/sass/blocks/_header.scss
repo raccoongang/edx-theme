@@ -126,7 +126,6 @@
 		color: $theme-btn-text-color !important;
 		border: none !important;
 		text-transform: uppercase;
-		padding: 7px 20px 4px !important;
 		&:active,
 		&:focus {
 			background: $theme-btn-bg !important;
@@ -150,14 +149,21 @@
 .mobile-menu {
 	margin: 0;
 	border-top: 1px solid #e7e7e7;
-	.mobile-nav-link a {
-		background: none !important;
-		color: #fff !important;
-		border-bottom: 1px solid #e7e7e7 !important;
-		font-size: 16px;
-		&:focus:hover,
-		&:hover {
+
+	.mobile-nav-link {
+		a {
 			background: none !important;
+			color: #fff !important;
+			border-bottom: 1px solid #e7e7e7 !important;
+			font-size: 16px;
+			&:focus:hover,
+			&:hover {
+				background: none !important;
+			}
+		}
+
+		&:last-child a {
+			border-bottom: 0 !important;
 		}
 	}
 }
