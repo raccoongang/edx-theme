@@ -19,9 +19,7 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-                <span>${_("STUDENT SUCCESS")}</span>
-                <a href="/courses" class="link">${_("FIND COURSES")}</a>
+                <h1>${_("Welcome to the LLTV")}</h1>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -127,6 +125,18 @@ from openedx.core.djangolib.markup import HTML, Text
       <script src="${static.url('js/slick.min.js')}"></script>
       <script src="${static.url('js/slider.js')}"></script>
       -->
+      <div class="promo-slider">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-1.png" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-2.png" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-3.png" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-4.png" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-5.jpg" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-6.png" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-7.png" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-8.png" alt="promo slider img" class="promo-slider__img">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-9.png" alt="promo slider img" class="promo-slider__img">
+      </div>
+
       <%include file="${courses_list}" />
 
     </section>
@@ -143,6 +153,8 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
+    <script src="${static.url('js/slick.min.js')}"></script>
+    <script src="${static.url('js/slider.js')}"></script>
    <script type="text/javascript">
       $(window).load(function() {
          if(getParameterByName('next')) {

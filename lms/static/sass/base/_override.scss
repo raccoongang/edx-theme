@@ -861,7 +861,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 50px;
                     text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
+                    font-family: "Open Sans",Verdana,Geneva,sans-serif;
                     @media screen and (min-width: 760px) {
                         font-size: 52px;
                     }
@@ -933,23 +933,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .footer-logo-holder {
     display: block;
     text-align: center;
-    padding: 30px 0 0;
+    padding: 0;
     img {
         display: block;
-        height: 37px;
+        height: 86px;
         margin: 0 auto;
-    }
-
-    @media screen and (min-width: 761px) {
-        display: inline;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        padding: 0;
-    }
-
-    @media screen and (max-width: 1362px) {
-        right: 70px;
     }
 }
 .logo-ar {
@@ -3825,4 +3813,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     &#password-reset-form {
         padding-bottom: 25px;
     }
+}
+
+.home>header .title .course-search .search-button .fa {
+    color: #7b7b7b;
 }

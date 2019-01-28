@@ -17,21 +17,78 @@
       dir=${bidi}
     % endif
   >
-    <div class="colophon">
-
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
-            </li>
-            <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
-            </li>
-        </ol>
-      </nav>
+  <div class="footer-holder">
+    <div class="footer-col footer-col_logo">
+      <a href="/" class="footer-logo-holder">
+        <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
+      </a>
+    </div>
+    <div class="footer-col footer-col_list">
+      <div class="footer-col__item">
+        <h3 class="footer-col__holder">${_("EDX")}</h3>
+        <ul class="footer-list">
+          <li class="footer-list__item">
+            <a href="#">${_("About")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("edx for Business")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Affiliates")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Open edX")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Carrers")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("News")}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col__item">
+        <h3 class="footer-col__holder">${_("LEGAL")}</h3>
+        <ul class="footer-list">
+          <li class="footer-list__item">
+            <a href="#">${_("Terms of Servise & Honor Code")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Privacy Policy")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Accessibility Policy")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Trademark Policy")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Sitemap")}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col__item">
+        <h3 class="footer-col__holder">${_("CONNECT")}</h3>
+        <ul class="footer-list">
+          <li class="footer-list__item">
+            <a href="#">${_("Blog")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Contact Us")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Help Center")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Media Kit")}</a>
+          </li>
+          <li class="footer-list__item">
+            <a href="#">${_("Donate")}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-col footer-col_social">
       <ul class="icon-list">
         <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
@@ -44,25 +101,19 @@
             <use xlink:href="#ico-twitter" />
           </svg></a>
         </li>
+        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
+          <svg class="icon-list_svg" viewBox="0 0 35 35">
+            <use xlink:href="#ico-linkedin" />
+          </svg></a>
+        </li>
+        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
+          <svg class="icon-list_svg" viewBox="0 0 35 35">
+            <use xlink:href="#ico-youtube" />
+          </svg></a>
+        </li>
       </ul>
-      <a href="/" class="footer-logo-holder">
-        <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
-      </a>
-      <p class="footer-support">${_("Built on")}
-        <a target="_blank" href="${footer['openedx_link']['url']}">
-          <svg class="svg-edx"  viewBox="0 0 100 70">
-            <use xlink:href="#logo-edx" />
-          </svg>
-        </a>
-        by
-        <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-          Raccoon Gang
-          <svg class="svg-raccoon"  viewBox="0 0 100 100">
-            <use xlink:href="#logo-raccoon" />
-          </svg>
-        </a>
-      </p>
     </div>
+  </div>
   </footer>
 </div>
 % if include_dependencies:
