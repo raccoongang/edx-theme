@@ -41,7 +41,7 @@
     <div class="promo-block__holder">
         <div class="video-box">
             <div class="video-box__wrapper">
-                <a href="${reverse('courses')}" class="btn">${_('find courses')}</a>
+                <a href="${reverse('courses')}" class="btn">${_('Find Courses')}</a>
                 % if custom_video:
                     <iframe class="video-box__video" id="player" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="${custom_video.link}?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;modestbranding=0&amp;playlist=668nUCeBHyY&amp;vq=hd1080&amp;enablejsapi=1&amp;widgetid=1&amp;mute=1" width="100%" height="100%" frameborder="0"></iframe>
                 % endif
