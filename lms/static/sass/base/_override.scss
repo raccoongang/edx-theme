@@ -37,6 +37,10 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
         @media screen and (min-width:761px ) {
             width: auto;
         }
@@ -55,6 +59,8 @@
             a {
                 color: $header-nav-link-color;
                 padding: 12px 10px !important;
+                text-transform: uppercase;
+                font-weight: 400;
 
                 &:active,
                 &:focus {
@@ -861,9 +867,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 50px;
                     text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
                     @media screen and (min-width: 760px) {
-                        font-size: 52px;
+                        font-size: 46px;
                     }
                 }
                 span {
@@ -904,6 +909,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     color: $search-input-color;
                     padding-left: 20px !important;
                     height: $search-height;
+                    font-size: 16px;
                     &:focus {
                         border-color: $search-input-border !important;
                     }
@@ -936,7 +942,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 60px;
         margin: 0 auto;
     }
 
@@ -968,6 +974,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 .highlighted-courses .courses {
     padding-bottom: 30px;
+    padding-top: 85px;
 
     .course a {
         background: $course-bg;
@@ -3824,5 +3831,29 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
     &#password-reset-form {
         padding-bottom: 25px;
+    }
+}
+
+.footer-link-text {
+    margin: 0 0 28px;
+    text-align: center;
+    line-height: normal;
+    font-size: 14px;
+
+    a {
+        transition: link-color 0.15s ease-in-out 0s,border 0.15s ease-in-out 0s;
+        border-bottom: none;
+        color: $header-nav-link-color;
+        text-decoration: none !important;
+
+        &:hover,
+        &:focus {
+            text-decoration: none !important;
+            border: none !important;
+        }
+
+        &:hover {
+            color: $header-nav-link-color-hover !important;
+        }
     }
 }
