@@ -12,75 +12,34 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
-      <div class="owl-carousel">
-      <header class="slide-1">
+      <header>
         <div class="outer-wrapper">
-          <div class="logo-block">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo (1).png" alt="">
+          <div class="title">
+            <div class="heading-group">
+              % if homepage_overlay_html:
+                ${homepage_overlay_html | n, decode.utf8}
+              % else:
+                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
+                <span>${_("STUDENT SUCCESS")}</span>
+                <a href="/courses" class="link">${_("FIND COURSES")}</a>
+              % endif
+            </div>
+            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+              <div class="course-search">
+                <form method="get" action="/courses">
+                  <label><span class="sr">${_("Search for a course")}</span>
+                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search")}..."></input>
+                  </label>
+                  <button class="search-button" type="submit">
+                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+                  </button>
+                </form>
+              </div>
+            % endif
+
           </div>
-          <div class="text-block">
-            Welcome to<br>
-            Microsoft Cloud Society<br>
-            Learning 
-          </div>
-
-          % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
         </div>
-
       </header>
-      <header class="slide-2">
-        <div class="outer-wrapper">
-          <div class="logo-block">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo (1).png" alt="">
-            </div>
-            <div class="text-block">
-                Get Certified and<br>
-                win a trip to the<br>
-                Mauritius Cloud Camp 
-            </div>
-
-          % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
-        </div>
-
-      </header>
-      <header class="slide-3">
-        <div class="outer-wrapper">
-            <div class="logo-block">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo (1).png" alt="">
-            </div>
-            <div class="text-block">
-                Save 20% on your<br>
-                digital certificate now!<br>
-                Take your skills to the<br>
-                next level. 
-            </div>
-            <div class="big-logo-block">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/Cloud-Society-Banner.jpg" alt="">
-            </div>
-            
-          % if show_homepage_promo_video:
-            <a href="#video-modal" class="media" rel="leanModal">
-              <div class="hero">
-                <div class="play-intro"></div>
-              </div>
-            </a>
-          % endif
-        </div>
-
-      </header>
-      </div>
       <%include file="${courses_list}" />
     </section>
 </main>
