@@ -102,12 +102,6 @@ site_status_msg = get_site_status_msg(course_id)
               </li>
             % endif
           % endif
-          %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
-            <li class="tab-nav-item">
-              ## Translators: This is short for "System administration".
-              <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-            </li>
-          %endif
         </%block>
       </ol>
       <div class="flex">
