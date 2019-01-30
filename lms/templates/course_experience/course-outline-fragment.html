@@ -166,13 +166,13 @@ course_sections = blocks.get('children')
                                             <span class="outline-item__status outline-item__status_complite">
                                                 <span class="outline-item__bullet"></span>
                                                 <span class="outline-item__text">
-                                                    completed at ${ vertical['completed_at'] }
+                                                    completed ${ vertical['completed_at'] }
                         % else:
                             % if vertical.get('last_visited_at'):
                                             <span class="outline-item__status outline-item__status_last-visit">
                                                 <span class="outline-item__bullet"></span>
                                                 <span class="outline-item__text">
-                                                    visited at ${ vertical['last_visited_at'] }
+                                                    visited ${ vertical['last_visited_at'] }
                             %else:
                                             <span class="outline-item__status">
                                                 <span class="outline-item__bullet"></span>
