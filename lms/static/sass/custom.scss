@@ -660,3 +660,20 @@ body.view-in-course .profile-wrapper {
     background: transparent;
     box-shadow: none;
 }
+
+.block-tree .fa-chevron-right {
+	background: url('#{$img-path}/arrow-1.png') no-repeat;
+	background-size: contain;
+	width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+
+	&:before {
+		display: none;
+	}
+
+	&.fa-rotate-90 {
+		background-image: url('#{$img-path}/arrow-2.png');
+	}
+}
