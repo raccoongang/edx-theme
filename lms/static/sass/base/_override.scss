@@ -3854,7 +3854,6 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
     .small {
         font-size: 16px;
-        font-style: italic;
     }
 }
 
@@ -3886,7 +3885,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .heading-title {
         color: #1f1f1f;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 32px;
         position: relative;
         max-width: 1200px;
@@ -3895,15 +3894,20 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         padding: 17px 15px 0;
         box-sizing: border-box;
 
-        &:before {
-            content: '';
+        span {
             display: inline-block;
-            width: 91px;
-            height: 6px;
-            background: $base-color;
-            position: absolute;
-            left: 15px;
-            top: 0;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 50px;
+                height: 6px;
+                background: $base-color;
+                position: absolute;
+                left: 0;
+                top: -17px;
+            }
         }
     }
 
