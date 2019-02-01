@@ -3885,27 +3885,38 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 }
 
 .heading-title {
-        color: #1f1f1f;
-        font-weight: 700;
-        font-size: 32px;
-        position: relative;
-        max-width: 1200px;
-        text-align: center;
-        margin: 46px auto;
-        padding: 17px 15px 0;
-        box-sizing: border-box;
+    color: #1f1f1f;
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+    max-width: 1200px;
+    text-align: center;
+    margin: 46px auto;
+    padding: 17px 15px 0;
+    box-sizing: border-box;
 
-        &:before {
-            content: '';
-            display: inline-block;
-            width: 91px;
-            height: 6px;
-            background: $base-color;
-            position: absolute;
-            left: 15px;
-            top: 0;
-        }
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 91px;
+        height: 6px;
+        background: $base-color;
+        position: absolute;
+        left: 15px;
+        top: 0;
     }
+}
+
+.main-page-graphic {
+    text-align: center;
+    max-width: 1180px;
+    margin: 40px auto;
+    padding: 0 15px;
+
+    img {
+        max-width: 100%;
+    }
+}
 
 .footer-copyright {
     text-align: center;
