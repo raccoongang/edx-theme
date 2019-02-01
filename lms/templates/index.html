@@ -31,11 +31,10 @@ from openedx.core.djangolib.markup import HTML, Text
         % endif
 
         <div class="main-page-text">
-            <p>Your Learning Team will register you for courses in one of these learning pathways
-                aligned with your job role.</p>
-            <p>Take the certificate exam after completing the courses to begin to earn a
-                Microsoft role-based certificate.</p>
-            <p class="small">(NOTE: Courses subject to change based on Microsoft program updates)</p>
+            <p>${_("Start on your learning pathway by taking the Azure Fundamentals course.")}</p>
+            <p>${_("Your Learning Team will register you for the instructor-led courses in the pathway aligned with your job role.")}</p>
+            <p>${_("Take the exam after completing all the classes in your pathway to begin to earn a Microsoft role-based certification.")}</p>
+            <p class="small">(${_("NOTE: Courses subject to change based on Microsoft program updates")})</p>
         </div>
 
       </header>
