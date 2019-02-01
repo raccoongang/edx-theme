@@ -91,6 +91,17 @@ CoursewareFactory();
     var $$course_id = "${course.id | n, js_escaped_string}";
 </script>
 
+<script type="text/javascript">
+  // mark vertical block as viewed
+  $('.sequence').on('sequence:change', function(event) {
+    // wait for sequence render
+    setTimeout(function() {
+      var usageId = $(event.target).find('#seq_content').find('.xblock-student_view-vertical').data('usageId');
+      $.get('${reverse('web_science_unit_log')}' + usageId);
+    }, 100);
+  });
+</script>
+
 % if not request.user.is_authenticated:
 <script type="text/javascript">
     // Disable discussions
