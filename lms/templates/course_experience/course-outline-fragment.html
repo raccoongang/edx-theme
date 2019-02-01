@@ -13,7 +13,7 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <%
-course_sections = blocks.get('children')
+    course_sections = blocks.get('children')
 %>
 <main role="main" class="course-outline" id="main" tabindex="-1">
     % if course_sections is not None:
@@ -151,7 +151,10 @@ course_sections = blocks.get('children')
                                     aria-labelledby="${ subsection['id'] }"
                                 >
                     % for vertical in subsection.get('children', []):
-                                    <li class="vertical outline-item focusable">
+                        <%
+                            graded_class = 'graded' if vertical.get('graded') else ''
+                        %>
+                                    <li class="vertical ${graded_class} outline-item focusable">
                                         <a class="outline-item focusable"
                                             href="${ vertical['lms_web_url'] }"
                                             id="${ vertical['id'] }">
