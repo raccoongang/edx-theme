@@ -2662,6 +2662,28 @@ body {
     margin: 0;
 }
 
+// styles for IE10+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+        display: flex;
+    }
+
+    body,
+    .window-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100vh;
+    }
+
+    #content {
+        flex: 1 1 auto;
+    }
+
+    .wrapper-footer {
+        overflow: hidden;
+    }
+}
 
 //mobile responsive
 @include x-sm {
@@ -3012,6 +3034,7 @@ body .user-dropdown {
     color: $header-nav-link-color;
     &:hover,&:focus,&:active {
         color: $header-nav-link-color-hover;
+        border: none;
     }
 }
 main#main .container.dashboard {
@@ -3328,6 +3351,10 @@ body .container .wiki-wrapper section.wiki .btn {
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
     text-transform: uppercase;
+}
+
+.account_settings-page #content {
+    display: flex;
 }
 
 // styles for IE10+
