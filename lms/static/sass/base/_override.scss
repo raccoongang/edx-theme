@@ -670,6 +670,11 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     .courses .course {
         border-bottom: 3px solid $courses-border-color;
 
+        &:hover,
+        &:focus {
+            border-bottom-color: $base-color2;
+        }
+
         .course-image .cover-image .learn-more {
             background-color: transparent;
             border: 3px solid #fff;
@@ -3901,9 +3906,9 @@ body .account-settings-sections .section .account-settings-section-body .u-field
             &:before {
                 content: '';
                 display: inline-block;
-                width: 50px;
+                width: 35px;
                 height: 6px;
-                background: $base-color;
+                background: $base-color2;
                 position: absolute;
                 left: 0;
                 top: -17px;
@@ -3952,5 +3957,20 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
     &#password-reset-form {
         padding-bottom: 25px;
+    }
+}
+
+.supplemental-link a,
+#login-form button.forgot-password,
+#register-form button.forgot-password,
+body .updates a,
+.bookmark-button-wrapper .bookmark-button,
+.course-info .details .inner-wrapper a,
+.dashboard .my-courses .course .details .course-title a,
+.horizontal-divider + p a {
+    color: $base-color2 !important;
+
+    &:visited {
+        color: $base-color2 !important;
     }
 }
