@@ -9,7 +9,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0;
+		padding: 17px 0;
 		height: auto;
 		@media screen and (max-width: 991px) {
 			display: block;
@@ -27,6 +27,7 @@
 				.logo {
 					display: block;
 					margin: 0 !important;
+					height: auto;
 				}
 			}
 			.course-header {
@@ -41,10 +42,30 @@
 			font-size: 16px !important;
 			.main {
 				margin: 0 0 0 20px;
+				display: flex;
+				flex: 1;
+				align-items: flex-end;
+				justify-content: center;
+				flex-wrap: wrap;
 				.nav-item {
 					margin-left: 30px;
 					a {
 						color: $header-nav-link-color;
+						padding: 6px 8px !important;
+						border: 1px solid $header-nav-link-color !important;
+						text-transform: uppercase;
+						display: inline-block;
+						margin: 3px 0;
+
+						&:hover,
+						&:focus {
+							color: $header-nav-link-color-hover !important;
+							border-color: $header-nav-link-color-hover !important;
+
+							&:before {
+								display: none;
+							}
+						}
 					}
 				}
 			}
@@ -86,21 +107,7 @@
 		border: none !important;
 		position: relative;
 		color: $header-nav-link-color !important;
-		&:before {
-			content: "";
-			width: 0;
-			height: 2px;
-			position: absolute;
-			left: 0;
-			bottom: -5px;
-			background: $base-color;
-			transition: all 0.2s ease;
-		}
-		&.active:before,
-		&:hover:before {
-			width: 100%;
-			}
-		}
+	}
 	.help-link {
 		color: $header-nav-link-color !important;
 	}
@@ -216,6 +223,11 @@ section.home {
 						@media screen and (min-width:760px ) {
 							font-size: 52px;
 						}
+						mark {
+							background: transparent;
+							color: #eeff6b;
+							font: inherit;
+						}
 					}
 					span {
 						display: block;
@@ -251,6 +263,7 @@ section.home {
 						color: $search-input-color;
 						padding-left: 20px !important;
 						height: $search-height;
+						font-size: 16px;
 						&:focus {
 							border-color: $search-input-border !important;
 						}

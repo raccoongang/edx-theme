@@ -1,4 +1,4 @@
-$base-color: #009be0;
+$base-color: #08aac7;
 //body background
 $body-bg: #eee;
 //links
@@ -6,7 +6,7 @@ $links-color: $base-color;
 $links-color-hover: lighten($links-color, 10%);
 //settings for header
 $header-bg: #fff;
-$header-nav-link-color: #000;
+$header-nav-link-color: $base-color;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $dropdown-menu-link-color: $base-color;
 $dropdown-menu-link-color-hover: lighten($dropdown-menu-link-color, 20%);
@@ -30,13 +30,13 @@ $search-input-color: #fff;
 $search-button-background: none;
 $search-button-border: #fff;
 $search-button-color: #fff;
-$search-height: 55px;
+$search-height: 43px;
 //settings for footer
-$footer-bg: #009289;
+$footer-bg: #1c2236;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
-$footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #fff;
+$footer-support-text-and-logo: rgba(#fff, .5);
+$footer-social-link-bg: #eeff6b;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
 //btn
 $theme-btn-bg: $base-color;
@@ -66,12 +66,12 @@ $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
 $courses-border-color: $base-color;
 $course-hover-bg: rgba(0, 0, 0, .5);
-$course-link-color: $theme-link;
+$course-link-color: #1c2236;
 $course-bg: #fff;
 //certificate
-$ribbon-corners-color: lighten($base-color, 5%);
-$ribbon-triangle-color: darken($base-color, 5%);
-$certificate-borders-color: lighten($base-color, 8%);
+$ribbon-corners-color: lighten($base-color, 1%);
+$ribbon-triangle-color: darken($base-color, 4%);
+$certificate-borders-color: $base-color;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;
