@@ -39,6 +39,7 @@
         margin-top: 0;
         @media screen and (min-width:761px ) {
             width: auto;
+            margin: 0 auto;
         }
 
         li {
@@ -55,6 +56,7 @@
             a {
                 color: $header-nav-link-color;
                 padding: 12px 10px !important;
+                text-transform: uppercase;
 
                 &:active,
                 &:focus {
