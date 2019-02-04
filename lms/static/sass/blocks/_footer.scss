@@ -82,18 +82,22 @@
 			order: 3;
 		}
 		span {
-			margin: 0 5px
+			margin: 0 5px;
+			color: $footer-support-text-and-logo !important;
 		}
 		a {
 			display: inline-block;
 			vertical-align: top;
-			color: #fff !important;
+			color: $footer-support-text-and-logo !important;
+		}
+		svg{
+			fill: $footer-support-text-and-logo;
 		}
 		em {
 			display: inline-block;
 			vertical-align: top;
 			font-style: normal;
-			line-height: 20px;
+			line-height: 25px;
 		}
 		.svg-edx {
 			width: 66px;
@@ -118,7 +122,7 @@
 			}
 		}
 		img {
-			height: 50px;
+			height: 36px;
 		}
 	}
 	.icon-list {
