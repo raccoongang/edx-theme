@@ -382,8 +382,12 @@ body {
     padding-left: 15px;
     display: flex;
     flex-wrap: wrap;
-    @media (max-width: 991px) {
+    @media (max-width: 1169px) {
         flex-direction: column-reverse !important;
+
+        .dashboard-search-bar {
+            margin-left: 0;
+        }
     }
     .my-courses {
         @media (max-width: 991px) {
@@ -448,7 +452,7 @@ body {
     .dashboard-search-bar {
         @media (max-width: 991px) {
             float: none;
-            width: 260px;
+            width: 100%;
             margin-left: 0;
         }
     }
