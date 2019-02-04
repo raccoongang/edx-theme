@@ -232,7 +232,7 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
 
 <script type="text/javascript">
     var units = $('#course-outline-block-tree').find('li.vertical');
-    var completedAmountPercent = Math.round(units.find('.outline-item__status_complite,outline-item__status_last-visit').length/units.length * 100);
+    var completedAmountPercent = Math.round(units.find('.outline-item__status_complite,.outline-item__status_last-visit').length/units.length * 100);
 
     $('.chart.completion .circle-chart__circle').attr('stroke-dasharray', completedAmountPercent + ',100');
     $('.chart.completion .circle-chart__percent').text(completedAmountPercent + '%');
