@@ -1012,6 +1012,10 @@ div {
         display: flex;
         justify-content: space-between;
 
+        .forum-nav-sort {
+            width: 50%;
+        }
+
         @media screen and (min-width: 768px) and (max-width: 900px), screen and (max-width: 380px) {
             flex-direction: column;
 
