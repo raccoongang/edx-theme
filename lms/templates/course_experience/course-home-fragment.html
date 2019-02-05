@@ -88,6 +88,39 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
     </header>
     <div class="page-content">
         <div class="page-content-main">
+            <div class="chart-holder">
+                <div class="chart completion">
+                    <svg class="circle-chart" viewbox="0 0 42 42" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="circle-chart__background" stroke="#e5ceb8" stroke-width="4" fill="none" cx="21" cy="21" r="15.91549430918954" />
+                        <circle class="circle-chart__circle" stroke="#de9e5a" stroke-width="4" stroke-dasharray="0,100" stroke-linecap="round" fill="none" cx="21" cy="21" r="15.91549430918954" />
+                        <g class="circle-chart__info">
+                            <text class="circle-chart__percent" x="21" y="21" alignment-baseline="central" text-anchor="middle" fill="#de9e5a">70%</text>
+                        </g>
+                    </svg>
+                    <span class="chart__text">
+                        ${_("Course")}
+                        <br>
+                        ${_("Completion")}
+                    </span>
+                </div>
+                <div class="chart">
+                    % if grade_percent is not None:
+                        <svg class="circle-chart" viewbox="0 0 42 42" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="circle-chart__background" stroke="#d6ecf9" stroke-width="4" fill="none" cx="21" cy="21" r="15.91549430918954" />
+                            <circle class="circle-chart__circle" stroke="#61abdb" stroke-width="4" stroke-dasharray="${grade_percent},100" stroke-linecap="round" fill="none" cx="21" cy="21" r="15.91549430918954" />
+                            <g class="circle-chart__info">
+                                <text class="circle-chart__percent" x="21" y="21" alignment-baseline="central" text-anchor="middle" fill="#61abdb">${grade_percent}%</text>
+                            </g>
+                        </svg>
+                        <span class="chart__text">
+                            ${_("Exercise")}
+                            <br>
+                            ${_("Results")}
+                        </span>
+                    % endif
+                </div>
+            </div>
+
             % if course_home_message_fragment:
                 ${HTML(course_home_message_fragment.body_html())}
             % endif
@@ -104,6 +137,24 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
         </div>
         <img class="course-page-decore" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/course-decore.png" alt="">
         <aside class="page-content-secondary course-sidebar">
+            <div class="countdown">
+                <p class="countdown__text">${_("You've been taking the course for:")}</p>
+                <div class="countdown__progress">
+                        % if counter_delta is not None:
+                            <%
+                                count_width = round(float(counter_delta) / end_counter_number * 100, 1)
+                            %>
+                            <div class="countdown__progress-line" style="width: ${count_width}%"></div>
+                        % endif
+                </div>
+                % if counter_delta is not None:
+                    <span class="countdown__days">
+                        <span class="countdown__bold">${counter_delta}</span>
+                        ${_("days out of")} ${end_counter_number}
+                    </span>
+                % endif
+
+            </div>
             % if has_goal_permission:
                 <div class="section section-goals ${'' if current_goal else 'hidden'}">
                     <div class="current-goal-container">
@@ -178,6 +229,15 @@ from openedx.features.portfolio_project import INCLUDE_PORTFOLIO_UPSELL_MODAL
         ${HTML(course_sock_fragment.body_html())}
     % endif
 </div>
+
+<script type="text/javascript">
+    var units = $('#course-outline-block-tree').find('li.vertical');
+    var completedAmountPercent = Math.round(units.find('.outline-item__status_complite,.outline-item__status_last-visit').length/units.length * 100);
+
+    $('.chart.completion .circle-chart__circle').attr('stroke-dasharray', completedAmountPercent + ',100');
+    $('.chart.completion .circle-chart__percent').text(completedAmountPercent + '%');
+</script>
+
 </%block>
 
 <%static:webpack entry="CourseHome">
