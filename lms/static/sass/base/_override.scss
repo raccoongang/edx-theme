@@ -383,8 +383,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     @media (max-width: 1169px) {
-        flex-direction: column-reverse !important;
-
         .dashboard-search-bar {
             margin-left: 0;
         }
@@ -3044,11 +3042,19 @@ body .user-dropdown {
 }
 main#main .container.dashboard {
     display: flex;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 20px;
+    }
 }
 body .dashboard .my-courses {
     width: 74%;
     flex: 1 1 auto;
     order: 2;
+
+    @media screen and (max-width: 1169px) {
+        width: 100%;
+    }
 }
 
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
