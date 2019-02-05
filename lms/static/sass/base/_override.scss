@@ -3904,11 +3904,11 @@ body .account-settings-sections .section .account-settings-section-body .u-field
             position: relative;
 
             &:before {
-                content: '';
+                content: '\2014';
                 display: inline-block;
-                width: 35px;
-                height: 6px;
-                background: $base-color2;
+                line-height: 20px;
+                font-weight: 700;
+                color: $base-color2;
                 position: absolute;
                 left: 0;
                 top: -17px;
@@ -3973,4 +3973,8 @@ body .updates a,
     &:visited {
         color: $base-color2 !important;
     }
+}
+
+.view-progress .container .profile-wrapper .course-info>.chapters>section .hd a {
+    text-decoration: underline;
 }
