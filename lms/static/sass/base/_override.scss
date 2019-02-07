@@ -9,6 +9,10 @@
     }
 }
 
+body .header-global .nav-global .tab-nav-item .active {
+    border-bottom: 2px solid #fff !important;
+}
+
 .header-global {
     height: auto;
     background: $header-bg;
@@ -36,16 +40,22 @@
     }
     .nav-global {
         width: 100%;
-        margin-top: 0;
+        margin: 0 0 15px;
         @media screen and (min-width:761px ) {
             width: auto;
+            display: flex;
+            align-items: flex-end;
+            flex: 1 1 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 0;
         }
 
         li {
             width: 100%;
             text-align: center;
             text-transform: none;
-            margin: 3px 0;
+            margin: 3px 0 !important;
             @media screen and (min-width:760px ) {
                 width: auto;
                 text-align: left;
@@ -54,21 +64,34 @@
 
             a {
                 color: $header-nav-link-color;
-                padding: 12px 10px !important;
+                padding: 7px 10px 9px !important;
+                border: 2px solid $header-nav-link-color !important;
+                @media screen and (min-width:761px ) {
+                    border: 2px solid $header-nav-link-color;
+                }
+
+                &.active {
+                    border-bottom: 2px solid $header-nav-link-color !important;
+                }
 
                 &:active,
                 &:focus {
                     color: $header-nav-link-color;
+                    opacity: 0.8;
                 }
                 &:hover {
                     color: $header-nav-link-color-hover;
+                    opacity: .8;
                 }
             }
         }
         .tab-nav-item {
-            .active {
-                border: none !important;
+            margin: 3px 5px !important;
+
+            &.active {
+                border-bottom: 2px solid $header-nav-link-color !important;
             }
+
             .tab-nav-link {
                 color: $header-nav-link-color;
 
@@ -232,7 +255,11 @@ body .container.activation h1.valid {
             position: relative;
 
             .nav-colophon {
-                margin: 2px 0 28px 0;
+                margin: 2px 0 28px;
+
+                @media screen and (min-width:761px ) {
+                    margin: 2px 0 70px;
+                }
 
                 .lang_ar & {
                     direction: rtl;
@@ -245,10 +272,40 @@ body .container.activation h1.valid {
                     float: none;
                     display: block;
                     text-align: center;
-                    margin: 0 15px 10px;
-                    &:last-child {
-                        margin-right: 15px;
+                    margin: 0 0 10px 0 !important;
+                    position: relative;
+                    padding: 0 9px 0 16px;
+
+                    &:before {
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        background: #fff;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        margin-top: -1px;
+
+                        @media screen and (max-width:760px ) {
+                            display: none;
+                        }
                     }
+
+                    &:last-child:after {
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        background: #fff;
+                        position: absolute;
+                        right: -6px;
+                        top: 50%;
+                        margin-top: -1px;
+
+                        @media screen and (max-width:760px ) {
+                            display: none;
+                        }
+                    }
+
                     @media screen and (min-width:761px ) {
                         display: inline-block;
                         margin: 0 15px;
@@ -808,6 +865,18 @@ body .wmd-prompt-dialog .btn-brand:focus {
             display: block;
         }
 
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #254962;
+            opacity: 0.4;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 100;
+        }
+
         .parallax-img {
             position: absolute;
             left: 0;
@@ -821,6 +890,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .outer-wrapper {
             animation: none;
             padding: 0;
+            z-index: 110;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table;
@@ -832,7 +902,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .title {
             background: transparent;
             box-shadow: none;
-            max-width: 1000px;
+            max-width: none;
             width: 100%;
             margin: 0 auto;
             float: none;
@@ -850,18 +920,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
             > .heading-group {
                 text-align: center;
                 width: 100%;
-                padding: 15px 0;
+                padding: 45px 0 15px;
 
                 h1 {
                     font-size: 32px;
                     line-height: 1.2;
                     color: $promo-box-text-color;
                     text-align: center;
-                    font-weight: bold;
+                    font-family: 'OpenSansExtraBold';
+                    font-weight: 800;
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 50px;
-                    text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
                     @media screen and (min-width: 760px) {
                         font-size: 52px;
                     }
@@ -897,7 +966,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 margin: 0 auto;
                 overflow: hidden;
                 position: relative;
-                padding: 15px 0;
+                padding: 15px 0 65px;
                 .search-input {
                     background: $search-input-background;
                     border: 2px solid $search-input-border;
@@ -925,6 +994,19 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     border-left: none !important;
                     right: 0;
                     height: $search-height;
+                }
+            }
+
+            .heading-icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    display: block;
+                    height: 60px;
+                    width: auto;
+                    margin: 0 25px;
                 }
             }
         }
@@ -960,7 +1042,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .logo-en {
-    display: inline;
+    display: block;
+    height: 64px;
 
     .lang_ar & {
         display: none;
@@ -3293,12 +3376,11 @@ body {
             width: 100%;
             text-align: center;
             color: $white;
-            background-color: $theme-link;
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
             &:hover {
-                background-color: $theme-link-hover;
+                background-color: none;
                 color: $white;
             }
         }
@@ -3564,7 +3646,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
 .arrow-up {
     cursor: pointer;
     position: fixed;
-    right: 30px;
+    right: 20px;
     bottom: -100px;
     border-radius: 50%;
     background: $theme-btn-bg;
@@ -3577,7 +3659,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     z-index: 100;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     &.active {
-        bottom: 200px;
+        bottom: 20px;
     }
     &:hover {
         background: $theme-btn-bg-hover;
