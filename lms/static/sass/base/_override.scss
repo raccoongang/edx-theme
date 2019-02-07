@@ -1,5 +1,5 @@
 @mixin sm {
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 890px) {
         @content;
     }
 }
@@ -21,7 +21,7 @@
     .wrapper-header {
         height: auto;
         padding: 0;
-        @media (min-width: 761px) {
+        @media (min-width: 890px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -37,7 +37,7 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
-        @media screen and (min-width:761px ) {
+        @media screen and (min-width:890px ) {
             width: auto;
             margin: 0 auto;
         }
@@ -47,7 +47,7 @@
             text-align: center;
             text-transform: none;
             margin: 3px 0;
-            @media screen and (min-width:760px ) {
+            @media screen and (min-width:890px ) {
                 width: auto;
                 text-align: left;
                 margin-right: 15px;
@@ -93,7 +93,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @media screen and (min-width:761px ) {
+        @media screen and (min-width:890px ) {
             width: auto;
             display: block;
         }
@@ -102,7 +102,7 @@
             width: 48%;
             text-align: center;
             margin: 3px 0;
-            @media screen and (min-width:761px ) {
+            @media screen and (min-width:890px ) {
                 width: auto;
                 text-align: left;
             }
@@ -199,7 +199,7 @@ body .container.activation h1.valid {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
-    @media screen and (min-width:761px ) {
+    @media screen and (min-width:890px ) {
         width: auto;
         text-align: left;
         margin: 12px 15px;
