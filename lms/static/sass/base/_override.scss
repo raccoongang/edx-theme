@@ -37,7 +37,7 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
-        @media screen and (min-width:890px ) {
+        @media screen and (min-width:889px ) {
             width: auto;
             margin: 0 auto;
         }
@@ -47,7 +47,7 @@
             text-align: center;
             text-transform: none;
             margin: 3px 0;
-            @media screen and (min-width:890px ) {
+            @media screen and (min-width:889px ) {
                 width: auto;
                 text-align: left;
                 margin-right: 15px;
@@ -3275,7 +3275,7 @@ body {
     }
 }
 
-@include sm {
+@media screen and (max-width: 889px) {
     .header-global .wrapper-header .nav-global li {
         width: 100%;
         margin-bottom: 8px;
@@ -3293,6 +3293,10 @@ body {
             }
         }
     }
+}
+
+
+@include sm {
     .view-teams .cards-list {
         display: flex;
         flex-direction: column;
