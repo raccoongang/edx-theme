@@ -201,11 +201,11 @@ from student.models import CourseEnrollment
                 % if empty_dashboard_message:
                   <p class="custom-message">${empty_dashboard_message | n, decode.utf8}</p>
                 %endif
-                % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-                  <a class="btn btn-primary" href="${marketing_link('COURSES')}">
-                    ${_("Explore courses")}
-                  </a>
-                %endif
+##                 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+##                   <a class="btn btn-primary" href="${marketing_link('COURSES')}">
+##                     ${_("Explore courses")}
+##                   </a>
+##                 %endif
               % else:
               <p>${_("Activate your account!")}</p>
               <p class="custom-message">${ activate_account_message | n, decode.utf8 }</p>
