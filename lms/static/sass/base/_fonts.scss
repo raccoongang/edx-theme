@@ -17,3 +17,13 @@
     font-weight: bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'OpenSansExtraBold';
+    src:
+            url('#{$static-path}/fonts/OpenSans/OpenSans-ExtraBold.woff2') format('woff2'),
+            url('#{$static-path}/fonts/OpenSans/OpenSans-ExtraBold.woff') format('woff'),
+            url('#{$static-path}/fonts/OpenSans/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
