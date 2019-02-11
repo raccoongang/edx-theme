@@ -87,3 +87,21 @@
 		}
 	}
 }
+
+.modal.video-modal,
+.video-modal.leanModal_box,
+.video-modal.entitlement-unenrollment-modal {
+	@media screen and (max-width: 560px) {
+		max-width: 90%;
+		transform: translateX(-50%);
+		margin: 0 !important;
+	}
+
+	.inner-wrapper,
+	iframe {
+		box-sizing: border-box;
+		max-width: 100%;
+		max-height: 100%;
+		width: 100%;
+	}
+}
