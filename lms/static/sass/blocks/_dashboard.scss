@@ -14,6 +14,17 @@
 			order: 1;
 		}
 	}
+	.search-bar {
+		.search-button,
+		.cancel-button{
+			background: $theme-btn-bg;
+
+			&:hover,
+			&:focus {
+				background: $theme-btn-bg-hover;
+			}
+		}
+	}
 }
 
 .dashboard .main-container .my-courses .listing-courses .course-item {
@@ -28,9 +39,10 @@
 		display: inline-block;
 		background: $theme-btn-white-bg !important;
 		color: $theme-btn-white-text-color !important;
-		border: 1px solid $theme-btn-white-border;
+		border: 1px solid $theme-btn-white-border !important;
 		text-transform: uppercase;
-		border-radius: 0 !important;
+		border-radius: 3px !important;
+		height: 42px;
 		&:active,
 		&:focus {
 			background: $theme-btn-white-bg !important;
@@ -64,5 +76,19 @@
 	&:hover {
 		background: $theme-btn-white-bg-hover !important;
 		color: #fff !important;
+	}
+}
+
+.search-results .search-results-item {
+	.result-type {
+		position: static;
+
+		&:before {
+			content: '(';
+		}
+
+		&:after {
+			content: ')';
+		}
 	}
 }
