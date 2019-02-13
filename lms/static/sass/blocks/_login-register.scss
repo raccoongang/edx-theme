@@ -1,5 +1,9 @@
 .login-register-content {
 	background: none;
+
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		display: block;
+	}
 }
 
 .login-register {
