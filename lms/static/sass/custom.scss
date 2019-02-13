@@ -57,8 +57,44 @@ body.view-in-course .wiki-wrapper {
 	background: none;
 	position: relative;
 	box-sizing: border-box;
-	@media screen and (min-width: 1200px) {
+}
+
+
+//sticky footer
+
+#content {
+	flex: 1 1 auto;
+	width: 100%;
+	margin-bottom: 40px;
+}
+.window-wrap {
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+.wrapper-preview-menu {
+	width: 100%;
+}
+body {
+	margin: 0;
+}
+
+// styles for IE10+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body {
+		display: flex;
+	}
+
+	body,
+	.window-wrap {
+		flex: 1 1 auto;
+		display: flex;
+		flex-flow: column nowrap;
 		min-height: 100vh;
-		padding-bottom: 250px;
+	}
+
+	.wrapper-footer {
+		overflow: hidden;
 	}
 }
