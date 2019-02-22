@@ -82,6 +82,8 @@ from pipeline_mako import render_require_js_path_overrides
 
   <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
 
+  <link rel="stylesheet" href="${static.url('css/vendor/font-awesome-5-all.min.css')}" type="text/css" media="all" />
+
   <%static:css group='style-vendor'/>
   % if '/' in self.attr.main_css:
     % if get_language_bidi():
