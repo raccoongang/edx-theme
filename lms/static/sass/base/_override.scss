@@ -3831,3 +3831,44 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 div.info-wrapper section.handouts {
     word-wrap: break-word;
 }
+
+.view-register {
+    .list-input {
+        select {
+            font-weight: 500;
+            font-family: "Open Sans",Verdana,Geneva,sans-serif;
+            font-size: 15px;
+            line-height: 21px;
+            color: #3c3c3c;
+            border-radius: 0;
+            height: 43px;
+        }
+
+        label {
+            font-size: 15px;
+            line-height: 21px;
+            color: #333;
+        }
+
+        .field-education-level {
+            width: 100%;
+            margin-bottom: 20px !important;
+        }
+
+        .field-gender {
+            width: calc( 50% - 10px);
+        }
+
+        .field-yob {
+            width: calc( 50% - 10px);
+            margin-left: 15px;
+        }
+
+        #field-education-level,
+        #field-gender,
+        #field-yob {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}
