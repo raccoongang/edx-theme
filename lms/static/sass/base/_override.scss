@@ -3478,3 +3478,200 @@ body .content-wrapper .page-header.has-secondary .page-header-secondary {
 div.info-wrapper section.handouts {
     word-wrap: break-word;
 }
+
+.shopping-cart {
+    &.confirm-enrollment:not(section),
+    &.billing-details-view {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .pattern + .user-data {
+        padding: 0 15px;
+
+        & + .discount {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .user-data {
+        .image {
+            @media screen and (max-width: 860px) {
+                float: none;
+                margin: 0 auto 15px;
+            }
+        }
+
+        .data-input {
+            @media screen and (max-width: 860px) {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+            .three-col {
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
+
+                .col-1 {
+                    width: calc(100% - 350px - 57px);
+
+                    @media screen and (max-width: 1024px) {
+                        width: calc(100% - 240px - 57px);
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        float: none;
+                        padding-top: 0;
+                    }
+                }
+
+                .col-2 {
+                    @media screen and (max-width: 1024px) {
+                        width: 240px;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        float: none;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-bottom: 10px;
+                    }
+
+                    .inc,
+                    .dec {
+                        color: #ababab;
+                    }
+                }
+
+                .col-3 {
+                    width: 57px;
+
+                    @media screen and (max-width: 768px) {
+                        float: none;
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding-top: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .discount {
+        padding: 17px 0 15px;
+
+        .code-input {
+            margin-right: 10px;
+
+            @media screen and (max-width: 460px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            input[type="text"] {
+                margin-bottom: 10px;
+            }
+        }
+
+        .code-text {
+            span {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .col-two {
+        .row-inside {
+            padding: 10px;
+            box-sizing: border-box;
+
+            @media (max-width:460px) {
+                width: 100%;
+            }
+
+            .billing-detail-value {
+                width: auto;
+            }
+        }
+
+        .col-2 {
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+
+            p {
+                @media screen and (max-width: 1024px) {
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    .steps {
+        @media (max-width:860px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width:768px) {
+            flex-wrap: wrap;
+        }
+
+        li {
+            @media (max-width:860px) {
+                margin: 0 17px;
+            }
+
+            @media (max-width:768px) {
+                box-sizing: border-box;
+                width: 45%;
+                margin: 0;
+            }
+
+            @media (max-width:460px) {
+                width: 100%;
+                padding: 20px 30px;
+            }
+
+            &:after {
+                @media (max-width:768px) {
+                    right: 6px;
+                }
+            }
+        }
+    }
+
+    .billing-data {
+        .col-half:nth-child(n) {
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .course-receipt-wrap {
+        padding: 0 15px;
+        width: 100%;
+        overflow: auto;
+        box-sizing: border-box;
+
+        table.course-receipt {
+            min-width: 700px;
+
+            tr {
+                td,
+                th {
+                    padding: 15px 5px;
+                }
+            }
+        }
+    }
+}
