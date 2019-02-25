@@ -598,7 +598,7 @@ body .search-bar .search-button {
     box-shadow: none;
     border: none;
     background: $theme-btn-bg;
-    color: $theme-btn-text-color;
+    color: $theme-btn-text-color !important;
     &:focus:not(:disabled),
     &:active,
     &:focus {
