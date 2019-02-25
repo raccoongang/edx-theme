@@ -3099,6 +3099,7 @@ body .breadcrumbs .nav-item {
     transition: all 0.25s;
     .fa {
         color: $theme-btn-white-border;
+        pointer-events: none;
     }
     &:hover {
         background: $theme-btn-bg;
