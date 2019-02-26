@@ -37,12 +37,15 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
-        flex: 1;
-        display: flex;
         justify-content: center;
+        display: block;
+        padding-top: 10px;
 
         @media screen and (min-width:761px ) {
             width: auto;
+            flex: 1;
+            display: flex;
+            padding-top: 0;
         }
 
         li {
@@ -90,6 +93,15 @@
                         border: none;
                     }
                 }
+            }
+        }
+    }
+    .nav-holder {
+        .flex {
+            @media (max-width: 760px) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
         }
     }
