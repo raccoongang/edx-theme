@@ -58,6 +58,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-sizing: border-box;
         @media (max-width: 570px) {
             display: block;
             &:after {
@@ -109,6 +110,7 @@ body {
         }
     }
     .nav-courseware {
+        text-align: right;
         @media (max-width: 820px) {
             float: none;
             display: flex;
@@ -117,6 +119,9 @@ body {
 
         li {
             margin-left: 5px;
+            &.nav-courseware-01 {
+                float: left;
+            }
             @media (max-width: 570px) {
                 margin-bottom: 10px;
             }
@@ -333,8 +338,12 @@ body {
 body {
     .header-global .wrapper-header .list-inline.nav-global {
         margin-top: 0;
+        margin-left: 10px;
         @media (max-width: 820px) {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            margin-left: 0;
+            float: none;
+            text-align: right;
         }
     }
 
@@ -344,8 +353,9 @@ body {
     display: none;
 }
 .header-global .theme-btn__active {
-    .header__login & {
-        margin-right: 350px;
+    margin-right: 300px !important;
+    @media (max-width: 820px){
+        margin-right: 0 !important;
     }
 }
 
@@ -424,4 +434,8 @@ body {
 
 .courseware-search-bar {
     margin-top: 5px;
+}
+
+.view-passwordreset .header-global nav {
+    width: 100%;
 }
