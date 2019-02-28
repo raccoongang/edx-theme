@@ -37,8 +37,15 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
+        justify-content: center;
+        display: block;
+        padding-top: 10px;
+
         @media screen and (min-width:761px ) {
             width: auto;
+            flex: 1;
+            display: flex;
+            padding-top: 0;
         }
 
         li {
@@ -54,7 +61,12 @@
 
             a {
                 color: $header-nav-link-color;
-                padding: 12px 10px !important;
+                border: 2px solid $header-nav-link-color;
+                padding: 6px 15px !important;
+                text-transform: uppercase;
+                font-weight: 400;
+                line-height: normal;
+                font-size: 16px;
 
                 &:active,
                 &:focus {
@@ -62,20 +74,35 @@
                 }
                 &:hover {
                     color: $header-nav-link-color-hover;
+                    border-color: $header-nav-link-color-hover;
                 }
             }
         }
         .tab-nav-item {
+            align-items: center;
+
+            & + .tab-nav-item {
+                margin-left: 5px;
+
+                @include sm {
+                    margin-left: 0;
+                }
+            }
             .active {
-                border: none !important;
+                border: 2px solid $header-nav-link-color-hover !important;
+
+                @include sm {
+                    border: none !important;
+                }
             }
             .tab-nav-link {
                 color: $header-nav-link-color;
+                white-space: nowrap;
 
                 &:focus,
                 &:hover {
                     color: $header-nav-link-color-hover;
-                    border: none;
+                    border: 2px solid $header-nav-link-color-hover;
                 }
                 @include sm {
                     color: $white;
@@ -84,6 +111,15 @@
                         border: none;
                     }
                 }
+            }
+        }
+    }
+    .nav-holder {
+        .flex {
+            @media (max-width: 760px) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
         }
     }
@@ -111,20 +147,18 @@
 
             // login and register btns on the header nav
             .btn {
-                background: $theme-btn-bg;
+                background: $base-color;
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
 
                 &:active,
                 &:focus {
-                    background: $theme-btn-bg;
+                    background: lighten($base-color, 20%);
                 }
-                &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
-                }
+                &:focus:hover,
                 &:hover {
-                    background: $theme-btn-bg-hover;
+                    background: lighten($base-color, 20%) !important;
                 }
             }
         }
@@ -861,9 +895,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 50px;
                     text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
                     @media screen and (min-width: 760px) {
-                        font-size: 52px;
+                        font-size: 48px;
+                        letter-spacing: 2px;
                     }
                 }
                 span {
@@ -904,6 +938,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     color: $search-input-color;
                     padding-left: 20px !important;
                     height: $search-height;
+                    font-size: 16px;
                     &:focus {
                         border-color: $search-input-border !important;
                     }
@@ -936,7 +971,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 57px;
         margin: 0 auto;
     }
 
@@ -3297,6 +3332,7 @@ body {
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
+            border: none;
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
@@ -3599,6 +3635,11 @@ body .courses-container .courses-more {
     text-align: center;
     margin: 0;
     position: relative;
+
+    &:empty {
+        display: none;
+    }
+
     .btn {
         cursor: pointer;
         margin: 5px 10px;
