@@ -741,7 +741,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
     }
     .signatures-holder {
         overflow: hidden;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         text-align: center;
     }
     .signatures-holder img {
@@ -787,6 +787,33 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
         display: inline-block;
         border-top: 1px solid #000;
         padding: 0 10px;
+    }
+    .signatures-second-part {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 0 40px;
+    }
+    .signatures-second-part li {
+        width: 25%;
+        border-bottom: 1px solid #000 !important;
+    }
+    .signatures-second-part li:first-child {
+        width: 40%;
+    }
+    .signatures-second-part li span {
+        display: inline-block;
+        vertical-align: top;
+        background: #fff;
+        position: relative;
+        top: 4px;
+        font-size: 14px;
+        padding-right: 5px;
+    }
+    .signatures-second-part li b {
+        display: inline-block;
+        vertical-align: top;
     }
 </style>
 <main class="accomplishment accomplishment-main">
@@ -1069,6 +1096,20 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                                             <p>${_("Educational Director")}</p>
                                         </div>
                                     </div>
+                                    <ul class="signatures-second-part">
+                                        <li>
+                                            <span>${_("Approved by the state of")}</span>
+                                            <b>${_(us_states_dict.get(user_state.get('state', ''), ''))}</b>
+                                        </li>
+                                        <li>
+                                            <span>${_("Provider")} #</span>
+                                            <b>${us_state.get(user_state.get('state', ''), {}).get('provider', 'NA') or 'NA'}</b>
+                                        </li>
+                                        <li>
+                                            <span>${_("Course Approval")} #</span>
+                                            <b>${us_state.get(user_state.get('state', ''), {}).get('number', 'NA') or 'NA'}</b>
+                                        </li>
+                                    </ul>
                                     <div class="different-text">
                                         <p class="text-center"><i>${_("This distance course has been approved for ")} ${get_course_about_section(request, course, 'duration')} ${_("of Real Estate Appraisal Continuing Education. The above participant has satisfactorily completed all course content, quizzes and exams.")}</i></p>
                                         <p>${_("I certify that I completed 100% of this program. I am aware that any misrepresentations by me may be subject to appropriate disciplinary action. I further understand that any false statement made is subject to penalty and may result in suspension or revocation of my license or certificate.")}</p>
@@ -1094,5 +1135,6 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                 % endif
                 % endfor
             % endif
+        </div>
     </div>
 </main>
