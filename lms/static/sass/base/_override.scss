@@ -240,7 +240,7 @@ body .container.activation h1.valid {
             position: relative;
 
             .nav-colophon {
-                margin: 2px 0 70px 0;
+                margin: 0;
 
                 .lang_ar & {
                     direction: rtl;
@@ -264,6 +264,7 @@ body .container.activation h1.valid {
 
                      a {
                         color: $footer-nav-link-color;
+                        text-transform: uppercase;
 
                         &:focus,
                         &:hover {
@@ -952,7 +953,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         display: inline;
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -30px;
         padding: 0;
     }
 
