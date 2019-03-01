@@ -3260,7 +3260,7 @@ body {
         color: $theme-link;
         &:hover,&:focus,&:active {
             background-color: $theme-link-hover;
-            color: $white;
+            color: $white !important;
         }
     }
     .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary,
