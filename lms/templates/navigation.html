@@ -148,7 +148,10 @@ site_status_msg = get_site_status_msg(course_id)
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <li class="tab-nav-item">
-                <a href="/courses">${_("Explore Courses")}</a>
+                <a href="/courses">
+                    <span class="icon fa fa-search" aria-hidden="true"></span>
+                    ${_("Explore Courses")}
+                </a>
               </li>
             %endif
           % endif
