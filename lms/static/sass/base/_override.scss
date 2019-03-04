@@ -2926,8 +2926,14 @@ table.stat_table {
     padding: 21px 10px;
     .logo {
         margin-top: 0 !important;
+        @media screen and (min-width: 761px) and (max-width:910px) {
+            margin-right: 0 !important;
+        }
         img {
-            height: 50px;
+            height: 47px;
+            @media screen and (min-width: 761px) and (max-width:910px) {
+                height: 32px;
+            }
         }
     }
     .flex {
@@ -2941,6 +2947,9 @@ table.stat_table {
         }
         li {
             margin: 0 10px !important;
+            @media screen and (min-width: 761px) and (max-width:910px) {
+                margin: 0 5px !important;
+            }
             @media screen and (max-width: 759px) {
                 margin: 10px 0 !important;
             }
@@ -2994,12 +3003,12 @@ table.stat_table {
         }
         span {
             font-size: 24px;
-            margin-bottom: 52px;
+            margin-bottom: 0px;
             text-transform: uppercase !important;
         }
     }
     .course-search {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 }
 
