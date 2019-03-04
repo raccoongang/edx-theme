@@ -1261,7 +1261,11 @@ body.view-in-course {
     .window-wrap {
         min-width: 320px !important;
     }
+    .content-wrapper {
+        overflow: hidden;
+    }
     .container {
+        overflow: hidden;
          .info-wrapper {
             display: flex;
             flex-wrap: wrap;
