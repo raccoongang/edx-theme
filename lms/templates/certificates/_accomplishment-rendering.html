@@ -129,7 +129,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
         width: 165px;
     }
     .certificates_wrapper {
-        margin-bottom: 80px;
+        margin-bottom: 90px;
     }
     .certificates_oklahoma-title {
         flex: 0 0 70%;
@@ -389,6 +389,7 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
             box-sizing: border-box;
             margin-bottom: 0;
             overflow: hidden;
+            position: relative;
         }
         .certificates_under-text {
             font-size: 16px;
@@ -608,6 +609,211 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
     .certificates_important-information {
         display: block;
         margin-bottom: 15px;
+    }
+    .certificate-holder {
+        position: relative;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-top-line.png) repeat-x -73px 0;
+        background-size: 70px 44px;
+        position: relative;
+    }
+    .certificate-holder:before {
+        content: "";
+        width: 44px;
+        height: 100%;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-right-line.png) repeat-y 0 -47px;
+        background-size: 44px 143px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: rotate(180deg);
+    }
+    .certificate-holder:after {
+        content: "";
+        width: 44px;
+        height: 100%;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-right-line.png) repeat-y 0 56px;
+        background-size: 44px 143px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .main-bg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .certificate-body {
+        width: 100%;
+        box-sizing: border-box;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-top-line.png) repeat-x 0 100%;
+        background-size: 70px 44px;
+        position: relative;
+        z-index: 100;
+    }
+    .certificate-body:before {
+        content: "";
+        width: 44px;
+        height: 44px;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-left-top-corner.png) no-repeat;
+        background-size: 44px 44px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .certificate-body:after {
+        content: "";
+        width: 44px;
+        height: 44px;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-right-top-corner.png) no-repeat;
+        background-size: 44px 44px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .certificate-inner {
+        position: relative;
+        padding: 60px 70px;
+    }
+    .certificate-inner:before {
+        content: "";
+        width: 44px;
+        height: 44px;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-left-bottom-corner.png) no-repeat;
+        background-size: 44px 44px;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+    }
+    .certificate-inner:after {
+        content: "";
+        width: 44px;
+        height: 44px;
+        background: url(/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-right-bottom-corner.png) no-repeat;
+        background-size: 44px 44px;
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+    }
+    .titles-holder {
+        text-align: center;
+    }
+    .titles-holder h3 {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+    .titles-holder h2 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+    .titles-holder span {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .titles-holder h4 {
+        font-size: 27px;
+        font-weight: bold;
+    }
+    .student-info {
+        list-style: none;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto 30px;
+    }
+    .student-info li {
+        border-bottom: 1px solid #000 !important;
+    }
+    .student-info li span {
+        background: #fff;
+        position: relative;
+        top: 2px;
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 5px;
+    }
+    .student-info li b {
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 20px;
+    }
+    .signatures-holder {
+        overflow: hidden;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .signatures-holder img {
+        display: block;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+    .signatures-holder .sign-left {
+        float: left;
+        width: 30%;
+        margin-left: 30px;
+    }
+    .signatures-holder .sign-right {
+        float: right;
+        width: 30%;
+        margin-right: 20px;
+    }
+    .signatures-holder p {
+        border-top: 1px solid #000;
+        margin: 0;
+        display: block;
+        padding-top: 5px;
+        font-size: 13px;
+    }
+    .different-text p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .different-text p i {
+        font-weight: bold;
+    }
+    .different-text p.text-center {
+        text-align: center;
+    }
+    .participant-signature {
+        text-align: center;
+    }
+    .participant-signature img {
+        display: block;
+        margin: 0 auto;
+    }
+    .participant-signature p {
+        display: inline-block;
+        border-top: 1px solid #000;
+        padding: 0 10px;
+    }
+    .signatures-second-part {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 0 40px;
+    }
+    .signatures-second-part li {
+        width: 25%;
+        border-bottom: 1px solid #000 !important;
+    }
+    .signatures-second-part li:first-child {
+        width: 40%;
+    }
+    .signatures-second-part li span {
+        display: inline-block;
+        vertical-align: top;
+        background: #fff;
+        position: relative;
+        top: 4px;
+        font-size: 14px;
+        padding-right: 5px;
+    }
+    .signatures-second-part li b {
+        display: inline-block;
+        vertical-align: top;
     }
 </style>
 <main class="accomplishment accomplishment-main">
@@ -845,72 +1051,69 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                             </div>
                         </div>
                     </div>
+
                 % else:
+
                     <div class="certificates_wrapper">
-                        <div class="certificates_uspap-wrapper">
-                            <ul class="certificates_uspap-left-part">
-                                    % for state_key, state_values in us_state.items()[:17]:
-                                        <li>
-                                            ${_(us_states_dict.get(state_key, state_key))}<br>
-                                            ${_("Provider #")} ${state_values.get('provider', 'NA') or 'NA'}<br>
-                                            ${_("Course #")} ${state_values.get('number', 'NA') or 'NA'}
-                                        </li>
-                                    % endfor
-                            </ul>
-                            <div class="certificates_uspap-main">
-                                <div class="certificates_uspap-title-holder">
-                                    <div class="certificates_uspap-title-image">
-                                        <img src="/static/certificates/images/1531141990645.jpg" alt="">
-                                    </div>
-                                    <div class="certificates_uspap-title-text">
+                        <div class="certificate-holder">
+                            <div class="certificate-body">
+                                <div class="certificate-inner">
+                                    <div class="titles-holder">
                                         <h3>${_("American Continuing Education Institute; dba:")}</h3>
                                         <h2>${_("Calypso Continuing Education™")}</h2>
-                                        <h3>${accomplishment_copy_course_name}</h3>
-                                        <h2>${_("Certificate of Successful Completion")}</h2>
+                                        <span>${accomplishment_copy_course_name}</span>
+                                        <h4>${_("Certificate of Successful Completion")}</h4>
                                     </div>
-                                </div>
-                                <div class="certificates_uspap-student-details">
-                                    <div><span>${_("Student Name:")}</span> ${accomplishment_copy_name}</div>
-                                    <div><span>${_("Student Address:")}</span> ${user_address}, ${', '.join((user_city, user_usa_state, user_zip,))}</div>
-                                    <div><span>${_("Student License Number:")}</span>${user_state['license']}</div>
-                                    <div><span>${_("Course Completion")}/<br>${_("Presentation Date:")}</span> ${user_certificate_create.strftime("%B %d, %Y")}</div>
-                                </div>
-                                <div class="certificates_uspap-signs-holder">
-                                    <div class="certificates_uspap-sign-dir">
-                                        % if mode != 'base':
-                                            % if certificate_data:
-                                                % for ind, signatory in enumerate(certificate_data.get('signatories', [])):
-                                                    % if ind == 0:
-                                                        <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
-                                                    %endif
-                                                % endfor
+                                    <ul class="student-info">
+                                        <li><span>${_("Student Name:")}</span> <b>${accomplishment_copy_name}</b></li>
+                                        <li><span>${_("Student Address:")}</span> <b>${user_address}, ${', '.join((user_city, user_usa_state, user_zip,))}</b></li>
+                                        <li><span>${_("Student License Number:")}</span> <b>${user_state['license']}</b></li>
+                                        <li><span>${_("Course Completion Date")}</span> <b>${user_certificate_create.strftime("%B %d, %Y")}</b></li>
+                                    </ul>
+                                    <div class="signatures-holder">
+                                        <div class="sign-left">
+                                            % if mode != 'base':
+                                                % if certificate_data:
+                                                    % for ind, signatory in enumerate(certificate_data.get('signatories', [])):
+                                                        % if ind == 1:
+                                                            <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                                        %endif
+                                                    % endfor
+                                                % endif
                                             % endif
-                                        % endif
-                                        <p>${_("Educational Director")}</p>
-                                    </div>
-                                    <div class="certificates_uspap-sign-instr">
-                                        % if mode != 'base':
-                                            % if certificate_data:
-                                                % for ind, signatory in enumerate(certificate_data.get('signatories', [])):
-                                                    % if ind == 1:
-                                                        <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
-                                                    %endif
-                                                % endfor
+                                            <p>${_("Course Instructor")}</p>
+                                        </div>
+                                        <div class="sign-right">
+                                            % if mode != 'base':
+                                                % if certificate_data:
+                                                    % for ind, signatory in enumerate(certificate_data.get('signatories', [])):
+                                                        % if ind == 0:
+                                                            <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                                        %endif
+                                                    % endfor
+                                                % endif
                                             % endif
-                                        % endif
-                                        <p>${_("Course Instructor")}</p>
+                                            <p>${_("Educational Director")}</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="certificates_uspap-bottom-holder">
-                                    <div class="certificates_uspap-coursive">
-                                        <i><b>${_("This distance course has been approved for ")} ${get_course_about_section(request, course, 'duration')} ${_("of Real Estate Appraisal Continuing Education. The above participant has satisfactorily completed all course content, quizzes and exams.")}
-                                        </b></i>
-                                    </div>
-                                    <p class="certificates_uspap-text">${_("Please retain a copy of this form for your own records and submission to your licensing board. Continuing education hours shall apply to only one renewal period. Identical education hours cannot be applied in subsequent renewal periods.")}</p>
-                                    <p class="certificates_uspap-text">${_("I certify that I completed 100% of this program. I am aware that any misrepresentations by me may be subject to appropriate disciplinary action. I further understand that any false statement made is subject to penalty and may result in suspension or revocation of my license or certificate.")}</p>
-                                    ## <p class="certificates_uspap-text-center"><b>${_("This course is NOT APPROVED for the following states: AK, AZ, AR, IA, KS, ME, MN, MT, NE, NH, NM, OH, SD, WV")}</b></p>
-                                    <div class="certificates_uspap-signs-holder">
-                                        <div class="certificates_uspap-sign-instr">
+                                    <ul class="signatures-second-part">
+                                        <li>
+                                            <span>${_("Approved by the state of")}</span>
+                                            <b>${_(us_states_dict.get(user_state.get('state', ''), ''))}</b>
+                                        </li>
+                                        <li>
+                                            <span>${_("Provider")} #</span>
+                                            <b>${us_state.get(user_state.get('state', ''), {}).get('provider', 'NA') or 'NA'}</b>
+                                        </li>
+                                        <li>
+                                            <span>${_("Course Approval")} #</span>
+                                            <b>${us_state.get(user_state.get('state', ''), {}).get('number', 'NA') or 'NA'}</b>
+                                        </li>
+                                    </ul>
+                                    <div class="different-text">
+                                        <p class="text-center"><i>${_("This distance course has been approved for ")} ${get_course_about_section(request, course, 'duration')} ${_("of Real Estate Appraisal Continuing Education. The above participant has satisfactorily completed all course content, quizzes and exams.")}</i></p>
+                                        <p>${_("I certify that I completed 100% of this program. I am aware that any misrepresentations by me may be subject to appropriate disciplinary action. I further understand that any false statement made is subject to penalty and may result in suspension or revocation of my license or certificate.")}</p>
+                                        <div class="participant-signature">
                                             % if mode != 'base':
                                                 % if certificate_data:
                                                     % for ind, signatory in enumerate(certificate_data.get('signatories', [])):
@@ -922,51 +1125,16 @@ us_states_dict = dict(settings.US_STATE_CHOICES)
                                             % endif
                                             <p>${_("Participant Signature")}</p>
                                         </div>
+                                        <p>${_("Please retain a copy of this form for your own records and submission to your licensing board. Continuing education hours shall apply to only one renewal period. Identical education hours cannot be applied in subsequent renewal periods.")}</p>
+                                        <p><b>${_("Courses may be submitted to the District of Columbia:")}</b> ${_("Non-DC approved Certificates must state explicitly that the Courses are approved by another Appraisal Regulatory body or the Appraisal Qualification Board’s (AQB) Course Approval Program (CAP). All of the community colleges in the State of Maryland are approved to offer real estate appraising education.")}</p>
                                     </div>
                                 </div>
-                            </div>
-                            <ul class="certificates_uspap-right-part">
-                                % for state_key, state_values in us_state.items()[17:34]:
-                                    <li>
-                                        ${_(us_states_dict.get(state_key, state_key))}<br>
-                                        ${_("Provider #")} ${state_values.get('provider', 'NA') or 'NA'}<br>
-                                        ${_("Course #")} ${state_values.get('number', 'NA') or 'NA'}
-                                    </li>
-                                % endfor
-                            </ul>
-                            <div class="certificates_uspap-bot-holder">
-                                <ul class="certificates_uspap-bottom-part">
-                                    <!-- # must be 8 elements !!! -->
-                                    % for state_key, state_values in us_state.items()[34:40]:
-                                        <li>
-                                            ${_(us_states_dict.get(state_key, state_key))}<br>
-                                            ${_("Provider #")} ${state_values.get('provider', 'NA') or 'NA'}<br>
-                                            ${_("Course #")} ${state_values.get('number', 'NA') or 'NA'}
-                                        </li>
-
-                                    % endfor
-                                </ul>
-                                <div class="certificates_uspap-submit-info">
-                                    <b>${_("Courses may be submitted to the District of Columbia:")}</b>
-                                    ${_("Non-DC approved Certificates must state explicitly that the Courses are approved by another Appraisal Regulatory body or the Appraisal Qualification Board’s (AQB) Course Approval Program (CAP). All of the community colleges in the State of Maryland are approved to offer real estate appraising education.")}
-                                    <a href="https://www.dcopla.com/appraisal/">https://www.dcopla.com/appraisal/</a>
-                                </div>
-                                <ul class="certificates_uspap-bottom-part certificates_uspap-bottom-part-two">
-                                        <!-- # must be 8 elements !!! -->
-                                        % for state_key, state_values in us_state.items()[40:42]:
-                                            <li>
-                                                ${_(us_states_dict.get(state_key, state_key))}<br>
-                                                ${_("Provider #")} ${state_values.get('provider', 'NA') or 'NA'}<br>
-                                                ${_("Course #")} ${state_values.get('number', 'NA') or 'NA'}
-                                            </li>
-
-                                        % endfor
-                                    </ul>
                             </div>
                         </div>
                     </div>
                 % endif
                 % endfor
             % endif
+        </div>
     </div>
 </main>
