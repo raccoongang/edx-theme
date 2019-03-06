@@ -1,15 +1,17 @@
-$base-color: #009be0;
+$base-color: #dd4628;
+//$base-color: #0075b4;
 //body background
 $body-bg: #eee;
 //links
-$links-color: $base-color;
-$links-color-hover: lighten($links-color, 10%);
+//$links-color: $base-color;
+$links-color: #0075b4;
+$links-color-hover: darken($links-color, 10%);
 //settings for header
-$header-bg: #fff;
-$header-nav-link-color: #000;
-$header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
+$header-bg: rgba(#000,.4);
+$header-nav-link-color: #fffefe;
+$header-nav-link-color-hover: darken($header-nav-link-color, 20%);
 $dropdown-menu-link-color: $base-color;
-$dropdown-menu-link-color-hover: lighten($dropdown-menu-link-color, 20%);
+$dropdown-menu-link-color-hover: darken($dropdown-menu-link-color, 20%);
 //settings for hamburger
 $hamburger-color: $base-color;
 $hamburger-width: 30px;
@@ -30,19 +32,21 @@ $search-input-color: #fff;
 $search-button-background: none;
 $search-button-border: #fff;
 $search-button-color: #fff;
-$search-height: 55px;
+$search-height: 45px;
 //settings for footer
-$footer-bg: #009289;
+$footer-bg: #23475f;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
-$footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #fff;
-$footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
+$footer-support-text-and-logo: #a2d1eb;
+$footer-social-link-bg: #183242;
+$footer-social-link-bg-hover: lighten($footer-social-link-bg,20%);
+$footer-social-link-color: #fff;
+$footer-social-link-color-hover: lighten($footer-social-link-color, 20%);
 //btn
 $theme-btn-bg: $base-color;
 $theme-btn-text-color: #ffe;
-$theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
-$theme-btn-shadow: darken($theme-btn-bg, 20%);
+$theme-btn-bg-hover: darken($theme-btn-bg, 10%);
+$theme-btn-shadow: darken($theme-btn-bg, 10%);
 //btn-red
 $theme-btn-red-bg: #c2387d;
 $theme-btn-red-text-color: #ffe;
@@ -66,7 +70,7 @@ $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
 $courses-border-color: $base-color;
 $course-hover-bg: rgba(0, 0, 0, .5);
-$course-link-color: $theme-link;
+$course-link-color: #1f1f1f;
 $course-bg: #fff;
 //certificate
 $ribbon-corners-color: lighten($base-color, 5%);

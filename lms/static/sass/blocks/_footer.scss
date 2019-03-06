@@ -71,6 +71,7 @@
 		align-items: center;
 		font-size: 12px;
 		margin: 0 !important;
+		color: $footer-support-text-and-logo;
 		@media screen and (max-width: 991px) {
 			justify-content: center;
 			order: 3;
@@ -81,22 +82,24 @@
 		a {
 			display: inline-block;
 			vertical-align: top;
-			color: #fff !important;
+			color: inherit !important;
 		}
 		em {
 			display: inline-block;
 			vertical-align: top;
 			font-style: normal;
-			line-height: 20px;
+			line-height: 24px;
 		}
 		.svg-edx {
 			width: 66px;
 			height: 50px;
+			fill: $footer-support-text-and-logo;
 		}
 
 		.svg-raccoon {
 			width: 20px;
 			height: 20px;
+			fill: $footer-support-text-and-logo;
 		}
 	}
 	.footer-logo-holder {
@@ -129,15 +132,28 @@
 		}
 		&_link {
 			display: block;
-			width: 35px;
-			height: 35px;
+			width: 40px;
+			height: 40px;
+			background: $footer-social-link-bg;
+			transition: background-color 0.15s ease !important;
+			border-radius: 2px;
+
+			&:hover {
+				background: $footer-social-link-bg-hover;
+			}
 		}
 		&_svg {
-			width: 35px;
-			height: 35px;
-			fill: $footer-social-link-bg;
+			width: 40px;
+			height: 40px;
+			fill: $footer-social-link-color;
+
+			&.ico-linkedin,
+			&.ico-facebook {
+				width: 20px;
+			}
+
 			&:hover {
-				fill: $footer-social-link-bg-hover;
+				fill: $footer-social-link-color-hover;
 				opacity: 0.8;
 			}
 		}

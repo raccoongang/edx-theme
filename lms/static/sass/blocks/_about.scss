@@ -54,6 +54,42 @@
 	.intro-inner-wrapper {
 		border-color: #ccc;
 	}
+
+	.theme-course-nav {
+		background: $body-bg;
+		padding: 16px 0 14px;
+		justify-content: space-between;
+		box-shadow: 0 2px 2px 0 #d6d6d6;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.theme-course-nav_list {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 15px;
+		box-sizing: border-box;
+		list-style: none;
+		display: flex;
+	}
+
+	.theme-course-nav_list-item {
+		margin-right: 36px;
+	}
+
+	a.theme-course-nav_list-link {
+		font-size: 16px;
+		line-height: 1.3;
+		color: #666;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		&:hover {
+			color: darken($base-color, 10%);
+		}
+	}
 }
 
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta > a.find-courses,
