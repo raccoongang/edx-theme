@@ -18,8 +18,7 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                 <h1>${_("Learning at the Speed of Innovation")}</h1>
-                <span>${_("Whether it's on-demand courses, blended learning packages, or other content from our subject matter experts - these things are designed to meet you in your moment of learning need and compliment your instructor-led experience, making them a crucial part of the ecosystem of learning.")}</span>
-                ##<a href="/courses" class="link">${_("FIND COURSES")}</a>
+                <span>${_("Whether it's on-demand, blended learning, or other content - these are designed to meet you in your moment of learning need and compliment your instructor-led experience, making them a crucial part of the ecosystem of learning.")}</span>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
