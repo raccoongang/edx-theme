@@ -12,6 +12,12 @@
     position: absolute;
     top: 28px;
     right: 10px;
+
+    .rtl & {
+        right: auto;
+        left: 10px;
+    }
+
     &:after,
     &:before {
         content: '';
