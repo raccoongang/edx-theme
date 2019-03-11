@@ -34,6 +34,7 @@
             @media screen and (max-width:991px ) {
                 a {
                     width: 190px;
+                    overflow: hidden;
                     img {
                         margin-left: -86px;
                     }
@@ -102,11 +103,15 @@
         .tab-nav-item {
             align-items: center;
 
+            .rtl & {
+                margin-left: 5px !important;
+            }
+
             & + .tab-nav-item {
                 margin-left: 5px;
 
                 @include sm {
-                    margin-left: 0;
+                    margin-left: 0 !important;
                 }
             }
 
@@ -196,6 +201,10 @@
             margin: 13px 5px 13px 15px;
             color: $header-nav-link-color;
 
+            .rtl & {
+                margin: 13px 15px 13px 5px;
+            }
+
             &:hover {
                 color: $header-nav-link-color-hover;
             }
@@ -237,8 +246,8 @@
             color: #003655;
         }
     }
-
 }
+
 .course-info header.course-profile {
     height: auto;
     margin-top: 0;
@@ -1000,11 +1009,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     &:hover {
                         color: #000;
                     }
+
+                    .rtl & {
+                        left: 0;
+                        right: auto;
+                    }
                 }
             }
         }
     }
 }
+
 .footer-logo-holder {
     display: block;
     text-align: center;
@@ -1026,7 +1041,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
     @media screen and (max-width: 1362px) {
         right: 70px;
     }
+
+    .rtl & {
+        left: 0;
+        right: auto;
+    }
 }
+
 .logo-ar {
     display: none;
 
@@ -1247,6 +1268,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
 }
 .flex {
     display: block;
+    direction: ltr !important;
     .doc-link {
         width: auto;
         margin: 12px 10px;
@@ -1908,6 +1930,10 @@ section.wiki .main-article {
 }
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
+
+    .course-name {
+        color: #fff;
+    }
 }
 body.lang_ar {
     * {
@@ -2927,6 +2953,7 @@ footer .footer-support {
     align-items: center;
     padding: 15px 0 0;
     justify-content: center;
+    direction: ltr !important;
 
     @media screen and (min-width: 761px) {
         position: absolute;
@@ -2934,6 +2961,11 @@ footer .footer-support {
         bottom: 0;
         height: 16px;
         justify-content: baseline;
+    }
+
+    .rtl & {
+        left: auto;
+        right: 0;
     }
 }
 
@@ -3181,6 +3213,14 @@ body .breadcrumbs .nav-item {
         .fa {
             color: #fff;
         }
+    }
+}
+
+.rtl {
+    .dashboard .my-courses .course .details .course-info,
+    .dashboard .my-courses .course .details .wrapper-course-actions {
+        float: right !important;
+        width: auto;
     }
 }
 
@@ -3659,6 +3699,11 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     }
     &:hover {
         background: $theme-btn-bg-hover;
+    }
+
+    .rtl & {
+        right: auto;
+        left: 30px;
     }
 }
 
