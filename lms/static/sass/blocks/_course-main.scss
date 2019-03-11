@@ -370,8 +370,36 @@ button.prerequisite-button .fa {
 	border-color: $base-color;
 }
 
-.courses-container .courses .course {
-	border-bottom-color: $base-color;
+.courses-container {
+	.courses .course {
+		border-bottom-color: $base-color;
+	}
+
+	.courses-more {
+		margin-right: 0;
+		text-align: center;
+		clear: both;
+
+		a {
+			font-weight: 700 !important;
+			color: $theme-btn-text-color;
+			background: $theme-btn-bg;
+			border-radius: 2px;
+			text-transform: uppercase;
+			padding: 8px 20px;
+			font-size: 14px;
+
+			&:after {
+				display: none;
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: $theme-btn-bg-hover;
+			}
+		}
+	}
 }
 
 .course-wrapper .course-content .staff-modal {
