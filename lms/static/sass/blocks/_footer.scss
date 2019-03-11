@@ -36,6 +36,8 @@
 						}
 						a {
 							color: $footer-nav-link-color;
+							text-transform: uppercase;
+							font-size: 14px;
 							&:focus,
 							&:hover {
 								border: none !important;
@@ -71,6 +73,7 @@
 		align-items: center;
 		font-size: 12px;
 		margin: 0 !important;
+		opacity: .3;
 		@media screen and (max-width: 991px) {
 			justify-content: center;
 			order: 3;
@@ -87,7 +90,8 @@
 			display: inline-block;
 			vertical-align: top;
 			font-style: normal;
-			line-height: 20px;
+			line-height: 24px;
+			text-transform: uppercase;
 		}
 		.svg-edx {
 			width: 66px;
@@ -112,7 +116,7 @@
 			}
 		}
 		img {
-			height: 50px;
+			height: 44px;
 		}
 	}
 	.icon-list {

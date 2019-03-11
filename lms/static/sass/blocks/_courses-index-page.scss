@@ -13,14 +13,17 @@
 	background: none;
 }
 
-.courses-container .courses .course .cover-image:before {
+.courses-container .courses .course:hover .cover-image:before,
+.courses-container .courses .course:focus .cover-image:before {
 	transition: all 0.2s ease;
 }
 
 .courses-container .courses .course .course-info .course-title {
 	color: $course-link-color;
-	font-size: 18px;
+	font-size: 16px;
 	margin: 5px 0;
 	height: 96px;
 	overflow: hidden;
+	font-weight: 700;
+	text-transform: uppercase;
 }
