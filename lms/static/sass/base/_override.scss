@@ -834,7 +834,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
     img {
         display: inline-block;
-        height: 50px;
+        height: 43px;
     }
 }
 .logo-ar {
@@ -2925,15 +2925,12 @@ table.stat_table {
 .header-global {
     padding: 21px 10px;
     .logo {
-        margin-top: 0 !important;
+        margin: 0 18px 0 0 !important;
         @media screen and (min-width: 760px) and (max-width:910px) {
             margin-right: 0 !important;
         }
         img {
-            height: 50px;
-            @media screen and (min-width: 760px) and (max-width:910px) {
-                height: 32px;
-            }
+            height: 43px;
         }
     }
     .flex {
@@ -2944,6 +2941,13 @@ table.stat_table {
         margin: 14px 0 !important;
         @media screen and (max-width: 759px) {
             margin: 10px 0 0 !important;
+        }
+        @media (min-width: 760px) and (max-width: 860px) {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin: 3px 0 0 !important;
+            padding-left: 30px;
         }
         li {
             margin: 0 10px !important;
