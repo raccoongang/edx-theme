@@ -4,6 +4,7 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
+  from datetime import date
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -74,7 +75,7 @@
         </a>
       </p>
     </div>
-    <p class="copyright-text">Copyright © 2018 Readynez A/S</p>
+    <p class="copyright-text">${'Copyright © {year} Readynez A/S'.format(year=date.today().year)}</p>
   </footer>
 </div>
 % if include_dependencies:
