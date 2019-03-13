@@ -62,20 +62,24 @@ input[type="submit"] {
 // btn white
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
 .account-settings-sections .section .account-deletion-details .btn-outline-primary,
-.btn-primary,
+.discussion .comment-form .btn-primary,
+.forum-new-post-form .btn-primary,
+.forum-new-post-form .btn-outline-primary,
 #expand-collapse-outline-all-button,
 .discussion-module .btn,
 .wmd-prompt-dialog .btn,
 .discussion.inline-discussion .new-post-article .add-post-cancel {
-	background: $theme-btn-white-bg;
-	border-color: $theme-btn-white-border;
-	color: $theme-btn-white-text-color;
+	background: $theme-btn-white-bg !important;
+	border: 1px solid $theme-btn-white-border !important;
+	color: $theme-btn-white-text-color !important;
+	border-radius: 3px !important;
+	text-transform: none;
 
 	&:hover,
 	&:focus {
-		color: $theme-btn-white-text-color-hover;
-		background: $theme-btn-white-bg-hover;
-		border-color: $theme-btn-white-bg-hover;
+		color: $theme-btn-white-text-color-hover !important;
+		background: $theme-btn-white-bg-hover !important;
+		border-color: $theme-btn-white-bg-hover !important;
 	}
 }
 
