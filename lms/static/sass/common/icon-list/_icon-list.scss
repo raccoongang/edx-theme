@@ -2,17 +2,24 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
 
     &_item {
-        margin: 0 5px;
+        margin: 0 7px;
+
+        img {
+            display: block;
+            height: 22px;
+            margin-left: 10px;
+        }
     }
     &_link {
         display: block;
-        width: 35px;
-        height: 35px;
+        color: $base-color !important;
+        font-size: 35px;
     }
     &_svg {
         width: 35px;

@@ -37,8 +37,14 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
+        justify-content: center;
+        display: block;
+        padding-top: 10px;
         @media screen and (min-width:761px ) {
             width: auto;
+            flex: 1;
+            display: flex;
+            padding-top: 0;
         }
 
         li {
@@ -54,7 +60,19 @@
 
             a {
                 color: $header-nav-link-color;
-                padding: 12px 10px !important;
+                border: 2px solid $base-color !important;
+                padding: 6px 15px !important;
+                text-transform: uppercase;
+                font-weight: bold;
+                line-height: normal;
+                font-size: 14px;
+                background: #fff;
+                border-radius: 2px;
+
+                @media screen and (max-width:960px ) {
+                    padding: 6px 3px !important;
+                    font-size: 13px !important;
+                }
 
                 &:active,
                 &:focus {
@@ -62,31 +80,58 @@
                 }
                 &:hover {
                     color: $header-nav-link-color-hover;
+                    border: 2px solid $base-color !important;
                 }
             }
         }
         .tab-nav-item {
-            .active {
-                border: none !important;
+            align-items: center;
+
+            .rtl & {
+                margin-left: 5px !important;
             }
+
+            & + .tab-nav-item {
+                margin-left: 5px;
+
+                @include sm {
+                    margin-left: 0 !important;
+                }
+            }
+
+            .active {
+                border: 2px solid $base-color !important;
+            }
+
             .tab-nav-link {
                 color: $header-nav-link-color;
+                white-space: nowrap;
 
                 &:focus,
                 &:hover {
                     color: $header-nav-link-color-hover;
-                    border: none;
+                    border: 2px solid $header-nav-link-color-hover;
                 }
                 @include sm {
-                    color: $white;
                     &:hover {
-                        color: $white;
-                        border: none;
+                        color: $header-nav-link-color-hover;
+                        border: 2px solid $header-nav-link-color-hover;
                     }
                 }
             }
         }
     }
+
+    .nav-holder {
+        .flex {
+            @media (max-width: 760px) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
     .nav-courseware {
         width: 100%;
         display: flex;
@@ -115,6 +160,8 @@
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
+                font-weight: bold;
+                font-size: 14px;
 
                 &:active,
                 &:focus {
@@ -137,6 +184,10 @@
             text-shadow: none;
             margin: 13px 5px 13px 15px;
             color: $header-nav-link-color;
+
+            .rtl & {
+                margin: 13px 15px 13px 5px;
+            }
 
             &:hover {
                 color: $header-nav-link-color-hover;
@@ -181,6 +232,7 @@
     }
 
 }
+
 .course-info header.course-profile {
     height: auto;
     margin-top: 0;
@@ -246,6 +298,8 @@ body .container.activation h1.valid {
                     display: block;
                     text-align: center;
                     margin: 0 15px 10px;
+                    font-size: 14px;
+                    text-transform: uppercase;
                     &:last-child {
                         margin-right: 15px;
                     }
@@ -353,6 +407,12 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    height: 75px;
+    overflow: hidden;
+    margin: 5px 0 33px;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -793,6 +853,26 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .home {
+
+    .oars-logo {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-850px, -50%);
+        width: 260px;
+        z-index: 100;
+
+        @media screen and (max-width: 1720px) {
+            width: 160px;
+            transform: translate(-750px, -50%);
+        }
+
+        @media screen and (max-width: 1500px) {
+            display: none;
+        }
+    }
+
     > header,
     .slider {
         //background-image: url('#{$img-path}/background.jpg');
@@ -832,7 +912,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .title {
             background: transparent;
             box-shadow: none;
-            max-width: 1000px;
+            max-width: none;
             width: 100%;
             margin: 0 auto;
             float: none;
@@ -850,20 +930,20 @@ body .wmd-prompt-dialog .btn-brand:focus {
             > .heading-group {
                 text-align: center;
                 width: 100%;
-                padding: 15px 0;
+                padding: 80px 0 15px;
 
                 h1 {
-                    font-size: 32px;
+                    font-size: 30px;
                     line-height: 1.2;
                     color: $promo-box-text-color;
                     text-align: center;
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
-                    margin-bottom: 50px;
+                    margin-bottom: 22px;
                     text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
+                    font-family: "theSansBold","Open Sans",Verdana,Geneva,sans-serif;
                     @media screen and (min-width: 760px) {
-                        font-size: 52px;
+                        font-size: 46px;
                     }
                 }
                 span {
@@ -897,7 +977,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 margin: 0 auto;
                 overflow: hidden;
                 position: relative;
-                padding: 15px 0;
+                padding: 15px 0 33px;
                 .search-input {
                     background: $search-input-background;
                     border: 2px solid $search-input-border;
@@ -925,18 +1005,40 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     border-left: none !important;
                     right: 0;
                     height: $search-height;
+
+                    .rtl & {
+                        left: 0;
+                        right: auto;
+                    }
                 }
             }
         }
     }
+
+    .second-title {
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        line-height: 1.2;
+        color: $promo-box-text-color;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: $promo-box-text-shadow;
+        text-transform: uppercase;
+        font-family: "theSansBold","Open Sans",Verdana,Geneva,sans-serif;
+        @media screen and (min-width: 760px) {
+            font-size: 39px;
+        }
+    }
 }
+
 .footer-logo-holder {
     display: block;
     text-align: center;
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 94px;
         margin: 0 auto;
     }
 
@@ -951,16 +1053,24 @@ body .wmd-prompt-dialog .btn-brand:focus {
     @media screen and (max-width: 1362px) {
         right: 70px;
     }
+
+    .rtl & {
+        left: 0;
+        right: auto;
+    }
 }
+
 .logo-ar {
     display: none;
+    height: 97px;
 
     .lang_ar & {
-        display: inline;
+        display: block;
     }
 }
 .logo-en {
-    display: inline;
+    display: block;
+    height: 97px;
 
     .lang_ar & {
         display: none;
@@ -1171,6 +1281,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
 }
 .flex {
     display: block;
+    direction: ltr !important;
     .doc-link {
         width: auto;
         margin: 12px 10px;
@@ -2851,6 +2962,7 @@ footer .footer-support {
     align-items: center;
     padding: 15px 0 0;
     justify-content: center;
+    direction: ltr !important;
 
     @media screen and (min-width: 761px) {
         position: absolute;
@@ -2858,6 +2970,11 @@ footer .footer-support {
         bottom: 0;
         height: 16px;
         justify-content: baseline;
+    }
+
+    .rtl & {
+        left: auto;
+        right: 0;
     }
 }
 
@@ -3108,6 +3225,14 @@ body .breadcrumbs .nav-item {
     }
 }
 
+.rtl {
+    .dashboard .my-courses .course .details .course-info,
+    .dashboard .my-courses .course .details .wrapper-course-actions {
+        float: right !important;
+        width: auto;
+    }
+}
+
 // Instructor Dashboard beautified
 
 .enrollment-wrapper table {
@@ -3252,7 +3377,7 @@ body {
         color: $theme-link;
         &:hover,&:focus,&:active {
             background-color: $theme-link-hover;
-            color: $white;
+            color: $white !important;
         }
     }
     .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary,
@@ -3292,14 +3417,15 @@ body {
         a {
             width: 100%;
             text-align: center;
-            color: $white;
-            background-color: $theme-link;
+            color: $base-color !important;
+            background: #fff;
+            border: 2px solid $base-color !important;
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
             &:hover {
-                background-color: $theme-link-hover;
-                color: $white;
+                border: 2px solid $base-color !important;
+                color: $base-color !important;
             }
         }
     }
@@ -3377,7 +3503,7 @@ body footer {
         font-size: 12px;
         display: flex;
         align-items: center;
-        color: $footer-nav-link-color;
+        color: $footer-support-text-and-logo !important;
         margin-left: 8px;
     }
 }
@@ -3511,6 +3637,7 @@ body .ccx-schedule-container {
 section.wiki .main-article .wiki-article p {
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 20px;
 }
 .teams-wrapper main {
     width: 100%;
@@ -3577,10 +3704,15 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     z-index: 100;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     &.active {
-        bottom: 200px;
+        bottom: 30px;
     }
     &:hover {
         background: $theme-btn-bg-hover;
+    }
+
+    .rtl & {
+        right: auto;
+        left: 30px;
     }
 }
 
@@ -3611,6 +3743,8 @@ body .courses-container .courses-more {
         min-width: 190px;
         font-weight: normal;
         text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
         &:hover {
             background: $theme-btn-bg-hover;
         }
