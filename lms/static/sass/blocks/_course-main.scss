@@ -105,6 +105,27 @@ body.view-in-course {
 			padding: 20px 0;
 		}
 	}
+
+	.page-header-search {
+		.search-field,
+		.search-button {
+			line-height: 20px;
+			box-sizing: border-box;
+		}
+
+		.search-field,
+		.search-input {
+			&::placeholder {
+				font-weight: 400;
+				color: #d8d8d8;
+				opacity: 1;
+			}
+			&:-ms-input-placeholder {
+				font-weight: 400;
+				color: #d8d8d8;
+			}
+		}
+	}
 }
 
 .navbar-expand,
