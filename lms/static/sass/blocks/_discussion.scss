@@ -206,3 +206,18 @@ section.discussion {
 .form-control:focus {
 	border-color: $base-color;
 }
+
+.discussion-column {
+	.is-hidden {
+		display: none;
+	}
+
+	.all-posts-btn {
+		padding: 0.625rem 0.625rem;
+
+		.fa-chevron-prev:before {
+			content: "\f053";
+			color: inherit;
+		}
+	}
+}
