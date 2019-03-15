@@ -1746,7 +1746,15 @@ section.wiki .wiki-wrapper .nav-tabs li {
 body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif;
     letter-spacing: 0;
+}
+.modal .inner-wrapper form label {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+}
+.empty-programs-message h2,
+.view-dashboard .modal .inner-wrapper header h2 {
+    text-transform: none;
 }
 section.wiki h1 {
     word-break: break-all;
