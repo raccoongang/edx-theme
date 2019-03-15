@@ -444,6 +444,9 @@ body {
                         width: 100%;
                     }
                 }
+                .course-actions button.action .fa {
+                    pointer-events: none;
+                }
             }
         }
     }
@@ -3421,7 +3424,6 @@ body .shopping-cart .discount button[type="submit"] {
     margin-left: 0;
 }
 
-.home .page-header-secondary
 .home .page-header-secondary .last-accessed-link:hover {
     cursor: pointer;
 }
