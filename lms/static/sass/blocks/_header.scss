@@ -4,7 +4,7 @@
 	border-bottom: none;
 	position: relative;
 	overflow: visible;
-	background: $header-bg;
+	background: #30363a;
 	.main-header {
 		display: flex;
 		justify-content: space-between;
@@ -31,18 +31,25 @@
 			}
 			.course-header {
 				margin-top: 0;
+				color: #fffefe;
+				font-weight: 400;
+				text-align: left;
+
+				.course-name {
+					font-weight: inherit;
+				}
 			}
 		}
 		.nav-links {
 			flex-grow: 1;
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-end;
 			align-items: center;
 			font-size: 16px !important;
 			.main {
 				margin: 0 0 0 20px;
 				.nav-item {
-					margin-left: 30px;
+					margin: 0 0 0 40px;
 					a {
 						color: $header-nav-link-color;
 					}
@@ -54,8 +61,45 @@
 					padding: 0;
 					margin: 0 0 0 10px;
 					font-size: 16px !important;
+					&:first-of-type {
+						margin-left: 40px;
+						margin-right: 50px;
+						a {
+							background: none !important;
+							border-bottom: none !important;
+							padding: 0;
+							position: relative;
+
+							&:hover {
+								&:before {
+									width: 100%;
+								}
+							}
+
+							&:before {
+								content: "";
+								width: 0;
+								height: 2px;
+								position: absolute;
+								left: 0;
+								bottom: -5px;
+								background: #dd4628;
+								transition: all 0.2s ease;
+							}
+						}
+					}
+					&:nth-of-type(2) {
+						border-bottom: 3px solid #a9402b !important;
+						border-radius: 2px !important;
+						transition: all 0.2s ease;
+
+						&:hover {
+							border-bottom-color: darken(#a9402b, 10%) !important;
+						}
+					}
 					a {
 						color: $header-nav-link-color;
+						padding: 7px 20px;
 					}
 					.fa {
 						color: $header-nav-link-color;
@@ -106,6 +150,10 @@
 	}
 	.hamburger-menu {
 		top: 28px;
+
+		.line {
+			background: $header-nav-link-color;
+		}
 	}
 
 	// header buttons
@@ -116,7 +164,7 @@
 		background: $theme-btn-bg !important;
 		color: $theme-btn-text-color !important;
 		border: none !important;
-		text-transform: uppercase;
+		text-transform: none;
 		border-radius: 0 !important;
 		&:active,
 		&:focus {
@@ -131,6 +179,16 @@
 	}
 }
 
+.home-page .global-header {
+	@media screen and (min-width: 992px) {
+		background: $header-bg;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+	}
+}
 
 // mobile menu
 
@@ -139,7 +197,7 @@
 	border-top: 1px solid #e7e7e7;
 	.mobile-nav-link a {
 		background: none !important;
-		color: #000 !important;
+		color: $header-nav-link-color !important;
 		border-bottom: 1px solid #e7e7e7 !important;
 		font-size: 16px;
 		&:focus:hover,
@@ -163,6 +221,11 @@ section.home {
 		justify-content: center;
 		color: #fff;
 		position: relative;
+
+		@media screen and (min-width: 992px) {
+			min-height: 500px;
+			padding-top: 90px;
+		}
 
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 			display: block;
@@ -211,7 +274,7 @@ section.home {
 						font-weight: bold;
 						text-shadow: $promo-box-text-shadow;
 						margin-bottom: 30px;
-						text-transform: uppercase;
+						text-transform: none;
 						text-align: center !important;
 						@media screen and (min-width:760px ) {
 							font-size: 52px;
@@ -251,6 +314,7 @@ section.home {
 						color: $search-input-color;
 						padding-left: 20px !important;
 						height: $search-height;
+						font-size: 16px;
 						&:focus {
 							border-color: $search-input-border !important;
 						}

@@ -371,7 +371,17 @@ button.prerequisite-button .fa {
 }
 
 .courses-container .courses .course {
-	border-bottom-color: $base-color;
+	border-bottom-color: #23475f;
+
+	&:hover {
+		.cover-image .learn-more {
+			display: none !important;
+		}
+
+		.cover-image:before {
+			transition: opacity 0.125s linear 0s;
+		}
+	}
 }
 
 .course-wrapper .course-content .staff-modal {
