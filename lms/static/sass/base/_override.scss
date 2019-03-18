@@ -63,12 +63,14 @@ h1 {
 
         .parallax-img {
             position: absolute;
-            left: 0;
+            left: 50%;
             top: -100px;
             width: 100%;
-            height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-            background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-            background-size: cover;
+            height: 1100px; /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
+            background: url(../images/background.svg) no-repeat 50% 0; /* высота картинки - желательно не меньше 600px по высоте */
+            background-size: contain;
+            min-width: 800px;
+            transform: translate(-50%,0);
         }
 
         .outer-wrapper {
@@ -179,6 +181,9 @@ h1 {
                 margin: 0 auto;
             }
         }
+    }
+    >header {
+        background: transparent;
     }
 }
 
@@ -3410,13 +3415,13 @@ body .shopping-cart .discount button[type="submit"] {
 }
 
 .theme-header__wrapper .item a {
-    color: $link-color;
+    color: $header-nav-link-color;
 
     &:visited {
-        color: $link-color;
+        color: $header-nav-link-color;
     }
     &:hover {
-        color: $link-hover;
+        color: $header-nav-link-color-hover;
     }
 }
 
