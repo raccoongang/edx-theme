@@ -768,6 +768,8 @@ div {
                 display: flex;
                 .page-header-search {
                     margin: 0 10px 0 0;
+                    box-sizing: border-box;
+                    max-width: 100%;
                     @media (max-width: 479px) {
                         display: block;
                         margin-right: 0;
@@ -783,6 +785,9 @@ div {
                             width: auto;
                             min-width: 0;
                         }
+                    }
+                    .search-field {
+                        min-width: 150px;
                     }
                     .search-button {
                         @media (max-width: 479px) {
@@ -2995,6 +3000,14 @@ body .enroll-message a {
     }
     .theme-header .list-inline {
         width: 100%;
+
+        .item {
+            margin-right: 3px !important;
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
+        }
     }
     .nav-global li {
         width: 100%;
@@ -3005,7 +3018,7 @@ body .enroll-message a {
         text-align: center;
         padding: 5px 0;
         background: $header-nav-link-color;
-        color: #fff;
+        color: #fff !important;
         &:hover,&:focus,&:active {
             background: $header-nav-link-color-hover;
             color: #fff;
@@ -3688,5 +3701,17 @@ div.info-wrapper section.handouts {
     box-sizing: border-box;
     margin: 0 !important;
     top: 50% !important;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+}
+
+.search-results .result-excerpt {
+    margin-top: 25px;
+
+    &:empty {
+        display: none;
+
+        & ~ .result-location {
+            padding-top: 25px;
+        }
+    }
 }
