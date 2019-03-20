@@ -29,6 +29,18 @@
 						}
 					}
 				}
+
+				> .heading-group h1 span {
+					display: inline-block;
+					background: $theme-btn-bg;
+					color: $theme-btn-text-color;
+					text-shadow: none;
+					font-size: 18px;
+					line-height: normal;
+					vertical-align: top;
+					padding: 4px 20px;
+					margin: 5px 0 0 5px;
+				}
 			}
 
 			&>div.table {
