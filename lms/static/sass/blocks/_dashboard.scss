@@ -85,16 +85,43 @@
 	}
 }
 
-.search-results .search-results-item {
-	.result-type {
-		position: static;
+.search-results {
+	.search-results-item {
+		.result-type {
+			position: static;
 
-		&:before {
-			content: '(';
+			&:before {
+				content: '(';
+			}
+
+			&:after {
+				content: ')';
+			}
 		}
+	}
+
+	.search-info {
+		margin-bottom: 20px;
+		border-bottom: 4px solid #f5f5f5;
+		padding-bottom: 0;
 
 		&:after {
-			content: ')';
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		.search-results-title {
+			float: left;
+			font-size: 18px;
+			line-height: 27px;
+			margin-bottom: 15px;
+		}
+
+		.search-count {
+			float: right;
+			font-size: 16px;
+			line-height: 19px;
 		}
 	}
 }
