@@ -2305,3 +2305,11 @@ body footer .raccoon__logo {
     margin: 0 0 35px;
     width: 100%;
 }
+
+.modal, .leanModal_box {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 !important;
+    top: 50% !important;
+    transform: translate(-50%,-50%);
+}
