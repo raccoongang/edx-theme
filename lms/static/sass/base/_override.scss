@@ -3682,3 +3682,11 @@ div.info-wrapper section.handouts {
         }
     }
 }
+
+.modal, .leanModal_box {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 !important;
+    top: 50% !important;
+    transform: translate(-50%,-50%);
+}
