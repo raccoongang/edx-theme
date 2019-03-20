@@ -337,8 +337,14 @@ section.tool-wrapper {
 }
 
 .find-courses .search-facets:last-child {
-	@media screen and (max-width: 540px) and (min-width: 320px) {
-		margin: 15px 0;
+	.search-facets:last-child {
+		@media screen and (max-width: 540px) and (min-width: 320px) {
+			margin: 15px 0;
+		}
+	}
+
+	.wrapper-search-context .search-status-label {
+		word-break: break-word;
 	}
 }
 
