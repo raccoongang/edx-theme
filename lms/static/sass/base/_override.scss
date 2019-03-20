@@ -458,62 +458,11 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     color: #000;
 }
 
-<<<<<<< HEAD
 .course-info__school {
     font-size: 16px;
     color: #ff6f00;
     display: block;
     margin-bottom: 16px;
-=======
-        &:after {
-            display: none;
-        }
-        &.has-secondary {
-            .page-header-secondary {
-                text-align: left;
-                justify-content: space-between;
-                display: flex;
-                .page-header-search {
-                    margin: 0 10px 0 0;
-                    box-sizing: border-box;
-                    max-width: 100%;
-                    @media (max-width: 479px) {
-                        display: block;
-                        margin-right: 0;
-                    }
-                    .search-form {
-                        @media (max-width: 479px) {
-                            display: -webkit-flex;
-                            display: flex;
-                        }
-                    }
-                    .search-input {
-                        @media (max-width: 479px) {
-                            width: auto;
-                            min-width: 0;
-                        }
-                    }
-                    .search-field {
-                        min-width: 150px;
-                    }
-                    .search-button {
-                        @media (max-width: 479px) {
-                            flex: none;
-                        }
-                    }
-                }
-                .form-actions {
-                    margin: 0 0 10px;
-                }
-            }
-        }
-    }
-    .course-view {
-        .page-header {
-            padding-bottom: 10px;
-        }
-    }
->>>>>>> 0854ec206... [SKILLONOMY-14] fixed links color, responsive for search block (#991)
 }
 
 .courses-container .courses .courses-listing .courses-listing-item {
@@ -1684,23 +1633,10 @@ body .login .form-actions button[type="submit"] {
         color: $theme-btn-white-text-color;
         box-shadow: none;
     }
-<<<<<<< HEAD
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
-=======
-    .theme-header .list-inline {
-        width: 100%;
-
-        .item {
-            margin-right: 3px !important;
-
-            &:last-child {
-                margin-right: 0 !important;
-            }
-        }
->>>>>>> 0854ec206... [SKILLONOMY-14] fixed links color, responsive for search block (#991)
     }
 }
 body .login-register {
@@ -1721,7 +1657,6 @@ body .login-register {
             text-shadow: none;
         }
     }
-<<<<<<< HEAD
     .nav-btn {
         background: $theme-btn-white-bg;
         color: $theme-btn-white-text-color;
@@ -1738,17 +1673,6 @@ body .login-register {
             color: $theme-btn-white-text-color-hover;
             background: $theme-btn-white-bg-hover;
             box-shadow: none;
-=======
-    .nav-global > li > a {
-        display: block;
-        text-align: center;
-        padding: 5px 0;
-        background: $header-nav-link-color;
-        color: #fff !important;
-        &:hover,&:focus,&:active {
-            background: $header-nav-link-color-hover;
-            color: #fff;
->>>>>>> 0854ec206... [SKILLONOMY-14] fixed links color, responsive for search block (#991)
         }
     }
 }
