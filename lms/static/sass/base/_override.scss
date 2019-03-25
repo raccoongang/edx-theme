@@ -26,9 +26,16 @@
             justify-content: space-between;
             align-items: center;
         }
+        &:after {
+            display: none;
+        }
         h1.logo {
             margin-top: 0;
             flex-grow: 0;
+
+            a img {
+                width: 166px;
+            }
         }
         .list-inline.nav-courseware {
             margin-top: 0;
@@ -36,9 +43,11 @@
     }
     .nav-global {
         width: 100%;
-        margin-top: 0;
+        margin: 0 auto;
         @media screen and (min-width:761px ) {
             width: auto;
+            display: flex;
+            align-items: center;
         }
 
         li {
@@ -54,28 +63,38 @@
 
             a {
                 color: $header-nav-link-color;
-                padding: 12px 10px !important;
+                padding: 8px 10px !important;
+                border: 2px solid $base-color;
 
                 &:active,
                 &:focus {
                     color: $header-nav-link-color;
+                    border: 2px solid $base-color;
                 }
                 &:hover {
                     color: $header-nav-link-color-hover;
+                    border: 2px solid $base-color;
                 }
             }
         }
         .tab-nav-item {
+            margin: 0 3px;
+            @include sm {
+                margin: 0;
+            }
+            
             .active {
                 border: none !important;
             }
             .tab-nav-link {
                 color: $header-nav-link-color;
+                padding: 8px 10px !important;
+                border: 2px solid #0088ce !important;
 
                 &:focus,
                 &:hover {
                     color: $header-nav-link-color-hover;
-                    border: none;
+                    border: 2px solid #0088ce;
                 }
                 @include sm {
                     color: $white;
@@ -99,7 +118,7 @@
         li {
             width: 48%;
             text-align: center;
-            margin: 3px 0;
+            margin: 0;
             @media screen and (min-width:761px ) {
                 width: auto;
                 text-align: left;
@@ -221,6 +240,8 @@ body .container.activation h1.valid {
     footer#footer-openedx {
         a {
             color: $footer-nav-link-color;
+            text-transform: uppercase;
+            font-size: 12px;
         }
         a:hover,
         a:focus {
@@ -354,6 +375,7 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -861,8 +883,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 50px;
-                    text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
+                    font-family: "Open Sans",Verdana,Geneva,sans-serif;
                     @media screen and (min-width: 760px) {
                         font-size: 52px;
                     }
@@ -937,8 +958,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 45px;
         margin: 0 auto;
+        @media screen and (min-width: 900px) {
+            height: 85px;
+        }
     }
 
     @media screen and (min-width: 761px) {
@@ -4073,4 +4097,20 @@ div.info-wrapper section.handouts {
 .empty-dashboard-message {
     width: 100%;
     box-sizing: border-box;
+}
+
+.colophon-text {
+    text-align: center;
+}
+
+.colophon-text_link {
+    color: rgba( #5bc6e8, .5) !important;
+    font-size: 16px !important;
+    text-transform: none !important;
+    margin: 23px 0 0;
+    display: inline-block;
+
+    &:hover {
+        color: rgba(#5bc6e8, 1) !important;
+    }
 }
