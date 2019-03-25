@@ -17,10 +17,38 @@
 	transition: all 0.2s ease;
 }
 
-.courses-container .courses .course .course-info .course-title {
-	color: $course-link-color;
-	font-size: 18px;
-	margin: 5px 0;
-	height: 96px;
-	overflow: hidden;
+.courses-container {
+	.courses .course .course-info .course-title {
+		color: $course-link-color;
+		font-size: 18px;
+		margin: 5px 0;
+		height: 96px;
+		overflow: hidden;
+		text-transform: uppercase;
+		font-weight: 700;
+		word-break: break-word;
+	}
+
+	.courses-more {
+		text-align: center;
+
+		.courses-more-cta {
+			font-weight: 700;
+			font-size: 14px;
+			color: #fff !important;
+			background: $links-color;
+			padding: 8px 20px;
+			text-transform: uppercase;
+			line-height: normal;
+
+
+			&:hover {
+				background: $links-color-hover;
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+	}
 }
