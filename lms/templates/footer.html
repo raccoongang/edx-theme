@@ -9,7 +9,7 @@
 <%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
-  <footer id="footer-openedx" class="grid-container"
+  <footer id="footer-openedx"
     ## When rendering the footer through the branding API,
     ## the direction may not be set on the parent element,
     ## so we set it here.
@@ -22,47 +22,52 @@
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
+              <a href="https://www.hbku.edu.qa/en/about-hamad-bin-khalifa-university" target="_blank">${_("About")}</a>
+            </li>
+            <li class="nav-colophon-01">
+              <a href="https://www.hbku.edu.qa/en/expert-opinion#/all" target="_blank">${_("Blog")}</a>
+            </li>
+            <li class="nav-colophon-01">
+              <a href="https://www.hbku.edu.qa/en/contact-us" target="_blank">${_("Contact Us")}</a>
             </li>
             <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
+              <a href="https://www.hbku.edu.qa/en/privacy-policy" target="_blank">${_("Privacy Policy")}</a>
             </li>
         </ol>
       </nav>
       <ul class="icon-list">
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
+        <li class="icon-list_item"><a href="https://www.facebook.com/HamadBinKhalifaUniversity/" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
             <use xlink:href="#ico-facebook" />
           </svg>
           </a>
         </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
+        <li class="icon-list_item"><a href="https://twitter.com/HBKU" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
             <use xlink:href="#ico-twitter" />
+          </svg></a>
+        </li>
+        <li class="icon-list_item"><a href="https://www.instagram.com/hbku/" target="_blank" class="icon-list_link">
+          <svg class="icon-list_svg" viewBox="0 0 35 35">
+            <use xlink:href="#ico-instagram" />
+          </svg></a>
+        </li>
+        <li class="icon-list_item"><a href="https://www.linkedin.com/school/hamad-bin-khalifa-university/" target="_blank" class="icon-list_link">
+          <svg class="icon-list_svg" viewBox="0 0 35 35">
+            <use xlink:href="#ico-linkedin" />
+          </svg></a>
+        </li>
+        <li class="icon-list_item"><a href="https://www.youtube.com/channel/UCQ9NLJDG_-ulq1FGP0hdTcw" target="_blank" class="icon-list_link">
+          <svg class="icon-list_svg" viewBox="0 0 35 35">
+            <use xlink:href="#ico-youtube" />
           </svg></a>
         </li>
       </ul>
       <a href="/" class="footer-logo-holder">
         <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
       </a>
-      <p class="footer-support">${_("Built on")}
-        <a target="_blank" href="${footer['openedx_link']['url']}">
-          <svg class="svg-edx"  viewBox="0 0 100 70">
-            <use xlink:href="#logo-edx" />
-          </svg>
-        </a>
-        by
-        <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-          Raccoon Gang
-          <svg class="svg-raccoon"  viewBox="0 0 100 100">
-            <use xlink:href="#logo-raccoon" />
-          </svg>
-        </a>
-      </p>
     </div>
+    <p class="colophon-text"><a class="colophon-text_link" href="http://www.edx.org/school/hbkux" target="_blank">www.edx.org/school/hbkux</a></p>
   </footer>
 </div>
 % if include_dependencies:

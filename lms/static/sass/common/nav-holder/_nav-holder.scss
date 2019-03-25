@@ -2,7 +2,6 @@
     width: 100%;
     flex-wrap: wrap;
     display: none;
-    flex-grow: 1;
     padding-top: 10px;
 
     .menu-open & {
@@ -10,8 +9,7 @@
         justify-content: center;
     }
     @media (min-width: 761px) {
-        width: auto;
-        display: block;
+        display: flex;
         padding: 0;
     }
 
