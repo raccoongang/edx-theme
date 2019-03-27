@@ -4,6 +4,7 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
+  from datetime import date
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -14,7 +15,7 @@
         <a class="footer-logo" href="/">
             <img src="/static/${settings.FEATURES.get('FASTLANE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo-footer.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}" width="47" height="47">
         </a>
-        <span class="copyright">&copy; 2018 Fast Lane. All rights reserved </span>
+        <span class="copyright">&copy; ${date.today().year} Fast Lane. ${_("All rights reserved")}.</span>
       </div>
     </div>
 </footer>
