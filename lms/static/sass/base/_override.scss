@@ -3930,6 +3930,10 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 }
 
 .program-header {
+    .org-wrapper {
+        display: none !important;
+    }
+
     .title,
     .subtitle {
         font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -3964,9 +3968,17 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .program-card {
     border: 1px solid #ccc !important;
+
+    .card-link {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
 }
 
 .sidebar .program-advertise .new-programs-btn {
     color: $base-color !important;
     border: 1px solid $base-color !important;
+
+    &:hover {
+        color: #fff !important;
+    }
 }
