@@ -22,6 +22,11 @@ body .header-global .nav-global .tab-nav-item .active {
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
+
+    &.header-authenticated h1.logo {
+        margin: 0 !important;
+    }
+
     .wrapper-header {
         height: auto;
         padding: 0;
@@ -31,7 +36,7 @@ body .header-global .nav-global .tab-nav-item .active {
             align-items: center;
         }
         h1.logo {
-            margin-top: 0;
+            margin: 0 177px 0 0;
             flex-grow: 0;
         }
         .list-inline.nav-courseware {
