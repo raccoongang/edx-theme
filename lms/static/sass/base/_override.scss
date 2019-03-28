@@ -3928,3 +3928,45 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         }
     }
 }
+
+.program-header {
+    .title,
+    .subtitle {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+
+    .banner-content {
+        padding-top: 50px !important;
+    }
+}
+
+.program-details-content {
+    .course-card {
+        .course-title .course-title-link {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        .course-actions {
+            .enrollment-info,
+            .view-course-link,
+            .enroll-button {
+                width: 100% !important;
+                padding: 10px 15px !important;
+                box-sizing: border-box;
+            }
+
+            button.cta-primary {
+                background: $base-color !important;
+            }
+        }
+    }
+}
+
+.program-card {
+    border: 1px solid #ccc !important;
+}
+
+.sidebar .program-advertise .new-programs-btn {
+    color: $base-color !important;
+    border: 1px solid $base-color !important;
+}
