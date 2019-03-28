@@ -47,7 +47,7 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
-  <header id="global-navigation" class="header-global ${"header-global__course" if course else ""}" >
+  <header id="global-navigation" class="header-global ${"header-global__course" if course else ""} ${"header-authenticated" if user.is_authenticated() else ""}">
     <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
@@ -78,11 +78,6 @@ site_status_msg = get_site_status_msg(course_id)
                   ${_("Courses")}
                 </a>
               </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
-                </a>
-              </li>
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
               <li class="tab-nav-item">
@@ -95,11 +90,6 @@ site_status_msg = get_site_status_msg(course_id)
                   ${_("Courses")}
                 </a>
               </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-                  ${_("Programs")}
-                </a>
-              </li>
             % endif
           % endif
           %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
@@ -108,6 +98,11 @@ site_status_msg = get_site_status_msg(course_id)
               <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
             </li>
           %endif
+          <li class="tab-nav-item">
+              <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
+                  ${_("Programs")}
+              </a>
+          </li>
         </%block>
       </ol>
       <div class="flex">
