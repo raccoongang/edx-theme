@@ -20,12 +20,12 @@
   <div class="footer-holder">
     <div class="footer-col footer-col_logo">
       <a href="/" class="footer-logo-holder">
-        <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
+        <img alt="organization logo" src="/static/${settings.FEATURES.get('IAMCP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.png">
       </a>
     </div>
     <div class="footer-col footer-col_list">
       <div class="footer-col__item">
-        <h3 class="footer-col__holder">${_("LLTV")}</h3>
+        <h3 class="footer-col__holder">${_("IAMCP")}</h3>
         <ul class="footer-list">
           <li class="footer-list__item">
             <a href="/about">${_("About")}</a>
@@ -91,7 +91,7 @@
     </div>
   </div>
   <div class="footer-holder">
-    <p class="footer-holder__text">© LLTV, Inc – Learning as a Service (LaaS). All rights reserved except where noted. EdX, Open edX and their respective logos are trademarks or registered trademarks of edX Inc.</p>
+    <p class="footer-holder__text">© IAMCP – Learning as a Service. All rights reserved except where noted. EdX, Open edX and their respective logos are trademarks or registered trademarks of edX Inc.</p>
   </div>
   </footer>
 </div>

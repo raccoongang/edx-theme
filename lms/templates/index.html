@@ -19,7 +19,7 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <h1>${_("Welcome to the LLTV")}</h1>
+                <h1>${_("Connect I Learn I Grow")}</h1>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -46,48 +46,6 @@ from openedx.core.djangolib.markup import HTML, Text
           % endif
         </div>
       </header>
-      <div class="promo-slider">
-        <div class="promo-slider_box">
-            <div class="promo-slider_img-holder">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-10.png" alt="promo slider img" class="promo-slider__img">
-            </div>
-            <div class="promo-slider_text-box">
-              <p class="promo-slider_text">Lenovo</p>
-            </div>
-        </div>
-        <div class="promo-slider_box">
-            <div class="promo-slider_img-holder">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-12.png" alt="promo slider img" class="promo-slider__img">
-            </div>
-            <div class="promo-slider_text-box">
-                <p class="promo-slider_text">Rutgers</p>
-            </div>
-        </div>
-        <div class="promo-slider_box">
-            <div class="promo-slider_img-holder">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-14.png" alt="promo slider img" class="promo-slider__img">
-            </div>
-            <div class="promo-slider_text-box">
-                <p class="promo-slider_text">IAMCP</p>
-            </div>
-        </div>
-        <div class="promo-slider_box">
-            <div class="promo-slider_img-holder">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-11.png" alt="promo slider img" class="promo-slider__img">
-            </div>
-            <div class="promo-slider_text-box">
-                <p class="promo-slider_text">Nurture Marketing</p>
-            </div>
-        </div>
-        <div class="promo-slider_box">
-            <div class="promo-slider_img-holder">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/promo-logo-13.jpg" alt="promo slider img" class="promo-slider__img">
-            </div>
-            <div class="promo-slider_text-box">
-                <p class="promo-slider_text">Microsoft</p>
-            </div>
-        </div>
-      </div>
 
 
       <%include file="${courses_list}" />
