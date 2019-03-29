@@ -20,11 +20,13 @@
 			}
 		}
 		.file-browse {
+			height: 30px;
+
 			.browse {
 				position: relative;
 				z-index: 10;
 				pointer-events: none;
-				padding: 5px 10px;
+				padding: 6px 10px;
 				@media screen and (max-width: 400px){
 					margin-left: 181px;
 				}
