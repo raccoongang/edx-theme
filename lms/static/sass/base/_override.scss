@@ -3914,6 +3914,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     }
 }
 
+// staff debug info modal
+
 .staff-modal {
     width: 95% !important;
     max-width: 1000px !important;
@@ -3928,6 +3930,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         }
     }
 }
+
+// programs
 
 .program-header {
     .org-wrapper {
@@ -3980,5 +3984,44 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
     &:hover {
         color: #fff !important;
+    }
+}
+
+// Account Settings
+
+.account-settings-sections {
+    .section {
+        padding: 20px;
+
+        .account-settings-section-body {
+            .u-field-social {
+                width: 32%;
+                margin: 0;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    padding: 5px 0 !important;
+                }
+
+                .u-field-social-help {
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                    }
+                }
+            }
+
+            .u-field .field {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+.accountsTabSections-section-body {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
     }
 }
