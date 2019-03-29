@@ -1,0 +1,16 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About")}</h1>
+        <p>${_("At LLTV, we’re passionate about taking complex ideas and making them understandable. Digestible. Sharable. We work closely with subject matter experts to create engaging, forward thinking videos, apps and interactive media for some of the world’s largest companies and organizations. ")}</p>
+        <p>${_("But we go beyond standard educational objectives – our goal is to build learning content that not only informs and teaches, but that reflects and reinforces your organization’s strength, vision, and overall corporate messaging.")}</p>
+        <p>${_("It’s this nexus of branding, customer experience, and educational material that we call “vertical learning.” From one-minute explainer videos to semester-long courses, today’s learning experience is an extension of your corporate identity, whether your organization is a Fortune 100 company, an NGO, or a small community college. We’ll help you build on that identity and create content that offers a great learning experience while deepening your customer’s commitment to your brand.")}</p>
+        <p>${_("As part of this vision, we built a robust, full-featured Learning Management System that you can customize and deploy within hours. Whether you’re targeting 100 or 100,000 users, our scalable LMS can easily deliver terabytes of content and keep you apprised of each learner’s progress. Need to provide specialized training to your employees’ enterprise-wide? Our LMS not only manages the courses, it also offers robust testing and certification. Looking for a tool that can give you specific data points on your learners? LLTV has the solutions for you. ")}</p>
+        <p>${_("Vertical learning connects the learning experience with your brand, increasing awareness and encouraging loyalty. Let LLTV show you how to reap the benefits – contact us today to get started!")}</p>
+    </section>
+</main>
