@@ -11,9 +11,17 @@
 
 	.customBrowseBtn {
 		display: block;
+		width: 395px;
+
 		@media screen and (max-width: 400px){
 			width: 248px;
 		}
+
+		//Edge
+		@supports (-ms-ime-align:auto) {
+			width: 388px;
+		}
+
 		.enhanced-input-file {
 			@media screen and (max-width: 400px){
 				width: 176px;
@@ -21,19 +29,31 @@
 		}
 		.file-browse {
 			height: 30px;
+			background: transparent !important;
 
 			.browse {
 				position: relative;
 				z-index: 10;
 				pointer-events: none;
 				padding: 6px 10px;
+				margin-left: 273px;
+
 				@media screen and (max-width: 400px){
-					margin-left: 181px;
+					margin-left: 126px;
 				}
 			}
 			.file_field {
-				width: 122%;
+				width: 127%;
 				height: 100%;
+				top: 0;
+				left: -94px;
+
+				//Firefox
+				@supports (-moz-appearance:none) {
+					left: -85px;
+					top: -4px;
+				}
+
 				&::-ms-browse {
 					display: none;
 				}
