@@ -1,0 +1,30 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("TERMS AND CONDITIONS")}</h1>
+        <ol>
+            <li>${_("Spectrum Networks reserves the right to cancel or reschedule courses with prior notice without any liability on its part.")}</li>
+            <li>${_("All prices are subject to change without prior notice. Once a booking is confirmed and the course is paid for, any subsequent price changes will NOT be implemented for that particular booking. Book early.")}</li>
+            <li>${_("Unless otherwise agreed in writing, payment terms are 100% in advance minimum 10 working days prior to the course start.")}</li>
+            <li>${_("Spectrum Networks reserves the right to refuse scheduling, booking or attendance on courses if there are outstanding past due payments.")}</li>
+            <li>${_("Spectrum Networks reserves the right to refuse attendance on courses if there are any outstanding payments due.")}</li>
+            <li>${_("Cancellation requests must be sent by email, otherwise they will NOT be accepted and payment in full must be made.")}</li>
+            <li>${_("No course cancellations will be accepted within 10 working days before commencement of the course \"No Shows\" will be due for payment in full.")}</li>
+            <li>${_("Substitute delegates will be accepted.")}</li>
+            <li>${_("As per contractual agreement between Spectrum Networks and course vendors, it is not allowed to sell manuals without delegate attending a course and every delegate receives his own training kit. To guarantee training kit availability, booking must be confirmed and payment issued minimum 10 working days prior to course commencement. Late Confirmations or payments will cause late delivery of course training kit.")}</li>
+            <li>${_("Course availability is on first come first serve basis. To guarantee your seat it is highly recommended to book trainings at least 15 working days in advance.")}</li>
+            <li>${_("All delegates are accepted on the understanding that they have read and agreed to the requirements of the course pre-requisites and outlines.")}</li>
+            <li>${_("Companies that operate its own purchase order systems must attach a hard copied Purchase Order.")}</li>
+            <li>${_("Payment can be be made in AED. or US$ mentioned in the PI or SI.")}</li>
+            <li>${_("For oversees bookings, please attach copy of your bank transfer receipt")}</li>
+            <li>${_("An interest of 10% of the total amount will be charged on total outstanding per month if any.")}</li>
+            <li>${_("Customers are required to submit documents such as Trade Licence, MOA, AOA, Partner's passport copy, specimen signature of the authorized signatory, VAT TRN Certificate for the purpose of Tax Invoice issuance.")}</li>
+            <li>${_("VAT charges at the rate of 5% will be applicable as per FTA rules.")}</li>
+        </ol>
+    </section>
+</main>
