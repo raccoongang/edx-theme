@@ -938,7 +938,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 0;
     img {
         display: block;
-        height: 86px;
+        height: 40px;
         margin: 0 auto;
     }
 }
@@ -946,11 +946,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
     display: none;
 
     .lang_ar & {
-        display: inline;
+        display: block;
+        height: 50px;
     }
 }
 .logo-en {
-    display: inline;
+    display: block;
+    height: 50px;
 
     .lang_ar & {
         display: none;
