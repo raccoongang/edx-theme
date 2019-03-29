@@ -2,13 +2,31 @@
     max-width: 1200px;
     margin: 20px auto 0;
     display: flex;
+    overflow: hidden;
 
     @media screen and (max-width: 1250px) {
         flex-wrap: wrap;
     }
-}
 
+    .slick-prev, .slick-next {
+        height: 16px;
+        width: 11px;
+        opacity: 1;
+    }
+
+    .slick-prev {
+        left: 5px;
+    } 
+
+    .slick-next {
+        right: 5px;
+    }
+}
 .promo-slider__img {
+    margin: 0 30px;
+    max-height: 71px;
+}
+.promo-slider__img-promo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -150,4 +168,4 @@
     @media screen and (max-width: 1100px) {
         order: 2;
     }
-}
+}   
