@@ -8,12 +8,15 @@
         @content;
     }
 }
+*:not(.fa) {
+    font-family: 'HelveticaNeue', "Open Sans", Verdana, Geneva, sans-serif !important;
+}
 
 .header-global {
     height: auto;
     background: $header-bg;
     border: none;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
@@ -29,6 +32,10 @@
         h1.logo {
             margin-top: 0;
             flex-grow: 0;
+
+            img {
+                height: 38px;
+            }
         }
         .list-inline.nav-courseware {
             margin-top: 0;
@@ -37,8 +44,15 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
+        justify-content: center;
+        display: block;
+        padding-top: 10px;
+
         @media screen and (min-width:761px ) {
             width: auto;
+            flex: 1;
+            display: flex;
+            padding-top: 0;
         }
 
         li {
@@ -54,7 +68,12 @@
 
             a {
                 color: $header-nav-link-color;
-                padding: 12px 10px !important;
+                border: 2px solid $header-nav-link-color;
+                padding: 7px 15px !important;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: normal;
+                font-size: 14px;
 
                 &:active,
                 &:focus {
@@ -62,20 +81,36 @@
                 }
                 &:hover {
                     color: $header-nav-link-color-hover;
+                    border-color: $header-nav-link-color-hover;
                 }
             }
         }
         .tab-nav-item {
+            align-items: center;
+
+            & + .tab-nav-item {
+                margin-left: 5px;
+
+                @include sm {
+                    margin-left: 0;
+                }
+            }
+
             .active {
-                border: none !important;
+                border: 2px solid $header-nav-link-color-hover !important;
+
+                @include sm {
+                    border: none !important;
+                }
             }
             .tab-nav-link {
                 color: $header-nav-link-color;
+                white-space: nowrap;
 
                 &:focus,
                 &:hover {
                     color: $header-nav-link-color-hover;
-                    border: none;
+                    border: 2px solid $header-nav-link-color-hover;
                 }
                 @include sm {
                     color: $white;
@@ -84,6 +119,19 @@
                         border: none;
                     }
                 }
+            }
+        }
+    }
+    .nav-holder {
+        @media (min-width: 761px) {
+            display: flex;
+        }
+
+        .flex {
+            @media (max-width: 760px) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
         }
     }
@@ -111,20 +159,22 @@
 
             // login and register btns on the header nav
             .btn {
-                background: $theme-btn-bg;
+                background: $header-nav-btn-bg;
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 700;
 
                 &:active,
                 &:focus {
-                    background: $theme-btn-bg;
+                    background: $header-nav-btn-bg-hover;
                 }
                 &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
+                    background: $header-nav-btn-bg-hover !important;
                 }
                 &:hover {
-                    background: $theme-btn-bg-hover;
+                    background: $header-nav-btn-bg-hover;
                 }
             }
         }
@@ -257,6 +307,8 @@ body .container.activation h1.valid {
 
                      a {
                         color: $footer-nav-link-color;
+                         text-transform: uppercase;
+                         font-size: 12px;
 
                         &:focus,
                         &:hover {
@@ -354,6 +406,8 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
     text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
 }
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
@@ -657,7 +711,31 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
 .courses-container {
     padding: 0 15px;
     .courses .course {
-        border-bottom: 3px solid $courses-border-color;
+        border-bottom: 3px solid transparent;
+        
+        &:hover {
+            &:after {
+                background: #c0c0c0;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #fff32a, #f15745, #ee3e84);
+        }
+
+        .cover-image {
+            &:before,
+            .learn-more {
+                transition: all 0.125s linear;
+            }
+        }
 
         .course-image .cover-image .learn-more {
             background-color: transparent;
@@ -860,21 +938,26 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-align: center;
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
-                    margin-bottom: 50px;
-                    text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
+                    margin-bottom: 10px;
+                    font-family: "Aldo","Open Sans",Verdana,Geneva,sans-serif !important;
                     @media screen and (min-width: 760px) {
-                        font-size: 52px;
+                        font-size: 48px;
+                    }
+
+                    span {
+                        font-size: 60px;
+                        margin: 0;
+                        font-family: inherit !important;
                     }
                 }
                 span {
                     display: block;
                     text-align: center;
-                    font-size: 34px;
+                    font-size: 28px;
                     line-height: 1.3;
                     text-shadow: $promo-box-text-shadow;
                     color: $promo-box-text-color;
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
                 }
                 .link {
                     background: $find-btn-bg;
@@ -905,6 +988,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     color: $search-input-color;
                     padding-left: 20px !important;
                     height: $search-height;
+                    font-size: 16px;
                     &:focus {
                         border-color: $search-input-border !important;
                     }
@@ -937,7 +1021,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     padding: 30px 0 0;
     img {
         display: block;
-        height: 37px;
+        height: 38px;
         margin: 0 auto;
     }
 
@@ -1544,6 +1628,10 @@ body.view-login #forgot-password-modal #password-reset header h2 {
             color: $theme-link-hover;
         }
     }
+
+    li + li {
+        margin-top: 20px;
+    }
 }
 .course-info .course-sidebar .important-dates,
 .dashboard .my-courses .course .wrapper-messages-primary .messages-list {
@@ -2088,6 +2176,11 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     @media screen and (min-width: 761px) {
         float: right;
         margin: 0 0 0 10px;
+    }
+    
+    &:hover,
+    &:focus {
+        color: #fff !important;
     }
 }
 
@@ -3303,13 +3396,15 @@ body {
             width: 100%;
             text-align: center;
             color: $white;
-            background-color: $theme-link;
+            background-color: $header-nav-btn-bg;
+            border-color: $header-nav-btn-bg;
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
             &:hover {
-                background-color: $theme-link-hover;
+                background-color: $header-nav-btn-bg-hover;
                 color: $white;
+                border-color: $header-nav-btn-bg-hover;
             }
         }
     }
@@ -3404,7 +3499,7 @@ body footer {
     text-shadow: none;
     background-color: $theme-link;
     border: 1px solid $theme-link;
-    transition: all 0.25s ease-in-out;;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
         border-color: $theme-link-hover;
@@ -3613,16 +3708,16 @@ body .courses-container .courses-more {
         cursor: pointer;
         margin: 5px 10px;
         display: inline-block;
-        background: $theme-btn-bg;
+        background: $header-nav-btn-bg;
         color: $theme-btn-text-color !important;
-        height: 40px;
-        line-height: 40px;
-        padding: 0 15px;
+        line-height: normal;
         min-width: 190px;
         font-weight: normal;
         text-transform: uppercase;
+        font-size: 14px;
+        padding: 10px;
         &:hover {
-            background: $theme-btn-bg-hover;
+            background: $header-nav-btn-bg-hover;
         }
     }
     .fa-spinner {
@@ -4073,4 +4168,8 @@ div.info-wrapper section.handouts {
 .empty-dashboard-message {
     width: 100%;
     box-sizing: border-box;
+}
+
+.user-wrapper {
+    margin: 0 auto;
 }
