@@ -163,3 +163,13 @@ input[type="submit"] {
 		background: lighten(#f94d45, 20%) !important;
 	}
 }
+
+.edit-post-form .post-update {
+	text-transform: none;
+	border: 1px solid $theme-btn-white-border !important;
+
+	&:hover,
+	&:focus {
+		border-color: $theme-btn-bg-hover !important;
+	}
+}
