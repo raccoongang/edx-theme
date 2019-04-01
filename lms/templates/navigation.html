@@ -87,10 +87,10 @@ site_status_msg = get_site_status_msg(course_id)
                 <a href="#">${_("Services")}</a>
               </li>
               <li class="tab-nav-item">
-                <a href="#">${_("Partners")}</a>
+                <a href="/partners">${_("Partners")}</a>
               </li>
               <li class="tab-nav-item">
-                <a href="#">${_("About us")}</a>
+                <a href="/about">${_("About us")}</a>
               </li>
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
@@ -101,10 +101,10 @@ site_status_msg = get_site_status_msg(course_id)
                 <a href="#">${_("Services")}</a>
               </li>
               <li class="tab-nav-item">
-                <a href="#">${_("Partners")}</a>
+                <a href="/partners">${_("Partners")}</a>
               </li>
               <li class="tab-nav-item">
-                <a href="#">${_("About us")}</a>
+                <a href="/about">${_("About us")}</a>
               </li>
             % endif
             % if show_program_listing:
@@ -175,10 +175,10 @@ site_status_msg = get_site_status_msg(course_id)
           <a href="#">${_("Services")}</a>
         </li>
         <li class="tab-nav-item">
-          <a href="#">${_("Partners")}</a>
+          <a href="/partners">${_("Partners")}</a>
         </li>
         <li class="tab-nav-item">
-          <a href="#">${_("About us")}</a>
+          <a href="/about">${_("About us")}</a>
         </li>
       </ol>
 
