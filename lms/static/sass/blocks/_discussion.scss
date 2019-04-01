@@ -243,8 +243,21 @@ section.discussion {
 	}
 }
 
-.wmd-prompt-dialog .input-text {
-	vertical-align: middle;
+.wmd-prompt-dialog {
+	left: 50% !important;
+	top: 50% !important;
+	bottom: auto;
+	right: auto;
+	transform: translate(-50%, -50%);
+	margin: 0 !important;
+	max-width: 96%;
+	max-height: 96%;
+	overflow: auto;
+
+	.input-text {
+		width: calc(100% - 190px);
+		vertical-align: middle;
+	}
 }
 
 .page-header-main {
