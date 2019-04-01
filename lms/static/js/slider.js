@@ -1,8 +1,8 @@
 $(window).load(function () {
     $('.promo-slider').slick({
         arrows: true,
-        slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         responsive: [
             {
               breakpoint: 1024,
