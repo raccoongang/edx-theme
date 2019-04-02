@@ -1,0 +1,20 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Privacy Policy")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Privacy Policy")}</h1>
+        <p>${_("We care about the confidentiality and security of your personal information. We will use commercially reasonable efforts to keep your Personal Information secure in compliance with this Privacy Policy.")}</p>
+        <p><strong>${_("Usernames and postings")}</strong></p>
+        <p>${_("Comments or other information posted by you to our forums, wikis or other areas of the Site designed for public communications or communications among registered class members may be viewed and downloaded by others who visit the Site. For this reason, we encourage you to use discretion when deciding whether to post any information that can be used to identify you to those forums (or other public or class-wide areas).")}</p>
+        <p><strong>${_("Personal information")}</strong></p>
+        <p>${_("As used in this Privacy Policy, 'Personal Information' means any information about yourself that you may provide to us when using the Site, such as when you sign up for a user account or enter into a transaction through the Site, which may include (but is not limited to) your name, contact information, gender, date of birth, occupation.")}</p>
+        <p><strong>${_("Information we collect and how we use it")}</strong></p>
+        <p>${_("We collect information, including Personal Information (described above), when you sign up for a user account, participate in courses, send us email messages and/or participate in our public forums. We also collect certain usage information about student performance and patterns of learning. In addition, we track information indicating, among other things, which pages of our Site were visited, the order in which they were visited, when they were visited, and which hyperlinks and other user interface controls were used.")}</p>
+        <p>${_("We may log the IP address, operating system, and browser software used by each user of the Site, and we may be able to determine from an IP address a user's Internet Service Provider and the geographic location of his or her point of connectivity. Various web analytics tools are used to collect this information. Some of the information is collected through cookies (small text files placed on your computer that store information about you, which can be accessed by the Site). You should be able to control how and whether cookies will be accepted by your web browser. Most browsers offer instructions on how to reset the browser to reject cookies in the 'Help' section of the toolbar. If you reject our cookies, many functions and conveniences of this Site may not work properly.")}</p>
+    </section>
+</main>
