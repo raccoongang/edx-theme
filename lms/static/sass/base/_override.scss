@@ -3767,6 +3767,21 @@ div.info-wrapper section.handouts {
         text-align: center;
         border: #3c3c3c 1px solid;
         display: table;
-        margin:0 auto;
+        margin: 0 auto;
+    }
+}
+
+.course-wrapper .course-content .sga-block {
+    .staff-modal {
+        width: 1170px;
+    }
+
+    #grade-info {
+        overflow-x: scroll;
+
+        table.gridtable {
+            width: 100%;
+            min-width: 1000px;
+        }
     }
 }
