@@ -3736,8 +3736,9 @@ div.info-wrapper section.handouts {
 
 .show {
     display: block;
+    text-align: center;
     margin: 0 auto;
-    max-width: 150px;
+    max-width: 170px;
 }
 
 .edeos-history {
@@ -3753,4 +3754,19 @@ div.info-wrapper section.handouts {
     padding: 20px 30px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.history-table-wrapper {
+    overflow: scroll;
+    max-width: 100%;
+    padding: 0 15px;
+
+    table {
+        min-width: 1170px;
+        font-size: 12px;
+        text-align: center;
+        border: #3c3c3c 1px solid;
+        display: table;
+        margin:0 auto;
+    }
 }
