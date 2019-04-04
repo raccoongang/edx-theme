@@ -40,3 +40,12 @@
 .wrapper-msg.wrapper-auto-cert .auto-cert-message {
     border-left-color: $base-color;
 }
+
+.profile-wrapper #course-info-progress > .chapters > section {
+    display: flex;
+
+    .sections>div .hd.hd-4 {
+        width: 100%;
+        display: block;
+    }
+}
