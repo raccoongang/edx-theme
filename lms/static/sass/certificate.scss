@@ -258,3 +258,14 @@
 	width: 100%;
 	text-align: center;
 }
+
+// safari only
+.main-bg,
+.certificate-wrapper,
+.certificate-body {
+	&:not(:root:root) {
+		@media print {
+			height: 19.5cm;
+		}
+	}
+}
