@@ -1,0 +1,17 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Affiliates")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Become Part of the largest Microsoft partner community")}</h1>
+        <h2>${_("How To Get Started")}</h2>
+        <ol>
+            <li><strong>${_("Sign Up")}</strong> <br> <a href="/register">${_("Register")}</a> ${_("to become a member.")}</li>
+            <li><strong>${_("Start Promoting")}</strong> <br> ${_("Ask for a custom banner you can add to your company website and link back to")} <a href="https://www.iamcpuniversity.org/" target="_blank">${_("www.IAMCPuniversity.org")}</a>. </li>
+            <li><strong>${_("We add your company logo to our partner page")}</strong> <br> ${_("This gets you visibility in Microsoft partner community.")}</li>
+        </ol>
+    </section>
+</main>
