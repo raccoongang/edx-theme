@@ -1050,6 +1050,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
 .logo-ar {
     display: none;
+    height: 54px;
 
     .lang_ar & {
         display: inline;
@@ -4140,6 +4141,21 @@ div.info-wrapper section.handouts {
                     padding: 15px 5px;
                 }
             }
+        }
+    }
+}
+
+.staff-modal {
+    width: 95% !important;
+    max-width: 1000px !important;
+
+    table {
+        word-break: break-all;
+
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid #ccc;
         }
     }
 }
