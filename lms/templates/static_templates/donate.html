@@ -1,0 +1,18 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Donate")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Your Donation Will Change Lives")}</h1>
+        <p>
+            ${_("IAMCP is a non-for-profit Microsoft Partner community. Entire organization is run by volunteers. Your contribution will help enhance this site and course experience for learners.")}
+            <br>
+            ${_("If you would like to Donate funds, please send it via")} <a href="https://www.paypal.com/" target="_blank">${_("PayPal")}</a> ${_("to")} <a href="mailto:">${_("Info@IAMCPuniversity.org")}</a> 
+            <br>
+            ${_("Thank you for your support!")}
+        </p>
+    </section>
+</main>
