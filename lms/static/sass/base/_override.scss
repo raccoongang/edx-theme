@@ -301,7 +301,8 @@ body .container.activation h1.valid {
             .nav-colophon {
                 margin: 2px 0 28px 0;
 
-                .lang_ar & {
+                .lang_ar &,
+                .lang_he & {
                     direction: rtl;
                 }
                 ol {
@@ -1048,11 +1049,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 
-.logo-ar {
+.logo-ar,
+.logo-he {
     display: none;
     height: 54px;
 
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         display: inline;
     }
 }
@@ -1060,7 +1063,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
     display: inline-block;
     height: 54px;
 
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         display: none;
     }
 }
@@ -1108,29 +1112,34 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background: $theme-content-bg;
 }
 section.wiki .main-article {
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         float: right;
         padding: 40px;
     }
 }
 section.wiki .breadcrumb {
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         float: right;
     }
 }
 section.wiki .global-functions {
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         float: left;
     }
 }
 .email-targets-secondary li label {
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         float: left;
         margin-right: 10px;
     }
 }
 .course-index .accordion .course-navigation .button-chapter .group-heading {
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         padding: 15px 40px 15px 10px;
     }
 }
@@ -1141,7 +1150,8 @@ section.wiki .global-functions {
     h1 {
         text-align: left;
 
-        .lang_ar & {
+        .lang_ar &,
+        .lang_he & {
             text-align: right;
         }
     }
@@ -1247,7 +1257,8 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     float: right;
     text-align: right;
 }
-.rtl .lang_ar .email-targets-secondary li label {
+.rtl .lang_ar .email-targets-secondary li label,
+.rtl .lang_he .email-targets-secondary li label {
     float: right;
 }
 .rtl .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field ul {
@@ -1898,7 +1909,8 @@ input[name="subject"] {
     left: -96px;
     top: 0;
 
-    .lang_ar & {
+    .lang_ar &,
+    .lang_he & {
         left: auto;
         right: - 100px;
     }
@@ -1936,7 +1948,8 @@ section.wiki .main-article {
         color: #fff;
     }
 }
-body.lang_ar {
+body.lang_ar,
+body.lang_he {
     * {
         letter-spacing: 0 !important;
     }
