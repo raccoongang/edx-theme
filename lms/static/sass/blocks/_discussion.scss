@@ -186,6 +186,13 @@ section.discussion {
 	}
 }
 
+.forum-nav-filter-main,
+.forum-nav-sort {
+	select {
+		border: 1px solid #a6a6a6;
+	}
+}
+
 @media screen and (max-width: 1080px) {
 	.forum-nav-refine-bar {
 		display: flex;
@@ -223,6 +230,51 @@ section.discussion {
 		.fa-chevron-prev:before {
 			content: "\f053";
 			color: inherit;
+		}
+	}
+}
+
+.page-header-main {
+	margin-bottom: 5px;
+
+	@media (min-width: 768px) {
+		margin-right: 20px;
+	}
+}
+
+.page-header .page-header-secondary {
+	@media (min-width: 768px) {
+		margin-left: 0;
+	}
+
+	.forum-actions,
+	.forum-search {
+		margin-bottom: 5px;
+	}
+}
+
+.view-discussion-home {
+	display: block;
+	padding-left: 0;
+
+	@media (max-width: 991px) {
+		.home-helpgrid,
+		tbody,
+		tr,
+		th,
+		td {
+			display: block;
+			width: 100% !important;
+		}
+
+		.helpgrid-row {
+			.row-title,
+			.row-item,
+			.row-item-full {
+				width: 100%;
+				padding: 10px 15px;
+			}
+
 		}
 	}
 }
