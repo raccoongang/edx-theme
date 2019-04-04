@@ -18,7 +18,12 @@ input[type="submit"] {
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 .btn-primary,
 .login-register .action-primary,
-.btn-brand {
+.btn-brand,
+.instructor-dashboard-content-2 input[type="button"],
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management .message .action-create,
+.instructor-dashboard-content-2 .btn-blue,
+.instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
+.instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit {
 	transition: all 0.2s ease;
 	display: inline-block;
 	background: $theme-btn-bg !important;
@@ -71,7 +76,8 @@ input[type="submit"] {
 .discussion-module .btn,
 .wmd-prompt-dialog .btn,
 .discussion.inline-discussion .new-post-article .add-post-cancel,
-.discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn {
+.discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
+.instructor-dashboard-wrapper-2 section#certificates.idash-section .white-listed-students table tr td button.delete-exception {
 	background: $theme-btn-white-bg !important;
 	border: 1px solid $theme-btn-white-border !important;
 	color: $theme-btn-white-text-color !important;
