@@ -435,11 +435,8 @@ body .content-wrapper .container {
     }
 }
 
-* * {
+*:not(.mce-ico):not(.fa) {
     font-family: 'Ubuntu', sans-serif !important;
-}
-.fa {
-    font-family: 'FontAwesome' !important;
 }
 
 .wrapper-footer footer#footer-openedx .raccoon-block {
