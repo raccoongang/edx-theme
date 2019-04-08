@@ -1,0 +1,30 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Affilate")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Earn commission on revenue generated from thousands of LLTV courses.")}</h1>
+        <h2>${_("How to Get Started")}</h2>
+        <ul>
+            <li>${_("Sign Up: Please email us about your interest. Some one from LLTV will respond within 72 hrs.")}</li>
+            <li>${_("Start Promoting / Selling:  Choose from our links and banners or create custom links and implement on your website.")}</li>
+            <li>${_("Earn Money: The more sell, the more you earn. Commission can only be earned for valid purchases of verified certificates.")}</li>
+        </ul>
+        <h2>${_("Frequently Asked Questions")}</h2>
+        <p>${_("Q: How much can I make?")} <br>
+            ${_("A: There’s no limit - the more you promote / Sell, the more you can earn! We offer competitive commission rates.")}</p>
+        <p>${_("Q: Are there costs involved with becoming an affiliate?")} <br>
+            ${_("A: There is a no cost associated with becoming an LLTV affiliate.")}</p>
+        <p>${_("Q: How long does it take to get started?")} <br>
+            ${_("A: Sign up today and we’ll review your application in 2-3 business days.")}</p>
+        <p>${_("Q: When do I get paid?")} <br>
+            ${_("A: commissions are paid 2nd of each month.")}</p>
+        <p>${_("Q: Who trains me how to sell?")} <br>
+            ${_("A: Our sales staff will train and provide all support to close opportunities.")}</p>
+        <h2>${_("Still have questions?")}</h2>
+        <p>${_("E-mail us at")} <a href="mailto:info@LLTV.tv">${_("info@LLTV.tv")}</a></p>
+    </section>
+</main>
