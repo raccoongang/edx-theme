@@ -39,6 +39,31 @@
 
 .wrapper-msg.wrapper-auto-cert .auto-cert-message {
     border-left-color: $base-color;
+
+    .has-actions .msg-actions .btn {
+        font-size: 13px;
+        text-transform: none;
+    }
+
+    .has-actions {
+        .msg-content {
+            @media screen and (max-width:650px) {
+                width: 100%;
+            }
+        }
+
+        .msg-actions {
+            @media screen and (max-width:650px) {
+                width: 100%;
+                text-align: left;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
+    text-transform: none;
 }
 
 .profile-wrapper #course-info-progress > .chapters > section {
