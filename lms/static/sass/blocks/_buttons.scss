@@ -25,14 +25,16 @@ input[type="submit"] {
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
 .login-register .action-primary,
 .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
-.wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
-	transition: all 0.2s ease;
+.wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
+.view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy,
+.wiki-wrapper section.wiki .btn.btn-primary {
+	transition: all 0.2s ease !important;
 	display: inline-block;
 	background: $theme-btn-bg !important;
 	color: $theme-btn-text-color !important;
 	border: none !important;
 	text-transform: uppercase;
-	border-radius: 0 !important;
+	border-radius: 3px !important;
 	text-shadow: none !important;
 	box-shadow: none !important;
 
@@ -80,12 +82,17 @@ input[type="submit"] {
 .discussion.inline-discussion .new-post-article .add-post-cancel,
 .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
 .instructor-dashboard-wrapper-2 section#certificates.idash-section .white-listed-students table tr td button.delete-exception,
-.page-header-search .search-form .search-button {
+.page-header-search .search-form .search-button,
+.wiki-wrapper section.wiki a.btn,
+.wiki-wrapper section.wiki #id_revision + .btn {
+	transition: all 0.2s ease !important;
 	background: $theme-btn-white-bg !important;
 	border: 1px solid $theme-btn-white-border !important;
 	color: $theme-btn-white-text-color !important;
 	border-radius: 3px !important;
 	text-transform: none;
+	box-shadow: none !important;
+	text-shadow: none !important;
 
 	&:hover,
 	&:focus {
@@ -148,5 +155,24 @@ input[type="submit"] {
 	&:hover,
 	&:focus {
 		border-color: $theme-btn-bg-hover !important;
+	}
+}
+
+.btn-danger,
+.wiki-wrapper section.wiki .btn.btn-danger {
+	transition: all 0.2s ease !important;
+	display: inline-block;
+	background: #f94d45 !important;
+	color: #ffe !important;
+	border: none !important;
+	text-transform: uppercase;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	line-height: normal;
+	border-radius: 3px !important;
+
+	&:hover,
+	&:focus {
+		background: lighten(#f94d45, 20%) !important;
 	}
 }
