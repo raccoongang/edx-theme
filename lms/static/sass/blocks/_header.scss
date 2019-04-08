@@ -119,6 +119,21 @@
 					z-index: 20;
 				}
 			}
+			&.authenticated-nav {
+				.secondary .nav-item {
+					&:first-of-type {
+						margin-right: 0;
+					}
+
+					&:nth-of-type(2) {
+						border-bottom: none !important;
+
+						&:hover {
+							opacity: .8;
+						}
+					}
+				}
+			}
 		}
 	}
 	.dropdown-user-menu a {
