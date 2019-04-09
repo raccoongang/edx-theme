@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ platform_name }}{% endblock %}</title>
   <link rel="icon" type="image/x-icon" href="{% favicon_path %}" />
-
+  
   {% with "js/i18n/"|add:LANGUAGE_CODE|add:"/djangojs.js" as i18njs_path %}
     <script type="text/javascript" src="{% static i18njs_path %}"></script>
   {% endwith %}
-
+  
   {% block main_vendor_js %}
   {% javascript 'main_vendor' %}
+  <script async src="${static.url('js/slick.min.js')}"></script>
+  <script async src="${static.url('js/slider.js')}"></script>
   {% endblock %}
   {% block headextra %}{% endblock %}
   {% render_block "css" %}
