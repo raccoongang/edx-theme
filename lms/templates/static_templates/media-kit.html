@@ -1,0 +1,14 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Media Kit")}</%block>
+
+<main id="main" aria-label="Cntent" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Media Kit")}</h1>
+        <p>${_("For new media kit, please email us at")} <a href="mailto:info@LLTV.tv">${_("info@LLTV.tv")}</a></p>
+        <h2>${_("NEWS & ANNOUNCEMENT")}</h2>
+        <p>${_("We will be updating the news section soon.")}</p>
+    </section>
+</main>
