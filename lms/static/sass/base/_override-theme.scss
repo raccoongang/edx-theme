@@ -46,6 +46,34 @@
     transform: translate(-50%, -50%);
 }
 
+.promo-slider__slide-holder {
+    height: 86px !important;
+    padding: 10px;
+    width: 20%;
+    box-sizing: border-box;
+    margin: 0 10px;
+    border: 1px solid #b5b3b3;
+    text-align: center;
+    vertical-align: middle;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 1px;
+        vertical-align: middle;
+    }
+
+    img {
+        width: auto;
+        max-height: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        display: inline-block !important;
+        vertical-align: middle;
+    }
+}
+
 .promo-slider__img-holder {
     position: relative;
     height: 112px;
