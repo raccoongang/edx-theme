@@ -47,15 +47,33 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </header>
       <div class="promo-slider">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Cisco.png" alt="promo slider img" class="promo-slider__img">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Citrix.png" alt="promo slider img" class="promo-slider__img">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/CommVault.jpg" alt="promo slider img" class="promo-slider__img">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/iamcp_logo.png" alt="promo slider img" class="promo-slider__img">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Lenovo.png" alt="promo slider img" class="promo-slider__img">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Marketing_Monarchs.jpg" alt="promo slider img" class="promo-slider__img">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/microsofts-logo.jpg" alt="promo slider img" class="promo-slider__img">
-	        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Nurture_Markeitng.png" alt="promo slider img" class="promo-slider__img">
-          <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/rutgers_university.png" alt="promo slider img" class="promo-slider__img">
+          <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Cisco.png" alt="promo slider img" class="promo-slider__img">
+          </div>
+	        <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Citrix.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
+	        <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/CommVault.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
+	        <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/iamcp_logo.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
+	        <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Lenovo.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
+	        <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Marketing_Monarchs.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
+	        <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/microsofts-logo.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
+	        <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/Nurture_Markeitng.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
+          <div class="promo-slider__slide-holder">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-page-partners/rutgers_university.png" alt="promo slider img" class="promo-slider__img">
+          </div> 
       </div>
 
       <%include file="${courses_list}" />
