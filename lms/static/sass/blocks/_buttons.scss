@@ -17,8 +17,10 @@ input[type="submit"] {
 .view-register .register .btn-login-action,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 .btn-primary,
-.btn-brand {
-	transition: all 0.2s ease;
+.btn-brand,
+.wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
+.wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
+	transition: all 0.2s ease !important;
 	display: inline-block;
 	background: $theme-btn-bg !important;
 	color: $theme-btn-text-color !important;
