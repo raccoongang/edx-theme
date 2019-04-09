@@ -292,3 +292,21 @@ section.discussion {
 .edit-comment-body {
 	width: 100%;
 }
+
+.wmd-prompt-dialog {
+	vertical-align: middle;
+	left: 50% !important;
+	top: 50% !important;
+	bottom: auto;
+	right: auto;
+	transform: translate(-50%, -50%);
+	margin: 0 !important;
+	max-width: 96%;
+	max-height: 96%;
+	overflow: auto;
+
+	.input-text {
+		width: calc(100% - 190px);
+		vertical-align: middle;
+	}
+}
