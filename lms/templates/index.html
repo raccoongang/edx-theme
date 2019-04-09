@@ -92,8 +92,6 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
-    <script src="${static.url('js/slick.min.js')}"></script>
-    <script src="${static.url('js/slider.js')}"></script>
    <script type="text/javascript">
       $(window).load(function() {
          if(getParameterByName('next')) {

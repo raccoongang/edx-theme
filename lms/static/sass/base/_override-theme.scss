@@ -3,6 +3,9 @@
     margin: 20px auto 0;
     display: flex !important;
     overflow: hidden;
+    height: 86px;
+    overflow: hidden;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 1250px) {
         flex-wrap: wrap;
@@ -31,6 +34,8 @@
 .promo-slider_other {
     flex-wrap: wrap;
     justify-content: space-between;
+    height: auto;
+    overflow: visible;
 }
 
 .promo-slider__img {

@@ -77,7 +77,8 @@ from pipeline_mako import render_require_js_path_overrides
     <%static:js group='base_vendor'/>
     <%static:js group='base_application'/>
   % endif
-
+  <script async src="${static.url('js/slick.min.js')}"></script>
+  <script async src="${static.url('js/slider.js')}"></script>
   <script>
     window.baseUrl = "${settings.STATIC_URL}";
     (function (require) {
