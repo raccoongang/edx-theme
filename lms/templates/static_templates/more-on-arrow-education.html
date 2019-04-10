@@ -1,0 +1,19 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("More on Arrow Education")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Not found the training you need on Arrow SkillsOnline or want to go deeper?")}</h1>
+        <p>${_("In addition to the Arrow SkillsOnline catalog we offer live classes, instructor-led training and more digital learning for a wide range of existing and emerging IT technologies – from cloud and data center infrastructure to security, AI and IoT solutions. Arrow Education is Authorized Training Center for key IT vendors including")} <b>${_("Citrix, VMware, Veeam, IBM, Check Point")}</b> ${_("and many more")} ... <a href="https://edu.arrow.com/xx/">${_("check out our catalog")}</a></p>
+        <h3>${_("Quality is key")}</h3>
+        <p>${_("Nominated repeatedly as one of the Top 20 IT Training Companies worldwide, our focus is dedicated to high quality and customer satisfaction. State-of-the-art labs and certified instructors provide a thorough environment to grow your skills and gain hands-on expertise. With Arrow Education, you can be sure that your training is the direct product of the realworld experience – our technology training gives you cutting-edge knowledge and a significant operational advantage.")}</p>
+        <h3>${_("Multiple choices to get the training you need and the flexibility you want")}</h3>
+        <p>${_("Choose from our convenient delivery formats to get the training you and your team need—where, when and how you want it. Whether it's in a classroom or online, public or private, synchronous or asynchronous, Arrow Education has a delivery option to match your needs and preferences. And we're not far from where you are – in one of our 18 training centers across all of Europe.")}</p>
+        <h3>${_("Get certified: realize your career goals")}</h3>
+        <p>${_("Expand your knowledge of IT solutions and prove your skills through IT certification! Arrow Education helps you find the right training to get ready for a specific certification track or a comprehensive learning journey, and we can help you achieve specific competency goals and meet your career objectives – in the most effective way. ")}</p>
+        <h2><a href="https://edu.arrow.com/xx/">${_("See the full course catalog on the Arrow Education website!")}</a></h2>
+    </section>
+</main>
