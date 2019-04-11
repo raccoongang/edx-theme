@@ -10,7 +10,7 @@
    if request.user.is_authenticated():
        url = request.user.profile.arrow_url
    else:
-       url = settings.ARROW_URL
+       url = settings.ARROW_CUSTOMER_SITE_URL
 %>
 
 <main id="main" aria-label="Content" tabindex="-1">
