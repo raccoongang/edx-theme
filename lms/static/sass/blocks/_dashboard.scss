@@ -74,6 +74,11 @@
 
 .wrapper-action-more button.action-more {
 	border: 1px solid $theme-btn-white-border !important;
+
+	.fa {
+		pointer-events: none;
+	}
+
 	&:hover {
 		background: $theme-btn-white-bg-hover !important;
 		color: #fff !important;
