@@ -1,0 +1,81 @@
+// button
+.button,
+.action,
+.new-button {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+// brand button
+.view-textbooks .action .edit,
+.view-textbooks .action .view,
+.edit-handouts-form .save-button,
+.sga-block .instructor-info-action,
+.form-create .actions .action-primary,
+.alert.warning .nav-actions .action-primary,
+.prompt.warning .nav-actions .action-primary,
+.course-updates .new-update-form .save-button,
+.notification.warning .nav-actions .action-primary,
+[class*="view-"] .modal-window .modal-chin .action-primary,
+[class*="view-"] .modal-window .xblock-actions .action-primary,
+[class*="view-"] .modal-window .modal-actions .action-primary {
+    border: 1px solid $uxpl-blue-base !important;
+    background: $uxpl-blue-base !important;
+    color: $white !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    padding: 5px 20px !important;
+    border-radius: 3px !important;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $uxpl-blue-hover-active !important;
+        background: $uxpl-blue-hover-active !important;
+    }
+}
+
+// gray button
+.cancel-button,
+button.action-cancel,
+.button.action-cancel,
+.action.license-button,
+.problem .action .submit,
+.sga-block .upload button,
+.course-handouts .edit-button,
+.form-create .actions .action-secondary,
+.course-updates .post-actions .edit-button,
+.view-settings .group-settings .remove-item,
+.course-updates .post-actions .delete-button {
+    border: 1px solid $uxpl-blue-base !important;
+    background: transparent !important;
+    color: $uxpl-blue-base !important;
+    padding: 5px 20px !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+
+    &:hover,
+    &:focus {
+        border-color: $uxpl-blue-hover-active !important;
+        background: $uxpl-blue-hover-active !important;
+        color: $white !important;
+    }
+
+}
+
+// disabled button
+button:disabled,
+.button.is-disabled,
+.problem .action button:disabled,
+[class*="view-"] .move-xblock-modal .modal-actions .action-move.is-disabled {
+    background: $uxpl-blue-hover-active !important;
+    border-color: $uxpl-blue-hover-active !important;
+    color: $white !important;
+}
+
+// selected button
+.action.license-button.is-selected {
+    border: 1px solid $uxpl-blue-hover-active !important;
+    background: $uxpl-blue-hover-active !important;
+    color: $white !important;
+}
