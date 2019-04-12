@@ -264,6 +264,7 @@ body .container.activation h1.valid {
         .colophon {
             width: 100%;
             position: relative;
+            text-align: center;
 
             .nav-colophon {
                 margin: 2px 0 28px 0;
@@ -632,7 +633,7 @@ body .search-bar .search-button {
     box-shadow: none;
     border: none;
     background: $theme-btn-bg;
-    color: $theme-btn-text-color;
+    color: $theme-btn-text-color !important;
     &:focus:not(:disabled),
     &:active,
     &:focus {
@@ -966,7 +967,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .footer-logo-holder {
-    display: block;
+    display: inline-block;
     text-align: center;
     padding: 30px 0 0;
     img {
@@ -1781,7 +1782,15 @@ section.wiki .wiki-wrapper .nav-tabs li {
 body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif;
     letter-spacing: 0;
+}
+.modal .inner-wrapper form label {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+}
+.empty-programs-message h2,
+.view-dashboard .modal .inner-wrapper header h2 {
+    text-transform: none;
 }
 section.wiki h1 {
     word-break: break-all;
@@ -3134,6 +3143,7 @@ body .breadcrumbs .nav-item {
     transition: all 0.25s;
     .fa {
         color: $theme-btn-white-border;
+        pointer-events: none;
     }
     &:hover {
         background: $theme-btn-bg;
@@ -3873,6 +3883,47 @@ div.info-wrapper section.handouts {
     word-wrap: break-word;
 }
 
+.view-register {
+    .list-input {
+        select {
+            font-weight: 500;
+            font-family: "Open Sans",Verdana,Geneva,sans-serif;
+            font-size: 15px;
+            line-height: 21px;
+            color: #3c3c3c;
+            border-radius: 0;
+            height: 43px;
+        }
+
+        label {
+            font-size: 15px;
+            line-height: 21px;
+            color: #333;
+        }
+
+        .field-education-level {
+            width: 100%;
+            margin-bottom: 20px !important;
+        }
+
+        .field-gender {
+            width: calc( 50% - 10px);
+        }
+
+        .field-yob {
+            width: calc( 50% - 10px);
+            margin-left: 15px;
+        }
+
+        #field-education-level,
+        #field-gender,
+        #field-yob {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}
+
 .shopping-cart {
     &.confirm-enrollment:not(section),
     &.billing-details-view {
@@ -4056,6 +4107,26 @@ div.info-wrapper section.handouts {
                     padding: 15px 5px;
                 }
             }
+        }
+    }
+}
+
+.empty-dashboard-message {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.staff-modal {
+    width: 95% !important;
+    max-width: 1000px !important;
+
+    table {
+        word-break: break-all;
+
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid #ccc;
         }
     }
 }
