@@ -4130,3 +4130,38 @@ div.info-wrapper section.handouts {
         }
     }
 }
+
+.modal,
+.leanModal_box,
+.wmd-prompt-dialog,
+.leanModal_box {
+    top: 50% !important;
+    left: 50% !important;
+    margin: 0 !important;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    overflow: auto;
+}
+
+.wmd-prompt-dialog {
+    .form-actions .form-btn {
+        @media screen and (max-width: 760px) {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .input-text {
+        @media screen and (max-width: 760px) {
+            width: 100%;
+
+            & + button {
+                margin-top: 10px;
+            }
+        }
+    }
+}
