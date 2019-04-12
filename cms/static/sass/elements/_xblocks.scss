@@ -1,6 +1,12 @@
 .sga-block {
     .upload {
-        min-height: 30px;
+        min-height: 35px;
+
+        .fileupload:hover + button {
+            border-color: $uxpl-blue-hover-active !important;
+            background: $uxpl-blue-hover-active !important;
+            color: $white !important;
+        }
     }
 
     .grade-modal {
@@ -29,6 +35,14 @@
             display: block;
             width: 100%;
             box-sizing: border-box;
+        }
+    }
+
+    .wrap-instructor-info {
+        margin-top: 10px;
+
+        .instructor-info-action {
+            display: inline-block;
         }
     }
 }
