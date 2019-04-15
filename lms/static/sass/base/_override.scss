@@ -3852,3 +3852,11 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 .home>header .title .course-search .search-button .fa {
     color: #7b7b7b;
 }
+
+.login #field-remember label {
+    font-weight: normal;
+
+    &:after {
+        display: none;
+    }
+}
