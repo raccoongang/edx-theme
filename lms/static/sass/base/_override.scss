@@ -3862,3 +3862,42 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         display: none;
     }
 }
+
+.register .group-form-personalinformation {
+    .list-input:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .field-group {
+        &.field-education-level {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &.field-gender,
+        &.field-yob {
+            width: calc(50% - 10px);
+            float: left;
+        }
+
+        &.field-yob {
+            margin-left: 20px;
+        }
+    }
+
+    .field {
+        width: 100%;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        select {
+            padding: 10px 15px;
+            height: 43px;
+            border-radius: inherit;
+        }
+    }
+}
