@@ -11,31 +11,47 @@
 
 	.customBrowseBtn {
 		display: block;
-		@media screen and (max-width: 400px){
-			width: 248px;
-		}
+		width: auto;
+
 		.enhanced-input-file {
-			@media screen and (max-width: 400px){
-				width: 176px;
+			@media screen and (max-width: 600px){
+				width: 100%;
 			}
 		}
+
 		.file-browse {
 			height: 30px;
+			background: transparent !important;
+			width: auto;
+
+			@media screen and (max-width: 600px){
+				width: calc(100% + 5px);
+			}
 
 			.browse {
 				position: relative;
 				z-index: 10;
 				pointer-events: none;
 				padding: 6px 10px;
-				@media screen and (max-width: 400px){
-					margin-left: 181px;
-				}
+
+				float: right;
+				white-space: nowrap;
+				width: auto;
 			}
+
 			.file_field {
-				width: 122%;
 				height: 100%;
+
+				width: 431px;
+				left: -95px;
+
 				&::-ms-browse {
 					display: none;
+				}
+
+				// styles for Firefox
+				@supports (-moz-appearance:none) {
+					left: -86px;
 				}
 
 				// styles for IE10+
@@ -47,14 +63,10 @@
 
 				// styles for Edge
 				@supports (-ms-ime-align:auto) {
-					height: 40px;
-					margin-top: -6px;
-				}
-
-				@media screen and (max-width: 400px){
-					width: 410px;
-					top: 0;
-					left: -227px;
+					padding-left: 5px;
+					padding-top: 0;
+					width: 100%;
+					left: 0;
 				}
 			}
 		}
