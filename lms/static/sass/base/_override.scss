@@ -2855,22 +2855,24 @@ table.stat_table {
 }
 //end sysadmin page responsive
 
-footer .footer-support {
-    font-size: 12px;
-    line-height: 1.2px;
-    color: $footer-support-text-and-logo !important;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    padding: 15px 0 0;
-    justify-content: center;
+footer {
+    .footer-support {
+        font-size: 12px;
+        line-height: 1.2px;
+        color: $footer-support-text-and-logo !important;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        padding: 15px 0 0;
+        justify-content: center;
 
-    @media screen and (min-width: 761px) {
-        position: absolute;
-        padding: 0;
-        bottom: 0;
-        height: 16px;
-        justify-content: baseline;
+        @media screen and (min-width: 761px) {
+            position: absolute;
+            padding: 0;
+            bottom: 0;
+            height: 16px;
+            justify-content: baseline;
+        }
     }
 }
 
