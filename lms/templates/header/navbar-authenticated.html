@@ -29,7 +29,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 <div class="nav-links authenticated-nav">
   <div class="main">
     % if show_dashboard_tabs:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab mobile-nav-item-hide">
         <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
           ${_("Courses")}
         </a>
@@ -48,7 +48,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
           </a>
         </div>
       % endif
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab mobile-nav-item-hide">
         <a class="${'active ' if '/u/' in request.path  else ''}tab-nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
           ${_("Profile")}
         </a>
@@ -56,7 +56,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     % endif
     % if show_explore_courses:
       <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a class="tab-nav-link" href="${marketing_link('COURSES')}">${_("Discover New")}</a>
+        <a class="tab-nav-link" href="${marketing_link('COURSES')}">${_("Find courses")}</a>
       </div>
     % endif
     % if show_sysadmin_dashboard:

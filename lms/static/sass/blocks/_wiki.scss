@@ -48,6 +48,8 @@
 		border-color: $theme-btn-bg;
 		text-shadow: none;
 		transition: all 0.2s ease;
+		line-height: normal;
+		vertical-align: middle;
 
 		&:hover:not(:disabled),
 		&:focus:not(:disabled) {
@@ -101,6 +103,20 @@
 		transform: translateX(-50%);
 		margin: 0 !important;
 		left: 50% !important;
+	}
+
+	section.delete {
+		padding-bottom: 20px;
+	}
+
+	.row-fluid {
+		margin-bottom: 20px;
+
+		h2 {
+			margin: 15px 0 10px;
+			font-weight: 700;
+			color: #313131;
+		}
 	}
 }
 
@@ -161,6 +177,10 @@
 			width: 100%;
 			margin-bottom: 10px;
 		}
+	}
+
+	.wiki-article p {
+		line-height: 20px;
 	}
 }
 

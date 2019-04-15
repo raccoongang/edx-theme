@@ -81,10 +81,51 @@ body.view-in-course {
 
 	.page-header {
 		padding: 20px;
+
+		@media screen and (max-width: 760px) {
+			padding: 20px 0;
+		}
+
+		.page-header-search {
+			max-width: 100%;
+
+			.search-form {
+				max-width: 100%;
+				box-sizing: border-box;
+				overflow: hidden;
+				display: flex;
+			}
+		}
 	}
 
 	.page-content {
 		padding: 20px;
+
+		@media screen and (max-width: 760px) {
+			padding: 20px 0;
+		}
+	}
+
+	.page-header-search {
+		.search-field,
+		.search-button {
+			line-height: 20px;
+			box-sizing: border-box;
+			font-weight: 400;
+		}
+
+		.search-field,
+		.search-input {
+			&::placeholder {
+				font-weight: 400;
+				color: #d8d8d8;
+				opacity: 1;
+			}
+			&:-ms-input-placeholder {
+				font-weight: 400;
+				color: #d8d8d8;
+			}
+		}
 	}
 }
 
@@ -195,17 +236,10 @@ div.info-wrapper section.handouts ol li .wrapper-course-material .course-tabs .t
 		img {
 			max-width: 100%;
 
-			&:not([align="right"]) {
-				float: left;
-			}
-
-			&,
-			&:not([align="right"]){
-				@media screen and (max-width: 760px) {
-					display: block;
-					margin: 0 auto 10px;
-					float: none;
-				}
+			@media screen and (max-width: 760px) {
+				display: block;
+				margin: 0 auto 10px;
+				float: none;
 			}
 		}
 
@@ -336,9 +370,17 @@ section.tool-wrapper {
 	}
 }
 
-.find-courses .search-facets:last-child {
-	@media screen and (max-width: 540px) and (min-width: 320px) {
-		margin: 15px 0;
+.find-courses {
+	.search-facets:last-child {
+		.search-facets:last-child {
+			@media screen and (max-width: 540px) and (min-width: 320px) {
+				margin: 15px 0;
+			}
+		}
+	}
+
+	.wrapper-search-context .search-status-label {
+		word-break: break-word;
 	}
 }
 
@@ -389,4 +431,17 @@ button.prerequisite-button .fa {
 	left: 50% !important;
 	transform: translate(-50%,-50%) !important;
 	margin: 0 !important;
+}
+
+.page-banner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px;
+    box-sizing: border-box;
+
+    .alert-warning {
+        border: 1px solid #e7e7e7;
+        background: #fff;
+        color: #313131;
+    }
 }

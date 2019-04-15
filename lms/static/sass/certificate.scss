@@ -177,6 +177,7 @@
 	font-weight: 800;
 	display: block;
 	margin-bottom: 17px;
+	word-break: break-word;
 }
 .certificate-text {
 	text-align: center;
@@ -224,6 +225,7 @@
 		display: inline-block !important;
 		vertical-align: top;
 		padding: 0 20px;
+		max-width: 200px;
 	}
 	* {
 		display: block;
@@ -239,9 +241,10 @@
 		display: block;
 		position: absolute;
 		left: 50%;
-		top: 50%;
-		transform: translate(-50%,-50%);
+		bottom: 3px;
+		transform: translate(-50%, 0);
 		max-width: 120px;
+		max-height: 90px;
 	}
 	span {
 		color: #636466;
@@ -257,4 +260,15 @@
 	font-size: 13px;
 	width: 100%;
 	text-align: center;
+}
+
+// safari only
+.main-bg,
+.certificate-wrapper,
+.certificate-body {
+	&:not(:root:root) {
+		@media print {
+			height: 19.5cm;
+		}
+	}
 }

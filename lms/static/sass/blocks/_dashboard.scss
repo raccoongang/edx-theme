@@ -1,12 +1,20 @@
 .dashboard {
 	.main-container {
+		box-sizing: border-box;
 		padding: 40px 20px 40px 0;
+		max-width: calc(100% - 300px);
 		@media screen and (max-width: 991px){
 			padding: 30px 0;
 			order: 2;
+			max-width: 100%;
+		}
+
+		.my-courses .course .details .wrapper-course-details .course-title a {
+			word-break: break-word;
 		}
 	}
 	.side-container {
+		box-sizing: border-box;
 		padding: 40px 0 40px 20px;
 		@media screen and (max-width: 991px){
 			padding: 30px 0 0;
@@ -85,16 +93,50 @@
 	}
 }
 
-.search-results .search-results-item {
-	.result-type {
-		position: static;
+.search-results {
+	.search-results-item {
+		.result-type {
+			position: static;
 
-		&:before {
-			content: '(';
+			&:before {
+				content: '(';
+			}
+
+			&:after {
+				content: ')';
+			}
 		}
+	}
+
+	.search-info {
+		margin-bottom: 20px;
+		border-bottom: 4px solid #f5f5f5;
+		padding-bottom: 0;
+		color: #222;
 
 		&:after {
-			content: ')';
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		h2 {
+			color: inherit;
+		}
+
+		.search-results-title {
+			float: left;
+			font-size: 18px;
+			line-height: 27px;
+			margin-bottom: 15px;
+			color: inherit;
+		}
+
+		.search-count {
+			float: right;
+			font-size: 16px;
+			line-height: 19px;
+			color: inherit;
 		}
 	}
 }
