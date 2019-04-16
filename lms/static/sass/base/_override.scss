@@ -108,6 +108,9 @@
             width: 48%;
             text-align: center;
             margin: 3px 0;
+            display: inline-block;
+            vertical-align: middle;
+
             @media screen and (min-width:761px ) {
                 width: auto;
                 text-align: left;
@@ -140,6 +143,7 @@
     .user {
         display: block;
         width: auto;
+        margin-bottom: 5px;
 
         .user-link .label-username {
             text-shadow: none;
@@ -953,7 +957,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         display: inline;
         position: absolute;
         right: 0;
-        bottom: -30px;
+        bottom: -11px;
         padding: 0;
     }
 
@@ -3844,3 +3848,61 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         padding-bottom: 25px;
     }
 }
+
+.help-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 7px;
+
+    &.help-link_footer {
+        margin-top: 0;
+
+        @media screen and (max-width: 1362px) {
+            position: relative;
+            left: 70px;
+        }
+
+        @media screen and (max-width: 760px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            position: static;
+        }
+
+        svg {
+            margin-right: 0;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &.help-link_not-authenticated {
+        margin-right: 0;
+
+        @media screen and (max-width: 760px) {
+            width: 100%;
+            border: 1px solid $base-color;
+            padding: 3px;
+            height: 36px;
+            box-sizing: border-box;
+            margin-top: 0;
+            border-radius: 2px;
+        }
+    }
+
+    &:hover {
+        svg {
+            fill: $header-nav-link-color-hover;
+        }
+    }
+
+    svg {
+        width: 30px;
+        height: 30px;
+        margin-right: 12px;
+        fill: $header-nav-link-color;
+    }
+}
+
+

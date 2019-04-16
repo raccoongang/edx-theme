@@ -90,6 +90,9 @@ site_status_msg = get_site_status_msg(course_id)
         </%block>
       </ol>
       <div class="flex">
+        <a href="https://helpcenter.fastlane.live" class="help-link" target="_blank" title="Help Center">
+          <svg><use xlink:href="#ico-help"></use></svg>
+        </a>
         <%include file="user_dropdown.html"/>
       </div>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
@@ -118,6 +121,11 @@ site_status_msg = get_site_status_msg(course_id)
         </%block>
       </ol>
       <ol class="right nav-courseware list-inline">
+            <li>
+              <a href="https://helpcenter.fastlane.live" class="help-link help-link_not-authenticated" target="_blank" title="Help Center">
+                <svg><use xlink:href="#ico-help"></use></svg>
+              </a>
+            </li>
 	        <%block name="navigation_sign_in">
 	          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
 	            <li class="item nav-courseware-01">
