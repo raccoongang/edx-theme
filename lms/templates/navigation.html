@@ -65,7 +65,7 @@ site_status_msg = get_site_status_msg(course_id)
       </a>
     </h1>
 
-        <div class="nav-holder">
+        <div class="nav-holder ${'' if user.is_authenticated() else 'not-authenticated'}">
       % if user.is_authenticated():
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
