@@ -13,7 +13,7 @@
     height: auto;
     background: $header-bg;
     border: none;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
@@ -34,16 +34,28 @@
             flex-grow: 0;
 
             a img {
-                width: 166px;
+                width: 84px;
             }
         }
         .list-inline.nav-courseware {
             margin-top: 0;
         }
     }
+
+    .nav-holder.not-authenticated {
+        justify-content: flex-end;
+    }
+
     .nav-global {
         width: 100%;
         margin: 0 auto;
+
+        &:not(.authenticated) {
+            @media screen and (min-width:761px ) {
+                margin: 0 4px 0 0;
+            }
+        }
+
         @media screen and (min-width:761px ) {
             width: auto;
             display: flex;
