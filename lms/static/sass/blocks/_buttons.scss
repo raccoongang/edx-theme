@@ -3,6 +3,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	max-width: 100%;
+	border-radius: 4px !important;
 }
 
 .register-button, /* register page */
@@ -17,14 +18,17 @@ input[type="submit"] {
 .view-register .register .btn-login-action,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong,
 .btn-primary,
-.btn-brand {
+.btn-brand,
+.video-box .btn,
+.slide-info__btn,
+.course-section__item .btn {
 	transition: all 0.2s ease;
 	display: inline-block;
 	background: $theme-btn-bg !important;
 	color: $theme-btn-text-color !important;
 	border: none !important;
 	text-transform: uppercase;
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 	text-shadow: none !important;
 	box-shadow: none !important;
 
@@ -46,7 +50,7 @@ input[type="submit"] {
 	background-color: #eeeeee;
 	background-image: linear-gradient(#eeeeee, #d6cece);
 	border: 1px solid #cfc6c6;
-	border-radius: 3px;
+	border-radius: 4px;
 	box-shadow: 0 1px 0 0 #ffffff inset;
 	color: #333333;
 	display: inline-block;
@@ -70,6 +74,7 @@ input[type="submit"] {
 	background: $theme-btn-white-bg;
 	border-color: $theme-btn-white-border;
 	color: $theme-btn-white-text-color;
+	border-radius: 4px !important;
 
 	&:hover,
 	&:focus {
@@ -88,11 +93,13 @@ input[type="submit"] {
 	color: $theme-btn-white-text-color-hover !important;
 	background: $theme-btn-white-bg-hover !important;
 	border-color: $theme-btn-white-bg-hover !important;
+	border-radius: 4px !important;
 }
 
 // btn without border
 .btn-default {
 	color: $theme-btn-white-text-color;
+	border-radius: 4px !important;
 
 	&:hover,
 	&.is-hovered,
@@ -117,6 +124,7 @@ input[type="submit"] {
 	box-shadow: 0 2px 1px 0 darken($theme-btn-bg, 10%);
 	background: darken($theme-btn-bg, 10%);
 	color: #fff;
+	border-radius: 4px !important;
 
 	&:hover,
 	&:focus {

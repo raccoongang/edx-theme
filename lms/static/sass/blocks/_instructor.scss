@@ -20,11 +20,21 @@
 			}
 		}
 		.file-browse {
+			background: none !important;
+
 			.browse {
 				position: relative;
 				z-index: 10;
 				pointer-events: none;
 				padding: 5px 10px;
+				background-color: #eee;
+				background-image: linear-gradient(#eee, #d6cece);
+				border: 1px solid #cfc6c6;
+				border-radius: 4px;
+				box-shadow: 0 1px 0 0 #fff inset;
+				color: #333;
+				text-shadow: 0 1px 0 #f9f8f8;
+
 				@media screen and (max-width: 400px){
 					margin-left: 181px;
 				}
@@ -233,6 +243,9 @@
 	}
 }
 
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link {
+	border-radius: 0 !important;
+}
 .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section,
 .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:hover,
 .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:focus{
@@ -241,4 +254,14 @@
 
 .open-response-assessment-block .ora-summary-title {
 	color: $base-color;
+}
+
+.cohort-management-add-form .form-actions new-cohort-form .action-save {
+	font-weight: normal !important;
+}
+
+.cohort-management-add-form .form-cancel {
+	display: inline-block;
+	padding: 7px 17px;
+	margin-top: 10px;
 }
