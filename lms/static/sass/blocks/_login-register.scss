@@ -25,6 +25,7 @@
 	.login,
 	.register {
 		max-width: 100%;
+
 		@media screen and (max-width: 960px) {
 			.content,
 			.content + aside {
@@ -72,12 +73,19 @@
 	background: transparent !important;
 }
 
+.login .orn-plus,
+.register .orn-plus, .passwordreset .orn-plus,
+#forgot-password-modal #password-reset .orn-plus {
+	color: $theme-btn-text-color;
+}
+
 .login-register .section-title.lines {
 	text-align: left;
 
 	&:after {
 		display: none;
 	}
+
 	.text {
 		background: transparent;
 		font-size: 24px;

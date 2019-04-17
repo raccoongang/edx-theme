@@ -58,11 +58,13 @@
 			}
 		}
 	}
+
 	.details {
 		* {
 			font-family: "Open Sans";
 		}
 	}
+
 	.intro-inner-wrapper {
 		border-color: #ccc;
 	}
@@ -80,13 +82,16 @@
 	border-radius: 0 !important;
 	text-shadow: none;
 	box-shadow: none !important;
+
 	&:active,
 	&:focus {
 		background: $theme-btn-bg !important;
 	}
+
 	&:focus:hover {
 		background: $theme-btn-bg-hover !important;
 	}
+
 	&:hover {
 		background: $theme-btn-bg-hover !important;
 	}

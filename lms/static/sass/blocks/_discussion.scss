@@ -8,17 +8,21 @@
 	border-radius: 0 !important;
 	height: 40px;
 	padding: 0 20px;
+
 	&:active,
 	&:focus {
 		background: $theme-btn-bg !important;
 	}
+
 	&:focus:hover {
 		background: $theme-btn-bg-hover !important;
 	}
+
 	&:hover {
 		background: $theme-btn-bg-hover !important;
 		text-decoration: none;
 	}
+
 	@media screen and (max-width: 600px) {
 		margin-bottom: 20px;
 		width: 100%;
@@ -29,21 +33,26 @@ section.discussion {
 	.page-header {
 		align-items: center;
 	}
+
 	.page-header .page-header-secondary {
 		@media screen and (max-width: 600px) {
 			justify-content: space-between;
 		}
+
 		@media screen and (max-width: 420px) {
 			display: block;
 		}
 	}
+
 	.page-content {
 		padding: 20px;
 	}
+
 	.search-button {
 		border: 1px solid $theme-btn-white-border;
 		color: $theme-btn-white-text-color;
 		cursor: pointer;
+
 		&:hover {
 			background: $theme-btn-white-bg-hover;
 			color: $theme-btn-white-text-color-hover;
@@ -62,11 +71,13 @@ section.discussion {
 .new-post-btn {
 	border: 1px solid $theme-btn-white-border;
 	color: $theme-btn-white-text-color;
+
 	&:hover {
 		background: $theme-btn-white-bg-hover;
 		color: $theme-btn-white-text-color-hover;
 		border-color: $theme-btn-white-bg-hover;
 	}
+
 	@media screen and (max-width: 420px) {
 		display: block;
 		width: 100%;
@@ -77,7 +88,6 @@ section.discussion {
 .page-header {
 	@media screen and (max-width: 600px) {
 		display: block;
-
 	}
 }
 
@@ -91,14 +101,7 @@ section.discussion {
 	}
 }
 
-.forum-actions {
-	@media screen and (max-width: 420px) {
-
-	}
-}
-
 .discussion {
-
 	.actions-dropdown {
 		.action-list-item {
 			border: none;
@@ -123,7 +126,6 @@ section.discussion {
 	}
 
 	.search-alert-controls {
-
 		.btn-link {
 			color: $theme-btn-white-border;
 			font-size: 12px;
@@ -134,6 +136,7 @@ section.discussion {
 			transition: all .15s linear;
 			margin-left: 5px;
 			vertical-align: top;
+
 			&:hover{
 				cursor: pointer;
 				color: $theme-btn-white-text-color-hover;
@@ -150,7 +153,6 @@ section.discussion {
 }
 
 .discussion-module {
-
 	.add_post_btn_container {
 		margin-bottom: 10px;
 	}
@@ -178,6 +180,7 @@ section.discussion {
 	padding: 7px 18px;
 	border-radius: 3px;
 	transition: all .125s ease-in-out;
+
 	&:hover {
 		text-decoration: none !important;
 		color: $theme-btn-white-text-color-hover;
