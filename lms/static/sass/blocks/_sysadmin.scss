@@ -5,21 +5,26 @@
 	padding: 20px;
 	margin-top: 20px;
 	overflow: hidden;
+
 	.instructor-nav {
 		a {
 			padding: 5px 0;
+
 			&.active-section {
 				color: #000;
 			}
 		}
 	}
+
 	hr {
 		width: 100%;
 	}
+
 	ol {
 		word-break: break-all;
 	}
 }
+
 .sysadmin-dashboard-content {
 	margin: 20px 0 !important;
 }
@@ -27,8 +32,10 @@
 .list-input {
 	list-style: none;
 	padding: 0;
+
 	li {
 		padding-bottom: 15px;
+
 		input {
 			&:not([type="checkbox"]) {
 				width: 100% !important;
@@ -46,6 +53,7 @@ table.stat_table {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	label {
 		margin: 0;
 	}

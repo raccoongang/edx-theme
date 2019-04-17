@@ -45,6 +45,7 @@ body.view-in-course {
 
 		.nav-link{
 			padding: 18px 15px 15px;
+
 			@media screen and (max-width: 760px) {
 				padding: 15px 10px 5px;
 			}
@@ -54,13 +55,16 @@ body.view-in-course {
 	.tab a,
 	.tab a:visited {
 		border-bottom-color: $base-color;
+
 		@media screen and (max-width: 760px) {
 			padding: 13px 10px 3px;
 		}
+
 		&:not(.active){
 			border-bottom-style: solid;
 			border-bottom-color: transparent;
 		}
+
 		&:hover {
 			border-bottom-color: inherit;
 		}
@@ -121,6 +125,7 @@ body.view-in-course {
 				color: #d8d8d8;
 				opacity: 1;
 			}
+
 			&:-ms-input-placeholder {
 				font-weight: 400;
 				color: #d8d8d8;
@@ -131,7 +136,6 @@ body.view-in-course {
 
 .navbar-expand,
 .wrapper-course-material {
-
 	.hamburger-menu {
 		position: static;
 		width: $hamburger-width;
@@ -142,6 +146,7 @@ body.view-in-course {
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
 		box-sizing: border-box;
+
 		@media screen and (min-width: 761px) {
 			display: none;
 		}
@@ -173,7 +178,6 @@ body.view-in-course {
 	}
 
 	&.course-nav-open  {
-
 		.navbar-nav,
 		.course-material .course-tabs{
 			display: flex;
@@ -181,7 +185,6 @@ body.view-in-course {
 
 		.hamburger-menu {
 			.line {
-
 				&:nth-child(1) {
 					top: ($hamburger-height/2)-2px;
 					width: 0;
@@ -197,7 +200,7 @@ body.view-in-course {
 				}
 
 				&:nth-child(4) {
-					top: ($hamburger-height/2)-2px;;
+					top: ($hamburger-height/2)-2px;
 					width: 0;
 					left: 50%;
 				}
@@ -223,7 +226,6 @@ div.info-wrapper section.handouts ol li .wrapper-course-material .course-tabs .t
 }
 
 .xmodule_display {
-
 	&.xmodule_CourseModule,
 	&.xmodule_SequenceModule,
 	&.xmodule_SectionModule {
@@ -412,8 +414,39 @@ button.prerequisite-button .fa {
 	border-color: $base-color;
 }
 
-.courses-container .courses .course {
-	border-bottom-color: $base-color;
+.courses-container {
+	.courses .course {
+		border-bottom-color: $courses-border-color;
+	}
+
+	.courses-more {
+		margin-right: 0;
+		text-align: center;
+		clear: both;
+
+		a {
+			font-weight: 700 !important;
+			color: $theme-btn-text-color;
+			background: $theme-btn-bg;
+			border-radius: 2px;
+			text-transform: uppercase;
+			padding: 8px 25px;
+			font-size: 14px;
+			display: inline-block;
+			line-height: 20px;
+
+			&:after {
+				display: none;
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: $theme-btn-bg-hover;
+				color: $theme-btn-text-color;
+			}
+		}
+	}
 }
 
 .course-wrapper .course-content .staff-modal {

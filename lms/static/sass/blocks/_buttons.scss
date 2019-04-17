@@ -34,7 +34,7 @@ input[type="submit"] {
 	color: $theme-btn-text-color !important;
 	border: none !important;
 	text-transform: uppercase;
-	border-radius: 3px !important;
+	border-radius: 2px !important;
 	text-shadow: none !important;
 	box-shadow: none !important;
 
@@ -43,10 +43,7 @@ input[type="submit"] {
 		background: $theme-btn-bg !important;
 	}
 
-	&:focus:hover {
-		background: $theme-btn-bg-hover !important;
-	}
-
+	&:focus:hover,
 	&:hover {
 		background: $theme-btn-bg-hover !important;
 	}
