@@ -9,7 +9,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0;
+		padding: 12px 0;
 		height: auto;
 		@media screen and (max-width: 991px) {
 			display: block;
@@ -24,9 +24,11 @@
 			}
 			a {
 				margin: 0;
+				height: auto;
 				.logo {
 					display: block;
 					margin: 0 !important;
+					height: 57px;
 				}
 			}
 			.course-header {
@@ -239,9 +241,10 @@ section.home {
 		justify-content: center;
 		color: #fff;
 		position: relative;
+		box-sizing: border-box;
 
 		@media screen and (min-width: 992px) {
-			min-height: 500px;
+			min-height: 490px;
 			padding-top: 90px;
 		}
 
