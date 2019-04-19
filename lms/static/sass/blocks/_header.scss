@@ -5,12 +5,13 @@
 	position: relative;
 	overflow: visible;
 	background: $header-bg;
+	z-index: 2;
 
 	.main-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 23px 0;
+		padding: 22px 0 23px;
 		height: auto;
 
 		@media screen and (max-width: $build-header-menu-tablet) {
@@ -18,7 +19,7 @@
 		}
 
 		@media screen and (min-width: $breakpoint-tablet) {
-			padding: 28px 0;
+			padding: 30px 0;
 		}
 
 		.header-logo {
@@ -35,6 +36,7 @@
 			a {
 				margin: 0;
 				transition: opacity .15s ease;
+				height: auto;
 
 				&:hover {
 					opacity: .8;
@@ -66,6 +68,17 @@
 				border-top: none;
 			}
 
+			&.nav-links_not-authenticated .main {
+				@media (max-width: $build-header-menu-tablet) {
+					border-bottom: none;
+					padding-bottom: 5px;
+				}
+
+				@media (max-width: $build-header-menu-mobile) {
+					padding-bottom: 0;
+				}
+			}
+
 			.main {
 				margin: 0;
 				display: flex;
@@ -82,7 +95,7 @@
 					position: static;
 					transform: none;
 					width: 100%;
-					padding: 15px;
+					padding: 20px 15px;
 					flex-wrap: wrap;
 					border-bottom: 1px solid #d4d4d4;
 				}
@@ -279,6 +292,11 @@
 				.toggle-user-dropdown {
 					padding: 5px 3px;
 
+					.fa {
+						position: relative;
+						top: 3px;
+					}
+
 					&:hover,
 					&:focus {
 						.fa {
@@ -316,16 +334,21 @@
 	}
 
 	.hamburger-menu {
-		top: 35px;
+		top: 25px;
 		right: 15px;
 		left: inherit;
 		position: absolute;
 		width: 30px;
-		height: 20px;
-		padding-bottom: 5px;
+		height: 30px;
+		padding-bottom: 0;
 		transform: rotate(0deg);
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
+		box-sizing: border-box;
+
+		@media screen and (min-width: $breakpoint-tablet) {
+			top: 32px;
+		}
 
 		&.open {
 			.line {
@@ -368,11 +391,11 @@
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				top: 10px;
+				top: 12px;
 			}
 
 			&:nth-child(4) {
-				top: 20px;
+				top: 24px;
 			}
 		}
 
@@ -497,7 +520,7 @@ section.home {
 		position: relative;
 
 		@media (min-width: $breakpoint-mobile) {
-			min-height: 450px;
+			min-height: 420px;
 		}
 
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -520,7 +543,7 @@ section.home {
 
 			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 				display: table;
-				min-height: 450px;
+				min-height: 420px;
 				box-sizing: border-box;
 			}
 
