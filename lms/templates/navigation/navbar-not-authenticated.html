@@ -9,7 +9,7 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 %>
 
-<ol class="header-list">
+<ol class="header-list header-list_not-authenticated">
   <%block name="navigation_global_links">
     % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
       <li class="header-list_item">

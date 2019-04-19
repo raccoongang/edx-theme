@@ -1,27 +1,49 @@
 .login-btns-list {
     display: flex;
     order: 1;
-    @media screen and (max-width: 760px) {
+
+    @media screen and (max-width: $build-header-menu-tablet) {
         width: 100%;
         justify-content: center;
         order: 2;
     }
+
+    @media screen and (max-width: $build-header-menu-mobile) {
+        flex-wrap: wrap;
+    }
 }
+
 .login-btns-list_item {
-    margin: 0;
-    margin-right: 3px;
+    margin: 0 5px 0 0;
+    font-size: 14px;
+    font-weight: 700;
 
     &:last-child {
         margin-right: 0;
     }
 
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: $build-header-menu-tablet) {
         text-align: center;
-        width: 100%;
+        width: auto;
+        min-width: 285px;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         .theme-btn {
             width: 100%;
             box-sizing: border-box;
+        }
+    }
+
+    @media screen and (max-width: $build-header-menu-mobile) {
+        width: 100%;
+        margin: 0 0 10px;
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }

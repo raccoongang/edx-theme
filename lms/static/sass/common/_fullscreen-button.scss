@@ -4,10 +4,12 @@
   height: 22px;
   width: 22px;
   line-height: 1.3;
+
   svg {
     height: 22px;
     width: 22px;
   }
+
   &:hover,&:focus,&:active {
     cursor: pointer;
     fill: $theme-link-hover;
@@ -29,6 +31,7 @@
     background: #fff !important;
     margin: 0 !important;
   }
+
   &:-moz-full-screen {
     overflow: auto;
     width: 100% !important;
@@ -36,6 +39,7 @@
     background: #fff !important;
     margin: 0 !important;
   }
+
   &:-ms-fullscreen {
     overflow: auto;
     width: 100% !important;
@@ -43,6 +47,7 @@
     background: #fff !important;
     margin: 0 !important;
   }
+
   &:fullscreen {
     overflow: auto;
     width: 100% !important;

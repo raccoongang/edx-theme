@@ -1,17 +1,22 @@
 .hamburger {
-    display: block;
-    position: relative;
+    display: none;
+    position: absolute;
     width: $hamburger-width;
-    height: $hamburger-height + 6;
+    height: $hamburger-height;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     border-radius: 0;
     box-shadow: none;
-    position: absolute;
-    top: 18px;
-    right: 10px;
+    top: 22px;
+    right: 15px;
+    z-index: 2;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        top: 22px;
+    }
+
     &:after,
     &:before {
         content: '';
@@ -23,10 +28,12 @@
         background-color: $hamburger-color;
         transition: all 0.3s;  
     }
+
     &:after {
-       box-shadow: 0 $hamburger-height / 2 0 0 $hamburger-color,
-                   0 $hamburger-height / -2 0 0 $hamburger-color; 
+       box-shadow: 0 ($hamburger-height / 2 - 3) 0 0 $hamburger-color,
+                   0 ($hamburger-height / -2 + 3) 0 0 $hamburger-color;
     }
+
     &:focus,
     &:active,
     &:hover {
@@ -34,8 +41,9 @@
         box-shadow: none !important; //platform has many selectors
         background: transparent !important; //platform has many selectors
     }
-    @media screen and (min-width: 761px) {
-        display: none;
+
+    @media screen and (max-width: $build-header-menu-tablet) {
+        display: block;
     }
 
     .lang_ar & {
@@ -43,10 +51,12 @@
         left: 10px;
     }
 }
+
 .menu-open .hamburger:after {
     transform: rotate(45deg);
     box-shadow: none;
 }
+
 .menu-open .hamburger:before {
     transform: rotate(-45deg);
 }
