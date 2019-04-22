@@ -1,3 +1,8 @@
+html, body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+
 .header-global .wrapper-header {
     max-width: 1200px;
 
@@ -50,11 +55,10 @@
 .wrapper-footer {
     box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
     border-top: 1px solid #c5c6c7;
-    padding: 50px 10px;
+    padding: 50px 10px 30px;
 
     footer#footer-openedx {
         max-width: 1200px;
-        flex-wrap: nowrap;
 
         ul {
             line-height: 1em;
@@ -92,6 +96,9 @@
             text-decoration: none !important;
             border: none !important;
         }
+    }
+    .footer-holder:last-of-type {
+        margin-top: 5px;
     }
 }
 .dropdown-menu-container {
