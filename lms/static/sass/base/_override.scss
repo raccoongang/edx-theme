@@ -8,7 +8,7 @@
         @content;
     }
 }
-*:not(.fa) {
+*:not(.fa):not(.closed-captions.is-visible:before):not(.mce-ico) {
     font-family: 'HelveticaNeue', "Open Sans", Verdana, Geneva, sans-serif !important;
 }
 
@@ -3237,6 +3237,9 @@ body .breadcrumbs .nav-item {
     .btn-blue,
     input[type=button] {
         margin: 10px 0;
+    }
+    .mce-btn button {
+        margin: 0;
     }
     p input {
         margin-top: 0 !important;
