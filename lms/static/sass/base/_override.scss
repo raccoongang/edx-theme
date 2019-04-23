@@ -66,6 +66,19 @@
             }
         }
         .tab-nav-item {
+            align-items: center;
+
+            .rtl & {
+                margin-left: 5px !important;
+            }
+
+            & + .tab-nav-item {
+                margin-left: 5px;
+
+                @include sm {
+                    margin-left: 0 !important;
+                }
+            }
             .active {
                 border: none !important;
             }
@@ -137,6 +150,10 @@
             text-shadow: none;
             margin: 13px 5px 13px 15px;
             color: $header-nav-link-color;
+
+            .rtl & {
+                margin: 13px 15px 13px 5px;
+            }
 
             &:hover {
                 color: $header-nav-link-color-hover;
@@ -926,6 +943,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     border-left: none !important;
                     right: 0;
                     height: $search-height;
+                    .rtl & {
+                        left: 0;
+                        right: auto;
+                    }
                 }
             }
         }
@@ -951,6 +972,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
     @media screen and (max-width: 1362px) {
         right: 70px;
+    }
+    .rtl & {
+        left: 0;
+        right: auto;
     }
 }
 .logo-ar {
@@ -1223,6 +1248,9 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
     }
     .deco-divider {
         display: none;
+    }
+    .orn-plus {
+        color: inherit;
     }
 }
 .view-login .introduction {
@@ -2871,6 +2899,10 @@ footer .footer-support {
         height: 16px;
         justify-content: baseline;
     }
+    .rtl & {
+        left: auto;
+        right: 0;
+    }
 }
 
 #content {
@@ -3118,6 +3150,14 @@ body .breadcrumbs .nav-item {
         .fa {
             color: #fff;
         }
+    }
+}
+
+.rtl {
+    .dashboard .my-courses .course .details .course-info,
+    .dashboard .my-courses .course .details .wrapper-course-actions {
+        float: right !important;
+        width: auto;
     }
 }
 
@@ -3392,6 +3432,11 @@ body footer {
         align-items: center;
         color: $footer-nav-link-color;
         margin-left: 8px;
+
+        .rtl & {
+            margin-left: 0;
+            margin-right: 8px;
+        }
     }
 }
 .view-teams .page-header-search .action-search:hover,
@@ -3594,6 +3639,10 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     }
     &:hover {
         background: $theme-btn-bg-hover;
+    }
+    .rtl & {
+        right: auto;
+        left: 30px;
     }
 }
 
@@ -3883,5 +3932,12 @@ div.info-wrapper section.handouts {
             margin-right: 0;
             width: 100%;
         }
+    }
+}
+
+div.info-wrapper section.updates div a {
+    &:hover,
+    &:focus {
+        color: $white !important;
     }
 }
