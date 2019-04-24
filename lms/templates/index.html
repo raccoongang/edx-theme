@@ -56,14 +56,12 @@ from openedx.core.djangolib.markup import HTML, Text
             <%include file="${courses_list}" />
         % else:
             % for category in courses_data:
-                <h2 class="course-box__heading"></h2>
-
                 <section class="course-box">
                     <h2 class="course-box__heading">${category}</h2>
-##                               <p class="course-box__info">${courses_data.get(category, {}).get('description', '')}</p>
-          <%
-                                  courses=courses_data.get(category, {}).get('courses', '')
-                %>
+##                  <p class="course-box__info">${courses_data.get(category, {}).get('description', '')}</p>
+                    <%
+                      courses=courses_data.get(category, {}).get('courses', '')
+                    %>
                     <%include file="${courses_list}" args="courses=courses" />
                 </section>
             % endfor
