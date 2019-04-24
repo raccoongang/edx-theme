@@ -63,10 +63,13 @@
 			background: $theme-btn-white-bg-hover !important;
 			color: $theme-btn-white-text-color-hover !important;
 		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 5px;
+		}
 	}
 
 	.wrapper-course-details {
-
 		.course-info,
 		.wrapper-course-actions {
 			margin-right: 0;
@@ -80,11 +83,18 @@
 	}
 }
 
-.wrapper-action-more button.action-more {
+.dashboard .main-container .my-courses .course .details .course-actions .action {
 	border: 1px solid $theme-btn-white-border !important;
+	background: #fff;
+	height: 42px;
 
 	.fa {
 		pointer-events: none;
+	}
+
+	@media (max-width: 767px) {
+		margin-right: 5px !important;
+		margin-bottom: 5px;
 	}
 
 	&:hover {
