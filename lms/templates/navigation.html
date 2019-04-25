@@ -109,6 +109,9 @@ site_status_msg = get_site_status_msg(course_id)
             </li>
           %endif
         </%block>
+          <li class="tab-nav-item">
+            <a class="btn" href="/more-on-arrow-education">${_("More on Arrow Education")}</a>
+          </li>
       </ol>
       <div class="flex">
         <%include file="user_dropdown.html"/>
@@ -153,9 +156,13 @@ site_status_msg = get_site_status_msg(course_id)
             %endif
           % endif
         </%block>
+
+        <li class="item nav-global-06">
+            <a class="btn" href="/more-on-arrow-education">${_("More on Arrow Education")}</a>
+        </li>
       </ol>
 
-      <ol class="right nav-courseware list-inline">
+      <ol class="right nav-courseware list-inline nav-courseware_not-authenticated">
         <%block name="navigation_sign_in">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:

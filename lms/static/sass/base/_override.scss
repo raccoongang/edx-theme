@@ -33,6 +33,8 @@
             width: 100%;
             text-align: center;
             text-transform: none;
+            margin-right: 0;
+
             @media screen and (min-width:760px ) {
                 width: auto;
                 text-align: left;
@@ -40,6 +42,8 @@
 
             a {
                 color: $header-nav-link-color;
+                box-sizing: border-box;
+                padding: 5px 10px;
 
                 &:active,
                 &:focus {
@@ -57,6 +61,18 @@
             .tab-nav-link {
                 color: $header-nav-link-color;
                 padding: 5px;
+
+                @media screen and (max-width: $breakpoint-rebuild-header) {
+                    padding: 10px 20px !important;
+                    color: $theme-btn-text-color !important;
+                    font-weight: 500;
+                    font-size: 16px;
+
+                    &:hover,
+                    &:focus {
+                        color: $theme-btn-text-color !important;
+                    }
+                }
 
                 &:focus,
                 &:hover {
@@ -112,6 +128,21 @@
             }
         }
     }
+
+    .wrapper-header .nav-courseware_not-authenticated {
+        @media screen and (max-width: $breakpoint-rebuild-header) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        li.item {
+            @media screen and (max-width: $breakpoint-rebuild-header) {
+                width: calc(50% - 4px);
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .user {
         display: block;
         width: auto;
@@ -868,7 +899,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 }
 .highlighted-courses .courses {
-    padding-bottom: 77px;
+    padding-bottom: 30px;
 
     .course a {
         background: $course-bg;
@@ -1411,6 +1442,14 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 }
 .container.about {
     line-height: 1.3;
+    padding-bottom: 50px;
+
+    h2 {
+        font-weight: 700;
+        text-transform: none;
+        font-size: 24px;
+        margin-top: 25px;
+    }
     h3 {
         margin: 12px 0;
         font-weight: 700;
@@ -3087,20 +3126,7 @@ body {
 }
 
 @include sm {
-    .header-global .wrapper-header .list-inline li {
-        width: 100%;
-        margin-bottom: 8px;
-        a {
-            width: 100%;
-            text-align: center;
-            color: $white;
-            background-color: $theme-link;
-            &:hover {
-                background-color: $theme-link-hover;
-                color: $white;
-            }
-        }
-    }
+
     .view-teams .cards-list {
         display: flex;
         flex-direction: column;
@@ -3132,6 +3158,31 @@ body {
     }
     body.view-teams .card.list-card .card-actions {
         width: auto;
+    }
+}
+
+.header-global .wrapper-header .list-inline li {
+    @media screen and (max-width: $breakpoint-rebuild-header) {
+        width: 100%;
+        margin-bottom: 8px;
+        margin-right: 0;
+
+        a {
+            width: 100%;
+            text-align: center;
+            color: $theme-btn-text-color;
+            background-color: $theme-link;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 2px;
+
+            &:hover {
+                background-color: $theme-link-hover;
+                color: $theme-btn-text-color;
+            }
+        }
     }
 }
 body .theme-header .list-inline {
@@ -3206,4 +3257,287 @@ body {
     .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type='button'].add {
         top: 13px;
     }
+}
+
+.header-global  .nav-holder {
+    @media screen and (max-width: $breakpoint-rebuild-header) {
+        display: none;
+        width: 100%;
+
+        .nav-global,
+        .nav-courseware {
+            width: 100%;
+        }
+    }
+
+    .menu-open & {
+        display: block;
+
+        @media screen and (max-width: $breakpoint-rebuild-header) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .tab-nav-item .tab-nav-link {
+        padding: 5px 10px;
+    }
+}
+
+.header-global .hamburger {
+    @media screen and (max-width: $breakpoint-rebuild-header) {
+        display: block;
+    }
+}
+
+.my-courses .empty-dashboard-message a {
+    color: $white;
+}
+.home > header .title .course-search .search-input::-webkit-input-placeholder {
+    color: $white;
+}
+body.view-teams .teams-wrapper .action-cancel:hover {
+    background: none;
+}
+body .instructor-dashboard-wrapper-2 main .instructor-dashboard-content-2 {
+    overflow: hidden;
+}
+body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke {
+    color: $theme-link;
+}
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
+.instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
+body form.ccx-form button,
+body .idash-section form button {
+    border: none;
+    box-shadow: none;
+    color: $white;
+    background: $theme-link;
+    text-decoration: none;
+    text-shadow: none;
+    &:hover,&:focus,&:active {
+        background: $theme-link-hover;
+    }
+}
+body form.ccx-form select {
+    color: $theme-link;
+}
+.batch-enrollment {
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+@media (max-width: 767px) {
+    .member-lists-management,
+    .batch-enrollment {
+        width: 100% !important;
+    }
+    .view-teams .page-header.has-secondary .page-header-secondary {
+        width: 100%;
+    }
+    .window-wrap .form-actions {
+        display: flex;
+        flex-direction: column;
+        button {
+            margin: 0 0 10px;
+            box-shadow: none;
+            &:hover, &:focus, &:action {
+                box-shadow: none;
+            }
+        }
+    }
+    .wiki-wrapper section.wiki #article_edit_form .btn {
+        box-sizing: border-box;
+    }
+    .instructor-nav {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-bottom: 10px;
+        }
+    }
+    section.wiki .wiki-wrapper .article-functions .see-children {
+        width: 100%;
+        text-align: center;
+    }
+}
+button.ccx-button-link {
+    color: $theme-link;
+}
+body .ccx-schedule-container {
+    width: auto;
+}
+
+.view-profile .profile-section-two-fields .u-field-value,
+section.wiki .main-article .wiki-article p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.teams-wrapper main {
+    width: 100%;
+}
+.view-teams .team-profile .page-content-secondary {
+    width: 30%;
+}
+body .page-header-secondary .action-edit-team {
+    &:hover {
+        color: $white;
+    }
+}
+body section.wiki #cheatsheetModal {
+    max-width: 972px;
+    width: 100%;
+    transform: translate(-50%);
+    left: 50% !important;
+    margin: 0 !important;
+}
+@media (max-width: 767px) {
+    .view-teams .team-profile .page-content-main,
+    .view-teams .team-profile .page-content-secondary {
+        width: 100%;
+    }
+}
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn:hover {
+    color: $theme-btn-white-text-color-hover !important;
+}
+.wrapper-msg .msg {
+    min-width: 0;
+}
+body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section {
+    background: none;
+}
+
+// "show more" button
+
+.home .highlighted-courses {
+    margin-bottom: 100px;
+}
+
+.arrow-up {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: -100px;
+    border-radius: 50%;
+    background: $theme-btn-bg;
+    color: $theme-btn-text-color !important;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 36px;
+    transition: all 0.2s ease;
+    z-index: 100;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    &.active {
+        bottom: 30px;
+    }
+    &:hover {
+        background: $theme-btn-bg-hover;
+    }
+}
+
+.home .courses-container .courses .courses-listing .courses-listing-item {
+    display: block;
+}
+
+body .courses-container .courses-more {
+    clear: both;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    .btn {
+        cursor: pointer;
+        margin: 5px 10px;
+        display: inline-block;
+        background: $theme-btn-bg;
+        color: $theme-btn-text-color !important;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        width: 180px;
+        font-weight: normal;
+        &:hover {
+            background: $theme-btn-bg-hover;
+        }
+    }
+    .fa-spinner {
+        position: absolute;
+        left: 50%;
+        bottom: -50px;
+        margin-left: -14px;
+        font-size: 30px;
+        visibility: hidden;
+        color: #9a9a9a;
+    }
+}
+
+// "show more" button end
+
+@media screen and (max-width:760px ) {
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+    }
+    .wiki-wrapper section.wiki #article_edit_form .btn {
+        box-sizing: border-box;
+    }
+    .instructor-nav {
+        display: flex;
+        flex-direction: column;
+        a {
+            margin-bottom: 10px;
+        }
+    }
+    .ccx-schedule-sidebar {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+.instructor-dashboard-wrapper-2 section.idash-section#data_download .reports-download-container .data-display-table .slickgrid {
+    font-size: 10px;
+}
+.teams-header .breadcrumbs {
+    display: flex;
+}
+div.gradebook-wrapper section.gradebook-content .grade-table {
+    width: 100%;
+}
+
+.wrapper-course-modes>div {
+    width: 100%;
+    margin-bottom: 5px;
+}
+body .container .wiki-wrapper section.wiki .btn {
+    text-align: center;
+}
+
+// all selects
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: 1px #c6c6c6 solid !important;
+    height: 32px;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    color: #222;
+    background: #fff url(../images/select-arrow.png) no-repeat 100% 50%;
+    background-size: 27px 7px;
+}
+@supports (-ms-ime-align:auto) {
+    select {
+        background: #fff url(../images/down-up-arrow.svg) no-repeat 98% 50%;
+        background-size: 10px 7px;
+    }
+}
+.teams-main select {
+    min-width: 120px;
+}
+body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down::after {
+    display: none;
+}
+.account-settings-sections .section .account-settings-section-body .u-field .field select {
+    padding: 0 10px !important;
 }
