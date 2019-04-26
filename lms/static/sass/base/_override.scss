@@ -4151,3 +4151,42 @@ div.info-wrapper section.handouts {
         }
     }
 }
+
+// Account Settings for linked accounts
+
+.account-settings-sections {
+    .section {
+        padding: 20px;
+
+        .account-settings-section-body {
+            .u-field-social {
+                width: 32%;
+                margin: 0;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    padding: 5px 0 !important;
+                }
+
+                .u-field-social-help {
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                    }
+                }
+            }
+
+            .u-field .field {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+.accountsTabSections-section-body {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
