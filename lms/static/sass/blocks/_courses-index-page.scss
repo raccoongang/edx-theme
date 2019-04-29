@@ -21,9 +21,10 @@
 
 	.courses .course {
 		border-bottom-color: $courses-border-color;
+		box-shadow: none !important;
 
 		&:hover {
-			background: none;
+			background: #fff;
 		}
 	}
 }
