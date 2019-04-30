@@ -174,57 +174,57 @@ h1 {
             }
 
             .course-search {
-                 max-width: 590px;
-                 margin: 0 auto;
-                 overflow: hidden;
-                 position: relative;
-                 padding-bottom: 0;
+                max-width: 590px;
+                margin: 0 auto;
+                overflow: hidden;
+                position: relative;
+                padding-bottom: 0;
 
-                 .search-input {
-                     background: $search-input-background;
-                     border: 2px solid $search-input-border;
-                     color: $search-input-color;
-                     padding-left: 15px !important;
-                     font-size: 12px;
-                     height: $search-height - 7;
-                     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                .search-input {
+                    background: $search-input-background;
+                    border: 2px solid $search-input-border;
+                    color: $search-input-color;
+                    padding-left: 15px !important;
+                    font-size: 12px;
+                    height: $search-height - 7;
+                    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-                     @media screen and (min-width: $breakpoint-mobile) {
-                         height: $search-height;
-                         font-size: 16px;
-                     }
+                    @media screen and (min-width: $breakpoint-mobile) {
+                        height: $search-height;
+                        font-size: 16px;
+                    }
 
-                     &:focus {
-                         border-color: $search-input-border !important;
-                     }
+                    &:focus {
+                        border-color: $search-input-border !important;
+                    }
 
-                     &::placeholder {
-                         color: $search-input-color;
-                         opacity: 1;
-                     }
+                    &::placeholder {
+                        color: $search-input-color;
+                        opacity: 1;
+                    }
 
-                     &:-ms-input-placeholder {
-                         color: $search-input-color;
-                     }
+                    &:-ms-input-placeholder {
+                        color: $search-input-color;
+                    }
 
-                     &::-webkit-input-placeholder{
-                         color: $search-input-color !important;
-                     }
-                 }
+                    &::-webkit-input-placeholder{
+                        color: $search-input-color !important;
+                    }
+                }
 
-                 .search-button {
-                     color: $search-button-color;
-                     background: none !important;
-                     border-color: $search-input-border !important;
-                     border-left: none !important;
-                     right: 0;
-                     height: $search-height - 7;
+                .search-button {
+                    color: $search-button-color;
+                    background: none !important;
+                    border-color: $search-input-border !important;
+                    border-left: none !important;
+                    right: 0;
+                    height: $search-height - 7;
 
-                     @media screen and (min-width: $breakpoint-mobile) {
-                         height: $search-height;
-                     }
-                 }
-             }
+                    @media screen and (min-width: $breakpoint-mobile) {
+                        height: $search-height;
+                    }
+                }
+            }
 
             &:last-child {
                 margin: 0 auto;
@@ -614,25 +614,26 @@ body {
                         &:hover,
                         &:focus {
                             color: #fff;
-                            border-color: $header-nav-link-color-hover;
-                            background: $header-nav-link-color-hover;
+                            border-color: $header-nav-link-color;
+                            background: $header-nav-link-color;
                         }
                     }
                 }
 
-                .course-actions button.action {
+                .course-actions .action {
                     padding: 5px 4px;
                     border-color: $header-nav-link-color;
                     font-size: 20px !important;
                     margin-right: 5px;
                     transition: color 0.25s ease, background 0.25s ease;
                     border-radius: 2px;
+                    height: 32px;
 
                     &:hover,
                     &:focus {
                         color: #fff;
-                        border-color: $header-nav-link-color-hover;
-                        background: $header-nav-link-color-hover;
+                        border-color: $header-nav-link-color;
+                        background: $header-nav-link-color;
                     }
 
                     .fa {
@@ -652,7 +653,7 @@ body {
 
         .search-button {
             background: $header-nav-link-color;
-            
+
             &:hover,
             &:focus {
                 background: $header-nav-link-color-hover !important;
@@ -1240,7 +1241,7 @@ div {
                     position: static;
                     width: 100%;
                     td {
-                         @media (max-width: 767px) {
+                        @media (max-width: 767px) {
                             height: 40px;
                             padding-left: 10px;
                             line-height: 40px;
@@ -2010,9 +2011,9 @@ button {
         }
     }
 
-   .loading-spinner {
+    .loading-spinner {
         background: $base-color;
-   }
+    }
 }
 
 .course-info {
@@ -2028,7 +2029,7 @@ button {
 
                     .main-cta {
                         strong {
-                           @extend %theme-btn;
+                            @extend %theme-btn;
                         }
 
                         a {
@@ -2661,11 +2662,11 @@ div {
 .breadcrumbs {
     .nav-item {
         a, a:visited {
-          color: $base-color;
+            color: $base-color;
         }
 
         a:hover {
-          color: $base-color;
+            color: $base-color;
         }
     }
 }
@@ -2685,7 +2686,7 @@ div {
 }
 
 .bookmarks-results-list {
-     .bookmarks-results-list-item {
+    .bookmarks-results-list-item {
         &:hover {
             border-color: $base-color;
 
@@ -2697,7 +2698,7 @@ div {
         &:before {
             color: $base-color;
         }
-     }
+    }
 }
 
 /*-----Discussion-----*/
@@ -2812,7 +2813,7 @@ div {
                 display: flex;
 
                 @media (max-width: 767px) {
-                   display: block;
+                    display: block;
                 }
 
                 .msg-content {
@@ -3067,10 +3068,10 @@ body {
 
 .user-menu {
     .user-dropdown {
-    font: 17px/20px "FontAwesome";
-    margin: -1px 0 0;
-    padding: 5px 3px;
-    vertical-align: top;
+        font: 17px/20px "FontAwesome";
+        margin: -1px 0 0;
+        padding: 5px 3px;
+        vertical-align: top;
 
         &:focus {
             border: none;
@@ -3189,7 +3190,7 @@ body {
     }
 
     body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions:not(:last-child) {
-     margin: 0 27px 10px 0;
+        margin: 0 27px 10px 0;
     }
 
     body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions {
@@ -3540,7 +3541,7 @@ body .doc-link {
 }
 
 body .doc-link+.user {
-     order: 4;
+    order: 4;
 }
 
 .user:last-child {
