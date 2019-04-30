@@ -125,6 +125,8 @@
 		font-size: 12px;
 		font-weight: 700;
 		line-height: 16px;
+		margin-top: 3px;
+		margin-bottom: 3px;
 
 		&:active,
 		&:focus {
@@ -192,17 +194,26 @@
 	}
 }
 
-.wrapper-action-more button.action-more {
-	border: 1px solid $theme-btn-white-border !important;
+.dashboard .main-container .my-courses .course .details .course-actions .action {
+	border: 1px solid $base-color2 !important;
 	margin-right: 5px !important;
+	background: #fff;
+	padding: 6px;
+	height: 32px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 
 	.fa {
 		pointer-events: none;
 	}
 
 	&:hover {
-		background: $theme-btn-white-bg-hover !important;
+		background: $base-color2-hover !important;
 		color: #fff !important;
+	}
+
+	@media (max-width: 767px) {
+		margin-right: 5px !important;
 	}
 }
 
