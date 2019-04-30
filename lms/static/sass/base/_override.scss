@@ -9,79 +9,139 @@
     }
 }
 
+*:not(.fa):not(.closed-captions.is-visible:before):not(.mce-ico) {
+    font-family: $global-font-family !important;
+}
+
 .header-global {
     height: auto;
     background: $header-bg;
     border: none;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
-    padding: 18px 10px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
+    padding: 30px 15px;
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        padding: 22px 15px 23px;
+    }
+
     .wrapper-header {
         height: auto;
         padding: 0;
+        max-width: 1170px;
+
         @media (min-width: 761px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
+        .nav-holder {
+            @media screen and (max-width: $build-header-menu-tablet) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 0;
+                background: #eee;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+                border-top: 1px solid #6e6e6e;
+            }
+        }
+
         h1.logo {
             margin-top: 0;
             flex-grow: 0;
+            z-index: 2;
 
             a {
-                height: $header-logo-height;
-                transition: opacity .15s linear;
+                transition: opacity .15s ease;
 
                 &:hover {
                     opacity: .8;
                     cursor: pointer;
                 }
+            }
 
-                img {
-                    max-height: 100%;
-                }
+            img {
+                height: $header-logo-height;
             }
         }
+
         .list-inline.nav-courseware {
             margin-top: 0;
+            position: relative;
+            z-index: 2;
+
+            @media screen and (max-width: $build-header-menu-tablet) {
+                padding: 20px 0;
+                z-index: 2;
+            }
+
+            @media screen and (max-width: $build-header-menu-mobile) {
+                padding: 20px 15px;
+                box-sizing: border-box;
+                width: 100%;
+                flex-wrap: wrap;
+            }
         }
     }
-    .nav-holder {
-        @media screen and (min-width:761px ) {
-            display: flex;
-            padding: 0;
-            justify-content: center;
-        }
-    }
+    
     .nav-global {
         width: 100%;
         margin-top: 0;
-        @media screen and (min-width:761px ) {
-            display: inline-block;
-            width: auto;
-            float: none;
-            vertical-align: middle;
-            margin: 0 auto;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(.authenticated) {
+            @media screen and (max-width: $build-header-menu-mobile) {
+                border-bottom: none;
+                padding-bottom: 5px;
+            }
+
+            @media screen and (max-width: $build-header-menu-mobile) {
+                padding-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: $build-header-menu-tablet) {
+            position: static;
+            transform: none;
+            width: 100%;
+            padding: 20px 15px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #d4d4d4;
         }
 
         li {
-            width: 100%;
-            text-align: center;
-            text-transform: none;
-            margin: 3px 0;
-            @media screen and (min-width:760px ) {
+            width: auto !important;
+            margin: 0 10px !important;
+
+            @media screen and (max-width: $build-header-menu-tablet) {
+                margin: 5px !important;
                 width: auto;
-                text-align: left;
-                margin-right: 15px;
+            }
+
+            @media screen and (max-width: $build-header-menu-mobile) {
+                margin: 0 !important;
             }
 
             a {
-                color: $header-nav-link-color;
-                padding: 8px 25px !important;
-                text-transform: uppercase;
+                background: transparent !important;
                 border: 2px solid $header-nav-link-color;
+                color: $header-nav-link-color !important;
+                padding: 8px 25px !important;
+                display: inline-block;
+                border-radius: 2px;
+                line-height: 16px;
+                text-transform: uppercase;
                 font-weight: 700;
 
                 &:active,
@@ -89,36 +149,41 @@
                     color: $header-nav-link-color;
                     border-color: $header-nav-link-color;
                 }
+
                 &:hover {
                     color: $header-nav-link-color-hover;
                     border-color: $header-nav-link-color-hover;
                 }
             }
         }
+
         .tab-nav-item {
             @media screen and (min-width:760px ) {
                 margin: 0 5px;
             }
 
             .active {
+                border: 2px solid $base-color2 !important;
+
+                &:hover,
+                &:hover {
+                    border-color: $base-color2-hover !important;
+                }
+            }
+
+            .tab-nav-link {
+                color: $header-nav-link-color;
                 border: 2px solid $header-nav-link-color !important;
 
                 &:focus,
                 &:hover {
-                    color: $header-nav-link-color-hover;
+                    color: $header-nav-link-color-hover !important;
                     border-color: $header-nav-link-color-hover !important;
                 }
-            }
-            .tab-nav-link {
-                color: $header-nav-link-color;
 
-                &:focus,
-                &:hover {
-                    color: $header-nav-link-color-hover;
-                    border: 2px solid $header-nav-link-color-hover;
-                }
                 @include sm {
                     color: $white;
+
                     &:hover {
                         color: $white;
                         border: none;
@@ -127,23 +192,37 @@
             }
         }
     }
+
     .nav-courseware {
-        width: 100%;
+        width: auto;
         display: flex;
         justify-content: space-between;
-        @media screen and (min-width:761px ) {
-            width: auto;
-            display: block;
+
+        @media screen and (max-width: $build-header-menu-mobile) {
+            width: 100%;
         }
 
         li {
-            width: 48%;
+            width: auto;
             text-align: center;
-            margin: 3px 0;
-            @media screen and (min-width:761px ) {
+            margin: 0 0 0 5px;
+
+            @media screen and (max-width: $build-header-menu-tablet) {
+                margin-left: 10px;
                 width: auto;
-                text-align: left;
-                margin: 0;
+            }
+
+            @media screen and (max-width: $build-header-menu-mobile) {
+                width: 100%;
+                margin: 0 0 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:first-child {
+                margin-left: 0;
             }
 
             a {
@@ -151,70 +230,127 @@
             }
 
             // login and register btns on the header nav
+
             .btn {
                 background: $theme-btn-bg;
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
-                font-size: 14px;
                 font-weight: 700;
-                padding: 10px 25px;
+                line-height: 18px;
+                padding: 9px 25px;
+                box-sizing: border-box;
+                font-size: 14px;
+                width: auto;
+
+                @media screen and (max-width: $build-header-menu-tablet) {
+                    min-width: 290px;
+                    text-align: center;
+                }
+
+                @media screen and (max-width: $build-header-menu-mobile) {
+                    width: 100%;
+                }
 
                 &:active,
                 &:focus {
                     background: $theme-btn-bg;
                 }
+
                 &:focus:hover {
                     background: $theme-btn-bg-hover!important;
                 }
+
                 &:hover {
                     background: $theme-btn-bg-hover;
                 }
             }
         }
     }
+
+    .secondary {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        float: right;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: $build-header-menu-tablet) {
+            padding: 20px 0;
+        }
+
+        @media screen and (max-width: $build-header-menu-mobile) {
+            width: 100%;
+            padding: 20px 15px;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+    }
+
     .user {
-        display: block;
+        display: flex;
+        align-items: center;
         width: auto;
 
-        .user-link .label-username {
-            text-shadow: none;
-            margin: 13px 5px 13px 15px;
-            color: $header-nav-link-color;
+        .user-link {
+            display: flex;
+            align-items: center;
 
-            &:hover {
-                color: $header-nav-link-color-hover;
+            .label-username {
+                text-shadow: none;
+                margin: 0 0 0 8px;
+                color: #474747;
+
+                &:hover {
+                    color: $header-nav-link-color-hover;
+                }
+
+                .fa {
+                    color: $header-nav-link-color;
+                }
             }
 
-            .fa {
-                color: $header-nav-link-color;
+            .user-image-frame {
+                width: 36px;
+                box-sizing: border-box;
+                border: 1px solid #bababa;
+                border-radius: 5px;
             }
         }
+
         .dropdown {
             background: none;
-            margin: 4px 0 0;
-            width: 29px;
-            height: 25px;
+            margin: 0;
+            padding: 0 6px;
+            width: auto;
+            height: auto;
             box-sizing: border-box;
-            color: $header-nav-link-color;
+            color: #474747;
+            font-size: 14px;
+            position: relative;
+            top: -4px;
+
             &:hover {
                 color: $header-nav-link-color-hover;
             }
         }
-        .dropdown-menu li>a {
+
+        .dropdown-menu li > a {
             color: $dropdown-menu-link-color;
 
             &:focus {
                 color: $dropdown-menu-link-color;
                 text-decoration: none;
             }
+
             &:hover {
                 color: $dropdown-menu-link-color-hover;
                 text-decoration: none;
             }
         }
     }
-    .primary>a {
+    .primary > a {
         box-shadow: none;
 
         &:focus,
@@ -223,17 +359,19 @@
             color: #003655;
         }
     }
-
 }
+
 .course-info header.course-profile {
     height: auto;
     margin-top: 0;
     padding: 20px 0;
 }
+
 body .container.activation h1.valid {
     background: $theme-link;
     border: 1px solid $theme-link;
 }
+
 .doc-link {
     color: $header-nav-link-color !important;
     margin: 12px 0;
@@ -241,6 +379,7 @@ body .container.activation h1.valid {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+
     @media screen and (min-width:761px ) {
         width: auto;
         text-align: left;
@@ -257,53 +396,75 @@ body .container.activation h1.valid {
         text-decoration: none;
     }
 }
+
 .wrapper-footer {
     background: $footer-bg;
     position: relative;
-    padding: 50px 10px;
+    padding: 44px 10px 55px;
 
     footer#footer-openedx {
         a {
             color: $footer-nav-link-color;
+
+            &.footer-logo-holder {
+                @media (max-width: $build-footer-mobile) {
+                    order: 2;
+                    position: static;
+                    padding-top: 0;
+                }
+            }
         }
+
         a:hover,
         a:focus {
             text-decoration: none !important;
             border: none !important;
         }
+
         .colophon {
             width: 100%;
             position: relative;
             text-align: center;
 
+            @media (max-width: $build-footer-mobile) {
+                display: flex;
+                flex-direction: column;
+            }
+
             .nav-colophon {
-                margin: 2px 0 28px 0;
+                margin: 0 0 35px;
 
                 .lang_ar & {
                     direction: rtl;
                 }
+
                 ol {
                     width: 100%;
                     text-align: center;
                 }
+
                 li {
                     float: none;
-                    display: block;
+                    display: inline-block;
+                    vertical-align: top;
                     text-align: center;
-                    margin: 0 15px 10px;
+                    margin: 0 5px;
+                    line-height: 1.2;
+
                     &:last-child {
                         margin-right: 15px;
                     }
+
                     @media screen and (min-width:761px ) {
                         display: inline-block;
-                        margin: 0 15px;
+                        margin: 0 5px;
                     }
 
                      a {
                         color: $footer-nav-link-color;
-                        text-transform: uppercase;
-                        font-weight: 700;
-                        font-size: 12px;
+                         text-transform: uppercase;
+                         font-size: 12px;
+                         font-weight: 700;
 
                         &:focus,
                         &:hover {
@@ -317,6 +478,7 @@ body .container.activation h1.valid {
         }
     }
 }
+
 .bookmarks-results-list .bookmarks-results-list-item:hover {
     border-color: $theme-link;
 
@@ -324,7 +486,9 @@ body .container.activation h1.valid {
         color: $theme-link;
     }
 }
+
 // links
+
 .register form .field.required label a,
 body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
 body .message-copy a,
@@ -374,6 +538,7 @@ body a {
         text-decoration: none !important;
     }
 }
+
 body .login a {
     color: $theme-link !important;
     border: none !important;
@@ -388,22 +553,30 @@ body .login a {
         text-decoration: none !important;
     }
 }
+
 body .discussion .user-label-staff {
     background: $theme-link;
 }
+
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:hover,
 body .xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:focus {
     text-decoration: none !important;
 }
+
 body .course-index .accordion .course-navigation .chapter-content-container .chapter-menu .menu-item.graded .menu-icon {
     color: $theme-link;
 }
+
 .courses-container .courses .course .course-info .course-title {
     color: $course-link-color;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
+    margin: 5px 0;
+    height: 96px;
+    overflow: hidden;
     font-weight: 700;
 }
+
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,
@@ -427,9 +600,11 @@ body .wrapper-course-material .course-tabs li a {
         border-color: $theme-link !important;
     }
 }
+
 body .wrapper-account-settings .wrapper-header .account-nav button:hover {
     border-color: $theme-link !important;
 }
+
 section.wiki .table.table-striped a,
 body section.wiki .article-functions .see-children a,
 body .updates a,
@@ -442,22 +617,28 @@ body .message a{
         text-decoration: none !important;
     }
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .wrapper-tabs .tab .toggle-button,
 body .forum-nav-thread.never-read .forum-nav-thread-link,
 body .discussion .post-label.post-label-following {
     color: $theme-link;
 }
+
 .courses-container .courses .course .course-image .cover-image:before {
     background: $course-hover-bg;
 }
+
 body .xmodule_display.xmodule_CapaModule div.problem .action .problem-action-btn {
     &:hover,
     &:focus {
         border: none !important;
     }
 }
+
 // end links
+
 // btns
+
 body.view-register .form-actions button[type="submit"],
 body.view-login .form-actions button[type="submit"],
 body .login .form-actions button[type="submit"] {
@@ -473,12 +654,14 @@ body .login .form-actions button[type="submit"] {
         color: $theme-btn-white-text-color-hover;
         box-shadow: none;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
 }
+
 body .login-register {
     .action-primary {
         background: $theme-btn-bg;
@@ -491,12 +674,14 @@ body .login-register {
             background: $theme-btn-bg;
             text-shadow: none;
         }
+
         &:hover {
             background: $theme-btn-bg-hover;
             box-shadow: none;
             text-shadow: none;
         }
     }
+
     .nav-btn {
         background: $theme-btn-white-bg;
         color: $theme-btn-white-text-color;
@@ -509,22 +694,26 @@ body .login-register {
             color: $theme-btn-white-text-color;
             box-shadow: none;
         }
+
         &:hover {
             color: $theme-btn-white-text-color-hover;
             background: $theme-btn-white-bg-hover;
             box-shadow: none;
         }
     }
+
     .select-gender {
         clear: none;
         float: left;
     }
+
     .select-year_of_birth {
         clear: none;
         float: right;
         margin-left: 0;
     }
 }
+
 body .view-login .form-actions button[type="submit"],
 body .login .form-actions button[type="submit"] {
     background: $theme-btn-white-bg;
@@ -539,12 +728,14 @@ body .login .form-actions button[type="submit"] {
         color: $theme-btn-white-text-color;
         box-shadow: none;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
 }
+
 .login-register .login-provider,
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
@@ -560,12 +751,14 @@ body .dashboard .my-courses .course .details .enter-course.archived,
         color: $theme-btn-white-text-color;
         box-shadow: none;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
 }
+
 .dashboard .my-courses .course .details .course-actions {
     .wrapper-action-more:first-child {
         .actions-dropdown {
@@ -582,6 +775,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
         }
     }
 }
+
 body .discussion-module .btn {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
@@ -599,6 +793,7 @@ body .discussion-module .btn {
         border-color: $theme-btn-white-border !important;
     }
 }
+
 body .courseware-bookmarks-button .bookmarks-list-button,
 body .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: $theme-btn-white-bg;
@@ -611,6 +806,7 @@ body .courseware-bookmarks-button .bookmarks-list-button.is-active {
         color: $theme-btn-white-text-color !important;
         border-color: $theme-btn-white-border;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover !important;
         background: $theme-btn-white-bg-hover !important;
@@ -649,6 +845,7 @@ body .search-bar .search-button {
     border: none;
     background: $theme-btn-bg;
     color: $theme-btn-text-color !important;
+
     &:focus:not(:disabled),
     &:active,
     &:focus {
@@ -657,6 +854,7 @@ body .search-bar .search-button {
         border: none;
         box-shadow: none !important;
     }
+
     &:hover:not(:disabled),
     &:hover {
         background: $theme-btn-bg-hover !important;
@@ -665,12 +863,14 @@ body .search-bar .search-button {
         color: $theme-btn-text-color;
     }
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:hover:not(:disabled),
 body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled),
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
     box-shadow: none;
     border-color: $theme-btn-bg;
 }
+
 .button,
 .heading-group button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
@@ -685,26 +885,33 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
         background: $theme-btn-bg;
         box-shadow: none;
     }
+
     &:hover {
         background: $theme-btn-bg-hover;
     }
 }
+
 .heading-group button {
     background: $theme-btn-bg;
     cursor: default !important;
     border: none;
     font-size: 14px;
     padding: 5px 10px;
+
     &:hover {
         background: $theme-btn-bg;
     }
 }
+
 .button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
+
 .courses-container {
     padding: 0 15px;
+    box-sizing: border-box;
+
     .courses .course {
         border-bottom: 3px solid $courses-border-color;
 
@@ -715,14 +922,17 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
         }
     }
 }
+
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
     border-bottom-color: $theme-btn-bg;
 }
+
 body .discussion.inline-discussion .new-post-article .add-post-cancel {
     color: $theme-btn-bg;
 }
+
 .discussion-module .btn-brand,
 .forum-new-post-form .post-type-input:checked+.post-type-label,
 body .edit-post-form .post-type-input:checked+.post-type-label {
@@ -749,47 +959,59 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 .date-summary-container .date-summary-todays-date {
     border-left-color: $theme-btn-bg;
 }
+
 .rtl .date-summary-container .date-summary-todays-date {
     border-right-color: $theme-btn-bg;
 }
+
 .rtl section.wiki .table.table-striped th {
     width: 100%;
 }
+
 .rtl.discussion .comments .comment-form .wmd-input {
     min-height: 50px;
 }
+
 .rtl.discussion .response-actions-list {
     text-align: left;
 }
+
 .rtl .discussion-response .response-header-actions {
     right: initial;
     left: 10px;
 }
+
 .rtl .instructor-dashboard-wrapper-2 section.idash-section#membership .enroll-option .has-hint:hover>.hint {
     right: 270px;
 }
+
 .has-breadcrumbs .breadcrumbs .all-topics:focus {
     background: none;
 }
+
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group {
     .button {
         border: none;
     }
 }
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.disabled {
     span {
         color: lighten(#222, .5);
     }
 }
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next,
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous {
     span {
         color: #222;
     }
 }
+
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     border: none;
 }
+
 .light-button:hover:not(:disabled),
 div.history-controls input[type="submit"]:hover:not(:disabled),
 a.light-button:hover:not(:disabled),
@@ -802,6 +1024,7 @@ div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:d
         box-shadow: none;
     }
 }
+
 body .discussion-module .btn:hover,
 body .wmd-prompt-dialog .btn:hover,
 body .discussion-module .btn-brand:hover,
@@ -818,7 +1041,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background-color: $theme-btn-bg !important;
     color: $theme-btn-text-color !important;
 }
+
 // end btns
+
 .u-field.mode-placeholder:hover {
     border-color: $theme-btn-bg;
 
@@ -826,6 +1051,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         color: $theme-btn-bg;
     }
 }
+
 .view-profile .profile-section-two-fields .u-field.mode-placeholder:hover {
     border-color: $theme-btn-bg;
 
@@ -833,6 +1059,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         color: $theme-btn-bg;
     }
 }
+
 .view-profile .profile-image-field .image-wrapper .u-field-upload-button {
     color: $theme-link;
 
@@ -842,17 +1069,22 @@ body .wmd-prompt-dialog .btn-brand:focus {
         background: rgba($theme-link-hover, 0.8);
     }
 }
+
 .home {
     > header,
     .slider {
         //background-image: url('#{$img-path}/background.jpg');
-        min-height: 420px;
+        min-height: 485px;
         background-position: center;
         position: relative;
         background-color: #040404;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (min-width: $breakpoint-mobile) {
+            min-height: 420px;
+        }
 
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             display: block;
@@ -886,7 +1118,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             width: 100%;
             margin: 0 auto;
             float: none;
-            padding: 20px;
+            padding: 15px;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table-cell;
@@ -897,99 +1129,118 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 margin-right: auto;
                 margin-left: auto;
             }
+
             > .heading-group {
                 text-align: center;
                 width: 100%;
-                padding: 15px 0;
+                padding: 0 0 20px;
 
                 h1 {
-                    font-size: 32px;
+                    font-size: 30px;
                     line-height: 1.2;
                     color: $promo-box-text-color;
                     text-align: center;
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 30px;
-                    @media screen and (min-width: 760px) {
+                    text-transform: uppercase;
+                    letter-spacing: 0;
+
+                    @media screen and (min-width: $breakpoint-mobile) {
+                        font-size: 42px;
+                        margin-bottom: 20px;
+                    }
+
+                    @media screen and (min-width: $breakpoint-tablet) {
                         font-size: 52px;
+                        margin-bottom: 15px;
                     }
                 }
+
                 span {
                     display: block;
                     text-align: center;
-                    font-size: 36px;
+                    font-size: 18px;
                     line-height: 1.3;
                     text-shadow: $promo-box-text-shadow;
                     color: $promo-box-text-color;
-                    margin-bottom: 30px;
-                }
-                .link {
-                    background: $find-btn-bg;
-                    border: 3px solid $find-btn-border;
-                    text-shadow: none;
-                    box-shadow: none;
-                    color: $find-btn-color;
-                    border-radius: 2px;
-                    padding: 10px 20px;
-                    display: inline-block;
+                    margin-bottom: 55px;
+                    max-width: 820px;
 
-                    &:hover {
-                        background: $find-btn-bg-hover;
-                        color: $find-btn-color-hover;
-                        text-decoration: none;
+                    @media screen and (min-width: $breakpoint-mobile) {
+                        font-size: 22px;
+                        margin-bottom: 25px;
+                    }
+
+                    @media screen and (min-width: $breakpoint-tablet) {
+                        font-size: 28px;
+                        margin-bottom: 15px;
                     }
                 }
             }
+
             .course-search {
                 max-width: 590px;
                 margin: 0 auto;
                 overflow: hidden;
                 position: relative;
                 padding: 15px 0;
+
                 .search-input {
                     background: $search-input-background;
                     border: 2px solid $search-input-border;
                     color: $search-input-color;
-                    padding-left: 20px !important;
-                    height: $search-height;
+                    padding-left: 15px !important;
+                    height: $search-height - 7;
+                    font-size: 12px;
+                    font-family: $global-font-family;
+
+                    @media screen and (min-width: $breakpoint-mobile) {
+                        height: $search-height;
+                        font-size: 16px;
+                    }
+
                     &:focus {
                         border-color: $search-input-border !important;
                     }
+
                     &::placeholder {
                         color: $search-input-color;
                         opacity: 1;
                     }
+
                     &:-ms-input-placeholder {
                         color: $search-input-color;
                     }
+
                     &::-webkit-input-placeholder {
                         color: $search-input-color !important;
                     }
                 }
+
                 .search-button {
                     background: $search-button-background !important;
                     border-color: $search-button-border !important;
                     color: $search-button-color;
                     border-left: none !important;
                     right: 0;
-                    height: $search-height;
+                    height: $search-height - 7;
+                    padding: 0 10px;
+
+                    @media screen and (min-width: $breakpoint-mobile) {
+                        height: $search-height;
+                    }
                 }
             }
         }
     }
 }
+
 .footer-logo-holder {
     display: inline-block;
     text-align: center;
     padding: 30px 0 0;
-    a {
-        transition: opacity .15s linear;
 
-        &:hover {
-            opacity: .8;
-            cursor: pointer;
-        }
-    }
     img {
         display: block;
         height: $footer-logo-height;
@@ -1008,41 +1259,48 @@ body .wmd-prompt-dialog .btn-brand:focus {
         right: 70px;
     }
 }
+
 .logo-ar {
     display: none;
 
     .lang_ar & {
-        display: inline;
+        display: block;
     }
 }
+
 .logo-en {
-    display: inline;
+    display: block;
 
     .lang_ar & {
         display: none;
     }
 }
+
 .highlighted-courses .courses {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 
     .course a {
         background: $course-bg;
     }
 }
+
 .login-register {
     .form-type {
         padding-bottom: 0;
     }
+
     .login-provider {
         .icon {
             background: $theme-btn-bg;
         }
+
         &:hover {
             span {
                 color: $theme-btn-white-text-color-hover;
             }
         }
     }
+
     label[for="register-terms_of_service"] {
         margin: 3px 5px 0 0 !important;
     }
@@ -1062,39 +1320,47 @@ body .wmd-prompt-dialog .btn-brand:focus {
         }
     }
 }
+
 .home {
     background: $theme-content-bg;
 }
+
 section.wiki .main-article {
     .lang_ar & {
         float: right;
         padding: 40px;
     }
 }
+
 section.wiki .breadcrumb {
     .lang_ar & {
         float: right;
     }
 }
+
 section.wiki .global-functions {
     .lang_ar & {
         float: left;
     }
 }
+
 .email-targets-secondary li label {
     .lang_ar & {
         float: left;
         margin-right: 10px;
     }
 }
+
 .course-index .accordion .course-navigation .button-chapter .group-heading {
     .lang_ar & {
         padding: 15px 40px 15px 10px;
     }
 }
+
 .content-wrapper {
     background: $theme-content-bg;
 }
+
 .main-article {
     h1 {
         text-align: left;
@@ -1104,6 +1370,7 @@ section.wiki .global-functions {
         }
     }
 }
+
 .window-wrap,
 body.view-in-course,
 .find-courses,
@@ -1112,15 +1379,19 @@ body.view-in-course,
 .view-profile .content-wrapper {
     background: $theme-content-bg;
 }
+
 .account-settings-sections .section {
     padding: 10px;
 }
+
 .has-breadcrumbs .breadcrumbs .all-topics .fa {
     margin-left: 10px;
 }
+
 body.view-in-course .window-wrap {
     min-width: auto;
 }
+
 body .bookmarks-results-list .bookmarks-results-list-item:before,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-bookmark {
     color: $theme-btn-bg;
@@ -1145,118 +1416,178 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav ol li button .fa-book
         }
     }
 }
+
 section#wiki-content.wiki .delete {
     padding: 20px;
 }
+
 .forum-nav-thread-wrapper-1 {
     width: 100%;
 }
+
 body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
     border-top: 7px solid $theme-input-icon;
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
     columns: 1;
     vertical-align: top;
 }
+
 body.rtl .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
     display: flex;
     flex-direction: column;
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-primary {
     vertical-align: top;
 }
+
 .wiki-wrapper .delete {
     padding: 20px;
 }
+
 body.view-profile .profile-image-field .image-wrapper .u-field-remove-button {
     color: #767676;
 }
+
 body .courses-container .courses .course .course-info {
     background: $course-bg;
+
+    .course-date {
+        padding: 0 15px;
+        line-height: normal;
+    }
 }
+
 html, body {
     background: $body-bg;
 }
+
 body .find-courses .search-facets .facet-option:hover,
 body .find-courses .search-facets .facet-option:focus {
     background: $theme-link;
 }
+
 body .openassessment .openassessment__steps__step.is--in-progress .step__status__value,
 body .find-courses .loading-spinner {
     background: $theme-btn-bg;
 }
+
 body .find-courses .filters .clear-filters {
     color: $theme-link;
 }
+
 body section.wiki #hint_id_content {
     position: relative;
 }
+
 body .CodeMirror-scroll {
     margin-right: 0;
 }
+
 body .openassessment .is--in-progress.openassessment__steps__step {
     border-top-color: $theme-btn-bg;
 }
+
 .rtl .course-info .details .inner-wrapper .course-staff .teacher .teacher-image {
     margin-right: 0;
     margin-left: 15px;
 }
+
 .rtl .dashboard .my-courses .course .details .course-actions .action {
     float: right;
     text-align: right;
 }
+
 .rtl .lang_ar .email-targets-secondary li label {
     float: right;
 }
+
 .rtl .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field ul {
     float: right;
 }
+
 .rtl .edit-post-form .post-update {
     float: right;
 }
+
 .rtl .edit-post-form .post-cancel {
     float: right;
     margin: 10px 15px 0 0;
 }
+
 .window-wrap[dir="rtl"] .accordion-heading .accordion-toggle {
     float: right!important;
 }
+
 .rtl .discussion-comment .comment-actions-list {
     right: auto;
     left: 10px;
 }
+
 .flex {
     display: block;
+
     .doc-link {
-        width: auto;
-        margin: 12px 10px;
+        color: #474747 !important;
+        text-transform: uppercase;
+        margin: 2px 0 0 20px;
+        order: 2;
+
+        &:hover {
+            color: $base-color2-hover !important;
+        }
+
+        @media (max-width: $build-header-menu-tablet) {
+            margin-left: 25px;
+            width: auto;
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: $base-color2;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1px;
+            position: relative;
+            top: -1px;
+        }
     }
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary:after {
     content: '';
     display: table;
     clear: both;
 }
+
 .sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
+
 .sticky:before,
 .sticky:after {
     content: '';
     display: table;
 }
+
 body.view-profile .profile-image-field .image-wrapper .u-field-remove-button {
     box-shadow: none;
 }
+
 body div.info-wrapper section.updates div article .date {
     padding-right: 0;
     padding-left: 20px;
 }
+
 .discussion-article .posted-details .username:visited {
     color: $theme-link;
 }
+
 body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,
@@ -1265,76 +1596,94 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
         border-bottom: 3px solid $theme-btn-bg;
 }
+
 .login {
     aside {
         display: none;
     }
+
     .content {
         margin: 0 auto;
         float: none;
     }
+
     .deco-divider {
         display: none;
     }
+
+    .orn-plus {
+        color: inherit;
+    }
 }
+
 .view-login .introduction {
     display: none;
 }
+
 body .login form .field.is-focused .tip,
 body .login form .field.is-focused label {
     color: $theme-link;
 }
+
 body.view-login .header-global nav {
-    max-width: 960px;
+    max-width: 1170px;
     width: auto;
 }
+
 body .login .content {
     max-width: 600px;
     width: auto;
 }
+
 body.view-login .container {
-    max-width: 960px;
+    max-width: 1170px;
     width: auto;
 }
+
 body .login.container {
     min-width: auto;
     width: auto;
 }
+
 body.view-login .wrapper-footer footer {
     width: auto;
-    max-width: 960px;
+    max-width: 1170px;
 }
+
 body.view-in-course {
     .window-wrap {
         min-width: 320px !important;
     }
+
     .container {
          .info-wrapper {
             display: flex;
             flex-wrap: wrap;
+
             @media screen and (min-width: 1000px) {
                 display: table;
                 table-layout: fixed;
             }
         }
+
         section.handouts {
             border-top: 1px solid #c8c8c8;
             width: 100%;
+
             @media screen and (min-width: 1000px) {
                 border-top: none;
                 width: 28%;
             }
         }
+
         .course-wrapper {
             display: flex;
             flex-wrap: wrap;
-            @media screen and (min-width: 1000px) {
-
-            }
 
             .course-content {
                 width: 100%;
                 display: table-cell;
+
                 @media screen and (min-width: 1000px) {
                     width: 76%;
                     display: table-cell;
@@ -1344,6 +1693,7 @@ body.view-in-course {
             .course-index {
                 width: 100%;
                 display: table-cell;
+
                 @media screen and (min-width: 1000px) {
                     width: 23%;
                     display: table-cell;
@@ -1351,6 +1701,7 @@ body.view-in-course {
             }
         }
     }
+
     .show-course-index {
         display: inline-block;
         margin: 50px auto 10px;
@@ -1359,6 +1710,7 @@ body.view-in-course {
         background: #ccc;
         max-width: 80%;
         text-align: center;
+
         @media screen and (min-width: 1000px) {
             display: none;
         }
@@ -1368,25 +1720,32 @@ body.view-in-course {
         }
     }
 }
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-nav-button {
     min-width: 60px;
+
     @media screen and (min-width: 1000px) {
         min-width: 120px;
     }
+
     span {
         display: none;
+
         @media screen and (min-width: 1000px) {
             display: inline;
         }
     }
+
     span.icon {
         display: inline;
     }
 }
+
 .wiki-wrapper .article-wrapper {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
     @media screen and (min-width: 1000px) {
         display: block;
         width: auto;
@@ -1395,16 +1754,19 @@ body.view-in-course {
     .main-article {
         order: 2;
     }
+
     .article-functions {
         order: 1;
     }
 }
+
 section.wiki .wiki-wrapper .article-functions {
     width: 100%;
     display: flex;
     border-bottom: 1px solid #c8c8c8;
     flex-wrap: wrap;
     justify-content: space-between;
+
     @media screen and (min-width: 1000px) {
         border: none;
         width: 23%;
@@ -1417,6 +1779,7 @@ section.wiki .wiki-wrapper .article-functions {
         padding-top: 0;
         border-top: none;
         margin-left: 30px;
+
         @media screen and (min-width: 1000px) {
             margin-left: 0;
             margin-top: 15px;
@@ -1424,51 +1787,63 @@ section.wiki .wiki-wrapper .article-functions {
             border-top: 1px solid #ddd;
         }
     }
+
     .timestamp {
         margin-left: 0;
         padding-left: 0;
+
         @media screen and (min-width: 1000px) {
             margin-top: 15px;
             padding: 15px 0 0;
         }
     }
 }
+
 body .container>div {
     max-width: 1180px;
     margin: 0 auto;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+
     @media screen and (min-width: 1000px) {
         display: block;
    }
 }
+
 body .home .page-header-secondary {
     margin-left: auto;
     white-space: nowrap;
 }
+
 section.wiki .wiki-wrapper .nav-tabs {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
     @media screen and (min-width: 1000px) {
         display: block;
         width: auto;
     }
+
     li {
         margin-left: 20px;
         margin-bottom: 40px;
+
         @media screen and (min-width: 1000px) {
             margin: 0;
         }
+
         &:first-child {
             margin-left: 0;
         }
     }
 }
+
 .container .profile-wrapper .course-info>.chapters>section {
     display: flex;
     flex-wrap: wrap;
+
     @media screen and (min-width: 1000px) {
         display: table;
     }
@@ -1477,118 +1852,146 @@ section.wiki .wiki-wrapper .nav-tabs {
         width: 100%;
         margin-bottom: 40px;
         border: none;
+
         @media screen and (min-width: 1000px) {
             width: 20.45455%;
             border-right: 1px dashed #ddd;
             margin-bottom: 0;
         }
     }
+
     .sections {
         width: 100%;
         padding-left: 0;
+
         @media screen and (min-width: 1000px) {
             padding-left: 2.27273%;
             width: 77.27273%;
         }
     }
 }
+
 body.view-in-course .content-wrapper .wrapper-course-material {
     padding: 0 2%;
+
     @media screen and (min-width: 1230px) {
         padding: 0;
     }
 }
+
 body .xmodule_display.xmodule_VideoModule .video {
     .tc-wrapper {
         display: flex;
         flex-wrap: wrap;
+
         @media screen and (min-width: 1000px) {
             display: block;
         }
     }
+
     .video-wrapper {
         width: 100%;
         margin-right: 0;
+
         @media screen and (min-width: 1000px) {
             margin-right: 2.27273%;
             width: 65.90909%;
         }
     }
+
     .subtitles {
         width: 100%;
+
         @media screen and (min-width: 1000px) {
             width: 31.81818%;
         }
     }
 }
+
 body .home .page-header-main {
     padding-right: 15px;
 }
+
 body section.wiki .wiki-wrapper>header {
     width: 100%;
     height: auto;
     min-height: 33px;
 }
+
 .register,
 .login {
     aside {
         display: none;
     }
+
     .content {
         margin: 0 auto;
         float: none;
     }
+
     .deco-divider {
         display: none;
     }
 }
+
 .view-login .introduction {
     display: none;
 }
+
 body .login form .field.is-focused .tip,
 body .login form .field.is-focused label {
     color: $theme-link;
 }
+
 body.view-passwordreset .header-global nav,
 body.view-register .header-global nav,
 body.view-login .header-global nav {
-    max-width: 960px;
+    max-width: 1170px;
     width: auto;
 }
+
 body .register .content,
 body .login .content {
     max-width: 600px;
     width: auto;
 }
+
 body.view-register .container,
 body.view-login .container {
-    max-width: 960px;
+    max-width: 1170px;
     width: auto;
 }
+
 body .register.container,
 body .login.container {
     min-width: auto;
     width: auto;
     background: transparent;
 }
+
 body.view-passwordreset .wrapper-footer footer,
 body.view-register .wrapper-footer footer,
 body.view-login .wrapper-footer footer {
     width: auto;
-    max-width: 960px;
+    max-width:  1170px;
 }
+
 body.view-login .header-global .nav-courseware .btn-login {
     display: block;
 }
+
 body.view-register .container {
     background: transparent;
 }
+
 body.view-register .introduction {
     display: none;
 }
+
 body.view-login #forgot-password-modal #password-reset header h2 {
     color: $theme-link;
 }
+
 .container.about {
     line-height: 1.3;
 
@@ -1600,6 +2003,7 @@ body.view-login #forgot-password-modal #password-reset header h2 {
         }
     }
 }
+
 .course-info .course-sidebar .important-dates,
 .dashboard .my-courses .course .wrapper-messages-primary .messages-list {
     list-style: none;
@@ -1612,60 +2016,138 @@ body.view-login #forgot-password-modal #password-reset header h2 {
         margin-top: 0;
     }
 }
+
 .course-info .course-sidebar .important-dates a {
     color: $theme-link;
 }
+
 #dashboard-search-bar {
     width: 100%;
     margin-bottom: 30px;
+    padding: 0;
+    order: 1;
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 991px) {
         margin: 0 0 20px;
         order: 2;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 0;
+        padding-left: 20px;
         flex: 1 1 24%;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            flex-basis: calc(24% - 20px);
+        }
+    }
+
+    label {
+        text-transform: none;
+        color: #313131;
+        font-size: 13px;
+        font-style: normal;
     }
 
     form {
         width: 100%;
     }
 }
-.dashboard .my-courses {
-    width: 100%;
-    @media screen and (min-width: 900px) {
-        flex: 1 1 74%;
-        order: 1;
+
+body .dashboard {
+    #dashboard-search-bar .search-button {
+        background-color: $base-color2 !important;
+
+        &:hover {
+            background-color: $base-color2-hover !important;
+        }
+    }
+
+    .my-courses {
+        width: 100%;
+
+        @media screen and (min-width: 991px) {
+            flex: 1 1 74%;
+            order: 1;
+            padding-right: 20px;
+
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                flex-basis: calc(74% - 20px);
+            }
+        }
+
+        .listing-courses {
+            width: 100%;
+
+            .course-item {
+                margin-bottom: 10px;
+                padding-bottom: 0;
+                background: #f5f5f5;
+            }
+        }
+
+        .course .wrapper-messages-primary .message.message-status {
+            margin-top: 0;
+
+            &.course-status-certavailable .actions-primary .action-certificate .btn {
+                transition: all 0.2s ease;
+                display: inline-block;
+                background: $white !important;
+                color: $base-color2 !important;
+                border: 1px solid $base-color2 !important;
+                text-transform: uppercase;
+                border-radius: 3px !important;
+                height: auto;
+                padding: 7px 20px;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 16px;
+                letter-spacing: 0;
+
+                &:hover:not(:disabled) {
+                    color: $white !important;
+                    background: $base-color2 !important;
+                }
+            }
+        }
     }
 }
+
 .container.dashboard {
     display: block;
-    @media screen and (min-width: 900px) {
-    min-width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 10px;
-    padding-left: 10px;
-    align-items: flex-start;
+    padding-right: 15px;
+    padding-left: 15px;
 
+    @media screen and (min-width: 991px) {
+        min-width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
+
     @media screen and (min-width: 1200px) {
         padding-right: 0;
         padding-left: 0;
     }
 }
+
 #dashboard-search-results {
     order: 3;
     min-height: auto;
     width: 100%;
     padding-top: 24px;
+
+    &:empty {
+        display: none;
+    }
 }
+
 #profile-sidebar {
     order: 4;
 }
+
 .dashboard .my-courses .wrapper-header-courses {
     width: 100%;
+    border-bottom: none;
 }
+
 .dashboard .my-courses .course .details {
     .wrapper-course-image {
         width: 100%;
@@ -1682,13 +2164,15 @@ body.view-login #forgot-password-modal #password-reset header h2 {
             }
         }
     }
+
     .course-info {
         width: 100%;
 
         @media screen and (min-width: 761px) {
-            width: 31.76157%;
+            width: 100% !important;
         }
     }
+
     .wrapper-course-actions {
         width: 100%;
 
@@ -1696,21 +2180,21 @@ body.view-login #forgot-password-modal #password-reset header h2 {
             width: 65.88078%;
         }
     }
+
     .wrapper-course-details {
         width: 100%;
-
-        @media screen and (min-width: 761px) {
-            width: 74.41059%;
-        }
     }
 }
+
 .dashboard-search-results .search-info {
     width: 100%;
 }
+
 .search-results .search-results-item {
     .result-excerpt {
         margin-top: 22px;
     }
+
     .result-link {
         top: 10px;
         color: $theme-link;
@@ -1721,10 +2205,12 @@ body.view-login #forgot-password-modal #password-reset header h2 {
             color: $theme-link-hover;
         }
     }
+
     .result-type {
         bottom: 10px;
     }
 }
+
 .global-functions.pull-right {
     width: 100%;
 
@@ -1732,10 +2218,12 @@ body.view-login #forgot-password-modal #password-reset header h2 {
         width: auto;
     }
 }
+
 section.wiki .wiki-wrapper>header {
     height: auto;
     min-height: 33px;
 }
+
 section.wiki .global-functions {
     width: 100%;
 
@@ -1743,6 +2231,7 @@ section.wiki .global-functions {
         width: auto;
     }
 }
+
 section.wiki a.btn {
     float: none;
 
@@ -1754,6 +2243,7 @@ section.wiki a.btn {
         float: left;
     }
 }
+
 section.wiki .wiki-wrapper .nav-tabs li {
     margin-right: 20px;
     margin-left: 0;
@@ -1762,15 +2252,18 @@ section.wiki .wiki-wrapper .nav-tabs li {
         margin-right: 0;
     }
 }
+
 .profile-wrapper .course-info {
     width: 100%;
     display: block;
 }
+
 .instructor-dashboard-wrapper-2 {
     section.idash-section#cohort_management .cohort-management-nav .cohort-management-nav-form {
         width: 100%;
         float: none;
         margin: 0 0 10px;
+
         @media screen and (min-width: 761px) {
             width: 60%;
             float: left;
@@ -1778,6 +2271,7 @@ section.wiki .wiki-wrapper .nav-tabs li {
         }
     }
 }
+
 .instructor-dashboard-content-2 .instructor-nav {
     li.nav-item {
         display: block;
@@ -1789,76 +2283,96 @@ section.wiki .wiki-wrapper .nav-tabs li {
         }
     }
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="text"] {
     width: auto;
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#data_download input {
     white-space: normal;
 }
+
 .xmodule_display.xmodule_HtmlModule img {
     max-width: 100%;
     height: auto;
 }
+
 body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
     letter-spacing: 0;
 }
+
 .modal .inner-wrapper form label {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
 }
+
 .empty-programs-message h2,
 .view-dashboard .modal .inner-wrapper header h2 {
     text-transform: none;
 }
+
 section.wiki h1 {
     word-break: break-all;
 }
+
 section.wiki .wiki-wrapper .article-functions .see-children {
     margin-left: 0;
+
     @media screen and (min-width: 761px) {
         margin-left: 30px;
     }
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#certificates .notes-field,
 input[name="subject"] {
     width: 100%;
     max-width: 600px;
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-primary {
     display: block;
     width: auto;
+
     @media screen and (min-width: 761px) {
         width: 20%;
         display: table-cell;
     }
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary {
     display: block;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
     }
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#certificates .student-username-or-email {
     width: 100%;
     max-width: 300px;
 }
+
 .xmodule_display.xmodule_SequenceModule nav.sequence-bottom .sequence-nav-button:last-of-type {
     border-left: 1px solid #c8c8c8;
     border-right: 1px solid #c8c8c8;
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
     word-break: break-all;
 }
+
 .instructor-dashboard-wrapper-2 .customBrowseBtn .enhanced-input-file {
     max-width: 250px;
     width: 100%;
 }
+
 .instructor-dashboard-wrapper-2 .customBrowseBtn {
     max-width: 350px;
     width: 100%;
 }
+
 .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
     left: -96px;
     top: 0;
@@ -1868,35 +2382,43 @@ input[name="subject"] {
         right: - 100px;
     }
 }
+
 .instructor-dashboard-content-2 input[type="button"] {
     white-space: normal;
 }
+
 section.wiki .main-article {
     width: 100%;
     padding: 10px 0 10px 10px;
+
     @media screen and (min-width: 761px) {
         width: 74.57627%;
         padding: 40px 0 40px 40px;
     }
 }
+
 .course-info {
     .hd-3 {
         word-break: break-all;
     }
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
     position: static;
     @media screen and (min-width: 761px) {
         position: absolute;
     }
 }
+
 .email-targets-secondary li,
 .email-targets-primary li {
     overflow: hidden;
 }
+
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
 }
+
 body.lang_ar {
     * {
         letter-spacing: 0 !important;
@@ -1905,9 +2427,11 @@ body.lang_ar {
         outline: none;
     }
 }
+
 section.wiki .table.table-striped {
     word-wrap: break-word;
 }
+
 #main {
     max-width: 100%;
 
@@ -1917,92 +2441,237 @@ section.wiki .table.table-striped {
 }
 
 //responsive for dashboard page
+
 .dashboard {
     min-width: 320px;
     padding-right: 15px;
     padding-left: 15px;
+
     &-search-bar {
         float: none;
         width: auto;
+
         @media screen and (min-width: 1000px) {
             float: right;
             width: 23.23176%;
         }
     }
+
     .my-courses {
         float: none;
         width: auto;
         margin-bottom: 0;
+
         @media screen and (min-width: 1000px) {
             float: left;
             width: 74.41059%;
             margin-bottom: 40px;
         }
+
         .wrapper-header-courses {
             width: 100%;
+
+            .header-courses {
+                text-transform: none;
+            }
         }
+
+        .course-container {
+            border: 1px solid #C0C0C0 !important;
+            box-shadow: 0 0 1.94px 0.06px rgba(0, 79, 135, 0.2);
+        }
+
         .course {
+            margin: 0;
+
             .details {
+                background: #f5f5f5;
+                min-height: 160px;
+                padding-left: 0;
+                display: flex;
+
+                @media (max-width: $breakpoint-mobile) {
+                    flex-direction: column;
+                }
+
                 .wrapper-course {
                     &-image {
                         float: none;
-                        width: 100%;
-                        margin: 0 0 10px;
-                        @media screen and (min-width: 761px) {
-                            float: left;
-                            margin: 0 2.35765% 0 0;
-                            width: 23.23176%;
+                        width: 260px;
+                        min-width: 260px;
+                        margin: 0;
+                        height: auto;
+                        max-height: 100%;
+                        min-height: 160px;
+
+                        @media (max-width: $breakpoint-mobile) {
+                            width: 100%;
                         }
+
+                        a {
+                            height: 100%;
+                            width: 100%;
+                            background-size: cover;
+                            background-position: center center;
+                            border: none !important;
+                            border-radius: 0;
+                        }
+
+                        img{
+                            position: absolute;
+                            width: 1px !important;
+                            height: 1px !important;
+                            overflow: hidden;
+                            clip: rect(0 0 0 0);
+                        }
+
                         .cover {
                             float: none;
                             display: block;
-                            max-height: initial;
-                            @media screen and (min-width: 761px) {
-                                float: left;
-                                max-height: 120px;
+                            max-height: 100%;
+                            border-radius: 0;
+
+                            @media (max-width: $breakpoint-mobile) {
+                                height: 160px;
                             }
                         }
                     }
+
                     &-details {
-                        float: none;
-                        width: initial;
-                        @media screen and (min-width: 761px) {
-                            float: left;
-                            width: 74.41059%;
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-between;
+                        padding: 15px 20px;
+                        box-sizing: border-box;
+                        margin: 0;
+                        flex-wrap: nowrap;
+                        width: calc(100% - 260px);
+
+                        @media (max-width: $breakpoint-mobile) {
+                            flex-direction: column;
+                            width: 100%;
+                        }
+
+                        .wrapper-course-details-info {
+                            margin: 5px 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            width: 100%;
+                        }
+
+                        .course-top-info {
+                            margin-bottom: 10px;
+
+                            span {
+                                font-size: 14px;
+                                color: #474747 !important;
+                            }
                         }
                     }
+
                     &-actions {
-                        width: initial;
-                        @media screen and (min-width: 761px) {
-                            width: 65.88078%;
+                        margin-top: 0;
+                        align-self: center;
+                        min-width: 200px;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: flex-end;
+                        width: auto;
+
+                        @media screen and (max-width: $breakpoint-mobile) {
+                            justify-content: center;
+                        }
+
+                        .wrapper-action-more {
+                            button.action {
+                                border-color: $base-color2 !important;
+                                font-size: 20px;
+                                line-height: 14px;
+                                text-shadow: none;
+                                padding: 5px;
+                                margin-right: 5px;
+
+                                &:hover {
+                                    background: $base-color2 !important;
+
+                                    .fa {
+                                        color: $white;
+                                    }
+                                }
+
+                                .fa {
+                                    color: #767676;
+
+                                }
+                            }
+                        }
+
+                        .enter-course {
+                            transition: all 0.2s ease;
+                            display: inline-block;
+                            background: #fff !important;
+                            color: $base-color2 !important;
+                            border: 1px solid $base-color2 !important;
+                            text-transform: uppercase;
+                            border-radius: 3px !important;
+                            height: auto;
+                            padding: 7px 20px;
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 16px;
+
+                            &:hover {
+                                background: $base-color2 !important;
+                                color: $white !important;
+                            }
                         }
                     }
                 }
+
                 .course {
                     &-title {
+                        flex-basis: auto;
+                        margin-bottom: 20px;
+                        padding-top: 0;
+
                         a {
-                            font-size: 1.2em;
-                            line-height: 1.2;
-                            @media screen and (min-width: 761px) {
-                                font-size: 36px;
-                                line-height: 53.28px;
+                            font-size: 14px;
+                            margin-bottom: 0;
+                            line-height: normal;
+                            word-break: break-word;
+                            color: #1f1f1f;
+                            text-transform: uppercase;
+                            font-weight: 700;
+
+                            &:visited {
+                                color: #1f1f1f;
                             }
                         }
                     }
+
                     &-info {
                         float: none;
                         width: 100%;
+                        margin-top: 0;
+
                         @media screen and (min-width: 761px) {
                             float: left;
                             width: 31.76157%;
+                        }
+
+                        .info-date-block {
+                            color: #5e5e5e;
                         }
                     }
                 }
             }
         }
     }
+
     &-search-results {
         min-height: initial;
+
         @media screen and (min-width: 761px) {
             min-height: 300px;
         }
@@ -2019,10 +2688,11 @@ body {
 
 //end responsive for dashboard page
 
-
 //responsive for forum page
+
 .view-discussion-home {
     padding: 0;
+
     @media screen and (min-width: 768px) {
         padding-left: 20px;
     }
@@ -2034,6 +2704,7 @@ body {
     width: 100%;
     flex-wrap: wrap;
     text-align: left;
+
     @media screen and (min-width: 761px) {
         flex-wrap: nowrap;
         float: right;
@@ -2044,12 +2715,15 @@ body {
 
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions {
     margin: 0 10px 16px 0;
+
     @media screen and (min-width: 761px) {
         margin: 0 0 0 20px;
     }
 }
+
 .content-wrapper .page-header.has-secondary .page-header-secondary  .forum-search{
     margin: 0 0 16px;
+
     @media screen and (min-width: 761px) {
         margin: 0 0 0 20px;
     }
@@ -2057,6 +2731,7 @@ body {
 
 .forum-nav {
     margin-bottom: 20px;
+
     @media screen and (min-width: 761px) {
         margin: 0;
     }
@@ -2064,6 +2739,7 @@ body {
 
 .view-discussion-home .helpgrid-row {
     display: block;
+
     @media screen and (min-width: 761px) {
         display: table-row;
     }
@@ -2072,6 +2748,7 @@ body {
 .view-discussion-home .helpgrid-row .row-title{
     display: block;
     padding: 16px 20px;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
         padding: 30px 20px;
@@ -2083,6 +2760,7 @@ body {
     display: block;
     width: 100%;
     padding: 10px;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
         width: 26%;
@@ -2091,6 +2769,7 @@ body {
 
 .view-discussion-home .helpgrid-row .row-item-full .notification-checkbox {
     margin-bottom: 10px;
+
     @media screen and (min-width: 761px) {
         margin-bottom: 0;
     }
@@ -2098,6 +2777,7 @@ body {
 
 .view-discussion-home .helpgrid-row .row-item-full .row-description {
     width: 100%;
+
     @media screen and (min-width: 761px) {
         width: 80%;
     }
@@ -2115,15 +2795,18 @@ body {
         height: 471px !important;
     }
 }
+
 //end responsive for forum page
 
 //responsive for course instructor pages
+
 body.view-in-course .instructor-dashboard-wrapper-2 {
     display: block;
 }
 
 .instructor-dashboard-content-2 {
     padding: 30px;
+
     @media screen and (min-width: 761px)  {
         padding: 40px;
     }
@@ -2131,6 +2814,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
 .instructor-dashboard-content-2 .wrap-instructor-info {
     display: block;
+
     @media screen and (min-width: 761px) {
         display: inline;
     }
@@ -2148,6 +2832,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
 .instructor-dashboard-content-2 .instructor-nav .nav-item {
     display: block;
+
     @media screen and (min-width: 761px) {
         display: inline-block;
     }
@@ -2156,6 +2841,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link {
     width: 100%;
     text-align: left;
+
     @media screen and (min-width: 761px) {
         width: initial;
         text-align: center;
@@ -2171,6 +2857,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
     input.add[name="student-action"] {
         margin: 10px 0 0;
+
         @media screen and (min-width: 760px) {
             position: static;
             margin: 0 5px;
@@ -2192,10 +2879,12 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar>label {
     display: block;
     margin-bottom: 12px;
+
     @media screen and (min-width: 761px) {
         display: initial;
         margin: 0;
     }
+
     @media screen and (max-width: 760px) {
         width: 100% !important;
     }
@@ -2207,6 +2896,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
 .instructor-dashboard-wrapper-2 #membership .member-list-widget .add-field {
     width: 100%;
+
     @media screen and (min-width: 761px) {
         width: 50%;
     }
@@ -2215,6 +2905,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add {
     position: static;
     margin: 0;
+
     @media screen and (min-width: 761px) {
         position: absolute;
         margin-bottom: 1em;
@@ -2251,6 +2942,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 .customBrowseBtn .enhanced-input-file {
     box-sizing: border-box;
     width: 100%;
+
     @media screen and (min-width: 761px) {
         box-sizing: content-box;
         width: 250px;
@@ -2260,6 +2952,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse {
     left: 4px;
     height: 30px;
+
     @media screen and (min-width: 761px) {
         left: 0;
         height: initial;
@@ -2269,10 +2962,11 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse {
     position: absolute;
     top: 0;
-    right: 0px;
+    right: 0;
     z-index: 2;
     height: 18px;
     margin-left: 0;
+
     @media screen and (min-width: 761px) {
         position: static;
         height: initial;
@@ -2287,6 +2981,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     height: 30px;
     padding: 0;
     opacity: 0;
+
     @media screen and (min-width: 761px) {
         left: -23%;
         width: 124%;
@@ -2299,6 +2994,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .cohort-management-nav-form {
     float: none;
     margin-bottom: 10px;
+
     @media screen and (min-width: 761px) {
         float: left;
         margin: 0;
@@ -2307,6 +3003,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .cohort-management-nav .action-create {
     float: left;
+
     @media screen and (min-width: 761px) {
         float: right;
     }
@@ -2316,39 +3013,49 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     table {
         thead {
             display: none;
+
             @media screen and (min-width: 761px) {
                 display: table-header-group;
             }
         }
+
         td {
             font-size: 0.8em;
+
             @media screen and (min-width: 761px) {
                 font-size: 1em;
             }
+
             &:before {
                 display: inline-block;
                 width: 46%;
                 padding-right: 10px;
+
                 @media screen and (min-width: 761px) {
                     display: none;
                 }
             }
+
             &:nth-of-type(1) {
                 padding-top: 10px;
+
                 &:before {
                     content: "Name";
                 }
             }
+
             &:nth-of-type(2) {
                 &:before {
                     content: "User Email";
                 }
             }
+
             &:nth-of-type(3) {
                 &:before {
                     content: "Exception Granted";
                 }
             }
+
             &:nth-of-type(4) {
                 &:before {
                     content: "Certificate Generated";
@@ -2359,6 +3066,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
                     content: "Notes";
                 }
             }
+
             &:nth-of-type(6) {
                 padding-bottom: 10px;
                 &:before {
@@ -2371,6 +3079,7 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
 .instructor-dashboard-wrapper-2 section.idash-section#certificates .white-listed-students table td {
     display: block;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
     }
@@ -2378,17 +3087,21 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
 .instructor-dashboard-wrapper-2 section.idash-section#certificates .white-listed-students table td{
     padding: 5px 10px;
+
     @media screen and (min-width: 761px) {
         padding: 10px;
     }
 }
+
 //end responsive for course instructor pages
 
 //responsive for course Wiki page
-section.wiki .wiki-wrapper>header {
+
+section.wiki .wiki-wrapper > header {
     height: auto;
     padding-left: 30px;
     padding-right: 30px;
+
     @media screen and (min-width: 761px) {
         height: 33px;
         padding: 24px 0;
@@ -2399,6 +3112,7 @@ section.wiki .breadcrumb {
     width: auto;
     float: left;
     margin: 0 0 10px;
+
     @media screen and (min-width: 761px) {
         margin: 0 0 0 40px;
     }
@@ -2406,6 +3120,7 @@ section.wiki .breadcrumb {
 
 section.wiki .global-functions {
     float: left;
+
     @media screen and (min-width: 761px) {
         float: right;
     }
@@ -2413,6 +3128,7 @@ section.wiki .global-functions {
 
 section.wiki .add-article-btn {
     margin-left: 0;
+
     @media screen and (min-width: 761px) {
         margin-left: 25px;
     }
@@ -2420,6 +3136,7 @@ section.wiki .add-article-btn {
 
 section.wiki .wiki-wrapper .article-functions {
     padding: 15px;
+
     @media screen and (min-width: 761px) {
         padding: 40px;
     }
@@ -2432,10 +3149,12 @@ section.wiki .wiki-wrapper .nav-tabs {
 
 section.wiki .wiki-wrapper .nav-tabs li {
     margin: 0 0 20px;
+
     @media screen and (min-width: 761px) {
         margin-left: 20px;
         margin-bottom: 40px;
     }
+
     @media screen and (min-width: 1000px) {
         margin: 0 0 5px;
     }
@@ -2449,6 +3168,7 @@ section.wiki .wiki-wrapper .nav-tabs li:first-child {
 
 section.wiki .nav-tabs a .icon {
     width: initial;
+
     @media screen and (min-width: 761px) {
         width: 25px;
     }
@@ -2457,6 +3177,7 @@ section.wiki .nav-tabs a .icon {
 .wiki-wrapper .article-wrapper .main-article {
     width: 100%;
     padding: 30px;
+
     @media screen and (min-width: 761px) {
         width: 74.57627%;
         padding: 40px 0 40px 40px;
@@ -2466,6 +3187,7 @@ section.wiki .nav-tabs a .icon {
 section.wiki .new-article {
     width: 100%;
     padding: 30px;
+
     @media screen and (min-width: 761px) {
         width: 74.57627%;
         padding: 40px 0 40px 40px;
@@ -2476,6 +3198,7 @@ section.wiki #hint_id_summary {
     margin-top: 5px;
     margin-left: 0;
     line-height: 1.5;
+
     @media screen and (min-width: 761px) {
         margin-left: 15px;
     }
@@ -2484,6 +3207,7 @@ section.wiki #hint_id_summary {
 section.wiki h1 {
     margin-bottom: 20px;
     font-size: 1.5em;
+
     @media screen and (min-width: 761px) {
         margin-bottom: 30px;
         font-size: 2em;
@@ -2506,6 +3230,7 @@ section.wiki .btn {
 
 section.wiki .btn.btn-danger {
     float: none;
+
     @media screen and (min-width: 761px) {
         float: right;
     }
@@ -2521,15 +3246,19 @@ section.wiki .directory-toolbar .well .pull-right {
 section.wiki .directory-toolbar .well .pull-right .search-query {
     width: 100%;
 }
+
 //end responsive for course Wiki page
 
 //responsive static pages
+
 .container.about {
     min-width: 320px;
 }
+
 //end responsive static pages
 
 //responsive cource about page
+
 .course-info header.course-profile {
     padding-right: 15px;
     padding-left: 15px;
@@ -2542,6 +3271,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 
 .course-info header.course-profile .intro-inner-wrapper>div.table {
     display: block;
+
     @media screen and (min-width: 761px) {
         display: table;
     }
@@ -2550,6 +3280,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info header.course-profile .intro-inner-wrapper .intro {
     display: block;
     width: 100%;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
         width: 68.23843%;
@@ -2559,6 +3290,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info header.course-profile .intro-inner-wrapper .media {
     display: block;
     width: 100%;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
         width: 31.76157%;
@@ -2567,6 +3299,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 {
     font-size: 1.5em;
+
     @media screen and (min-width: 761px) {
         font-size: 2em;
     }
@@ -2576,10 +3309,11 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     width: initial;
     margin: 0 15px 10px 0;
     padding: 10px;
+
     @media screen and (min-width: 761px) {
         width: 61.158%;
         margin: 1px 3.57866% 0 0;
-        padding: 10px 0px 8px;
+        padding: 10px 0 8px;
     }
 }
 
@@ -2587,6 +3321,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     width: initial;
     padding: 10px 12px;
     font-size: 0.8rem;
+
     @media screen and (min-width: 761px) {
         width: 35.26334%;
         font-size: 1.2rem;
@@ -2597,6 +3332,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     display: inline-block;
     width: auto;
     padding: 10px 16px;
+
     @media screen and (min-width: 761px) {
         display: block;
         width: 48.82117%;
@@ -2613,6 +3349,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info .details {
     width: 100%;
     margin: 0 0 20px;
+
     @media screen and (min-width: 761px) {
         margin-right: 2.35765%;
         margin-bottom: 0;
@@ -2625,6 +3362,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     width: 100%;
     display: flex;
     justify-content: center;
+
     @media screen and (min-width: 761px) {
         float: left;
         width: 31.76157%;
@@ -2633,6 +3371,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info .course-summary{
     width: 290px;
     max-width: 100%;
+
     @media screen and (min-width: 1000px) {
         width: auto;
     }
@@ -2661,6 +3400,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 section.tool-wrapper {
     width: 100%;
     margin: 0 auto;
+
     @media screen and (min-width: 761px) {
         margin: 1.41575em -1.41575em 0;
     }
@@ -2689,15 +3429,19 @@ section.tool-wrapper {
 .courseware .edit-post-form .post-field {
     margin-bottom: 20px;
 }
+
 section.tool-wrapper div#controlls-container {
     width: 100%;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
         width: 48.86364%;
     }
 }
+
 section.tool-wrapper div#graph-container {
     width: 100%;
+
     @media screen and (min-width: 761px) {
         display: table-cell;
         width: 51.13636%;
@@ -2707,6 +3451,7 @@ section.tool-wrapper div#graph-container {
 //end responsive cource about page
 
 //profile page responsive
+
 .view-profile .wrapper-profile-sections,
 .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy  {
     min-width: 320px;
@@ -2715,6 +3460,7 @@ section.tool-wrapper div#graph-container {
 .view-profile .profile-section-one-fields {
     width: 100%;
     margin: 0;
+
     @media screen and (min-width: 761px) {
         width: 31.76157%;
         margin-left: 20px;
@@ -2723,6 +3469,7 @@ section.tool-wrapper div#graph-container {
 
 .view-profile .wrapper-profile-section-two {
     width: 100%;
+
     @media screen and (min-width: 761px) {
         width: 65.88078%;
     }
@@ -2740,12 +3487,15 @@ section.tool-wrapper div#graph-container {
     float: left;
     width: initial;
 }
+
 //end profile page responsive
 
 //account page responsive
+
 .wrapper-account-settings .wrapper-header {
     height: auto;
     border-bottom: none;
+
     @media screen and (min-width: 761px) {
         height: 139px;
         border-bottom: 4px solid #f5f5f5;
@@ -2755,6 +3505,7 @@ section.tool-wrapper div#graph-container {
 .wrapper-account-settings .wrapper-header .account-nav {
     float: none;
     overflow: hidden;
+
     @media screen and (min-width: 761px) {
         float: left;
     }
@@ -2762,6 +3513,7 @@ section.tool-wrapper div#graph-container {
 
 .wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
     border-bottom: 4px solid #f5f5f5;
+
     @media screen and (min-width: 761px) {
         border-bottom: none;
     }
@@ -2769,9 +3521,11 @@ section.tool-wrapper div#graph-container {
 
 .wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
     padding: 16px 12px;
+
     &:focus {
         outline: none;
     }
+
     @media screen and (min-width: 761px) {
         padding: 5px 25px 23px;
     }
@@ -2780,6 +3534,7 @@ section.tool-wrapper div#graph-container {
 .account-settings-sections .section .account-settings-section-body .u-field .field {
     width: 100%;
     max-width: 300px;
+
     @media screen and (min-width: 761px) {
         width: 30%;
         max-width: 30%;
@@ -2794,6 +3549,7 @@ section.tool-wrapper div#graph-container {
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-order > span {
     padding: 10px 5px;
     font-size: 0.8em;
+
     @media screen and (min-width: 761px) {
         padding: 20px;
         font-size: 1em;
@@ -2804,6 +3560,7 @@ section.tool-wrapper div#graph-container {
     width: auto;
     padding-left: 5px;
     font-size: 0.8em;
+
     @media screen and (min-width: 761px) {
         width: 26%;
         padding-left: 40px;
@@ -2813,6 +3570,7 @@ section.tool-wrapper div#graph-container {
 
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-date {
     width: auto;
+
     @media screen and (min-width: 761px) {
         width: 16%;
     }
@@ -2820,9 +3578,11 @@ section.tool-wrapper div#graph-container {
 
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-value {
     width: auto;
+
     @media screen and (min-width: 761px) {
         width: 12%;
     }
+
     @media screen and (max-width: 400px) {
         padding-right: 15px;
     }
@@ -2830,6 +3590,7 @@ section.tool-wrapper div#graph-container {
 
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-order .u-field-order-link {
     width: auto;
+
     @media screen and (min-width: 761px) {
         width: 15%;
     }
@@ -2837,6 +3598,7 @@ section.tool-wrapper div#graph-container {
 
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
     padding-left: 0;
+
     @media screen and (min-width: 761px) {
         padding-left: 100px;
     }
@@ -2844,6 +3606,7 @@ section.tool-wrapper div#graph-container {
 
 .account-settings-sections .u-field-message {
     width: 100%;
+
     @media screen and (min-width: 761px) {
         width: 49.15254%;
     }
@@ -2851,10 +3614,12 @@ section.tool-wrapper div#graph-container {
 
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
     width: initial;
+
     @media screen and (min-width: 761px) {
         width: 100%;
     }
 }
+
 //end account page responsive
 
 .container {
@@ -2862,12 +3627,14 @@ section.tool-wrapper div#graph-container {
 }
 
 //sysadmin page responsive
+
 .sysadmin-dashboard-content .instructor-nav a {
     white-space: nowrap;
 }
 
 .sysadmin-dashboard-content ol{
     word-break: break-all;
+
     @media screen and (min-width: 761px) {
         word-break: normal;
     }
@@ -2876,6 +3643,7 @@ section.tool-wrapper div#graph-container {
 table.stat_table {
     width: 100%;
     word-wrap: break-word;
+
     @media screen and (min-width: 761px) {
         width: initial;
     }
@@ -2883,6 +3651,7 @@ table.stat_table {
 
 .sysadmin-dashboard-content table.stat_table td {
     padding: 4px;
+
     @media screen and (min-width: 761px) {
         padding: 8px;
     }
@@ -2892,6 +3661,7 @@ table.stat_table {
 .sysadmin-dashboard-content input[type="email"],
 .sysadmin-dashboard-content input[type="password"] {
     width: 100%;
+
     @media screen and (min-width: 761px) {
         width: initial;
     }
@@ -2900,10 +3670,12 @@ table.stat_table {
 .sysadmin-dashboard-content button[value="download_users"],
 .sysadmin-dashboard-content button[value="repair_eamap"] {
     width: auto !important;
+
     @media screen and (min-width: 761px) {
         width: 350px !important;
     }
 }
+
 //end sysadmin page responsive
 
 footer .footer-support {
@@ -2915,13 +3687,13 @@ footer .footer-support {
     align-items: center;
     padding: 15px 0 0;
     justify-content: center;
+    height: 16px;
 
     @media screen and (min-width: 761px) {
         position: absolute;
         padding: 0;
         bottom: 0;
-        height: 16px;
-        justify-content: baseline;
+        justify-content: center;
     }
 
     a {
@@ -2932,15 +3704,25 @@ footer .footer-support {
 #content {
     flex: 1 1 auto;
 }
+
 .window-wrap {
     flex: 1 1 auto;
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
+
+    @supports (-ms-ime-align:auto) {
+        overflow: hidden;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        overflow: hidden;
+    }
 }
+
 .svg-edx {
     width: 73px;
-    margin: -5px 10px 0 5px;
+    margin: -5px 20px 0 3px;
 }
 
 .svg-raccoon {
@@ -2949,6 +3731,7 @@ footer .footer-support {
     position: relative;
     top: 3px;
 }
+
 body {
     margin: 0;
 }
@@ -2979,6 +3762,7 @@ body .breadcrumbs .nav-item {
     text-overflow: ellipsis;
     max-width: 100%;
     display: inline;
+
     span.fa {
         @media screen and (max-width: 767px) {
             margin-left: 0;
@@ -3007,6 +3791,7 @@ body .breadcrumbs .nav-item {
             right: auto;
             left: 6px;
         }
+
         .actions-dropdown-list a {
             float: left !important;
         }
@@ -3030,6 +3815,7 @@ body .breadcrumbs .nav-item {
         width: 100%;
         margin-top: 10px;
     }
+
     .btn {
         display: block;
         width: 100%;
@@ -3042,17 +3828,21 @@ body .breadcrumbs .nav-item {
         .article-wrapper {
             order: 2;
         }
+
         .article-functions {
             order: 1;
         }
     }
+
     h3.page-header {
         margin-bottom: 15px;
     }
+
     #div_id_locked,
     #div_id_recursive {
         .controls {
             display: flex;
+
             input {
                 margin: 2px 10px 0 0;
             }
@@ -3063,9 +3853,11 @@ body .breadcrumbs .nav-item {
     #div_id_other_read,
     #div_id_other_write {
         display: flex;
+
         label {
             order: 2;
         }
+
         .controls {
             order: 1;
             margin: 3px 10px 0 0;
@@ -3086,6 +3878,7 @@ body .breadcrumbs .nav-item {
         cursor: pointer;
         border-radius: 0;
         box-shadow: none;
+
         &:hover,
         &:focus {
             &:not(:disabled) {
@@ -3095,9 +3888,11 @@ body .breadcrumbs .nav-item {
                 outline: none;
             }
         }
+
         @media screen and (min-width: 761px) {
             display: none;
         }
+
         &:before,
         &:after {
             content: '';
@@ -3108,36 +3903,44 @@ body .breadcrumbs .nav-item {
             left: 5px;
             background-color: $hamburger-color;
             transition: all 0.3s;
-
         }
+
         &:after {
             box-shadow: 0 10px 0 0 $hamburger-color, 0 -10px 0 0 $hamburger-color;
         }
     }
+
     .course-material {
         display: none;
+
         @media screen and (min-width: 761px) {
             display: block;
         }
+
         @media screen and (max-width: 760px) {
             padding: 0 10px;
         }
     }
+
     .course-tabs {
         li {
             display: block;
             float: none;
+
             @media screen and (min-width: 761px) {
                 display: inline-block;
             }
+
             @media screen and (max-width: 760px) {
                 margin-bottom: 10px;
             }
+
             a {
                 padding: 1px 10px;
                 text-align: left;
                 font-weight: 400;
                 line-height: 20.72px;
+
                 @media screen and (min-width: 761px) {
                     padding: 10px 15px 13px;
                     text-align: center;
@@ -3152,11 +3955,13 @@ body .breadcrumbs .nav-item {
         &:before {
             transform: rotate(-45deg);
         }
+
         &:after {
             transform: rotate(45deg);
             box-shadow: none;
         }
     }
+
     .course-material {
         display: block;
     }
@@ -3167,12 +3972,15 @@ body .breadcrumbs .nav-item {
 .dashboard .my-courses .course .details .course-actions button.action {
     border-color: $theme-btn-white-border !important;
     transition: all 0.25s;
+
     .fa {
         color: $theme-btn-white-border;
         pointer-events: none;
     }
+
     &:hover {
         background: $theme-btn-bg;
+
         .fa {
             color: #fff;
         }
@@ -3183,15 +3991,19 @@ body .breadcrumbs .nav-item {
 
 .enrollment-wrapper table {
     width: 100%;
+
     caption {
         padding: 10px;
     }
+
     th {
         text-align: left;
     }
+
     td {
         text-align: center;
     }
+
     th, td {
         padding: 5px 10px;
         border: 1px solid #ccc;
@@ -3201,11 +4013,17 @@ body .breadcrumbs .nav-item {
 
 .instructor-dashboard-content-2 {
     line-height: 1.5;
+
     button:not(.btn-link),
     .btn-blue,
     input[type=button] {
         margin: 10px 0;
     }
+
+    .mce-btn button {
+        margin: 0;
+    }
+
     p input {
         margin-top: 0 !important;
     }
@@ -3215,16 +4033,19 @@ body .breadcrumbs .nav-item {
     textarea {
         width: 100% !important;
         clear: both;
+
         &#notes,
         &#certificate-invalidation-notes {
             height: 100px;
         }
     }
+
     .add-certificate-invalidation {
         label {
             display: block;
             margin-bottom: 10px;
         }
+
         div {
             margin-bottom: 10px;
         }
@@ -3236,25 +4057,30 @@ body .breadcrumbs .nav-item {
 .field-link {
     color: $theme-link;
 }
+
 #login-form,
 #register-form {
     button {
         font-weight: normal !important;
         font-size: 16px !important;
         text-transform: uppercase;
+
         &.forgot-password {
             text-transform: none;
         }
     }
+
     .nav-btn {
         height: auto !important;
     }
 }
+
 #register-mailing_address {
     height: 32px !important;
 }
 
 // correct modal window
+
 .course-wrapper .course-content .xqa-modal,
 .course-wrapper .course-content .staff-modal,
 .course-wrapper .course-content .history-modal,
@@ -3295,7 +4121,10 @@ body main .container .wiki-wrapper .btn:not(.btn-danger) {
     background: $theme-link;
     color: #fff;
     text-shadow: none;
-    &:hover,&:focus,&:active {
+
+    &:hover,
+    &:focus,
+    &:active {
         background-image: none;
         background: $theme-link-hover;
         border: none;
@@ -3307,7 +4136,10 @@ body main .container .wiki-wrapper .btn:not(.btn-danger) {
 
 body section.wiki .btn.btn-danger {
     background: $delete-button;
-    &:hover,&:focus,&:active {
+
+    &:hover,
+    &:focus,
+    &:active {
         border: none !important;
         box-shadow: none !important;
     }
@@ -3319,47 +4151,85 @@ body .enroll-message a {
 
 body {
     .wrap-instructor-info .instructor-info-action,
-    .course-info .container .wrap-instructor-info .instructor-info-action, .course-info section.outside-app .wrap-instructor-info .instructor-info-action, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action{
+    .course-info .container .wrap-instructor-info .instructor-info-action,
+    .course-info section.outside-app .wrap-instructor-info .instructor-info-action,
+    .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action,
+    .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action,
+    .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action,
+    .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action,
+    .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action,
+    .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action {
         color: $theme-link;
-        &:hover,&:focus,&:active {
+
+        &:hover,
+        &:focus,
+        &:active {
             background-color: $theme-link-hover;
             color: $white;
         }
     }
-    .proctored_exam_status .exam-timer .exam-button-turn-in-exam, .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary, .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary, div.info-wrapper section.updates>ol .show-older-updates, div.info-wrapper section.updates section .show-older-updates, div.info-wrapper section.updates div .show-older-updates, .btn-secondary,
+
+    .proctored_exam_status .exam-timer .exam-button-turn-in-exam,
+    .course-wrapper .course-content div.timed-exam .exam-action-button.btn-pl-primary,
+    .course-wrapper .course-content div.proctored-exam .exam-action-button.btn-pl-primary,
+    .course-wrapper .courseware-results-wrapper div.timed-exam .exam-action-button.btn-pl-primary,
+    .course-wrapper .courseware-results-wrapper div.proctored-exam .exam-action-button.btn-pl-primary,
+    div.info-wrapper section.updates>ol .show-older-updates,
+    div.info-wrapper section.updates section .show-older-updates,
+    div.info-wrapper section.updates div .show-older-updates,
+    .btn-secondary,
     &.view-teams .teams-main .card .card-actions .action-view {
         border-color: $theme-link;
         color: $theme-link;
-        &:hover,&:focus,&:active {
+
+        &:hover,
+        &:focus,
+        &:active {
             background-color: $theme-link-hover !important;
             color: $white;
             box-shadow: none;
         }
     }
+
     &.view-teams .teams-main .page-content-nav .nav-item.is-active {
         border-color: $theme-link;
         color: $theme-link;
     }
+
     &.view-teams .teams-main .page-content-nav .nav-item:hover,
     &.view-teams .teams-main .page-content-nav .nav-item:focus {
         border-color: $theme-link;
         color: $theme-link;
     }
+
     .wrapper--openassessment .wrapper--staff-area .wrapper--staff-toolbar .ui-staff__button:hover {
         background-color: $theme-link-hover;
     }
+
     .wrapper-footer .footer-support {
         color: $white;
+
+        @media (max-width: $build-footer-mobile) {
+            order: 4;
+            position: static;
+            padding-top: 0;
+        }
     }
+
     .btn-secondary:hover {
         color: $theme-link-hover;
     }
 }
 
-@include sm {
+@media screen and (max-width: $build-header-menu-mobile) {
     .header-global .wrapper-header .nav-global li {
-        width: 100%;
-        margin-bottom: 8px;
+        width: 100% !important;
+        margin-bottom: 8px !important;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
         a {
             width: 100%;
             text-align: center;
@@ -3368,63 +4238,86 @@ body {
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
+
             &:hover {
                 background-color: $theme-btn-bg-hover;
                 color: $theme-btn-text-color;
             }
         }
     }
+
     .view-teams .cards-list {
         display: flex;
         flex-direction: column;
     }
+
     .view-teams .card {
         width: 100%;
     }
+
     body .header-global.header-global__course,
     body .header-global {
-    flex: 0 0 auto;
+        flex: 0 0 auto;
     }
+
     .nav-global li {
         width: 100%;
     }
+
     // ie11 fix - button for upload csv on cert page in instructor
+
     body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .file_field {
         height: 26px;
     }
+
     // ie11 fix - course tab responsive fixes
+
     body.view-in-course .container .course-index {
         display: table;
     }
+
     body .wrapper-course-material .course-tabs li a {
         display: inline-block;
     }
+
     .view-teams .cards-list .card {
         width: 100%;
     }
+
     body.view-teams .card.list-card .card-actions {
         width: auto;
     }
 }
+
 body .theme-header .list-inline {
     display: flex;
     flex-direction: column;
 }
+
 body .doc-link {
     color: $theme-link;
-    &:hover,&:focus,&:active {
+
+    &:hover,
+    &:focus,
+    &:active {
         color: $header-nav-link-color-hover;
     }
 }
+
 body .user-dropdown {
     color: $header-nav-link-color;
-    &:hover,&:focus,&:active {
+
+    &:hover,
+    &:focus,
+    &:active {
         color: $header-nav-link-color-hover;
     }
 }
+
 body .teams-content .teams-main .team-edit-fields .team-required-fields {
     width: 100%;
 }
+
 .view-teams .theme-footer p, .view-teams .theme-footer span {
     color: $footer-support-text-and-logo;
 }
@@ -3432,6 +4325,7 @@ body .teams-content .teams-main .team-edit-fields .team-required-fields {
 body .theme-header .list-inline {
     display: flex;
     flex-direction: column;
+
     @media screen and (max-width: 760px) {
         align-items: center;
     }
@@ -3440,10 +4334,12 @@ body .theme-header .list-inline {
 body footer {
     .footer-support {
         align-items: center;
+
         a:hover {
             opacity: 0.8;
         }
     }
+
     .raccoon__logo {
         font-size: 12px;
         display: flex;
@@ -3452,14 +4348,17 @@ body footer {
         margin-left: 8px;
     }
 }
+
 .view-teams .page-header-search .action-search:hover,
 .view-teams .page-header-search .action-search:focus {
     background-color: $theme-link-hover;
 }
+
 .btn-blue, .instructor-dashboard-wrapper-2 .btn-blue {
     background-color: $theme-link-hover;
     box-shadow: $theme-link-hover;
 }
+
 .view-teams .action-primary {
     box-shadow: none;
     text-shadow: none;
@@ -3478,6 +4377,7 @@ body footer {
         box-shadow: none;
     }
 }
+
 .view-teams .action-cancel {
     border-radius: 2px;
 
@@ -3487,10 +4387,12 @@ body footer {
         color: $theme-link;
     }
 }
+
 .course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro::after {
     margin: 0;
     transform: translate(-50%, -50%);
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar > label {
     width: 50%;
 }
@@ -3503,19 +4405,24 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
     a {
         color: $white;
     }
+
     p {
         line-height: 1.3;
     }
-} 
+}
+
 body.view-teams .teams-wrapper .action-cancel:hover {
     background: none;
 }
+
 body .instructor-dashboard-wrapper-2 main .instructor-dashboard-content-2 {
     overflow: hidden;
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .revoke {
     color: $theme-link;
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-enrollment .enrollment-button,
 .instructor-dashboard-wrapper-2 section.idash-section#membership .batch-beta-testers input,
 body form.ccx-form button,
@@ -3526,54 +4433,71 @@ body .idash-section form button {
     background: $theme-link;
     text-decoration: none;
     text-shadow: none;
-    &:hover,&:focus,&:active {
+
+    &:hover,
+    &:focus,
+    &:active {
         background: $theme-link-hover;
     }
 }
+
 body form.ccx-form select {
     color: $theme-link;
 }
+
 .batch-enrollment {
     padding-right: 10px;
     box-sizing: border-box;
 }
+
 @media (max-width: 767px) {
     .member-lists-management,
     .batch-enrollment {
         width: 100% !important;
     }
+
     .view-teams .page-header.has-secondary .page-header-secondary {
         width: 100%;
     }
+
     .window-wrap .form-actions {
         display: flex;
         flex-direction: column;
+
         button {
             margin: 0 0 10px;
             box-shadow: none;
-            &:hover, &:focus, &:action {
+            &:hover,
+            &:focus,
+            &:active {
                 box-shadow: none;
             }
         }
     }
+
     .wiki-wrapper section.wiki #article_edit_form .btn {
         box-sizing: border-box;
     }
+
     .instructor-nav {
         display: flex;
         flex-direction: column;
+
         a {
             margin-bottom: 10px;
         }
     }
+
     section.wiki .wiki-wrapper .article-functions .see-children {
         width: 100%;
         text-align: center;
     }
 }
+
 button.ccx-button-link {
     color: $theme-link;
 }
+
 body .ccx-schedule-container {
     width: auto;
 }
@@ -3583,26 +4507,32 @@ section.wiki .main-article .wiki-article p {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .teams-wrapper main {
     width: 100%;
 }
+
 .view-teams .team-profile .page-content-secondary {
     width: 30%;
 }
+
 body .page-header-secondary .action-edit-team {
     transition: all 0.25s ease-in-out;
+
     &:hover {
         color: $white;
         text-shadow: none;
         border-color: $theme-btn-white-border;
         background: $theme-btn-white-bg-hover !important;
     }
+
     &:focus {
         background: $theme-btn-white-bg !important;
         border-color: $theme-btn-white-border !important;
         color: $theme-btn-white-text-color !important;
     }
 }
+
 body section.wiki #cheatsheetModal {
     max-width: 972px;
     width: 100%;
@@ -3610,18 +4540,22 @@ body section.wiki #cheatsheetModal {
     left: 50% !important;
     margin: 0 !important;
 }
+
 @media (max-width: 767px) {
     .view-teams .team-profile .page-content-main,
     .view-teams .team-profile .page-content-secondary {
         width: 100%;
     }
 }
+
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button.new-post-btn:hover {
     color: $theme-btn-white-text-color-hover !important;
 }
+
 .wrapper-msg .msg {
     min-width: 0;
 }
+
 body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-section {
     background: none;
 }
@@ -3629,7 +4563,8 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
 // "show more" button
 
 .home .highlighted-courses {
-    margin-bottom: 100px;
+    padding-top: 45px;
+    margin-bottom: 60px;
 }
 
 .arrow-up {
@@ -3647,21 +4582,42 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     transition: all 0.2s ease;
     z-index: 100;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
     &.active {
         bottom: 200px;
     }
+
     &:hover {
         background: $theme-btn-bg-hover;
     }
 }
 
-.home .courses-container .courses .courses-listing .courses-listing-item {
-    display: none;
-}
+.home .courses-container .courses .courses-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-.home .courses-container .courses .courses-listing .courses-listing-item {
-    &:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+    @media (min-width: 990px) {
         display: block;
+    }
+
+    .courses-listing-item {
+        display: none;
+
+        @media (min-width: 541px) {
+            max-width: 280px;
+        }
+
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8) {
+            display: block;
+        }
     }
 }
 
@@ -3670,23 +4626,27 @@ body .courses-container .courses-more {
     text-align: center;
     margin: 0;
     position: relative;
+
     .btn {
         cursor: pointer;
-        margin: 5px 10px;
+        margin: 0;
         display: inline-block;
         background: $theme-btn-bg;
         color: $theme-btn-text-color !important;
         height: auto;
-        line-height: 16px;
-        padding: 10px 25px;
-        min-width: 190px;
+        line-height: 20px;
+        padding: 8px 25px;
+        font-weight: 700 !important;
         text-transform: uppercase;
-        font-weight: 700;
+        background: #47bded;
+        border-radius: 2px;
         font-size: 14px;
+
         &:hover {
             background: $theme-btn-bg-hover;
         }
     }
+
     .fa-spinner {
         position: absolute;
         left: 50%;
@@ -3705,27 +4665,34 @@ body .courses-container .courses-more {
         display: flex;
         flex-direction: column;
     }
+
     .wiki-wrapper section.wiki #article_edit_form .btn {
         box-sizing: border-box;
     }
+
     .instructor-nav {
         display: flex;
         flex-direction: column;
+
         a {
             margin-bottom: 10px;
         }
     }
+
     .ccx-schedule-sidebar {
         margin-left: 0;
         width: 100%;
     }
 }
+
 .instructor-dashboard-wrapper-2 section.idash-section#data_download .reports-download-container .data-display-table .slickgrid {
     font-size: 10px;
 }
+
 .teams-header .breadcrumbs {
     display: flex;
 }
+
 div.gradebook-wrapper section.gradebook-content .grade-table {
     width: 100%;
 }
@@ -3734,6 +4701,7 @@ div.gradebook-wrapper section.gradebook-content .grade-table {
     width: 100%;
     margin-bottom: 5px;
 }
+
 body .container .wiki-wrapper section.wiki .btn {
     text-align: center;
 }
@@ -3755,6 +4723,7 @@ select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
     background: #fff url(../images/select-arrow.png) no-repeat 100% 50%;
     background-size: 27px 7px;
 }
+
 @supports (-ms-ime-align:auto) {
     select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
     .forum-new-post-form .post-field .field-label .field-input select.post-topic {
@@ -3762,12 +4731,15 @@ select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
         background-size: 10px 7px;
     }
 }
+
 .teams-main select {
     min-width: 120px;
 }
+
 body .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down::after {
     display: none;
 }
+
 .account-settings-sections .section .account-settings-section-body .u-field .field select {
     padding: 0 10px !important;
     height: 48px;
@@ -3811,18 +4783,22 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         border-radius: 3px;
         font-weight: bold !important;
         padding: 8px 15px !important;
+
         &:hover {
             background: $theme-btn-bg-hover !important;
             color: #fff !important;
         }
     }
+
     .message-warning {
         border-top: 2px solid red !important;
         background: #f4f4f4 !important;
+
         .message-title {
             color: #000 !important;
         }
     }
+
     .cohort-management-nav .cohort-management-nav-form {
         margin: 5px 0;
     }
@@ -3975,6 +4951,7 @@ div.info-wrapper section.handouts {
                 width: 100%;
                 margin-left: 0;
             }
+
             .three-col {
                 @media screen and (max-width: 768px) {
                     text-align: center;
@@ -4188,5 +5165,20 @@ div.info-wrapper section.handouts {
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+body.view-in-course .header-global,
+.header-global.header-global__course {
+    padding: 30px 15px;
+
+    @media screen and (max-width: 990px) {
+        padding: 22px 15px 23px;
+    }
+}
+
+.wrap-instructor-info.studio-view .instructor-info-action {
+    &:hover {
+        color: $white !important;
     }
 }
