@@ -9,17 +9,28 @@
 			max-width: 100%;
 		}
 
-		.my-courses .course .details .wrapper-course-details .course-title a {
-			word-break: break-word;
-			color: #1f1f1f;
-			font-size: 14px;
-			text-transform: uppercase;
-			font-weight: 700;
+		.my-courses {
+			.course .details .wrapper-course-details .course-title a {
+				word-break: break-word;
+				color: #1f1f1f;
+				font-size: 14px;
+				text-transform: uppercase;
+				font-weight: 700;
 
-			&:hover {
-				color: lighten(#1f1f1f, 10%);
+				&:hover {
+					color: lighten(#1f1f1f, 10%);
+				}
+			}
+
+			.listing-courses .messages-list .message-related-programs li {
+				padding-right: 5px;
+
+				&:last-child {
+					padding-right: 0;
+				}
 			}
 		}
+
 	}
 	.side-container {
 		box-sizing: border-box;
@@ -121,10 +132,10 @@
 		text-transform: uppercase;
 		border-radius: 3px !important;
 		height: auto;
-		padding: 7px 20px;
-		font-size: 12px;
-		font-weight: 700;
-		line-height: 16px;
+		padding: 7px 20px !important;
+		font-size: 12px !important;
+		font-weight: 700 !important;
+		line-height: 16px !important;
 		margin-top: 3px;
 		margin-bottom: 3px;
 
@@ -215,6 +226,33 @@
 	@media (max-width: 767px) {
 		margin-right: 5px !important;
 	}
+
+	& + .actions-dropdown {
+		@media (max-width: 767px) {
+			left: 19px;
+			right: inherit;
+		}
+
+		.actions-dropdown-list {
+			&:before,
+			&:after {
+				@media (max-width: 767px) {
+					left: 6px !important;
+					right: inherit;
+				}
+			}
+		}
+
+		.action {
+			height: auto;
+			border: none !important;
+
+			&:hover {
+				color: $base-color2-hover !important;
+				background: transparent !important;
+			}
+		}
+	}
 }
 
 .search-results {
@@ -261,6 +299,23 @@
 			font-size: 16px;
 			line-height: 19px;
 			color: inherit;
+		}
+	}
+}
+
+.wrapper-messages-primary .messages-list {
+	.prerequisites {
+		margin-bottom: 0;
+		border-radius: 3px;
+		padding: 10px 20px;
+		border-top: 1px solid #e4e4e4;
+		color: #313131;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 21px;
+
+		a {
+			font-weight: 400;
 		}
 	}
 }
