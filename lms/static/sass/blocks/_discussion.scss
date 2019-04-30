@@ -307,3 +307,54 @@ section.discussion {
 .wmd-prompt-dialog .input-text {
 	vertical-align: middle;
 }
+
+.discussion-thread-list-container {
+	.forum-nav-filter-main,
+	.forum-nav-sort {
+		width: 100%;
+		float: none;
+		text-align: left;
+		margin-bottom: 5px;
+
+		&:last-child {
+			margin-bottom: 0;
+
+			@media (max-width: 767px) and (min-width: 470px) {
+				text-align: right;
+			}
+		}
+
+		@media (max-width: 767px) and (min-width: 470px) {
+			width: 49%;
+			margin-bottom: 0;
+		}
+
+		select {
+			width: 100%;
+
+			@media (max-width: 767px) and (min-width: 470px) {
+				width: auto;
+			}
+		}
+	}
+}
+
+.forum-nav-thread-list-wrapper {
+	.forum-nav-filter-main,
+	.forum-nav-sort {
+		@media (max-width: 470px) {
+			width: 100%;
+			float: none;
+			text-align: left;
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			select {
+				width: 100%;
+			}
+		}
+	}
+}
