@@ -2,72 +2,112 @@
 .theme-footer_holder {
     position: relative;
     padding: 0 20px;
-    @media screen and (min-width: 800px) {
-        display: flex;
-        justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $build-footer-mobile) {
+        flex-direction: column;
     }
-    //@media all and (max-width: 768px){
-    //    flex-direction: column;
-    //    align-items: center;
-    //    height: 120px;
-    //}
+
     .logo-footer,
     .icon-list,
     .footer-support {
         position: static;
-        flex: 0 0 33%;
         margin: 0;
         width: auto;
     }
+
     .icon-list {
         justify-content: center;
         order: 2;
-        @media screen and (max-width: 779px) {
-            margin: 10px 0;
+
+        @media screen and (max-width: $build-footer-mobile) {
+            margin: 21px 0 0;
+            flex-wrap: wrap;
         }
     }
+
     .logo-footer {
-        justify-content: center;
         order: 3;
-        @media screen and (min-width: 800px) {
-            justify-content: flex-end;
+        justify-content: flex-end;
+        flex: 0 0 260px;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            display: block;
+            text-align: right;
+            flex: 0 0 265px;
         }
-        @media screen and (max-width: 779px) {
+
+        @media screen and (max-width: $build-footer-mobile) {
+            justify-content: center;
+            order: 1;
+            flex: auto;
+
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: $build-footer-mobile) {
             margin: 20px 0;
         }
     }
+
     .footer-support {
-        justify-content: center;
-        flex: 0 0 34%;
+        order: 1;
+        justify-content: flex-start;
+        flex: 0 0 260px;
         align-items: center;
         color: $footer-nav-link-color !important;
-        @media screen and (min-width: 800px) {
-            justify-content: flex-start;
+        position: relative;
+        top: 12px;
+        left: 0;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            flex: 0 0 265px;
         }
-        @media screen and (max-width: 779px) {
+
+        @media screen and (max-width: $build-footer-mobile) {
+            justify-content: center;
+            order: 3;
+            flex: auto;
+        }
+
+        @media screen and (max-width: $build-footer-mobile) {
             margin: 10px 0;
+        }
+
+        a {
+            &:first-of-type {
+                margin-right: 15px;
+            }
         }
     }
 }
+
 .theme-footer {
     width: 100%;
     background: $footer-bg;
 }
+
 .theme-footer_wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 41px 0 45px;
 }
+
 .logo-footer {
     display: flex;
-    width: 100%;
     margin: 0 0 15px;
+    flex-wrap: wrap;
+
     @media screen and (min-width: 800px) {
         margin: 0;
         width: auto;
         position: absolute;
         right: 20px;
     }
+
     @media screen and (min-width: 1200px) {
         right: 0;
     }

@@ -1,6 +1,7 @@
 .btn {
 	color: $base-color;
 	border-color: $base-color;
+
 	&:hover,
 	&:active {
 		&:not(:disabled) {
@@ -9,6 +10,7 @@
 			border-color: $btn-bg-hover;
 		}
 	}
+
 	&:focus {
 		border-color: $btn-bg-hover;
 	}

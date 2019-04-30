@@ -4,14 +4,38 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media screen and (max-width: $build-header-menu-tablet) {
+        width: auto;
+        margin: 0;
+    }
 }
+
 .user .primary {
     margin-bottom: 0;
+
+    .menu-title {
+        color: #474747;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.3;
+        margin: 0 3px 0 7px;
+
+        img {
+            max-width: 36px;
+            border-radius: 10%;
+            border: 1px solid #bababa;
+            box-sizing: border-box;
+            margin-right: 3px;
+        }
+    }
 }
+
 .user-link {
     display: flex;
     align-items: center;
 }
+
 .user-dropdown-menu {
     display: none;
     position: absolute;
@@ -27,6 +51,11 @@
     margin: 8px 11px 0 0;
     list-style: none;
 
+    @media (max-width: $build-header-menu-tablet) {
+        left: 0;
+        right: inherit;
+    }
+
     &::before {
         background: transparent;
         border-top: 6px solid #fcfcfc;
@@ -36,16 +65,21 @@
         box-shadow: 1px 0 0 0 #c8c8c8, 0 -1px 0 0 #c8c8c8;
         content: "";
         display: block;
-        height: 0px;
+        height: 0;
         position: absolute;
         transform: rotate(-45deg);
         left: 7px;
         top: -5px;
-        width: 0px;
+        width: 0;
 
         .lang_en & {
             right: 7px;
             left: auto;
+
+            @media (max-width: $build-header-menu-tablet) {
+                left: 7px;
+                right: auto;
+            }
         }
     }
 
@@ -58,30 +92,35 @@
     &.expanded {
         display: block;
     }
+
     .item {
         padding-top: 5px;
     }
+
     .user-dropdown-menuitem,
     .dropdown-menuitem {
+        display: block;
         white-space: nowrap;
-        color: $theme-link;
+        color: #474747;
 
-        &:focus {
-            color: $theme-link;
-        }
-
+        &:focus,
         &:hover {
-            color: $theme-link-hover;
+            color: $base-color2;
         }
     }
 }
+
 .user-image-frame {
-    max-width: 40px;
+    max-width: 36px;
     border-radius: 10%;
+    border: 1px solid #bababa;
+    box-sizing: border-box;
 }
+
 .user-menu {
     position: relative;
 }
+
 .user-dropdown {
     border: none;
     background: none;
@@ -102,13 +141,17 @@
         box-shadow: none;
     }
 }
+
 .label-username {
-    color: $header-nav-link-color;
-    font-weight: 600;
+    color: #474747;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1.3;
-    margin: 0 5px;
-    &:hover,&:focus,&:active {
+    margin: 0 3px 0 7px;
+
+    &:hover,
+    &:focus,
+    &:active {
         color: $header-nav-link-color-hover;
     }
 }
