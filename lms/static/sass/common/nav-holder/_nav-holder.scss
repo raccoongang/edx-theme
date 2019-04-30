@@ -1,18 +1,19 @@
 .nav-holder {
-    width: 100%;
+    width: auto;
+    display: block;
+    padding: 0;
     flex-wrap: wrap;
-    display: none;
     flex-grow: 1;
-    padding-top: 10px;
 
     .menu-open & {
         display: flex;
         justify-content: center;
     }
-    @media (min-width: 761px) {
-        width: auto;
-        display: block;
-        padding: 0;
+
+    @media (max-width: $build-header-menu-tablet) {
+        display: none;
+        width: 100%;
+        padding-top: 10px;
     }
 
     &:after {
