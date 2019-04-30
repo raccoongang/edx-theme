@@ -767,6 +767,26 @@ body .dashboard .my-courses .course .details .enter-course.archived,
             }
         }
     }
+
+    .action {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        background: #fff;
+        padding: 6px;
+        height: 32px;
+        margin-right: 5px;
+        border-color: $base-color2;
+
+        &:hover {
+            background: $base-color2 !important;
+            border-color: $base-color2;
+            color: $white;
+        }
+
+        @media (max-width: 767px) {
+            margin-right: 5px !important;
+        }
+    }
 }
 
 body .discussion-module .btn {
@@ -2550,7 +2570,7 @@ section.wiki .table.table-striped {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
-                            width: 100%;
+                            width: auto;
                         }
 
                         .course-top-info {
@@ -2613,6 +2633,8 @@ section.wiki .table.table-striped {
                             font-size: 12px;
                             font-weight: 700;
                             line-height: 16px;
+                            margin-top: 3px;
+                            margin-bottom: 3px;
 
                             &:hover {
                                 background: $base-color2 !important;
