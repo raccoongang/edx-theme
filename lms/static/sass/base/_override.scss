@@ -639,6 +639,36 @@ body {
                     .fa {
                         pointer-events: none;
                     }
+
+                    & + .actions-dropdown {
+                        @media (max-width: 767px) {
+                            left: 19px;
+                            right: inherit;
+                        }
+
+                        .actions-dropdown-list {
+                            &:before,
+                            &:after {
+                                @media (max-width: 767px) {
+                                    left: 6px !important;
+                                    right: inherit;
+                                }
+                            }
+                        }
+
+                        .action {
+                            height: auto;
+                            border: none !important;
+                            font-size: 12px !important;
+                            text-transform: uppercase;
+                            font-weight: 700;
+
+                            &:hover {
+                                color: $header-nav-link-color !important;
+                                background: transparent !important;
+                            }
+                        }
+                    }
                 }
             }
         }
