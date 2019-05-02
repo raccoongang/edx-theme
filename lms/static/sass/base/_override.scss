@@ -793,6 +793,23 @@ body .dashboard .my-courses .course .details .enter-course.archived,
         @media (max-width: 767px) {
             margin-right: 5px !important;
         }
+
+        & + .actions-dropdown {
+            @media (max-width: 767px) {
+                left: 19px;
+                right: inherit;
+            }
+
+            .action {
+                height: auto;
+                border: none !important;
+
+                &:hover {
+                    color: $base-color2-hover !important;
+                    background: transparent !important;
+                }
+            }
+        }
     }
 }
 
