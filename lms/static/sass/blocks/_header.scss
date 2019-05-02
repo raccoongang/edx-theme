@@ -13,6 +13,7 @@
 		align-items: center;
 		padding: 22px 0 23px;
 		height: auto;
+		position: relative;
 
 		@media screen and (max-width: $build-header-menu-tablet) {
 			display: block;
@@ -47,11 +48,6 @@
 					margin: 0 !important;
 					height: $header-logo-height;
 				}
-			}
-
-			.course-header {
-				margin-top: 0;
-				color: #fff;
 			}
 		}
 
@@ -179,6 +175,7 @@
 
 				.user-dropdown-wrapper {
 					display: flex;
+					align-items: center;
 				}
 
 				.nav-item {
@@ -217,6 +214,8 @@
 
 						&.menu-title {
 							color: #474747;
+							position: relative;
+							top: 1px;
 
 							&:hover,
 							&:focus {
@@ -306,6 +305,13 @@
 				}
 			}
 		}
+	}
+
+	.course-header {
+		margin-top: 0;
+		color: #313131;
+		text-align: center;
+		padding-bottom: 20px;
 	}
 
 	.dropdown-user-menu a {
