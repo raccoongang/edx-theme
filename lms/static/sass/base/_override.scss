@@ -1599,9 +1599,15 @@ body.view-profile .profile-image-field .image-wrapper .u-field-remove-button {
     box-shadow: none;
 }
 
-body div.info-wrapper section.updates div article .date {
-    padding-right: 0;
-    padding-left: 20px;
+body div.info-wrapper section.updates div {
+    &.recent-updates {
+        margin-top: 10px;
+    }
+
+    article .date {
+        padding-right: 0;
+        padding-left: 20px;
+    }
 }
 
 .discussion-article .posted-details .username:visited {
