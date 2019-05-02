@@ -101,6 +101,36 @@
 		margin-right: 5px !important;
 		margin-bottom: 5px;
 	}
+
+	& + .actions-dropdown {
+		top: 43px;
+
+		@media (max-width: 767px) {
+			left: 19px;
+			right: inherit;
+		}
+
+		.actions-dropdown-list {
+			&:before,
+			&:after {
+				@media (max-width: 767px) {
+					left: 6px !important;
+					right: inherit;
+				}
+			}
+		}
+
+		.action {
+			height: auto;
+			border: none !important;
+			padding: 5px 10px;
+
+			&:hover {
+				color: $theme-btn-white-bg-hover !important;
+				background: transparent !important;
+			}
+		}
+	}
 }
 
 .search-results {
