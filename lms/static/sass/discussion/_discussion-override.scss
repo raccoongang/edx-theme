@@ -39,3 +39,28 @@
 		}
 	}
 }
+
+.modal,
+.leanModal_box,
+.wmd-prompt-dialog,
+.leanModal_box {
+	left: 50% !important;
+	top: 50% !important;
+	max-width: calc(100% - 20px) !important;
+	max-height: calc(100vh - 20px) !important;
+	transform: translate(-50%, -50%);
+	margin: 0 !important;
+	overflow-y: auto;
+
+	.form-actions {
+		.form-btn {
+			@media screen and (max-width: 760px) {
+				margin-bottom: 10px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
