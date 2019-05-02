@@ -215,6 +215,14 @@
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
+
+    &.new-post-btn {
+        height: 40px !important;
+
+        @media (max-width: 767px) {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .has-breadcrumbs .breadcrumbs .all-topics {
@@ -369,4 +377,9 @@ body .btn-brand {
     &:hover {
         border: 1px solid $theme-btn-bg-hover;
     }
+}
+
+.page-header-secondary .forum-search .search-input {
+    max-height: 40px;
+    box-sizing: border-box !important;
 }
