@@ -12,12 +12,13 @@
 		align-items: center;
 		padding: 23px 0;
 		height: auto;
+		position: relative;
 
 		@media screen and (max-width: $build-header-menu-tablet) {
 			display: block;
 		}
 
-		@media screen and (min-width: $breakpoint-tablet) {
+		@media screen and (min-width: $build-header-menu-tablet) {
 			padding: 28px 0;
 		}
 
@@ -35,6 +36,7 @@
 			a {
 				margin: 0;
 				transition: opacity .15s ease;
+				height: $header-logo-height;
 
 				&:hover {
 					opacity: .8;
@@ -45,11 +47,6 @@
 					margin: 0 !important;
 					height: $header-logo-height;
 				}
-			}
-
-			.course-header {
-				margin-top: 0;
-				color: #fff;
 			}
 		}
 
@@ -204,6 +201,8 @@
 
 						&.menu-title {
 							color: #474747;
+							display: flex;
+							align-items: center;
 
 							&:hover,
 							&:focus {
@@ -244,7 +243,7 @@
 				}
 
 				.username {
-					margin-left: 5px;
+					margin: 5px;
 				}
 
 				.user-image-frame {
@@ -285,9 +284,21 @@
 							color: $base-color2 !important;
 						}
 					}
+
+					.fa {
+						position: relative;
+						top: 1px;
+					}
 				}
 			}
 		}
+	}
+
+	.course-header {
+		margin-top: 0;
+		color: $header-nav-link-color;
+		text-align: center;
+		padding-bottom: 20px;
 	}
 
 	.dropdown-user-menu a {
@@ -316,7 +327,7 @@
 	}
 
 	.hamburger-menu {
-		top: 35px;
+		top: 29px;
 		right: 15px;
 		left: inherit;
 		position: absolute;
@@ -542,22 +553,27 @@ section.home {
 					text-align: center;
 
 					h1 {
-						font-size: 30px;
+						font-size: 22px;
 						line-height: 1.2;
 						color: $promo-box-text-color;
 						font-weight: bold;
-						text-shadow: $promo-box-text-shadow;
-						margin-bottom: 30px;
+						text-shadow: none;
+						margin: 0 auto 30px;
+						padding: 25px 30px;
+						box-sizing: border-box;
 						text-transform: uppercase;
 						text-align: center !important;
+						background: rgba(255,255,255,0.8);
+						max-width: 590px;
+						border-radius: 4px;
 
 						@media screen and (min-width: $breakpoint-mobile) {
-							font-size: 42px;
+							font-size: 30px;
 							margin-bottom: 20px;
 						}
 
 						@media screen and (min-width: $breakpoint-tablet) {
-							font-size: 52px;
+							font-size: 40px;
 							margin-bottom: 15px;
 						}
 					}
