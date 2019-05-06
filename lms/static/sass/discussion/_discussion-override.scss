@@ -6,9 +6,10 @@
     }
     .course-header {
         display: none;
+        clear: both;
         @media screen and (min-width:600px ) {
           font-size: 16px;
-          padding: 20px 45px 0 5px;
+          padding: 20px 20px 0;
           text-align: center;
           display: block;
           text-transform: uppercase;
@@ -36,9 +37,22 @@
         &.nav-global {
             margin-top: 10px;
         }
-        .item {
+        .item,
+        .tab-nav-item {
             text-transform: none;
             font-size: 14px;
+
+            a {
+                font-weight: 600;
+                font-size: 14px;
+                display: inline-block;
+                border: none;
+
+                &:hover {
+                    background: transparent !important;
+
+                }
+            }
         }
     }
     .nav-global li a:hover {
