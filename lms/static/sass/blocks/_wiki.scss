@@ -23,6 +23,16 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		height: auto;
+
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			display: block;
+
+			&:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
 	}
 
 	.main-article {
