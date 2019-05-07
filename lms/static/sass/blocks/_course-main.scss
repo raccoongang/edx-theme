@@ -249,6 +249,13 @@ div.info-wrapper section.handouts ol li .wrapper-course-material .course-tabs .t
 			max-width: 100%;
 			overflow-x: auto;
 		}
+
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			.zooming-image-place .loupe img {
+				max-width: 100%;
+				width: 1080px;
+			}
+		}
 	}
 
 	&.xmodule_VideoModule {
