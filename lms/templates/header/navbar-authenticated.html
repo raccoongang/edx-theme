@@ -30,7 +30,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   <div class="main">
     % if show_dashboard_tabs:
       <div class="mobile-nav-item nav-item nav-tab mobile-nav-item-hide">
-        <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link" href="${reverse('dashboard')}">
+        <a class="${'active ' if reverse('courses') == request.path else ''}tab-nav-link" href="${reverse('courses')}">
           ${_("Courses")}
         </a>
       </div>
