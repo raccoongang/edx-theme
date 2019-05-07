@@ -22,4 +22,21 @@ $(document).ready(function () {
     }
   });
 
+  // move to current course tab in course nav menu
+  if( $('.sequence-nav li button.active').length && window.innerWidth <= 991 ) {
+    var navList = $('.sequence-nav ol').get(0);
+    var activeButtonOffsetLeft = $('.sequence-nav li button.active').get(0).parentNode.offsetLeft;
+
+    if ( activeButtonOffsetLeft > navList.offsetWidth ) {
+      $('.xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper').scrollLeft(activeButtonOffsetLeft);
+    }
+
+    $(document).on('click', '.xmodule_display.xmodule_SequenceModule .sequence-nav-button', function() {
+      if( navList.scrollWidth > navList.offsetWidth ) {
+        var activeButtonOffsetLeft = $('.sequence-nav li button.active').get(0).parentNode.offsetLeft;
+        $('.xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper').scrollLeft(activeButtonOffsetLeft);
+      }
+    });
+  }
+
 });
