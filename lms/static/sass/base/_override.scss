@@ -149,7 +149,7 @@
                 }
 
                 &:hover {
-                    color: $header-nav-link-color-hover;
+                    color: $header-nav-link-color-hover !important;
                     border-color: $header-nav-link-color-hover;
                 }
             }
@@ -5269,4 +5269,9 @@ body.view-in-course .header-global,
     &:hover {
         color: #fff !important;
     }
+}
+
+body.view-in-course .header-global .wrapper-header {
+    padding-left: 0;
+    padding-right: 0;
 }
