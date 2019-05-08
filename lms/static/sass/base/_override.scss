@@ -3032,6 +3032,10 @@ body .doc-link {
     &:hover,&:focus,&:active {
         color: $header-nav-link-color-hover;
     }
+
+    &:visited {
+        color: #3c3c3c;
+    }
 }
 body .doc-link+.user {
      order: 4;
@@ -3041,9 +3045,9 @@ body .doc-link+.user {
     order: 3;
 }
 body .user-dropdown {
-    color: $header-nav-link-color;
+    color: #3c3c3c;
     &:hover,&:focus,&:active {
-        color: $header-nav-link-color-hover;
+        color: lighten(#3c3c3c, 20%);        
         border: none;
     }
 }
@@ -3676,4 +3680,88 @@ div.info-wrapper section.handouts {
             }
         }
     }
+}
+
+.footer-text {
+    text-align: center;
+    width: 100%;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.dashboard .my-courses .wrapper-header-courses {
+    display: none;
+}
+
+.dashboard-search-bar {
+    box-shadow: 0 3px 10px #ccc;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.dashboard .my-courses .listing-courses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboard .my-courses .listing-courses .course-item {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dashboard .my-courses .listing-courses .course-item .course-container {
+    box-shadow: 0 0 12px #777;
+    border: none;
+
+    .details {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.dashboard .my-courses .course .details .wrapper-course-image {
+    width: 100%;
+    float: none;
+    margin: 0;
+    min-height: 135px;
+}
+
+.dashboard .my-courses .course {
+    margin: 0;
+}
+
+.dashboard .my-courses .course .details .wrapper-course-details {
+    padding:  15px 10px 10px;
+    width: 100%;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.dashboard .my-courses .course .details .course-title a {
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.dashboard .my-courses .course .details .course-info {
+    float: none;
+    width: 100%;
+    display: none;
+}
+
+.dashboard .my-courses .course .details .wrapper-course-image .cover {
+    border: none;
+    border-radius: 0;
+}
+
+.dashboard .my-courses .course .details .wrapper-course-actions {
+    width: 100%;
+    float: none;
+}
+
+.dashboard .my-courses .course .details .enter-course {
+    display: none;
 }
