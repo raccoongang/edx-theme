@@ -1,5 +1,5 @@
 .header-global .wrapper-header {
-    max-width: 1200px;
+    max-width: 1170px;
 
     .logo {
         margin: -2px 39px 0 0;
@@ -190,7 +190,22 @@
 }
 
 .dropdown-menu-container .menu-title .menu-image {
-    margin-right: 5px;
+    display: flex;
+    align-items: center;
+
+    .menu-image {
+        margin-right: 8px;
+        width: 36px;
+        box-sizing: border-box;
+        border: 1px solid #bababa;
+        border-radius: 5px;
+        height: 36px;
+    }
+
+    .label-username {
+        margin: 0;
+        color: #474747 !important;
+    }
 }
 
 .header-global .wrapper-header .dropdown-menu {
@@ -251,6 +266,12 @@
 
 body .header-global .wrapper-header .wrapper-user-menu {
     width: auto;
+    display: flex;
+    align-items: center;
+
+    span {
+        color: inherit;
+    }
 }
 
 .dropdown-menu-container .menu-title .label-username,
@@ -267,11 +288,17 @@ body .header-global .wrapper-header .wrapper-user-menu {
     font-size: 14px;
 }
 
-.header-global .wrapper-header .list-inline .item {
-    float: left;
+.header-global .wrapper-header .list-inline {
+    &.nav-global {
+        margin-top: 0;
+    }
 
-    @media screen and (min-width:760px ) {
-        margin-bottom: 10px;
+    .item {
+        float: left;
+
+        @media screen and (min-width:760px ) {
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -319,7 +346,22 @@ body .header-global .wrapper-header .wrapper-user-menu {
 }
 
 body .dropdown-menu-container .menu-button {
-    color: $theme-link;
+    background: none;
+    margin: 5px 0 0 0;
+    padding: 0 6px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    color: #474747;
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+
+    &:hover {
+        span {
+            color: $base-color2-hover;
+        }
+    }
 }
 
 body .wrapper-course-material .course-tabs li a {
