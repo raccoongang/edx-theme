@@ -31,7 +31,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     % if show_dashboard_tabs:
       <div class="mobile-nav-item nav-item nav-tab mobile-nav-item-hide">
         <a class="${'active ' if reverse('courses') == request.path else ''}tab-nav-link" href="${reverse('courses')}">
-          ${_("Courses")}
+          ${_("Find courses")}
         </a>
       </div>
       % if show_program_listing:
@@ -56,7 +56,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     % endif
     % if show_explore_courses:
       <div class="mobile-nav-item nav-item nav-tab">
-        <a class="tab-nav-link" href="${marketing_link('COURSES')}">${_("Find courses")}</a>
+        <a class="tab-nav-link" href="${reverse('dashboard')}">${_("Courses")}</a>
       </div>
     % endif
     % if show_sysadmin_dashboard:
