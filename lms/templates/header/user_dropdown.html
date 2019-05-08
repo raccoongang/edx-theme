@@ -17,11 +17,13 @@ self.real_user = getattr(user, 'real_user', user)
 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
 username = self.real_user.username
 resume_block = retrieve_last_sitewide_block_completed(username)
-displayname = get_enterprise_learner_generic_name(request) or username
+displayname = self.real_user.get_full_name() or username
+url_logout = marketing_link('LOGOUT') if marketing_link('LOGOUT') != '#' else reverse('logout')
+dashboard = marketing_link('DASHBOARD') if marketing_link('DASHBOARD') != '#' else reverse('dashboard')
 %>
 
 <div class="nav-item">
-    <a href="${reverse('dashboard')}" class="menu-title">
+    <a href="${dashboard}" class="menu-title">
         <img class="user-image-frame" src="${profile_image_url}" alt="">
         <span class="sr-only">${_("Dashboard for:")}</span>
         <span class="username">${displayname}</span>
@@ -35,9 +37,9 @@ displayname = get_enterprise_learner_generic_name(request) or username
         % if resume_block:
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${resume_block}" role="menuitem">${_("Resume your last course")}</a></div>
         % endif
-        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('dashboard')}" role="menuitem">${_("Dashboard")}</a></div>
-        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a></div>
-        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a></div>
-        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></div>
+##         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('dashboard')}" role="menuitem">${_("Dashboard")}</a></div>
+##         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a></div>
+##         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${url_logout}" role="menuitem">${_("Logout")}</a></div>
     </div>
 </div>
