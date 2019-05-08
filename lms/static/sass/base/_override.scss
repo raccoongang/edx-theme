@@ -5275,3 +5275,25 @@ body.view-in-course .header-global .wrapper-header {
     padding-left: 0;
     padding-right: 0;
 }
+
+.find-courses .courses-container .courses:not(.no-course-discovery) {
+    @media screen and (max-width: 768px) {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .courses-listing {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+
+        .courses-listing-item {
+            @media screen and (max-width: 768px) {
+                display: inline-block;
+                float: none;
+                max-width: 280px;
+                text-align: left;
+            }
+        }
+    }
+}
