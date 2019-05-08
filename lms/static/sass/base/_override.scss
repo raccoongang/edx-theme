@@ -18,13 +18,13 @@
     background: $header-bg;
     border: none;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
-    padding: 30px 15px;
+    padding: 22px 15px;
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
 
     @media screen and (max-width: $breakpoint-tablet) {
-        padding: 22px 15px 23px;
+        padding: 14px 15px 15px;
     }
 
     .wrapper-header {
@@ -149,7 +149,7 @@
                 }
 
                 &:hover {
-                    color: $header-nav-link-color-hover;
+                    color: $header-nav-link-color-hover !important;
                     border-color: $header-nav-link-color-hover;
                 }
             }
@@ -5202,10 +5202,10 @@ div.info-wrapper section.handouts {
 
 body.view-in-course .header-global,
 .header-global.header-global__course {
-    padding: 30px 15px;
+    padding: 22px 15px;
 
     @media screen and (max-width: 990px) {
-        padding: 22px 15px 23px;
+        padding: 14px 15px 15px;
     }
 }
 
@@ -5269,4 +5269,9 @@ body.view-in-course .header-global,
     &:hover {
         color: #fff !important;
     }
+}
+
+body.view-in-course .header-global .wrapper-header {
+    padding-left: 0;
+    padding-right: 0;
 }
