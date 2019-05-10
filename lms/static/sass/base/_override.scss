@@ -1801,6 +1801,16 @@ body.view-in-course {
     .article-functions {
         order: 1;
     }
+
+    .form-actions {
+        .btn {
+            @media (max-width: 767px) {
+                margin-right: 0;
+                text-align: center;
+                -webkit-font-smoothing: antialiased;
+            }
+        }
+    }
 }
 
 section.wiki .wiki-wrapper .article-functions {
