@@ -2053,9 +2053,14 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
     float: none;
     margin: 0 0 10px;
     display: inline-block;
+
     @media screen and (min-width: 761px) {
         float: right;
         margin: 0 0 0 10px;
+    }
+
+    &:hover {
+        color: $white !important;
     }
 }
 
@@ -3742,4 +3747,8 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.updates .recent-updates {
+    margin-top: 10px;
 }
