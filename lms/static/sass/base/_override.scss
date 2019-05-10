@@ -974,6 +974,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
     label[for="register-terms_of_service"] {
         margin: 3px 5px 0 0 !important;
     }
+    .form-field select {
+        border-radius: 0;
+        font-size: 16px !important;
+        line-height: 24px;
+        -webkit-font-smoothing: antialiased;
+    }
 }
 .home {
     background: $theme-content-bg;
@@ -3125,6 +3131,7 @@ body .breadcrumbs .nav-item {
 }
 #register-mailing_address {
     height: 32px !important;
+    line-height: 32px;
 }
 
 // correct modal window
