@@ -3709,3 +3709,22 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 .course-info .details .inner-wrapper .course-staff .teacher .teacher-image {
     border: none;
 }
+
+.modal.video-modal,
+.video-modal.leanModal_box {
+    max-width: calc(100% - 20px);
+    margin: 0 !important;
+    transform: translateX(-50%);
+    left: 50% !important;
+
+    .inner-wrapper {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
