@@ -4786,6 +4786,10 @@ select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
     background: #fff url(../images/select-arrow.png) no-repeat 100% 50%;
     background-size: 27px 7px;
     border-radius: 0;
+
+    &::-ms-expand {
+        display: none;
+    }
 }
 
 .teams-main select {
