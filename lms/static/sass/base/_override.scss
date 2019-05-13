@@ -2734,8 +2734,14 @@ section.tool-wrapper div#graph-container {
 
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
     padding-left: 0;
+
     @media screen and (min-width: 761px) {
         padding-left: 100px;
+    }
+
+    .u-field-message-notification {
+        position: static;
+        padding-left: 0;
     }
 }
 
