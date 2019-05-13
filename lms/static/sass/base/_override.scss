@@ -5300,3 +5300,12 @@ body.view-in-course .header-global .wrapper-header {
         }
     }
 }
+
+.find-courses .search-facets:last-child {
+    @media screen and (max-width: 540px) and (min-width: 320px) {
+        margin-right: 0;
+        float: left;
+        display: block;
+        width: 100%;
+    }
+}
