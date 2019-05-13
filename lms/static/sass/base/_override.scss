@@ -1731,6 +1731,10 @@ body.view-in-course {
                     width: 76%;
                     display: table-cell;
                 }
+
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    display: block;
+                }
             }
 
             .course-index {
@@ -1740,6 +1744,10 @@ body.view-in-course {
                 @media screen and (min-width: 1000px) {
                     width: 23%;
                     display: table-cell;
+                }
+
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    display: block;
                 }
             }
         }
