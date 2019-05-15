@@ -1700,3 +1700,26 @@ body .header-global .wrapper-header .wrapper-user-menu {
 .wrapper-course-material .course-material .course-tabs {
     padding-top: 10px;
 }
+
+.xblock--drag-and-drop {
+    .drag-container {
+        overflow: auto;
+
+        .item-bank,
+        .target {
+            min-width: 750px;
+        }
+
+        .zone {
+            flex-direction: column-reverse;
+            padding-right: 28px;
+            box-sizing: border-box;
+            align-items: center;
+
+            p {
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+        }
+    }
+}
