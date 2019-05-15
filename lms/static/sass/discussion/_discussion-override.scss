@@ -1,3 +1,7 @@
+body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
 .header-global .wrapper-header {
     max-width: 1200px;
 
@@ -289,4 +293,8 @@ body .wrapper-course-material .course-tabs li a {
 
 .forum-new-post-form .post-type-label:hover {
     cursor: pointer;
+}
+
+.footer-info {
+    margin-bottom: 0;
 }
