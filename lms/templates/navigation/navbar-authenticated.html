@@ -47,6 +47,9 @@ from django.utils.translation import ugettext as _
       <li class="item nav-global-01">
         <a href="${reverse('pcitool:index-student')}">${_("Peer Groups")}</a>
       </li>
+      <li class="item nav-global-01">
+        <a href="${reverse('gradebook:gradebook_dashboard')}">${_("Gradebook")}</a>
+      </li>
     % endif
 
     %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
