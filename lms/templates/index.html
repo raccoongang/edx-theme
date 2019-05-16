@@ -58,11 +58,16 @@ from openedx.core.djangolib.markup import HTML, Text
             % for category in courses_data:
                 <section class="course-box">
                     <h2 class="course-box__heading">${category}</h2>
-##                  <p class="course-box__info">${courses_data.get(category, {}).get('description', '')}</p>
-                    <%
-                      courses=courses_data.get(category, {}).get('courses', '')
-                    %>
-                    <%include file="${courses_list}" args="courses=courses" />
+                    <div class="course-box-content">
+                        <div class="course-box-info">
+                            ${courses_data.get(category, {}).get('description', '')}
+                            <span class="course-box__count">55 courses</span>
+                        </div>
+                        <%
+                          courses=courses_data.get(category, {}).get('courses', '')
+                        %>
+                        <%include file="${courses_list}" args="courses=courses" />
+                    </div>
                 </section>
             % endfor
         % endif
@@ -123,6 +128,11 @@ from openedx.core.djangolib.markup import HTML, Text
             }, 300);
         });
         // js for show more btn end
+
+        // accordion for course block
+        $('.course-box__heading').on('click', function () {
+          $(this).toggleClass('open').next('.course-box-content').slideToggle(300);
+        });
 
     </script>
 </%block>
