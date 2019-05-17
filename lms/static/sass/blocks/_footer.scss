@@ -13,6 +13,13 @@
 		width: 100%;
 		max-width: 1200px !important;
 		padding: 0 15px;
+		position: relative;
+
+		@media screen and (min-width: $breakpoint-tablet) {
+			min-height: 47px;
+			display: flex;
+			align-items: center;
+		}
 
 		@media (min-width: 1230px) {
 			padding: 0;
@@ -29,11 +36,7 @@
 
 			.nav-colophon {
 				text-align: center;
-				margin: 0 0 30px;
-
-				@media (max-width: $build-footer-mobile) {
-					margin: 0 0 35px;
-				}
+				margin: 0;
 
 				ol {
 					margin: 0;
@@ -44,7 +47,11 @@
 						display: inline-block;
 						vertical-align: top;
 						font-size: 16px;
-						margin: 0 5px;
+						margin: 5px 15px !important;
+
+						@media screen and (max-width: 400px) {
+							margin: 5px !important;
+						}
 
 						a {
 							color: $footer-nav-link-color;
@@ -134,20 +141,14 @@
 	}
 
 	.footer-logo-holder {
-		width: 275px;
+		margin-bottom: 20px;
 
-		@media screen and (max-width: $build-footer-mobile) {
-			order: 1;
-			margin-bottom: 38px;
-		}
-
-		a {
-			float: right;
-
-			@media screen and (max-width: $build-footer-mobile) {
-				float: none;
-				display: inline-block;
-			}
+		@media screen and (min-width: $breakpoint-tablet) {
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-bottom: 0;
 		}
 
 		img {
