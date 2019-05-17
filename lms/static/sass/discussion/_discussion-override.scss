@@ -1,5 +1,11 @@
+body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
+
 .header-global .wrapper-header {
-    max-width: 1200px;
+    max-width: 1180px;
+    box-sizing: border-box;
 
     .logo {
         margin: -2px 39px 0 0;
@@ -62,17 +68,23 @@
             width: 100%;
             position: relative;
 
-            .nav-colophon ol {
-                overflow: hidden;
-                margin-left: 0;
+            .nav-colophon {
+                ol {
+                    margin-left: 0;
+                    line-height: 16px;
+                }
+
+                li {
+                    a {
+                        line-height: 16px;
+                    }
+                }
             }
         }
         .wrapper-logo p {
             margin: 0;
         }
         ul {
-            margin-left: 0;
-
             a {
                 &:hover {
                     text-decoration: none;
@@ -170,7 +182,7 @@
     }
 }
 .dropdown-menu-container .menu-title .menu-image {
-    margin-right: 5px;
+    margin-right: 0;
 }
 .header-global .wrapper-header .dropdown-menu {
     top: 100%;
@@ -251,9 +263,6 @@ body .header-global .wrapper-header .wrapper-user-menu {
   }
 }
 @media screen and (max-width:760px ) {
-    body .header-global .wrapper-header .list-inline li a {
-        padding: 5px !important;
-    }
     .form-actions {
         display: flex;
         flex-direction: column;
@@ -289,4 +298,20 @@ body .wrapper-course-material .course-tabs li a {
 
 .forum-new-post-form .post-type-label:hover {
     cursor: pointer;
+}
+
+.header-global {
+    .wrapper-header .list-inline.nav-global {
+        margin-top: 0;
+    }
+
+    .nav-global li a {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+    }
+}
+
+.footer-logo-holder img {
+    top: -17px;
 }
