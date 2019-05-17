@@ -418,8 +418,8 @@
 				background: $body-bg;
 				box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
 				top: 100%;
-				width: 100%;
-				left: 0;
+				width: calc(100% + 30px);
+				left: -15px;
 				z-index: 10;
 			}
 		}
@@ -445,6 +445,7 @@
 
 		@media (max-width: $build-header-menu-mobile) {
 			width: 100%;
+			min-width: 0;
 		}
 
 		&:active,
@@ -592,7 +593,7 @@ section.home {
 					}
 
 					span {
-						display: block;
+						display: inline-block;
 						text-align: center;
 						font-size: 18px;
 						line-height: 1.3;
