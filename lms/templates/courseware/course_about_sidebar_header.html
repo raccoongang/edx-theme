@@ -6,6 +6,8 @@ from django.conf import settings
 import urllib
 %>
 
+${xml_header | n}
+
 <header>
   % if static.get_value('course_about_show_social_links', True):
   <div class="social-sharing">
