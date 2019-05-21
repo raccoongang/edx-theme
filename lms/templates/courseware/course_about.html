@@ -18,6 +18,7 @@ from openedx.core.lib.courses import course_image_url
 </%block>
 
 <%block name="js_extra">
+
   <script type="text/javascript">
   (function() {
     $(".register").click(function(event) {
@@ -63,7 +64,7 @@ from openedx.core.lib.courses import course_image_url
       %>
     $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
       if(xhr.status == 200) {
-        location.href = "${reverse('dashboard')}";
+	location.href = "${course_target}";
       } else if (xhr.status == 403) {
         location.href = "${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}?course_id=${course.id | u}&enrollment_action=enroll";
       } else if (xhr.status == 400) { //This means the user did not have permission
@@ -80,7 +81,7 @@ from openedx.core.lib.courses import course_image_url
     $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
       if(xhr.status == 200) {
         if (xhr.responseText == "") {
-          location.href = "${reverse('dashboard')}";
+	  location.href = "${course_target}";
         }
         else {
           location.href = xhr.responseText;
@@ -112,12 +113,12 @@ from openedx.core.lib.courses import course_image_url
         <div class="heading-group">
           <h1>
             ${course.display_name_with_default_escaped}
-            <button type="button">${course.display_org_with_default | h}</button>
+            <a style='font: italic 700 0.6em/1em "Open Sans",Verdana,Geneva,sans-serif,sans-serif;letter-spacing: 0px;
+              margin-left: 15px;
+              text-shadow: 0 1px rgba(255,255,255,0.6);
+              text-transform: none;'>${course.display_org_with_default | h}
+            </a>
           </h1>
-          <br>
-          <h3>
-            ${get_course_about_section(request, course, 'short_description')}
-          </h3>
         </div>
 
         <div class="main-cta">
@@ -129,7 +130,7 @@ from openedx.core.lib.courses import course_image_url
           <span class="register disabled">${_("You are enrolled in this course")}</span>
 
           %if show_courseware_link:
-            <strong>${_("View Course")}</strong>
+            <strong>${_("Resume Course")}</strong>
             </a>
           %endif
 
@@ -167,7 +168,7 @@ from openedx.core.lib.courses import course_image_url
           </a>
           <div id="register_error"></div>
         %else:
-          <% 
+          <%
             if ecommerce_checkout:
               reg_href = ecommerce_checkout_link
             else:
@@ -214,6 +215,7 @@ from openedx.core.lib.courses import course_image_url
       <div class="inner-wrapper">
         ${get_course_about_section(request, course, "overview")}
       </div>
+      <%include file="../appliedx_includes/honor_code_plain.html" />
   </div>
 
     <div class="course-sidebar">
@@ -264,6 +266,10 @@ from openedx.core.lib.courses import course_image_url
           % if get_course_about_section(request, course, "effort"):
             <li class="important-dates-item"><span class="icon fa fa-pencil" aria-hidden="true"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
           % endif
+
+           % if get_course_about_section(request, course, "pathway"):
+            <li class="important-dates-item"><span class="icon fa fa-road" aria-hidden="true"></span><p class="important-dates-item-title">${_("On Pathway")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "pathway")}</span></li>
+           % endif
 
           ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
 
@@ -320,7 +326,8 @@ from openedx.core.lib.courses import course_image_url
   </div>
 
   </div>
-</section>
+  </section>
+</div>
 
 ## Need to put this hidden form on the page so that the registration button works.
 ## Since it's no harm to display a hidden form, we display it with the most permissive conditional
