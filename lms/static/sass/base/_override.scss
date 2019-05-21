@@ -847,7 +847,7 @@ body .university-profile {
 .discussion-body .btn:active {
     background: transparent;
 }
-body .header-global h1.logo a{
+body .header-global h1.logo a {
     display: flex;
     margin-top: 5px;
 }
@@ -863,4 +863,9 @@ html body .btn-link:active:not(:disabled) {
 .langs-user-holder {
     display: flex;
     align-items: center;
+}
+
+.header-global .nav-global .tab-nav-item,
+.header-global .user > .primary {
+    display: none;
 }
