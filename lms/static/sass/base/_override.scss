@@ -1037,13 +1037,25 @@ body .wmd-prompt-dialog .btn-brand:focus {
         padding-bottom: 0;
     }
     .login-provider {
+        width: 148px;
+
+        @media screen and (max-width: 330px) {
+            margin-top: 0;
+        }
+
         .icon {
             background: $theme-btn-bg;
         }
+
         &:hover {
             span {
                 color: $theme-btn-white-text-color-hover;
             }
+        }
+
+        span {
+            display: inline-block;
+            padding: 0 10px 0 0;
         }
     }
     label[for="register-terms_of_service"] {
