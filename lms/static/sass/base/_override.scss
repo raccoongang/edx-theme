@@ -3658,6 +3658,11 @@ section.tool-wrapper div#graph-container {
     @media screen and (min-width: 761px) {
         padding-left: 100px;
     }
+
+    .u-field-message-notification {
+        position: static;
+        padding-left: 0;
+    }
 }
 
 .account-settings-sections .u-field-message {
@@ -5182,8 +5187,8 @@ div.info-wrapper section.handouts {
     .section {
         padding: 20px;
 
-        .account-settings-section-body {
-            .u-field-social {
+        .account-settings-section-body .u-field-auth-oa2-azuread-oauth2 {
+            &.u-field-social {
                 width: 32%;
                 margin: 0;
 
@@ -5199,7 +5204,7 @@ div.info-wrapper section.handouts {
                 }
             }
 
-            .u-field .field {
+            &.u-field .field {
                 width: 100%;
                 max-width: 100%;
                 margin: 0 !important;
