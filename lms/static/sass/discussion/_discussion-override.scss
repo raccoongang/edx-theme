@@ -1,3 +1,7 @@
+body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+}
 .header-global .wrapper-header {
     max-width: 1200px;
 
@@ -236,8 +240,24 @@ body .header-global .wrapper-header .wrapper-user-menu {
     padding: 0;
     font-size: 14px;
 }
-.header-global .wrapper-header .list-inline .item {
-    float: left;
+.header-global .wrapper-header .list-inline {
+    .item,
+    .tab-nav-item {
+        float: left;
+
+        a {
+            @media screen and (max-width: 960px) {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 16px;
+
+                &:hover {
+                    background-color: #aaa !important;
+                    color: #ffe;
+                }
+            }
+        }
+    }
 }
 .header-global.header-global__course {
   h2 {
