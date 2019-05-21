@@ -47,6 +47,9 @@ site_status_msg = get_site_status_msg(course_id)
 </div>
 % endif
 </%block>
+
+  ${xml_header | n}
+
   <header id="global-navigation" class="header-global ${"header-global__course" if course else ""} ${"header-authenticated" if user.is_authenticated() else ""}">
     <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">

@@ -9,48 +9,7 @@
 <%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
-  <footer id="footer-openedx" class="grid-container"
-    ## When rendering the footer through the branding API,
-    ## the direction may not be set on the parent element,
-    ## so we set it here.
-    % if bidi:
-      dir=${bidi}
-    % endif
-  >
-    <div class="colophon">
-
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
-            </li>
-            <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
-            </li>
-        </ol>
-      </nav>
-      <a href="/" class="footer-logo-holder">
-        <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png">
-      </a>
-      <p class="footer-support">${_("Built on")}
-        <a target="_blank" href="${footer['openedx_link']['url']}">
-          <svg class="svg-edx"  viewBox="0 0 100 70">
-            <use xlink:href="#logo-edx" />
-          </svg>
-        </a>
-        by
-        <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-          Raccoon Gang
-          <svg class="svg-raccoon"  viewBox="0 0 100 100">
-            <use xlink:href="#logo-raccoon" />
-          </svg>
-        </a>
-      </p>
-    </div>
-  </footer>
+    ${xml_footer | n}
 </div>
 % if include_dependencies:
   <%static:js group='base_vendor'/>

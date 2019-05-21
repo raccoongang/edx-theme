@@ -108,6 +108,9 @@ from openedx.core.lib.courses import course_image_url
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
 
 <section class="course-info">
+
+  ${xml_header | n}
+
   <header class="course-profile">
     <div class="intro-inner-wrapper">
       <div class="table">
@@ -312,6 +315,9 @@ from openedx.core.lib.courses import course_image_url
       ## For now, ocw links are the only thing that goes in additional resources
       % if get_course_about_section(request, course, "ocw_links"):
       <div class="additional-resources">
+
+        ${xml_header | n}
+
         <header>
           <h1>${_("Additional Resources")}</h1>
       </div>
