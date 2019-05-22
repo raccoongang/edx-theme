@@ -336,17 +336,27 @@
             }
         }
 
-        .dropdown-menu li > a {
-            color: $dropdown-menu-link-color;
+        .dropdown-menu {
+            @media screen and (max-width: $build-header-menu-mobile) {
+                left: -45px;
 
-            &:focus {
-                color: $dropdown-menu-link-color;
-                text-decoration: none;
+                &:before {
+                    left: 49px;
+                }
             }
 
-            &:hover {
-                color: $dropdown-menu-link-color-hover;
-                text-decoration: none;
+            li > a {
+                color: $dropdown-menu-link-color;
+
+                &:focus {
+                    color: $dropdown-menu-link-color;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    color: $dropdown-menu-link-color-hover;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -4801,9 +4811,11 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 }
 
 .account-settings-sections .section .account-settings-section-body .u-field .field select {
-    padding: 0 10px !important;
+    padding: 0 25px 0 10px !important;
     height: 48px;
+    font-size: 14px;
 }
+
 .login-register .form-field label[for="register-honor_code"] {
     @media (max-width: 400px) {
         width: 80%;
