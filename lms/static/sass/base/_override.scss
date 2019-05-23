@@ -85,7 +85,8 @@ body .header-global .nav-global .tab-nav-item .active {
                     opacity: 0.8;
                 }
                 &:hover {
-                    color: $header-nav-link-color-hover;
+                    color: $header-nav-link-color-hover !important;
+                    border-color: $header-nav-link-color-hover !important;
                     opacity: .8;
                 }
             }
@@ -141,7 +142,7 @@ body .header-global .nav-global .tab-nav-item .active {
 
             // login and register btns on the header nav
             .btn {
-                background: $theme-btn-bg;
+                background: #021822;
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
@@ -151,10 +152,10 @@ body .header-global .nav-global .tab-nav-item .active {
                     background: $theme-btn-bg;
                 }
                 &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
+                    background: $header-nav-link-color-hover !important;
                 }
                 &:hover {
-                    background: $theme-btn-bg-hover;
+                    background: $header-nav-link-color-hover;
                 }
             }
         }
@@ -4035,5 +4036,23 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+.login-register .login-provider.button-oa2-google-oauth2 {
+    color: #931000 !important;
+
+    .icon {
+        background: #931000 !important;
+    }
+}
+
+#login-form button.form-toggle,
+#register-form button.form-toggle {
+    background: $theme-btn-bg;
+    color: #fff;
+
+    &:hover {
+        background: $theme-btn-bg-hover;
     }
 }
