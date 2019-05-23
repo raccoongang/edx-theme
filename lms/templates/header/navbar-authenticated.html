@@ -36,6 +36,10 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     % endif
   </div>
   <div class="secondary">
+    <div class="mobile-nav-item hidden-mobile nav-item"><a href="#">Wiki</a></div>
+    <div class="mobile-nav-item hidden-mobile nav-item"><a href="#">Нормативно-правова база</a></div>
+    <div class="mobile-nav-item hidden-mobile nav-item"><a href="#">Конференція</a></div>
+    <div class="mobile-nav-item hidden-mobile nav-item"><a href="#">Мій профіль</a></div>
     % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
       <div class="mobile-nav-item hidden-mobile nav-item">
         <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">

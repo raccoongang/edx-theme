@@ -24,7 +24,6 @@ url_logout = marketing_link('LOGOUT') if marketing_link('LOGOUT') != '#' else re
 
 <div class="nav-item hidden-mobile">
     <a href="${reverse('dashboard')}" class="menu-title">
-        <img class="user-image-frame" src="${profile_image_url}" alt="">
         <span class="sr-only">${_("Dashboard for:")}</span>
         <span class="username">${displayname}</span>
     </a>

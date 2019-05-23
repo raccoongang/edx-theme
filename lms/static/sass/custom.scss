@@ -18,6 +18,10 @@
 @import "blocks/profile-account";
 @import "blocks/slider";
 
+html body #djDebug {
+	display: none !important;
+}
+
 html, body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -35,6 +39,10 @@ body {
 	padding: 0 15px;
 	width: 100%;
 	box-sizing: border-box;
+}
+
+.global-header .holder {
+	max-width: 1700px !important;
 }
 
 body.view-in-course .instructor-dashboard-wrapper-2,
