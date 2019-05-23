@@ -20,7 +20,7 @@ from django.utils.translation import ugettext as _
 
     % if show_program_listing:
       <li class="nav-item mt-2 nav-item-open-collapsed">
-        <a class="nav-link ${'active' if reverse('dashboard') == request.path else ''}" href="${reverse('dashboard')}">
+        <a class="nav-link ${'active' if reverse('dashboard') == request.path else ''}" href="http://courses/">
           ${_("Courses")}
         </a>
       </li>

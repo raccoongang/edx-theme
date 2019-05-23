@@ -10,7 +10,7 @@ from django.utils.translation import ugettext as _
 from branding import api as branding_api
 %>
 
-<a class="navbar-brand" href="${marketing_link('ROOT')}">
+<a class="navbar-brand" href="http://courses/">
   <div class="logo">
     <img src="${branding_api.get_logo_url(is_secure)}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
   </div>
