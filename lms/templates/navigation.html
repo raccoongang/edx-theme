@@ -50,7 +50,7 @@ site_status_msg = get_site_status_msg(course_id)
 
   ${xml_header | n}
 
-  <header id="global-navigation" class="header-global ${"header-global__course" if course else ""} ${"header-authenticated" if user.is_authenticated() else ""}">
+  <header id="global-navigation" class="header-global ${"header-global__course" if course else ""} ${"header-authenticated" if user.is_authenticated() else ""}" aria-label="4 afrika skills lab navigation">
     <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
