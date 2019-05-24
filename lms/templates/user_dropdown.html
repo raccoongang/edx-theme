@@ -15,7 +15,7 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
 %>
 % if uses_bootstrap:
     <li class="nav-item nav-item-hidden-collapsed">
-        <a href="${reverse('dashboard')}" class="menu-title">
+        <a href="http://courses/" class="menu-title">
             <span class="sr-only">${_("Dashboard for:")}</span>
             <% profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium'] %>
             <img class="user-image-frame" src="${profile_image_url}" alt="">
@@ -25,20 +25,20 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
         <% username = self.real_user.username %>
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${username}</a>
         <ul class="dropdown-menu dropdown-menu-right" id="${_("Usermenu")}" aria-labelledby="dropdownMenuLink" tabindex="-1">
-            <a class="dropdown-item" href="${reverse('dashboard')}">${_("Dashboard")}</a>
+            <a class="dropdown-item" href="http://courses/">${_("Dashboard")}</a>
             <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}">${_("Profile")}</a>
             <a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a>
             <a class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a>
         </ul>
     </li>
-    <li class="nav-item nav-item-open-collapsed-only"><a href="${reverse('dashboard')}">${_("Dashboard")}</a></li>
+    <li class="nav-item nav-item-open-collapsed-only"><a href="http://courses/">${_("Dashboard")}</a></li>
     <li class="nav-item nav-item-open-collapsed-only"><a href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}">${_("Profile")}</a></li>
     <li class="nav-item nav-item-open-collapsed-only"><a href="${reverse('account_settings')}">${_("Account")}</a></li>
     <li class="nav-item nav-item-open-collapsed-only"><a href="${reverse('logout')}">${_("Sign Out")}</a></li>
 % elif uses_pattern_library:
     <ol class="user">
         <li class="primary">
-            <a href="${reverse('dashboard')}" class="menu-title">
+            <a href="http://courses/" class="menu-title">
                 <span class="sr-only">${_("Dashboard for:")}</span>
                 <%
                 username = self.real_user.username
@@ -56,7 +56,7 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
                 </button>
                 <ul class="user-dropdown-menu" aria-label="More Options" role="menu">
                     <%block name="navigation_dropdown_menu_links" >
-                    <li class="dropdown-item item has-block-link"><a href="${reverse('dashboard')}" role="menuitem" class="action dropdown-menuitem">${_("Dashboard")}</a></li>
+                    <li class="dropdown-item item has-block-link"><a href="http://courses/" role="menuitem" class="action dropdown-menuitem">${_("Dashboard")}</a></li>
                     <li class="dropdown-item item has-block-link"><a href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}" role="menuitem" class="action dropdown-menuitem">${_("Profile")}</a></li>
                     <li class="dropdown-item item has-block-link"><a href="${reverse('account_settings')}" role="menuitem" class="action dropdown-menuitem">${_("Account")}</a></li>
                     </%block>
@@ -68,7 +68,7 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
 % else:
     <ol class="user">
         <li class="primary">
-            <a href="${reverse('dashboard')}" class="user-link">
+            <a href="http://courses/" class="user-link">
                 <span class="sr">${_("Dashboard for:")}</span>
                 <%
                 username = self.real_user.username

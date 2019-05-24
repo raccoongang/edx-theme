@@ -100,7 +100,7 @@ from django.utils.http import urlquote_plus
                         <span class="eligibility_msg">
                             ${Text(_("{student_name}, you have met the requirements for credit in this course. {a_start}Go to your dashboard{a_end} to purchase course credit.")).format(
                                 student_name=student.profile.name,
-                                a_start=HTML("<a href={url}>").format(url=reverse('dashboard')),
+                                a_start=HTML("<a href={url}>").format(url='http://courses/'),
                                 a_end=HTML("</a>")
                             )}
                         </span>
