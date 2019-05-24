@@ -92,7 +92,7 @@
         width: 100%;
         margin-top: 0;
         position: absolute;
-        top: 30px;
+        top: 36px;
         left: 50%;
         transform: translate(-50%, 0);
         display: flex;
@@ -293,7 +293,7 @@
             .label-username {
                 text-shadow: none;
                 margin: 0 0 0 8px;
-                color: #474747;
+                color: $white;
 
                 &:hover {
                     color: $header-nav-link-color-hover;
@@ -319,7 +319,7 @@
             width: auto;
             height: auto;
             box-sizing: border-box;
-            color: #474747;
+            color: $white;
             font-size: 14px;
             position: relative;
             top: -4px;
@@ -475,6 +475,24 @@ body .container.activation h1.valid {
                             text-decoration: none !important;
                             color: $footer-nav-link-color-hover !important;
                         }
+                    }
+                }
+            }
+
+            .footer-link {
+                text-align: center;
+                margin-top: 50px;
+
+                a {
+                    color: $footer-nav-link-color;
+                    font-size: 12px;
+                    text-decoration: underline !important;
+                    display: inline-block;
+
+                    &:focus,
+                    &:hover {
+                        text-decoration: none !important;
+                        color: $footer-nav-link-color-hover;
                     }
                 }
             }
@@ -1173,6 +1191,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             > .heading-group {
                 text-align: center;
                 width: 100%;
+                max-width: 800px;
                 padding: 0 0 20px;
 
                 h1 {
@@ -1182,18 +1201,18 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-align: center;
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
-                    margin-bottom: 30px;
+                    margin-bottom: 50px;
                     text-transform: uppercase;
                     letter-spacing: 0;
 
                     @media screen and (min-width: $breakpoint-mobile) {
-                        font-size: 42px;
-                        margin-bottom: 20px;
+                        font-size: 36px;
+                        margin-bottom: 40px;
                     }
 
                     @media screen and (min-width: $breakpoint-tablet) {
-                        font-size: 52px;
-                        margin-bottom: 15px;
+                        font-size: 48px;
+                        margin-bottom: 35px;
                     }
                 }
 
@@ -1570,7 +1589,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     display: block;
 
     .doc-link {
-        color: #474747 !important;
+        color: $white !important;
         text-transform: uppercase;
         margin: 2px 0 0 20px;
         order: 2;
@@ -4286,6 +4305,10 @@ body {
     }
 }
 
+.header-global.header-global__course h2 {
+    color: $white;
+}
+
 @media screen and (max-width: $build-header-menu-mobile) {
     .header-global .wrapper-header .nav-global li {
         width: 100% !important;
@@ -4703,12 +4726,15 @@ body .courses-container .courses-more {
         padding: 8px 25px;
         font-weight: 700 !important;
         text-transform: uppercase;
-        background: #47bded;
         border-radius: 2px;
         font-size: 14px;
 
         &:hover {
             background: $theme-btn-bg-hover;
+        }
+
+        &:after {
+            display: none;
         }
     }
 
