@@ -1,14 +1,14 @@
-$base-color: #47bded;
-$base-color2: #44b759;
+$base-color: #dd3333;
+$base-color2: $base-color;
 $base-color2-hover: lighten($base-color2, 20%);
 //body background
 $body-bg: #eee;
 //logo
-$header-logo-height: 35px;
+$header-logo-height: 48px;
 $footer-logo-height: $header-logo-height;
 $certificate-logo-height: $header-logo-height;
 //settings for header
-$header-bg: #fff;
+$header-bg: #062e72;
 $header-nav-link-color: $base-color2;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $dropdown-menu-link-color: #474747;
@@ -35,7 +35,7 @@ $search-button-border: #fff;
 $search-button-color: #7b7b7b;
 $search-height: 43px;
 //settings for footer
-$footer-bg: #2a374a;
+$footer-bg: #062e72;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: darken($footer-nav-link-color, 20%);
 $footer-support-text-and-logo: #fff;
