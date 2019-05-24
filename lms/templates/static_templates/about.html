@@ -1,0 +1,16 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About John Bryce Online Academy")}</h1>
+        <p>${_("John Bryce Online Academy is an interactive, online learning platform that gives you direct access to a wide range of high-quality e-learning courses.")}</p>
+        <p>${_("Our course catalog offers a variety of e-learning courses in various areas, such as Data Science, Programming, Microsoft Azure and more.")}</p>
+        <p>${_("Log in at any time, from anywhere and on any device to your profile and continue your learning with John Bryce Online Academy.")}</p>
+        <p><b>${_("Looking for a blended/hybrid learning solution for your team or company?")}</b><br>${_("We can happily provide you with a tailored solution to your team's needs. Contact us at")} <a href="mailto:online_academy@johnbryce.co.il">online_academy@johnbryce.co.il</a></p>
+        <p>${_("John Bryce Training, the training division of <a target='_blank' href='https://www.matrix-globalservices.com/'>Matrix Group</a>, is the leading training company in Israel, providing reskilling courses for Hi-Tech industry and training for technology professionals, training over 10,000 participants in a year, with a verity of over 500 professional courses in 3 training centers located at Tel Aviv, Haifa and Jerusalem.")}</p>
+        <p>${_("Interested to know more? Visit us at")} <a target="_blank\" href="www.johnbryce.co.il">www.johnbryce.co.il</a></p>
+    </section>
+</main>

@@ -4181,3 +4181,28 @@ div.info-wrapper section.handouts {
         }
     }
 }
+
+section.container.about {
+    a {
+        text-decoration: underline;
+    }
+
+    ol li,
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        line-height: 1em;
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: 13px;
+        }
+    }
+
+    p b {
+        text-transform: uppercase;
+    }
+}
