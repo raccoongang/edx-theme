@@ -1,5 +1,19 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+ from django.utils.translation import ugettext as _
+ from lms.djangoapps.grades.new.course_grade_factory import CourseGradeFactory
+ from opaque_keys.edx.keys import UsageKey
+ from xmodule.modulestore.django import modulestore
+%>
+
+<%
+course = modulestore().get_course(UsageKey.from_string(item_id).course_key)
+course_grade = CourseGradeFactory().create(request.user, course)
+
+sections = [int(s['percent']) for s in course_grade.summary['section_breakdown'] if not s.get('prominent')]
+progress = (100.0 / len(sections)) * sum(sections)
+
+%>
 
 <div id="sequence_${element_id}" class="sequence" data-id="${item_id}" data-position="${position}" data-ajax-url="${ajax_url}" data-next-url="${next_url}" data-prev-url="${prev_url}">
   % if banner_text:
@@ -14,7 +28,7 @@
   % endif
 
   <div class="progress">
-    <div class="progress-bar" style="width: 30%"><span class="percent-bar">30%</span></div>
+    <div class="progress-bar" style="width: ${progress}%"><span class="percent-bar">${'{0:.0f}%'.format(progress)}</span></div>
   </div>
 
   <div class="sequence-nav">
