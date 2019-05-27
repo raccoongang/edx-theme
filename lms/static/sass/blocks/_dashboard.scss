@@ -12,6 +12,19 @@
 		.my-courses .course .details .wrapper-course-details .course-title a {
 			word-break: break-word;
 		}
+
+		.my-courses .course.not-started .details .course-actions .action + .actions-dropdown {
+			left: auto;
+			right: 19px;
+
+			.actions-dropdown-list {
+				&:after,
+				&:before {
+					left: auto !important;
+					right: 6px;
+				}
+			}
+		}
 	}
 	.side-container {
 		box-sizing: border-box;
@@ -73,10 +86,24 @@
 		.course-info,
 		.wrapper-course-actions {
 			margin-right: 0;
+
 			.wrapper-action-more,
 			.entitlement-actions-wrapper{
-				@media screen and (max-width: 767px){
+				@media screen and (max-width: 767px) {
 					padding-top: 0;
+				}
+			}
+		}
+
+		.course-actions {
+			@media screen and (max-width: 767px) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.wrapper-action-more {
+				@media screen and (max-width: 767px) {
+					order: -1;
 				}
 			}
 		}
@@ -185,3 +212,6 @@
 	padding-right: 5px;
 }
 
+.wrapper-msg .msg {
+	min-width: auto;
+}
