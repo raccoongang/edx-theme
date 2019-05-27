@@ -192,7 +192,11 @@ from django.utils.http import urlquote_plus
                                           <dl class="scores">
                                               <dt class="hd hd-6">${ _("Problem Scores: ") if section.graded else _("Practice Scores: ")}</dt>
                                               %for score in section.problem_scores.values():
-                                              <dd>${"{0:.3n}/{1:.3n}".format(float(score.earned),float(score.possible))}</dd>
+                                                  %if score.first_attempted is None:
+                                                      <dd>${"{0:.3n}/{1:.3n}".format(float(score.earned),float(score.possible))}</dd>
+                                                  %else:
+                                                      <dd><b>${"{0:.3n}/{1:.3n}".format(float(score.earned),float(score.possible))}</b></dd>
+                                                  %endif
                                               %endfor
                                           </dl>
                                           %else:
