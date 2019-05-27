@@ -28,13 +28,11 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
             <a class="dropdown-item" href="http://courses/">${_("Dashboard")}</a>
             <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}">${_("Profile")}</a>
             <a class="dropdown-item" href="${reverse('account_settings')}">${_("Account")}</a>
-            <a class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a>
         </ul>
     </li>
     <li class="nav-item nav-item-open-collapsed-only"><a href="http://courses/">${_("Dashboard")}</a></li>
     <li class="nav-item nav-item-open-collapsed-only"><a href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}">${_("Profile")}</a></li>
     <li class="nav-item nav-item-open-collapsed-only"><a href="${reverse('account_settings')}">${_("Account")}</a></li>
-    <li class="nav-item nav-item-open-collapsed-only"><a href="${reverse('logout')}">${_("Sign Out")}</a></li>
 % elif uses_pattern_library:
     <ol class="user">
         <li class="primary">
@@ -60,7 +58,6 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
                     <li class="dropdown-item item has-block-link"><a href="${reverse('learner_profile', kwargs={'username': self.real_user.username})}" role="menuitem" class="action dropdown-menuitem">${_("Profile")}</a></li>
                     <li class="dropdown-item item has-block-link"><a href="${reverse('account_settings')}" role="menuitem" class="action dropdown-menuitem">${_("Account")}</a></li>
                     </%block>
-                    <li class="dropdown-item item has-block-link"><a href="${reverse('logout')}" role="menuitem" class="action dropdown-menuitem">${_("Sign Out")}</a></li>
                 </ul>
             </div>
         </li>
@@ -86,7 +83,6 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
                 </button>
                 <ul class="user-dropdown-menu" aria-label="More Options" role="menu">
                     ${navigation_dropdown_menu_links()}
-                    <li class="item"><a href="${reverse('logout')}" role="menuitem" class="user-dropdown-menuitem">${_("Sign Out")}</a></li>
                 </ul>
             </div>
         </li>
