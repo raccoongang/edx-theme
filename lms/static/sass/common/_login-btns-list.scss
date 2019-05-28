@@ -27,6 +27,10 @@
         order: -1;
     }
 
+    .lang_ar & {
+        margin: 0 0 0 5px;
+    }
+
     @media screen and (max-width: $build-header-menu-tablet) {
         text-align: center;
         width: auto;
@@ -35,6 +39,10 @@
 
         &:last-child {
             margin-right: 0;
+        }
+
+        .lang_ar & {
+            margin: 5px;
         }
 
         .theme-btn {
