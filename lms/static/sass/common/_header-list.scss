@@ -4,11 +4,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    position: static;
+    transform: none;
+    width: auto;
     box-sizing: border-box;
 
     @media (max-width: $build-header-menu-tablet) {
@@ -60,12 +58,13 @@
 }
 
 .header-list_link {
-    border: 2px solid $header-nav-link-color;
-    padding: 8px 25px;
-    color: $header-nav-link-color !important;
+    border: none;
+    padding: 5px;
+    color: $white !important;
     display: inline-block;
     border-radius: 2px;
     line-height: 16px;
+    font-weight: normal;
 
     @media screen and (max-width: $build-header-menu-mobile) {
         display: block;
