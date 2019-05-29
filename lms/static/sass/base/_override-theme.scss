@@ -55,3 +55,78 @@
         fill: $header-nav-link-color;
     }
 }
+
+.course-box__description {
+    max-width: 850px;
+    text-align: center;
+    margin: 30px auto;
+
+    &:empty {
+        display: none;
+    }
+
+    p + p {
+        margin-top: 10px;
+    }
+}
+
+.course-box {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    .highlighted-courses {
+        margin-bottom: 0;
+    }
+}
+
+.course-box__heading {
+    font-size: 30px;
+    line-height: normal;
+    color: #000;
+    margin: 40px 0;
+    text-align: center;
+    text-transform: none;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        border: solid #666;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg) translateX(-50%);
+        transition: all .15s linear;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &:not(.open):after {
+            top: calc(100% + 10px);
+            opacity: .8;
+        }
+    }
+
+    &.open {
+        &:after {
+            top: calc(100% + 10px);
+            transform: rotate(-135deg) translate(-50%, -50%);
+        }
+
+        &:hover:after {
+            opacity: .8;
+        }
+    }
+
+}
+
+.course-box__content {
+    display: none;
+}
