@@ -64,11 +64,11 @@ site_status_msg = get_site_status_msg(course_id)
     </nav>
   </header>
 % else:
-  <header id="global-navigation" class="theme-header  ${"header-global__course" if course else ""} ${"header-global__login" if "login" in request.path else ""}" >
+  <header id="global-navigation" class="theme-header ${"header-global__course" if course else ""} ${"header-global__login" if "login" in request.path else ""}" >
     <span id="hamburger" class="hamburger"></span>
     <nav class="theme-header__holder" aria-label="${_('Global')}">
       <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-      <div class="theme-header__wrapper">
+      <div class="theme-header__wrapper ${'' if user.is_authenticated() else 'theme-header__wrapper__not-authenticated'}">
         % if user.is_authenticated():
           <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
         % else:
@@ -104,6 +104,14 @@ site_status_msg = get_site_status_msg(course_id)
         % endif
       % endif
     </nav>
+
+    % if course and not disable_courseware_header:
+    <h2 class="course-header">
+      <span class="provider">${course.display_org_with_default}:</span>
+      <span class="course-number">${course.display_number_with_default}</span>
+      <span class="course-name">${course.display_name_with_default}</span>
+    </h2>
+    % endif
   </header>
   <script>
       var btn = document.getElementById('hamburger'),

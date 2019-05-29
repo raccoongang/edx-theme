@@ -7,11 +7,11 @@ from django.core.urlresolvers import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
+<%block name="bodyclass">home</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
-        <div class="parallax-img"></div>
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
@@ -19,23 +19,12 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <h1>${_("Welcome to the academy")}</h1>
+                  <span>${_("Digital Security training for Activists & Journalists")}</span>
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <span>${_("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor")}</span>
+                  <h1>${_("Welcome to Totem!")}</h1>
+                  <a href="/courses" class="link">${_("FIND COURSES")}</a>
               % endif
             </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search")}..."></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
 
           </div>
 

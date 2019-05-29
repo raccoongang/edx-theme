@@ -1,11 +1,11 @@
 //----------platform variables----------//
-$blue: #47bded;
+$blue: #6c9;
 $base-color: $blue;
-$base-color2: #44b759;
-$btn-bg-hover: lighten($base-color, 20%);
+$base-color2: #fc0;
+$btn-bg-hover: #fc0;
 
 $link-color: $base-color;
-$link-hover: lighten($base-color, 20%);
+$link-hover: #fc0;
 $shadow-color: $base-color;
 $button-color: $base-color;
 $action-primary-bg: $base-color;
@@ -27,15 +27,16 @@ $header-logo-height: 35px;
 $footer-logo-height: $header-logo-height;
 $certificate-logo-height: $header-logo-height;
 //settings for header
-$header-nav-link-color: $base-color2;
-$header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
-$header-background: #fff;
+$header-nav-link-color: $base-color;
+$header-nav-link-color-hover: darken($header-nav-link-color, 20%);
+$header-background: #033;
 $dropdown-menu-background: #9da5ac;
 $dropdown-menu-color: $base-color;
-$dropdown-menu-color-hover: lighten($dropdown-menu-color, 20%);
+$dropdown-menu-color-hover: #fc0;
 //logo
 $logo-width: auto;
-$logo-height: 35px;
+$logo-height: 30px;
+$footer-logo-height: 110px;
 //settings for hamburger
 $hamburger-color: $base-color2;
 $hamburger-width: 30px;
@@ -44,9 +45,9 @@ $hamburger-height-line: 5px;
 //settings on promo box
 $promo-box-text-color: #fff;
 $promo-box-text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4);
-$find-btn-bg: transparent;
-$find-btn-bg-hover: rgba(0, 0, 0, .2);
-$find-btn-border: #fff;
+$find-btn-bg: #003333;
+$find-btn-bg-hover: $btn-bg-hover;
+$find-btn-border: #003333;
 $find-btn-color: #fff;
 $find-btn-color-hover: $find-btn-color;
 //search input on promo box
@@ -56,18 +57,18 @@ $search-input-color: #4b4b4b;
 $search-input-border: #fff;
 $search-button-color: #7b7b7b;
 //settings for footer
-$footer-bg: #2a374a;
+$footer-bg: #343a40;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: darken($footer-nav-link-color, 20%);
 $footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #44b759;
+$footer-social-link-bg: #fff;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
 //btn
 $theme-btn-bg: $base-color;
 $theme-btn-text-color: #fffefe;
-$theme-btn-bg-hover: lighten($theme-btn-bg, 20%);
+$theme-btn-bg-hover: #fc0;
 $theme-btn-text-color-hover: #fffefe;
-$theme-btn-shadow: darken($theme-btn-bg, 20%);
+$theme-btn-shadow: none;
 //btn-white
 $theme-btn-white-bg: #fff;
 $theme-btn-white-border: #fc6a15;
@@ -76,7 +77,7 @@ $theme-btn-white-text-color-hover: #fff;
 $theme-btn-white-bg-hover: #fc6a15;
 // link color
 $theme-link: $base-color;
-$theme-link-hover: lighten($base-color, 20%);
+$theme-link-hover: #fc0;
 //settings for bg content pages
 $theme-content-bg: #eee;
 //settings for input icons
@@ -85,10 +86,10 @@ $theme-input-icon: #fc6a15;
 $theme-user-link: #3c3c3c;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
-$courses-border-color: $base-color2;
-$course-hover-bg: rgba(0, 0, 0, .5);
-$course-link-color: #1f1f1f;
-$course-bg: #fff;
+$courses-border-color: $btn-bg-hover;
+$course-hover-bg: #6c9;
+$course-link-color: #6c9;
+$course-bg: $body-bg;
 //certificate
 $certificate-logo-height: 30px;
 $ribbon-corners-color: lighten($base-color, 5%);

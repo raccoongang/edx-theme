@@ -1,5 +1,6 @@
 .login-btns-list {
     display: flex;
+    flex-wrap: wrap;
     order: 1;
 
     @media screen and (max-width: $build-header-menu-tablet) {
@@ -22,11 +23,15 @@
         margin-right: 0;
     }
 
+    &.login-btns-list_item__signin {
+        order: -1;
+    }
+
     @media screen and (max-width: $build-header-menu-tablet) {
         text-align: center;
         width: auto;
         min-width: 285px;
-        margin-right: 10px;
+        margin: 5px;
 
         &:last-child {
             margin-right: 0;

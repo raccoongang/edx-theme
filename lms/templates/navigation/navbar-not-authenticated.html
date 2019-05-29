@@ -9,36 +9,45 @@ from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 %>
 
-<ol class="header-list header-list_not-authenticated">
-  <%block name="navigation_global_links">
-    % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-      <li class="header-list_item">
-        <a class="header-list_link" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-      </li>
-      % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-        <li class="header-list_item">
-          <a class="header-list_link" href="${marketing_link('COURSES')}">${_("Courses")}</a>
-        </li>
-      % endif
-      <li class="header-list_item">
-        <a class="header-list_link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-      </li>
-    % endif
-  </%block>
-
-  <%block name="navigation_other_global_links">
-    % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-        <li class="header-list_item">
-          <a class="header-list_link" href="/courses">${_("Explore Courses")}</a>
-        </li>
-      %endif
-    % endif
-  </%block>
-</ol>
 <div class="theme-header__block">
   <ol class="login-btns-list">
+
+    <%block name="navigation_global_links">
+        % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+        <li class="login-btns-list_item">
+          <a class="theme-btn" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+        </li>
+        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+        <li class="login-btns-list_item">
+          <a class="theme-btn" href="${marketing_link('COURSES')}">${_("Courses")}</a>
+        </li>
+        % endif
+        <li class="login-btns-list_item">
+          <a class="theme-btn" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+        </li>
+        % endif
+    </%block>
+
+    <%block name="navigation_other_global_links">
+      % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+      <li class="login-btns-list_item">
+        <a class="theme-btn" href="/courses">${_("Explore Courses")}</a>
+      </li>
+      %endif
+      % endif
+    </%block>
+
     <%block name="navigation_sign_in">
+      <li class="login-btns-list_item login-btns-list_item__signin">
+        % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+        % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+        <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+        % else:
+        <a class="theme-btn" href="/login${login_query()}">${_("Sign in")}</a>
+        % endif
+        % endif
+      </li>
       <li class="login-btns-list_item">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
@@ -47,15 +56,6 @@ from django.utils.translation import ugettext as _
               <a class="theme-btn" href="/register${login_query()}">${_("Register")}</a>
             % endif
           % endif
-      </li>
-      <li class="login-btns-list_item">
-        % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-            <a class="theme-btn" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
-          % else:
-            <a class="theme-btn" href="/login${login_query()}">${_("Sign in")}</a>
-          % endif
-        % endif
       </li>
     </%block>
   </ol>
