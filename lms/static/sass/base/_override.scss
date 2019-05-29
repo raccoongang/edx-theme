@@ -17,7 +17,7 @@
     height: auto;
     background: $header-bg;
     border: none;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
@@ -962,14 +962,26 @@ body .wmd-prompt-dialog .btn-brand:focus {
         padding-bottom: 0;
     }
     .login-provider {
+        display: inline-block;
+        width: auto;
+        padding-right: 8px;
+        margin: 5px;
+        min-width: 130px;
+
+        @media screen and (max-width:340px) {
+            max-width: 146px;
+        }
+
         .icon {
             background: $theme-btn-bg;
         }
+
         &:hover {
             span {
                 color: $theme-btn-white-text-color-hover;
             }
         }
+
     }
     label[for="register-terms_of_service"] {
         margin: 3px 5px 0 0 !important;
