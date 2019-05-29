@@ -10,7 +10,14 @@
 course = modulestore().get_course(UsageKey.from_string(item_id).course_key)
 course_grade = CourseGradeFactory().create(request.user, course)
 
-sections = [int(s['percent']) for s in course_grade.summary['section_breakdown'] if not s.get('prominent')]
+quizes = [s for s in course_grade.summary['section_breakdown'] if 'quiz' in s['category'].lower()]
+final_exams = [s for s in course_grade.summary['section_breakdown'] if 'exam' in s['category'].lower()]
+
+quizes = [int(s['percent']) for s in quizes if len(quizes) == 1 or not s.get('prominent')]
+final_exams = [int(s['percent']) for s in final_exams if len(final_exams) == 1 or not s.get('prominent')]
+
+sections = quizes + final_exams
+
 progress = (100.0 / len(sections)) * sum(sections)
 
 %>
