@@ -92,7 +92,7 @@
         width: 100%;
         margin-top: 0;
         position: absolute;
-        top: 30px;
+        top: 36px;
         left: 50%;
         transform: translate(-50%, 0);
         display: flex;
@@ -142,6 +142,7 @@
                 line-height: 16px;
                 text-transform: uppercase;
                 font-weight: 700;
+                font-family: $global-font-family-bold;
 
                 &:active,
                 &:focus {
@@ -235,6 +236,7 @@
                 box-sizing: border-box;
                 font-size: 14px;
                 width: auto;
+                font-family: $global-font-family-bold;
 
                 @media screen and (max-width: $build-header-menu-tablet) {
                     min-width: 290px;
@@ -465,9 +467,10 @@ body .container.activation h1.valid {
 
                      a {
                         color: $footer-nav-link-color;
-                         text-transform: uppercase;
-                         font-size: 12px;
-                         font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        font-weight: 700;
+                        font-family: $global-font-family-bold;
 
                         &:focus,
                         &:hover {
@@ -959,6 +962,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
             background-color: transparent;
             border: 3px solid #fff;
             line-height: 45px;
+            font-family: $global-font-family;
         }
     }
 }
@@ -1183,8 +1187,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 30px;
-                    text-transform: uppercase;
+                    text-transform: none;
                     letter-spacing: 0;
+                    font-family: $global-font-family-bold;
 
                     @media screen and (min-width: $breakpoint-mobile) {
                         font-size: 42px;
@@ -1192,7 +1197,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     }
 
                     @media screen and (min-width: $breakpoint-tablet) {
-                        font-size: 52px;
+                        font-size: 46px;
                         margin-bottom: 15px;
                     }
                 }
@@ -1317,7 +1322,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .highlighted-courses .courses {
-    padding-bottom: 15px;
+    padding: 0;
 
     .course a {
         background: $course-bg;
@@ -1497,6 +1502,16 @@ body .courses-container .courses .course .course-info {
     .course-date {
         padding: 0 15px;
         line-height: normal;
+    }
+
+    .course-date,
+    .course-code,
+    .course-organization {
+        font-family: $global-font-family;
+    }
+
+    .course-title {
+        font-family: $global-font-family-bold;
     }
 }
 
@@ -4628,8 +4643,8 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
 // "show more" button
 
 .home .highlighted-courses {
-    padding-top: 45px;
-    margin-bottom: 60px;
+    padding-top: 0;
+    margin-bottom: 0;
 }
 
 .arrow-up {
@@ -5342,4 +5357,29 @@ body.view-in-course .header-global .wrapper-header {
 section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.course-info .details {
+    font-family: $global-font-family;
+
+    h3,
+    h2 {
+        font-family: $global-font-family-bold;
+    }
+}
+
+.course-info .details .inner-wrapper .faq .response h3 {
+    font-family: $global-font-family-bold;
+}
+
+.wrapper-footer footer#footer-openedx {
+    .footer-link__holder {
+        text-align: center;
+
+        a {
+            text-decoration: underline !important;
+            font-size: 12px;
+            font-family: $global-font-family;
+        }
+    }
 }
