@@ -73,7 +73,7 @@
 	}
 
 	.btn.btn-danger {
-		background: $theme-btn-red-bg;
+		background: $theme-btn-bg !important;
 		border-color: $theme-btn-red-bg;
 		box-shadow: none;
 		transition: all 0.2s ease;
@@ -81,7 +81,7 @@
 		&:hover:not(:disabled),
 		&:focus:not(:disabled) {
 			box-shadow: none;
-			background: $theme-btn-red-bg-hover;
+			background: $theme-btn-bg-hover !important;
 			border-color: $theme-btn-red-bg-hover;
 		}
 	}
