@@ -1,0 +1,48 @@
+.sga-block {
+    .upload {
+        min-height: 35px;
+
+        .fileupload:hover + button {
+            border-color: $uxpl-blue-hover-active !important;
+            background: $uxpl-blue-hover-active !important;
+            color: $white !important;
+        }
+    }
+
+    .grade-modal {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%,-50%);
+        margin: 0 !important;
+        height: auto;
+        padding: 20px;
+        border: 1px solid #222;
+        width: 600px;
+        max-width: 96%;
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+
+    #enter-grade-form {
+        > div {
+            margin-bottom: 15px;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    .wrap-instructor-info {
+        margin-top: 10px;
+
+        .instructor-info-action {
+            display: inline-block;
+        }
+    }
+}
