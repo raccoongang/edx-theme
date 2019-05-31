@@ -1,0 +1,37 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%! from django.core.urlresolvers import reverse %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact page")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Contact page")}</h1>
+        <p>
+            ${_("Welcome to the ACCEL platform, if you have any questions, wishes or problems, we will be happy to help.")}
+        </p>
+        % if sent_mail:
+        <div class="group group-form group-form-requiredinformation">
+            <h4>${_("Your message was successfully sent.")}</h4>
+        </div>
+        % endif
+        <div class="group group-form group-form-requiredinformation">
+            % if form:
+            <form action="${reverse('contact_form')}" method="post">
+                <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}">
+                <ol class="list-input">
+
+                    ${form.as_ul_with_class('field required text') | n}
+
+                    <li class="form-actions">
+                        <button type="submit" class="action action-primary action-update" aria-disabled="false">
+                            ${_("Submit")}
+                        </button>
+                    </li>
+                </ol>
+            </form>
+            % endif
+        </div>
+    </section>
+</main>
