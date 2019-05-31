@@ -16,22 +16,20 @@
             <h4>${_("Your message was successfully sent.")}</h4>
         </div>
         % endif
-        <div class="group group-form group-form-requiredinformation">
-            % if form:
-            <form action="${reverse('contact_form')}" method="post">
-                <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}">
-                <ol class="list-input">
+        % if form:
+        <form action="${reverse('contact_form')}" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}">
+            <ol class="list-input">
 
-                    ${form.as_ul_with_class('field required text') | n}
+                ${form.as_ul_with_class('field required text') | n}
 
-                    <li class="form-actions">
-                        <button type="submit" class="action action-primary action-update" aria-disabled="false">
-                            ${_("Submit")}
-                        </button>
-                    </li>
-                </ol>
-            </form>
-            % endif
-        </div>
+                <li class="form-actions">
+                    <button type="submit" class="action action-primary action-update" aria-disabled="false">
+                        ${_("Submit")}
+                    </button>
+                </li>
+            </ol>
+        </form>
+        % endif
     </section>
 </main>
