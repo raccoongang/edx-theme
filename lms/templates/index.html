@@ -9,7 +9,41 @@
 %>
 
 <main id="main" aria-label="Content" tabindex="-1">
-  <section class="home">
+  <section class="promo-section">
+    <div class="promo-section__holder">
+        <abbr class="promo-section__name" title="Mobytize Affiliate Marketing Academy">MAMA</abbr>
+        <strong class="promo-section__title">Mobytize Affiliate Marketing Academy</strong>
+        <dl class="promo-section__description">
+          <dt class="promo-section__description-name">МАМА</dt>
+          <dd class="promo-section__description-text">-  это современная образовательная платформа, предлагающая онлайн-курсы для тех кто не боится окунуться в мир интернет маркетинга. МАМА всегда на шаг вперед других образовательных платформ, мы следим за тенденциями рынка и ищем пути решения проблем.</dd>
+        </dl>
+        <a class="promo-section__link" href="#"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram-plane" class="svg-inline--fa fa-telegram-plane fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg> наш telegram-канал</a>
+    </div>
+  </section>
+  <section class="tree-blocks">
+    <div class="tree-blocks__holder">
+      <h2 class="tree-blocks__heading">Преподаватели-практики</h2>
+      <div class="tree-blocks__wrapper">
+        <span class="tree-blocks__ico1"></span>
+        <p class="tree-blocks__text">Практикующие гуру готовы поделиться знаниями, в основе которых - успешный кейсы создания и развития рекламных кампаний.</p>
+      </div>
+    </div>
+    <div class="tree-blocks__holder">
+      <h2 class="tree-blocks__heading">Прикладные знания</h2>
+      <div class="tree-blocks__wrapper">
+        <span class="tree-blocks__ico2"></span>
+        <p class="tree-blocks__text">Теорию вы сможете найти в Google, а вот настоящие кейсы только у нас. Наши менторы делятся исключительно конкретной информацией, реальными примерами из их практики.</p>
+      </div> 
+    </div>
+    <div class="tree-blocks__holder">
+      <h2 class="tree-blocks__heading">Реальные проекты</h2>
+      <div class="tree-blocks__wrapper">
+        <span class="tree-blocks__ico3"></span>
+        <p class="tree-blocks__text">Мы предлагаем вам уже сейчас делать свои проекты и отрабатывать полученные знания. Опыт каждого задания пригодится вам для работы вашей мечты.</p>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="home"> -->
     <!-- <header>
         <div class="outer-wrapper">
           <div class="title">
@@ -42,14 +76,14 @@
         </div>
 
       </header> -->
-    <article class="promo-block">
-      <div class="promo-block__holder">
+    <!-- <article class="promo-block"> -->
+      <!-- <div class="promo-block__holder">
         <div class="video-box">
           <div class="video-box__wrapper">
             <p class="video-box__text">ПОСТУПЛЕНИЕ В OXFORD, HARVARD  <br> И ЛУЧШИЕ РОССИЙСКИЕ УНИВЕРСИТЕТЫ</p>
             <a href="/courses" class="login-theme">найти курс</a>
             <div class="video-box__video" id="player"></div>
-            <!-- <iframe class="video-box__video" id="video-box__video" width="800" height="457" src="https://www.youtube.com/embed/S66Gqwt4Mdg?rel=0&amp;showinfo=0&amp;" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
+             <iframe class="video-box__video" id="video-box__video" width="800" height="457" src="https://www.youtube.com/embed/S66Gqwt4Mdg?rel=0&amp;showinfo=0&amp;" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
         <div class="course-section">
@@ -81,8 +115,8 @@
             <a href="/courses" class="login-theme">найти курс</a>
           </div>
         </div>
-      </div>
-      <div class="schools">
+      </div> -->
+      <!-- <div class="schools">
         <a class="schools__item schools__item_color1">
           <strong class="schools__name">СУНЦ МГУ</strong>
           <p class="schools__text"><span class="schools__strong">Топ-5</span> в рейтинге российских школ</p>
@@ -103,12 +137,12 @@
           <strong class="schools__name">Вторая школа</strong>
           <p class="schools__text"><span class="schools__strong">Топ-10</span> в рейтинге российских школ</p>
         </a>
-      </div>
-    </article>
-  </section>
-  </article>
-  <hr>
-  <div class="title">
+      </div> -->
+    <!-- </article> -->
+  <!-- </section> -->
+
+  <!-- <hr> -->
+  <!-- <div class="title">
     <div class="title__helper"></div>
     <h2 class="title__heading">С помощью INTELLECTUALE можно легко<br>освоить любой школьный предмет</h2>
   </div>
@@ -122,14 +156,14 @@
     <a href="/courses" class="subject__item"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/subject8.png"
                                                   alt="ПОСМОТРЕТЬ  ВСЕ" class="subject__img"><span
         class="subject__text">ПОСМОТРЕТЬ  ВСЕ <br> КУРСЫ</span></a>
-  </div>
+  </div> -->
   <%include file="${courses_list}" />
-  <hr>
-  <div class="title title_left">
+
+  <!-- <div class="title title_left">
     <div class="title__helper"></div>
     <h2 class="title__heading">INTELLECTUALE взаимодействует только с <br> лучшими школами России</h2>
   </div>
-  <article class="gallery-index">
+  <article class="gallery-index"> -->
     <!-- <div class="slider-gallery">
       <div class="slider-gallery__item">
         <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-slide01.jpg" alt=""
@@ -180,7 +214,7 @@
         </div>
       </div>
     </div> -->
-    <div class="owl-carousel">
+    <!-- <div class="owl-carousel">
       <div>
         <div class="owl-carousel__image-holder">
           <img src="/static/${settings.DEFAULT_SITE_THEME}/images/main-slide01.jpg" alt=""
@@ -241,9 +275,9 @@
           <a class="login-theme" href="/schools">Школы</a>
         </div>
       </div>
-    </div>
-  </article>
-  <hr>
+    </div> -->
+  <!-- </article> -->
+  <!-- <hr>
   <div class="advantage">
     <h2 class="advantage__heading">INTELLECTUALE <br> соответствие мировым стандартам качества</h2>
     <div class="advantage__row">
@@ -278,7 +312,7 @@
       <img class="advantage__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/advantage_img3.png" alt="">
     </div>
   </div>
-  </section>
+  </section> -->
 </main>
 
 % if show_homepage_promo_video:

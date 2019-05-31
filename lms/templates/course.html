@@ -40,9 +40,9 @@ from courseware.courses import get_course
           course_date_string = ''
       %>
       % if course.advertised_start is not None:
-          <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
+          <div class="course-date" aria-hidden="true"><mark><span class="icon fa fa-calendar" aria-hidden="true"></span> ${_("Starts")}:</mark> ${course.advertised_start}</div>
       % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate">${_("Course starts: ")}${course_date_string_format}</div>
+          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate"><mark><span class="icon fa fa-calendar" aria-hidden="true"></span> ${_("Course starts: ")}</mark>${course_date_string_format}</div>
           <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
       % endif
     </div>

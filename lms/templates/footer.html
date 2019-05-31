@@ -21,7 +21,6 @@
       <div class="colophon">
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
-              <li><a href="/schools">Школы</a></li>
               <li><a href="/courses">Курсы</a></li>
               <li><a href="/about">О проекте</a></li>
               <li><a href="/honor">Пользовательское соглашение</a></li>
@@ -34,7 +33,6 @@
 
 
         ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-        <p class="copyright">© 2018 ООО "Интеллектуале". Все права защищены. По вопросам сотрудничества: <a href="mailto:info@intellectuale.ru">info@intellectuale.ru</a></p>
       </div>
 
       ## Please leave this link and use one of the logos provided
@@ -42,13 +40,28 @@
       ## through an API to partner sites (such as marketing sites or blogs),
       ## which are not technically powered by OpenEdX.
       % if not hide_openedx_link:
+      <div class="theme-footer_holder">
+        <p class="footer-support">Built on
+          <a target="_blank" href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer">
+            <svg class="svg-edx" viewBox="0 0 100 70">
+              <use xlink:href="#logo-edx"></use>
+            </svg>
+          </a>
+          by
+          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
+            RACCOONGANG
+            <svg class="svg-raccoon" viewBox="0 0 100 100">
+              <use xlink:href="#logo-raccoon"></use>
+            </svg>
+          </a>
+        </p>
       <div class="footer-about-openedx">
         <p>
           <a href="/">
-            <img class="header__logo-dark" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-img-dark.png" alt="INTELLECTUALE">
-            INTELLECTUALE
+            <img class="header__logo-dark" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png" alt="INTELLECTUALE">
           </a>
         </p>
+      </div>
       </div>
       % endif
     </footer>

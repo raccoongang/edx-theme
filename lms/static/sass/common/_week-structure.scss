@@ -9,7 +9,7 @@
     }
 }
 .week-structure__name {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 30px;
     width: 241px;
     min-width: 241px;
@@ -49,6 +49,7 @@
     }
 }
 .week-structure__ico {
+    display: none;
     width: 90px;
     min-width: 90px;
     height: 90px;
@@ -102,9 +103,9 @@
     right: 41px;
     height: 100%;
     width: 140%;
-    box-shadow: 0 -3px 3px 0 rgba(0,0,0,0.30);
     transform: skew(20deg);
-    background: $gradient4;
+    background: #f0f0f0;
+    border-bottom: 3px solid $color1;
     display: none;
     @media (min-width: $tablet-size) {
         display: block;
@@ -113,8 +114,8 @@
     .week-structure:nth-child(2n) & {
         right: auto;
         left: 41px;
-        background: $gradient3;
-        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.30);
+        background: #f0f0f0;
+        border-bottom: 3px solid $color1;
     }
 }
 .week-structure__list {
@@ -135,8 +136,7 @@
     position: relative;
     color: #000;
     font-size: 14px;
-    font-style: italic;
-    line-height: 23px;
+    line-height: 18px;
     margin-bottom: 8px;
     @media (min-width: $tablet-size) {
         font-size: 20px;
@@ -148,22 +148,24 @@
         content: '';
         position: absolute;
         left: -15px;
-        top: 9px;
+        top: 14px;
         width: 6px;
         height: 6px;
-        background: #9B9B9B;
+        background: #000;
         border-radius: 50%;
         @media (min-width: $tablet-size) {
-            background: #fff;
-            width: 11px;
-            height: 11px;
+            background: #000;
+            width: 8px;
+            height: 8px;
         }
     }
 
     a {
+        font-size: 14px;
+        line-height: 18px;
         color: #000;
         @media (min-width: $tablet-size) {
-            color: #fff;
+            color: #000;
         }
     }
 }

@@ -214,96 +214,82 @@ from openedx.core.lib.courses import course_image_url
   </header>
 
   <div class="container">
-    <div class="details">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
-        </div>
-      % endif
-
-      <div class="inner-wrapper">
-        ${get_course_about_section(request, course, "overview")}
-      </div>
-  </div>
-
     <div class="course-sidebar">
       <div class="course-summary">
-        <hr class="other">
-
         <ol class="important-dates">
-          <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
-          % if not course.start_date_is_still_default:
-              <%
-                  course_start_date = course.start
-              %>
-            <li class="important-dates-item">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-course-about.png" alt="ico course about">
-              <p class="important-dates-item-title">${_("Classes Start")}:</p>
-              % if isinstance(course_start_date, str):
-                  <span class="important-dates-item-text start-date">${course_start_date}</span>
-              % else:
-                  <%
-                     course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                  %>
-                  <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-              % endif
-            </li>
-          % endif
-            ## We plan to ditch end_date (which is not stored in course metadata),
-            ## but for backwards compatibility, show about/end_date blob if it exists.
-            % if get_course_about_section(request, course, "end_date") or course.end:
+            <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
+            % if not course.start_date_is_still_default:
                 <%
-                    course_end_date = course.end
+                    course_start_date = course.start
                 %>
-
-            <li class="important-dates-item">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-course-about.png" alt="ico course about">
-                <p class="important-dates-item-title">${_("Classes End")}:</p>
-                  % if isinstance(course_end_date, str):
-                      <span class="important-dates-item-text final-date">${course_end_date}</span>
-                  % else:
+              <li class="important-dates-item">
+                <span class="icon fa fa-calendar" aria-hidden="true"></span>
+                <p class="important-dates-item-title">${_("Classes Start")}</p>
+                % if isinstance(course_start_date, str):
+                    <span class="important-dates-item-text start-date">${course_start_date}</span>
+                % else:
                     <%
-                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                       course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                     %>
-                    <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-                  % endif
+                    <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
+                % endif
+              </li>
+            % endif
+              ## We plan to ditch end_date (which is not stored in course metadata),
+              ## but for backwards compatibility, show about/end_date blob if it exists.
+              % if get_course_about_section(request, course, "end_date") or course.end:
+                  <%
+                      course_end_date = course.end
+                  %>
+  
+              <li class="important-dates-item">
+                  <span class="icon fa fa-calendar" aria-hidden="true"></span>
+                  <p class="important-dates-item-title">${_("Classes End")}</p>
+                    % if isinstance(course_end_date, str):
+                        <span class="important-dates-item-text final-date">${course_end_date}</span>
+                    % else:
+                      <%
+                          course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                      %>
+                      <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
+                    % endif
+              </li>
+              % endif
+  
+            % if get_course_about_section(request, course, "effort"):
+              <li class="important-dates-item"><span class="icon fa fa-pencil" aria-hidden="true"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
+            % endif
+  
+            ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
+  
+            %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
+              <li class="important-dates-item">
+                <span class="icon fa fa-money" aria-hidden="true"></span>
+                <p class="important-dates-item-title">${_("Price")}</p>
+                <span class="important-dates-item-text">${course_price}</span>
+              </li>
+            %endif
+  
+            % if pre_requisite_courses:
+            <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
+            <li class="prerequisite-course important-dates-item">
+              <span class="icon fa fa-list-ul" aria-hidden="true"></span>
+              <p class="important-dates-item-title">${_("Prerequisites")}</p>
+              ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
+              <span class="important-dates-item-text pre-requisite"><a href="${prc_target}">${pre_requisite_courses[0]['display']}</a></span>
+              <p class="tip">
+              ${_("You must successfully complete {link_start}{prc_display}{link_end} before you begin this course.").format(
+                link_start='<a href="{}">'.format(prc_target),
+                link_end='</a>',
+                prc_display=pre_requisite_courses[0]['display'],
+              )}
+              </p>
             </li>
             % endif
-
-          % if get_course_about_section(request, course, "effort"):
-            <li class="important-dates-item"><img src="/static/${settings.DEFAULT_SITE_THEME}/images/ico-course-about-2.png" alt="ico course about"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
-          % endif
-
-          ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}:</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
-
-          %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
-            <li class="important-dates-item">
-              <span class="icon fa fa-money" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Price")}</p>
-              <span class="important-dates-item-text">${course_price}</span>
-            </li>
-          %endif
-
-          % if pre_requisite_courses:
-          <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
-          <li class="prerequisite-course important-dates-item">
-            <span class="icon fa fa-list-ul" aria-hidden="true"></span>
-            <p class="important-dates-item-title">${_("Prerequisites")}</p>
-            ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
-            <span class="important-dates-item-text pre-requisite"><a href="${prc_target}">${pre_requisite_courses[0]['display']}</a></span>
-            <p class="tip">
-            ${_("You must successfully complete {link_start}{prc_display}{link_end} before you begin this course.").format(
-              link_start='<a href="{}">'.format(prc_target),
-              link_end='</a>',
-              prc_display=pre_requisite_courses[0]['display'],
-            )}
-            </p>
-          </li>
-          % endif
-          % if get_course_about_section(request, course, "prerequisites"):
-            <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
-          % endif
-        </ol>
+            % if get_course_about_section(request, course, "prerequisites"):
+              <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
+            % endif
+          </ol>
     </div>
 
       ## Course reviews tool
@@ -324,7 +310,137 @@ from openedx.core.lib.courses import course_image_url
              ${get_course_about_section(request, course, "ocw_links")}
         </div>
     </div>
-      %endif
+    %endif
+
+    <div class="details">
+      % if staff_access and studio_url is not None:
+        <div class="wrap-instructor-info studio-view">
+          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
+        </div>
+      % endif
+
+      <div class="inner-wrapper">
+
+          <div class="inner-wrapper">
+            <div class="about-box">
+                <div class="about-box__container">
+                  <h3 class="about-box__heading">1. Курс подходит</h3>
+                  <div class="about-box__content">
+                    <img class="about-box__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/about-course-img5.png" alt="">
+                    <p class="about-box__text">Арбитражникам, которые хотят получать востребованные предложения на европейских и западных рынках, иметь низкоконкурентую среду и возможность высокого пожизненного заработка.</p>
+                  </div>
+                </div>
+                <div class="about-box__container">
+                  <h3 class="about-box__heading">2. Необходимые навыки и знания</h3>
+                  <div class="about-box__content">
+                    <img class="about-box__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/about-course-img4.png" alt="">
+                    <ul class="about-box__list">
+                      <li class="about-box__list-item">Специальные базовые знания;</li>
+                      <li class="about-box__list-item">Опыт работы - не обязательный.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="about-box__container">
+                  <h3 class="about-box__heading">3. Чему вы научитесь</h3>
+                  <div class="about-box__content">
+                    <img class="about-box__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/about-course-img3.png" alt="">
+                    <ul class="about-box__list">
+                      <li class="about-box__list-item">Проведение конкурентного анализа, подбор оптимальных предложений (офферов).</li>
+                      <li class="about-box__list-item">Возможность работы с поисковой и контекстно-медийной сетью Google Ads в запрещенных тематиках.</li>
+                      <li class="about-box__list-item">Работа с регистратором доменных имен и хостинг-провайдером.</li>
+                      <li class="about-box__list-item">Самостоятельное создание white-сайтов в несколько кликов.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="about-box__container">
+                  <h3 class="about-box__heading">4. Технические особенности</h3>
+                  <div class="about-box__content">
+                    <img class="about-box__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/about-course-img2.png" alt="">
+                    <ul class="about-box__list">
+                      <li class="about-box__list-item">Устройство с доступом к интернету</li>
+                      <li class="about-box__list-item">Скорость достаточная для комфортного просмотра роликов на YouTube.</li>
+                      <li class="about-box__list-item">Наличие электронной почты</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="about-box__container about-box__container_other">
+                  <h3 class="about-box__heading">Бонус</h3>
+                  <div class="about-box__content">
+                    <img class="about-box__img" src="/static/${settings.DEFAULT_SITE_THEME}/images/about-course-img1.png" alt="">
+                    <ul class="about-box__list">
+                      <li class="about-box__list-item">Инструкция по созданию рекламных кампаний</li>
+                      <li class="about-box__list-item">Самописная клоака + список ip-адресов модераторов Google Ads</li>
+                      <li class="about-box__list-item">Купон на первую рекламную кампанию в Google Ads на 55$</li>
+                      <li class="about-box__list-item">Полезные материалы</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <h2 class="about-course-heading">Программа курса</h2>
+            <div class="program-course">
+                <div class="program-course__box">
+                  <h3 class="program-course__heading">Раздел №1. Теория</h3>
+                  <p class="program-course__text"> <mark class="program-course__mark">Занятие 1</mark> Вступительное занятие. Возможности</p>
+                  <ul class="program-course__list">
+                    <li class="program-course__list-item">Преимущество контекстной рекламы</li>
+                    <li class="program-course__list-item">Возможности Google Ads</li>
+                    <li class="program-course__list-item">Настройки и форматы</li>
+                    <li class="program-course__list-item">Модель ценообразования</li>
+                    <li class="program-course__list-item">Политика Google Ads в отношении рекламируемых товаров и услуг. Модерация объявлений</li>
+                    <li class="program-course__list-item">Оценка эффективности рекламных кампаний</li>
+                  </ul>
+                  <p class="program-course__text"> <mark class="program-course__mark">Занятие 1</mark> Вступительное занятие. Возможности</p>
+                  <ul class="program-course__list">
+                    <li class="program-course__list-item">Преимущество контекстной рекламы</li>
+                    <li class="program-course__list-item">Возможности Google Ads</li>
+                    <li class="program-course__list-item">Настройки и форматы</li>
+                    <li class="program-course__list-item">Модель ценообразования</li>
+                    <li class="program-course__list-item">Политика Google Ads в отношении рекламируемых товаров и услуг. Модерация объявлений</li>
+                    <li class="program-course__list-item">Оценка эффективности рекламных кампаний</li>
+                  </ul>
+                </div>
+                <div class="program-course__box">
+                  <h3 class="program-course__heading">Раздел №1. Теория</h3>
+                  <p class="program-course__text"> <mark class="program-course__mark">Занятие 1</mark> Вступительное занятие. Возможности</p>
+                  <ul class="program-course__list">
+                    <li class="program-course__list-item">Преимущество контекстной рекламы</li>
+                    <li class="program-course__list-item">Возможности Google Ads</li>
+                    <li class="program-course__list-item">Настройки и форматы</li>
+                    <li class="program-course__list-item">Модель ценообразования</li>
+                    <li class="program-course__list-item">Политика Google Ads в отношении рекламируемых товаров и услуг. Модерация объявлений</li>
+                    <li class="program-course__list-item">Оценка эффективности рекламных кампаний</li>
+                  </ul>
+                  <p class="program-course__text"> <mark class="program-course__mark">Занятие 1</mark> Вступительное занятие. Возможности</p>
+                  <ul class="program-course__list">
+                    <li class="program-course__list-item">Преимущество контекстной рекламы</li>
+                    <li class="program-course__list-item">Возможности Google Ads</li>
+                    <li class="program-course__list-item">Настройки и форматы</li>
+                    <li class="program-course__list-item">Модель ценообразования</li>
+                    <li class="program-course__list-item">Политика Google Ads в отношении рекламируемых товаров и услуг. Модерация объявлений</li>
+                    <li class="program-course__list-item">Оценка эффективности рекламных кампаний</li>
+                  </ul>
+                </div>
+            </div>
+            <h2 class="about-course-heading">Преподаватель курса</h2>
+            <div class="teacher-box">
+              <img class="teacher-box__photo" src="/static/${settings.DEFAULT_SITE_THEME}/images/teacher-photo.jpg" alt="">
+              <div class="teacher-box__text-holder">
+                  <strong class="teacher-box__name">Юрий Скаковский </strong>
+                  <p class="teacher-box__description">Генеральный директор агентства интернет-маркетинга Level-Ads, совладелец компании HelpTrucks LLC. 
+                      Специализируется на контекстной рекламе и SEO-продвижении. <br>
+                      В маркетинге более 7 лет, специалист комплексного интернет-продвижения, сторонник UX подхода.
+                      Более 3 лет занимается продвижением на западные рынки - США, Канаду и Австралию.
+                      Продвигал digital-проекты с аудиторией более, чем 1 000 000 пользователей в месяц</p>
+              </div>
+            </div>
+          </div>
+      
+        ##${get_course_about_section(request, course, "overview")}
+      </div>
+  </div>
+
+    
+    
 
   </div>
 
