@@ -3105,3 +3105,36 @@ body.dialog-modal-open:before {
 .dialog-modal-open .ui-dialog-titlebar-close {
     display: none;
 }
+
+.pattern-library-shim.alert-information {
+    margin-bottom: 20px !important;
+}
+
+.progress {
+    height: 30px;
+    width: 100%;
+    background: #e8ecef;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 20px;
+
+    .progress-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #007aff;
+        border-radius: 4px;
+    }
+
+    .percent-bar {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        line-height: 30px;
+        color: #fff;
+        font-size: 14px;
+    }
+}
