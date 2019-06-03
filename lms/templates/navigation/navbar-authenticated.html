@@ -17,12 +17,12 @@ from django.utils.translation import ugettext as _
   <div class="main-nav__item">
     <a class="main-nav__link" href="/courses">Курсы</a>
   </div>
-  <div class="main-nav__item">
+  <!-- <div class="main-nav__item">
     <a class="main-nav__link" href="/schools">Школы</a>
   </div>
   <div class="main-nav__item">
     <a class="main-nav__link" href="/about">О проекте</a>
-  </div>
+  </div> -->
     %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
       <div class="item">
         ## Translators: This is short for "System administration".

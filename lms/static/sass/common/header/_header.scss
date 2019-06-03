@@ -2,7 +2,7 @@
     position: relative;
 }
 .header__holder {
-    padding: 20px 0;
+    padding: 18px 0;
     max-width: $desktop-size;
     margin: 0 auto;
     display: flex;
@@ -15,7 +15,7 @@
         justify-content: space-between;
     }
     @media (min-width: $desktop-size) {
-        padding: 20px 0 50px;
+        padding: 18px 0;
         background: none;
     }
     
@@ -114,8 +114,8 @@ a.header__logo,
 }
 .header__opener {
     position: absolute;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-top: 2px solid $color1;
+    border-bottom: 2px solid $color1;
     transition: transform .2s;
     width: 18px;
     height: 8px;
@@ -125,7 +125,7 @@ a.header__logo,
     &:after {
         content: '';
         height: 2px;
-        background: #fff;
+        background: $color1;
         position: absolute;
         width: 100%;
         top: 3px;

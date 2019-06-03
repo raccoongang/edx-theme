@@ -118,6 +118,7 @@ hr.other {
             width: auto;
         }
     }
+    
     #register-form.form-wrapper {
         padding: 20px 16px 210px;
         box-sizing: border-box;
@@ -148,14 +149,12 @@ hr.other {
                 bottom: auto;
             }
         }
-        h2 {
-            display: none;
-        }
     }
     h2 {
         text-align: center;
         text-transform: uppercase;
         margin: 0 0 20px;
+        color: $color1;
     }
     .tip.tip-input {
         display: none;
@@ -2394,4 +2393,8 @@ body footer .raccoon__logo {
             box-sizing: border-box;
         }
     }
+}
+
+body .login-register .form-field.select-year_of_birth {
+    margin-left: 14px;
 }
