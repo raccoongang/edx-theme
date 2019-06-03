@@ -17,7 +17,7 @@
         </div>
         % endif
         % if form:
-        <form action="${reverse('contact_form')}" method="post">
+        <form action="${reverse('contact_form')}" method="post" class="contact-form">
             <input type="hidden" name="csrfmiddlewaretoken" value="${csrf_token}">
             <ol class="list-input">
 
