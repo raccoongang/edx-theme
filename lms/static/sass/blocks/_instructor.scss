@@ -138,7 +138,6 @@
 	}
 
 	section.idash-section#certificates {
-		.white-listed-students,
 		.invalidation-history,
 		.certificate-generation-history-content {
 			table {
@@ -151,6 +150,32 @@
 				tbody {
 					@media screen and (max-width: 760px) {
 						overflow: auto;
+					}
+				}
+			}
+		}
+
+		&.idash-section {
+			.white-listed-students,
+			.invalidation-history {
+				table {
+					@media screen and (max-width: 990px) {
+						max-width: 100%;
+						display: block;
+						overflow-x: auto;
+					}
+					thead,
+					tbody {
+						@media screen and (max-width: 990px) {
+							overflow: auto;
+						}
+					}
+				}
+				tr {
+					td, th {
+						border: 1px solid #e4e4e4;
+						min-width: 65px;
+						max-width: 400px;
 					}
 				}
 			}
@@ -269,19 +294,6 @@
 
 .slick-header-column.ui-state-default {
 	height: auto;
-}
-
-.instructor-dashboard-wrapper-2 section#certificates.idash-section .white-listed-students table,
-.instructor-dashboard-wrapper-2 section#certificates.idash-section .invalidation-history table {
-	table-layout: auto;
-	tr {
-		td, th {
-			border: 1px solid #e4e4e4;
-			button.delete-exception {
-				min-width: 160px;
-			}
-		}
-	}
 }
 
 .profile-wrapper .course-info .grade-detail-graph {
