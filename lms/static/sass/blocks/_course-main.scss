@@ -432,3 +432,32 @@ button.prerequisite-button .fa {
         color: #313131;
     }
 }
+
+.contact-form {
+	margin-top: 30px;
+
+	label {
+		display: block;
+		margin-bottom: 5px;
+		font: normal normal 16px/19px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		font-style: normal;
+	}
+
+	textarea {
+		min-height: 90px;
+	}
+
+	.form-actions {
+		text-align: right;
+
+		.action {
+			border-radius: 0 !important;
+			padding: 6px 20px;
+		}
+	}
+}
