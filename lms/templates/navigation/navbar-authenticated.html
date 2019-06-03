@@ -15,7 +15,7 @@ from django.utils.translation import ugettext as _
   <%block name="navigation_global_links_authenticated">
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <li class="item nav-global-01">
-        <a href="http://courses/courses/">${_('Explore courses')}</a>
+        <a href="http://courses/courses/">${_('Find Courses')}</a>
       </li>
     % endif
     % if show_program_listing:
