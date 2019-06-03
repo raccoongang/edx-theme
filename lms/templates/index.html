@@ -47,23 +47,23 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </header>
 
-     <div>
-      <div class="heading-holder">
-        <h2 class="heading-holder__name">${_("Data Science")}</h2>
-        <p class="heading-holder__text">${_("Opportunities for data scientists—one of today's hottest jobs—are rapidly growing in response to the exponential amounts of data being captured and analyzed. Companies hire data scientists to find insights and to solve meaningful business problems.")}</p>
-      </div>
-      <%include file="${courses_list}" />
-      <div class="heading-holder">
-        <h2 class="heading-holder__name">${_("Artificial Intelligence")}</h2>
-        <p class="heading-holder__text">${_("Artificial Intelligence (AI) will define the next generation of software solutions. Human-like capabilities such as understanding natural language, speech, vision, and making inferences from knowledge will extend software beyond the app.")}</p>
-      </div>
-      <%include file="${courses_list}" />
-      <div class="heading-holder">
-        <h2 class="heading-holder__name">${_("Internet of Things (IoT)")}</h2>
-        <p class="heading-holder__text">${_("Accelerate your career in one of the fastest-growing cloud technology fields: IoT. This program will teach you the device programming, data analytics, machine learning, and solution design skills you need for a successful career in IoT.")}</p>
-      </div>
-      <%include file="${courses_list}" />      
-    </div>
+        % if not courses_data:
+            <%include file="${courses_list}" />
+        % else:
+            % for category in courses_data:
+                <div>
+                  <div class="heading-holder">
+                    <h2 class="heading-holder__name">${category}</h2>
+                    <p class="heading-holder__text">${courses_data.get(category, {}).get('description', '')}</p>
+                  </div>
+                  <%
+                    courses=courses_data.get(category, {}).get('courses', '')
+                  %>
+                  <%include file="${courses_list}" args="courses=courses" />
+                </div>
+            % endfor
+        % endif
+
     </section>
 </main>
 
