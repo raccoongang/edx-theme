@@ -1,0 +1,54 @@
+.help-center-link-wrapper {
+    @media screen and (max-width: 990px) {
+        width: 100% !important;
+        order: 3;
+        margin-top: 10px;
+        margin-bottom: 0;
+
+        a {
+            border: none !important;
+        }
+    }
+}
+
+.help-center-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 7px;
+
+    .help-center-link-wrapper & {
+        margin-right: 0;
+        margin-top: 5px;
+
+        @media screen and (max-width: 760px) {
+            width: auto;
+            border: 1px solid $base-color;
+            padding: 3px;
+            height: 36px;
+            box-sizing: border-box;
+            margin-top: 0;
+            border-radius: 2px;
+
+            svg {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .flex & {
+        float: right;
+    }
+
+    &:hover {
+        svg {
+            fill: $header-nav-link-color-hover;
+        }
+    }
+
+    svg {
+        width: 30px;
+        height: 30px;
+        margin-right: 12px;
+        fill: $header-nav-link-color;
+    }
+}
