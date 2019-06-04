@@ -39,6 +39,10 @@
         }
         .list-inline.nav-courseware {
             margin-top: 0;
+
+            @media screen and (max-width: 990px) {
+                flex-wrap: wrap;
+            }
         }
     }
     .nav-global {
@@ -103,16 +107,16 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @media screen and (min-width:761px ) {
+        @media screen and (min-width:991px ) {
             width: auto;
             display: block;
         }
 
         li {
-            width: 48%;
+            width: calc(50% - 5px);
             text-align: center;
             margin: 3px 0;
-            @media screen and (min-width:761px ) {
+            @media screen and (min-width:991px ) {
                 width: auto;
                 text-align: left;
             }
@@ -3255,6 +3259,7 @@ body {
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
+            border-radius: 2px;
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
