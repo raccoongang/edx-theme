@@ -51,9 +51,12 @@
     margin: 8px 11px 0 0;
     list-style: none;
 
-    @media (max-width: $build-header-menu-tablet) {
-        left: 0;
-        right: inherit;
+    body:not(.lang_ar) & {
+        @media (max-width: $build-header-menu-tablet) {
+            right: 0 !important;
+            left: auto !important;
+            margin-right: 0;
+        }
     }
 
     &::before {
@@ -73,12 +76,12 @@
         width: 0;
 
         .lang_en & {
-            right: 7px;
-            left: auto;
+            left: 7px;
+            right: auto;
 
             @media (max-width: $build-header-menu-tablet) {
-                left: 7px;
-                right: auto;
+                right: 7px;
+                left: auto;
             }
         }
     }
