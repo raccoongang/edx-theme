@@ -143,6 +143,11 @@
                 text-transform: uppercase;
                 font-weight: 700;
 
+                @media screen and (max-width: $build-header-menu-tablet) {
+                    border: 2px solid $base-color2;
+                    color: $base-color2 !important;
+                }
+
                 &:active,
                 &:focus {
                     color: $header-nav-link-color;
@@ -168,18 +173,19 @@
                 color: $header-nav-link-color;
                 border: 2px solid $header-nav-link-color !important;
 
+                @media screen and (max-width: $build-header-menu-tablet) {
+                    color: $base-color2 !important;
+                    border: 2px solid $base-color2 !important;
+                }
+
                 &:focus,
                 &:hover {
                     color: $header-nav-link-color-hover !important;
                     border-color: $header-nav-link-color-hover !important;
-                }
 
-                @include sm {
-                    color: $white;
-
-                    &:hover {
-                        color: $white;
-                        border: none;
+                    @media screen and (max-width: $build-header-menu-tablet) {
+                        color: $base-color2 !important;
+                        border: 2px solid $base-color2 !important;
                     }
                 }
             }
@@ -293,7 +299,7 @@
             .label-username {
                 text-shadow: none;
                 margin: 0 0 0 8px;
-                color: #474747;
+                color: #fff;
 
                 &:hover {
                     color: $header-nav-link-color-hover;
@@ -301,6 +307,10 @@
 
                 .fa {
                     color: $header-nav-link-color;
+                }
+
+                @media screen and (max-width: $build-header-menu-tablet) {
+                    color: $base-color2 !important;
                 }
             }
 
@@ -319,13 +329,17 @@
             width: auto;
             height: auto;
             box-sizing: border-box;
-            color: #474747;
+            color: #fff;
             font-size: 14px;
             position: relative;
             top: -4px;
 
             &:hover {
                 color: $header-nav-link-color-hover;
+            }
+
+            @media screen and (max-width: $build-header-menu-tablet) {
+                color: $base-color2 !important;
             }
         }
 
@@ -375,31 +389,6 @@ body .container.activation h1.valid {
     border: 1px solid $theme-link;
 }
 
-.doc-link {
-    color: $header-nav-link-color !important;
-    margin: 12px 0;
-    line-height: 16px;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-
-    @media screen and (min-width:761px ) {
-        width: auto;
-        text-align: left;
-        margin: 12px 15px;
-    }
-
-    &:visited {
-        color: $header-nav-link-color !important;
-    }
-
-    &:focus,
-    &:hover {
-        color: $header-nav-link-color-hover !important;
-        text-decoration: none;
-    }
-}
-
 .wrapper-footer {
     background: $footer-bg;
     position: relative;
@@ -435,7 +424,11 @@ body .container.activation h1.valid {
             }
 
             .nav-colophon {
-                margin: 0 0 35px;
+                margin: 0 0 55px;
+
+                @media (max-width: $build-footer-mobile) {
+                    margin: 0 0 30px;
+                }
 
                 .lang_ar & {
                     direction: rtl;
@@ -837,8 +830,8 @@ body .discussion-module .btn {
 body .courseware-bookmarks-button .bookmarks-list-button,
 body .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: $theme-btn-white-bg;
-    color: $theme-btn-white-text-color;
-    border-color: $theme-btn-white-border;
+    color: #197a67;
+    border-color: #197a67;
 
     &:active,
     &:focus {
@@ -1154,7 +1147,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .title {
             background: transparent;
             box-shadow: none;
-            max-width: 1000px;
+            max-width: none;
             width: 100%;
             margin: 0 auto;
             float: none;
@@ -1188,12 +1181,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
                     @media screen and (min-width: $breakpoint-mobile) {
                         font-size: 42px;
-                        margin-bottom: 20px;
+                        margin-bottom: 50px;
                     }
 
                     @media screen and (min-width: $breakpoint-tablet) {
                         font-size: 52px;
-                        margin-bottom: 15px;
+                        margin-bottom: 100px;
                     }
                 }
 
@@ -1285,6 +1278,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
         display: block;
         height: $footer-logo-height;
         margin: 0 auto;
+    }
+
+    @media (max-width: $build-footer-mobile) {
+        margin: 0 0 30px;
     }
 
     @media screen and (min-width: 761px) {
@@ -1504,6 +1501,10 @@ html, body {
     background: $body-bg;
 }
 
+body .find-courses .discovery-input:focus {
+    border-color: $base-color !important;
+}
+
 body .find-courses .search-facets .facet-option:hover,
 body .find-courses .search-facets .facet-option:focus {
     background: $theme-link;
@@ -1570,29 +1571,41 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     display: block;
 
     .doc-link {
-        color: #474747 !important;
+        color: $header-nav-link-color !important;
         text-transform: uppercase;
         margin: 2px 0 0 20px;
         order: 2;
 
-        &:hover {
-            color: $base-color2-hover !important;
-        }
-
         @media (max-width: $build-header-menu-tablet) {
             margin-left: 25px;
             width: auto;
+            color: $base-color2 !important;
+        }
+
+        &:visited,
+        &:focus,
+        &:hover {
+            color: $header-nav-link-color-hover !important;
+            text-decoration: none;
+
+            @media (max-width: $build-header-menu-tablet) {
+                color: $base-color2 !important;
+            }
         }
 
         svg {
             width: 18px;
             height: 18px;
-            fill: $base-color2;
+            fill: $header-nav-link-color;
             display: inline-block;
             vertical-align: middle;
             margin-right: 1px;
             position: relative;
             top: -1px;
+
+            @media screen and (max-width: $build-header-menu-tablet) {
+                fill: $base-color2 !important;
+            }
         }
     }
 }
@@ -1640,7 +1653,7 @@ body .xmodule_display.xmodule_SequenceModule .sequence-nav-button.active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
-        border-bottom: 3px solid $theme-btn-bg;
+        border-bottom: 3px solid #197a67;
 }
 
 .login {
@@ -2118,6 +2131,7 @@ body.view-login #forgot-password-modal #password-reset header h2 {
 body .dashboard {
     #dashboard-search-bar .search-button {
         background-color: $base-color2 !important;
+        color: #fff !important;
 
         &:hover {
             background-color: $base-color2-hover !important;
@@ -2481,6 +2495,7 @@ section.wiki .main-article {
 
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    color: #fff !important;
 }
 
 body.lang_ar {
@@ -4359,16 +4374,6 @@ body .theme-header .list-inline {
     flex-direction: column;
 }
 
-body .doc-link {
-    color: $theme-link;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $header-nav-link-color-hover;
-    }
-}
-
 body .user-dropdown {
     color: $header-nav-link-color;
 
@@ -4703,9 +4708,10 @@ body .courses-container .courses-more {
         padding: 8px 25px;
         font-weight: 700 !important;
         text-transform: uppercase;
-        background: #47bded;
         border-radius: 2px;
         font-size: 14px;
+        min-width: 180px;
+        margin-bottom: 10px;
 
         &:hover {
             background: $theme-btn-bg-hover;
