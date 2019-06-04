@@ -575,6 +575,12 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         }
     }
 
+    .label-username {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .user-link {
         display: flex;
         align-items: center;
@@ -651,6 +657,11 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
             background: none;
             box-shadow: none;
             text-shadow: none;
+        }
+
+        .fa-sort-desc {
+            position: relative;
+            top: -2px;
         }
     }
     .item {
@@ -2397,4 +2408,14 @@ body footer .raccoon__logo {
 
 body .login-register .form-field.select-year_of_birth {
     margin-left: 14px;
+}
+
+
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action.action-email-settings {
+    border-radius: 3px;
+    display: none;
+}
+
+body .home .page-header-secondary .last-accessed-link {
+    display: none;
 }
