@@ -3770,3 +3770,35 @@ section.outside-app {
 .updates .recent-updates {
     margin-top: 10px;
 }
+
+// Account Settings for linked accounts
+
+.account-settings-sections {
+    .section {
+        padding: 20px;
+
+        .account-settings-section-body [class*="u-field-auth-oa2-"] {
+            &.u-field-social {
+                width: 32%;
+                margin: 0;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    padding: 5px 0 !important;
+                }
+
+                .u-field-social-help {
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                    }
+                }
+            }
+
+            &.u-field .field {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 !important;
+            }
+        }
+    }
+}
