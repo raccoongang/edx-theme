@@ -101,7 +101,7 @@
         }
 
         li {
-            width: 48%;
+            width: 100%;
             text-align: center;
             margin: 3px 0;
             @media screen and (min-width:761px ) {
@@ -3805,4 +3805,18 @@ section.outside-app {
             }
         }
     }
+}
+
+#login-and-registration-container .form-field,
+#login-and-registration-container .login-button,
+#login-and-registration-container .login-providers .section-title.lines,
+#login-and-registration-container .toggle-form,
+.wrapper-account-settings #accounts-tab,
+.account-settings-sections .section .account-settings-section-body .u-field-password {
+    display: none !important;
+}
+
+body .login-register .section-title.lines .text {
+    font-size: 2em;
+    line-height: 1.4em;
 }
