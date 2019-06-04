@@ -495,6 +495,7 @@ body {
                     max-height: 100%;
                     min-width: 260px;
                     margin-right: 0;
+                    margin-left: 0;
 
                     @media (max-width: $breakpoint-mobile) {
                         float: none;
@@ -688,6 +689,15 @@ body {
             &:focus {
                 background: $header-nav-link-color-hover !important;
             }
+        }
+    }
+}
+
+.lang_ar .dashboard .my-courses .course .details {
+    .wrapper-course-actions .enter-course,
+    .course-actions .wrapper-action-more {
+        @media screen and (max-width: 760px) {
+            float: right;
         }
     }
 }
@@ -897,6 +907,19 @@ body {
     }
 }
 
+.lang_ar .account-settings-sections .section .account-settings-section-body .u-field .u-field-message {
+    padding: 24px 100px 0 0;
+
+    @media (max-width: 991px) {
+        padding-left: 0;
+        padding-right: 40px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
+    }
+}
+
 /*-----Course inner pages-----*/
 
 
@@ -1037,6 +1060,10 @@ div {
 
                 .page-header-search {
                     margin: 0 10px 0 0;
+
+                    .lang_ar & {
+                        margin: 0 0 0 10px;
+                    }
 
                     @media (max-width: 479px) {
                         display: block;
@@ -2047,6 +2074,9 @@ button {
 }
 
 .course-info {
+    position: relative;
+    z-index: 1;
+
     header {
         &.course-profile {
             .intro-inner-wrapper {
@@ -2073,6 +2103,10 @@ button {
                 }
             }
         }
+    }
+
+    .lang_ar & .details .inner-wrapper .course-staff .teacher .teacher-image {
+        margin: 0 0 0 15px;
     }
 }
 
@@ -2313,6 +2347,8 @@ h6,
                     .field {
                         .email-targets-secondary,
                         .email-targets-primary {
+                            width: 20%;
+
                             @media (max-width: 767px) {
                                 display: block;
                                 float: left;
@@ -2408,6 +2444,15 @@ h6,
     }
 }
 
+.lang_ar {
+    .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-secondary,
+    .instructor-dashboard-wrapper-2 section.idash-section#send_email .list-fields .field .email-targets-primary {
+        @media (max-width: 767px) {
+            float: right;
+        }
+    }
+}
+
 .instructor-dashboard-content-2 {
     input[type="button"] {
         @extend %theme-btn;
@@ -2482,6 +2527,13 @@ h6,
 }
 
 .open-response-assessment-block {
+    max-width: 100%;
+    overflow-x: auto;
+
+    .open-response-assessment-content {
+        min-width: 1000px;
+    }
+
     .ora-summary-title {
         color: $base-color;
     }
@@ -3223,11 +3275,14 @@ body {
         margin: 0 27px 10px 0;
     }
 
-    body .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions {
-        margin: 0;
+    body .content-wrapper .page-header.has-secondary .page-header-secondary {
+        .form-actions,
+        .page-header-search {
+            margin: 0;
 
-        @media (max-width: 552px) {
-            margin-top: 10px;
+            @media (max-width: 552px) {
+                margin-top: 5px !important;
+            }
         }
     }
 
@@ -3966,6 +4021,10 @@ body .courses-container .courses-more {
 
 body .container .wiki-wrapper section.wiki .btn {
     text-align: center;
+}
+
+.lang_ar .container .wiki-wrapper section.wiki .btn.add-article-btn {
+    margin-right: 10px;
 }
 
 .courses-container .courses .course .course-info .course-title {
