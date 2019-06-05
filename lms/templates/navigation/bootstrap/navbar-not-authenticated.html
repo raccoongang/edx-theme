@@ -27,10 +27,10 @@ from django.utils.translation import ugettext as _
   % endif
 
   % if not settings.FEATURES['DISABLE_LOGIN_BUTTON'] and not combined_login_and_register:
-    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-      <li class="nav-item">
-        <a class="nav-link mt-2" href="http://courses/courses/">${_('Explore courses')}</a>
-      </li>
+      % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+        <li class="nav-item">
+          <a class="nav-link mt-2" href="http://courses/courses/">${_('Find Courses')}</a>
+        </li>
     %endif
     % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
       <li class="nav-item">

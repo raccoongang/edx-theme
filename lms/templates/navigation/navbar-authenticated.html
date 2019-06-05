@@ -13,9 +13,15 @@ from django.utils.translation import ugettext as _
 
 <ol class="left nav-global list-inline authenticated">
   <%block name="navigation_global_links_authenticated">
-    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-      <li class="item nav-global-01">
-        <a href="http://courses/courses/">${_('Explore courses')}</a>
+    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
+      <li class="nav-global-01">
+        <a href="${marketing_link('ABOUT')}">About</a>
+      </li>
+      <li class="nav-global-02">
+        <a href="http://courses/courses/">${_('Find Courses')}</a>
+      </li>
+      <li class="nav-global-03">
+        <a href="http://courses/pathway/" style="text-transform:none">appliedx PATHWAY</a>
       </li>
     % endif
     % if show_program_listing:
@@ -39,7 +45,7 @@ from django.utils.translation import ugettext as _
   </%block>
 </ol>
 
-<a href="${get_online_help_info(online_help_token)['doc_url']}"
+<a href="https://amat.service-now.com/AMAT3/topic.do?topic=appliedx"
          target="_blank"
          class="doc-link">${_("Help")}</a>
 
