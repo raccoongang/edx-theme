@@ -3084,6 +3084,15 @@ div {
 /*-----Popup-----*/
 .modal,
 .leanModal_box {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    max-width: calc(100% - 20px);
+    max-height: calc(100vh - 20px);
+    overflow: auto;
+
     .inner-wrapper {
         form {
             .submit {
