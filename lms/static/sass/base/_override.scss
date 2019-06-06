@@ -1043,7 +1043,7 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-dropdown-list {
     margin: 0;
     padding: 0;
-    display: block;
+    display: flex;
     box-shadow: none;
     border: none;
     background: none;
@@ -1051,6 +1051,10 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
     &:after,
     &:before {
         display: none;
+    }
+
+    li {
+        margin-right: 10px;
     }
 }
 .dashboard .my-courses .course .details .course-actions {
@@ -1128,9 +1132,8 @@ body {
     .account-settings-tabpanels {
         display: flex;
         width: 100%;
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-        }
+        flex-direction: column;
+        
         .section {
             flex: 0 0 66%;
             &:last-child {
@@ -1210,6 +1213,7 @@ body {
         font-size: 14px;
         border: 0;
         white-space: normal;
+        border: 1px solid transparent;
     }
     .account-settings-sections .section .account-settings-section-body .u-field.u-field-username,
     .account-settings-sections .section .account-settings-section-body .u-field .field .field-label,
@@ -1538,7 +1542,7 @@ body.view-in-course .wrapper-course-material .course-material {
     max-width: 240px;
     font-size: 24px;
     line-height: 30px;
-    color: #062860;
+    color: $color1;
     display: none;
     @media (min-width: $tablet-size) {
         width: 240px;
@@ -1608,14 +1612,7 @@ body.view-in-course .wrapper-course-material .course-material {
 .wrapper-account-settings .wrapper-header .account-nav button.active {
     border-bottom: 3px solid #ff6f00 !important;
 }
-#accountsTabSections-tabpanel {
-    .section:last-child {
-        flex: 100% !important;
-    }
-    .account-settings-section-body.accountsTabSections-section-body {
-        display: flex;
-    }
-}
+
 .course-info .course-sidebar .important-dates li:first-child {
     display: none;
 }
@@ -1971,11 +1968,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
         background: url("../images/delete-ico.png") no-repeat center;
     }
 }
-.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action-unenroll.action-email-settings {
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action-email-settings {
     width: 36px;
     height: 38px;
     display: block;
     position: relative;
+    overflow: hidden;
+    color: #ccc !important;
 
     &:after {
         content: '';
@@ -1984,7 +1983,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
         left: 0;
         height: 100%;
         width: 100%;
-        background: url("../images/delete-ico.png") no-repeat center;
+        background: url("../images/mail-ico.png") no-repeat center;
+    }
+
+    &:hover {
+        color: #ccc !important;
     }
 }
 .modal .inner-wrapper {
