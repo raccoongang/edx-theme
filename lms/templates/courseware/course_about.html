@@ -216,6 +216,7 @@ from openedx.core.lib.courses import course_image_url
   <div class="container">
     <div class="course-sidebar">
       <div class="course-summary">
+        <%include file="course_about_sidebar_header.html" />
         <ol class="important-dates">
             <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
             % if not course.start_date_is_still_default:

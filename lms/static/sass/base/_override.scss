@@ -2235,12 +2235,16 @@ body .wrapper-account-settings .account-settings-container {
 }
 .wrapper-footer footer#footer-openedx p a {
     color: $color1;
+
+    &:hover {
+        border-bottom: none;
+    }
 }
 .modal,
 .leanModal_box {
     margin-left: 0 !important;
     box-sizing: border-box;
-    max-width: 480px;
+    max-width: 480px !important;
     width: 100%;
     transform: translateX(-50%);
 }
@@ -2290,12 +2294,17 @@ body footer .raccoon__logo {
     align-items: center;
     color: #fff !important;
     margin-left: 8px;
+
+    &:hover {
+        border-bottom: none;
+    }
 }
 
 .svg-raccoon {
     width: 20px;
     height: 20px;
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 .svg-edx {
@@ -2320,6 +2329,22 @@ body footer .raccoon__logo {
 
 .course-summary {
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-info .course-sidebar header {
+    order: 2;
+    margin: 0;
+    width: 45%;
+
+    &:after {
+        display: none;
+    }
+}
+
+.course-info .course-sidebar .important-dates {
+    order: 1;
 }
 
 .about-course-heading {
@@ -2333,7 +2358,6 @@ body footer .raccoon__logo {
 }
 
 .modal, .leanModal_box {
-    max-width: 100%;
     box-sizing: border-box;
     margin: 0 !important;
     top: 50% !important;
@@ -2424,4 +2448,39 @@ body footer .raccoon__logo {
 
 body .login-register .form-field.select-year_of_birth {
     margin-left: 14px;
+}
+
+.course-info .course-sidebar header .social-sharing .share.share__twitter {
+    width: 37px;
+    height: 37px;
+    background-image: url('../images/share_twitter.png');
+
+    .fa {
+        display: none;
+    }
+}
+
+.course-info .course-sidebar header .social-sharing .share.share__facebook {
+    width: 37px;
+    height: 37px;
+    background-image: url('../images/share_facebook.png');
+
+    .fa {
+        display: none;
+    }
+}
+
+.course-info .course-sidebar header .social-sharing .share.share__mail {
+    width: 37px;
+    height: 37px;
+    background-image: url('../images/share_mail.png');
+
+    .fa {
+        display: none;
+    }
+}
+
+.skillonomy__logo {
+    width: 80px;
+    margin-left: 3px;
 }
