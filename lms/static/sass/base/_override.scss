@@ -1505,7 +1505,7 @@ body.view-in-course .wrapper-course-material .course-material {
         width: 134px;
     }
     @media (min-width: $desktop-size) {
-        transform: translateX(140px);
+        transform: translateX(0);
         margin: 0;
     }
     
@@ -1529,6 +1529,9 @@ body.view-in-course .wrapper-course-material .course-material {
     &:hover {
         border: 1px solid #c8c8c8;
     }
+}
+.login-register .login-provider.button-oa2-google-oauth2 {
+    background: #fff;
 }
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
