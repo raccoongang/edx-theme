@@ -1,0 +1,14 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("About Us")}</h1>
+        <p>${_("Eduqe is an industry-leading, vendor and seta accredited delivery partner that specialises in training, enablement and certification. Eduqe provides in-class instructor-led, virtual instructor-led, self-paced and digital training on several key vendor technologies, delivered in a high quality, interactive training environment or platform that is conducive to learning.")}</p>
+        <p>${_("Our edX platform provides a MOOC Client offering that can be associated by choice to verified certificates as well as the prestigious Microsoft Professional Programs such as Data Science, Big Data and Artificial Intelligence Web Development but to name a few.")}</p>
+        <p>${_("For further information on our vendor authorised training product offering, go to")} <a href="https://www.eduqe.co.za">https://www.eduqe.co.za</a></p>
+    </section>
+</main>
