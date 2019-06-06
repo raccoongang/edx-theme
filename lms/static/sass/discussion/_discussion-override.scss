@@ -131,6 +131,10 @@ body {
             font-size: 14px;
             line-height: 1.3;
             color: $header-nav-link-color !important;
+            max-width: 115px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
             &:hover {
                 color: $header-nav-link-color-hover !important;
             }

@@ -48,12 +48,65 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
-        @media screen and (min-width:991px ) {
-            width: auto;
-            position: absolute;
-            left: 50%;
-            top: 29px;
-            transform: translate(-50%, 0);
+
+        &:not(.authenticated) {
+            @media screen and (min-width:991px ) {
+                width: auto;
+                position: absolute;
+                left: 50%;
+                top: 29px;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &.authenticated {
+            @media screen and (min-width:991px ) {
+                width: auto;
+                margin-left: 30px;
+                margin-top: 3px;
+            }
+
+            & ~ #certificate-voucher {
+                float: none;
+                width: 100%;
+                order: 2;
+
+                @media screen and (max-width: 990px) {
+                    width: 100%;
+                    text-align: center;
+                    color: $white;
+                    background-color: $base-color;
+                    display: inline-block;
+                    max-width: 100%;
+                    box-sizing: border-box;
+                    border-radius: 2px;
+                    padding: 12px 10px !important;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+
+                    &:active,
+                    &:focus {
+                        color: $header-nav-link-color;
+                    }
+
+                    &:hover {
+                        background-color: $theme-link-hover;
+                        color: $white;
+                    }
+                }
+
+                @media screen and (min-width: 991px) {
+                    width: auto;
+                    float: right;
+                    margin-top: 13px;
+                    margin-right: 10px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
         }
 
         li {
@@ -76,6 +129,7 @@
                 &:focus {
                     color: $header-nav-link-color;
                 }
+
                 &:hover {
                     color: $header-nav-link-color-hover;
                 }
@@ -113,12 +167,58 @@
         }
 
         li {
-            width: calc(50% - 5px);
+            width: 100%;
             text-align: center;
-            margin: 3px 0;
+            margin: 3px 0 8px;
+            @media screen and (min-width:601px ) {
+                width: calc(50% - 5px);
+                margin: 3px 0;
+            }
             @media screen and (min-width:991px ) {
                 width: auto;
                 text-align: left;
+                vertical-align: middle;
+            }
+
+            &.additional {
+                margin-right: 10px;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 14px;
+
+                @media screen and (max-width:990px ) {
+                    margin-right: 0;
+                    border: none;
+                    padding: 12px 20px;
+                    text-align: center;
+                    text-shadow: none;
+                    letter-spacing: 0;
+                    box-sizing: border-box;
+                    background: $theme-btn-bg;
+                    box-shadow: none;
+                    color: $theme-btn-text-color !important;
+                    border-radius: 2px;
+                    font-size: 16px;
+
+                    &:active,
+                    &:focus {
+                        background: $theme-btn-bg;
+                    }
+
+                    &:focus {
+                        box-shadow: 0 0 6px 0 #126f9a;
+                    }
+
+                    &:focus:hover,
+                    &:hover {
+                        background: $theme-btn-bg-hover;
+                    }
+
+                    a {
+                        color: $theme-btn-text-color !important;
+                    }
+
+                }
             }
 
             a {
@@ -131,13 +231,15 @@
                 box-shadow: none;
                 color: $theme-btn-text-color !important;
                 text-transform: uppercase;
+                padding: 12px 20px;
+                font-weight: 600;
 
                 &:active,
                 &:focus {
                     background: $theme-btn-bg;
                 }
                 &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
+                    background: $theme-btn-bg-hover !important;
                 }
                 &:hover {
                     background: $theme-btn-bg-hover;
@@ -153,6 +255,9 @@
             text-shadow: none;
             margin: 13px 5px 13px 15px;
             color: $header-nav-link-color;
+            max-width: 115px;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             &:hover {
                 color: $header-nav-link-color-hover;
@@ -1163,6 +1268,11 @@ body .openassessment .is--in-progress.openassessment__steps__step {
 }
 .flex {
     display: block;
+
+    @media screen and (max-width: 990px) {
+        order: 3;
+    }
+
     .doc-link {
         width: auto;
         margin: 12px 10px;
@@ -3267,6 +3377,8 @@ body {
         width: 100%;
         margin-bottom: 8px;
         display: block;
+        font-size: 16px;
+
         a {
             width: 100%;
             text-align: center;
@@ -3276,6 +3388,8 @@ body {
             max-width: 100%;
             box-sizing: border-box;
             border-radius: 2px;
+            font-size: 16px;
+
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;
@@ -3741,4 +3855,67 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     max-width: 560px;
     width: 100%;
     box-sizing: border-box;
+}
+
+#certificate-voucher {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#certificate-voucher-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 610px;
+    height: 410px;
+    box-sizing: border-box;
+    max-width: calc(100% - 30px);
+    max-height: calc(100vh - 30px);
+    overflow: auto;
+    z-index: 999;
+    background: #fff;
+    border: 5px solid #000;
+
+    iframe {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .close-btn {
+        width: 29px;
+        height: 29px;
+        display: inline-block;
+        border: 2px solid #333;
+        border-radius: 50%;
+        position: absolute;
+        right: 3px;
+        top: 7px;
+        box-sizing: border-box;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 65%;
+            background: #333;
+            position: absolute;
+            top: 0;
+        }
+
+        &:after {
+            transform: rotate(-51deg) translate(4px,12px);
+        }
+
+        &:before {
+            transform: rotate(51deg) translate(11px,-6px);
+        }
+    }
 }
