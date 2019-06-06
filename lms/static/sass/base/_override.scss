@@ -672,9 +672,6 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         &:first-child {
             border: none;
         }
-        &:nth-child(2) {
-            display: none;
-        }
         .main-nav & { 
             border-top: 1px solid #F5F5F5;
         }
@@ -1974,6 +1971,22 @@ body .wmd-prompt-dialog .btn-brand:focus {
         background: url("../images/delete-ico.png") no-repeat center;
     }
 }
+.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action-unenroll.action-email-settings {
+    width: 36px;
+    height: 38px;
+    display: block;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url("../images/delete-ico.png") no-repeat center;
+    }
+}
 .modal .inner-wrapper {
     margin-bottom: 0;
 }
@@ -2408,14 +2421,4 @@ body footer .raccoon__logo {
 
 body .login-register .form-field.select-year_of_birth {
     margin-left: 14px;
-}
-
-
-.dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action.action-email-settings {
-    border-radius: 3px;
-    display: none;
-}
-
-body .home .page-header-secondary .last-accessed-link {
-    display: none;
 }
