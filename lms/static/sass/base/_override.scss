@@ -3220,6 +3220,19 @@ body {
 
 .wrapper-preview-menu {
     width: 100%;
+
+    .preview-actions {
+        max-width: 100%;
+
+        .action-preview {
+            max-width: 100%;
+
+            .action-preview-select {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
 }
 
 body {
