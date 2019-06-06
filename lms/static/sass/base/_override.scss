@@ -295,14 +295,14 @@
             .label-username {
                 text-shadow: none;
                 margin: 0 0 0 8px;
-                color: #474747;
+                color: $header-user-links;
 
                 &:hover {
-                    color: $header-nav-link-color-hover;
+                    color: $header-user-links-hover;
                 }
 
                 .fa {
-                    color: $header-nav-link-color;
+                    color: $header-user-links;
                 }
             }
 
@@ -321,13 +321,13 @@
             width: auto;
             height: auto;
             box-sizing: border-box;
-            color: #474747;
+            color: $header-user-links;
             font-size: 14px;
             position: relative;
             top: -4px;
 
             &:hover {
-                color: $header-nav-link-color-hover;
+                color: $header-user-links-hover;
             }
         }
 
@@ -375,31 +375,6 @@
 body .container.activation h1.valid {
     background: $theme-link;
     border: 1px solid $theme-link;
-}
-
-.doc-link {
-    color: $header-nav-link-color !important;
-    margin: 12px 0;
-    line-height: 16px;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-
-    @media screen and (min-width:761px ) {
-        width: auto;
-        text-align: left;
-        margin: 12px 15px;
-    }
-
-    &:visited {
-        color: $header-nav-link-color !important;
-    }
-
-    &:focus,
-    &:hover {
-        color: $header-nav-link-color-hover !important;
-        text-decoration: none;
-    }
 }
 
 .wrapper-footer {
@@ -1572,13 +1547,18 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     display: block;
 
     .doc-link {
-        color: #474747 !important;
+        color: $header-user-links !important;
         text-transform: uppercase;
         margin: 2px 0 0 20px;
         order: 2;
+        line-height: 16px;
+        box-sizing: border-box;
 
-        &:hover {
-            color: $base-color2-hover !important;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $header-user-links-hover !important;
+            text-decoration: none;
         }
 
         @media (max-width: $build-header-menu-tablet) {
@@ -4361,16 +4341,6 @@ body .theme-header .list-inline {
     flex-direction: column;
 }
 
-body .doc-link {
-    color: $theme-link;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $header-nav-link-color-hover;
-    }
-}
-
 body .user-dropdown {
     color: $header-nav-link-color;
 
@@ -4705,7 +4675,6 @@ body .courses-container .courses-more {
         padding: 8px 25px;
         font-weight: 700 !important;
         text-transform: uppercase;
-        background: #47bded;
         border-radius: 2px;
         font-size: 14px;
 
