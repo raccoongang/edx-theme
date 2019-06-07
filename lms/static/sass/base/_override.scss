@@ -157,7 +157,7 @@ hr.other {
         color: $color1;
     }
     .tip.tip-input {
-        display: none;
+        font-size: 12px;
     }
     .form-field input {
         background: #F5F5F5;
@@ -175,7 +175,7 @@ hr.other {
         width: auto;
     }
     .label-text {
-        display: none;
+        font-size: 14px;
     }
     .toggle-form {
         font-size: 14px;
@@ -215,7 +215,7 @@ hr.other {
         &:before {
             font-family: FontAwesome;
             position: absolute;
-            top: 50%;
+            top: 47px;
             left: 8px;
             transform: translate(0, -63%);
             color: #B3B3B3;
@@ -255,7 +255,6 @@ hr.other {
         color: #ff6f00;
     }
     .form-field.checkbox-honor_code {
-        display: flex;
         flex-direction: row-reverse;
         align-items: center;
     }
