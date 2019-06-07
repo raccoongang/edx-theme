@@ -2533,8 +2533,40 @@ body .login-register .form-field.select-year_of_birth {
     column-count: 2;
     margin: 0 0 0 30px;
     padding: 14px 0;
+    list-style: none;
 }
 
 .about-info-box_item {
     margin-bottom: 10px !important;
+    position: relative;
+
+    &:after {
+        content: '';
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        left: -30px;
+        top: 0;
+    }
+}
+
+.about-info-box_item__usd:after {
+    background-image: url("../images/about-usd.png");
+}
+.about-info-box_item__account-multiple:after {
+    background-image: url("../images/about-account-multiple.png");
+}
+.about-info-box_item_alert-circle:after {
+    background-image: url("../images/about-alert-circle.png");
+}
+.about-info-box_item_calendar-clock:after {
+    background-image: url("../images/about-calendar-clock.png");
+}
+.about-info-box_item_calendar-multiselect:after {
+    background-image: url("../images/about-calendar-multiselect.png");
+}
+.about-info-box_item_clock:after {
+    background-image: url("../images/about-clock.png");
 }
