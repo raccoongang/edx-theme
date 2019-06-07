@@ -179,6 +179,21 @@
 			margin: 10px 10px 0 0;
 		}
 	}
+
+	section.idash-section#send_email .list-fields .field ul {
+		padding-left: 10px;
+		width: 30% !important;
+		vertical-align: top;
+
+		@media screen and (max-width: 768px) {
+			width: 100% !important;
+			display: block !important;
+		}
+
+		&.email-targets-secondary {
+			columns: 1;
+		}
+	}
 }
 
 .enrollment-wrapper {
@@ -213,6 +228,10 @@
 	.btn-blue,
 	input[type=button] {
 		margin: 10px 0;
+	}
+
+	.mce-btn-group button {
+		margin: 0;
 	}
 
 	p input {
@@ -277,4 +296,8 @@
 
 .open-response-assessment-block .ora-summary-title {
 	color: $base-color;
+}
+
+input[name="subject"] {
+	max-width: 100%;
 }
