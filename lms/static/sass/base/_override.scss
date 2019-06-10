@@ -18,7 +18,7 @@
     background: $header-bg;
     border: none;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
-    padding: 30px 15px;
+    padding: 18px 15px;
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
@@ -45,7 +45,7 @@
                 left: 0;
                 right: 0;
                 padding: 0;
-                background: #eee;
+                background: #2e2e38;
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
                 border-top: 1px solid #6e6e6e;
             }
@@ -1107,6 +1107,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
             display: block;
         }
 
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
         .parallax-img {
             position: absolute;
             left: 0;
@@ -1120,6 +1131,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .outer-wrapper {
             animation: none;
             padding: 0;
+            z-index: 2;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table;
@@ -2463,6 +2475,7 @@ section.wiki .main-article {
 
 .course-header {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    color: $header-user-links;
 }
 
 body.lang_ar {
@@ -5205,7 +5218,7 @@ div.info-wrapper section.handouts {
 
 body.view-in-course .header-global,
 .header-global.header-global__course {
-    padding: 30px 15px;
+    padding: 18px 15px;
 
     @media screen and (max-width: 990px) {
         padding: 22px 15px 23px;
