@@ -25,7 +25,7 @@
     .wrapper-header {
         height: auto;
         padding: 0;
-        @media (min-width: 761px) {
+        @media (min-width: $build-header-menu-tablet+1) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -41,7 +41,8 @@
     .nav-global {
         width: 100%;
         margin-top: 0;
-        @media screen and (min-width:761px ) {
+
+        @media screen and (min-width:$build-header-menu-tablet+1 ) {
             width: auto;
         }
 
@@ -50,7 +51,8 @@
             text-align: center;
             text-transform: none;
             margin: 3px 0;
-            @media screen and (min-width:760px ) {
+
+            @media screen and (min-width: $build-header-menu-tablet) {
                 width: auto;
                 text-align: left;
                 margin-right: 15px;
@@ -81,8 +83,9 @@
                     color: $header-nav-link-color-hover;
                     border: none;
                 }
-                @include sm {
+                @media screen and (max-width: $build-header-menu-tablet) {
                     color: $white;
+
                     &:hover {
                         color: $white;
                         border: none;
@@ -90,12 +93,21 @@
                 }
             }
         }
+
+        & ~ #certificate-voucher {
+            float: right;
+            margin: 12px 10px 0 0;
+            font-weight: 600;
+            font-size: 14px;
+        }
     }
     .nav-courseware {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @media screen and (min-width:761px ) {
+        flex-wrap: wrap;
+
+        @media screen and (min-width: $build-header-menu-tablet+1) {
             width: auto;
             display: block;
         }
@@ -103,10 +115,25 @@
         li {
             width: 100%;
             text-align: center;
-            margin: 3px 0;
-            @media screen and (min-width:761px ) {
+            margin: 3px 0 8px;
+
+            @media screen and (min-width: $build-header-menu-tablet+1) {
                 width: auto;
                 text-align: left;
+                margin: 3px 0;
+            }
+
+            &.additional {
+              #certificate-voucher {
+                  @media screen and (min-width: $build-header-menu-tablet+1) {
+                      background: transparent;
+                      color: $base-color !important;
+                      font-weight: 600;
+                      font-size: 14px;
+                      margin-right: 15px;
+                      text-transform: none;
+                  }
+              }
             }
 
             a {
@@ -141,6 +168,9 @@
             text-shadow: none;
             margin: 13px 5px 13px 15px;
             color: $header-nav-link-color;
+            max-width: 115px;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             &:hover {
                 color: $header-nav-link-color-hover;
@@ -1158,6 +1188,8 @@ body .openassessment .is--in-progress.openassessment__steps__step {
 }
 .flex {
     display: block;
+    order: 2;
+
     .doc-link {
         width: auto;
         margin: 12px 10px;
@@ -3259,10 +3291,11 @@ body {
     }
 }
 
-@include sm {
+@media screen and (max-width: $build-header-menu-tablet) {
     .header-global .wrapper-header .nav-global li {
         width: 100%;
         margin-bottom: 8px;
+
         a {
             width: 100%;
             text-align: center;
@@ -3271,6 +3304,10 @@ body {
             display: inline-block;
             max-width: 100%;
             box-sizing: border-box;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+
             &:hover {
                 background-color: $theme-link-hover;
                 color: $white;

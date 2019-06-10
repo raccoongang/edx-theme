@@ -117,6 +117,7 @@ site_status_msg = get_site_status_msg(course_id)
           target="_blank"
           class="doc-link">${_("Help")}</a>
       </div>
+      <a id="certificate-voucher">${_("Certificate Voucher")}</a>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
           <li class="primary">
@@ -156,6 +157,9 @@ site_status_msg = get_site_status_msg(course_id)
       </ol>
 
       <ol class="right nav-courseware list-inline">
+        <li class="item additional">
+          <a id="certificate-voucher" class="btn">${_("Certificate Voucher")}</a>
+        </li>
         <%block name="navigation_sign_in">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             <li class="item nav-courseware-01">
@@ -226,6 +230,25 @@ site_status_msg = get_site_status_msg(course_id)
     window.onresize = function() {
         window.innerWidth > 760 && document.getElementsByTagName("body")[0].className.match(/menu-open/) ? body.classList.remove('menu-open') : '';
     };
+
+    $('#certificate-voucher').on('click', function (e) {
+      e.preventDefault();
+      if(!$('#certificate-voucher-modal').length) {
+        $('body').prepend('<div id="certificate-voucher-modal">' +
+                '<span class="close-btn"></span> ' +
+                '<iframe width="600" height="400" src="https://apps.fastlane.live/certificate/staffs/"></iframe>' +
+                '</div>');
+      }
+    });
+    $(document).on('click', '#certificate-voucher-modal .close-btn', function() {
+      $('#certificate-voucher-modal').remove();
+    });
+    $(document).mouseup(function (e){
+      var div = $("#certificate-voucher-modal");
+      if (!div.is(e.target) && div.has(e.target).length === 0) {
+        div.remove();
+      }
+    });
 </script>
 % if course:
 <!--[if lte IE 9]>
