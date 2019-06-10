@@ -204,7 +204,7 @@
 
     .label-username {
         margin: 0;
-        color: #474747 !important;
+        color: $header-user-links !important;
     }
 }
 
@@ -312,7 +312,7 @@ body .header-global .wrapper-header .wrapper-user-menu {
           text-align: center;
           display: block;
           text-transform: uppercase;
-          color: #646464;
+          color: $header-user-links;
       }
 
       @media screen and (min-width:760px ) {
@@ -352,7 +352,7 @@ body .dropdown-menu-container .menu-button {
     width: auto;
     height: auto;
     box-sizing: border-box;
-    color: #474747;
+    color: $header-user-links;
     font-size: 14px;
     position: relative;
     top: -3px;
