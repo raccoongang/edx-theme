@@ -48,6 +48,7 @@
                 background: #eee;
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
                 border-top: 1px solid #6e6e6e;
+                align-items: center;
             }
         }
 
@@ -55,6 +56,7 @@
             margin-top: 0;
             flex-grow: 0;
             z-index: 2;
+            margin-right: 20px;
 
             a {
                 transition: opacity .15s ease;
@@ -77,6 +79,7 @@
             @media screen and (max-width: $build-header-menu-tablet) {
                 padding: 20px 0;
                 z-index: 2;
+                order: 2;
             }
 
             @media screen and (max-width: $build-header-menu-mobile) {
@@ -98,6 +101,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        order: 1;
 
         &:not(.authenticated) {
             @media screen and (max-width: $build-header-menu-mobile) {
@@ -107,6 +111,35 @@
 
             @media screen and (max-width: $build-header-menu-mobile) {
                 padding-bottom: 0;
+            }
+        }
+
+        &.authenticated {
+            position: static;
+            transform: none;
+
+            @media screen and (min-width: $build-header-menu-tablet+1) {
+                width: auto;
+            }
+
+            & ~ #certificate-voucher {
+                float: right;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 14px;
+                min-height: 36px;
+                margin-right: 15px;
+                line-height: 36px;
+                color: $base-color2;
+                order: 2;
+
+                &:hover {
+                    color: $base-color2-hover;
+                }
+
+                @media screen and (max-width: $build-header-menu-mobile) {
+                    margin-right: 0;
+                }
             }
         }
 
@@ -121,7 +154,7 @@
 
         li {
             width: auto !important;
-            margin: 0 10px !important;
+            margin: 0 8px !important;
 
             @media screen and (max-width: $build-header-menu-tablet) {
                 margin: 5px !important;
@@ -140,6 +173,7 @@
                 display: inline-block;
                 border-radius: 2px;
                 line-height: 16px;
+                font-size: 14px;
                 text-transform: uppercase;
                 font-weight: 700;
 
@@ -189,7 +223,8 @@
     .nav-courseware {
         width: auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-wrap: wrap;
 
         @media screen and (max-width: $build-header-menu-mobile) {
             width: 100%;
@@ -220,6 +255,26 @@
 
             a {
                 width: 100%;
+            }
+
+            &.additional {
+                @media screen and (max-width: $build-header-menu-tablet) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                .btn {
+                    @media screen and (min-width: $build-header-menu-tablet+1) {
+                        color: $theme-btn-bg !important;
+                        background: transparent !important;
+                        border-color: transparent !important;
+                        padding-right: 15px;
+
+                        &:hover {
+                            color: $theme-btn-bg-hover!important;
+                        }
+                    }
+                }
             }
 
             // login and register btns on the header nav
@@ -271,6 +326,7 @@
 
         @media screen and (max-width: $build-header-menu-tablet) {
             padding: 20px 0;
+            order: 3;
         }
 
         @media screen and (max-width: $build-header-menu-mobile) {
@@ -294,6 +350,9 @@
                 text-shadow: none;
                 margin: 0 0 0 8px;
                 color: #474747;
+                max-width: 115px;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 &:hover {
                     color: $header-nav-link-color-hover;
@@ -5298,3 +5357,4 @@ body.view-in-course .header-global .wrapper-header {
         }
     }
 }
+
