@@ -47,23 +47,49 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </header>
 
-        % if not courses_data:
+        % if not categories:
             <%include file="${courses_list}" />
         % else:
-            % for category in courses_data:
+            % for category in categories:
+              <%
+                set_courses_sub_category = set()
+                category_courses = filter(lambda x: x, category.get_descendants(include_self=True).values_list('courses', flat=True))
+              %>
+              % if category_courses:
                 <div>
                   <div class="heading-holder">
-                    <h2 class="heading-holder__name">${category}</h2>
-                    <p class="heading-holder__text">${courses_data.get(category, {}).get('description', '')}</p>
+                    <h2 class="heading-holder__name">${category.name}</h2>
+                    % if category.img:
+                      <img src="${category.img.url}" alt="${category.name}">
+                    % endif
+                    <p class="heading-holder__text">${category.description}</p>
                   </div>
+                  % for sub_category in category.get_children():
+                    <%
+                      courses_sub_category = sub_category.courses.all()
+                      set_courses_sub_category.update(courses_sub_category)
+                    %>
+                    % if courses_sub_category:
+                      <%include file="${courses_list}" args="courses=courses_sub_category" />
+                    % endif
+                    % if sub_category.url:
+                    <!-- place for external link -->
+                      <div class="heading-holder">
+                        <p class="heading-holder__text"><a href="${sub_category.url}">${sub_category}</a></p>
+                      </div>
+                    <!--  -->
+                    % endif
+                  % endfor
                   <%
-                    courses=courses_data.get(category, {}).get('courses', '')
+                    root_category_courses = set(category.courses.all()) - set_courses_sub_category
                   %>
-                  <%include file="${courses_list}" args="courses=courses" />
+                  % if root_category_courses:
+                    <%include file="${courses_list}" args="courses=root_category_courses" />
+                  % endif
                 </div>
+              % endif
             % endfor
         % endif
-
     </section>
 </main>
 
