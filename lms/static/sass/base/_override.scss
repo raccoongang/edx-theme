@@ -4206,7 +4206,15 @@ section.container.about {
         }
     }
 
-    p b {
+    p b.uppercase {
         text-transform: uppercase;
+    }
+}
+
+.supplemental-link a {
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
     }
 }
