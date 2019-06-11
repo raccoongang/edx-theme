@@ -18,7 +18,7 @@
     background: $header-bg;
     border: none;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
-    padding: 18px 10px;
+    padding: 30px 15px;
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
@@ -305,6 +305,20 @@
         .user-link {
             display: flex;
             align-items: center;
+
+            .label-username {
+                text-shadow: none;
+                margin: 0 0 0 8px;
+                color: $header-user-links;
+
+                &:hover {
+                    color: $header-user-links-hover;
+                }
+
+                .fa {
+                    color: $header-user-links;
+                }
+            }
 
             .label-username {
                 text-shadow: none;
@@ -1260,6 +1274,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
                     @media screen and (min-width: $breakpoint-mobile) {
                         height: $search-height;
+                    }
+
+                    .rtl & {
+                        left: 0;
+                        right: auto;
                     }
                 }
             }
@@ -2367,6 +2386,10 @@ body .home>header .title>.heading-group p,
 body section.outside-app h1 {
     font-family: "Open Sans",Verdana,Geneva,sans-serif;
     letter-spacing: 0;
+}
+
+.modal .inner-wrapper form label {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif;
 }
 
 .modal .inner-wrapper form label {
@@ -5360,4 +5383,363 @@ div.info-wrapper section.updates div a {
     &:focus {
         color: $white !important;
     }
+}
+
+.shopping-cart {
+    &.confirm-enrollment:not(section),
+    &.billing-details-view {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .pattern + .user-data {
+        padding: 0 15px;
+
+        & + .discount {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .user-data {
+        .image {
+            @media screen and (max-width: 860px) {
+                float: none;
+                margin: 0 auto 15px;
+            }
+        }
+
+        .data-input {
+            @media screen and (max-width: 860px) {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .three-col {
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
+
+                .col-1 {
+                    width: calc(100% - 350px - 45px);
+
+                    @media screen and (max-width: 1024px) {
+                        width: calc(100% - 240px - 45px);
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        float: none;
+                        padding-top: 0;
+                    }
+                }
+
+                .col-2 {
+                    @media screen and (max-width: 1024px) {
+                        width: 240px;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        float: none;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+                .col-3 {
+                    @media screen and (max-width: 768px) {
+                        float: none;
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .discount {
+        padding: 17px 0 15px;
+
+        .code-input {
+            margin-right: 10px;
+
+            @media screen and (max-width: 460px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            input[type="text"] {
+                margin-bottom: 10px;
+            }
+        }
+
+        .code-text {
+            span {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .col-two {
+        .row-inside {
+            padding: 10px;
+            box-sizing: border-box;
+
+            @media (max-width:460px) {
+                width: 100%;
+            }
+
+            .billing-detail-value {
+                width: auto;
+            }
+        }
+
+        .col-2 {
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+
+            p {
+                @media screen and (max-width: 1024px) {
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    .steps {
+        @media (max-width:860px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width:768px) {
+            flex-wrap: wrap;
+        }
+
+        li {
+            @media (max-width:860px) {
+                margin: 0 17px;
+            }
+
+            @media (max-width:768px) {
+                box-sizing: border-box;
+                width: 45%;
+                margin: 0;
+            }
+
+            @media (max-width:460px) {
+                width: 100%;
+                padding: 20px 30px;
+            }
+
+            &:after {
+                @media (max-width:768px) {
+                    right: 6px;
+                }
+            }
+        }
+    }
+
+    .billing-data {
+        .col-half:nth-child(n) {
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .course-receipt-wrap {
+        padding: 0 15px;
+        width: 100%;
+        overflow: auto;
+
+        table.course-receipt {
+            min-width: 700px;
+
+            tr {
+                td,
+                th {
+                    padding: 15px 5px;
+                }
+            }
+        }
+    }
+}
+
+.empty-dashboard-message {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.staff-modal {
+    width: 95% !important;
+    max-width: 1000px !important;
+
+    table {
+        word-break: break-all;
+
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+    }
+}
+
+// Account Settings for linked accounts
+
+.account-settings-sections {
+    .section {
+        padding: 20px;
+
+        .account-settings-section-body [class*="u-field-auth-oa2-"] {
+            &.u-field-social {
+                width: 32%;
+                margin: 0;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    padding: 5px 0 !important;
+                }
+
+                .u-field-social-help {
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                    }
+                }
+            }
+
+            &.u-field .field {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+.accountsTabSections-section-body {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+body.view-in-course .header-global,
+.header-global.header-global__course {
+    padding: 30px 15px;
+
+    @media screen and (max-width: 990px) {
+        padding: 22px 15px 23px;
+    }
+}
+
+.wrap-instructor-info.studio-view .instructor-info-action {
+    &:hover {
+        color: $white !important;
+    }
+}
+
+// programs
+
+.program-header {
+    .org-wrapper {
+        display: none !important;
+    }
+
+    .title,
+    .subtitle {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+
+    .banner-content {
+        padding-top: 50px !important;
+    }
+}
+
+.program-details-content {
+    .course-card {
+        .course-title .course-title-link {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        .course-actions {
+            .enrollment-info,
+            .view-course-link,
+            .enroll-button {
+                width: 100% !important;
+                padding: 10px 15px !important;
+                box-sizing: border-box;
+            }
+
+            button.cta-primary {
+                background: $base-color !important;
+            }
+        }
+    }
+}
+
+.program-card {
+    border: 1px solid #ccc !important;
+
+    .card-link {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+}
+
+.sidebar .program-advertise .new-programs-btn {
+    color: $base-color !important;
+    border: 1px solid $base-color !important;
+
+    &:hover {
+        color: #fff !important;
+    }
+}
+
+body.view-in-course .header-global .wrapper-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.find-courses .courses-container .courses:not(.no-course-discovery) {
+    @media screen and (max-width: 768px) {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .courses-listing {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+
+        .courses-listing-item {
+            @media screen and (max-width: 768px) {
+                display: inline-block;
+                float: none;
+                max-width: 280px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.find-courses .search-facets:last-child {
+    @media screen and (max-width: 540px) and (min-width: 320px) {
+        margin-right: 0;
+        float: left;
+        display: block;
+        width: 100%;
+    }
+}
+
+section.outside-app {
+    padding-left: 10px;
+    padding-right: 10px;
 }
