@@ -51,17 +51,17 @@ from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
 
 <%block name="js_extra">
   % if user.is_authenticated() and user.is_active:
-  <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
-  <script type="text/javascript" charset="utf-8">
-      $(document).ready(function () {
-          var domain_address = document.location.origin;
-          $.post(domain_address + "/api/get_referral_hash_key/", {},
-              function (data) {
-                  $(".referral-btn").attr('data-clipboard-text', (domain_address + data.hashkey));
+      <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+      <script type="text/javascript" charset="utf-8">
+          $(document).ready(function () {
+              var domain_address = document.location.origin;
+              $.post(domain_address + "/api/get_referral_hash_key/", {},
+                  function (data) {
+                      $(".referral-btn").attr('data-clipboard-text', (domain_address + data.hashkey));
+              });
+              new Clipboard('.referral-btn');
           });
-          new Clipboard('.referral-btn');
-      });
-  </script>
+      </script>
   % endif
 </%block>
 
