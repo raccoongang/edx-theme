@@ -19,9 +19,8 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <h1>${_("TIPS FOR BETTER TIME MANAGEMENT")}</h1>
-                <span>${_("STUDENT SUCCESS")}</span>
-                <a href="/courses" class="link">${_("FIND COURSES")}</a>
+                <h1>${_("Welcome to the academy")}</h1>
+                <span>${_("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor")}</span>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -143,12 +142,13 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
+   <script src="${static.url('js/jquery.lazyload.min.js')}"></script>
    <script type="text/javascript">
       $(window).load(function() {
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
-      })
+      });
 
       // js for parallax
       $(window).scroll(function () {
@@ -161,9 +161,7 @@ from openedx.core.djangolib.markup import HTML, Text
         } else if ($(window).scrollTop() <= 100) {
           $('.arrow-up').removeClass('active');
         }
-
       });
-      // js for parallax end
 
       // js for show more btn
       $('.show-more').click(function () {
@@ -180,7 +178,11 @@ from openedx.core.djangolib.markup import HTML, Text
           }
         }, 300);
       });
-      // js for show more btn end
+
+      // js lazy loading images
+      $('.courses-container img.lazy').lazyload({
+        effect : "fadeIn"
+      });
 
    </script>
 </%block>
