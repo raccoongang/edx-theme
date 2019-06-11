@@ -1,6 +1,5 @@
 .hamburger {
     display: block;
-    position: relative;
     width: $hamburger-width;
     height: $hamburger-height + 6;
     background: transparent;
@@ -34,7 +33,7 @@
         box-shadow: none !important; //platform has many selectors
         background: transparent !important; //platform has many selectors
     }
-    @media screen and (min-width: 761px) {
+    @media screen and (min-width: $build-header-menu-tablet+1) {
         display: none;
     }
 

@@ -9,7 +9,8 @@
         display: flex;
         justify-content: center;
     }
-    @media (min-width: 761px) {
+
+    @media (min-width: $build-header-menu-tablet+1) {
         width: auto;
         display: block;
         padding: 0;

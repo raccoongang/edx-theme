@@ -8,6 +8,7 @@ body {
     .logo {
         margin: -2px 39px 0 0;
     }
+
     .course-header {
         display: none;
         @media screen and (min-width:600px ) {
@@ -39,12 +40,13 @@ body {
         }
     }
     .list-inline {
-        &.nav-global {
-            margin-top: 10px;
-        }
         .item {
             text-transform: none;
             font-size: 14px;
+        }
+
+        &.nav-global {
+            margin-top: 0;
         }
     }
     .nav-global li a:hover {
@@ -123,6 +125,10 @@ body {
             font-size: 14px;
             line-height: 1.3;
             color: $header-nav-link-color !important;
+            max-width: 115px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
             &:hover {
                 color: $header-nav-link-color-hover !important;
             }
@@ -228,10 +234,18 @@ body .header-global .wrapper-header .wrapper-user-menu {
         color: $theme-user-link-hover;
     }
 }
-.header-global .nav-global .tab-nav-item .tab-nav-link {
-    padding: 0;
-    font-size: 14px;
+.header-global .nav-global {
+    li a {
+        font-weight: 600;
+        font-size: 14px !important;
+    }
+
+    .tab-nav-item .tab-nav-link {
+        padding: 0;
+        font-size: 14px;
+    }
 }
+
 .header-global .wrapper-header .list-inline .item {
     float: left;
     @media screen and (min-width:760px ) {
@@ -255,9 +269,6 @@ body .header-global .wrapper-header .wrapper-user-menu {
   }
 }
 @media screen and (max-width:760px ) {
-    body .header-global .wrapper-header .list-inline li a {
-        padding: 5px !important;
-    }
     .form-actions {
         display: flex;
         flex-direction: column;
