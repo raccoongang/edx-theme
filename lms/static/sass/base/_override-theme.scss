@@ -1,0 +1,60 @@
+#certificate-voucher {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#certificate-voucher-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 610px;
+    height: 410px;
+    box-sizing: border-box;
+    max-width: calc(100% - 30px);
+    max-height: calc(100vh - 30px);
+    overflow: auto;
+    z-index: 999;
+    background: #fff;
+    border: 5px solid #000;
+
+    iframe {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .close-btn {
+        width: 29px;
+        height: 29px;
+        border: 2px solid #333;
+        border-radius: 50%;
+        position: absolute;
+        right: 3px;
+        top: 7px;
+        box-sizing: border-box;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            width: 2px;
+            height: 65%;
+            background: #333;
+            position: absolute;
+            top: 0;
+        }
+
+        &:after {
+            transform: rotate(-51deg) translate(4px,12px);
+        }
+
+        &:before {
+            transform: rotate(51deg) translate(11px,-6px);
+        }
+    }
+}
