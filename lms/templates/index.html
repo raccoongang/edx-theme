@@ -56,37 +56,35 @@ from openedx.core.djangolib.markup import HTML, Text
                 category_courses = filter(lambda x: x, category.get_descendants(include_self=True).values_list('courses', flat=True))
               %>
               % if category_courses:
-                <div>
-                  <div class="heading-holder">
-                    <h2 class="heading-holder__name">${category.name}</h2>
+                <section class="course-box">
+                  <h2 class="course-box__heading">${category.name}</h2>
+                  <div class="course-box__content">
                     % if category.img:
-                      <img src="${category.img.url}" alt="${category.name}">
+                      <img class="course-box__img" src="${category.img.url}" alt="${category.name}">
                     % endif
-                    <p class="heading-holder__text">${category.description}</p>
-                  </div>
-                  % for sub_category in category.get_children():
+                    <p class="course-box__description">${category.description}</p>
+                    % for sub_category in category.get_children():
+                      <%
+                        courses_sub_category = sub_category.courses.all()
+                        set_courses_sub_category.update(courses_sub_category)
+                      %>
+                      % if courses_sub_category:
+                        <%include file="${courses_list}" args="courses=courses_sub_category" />
+                      % endif
+                      % if sub_category.url:
+                      <!-- place for external link -->
+                        <a class="course-box__link" href="${sub_category.url}">${_("Link to exam")} >>></a>
+                      <!--  -->
+                      % endif
+                    % endfor
                     <%
-                      courses_sub_category = sub_category.courses.all()
-                      set_courses_sub_category.update(courses_sub_category)
+                      root_category_courses = set(category.courses.all()) - set_courses_sub_category
                     %>
-                    % if courses_sub_category:
-                      <%include file="${courses_list}" args="courses=courses_sub_category" />
+                    % if root_category_courses:
+                      <%include file="${courses_list}" args="courses=root_category_courses" />
                     % endif
-                    % if sub_category.url:
-                    <!-- place for external link -->
-                      <div class="heading-holder">
-                        <p class="heading-holder__text"><a href="${sub_category.url}">${sub_category}</a></p>
-                      </div>
-                    <!--  -->
-                    % endif
-                  % endfor
-                  <%
-                    root_category_courses = set(category.courses.all()) - set_courses_sub_category
-                  %>
-                  % if root_category_courses:
-                    <%include file="${courses_list}" args="courses=root_category_courses" />
-                  % endif
-                </div>
+                  </div>
+                </section>
               % endif
             % endfor
         % endif
@@ -142,6 +140,11 @@ from openedx.core.djangolib.markup import HTML, Text
         }, 300);
       });
       // js for show more btn end
+
+      // accordion for course block
+      $('.course-box__heading').on('click', function () {
+        $(this).toggleClass('open').next('.course-box__content').slideToggle(300);
+      });
 
    </script>
 </%block>
