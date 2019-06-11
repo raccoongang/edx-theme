@@ -18,7 +18,7 @@
     background: $header-bg;
     border: none;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
-    padding: 30px 15px;
+    padding: 20px 15px;
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
@@ -1128,6 +1128,17 @@ body .wmd-prompt-dialog .btn-brand:focus {
             display: block;
         }
 
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(#000, .5);
+            z-index: 1;
+        }
+
         .parallax-img {
             position: absolute;
             left: 0;
@@ -1141,6 +1152,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .outer-wrapper {
             animation: none;
             padding: 0;
+            z-index: 2;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table;
@@ -1211,7 +1223,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     }
 
                     @media screen and (min-width: $breakpoint-tablet) {
-                        font-size: 28px;
+                        font-size: 26px;
                         margin-bottom: 15px;
                     }
                 }
@@ -5267,7 +5279,7 @@ div.info-wrapper section.updates div a {
 
 body.view-in-course .header-global,
 .header-global.header-global__course {
-    padding: 30px 15px;
+    padding: 20px 15px;
 
     @media screen and (max-width: 990px) {
         padding: 22px 15px 23px;
