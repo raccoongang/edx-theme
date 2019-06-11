@@ -1708,6 +1708,7 @@ body .login .form-actions button[type="submit"] {
 .login-register .login-provider,
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
+.referral-btn-wrapper .referral-btn.last-accessed-link,
 .dashboard .my-courses .course .details .enter-course {
     white-space: nowrap;
     background: $theme-btn-white-bg;
@@ -1728,6 +1729,20 @@ body .dashboard .my-courses .course .details .enter-course.archived,
         border-color: $theme-btn-white-bg-hover;
     }
 }
+
+.referral-btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-bottom: 1rem;
+    padding-left: 1.25rem;
+
+    @media (min-width: 1200px) {
+        padding-left: initial;
+    }
+}
+
+
 body .discussion-module .btn {
     white-space: nowrap;
     background: $theme-btn-white-bg;
