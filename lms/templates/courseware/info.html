@@ -50,10 +50,6 @@ from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
 </%static:require_module_async>
 
 <%block name="js_extra">
-  ## CourseTalk widget js script
-  % if show_coursetalk_widget:
-      <script src="//d3q6qq2zt8nhwv.cloudfront.net/s/js/widgets/coursetalk-write-reviews.js"></script>
-  % endif
   % if user.is_authenticated() and user.is_active:
   <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
   <script type="text/javascript" charset="utf-8">
