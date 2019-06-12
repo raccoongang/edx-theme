@@ -2256,9 +2256,10 @@ body .wrapper-account-settings .account-settings-container {
     }
 }
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification {
-    padding: 0 0 0 100px;
+    padding: 0;
     z-index: 100;
     height: 24px;
+    position: relative;
 }
 .wrapper-footer footer#footer-openedx p a {
     color: $color1;
@@ -2287,7 +2288,7 @@ body.menu-open {
 .courses-container .courses .courses-listing {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .courses-container .highlighted-courses .courses .courses-listing .courses-listing-item {
     width: 49%;
@@ -2579,18 +2580,31 @@ body .login-register .form-field.select-year_of_birth {
 .about-info-box_item__usd:after {
     background-image: url("../images/about-usd.png");
 }
+
 .about-info-box_item__account-multiple:after {
     background-image: url("../images/about-account-multiple.png");
 }
+
 .about-info-box_item_alert-circle:after {
     background-image: url("../images/about-alert-circle.png");
 }
+
 .about-info-box_item_calendar-clock:after {
     background-image: url("../images/about-calendar-clock.png");
 }
+
 .about-info-box_item_calendar-multiselect:after {
     background-image: url("../images/about-calendar-multiselect.png");
 }
+
 .about-info-box_item_clock:after {
     background-image: url("../images/about-clock.png");
+}
+
+.wallet-holder {
+    display: none;
+}
+
+body .find-courses .search-facets.phone-menu {
+    visibility: hidden;
 }
