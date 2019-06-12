@@ -1,0 +1,183 @@
+.shopping-cart {
+	.container {
+		padding: 10px 15px;
+		max-width: 1200px !important;
+	}
+
+	.steps {
+		border-top: 2px solid #ccc;
+		border-bottom: 2px solid #ccc;
+
+		li {
+			padding: 10px 20px;
+
+			&:after {
+				top: 50%;
+				transform: translateY(-50%);
+				margin-top: 2px;
+			}
+		}
+	}
+
+	.user-data {
+		.data-input hr {
+			border-color: #ccc;
+		}
+
+		.three-col {
+			overflow: hidden;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			button.btn-remove {
+				background: none !important;
+				color: #000;
+			}
+
+			.numbers-row {
+				label {
+					display: inline-block;
+					vertical-align: top;
+					line-height: 67px !important;
+				}
+
+				button.inc,
+				button.dec {
+					color: #000;
+					margin-left: -25px !important;
+
+					.fa-caret-up span {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.discount {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+
+		.code-text {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&:after {
+				display: none;
+			}
+
+			.code-input {
+				padding: 9px 0;
+
+				button[type=submit] {
+					height: 44px;
+					background: $base-color;
+					color: #fff;
+					border-color: $base-color;
+					box-shadow: none !important;
+					text-shadow: none;
+					border-radius: 4px;
+
+					&:hover {
+						background: $base-color-hover;
+					}
+				}
+			}
+
+			span {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.col-two .col-2 {
+		width: 100%;
+
+		button[name="billing-details"] {
+			background: $base-color;
+			color: #fff;
+			text-shadow: none;
+			border: 1px solid $base-color;
+			box-shadow: none;
+			padding: 10px 20px;
+			display: block;
+			height: auto !important;
+			font-size: 20px !important;
+
+			&:hover {
+				background: $base-color-hover;
+			}
+
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+#flutterwave_form {
+	button {
+		background: $base-color;
+		color: #fff;
+		text-shadow: none;
+		border: 1px solid $base-color;
+		box-shadow: none;
+		padding: 10px 20px;
+		margin: 0 auto;
+		display: block;
+
+		&:hover {
+			background: $base-color-hover;
+		}
+
+		span {
+			display: none;
+		}
+	}
+}
+
+.ui-widget-overlay {
+	background-image: none !important;
+}
+
+.payment-modal {
+	.ui-dialog-titlebar {
+		background: #ccc;
+		border: none;
+	}
+
+	.ui-dialog-titlebar-close {
+		background: none !important;
+		border: none !important;
+		box-shadow: none;
+		padding: 0 !important;
+
+		.ui-icon-closethick {
+			left: 0 !important;
+			top: 0 !important;
+			position: relative;
+			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);
+		}
+	}
+
+	.ui-dialog-buttonset button.ui-button {
+		background: $base-color;
+		color: #fff;
+		text-shadow: none;
+		border: none !important;
+		box-shadow: none;
+
+		&:hover {
+			background: $base-color-hover;
+		}
+	}
+}
+
+.main-header .shopping-cart {
+	background: none !important;
+	border: none !important;
+	margin-right: 15px;
+}
