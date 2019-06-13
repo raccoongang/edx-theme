@@ -656,6 +656,7 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
             background: none;
             box-shadow: none;
             text-shadow: none;
+            outline: none;
         }
 
         .fa-sort-desc {
@@ -1615,6 +1616,11 @@ body.view-in-course .wrapper-course-material .course-material {
 }
 .wrapper-account-settings .wrapper-header .account-nav button.active {
     border-bottom: 3px solid #ff6f00 !important;
+
+    &:focus,
+    &:hover {
+        outline: none;
+    }
 }
 
 .course-info .course-sidebar .important-dates li:first-child {
@@ -1728,6 +1734,10 @@ body .dashboard .my-courses .course .details .enter-course.archived,
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-bg-hover;
     }
+}
+
+.account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link:hover {
+    border: 1px solid #f39e00;
 }
 
 .referral-btn-wrapper .referral-btn.last-accessed-link {
@@ -2607,4 +2617,30 @@ body .login-register .form-field.select-year_of_birth {
 
 body .find-courses .search-facets.phone-menu {
     visibility: hidden;
+}
+
+.view-profile .profile-section-one-fields .u-field-icon {
+    display: none;
+}
+
+.profile-section-one-fields > span {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.view-profile .wrapper-profile-section-one {
+    overflow: hidden;
+}
+
+body .account-settings-sections .section .account-settings-section-body .u-field .social-field-linked .u-field-social-help {
+    display: inline-block;
+    padding: 0px 0 6px;
+    text-align: center;
+}
+
+.banner_img {
+    width: 100%;
+    display: block;
+    margin-bottom: 40px;
 }
