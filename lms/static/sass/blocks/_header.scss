@@ -90,7 +90,7 @@
 					a {
 						color: $header-nav-link-color;
 					}
-					.btn{
+					.btn {
 						padding: 6px 20px;
 					}
 					.fa {
@@ -102,6 +102,11 @@
 				}
 				.username {
 					margin-left: 10px;
+					max-width: 120px;
+					display: inline-block;
+					overflow: hidden;
+					vertical-align: middle;
+					text-overflow: ellipsis;
 				}
 				.user-image-frame {
 					margin: 0 5px;
