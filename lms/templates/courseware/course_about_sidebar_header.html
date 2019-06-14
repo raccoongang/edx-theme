@@ -19,10 +19,9 @@ import urllib
 
         ## Translators: This text will be automatically posted to the student's
         ## Twitter account. {url} should appear at the end of the text.
-        tweet_text = _("I just enrolled in {number} {title} through {account}: {url}").format(
+        tweet_text = _("I just enrolled in {number} {title} through: {url}").format(
             number=course.number,
             title=course.display_name_with_default_escaped,
-            account=static.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),
             url=u"http://{domain}{path}".format(
                 domain=site_domain,
                 path=reverse('about_course', args=[course.id.to_deprecated_string()])
