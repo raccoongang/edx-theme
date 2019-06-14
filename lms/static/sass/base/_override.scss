@@ -427,6 +427,11 @@ body {
                 }
                 .course-title {
                     a {
+                        max-height: 111px;
+                        overflow: hidden;
+                        font-size: 18px;
+                        line-height: 19px;
+                        
                         @media (max-width: 767px) {
                             font-size: 1.4em;
                             line-height: 1.6em;
