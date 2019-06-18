@@ -47,19 +47,25 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </header>
       <div class="promobox">
-        <img class="promobox__image" src="/static/${settings.DEFAULT_SITE_THEME}/images/1GENERIC_PATHWAY_Merck.png" alt="GENERIC PATHWAY Merck">
-        <img class="promobox__image" src="/static/${settings.DEFAULT_SITE_THEME}/images/2EXAMPLE_PATHWAY_Merck.png" alt="EXAMPLE PATHWAY Merck">
-        <p class="promobox__text">${_("Finding your learning pathway and course direction is as easy as 1, 2, 3, 4, 5!")}</p>
-        <ul class="promobox__list">
+        <p class="promobox__text"><strong>${_("Finding your learning pathway and course direction is as easy as 1, 2, 3, 4, 5!")}</strong></p>
+        <ol class="promobox__list">
           <li class="promobox__list-item">${_("Identify your professional role, one of the fundamentals courses, or a topic that supports your development goals.")}</li>
-          <li class="promobox__list-item">${_("Explore two paths to learn: learning pathways that lead to ")}<a href="https://www.microsoft.com/en-us/learning/certification-overview.aspx">${_("Microsoft professional certifications")}</a> ${_("and courses that meet your current interests.")}</li>
-          <li class="promobox__list-item">${_("Click on a Certification Track or Topic to see all associated courses.")}</li>
+          <li class="promobox__list-item">${_("Explore two paths to learn:")}
+            <ul class="promobox__list">
+              <li class="promobox__list-item">${_("Learning pathways that lead to ")}<a class="promobox__link" href="https://www.microsoft.com/en-us/learning/certification-overview.aspx">${_("Microsoft professional certifications")}</a></li>
+              <li class="promobox__list-item">${_("Courses that meet your current interests")}</li>
+            </ul>
+          </li>
+          <li class="promobox__list-item">${_("Click on a category listed below to see all associated courses.")}</li>
           <li class="promobox__list-item">${_("Click to enroll in a course.")}</li>
           <li class="promobox__list-item">${_("Start learning today and enhance your professional credentials.")}</li>
-        </ul>
-        <p class="promobox__text">${_("Take the certification exam after completing all the classes in your pathway to begin to earn a Microsoft role-based certification.")}</p>
-        <p class="promobox__text">${_("For more details, explore the ")}<a href="https://collaboration.merck.com/sites/support/Pages/Office-365-Tech-Hub.aspx#/">${_("Tech Hub FAQ")}</a></p>
-        <p class="promobox__text">${_("(NOTE: Courses subject to change based on Microsoft program updates)")}</p>
+        </ol>
+        <p class="promobox__text">${_("Take the certification exam after completing all the classes in your pathway to begin to earn a Microsoft role-based certification.")} <strong>${_("Categories that lead to a certificate are marked with a double asterisk")}</strong></p>
+        <p class="promobox__text">${_("For more details, explore the ")}<a class="promobox__link" href="https://collaboration.merck.com/sites/support/Pages/Office-365-Tech-Hub.aspx#/">${_("Tech Hub FAQ")}</a></p>
+        <p class="promobox__text promobox__text_small">${_("(NOTE: Courses subject to change based on Microsoft program updates)")}</p>
+        <img class="promobox__image" src="/static/${settings.DEFAULT_SITE_THEME}/images/generic_pathway-no_white.png" alt="GENERIC PATHWAY Merck">
+        <img class="promobox__image" src="/static/${settings.DEFAULT_SITE_THEME}/images/example_learning_pathway-no_white.png" alt="EXAMPLE PATHWAY Merck">
+        <p class="promobox__text promobox__text_center">${_("Click on a category below to start learning today")}</p>
       </div>
 
         % if not categories:
@@ -88,7 +94,9 @@ from openedx.core.djangolib.markup import HTML, Text
                       % endif
                       % if sub_category.url:
                       <!-- place for external link -->
-                        <a class="course-box__link" href="${sub_category.url}">${_("Link to exam")} >>></a>
+                      <div class="course-box__link-holder">
+                          <a class="course-box__link" href="${sub_category.url}">${_("Link to exam")} &rsaquo;&rsaquo;&rsaquo;</a>
+                      </div>
                       <!--  -->
                       % endif
                     % endfor
