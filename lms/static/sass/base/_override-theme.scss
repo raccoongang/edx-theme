@@ -31,6 +31,7 @@
     max-width: 850px;
     text-align: center;
     margin: 30px auto;
+    font-family: $global-font-family;
 
     &:empty {
         display: none;
@@ -127,9 +128,38 @@
 }
 
 .course-box__link {
-    display: block;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid $base-color;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        color: $base-color2 !important;
+    }
+}
+
+.course-box__link-holder {
     text-align: center;
-    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+.promobox {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0 0;
+    font-family: $global-font-family;
+}
+
+.promobox__image {
+    display: block;
+    max-width: 100%;
+    margin: 30px 0 20px;
+}
+
+.promobox__list-item {
+    padding-bottom: 10px;
 }
 
 .promobox {
