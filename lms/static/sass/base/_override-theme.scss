@@ -124,7 +124,8 @@
 .course-box__img {
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 30px;
+    display: block;
 }
 
 .course-box__link {
@@ -148,8 +149,10 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 0 0;
+    padding: 40px 15px 0;
+    box-sizing: border-box;
     font-family: $global-font-family;
+    line-height: 1.2;
 }
 
 .promobox__image {
