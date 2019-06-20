@@ -3784,6 +3784,7 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
     }
 }
 
+
 .container.about {
     padding-bottom: 0;
 }
@@ -3801,4 +3802,16 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
     display: block;
     width: 100%;
     margin-bottom: 30px;
+
+.profile-wrapper .course-info>.chapters>section {
+    display: flex;
+}
+
+.profile-wrapper .course-info>.chapters>section .hd {
+    width: 25%;
+}
+
+.profile-wrapper .course-info>.chapters>section .sections>div .hd {
+    width: 100%;
+    border-right: none;
 }
