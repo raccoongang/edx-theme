@@ -3783,3 +3783,16 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
         text-transform: uppercase;
     }
 }
+
+.profile-wrapper .course-info>.chapters>section {
+    display: flex;
+}
+
+.profile-wrapper .course-info>.chapters>section .hd {
+    width: 25%;
+}
+
+.profile-wrapper .course-info>.chapters>section .sections>div .hd {
+    width: 100%;
+    border-right: none;
+}
