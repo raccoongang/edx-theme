@@ -425,3 +425,26 @@ body .btn-brand {
     max-height: 40px;
     box-sizing: border-box !important;
 }
+
+.course-header,
+.course-header span {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    color: #fff !important;
+}
+
+.dropdown-menu-container .menu-title .label-username,
+.header-global .user .user-link .label-username {
+    color: #fff !important;
+
+    &:hover {
+        color: $base-color !important;
+    }
+}
+
+body .dropdown-menu-container .user-menu .menu-button {
+    color: #fff !important;
+
+    &:hover {
+        color: #fff !important;
+    }
+}
