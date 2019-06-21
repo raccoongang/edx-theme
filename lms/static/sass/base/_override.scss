@@ -722,6 +722,12 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     justify-content: space-between;
     width: 100%;
     margin-bottom: 50px;
+
+    @media (max-width: $desktop-size) {
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
 }
 .course-info .course-sidebar {
     float: none;
@@ -747,6 +753,10 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     margin-right: 50px;
     display: flex;
     align-items: center;
+
+    @media (max-width: $tablet-size) {
+        margin-right: 0;
+    }
 
     img{
         margin-right: 6px;
@@ -1975,6 +1985,10 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
     @media (min-width: $tablet-size) {
         width: 48.82117%;
     }
+    @media (max-width: $tablet-size) {
+        background: $color1;
+        color: #fff;
+    }
 }
 .light-button:hover:not(:disabled),
 div.history-controls input[type="submit"]:hover:not(:disabled),
@@ -2420,12 +2434,23 @@ body footer .raccoon__logo {
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: $desktop-size) {
+        padding: 0 30px;
+    }
+    @media (max-width: $tablet-size) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .course-info .course-sidebar header {
     order: 2;
     margin: 0;
     width: 45%;
+
+    @media (max-width: $tablet-size) {
+        width: 100%;
+    }
 
     &:after {
         display: none;
@@ -2434,6 +2459,9 @@ body footer .raccoon__logo {
 
 .course-info .course-sidebar .important-dates {
     order: 1;
+    @media (max-width: $tablet-size) {
+        align-items: center;
+    }
 }
 
 .about-course-heading {
@@ -2620,6 +2648,12 @@ body .login-register .form-field.select-year_of_birth {
     margin: 0 0 0 30px;
     padding: 14px 0;
     list-style: none;
+
+    @media (max-width: $tablet-size) {
+        column-count: 1;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .about-info-box_item {
@@ -2696,15 +2730,15 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     margin-bottom: 40px;
 }
 
-body .view-profile .wrapper-profile-section-two {
+body.view-profile .wrapper-profile-section-two {
     width: 100%;
 }
 
-body .view-profile .profile-section-two-fields .u-field-title {
+body.view-profile .profile-section-two-fields .u-field-title {
     width: 100%;
 }
 
-body .view-profile .profile-section-two-fields .u-field-value {
+body.view-profile .profile-section-two-fields .u-field-value {
     width: 100%;
     padding: 0;
 }

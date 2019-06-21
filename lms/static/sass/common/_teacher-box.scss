@@ -1,6 +1,10 @@
 .teacher-box {
     display: flex;
     align-items: flex-start;
+
+    @media (max-width: $mobile-size) {
+        flex-direction: column;
+    }
 }
 
 .teacher-box__photo {
@@ -8,6 +12,9 @@
     max-width: 198px;
     margin-right: 40px;
     border: 1px solid #ccc;
+    @media (max-width: $mobile-size) {
+        margin: 0  auto 30px;
+    }
 }
 
 .teacher-box__name {
