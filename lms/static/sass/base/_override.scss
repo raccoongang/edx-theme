@@ -56,6 +56,12 @@
     align-items: center;
 }
 
+body .wrapper-footer footer#footer-openedx .footer-about-openedx {
+    @media (max-width: $tablet-size) {
+        width: auto;
+    }
+}
+
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li.desktop {
     display: none;
     @media (min-width: $tablet-size) {
@@ -328,6 +334,10 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     height: 328px;
     position: relative;
 
+    @media (max-width: $desktop-size) {
+        height: auto;
+    }
+
     &:after {
         content: '';
         height: 3px;
@@ -340,7 +350,12 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 
     &:before {
         height: 328px;
+
+        @media (max-width: $desktop-size) {
+            height: auto;
+        }
     }
+    
 }
 
 .courses-container .courses .course .course-info .course-date {
@@ -1184,6 +1199,7 @@ body {
         @media screen and (max-width: 768px) {
             flex-direction: column;
             flex: 0 0 100%;
+            width: 100%;
         }
     }
     .account-settings-sections .section .account-settings-section-body .u-field,
@@ -1286,6 +1302,12 @@ body {
     .account-settings-sections .section-header {
         margin-bottom: 30px;
         font-size: 24px;
+    }
+}
+
+body .account-settings-sections .section .account-settings-section-body .u-field .social-field-unlinked {
+    @media (max-width: $tablet-size) {
+        margin: 0;
     }
 }
 
@@ -1534,6 +1556,11 @@ body.view-in-course .wrapper-course-material .course-material {
 }
 .login-register .login-provider.button-oa2-google-oauth2 {
     background: #fff;
+
+    @media (max-width: $tablet-size) {
+        width: 100%;
+    }
+
 }
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
@@ -2299,19 +2326,43 @@ body.menu-open {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @media (max-width: $desktop-size) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .courses-container .highlighted-courses .courses .courses-listing .courses-listing-item {
     width: 49%;
     margin-right: 0;
     max-width: none;
+    @media (max-width: $desktop-size) {
+        margin: 0 auto 20px;
+    }
+    @media (max-width: $tablet-size) {
+        width: 100%;
+    }
 }
-
+.courses-container .highlighted-courses .courses .courses-listing .courses-listing-item:nth-child(2n) {
+    margin-left: 2%;
+    @media (max-width: $desktop-size) {
+        margin: 0 auto 20px;
+    }
+    @media (max-width: $tablet-size) {
+        width: 100%;
+    }
+}
 .theme-footer_holder {
     position: relative;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+
+    @media (max-width: $tablet-size) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .theme-footer_holder .footer-support {
     justify-content: flex-start;
@@ -2643,4 +2694,26 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     width: 100%;
     display: block;
     margin-bottom: 40px;
+}
+
+body .view-profile .wrapper-profile-section-two {
+    width: 100%;
+}
+
+body .view-profile .profile-section-two-fields .u-field-title {
+    width: 100%;
+}
+
+body .view-profile .profile-section-two-fields .u-field-value {
+    width: 100%;
+    padding: 0;
+}
+
+.account-settings-section-body.accountsTabSections-section-body {
+    
+    @media (max-width: $tablet-size) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -24,6 +24,14 @@
     display: block;
     font-weight: bold;
     color: #fff;
+
+    @media (max-width: $mobile-size) {
+        font-size: 110px;
+    }
+
+    @media (max-width: 320px) {
+        font-size: 80px;
+    }
 }
 
 .promo-section__title {
@@ -43,10 +51,9 @@
 }
 
 .promo-section__description-name {
-    float: left;
-    font-size: 26px;
-    line-height: 1.3;
-    font-weight: bold;
+    float: none;
+    font-size: 0;
+    line-height: 0;
 }
 
 .promo-section__description-text {
