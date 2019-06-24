@@ -20,9 +20,10 @@ course_sections = blocks.get('children')
 
 <%
     viewing_role = None
-    course_key = None
     if 'masquerade_settings' in request.session:
-        course_key = CourseKey.from_string(request.session['course_id'])
+        course_key=None
+        if 'masquerade_settings' in request.session and request.session['masquerade_settings']:
+            course_key = CourseKey.from_string(request.session['course_id'])
 
         if not request.session['masquerade_settings'] and not course_key:
             viewing_role = 'staff'
