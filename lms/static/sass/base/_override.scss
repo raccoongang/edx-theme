@@ -3920,6 +3920,23 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     }
 }
 
+
 .home>header .title .course-search {
     padding-top: 250px;
+}
+  
+.footer-logo-holder {
+    display: flex;
+
+    @media (max-width: 1100px) {
+        position: static;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+}
+
+.footer-logo-holder__item {
+    margin-left: 20px;
 }
