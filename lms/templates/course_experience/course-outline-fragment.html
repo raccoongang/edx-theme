@@ -206,7 +206,6 @@ course_sections = blocks.get('children')
                                              </li>
                             % endfor
                                     </ol>
-                            % endif
                         % endif
                     % if not gated_subsection or (gated_subsection and completed_prereqs):
                         <ol class="outline-item accordion-panel ${ '' if subsection_is_auto_opened else 'is-hidden' }"
