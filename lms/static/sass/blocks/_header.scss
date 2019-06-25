@@ -5,20 +5,22 @@
 	position: relative;
 	overflow: visible;
 	background: $header-bg;
+	z-index: 2;
 
 	.main-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 23px 0;
+		padding: 22px 0 23px;
 		height: auto;
+		position: relative;
 
 		@media screen and (max-width: $build-header-menu-tablet) {
 			display: block;
 		}
 
 		@media screen and (min-width: $breakpoint-tablet) {
-			padding: 28px 0;
+			padding: 30px 0;
 		}
 
 		.header-logo {
@@ -35,6 +37,7 @@
 			a {
 				margin: 0;
 				transition: opacity .15s ease;
+				height: auto;
 
 				&:hover {
 					opacity: .8;
@@ -45,11 +48,6 @@
 					margin: 0 !important;
 					height: $header-logo-height;
 				}
-			}
-
-			.course-header {
-				margin-top: 0;
-				color: #fff;
 			}
 		}
 
@@ -64,6 +62,17 @@
 			@media (min-width: $build-header-menu-tablet + 1) {
 				display: flex;
 				border-top: none;
+			}
+
+			&.nav-links_not-authenticated .main {
+				@media (max-width: $build-header-menu-tablet) {
+					border-bottom: none;
+					padding-bottom: 5px;
+				}
+
+				@media (max-width: $build-header-menu-mobile) {
+					padding-bottom: 0;
+				}
 			}
 
 			.main {
@@ -82,7 +91,7 @@
 					position: static;
 					transform: none;
 					width: 100%;
-					padding: 15px;
+					padding: 20px 15px;
 					flex-wrap: wrap;
 					border-bottom: 1px solid #d4d4d4;
 				}
@@ -166,6 +175,7 @@
 
 				.user-dropdown-wrapper {
 					display: flex;
+					align-items: center;
 				}
 
 				.nav-item {
@@ -204,6 +214,8 @@
 
 						&.menu-title {
 							color: #474747;
+							position: relative;
+							top: 1px;
 
 							&:hover,
 							&:focus {
@@ -279,6 +291,11 @@
 				.toggle-user-dropdown {
 					padding: 5px 3px;
 
+					.fa {
+						position: relative;
+						top: 3px;
+					}
+
 					&:hover,
 					&:focus {
 						.fa {
@@ -288,6 +305,13 @@
 				}
 			}
 		}
+	}
+
+	.course-header {
+		margin-top: 0;
+		color: #313131;
+		text-align: center;
+		padding-bottom: 20px;
 	}
 
 	.dropdown-user-menu a {
@@ -316,16 +340,21 @@
 	}
 
 	.hamburger-menu {
-		top: 35px;
+		top: 25px;
 		right: 15px;
 		left: inherit;
 		position: absolute;
 		width: 30px;
-		height: 20px;
-		padding-bottom: 5px;
+		height: 30px;
+		padding-bottom: 0;
 		transform: rotate(0deg);
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
+		box-sizing: border-box;
+
+		@media screen and (min-width: $breakpoint-tablet) {
+			top: 32px;
+		}
 
 		&.open {
 			.line {
@@ -368,11 +397,11 @@
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				top: 10px;
+				top: 12px;
 			}
 
 			&:nth-child(4) {
-				top: 20px;
+				top: 24px;
 			}
 		}
 
@@ -389,8 +418,8 @@
 				background: $body-bg;
 				box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
 				top: 100%;
-				width: 100%;
-				left: 0;
+				width: calc(100% + 30px);
+				left: -15px;
 				z-index: 10;
 			}
 		}
@@ -416,6 +445,7 @@
 
 		@media (max-width: $build-header-menu-mobile) {
 			width: 100%;
+			min-width: 0;
 		}
 
 		&:active,
@@ -497,7 +527,7 @@ section.home {
 		position: relative;
 
 		@media (min-width: $breakpoint-mobile) {
-			min-height: 450px;
+			min-height: 420px;
 		}
 
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -520,7 +550,7 @@ section.home {
 
 			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 				display: table;
-				min-height: 450px;
+				min-height: 420px;
 				box-sizing: border-box;
 			}
 
@@ -563,7 +593,7 @@ section.home {
 					}
 
 					span {
-						display: block;
+						display: inline-block;
 						text-align: center;
 						font-size: 18px;
 						line-height: 1.3;

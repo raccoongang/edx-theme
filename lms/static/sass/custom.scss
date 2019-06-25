@@ -17,6 +17,7 @@
 @import "blocks/progress";
 @import "blocks/profile-account";
 @import "blocks/slider";
+@import "blocks/textblock";
 
 //*:not(.fa):not(.glyphicon):not(table.dataTable thead [class*='sorting']:after):not([class*=" icon-cc"]:before):not(div.dataTables_paginate a:before):not(div.dataTables_paginate a:after) {
 	//font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -77,6 +78,7 @@ body.view-in-course .wiki-wrapper {
 	display: flex;
 	flex-flow: column nowrap;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 .wrapper-preview-menu {
