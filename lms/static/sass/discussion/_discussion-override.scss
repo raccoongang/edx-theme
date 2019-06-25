@@ -63,7 +63,7 @@
 
     footer#footer-openedx {
         max-width: 1200px;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
 
         .colophon {
             margin-left: 0;
@@ -101,6 +101,10 @@
             border: none !important;
         }
     }
+}
+
+.footer-link__holder {
+    width: 100%;
 }
 
 .dropdown-menu-container {
