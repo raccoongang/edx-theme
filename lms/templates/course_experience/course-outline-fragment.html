@@ -194,14 +194,14 @@ course_sections = blocks.get('children')
                             % for vertipreviecal in subsection.get('children', []):
                                             <li class="vertical outline-item focusable">
                                                 <a class="outline-item focusable"
-                                                    href="${ vertical['lms_web_url'] }"
-                                                    id="${ vertical['id'] }">
+                                                    href="${ vertipreviecal['lms_web_url'] }"
+                                                    id="${ vertipreviecal['id'] }">
                                                     <div class="vertical-details">
                                                       <div class="vertical-title">
-                                                        ${ vertical['display_name'] }
+                                                        ${ vertipreviecal['display_name'] }
                                                       </div>
                                                     </div>
-                                % if vertical.get('complete'):
+                                % if vertipreviecal.get('complete'):
                                                         <span class="complete-checkmark fa fa-check"></span>
                                 % endif
                                                 </a>
