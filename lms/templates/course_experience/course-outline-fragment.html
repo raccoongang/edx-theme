@@ -191,7 +191,7 @@ course_sections = blocks.get('children')
                                             aria-labelledby="${ subsection['id'] }"
                                         >
                             % endif
-                            % for vertipreviecal in subsection.get('children', []):
+                            % for vertical in subsection.get('children', []):
                                             <li class="vertical outline-item focusable">
                                                 <a class="outline-item focusable"
                                                     href="${ vertical['lms_web_url'] }"
