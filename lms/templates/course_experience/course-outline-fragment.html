@@ -27,7 +27,7 @@ course_sections = blocks.get('children')
 
         if not request.session['masquerade_settings'] and not course_key:
             viewing_role = 'staff'
-        else:
+        elif course_key in request.session['masquerade_settings']:
             viewing_role = request.session['masquerade_settings'][course_key].role
 %>
 
