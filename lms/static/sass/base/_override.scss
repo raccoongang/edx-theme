@@ -1752,6 +1752,8 @@ body .login .form-actions button[type="submit"] {
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
 .referral-btn-wrapper .referral-btn.last-accessed-link,
+.btn-small.new-post-btn,
+.btn-small.search-button,
 .dashboard .my-courses .course .details .enter-course {
     white-space: nowrap;
     background: $theme-btn-white-bg;
@@ -2237,12 +2239,7 @@ div.info-wrapper {
 .container.about.honor {
     line-height: 1.3;
 }
-.page-header.has-secondary {
-    display: none;
-}
-.bookmark-button {
-    display: none !important;
-}
+
 .form-controls {
     display: flex;
     justify-content: space-between;
