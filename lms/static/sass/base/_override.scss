@@ -1119,7 +1119,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     > header,
     .slider {
         //background-image: url('#{$img-path}/background.jpg');
-        min-height: 350px;
+        min-height: 315px;
         background-position: center;
         position: relative;
         background-color: #040404;
@@ -5406,4 +5406,11 @@ section.outside-app {
 
 .promobox__text-heading {
     font-size: 20px;
+}
+
+.discovery-button__text {
+    max-width: 84%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
