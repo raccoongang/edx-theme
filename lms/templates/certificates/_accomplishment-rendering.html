@@ -5,19 +5,30 @@ course_mode_class = course_mode if course_mode else ''
 %>
 
 <div class="certificate-wrapper">
-    <img class="main-bg" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg.jpg">
+    <img class="main-bg" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg-2.jpg">
     <div class="certificate-body">
-        <img class="certificate-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-logo.png">
+        <img class="certificate-logo-itcluster" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/it-cluster-logo.png">
+        <img class="certificate-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-logo-2.png">
         <div class="ribbon">
             <span class="ribbon-text">
                 <b>СЕРТИФИКАТ</b>
             </span>
-            <span class="general-text">об участии в <b>Hard Skills Exam: QA</b> получает</span>
+            <span class="general-text">об участии в <b>Hard Skills Exam: QA</b> <br> получает</span>
         </div>
+        <strong class="user-name">Иванов Иван Иванович</strong>
         <div class="inner">
-            <strong class="user-name">${accomplishment_copy_name}</strong>
-            <p class="certificate-text">Результат теста – ${percent}%</p>
-            <strong class="course-name">Тест основан на требованиях к Junior QA Manual трех харьковских компаний</strong>
+            <div class="results">
+                <span class="results-title">Результат теста:</span>
+                <ul class="results-list">
+                    <li><strong>1.</strong> Навыки тестирования - <b>40%</b></li>
+                    <li><strong>2.</strong> WEB-архитектура - <b>25%</b></li>
+                    <li><strong>3.</strong> Разработка - <b>46%</b></li>
+                    <li><strong>4.</strong> Навыки работы SQL - <b>58%</b></li>
+                    <li><strong>5.</strong> Базовые навыки работы с инструментами - <b>56%</b></li>
+                    <li><strong>6.</strong> Знание английского языка - <b>67%</b></li>
+                    <li>Общий результат теста - <b>50%</b></li>
+                </ul>
+            </div>
         </div>
         <div class="certificate-bottom">
             <div class="date">
@@ -25,8 +36,8 @@ course_mode_class = course_mode if course_mode else ''
                 <span>ДАТА</span>
             </div>
         </div>
-        <span class="certificate-info">Загружай этот сертификат в свой профиль в LinkedIn или другие соц.сети.</span>
-        <span class="certificate-number">${_("Certificate ID Number")}: ${certificate_id_number}</span>
+        <div class="qa-text">Тест на основе  требований к <b>Junior QA 2019</b></div>
+        <img class="sukhari-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/sukhari-logo.png">
     </div>
 </div>
 
