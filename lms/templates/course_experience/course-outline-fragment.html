@@ -191,17 +191,17 @@ course_sections = blocks.get('children')
                                             aria-labelledby="${ subsection['id'] }"
                                         >
                             % endif
-                            % for vertipreviecal in subsection.get('children', []):
+                            % for vertical in subsection.get('children', []):
                                             <li class="vertical outline-item focusable">
                                                 <a class="outline-item focusable"
-                                                    href="${ vertipreviecal['lms_web_url'] }"
-                                                    id="${ vertipreviecal['id'] }">
+                                                    href="${ vertical['lms_web_url'] }"
+                                                    id="${ vertical['id'] }">
                                                     <div class="vertical-details">
                                                       <div class="vertical-title">
-                                                        ${ vertipreviecal['display_name'] }
+                                                        ${ vertical['display_name'] }
                                                       </div>
                                                     </div>
-                                % if vertipreviecal.get('complete'):
+                                % if vertical.get('complete'):
                                                         <span class="complete-checkmark fa fa-check"></span>
                                 % endif
                                                 </a>
