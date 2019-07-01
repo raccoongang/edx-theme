@@ -113,9 +113,11 @@ site_status_msg = get_site_status_msg(course_id)
       <div class="flex user-wrapper">
         <%include file="user_dropdown.html"/>
 
-        <a href="${get_online_help_info(online_help_token)['doc_url']}" 
-          target="_blank"
-          class="doc-link">${_("Help")}</a>
+        <a class="help-link-btn" href="https://helpcenter.fastlane.live" target="_blank">
+          <svg viewBox="0 0 60 60">
+            <use xlink:href="#ico-help-link" />
+          </svg>
+        </a>
       </div>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
@@ -157,6 +159,13 @@ site_status_msg = get_site_status_msg(course_id)
 
       <ol class="right nav-courseware list-inline">
         <%block name="navigation_sign_in">
+        <li class="item">
+          <a class="help-link-btn" href="https://helpcenter.fastlane.live" target="_blank">
+            <svg viewBox="0 0 60 60">
+              <use xlink:href="#ico-help-link" />
+            </svg>
+          </a>
+        </li>
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             <li class="item nav-courseware-01">
                 % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
