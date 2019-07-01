@@ -15,24 +15,21 @@ course_mode_class = course_mode if course_mode else ''
             </span>
             <span class="general-text">об участии в <b>Hard Skills Exam: QA</b> <br> получает</span>
         </div>
-        <strong class="user-name">Иванов Иван Иванович</strong>
+        <strong class="user-name">${(accomplishment_copy_name or accomplishment_copy_username) | h}</strong>
         <div class="inner">
             <div class="results">
                 <span class="results-title">Результат теста:</span>
                 <ul class="results-list">
-                    <li><strong>1.</strong> Навыки тестирования - <b>40%</b></li>
-                    <li><strong>2.</strong> WEB-архитектура - <b>25%</b></li>
-                    <li><strong>3.</strong> Разработка - <b>46%</b></li>
-                    <li><strong>4.</strong> Навыки работы SQL - <b>58%</b></li>
-                    <li><strong>5.</strong> Базовые навыки работы с инструментами - <b>56%</b></li>
-                    <li><strong>6.</strong> Знание английского языка - <b>67%</b></li>
-                    <li>Общий результат теста - <b>50%</b></li>
+                  % for grade, _percent in grades:
+                    <li><strong>${loop.index+1}.</strong> ${grade | h} - <b>${_percent}%</b></li>
+                  % endfor
+                    <li>${_("Общий результат теста")} - <b>${percent}%</b></li>
                 </ul>
             </div>
         </div>
         <div class="certificate-bottom">
             <div class="date">
-                <strong>8 декабря 2018</strong>
+                <strong>${certificate_date_issued}</strong>
                 <span>ДАТА</span>
             </div>
         </div>
