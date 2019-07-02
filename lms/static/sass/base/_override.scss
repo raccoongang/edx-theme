@@ -427,6 +427,11 @@ body {
                 }
                 .course-title {
                     a {
+                        max-height: 91px;
+                        overflow: hidden;
+                        font-size: 16px;
+                        line-height: 18px;
+                        
                         @media (max-width: 767px) {
                             font-size: 1.4em;
                             line-height: 1.6em;
@@ -3741,9 +3746,11 @@ div.info-wrapper section.handouts {
     box-sizing: border-box;
 }
 
-.dashboard .my-courses .course .details .course-title a {
-    font-size: 19px;
-    line-height: 1.3;
+body .dashboard .my-courses .course .details .course-title a {
+    font-size: 16px;
+    line-height: 1.2;
+    overflow: hidden;
+    height: 91px;
 }
 
 .dashboard .my-courses .course .details .course-info {
@@ -3768,4 +3775,44 @@ div.info-wrapper section.handouts {
 
 body .dashboard .my-courses .course .details .course-actions .wrapper-action-more {
     right: 24px;
+}
+
+.nav-global-02,
+.nav-global-01 {
+    a {
+        text-transform: uppercase;
+    }
+}
+
+
+.container.about {
+    padding-bottom: 0;
+}
+
+#faq {
+    padding: 20px 0 0;
+}
+
+.faq-holder {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.faq_holder-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.profile-wrapper .course-info>.chapters>section {
+    display: flex;
+}
+
+.profile-wrapper .course-info>.chapters>section .hd {
+    width: 25%;
+}
+
+.profile-wrapper .course-info>.chapters>section .sections>div .hd {
+    width: 100%;
+    border-right: none;
 }
