@@ -69,12 +69,20 @@ from openedx.core.djangolib.markup import HTML, Text
         <p class="promobox__text promobox__text_small">${_("(NOTE: Courses subject to change based on Microsoft program updates)")}</p>
         <img class="promobox__image" src="/static/${settings.DEFAULT_SITE_THEME}/images/generic_pathway-no_white.png" alt="GENERIC PATHWAY Merck">
         <img class="promobox__image" src="/static/${settings.DEFAULT_SITE_THEME}/images/example_learning_pathway-no_white.png" alt="EXAMPLE PATHWAY Merck">
-        <p class="promobox__text promobox__text_center">${_("Click on a category below to start learning today.")}</p>
-      </div>
 
-        % if not categories:
+        <%
+          if categories:
+            category_courses = filter(lambda x: x.get_descendants(include_self=True).values_list('courses', flat=True), categories)
+          else:
+            category_courses = []
+        %>
+        % if not categories or not category_courses:
             <%include file="${courses_list}" />
         % else:
+        % if category_courses:
+          <p class="promobox__text promobox__text_center">${_("Click on a category below to start learning today.")}</p>
+        % endif
+      </div>
             % for category in categories:
               <%
                 set_courses_sub_category = set()
