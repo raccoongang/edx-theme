@@ -114,7 +114,7 @@
                     color: $white;
                     &:hover {
                         color: $white;
-                        border: none;
+                        border: 2px solid $header-nav-link-color-hover;
                     }
                 }
             }
@@ -138,19 +138,31 @@
     .nav-courseware {
         width: 100%;
         display: flex;
+        flex-direction: column-reverse;
         justify-content: space-between;
+    
         @media screen and (min-width:761px ) {
             width: auto;
-            display: block;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
 
         li {
-            width: 48%;
+            width: 100%;
             text-align: center;
-            margin: 3px 0;
+            margin: 3px 0 6px;
+            &:first-child {
+                margin-bottom: 0;
+            }
             @media screen and (min-width:761px ) {
                 width: auto;
                 text-align: left;
+                margin: 0;
+                &:first-child {
+                    margin-bottom: 0;
+                }
+                
             }
 
             a {
@@ -4189,4 +4201,11 @@ div.info-wrapper section.handouts {
             }
         }
     }
+}
+
+.help-link-btn {
+    display: inline-block;
+    width: 40px !important;
+    margin-right: 20px;
+    height: 40px;
 }
