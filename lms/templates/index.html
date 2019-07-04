@@ -12,9 +12,11 @@ from openedx.core.djangolib.markup import HTML, Text
     <section class="home">
 
       <header>
-        <video muted="muted" loop="loop" preload="auto" autoplay="true" class="background-video">
-          <source media="only screen" src="/static/${settings.DEFAULT_SITE_THEME}/video/background-video.mp4" type="video/mp4">
-        </video>
+        <div class="video-holder">
+            <video muted="muted" loop="loop" preload="auto" autoplay="true" class="background-video">
+              <source media="only screen" src="/static/${settings.DEFAULT_SITE_THEME}/video/background-video.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="parallax-img"></div>
         <div class="outer-wrapper">
           <div class="title">
