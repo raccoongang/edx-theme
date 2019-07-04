@@ -887,7 +887,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     > header,
     .slider {
         //background-image: url('#{$img-path}/background.jpg');
-        min-height: 420px;
+        min-height: 200px;
         background-position: center;
         position: relative;
         background-color: #040404;
@@ -905,7 +905,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             top: -100px;
             width: 100%;
             height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-            background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
+            background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 100px; /* высота картинки - желательно не меньше 600px по высоте */
             background-size: cover;
 
             @media screen and (min-width: 641px) {
@@ -919,21 +919,23 @@ body .wmd-prompt-dialog .btn-brand:focus {
             @media screen and (min-width: 641px) {
                 display: block;
                 position: absolute;
-                left: 0;
-                right: 0;
+                left: 50%;
+                right: 50%;
                 width: 100%;
+                max-width: 100%;
+                transform: translate( -50%, -50%);
+                margin-top: 214px;
             }
         }
 
         .outer-wrapper {
             animation: none;
             padding: 0;
-
-            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                display: table;
-                min-height: 450px;
-                box-sizing: border-box;
-            }
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 55px;
+            bottom: -94px;
         }
 
         .title {
@@ -943,7 +945,9 @@ body .wmd-prompt-dialog .btn-brand:focus {
             width: 100%;
             margin: 0 auto;
             float: none;
-            padding: 20px;
+            padding: 0;
+            min-height: auto;
+            height: 55px;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table-cell;
@@ -958,6 +962,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 text-align: center;
                 width: 100%;
                 padding: 15px 0;
+                display: none;
 
                 h1 {
                     font-size: 32px;
@@ -1004,25 +1009,43 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 margin: 0 auto;
                 overflow: hidden;
                 position: relative;
-                padding: 15px 0;
+                padding: 0;
                 .search-input {
                     background: $search-input-background;
                     border: 2px solid $search-input-border;
                     color: $search-input-color;
                     padding-left: 20px !important;
                     height: $search-height;
+                    width: 585px;
                     &:focus {
                         border-color: $search-input-border !important;
                     }
                     &::placeholder {
                         color: $search-input-color;
                         opacity: 1;
+                        @media screen and (max-width: 584px){
+                            width: 100%;
+                            color: #000 !important;
+                        }
                     }
                     &:-ms-input-placeholder {
                         color: $search-input-color;
+                        @media screen and (max-width: 584px){
+                            width: 100%;
+                            color: #000 !important;
+                        }
                     }
                     &::-webkit-input-placeholder {
                         color: $search-input-color !important;
+                        @media screen and (max-width: 584px){
+                            width: 100%;
+                            color: #000 !important;
+                        }
+                    }
+                    @media screen and (max-width: 584px){
+                        width: 100%;
+                        color: #000 !important;
+                        border-color: #fff !important;
                     }
                 }
                 .search-button {
@@ -1032,10 +1055,19 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     border-left: none !important;
                     right: 0;
                     height: $search-height;
+                    @media screen and (max-width: 584px){
+                        border-color: #fff !important;
+                    }
                 }
             }
         }
     }
+}
+
+.home > header {
+    overflow: visible;
+    display: block;
+    min-height: 0;
 }
 .footer-logo-holder {
     display: block;
@@ -3914,11 +3946,6 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         }
     }
 }
-
-
-.home>header .title .course-search {
-    padding-top: 250px;
-}
   
 .footer-logo-holder {
     display: flex;
@@ -3941,4 +3968,14 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.video-holder {
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @media screen and (max-width: 584px){
+        display: none;
+    }
 }
