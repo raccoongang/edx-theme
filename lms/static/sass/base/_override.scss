@@ -3829,3 +3829,16 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 section.find-courses .course-date {
     display: none !important;
 }
+
+.search-facets-lists ul li {
+    height: auto;
+
+    button {
+        white-space: normal !important;
+        padding: 5px 30px 5px 10px !important;
+
+        span {
+            top: 5px;
+        }
+    }
+}
