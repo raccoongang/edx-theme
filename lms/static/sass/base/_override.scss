@@ -3966,3 +3966,27 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         height: 300px;
     }
 }
+
+.btn-providers {
+    height: 35px;
+    border: 1px solid $base-color;
+    background: #fff;
+    position: relative;
+    padding: 0 8px 0 40px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: auto !important;
+    line-height: 35px;
+
+    .icon {
+        left: 0;
+        position: absolute;
+        top: -1px;
+        width: 30px;
+        bottom: -1px;
+        background: $base-color;
+        line-height: 35px;
+        text-align: center;
+        color: #fff;
+    }
+}
