@@ -59,7 +59,7 @@ from six import text_type
             </div>
           % endif
           <div class="mobile-nav-item hidden-mobile nav-item">
-            <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
+            <a class="sign-in-btn btn" href="${settings.LOGIN_REDIRECT_URL}${login_query()}">${_("Sign in")}</a>
           </div>
         % endif
       % endif
