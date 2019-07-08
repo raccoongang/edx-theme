@@ -168,6 +168,9 @@ from pipeline_mako import render_require_js_path_overrides
     </script>
 % endif
 
+<link rel="stylesheet" href="${static.url('css/edx_plugin_for_odoos_chat/chat_style.css')}">
+<script type="text/javascript" src="${static.url('js/edx_plugin_for_odoos_chat/index.js')}"></script>
+
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
