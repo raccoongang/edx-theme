@@ -60,6 +60,17 @@
     .wrapper-header {
         height: auto;
         padding: 0;
+        position: relative;
+
+        .is-authenticated & {
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width: 840px) {
+            .is-authenticated.menu-open & {
+                display: block;
+            }
+        }
     }
     .nav-global {
         width: 100%;
@@ -136,7 +147,7 @@
                     background: $theme-btn-bg;
                 }
                 &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
+                    background: $theme-btn-bg-hover !important;
                 }
                 &:hover {
                     background: $theme-btn-bg-hover;
@@ -147,6 +158,7 @@
     .user {
         display: block;
         width: auto;
+        margin-top: 0 !important;
 
         .user-link .label-username {
             text-shadow: none;
@@ -3114,4 +3126,62 @@ div.info-wrapper section.handouts {
     width: 40px !important;
     margin-right: 20px;
     height: 40px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+
+    .is-authenticated & {
+        position: static;
+        margin: 2px 20px 0px 0;
+
+        @media (max-width: 840px) {
+            order: 1;
+        }
+    }
+}
+
+body .header-global .wrapper-header .list-inline.nav-global {
+    flex-wrap: wrap;
+    margin-right: auto;
+}
+
+body.is-authenticated .header-global .wrapper-header .list-inline.nav-global {
+    margin-top: 0;
+}
+
+body.is-authenticated.menu-open .header-global .wrapper-header .list-inline.nav-global {
+    @media (max-width: 840px) {
+        width: 100%;
+        margin-top: 16px;
+
+        .item,
+        .tab-nav-item {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+body .header-global .wrapper-header .list-inline .item a {
+    padding: 10px;
+}
+
+body .header-global .wrapper-header .list-inline .item {
+    margin: 0;
+
+    .is-authenticated & {
+        margin: inherit;
+    }
+}
+
+.header-global .nav-global .tab-nav-item .tab-nav-link {
+    padding: 10px;
+}
+
+body .flex {
+    @media (max-width: 840px) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
 }

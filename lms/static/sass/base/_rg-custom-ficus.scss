@@ -281,6 +281,7 @@ body {
         font-size: 0.875em;
         font-weight: 600;
         text-transform: uppercase;
+        justify-content: center;
     }
     .dropdown-menu-container .menu-title,
     .doc-link {
@@ -305,6 +306,9 @@ body {
     .header-global .user {
         display: flex;
         margin-top: 5px;
+        @media (max-width: 840px) {
+            order: 2;
+        }
     }
     .wrapper-footer {
         padding-top: 30px;
