@@ -5377,9 +5377,6 @@ section.outside-app {
 .promobox__text {
     line-height: 1.3;
     font-size: 18px;
-    &_grey {
-        color: $promo-box-text-color-grey;
-    }
 }
 
 .promobox strong {
@@ -5392,6 +5389,10 @@ section.outside-app {
 
 .promobox__text_small {
     font-size: 12px;
+}
+
+.promobox__text_colored {
+    color: $promo-box-text-colored;
 }
 
 .promobox__link {
