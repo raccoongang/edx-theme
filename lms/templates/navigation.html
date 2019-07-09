@@ -117,7 +117,7 @@ site_status_msg = get_site_status_msg(course_id)
           target="_blank"
           class="doc-link">${_("Help")}</a>
       </div>
-      <a id="certificate-voucher">${_("Certificate Voucher++")}</a>
+      <a id="certificate-voucher">${_("Certificate Voucher")}</a>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
           <li class="primary">
@@ -164,13 +164,15 @@ site_status_msg = get_site_status_msg(course_id)
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             <li class="item nav-courseware-01">
                 % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-                    <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in ")}</a>
-                % else:
+                    <a class="btn btn-login" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+                % elif providers:
                     <a class="btn btn-login" href="${providers[0]['loginUrl']}">
                       <div class="icon fa fa-sign-in" aria-hidden="true">
                       </div>
                       ${providers[0]['name']}
-                    </a>
+                    </a> 
+                % else: 
+                  <a class="btn btn-login" href="/login${login_query()}">${_("Sign in")}</a>
                 % endif      
             </li>
           % endif
