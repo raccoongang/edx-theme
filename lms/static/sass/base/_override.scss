@@ -3138,3 +3138,25 @@ body.dialog-modal-open:before {
         font-size: 14px;
     }
 }
+
+#register label[for="register-header_for_licenses"] {
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .login-register {
+        [class *= "select-state"],
+        [class *= "text-license"] {
+            width: 48%;
+            clear: none;
+        }
+
+        [class *= "select-state"] {
+            float: left;
+        }
+
+        [class *= "text-license"] {
+            float: right;
+        }
+    }
+}
