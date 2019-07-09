@@ -1280,6 +1280,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
             }
         }
     }
+    .courses-container .courses .courses-listing .courses-listing-item {
+        margin-bottom: 24px;
+        .course {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .footer-logo-holder {
@@ -5313,6 +5319,11 @@ body.view-in-course .header-global .wrapper-header {
     padding-right: 0;
 }
 
+.find-courses .courses-container .courses .courses-listing .courses-listing-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .find-courses .courses-container .courses:not(.no-course-discovery) {
     @media screen and (max-width: 768px) {
         margin-right: 0;
@@ -5320,6 +5331,8 @@ body.view-in-course .header-global .wrapper-header {
     }
 
     .courses-listing {
+        margin-top: 10px;
+        margin-bottom: 10px;
         @media screen and (max-width: 768px) {
             text-align: center;
         }
@@ -5331,6 +5344,11 @@ body.view-in-course .header-global .wrapper-header {
                 max-width: 280px;
                 text-align: left;
             }
+
+            .course {
+                margin-bottom: 0;
+            }
+
         }
     }
 }
