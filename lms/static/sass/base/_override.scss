@@ -936,6 +936,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
             transform: translateX(-50%);
             height: 55px;
             bottom: -94px;
+            max-width: 100%;
+            width: 100%;
         }
 
         .title {
@@ -945,7 +947,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             width: 100%;
             margin: 0 auto;
             float: none;
-            padding: 0;
+            padding: 0 15px;
             min-height: auto;
             height: 55px;
 
@@ -1016,36 +1018,23 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     color: $search-input-color;
                     padding-left: 20px !important;
                     height: $search-height;
-                    width: 585px;
+                    width: 100%;
+                    max-width: 590px;
                     &:focus {
                         border-color: $search-input-border !important;
                     }
                     &::placeholder {
                         color: $search-input-color;
                         opacity: 1;
-                        @media screen and (max-width: 584px){
-                            width: 100%;
-                            color: #000 !important;
-                        }
                     }
                     &:-ms-input-placeholder {
                         color: $search-input-color;
-                        @media screen and (max-width: 584px){
-                            width: 100%;
-                            color: #000 !important;
-                        }
                     }
                     &::-webkit-input-placeholder {
                         color: $search-input-color !important;
-                        @media screen and (max-width: 584px){
-                            width: 100%;
-                            color: #000 !important;
-                        }
                     }
                     @media screen and (max-width: 584px){
                         width: 100%;
-                        color: #000 !important;
-                        border-color: #fff !important;
                     }
                 }
                 .search-button {
@@ -1055,9 +1044,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     border-left: none !important;
                     right: 0;
                     height: $search-height;
-                    @media screen and (max-width: 584px){
-                        border-color: #fff !important;
-                    }
                 }
             }
         }
@@ -3977,6 +3963,6 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     position: relative;
     width: 100%;
     @media screen and (max-width: 584px){
-        display: none;
+        height: 300px;
     }
 }
