@@ -1110,6 +1110,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
         .icon {
             background: $theme-btn-bg;
+            + span {
+                display: inline-block;
+                line-height: 1;
+            }
         }
         &:hover {
             span {
