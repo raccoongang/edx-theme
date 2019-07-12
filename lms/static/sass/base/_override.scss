@@ -22,6 +22,7 @@
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
+    z-index: 999;
 
     @media screen and (max-width: $breakpoint-tablet) {
         padding: 22px 15px 23px;
@@ -1376,6 +1377,14 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
 .home {
     background: $theme-content-bg;
+}
+
+.home {
+    .course-box__heading {
+        + .course-box__content {
+          margin-top: 15px;
+        }
+    }
 }
 
 section.wiki .main-article {
@@ -5411,8 +5420,17 @@ section.outside-app {
     font-size: 12px;
 }
 
+.promobox__text_note {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto 20px;
+    max-width: 1200px;
+}
+
 .promobox__text_colored {
     color: $promo-box-text-colored;
+    font-size: 30px;
+    margin: 0 0 20px;
 }
 
 .promobox__link {
