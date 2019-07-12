@@ -1379,6 +1379,14 @@ body .wmd-prompt-dialog .btn-brand:focus {
     background: $theme-content-bg;
 }
 
+.home {
+    .course-box__heading {
+        + .course-box__content {
+          margin-top: 15px;
+        }
+    }
+}
+
 section.wiki .main-article {
     .lang_ar & {
         float: right;
@@ -5413,8 +5421,10 @@ section.outside-app {
 }
 
 .promobox__text_note {
+    box-sizing: border-box;
     padding: 0 15px;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
+    max-width: 1200px;
 }
 
 .promobox__text_colored {
