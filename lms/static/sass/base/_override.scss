@@ -1380,6 +1380,21 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .home {
+
+    .promobox__list {
+        .promobox__list {
+            padding-left: 54px;
+        }
+    }
+
+    .promobox__image {
+        max-width: 80%;
+        margin: 30px auto 20px;
+        @media screen and (max-width: 760px) {
+            max-width: 100%;
+        }
+    }
+
     .course-box__heading {
         + .course-box__content {
           margin-top: 15px;
@@ -5431,6 +5446,7 @@ section.outside-app {
     color: $promo-box-text-colored;
     font-size: 30px;
     margin: 0 0 20px;
+    font-weight: 700;
 }
 
 .promobox__link {
