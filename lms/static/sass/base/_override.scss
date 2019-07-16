@@ -1380,6 +1380,20 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .home {
+    .promobox__list {
+        .promobox__list {
+            padding-left: 54px;
+        }
+    }
+
+    .promobox__image {
+        max-width: 80%;
+        margin: 30px auto 20px;
+        @media screen and (max-width: 760px) {
+            max-width: 100%;
+        }
+    }
+
     .course-box__heading {
         + .course-box__content {
           margin-top: 15px;
@@ -5373,6 +5387,15 @@ body.view-in-course .header-global .wrapper-header {
     }
 }
 
+.find-courses .search-facets .facet-list {
+    padding-bottom: 0;
+}
+
+.find-courses .search-facets .facet-list.collapse {
+    box-sizing: border-box;
+    max-height: 315px;
+}
+
 section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
@@ -5431,6 +5454,7 @@ section.outside-app {
     color: $promo-box-text-colored;
     font-size: 30px;
     margin: 0 0 20px;
+    font-weight: 700;
 }
 
 .promobox__link {
