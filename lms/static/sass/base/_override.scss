@@ -5388,8 +5388,13 @@ body.view-in-course .header-global .wrapper-header {
     }
 }
 
+.find-courses .search-facets .facet-list {
+    padding-bottom: 0;
+}
+
 .find-courses .search-facets .facet-list.collapse {
-    max-height: 305px;
+    box-sizing: border-box;
+    max-height: 315px;
 }
 
 section.outside-app {
