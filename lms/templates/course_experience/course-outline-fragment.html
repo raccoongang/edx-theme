@@ -179,59 +179,29 @@ course_sections = blocks.get('children')
                         % endif
                         </div> <!-- /details -->
                             </button> <!-- /subsection-text -->
-                        % if gated_subsection and not completed_prereqs:
-                            % if viewing_role == 'staff':
-                                <ol class="outline-item accordion-panel"
-                                    id="${ subsection['id'] }_contents"
-                                    aria-labelledby="${ subsection['id'] }"
-                                >
-                            % else:
-                               <ol class="outline-item accordion-panel ${ '' if subsection_is_auto_opened else 'is-hidden' }"
-                                            id="${ subsection['id'] }_contents"
-                                            aria-labelledby="${ subsection['id'] }"
-                                        >
-                            % endif
-                            % for vertical in subsection.get('children', []):
-                                            <li class="vertical outline-item focusable">
-                                                <a class="outline-item focusable"
-                                                    href="${ vertical['lms_web_url'] }"
-                                                    id="${ vertical['id'] }">
-                                                    <div class="vertical-details">
-                                                      <div class="vertical-title">
-                                                        ${ vertical['display_name'] }
-                                                      </div>
-                                                    </div>
-                                % if vertical.get('complete'):
-                                                        <span class="complete-checkmark fa fa-check"></span>
-                                % endif
-                                                </a>
-                                             </li>
-                            % endfor
-                                    </ol>
+                        % if not gated_subsection or (gated_subsection and completed_prereqs) or viewing_role == 'staff':
+                            <ol class="outline-item accordion-panel ${ '' if subsection_is_auto_opened else 'is-hidden' }"
+                                id="${ subsection['id'] }_contents"
+                                aria-labelledby="${ subsection['id'] }"
+                            >
+                                % for vertical in subsection.get('children', []):
+                                    <li class="vertical outline-item focusable">
+                                        <a class="outline-item focusable"
+                                            href="${ vertical['lms_web_url'] }"
+                                            id="${ vertical['id'] }">
+                                            <div class="vertical-details">
+                                              <div class="vertical-title">
+                                                ${ vertical['display_name'] }
+                                              </div>
+                                            </div>
+                                            % if vertical.get('complete'):
+                                                <span class="complete-checkmark fa fa-check"></span>
+                                            % endif
+                                        </a>
+                                    </li>
+                                % endfor
+                            </ol>
                         % endif
-                    % if not gated_subsection or (gated_subsection and completed_prereqs):
-                        <ol class="outline-item accordion-panel ${ '' if subsection_is_auto_opened else 'is-hidden' }"
-                            id="${ subsection['id'] }_contents"
-                            aria-labelledby="${ subsection['id'] }"
-                        >
-                            % for vertical in subsection.get('children', []):
-                                <li class="vertical outline-item focusable">
-                                    <a class="outline-item focusable"
-                                        href="${ vertical['lms_web_url'] }"
-                                        id="${ vertical['id'] }">
-                                        <div class="vertical-details">
-                                          <div class="vertical-title">
-                                            ${ vertical['display_name'] }
-                                          </div>
-                                        </div>
-                                        % if vertical.get('complete'):
-                                            <span class="complete-checkmark fa fa-check"></span>
-                                        % endif
-                                    </a>
-                                </li>
-                            % endfor
-                        </ol>
-                    % endif
                             </button>
                         </li>
                     % endfor
