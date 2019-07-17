@@ -11,6 +11,10 @@
 	color: $header-nav-link-color;
 	border: none;
 }
+.copy-meta a {
+	display: none;
+	visibility: hidden;
+}
 .header-app .logo {
 	width: 230px;
 }
@@ -50,21 +54,21 @@
 }
 .certificate-wrapper {
 	position: relative;
-	width: 29.7cm;
-	height: 20.98cm;
+	width: $width_cf;
+	height: $height_cf;
 	margin: 0 auto;
 }
 .main-bg {
 	display: block;
-	width: 29.7cm;
-	height: 20.98cm;
+	width: $width_cf;
+	height: $height_cf;
 }
 .certificate-body {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 29.7cm;
-	height: 20.98cm;
+	width: $width_cf;
+	height: $height_cf;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -76,17 +80,16 @@
 	display: block;
 	width: 160px;
 	height: auto;
-	margin: 38px auto 40px;
+	margin: 38px auto 30px;
 }
 .certificate-logo {
 	display: block;
-	width: 140px;
+	width: 85px;
 	margin: 0 auto;
 }
 .ribbon {
 	position: relative;
-	margin-bottom: 25px;
-	overflow: hidden;
+	margin-bottom: 5px;
 }
 .ribbon-text {
 	display: block;
@@ -125,7 +128,7 @@
 .user-name {
 	font-size: 2em;
 	color: #4ec7ee;
-	margin-bottom: 12px;
+	margin-bottom: 30px;
 }
 .inner {
 	width: 100%;
@@ -212,4 +215,8 @@
 	display: block;
 	margin: 0 auto;
 	width: 100px;
+}
+.footer-app-nav {
+	display: none;
+	visibility: hidden;
 }
