@@ -79,7 +79,7 @@ from openedx.core.djangolib.markup import HTML, Text
             % for category in categories:
               <%
                 set_courses_sub_category = set()
-                category_courses = filter(lambda x: x, category.get_descendants(include_self=True).values_list('courses', flat=True))
+                category_courses = category.get_descendants(include_self=True).filter(courses__id__in=available_courses).exists()
               %>
               % if category_courses:
                 <section class="course-box">
