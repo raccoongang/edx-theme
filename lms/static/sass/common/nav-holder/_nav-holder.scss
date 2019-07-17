@@ -8,14 +8,12 @@
         display: flex;
         justify-content: center;
     }
-    @media (min-width: 760px) {
+
+    @media (min-width: $build-header-menu-mobile) {
         width: auto;
         display: block;
     }
-    @media (min-width: 760px) and (max-width: 860px) {
-        display: flex;
-        flex-wrap: nowrap;
-    }
+
     &:after {
         content: '';
         clear: both;

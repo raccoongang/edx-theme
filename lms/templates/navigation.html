@@ -71,6 +71,11 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
               <li class="item nav-global-01 nav-global-01-xseries-style">
+                <a class="tab-nav-link" href="/courses?facet=org&term=Learning_Tree">
+                    ${_("Microlearning")}
+                </a>
+              </li>
+              <li class="item nav-global-01 nav-global-01-xseries-style">
                 <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('On-Demand courses')}</a>
               </li>
               <li class="tab-nav-item">
@@ -161,6 +166,11 @@ site_status_msg = get_site_status_msg(course_id)
         <li class="item">
             <a class="tab-nav-link" href="https://blog.learningtree.com/" target="_blank">
                 ${_("BLOG")}
+            </a>
+        </li>
+        <li class="item">
+            <a class="tab-nav-link" href="/courses?facet=org&term=Learning_Tree">
+                ${_("MICROLEARNING")}
             </a>
         </li>
       </ol>

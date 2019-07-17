@@ -1,6 +1,5 @@
 .hamburger {
-    display: block;
-    position: relative;
+    display: block !important;
     width: $hamburger-width;
     height: $hamburger-height + 6;
     background: transparent;
@@ -12,6 +11,11 @@
     position: absolute;
     top: 18px;
     right: 10px;
+
+    @media screen and (min-width: $build-header-menu-mobile) {
+        display: none !important;
+    }
+
     &:after,
     &:before {
         content: '';

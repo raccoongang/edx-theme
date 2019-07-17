@@ -18,7 +18,7 @@
     height: auto;
     background: $header-bg;
     border: none;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
     padding: 18px 10px;
     position: relative;
     box-sizing: border-box;
@@ -29,7 +29,7 @@
     }
     .nav-global {
         width: 100%;
-        @media screen and (min-width:760px ) {
+        @media screen and (min-width: $build-header-menu-mobile) {
             width: auto;
         }
 
@@ -37,7 +37,7 @@
             width: 100%;
             text-align: center;
             text-transform: none;
-            @media screen and (min-width:760px ) {
+            @media screen and (min-width: $build-header-menu-mobile) {
                 width: auto;
                 text-align: left;
             }
@@ -72,17 +72,28 @@
     }
     .nav-courseware {
         width: 100%;
-        @media screen and (min-width:760px ) {
+
+        @media screen and (min-width: $build-header-menu-mobile) {
             width: auto;
+        }
+
+        @media screen and (max-width: $build-header-menu-mobile - 1) and (min-width: 760px) {
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         li {
             width: 100%;
             text-align: center;
             margin: 0 0 3px;
-            @media screen and (min-width:760px ) {
+            @media screen and (min-width: $build-header-menu-mobile) {
                 width: auto;
                 text-align: left;
+            }
+
+             @media screen and (max-width: $build-header-menu-mobile - 1) and (min-width: 760px) {
+                width: calc(50% - 10px);
             }
 
             a {
@@ -2939,23 +2950,13 @@ table.stat_table {
     }
     .nav-global {
         margin: 14px 0 !important;
-        @media screen and (max-width: 759px) {
+        @media screen and (max-width: $build-header-menu-mobile - 1) {
             margin: 10px 0 0 !important;
         }
-        @media (min-width: 760px) and (max-width: 860px) {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            margin: 3px 0 0 !important;
-            padding-left: 30px;
-        }
         li {
-            margin: 0 10px !important;
-            @media screen and (min-width: 760px) and (max-width:910px) {
-                margin: 0 5px !important;
-            }
-            @media screen and (max-width: 759px) {
-                margin: 10px 0 !important;
+            margin: 7px 0 !important;
+            @media screen and (min-width: $build-header-menu-mobile) {
+                margin: 0 10px !important;
             }
             a {
                 font-weight: normal !important;
@@ -2968,7 +2969,7 @@ table.stat_table {
             margin: 0 !important;
             vertical-align: top;
 
-            @media screen and (max-width: 759px) {
+            @media screen and (max-width: $build-header-menu-mobile - 1) {
                 margin-bottom: 10px !important;
             }
 
@@ -3314,4 +3315,10 @@ section.wiki .wiki-wrapper {
     a {
         color: #fff !important;
     }
+}
+
+.view-passwordreset .header-global nav,
+.wrapper-footer footer#footer-openedx {
+    max-width: 1180px;
+    width: 100%;
 }
