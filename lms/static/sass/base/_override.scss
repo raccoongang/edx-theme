@@ -234,7 +234,12 @@ body .container.activation h1.valid {
 
     footer#footer-openedx {
         a {
-            color: $footer-nav-link-color;
+            font-weight: 400;
+            color: inherit;
+            transition: color .3s ease-in-out;
+            &:hover {
+                color: #fff;
+            }
         }
         a:hover,
         a:focus {
@@ -3701,4 +3706,26 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 body .xmodule_display.xmodule_SequenceModule .sequence-nav {
     height: auto;
     min-height: 44px;
+}
+
+.header-global {
+    .item {
+        span {
+            font-weight: 400;
+            color: #a3a3a3;
+            margin-left: 18px;
+            a {
+                color: inherit;
+                transition: color .3s ease-in-out;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        &:first-child {
+            span {
+                margin-left: 0;
+            }
+        }
+    }
 }

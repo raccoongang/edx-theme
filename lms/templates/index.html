@@ -11,7 +11,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="promo-box">
       <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="hardskill logo" class="promo-box__logo">
-      <h1 class="promo-box__main-text">Hard Skills Exam: QA</h1>
+      <h1 class="promo-box__main-text">Hard Skills Exam</h1>
       <span class="promo-box__date">8-го декабря</span>
       <p class="promo-box__text">Чемпионат среди начинающих тестировщиков</p>
       <a href="https://goo.gl/forms/kerL25GCfN9GrEPn2" target="_blank" class="promo-link">Участвовать!</a>
@@ -205,6 +205,8 @@ from openedx.core.djangolib.markup import HTML, Text
       </div>
     </section>
 </main>
+
+<%include file="${static.get_template_path('footer.html')}" />
 
 <a class="arrow-up" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
