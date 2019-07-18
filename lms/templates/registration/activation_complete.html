@@ -8,7 +8,6 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <section class="container activation">
-    <img style="width: 100%; display: block; margin-bottom: 15px;" src="{{ settings.LMS_ROOT_URL }}/static/{{ settings.DEFAULT_SITE_THEME }}/images/email-template-banner.jpg" />
   <section class="message">
     %if not already_active:
       <h1 class="valid">${_("Account Activated")}</h1>
