@@ -35,7 +35,29 @@ from openedx.core.djangolib.markup import HTML, Text
     </section>
     <section class="employ-box">
       <div class="employ-box__holder">
-        <strong class="employ-box__text"><span class="employ-box__text-select">Мета проекту:</span> что знают и умеют выпускники ІТ-курсов и самоучки?</strong>
+        <div class="anchor-box__columns">
+          <div class="anchor-box__column">
+            <a class="anchor-box__link" href="#req">
+              Вимоги компаній до junior
+            </a>
+          </div>
+          <div class="anchor-box__column">
+            <a class="anchor-box__link" href="#ratings">
+              Рейтинги  ІТ-шкіл
+            </a>
+          </div>
+          <div class="anchor-box__column">
+            <a class="anchor-box__link" href="#sertf">
+              Сертифікаційне тестування від IT Cluster
+            </a>
+          </div>
+        </div>
+        <div class="promo-link__holder">
+          <a href="https://goo.gl/forms/kerL25GCfN9GrEPn2" target="_blank" class="promo-link">
+            Оформити заявку на тестування
+          </a>
+        </div>
+        <strong class="employ-box__text"><span class="employ-box__text-select">Мета проекту:</span></strong>
         <div class="employ-box__columns">
           <div class="employ-box__column">
             <p class="employ-box__column-text">
@@ -52,28 +74,137 @@ from openedx.core.djangolib.markup import HTML, Text
     </section>
     <section class="info-box">
       <div class="info-box__holder">
-        <h2 class="info-box__heading"><span class="info-box__heading-select">8-го декабря</span> ждем на чемпионат тех, кто ещё не работал тестировщиком или тестировщицей:</h2>
-        <div class="info-box__columns">
-          <div class="info-box__column">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/info-box_img.png" alt="" class="info-box__column-img">
-            <p class="info-box__column-text">
-              Участников от харьковских курсов по <span class="info-box__select">ручному тестированию (QA Manual)</span>: тех, кто завершает учёбу или уже получил сертификат.
-            </p>
+        <h2 class="info-box__heading">
+          <span class="info-box__heading-select">Етап 1</span>
+          <br>
+          Узгодження очікувань від претендента на позицію junior
+        </h2>
+        <div class="spec-list__holder">
+          <div class="spec-list__row header">
+            <div class="spec-list__item-first">
+              Очікувані знання та навички
+            </div>
+            <div class="spec-list__item-second">
+              Компанії, що узгодили свої вимоги
+            </div>
           </div>
-          <div class="info-box__column">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/info-box_img-2.png" alt="" class="info-box__column-img">
-            <p class="info-box__column-text">Начинающих тестировщиков, <span class="info-box__select">которые учились самостоятельно</span>, на <span class="info-box__select">онлайн-курсах</span> или в университете.
-            </p>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Quality Assurance (QA)
+            </div>
+            <div class="spec-list__item-second">
+              NIX Solution, Raccoon Gang, Ciklum, EPAM, Data Art, Sigma Software, Fortifier
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Java Script (JS)
+            </div>
+            <div class="spec-list__item-second">
+              NIX, Raccoon Gang, Ciklum, EPAM, Data Art, Sigma Software, SoftServe, Fortifier, INSART
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Java
+            </div>
+            <div class="spec-list__item-second">
+              Fortifier
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              .Net
+            </div>
+            <div class="spec-list__item-second">
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              PHP
+            </div>
+            <div class="spec-list__item-second">
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Phyton
+            </div>
+            <div class="spec-list__item-second">
+            </div>
           </div>
         </div>
-        <p class="info-box__text">На чемпионате будет <span class="info-box__select">индивидуальное прохождение тестов</span>. Если наберете <span class="info-box__select">проходной балл</span> в тесте, считайте, успешно прошли техническое <span class="info-box__select">собеседование в компании-партнеры мероприятия</span>.</p>
-        <a href="https://goo.gl/forms/kerL25GCfN9GrEPn2" target="_blank" class="promo-link">заполнить анкету</a>
       </div>
     </section>
     <section class="about-box">
       <div class="about-box__wrapper">
-        <h2 class="about-box__heading">Что будет на тесте?</h2>
-        <p class="about-box__text">Тесты для чемпионата создают QA-эксперты, которые работают в сфере тестирования больше пяти лет. Это люди, которые сотни раз собеседовали и отбирали на работу новичков. В квалификационных тестах на позицию Junior QA будет проверка знаний из 3-х разделов:</p>
+        <h2 class="about-box__heading">
+          <span class="about-box__heading-select">Етап 2</span>
+          <br>
+          Наповнення бази Сертифікаційних випробувань та рейтинги ІТ шкіл
+        </h2>
+        <div class="spec-list__holder mod">
+          <div class="spec-list__row header">
+            <div class="spec-list__item-first">
+              Спеціальності
+            </div>
+            <div class="spec-list__item-second">
+              ІТ школи, що надали тестові питання з своїх програм навчання по узгодженим вимогам від компаній.
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Quality Assurance (QA)
+            </div>
+            <div class="spec-list__item-second">
+              NIX Solution, Raccoon Gang, Ciklum, EPAM, Data Art, Sigma Software, Fortifier
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Java Script (JS)
+            </div>
+            <div class="spec-list__item-second">
+              NIX, Raccoon Gang, Ciklum, EPAM, Data Art, Sigma Software, SoftServe, Fortifier, INSART
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Java
+            </div>
+            <div class="spec-list__item-second">
+              Fortifier
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              .Net
+            </div>
+            <div class="spec-list__item-second">
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              PHP
+            </div>
+            <div class="spec-list__item-second">
+            </div>
+          </div>
+          <div class="spec-list__row">
+            <div class="spec-list__item-first">
+              Phyton
+            </div>
+            <div class="spec-list__item-second">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="company-box">
+      <div class="company-box__holder">
+        <h2 class="company-box__header">Партнеры</h2>
+        <p class="company-box__text">Компании, которым не все равно на качество обучения их будущих сотрудников:</p>
         <div class="about-box__columns">
           <div class="about-box__column">
             <span class="about-box__column-num about-box__column-num_color-1">1</span>
@@ -99,125 +230,6 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
     </section>
-    <section class="company-box">
-      <div class="company-box__holder">
-        <h2 class="company-box__header">Партнеры</h2>
-        <p class="company-box__text">Компании, которым не все равно на качество обучения их будущих сотрудников:</p>
-        <div class="company-box__slick">
-          <div class="company-box__slide">
-            <div class="company-box__slide-holder">
-              <div class="company-box__slide-wrapper">
-                <img class="company-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/company-box_logo-5.png" alt="NIX Solutions">
-              </div>
-              <strong class="company-box__company-name"><a href="https://www.facebook.com/raccoongangco" target="_blank">Raccoon Gang</a></strong>
-              <p class="company-box__company-info">Провайдер комплексных решений в сфере онлайн обучения. Компания предлагает услуги по созданию и кастомизации платформ и разработке в сфере технологий Learning management system, к примеру: геймификация обучения, адаптивное обучение, аналитика и др.</p>
-            </div>
-          </div>
-          <div class="company-box__slide">
-            <div class="company-box__slide-holder">
-              <div class="company-box__slide-wrapper">
-                <img class="company-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/company-box_logo-4.png" alt="NIX Solutions">
-              </div>
-              <strong class="company-box__company-name">Design and Test Lab</strong>
-              <p class="company-box__company-info">Высший приоритет Design and Test Lab — разработка надежного программного обеспечения. В работе компания применяет научные знания при планировании проекта, разработке архитектуры, программировании и тестировании.</p>
-            </div>
-          </div>
-          <div class="company-box__slide">
-            <div class="company-box__slide-holder">
-              <div class="company-box__slide-wrapper">
-                <img class="company-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/company-box_logo-1.png" alt="NIX Solutions">
-              </div>
-              <strong class="company-box__company-name">Генеральный партнер - NIX Solutions</strong>
-              <p class="company-box__company-info">Компания NIX Solutions была основана в 1994 году и к настоящему времени превратилась во флагман IT-аутсорсинга в Украине с богатой историей и крепкими традициями.<br>Наша команда — это более 1500 грамотных специалистов и просто хороших людей.</p>
-            </div>
-          </div>
-        </div>
-        <a href="https://goo.gl/forms/K23xZvkkERv5DBO73" target="_blank" class="promo-link">Поддержать проект</a>
-      </div>
-    </section>
-    <section class="schools-box">
-      <div class="schools-box__holder">
-        <h2 class="schools-box__header">IT-школы</h2>
-        <p class="schools-box__text">В чемпионате участвуют выпускники харьковских IT-школ:</p>
-        <div class="schools-box__slick">
-          <div class="schools-box__slide">
-            <div class="schools-box__slide-holder">
-              <div class="schools-box__slide-wrapper">
-                <img class="schools-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/schools-box_logo-3.png" alt="Ukrainian IT School">
-              </div>
-              <p class="schools-box__school-info"><span class="schools-box__selected">Ukrainian IT School</span> – ІТ-школа, у которой больше десяти ІТ и маркетинговых курсов разных направлений.</p>
-            </div>
-          </div>
-          <div class="schools-box__slide">
-            <div class="schools-box__slide-holder">
-              <div class="schools-box__slide-wrapper">
-                <img class="schools-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/schools-box_logo-2.png" alt="Telesens Academy">
-              </div>
-              <p class="schools-box__school-info"><span class="schools-box__selected">Telesens Academy</span> – ІТ-школа, которая до недавнего времени специализировалась на обучении тестировщиков. Входит в сообщество хороших школ и подписала Манифест.</p>
-            </div>
-          </div>
-          <div class="schools-box__slide">
-            <div class="schools-box__slide-holder">
-              <div class="schools-box__slide-wrapper">
-                <img class="schools-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/schools-box_logo-6.png" alt="Lemon.School">
-              </div>
-              <p class="schools-box__school-info"><span class="schools-box__selected">Lemon.School</span> – ІТ-школа, у которой более 15 курсов ІТ и маркетинговых курсов разных направлений.</p>
-            </div>
-          </div>
-          <div class="schools-box__slide">
-            <div class="schools-box__slide-holder">
-              <div class="schools-box__slide-wrapper">
-                <img class="schools-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/schools-box_logo-1.png" alt="A-Level">
-              </div>
-              <p class="schools-box__school-info"><span class="schools-box__selected">A-Level</span> – ІТ-школа, у которой больше десяти  ІТ и маркетинговых курсов разных направлений.  Входит в сообщество хороших школ. Подписали Манифест хорошей школы и прошли ревизию по чек-листу.</p>
-            </div>
-          </div>
-          <div class="schools-box__slide">
-            <div class="schools-box__slide-holder">
-              <div class="schools-box__slide-wrapper">
-                <img class="schools-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/schools-box_logo-4.png" alt="Hillel">
-              </div>
-              <p class="schools-box__school-info"><span class="schools-box__selected">Hillel</span> – ІТ-школа, у которой более 20 курсов для детей и взрослых по ІТ и маркетинговым направлениям. В Харькове находится одно из представительств сети школ.</p>
-            </div>
-          </div>
-          <div class="schools-box__slide">
-            <div class="schools-box__slide-holder">
-              <div class="schools-box__slide-wrapper">
-                <img class="schools-box__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/schools-box_logo-5.png" alt="SkillUP">
-              </div>
-              <p class="schools-box__school-info"><span class="schools-box__selected">SkillUP</span> – ІТ-школа, у которой пять ІТ-курсов. В Харькове находится одно из представительств сети школ. </p>
-            </div>
-          </div>
-        </div>
-        <a href="https://goo.gl/forms/mbQ9EKs0tI81XAiP2" target="_blank" class="promo-link">Участвовать как іт-школа </a>
-      </div>
-    </section>
-    <section class="organizer">
-      <div class="organizer__holder">
-        <h2 class="organizer__heading">Организаторы</h2>
-        <div class="organizer__wrapper">
-          <div class="organizer__logo-holder">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/organizer-logo.png" alt="" class="organizer__img">
-          </div>
-          <div class="organizer__column">
-            <p class="organizer__text"><span class="organizer__text-selected">Портал в непрерывное образование СуХаРи</span> больше полутора лет изучает экосистему образования, проводит ревизии курсов и собирает отзывы и принципы хорошего обучения.</p>
-            <p class="organizer__text">Часто мы слышим от компаний, что выпускники ІТ-курсов не отвечают требованиям и их нужно доучивать. Курсы, в свою очередь, обещают, что уровень подготовки студентов отвечает потребностям бизнеса. Как-то это подозрительно… Нужно разобраться! А лучше, дать еще один толчок к развитию системы ІТ-образования.</p>
-            <p class="organizer__text"><span class="organizer__text-selected">Портал в непрерывное образование СуХаРи</span> — сайт про все курсы и образовательные события в Харькове.</p>
-            <p class="organizer__text">CуХаРи являются инициаторами создания принципов <span class="organizer__text-selected">Манифеста хорошей школы</span>, к которому присоединились больше 20 школ и курсов из Харькова.</p>
-            <strong class="organizer__speaker">На вопросы отвечает Светлана Охович </strong>
-            <span class="organizer__phone">+38 097 878 34 43</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="partners">
-      <h2 class="partners__heading">Партнеры</h2>
-      <div class="partners__slick">
-          <a class="partners__slick-link" href="https://www.rabota.kharkov.ua/" target="_blank"><img class="partners__slick-img" src="/static/${settings.DEFAULT_SITE_THEME}/images/partners-3.png" alt="partner"></a>
-          <a class="partners__slick-link" href="http://www.stdo42.com/ru/" target="_blank"><img class="partners__slick-img" src="/static/${settings.DEFAULT_SITE_THEME}/images/partners-2.png" alt="partner"></a>
-          <a class="partners__slick-link" href="https://www.facebook.com/itcrowdkh/" target="_blank"><img class="partners__slick-img" src="/static/${settings.DEFAULT_SITE_THEME}/images/partners-1.png" alt="partner"></a>
-      </div>
-    </section>
 </main>
 
 <%include file="${static.get_template_path('footer.html')}" />
@@ -233,10 +245,7 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
-    <script src="${static.url('js/owl.carousel.min.js')}"></script>
-    <script src="${static.url('js/slick.min.js')}"></script>
-    <script src="${static.url('js/slider.js')}"></script>
-    
+
     <script type="text/javascript">
       $(window).load(function() {
          if(getParameterByName('next')) {

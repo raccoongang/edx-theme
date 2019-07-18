@@ -29,6 +29,7 @@ $color-1: #ffbf10;
 }
 
 .promo-box__main-text {
+    font-family: phenomenaextrabold, sans-serif;
     font-size: 44px;
     font-weight: 700;
     color: #fff;
@@ -235,7 +236,7 @@ $color-1: #ffbf10;
     background: #895F85 url('#{$img-path}/info-box_bg.jpg') no-repeat;
     background-size: cover;
     position: relative;
-    padding: 0 0 35px;
+    padding: 0 0 65px;
 
     &:after {
         content: '';
@@ -266,7 +267,7 @@ $color-1: #ffbf10;
 }
 
 .info-box__heading {
-    font: 52px/60px phenomenaextrabold, sans-serif;
+    font: 46px/60px phenomenaextrabold, sans-serif;
     text-align: center;
     color: #fff;
     text-transform: none;
@@ -325,6 +326,7 @@ $color-1: #ffbf10;
 }
 
 .about-box {
+    background: #e8e8e8;
     position: relative;
     padding: 80px 0 77px;
     z-index: 1;
@@ -334,9 +336,9 @@ $color-1: #ffbf10;
         position: absolute;
         height: 10px;
         width: 100%;
-        bottom: -16px;
+        top: 0;
         left: 0;
-        background: linear-gradient(to right, rgba(255,191,16,0) 0%,rgba(255,191,16,1) 25%,rgba(255,191,16,1) 75%,rgba(255,191,16,0) 100%);
+        background: linear-gradient(to right, rgba(2,202,245,0) 0%, #02caf5 25%, #02caf5 75%, rgba(2,202,245,0) 100%);
     }
 }
 
@@ -351,6 +353,10 @@ $color-1: #ffbf10;
     text-align: center;
     text-transform: none;
     margin: 0 0 36px;
+}
+
+.about-box__heading-select {
+    color: #04cbf5;
 }
 
 .about-box__text {
@@ -433,7 +439,7 @@ $color-1: #ffbf10;
 
 .company-box {
     position: relative;
-    background: #e8e8e8;
+    background: #fff;
     padding: 0 0 51px;
 
     &:after {
@@ -838,4 +844,110 @@ $color-1: #ffbf10;
 
 .header-global.header-global__course h2 {
     color: #fff;
+}
+
+.anchor-box__columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 32px;
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(to right, rgba(2,202,245,0) 0%, #02caf5 50%, rgba(2,202,245,0) 100%);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.anchor-box__column {
+    width: 32.5%;
+}
+
+.anchor-box__link {
+    display: block;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 12px;
+    text-align: center;
+    font-family: phenomenaextrabold, sans-serif;
+    text-transform: uppercase;
+    color: #423940;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: #fff;
+        background: #009be0;
+        border-color: #009be0;
+    }
+}
+
+.promo-link__holder {
+    text-align: center;
+    margin: 0;
+
+    .promo-link {
+        display: block !important;
+        font-weight: 400;
+        font-size: 18px !important;
+        color: #423940 !important;
+    }
+}
+
+.spec-list__holder {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 865px;
+    margin: 0 auto;
+    .spec-list__row {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 2px;
+        &:last-child {
+            margin: 0;
+        }
+        .spec-list__item-first {
+            width: 30%;
+        }
+        .spec-list__item-second {
+            width: 70%;
+            margin-left: 4px;
+        }
+        .spec-list__item-first,
+        .spec-list__item-second {
+            padding: 8px 22px;
+            background: #fff;
+            font-size: 16px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            min-height: 68px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            line-height: 1.4;
+        }
+        &.header {
+            .spec-list__item-first,
+            .spec-list__item-second {
+                color: #423940;
+                background: #ffbf10 !important;
+                font-family: phenomenaextrabold, sans-serif;
+                font-size: 19px;
+            }
+        }
+    }
+    &.mod {
+        .spec-list__row:nth-child(2n+1) {
+            .spec-list__item-first,
+            .spec-list__item-second {
+                background: #f0f1f3;
+            }
+        }
+    }
 }
