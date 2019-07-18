@@ -91,7 +91,7 @@ from openedx.core.djangolib.markup import HTML, Text
                     <p class="course-box__description">${category.description}</p>
                     % for sub_category in category.get_children():
                       <%
-                        courses_sub_category = sub_category.courses.filter(id__in=available_courses)
+                        courses_sub_category = sub_category.courses.filter(id__in=available_courses).order_by('display_number_with_default')
                         set_courses_sub_category.update(courses_sub_category)
                       %>
                       % if courses_sub_category:
@@ -106,7 +106,10 @@ from openedx.core.djangolib.markup import HTML, Text
                       % endif
                     % endfor
                     <%
-                      root_category_courses = set(category.courses.filter(id__in=available_courses)) - set_courses_sub_category
+                      root_category_courses = sorted(
+                        set(category.courses.filter(id__in=available_courses)) - set_courses_sub_category,
+                        key=lambda course: course.display_number_with_default
+                      )
                     %>
                     % if root_category_courses:
                       <%include file="${courses_list}" args="courses=root_category_courses" />
