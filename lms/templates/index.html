@@ -10,28 +10,42 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="promo-box">
-      <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="hardskill logo" class="promo-box__logo">
-      <h1 class="promo-box__main-text">Hard Skills Exam</h1>
-      <span class="promo-box__date">8-го декабря</span>
-      <p class="promo-box__text">Чемпионат среди начинающих тестировщиков</p>
-      <a href="https://goo.gl/forms/kerL25GCfN9GrEPn2" target="_blank" class="promo-link">Участвовать!</a>
+      <div class="promo-box__holder">
+        <img src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="hardskill logo" class="promo-box__logo">
+        <h1 class="promo-box__main-text">Hard Skills Exam</h1>
+        <div class="promo-box__columns">
+          <div class="promo-box__column">
+            <p class="promo-box__info">
+              Ми пропонуємо дієвий інструмент підвищення якості  неформальної освіти.
+            </p>
+          </div>
+          <div class="promo-box__column">
+            <p class="promo-box__info">
+              Наша задача - створення прозорої регіональної системи  постійного коригування вимог ринку  до IT фахівців початкового рівня.
+            </p>
+          </div>
+          <div class="promo-box__column">
+            <p class="promo-box__info">
+              Ми проводимо сертифікаційні випробування  за узгодженими вимогами ІТ компаній.
+            </p>
+          </div>
+        </div>
+      </div>
       <span class="promo-box__arrows"></span>
     </section>
     <section class="employ-box">
       <div class="employ-box__holder">
-        <strong class="employ-box__text"><span class="employ-box__text-select">Проверяем employability:</span> что знают и умеют выпускники ІТ-курсов и самоучки?</strong>
+        <strong class="employ-box__text"><span class="employ-box__text-select">Мета проекту:</span> что знают и умеют выпускники ІТ-курсов и самоучки?</strong>
         <div class="employ-box__columns">
-          <div class="employ-box__column employ-box__column_color-1">
-            <p class="employ-box__column-text">Нетипичное мероприятие, после которого участники экосистемы образования сделают выводы, как лучше взаимодействовать.</p>
-          </div>
           <div class="employ-box__column">
-            <p class="employ-box__column-text">Сравним компетенции (hard skills), которые нужны бизнесу и то, что знают и умеют выпускники IТ-школ и частных учебных заведений для взрослых.</p>
+            <p class="employ-box__column-text">
+              Глибока взаємодія секторів ІТ-освіти та  ІТ-бізнеса для налагодження постійного та прогнозованого потоку якісних фахівців початкового рівня для галузі.
+            </p>
           </div>
           <div class="employ-box__column employ-box__column_color-3">
-            <p class="employ-box__column-text">Тех, кто лучше справится с тестами, возьмут на работу наши компании-партнеры.</p>
-          </div>
-          <div class="employ-box__column employ-box__column_color-2">
-            <p class="employ-box__column-text employ-box__column-text_bold">А, главное, после «Hard skills exam: QA» весь Харьков узнает, где и как лучше учиться на QA-специалиста, чтобы, в конце концов, войти в айти.</p>
+            <p class="employ-box__column-text">
+              Основним інструментом проекту є налагодження прозорої системи медійної та фінансової підтримки з боку ІТ-компаній процесу підготовки якісних фахівців закладами неформальної освіти.
+            </p>
           </div>
         </div>
       </div>
