@@ -53,7 +53,7 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
         </div>
         <div class="promo-link__holder">
-          <a href="https://goo.gl/forms/kerL25GCfN9GrEPn2" target="_blank" class="promo-link">
+          <a href="https://forms.gle/4Vy1PpGxehaNJwSW8" target="_blank" class="promo-link">
             Оформити заявку на тестування
           </a>
         </div>
@@ -72,7 +72,7 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
     </section>
-    <section class="info-box">
+    <section class="info-box" id="req">
       <div class="info-box__holder">
         <h2 class="info-box__heading">
           <span class="info-box__heading-select">Етап 1</span>
@@ -142,7 +142,7 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
     </section>
-    <section class="about-box">
+    <section class="about-box" id="ratings">
       <div class="about-box__wrapper">
         <h2 class="about-box__heading">
           <span class="about-box__heading-select">Етап 2</span>
@@ -238,7 +238,7 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
     </section>
-    <section class="company-box">
+    <section class="company-box" id="sertf">
       <div class="company-box__holder">
         <h2 class="company-box__heading">
           <span class="company-box__heading-select">Етап 3</span>
@@ -284,11 +284,11 @@ from openedx.core.djangolib.markup import HTML, Text
         </p>
         <p class="company-box__text">
           У день тестування Ви з'являєтеся в пункт тестування, Вас ідентифікують по документу з фото (паспорт, права, студентський квиток ...), роз'яснюють
-          <a href="https://drive.google.com/drive/folders/18tqqgVXf8JLoz8fqTHGMVckg4L-rLcsc" target="_blank">правила тестування</a>.
+          <a href="https://drive.google.com/drive/folders/18tqqgVXf8JLoz8fqTHGMVckg4L-rLcsc" target="_blank" download>правила тестування</a>.
         </p>
         <p class="company-box__text">
           Під час тестування Вам не можна користуватися сторонніми матеріалами. По закінченню тестування
-          <a href="https://drive.google.com/drive/folders/18tqqgVXf8JLoz8fqTHGMVckg4L-rLcsc" target="_blank">формується сертифікат</a>. Ваші дані і розгорнуті результати тестування передаються компаніям-партнерам проекту Hard Skills Exam.
+          <a href="https://drive.google.com/drive/folders/18tqqgVXf8JLoz8fqTHGMVckg4L-rLcsc" target="_blank" download>формується сертифікат</a>. Ваші дані і розгорнуті результати тестування передаються компаніям-партнерам проекту Hard Skills Exam.
         </p>
         <p class="company-box__text-select">
           Бажаємо успіхів!!!
@@ -312,11 +312,15 @@ from openedx.core.djangolib.markup import HTML, Text
 <%block name="js_extra">
 
     <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
+      // smooth scroll to anchor
+      $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+      });
+      // END smooth scroll to anchor
 
       // js for parallax
       $(window).scroll(function () {
@@ -332,23 +336,6 @@ from openedx.core.djangolib.markup import HTML, Text
 
       });
       // js for parallax end
-
-      // js for show more btn
-      $('.show-more').click(function () {
-        $('.fa-spinner').css('visibility', 'visible');
-        setTimeout(function() {
-          $('.fa-spinner').css('visibility', 'hidden');
-          $('.courses-listing-item:visible:last').nextAll(':lt(8)').show().addClass('newElements');
-          if ($('.courses-listing-item').is(':hidden')) {
-            $('html, body').animate({ scrollTop: $('.newElements:first').offset().top - 20}, 1000);
-            $('.courses-listing-item').removeClass('newElements');
-          } else {
-            $('html, body').animate({ scrollTop: $('.newElements:first').offset().top - 20}, 1000);
-            $('.show-more').hide();
-          }
-        }, 300);
-      });
-      // js for show more btn end
 
     </script>
 </%block>
