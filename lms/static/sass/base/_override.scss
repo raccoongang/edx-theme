@@ -1387,8 +1387,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
     }
 
     .promobox__image {
-        max-width: 80%;
-        margin: 30px auto 20px;
+        max-width: 70%;
+        margin: 30px 0 20px;
         @media screen and (max-width: 760px) {
             max-width: 100%;
         }
@@ -5444,6 +5444,8 @@ section.outside-app {
 }
 
 .promobox__text_note {
+    font-size: 18px;
+    font-weight: 700;
     box-sizing: border-box;
     padding: 0 15px;
     margin: 0 auto 20px;
@@ -5455,6 +5457,10 @@ section.outside-app {
     font-size: 30px;
     margin: 0 0 20px;
     font-weight: 700;
+
+    span {
+        font-size: 18px;
+    }
 }
 
 .promobox__link {
