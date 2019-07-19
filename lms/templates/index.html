@@ -284,11 +284,11 @@ from openedx.core.djangolib.markup import HTML, Text
         </p>
         <p class="company-box__text">
           У день тестування Ви з'являєтеся в пункт тестування, Вас ідентифікують по документу з фото (паспорт, права, студентський квиток ...), роз'яснюють
-          <a href="https://drive.google.com/drive/folders/18tqqgVXf8JLoz8fqTHGMVckg4L-rLcsc" target="_blank" download>правила тестування</a>.
+          <a href="docs/rules_UA.docx" target="_blank" download>правила тестування</a>.
         </p>
         <p class="company-box__text">
           Під час тестування Вам не можна користуватися сторонніми матеріалами. По закінченню тестування
-          <a href="https://drive.google.com/drive/folders/18tqqgVXf8JLoz8fqTHGMVckg4L-rLcsc" target="_blank" download>формується сертифікат</a>. Ваші дані і розгорнуті результати тестування передаються компаніям-партнерам проекту Hard Skills Exam.
+          <a href="docs/certificate.pdf" target="_blank" download>формується сертифікат</a>. Ваші дані і розгорнуті результати тестування передаються компаніям-партнерам проекту Hard Skills Exam.
         </p>
         <p class="company-box__text-select">
           Бажаємо успіхів!!!
@@ -300,14 +300,6 @@ from openedx.core.djangolib.markup import HTML, Text
 <%include file="${static.get_template_path('footer.html')}" />
 
 <a class="arrow-up" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-
-% if show_homepage_promo_video:
-  <section id="video-modal" class="modal home-page-video-modal video-modal">
-    <div class="inner-wrapper">
-      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-% endif
 
 <%block name="js_extra">
 

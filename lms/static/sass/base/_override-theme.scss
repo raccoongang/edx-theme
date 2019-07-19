@@ -739,6 +739,11 @@ $color-1: #ffbf10;
     }
 }
 
+#djDebug #djDebugToolbar {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 @media screen and (max-width: 1199px) {
     .header-global .nav-courseware {
         flex-direction: column;
