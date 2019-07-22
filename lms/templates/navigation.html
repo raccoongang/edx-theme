@@ -209,9 +209,12 @@ site_status_msg = get_site_status_msg(course_id)
         <div class="flex">
           <%include file="user_dropdown.html"/>
 
-          <a href="${get_online_help_info(online_help_token)['doc_url']}"
+          <a href="https://helpcenter.fastlane.live/"
              target="_blank"
-             class="doc-link">${_("Help")}</a>
+             title="Help Center"
+             class="doc-link">
+            <img src="/static/${settings.FEATURES.get('FASTLANE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/help-icon.svg" alt="Help Center" title="Help Center">
+          </a>
         </div>
 
       </div>

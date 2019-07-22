@@ -46,6 +46,11 @@ body .header-global h1.logo {
         width: 100%;
         @media screen and (min-width:760px ) {
             width: auto;
+
+            &.authenticated {
+                margin-left: 18px;
+                margin-top: 0;
+            }
         }
 
         li {
@@ -81,10 +86,11 @@ body .header-global h1.logo {
         }
     }
     .nav-courseware {
-        width: 100%;
+        width: auto;
         @media screen and (min-width:760px ) {
             display: flex;
             justify-content: space-between;
+            margin-left: 18px;
         }
 
         li {
@@ -180,9 +186,9 @@ body .header-global h1.logo {
 .doc-link {
     color: $header-link-color !important;
     line-height: 16px;
-    width: auto;
+    width: 38px;
     text-align: left;
-    margin: 12px 15px;
+    margin: 0;
     box-sizing: border-box;
 
     &:visited {
@@ -193,6 +199,10 @@ body .header-global h1.logo {
     &:hover {
         color: $header-link-color-hover !important;
         text-decoration: none;
+    }
+
+    img {
+        width: 100%;
     }
 }
 .wrapper-footer {
