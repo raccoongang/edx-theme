@@ -58,6 +58,8 @@
     box-sizing: border-box;
 
     .wrapper-header {
+        display: flex;
+        align-items: center;
         height: auto;
         padding: 0;
         position: relative;
@@ -3126,13 +3128,10 @@ div.info-wrapper section.handouts {
     width: 40px !important;
     margin-right: 20px;
     height: 40px;
-    position: absolute;
-    right: 0;
-    top: 30px;
 
     .is-authenticated & {
         position: static;
-        margin: 2px 20px 0px 0;
+        margin: 2px 20px 0 0;
 
         @media (max-width: 840px) {
             order: 1;
@@ -3143,6 +3142,7 @@ div.info-wrapper section.handouts {
 body .header-global .wrapper-header .list-inline.nav-global {
     flex-wrap: wrap;
     margin-right: auto;
+    margin-top: 0;
 }
 
 body.is-authenticated .header-global .wrapper-header .list-inline.nav-global {
