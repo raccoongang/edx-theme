@@ -257,6 +257,11 @@
 
 				.username {
 					margin-left: 5px;
+					max-width: 120px;
+					display: inline-block;
+					overflow: hidden;
+					vertical-align: middle;
+					text-overflow: ellipsis;
 				}
 
 				.user-image-frame {
