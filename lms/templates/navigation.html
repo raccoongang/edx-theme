@@ -114,9 +114,11 @@ site_status_msg = get_site_status_msg(course_id)
       <div class="flex">
         <%include file="user_dropdown.html"/>
 
-        <a href="${get_online_help_info(online_help_token)['doc_url']}" 
-          target="_blank"
-          class="doc-link">${_("Help")}</a>
+        <a class="help-link-btn" href="https://helpcenter.fastlane.live" target="_blank" title="Help Center">
+          <svg viewBox="0 0 60 60">
+            <use xlink:href="#ico-help-link" />
+          </svg>
+        </a>
       </div>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
@@ -144,16 +146,6 @@ site_status_msg = get_site_status_msg(course_id)
             </li>
           % endif
         </%block>
-
-        <%block name="navigation_other_global_links">
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
-              </li>
-            %endif
-          % endif
-        </%block>
       </ol>
 
       <ol class="right nav-courseware list-inline">
@@ -178,6 +170,11 @@ site_status_msg = get_site_status_msg(course_id)
           % endif
         </%block>
       </ol>
+      <a class="help-link-btn" href="https://helpcenter.fastlane.live" target="_blank" title="Help Center">
+        <svg viewBox="0 0 60 60">
+          <use xlink:href="#ico-help-link" />
+        </svg>
+      </a>
     % endif
     % if static.show_language_selector():
      <% languages = static.get_released_languages() %>

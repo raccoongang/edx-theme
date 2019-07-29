@@ -58,8 +58,21 @@
     box-sizing: border-box;
 
     .wrapper-header {
+        display: flex;
+        align-items: center;
         height: auto;
         padding: 0;
+        position: relative;
+
+        .is-authenticated & {
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width: 840px) {
+            .is-authenticated.menu-open & {
+                display: block;
+            }
+        }
     }
     .nav-global {
         width: 100%;
@@ -108,6 +121,7 @@
         width: 100%;
         @media screen and (min-width:760px ) {
             width: auto;
+            display: flex;
         }
 
         li {
@@ -135,7 +149,7 @@
                     background: $theme-btn-bg;
                 }
                 &:focus:hover {
-                    background: $theme-btn-bg-hover!important;
+                    background: $theme-btn-bg-hover !important;
                 }
                 &:hover {
                     background: $theme-btn-bg-hover;
@@ -146,6 +160,7 @@
     .user {
         display: block;
         width: auto;
+        margin-top: 0 !important;
 
         .user-link .label-username {
             text-shadow: none;
@@ -2808,4 +2823,365 @@ body {
 
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta {
     display: flex;
+}
+
+.team-optional-fields .u-field-country {
+    display: block;
+}
+
+.progress-certificates-title {
+    word-break: normal !important;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1em;
+    }
+
+    @media screen and (max-width: 400px) {
+        font-size: .8em;
+    }
+}
+
+.login-register .form-wrapper {
+    padding-bottom: 15px;
+
+    &#password-reset-form {
+        padding-bottom: 25px;
+    }
+}
+
+.updates-article,
+div.info-wrapper section.handouts {
+    word-wrap: break-word;
+}
+
+.view-register {
+    .list-input {
+        select {
+            font-weight: 500;
+            font-family: "Open Sans",Verdana,Geneva,sans-serif;
+            font-size: 15px;
+            line-height: 21px;
+            color: #3c3c3c;
+            border-radius: 0;
+            height: 43px;
+        }
+
+        label {
+            font-size: 15px;
+            line-height: 21px;
+            color: #333;
+        }
+
+        .field-education-level {
+            width: 100%;
+            margin-bottom: 20px !important;
+        }
+
+        .field-gender {
+            width: calc( 50% - 10px);
+        }
+
+        .field-yob {
+            width: calc( 50% - 10px);
+            margin-left: 15px;
+        }
+
+        #field-education-level,
+        #field-gender,
+        #field-yob {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}
+
+.shopping-cart {
+    &.confirm-enrollment:not(section),
+    &.billing-details-view {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .pattern + .user-data {
+        padding: 0 15px;
+
+        & + .discount {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .user-data {
+        .image {
+            @media screen and (max-width: 860px) {
+                float: none;
+                margin: 0 auto 15px;
+            }
+        }
+
+        .data-input {
+            @media screen and (max-width: 860px) {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+            .three-col {
+                @media screen and (max-width: 768px) {
+                    text-align: center;
+                }
+
+                .col-1 {
+                    width: calc(100% - 350px - 45px);
+
+                    @media screen and (max-width: 1024px) {
+                        width: calc(100% - 240px - 45px);
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        float: none;
+                        padding-top: 0;
+                    }
+                }
+
+                .col-2 {
+                    @media screen and (max-width: 1024px) {
+                        width: 240px;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        float: none;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+                .col-3 {
+                    @media screen and (max-width: 768px) {
+                        float: none;
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .discount {
+        padding: 17px 0 15px;
+
+        .code-input {
+            margin-right: 10px;
+
+            @media screen and (max-width: 460px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            input[type="text"] {
+                margin-bottom: 10px;
+            }
+        }
+
+        .code-text {
+            span {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .col-two {
+        .row-inside {
+            padding: 10px;
+            box-sizing: border-box;
+
+            @media (max-width:460px) {
+                width: 100%;
+            }
+
+            .billing-detail-value {
+                width: auto;
+            }
+        }
+
+        .col-2 {
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+
+            p {
+                @media screen and (max-width: 1024px) {
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    .steps {
+        @media (max-width:860px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width:768px) {
+            flex-wrap: wrap;
+        }
+
+        li {
+            @media (max-width:860px) {
+                margin: 0 17px;
+            }
+
+            @media (max-width:768px) {
+                box-sizing: border-box;
+                width: 45%;
+                margin: 0;
+            }
+
+            @media (max-width:460px) {
+                width: 100%;
+                padding: 20px 30px;
+            }
+
+            &:after {
+                @media (max-width:768px) {
+                    right: 6px;
+                }
+            }
+        }
+    }
+
+    .billing-data {
+        .col-half:nth-child(n) {
+            width: calc(50% - 10px);
+            box-sizing: border-box;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .course-receipt-wrap {
+        padding: 0 15px;
+        width: 100%;
+        overflow: auto;
+
+        table.course-receipt {
+            min-width: 700px;
+
+            tr {
+                td,
+                th {
+                    padding: 15px 5px;
+                }
+            }
+        }
+    }
+}
+
+.empty-dashboard-message {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user-wrapper {
+    margin: 0 auto;
+}
+
+// Account Settings for linked accounts
+
+.account-settings-sections {
+    .section {
+        padding: 20px;
+
+        .account-settings-section-body [class*="u-field-auth-oa2-"] {
+            &.u-field-social {
+                width: 32%;
+                margin: 0;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    padding: 5px 0 !important;
+                }
+
+                .u-field-social-help {
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                    }
+                }
+            }
+
+            &.u-field .field {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+.help-link-btn {
+    display: inline-block;
+    width: 40px !important;
+    margin-right: 20px;
+    height: 40px;
+
+    .is-authenticated & {
+        position: static;
+        margin: 2px 20px 0 0;
+
+        @media (max-width: 840px) {
+            order: 1;
+        }
+    }
+}
+
+body .header-global .wrapper-header .list-inline.nav-global {
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+body.is-authenticated .header-global .wrapper-header .list-inline.nav-global {
+    margin-top: 0;
+}
+
+body.is-authenticated.menu-open .header-global .wrapper-header .list-inline.nav-global {
+    @media (max-width: 840px) {
+        width: 100%;
+        margin-top: 16px;
+
+        .item,
+        .tab-nav-item {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+body .header-global .wrapper-header .list-inline .item a {
+    padding: 10px;
+}
+
+body .header-global .wrapper-header .list-inline .item {
+    margin: 0;
+
+    .is-authenticated & {
+        margin: inherit;
+    }
+}
+
+.header-global .nav-global .tab-nav-item .tab-nav-link {
+    padding: 10px;
+}
+
+body .flex {
+    @media (max-width: 840px) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
 }

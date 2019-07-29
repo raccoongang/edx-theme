@@ -1,16 +1,30 @@
 .nav-holder {
-    width: 100%;
-    display: flex;
+    width: auto;
+    padding: 0;
     flex-wrap: wrap;
-    display: none;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
     .menu-open & {
-        display: flex;
-        justify-content: center;
+        .is-authenticated & {
+            display: flex;
+            justify-content: center;
+        }
     }
-    @media (min-width: 760px) {
-        width: auto;
-        display: block;
+
+    @media (max-width: 840px) {
+
+        .is-authenticated & {
+            display: none;
+            width: 100%;
+            padding-top: 10px;
+        }
+        
+        .is-authenticated.menu-open & {
+            display: block;
+        }
     }
 
     &:after {
