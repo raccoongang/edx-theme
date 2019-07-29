@@ -3895,17 +3895,19 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 610px;
-    height: 410px;
+    width: 675px;
+    height: 485px;
     box-sizing: border-box;
     max-width: calc(100% - 30px);
     max-height: calc(100vh - 30px);
-    overflow: auto;
+    overflow: hidden;
     z-index: 9999;
     background: #fff;
     border: 5px solid #000;
 
     iframe {
+        width: 100% !important;
+        height: 100% !important;
         max-width: 100%;
         box-sizing: border-box;
     }
