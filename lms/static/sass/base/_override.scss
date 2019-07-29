@@ -396,6 +396,8 @@ body {
 .find-courses {
     .wrapper-search-context {
         .search-status-label {
+            word-break: break-word;
+
             @media (max-width: 767px) {
                 font-size: 1.8em;
                 line-height: 1.8em;
