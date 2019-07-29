@@ -146,16 +146,6 @@ site_status_msg = get_site_status_msg(course_id)
             </li>
           % endif
         </%block>
-
-        <%block name="navigation_other_global_links">
-          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
-              </li>
-            %endif
-          % endif
-        </%block>
       </ol>
 
       <ol class="right nav-courseware list-inline">
