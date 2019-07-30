@@ -1,0 +1,29 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">
+            % if page_header:
+                page_header
+            % else:
+                ${_("Contact")}
+            % endif
+            </%block>
+        </h1>
+        <%block name="pagecontent">
+        % if page_content:
+            page_content
+        % else:
+            <p>тел./факс: (044) 281-23-57</p>
+            <p>04655 м. Київ, пр-т. Московський, 19</p>
+            <p>тел./факс: 275-46-17</p>
+            <p>03680, м. Київ, вул. М. Амосова, 5</p>
+        % endif
+        </%block>
+    </section>
+</main>

@@ -1,13 +1,9 @@
 .wrapper-footer {
-	padding: 44px 0 !important;
+	padding: 10px 0 40px !important;
 	text-align: center;
 	background: $footer-bg;
 	color: #fff;
 	margin: 0 !important;
-
-	@media screen and (max-width: $build-footer-mobile) {
-		padding: 30px 0 10px;
-	}
 
 	footer#footer-openedx {
 		width: 100%;
@@ -26,13 +22,21 @@
 			float: none;
 			width: 100%;
 			text-align: center;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+
+			@media (max-width: $build-footer-mobile) {
+				flex-direction: column;
+				align-items: center;
+			}
 
 			.nav-colophon {
 				text-align: center;
-				margin: 0 0 30px;
+				margin: 0 0 6px;
 
 				@media (max-width: $build-footer-mobile) {
-					margin: 0 0 35px;
+					margin: 0 0 6px;
 				}
 
 				ol {
@@ -48,9 +52,8 @@
 
 						a {
 							color: $footer-nav-link-color;
-							text-transform: uppercase;
-							font-size: 12px;
-							font-weight: 700;
+							font-size: 14px;
+							font-weight: 400;
 
 							&:focus,
 							&:hover {
@@ -193,6 +196,29 @@
 				fill: $footer-social-link-bg-hover;
 				opacity: 0.8;
 			}
+		}
+	}
+}
+
+.wrapper-footer-ucdc {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #f8f8f8;
+    margin-top: 0;
+
+	@media (max-width: $build-footer-mobile) {
+		padding: 0 15px;
+	}
+
+	footer#footer-ucdc {
+		box-sizing: border-box;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 10px 0;
+		color: #a9a9a9;
+
+		p {
+			line-height: 1.3em;
+			font-size: 14px;
 		}
 	}
 }
