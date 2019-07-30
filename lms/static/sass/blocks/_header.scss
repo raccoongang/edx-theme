@@ -11,7 +11,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 22px 0 23px;
+		padding: 10px 0;
 		height: auto;
 		position: relative;
 
@@ -20,7 +20,7 @@
 		}
 
 		@media screen and (min-width: $breakpoint-tablet) {
-			padding: 30px 0;
+			padding: 10px 0;
 		}
 
 		.header-logo {
@@ -340,7 +340,7 @@
 	}
 
 	.hamburger-menu {
-		top: 25px;
+		top: 30px;
 		right: 15px;
 		left: inherit;
 		position: absolute;
@@ -351,10 +351,6 @@
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
 		box-sizing: border-box;
-
-		@media screen and (min-width: $breakpoint-tablet) {
-			top: 32px;
-		}
 
 		&.open {
 			.line {

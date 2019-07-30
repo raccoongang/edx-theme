@@ -1,10 +1,10 @@
-$base-color: #47bded;
-$base-color2: #44b759;
+$base-color: #26a3db;
+$base-color2: $base-color;
 $base-color2-hover: lighten($base-color2, 10%);
 //body background
 $body-bg: #eee;
 // logo
-$header-logo-height: 35px;
+$header-logo-height: 70px;
 $footer-logo-height: $header-logo-height;
 $certificate-logo-height: $header-logo-height;
 //links
@@ -38,9 +38,9 @@ $search-button-border: #fff;
 $search-button-color: #7b7b7b;
 $search-height: 43px;
 //settings for footer
-$footer-bg: #2a374a;
-$footer-nav-link-color: #fff;
-$footer-nav-link-color-hover: rgba(255,255,255, .8);
+$footer-bg: #006ea1;
+$footer-nav-link-color: #3ae5f4;
+$footer-nav-link-color-hover: darken($footer-nav-link-color, 20%);
 $footer-support-text-and-logo: #fff;
 $footer-social-link-bg: #44b759;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);

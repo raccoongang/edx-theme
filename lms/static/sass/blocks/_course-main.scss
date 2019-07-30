@@ -478,3 +478,24 @@ button.prerequisite-button .fa {
         color: #313131;
     }
 }
+
+.container.about {
+	h1,
+	h2 {
+		color: $base-color;
+		font-family: "Open Sans", Verdana, Geneva, sans-serif;
+	}
+
+	h2 {
+		text-transform: uppercase;
+	}
+
+	p,
+	li {
+		line-height: 1.5;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+}
