@@ -218,9 +218,7 @@ site_status_msg = get_site_status_msg(course_id)
         %>
         <span class="course-name">${display_name}</span></h2>
       % endif
-    % if user.is_authenticated():
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
-    % endif
 </header>
 <script>
     var btn = document.getElementById('hamburger'),
