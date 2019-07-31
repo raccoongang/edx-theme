@@ -8,22 +8,17 @@
     justify-content: flex-end;
 
     .menu-open & {
-        .is-authenticated & {
-            display: flex;
-            justify-content: center;
-        }
+        display: flex;
+        justify-content: center;
     }
 
     @media (max-width: 840px) {
-
-        .is-authenticated & {
-            display: none;
-            width: 100%;
-            padding-top: 10px;
-        }
+        display: none;
+        width: 100%;
+        padding-top: 10px;
         
-        .is-authenticated.menu-open & {
-            display: block;
+        .menu-open & {
+            display: flex;
         }
     }
 
