@@ -18,10 +18,11 @@
 @import "blocks/profile-account";
 @import "blocks/slider";
 @import "blocks/textblock";
+@import "blocks/shopping-cart";
 
-//*:not(.fa):not(.glyphicon):not(table.dataTable thead [class*='sorting']:after):not([class*=" icon-cc"]:before):not(div.dataTables_paginate a:before):not(div.dataTables_paginate a:after) {
-	//font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-//}
+*:not(.fa):not(.glyphicon):not([class*='sorting']):not([class*="icon-cc"]) {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
 
 html, body {
 	-webkit-font-smoothing: auto;
