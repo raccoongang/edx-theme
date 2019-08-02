@@ -59,8 +59,8 @@ site_status_msg = get_site_status_msg(course_id)
             logo_url = branding_api.get_logo_url(is_secure)
             logo_size = ''
         %>
-            <img class="${logo_size}logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-            <img class="${logo_size}logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-ar.png" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img class="${logo_size}logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+            <img class="${logo_size}logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-ar.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -70,7 +70,7 @@ site_status_msg = get_site_status_msg(course_id)
         <ol class="left nav-global list-inline authenticated">
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE_AND_SHOW_PROGRAM_LISTING_NAVIGATE') and context.get('threads') == None:
-              <li class="item nav-global-01 nav-global-01-xseries-style">
+              <li class="tab-nav-item">
                 <a class="${'active ' if marketing_link('COURSES') == request.path else ''}tab-nav-link" href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
               </li>
               <li class="tab-nav-item">
@@ -85,7 +85,7 @@ site_status_msg = get_site_status_msg(course_id)
               </li>
           % else:
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
-              <li class="item nav-global-01">
+              <li class="tab-nav-item">
                 <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
               </li>
             % endif
@@ -103,19 +103,19 @@ site_status_msg = get_site_status_msg(course_id)
             % endif
           % endif
           %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
-            <li class="item">
+            <li class="tab-nav-item">
               ## Translators: This is short for "System administration".
               <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
             </li>
           %endif
         </%block>
       </ol>
-      <div class="flex">
-        <%include file="user_dropdown.html"/>
-
+      <div class="flex secondary">
         <a href="${get_online_help_info(online_help_token)['doc_url']}" 
           target="_blank"
-          class="doc-link">${_("Help")}</a>
+          class="doc-link">
+          <svg><use xlink:href="#ico-help"></use></svg> ${_("Help")}</a>
+        <%include file="user_dropdown.html"/>
       </div>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
@@ -130,15 +130,15 @@ site_status_msg = get_site_status_msg(course_id)
       <ol class="left list-inline nav-global">
         <%block name="navigation_global_links">
           % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
-            <li class="item nav-global-01">
+            <li class="tab-nav-item">
               <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
             </li>
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-              <li class="item nav-global-02">
+              <li class="tab-nav-item">
                 <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
               </li>
             % endif
-            <li class="item nav-global-03">
+            <li class="tab-nav-item">
               <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
             </li>
           % endif
@@ -147,8 +147,8 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
+              <li class="tab-nav-item">
+                <a href="/courses">${_("Explore Courses")}</a>
               </li>
             %endif
           % endif
@@ -207,6 +207,8 @@ site_status_msg = get_site_status_msg(course_id)
       % endif
       % endif
       </div>
+    </nav>
+
       % if course:
       <h2 class="course-header"><span class="provider">${course.display_org_with_default}:</span>
         <span class="course-number">${course.display_number_with_default}</span>
@@ -219,7 +221,6 @@ site_status_msg = get_site_status_msg(course_id)
         %>
         <span class="course-name">${display_name}</span></h2>
       % endif
-    </nav>
     <button class="hamburger" id="hamburger" type="button" aria-label="menu"></button>
 </header>
 <script>
@@ -230,6 +231,10 @@ site_status_msg = get_site_status_msg(course_id)
        body.classList.toggle('menu-open');
     }
     btn.addEventListener('click', btnToggle);
+
+    window.onresize = function() {
+        window.innerWidth > 760 && document.getElementsByTagName("body")[0].className.match(/menu-open/) ? body.classList.remove('menu-open') : '';
+    };
 </script>
 % if course:
 <!--[if lte IE 9]>

@@ -4,25 +4,100 @@
 @import "main";
 
 .header-global.header-global__course {
-  height: auto;
-  background: $header-bg;
-  padding: 18px 10px;
-  position: relative;
-  box-sizing: border-box;
+    height: auto;
+    background: $header-bg;
+    padding: 18px 10px;
+    position: relative;
+    box-sizing: border-box;
 
-  h2 {
-      display: none;
-      @media screen and (min-width:600px ) {
-          font-size: 16px;
-          padding: 20px 45px 0 5px;
-          text-align: center;
-          display: block;
-      }
-      @media screen and (min-width:760px ) {
-          padding-right: 20px;
+    h2 {
+        display: none;
+
+        @media screen and (min-width:600px ) {
+            font-size: 16px;
+            padding: 20px 45px 0 5px;
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        @media screen and (min-width:760px ) {
+            padding-right: 20px;
+        }
+    }
+}
+
+.container .profile-wrapper .course-info>.chapters>section {
+    width: 100%;
+}
+
+div.gradebook-wrapper section.gradebook-content {
+  .grades {
+      @media screen and (max-width: 767px) {
+          width: 64%;
       }
   }
+
+  .student-table {
+      @media screen and (max-width: 767px) {
+         width: 36%;
+      }
+  }
+
+  h1 {
+    @media screen and (max-width: 600px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .student-table {
+    position: relative;
+
+    td {
+      text-overflow: ellipsis;
+      padding-right: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .student-search {
+    @media screen and (max-width: 600px) {
+      position: absolute;
+      top: -35px;
+      width: 100%;
+      padding: 0;
+      min-width: 200px;
+    }
+  }
+
+  .student-search-field {
+    @media screen and (max-width: 767px) {
+      padding: 0 15px 0 30px;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
 }
-.container .profile-wrapper .course-info>.chapters>section {
+
+.course-wrapper .course-content .vert-mod {
+  max-width: 100%
+}
+
+.course-wrapper .course-content .vert-mod .vert>.xblock-student_view {
+  max-width: 850px;
+}
+
+section.wiki .modal {
+  max-width: 960px;
+  transform: translateX(-50%);
+  box-sizing: border-box;
   width: 100%;
+  margin-left: 0 !important;
+  
+  @media screen and (max-width: 567px) {
+      left: 50% !important;
+  }
 }
