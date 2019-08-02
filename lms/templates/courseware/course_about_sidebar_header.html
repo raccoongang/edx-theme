@@ -43,7 +43,7 @@ import urllib
             )
         ).replace(u" ", u"%20")
       %>
-      <a href="${tweet_action}" target="_blank" class="share">
+      <a href="${tweet_action}" class="share" target="_blank">
         <span class="icon fa fa-twitter" aria-hidden="true"></span><span class="sr">${_("Tweet that you've enrolled in this course")}</span>
       </a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=${ urllib.quote(request.build_absolute_uri(), safe='') }" class="share" target="_blank">
