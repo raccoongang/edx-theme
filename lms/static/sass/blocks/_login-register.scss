@@ -33,6 +33,23 @@
 			}
 		}
 	}
+
+	.introduction header {
+		height: auto;
+		min-height: 120px;
+
+		@media screen and (max-width: 960px) {
+			padding-bottom: 10px;
+		}
+
+		.title {
+			@media screen and (max-width: 960px) {
+				position: relative;
+				left: 15px;
+				max-width: calc(100% - 30px);
+			}
+		}
+	}
 }
 
 .view-register {
