@@ -29,3 +29,11 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+.register form .field-group .field {
+  &.checkbox {
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+}
