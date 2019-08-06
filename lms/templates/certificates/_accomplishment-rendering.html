@@ -13,27 +13,24 @@ course_mode_class = course_mode if course_mode else ''
             <span class="ribbon-text">
                 <b>СЕРТИФИКАТ</b>
             </span>
-            <span class="general-text">об участии в <b>Hard Skills Exam: QA</b> <br> получает</span>
+            <span class="general-text">засвідчує, що</span><br><br>
         </div>
         <strong class="user-name">${(accomplishment_copy_name or accomplishment_copy_username) | h}</strong>
+        <div class="ribbon">
+            <span class="results-title" ><u>${certificate_date_issued}</u> склав(ла)  Hard Skills Exam за напрямком ${organization_long_name} та отримав(ла)</span>
+            <span class="results-title"><u>${percent}</u> балів зі 100 можливих з таким розподілом балів:</span>
+        </div>
         <div class="inner">
             <div class="results">
-                <span class="results-title">Результат теста:</span>
                 <ul class="results-list">
                   % for grade, _percent in grades:
-                    <li><strong>${loop.index+1}.</strong> ${grade | h} - <b>${_percent}%</b></li>
+                    <li><strong>${loop.index+1}.</strong> ${grade | h} - <b>${_percent}</b></li>
                   % endfor
-                    <li>${_("Общий результат теста")} - <b>${percent}%</b></li>
                 </ul>
             </div>
         </div>
         <div class="certificate-bottom">
-            <div class="date">
-                <strong>${certificate_date_issued}</strong>
-                <span>ДАТА</span>
-            </div>
         </div>
-        <div class="qa-text">Тест на основе  требований к <b>Junior QA 2019</b></div>
         <img class="sukhari-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/sukhari-logo.png">
     </div>
 </div>
