@@ -213,41 +213,61 @@
 						box-sizing: border-box;
 
 						&.menu-title {
-							color: #474747;
+							color: #fff;
 							position: relative;
 							top: 1px;
 
 							&:hover,
 							&:focus {
+								color: #86b436 !important;
+							}
+
+							@media (max-width: $build-header-menu-tablet) {
 								color: $base-color2 !important;
 							}
 						}
 
 						&.help-link {
-							color: #474747 !important;
+							color: #fff !important;
 							text-transform: uppercase;
 							margin-left: 20px;
 
 							&:hover,
 							&:focus {
+								color: #86b436 !important;
+							}
+
+							@media (max-width: $build-header-menu-tablet) {
 								color: $base-color2 !important;
 							}
 
 							svg {
 								width: 18px;
 								height: 18px;
-								fill: $base-color2;
+								fill: #fff;
 								display: inline-block;
 								vertical-align: middle;
 								position: relative;
 								top: -2px;
 								margin-right: 5px;
+
+								@media (max-width: $build-header-menu-tablet) {
+									fill: $base-color2 !important;
+								}
 							}
 						}
 					}
 
 					.fa {
-						color: #474747;
+						color: #fff;
+
+						&:hover {
+							color: #86b436;
+						}
+
+						@media (max-width: $build-header-menu-tablet) {
+							color: #86b436 !important;
+						}
 					}
 				}
 
@@ -314,7 +334,7 @@
 
 	.course-header {
 		margin-top: 0;
-		color: #313131;
+		color: #fff;
 		text-align: center;
 		padding-bottom: 20px;
 	}
@@ -338,10 +358,6 @@
 			color: $header-nav-link-color-hover !important;
 			border-color: $header-nav-link-color-hover !important;
 		}
-	}
-
-	.help-link {
-		color: $header-nav-link-color !important;
 	}
 
 	.hamburger-menu {
@@ -386,7 +402,7 @@
 		}
 
 		.line {
-			background: $base-color2;
+			background: $hamburger-color;
 			display: block;
 			position: absolute;
 			height: 5px;
@@ -537,16 +553,6 @@ section.home {
 
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 			display: block;
-		}
-
-		.parallax-img {
-			position: absolute;
-			left: 0;
-			top: -100px;
-			width: 100%;
-			height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-			background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-			background-size: cover;
 		}
 
 		.outer-wrapper {
