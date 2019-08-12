@@ -4,6 +4,7 @@
 	background: $footer-bg;
 	color: #fff;
 	margin: 0 !important;
+	border-top: 1px solid #ededed;
 
 	@media screen and (max-width: $build-footer-mobile) {
 		padding: 30px 0 10px;
@@ -193,6 +194,28 @@
 				fill: $footer-social-link-bg-hover;
 				opacity: 0.8;
 			}
+		}
+	}
+
+	.footer-text {
+		text-align: center;
+		text-transform: uppercase;
+		color: #393939;
+		font-size: 16px;
+		margin: 0 0 30px;
+	}
+
+	.footer-logos {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 550px;
+		justify-content: space-between;
+		margin: 0 auto;
+
+		img {
+			display: block;
+			height: 55px;
 		}
 	}
 }
