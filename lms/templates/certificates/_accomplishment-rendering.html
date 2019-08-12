@@ -5,19 +5,18 @@ course_mode_class = course_mode if course_mode else ''
 %>
 
 <div class="certificate-wrapper">
-    <img class="main-bg" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg-2.jpg">
+    <img class="main-bg" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg.jpg">
     <div class="certificate-body">
-        <img class="certificate-logo-itcluster" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/it-cluster-logo.png">
         <img class="certificate-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo-dark.png">
         <div class="ribbon">
             <span class="ribbon-text">
                 <b>СЕРТИФИКАТ</b>
             </span>
-            <span class="general-text">засвідчує, що</span><br><br>
+            <span class="general-text">засвідчує, що</span>
         </div>
         <strong class="user-name">${(accomplishment_copy_name or accomplishment_copy_username) | h}</strong>
         <div class="ribbon">
-            <span class="results-title" ><u>${certificate_date_issued}</u> склав(ла)  Hard Skills Exam за напрямком ${organization_long_name} та отримав(ла)</span>
+            <span class="results-title" ><u>${certificate_date_issued}</u> склав(ла) Hard Skills Exam за напрямком ${organization_long_name} та отримав(ла)</span>
             <span class="results-title"><u>${percent}</u> балів зі 100 можливих з таким розподілом балів:</span>
         </div>
         <div class="inner">
@@ -30,8 +29,35 @@ course_mode_class = course_mode if course_mode else ''
             </div>
         </div>
         <div class="certificate-bottom">
+            <div class="certificate-responsible">
+                <div class="responsible-wrapper">
+                    <div class="responsible-logo">
+                        <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/it-cluster-logo.png" alt="">
+                    </div>
+                    <div class="responsible-info">
+                        <span class="responsible-title">Виконавчий директор:</span>
+                        <span class="responsible-name">Ольга Шаповал</span>
+                    </div>
+                </div>
+                <div class="certificate-responsible-signature">
+                    <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/signature1.png" alt="">
+                </div>
+            </div>
+            <div class="certificate-responsible">
+                <div class="responsible-wrapper">
+                    <div class="responsible-logo">
+                        <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-sukhari-logo.png" alt="">
+                    </div>
+                    <div class="responsible-info">
+                        <span class="responsible-title">Голова:</span>
+                        <span class="responsible-name">Сергій Мовчан</span>
+                    </div>
+                </div>
+                <div class="certificate-responsible-signature">
+                    <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/signature2.png" alt="">
+                </div>
+            </div>
         </div>
-        <img class="sukhari-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/sukhari-logo.png">
     </div>
 </div>
 
