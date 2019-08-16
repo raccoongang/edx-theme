@@ -696,9 +696,18 @@ section.home {
 
 .wrapper-preview-menu {
 	background: #c8c8c8;
+	padding: 0;
 
 	label {
 		color: #3c3c3c !important;
+		text-shadow: none;
+		-webkit-font-smoothing: auto;
+		-moz-osx-font-smoothing: auto;
+		line-height: 20px;
+	}
+
+	.preview-menu {
+		padding: 15px !important;
 	}
 }
 
