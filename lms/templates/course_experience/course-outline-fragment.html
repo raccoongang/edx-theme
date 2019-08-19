@@ -90,7 +90,6 @@ course_sections = blocks.get('children')
                                     <span class="complete-checkmark fa fa-check"></span>
                                 % endif
                         % elif gated_subsection and not completed_prereqs:
-                                <a href="${ subsection['lms_web_url'] }">
                                             <button class="subsection-text prerequisite-button"
                                                     id="${ subsection['id'] }">
                                             <span class="menu-icon icon fa fa-lock"
