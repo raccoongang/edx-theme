@@ -3954,13 +3954,28 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 }
 
 .main-page-graphic__link {
+    position: relative;
     color: #6e6e6e;
-    padding: 8px 10px !important;
+    padding: 12px 20px !important;
     border: 2px solid #6e6e6e;
     font-size: 16px;
     text-transform: uppercase;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 25px;
+}
+
+.main-page-graphic__link-numb {
+    color: #383838;
+    background: #A9A9A9;
+    padding: 8px 14px 9px;
+    border-radius: 50%;
+    font-size: 23px;
+    line-height: 1;
+    margin-right: 15px;
+    position: absolute;
+    left: -24px;
+    top: -15px;
+    font-style: normal;
 }
 
 .footer-copyright {
