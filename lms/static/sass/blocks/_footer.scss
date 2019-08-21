@@ -1,9 +1,11 @@
 .wrapper-footer {
-	padding: 44px 0 !important;
+	padding: 82px 0 !important;
 	text-align: center;
 	background: $footer-bg;
 	color: #fff;
 	margin: 0 !important;
+	box-shadow: none !important;
+	border-top: none !important;
 
 	@media screen and (max-width: $build-footer-mobile) {
 		padding: 30px 0 10px;
@@ -29,7 +31,7 @@
 
 			.nav-colophon {
 				text-align: center;
-				margin: 0 0 30px;
+				margin: 0;
 
 				@media (max-width: $build-footer-mobile) {
 					margin: 0 0 35px;
@@ -51,6 +53,7 @@
 							text-transform: uppercase;
 							font-size: 12px;
 							font-weight: 700;
+							transition: all .3s ease-in-out;
 
 							&:focus,
 							&:hover {
@@ -67,8 +70,9 @@
 	.footer-flex {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+		position: relative;
 
 		> * {
 			@media screen and (max-width: $build-footer-mobile) {
@@ -134,15 +138,24 @@
 	}
 
 	.footer-logo-holder {
-		width: 275px;
+		width: auto;
+		position: absolute;
+		bottom: 0;
+		right: 0;
 
 		@media screen and (max-width: $build-footer-mobile) {
+			position: static;
 			order: 1;
-			margin-bottom: 38px;
+			margin-bottom: 0;
 		}
 
 		a {
-			float: right;
+			float: none;
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				opacity: .5;
+			}
 
 			@media screen and (max-width: $build-footer-mobile) {
 				float: none;
