@@ -31,32 +31,73 @@ from openedx.core.djangolib.markup import HTML, Text
         % endif
 
         <div class="main-page-text">
-            <p>${_("Start on your learning pathway by taking the Azure Fundamentals course.")}</p>
-            <p>${_("Your Learning Team will register you for the instructor-led courses in the pathway aligned with your job role.")}</p>
-            <p>${_("Take the exam after completing all the classes in your pathway to begin to earn a Microsoft role-based certification.")}</p>
-            <p class="small">(${_("NOTE: Courses subject to change based on Microsoft program updates")})</p>
+            <p>${_("Let's start you'r learning pathway")}</p>
+            <ol>
+              <li>${_("Take the Azure Fundamentals Course.")}</li>
+              <li>${_("Click on the link below to register for the online, instructor-led course aligned with your job role.")}</li>
+              <li>${_("Complete the course and take the certificate exam to earn a Microsoft role-based certification.")}</li>
+            </ol>
         </div>
-        
+      
         <div class="main-page-graphic">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/graphic.png" alt="">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/graphic-dev.png" alt="Developer Pathway">
+
+            <div class="main-page-graphic__link-holder">
+              <a class="main-page-graphic__link" href="http://portal.fastlaneus.com/abb/course/ms-az-203" target="_blank">${_("link to enroll ")} <mark class="main-page-graphic__link-numb">2</mark></a>
+              <a class="main-page-graphic__link" href="https://www.microsoft.com/en-us/learning/exam-az-203.aspx" target="_blank">${_("link to exam")} <mark class="main-page-graphic__link-numb">3</mark></a>
+            </div>
+        </div>
+        <div class="main-page-graphic">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/graphic-admin.png" alt="Administrator Pathway">
+
+            <div class="main-page-graphic__link-holder">
+              <a class="main-page-graphic__link" href="http://portal.fastlaneus.com/abb/course/ms-az-103" target="_blank">${_("link to enroll ")} <mark class="main-page-graphic__link-numb">2</mark></a>
+              <a class="main-page-graphic__link" href="https://www.microsoft.com/en-us/learning/azure-administrator.aspx" target="_blank">${_("link to exam")} <mark class="main-page-graphic__link-numb">3</mark></a>
+            </div>
+        </div>
+        <div class="main-page-graphic">
+            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/graphic-ai.png" alt="AI Engineer Pathway">
+
+            <div class="main-page-graphic__link-holder">
+              <a class="main-page-graphic__link" href="http://portal.fastlaneus.com/abb/course/ms-ai-100" target="_blank">${_("link to enroll ")} <mark class="main-page-graphic__link-numb">2</mark></a>
+              <a class="main-page-graphic__link" href="https://www.microsoft.com/en-us/learning/exam-ai-100.aspx" target="_blank">${_("link to exam")} <mark class="main-page-graphic__link-numb">3</mark></a>
+            </div>
         </div>
 
       </header>
-      % if not courses_data:
-          <%include file="${courses_list}" />
-      % else:
-        % for category in courses_data:
-        <section class="course-box">
-          <h2 class="course-box__heading">${category}</h2>
-          <p class="course-box__info">${courses_data.get(category, {}).get('description', '')}</p>
-          <%
-          courses=courses_data.get(category, {}).get('courses', '')
-          %>
-          <%include file="${courses_list}" args="courses=courses" /> 
-        </section>
-        % endfor
-      % endif
-
+     
+      <section class="course-box">
+        <h2 class="course-box__heading">${_("Register and complete Azure Fundamentals BEFORE taking the instructor led courses. AFTER completing your instructor led course, click on the links in the learning pathways above and register to take your certificate exam.")}</h2>
+        <div class="courses-container">
+        <div class="highlighted-courses">
+        <div class="courses">
+          <ul class="courses-listing">
+            <li class="courses-listing-item">
+              <article class="course" id="course-v1:Microsoft+AZ-900+2019_T1" role="region" aria-label="Microsoft Azure Fundamentals">
+                  <a href="https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/" target="_blank">
+                      <header class="course-image">
+                          <div class="cover-image">
+                              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/asset-v1_Microsoft+AZ.jpg" alt="Microsoft Azure Fundamentals AZ-900">
+                              <div class="learn-more" aria-hidden="true">LEARN MORE</div>
+                          </div>
+                      </header>
+                      <div class="course-info" aria-hidden="true">
+                          <h2 class="course-name">
+                              <span class="course-organization">Microsoft</span>
+                              <span class="course-code">AZ-900</span>
+                              <span class="course-title">Microsoft Azure Fundamentals</span>
+                          </h2>
+                          
+                              <div class="course-date localized_datetime" aria-hidden="true" data-language="en" data-format="shortDate" data-datetime="2019-02-01T00:00:00+0000" data-string="Course Starts: {date}">Course Starts: Feb 1, 2019</div>
+                      </div>
+                  </a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      </section>
     </section>
 </main>
 
