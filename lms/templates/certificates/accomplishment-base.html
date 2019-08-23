@@ -1,5 +1,6 @@
+<%page expression_filter="h"/>
 <%namespace name='static' file='/static_content.html'/>
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import ugettext as _%>
 
 <%
 # set doc language direction
@@ -9,7 +10,7 @@ course_mode_class = course_mode if course_mode else ''
 %>
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="${LANGUAGE_CODE}">
 <head dir="${dir_rtl}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -21,8 +22,10 @@ course_mode_class = course_mode if course_mode else ''
     <link rel="stylesheet" href="/static/${settings.FEATURES.get('BASE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/css/certificate.css" type="text/css" media="all" />
     <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
 </head>
+</head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
+    <%include file="${static.get_template_path('../svg_sprite.html')}" />
 
     <div class="wrapper-view" dir="${dir_rtl}">
 
@@ -41,8 +44,5 @@ course_mode_class = course_mode if course_mode else ''
     %if badge:
         <%include file="_badges-modal.html" />
     %endif
-    <style>
-
-    </style>
 </body>
 </html>

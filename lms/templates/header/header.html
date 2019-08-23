@@ -7,6 +7,7 @@
 <%!
 from django.urls import reverse
 from django.utils.translation import ugettext as _
+import waffle
 
 from lms.djangoapps.ccx.overrides import get_current_ccx
 from openedx.core.djangolib.markup import HTML, Text
@@ -14,6 +15,7 @@ from openedx.core.djangolib.markup import HTML, Text
 # App that handles subdomain specific branding
 from branding import api as branding_api
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 
 %>
 
@@ -29,45 +31,49 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     </%block>
 % endif
 
+<%
+  unsupported_browser_alert_versions = configuration_helpers.get_value('UNSUPPORTED_BROWSER_ALERT_VERSIONS', settings.FEATURES.get('UNSUPPORTED_BROWSER_ALERT_VERSIONS'))
+%>
+% if waffle.switch_is_active('enable_unsupported_browser_alert'):
+  <script>
+    var $buoop = {
+        notify:${unsupported_browser_alert_versions | n, decode.utf8},
+        api:5,
+        reminder:0
+    };
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+  </script>
+% endif
+
 <header class="global-header ${'slim' if course else ''}">
-    <div class="holder">
-        % if use_cookie_banner:
-            ${static.renderReact(
-                component="CookiePolicyBanner",
-                id="cookie-policy-banner",
-                props={}
-            )}
-        % endif
-        <div class="main-header">
-            <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-            <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
-            % if user.is_authenticated:
-                <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-            % else:
-                <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-            % endif
+    % if use_cookie_banner:
+        ${static.renderReact(
+            component="CookiePolicyBanner",
+            id="cookie-policy-banner",
+            props={}
+        )}
+    % endif
+    <div class="main-header">
+        <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
+        <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
         </div>
-        % if course:
-        <div class="course-header">
-            <span class="provider">${course.display_org_with_default}:</span>
-            <span class="course-number">${course.display_number_with_default}</span>
-            <%
-            display_name = course.display_name_with_default
-            if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-                ccx = get_current_ccx(course.id)
-                if ccx:
-                    display_name = ccx.display_name
-                %>
-            <span class="course-name">${display_name}</span>
-        </div>
+        % if user.is_authenticated:
+            <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+        % else:
+            <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
         % endif
-        <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
     </div>
+    <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
 </header>
 
 % if course:

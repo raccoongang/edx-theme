@@ -1,4 +1,4 @@
-@import "const";
+@import "theme-variables";
 
 .rtl.layout-accomplishment .accomplishment-orgs .organization-logo {
 	position: relative;
@@ -9,7 +9,7 @@
 
 .btn-link,
 .copy-meta a {
-	color: $base-color;
+	color: $theme-link;
 	border: none;
 }
 
@@ -21,7 +21,7 @@
 .btn-link:focus,
 .copy-meta a:focus,
 .copy-meta a:hover {
-	color: lighten($base-color, 20%);
+	color: lighten($theme-link, 20%);
 	background: none;
 	text-decoration: none;
 	border: none;
@@ -92,7 +92,7 @@
 
 .ribbon {
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 .ribbon-text {
@@ -107,15 +107,6 @@
 	color: #fff;
 	z-index: 1;
 
-	img {
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-	}
-
 	b {
 		z-index: 100;
 		position: relative;
@@ -123,6 +114,21 @@
 		letter-spacing: 6px;
 		font-variant-ligatures: none;
 	}
+}
+
+.certificate-dot {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#certificate-dot {
+    path {
+        fill: $certificate-borders-color;
+    }
 }
 
 .ribbon:before,
@@ -203,7 +209,6 @@
 	font-weight: 800;
 	display: block;
 	margin-bottom: 17px;
-	word-break: break-word;
 }
 
 .certificate-text {
@@ -247,9 +252,9 @@
 	margin: 0 30px;
 
 	img {
-		display: inline-block;
-		vertical-align: top;
-		width: 70px;
+	display: inline-block;
+	vertical-align: top;
+	width: 70px;
 	}
 }
 
@@ -261,7 +266,6 @@
 		display: inline-block !important;
 		vertical-align: top;
 		padding: 0 20px;
-		max-width: 200px;
 	}
 
 	* {
@@ -280,10 +284,12 @@
 		display: block;
 		position: absolute;
 		left: 50%;
-		bottom: 3px;
-		transform: translate(-50%, 0);
-		max-width: 120px;
-		max-height: 90px;
+		bottom: 0;
+		transform: translateX(-50%);
+		height: auto;
+		width: auto;
+		max-width: 85px;
+		max-height: 85px;
 	}
 
 	span {
@@ -301,15 +307,4 @@
 	font-size: 13px;
 	width: 100%;
 	text-align: center;
-}
-
-// safari only
-.main-bg,
-.certificate-wrapper,
-.certificate-body {
-	&:not(:root:root) {
-		@media print {
-			height: 19.5cm;
-		}
-	}
 }
