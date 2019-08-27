@@ -2,7 +2,7 @@ $base-color: #47bded;
 $base-color2: #44b759;
 $base-color2-hover: lighten($base-color2, 10%);
 //body background
-$body-bg: #eee;
+$body-bg: #fff;
 // logo
 $header-logo-height: 35px;
 $footer-logo-height: $header-logo-height;
@@ -12,6 +12,7 @@ $links-color: $base-color;
 $links-color-hover: lighten($links-color, 10%);
 //settings for header
 $header-bg: #fff;
+$header-border: #2b5279;
 $header-nav-link-color: $base-color2;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $dropdown-menu-link-color: $base-color;
@@ -78,6 +79,8 @@ $course-bg: #fff;
 $ribbon-corners-color: lighten($base-color, 5%);
 $ribbon-triangle-color: darken($base-color, 5%);
 $certificate-borders-color: lighten($base-color, 8%);
+//onboarding pages
+$onboarding-content-bg: #f2f2f2;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;

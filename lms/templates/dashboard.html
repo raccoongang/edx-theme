@@ -121,8 +121,34 @@ from student.models import CourseEnrollment
 </div>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    <div class="dashboard holder" id="dashboard-main">
-      <div class="main-container">
+    <div class="dashboard holder holder__full-width" id="dashboard-main">
+      <div class="main-container onboarding-container">
+        <div class="onboarding-holder">
+          <div class="onboarding-content">
+            <h1 class="onboarding-title">
+              Hi! Welcome to HERA.
+            </h1>
+            <div class="onboarding-text-block">
+              <h3 class="onboarding-text-block-title">
+                What is HERA?
+              </h3>
+              <p class="onboarding-text">
+                The HERA system is designed to help you learn scientific thinking skills in an easy and engaging way.
+              </p>
+            </div>
+            <div class="onboarding-text-block">
+              <h3 class="onboarding-text-block-title">
+                What is Scientific Thinking?
+              </h3>
+              <p class="onboarding-text">
+                Every new invention or discovery is a result of scientific work. Scientific thinking also teaches you problem solving skills, and includes reasoning and critical thinking.
+              </p>
+            </div>
+          </div>
+          <div class="mascot">
+            <img  class="mascot-image" src="/static/${settings.DEFAULT_SITE_THEME}/images/hera_mascot.png" alt="HERA-mascot" />
+          </div>
+        </div>
         <div class="my-courses" id="my-courses">
           % if display_dashboard_courses:
           <%include file="learner_dashboard/_dashboard_navigation_courses.html"/>

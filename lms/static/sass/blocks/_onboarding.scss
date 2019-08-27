@@ -1,0 +1,45 @@
+.onboarding-container {
+    padding: 40px 20px !important;
+}
+
+.onboarding-holder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.onboarding-content {
+    max-width: 760px;
+    box-sizing: border-box;
+    background: $onboarding-content-bg;
+    padding: 32px 62px;
+    border-radius: 50px;
+    position: relative;
+    margin-right: 8px;
+    &:before {
+        content: '';
+        position: absolute;
+        right: -34px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 17.5px 0 17.5px 39px;
+        border-color: transparent transparent transparent $onboarding-content-bg;
+    }
+}
+
+.onboarding-title {
+    text-align: center;
+}
+
+.onboarding-text-block-title {
+    font-weight: bold;
+    margin: 0 0 6px;
+}
+
+.onboarding-text {
+    margin: 0 0 24px;
+}
