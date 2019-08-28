@@ -28,7 +28,9 @@ input[type="submit"] {
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
 .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
 .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
-.contact-form .form-actions .action {
+.contact-form .form-actions .action,
+.view-teams .page-header-search .action-search,
+.view-teams .action-primary {
 	transition: all 0.2s ease !important;
 	display: inline-block;
 	background: $theme-btn-bg !important;
@@ -86,7 +88,12 @@ input[type="submit"] {
 .wiki-wrapper section.wiki a.btn,
 .wiki-wrapper section.wiki #id_revision + .btn,
 .instructor-dashboard-wrapper-2 section#certificates.idash-section .white-listed-students table tr td button.delete-exception,
-.page-header-search .search-form .search-button {
+.page-header-search .search-form .search-button,
+.view-teams .card .card-actions .action-view,
+.view-teams .action-cancel,
+.view-teams .page-header.has-secondary .page-header-secondary .btn-secondary,
+.view-teams .edit-members .action-remove-member,
+.view-teams .prompt.warning .action-secondary {
 	transition: all 0.2s ease !important;
 	background: $theme-btn-white-bg !important;
 	border: 1px solid $theme-btn-white-border !important;

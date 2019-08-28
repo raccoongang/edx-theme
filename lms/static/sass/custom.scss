@@ -17,8 +17,9 @@
 @import "blocks/progress";
 @import "blocks/profile-account";
 @import "blocks/slider";
+@import "blocks/teams";
 
-*:not(.fa):not(.glyphicon):not([class*='sorting']):not([class*=" icon-cc"]) {
+*:not(.fa):not([class*="fa-"]):not(.glyphicon):not([class*='sorting']):not([class*=" icon-cc"]) {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
