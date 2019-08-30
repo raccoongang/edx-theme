@@ -16,7 +16,7 @@
 
 .tree-blocks__holder {
     width: 30%;
-    border-bottom: 3px solid #ccc;
+    border-bottom: 1px solid #C0D2DB;
     padding: 0 0 30px;
 
     @media (max-width: $mobile-size) {
@@ -28,7 +28,8 @@
 .tree-blocks__heading {
     background: $gradient;
     padding: 20px 10px;
-    font-size: 16px;
+    font-size: 20px;
+    border-radius: 20px 20px 0 0;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
@@ -53,22 +54,22 @@
 }
 
 .tree-blocks__ico1 {
-    width: 93px;
-    height: 88px;
+    width: 74px;
+    height: 71px;
     background: url('../images/tree-bloks-ico-1.png');
     margin: 0 0 15px;
 }
 
 .tree-blocks__ico2 {
-    width: 61px;
-    height: 86px;
+    width: 74px;
+    height: 71px;
     background: url('../images/tree-bloks-ico-2.png');
     margin: 0 0 15px;
 }
 
 .tree-blocks__ico3 {
-    width: 78px;
-    height: 86px;
+    width: 74px;
+    height: 71px;
     background: url('../images/tree-bloks-ico-3.png');
     margin: 0 0 15px;
 }

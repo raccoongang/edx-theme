@@ -1,14 +1,13 @@
 a.login-theme,
 .login-theme {
-    background: #f39b08;
+    background: $theme-btn-bg;
     box-shadow: 0 0 6px 2px rgba(0,0,0,0.10);
     border-radius: 4px;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
     color: #fff;
     letter-spacing: 0;
-    padding: 11px 42px 12px;
-    text-transform: uppercase;
+    padding: 11px 20px 12px;
     transition: background color .3s linear .3s;
     text-align: center;
 
@@ -39,5 +38,11 @@ a.login-theme,
     &_register {
         margin-right: 10px;
         margin-left: auto;
+    }
+    &_white {
+        background: none;
+        box-shadow: none;
+        color: #000;
+        margin-left: 0;
     }
 }
