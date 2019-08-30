@@ -15,17 +15,13 @@
 .wrapper-footer footer#footer-openedx {
     box-sizing: border-box;
     max-width: 1200px;
-    padding: 20px;
+    padding: 48px 12px 42px;
     overflow: hidden;
     position: relative;
-
-    @media (min-width: 1200px) {
-        padding: 20px 0;
-    }
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
 
     &:hover {
@@ -45,7 +41,34 @@
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon {
-    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 34px;
+
+    @media screen and (max-width: $tablet-size) {
+        flex-direction: column;
+        margin: 0 0 16px;
+    }
+
+    &:after {
+        display: none;
+    }
+
+    ol {
+        @media screen and (max-width: 479px) {
+            flex-direction: column;
+        }
+
+        li {
+            float: none;
+
+            @media screen and (max-width: 479px) {
+                text-align: center;
+                margin: 0 0 10px;
+            }
+        }
+    }
 }
 
 .wrapper-footer footer#footer-openedx .footer-about-openedx a {
@@ -71,11 +94,50 @@ body .wrapper-footer footer#footer-openedx .footer-about-openedx {
 
 .wrapper-footer footer#footer-openedx .colophon {
     width: 100%;
+    float: none;
+    margin: 0;
 }
 
 .wrapper-footer footer#footer-openedx ol {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+}
+
+.logo-footer {
+    @media screen and (max-width: $tablet-size) {
+        margin: 0 0 16px;
+    }
+
+    img {
+        width: auto;
+        margin: 0;
+    }
+}
+
+.wrapper-footer footer#footer-openedx .footer-socials-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    .footer-socials-list-item {
+        margin-right: 16px;
+        list-style-type: none;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    .footer-socials-list-item a {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        &:hover {
+            text-decoration: none;
+            opacity: .55;
+        }
+    }
 }
 
 hr {
@@ -2331,7 +2393,7 @@ body.menu-open {
 }
 .theme-footer_holder {
     position: relative;
-    padding: 0 20px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -2348,6 +2410,20 @@ body.menu-open {
     display: flex;
     font-size: 12px;
     line-height: 1.2px;
+
+    @media screen and (max-width: $tablet-size) {
+        margin: 0 0 16px;
+    }
+
+    @media screen and (max-width: 479px) {
+        font-size: 12px;
+        flex-direction: column;
+        line-height: 1.5;
+
+        a, img {
+            margin: 0;
+        }
+    }
 }
 
 .theme-footer_holder .footer-support a:first-of-type {
