@@ -98,12 +98,22 @@
                 margin: 0 0 15px;
             }
         }
+
         .page-header-secondary {
             width: 34%;
 
             @media screen and (max-width: 768px) {
                 width: 100%;
                 text-align: left;
+            }
+        }
+
+        .form-actions {
+            margin-top: 0;
+
+            .action-primary,
+            .btn-secondary {
+                margin: 0 0 5px 5px;
             }
         }
     }
