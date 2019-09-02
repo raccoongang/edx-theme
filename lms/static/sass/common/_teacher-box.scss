@@ -12,15 +12,17 @@
     max-width: 198px;
     margin-right: 40px;
     border: 1px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
     @media (max-width: $mobile-size) {
         margin: 0  auto 30px;
     }
 }
 
 .teacher-box__name {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 24px;
-    color: #000;
+    color: #054E6F;
     display: block;
     margin: 0 0 25px;
 }

@@ -2,11 +2,8 @@
     width: 100%;
     margin-bottom: 50px;
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column-reverse;
-    @media (min-width: $tablet-size) {
-        flex-direction: row;
-    }
 }
 .week-structure__name {
     font-size: 16px;
@@ -24,7 +21,7 @@
     @media (min-width: $tablet-size) {
         color: #000;
         order: 2;
-        margin: 0 0 0 60px;
+        margin: 0;
         text-transform: none;
         flex-direction: row;
         padding-left: 24px;
@@ -89,35 +86,28 @@
         width: 100%;
         margin: 0;
     }
-
-    .week-structure:nth-child(2n) & {
-        @media (min-width: $tablet-size) {
-            order: 2;
-            padding-left: 106px;
-        }
-    }
 }
-.week-structure__helper {
-    position: absolute;
-    top: 0;
-    right: 41px;
-    height: 100%;
-    width: 140%;
-    transform: skew(20deg);
-    background: #f0f0f0;
-    border-bottom: 3px solid $color1;
-    display: none;
-    @media (min-width: $tablet-size) {
-        display: block;
-    }
+// .week-structure__helper {
+//     position: absolute;
+//     top: 0;
+//     right: 41px;
+//     height: 100%;
+//     width: 140%;
+//     transform: skew(20deg);
+//     background: #f0f0f0;
+//     border-bottom: 3px solid $color1;
+//     display: none;
+//     @media (min-width: $tablet-size) {
+//         display: block;
+//     }
 
-    .week-structure:nth-child(2n) & {
-        right: auto;
-        left: 41px;
-        background: #f0f0f0;
-        border-bottom: 3px solid $color1;
-    }
-}
+//     .week-structure:nth-child(2n) & {
+//         right: auto;
+//         left: 41px;
+//         background: #f0f0f0;
+//         border-bottom: 3px solid $color1;
+//     }
+// }
 .week-structure__list {
     margin: 0;
     padding: 0 0 0 15px;
@@ -148,12 +138,13 @@
         content: '';
         position: absolute;
         left: -15px;
-        top: 14px;
+        top: 5px;
         width: 6px;
         height: 6px;
         background: #000;
         border-radius: 50%;
         @media (min-width: $tablet-size) {
+            top: 14px;
             background: #000;
             width: 8px;
             height: 8px;
