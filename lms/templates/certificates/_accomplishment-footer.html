@@ -1,3 +1,6 @@
+<%!
+  from django.utils.translation import ugettext as _
+%>
 <div class="wrapper-footer">
 
     <footer class="footer-app" role="contentinfo" id="company-info">
@@ -7,10 +10,10 @@
         <nav class="footer-app-nav">
             <ul class="list list-legal">
                 <li class="nav-item">
-                    <a class="action btn btn-small btn-link" href="${company_tos_url}">${company_tos_urltext}</a>
+                    <a class="action btn btn-small btn-link" href="https://tbs-education.ma/mentions-legales" target="_blank">${_("Terms & conditions")}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="action btn btn-small btn-link" href="${company_privacy_url}">${company_privacy_urltext}</a>
+                    <a class="action btn btn-small btn-link" href="https://tbs-education.ma/contactez-nous" target="_blank">${_("Contact us")}</a>
                 </li>
             </ul>
         </nav>
