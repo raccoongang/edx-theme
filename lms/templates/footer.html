@@ -20,6 +20,11 @@
     >
       <div class="colophon">
         <nav class="nav-colophon" aria-label="${_('About')}">
+          <div class="logo-footer">
+            <a href="/">
+              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png" alt="MAMA">
+            </a>
+          </div>
           <ol>
               <li><a href="/courses">Курсы</a></li>
               <li><a href="/about">О проекте</a></li>
@@ -59,13 +64,28 @@
             <img class="skillonomy__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo_skillonomy.png" alt="skillonomy">
           </a>
         </p>
-      <div class="footer-about-openedx">
-        <p>
-          <a href="/">
-            <img class="header__logo-dark" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png" alt="MAMA">
-          </a>
-        </p>
-      </div>
+        <ul class="footer-socials-list">
+          <li class="footer-socials-list-item">
+            <a href="/">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="footer-socials-list-item">
+            <a href="/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="footer-socials-list-item">
+            <a href="/">
+              <i class="fa fa-vk"></i>
+            </a>
+          </li>
+          <li class="footer-socials-list-item">
+            <a href="/">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
       </div>
       % endif
     </footer>

@@ -9,11 +9,10 @@
 }
 
 .program-course__heading {
-    text-transform: uppercase;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 24px;
-    color: #000;
-    margin-bottom: 30px;
+    color: #054E6F;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
@@ -27,18 +26,25 @@
 }
 
 .program-course__text {
-    text-transform: uppercase;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
-    color: #000;
+    color: #054E6F;
     margin-bottom: 30px;
 }
 
 .program-course__mark {
-    background: none;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 16px;
+    color: #fff;
+    background: #008707;
     font-weight: normal;
     display: inline-block;
-    border: 1px solid #000;
-    border-radius: 3px;
-    font-style: normal;
+    border-radius: 50%;
+    padding: 0 3px 0;
+    margin-right: 16px;
+}
+
+.teacher-box__text-holder {
+    width: 100%;
 }
