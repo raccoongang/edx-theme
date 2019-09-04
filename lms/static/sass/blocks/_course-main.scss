@@ -467,3 +467,109 @@ button.prerequisite-button .fa {
 		margin: 20px 0;
 	}
 }
+
+.view-cohort-dashboard {
+	.action-cohort-select-label {
+		display: inline-block;
+		margin-right: 12px;
+	}
+
+	.course-wrapper .course-content {
+		display: block;
+		width: 100%;
+	}
+
+	.cohort-select-wrapper {
+		max-width: 100%;
+		box-sizing: border-box;
+		padding-left: 0;
+		list-style: none;
+		display: inline-block;
+	}
+
+	.member-list {
+		table {
+			width: 100%;
+
+			@media screen and (min-width: 900px) {
+				table-layout: auto;
+			}
+		}
+
+		thead {
+			display: table-header-group;
+			vertical-align: middle;
+			border-color: inherit;
+		}
+
+		th {
+			vertical-align: middle;
+			padding: 10px 5px;
+			word-wrap: break-word;
+			border: 1px solid #ddd;
+		}
+
+		tr {
+			background-color: #fff;
+
+			&:nth-child(even) {
+				background-color: #f9f9f9;
+			}
+		}
+
+		td {
+			padding: 5px;
+			border: 1px solid #ddd;
+			vertical-align: middle;
+		}
+
+		th, td {
+			box-sizing: border-box;
+			overflow: hidden;
+			word-wrap: break-word;
+
+			@media screen and (min-width: 900px) {
+				&:nth-child(1),
+				&:nth-child(2) {
+					width: 50%;
+					max-width: 0;
+					min-width: 300px;
+				}
+
+				&:nth-child(3) {
+					min-width: 230px;
+					max-width: 230px;
+				}
+			}
+		}
+
+		.action-cohort-select {
+			max-width: calc(100% - 40px);
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.change-cohort-btn {
+			padding: 7px;
+			line-height: 18px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.remove-user {
+			display: inline-block;
+			background: none;
+			border: none;
+			padding: 0;
+
+			&:hover {
+				cursor: pointer;
+				color: $base-color;
+			}
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+}
