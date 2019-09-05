@@ -178,3 +178,30 @@ input[type="submit"] {
 		background: lighten(#f94d45, 20%) !important;
 	}
 }
+
+.btn {
+	&.btn-primary,
+	&.btn-prev {
+		box-sizing: border-box;
+		border: 1px solid $base-color;
+		height: 40px;
+		padding: .5rem 1.25rem;
+		line-height: 1;
+	}
+	&.btn-prev {
+		background: none;
+		color: $base-color;
+		transition: all 0.2s ease !important;
+		display: inline-block;
+		text-transform: uppercase;
+		border-radius: 2px !important;
+		text-shadow: none !important;
+		box-shadow: none !important;
+		font-size: 16px;
+		font-weight: normal;
+		&:hover {
+			color: #fff;
+			background: $base-color;
+		}
+	}
+}

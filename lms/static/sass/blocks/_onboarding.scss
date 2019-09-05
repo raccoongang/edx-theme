@@ -9,6 +9,33 @@
     justify-content: center;
     padding: 0 20px;
     margin: 0 0 42px;
+
+    h1 {
+        text-align: center;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-weight: bold;
+        margin: 0 0 6px;
+    }
+
+    .mascot {
+        margin-bottom: 14px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 50px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 17.5px 0 17.5px 39px;
+            border-color: transparent transparent transparent $onboarding-content-bg;
+        }
+    }
 }
 
 .onboarding-content {
@@ -19,19 +46,6 @@
     border-radius: 50px;
     position: relative;
     margin-right: 8px;
-
-    &:before {
-        content: '';
-        position: absolute;
-        right: -34px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 17.5px 0 17.5px 39px;
-        border-color: transparent transparent transparent $onboarding-content-bg;
-    }
 }
 
 .onboarding-content-columns {
@@ -43,18 +57,11 @@
     }
 }
 
-.onboarding-title {
-    text-align: center;
-}
-
-.onboarding-text-block-title {
-    font-weight: bold;
-    margin: 0 0 6px;
-}
-
-.onboarding-text {
-    line-height: 1.5;
-    margin: 0 0 24px;
+.onboarding-text-block {
+    p {
+        line-height: 1.5;
+        margin: 0 0 24px;
+    }
 }
 
 .onboarding-list-block {
@@ -71,16 +78,23 @@
         padding: 0 0 12px;
         margin: 0 0 6px;
         line-height: 1.5;
+        border-bottom: 1px solid $onboarding-item-border;
 
         &:last-child {
             margin: 0;
+            border: none;
         }
+    }
+
+    .onboarding-list-item-text {
+        position: relative;
     }
 
     .mascoted {
         display: flex;
         align-items: center;
         position: relative;
+        margin-right: 28px;
 
         img {
             display: block;
@@ -102,5 +116,34 @@
 
     .hint {
         font-style: italic;
+    }
+}
+
+.onboarding-atoms-columns {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .onboarding-atoms-column-item {
+        position: relative;
+        width: 25%;
+    }
+
+    .onboarding-atoms-icon {
+        display: flex;
+        align-items: center;
+        margin: 0 0 12px;
+
+        img {
+            margin-right: 8px;
+            width: 82px;
+            position: relative;
+        }
+
+        .onboarding-atom-counter {
+            font-size: 26px;
+            font-weight: bold;
+            position: relative;
+        }
     }
 }
