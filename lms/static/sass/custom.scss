@@ -19,6 +19,7 @@
 @import "blocks/slider";
 @import "blocks/textblock";
 @import "blocks/shopping-cart";
+@import "blocks/onboarding";
 
 *:not(.fa):not(.glyphicon):not([class*='sorting']):not([class*="icon-cc"]) {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -55,6 +56,14 @@ body {
 	}
 }
 
+.holder {
+	&.holder__full-width {
+		display: block;
+		width: 100%;
+		max-width: initial;
+	}
+}
+
 body.view-in-course .instructor-dashboard-wrapper-2,
 body.view-in-course .wiki-wrapper {
 	max-width: 1170px;
@@ -67,7 +76,6 @@ body.view-in-course .wiki-wrapper {
 .content-wrapper {
 	margin: 0 auto;
 	padding: 0;
-	background: #eeeeee;
 }
 
 .window-wrap,

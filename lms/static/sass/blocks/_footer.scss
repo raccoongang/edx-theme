@@ -198,3 +198,23 @@
 		}
 	}
 }
+
+.footer-controls {
+	padding: 0 20px;
+	margin: 0 0 20px;
+}
+
+.footer-controls-buttons-holder {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 16px 20px;
+	border: 1px solid $footer-border-color;
+
+	button {
+		margin-right: 8px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
