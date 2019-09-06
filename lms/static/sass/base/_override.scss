@@ -1957,6 +1957,10 @@ body .xmodule_display.xmodule_VideoModule .video {
 
 body .home .page-header-main {
     padding-right: 15px;
+
+    .page-subtitle {
+        word-break: break-word;
+    }
 }
 
 body section.wiki .wiki-wrapper>header {
@@ -2684,7 +2688,8 @@ section.wiki .table.table-striped {
                         margin-bottom: 20px;
                         padding-top: 0;
 
-                        a {
+                        a,
+                        span {
                             font-size: 14px;
                             margin-bottom: 0;
                             line-height: normal;
@@ -2744,6 +2749,10 @@ body {
 
     @media screen and (min-width: 768px) {
         padding-left: 20px;
+    }
+
+    .home-title {
+        word-break: break-word;
     }
 }
 
@@ -2858,6 +2867,10 @@ body.view-in-course .instructor-dashboard-wrapper-2 {
 
     @media screen and (min-width: 761px)  {
         padding: 40px;
+    }
+
+    ul li {
+        word-break: break-word;
     }
 }
 
@@ -3348,6 +3361,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 {
     font-size: 1.5em;
+    word-break: break-word;
 
     @media screen and (min-width: 761px) {
         font-size: 2em;
@@ -3705,6 +3719,7 @@ table.stat_table {
 
 .sysadmin-dashboard-content table.stat_table td {
     padding: 4px;
+    word-break: break-word;
 
     @media screen and (min-width: 761px) {
         padding: 8px;
@@ -4435,10 +4450,6 @@ body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-li
     width: 50%;
 }
 
-.view-profile .profile-section-two-fields .u-field-value {
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 .my-courses .empty-dashboard-message {
     a {
         color: $white;
@@ -4543,7 +4554,8 @@ body .ccx-schedule-container {
 .view-profile .profile-section-two-fields .u-field-value,
 section.wiki .main-article .wiki-article p {
     overflow: hidden;
-    text-overflow: ellipsis;
+    word-break: break-word;
+    line-height: normal;
 }
 
 .teams-wrapper main {
@@ -5211,6 +5223,13 @@ body.view-in-course .header-global,
     @media screen and (max-width: 990px) {
         padding: 22px 15px 23px;
     }
+}
+
+.header-global.header-global__course h2 {
+    max-width: 1170px;
+    word-break: break-word;
+    margin: 0 auto 20px;
+    padding: 20px 15px 0;
 }
 
 .wrap-instructor-info.studio-view .instructor-info-action {
