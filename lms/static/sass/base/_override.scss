@@ -473,7 +473,7 @@ body .container.activation h1.valid {
 .register form .field.required label a,
 body .discussion.inline-discussion .inline-thread .forum-nav-bar .all-posts-btn,
 body .message-copy a,
-body .openassessment span,
+body .openassessment span:not([class*='step__status__']),
 .article-wrapper strong a,
 body .wiki-wrapper section.wiki .breadcrumb li a,
 body .setup-value a,
