@@ -2372,6 +2372,16 @@ section.wiki .wiki-wrapper .nav-tabs li {
     white-space: normal;
 }
 
+.instructor-dashboard-wrapper-2 section.idash-section#student_admin input[type="button"],
+.instructor-dashboard-wrapper-2 section.idash-section#data_download input[type="button"] {
+    background: $theme-link;
+    color: #fff !important;
+
+    &:hover {
+        background: $theme-link-hover;
+    }
+}
+
 .xmodule_display.xmodule_HtmlModule img {
     max-width: 100%;
     height: auto;
@@ -4855,6 +4865,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 // cohort tab
 
 .instructor-dashboard-wrapper-2 section#cohort_management.idash-section {
+    .cohort-management-settings .form-submit,
     .cohort-management-settings .form-cancel {
         background: $theme-btn-bg !important;
         color: #fff !important;
@@ -4865,6 +4876,10 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
         &:hover {
             background: $theme-btn-bg-hover !important;
+            color: #fff !important;
+        }
+
+        button.action-create {
             color: #fff !important;
         }
     }
@@ -5357,4 +5372,18 @@ body.view-in-course .header-global .wrapper-header {
 section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.instructor-dashboard-wrapper-2 section#membership.idash-section .batch-enrollment .enrollment-button,
+.instructor-dashboard-wrapper-2 section#membership.idash-section .batch-beta-testers input {
+    color: #fff !important;
+}
+
+body .instructor-dashboard-wrapper-2 section#membership.idash-section .member-lists-management .auth-list-container .member-list-widget input.add[type="button"] {
+    background: $theme-link !important;
+    color: #fff !important;
+
+    &:hover {
+        background: $theme-link-hover !important;
+    }
 }

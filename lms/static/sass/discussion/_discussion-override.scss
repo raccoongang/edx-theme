@@ -244,24 +244,33 @@
 .btn,
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button {
     background: $theme-btn-white-bg;
-    color: $theme-btn-white-text-color;
-    border-color: $theme-btn-white-border;
+    color: $theme-link;
+    border-color: $theme-link;
     box-shadow: none;
+    font-size: 15px !important;
 
     &:focus {
-        background: $theme-btn-white-bg !important;
+        background: $theme-link-hover !important;
         color: $theme-btn-white-text-color !important;
-        border-color: $theme-btn-white-border !important;
+        border-color: $theme-link-hover !important;
     }
 
     &:hover {
+        background: $theme-link-hover !important;
         color: $theme-btn-white-text-color-hover !important;
-        background: $theme-btn-white-bg-hover !important;
-        border-color: $theme-btn-white-border;
+        border-color: $theme-link-hover !important;
     }
 
     &.new-post-btn {
         height: 40px !important;
+        border-color: $theme-link !important;
+        color: $theme-link;
+        font-size: 15px !important;
+
+        &:hover {
+            border-color: $theme-link-hover !important;
+            background: $theme-link-hover !important;
+        }
 
         @media (max-width: 767px) {
             margin-bottom: 0;
