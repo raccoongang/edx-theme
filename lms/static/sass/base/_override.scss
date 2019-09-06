@@ -460,6 +460,14 @@ body .container.activation h1.valid {
     }
 }
 
+.discovery-button__text {
+    max-width: 85%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .bookmarks-results-list .bookmarks-results-list-item:hover {
     border-color: $theme-link;
 
