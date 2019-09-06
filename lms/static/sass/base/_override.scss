@@ -928,122 +928,160 @@ body .wmd-prompt-dialog .btn-brand:focus {
             }
         }
 
-        .outer-wrapper {
-            animation: none;
-            padding: 0;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 55px;
-            bottom: -94px;
-            max-width: 100%;
-            width: 100%;
+
+
+
+    }
+}
+
+.home {
+    .search-holder {
+        display: flex;
+        min-height: 298px;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 760px) {
+            min-height: 125px;
+        }
+    }
+
+    .outer-wrapper {
+        animation: none;
+        padding: 0 15px;
+        height: 55px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .title {
+        background: transparent;
+        box-shadow: none;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+        padding: 0;
+        min-height: auto;
+        height: 55px;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: table-cell;
+            vertical-align: middle;
         }
 
-        .title {
-            background: transparent;
-            box-shadow: none;
-            max-width: 1000px;
+        &:last-child {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        > .heading-group {
+            text-align: center;
             width: 100%;
-            margin: 0 auto;
-            float: none;
-            padding: 0 15px;
-            min-height: auto;
-            height: 55px;
+            padding: 15px 0;
+            display: none;
 
-            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            &:last-child {
-                margin-right: auto;
-                margin-left: auto;
-            }
-            > .heading-group {
+            h1 {
+                font-size: 32px;
+                line-height: 1.2;
+                color: $promo-box-text-color;
                 text-align: center;
-                width: 100%;
-                padding: 15px 0;
-                display: none;
-
-                h1 {
-                    font-size: 32px;
-                    line-height: 1.2;
-                    color: $promo-box-text-color;
-                    text-align: center;
-                    font-weight: bold;
-                    text-shadow: $promo-box-text-shadow;
-                    margin-bottom: 50px;
-                    text-transform: uppercase;
-                    font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
-                    @media screen and (min-width: 760px) {
-                        font-size: 52px;
-                    }
-                }
-                span {
-                    display: block;
-                    text-align: center;
-                    font-size: 34px;
-                    line-height: 1.3;
-                    text-shadow: $promo-box-text-shadow;
-                    color: $promo-box-text-color;
-                    margin-bottom: 40px;
-                }
-                .link {
-                    background: $find-btn-bg;
-                    border: 3px solid $find-btn-border;
-                    text-shadow: none;
-                    box-shadow: none;
-                    color: $find-btn-color;
-                    border-radius: 2px;
-                    padding: 10px 20px;
-                    display: inline-block;
-
-                    &:hover {
-                        background: $find-btn-bg-hover;
-                        color: $find-btn-color-hover;
-                        text-decoration: none;
-                    }
+                font-weight: bold;
+                text-shadow: $promo-box-text-shadow;
+                margin-bottom: 50px;
+                text-transform: uppercase;
+                font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
+                @media screen and (min-width: 760px) {
+                    font-size: 52px;
                 }
             }
-            .course-search {
-                max-width: 590px;
-                margin: 0 auto;
-                overflow: hidden;
-                position: relative;
-                padding: 0;
-                .search-input {
-                    background: $search-input-background;
-                    border: 2px solid $search-input-border;
-                    color: $search-input-color;
-                    padding-left: 20px !important;
-                    height: $search-height;
-                    width: 100%;
-                    max-width: 590px;
-                    &:focus {
-                        border-color: $search-input-border !important;
-                    }
-                    &::placeholder {
-                        color: $search-input-color;
-                        opacity: 1;
-                    }
-                    &:-ms-input-placeholder {
-                        color: $search-input-color;
-                    }
-                    &::-webkit-input-placeholder {
-                        color: $search-input-color !important;
-                    }
-                    @media screen and (max-width: 584px){
-                        width: 100%;
-                    }
+            span {
+                display: block;
+                text-align: center;
+                font-size: 34px;
+                line-height: 1.3;
+                text-shadow: $promo-box-text-shadow;
+                color: $promo-box-text-color;
+                margin-bottom: 40px;
+            }
+            .link {
+                background: $find-btn-bg;
+                border: 3px solid $find-btn-border;
+                text-shadow: none;
+                box-shadow: none;
+                color: $find-btn-color;
+                border-radius: 2px;
+                padding: 10px 20px;
+                display: inline-block;
+
+                &:hover {
+                    background: $find-btn-bg-hover;
+                    color: $find-btn-color-hover;
+                    text-decoration: none;
                 }
-                .search-button {
-                    background: $search-button-background !important;
+            }
+        }
+        .course-search {
+            max-width: 590px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            .search-input {
+                background: $search-input-background;
+                border: 2px solid $search-input-border;
+                color: $search-input-color;
+                padding-left: 20px !important;
+                padding-right: 55px !important;
+                height: $search-height;
+                width: 100%;
+                max-width: 590px;
+                font-size: 18px;
+                line-height: 26.64px;
+                font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-style: normal;
+
+                &:focus,
+                &:active {
+                    border-color: $search-input-border !important;
+                    outline: none;
+                }
+                &::placeholder {
+                    color: $search-input-color;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    color: $search-input-color;
+                }
+                &::-webkit-input-placeholder {
+                    color: $search-input-color !important;
+                }
+                @media screen and (max-width: 584px){
+                    width: 100%;
+                }
+            }
+            .search-button {
+                position: absolute;
+                background: $search-button-background !important;
+                border-color: $search-button-border !important;
+                border-top-left-radius: 1px;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                border-bottom-left-radius: 1px;
+                color: $search-button-color;
+                border-left: none !important;
+                right: 0;
+                height: $search-height;
+                box-shadow: none;
+                text-shadow: none;
+                padding: 0 14px;
+                font-size: 24px;
+                z-index: 100;
+
+                &:focus,
+                &:active {
+                    outline: none;
                     border-color: $search-button-border !important;
-                    color: $search-button-color;
-                    border-left: none !important;
-                    right: 0;
-                    height: $search-height;
+                    box-shadow: none;
                 }
             }
         }
@@ -1054,7 +1092,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
     overflow: visible;
     display: block;
     min-height: 0;
-    margin-bottom: 125px;
 }
 .footer-logo-holder {
     display: block;
