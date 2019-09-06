@@ -1,0 +1,21 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="home">
+      <section class="course-box">
+        <h2 class="course-box__heading">${category.name}</h2>
+        <div>
+          <p class="course-box__description">${category.description}</p>
+          <%include file="${courses_list}" args="courses=courses" />
+        </div>
+      </section>
+    </section>
+</main>
