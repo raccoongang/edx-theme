@@ -353,6 +353,8 @@ body .container.activation h1.valid {
         .colophon {
             width: 100%;
             position: relative;
+            float: none;
+            margin: 0 0 22px;
 
             .nav-colophon {
                 margin: 2px 0 28px 0;
@@ -1113,6 +1115,55 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
     @media screen and (max-width: 1362px) {
         right: 70px;
+    }
+}
+.footer-under {
+    padding: 0 15px;
+
+    .footer-under-text {
+        font-size: 14px;
+        color: #7f8183;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.1;
+    }
+
+    .footer-under-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 28px -54px;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            margin-left: 0;
+        }
+
+        .footer-under-item {
+            margin: 0 50px;
+            position: relative;
+
+            @media screen and (max-width: 900px) {
+                margin: 0 0 18px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            a {
+                display: block;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    opacity: .65;
+                }
+            }
+
+            img {
+                height: 60px;
+            }
+        }
     }
 }
 .logo-ar {
