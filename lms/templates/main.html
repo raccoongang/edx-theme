@@ -120,6 +120,17 @@ from pipeline_mako import render_require_js_path_overrides
     </script>
 % endif
 
+<% rg_ga_acct = static.get_value("RG_GOOGLE_ANALYTICS_ACCOUNT", settings.RG_GOOGLE_ANALYTICS_ACCOUNT if hasattr(settings, "RG_GOOGLE_ANALYTICS_ACCOUNT") else None) %>
+% if rg_ga_acct:
+  <script async src="https://www.googletagmanager.com/gtag/js?id=${rg_ga_acct}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${rg_ga_acct}');
+  </script>
+% endif
+
 </head>
 
 <body class="${static.dir_rtl()} <%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
