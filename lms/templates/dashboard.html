@@ -283,6 +283,30 @@ from student.models import CourseEnrollment
             <img class="mascot-image" src="/static/${settings.DEFAULT_SITE_THEME}/images/hera_mascot.png" alt="HERA-mascot" />
           </div>
         </div>
+        <div class="onboarding-holder">
+          <div class="mascot mascot__left">
+            <img class="mascot-image" src="/static/${settings.DEFAULT_SITE_THEME}/images/hera_mascot.png" alt="HERA-mascot" />
+          </div>
+          <div class="onboarding-content">
+            <h1>
+              Choose a lesson!
+            </h1>
+            <div class="selection-holder">
+              <a href="/" class="selection-item">
+                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/selection/selection-1.png" alt="selection-image">
+                <span>
+                  hookes's law
+                </span>
+              </a>
+              <a href="/" class="selection-item">
+                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/selection/selection-2.png" alt="selection-image">
+                <span>
+                  beer's law
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="my-courses" id="my-courses">
           % if display_dashboard_courses:
           <%include file="learner_dashboard/_dashboard_navigation_courses.html"/>

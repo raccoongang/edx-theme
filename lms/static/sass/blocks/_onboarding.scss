@@ -20,6 +20,7 @@
     }
 
     .mascot {
+        margin-left: 8px;
         margin-bottom: 14px;
         position: relative;
 
@@ -35,17 +36,28 @@
             border-width: 17.5px 0 17.5px 39px;
             border-color: transparent transparent transparent $onboarding-content-bg;
         }
+
+        &.mascot__left {
+            margin-left: 0;
+            margin-right: 8px;
+
+            &:before {
+                left: auto;
+                right: -12px;
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
     }
 }
 
 .onboarding-content {
+    min-width: 760px;
     max-width: 760px;
     box-sizing: border-box;
     background: $onboarding-content-bg;
     padding: 32px 62px;
     border-radius: 50px;
     position: relative;
-    margin-right: 8px;
 }
 
 .onboarding-content-columns {
