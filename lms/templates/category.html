@@ -5,19 +5,25 @@ from django.utils.translation import ugettext as _, get_language
 from django.core.urlresolvers import reverse
 %>
 <%page args="category" expression_filter="h"/>
-<article class="course" id="${category.id}" role="region" aria-label="${category.name}">
-    <a href="${reverse('courses_list_for_category', kwargs={'slug': category.slug})}">
-        <header class="course-image">
-            <div class="cover-image">
-                <img src="${category.img.url if category.img else ''}" alt="${category.name}" />
-                <div class="learn-more" aria-hidden="true">${_("Course list")}</div>
-            </div>
-        </header>
-        <div class="course-info" aria-hidden="true">
-            <h2 class="course-name">
-                <span class="course-title">${category.name}</span>
-                <span class="course-code">${category.description}</span>
-            </h2>
+<div class="category" id="${category.id}" role="region" aria-label="${category.name}">
+    <div class="category-info" aria-hidden="true">
+        <div class="category-image">
+            <img src="${category.img.url if category.img else ''}" alt="${category.name}" />
         </div>
-    </a>
-</article>
+        <div class="category-info-body">
+            <h2 class="category-title">
+                ${category.name}
+            </h2>
+            <p class="category-description">
+                ${category.description}
+            </p>
+        </div>
+    </div>
+    <div class="category-info-footer">
+        <a class="category-details-btn" href="${reverse('courses_list_for_category', kwargs={'slug': category.slug})}">
+            ${_("View details")}
+            &ensp;
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </div>
+</div>
