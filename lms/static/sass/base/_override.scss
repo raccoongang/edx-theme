@@ -437,7 +437,7 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 .courses-container .courses .course .course-info {
     height: auto;
     background: #fff;
-    margin: 27px 45px;
+    margin: 2% 8%;
     border-bottom: 1px solid #C0D2DB;
 }
 
@@ -2162,6 +2162,9 @@ body .empty-dashboard-message a {
     top: 50%;
     margin: -25px 0 0;
 }
+.courses-container .courses .course .course-image .cover-image .learn-more {
+    background: #008707;
+}
 body.view-in-course .course-wrapper,
 body.view-in-course .profile-wrapper, 
 body.view-in-course .instructor-dashboard-wrapper-2,
@@ -2790,4 +2793,8 @@ body.view-profile .profile-section-two-fields .u-field-value {
 .wrapper-course-material {
     background: #F6F9FC;
     box-shadow: inset 0px 4px 4px #C0D2DB;
+}
+
+.find-courses .wrapper-search-context .search-status-label {
+    color: #112F41;
 }
