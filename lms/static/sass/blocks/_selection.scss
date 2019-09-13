@@ -1,0 +1,30 @@
+.selection-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .selection-item {
+        margin: 0 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 130px;
+        text-decoration: none;
+        transition: all .3s ease-in-out !important;
+
+        &:hover {
+            opacity: .8;
+        }
+
+        p, span {
+            color: $color-text-selection;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        img {
+            margin: 0 0 12px;
+        }
+    }
+}
