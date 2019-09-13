@@ -19,6 +19,8 @@ from django.utils.translation import ugettext as _
             <li class="category-listing-item">
                 <%include file="category.html" args="category=category" />
             </li>
+            % else:
+            <h1>${_("There are no categories on the platform.")}</h1>
             % endif
         % endfor
     </ul>

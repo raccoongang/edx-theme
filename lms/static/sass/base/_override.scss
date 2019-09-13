@@ -21,7 +21,7 @@
     .wrapper-header {
         height: auto;
         padding: 0;
-        @media (min-width: 991px) {
+        @media (min-width: 1199px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -52,7 +52,7 @@
         margin-top: 0;
 
         &:not(.authenticated) {
-            @media screen and (min-width:991px ) {
+            @media screen and (min-width:1199px ) {
                 width: auto;
                 position: absolute;
                 left: 50%;
@@ -62,7 +62,7 @@
         }
 
         &.authenticated {
-            @media screen and (min-width:991px ) {
+            @media screen and (min-width:1199px ) {
                 width: auto;
                 margin-left: 30px;
                 margin-top: 3px;
@@ -73,7 +73,7 @@
                 width: 100%;
                 order: 2;
 
-                @media screen and (max-width: 990px) {
+                @media screen and (max-width: 1199px) {
                     width: 100%;
                     text-align: center;
                     color: $white;
@@ -99,7 +99,7 @@
                     }
                 }
 
-                @media screen and (min-width: 991px) {
+                @media screen and (min-width: 1199px) {
                     width: auto;
                     float: right;
                     margin-top: 13px;
@@ -149,7 +149,7 @@
                     color: $header-nav-link-color-hover;
                     border: none;
                 }
-                @media screen and (max-width: 990px) {
+                @media screen and (max-width: 1199px) {
                     color: $white;
                     &:hover {
                         color: $white;
@@ -1385,7 +1385,7 @@ body .openassessment .is--in-progress.openassessment__steps__step {
 .flex {
     display: block;
 
-    @media screen and (max-width: 990px) {
+    @media screen and (max-width: 1199px) {
         order: 3;
     }
 
@@ -3497,7 +3497,7 @@ body {
     }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1199px) {
     .header-global .wrapper-header .nav-global li {
         width: 100%;
         margin-bottom: 8px;
