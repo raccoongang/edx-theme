@@ -15,11 +15,11 @@ from django.utils.translation import ugettext as _
 <section class="courses">
     <ul class="category-listing">
         % for category in categories:
-        % if category.courses.exists():
-        <li class="category-listing-item">
-            <%include file="category.html" args="category=category" />
-        </li>
-        % endif
+            % if category.courses.exists():
+            <li class="category-listing-item">
+                <%include file="category.html" args="category=category" />
+            </li>
+            % endif
         % endfor
     </ul>
 </section>
