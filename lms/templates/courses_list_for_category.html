@@ -11,11 +11,11 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <section class="course-box">
-        <h2 class="course-box__heading">${category.name}</h2>
-        <div>
-          <p class="course-box__description">${category.description}</p>
-          <%include file="${courses_list}" args="courses=category.courses.all()" />
-        </div>
+          <div class="course-list-holder">
+              <h2 class="course-list-heading">${category.name}</h2>
+              <p class="course-list-heading-description">${category.description}</p>
+              <%include file="${courses_list}" args="courses=category.courses.all()" />
+          </div>
       </section>
     </section>
 </main>
