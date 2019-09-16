@@ -427,6 +427,11 @@
 				left: -15px;
 				z-index: 10;
 			}
+
+			@media (max-width: $build-header-menu-tablet) and (min-width: 1200px) {
+				width: calc(100% + 80px);
+				left: -40px;
+			}
 		}
 
 	}
