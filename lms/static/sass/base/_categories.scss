@@ -26,13 +26,22 @@
     }
 }
 
+.category-listing-holder {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
 .category-listing {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    margin-top: 46px;
+    margin: 46px -15px 0;
 
-    @media screen and (max-width: 719px){
+    @media screen and (max-width: 1199px) {
+        margin: 46px 0 0;
+    }
+
+    @media screen and (max-width: 719px) {
         justify-content: center;
     }
 
@@ -41,7 +50,8 @@
         width: 22%;
         max-width: 275px;
         min-height: 405px;
-        margin: 0 15px 30px;
+        margin: 0 0 30px;
+        padding: 0 15px;
         list-style-type: none;
 
         @media screen and (max-width: 999px){

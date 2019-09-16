@@ -12,7 +12,7 @@ from django.utils.translation import ugettext as _
 </main>
 
 % if categories:
-<section class="courses">
+<div class="category-listing-holder">
     <ul class="category-listing">
         % for category in categories:
             % if category.courses.exists():
@@ -24,7 +24,7 @@ from django.utils.translation import ugettext as _
             % endif
         % endfor
     </ul>
-</section>
+</div>
 % else:
 <h1>${_("There are no categories on the platform.")}</h1>
 % endif
