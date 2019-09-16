@@ -5,7 +5,7 @@
 	position: relative;
 	overflow: visible;
 	background: $header-bg;
-	z-index: 2;
+	z-index: 11;
 
 	.main-header {
 		display: flex;
@@ -257,6 +257,11 @@
 
 				.username {
 					margin-left: 5px;
+					max-width: 120px;
+					display: inline-block;
+					overflow: hidden;
+					vertical-align: middle;
+					text-overflow: ellipsis;
 				}
 
 				.user-image-frame {
@@ -687,9 +692,18 @@ section.home {
 
 .wrapper-preview-menu {
 	background: #c8c8c8;
+	padding: 0;
 
 	label {
 		color: #3c3c3c !important;
+		text-shadow: none;
+		-webkit-font-smoothing: auto;
+		-moz-osx-font-smoothing: auto;
+		line-height: 20px;
+	}
+
+	.preview-menu {
+		padding: 15px !important;
 	}
 }
 

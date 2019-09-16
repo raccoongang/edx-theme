@@ -22,6 +22,19 @@
 				}
 			}
 
+			.course.not-started .details .course-actions .action + .actions-dropdown {
+				left: auto;
+				right: 19px;
+
+				.actions-dropdown-list {
+					&:after,
+					&:before {
+						left: auto !important;
+						right: 6px;
+					}
+				}
+			}
+
 			.listing-courses .messages-list .message-related-programs li {
 				padding-right: 5px;
 
@@ -30,11 +43,12 @@
 				}
 			}
 		}
-
 	}
+
 	.side-container {
 		box-sizing: border-box;
 		padding: 40px 0 40px 20px;
+
 		@media screen and (max-width: 991px){
 			padding: 30px 0 0;
 			margin: 0;
@@ -173,9 +187,22 @@
 			margin-right: 0;
 
 			.wrapper-action-more,
-			.entitlement-actions-wrapper{
+			.entitlement-actions-wrapper {
 				@media screen and (max-width: 767px){
 					padding-top: 0;
+				}
+			}
+		}
+
+		.course-actions {
+			@media screen and (max-width: 767px){
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.wrapper-action-more {
+				@media screen and (max-width: 767px){
+					order: -1;
 				}
 			}
 		}
@@ -301,6 +328,11 @@
 			color: inherit;
 		}
 	}
+
+	.search-load-next {
+		text-align: center;
+		margin-top: 20px;
+	}
 }
 
 .wrapper-messages-primary .messages-list {
@@ -318,4 +350,17 @@
 			font-weight: 400;
 		}
 	}
+}
+
+.wrapper-msg .msg {
+	min-width: auto;
+}
+
+#unenroll-modal,
+#email-settings-modal {
+	box-sizing: border-box;
+	max-width: 95%;
+	transform: translateX(-50%);
+	margin: 0 !important;
+	left: 50% !important;
 }

@@ -48,6 +48,14 @@
 	.wrapper-profile-section-container-two .u-field-value {
 		word-break: break-all;
 	}
+
+	#u-field-value-username {
+		white-space: nowrap;
+		max-width: 100%;
+		width: auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 }
 
 // account page
