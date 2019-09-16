@@ -857,7 +857,6 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .co
 body .forum-new-post-form .post-type-input:checked+.post-type-label,
 body .edit-post-form .post-type-input:checked+.post-type-label,
 body .empty-dashboard-message a,
-body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse,
 body .btn-blue,
 body .instructor-dashboard-wrapper-2 .btn-blue,
 body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .file-upload-form .action-submit,
@@ -5386,4 +5385,36 @@ body .instructor-dashboard-wrapper-2 section#membership.idash-section .member-li
     &:hover {
         background: $theme-link-hover !important;
     }
+}
+
+body .instructor-dashboard-wrapper-2 section#cohort_management.idash-section .cohort-management,
+body .instructor-dashboard-wrapper-2 section#certificates.idash-section {
+    button.action-create,
+    button.action-save,
+    a.action-cancel,
+    .certificates-wrapper .btn-blue {
+        background: $theme-link !important;
+        color: #fff !important;
+        font-weight: bold !important;
+        font-size: 12px !important;
+
+        &:hover {
+            background: $theme-link-hover !important;
+        }
+    }
+}
+
+body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn {
+    background: $theme-link !important;
+    color: #fff !important;
+
+    &:hover {
+        background: $theme-link-hover !important;
+    }
+}
+
+body .instructor-dashboard-wrapper-2 .customBrowseBtn .file-browse .browse {
+    background: $theme-link !important;
+    color: #fff !important;
+    box-shadow: none !important;
 }
