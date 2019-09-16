@@ -42,7 +42,7 @@
         .list-inline.nav-courseware {
             margin-top: 0;
 
-            @media screen and (max-width: 990px) {
+            @media screen and (max-width: 1199px) {
                 flex-wrap: wrap;
             }
         }
@@ -52,7 +52,7 @@
         margin-top: 0;
 
         &:not(.authenticated) {
-            @media screen and (min-width:1199px ) {
+            @media screen and (min-width:1198px ) {
                 width: auto;
                 position: absolute;
                 left: 50%;
@@ -62,7 +62,7 @@
         }
 
         &.authenticated {
-            @media screen and (min-width:1199px ) {
+            @media screen and (min-width:1198px ) {
                 width: auto;
                 margin-left: 30px;
                 margin-top: 3px;
@@ -163,7 +163,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @media screen and (min-width:991px ) {
+        @media screen and (min-width:1198px ) {
             width: auto;
             display: block;
         }
@@ -172,11 +172,11 @@
             width: 100%;
             text-align: center;
             margin: 3px 0 8px;
-            @media screen and (min-width:601px ) {
+            @media screen and (min-width:1198px ) {
                 width: calc(50% - 5px);
                 margin: 3px 0;
             }
-            @media screen and (min-width:991px ) {
+            @media screen and (min-width:1198px ) {
                 width: auto;
                 text-align: left;
                 vertical-align: middle;
@@ -188,7 +188,7 @@
                 text-transform: uppercase;
                 font-size: 14px;
 
-                @media screen and (max-width:990px ) {
+                @media screen and (max-width:1199px ) {
                     margin-right: 0;
                     border: none;
                     padding: 12px 20px;
