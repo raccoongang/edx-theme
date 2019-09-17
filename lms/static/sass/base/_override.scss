@@ -392,6 +392,10 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     padding: 0;
 }
 
+.courses-container .highlighted-courses .courses {
+    float: none !important;
+}
+
 .courses-container .highlighted-courses .courses .course .course-image .cover-image {
     height: 328px;
     position: relative;
@@ -2795,4 +2799,35 @@ body.view-profile .profile-section-two-fields .u-field-value {
 
 .find-courses .wrapper-search-context .search-status-label {
     color: #112F41;
+}
+
+.courses-container .courses-more {
+    text-align: center;
+
+    .courses-more-cta {
+        width: 270px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.3px;
+        color: #fff;
+        background: linear-gradient(107.31deg, #054E6F 52.6%, #112F41 100%);
+        box-shadow: 0px 10px 20px rgba(123, 66, 246, 0.15);
+        border-radius: 30px;
+        display: inline-block;
+        font-weight: normal;
+        padding: 30px 0px;
+        margin: 0 0 60px;
+        position: relative;
+
+        &:after {
+            content: '';
+            background: url(../images/arrow.png);
+            position: absolute;
+            width: 90px;
+            height: 47px;
+            bottom: -47px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
