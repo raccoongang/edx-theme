@@ -1,0 +1,119 @@
+<%page expression_filter="h"/>
+<%inherit file="/main.html" />
+
+% for page in pages:
+
+    <div class="page-holder" data-page-name="${page['name']}" style="display: ${'block' if page['name'] == current_page else 'none'}; ">
+        ${page['content'] | n}
+    </div>
+
+% endfor
+
+<div class="footer-controls">
+    <div class="footer-controls-buttons-holder">
+        <button id="previous_button" class="btn btn-prev" data-current-page="${current_page}" style="display: ${'none' if current_page == 'page_1' else 'inline-block'}; ">Previous</button>
+        <button id="next_button" class="btn btn-primary" data-current-page="${current_page}"  data-is-passed="${is_passed}">Next</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var currentLocation = "{% url 'hera:onboarding' %}";
+
+    function fourthPageButtonTitle(currentPage, isPassed){
+        $('#next_button').show();
+        if (currentPage === 'page_4' && !isPassed) {
+            $('#next_button').text('Lets Learn Some Science!');
+        } else if (currentPage === 'page_4' && isPassed) {
+            $('#next_button').hide();
+        } else{
+            $('#next_button').text('Next');
+        }
+    }
+
+    function firstPageButtonHide(currentPage){
+        if (currentPage === 'page_1'){
+            $('#previous_button').hide();
+        } else {
+            $('#previous_button').show();
+        }
+    }
+
+    function changeCurrentPageContent(currentPage){
+        $('.page-holder').each( function(ind, el) {
+            if ($(el).data('pageName') === currentPage) {
+                $(el).show();
+            } else {
+                $(el).hide();
+            }
+        });
+    }
+
+    fourthPageButtonTitle("${current_page}", $('#next_button').data('is-passed'));
+
+    $('#next_button').click(function(event){
+
+        var currentPage = $(this).data('currentPage');
+
+        if (currentPage === 'page_4'){
+            // TODO: add redirect by pass
+        }
+
+        data = {
+            "csrfmiddlewaretoken": "${csrf_token}",
+            "page": currentPage
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: currentLocation,
+            data: data,
+            dataType: 'json',
+            success: function (data) {
+                if (data.next_page){
+                    $('#next_button').data('currentPage', data.next_page);
+                    $('#next_button').data('is-passed', data.is_passed);
+                    $('#previous_button').data('currentPage', data.next_page);
+
+                    $('.page-holder').each( function(ind, el) {
+                        if ($(el).data('pageName') === data.next_page) {
+                            $(el).show()
+                        } else {
+                            $(el).hide()
+                        }
+                    });
+
+                    changeCurrentPageContent(data.next_page);
+                    firstPageButtonHide(data.next_page);
+                    fourthPageButtonTitle(data.next_page, data.is_passed);
+
+                }
+            },
+            error: function(data){
+                console.log('error', data);
+            }
+         });
+
+    });
+
+    $('#previous_button').click(function(event) {
+
+        var previousPage = parseInt($(this).data('currentPage').split('_')[1]) - 1;
+
+        if (previousPage > 0){
+
+            var currentPage = 'page_' + previousPage;
+            $('#next_button').data('currentPage', currentPage);
+            $('#previous_button').data('currentPage', currentPage);
+
+            changeCurrentPageContent(currentPage);
+            firstPageButtonHide(currentPage);
+            fourthPageButtonTitle(currentPage);
+
+        } else if (previousPage === 0) {
+            $('#next_button').data('currentPage', 'page_1');
+        }
+
+    });
+
+</script>
