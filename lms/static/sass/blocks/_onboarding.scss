@@ -7,7 +7,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 0 20px;
+    padding: 20px 20px 0;
     margin: 0 0 42px;
 
     h1 {
@@ -51,6 +51,10 @@
 }
 
 .onboarding-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 530px;
     min-width: 760px;
     max-width: 760px;
     box-sizing: border-box;
