@@ -204,4 +204,24 @@ input[type="submit"] {
 			background: $base-color;
 		}
 	}
+	&.btn-main {
+		box-sizing: border-box;
+		border: none;
+		outline: none;
+		min-height: 40px;
+		padding: 22px 15px;
+		font-weight: 700;
+		line-height: 1;
+		color: #fff;
+		background: $btn-main;
+		box-shadow: none;
+		text-shadow: none;
+		transition: all .3s ease-in-out;
+
+		&:hover {
+			opacity: .75;
+			background-image: none;
+			background-color: $btn-main;
+		}
+	}
 }

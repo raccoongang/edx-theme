@@ -11,11 +11,12 @@
 	}
 
 	.main-header {
+		box-sizing: border-box;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 12px 0;
-		height: auto;
+		height: $header-height;
 		position: relative;
 
 		@media screen and (max-width: $build-header-menu-tablet) {
@@ -344,7 +345,7 @@
 	}
 
 	.hamburger-menu {
-		top: 25px;
+		top: 18px;
 		right: 15px;
 		left: inherit;
 		position: absolute;
@@ -355,10 +356,6 @@
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
 		box-sizing: border-box;
-
-		@media screen and (min-width: $breakpoint-tablet) {
-			top: 32px;
-		}
 
 		&.open {
 			.line {
@@ -520,8 +517,8 @@ div.mobile-menu {
 section.home {
 	> header,
 	.slider {
-		min-height: 485px;
-		background: url('../images/background.jpg') no-repeat 50% 50%;
+		height: calc(100vh - 68px);
+		background: url('../images/main-bg.png') no-repeat;
 		background-size: cover;
 		text-align: center;
 		display: flex;
@@ -529,10 +526,6 @@ section.home {
 		justify-content: center;
 		color: #fff;
 		position: relative;
-
-		@media (min-width: $breakpoint-mobile) {
-			min-height: 420px;
-		}
 
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 			display: block;
@@ -576,23 +569,15 @@ section.home {
 					text-align: center;
 
 					h1 {
-						font-size: 30px;
+						font-size: 72px;
+						font-weight: 400;
 						line-height: 1.2;
-						color: $promo-box-text-color;
-						font-weight: bold;
-						text-shadow: $promo-box-text-shadow;
-						margin-bottom: 30px;
-						text-transform: uppercase;
+						color: $main-title;
+						margin-bottom: 28px;
 						text-align: center !important;
 
-						@media screen and (min-width: $breakpoint-mobile) {
-							font-size: 42px;
-							margin-bottom: 20px;
-						}
-
-						@media screen and (min-width: $breakpoint-tablet) {
+						@media screen and (max-width: $breakpoint-mobile) {
 							font-size: 52px;
-							margin-bottom: 15px;
 						}
 					}
 
@@ -713,4 +698,46 @@ section.home {
 .wrapper-preview-menu .preview-actions .action-preview .action-preview-select,
 .u-field-value select {
 	padding: 0 5px;
+}
+
+.heading-group {
+	position: relative;
+
+	.mascot {
+		position: absolute;
+		right: -202px;
+		bottom: -55px;
+
+		@media screen and (max-width: $build-header-menu-tablet) {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	.mascot-quote {
+		display: inline-block;
+		padding: 28px;
+		position: absolute;
+		top: -120px;
+		left: 82px;
+		color: #fff;
+		font-size: 22px;
+		background: #6b9d9c;
+		border-radius: 50px;
+	}
+
+	.mascot-quote:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 41px solid transparent;
+		border-top-color: #6b9d9c;
+		border-bottom: 0;
+		border-left: 0;
+		margin-left: -38.5px;
+		margin-bottom: -28px;
+	}
 }
