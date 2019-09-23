@@ -345,7 +345,7 @@
 	}
 
 	.hamburger-menu {
-		top: 25px;
+		top: 18px;
 		right: 15px;
 		left: inherit;
 		position: absolute;
@@ -356,10 +356,6 @@
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
 		box-sizing: border-box;
-
-		@media screen and (min-width: $breakpoint-tablet) {
-			top: 32px;
-		}
 
 		&.open {
 			.line {
@@ -579,6 +575,10 @@ section.home {
 						color: $main-title;
 						margin-bottom: 28px;
 						text-align: center !important;
+
+						@media screen and (max-width: $breakpoint-mobile) {
+							font-size: 52px;
+						}
 					}
 
 					span {
@@ -707,6 +707,11 @@ section.home {
 		position: absolute;
 		right: -202px;
 		bottom: -55px;
+
+		@media screen and (max-width: $build-header-menu-tablet) {
+			display: none;
+			visibility: hidden;
+		}
 	}
 
 	.mascot-quote {
