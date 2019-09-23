@@ -3,7 +3,14 @@ body {
     -moz-osx-font-smoothing: auto;
 }
 
-*:not(.mce-ico):not(.fa):not(.glyphicon) {
+*:not(.mce-ico):not(.fa):not(.glyphicon),
+.content-wrapper .edx-notes-wrapper .annotator-outer,
+.content-wrapper .edx-notes-wrapper .annotator-editor .annotator-item textarea,
+.content-wrapper .edx-notes-wrapper .annotator-editor .annotator-item form#wiki_revision .CodeMirror,
+.content-wrapper form#wiki_revision .edx-notes-wrapper .annotator-editor .annotator-item .CodeMirror,
+.content-wrapper .edx-notes-wrapper .annotator-viewer div:first-of-type,
+.content-wrapper .edx-notes-wrapper .annotator-editor .annotator-controls .annotator-save,
+.content-wrapper .edx-notes-wrapper .annotator-editor .annotator-controls .annotator-cancel {
     font-family: 'NotoSans', 'Open Sans', sans-serif !important;
 }
 
