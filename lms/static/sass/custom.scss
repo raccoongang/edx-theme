@@ -126,3 +126,89 @@ body {
 		padding-top: 52px !important;
 	}
 }
+
+section.home {
+	.find-courses {
+		.wrapper-search-context {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 15px;
+
+			&:after {
+				display: none;
+			}
+
+			.search-status-label {
+				float: none !important;
+			}
+
+			.wrapper-search-input {
+				float: none;
+				max-width: 278px;
+				width: 100%;
+			}
+		}
+	}
+
+	.filters {
+		max-width: 1200px;
+		margin: 18px auto !important;
+	}
+
+	.search-facets {
+		max-width: 278px;
+		width: 100%;
+		margin: 66px 0 22px 12px !important;
+
+		@media screen and (max-width: $breakpoint-mobile) {
+			margin-top: 0 !important;
+			margin-left: 0 !important;
+			max-width: initial;
+		}
+
+		.discovery-input {
+			border-left: none;
+			border-right: none;
+			border-radius: 0;
+		}
+	}
+
+	.discovery-input {
+		&:focus {
+			border-color: $base-color2 !important;
+		}
+	}
+
+	.find-courses .loading-spinner {
+		background: $base-color2;
+	}
+}
+
+.flex-holder {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0 15px;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	@media screen and (max-width: $breakpoint-mobile){
+		flex-direction: column-reverse;
+	}
+
+	.programs-container {
+		width: 100%;
+	}
+
+}
+
+
+.discovery-button__text {
+	width: 85%;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
