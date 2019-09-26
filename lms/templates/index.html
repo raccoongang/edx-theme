@@ -20,8 +20,8 @@ course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
       <%static:include path="index_discovery/${template_name}.underscore" />
   </script>
   % endfor
-  <%static:require_module module_name="js/index_discovery/discovery_factory" class_name="DiscoveryFactory">
-    DiscoveryFactory(
+  <%static:require_module module_name="js/index_discovery/index_discovery_factory" class_name="IndexDiscoveryFactory">
+    IndexDiscoveryFactory(
       ${course_discovery_meanings | n, dump_js_escaped_json},
       getParameterByName('search_query'),
       "${user_language}",
