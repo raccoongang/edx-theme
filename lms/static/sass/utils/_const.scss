@@ -1,6 +1,6 @@
-$base-color: #47bded;
-$base-color2: #44b759;
-$base-color2-hover: lighten($base-color2, 20%);
+$base-color: #00c09e;
+$base-color2: $base-color;
+$base-color2-hover: lighten($base-color2, 10%);
 //body background
 $body-bg: #eee;
 //logo
@@ -37,12 +37,13 @@ $search-button-border: #fff;
 $search-button-color: #7b7b7b;
 $search-height: 43px;
 //settings for footer
-$footer-bg: #2a374a;
-$footer-nav-link-color: #fff;
-$footer-nav-link-color-hover: darken($footer-nav-link-color, 20%);
+$footer-bg: #efeff6;
+$footer-border-color: #d7d7f3;
+$footer-nav-link-color: #48485e;
+$footer-nav-link-color-hover: $base-color;
 $footer-support-text-and-logo: #fff;
 $footer-social-link-bg: $base-color2;
-$footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
+$footer-social-link-bg-hover: $base-color2-hover;
 //btn
 $theme-btn-bg: $base-color;
 $theme-btn-text-color: #fffefe;
@@ -78,7 +79,7 @@ $img-path: "../images" !default;
 $font-path: "../fonts" !default;
 $delete-button: #f05a23;
 $white: #fff;
-$global-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$global-font-family: "Roboto", sans-serif;
 
 
 // breakpoints

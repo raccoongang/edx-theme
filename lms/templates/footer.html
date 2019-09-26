@@ -22,86 +22,51 @@
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
+              <a href="https://www.springboard.com/about/" target="_blank">${_("About us")}</a>
             </li>
             <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
+              <a href="https://www.springboard.com/legal/privacy/" target="_blank">${_("Privacy Policy")}</a>
             </li>
             <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
+              <a href="https://www.springboard.com/legal/terms/" target="_blank">${_("Terms of Service")}</a>
             </li>
+          <li class="nav-colophon-04">
+            <a href="https://www.springboard.com/legal/conduct/" target="_blank">${_("Conduct")}</a>
+          </li>
+          <li class="nav-colophon-05">
+            <a href="https://www.springboard.com/contact/" target="_blank">${_("Contact Us")}</a>
+          </li>
         </ol>
       </nav>
       <ul class="icon-list">
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
+        <li class="icon-list_item"><a href="https://www.facebook.com/springboard/" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
             <use xlink:href="#ico-facebook" />
           </svg>
           </a>
         </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
+        <li class="icon-list_item"><a href="https://twitter.com/springboard" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
             <use xlink:href="#ico-twitter" />
           </svg></a>
         </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
+        <li class="icon-list_item">
+          <a href="https://medium.springboard.com/" target="_blank" class="icon-list_link">
           <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-instagram" />
-          </svg></a>
-        </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-linkedin" />
-          </svg></a>
-        </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-youtube" />
-          </svg></a>
-        </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-odnoklassniki" />
-          </svg></a>
-        </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-vimeo" />
-          </svg></a>
-        </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-vk" />
-          </svg></a>
-        </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-behance" />
-          </svg></a>
-        </li>
-        <li class="icon-list_item"><a href="#" target="_blank" class="icon-list_link">
-          <svg class="icon-list_svg" viewBox="0 0 35 35">
-            <use xlink:href="#ico-google-plus" />
-          </svg></a>
+            <use xlink:href="#ico-medium" />
+          </svg>
+          </a>
         </li>
       </ul>
-      <a href="/" class="footer-logo-holder">
-        <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.svg">
-      </a>
-      <p class="footer-support">${_("Built on")}
-        <a target="_blank" href="${footer['openedx_link']['url']}">
-          <svg class="svg-edx"  viewBox="0 0 100 70">
-            <use xlink:href="#logo-edx" />
-          </svg>
+      <div class="footer-logos-holder">
+        <a href="https://www.springboard.com/" target="_blank" class="footer-logo-holder">
+          <img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.svg">
         </a>
-        by
-        <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-          RACCOONGANG
-          <svg class="svg-raccoon"  viewBox="0 0 100 100">
-            <use xlink:href="#logo-raccoon" />
-          </svg>
-        </a>
-      </p>
+        <span class="part-text">&nbsp;${_("in partnership with")}&nbsp;</span>
+        <span class="part-img">
+          <img class="part-img-logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/microsoft_logo_grey.png" alt="microsoft_logo"/>
+        </span>
+      </div>
     </div>
   </footer>
 </div>
