@@ -1,8 +1,8 @@
 .program-title {
     max-width: 1200px;
-    padding: 14px 15px;
+    padding: 12px 0;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     line-height: 1.5;
 }
@@ -12,17 +12,25 @@
     font-weight: 400;
 }
 
-.programs-listing-item {
-    .highlighted-courses {
-        padding: 15px 12px 0;
-        margin: 0;
+.programs {
+    .programs-listing-item {
+        margin: 0 0 32px;
 
-        .courses {
-            padding: 0;
+        &:last-child {
+            margin-bottom: 0;
         }
 
-        .courses-listing-item {
-            margin-bottom: 15px !important;
+        .highlighted-courses {
+            padding: 0;
+            margin: 0;
+
+            .courses {
+                padding: 0;
+            }
+
+            .courses-listing-item {
+                margin-bottom: 15px !important;
+            }
         }
     }
 }

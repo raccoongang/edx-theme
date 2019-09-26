@@ -153,27 +153,26 @@ course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
             </form>
           </div>
 
-          <div id="filter-bar" class="filters hide-phone is-collapsed">
+          <div id="filter-bar" class="filters hide-phone is-collapsed"></div>
+          % endif
+
+          <div class="flex-holder">
+            <%include file="programs_list.html" />
+
+            % if course_discovery_enabled:
+            <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
+              <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
+              <section id="search-facet-filter">
+                <form class="wrapper-facet-filter-input">
+                  <label for="facet-filter-input" class="sr">${_('Search for a category')}</label>
+                  <input id="facet-filter-input" class="discovery-input" placeholder="${_('Search for a category')}" type="text"/>
+                </form>
+              </section>
+              <section class="search-facets-lists">
+              </section>
+            </aside>
+            % endif
           </div>
-          % endif
-
-
-          <%include file="programs_list.html" />
-
-          % if course_discovery_enabled:
-          <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
-            <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
-            <section id="search-facet-filter">
-              <form class="wrapper-facet-filter-input">
-                <label for="facet-filter-input" class="sr">${_('Search for a category')}</label>
-                <input id="facet-filter-input" class="discovery-input" placeholder="${_('Search for a category')}" type="text"/>
-              </form>
-            </section>
-            <section class="search-facets-lists">
-            </section>
-          </aside>
-          % endif
-
         </section>
       </section>
     </section>
