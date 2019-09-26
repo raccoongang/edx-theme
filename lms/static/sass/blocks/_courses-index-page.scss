@@ -49,44 +49,44 @@
 
 .home .courses-container {
 	padding: 0 !important;
-}
 
-.home .courses-container .courses {
-	width: 100% !important;
-	float: none !important;
-}
-
-.home .courses-container .courses .courses-listing {
-	display: flex;
-	justify-content: stretch;
-	align-items: center;
-	flex-wrap: wrap;
-
-	.courses-listing-item {
+	.courses {
+		width: 100% !important;
 		float: none !important;
-		width: 30% !important;
-		margin-right: 28px !important;
-		max-width: 280px;
 
-		&:nth-child(3n) {
-			margin-right: 0 !important;
-		}
+		.courses-listing {
+			display: flex;
+			justify-content: stretch;
+			align-items: center;
+			flex-wrap: wrap;
 
-		@media screen and (max-width: $breakpoint-tablet) {
-			max-width: initial;
-			width: 45% !important;
-
-			&:nth-child(3n) {
+			.courses-listing-item {
+				float: none !important;
+				width: 30% !important;
 				margin-right: 28px !important;
-			}
-		}
+				max-width: 280px;
 
-		@media screen and (max-width: 619px) {
-			width: 100% !important;
-			margin-right: 0 !important;
+				&:nth-child(3n) {
+					margin-right: 0 !important;
+				}
 
-			&:nth-child(3n) {
-				margin-right: 0 !important;
+				@media screen and (max-width: $breakpoint-tablet) {
+					max-width: initial;
+					width: 45% !important;
+
+					&:nth-child(3n) {
+						margin-right: 28px !important;
+					}
+				}
+
+				@media screen and (max-width: 619px) {
+					width: 100% !important;
+					margin-right: 0 !important;
+
+					&:nth-child(3n) {
+						margin-right: 0 !important;
+					}
+				}
 			}
 		}
 	}
