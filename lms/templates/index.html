@@ -64,12 +64,13 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <%block name="js_extra">
+   <script src="${static.url('js/jquery.lazyload.min.js')}"></script>
    <script type="text/javascript">
       $(window).load(function() {
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
-      })
+      });
 
       // js for parallax
       $(window).scroll(function () {
@@ -82,9 +83,7 @@ from openedx.core.djangolib.markup import HTML, Text
         } else if ($(window).scrollTop() <= 100) {
           $('.arrow-up').removeClass('active');
         }
-
       });
-      // js for parallax end
 
       // js for show more btn
       $('.show-more').click(function () {
@@ -101,7 +100,11 @@ from openedx.core.djangolib.markup import HTML, Text
           }
         }, 300);
       });
-      // js for show more btn end
+
+      // js lazy loading images
+      $('.courses-container img.lazy').lazyload({
+        effect : "fadeIn"
+      });
 
    </script>
 </%block>

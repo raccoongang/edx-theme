@@ -1,19 +1,48 @@
 @font-face {
-    font-family: 'SegoeUI';
-    src:
-            url('#{$static-path}/fonts/SegoeUI-Bold/SegoeUI.woff2') format('woff2'),
-            url('#{$static-path}/fonts/SegoeUI-Bold/SegoeUI.woff') format('woff'),
-            url('#{$static-path}/fonts/SegoeUI-Bold/SegoeUI.ttf') format('truetype');
-    font-weight: normal;
+    font-family: "Roboto";
+    src: url("#{$static-path}/fonts/Robotolight.woff2") format("woff2"),
+    url("#{$static-path}/fonts/Robotolight.woff") format("woff");
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'SegoeUIBold';
-    src:
-            url('#{$static-path}/fonts/SegoeUI-Bold/SegoeUIBold.woff2') format('woff2'),
-            url('#{$static-path}/fonts/SegoeUI-Bold/SegoeUIBold.woff') format('woff'),
-            url('#{$static-path}/fonts/SegoeUI-Bold/SegoeUIBold.ttf') format('truetype');
-    font-weight: bold;
+    font-family: "Roboto";
+    src: url("#{$static-path}/fonts/Robotolightitalic.woff2") format("woff2"),
+    url("#{$static-path}/fonts/Robotolightitalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("#{$static-path}/fonts/Roboto.woff2") format("woff2"),
+    url("#{$static-path}/fonts/Roboto.woff") format("woff");
+    font-weight: 400;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("#{$static-path}/fonts/Robotoitalic.woff2") format("woff2"),
+    url("#{$static-path}/fonts/Robotoitalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("#{$static-path}/fonts/Robotobold.woff2") format("woff2"),
+    url("#{$static-path}/fonts/Robotobold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("#{$static-path}/fonts/Robotobolditalic.woff2") format("woff2"),
+    url("#{$static-path}/fonts/Robotobolditalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
 }

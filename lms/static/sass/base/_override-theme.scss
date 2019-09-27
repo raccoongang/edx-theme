@@ -1,0 +1,39 @@
+.wrapper-course-modes {
+  > div {
+    display: block;
+    width: 100%;
+    margin: 0 0 8px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.prerequisites {
+  .tip {
+    padding: 10px 20px;
+  }
+}
+
+#field-remember {
+  label {
+    font-weight: 400 !important;
+    &:after {
+      display: none !important;
+    }
+  }
+}
+
+.forum-search .search-input,
+.forum-search .btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.register form .field-group .field {
+  &.checkbox {
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+}

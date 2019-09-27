@@ -1,11 +1,13 @@
 .header-global .wrapper-header {
-    max-width: 1200px;
+    max-width: 1170px;
 
     .logo {
         margin: -2px 39px 0 0;
     }
+
     .course-header {
         display: none;
+
         @media screen and (min-width:600px ) {
           font-size: 16px;
           padding: 20px 45px 0 5px;
@@ -15,15 +17,18 @@
           float: none;
             margin: 0 0 15px;
         }
+
         @media screen and (min-width:760px ) {
           padding-right: 20px;
         }
     }
+
     .wrapper-user-menu {
         display: flex;
         width: 100%;
         justify-content: center;
         margin: 0;
+
         @media screen and (min-width: 760px) {
             display: block;
             width: auto;
@@ -34,23 +39,27 @@
             color: $header-nav-link-color;
         }
     }
+
     .list-inline {
         &.nav-global {
             margin-top: 10px;
         }
+
         .item {
             text-transform: none;
             font-size: 14px;
         }
     }
+
     .nav-global li a:hover {
         text-decoration: none;
     }
 }
+
 .wrapper-footer {
     box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.1);
     border-top: 1px solid #c5c6c7;
-    padding: 50px 10px;
+    padding: 44px 10px 55px;
 
     footer#footer-openedx {
         max-width: 1200px;
@@ -67,9 +76,11 @@
                 margin-left: 0;
             }
         }
+
         .wrapper-logo p {
             margin: 0;
         }
+
         ul {
             margin-left: 0;
 
@@ -83,6 +94,7 @@
         .footer-about-openedx {
             width: 100%;
         }
+
         a:hover,
         a:focus {
             text-decoration: none !important;
@@ -90,6 +102,7 @@
         }
     }
 }
+
 .dropdown-menu-container {
     .menu-button {
         color: #000;
@@ -102,6 +115,7 @@
             background: none;
         }
     }
+
     .menu-title {
         float: left;
 
@@ -109,21 +123,25 @@
         &:hover {
             text-decoration: none;
         }
+
         .menu-image {
             border-radius: 10%;
             margin: 0;
         }
+
         .label-username {
             float: right;
             margin: 11px 5px 11px 15px;
             font-size: 14px;
             line-height: 1.3;
             color: $header-nav-link-color !important;
+
             &:hover {
                 color: $header-nav-link-color-hover !important;
             }
         }
     }
+
     .dropdown-menu {
         box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
         border: 1px solid #c8c8c8;
@@ -161,6 +179,7 @@
                     color: $dropdown-menu-link-color;
                     text-decoration: none;
                 }
+
                 &:hover {
                     color: $dropdown-menu-link-color-hover;
                     text-decoration: none;
@@ -169,12 +188,30 @@
         }
     }
 }
-.dropdown-menu-container .menu-title .menu-image {
-    margin-right: 5px;
+
+.dropdown-menu-container .menu-title {
+    display: flex;
+    align-items: center;
+
+    .menu-image {
+        margin-right: 8px;
+        width: 36px;
+        box-sizing: border-box;
+        border: 1px solid #bababa;
+        border-radius: 5px;
+        height: 36px;
+    }
+
+    .label-username {
+        margin: 0;
+        color: #474747 !important;
+    }
 }
+
 .header-global .wrapper-header .dropdown-menu {
     top: 100%;
 }
+
 .btn,
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>button {
     background: $theme-btn-white-bg;
@@ -187,12 +224,22 @@
         color: $theme-btn-white-text-color !important;
         border-color: $theme-btn-white-border !important;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover !important;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
+
+    &.new-post-btn {
+        height: 40px !important;
+
+        @media (max-width: 767px) {
+            margin-bottom: 0;
+        }
+    }
 }
+
 .has-breadcrumbs .breadcrumbs .all-topics {
     box-shadow: none;
     border: none;
@@ -201,21 +248,32 @@
         background: none;
     }
 }
+
 .discussion .action-button .action-label {
     padding-bottom: 1px;
 }
+
 .window-wrap {
     background: $theme-content-bg;
 }
+
 .discussion .action-button.action-follow:hover,
 .discussion .action-button.action-follow:focus,
 .discussion .action-button.action-vote:hover,
 .discussion .action-button.action-vote:focus {
     background: transparent;
 }
+
 body .header-global .wrapper-header .wrapper-user-menu {
     width: auto;
+    display: flex;
+    align-items: center;
+
+    span {
+        color: inherit;
+    }
 }
+
 .dropdown-menu-container .menu-title .label-username,
 .header-global .user .user-link .label-username {
     color: $theme-user-link;
@@ -224,19 +282,30 @@ body .header-global .wrapper-header .wrapper-user-menu {
         color: $theme-user-link-hover;
     }
 }
+
 .header-global .nav-global .tab-nav-item .tab-nav-link {
     padding: 0;
     font-size: 14px;
 }
-.header-global .wrapper-header .list-inline .item {
-    float: left;
-    @media screen and (min-width:760px ) {
-        margin-bottom: 10px;
+
+.header-global .wrapper-header .list-inline {
+    &.nav-global {
+        margin-top: 0;
+    }
+
+    .item {
+        float: left;
+
+        @media screen and (min-width:760px ) {
+            margin-bottom: 10px;
+        }
     }
 }
+
 .header-global.header-global__course {
   h2 {
       display: none;
+
       @media screen and (min-width:600px ) {
           font-size: 16px;
           padding: 20px 45px 0 5px;
@@ -245,36 +314,60 @@ body .header-global .wrapper-header .wrapper-user-menu {
           text-transform: uppercase;
           color: #646464;
       }
+
       @media screen and (min-width:760px ) {
           padding-right: 20px;
       }
   }
 }
+
 @media screen and (max-width:760px ) {
     body .header-global .wrapper-header .list-inline li a {
         padding: 5px !important;
     }
+
     .form-actions {
         display: flex;
         flex-direction: column;
     }
+
     .wiki-wrapper section.wiki #article_edit_form .btn {
         box-sizing: border-box;
     }
+
     .instructor-nav {
         display: flex;
         flex-direction: column;
+
         a {
             margin-bottom: 10px;
         }
     }
 }
+
 body .dropdown-menu-container .menu-button {
-    color: $theme-link;
+    background: none;
+    margin: 5px 0 0 0;
+    padding: 0 6px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    color: #474747;
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+
+    &:hover {
+        span {
+            color: $base-color2-hover;
+        }
+    }
 }
+
 body .wrapper-course-material .course-tabs li a {
     color: #5e5e5e !important;
     border-color: transparent !important;
+
     &:focus,
     &:hover,
     &.active {
@@ -289,4 +382,50 @@ body .wrapper-course-material .course-tabs li a {
 
 .forum-new-post-form .post-type-label:hover {
     cursor: pointer;
+}
+
+.discussion-post .post-header-content .post-title {
+    word-break: break-word;
+}
+
+.modal,
+.leanModal_box,
+.wmd-prompt-dialog,
+.leanModal_box {
+    left: 50% !important;
+    top: 50% !important;
+    max-width: calc(100% - 20px) !important;
+    max-height: calc(100vh - 20px) !important;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    overflow-y: auto;
+
+    .form-actions {
+        .form-btn {
+            @media screen and (max-width: 760px) {
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+body .btn-brand {
+    border: 1px solid $theme-btn-bg;
+
+    &:hover {
+        border: 1px solid $theme-btn-bg-hover;
+    }
+}
+
+.page-header-secondary .forum-search .search-input {
+    max-height: 40px;
+    box-sizing: border-box !important;
+}
+
+.page-header-secondary .forum-search .input-text[type="search"] + button {
+    line-height: 18px;
 }
