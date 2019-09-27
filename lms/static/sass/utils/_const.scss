@@ -1,5 +1,5 @@
 $base-color: #d10b14;
-$base-color2: #44b759;
+$base-color2: $base-color;
 $base-color2-hover: lighten($base-color2, 20%);
 //body background
 $body-bg: #eee;
@@ -31,7 +31,7 @@ $find-btn-color-hover: $find-btn-color;
 //search input on promo box
 $search-input-background: rgba(255,255,255,0.3);
 $search-input-border: #fff;
-$search-input-color: #4b4b4b;
+$search-input-color: #fff;
 $search-button-background: none;
 $search-button-border: #fff;
 $search-button-color: #fff;
