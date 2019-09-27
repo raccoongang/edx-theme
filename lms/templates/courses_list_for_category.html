@@ -14,7 +14,7 @@ from openedx.core.djangolib.markup import HTML, Text
           <div class="course-list-holder">
               <h2 class="course-list-heading">${category.name}</h2>
               <p class="course-list-heading-description">${category.description}</p>
-              <%include file="${courses_list}" args="courses=category.courses.all()" />
+              <%include file="${courses_list}" args="courses=courses" />
           </div>
       </section>
     </section>
