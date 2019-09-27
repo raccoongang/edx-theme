@@ -5327,3 +5327,42 @@ section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.confirm-enrollment {
+    padding: 0 15px;
+
+    .container {
+        min-width: auto;
+    }
+
+    @media (max-width: 768px) {
+        .course-image {
+            width: auto;
+            margin: 0 auto;
+            float: none;
+            max-width: 100%;
+        }
+
+        .enrollment-details {
+            width: 100%;
+            margin-top: 15px;
+
+        }
+
+        button[type="submit"],
+        a.link-button {
+            max-width: 100%;
+            font-size: 20px;
+            height: auto;
+            width: auto;
+            box-sizing: border-box;
+            padding: 7px 18px;
+            line-height: normal;
+            border-width: 5px;
+        }
+
+        .enrollment-details .course-date-label {
+            float: none;
+        }
+    }
+}
