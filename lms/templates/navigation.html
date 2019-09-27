@@ -105,9 +105,16 @@ site_status_msg = get_site_status_msg(course_id)
           %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
             <li class="tab-nav-item">
               ## Translators: This is short for "System administration".
-              <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+              <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
             </li>
           %endif
+          % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
+              <li class="tab-nav-item">
+                <a class="tab-nav-link shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
+                  <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+                </a>
+              </li>
+          % endif
         </%block>
       </ol>
       <div class="flex secondary">
@@ -117,15 +124,6 @@ site_status_msg = get_site_status_msg(course_id)
           <svg><use xlink:href="#ico-help"></use></svg> ${_("Help")}</a>
         <%include file="user_dropdown.html"/>
       </div>
-      % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
-        <ol class="user">
-          <li class="primary">
-            <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
-              <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
-            </a>
-          </li>
-        </ol>
-      % endif
     % else:
       <ol class="left list-inline nav-global">
         <%block name="navigation_global_links">
