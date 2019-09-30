@@ -9,10 +9,11 @@
 .promo-section__holder {
     max-width: 1200px;
     width: 100%;
-    padding: 69px 15px 60px;
     box-sizing: border-box;
     margin: 0 auto;
     text-align: center;
+    height: 100%;
+    position: relative;
 }
 
 .promo-section__name {
@@ -43,7 +44,8 @@
     width: 570px;
     position: absolute;
     bottom: 180px;
-    right: 10%;
+    right: 0;
+    text-align: left;
 
     &:after {
         content: '';
@@ -53,6 +55,17 @@
         background: #C0D2DB;
         left: -30px;
         top: 0;
+
+        @media (max-width: $tablet-size) {
+            display: none;
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        width: 100%;
+        padding: 0 25px;
+        box-sizing: border-box;
+        text-align: center;
     }
 }
 
@@ -80,8 +93,8 @@
     border-radius: 30px;
     color: #fff !important;
     background: #054E6F;
-    font-size: 24px;
-    padding: 12px 13px 12px 14px;
+    font-size: 24px !important;
+    padding: 16px 19px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,10 +102,15 @@
     margin: 0 auto;
     position: absolute;
     bottom: 90px;
-    left: 213px;
+    left: 109px;
+
+    @media (max-width: $tablet-size) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     svg {
-        width: 18px;
-        margin-right: 5px;
+        width: 24px;
+        margin-right: 15px;
     }
 }
