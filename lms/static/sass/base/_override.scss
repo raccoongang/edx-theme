@@ -13,6 +13,28 @@
     font-family: $global-font-family !important;
 }
 
+html,
+body {
+    font-family: $global-font-family !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    button,
+    div,
+    p,
+    label,
+    .course-title a,
+    .info-date-block,
+    .enter-course,
+    .btn {
+        font-family: $global-font-family !important;
+    }
+}
+
 .header-global {
     height: auto;
     background: $header-bg;
@@ -406,6 +428,7 @@ body .container.activation h1.valid {
     footer#footer-openedx {
         a {
             color: $footer-nav-link-color;
+            font-family: $global-font-family !important;
 
             &.footer-logo-holder {
                 @media (max-width: $build-footer-mobile) {
@@ -575,6 +598,10 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
     height: 96px;
     overflow: hidden;
     font-weight: 700;
+}
+
+.courses-container .courses .course .course-info .course-date {
+    font-family: $global-font-family !important;
 }
 
 .action-type-container a,
