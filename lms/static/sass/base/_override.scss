@@ -5381,4 +5381,10 @@ section.outside-app {
             float: none;
         }
     }
+
+    .course-receipt thead {
+        @media print {
+             display: table-row-group;
+        }
+    }
 }
