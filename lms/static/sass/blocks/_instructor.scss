@@ -148,7 +148,7 @@
 		.invalidation-history,
 		.certificate-generation-history-content {
 			table {
-				@media screen and (max-width: 760px) {
+				@media screen and (max-width: 1199px) {
 					max-width: 100%;
 					display: block;
 					overflow-x: auto;
@@ -273,14 +273,15 @@
 
 .instructor-dashboard-wrapper-2 section#certificates.idash-section .white-listed-students table,
 .instructor-dashboard-wrapper-2 section#certificates.idash-section .invalidation-history table {
-	table-layout: auto;
+	table-layout: fixed;
 
 	tr {
 		td, th {
 			border: 1px solid #e4e4e4;
 
 			button.delete-exception {
-				min-width: 160px;
+				min-width: auto;
+				padding: 6px 8px;
 			}
 		}
 	}

@@ -1,0 +1,36 @@
+.program-title {
+    max-width: 1200px;
+    padding: 12px 0;
+    margin: 0 auto;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.program-subtitle {
+    display: block;
+    font-weight: 400;
+}
+
+.programs {
+    .programs-listing-item {
+        margin: 0 0 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlighted-courses {
+            padding: 0;
+            margin: 0;
+
+            .courses {
+                padding: 0;
+            }
+
+            .courses-listing-item {
+                margin-bottom: 15px !important;
+            }
+        }
+    }
+}
