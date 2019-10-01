@@ -2695,7 +2695,7 @@ section.wiki .table.table-striped {
                             margin: 5px 0;
                             display: flex;
                             flex-direction: column;
-                            justify-content: space-between;
+                            justify-content: initial;
                             width: auto;
                         }
 
@@ -4714,7 +4714,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
     &.active {
-        bottom: 200px;
+        bottom: 155px;
     }
 
     &:hover {
@@ -5406,4 +5406,11 @@ body.view-in-course .header-global .wrapper-header {
 section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.course-name {
+    + .course-date {
+        display: none !important;
+        visibility: hidden !important;
+    }
 }
