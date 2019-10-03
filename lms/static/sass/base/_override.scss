@@ -340,6 +340,7 @@ body .container.activation h1.valid {
     background: $footer-bg;
     position: relative;
     padding: 50px 10px;
+    border-top: none;
 
     footer#footer-openedx {
         a {
@@ -939,19 +940,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .home {
     .search-holder {
         display: flex;
-        min-height: 298px;
         justify-content: center;
         align-items: center;
-
-        @media screen and (max-width: 760px) {
-            min-height: 125px;
-        }
     }
 
     .outer-wrapper {
         animation: none;
         padding: 0 15px;
-        height: 55px;
         max-width: 100%;
         width: 100%;
     }
@@ -965,7 +960,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
         float: none;
         padding: 0;
         min-height: auto;
-        height: 55px;
 
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             display: table-cell;
