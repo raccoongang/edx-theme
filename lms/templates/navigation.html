@@ -99,7 +99,7 @@ site_status_msg = get_site_status_msg(course_id)
                 </a>
               </li>
               <li class="tab-nav-item">
-                <a href="${marketing_link('COURSES')}">${_('Find Courses')}</a>
+                <a href="${marketing_link('COURSES')}">${_('Explore Courses')}</a>
               </li>
               <li class="tab-nav-item">
                 <a class="${'active ' if reverse('course_category_list') == request.path else ''}tab-nav-link" href="${reverse('course_category_list')}">
@@ -139,7 +139,6 @@ site_status_msg = get_site_status_msg(course_id)
           <svg><use xlink:href="#ico-help"></use></svg>
         </a>
       </div>
-      <a id="certificate-voucher">${_("Certificate Voucher")}</a>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
         <ol class="user">
           <li class="primary">
@@ -184,9 +183,6 @@ site_status_msg = get_site_status_msg(course_id)
       </ol>
 
       <ol class="right nav-courseware list-inline">
-        <li class="item additional">
-          <a id="certificate-voucher">${_("Certificate Voucher")}</a>
-        </li>
         <li class="help-center-link-wrapper">
           <a href="https://www.staffs.ac.uk/support_depts/digital-services/contactus.jsp" class="help-center-link" target="_blank" title="Help Center">
             <svg><use xlink:href="#ico-help"></use></svg>

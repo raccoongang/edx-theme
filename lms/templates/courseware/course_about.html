@@ -240,7 +240,7 @@ from openedx.core.lib.courses import course_image_url
               %>
             <li class="important-dates-item">
               <span class="icon fa fa-calendar" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Classes Start")}</p>
+              <p class="important-dates-item-title">${_("Available From")}</p>
               % if isinstance(course_start_date, str):
                   <span class="important-dates-item-text start-date">${course_start_date}</span>
               % else:
@@ -260,7 +260,7 @@ from openedx.core.lib.courses import course_image_url
 
             <li class="important-dates-item">
                 <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Classes End")}</p>
+                <p class="important-dates-item-title">${_("Available From")}</p>
                   % if isinstance(course_end_date, str):
                       <span class="important-dates-item-text final-date">${course_end_date}</span>
                   % else:
