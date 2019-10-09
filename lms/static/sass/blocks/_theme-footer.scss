@@ -37,3 +37,22 @@
         height: $footer-logo-height;
     }
 }
+
+//start footer at bottom
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-content {
+    flex: 1 0 auto;
+}
+
+.theme-footer {
+    flex-shrink: 0;
+}
+//end footer at bottom

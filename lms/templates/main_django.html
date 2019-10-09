@@ -28,6 +28,7 @@
 </head>
 
 <body class="{% block bodyclass %}{% endblock %} lang_{{LANGUAGE_CODE}}">
+<div class="theme-content">
     {% include "svg_sprite.html" %}
     {% load render_bundle from webpack_loader %}
     {% render_bundle "commons" %}
@@ -40,11 +41,11 @@
       {% block body %}{% endblock %}
       {% block bodyextra %}{% endblock %}
     </div>
-    {% with course=request.course %}
-      {% include "footer.html"|microsite_template_path %}
-    {% endwith %}
-
   </div>
+</div>
+  {% with course=request.course %}
+    {% include "footer.html"|microsite_template_path %}
+  {% endwith %}
 
     {% javascript 'base_application' %}
 
