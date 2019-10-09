@@ -14,3 +14,12 @@
 .find-courses .discovery-submit:hover {
     background: $m-blue-l1;
 }
+
+//remove pseudo element for footer at bottom
+.wrapper-footer:after {
+    display: none;
+}
+
+.discussion-body:after {
+    display: none !important;
+}
