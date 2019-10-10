@@ -18,9 +18,16 @@
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
+
     .wrapper-header {
         height: auto;
         padding: 0;
+        max-width: 1280px;
+
+        @media (max-width: 1281px) {
+            max-width: initial;
+        }
+
         @media (min-width: 1199px) {
             display: flex;
             justify-content: space-between;
@@ -47,25 +54,32 @@
             }
         }
     }
+    .nav-holder {
+        justify-content: space-between;
+        align-items: center;
+
+        &:after {
+            display: none;
+        }
+
+        @media screen and (min-width:1199px ) {
+            display: flex;
+        }
+    }
     .nav-global {
         width: 100%;
         margin-top: 0;
 
         &:not(.authenticated) {
-            @media screen and (min-width:1198px ) {
+            @media screen and (min-width:1199px ) {
                 width: auto;
-                position: absolute;
-                left: 50%;
-                top: 29px;
-                transform: translate(-50%, 0);
+                margin: 0 auto;
             }
         }
 
         &.authenticated {
-            @media screen and (min-width:1198px ) {
+            @media screen and (min-width:1199px ) {
                 width: auto;
-                margin-left: 30px;
-                margin-top: 3px;
             }
 
             & ~ #certificate-voucher {
@@ -163,7 +177,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @media screen and (min-width:1198px ) {
+        @media screen and (min-width:1199px ) {
             width: auto;
             display: block;
         }
@@ -172,11 +186,11 @@
             width: 100%;
             text-align: center;
             margin: 3px 0 8px;
-            @media screen and (min-width:1198px ) {
+            @media screen and (min-width:1199px ) {
                 width: calc(50% - 5px);
                 margin: 3px 0;
             }
-            @media screen and (min-width:1198px ) {
+            @media screen and (min-width:1199px ) {
                 width: auto;
                 text-align: left;
                 vertical-align: middle;
@@ -1377,10 +1391,22 @@ body .openassessment .is--in-progress.openassessment__steps__step {
     left: 10px;
 }
 .flex {
-    display: block;
+    display: flex;
+    align-items: center;
 
     @media screen and (max-width: 1199px) {
+        width: 100%;
+        justify-content: center;
         order: 3;
+    }
+
+    #certificate-voucher {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.5;
     }
 
     .doc-link {
@@ -3967,8 +3993,6 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 }
 
 #certificate-voucher {
-    line-height: 1.4 !important;
-    
     &:hover {
         cursor: pointer;
     }
