@@ -1,0 +1,34 @@
+.teacher-box {
+    display: flex;
+    align-items: flex-start;
+
+    @media (max-width: $mobile-size) {
+        flex-direction: column;
+    }
+}
+
+.teacher-box__photo {
+    width: 198px;
+    max-width: 198px;
+    margin-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    @media (max-width: $mobile-size) {
+        margin: 0  auto 30px;
+    }
+}
+
+.teacher-box__name {
+    font-size: 24px;
+    line-height: 24px;
+    color: #054E6F;
+    display: block;
+    margin: 0 0 25px;
+}
+
+.teacher-box__description {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+}

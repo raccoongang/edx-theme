@@ -1,0 +1,129 @@
+.about-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile-size) {
+        flex-direction: column;
+    }
+}
+
+.about-box__container {
+    width: 45%;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile-size) {
+        width: 100%;
+    }
+}
+
+.about-box__heading {
+    background: #980D21;
+    padding: 20px;
+    font-size: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    max-height: 60px;
+    border-radius: 20px 0 0 0;
+    box-shadow: 0px -4px 10px #D1D8DF;
+    width: 65%;
+
+    @media (max-width: $mobile-size) {
+        max-height: none;
+    }
+}
+
+.about-box__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #F6F9FC;
+    padding: 13px 120px 26px 101px;
+    border-right: 1px solid #C0D2DB;
+    position: relative;
+
+    @media (max-width: $mobile-size) {
+        flex-direction: column;
+    }
+}
+
+.about-box__img {
+    @media (max-width: $mobile-size) {
+        margin: 0 auto 30px;
+    }
+}
+
+.about-box__list,
+.about-box__text {
+    max-width: 80%;
+    width: 80%;
+}
+
+.about-box__text {
+    margin: 0;
+}
+
+.about-box__list {
+    margin: 0 0 0 20px;
+    padding: 0 0 0 20px;
+}
+
+.about-box__ico {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    background-image: url('../images/icon.png');
+    width: 70px;
+    height: 70px;
+}
+
+.about-box__ico-1 {
+    background-image: url('../images/about-group-1.png');
+    position: absolute;
+    width: 46px;
+    height: 42px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-box__ico-2 {
+    background-image: url('../images/about-group-2.png');
+    position: absolute;
+    width: 38px;
+    height: 42px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-box__ico-3 {
+    background-image: url('../images/about-group-3.png');
+    position: absolute;
+    width: 39px;
+    height: 42px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-box__ico-4 {
+    background-image: url('../images/about-group-4.png');
+    position: absolute;
+    width: 31px;
+    height: 42px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-box__ico-5 {
+    background-image: url('../images/about-group-5.png');
+    position: absolute;
+    width: 35px;
+    height: 42px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,206 @@
+.course-box {
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+        width: 45%;
+    }
+}
+.course-box__header {
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 15px 16px;
+    margin: 0 0 50px;
+    color: #fff;
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    @media screen and (min-width: $desktop-size) {
+        height: 67px;
+        max-width: 500px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        box-shadow: 5px 2px 7px 0px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        background: $gradient3;
+        @media screen and (min-width: $desktop-size) {
+            width: 120%;
+            height: 60px;
+            right: 20px;
+            transform: skew(-20deg);
+        }
+    }
+}
+.course-box__header-text {
+    position: relative;
+    font-weight: bold;
+    @media screen and (min-width: $desktop-size) {
+        font-weight: normal;
+    }
+}
+.course-box__header-text_desktop {
+    display: none;
+
+    @media screen and (min-width: $desktop-size) {
+        display: block;
+    }
+}
+.course-box__header-text_hidden {
+    display: block;
+    font-weight: normal;
+    line-height: 1.3;
+
+    @media screen and (min-width: $desktop-size) {
+        display: none;
+    }
+}
+.course-box__holder {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+        flex-direction: row;
+    }
+
+}
+.course-box__description {
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+        width: auto;
+    }
+}
+.course-box__heading {
+    font-size: 16px;
+    line-height: 1.3;
+    color: #000;
+    margin-bottom: 16px;
+    display: block;
+    position: relative;
+    padding: 0 24px;
+    @media screen and (min-width: $tablet-size) {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 0;
+        left: -20px;
+    }
+}
+.course-box__list {
+    padding: 0 24px 0 44px;
+    margin: 0;
+    list-style: none;
+    @media screen and (min-width: $tablet-size) {
+        padding: 0;
+    }
+}
+.course-box__list_other {
+    padding: 0 24px 0 40px;
+    @media screen and (min-width: $desktop-size) {
+        padding: 0 0 0 40px;
+    }
+}
+.course-box__list-item {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.3;
+    font-style: italic;
+    margin-bottom: 8px;
+    @media screen and (min-width: $tablet-size) {
+        font-style: normal;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+
+    &:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: #008707;
+        border-radius: 50%;
+        position: absolute;
+        left: -20px;
+        top: 6px;
+    }
+
+    .course-box__list_other & {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+.course-box__img {
+    margin: 0 auto 24px;
+    width: 90px;
+    height: auto;
+    display: block;
+    @media screen and (min-width: $tablet-size) {
+        margin: 0 80px 0 15px;
+    }
+}
+
+//styles for about page
+.course-box {
+    &__title-holder {
+        .course-box_about & {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (min-width: $desktop-size) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+    &_about {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 32px;
+            width: 100%;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+    }
+    strong {
+        font-weight: 700;
+    }
+    &__header-text {
+        position: relative;
+        margin: -5px 0 0;
+    }
+    &__list-item {
+        font-style: normal;
+        margin-bottom: 16px;
+    }
+    &__quote {
+        font-style: italic;
+        font-size: 18px;
+        line-height: 30px;
+        color: #062860;
+        padding: 0 24px;
+        @media screen and (min-width: $desktop-size) {
+            padding: 0;
+        }
+    }
+    &__header {
+        margin: 0;
+    }
+}
+//end of styles for about page
+.course-box_tablet {
+    display: block;
+    width: 100%;
+    @media screen and (min-width: $desktop-size) {
+        display: none;
+    }
+}

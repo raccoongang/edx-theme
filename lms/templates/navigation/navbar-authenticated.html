@@ -1,0 +1,47 @@
+## mako
+
+<%page expression_filter="h" args="online_help_token"/>
+
+<%namespace name='static' file='../static_content.html'/>
+<%namespace file='../main.html' import="login_query"/>
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+%>
+
+<div class="main-nav">
+  <%block name="navigation_global_links_authenticated">
+  <div class="main-nav__item">
+    <a class="main-nav__link ${"main-nav__link_active" if request.path == '/dashboard' in request.path else ""}" href="/">Мои курсы</a>
+  </div>
+  <div class="main-nav__item">
+    <a class="main-nav__link ${"main-nav__link_active" if request.path == '/courses' in request.path else ""}" href="/courses">Курсы</a>
+  </div>
+  <!-- <div class="main-nav__item">
+    <a class="main-nav__link" href="/schools">Школы</a>
+  </div>
+  <div class="main-nav__item">
+    <a class="main-nav__link" href="/about">О проекте</a>
+  </div> -->
+    %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
+      <div class="item">
+        ## Translators: This is short for "System administration".
+        <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+      </div>
+    %endif
+  </%block>
+  <%include file="../user_dropdown.html"/>
+</div>
+
+<%include file="../user_dropdown.html"/>
+
+% if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
+  <ol class="user">
+    <li class="primary">
+      <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
+        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+      </a>
+    </li>
+  </ol>
+% endif
+

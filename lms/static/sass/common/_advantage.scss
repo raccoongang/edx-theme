@@ -1,0 +1,197 @@
+.advantage {
+    max-width: 845px;
+    margin: 0 auto 50px;
+    @media (min-width: $tablet-size) {
+        margin: 0 auto 90px;
+    }
+}
+
+.advantage__heading {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 30px;
+    font-family: Verdana, Geneva, sans-serif, sans-serif;
+    background: $gradient2;
+    padding: 15px 24px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (min-width: $tablet-size) {
+        width: auto;
+        padding: 0;
+        font-size: 24px;
+        line-height: 33px;
+        background: transparent;
+        color: $color1;
+        text-align: center;
+        margin: 0 0 50px;
+    }
+}
+
+.advantage__row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    padding: 0 23px;
+    align-items: flex-start;
+    @media (min-width: $mobile-size) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    @media (min-width: $tablet-size) {
+        padding: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.advantage__caption {
+    display: block;
+    font-size: 16px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    font-weight: normal;
+    text-align: center;
+    @media (min-width: $tablet-size) {
+        font-size: 24px;
+        text-align: left;
+    }
+}
+
+.advantage__img {
+    order: 2;
+    max-width: 450px;
+
+    @media (min-width: $tablet-size) {
+        order: 1;
+        margin-left: -71px;
+    }
+    
+    .advantage__row:nth-child(2n) & {
+        @media (min-width: $tablet-size) {
+            order: 2;
+            margin-left: 0;
+            margin-right: -71px;
+        }
+    }
+}
+
+.advantage__caption_color1 {
+    color: $color2;
+}
+
+.advantage__caption_color2 {
+    color: $color1;
+}
+
+.advantage__caption_color3 {
+    color: $color3;
+}
+
+.advantage__ico-holder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.03);
+    margin: 0 auto 16px;
+    @media (min-width: $tablet-size) {
+        box-shadow: 0 1px 3px 1px rgba(0,0,0,0.20);
+        margin: 0 0 16px;
+    }
+}
+
+.advantage__ico {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70px;
+}
+
+.advantage__text {
+    font-size: 14px;
+    line-height: 23px;
+    color: #000;
+    text-align: center;
+    margin: 0 0 16px;
+
+    @media (min-width: $tablet-size) {
+        margin: 0;
+        text-align: left;
+    }
+}
+
+.advantage__description {
+    order: 1;
+    width: 100%;
+    @media (min-width: $tablet-size) {
+        max-width: 407px;
+        width: auto;
+        order: 2;
+    }
+
+    .advantage__row:nth-child(2n) & {
+        @media (min-width: $tablet-size) {
+            order: 1;
+        }
+    }
+}
+
+.advantage_about {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (min-width: $desktop-size) {
+        justify-content: space-between;
+    }
+    .advantage__heading {
+        flex: 0 0 100%;
+    }
+    .advantage__row {
+        justify-content: center;
+        @media (min-width: $desktop-size) {
+            flex: 0 0 350px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+    .advantage__text {
+        text-align: center;
+    }
+    .advantage__img {
+        order: 1 !important;
+        margin: 0 !important;
+        width: 100%;
+        @media (min-width: $mobile-size) {
+            max-width: 60%;
+        }
+        @media (min-width: $tablet-size) {
+            max-width: 50%;
+        }
+        @media (min-width: $desktop-size) {
+            width: 110%;
+            max-width: none;
+        }
+        
+    }
+    .advantage__description {
+        order: 1 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .advantage__ico {
+        margin-bottom: 16px;
+    }
+}
