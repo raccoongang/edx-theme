@@ -192,6 +192,21 @@ section.home {
 	}
 }
 
+.find-courses .search-facets .facet-list.collapse {
+	box-sizing: border-box;
+	max-height: 280px !important;
+
+	// Firefox
+	@-moz-document url-prefix() {
+		max-height: 286px !important;
+	}
+
+	// Safari
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		max-height: 270px !important;
+	}
+}
+
 .flex-holder {
 	display: flex;
 	justify-content: space-between;
