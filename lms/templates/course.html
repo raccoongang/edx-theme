@@ -36,7 +36,7 @@ from six import text_type
       else:
           course_date_string = ''
       %>
-        % not course.product:
+        % if not course.product:
       % if course.advertised_start is not None:
           <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
       % else:
