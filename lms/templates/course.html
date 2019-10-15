@@ -26,7 +26,7 @@ from six import text_type
     </header>
     <div class="course-info" aria-hidden="true">
       <h2 class="course-name">
-        <span class="course-organization">${course.display_org_with_default}</span>
+        <span class="course-organization">${course.display_org_with_default}aaaaa</span>
         <span class="course-code">${course.display_number_with_default}</span>
         <span class="course-title">${course.display_name_with_default}</span>
       </h2>
@@ -36,11 +36,13 @@ from six import text_type
       else:
           course_date_string = ''
       %>
+        % if not course.product:
       % if course.advertised_start is not None:
           <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
       % else:
           <div class="course-date localized_datetime" aria-hidden="true" data-language="${get_language()}" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_('Starts: {date}')}"></div>
       % endif
+        % endif
     </div>
     <!--<div class="sr">-->
       <!--<ul>-->
