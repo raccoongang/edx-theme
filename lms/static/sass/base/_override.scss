@@ -225,6 +225,8 @@ body .container.activation h1.valid {
     border: 1px solid $theme-link;
 }
 .doc-link {
+    display: none !important;
+    visibility: hidden !important;
     color: $header-nav-link-color !important;
     margin: 12px 0;
     line-height: 16px;
