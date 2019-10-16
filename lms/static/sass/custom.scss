@@ -194,16 +194,23 @@ section.home {
 
 .find-courses .search-facets .facet-list.collapse {
 	box-sizing: border-box;
-	max-height: 280px !important;
+
+	// Chrome
+	@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+		max-height: 280px !important;
+	}
+
+	// Safari
+	@media not all and (min-resolution:.001dpcm) {
+		@media {
+			max-height: 270px !important;
+
+		}
+	}
 
 	// Firefox
 	@-moz-document url-prefix() {
 		max-height: 286px !important;
-	}
-
-	// Safari
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
-		max-height: 270px !important;
 	}
 }
 
