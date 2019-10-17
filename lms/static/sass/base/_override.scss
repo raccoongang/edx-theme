@@ -1400,6 +1400,18 @@ body .openassessment .is--in-progress.openassessment__steps__step {
         order: 3;
     }
 
+    @media screen and (max-width: 1199px) {
+        flex-direction: column;
+    }
+
+    .help-holder {
+        display: inline-flex;
+
+        @media screen and (max-width: 1199px) {
+            display: flex;
+        }
+    }
+
     #certificate-voucher {
         display: inline-block;
         margin-right: 10px;
@@ -1407,6 +1419,21 @@ body .openassessment .is--in-progress.openassessment__steps__step {
         font-weight: 600;
         text-transform: uppercase;
         line-height: 1.5;
+
+        @media screen and (max-width: 1199px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            background-color: #d52362;
+            box-sizing: border-box;
+            border-radius: 2px;
+            font-size: 16px;
+            margin: 0 0 8px;
+            height: 40px;
+            padding: 12px 10px;
+            line-height: 1;
+        }
     }
 
     .doc-link {
