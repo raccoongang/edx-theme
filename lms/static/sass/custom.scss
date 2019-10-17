@@ -78,6 +78,11 @@ body.view-in-course .wiki-wrapper {
 	box-sizing: border-box;
 }
 
+.container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 //sticky footer
 
 #content {
@@ -184,6 +189,25 @@ section.home {
 
 	.find-courses .loading-spinner {
 		background: $base-color2;
+	}
+}
+
+.find-courses .search-facets .facet-list.collapse {
+	box-sizing: border-box;
+
+	// Chrome
+	@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+		max-height: 280px !important;
+	}
+
+	// Safari
+	@media not all and (min-resolution:.001dpcm) {
+		max-height: 270px !important;
+	}
+
+	// Firefox
+	@-moz-document url-prefix() {
+		max-height: 286px !important;
 	}
 }
 
