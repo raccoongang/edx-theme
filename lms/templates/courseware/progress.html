@@ -10,6 +10,7 @@ from openedx.core.djangolib.markup import HTML, Text
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.utils.http import urlquote_plus
+from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
 %>
 <%block name="bodyclass">view-in-course view-progress</%block>
 
@@ -18,6 +19,10 @@ from django.utils.http import urlquote_plus
 <%static:css group='style-course'/>
 </%block>
 
+<%
+course_overview = CourseOverview.objects.get(id=course.id)
+is_uspap = ('uspap' in (course_overview.effort or ''))
+%>
 
 <%namespace name="progress_graph" file="/courseware/progress_graph.js"/>
 
@@ -167,14 +172,18 @@ from django.utils.http import urlquote_plus
                                         percentageString = "{0:.0%}".format( float(earned)/total) if earned > 0 and total > 0 else ""
                                         %>
                                         <h4 class="hd hd-4">
+                                            %if not is_uspap:
                                             <a href="${reverse('courseware_section', kwargs=dict(course_id=course.id.to_deprecated_string(), chapter=chapter['url_name'], section=section.url_name))}">
+                                            %endif
                                                 ${ section.display_name}
                                                 %if total > 0 or earned > 0:
                                                 <span class="sr">
                                                     ${_("{earned} of {total} possible points").format(earned='{:.3n}'.format(float(earned)), total='{:.3n}'.format(float(total)))}
                                                 </span>
                                                 %endif
+                                            %if not is_uspap:
                                             </a>
+                                            %endif
                                             %if total > 0 or earned > 0:
                                             <span> ${"({0:.3n}/{1:.3n}) {2}".format( float(earned), float(total), percentageString )}</span>
                                             %endif
