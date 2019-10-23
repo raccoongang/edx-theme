@@ -19,8 +19,8 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-              <h1>Онлайн обучение</h1>
-              <span>Неграмотными людьми 21 века будут не те, кто не умеет читать и писать, а те, кто не умеет учиться и переучиваться.</span>
+              <h1>${_("Welcome to the TVTC")}</h1>
+              <span>${_("Technical and Vocational Training Corporation")}</span>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
