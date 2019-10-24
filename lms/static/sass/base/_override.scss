@@ -13,6 +13,28 @@
     font-family: $global-font-family !important;
 }
 
+html,
+body {
+    font-family: $global-font-family !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    button,
+    div,
+    p,
+    label,
+    .course-title a,
+    .info-date-block,
+    .enter-course,
+    .btn {
+        font-family: $global-font-family !important;
+    }
+}
+
 .header-global {
     height: auto;
     background: $header-bg;
@@ -53,7 +75,7 @@
         }
 
         h1.logo {
-            margin-top: 0;
+            margin-top: -6px;
             flex-grow: 0;
             z-index: 2;
 
@@ -381,7 +403,9 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-bg;
     position: relative;
-    padding: 44px 10px 55px;
+    padding: 42px 10px;
+    box-shadow: none !important;
+    border: none !important;
 
     footer#footer-openedx {
         a {
@@ -446,12 +470,14 @@ body .container.activation h1.valid {
                          text-transform: uppercase;
                          font-size: 12px;
                          font-weight: 700;
+                         transition: opacity .3s ease-in-out;
 
                         &:focus,
                         &:hover {
                             border: none !important;
                             text-decoration: none !important;
                             color: $footer-nav-link-color-hover !important;
+                            opacity: .55;
                         }
                     }
                 }
@@ -1091,7 +1117,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .home {
     > header,
     .slider {
-        //background-image: url('#{$img-path}/background.jpg');
         min-height: 485px;
         background-position: center;
         position: relative;
@@ -1101,7 +1126,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         align-items: center;
 
         @media (min-width: $breakpoint-mobile) {
-            min-height: 420px;
+            min-height: 600px;
         }
 
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -1114,7 +1139,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             top: -100px;
             width: 100%;
             height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-            background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
+            background: #040404 url('#{$img-path}/background.png') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
             background-size: cover;
         }
 
@@ -1161,7 +1186,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     font-weight: bold;
                     text-shadow: $promo-box-text-shadow;
                     margin-bottom: 30px;
-                    text-transform: uppercase;
                     letter-spacing: 0;
 
                     @media screen and (min-width: $breakpoint-mobile) {
@@ -1255,26 +1279,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .footer-logo-holder {
-    display: inline-block;
+    display: block;
     text-align: center;
-    padding: 30px 0 0;
 
     img {
         display: block;
         height: $footer-logo-height;
         margin: 0 auto;
-    }
-
-    @media screen and (min-width: 761px) {
-        display: inline;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        padding: 0;
-    }
-
-    @media screen and (max-width: 1362px) {
-        right: 70px;
     }
 }
 
@@ -2347,12 +2358,12 @@ section.wiki .wiki-wrapper .nav-tabs li {
 body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    font-family: $global-font-family;
     letter-spacing: 0;
 }
 
 .modal .inner-wrapper form label {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    font-family: $global-font-family;
 }
 
 .empty-programs-message h2,
@@ -2463,7 +2474,7 @@ section.wiki .main-article {
 }
 
 .course-header {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    font-family: $global-font-family;
 }
 
 body.lang_ar {
@@ -4920,7 +4931,7 @@ div.info-wrapper section.handouts {
     .list-input {
         select {
             font-weight: 500;
-            font-family: "Open Sans",Verdana,Geneva,sans-serif;
+            font-family: $global-font-family;
             font-size: 15px;
             line-height: 21px;
             color: #3c3c3c;
@@ -5228,7 +5239,7 @@ body.view-in-course .header-global,
 
     .title,
     .subtitle {
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        font-family: $global-font-family !important;
     }
 
     .banner-content {
@@ -5239,7 +5250,7 @@ body.view-in-course .header-global,
 .program-details-content {
     .course-card {
         .course-title .course-title-link {
-            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: $global-font-family !important;
         }
 
         .course-actions {
@@ -5262,7 +5273,7 @@ body.view-in-course .header-global,
     border: 1px solid #ccc !important;
 
     .card-link {
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        font-family: $global-font-family !important;
     }
 }
 
