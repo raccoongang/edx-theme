@@ -13,28 +13,6 @@
     font-family: $global-font-family !important;
 }
 
-html,
-body {
-    font-family: $global-font-family !important;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    button,
-    div,
-    p,
-    label,
-    .course-title a,
-    .info-date-block,
-    .enter-course,
-    .btn {
-        font-family: $global-font-family !important;
-    }
-}
-
 .header-global {
     height: auto;
     background: $header-bg;
@@ -1139,7 +1117,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             top: -100px;
             width: 100%;
             height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-            background: #040404 url('#{$img-path}/background.png') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
+            background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
             background-size: cover;
         }
 
