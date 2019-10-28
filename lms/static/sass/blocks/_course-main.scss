@@ -192,12 +192,12 @@ div.info-wrapper section.handouts ol li .wrapper-course-material .course-tabs .t
 	}
 
 	&.xmodule_HtmlModule {
+		p {
+			@extend %clearfix;
+		}
+
 		img {
 			max-width: 100%;
-
-			&:not([align="right"]) {
-				float: left;
-			}
 
 			&,
 			&:not([align="right"]){
