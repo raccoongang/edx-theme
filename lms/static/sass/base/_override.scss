@@ -24,14 +24,15 @@
     min-height: 76px;
     z-index: 999;
 
-    @media screen and (max-width: $breakpoint-tablet) {
-        padding: 22px 15px 23px;
-    }
-
     .wrapper-header {
         height: auto;
         padding: 0;
         max-width: 1170px;
+        position: relative;
+
+        @media screen and (max-width: $build-header-menu-tablet) {
+            position: static;
+        }
 
         @media (min-width: 761px) {
             display: flex;
@@ -53,14 +54,26 @@
         }
 
         h1.logo {
-            margin-top: 0;
+            position: absolute;
+            left: 0;
+            margin: 0;
+            top: -14px;
             flex-grow: 0;
             z-index: 2;
+
+            @media screen and (max-width: $build-header-menu-tablet) {
+                top: 12px;
+                left: 15px;
+            }
 
             a {
                 transition: opacity .15s ease;
                 display: block;
                 height: $header-logo-height;
+
+                @media screen and (max-width: $build-header-menu-tablet) {
+                    height: 50px;
+                }
 
                 &:hover {
                     opacity: .8;
@@ -69,6 +82,10 @@
 
             img {
                 height: $header-logo-height;
+
+                @media screen and (max-width: $build-header-menu-tablet) {
+                    height: 50px;
+                }
             }
         }
 
@@ -95,7 +112,7 @@
         width: 100%;
         margin-top: 0;
         position: absolute;
-        top: 30px;
+        top: 0;
         left: 50%;
         transform: translate(-50%, 0);
         display: flex;
@@ -381,7 +398,7 @@ body .container.activation h1.valid {
 .wrapper-footer {
     background: $footer-bg;
     position: relative;
-    padding: 44px 10px 55px;
+    padding: 32px 10px;
 
     footer#footer-openedx {
         a {
@@ -413,7 +430,7 @@ body .container.activation h1.valid {
             }
 
             .nav-colophon {
-                margin: 0 0 35px;
+                margin: 0 0 26px;
 
                 .lang_ar & {
                     direction: rtl;
@@ -426,15 +443,11 @@ body .container.activation h1.valid {
 
                 li {
                     float: none;
-                    display: inline-block;
+                    display: block;
                     vertical-align: top;
                     text-align: center;
-                    margin: 0 5px;
+                    margin: 0 5px 12px;
                     line-height: 1.2;
-
-                    &:last-child {
-                        margin-right: 15px;
-                    }
 
                     @media screen and (min-width:761px ) {
                         display: inline-block;
@@ -446,6 +459,7 @@ body .container.activation h1.valid {
                          text-transform: uppercase;
                          font-size: 12px;
                          font-weight: 700;
+                         transition: all .3s ease-in-out;
 
                         &:focus,
                         &:hover {
@@ -1091,8 +1105,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .home {
     > header,
     .slider {
-        //background-image: url('#{$img-path}/background.jpg');
-        min-height: 485px;
+        min-height: 225px;
         background-position: center;
         position: relative;
         background-color: #040404;
@@ -1101,7 +1114,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         align-items: center;
 
         @media (min-width: $breakpoint-mobile) {
-            min-height: 420px;
+            min-height: 400px;
         }
 
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -1133,6 +1146,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
             background: transparent;
             box-shadow: none;
             max-width: 1000px;
+            min-width: 584px;
             width: 100%;
             margin: 0 auto;
             float: none;
@@ -1141,6 +1155,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table-cell;
                 vertical-align: middle;
+            }
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                min-width: 290px;
             }
 
             &:last-child {
@@ -1257,24 +1275,16 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .footer-logo-holder {
     display: inline-block;
     text-align: center;
-    padding: 30px 0 0;
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+        opacity: .65;
+    }
 
     img {
         display: block;
         height: $footer-logo-height;
         margin: 0 auto;
-    }
-
-    @media screen and (min-width: 761px) {
-        display: inline;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        padding: 0;
-    }
-
-    @media screen and (max-width: 1362px) {
-        right: 70px;
     }
 }
 
@@ -5207,10 +5217,6 @@ div.info-wrapper section.handouts {
 body.view-in-course .header-global,
 .header-global.header-global__course {
     padding: 30px 15px;
-
-    @media screen and (max-width: 990px) {
-        padding: 22px 15px 23px;
-    }
 }
 
 .wrap-instructor-info.studio-view .instructor-info-action {
