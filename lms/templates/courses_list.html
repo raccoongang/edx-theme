@@ -8,7 +8,6 @@
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <section class="courses">
         <ul class="courses-listing">
-        ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
         % if pageargs.get('courses'):
             % for course in pageargs['courses']:
             <li class="courses-listing-item">

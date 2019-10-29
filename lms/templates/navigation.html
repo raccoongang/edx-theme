@@ -79,11 +79,6 @@ site_status_msg = get_site_status_msg(course_id)
                 </a>
               </li>
               <li class="tab-nav-item">
-                <a class="${'active ' if reverse('course_category_list') == request.path else ''}tab-nav-link" href="${reverse('course_category_list')}">
-                  ${_("Explore Categories")}
-                </a>
-              </li>
-              <li class="tab-nav-item">
                 <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
                   ${_("Programs")}
                 </a>
@@ -99,10 +94,6 @@ site_status_msg = get_site_status_msg(course_id)
                 <a href="${marketing_link('COURSES')}">${_('Explore Courses')}</a>
               </li>
               <li class="tab-nav-item">
-                <a class="${'active ' if reverse('course_category_list') == request.path else ''}tab-nav-link" href="${reverse('course_category_list')}">
-                  ${_("Explore Categories")}
-                </a>
-              </li>
             % endif
             % if show_program_listing:
               <li class="tab-nav-item">
@@ -164,11 +155,6 @@ site_status_msg = get_site_status_msg(course_id)
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
               <li class="tab-nav-item">
                 <a href="/courses">${_("Explore Courses")}</a>
-              </li>
-              <li class="tab-nav-item">
-                <a class="${'active ' if reverse('course_category_list') == request.path else ''}tab-nav-link" href="${reverse('course_category_list')}">
-                  ${_("Explore Categories")}
-                </a>
               </li>
             %endif
           % endif
