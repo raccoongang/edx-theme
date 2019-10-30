@@ -14,7 +14,7 @@
     padding: 10px 20px;
   }
 }
-  
+
 #field-remember {
   label {
     font-weight: 400 !important;
@@ -109,6 +109,47 @@
 
 }
 
+.course-box-info {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.3;
+    color: #414141;
+    margin: 0 auto 10px;
+    max-width: 1090px;
+}
+
+.main-page-text {
+    max-width: 1090px;
+    margin: 40px auto;
+    padding: 0 15px;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+}
+
 .course-box__content {
     display: none;
+}
+
+.course-box__img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.course-box__link {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid $base-color;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover {
+        color: $base-color2 !important;
+    }
+}
+
+.course-box__link-holder {
+    text-align: center;
+    margin-bottom: 30px;
 }
