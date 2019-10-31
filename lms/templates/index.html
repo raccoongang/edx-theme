@@ -30,6 +30,11 @@ from openedx.core.djangolib.markup import HTML, Text
           % endif
         </div>
       </header>
+      <div class="text-under">
+        <p>
+          ${_("Choose Fundamentals or one of the advanced roles to see the learning path")}.
+        </p>
+      </div>
         % if not categories:
             <%include file="${courses_list}" />
         % else:
@@ -73,6 +78,11 @@ from openedx.core.djangolib.markup import HTML, Text
             % endif
           % endfor
         % endif
+        <div class="text-under with-link">
+          <p>
+            ${_("Link to obtain free Azure Pass")}: <a href="https://www.microsoftazurepass.com/" target="_blank">https://www.microsoftazurepass.com/</a>
+          </p>
+        </div>
     </section>
 </main>
 

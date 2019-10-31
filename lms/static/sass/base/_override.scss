@@ -5329,3 +5329,24 @@ section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+// Text under the banner on the index page
+.text-under {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &.with-link {
+        margin-bottom: 45px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 1.5;
+
+        @media screen and (max-width: $breakpoint-mobile){
+            font-size: 16px;
+        }
+    }
+}
