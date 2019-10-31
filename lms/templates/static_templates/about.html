@@ -1,0 +1,30 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            ${_("AI Academy")}
+            <br>
+            ${_("About Etihad AI Academy")}
+        </h1>
+        <p>
+            ${_("The Etihad AI Academy is our online training platform powered by Microsoft. The training modules on this platform are available to all Etihad Aviation Group employees who are interested in broadening their understanding of artificial intelligence, or AI")}.
+        </p>
+        <p>
+            ${_("Through this platform, we hope to demystify AI and machine-learning and upskill and future-proof you for changes in technology and organisational priorities. There will be business and technical tracks for learning on this online platform, and you are free to explore and learn at your own pace")}.
+        </p>
+        <p>
+            ${_("As you go through the training, we encourage you to identify areas within your work where AI can play a role, and support Etihad’s push towards being an AI literate and enabled organisation")}.
+        </p>
+        <p>
+            ${_("We are proud to provide this online training platform in partnership with Microsoft, and look forward to unlocking the power of AI with you")}.
+        </p>
+        <p>
+            ${_("For any enquiries, please contact")} <a href="mailto:innovate@etihad.ae" target="_blank">innovate@etihad.ae</a>
+        </p>
+    </section>
+</main>
