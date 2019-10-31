@@ -1,0 +1,25 @@
+// Extra rules needed for an LMS theme
+//
+// The _extras.scss file is imported after all other rules by
+// the LMS Sass. For your own theme, you can override this file
+// to add any custom rules that you need. You can also import
+// partials directly into this file so that you can break your
+// rules into modular pieces.
+
+.find-courses .search-facets .facet-option:hover,
+.find-courses .search-facets .facet-option:focus {
+    background: $facet-background-color-theme;
+}
+
+.find-courses .discovery-submit:hover {
+    background: $m-blue-l1;
+}
+
+//remove pseudo element for footer at bottom
+.wrapper-footer:after {
+    display: none;
+}
+
+.discussion-body:after {
+    display: none !important;
+}

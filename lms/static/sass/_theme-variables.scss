@@ -1,0 +1,30 @@
+$img-path: "../images" !default;
+
+@import 'partials/lms/theme/variables';
+
+//logo
+$header-logo-height: 35px;
+$footer-logo-height: $header-logo-height;
+
+//footer
+$footer-bg: #2a374a;
+$footer-nav-link-color: #fff;
+$footer-nav-link-color-hover: rgba(255,255,255, .8);
+$footer-support-text-and-logo: #fff;
+$footer-social-link-bg: #44b759;
+$footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
+
+//certificate
+$ribbon-corners-color: lighten($base-color, 1%);
+$ribbon-triangle-color: darken($base-color, 4%);
+$certificate-borders-color: $base-color;
+$theme-link: $blue;
+$certificate-logo-height: 24px;
+
+// breakpoints
+$breakpoint-mobile: 760px;
+$breakpoint-tablet: 990px;
+
+$build-header-menu-tablet: 1110px;
+$build-header-menu-mobile: 610px;
+$build-footer-mobile: 1025px;
