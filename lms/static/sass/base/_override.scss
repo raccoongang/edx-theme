@@ -36,12 +36,15 @@
         }
 
         .nav-holder {
-            display: flex;
             align-items: center;
             justify-content: space-between;
 
             &:after {
                 display: none;
+            }
+
+            @media screen and (min-width: $build-header-menu-tablet + 1) {
+                display: flex;
             }
 
             @media screen and (max-width: $build-header-menu-tablet) {
@@ -53,6 +56,7 @@
                 background: #eee;
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
                 border-top: 1px solid #6e6e6e;
+                justify-content: center;
             }
         }
 
@@ -159,6 +163,10 @@
         }
 
         .tab-nav-item {
+            @media screen and (max-width: $build-header-menu-tablet) {
+                float: none;
+            }
+
             .active {
                 border: 2px solid $base-color2 !important;
 
