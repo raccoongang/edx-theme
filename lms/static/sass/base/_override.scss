@@ -118,6 +118,9 @@
         }
 
         @media screen and (max-width: $build-header-menu-tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: static;
             transform: none;
             width: 100%;
@@ -3378,6 +3381,12 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 }
 
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register {
+    display: flex;
+    height: 44px;
+    box-sizing: border-box;
+    /* line-height: 1; */
+    align-items: center;
+    justify-content: center;
     width: initial;
     margin: 0 15px 10px 0;
     padding: 10px;
@@ -3426,6 +3435,10 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
         margin-right: 2.35765%;
         margin-bottom: 0;
         width: 65.88078%;
+    }
+
+    p {
+        font-family: $global-font-family;
     }
 }
 
