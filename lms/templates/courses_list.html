@@ -3,11 +3,11 @@
 <%! from django.utils.translation import ugettext as _ %>
 
 <section class="courses-container">
-  <section class="highlighted-courses">
+  <section class="highlighted-courses clearfix">
 
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <section class="courses">
-        <ul class="courses-listing">
+        <ul class="courses-listing clearfix">
         % if pageargs.get('courses'):
             % for course in pageargs['courses']:
             <li class="courses-listing-item">

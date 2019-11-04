@@ -39,9 +39,9 @@
 }
 
 .course-box__description {
-    max-width: 850px;
-    text-align: center;
-    margin: 30px auto;
+    max-width: initial;
+    text-align: left;
+    padding: 0 15px;
 
     &:empty {
         display: none;
