@@ -50,6 +50,18 @@ from openedx.core.djangolib.markup import HTML, Text
                   % if category.img:
                     <img class="course-box__img" src="${category.img.url}" alt="${category.name}">
                   % endif
+                  %if user.is_authenticated():
+                    <form class="enroll-category" method="POST" id="${category.slug}">
+                      <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }" />
+                      <button type="submit" name="enroll" value="enroll_all_category_courses">${_('Bulk Enrollment')}</button>
+                    </form>
+                    <p>Click the Bulk Enrollment button to enroll in an entire category at once or select a course card to enroll in one course at a time.</p>
+                    <div class="enroll_status is-hidden ${category.slug}">
+                      Check your email for enrollments status!
+                    </div>
+
+
+                  %endif
                   <p class="course-box__description">${category.description}</p>
                     % for sub_category in category.get_children():
                       <%
@@ -137,6 +149,26 @@ from openedx.core.djangolib.markup import HTML, Text
       // js lazy loading images
       $('.courses-container img.lazy').lazyload({
         effect : "fadeIn"
+      });
+
+      // category enrollment
+      $(function(){
+        $('.enroll-category').on('submit', function(event){
+          var slug = this.id;
+          event.preventDefault();
+          $.ajax({
+            url:'/enroll-category/',
+            type: "POST",
+            data: {'slug': slug},
+            success:function(response){
+              var $message=$(".enroll_status." + slug);
+              $message.show(600);
+              setTimeout(function() {
+                $message.hide(600);
+              }, 5000);
+            },
+          });
+        })
       });
 
       // accordion for course block
