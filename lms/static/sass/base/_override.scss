@@ -18,15 +18,11 @@
     background: $header-bg;
     border: none;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
-    padding: 30px 15px;
+    padding: 10px 15px;
     position: relative;
     box-sizing: border-box;
     min-height: 76px;
     z-index: 999;
-
-    @media screen and (max-width: $breakpoint-tablet) {
-        padding: 22px 15px 23px;
-    }
 
     .wrapper-header {
         height: auto;
@@ -95,9 +91,9 @@
         width: 100%;
         margin-top: 0;
         position: absolute;
-        top: 30px;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -50%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -382,6 +378,8 @@ body .container.activation h1.valid {
     background: $footer-bg;
     position: relative;
     padding: 44px 10px 55px;
+    box-shadow: none !important;
+    border: none !important;
 
     footer#footer-openedx {
         a {
@@ -446,6 +444,7 @@ body .container.activation h1.valid {
                          text-transform: uppercase;
                          font-size: 12px;
                          font-weight: 700;
+                         transition: all .3s ease-in-out;
 
                         &:focus,
                         &:hover {
@@ -1099,7 +1098,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
 .home {
     > header,
     .slider {
-        //background-image: url('#{$img-path}/background.jpg');
         min-height: 485px;
         background-position: center;
         position: relative;
@@ -1108,8 +1106,19 @@ body .wmd-prompt-dialog .btn-brand:focus {
         justify-content: center;
         align-items: center;
 
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            z-index: 1;
+        }
+
         @media (min-width: $breakpoint-mobile) {
-            min-height: 420px;
+            min-height: 600px;
         }
 
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -1127,6 +1136,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         }
 
         .outer-wrapper {
+            max-width: initial;
             animation: none;
             padding: 0;
 
@@ -1140,11 +1150,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
         .title {
             background: transparent;
             box-shadow: none;
-            max-width: 1000px;
+            max-width: initial;
             width: 100%;
             margin: 0 auto;
             float: none;
             padding: 15px;
+            position: relative;
+            z-index: 2;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table-cell;
@@ -1188,6 +1200,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-align: center;
                     font-size: 18px;
                     line-height: 1.3;
+                    text-transform: uppercase;
                     text-shadow: $promo-box-text-shadow;
                     color: $promo-box-text-color;
                     margin-bottom: 55px;
@@ -1266,6 +1279,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
     display: inline-block;
     text-align: center;
     padding: 30px 0 0;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        opacity: .75;
+    }
 
     img {
         display: block;
