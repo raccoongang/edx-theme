@@ -10,7 +10,13 @@
 <%namespace name='static' file='static_content.html'/>
 
 
-<div class="theme-footer">
+<div class="wrapper wrapper-footer">
+  <div class="footer_section footer_section-contact-us">
+    <div class="footer_section-holder">
+      <span class="footer_text">If you have some questions please contact us</span>
+      <a class="footer_btn__contact" href="/contact">Contact us</a>
+    </div>
+  </div>
   <footer id="footer-openedx" class="theme-footer_wrapper"
     ## When rendering the footer through the branding API,
     ## the direction may not be set on the parent element,
@@ -19,82 +25,42 @@
       dir=${bidi}
     % endif
   >
-  <ul class="footer-list">
-    <li class="footer-list_item">
-      <a href="/about" class="footer-list_link">${_('About')}</a>
-    </li>
-    <li class="footer-list_item">
-      <a href="/privacy" class="footer-list_link">${_('Privacy Policy')}</a>
-    </li>
-    <li class="footer-list_item">
-      <a href="/tos" class="footer-list_link">${_('Terms of Service')}</a>
-    </li>
-  </ul>
-  <div class="theme-footer_holder">
-    <ul class="icon-list">
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-facebook" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-twitter" />
-          </svg>
-        </a></li>
-      <!-- <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon">
-            <use xlink:href="#ico-youtube" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-linkedin" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-behance" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-instagram" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-odnoklassniki" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-vimeo" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-vk" />
-          </svg>
-        </a></li> -->
-    </ul>
-    <a class="logo-footer" href="/">
-      <img src="/static/${settings.FEATURES.get('BASE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo-footer.svg" alt="footer logo">
-    </a>
-    <p class="footer-support">Built on 
-      <a target="_blank" href="#">
-        <svg class="svg-edx"  viewBox="0 0 100 70">
-          <use xlink:href="#logo-edx" />
-        </svg>
-      </a>
-      by RACCOONGANG 
-      <a target="_blank" href="#">
-        <svg class="svg-raccoon"  viewBox="0 0 100 100">
-          <use xlink:href="#logo-raccoon" />
-        </svg>
-      </a>
-    </p>
-  </div>
+    <div class="colophon">
+      <div class="footer-nav-wrapper">
+        <div class="footer-col">
+          <div class="footer-title">About the university</div>
+          <ul>
+            <li><a href="https://raccoongang.com/en/raccoon-university/" target="_blank">Raccoon Gang University</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="#" target="_blank">eDX Services</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">courses</div>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="#" target="_blank">eDX Services</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Contact us</div>
+          <ul>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_section">
+        <div class="footer_copyright-holder">
+          &copy; 2016 Racoongang. All Rights Reserved
+          <a href="${footer['openedx_link']['url']}">
+            <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+          </a>
+          </div>
+      </div>
+    </div>
   </footer>
 </div>
 % if include_dependencies:
