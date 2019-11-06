@@ -58,6 +58,10 @@
                 display: block;
                 height: $header-logo-height;
 
+                @media screen and (max-width: $breakpoint-mobile) {
+                    height: $header-logo-height-mobile;
+                }
+
                 &:hover {
                     opacity: .8;
                 }
@@ -65,6 +69,10 @@
 
             img {
                 height: $header-logo-height;
+
+                @media screen and (max-width: $breakpoint-mobile) {
+                    height: $header-logo-height-mobile;
+                }
             }
         }
 
@@ -934,7 +942,6 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
 }
 
 .courses-container {
-    padding: 0 15px;
     box-sizing: border-box;
 
     .courses .course {
@@ -1096,6 +1103,8 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .home {
+    padding-bottom: 32px;
+
     > header,
     .slider {
         min-height: 485px;
@@ -1133,6 +1142,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
             height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
             background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
             background-size: cover;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                background-position: right;
+            }
         }
 
         .outer-wrapper {
@@ -1204,7 +1217,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     text-shadow: $promo-box-text-shadow;
                     color: $promo-box-text-color;
                     margin-bottom: 55px;
-                    max-width: 820px;
 
                     @media screen and (min-width: $breakpoint-mobile) {
                         font-size: 22px;
@@ -1321,6 +1333,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 
 .highlighted-courses .courses {
+    padding-top: 0;
     padding-bottom: 15px;
 
     .course a {
@@ -3381,6 +3394,11 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 }
 
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register {
+    display: flex;
+    height: 44px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
     width: initial;
     margin: 0 15px 10px 0;
     padding: 10px;
@@ -3422,6 +3440,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 }
 
 .course-info .details {
+    font-family: $global-font-family !important;
     width: 100%;
     margin: 0 0 20px;
 
@@ -4627,7 +4646,6 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
 // "show more" button
 
 .home .highlighted-courses {
-    padding-top: 45px;
     margin-bottom: 60px;
 }
 
@@ -5340,4 +5358,13 @@ body.view-in-course .header-global .wrapper-header {
 section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $global-font-family !important;
+    }
 }

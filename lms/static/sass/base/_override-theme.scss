@@ -39,9 +39,10 @@
 }
 
 .course-box__description {
-    max-width: 850px;
-    text-align: center;
-    margin: 30px auto;
+    max-width: initial;
+    text-align: left;
+    margin: 0 auto 28px;
+    line-height: 1.5;
 
     &:empty {
         display: none;
@@ -64,26 +65,36 @@
 }
 
 .course-box__heading {
+    display: inline-block;
     font-size: 30px;
     line-height: normal;
-    color: #000;
-    margin: 40px 0;
-    text-align: center;
-    text-transform: none;
+    color: #565656;
+    margin: 20px 0 10px;
+    text-align: left;
+    text-transform: uppercase;
     position: relative;
+    padding-left: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        display: block;
+    }
 
     &:after {
         content: '';
         position: absolute;
-        top: 100%;
-        left: 50%;
+        top: 50%;
+        left: 6px;
         border: solid #666;
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;
-        transform: rotate(45deg) translateX(-50%);
+        margin-top: -3px;
+        transform: rotate(45deg) translateY(-50%);
         transition: all .15s linear;
-        opacity: 0;
+        opacity: .55;
         pointer-events: none;
     }
 
@@ -91,19 +102,17 @@
         cursor: pointer;
 
         &:not(.open):after {
-            top: calc(100% + 10px);
-            opacity: .8;
+            opacity: 1;
         }
     }
 
     &.open {
         &:after {
-            top: calc(100% + 10px);
-            transform: rotate(-135deg) translate(-50%, -50%);
+            transform: rotate(-135deg);
         }
 
         &:hover:after {
-            opacity: .8;
+            opacity: 1;
         }
     }
 

@@ -12,6 +12,10 @@
     top: 32px;
     right: 15px;
 
+    @media screen and (max-width: $breakpoint-mobile) {
+        top: 22px;
+    }
+
     &:active:not(:disabled),
     &:focus {
         border: none !important;
