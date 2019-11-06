@@ -18,7 +18,6 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                 <h1>${_("Welcome to Vijfhart")}</h1>
-                <!--<span>${_("SAMEN GROEIEN")}</span>-->
                 <a href="/courses" class="link">${_("FIND COURSES")}</a>
               % endif
             </div>
@@ -52,6 +51,13 @@ from openedx.core.djangolib.markup import HTML, Text
     </section>
 </main>
 
+<div class="notification-block">
+    <div class="notification-content">
+        <button type="button" class="notification-close"></button>
+        ${_("Microsoft has decided to discontinue the Microsoft Professional Program and that as a direct result, this website will be shut down on the 2nd of January 2020.")}
+    </div>
+</div>
+
 % if show_homepage_promo_video:
   <section id="video-modal" class="modal home-page-video-modal video-modal">
     <div class="inner-wrapper">
@@ -66,7 +72,38 @@ from openedx.core.djangolib.markup import HTML, Text
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
-      })
+      });
+
+      $(document).ready(function () {
+        const notificationBlock = $('.notification-block');
+        const cookieTime = 86400; // 24h
+        const isNotificationAvailable = getCookie('notification-block');
+
+        if (isNotificationAvailable !== 'false') {
+            setTimeout(function () {
+                notificationBlock.fadeIn();
+            }, 2000);
+
+            setTimeout(function () {
+                if (notificationBlock.length) {
+                    notificationBlock.remove();
+                }
+            }, 17000);
+        }
+
+        $('.notification-close').on('click', function (e) {
+            e.preventDefault();
+            notificationBlock.remove();
+            document.cookie = 'notification-block=false; max-age=' + cookieTime;
+        });
+
+        function getCookie(name) {
+            const matches = document.cookie.match(new RegExp(
+                '(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+    });
    </script>
 </%block>
 
