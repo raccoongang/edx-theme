@@ -50,19 +50,21 @@ from openedx.core.djangolib.markup import HTML, Text
                   % if category.img:
                     <img class="course-box__img" src="${category.img.url}" alt="${category.name}">
                   % endif
+                  <p class="course-box__description">${category.description}</p>
                   %if user.is_authenticated():
                     <form class="enroll-category" method="POST" id="${category.slug}">
                       <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }" />
-                      <button type="submit" name="enroll" value="enroll_all_category_courses">${_('Bulk Enrollment')}</button>
+                      <div class="course-box__link-holder">
+                        <p>Click the Bulk Enrollment button to enroll in an entire category at once or select a course card to enroll in one course at a time.</p>
+                        <button class="course-box__link" type="submit" name="enroll" value="enroll_all_category_courses">${_('Bulk Enrollment')}</button>
+                        <div class="enroll_status is-hidden ${category.slug}">
+                          <span>
+                            Check your <b>email</b> for <b>enrollments</b> status!
+                          </span>
+                        </div>
+                      </div>
                     </form>
-                    <p>Click the Bulk Enrollment button to enroll in an entire category at once or select a course card to enroll in one course at a time.</p>
-                    <div class="enroll_status is-hidden ${category.slug}">
-                      Check your email for enrollments status!
-                    </div>
-
-
                   %endif
-                  <p class="course-box__description">${category.description}</p>
                     % for sub_category in category.get_children():
                       <%
                         courses_sub_category = sub_category.courses.filter(id__in=available_courses)
