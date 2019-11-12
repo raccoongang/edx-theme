@@ -53,8 +53,22 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <div class="notification-block">
     <div class="notification-content">
-        <button type="button" class="notification-close"></button>
-        ${_("Microsoft has decided to discontinue the Microsoft Professional Program and that as a direct result, this website will be shut down on the 2nd of January 2020.")}
+        <p>${_("Dear Vijhart Online Academy visitor.")}</p>
+        <p>${_("Thank you for visiting this online learning platform.")}</p>
+        <p>${_("Please read this message since it contains very important information regarding your course(s).")}</p>
+        <p>
+            ${_("Unfortunately")}, <mark>${_("Microsoft has decided to retire the Microsoft Professional Program on")} <b>${_("December 31 2019")}</b>.<br>
+            ${_("Therefore, this website will be shutdown on")} <b>${_("January 2 2020")}.</b></mark>
+        </p>
+        <p>
+            <mark>${_("When you're following a course, please end it latest on")} <b>${_("December 31 2019")}</b>.</mark>
+            ${_("After that date this website and the related courses aren't accessible anymore.")}
+        </p>
+        <p>${_("This message will close itself after 25 seconds.")}</p>
+        <p>
+            ${_("With kind regards,")}<br>
+            ${_("The Vijfhart Team")}
+        </p>
     </div>
 </div>
 
@@ -76,33 +90,14 @@ from openedx.core.djangolib.markup import HTML, Text
 
       $(document).ready(function () {
         const notificationBlock = $('.notification-block');
-        const cookieTime = 86400; // 24h
-        const isNotificationAvailable = getCookie('notification-block');
 
-        if (isNotificationAvailable !== 'false') {
-            setTimeout(function () {
-                notificationBlock.fadeIn();
-            }, 2000);
+        setTimeout(function () {
+            notificationBlock.fadeIn();
+        }, 2000);
 
-            setTimeout(function () {
-                if (notificationBlock.length) {
-                    notificationBlock.remove();
-                }
-            }, 17000);
-        }
-
-        $('.notification-close').on('click', function (e) {
-            e.preventDefault();
+        setTimeout(function () {
             notificationBlock.remove();
-            document.cookie = 'notification-block=false; max-age=' + cookieTime;
-        });
-
-        function getCookie(name) {
-            const matches = document.cookie.match(new RegExp(
-                '(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'
-            ));
-            return matches ? decodeURIComponent(matches[1]) : undefined;
-        }
+        }, 27000);
     });
    </script>
 </%block>
