@@ -13,8 +13,8 @@
 <div class="wrapper wrapper-footer">
   <div class="footer_section footer_section-contact-us">
     <div class="footer_section-holder">
-      <span class="footer_text">If you have some questions please contact us</span>
-      <a class="footer_btn__contact" href="/contact">Contact us</a>
+      <span class="footer_text">${_("If you have some questions please contact us")}</span>
+      <a class="footer_btn__contact" href="/contact">${_("Contact us")}</a>
     </div>
   </div>
   <footer id="footer-openedx" class="theme-footer_wrapper"
@@ -28,37 +28,26 @@
     <div class="colophon">
       <div class="footer-nav-wrapper">
         <div class="footer-col">
-          <div class="footer-title">About the university</div>
+          <div class="footer-title">${_("learn@pst")}</div>
           <ul>
-            <li><a href="https://raccoongang.com/en/raccoon-university/" target="_blank">Raccoon Gang University</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="#" target="_blank">eDX Services</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">${_("Contact us")}</a></li>
+            <li><a href="/about">${_("About us")}</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <div class="footer-title">courses</div>
-          <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="#" target="_blank">eDX Services</a></li>
-            <li><a href="/blog">Blog</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-title">Contact us</div>
-          <ul>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/help">Help</a></li>
-          </ul>
+          <a href="${footer['openedx_link']['url']}">
+            <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="180" />
+          </a>
         </div>
       </div>
-      <div class="footer_section">
+      <div class="footer_section footer_section-bottom-bar">
         <div class="footer_copyright-holder">
-          &copy; 2016 Racoongang. All Rights Reserved
-          <a href="${footer['openedx_link']['url']}">
-            <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-          </a>
+          &copy; 2016 ${_("PST Foundation")}.
           </div>
+          <ul class="footer_bottom-links">
+            <li><a href="/tos">${_("Terms of Service")}</a></li>
+            <li><a href="/privacy">${_("Privacy Policy")}</a></li>
+          </ul>
       </div>
     </div>
   </footer>

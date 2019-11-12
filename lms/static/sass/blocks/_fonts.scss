@@ -35,6 +35,15 @@
 }
 
 @font-face {
+    font-family: 'Muli';
+    src: url('#{$font-path}/Muli-Bold.woff2') format('woff2'),
+    url('#{$font-path}/Muli-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Work Sans';
     src: url('#{$font-path}/WorkSans-Bold.woff2') format('woff2'),
     url('#{$font-path}/WorkSans-Bold.woff') format('woff');
