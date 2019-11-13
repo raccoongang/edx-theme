@@ -6,8 +6,10 @@
     header.course-profile {
         padding: 20px 0;
         height: auto;
-        width: calc(100% + 40px);
-        margin-left: -20px;
+        @media screen and (min-width: 768px) {
+            width: calc(100% + 40px);
+            margin-left: -20px;
+        }
 
         .intro-inner-wrapper {
             .intro {
@@ -305,6 +307,8 @@
     align-items: center;
     justify-content: center;
     min-height: 350px;
+    background-size: cover;
+    background-position: center center;
 
     @media screen and (min-width: $screen-md) {
         height: 500px;
@@ -319,6 +323,10 @@
     }
 
     .course-profile-wrapper {
+        position: static;
+        width: 100%;
+        text-align: center;
+
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             display: table;
             box-sizing: border-box;
@@ -357,16 +365,6 @@
         }
     }
 
-    .course-profile_img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 1600px;
-    }
-
     .heading-group {
         margin-bottom: 10px;
     }
@@ -402,6 +400,79 @@
             border: 2px solid $find-btn-border !important;
             color: $find-btn-color-hover !important;
             background: $find-btn-bg-hover;
+        }
+    }
+
+    .main-cta {
+        a:not(.media) {
+            color: $base-color;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+
+        span + strong {
+            margin-left: 20px;
+            transition: all 0.1s linear 0s;
+
+            &:hover,
+            &:focus {
+                opacity: .7;
+            }
+        }
+    }
+
+    .media {
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        margin-bottom: 20px;
+
+        &:focus {
+            color: transparent;
+
+            .play-intro {
+                background-image: linear-gradient(-90deg, rgba(0,0,0,0.75), rgba(0,0,0,0.8));
+                box-shadow: 0 1px 12px 0 rgba(0,0,0,0.5);
+                border-color: rgba(255,255,255,0.9);
+            }
+        }
+    }
+
+    .play-intro {
+        border: 2px solid rgba(255,255,255,0.9);
+        height: 80px;
+        position: relative;
+        margin: 0 auto;
+        width: 80px;
+        background-image: linear-gradient(-90deg, rgba(0,0,0,0.65), rgba(0,0,0,0.75));
+        border-radius: 4px;
+        box-shadow: 0 1px 12px 0 rgba(0,0,0,0.4);
+
+        &:hover,
+        &:focus {
+            background-image: linear-gradient(-90deg, rgba(0,0,0,0.75), rgba(0,0,0,0.8));
+            box-shadow: 0 1px 12px 0 rgba(0,0,0,0.5);
+            border-color: rgba(255,255,255,0.9);
+
+            &:after {
+                color: #fff;
+            }
+        }
+
+        &:after {
+            content: "\25B6";
+            font-size: 32px;
+            line-height: 32px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-shadow: 0 -1px rgba(0,0,0,0.8);
+            color: #ccc;
+            transition: all 0.1s linear 0s;
         }
     }
 }
