@@ -9,7 +9,9 @@
         <h1>
             <%block name="pageheader">${page_header or _("Contact")}</%block>
         </h1>
-        <p>
+        <div class="contact-wrapper">
+            <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.598358580636!2d96.12821431486883!3d16.846269788405078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c195bede7f46b5%3A0x7c8a4b268da96ba!2s2C2P%20(Myanmar)%20Co.%2CLtd.!5e0!3m2!1sru!2sua!4v1573486585109!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div class="contact-content">
             <%block name="pagecontent">
                 % if page_content:
                     ${page_content}
@@ -19,8 +21,10 @@
                     <p>${_("2C2P Building")}</p>
                     <p>${_("11 Ward, Hlaing Township,")}</p>
                     <p>${_("Yangon, Myanmar")}</p>
+                    <p><b>${_("Email: support@pst.foundation")}</b></p>
                 % endif
             </%block>
-        </p>
+            </div>
+        </div>
     </section>
 </main>

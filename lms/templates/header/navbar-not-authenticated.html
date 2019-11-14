@@ -20,26 +20,6 @@ from six import text_type
   allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
 %>
 <nav class="nav-links" aria-label=${_("Supplemental Links")}>
-  % if mktg_site_enabled:
-    <div class="mobile-nav-item hidden-mobile nav-item">
-      <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-    </div>
-    % if courses_are_browsable:
-      <div class="mobile-nav-item hidden-mobile nav-item">
-        <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
-      </div>
-    % endif
-    <div class="mobile-nav-item hidden-mobile nav-item">
-      <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-    </div>
-  % endif
-  % if allows_login:
-    % if can_discover_courses:
-      <div class="mobile-nav-item hidden-mobile nav-item">
-        <a href="/courses">${_('Explore courses')}</a>
-      </div>
-    %endif
-  % endif
   % if allows_login:
     % if restrict_enroll_for_course:
       <div class="mobile-nav-item hidden-mobile nav-item">

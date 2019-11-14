@@ -1,0 +1,160 @@
+<%!
+import sys
+
+from time import strftime as time
+
+from django.utils.translation import ugettext as _
+from django.utils.translation import get_language_bidi
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from django.conf import settings
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+is_rtl = get_language_bidi()
+
+lms_url = configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)
+support_email = configuration_helpers.get_value('CONTACT_EMAIL', settings.CONTACT_EMAIL)
+
+%>
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title lang="${LANGUAGE_CODE}">
+        <%block name="mail_title"/>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <style type="text/css">
+        @media only screen and (min-device-width: 601px) {
+            .content {
+                width: 600px !important;
+            }
+        }
+
+        @-ms-viewport {
+            width: device-width;
+        }
+
+        /* Column Drop Layout Pattern CSS */
+        @media only screen and (max-width: 450px) {
+            td[class="col"] {
+                display: block;
+                width: 100%;
+                  -moz-box-sizing: border-box;
+                  -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                float: left;
+                text-align: left !important;
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div bgcolor="#f5f5f5" lang="${LANGUAGE_CODE}" dir="${'rtl' if is_rtl else 'ltr'}" style="margin: 0;padding: 0;min-width: 100%;">
+<!-- Hack for outlook 2010, which wants to render everything in Times New Roman -->
+<!--[if mso]>
+<style type="text/css">
+    body, table, td {
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    }
+</style>
+<![endif]-->
+
+<!--[if (gte mso 9)|(IE)]>
+<table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td>
+<![endif]-->
+
+<!-- CONTENT -->
+<table class="content" role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f5f5"
+       width="100%" style="
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
+        max-width: 600px;
+        padding: 0 20px 0 20px;
+    ">
+    <tr>
+        <!-- HEADER -->
+        <td class="header" style="padding: 20px;">
+            <table role="presentation" width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="70">
+                        <a href="${lms_url}" target="_blank">
+                            <img
+                                src="${lms_url}/static/${settings.FEATURES.get('MARVEL_BLUE_DEFAULT_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.png"
+                                width="83"
+                                height="50"
+                                alt="Go to ${ platform_name } Home Page"
+                            />
+                        </a>
+                    </td>
+                    <td align="right" style="text-align: ${'left' if is_rtl else 'right'};">
+                    <a class="login" target="_blank" href="${lms_url}/login" style="color: #fcd905;">${_("Sign In")}</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <!-- MAIN -->
+        <td class="main" bgcolor="#ffffff" style="
+                padding: 30px 20px;
+                box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+            ">
+            <%block name="mail_body"/>
+        </td>
+    </tr>
+
+    <tr>
+        <!-- FOOTER -->
+        <td class="footer" style="padding: 20px;">
+            <table role="presentation" width="100%" align="left" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="padding-bottom: 20px;">
+                        <!-- SOCIAL -->
+                        <table role="presentation" align="${'left' if is_rtl else 'right'}" border="0" border="0" cellpadding="0" cellspacing="0" width="210">
+                <tr></tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <!-- APP BUTTONS -->
+        <td style="padding-bottom: 20px;"></td>
+    </tr>
+    <tr>
+        <!-- Actions -->
+        <td style="padding-bottom: 20px;"></td>
+    </tr>
+    <tr>
+        <!-- COPYRIGHT -->
+        <td>
+            &copy; ${"%Y" | time} ${ platform_name }, ${_("All rights reserved")}.<br/>
+            <br/>
+            ${_("Our mailing address is")}:<br/>
+            ${support_email}
+        </td>
+    </tr>
+</table>
+</td>
+</tr>
+</table>
+
+<!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+
+</div>
+
+</body>
+</html>
