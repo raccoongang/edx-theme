@@ -113,18 +113,18 @@ from six import string_types
 <section class="course-info">
 
   <%block name="course_about_header">
-  <header class="course-profile course-profile-promo-box">
+  <header class="course-profile course-profile-promo-box" style="background-image: url('${course_image_urls['large']}')">
     <div class="holder course-profile-wrapper">
 
       % if get_course_about_section(request, course, "video"):
       <a href="#video-modal" class="media" rel="leanModal">
         <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
+          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" class="sr" />
           <div class="play-intro"></div>
         </div>
       </a>
       %else:
-          <img src="${course_image_urls['large']}" alt="" class="course-profile_img"/>
+          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" class="sr"/>
       % endif
 
       <section class="intro">
