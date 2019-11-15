@@ -53,6 +53,7 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <div class="notification-block">
     <div class="notification-content">
+        <button type="button" class="notification-close"></button>
         <p>${_("Dear Vijhart Online Academy visitor.")}</p>
         <p>${_("Thank you for visiting this online learning platform.")}</p>
         <p>${_("Please read this message since it contains very important information regarding your course(s).")}</p>
@@ -90,14 +91,29 @@ from openedx.core.djangolib.markup import HTML, Text
 
       $(document).ready(function () {
         const notificationBlock = $('.notification-block');
+        const cookieTime = 86400; // 24h
+        const isNotificationAvailable = getCookie('notification-block');
 
-        setTimeout(function () {
+        if (isNotificationAvailable !== 'false') {
             notificationBlock.fadeIn();
-        }, 2000);
 
-        setTimeout(function () {
+            setTimeout(function () {
+                notificationBlock.remove();
+            }, 25000);
+        }
+
+        $('.notification-close').on('click', function (e) {
+            e.preventDefault();
             notificationBlock.remove();
-        }, 27000);
+            document.cookie = 'notification-block=false; max-age=' + cookieTime;
+        });
+
+        function getCookie(name) {
+            const matches = document.cookie.match(new RegExp(
+                '(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
     });
    </script>
 </%block>
