@@ -74,8 +74,10 @@
     text-transform: uppercase;
     position: relative;
     padding-left: 32px;
+    padding-right: 32px;
+    max-width: 100%;
+    box-sizing: border-box;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
 
     @media screen and (max-width: $breakpoint-mobile) {
