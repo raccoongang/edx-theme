@@ -100,11 +100,11 @@
         margin-top: 0;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0;
+        transform: translate(0, -50%);
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
         &:not(.authenticated) {
             @media screen and (max-width: $build-header-menu-mobile) {
@@ -124,6 +124,7 @@
             padding: 20px 15px;
             flex-wrap: wrap;
             border-bottom: 1px solid #d4d4d4;
+            justify-content: center;
         }
 
         li {
@@ -4684,22 +4685,22 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
     }
 
     .courses-listing-item {
-        display: none;
+        // display: none;
 
         @media (min-width: 541px) {
             max-width: 280px;
         }
 
-        &:first-child,
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6),
-        &:nth-child(7),
-        &:nth-child(8) {
-            display: block;
-        }
+        // &:first-child,
+        // &:nth-child(2),
+        // &:nth-child(3),
+        // &:nth-child(4),
+        // &:nth-child(5),
+        // &:nth-child(6),
+        // &:nth-child(7),
+        // &:nth-child(8) {
+        //     display: block;
+        // }
     }
 }
 
@@ -5367,4 +5368,12 @@ section.outside-app {
     h6 {
         font-family: $global-font-family !important;
     }
+}
+
+.find-courses .search-facets .facet-list.collapse {
+    max-height: 276px;
+}
+
+.find-courses .search-facets .toggle button {
+    color: $base-color;
 }
