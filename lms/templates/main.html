@@ -55,10 +55,10 @@ from pipeline_mako import render_require_js_path_overrides
   % endif
 
   <%
-    jsi18n_path = "js/i18n/{language}/djangojs.js".format(language=LANGUAGE_CODE)
+    jsi18n_lms_path = "js/i18n/{language}/djangojs.js".format(language=LANGUAGE_CODE)
   %>
 
-  <script type="text/javascript" src="${static.url(jsi18n_path)}"></script>
+  <script type="text/javascript" src="${static.url(jsi18n_lms_path)}"></script>
 
   <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
 
@@ -358,7 +358,7 @@ from pipeline_mako import render_require_js_path_overrides
       <path d="M197.535 12.5109H203.214L207.307 24.3809L211.349 12.5109H216.696V29.1136H213.089V16.8343H213.012L208.817 29.1136H205.619L201.296 16.8343H201.193V29.1136H197.535V12.5109Z" fill="#980D21"/>
       <path d="M224.695 22.4623L218.683 12.5109H223.211L226.716 19.0087L230.195 12.5109H234.748L228.685 22.4111V29.1136H224.695V22.4623Z" fill="#980D21"/>
     </symbol>
-      
+
 </svg>
 
 <%static:optional_include_mako file="body-initial.html" is_theming_enabled="True" />
