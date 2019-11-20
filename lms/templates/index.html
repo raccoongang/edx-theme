@@ -52,24 +52,29 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </header>
 
-        % if not categories:
+        % if categories:
+          <% courses_in_catrgories = False %>
+          % for category in categories:
+            <%
+              set_courses_sub_category = set()
+              category_courses = category.courses.filter(id__in=available_courses)
+            %>
+            % if category_courses:
+              <section class="course-box">
+                <h2 class="course-box__heading">${category.name}</h2>
+                <div class="course-box__content">
+                  <p class="course-box__description">${category.description}</p>
+                  <%include file="${courses_list}" args="courses=category_courses" />
+                  <% courses_in_catrgories = True %>
+                </div>
+              </section>
+            % endif
+          % endfor
+          % if not courses_in_catrgories:
             <%include file="${courses_list}" />
-        % else:
-            % for category in categories:
-              <%
-                set_courses_sub_category = set()
-                category_courses = category.get_descendants(include_self=True).filter(courses__id__in=available_courses).exists()
-              %>
-              % if category_courses:
-                <section class="course-box">
-                  <h2 class="course-box__heading">${category.name}</h2>
-                  <div class="course-box__content">
-                    <p class="course-box__description">${category.description}</p>
-                    <%include file="${courses_list}" args="courses=category.courses.filter(id__in=available_courses)" />
-                  </div>
-                </section>
-              % endif
-            % endfor
+          % endif
+        %else:
+          <%include file="${courses_list}" />
         % endif
     </section>
 </main>
