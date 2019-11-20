@@ -30,9 +30,23 @@ from openedx.core.djangolib.markup import HTML, Text
           % endif
         </div>
       </header>
+      <div class="banner">
+        <h2 class="banner_heading">Azure applications and infrastructure certifications</h2>
+        <p class="banner_holder">
+            <strong class="banner_subHeader">Fundamentals</strong>
+            <strong class="banner_subHeader banner_subHeader__right">Role-based</strong>
+        </p>
+        <p class="banner_holder banner_holder__other">
+            <span class="banner_pin">Associate</span>
+            <span class="banner_pin banner_pin__right">Expert</span>
+        </p>
+        <img class="banner_img" alt="azure applications and infrastructure certifications" src="/static/${settings.DEFAULT_SITE_THEME}/images/banner4.png">
+        <p class="banner_copyright">&copy; PwC. All nights reserved. PwC refers to the US member firm ore one of its subsidianies or affiliates, and may sometimes refer to the PwC network. Each member firm is a separate legal entity. Please see <a href="www.pwc.com/structure" target="_blank">www.pwc.com/structure</a>  for further details.</p>
+        <img class="banner_logo" alt="logo pwc" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg">
+      </div>
       <div class="text-under">
         <p>
-          ${_("Choose Fundamentals or one of the advanced roles to see the learning path")}.
+          ${_("Choose Fundamentals or one of the advanced roles to see the learning path")}
         </p>
       </div>
         % if not categories:
@@ -76,7 +90,7 @@ from openedx.core.djangolib.markup import HTML, Text
                       % if sub_category.url:
                       <!-- place for external link -->
                         <div class="course-box__link-holder">
-                          <a class="course-box__link" href="${sub_category.url}" target="_blank">${_("Link to exam")} >>></a>
+                          <a class="course-box__link" href="${sub_category.url}" target="_blank">${_("See Vantage for exam voucher details")}</a>
                         </div>
                       <!--  -->
                       % endif
@@ -94,7 +108,7 @@ from openedx.core.djangolib.markup import HTML, Text
         % endif
         <div class="text-under with-link">
           <p>
-            ${_("Link to obtain free Azure Pass")}: <a href="https://www.microsoftazurepass.com/" target="_blank">https://www.microsoftazurepass.com/</a>
+            ${_("Link to obtain free Azure Pass")}: <a href="https://sites.google.com/pwc.com/cloud-training/azure" target="_blank">https://sites.google.com/pwc.com/cloud-training/azure</a>
           </p>
         </div>
     </section>
