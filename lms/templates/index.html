@@ -101,10 +101,12 @@ from openedx.core.djangolib.markup import HTML, Text
       });
 
       $(window).scroll(function () {
+        var arrow = $('.arrow-up');
+
         if ($(window).scrollTop() > 100) {
-          $('.arrow-up').addClass('active');
-        } else if ($(window).scrollTop() <= 100) {
-          $('.arrow-up').removeClass('active');
+          $(arrow).addClass('active');
+        } else {
+          $(arrow).removeClass('active');
         }
       });
 
