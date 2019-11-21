@@ -5358,7 +5358,22 @@ section.outside-app {
 }
 
 .find-courses .search-facets .facet-list.collapse {
-    max-height: 276px;
+    box-sizing: border-box;
+
+    // Chrome
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+        max-height: 314px !important;
+    }
+
+    // Safari
+    @media not all and (min-resolution:.001dpcm) {
+        max-height: 270px !important;
+    }
+
+    // Firefox
+    @-moz-document url-prefix() {
+        max-height: 318px !important;
+    }
 }
 
 .find-courses .search-facets .toggle button {
