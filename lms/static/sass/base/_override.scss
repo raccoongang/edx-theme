@@ -4692,6 +4692,7 @@ body .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link.active-
 }
 
 body .courses-container .courses-more {
+    display: none;
     clear: both;
     text-align: center;
     margin: 0;
@@ -4725,6 +4726,18 @@ body .courses-container .courses-more {
         visibility: hidden;
         color: #9a9a9a;
     }
+}
+
+.main-courses-holder {
+    padding-top: 32px;
+}
+
+body .main-courses-holder .courses-container .courses-more {
+    display: block;
+}
+
+.home .main-courses-holder .courses-container .courses .courses-listing .courses-listing-item:nth-child(n+9) {
+    display: none;
 }
 
 // "show more" button end

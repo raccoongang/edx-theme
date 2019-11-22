@@ -24,6 +24,13 @@
         </ul>
       </section>
 
+      <div class="courses-more">
+          % if len(courses) > 8:
+          <a class="btn show-more">${_("Show more courses")}</a>
+          <i class="fa fa-spinner fa-spin"></i>
+          % endif
+      </div>
+
     % endif
 
   </section>

@@ -74,7 +74,9 @@ from openedx.core.djangolib.markup import HTML, Text
             <%include file="${courses_list}" />
           % endif
         %else:
-          <%include file="${courses_list}" />
+          <div class="main-courses-holder">
+            <%include file="${courses_list}" />
+          </div>
         % endif
     </section>
 </main>
@@ -96,6 +98,16 @@ from openedx.core.djangolib.markup import HTML, Text
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
+      });
+
+      $(window).scroll(function () {
+        var arrow = $('.arrow-up');
+
+        if ($(window).scrollTop() > 100) {
+            arrow.addClass('active');
+        } else {
+            arrow.removeClass('active');
+        }
       });
 
       // js for show more btn
