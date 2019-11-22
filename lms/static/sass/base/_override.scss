@@ -5372,15 +5372,52 @@ section.outside-app {
     text-align: center;
     text-transform: none;
     position: relative;
+
+    @media screen and (max-width: $breakpoint-tablet){
+        font-size: 22px;
+    }
 }
 
 .banner_holder {
     display: flex;
     margin: 0;
+
+    @media screen and (max-width: $breakpoint-tablet){
+        align-items: center;
+        justify-content: space-between;
+
+        .banner_subHeader {
+            width: 50%;
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+            }
+
+            &.banner_subHeader__right {
+                flex: initial;
+                padding: 0;
+            }
+        }
+    }
 }
 
 .banner_holder__other {
     padding-left: 400px;
+
+    @media screen and (max-width: $breakpoint-tablet){
+        padding: 0;
+        justify-content: flex-end;
+
+        .banner_pin {
+            flex: initial;
+
+            &.banner_pin__right {
+                padding-left: 32%;
+                padding-right: 12px;
+            }
+        }
+    }
 }
 
 .banner_subHeader {
@@ -5393,6 +5430,10 @@ section.outside-app {
     text-transform: none;
     position: relative;
     flex: 1 1 280px;
+
+    @media screen and (max-width: $breakpoint-tablet){
+        font-size: 18px;
+    }
 }
 
 .banner_subHeader__right {
@@ -5411,6 +5452,10 @@ section.outside-app {
     text-transform: none;
     position: relative;
     flex: 1 1 350px;
+
+    @media screen and (max-width: $breakpoint-tablet){
+        font-size: 14px;
+    }
 }
 
 .banner_pin__right {
