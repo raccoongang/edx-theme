@@ -3391,6 +3391,11 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 }
 
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta span.register {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
     width: initial;
     margin: 0 15px 10px 0;
     padding: 10px;
@@ -3399,6 +3404,22 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
         width: 61.158%;
         margin: 1px 3.57866% 0 0;
         padding: 10px 0 8px;
+    }
+}
+
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta {
+    @media screen and (max-width: $breakpoint-mobile) {
+        margin: 0;
+
+        span.register {
+            margin-right: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        strong {
+            width: 100%;
+        }
     }
 }
 
