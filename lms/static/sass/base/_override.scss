@@ -3434,6 +3434,7 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
 .course-info .details {
     width: 100%;
     margin: 0 0 20px;
+    font-family: $global-font-family !important;
 
     @media screen and (min-width: 761px) {
         margin-right: 2.35765%;
@@ -5364,9 +5365,10 @@ body.view-in-course .header-global .wrapper-header {
     }
 }
 
-section.outside-app {
-    padding-left: 10px;
-    padding-right: 10px;
+h1, h2,
+.home>header .title>.heading-group p,
+section.outside-app h1, h3, h4, h5, h6 {
+    font-family: $global-font-family !important;
 }
 
 @media screen and (max-width: $breakpoint-mobile){
