@@ -5304,3 +5304,11 @@ section.outside-app {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+@media screen and (max-width: $breakpoint-mobile){
+    .wrapper-course-material .course-tabs li {
+        a {
+            display: inline-block !important;
+        }
+    }
+}
