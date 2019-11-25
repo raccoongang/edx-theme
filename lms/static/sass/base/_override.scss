@@ -50,6 +50,22 @@
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
                 border-top: 1px solid #6e6e6e;
             }
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                .nav-global {
+                    order: 1;
+                }
+
+                .user {
+                    &.mod {
+                        order: 2;
+                    }
+                }
+
+                .secondary {
+                    order: 3;
+                }
+            }
         }
 
         h1.logo {
@@ -352,6 +368,37 @@
                 &:hover {
                     color: $dropdown-menu-link-color-hover;
                     text-decoration: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: $build-header-menu-tablet) {
+            &.mod {
+                > .primary {
+                    a.shopping-cart {
+                        margin: 0 10px !important;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+            &.mod {
+                display: block;
+                float: none;
+                width: 100%;
+
+                > .primary {
+                    float: none;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                    width: 100%;
+
+                    a.shopping-cart {
+                        margin: 18px 0 0 !important;
+                        justify-content: center;
+                    }
                 }
             }
         }
@@ -4943,6 +4990,23 @@ div.info-wrapper section.handouts {
             margin-right: 0;
             width: 100%;
         }
+    }
+}
+
+a.shopping-cart {
+    font-size: 12px;
+    box-sizing: border-box !important;
+    height: 36px;
+    display: flex !important;
+    align-items: center;
+    line-height: 1 !important;
+
+    .icon {
+        margin-right: 6px;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile){
+        margin: 0 10px 12px;
     }
 }
 

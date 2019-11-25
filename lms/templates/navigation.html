@@ -108,13 +108,13 @@ site_status_msg = get_site_status_msg(course_id)
         <%include file="user_dropdown.html"/>
       </div>
       % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
-        <ol class="user">
-          <li class="primary">
-            <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
-              <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
-            </a>
-          </li>
-        </ol>
+          <ol class="user mod">
+            <li class="primary">
+              <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
+                <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+              </a>
+            </li>
+          </ol>
       % endif
     % else:
       <ol class="left list-inline nav-global">
