@@ -69,7 +69,7 @@ from openedx.core.djangolib.markup import HTML, Text
                       <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }" />
                       <div class="course-box__link-holder">
                         <p>Click the Bulk Enrollment button to enroll in an entire category at once or select a course card to enroll in one course at a time.</p>
-                        <button class="course-box__link" type="submit" name="enroll" value="enroll_all_category_courses">${_('Bulk Enrollment')}</button>
+                        <button class="course-box__link button-click" type="submit" name="enroll" value="enroll_all_category_courses">${_('Bulk Enrollment')}</button>
                         <div class="enroll_status is-hidden ${category.slug}">
                           <span>
                             Check your <b>email</b> for <b>enrollments</b> status!
@@ -185,6 +185,10 @@ from openedx.core.djangolib.markup import HTML, Text
           });
         })
       });
+
+      $('.button-click').click((event)=>{
+        $(event.currentTarget).addClass("submited");
+      })
 
       // accordion for course block
       $('.course-box__heading').on('click', function () {
