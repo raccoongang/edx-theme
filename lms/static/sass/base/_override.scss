@@ -3311,6 +3311,10 @@ section.wiki .alert .close {
 
 section.wiki .btn {
     margin-bottom: 5px;
+
+    @media screen and (max-width: $breakpoint-mobile){
+        margin-right: 0 !important;
+    }
 }
 
 section.wiki .btn.btn-danger {
