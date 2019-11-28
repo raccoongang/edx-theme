@@ -187,6 +187,11 @@
         outline: none;
         box-shadow: none;
       }
+
+      &.submited {
+        pointer-events: none;
+        opacity: .65;
+      }
     }
 }
 
