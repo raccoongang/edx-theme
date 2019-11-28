@@ -3452,10 +3452,15 @@ section.wiki .directory-toolbar .well .pull-right .search-query {
     padding: 40px 15px;
 }
 
+.course-info .details .inner-wrapper .prerequisites ul li,
+.course-info .details .inner-wrapper .syllabus ul li {
+    font: normal 1em/1.6em $global-font-family !important;
+}
+
 .course-info .details {
     width: 100%;
     margin: 0 0 20px;
-    font-family: $global-font-family !important;
+    font: normal 1em/1.6em $global-font-family !important;
 
     @media screen and (min-width: 761px) {
         margin-right: 2.35765%;
