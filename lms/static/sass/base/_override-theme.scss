@@ -43,3 +43,10 @@
   font-weight: 700;
   margin-top: 18px;
 }
+
+form#login {
+  + .toggle-form {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
