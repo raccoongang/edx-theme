@@ -71,7 +71,9 @@ from openedx.core.djangolib.markup import HTML, Text
             % endif
           % endfor
           % if not courses_in_catrgories:
-            <%include file="${courses_list}" />
+            <div class="main-courses-holder">
+              <%include file="${courses_list}" />
+            </div>
           % endif
         %else:
           <div class="main-courses-holder">
