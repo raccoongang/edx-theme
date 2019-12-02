@@ -1108,7 +1108,6 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
     > header,
     .slider {
-        min-height: 485px;
         background-position: center;
         position: relative;
         background-color: #040404;
@@ -1127,12 +1126,24 @@ body .wmd-prompt-dialog .btn-brand:focus {
             z-index: 1;
         }
 
-        @media (min-width: $breakpoint-mobile) {
-            min-height: 600px;
-        }
-
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
             display: block;
+        }
+
+        @media screen and (max-width: $breakpoint-mobile){
+            min-height: 345px;
+            background: #040404 url('#{$img-path}/background-mob.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main-img {
+            display: block;
+            width: 100%;
+
+            @media screen and (max-width: $breakpoint-mobile){
+                display: none;
+            }
         }
 
         .parallax-img {
@@ -1153,6 +1164,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
             max-width: initial;
             animation: none;
             padding: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            z-index: 2;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display: table;
@@ -1207,6 +1224,10 @@ body .wmd-prompt-dialog .btn-brand:focus {
                         font-size: 52px;
                         margin-bottom: 15px;
                     }
+
+                    @media screen and (max-width: $breakpoint-mobile) {
+                        margin-bottom: 12px;
+                    }
                 }
 
                 span {
@@ -1221,12 +1242,16 @@ body .wmd-prompt-dialog .btn-brand:focus {
 
                     @media screen and (min-width: $breakpoint-mobile) {
                         font-size: 22px;
-                        margin-bottom: 25px;
+                        margin-bottom: 0;
                     }
 
                     @media screen and (min-width: $breakpoint-tablet) {
                         font-size: 28px;
                         margin-bottom: 15px;
+                    }
+
+                    @media screen and (max-width: $breakpoint-tablet) {
+                        margin-bottom: 0;
                     }
                 }
             }
