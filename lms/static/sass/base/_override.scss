@@ -1220,6 +1220,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
     label[for="register-terms_of_service"] {
         margin: 3px 5px 0 0 !important;
     }
+    .form-field,
+    .register-button,
+    .note {
+        display: none !important;
+        visibility: hidden !important;
+    }
     .form-wrapper form {
         background: #fff;
     }
