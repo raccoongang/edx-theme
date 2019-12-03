@@ -1,12 +1,12 @@
-$base-color: #47bded;
-$base-color2: #44b759;
+$base-color: #000;
+$base-color2: $base-color;
 $base-color2-hover: lighten($base-color2, 20%);
 //body background
 $body-bg: #eee;
 //logo
-$header-logo-height: 35px;
+$header-logo-height: 60px;
 $footer-logo-height: $header-logo-height;
-$certificate-logo-height: $header-logo-height;
+$certificate-logo-height: 120px;
 //settings for header
 $header-bg: #fff;
 $header-nav-link-color: $base-color2;
@@ -21,28 +21,28 @@ $hamburger-width: 30px;
 $hamburger-height: 30px;
 $hamburger-height-line: 5px;
 //settings on promo box
-$promo-box-text-color: #fff;
+$promo-box-text-color: #000;
 $promo-box-text-shadow: 0px 2px 0px rgba(77, 77, 77, 0.4);
 $find-btn-bg: transparent;
 $find-btn-bg-hover: rgba(0, 0, 0, .2);
-$find-btn-border: #fff;
-$find-btn-color: #fff;
+$find-btn-border: #000;
+$find-btn-color: #000;
 $find-btn-color-hover: $find-btn-color;
 //search input on promo box
 $search-input-background: rgba(255,255,255,0.8);
-$search-input-border: #fff;
+$search-input-border: #000;
 $search-input-color: #4b4b4b;
 $search-button-background: none;
-$search-button-border: #fff;
+$search-button-border: #000;
 $search-button-color: #7b7b7b;
 $search-height: 43px;
 //settings for footer
-$footer-bg: #2a374a;
+$footer-bg: #000;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: darken($footer-nav-link-color, 20%);
 $footer-support-text-and-logo: #fff;
-$footer-social-link-bg: $base-color2;
-$footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
+$footer-social-link-bg: #fff;
+$footer-social-link-bg-hover: darken($footer-social-link-bg, 20%);
 //btn
 $theme-btn-bg: $base-color;
 $theme-btn-text-color: #fffefe;
@@ -78,7 +78,7 @@ $img-path: "../images" !default;
 $font-path: "../fonts" !default;
 $delete-button: #f05a23;
 $white: #fff;
-$global-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$global-font-family: "e-Ukraine", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 // breakpoints
