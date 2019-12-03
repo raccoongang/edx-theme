@@ -9,7 +9,7 @@
     }
 }
 
-*:not(.fa):not(.closed-captions.is-visible:before):not(.mce-ico) {
+*:not(.fa):not(.closed-captions):not(.mce-ico):not(.glyphicon):not([class*='sorting']):not([class*="icon-cc"]):not([class*='mce-']) {
     font-family: $global-font-family !important;
 }
 
@@ -1144,6 +1144,13 @@ body .wmd-prompt-dialog .btn-brand:focus {
             right: 0;
             background: rgba(#000, .5);
             z-index: 1;
+            display: none;
+        }
+
+        .video-bg {
+            position: absolute;
+            min-height: 100%;
+            min-width: 100%;
         }
 
         .parallax-img {
@@ -1193,7 +1200,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
                 padding: 0 0 20px;
 
                 h1 {
-                    font-size: 30px;
+                    font-size: 26px;
                     line-height: 1.2;
                     color: $promo-box-text-color;
                     text-align: center;
@@ -1204,12 +1211,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     letter-spacing: 0;
 
                     @media screen and (min-width: $breakpoint-mobile) {
-                        font-size: 42px;
+                        font-size: 36px;
                         margin-bottom: 20px;
                     }
 
                     @media screen and (min-width: $breakpoint-tablet) {
-                        font-size: 52px;
+                        font-size: 46px;
                         margin-bottom: 15px;
                     }
                 }
@@ -1315,6 +1322,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
         right: 0;
         bottom: 0;
         padding: 0;
+        transform: translateY(22%);
     }
 
     @media screen and (max-width: 1362px) {
@@ -2396,16 +2404,16 @@ section.wiki .wiki-wrapper .nav-tabs li {
 body h2,
 body .home>header .title>.heading-group p,
 body section.outside-app h1 {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    font-family: $global-font-family;
     letter-spacing: 0;
 }
 
 .modal .inner-wrapper form label {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    font-family: $global-font-family;
 }
 
 .modal .inner-wrapper form label {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    font-family: $global-font-family;
 }
 
 .empty-programs-message h2,
@@ -2516,7 +2524,7 @@ section.wiki .main-article {
 }
 
 .course-header {
-    font-family: "Open Sans",Verdana,Geneva,sans-serif;
+    font-family: $global-font-family;
 }
 
 body.lang_ar {
@@ -3801,6 +3809,7 @@ footer .footer-support {
         padding: 0;
         bottom: 0;
         justify-content: center;
+        transform: translateY(-55%);
     }
     .rtl & {
         left: auto;
@@ -4994,7 +5003,7 @@ div.info-wrapper section.handouts {
     .list-input {
         select {
             font-weight: 500;
-            font-family: "Open Sans",Verdana,Geneva,sans-serif;
+            font-family: $global-font-family;
             font-size: 15px;
             line-height: 21px;
             color: #3c3c3c;
@@ -5668,7 +5677,7 @@ body.view-in-course .header-global,
 
     .title,
     .subtitle {
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        font-family: $global-font-family !important;
     }
 
     .banner-content {
@@ -5679,7 +5688,7 @@ body.view-in-course .header-global,
 .program-details-content {
     .course-card {
         .course-title .course-title-link {
-            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: $global-font-family !important;
         }
 
         .course-actions {
@@ -5702,7 +5711,7 @@ body.view-in-course .header-global,
     border: 1px solid #ccc !important;
 
     .card-link {
-        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        font-family: $global-font-family !important;
     }
 }
 
