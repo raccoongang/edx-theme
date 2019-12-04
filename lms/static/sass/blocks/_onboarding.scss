@@ -170,6 +170,14 @@
     max-width: 1120px !important;
     padding-bottom: 48px;
 
+    .slick-arrow {
+        &.slick-disabled {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+    }
+
     .slick-prev,
     .slick-next {
         width: 30px;
