@@ -75,13 +75,52 @@
                     height: 50px;
                 }
 
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                    display: flex;
+                    align-items: flex-end;
+                }
+
                 &:hover {
                     opacity: .8;
+                }
+
+                span {
+                    display: inline-block;
+                    line-height: 1;
+                    color: #2D2D2D;
+                    position: relative;
+                    font-size: 19px;
+                    padding-left: 23px;
+                    margin-left: -6px;
+
+                    @media screen and (max-width: $build-header-menu-tablet) {
+                        font-size: 17px;
+                        padding-left: 17px;
+                        margin-left: -7px;
+                        top: 4px;
+                    }
+
+                    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                        top: -6px;
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        width: 2px;
+                        background: #2d2d2d;
+                        height: 80%;
+                        transform: translateY(-50%);
+                    }
                 }
             }
 
             img {
                 height: $header-logo-height;
+                display: inline-block;
+                vertical-align: bottom;
 
                 @media screen and (max-width: $build-header-menu-tablet) {
                     height: 50px;
@@ -578,6 +617,12 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
     height: 96px;
     overflow: hidden;
     font-weight: 700;
+}
+
+.dashboard .my-courses .course .details .course-title {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        margin-top: 30px !important;
+    }
 }
 
 .action-type-container a,
@@ -2624,6 +2669,10 @@ section.wiki .table.table-striped {
                             flex-direction: column;
                             justify-content: space-between;
                             width: auto;
+
+                            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                                display: block;
+                            }
                         }
 
                         .course-top-info {
@@ -5482,4 +5531,10 @@ section.outside-app {
 .banner_img {
     max-width: 100%;
     display: block;
+}
+
+.info-date-block,
+.course-date {
+    display: none !important;
+    visibility: hidden !important;
 }

@@ -60,8 +60,8 @@ site_status_msg = get_site_status_msg(course_id)
             logo_size = ''
         %>
             <img class="${logo_size}logo-en" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-            <img class="${logo_size}logo-ar" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-ar.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-        </%block>
+            <span>Home</span>
+      </%block>
       </a>
     </h1>
 
