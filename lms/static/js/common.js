@@ -39,4 +39,21 @@ $(document).ready(function () {
     });
   }
 
+  $('.slider-holder').slick({
+    infinite: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+
+  // Initialize the plugin
+  $('#pop-up').popup({
+    closebutton: true,
+    scrolllock: true,
+    transition: 'all 0.3s',
+    onopen: function () {
+      $('.slider-holder').slick('setPosition');
+    },
+  });
+
 });
