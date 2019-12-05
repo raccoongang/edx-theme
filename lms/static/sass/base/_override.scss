@@ -619,6 +619,12 @@ body .course-index .accordion .course-navigation .chapter-content-container .cha
     font-weight: 700;
 }
 
+.dashboard .my-courses .course .details .course-title {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        margin-top: 30px !important;
+    }
+}
+
 .action-type-container a,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-discussions,
 .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .toggle-cohort-management-secondary,
@@ -2663,6 +2669,10 @@ section.wiki .table.table-striped {
                             flex-direction: column;
                             justify-content: space-between;
                             width: auto;
+
+                            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                                display: block;
+                            }
                         }
 
                         .course-top-info {
