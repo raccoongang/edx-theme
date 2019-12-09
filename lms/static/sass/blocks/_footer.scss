@@ -104,6 +104,10 @@
 			font-size: 14px;
 			line-height: 1.4;
 
+			@media screen and (max-width: $build-header-menu-tablet) {
+				text-align: center;
+			}
+
 			&.last-line {
 				margin-bottom: 0;
 
