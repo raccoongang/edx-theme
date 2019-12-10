@@ -229,10 +229,15 @@ section.home {
 
 }
 
-
 .discovery-button__text {
 	width: 85%;
 	display: inline-block;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.submission-error {
+	&.logo-margin {
+		margin-top: 48px;
+	}
 }
