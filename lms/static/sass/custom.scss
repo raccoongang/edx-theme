@@ -34,6 +34,27 @@ body {
 	background: $body-bg !important;
 	position: relative;
 	line-height: 1.2;
+
+	.account-activation {
+		@media screen and (max-width: $build-header-menu-tablet) {
+			text-align: center;
+
+			.message-copy {
+				display: inline-block;
+			}
+		}
+	}
+
+	.login-register-content {
+		@media screen and (min-width: $build-header-menu-tablet) {
+			margin-top: 48px;
+
+			.submission-error {
+				padding-top: 34px;
+				text-align: center;
+			}
+		}
+	}
 }
 
 .holder,
@@ -76,6 +97,23 @@ body.view-in-course .wiki-wrapper {
 	background: none;
 	position: relative;
 	box-sizing: border-box;
+}
+
+.view-profile {
+	@media screen and (min-width: $build-header-menu-tablet) {
+		.wrapper-msg {
+			text-align: center;
+			padding-top: 42px;
+		}
+
+		.wrapper-profile-sections {
+			padding-top: 58px;
+		}
+
+		.profile-header + .wrapper-profile-sections {
+			padding-top: 0;
+		}
+	}
 }
 
 .container {
