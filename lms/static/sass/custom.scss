@@ -36,7 +36,7 @@ body {
 	line-height: 1.2;
 
 	.account-activation {
-		@media screen and (max-width: $build-header-menu-tablet) {
+		@media screen and (min-width: $build-header-menu-tablet) {
 			text-align: center;
 
 			.message-copy {
