@@ -50,3 +50,19 @@ form#login {
     visibility: hidden !important;
   }
 }
+
+.u-field {
+  &.u-field-password {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#login_form {
+  button {
+    &.forgot-password {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
