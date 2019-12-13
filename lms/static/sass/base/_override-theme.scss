@@ -50,3 +50,10 @@ form#login {
     visibility: hidden !important;
   }
 }
+
+.u-field.u-field-password,
+#login-form button.forgot-password,
+#register-form button.forgot-password {
+  display: none;
+  visibility: hidden;
+}
