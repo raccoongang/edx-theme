@@ -51,18 +51,9 @@ form#login {
   }
 }
 
-.u-field {
-  &.u-field-password {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-#login_form {
-  button {
-    &.forgot-password {
-      display: none;
-      visibility: hidden;
-    }
-  }
+.u-field.u-field-password,
+#login-form button.forgot-password,
+#register-form button.forgot-password {
+  display: none;
+  visibility: hidden;
 }
