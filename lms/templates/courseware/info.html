@@ -85,13 +85,6 @@ from openedx.features.course_experience import SHOW_REVIEWS_TOOL_FLAG
               <a href="${resume_course_url}" class="last-accessed-link">${_("Resume Course")}</a>
           </div>
         % endif
-        % if user.is_authenticated() and user.is_active:
-            <div class="page-header-secondary">
-                <a href="#" class="referral-btn last-accessed-link" data-clipboard-text="An error happened while fetching the referral link from the backend.">
-                    ${_("Copy Referral Link")}
-                </a>
-            </div>
-        % endif
       </div>
       <div class="info-wrapper">
       % if user.is_authenticated():
