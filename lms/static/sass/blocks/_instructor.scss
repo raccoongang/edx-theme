@@ -234,6 +234,15 @@
 		margin: 10px 0;
 	}
 
+	input[type="submit"],
+	input[type="button"] {
+		max-width: 100%;
+		overflow: hidden;
+		display: inline-block;
+		word-wrap: break-word;
+		white-space: normal;
+	}
+
 	.mce-btn-group button {
 		margin: 0;
 	}
@@ -244,6 +253,7 @@
 
 	ul li {
 		margin-bottom: 5px;
+		word-break: break-word;
 	}
 
 	textarea {
@@ -453,3 +463,23 @@ input[name="subject"] {
 		}
 	}
 }
+
+.open-response-assessment-block {
+    .backgrid {
+        .total,
+        .name,
+        .parent_name {
+            @media (max-width: 1200px) {
+                width: 150px;
+                white-space: normal;
+            }
+        }
+    }
+
+    .uri-cell {
+        @media (max-width: 1200px) {
+            white-space: normal;
+        }
+    }
+}
+

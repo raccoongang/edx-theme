@@ -276,6 +276,7 @@ section.discussion {
 .view-discussion-home {
 	display: block;
 	padding-left: 0;
+	word-break: break-word;
 
 	@media (max-width: 991px) {
 		.home-helpgrid,
@@ -364,3 +365,10 @@ section.discussion {
 		max-width: 100%;
 	}
 }
+
+.wmd-preview,
+.discussion-post,
+.comments {
+	word-break: break-word;
+}
+
