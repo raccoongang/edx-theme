@@ -49,6 +49,21 @@ form#login {
     display: none !important;
     visibility: hidden !important;
   }
+
+  .form-field {
+    &.email-email,
+    &.password-password,
+    &.checkbox-remember {
+      display: none !important;
+      visibility: hidden !important;
+    }
+  }
+
+  button.action,
+  .login-providers .section-title {
+    display: none !important;
+    visibility: hidden !important;
+  }
 }
 
 .u-field.u-field-password,
