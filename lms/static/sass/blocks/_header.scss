@@ -183,12 +183,20 @@
 					margin: 0 0 0 5px;
 					font-size: 14px !important;
 
+					.rtl & {
+						margin: 0 5px 0 0;
+					}
+
 					@media (max-width: $build-header-menu-tablet) {
 						margin: 0 0 0 10px;
+
+						.rtl & {
+							margin: 0 10px 0 0;
+						}
 					}
 
 					@media (max-width: $build-header-menu-mobile) {
-						margin: 0 0 10px;
+						margin: 0 0 10px !important;
 						width: 100%;
 						box-sizing: border-box;
 
@@ -228,6 +236,11 @@
 							text-transform: uppercase;
 							margin-left: 20px;
 
+							.rtl &,
+							.lang_ar & {
+								margin: 0 20px 0 0;
+							}
+
 							&:hover,
 							&:focus {
 								color: $base-color2 !important;
@@ -242,6 +255,11 @@
 								position: relative;
 								top: -2px;
 								margin-right: 5px;
+
+								.rtl &,
+								.lang_ar & {
+									margin: 0 0 0 5px;
+								}
 							}
 						}
 					}
@@ -356,6 +374,12 @@
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
 		box-sizing: border-box;
+
+		.rtl &,
+		.lang_ar & {
+			right: auto;
+			left: 15px;
+		}
 
 		@media screen and (min-width: $breakpoint-tablet) {
 			top: 32px;
@@ -689,6 +713,12 @@ section.home {
 
 						&:hover {
 							opacity: .8;
+						}
+
+						.rtl & {
+							right: auto;
+							left: 0;
+							border-right: none !important;
 						}
 					}
 				}

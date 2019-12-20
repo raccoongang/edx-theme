@@ -15,6 +15,12 @@ body.view-in-course {
 	background: $body-bg;
 }
 
+.content-wrapper .wiki .course-tabs {
+	@media screen and (min-width: $breakpoint-mobile +1) {
+		display: flex;
+	}
+}
+
 .content-wrapper .course-tabs {
 	overflow-x: auto !important;
 
@@ -390,6 +396,18 @@ section.tool-wrapper {
 
 	.wrapper-search-context .search-status-label {
 		word-break: break-word;
+	}
+}
+
+.course-outline #course-outline-block-tree .accordion-trigger {
+	.fa {
+		.rtl & {
+			transform: rotate(180deg);
+		}
+	}
+
+	.fa-rotate-90 {
+		transform: rotate(90deg) !important;
 	}
 }
 

@@ -18,4 +18,9 @@ select:not(.forum-nav-filter-main-control):not(.forum-nav-sort-control),
     &::-ms-expand {
         display: none;
     }
+
+    .rtl & {
+        background-position: 0 50% !important;
+        padding: 0 10px 0 30px !important;
+    }
 }
