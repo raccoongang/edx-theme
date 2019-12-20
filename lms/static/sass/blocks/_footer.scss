@@ -146,6 +146,13 @@
 		a {
 			float: right;
 
+			@media screen and (min-width: $build-footer-mobile + 1) {
+				.rtl &,
+				.lang_ar & {
+					float: left;
+				}
+			}
+
 			@media screen and (max-width: $build-footer-mobile) {
 				float: none;
 				display: inline-block;

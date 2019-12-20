@@ -1,3 +1,11 @@
+body.view-wiki.lang_ar {
+	text-align: start;
+
+	h1, h2, h3, h4, h5, h6, p, label {
+		text-align: start;
+	}
+}
+
 .paragon__alert-warning {
 	border-bottom: 1px solid #c8c8c8;
 }
@@ -207,6 +215,12 @@
 	&:hover,
 	&:focus {
 		color: $links-color-hover;
+	}
+
+	.icon {
+		.lang_ar & {
+			float: right;
+		}
 	}
 }
 
