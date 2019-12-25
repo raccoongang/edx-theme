@@ -10,17 +10,17 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
+
       <header>
-        <video autoplay muted loop poster="/static/${settings.FEATURES.get('DS4_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/background.jpg" class="video-bg">
-          <source src="/static/${settings.FEATURES.get('DS4_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/video-bg.mp4" type="video/mp4">
-        </video>
+        <div class="parallax-img"></div>
         <div class="outer-wrapper">
           <div class="title">
             <div class="heading-group">
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-              <h1>Онлайн платформа дієвого навчання&nbsp;та профорієнтації</h1>
+                <h1>${_("Africa's trusted source for online learning")}</h1>
+                ## <span>${_("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor")}</span>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
