@@ -1,4 +1,3 @@
-<%page expression_filter="h"/>
 <%! from django.utils.translation import ugettext as _ %>
 <%namespace name='static' file='../static_content.html'/>
 <%
@@ -8,16 +7,13 @@ course_mode_class = course_mode if course_mode else ''
 <div class="certificate-wrapper">
     <img class="main-bg" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg.svg">
     <div class="certificate-body">
-        <img class="certificate-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/cert-logo.svg">
+        <img class="certificate-logo" src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.svg">
         <div class="ribbon">
             <span class="ribbon-text">
                 <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/dot.png">
-                <svg class="certificate-dot" viewBox="0 0 400 60">
-                    <use xlink:href="#certificate-dot" />
-                </svg>
-                <b>${_('Certificate')}</b>
+                <b>${_("Certificate")}</b>
             </span>
-            <strong class="general-text">${_('This certificate is proudly presented to')}</strong>
+            <strong class="general-text">${_("This certificate is proudly presented to")}</strong>
         </div>
         <div class="inner">
             <strong class="user-name">${accomplishment_copy_name or accomplishment_copy_username}</strong>
@@ -27,7 +23,7 @@ course_mode_class = course_mode if course_mode else ''
         <div class="certificate-bottom">
             <div class="date">
                 <strong>${certificate_date_issued}</strong>
-                <span>${_('Date')}</span>
+                <span>${_("Date")}</span>
             </div>
             <div class="medal">
                 <img src="/static/${settings.FEATURES.get('DEMO_KTHPLUS_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/medal.svg">

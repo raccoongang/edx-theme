@@ -1,0 +1,91 @@
+.profile-wrapper .course-info>.chapters>section {
+    @media screen and (max-width: 760px) {
+      display: block;
+    }
+
+    .hd,
+    .sections {
+        @media screen and (max-width: 760px) {
+            width: 100%;
+            padding-right: 0;
+            display: block;
+            border-right: none;
+        }
+    }
+
+    .sections>div .scores {
+        dt {
+            @media screen and (max-width: 760px) {
+                width: 100%;
+            }
+        }
+
+        dd {
+            @media screen and (max-width: 760px) {
+                margin-right: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.progress-certificates-title {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+.wrapper-msg.wrapper-auto-cert .auto-cert-message {
+    border-left-color: $base-color;
+
+    .has-actions .msg-actions .btn {
+        font-size: 13px;
+        text-transform: none;
+    }
+
+    .has-actions {
+        .msg-content {
+            @media screen and (max-width:650px) {
+                width: 100%;
+            }
+        }
+
+        .msg-actions {
+            @media screen and (max-width:650px) {
+                width: 100%;
+                text-align: left;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn {
+    text-transform: none;
+}
+
+.profile-wrapper #course-info-progress {
+    > .chapters > section {
+        display: flex;
+
+        .sections>div .hd.hd-4 {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .wrap-instructor-info {
+        @media (max-width: 767px) {
+            display: block;
+            margin-bottom: 5px;
+
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+// profile page
+
+.view-profile .window-wrap,
+.view-profile .content-wrapper {
+	background: none;
+}
+
+.view-profile .profile-self .wrapper-profile-field-account-privacy {
+	padding: 0;
+	display: block;
+
+	.u-field {
+		padding: 15px;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.u-field-title {
+		line-height: 30px;
+	}
+
+	.u-field-account_privacy .btn-change-privacy {
+		padding: 8px 20px;
+	}
+}
+
+.view-profile {
+	.profile-header {
+		padding: 15px;
+		max-width: 1200px;
+		margin: 0 auto;
+		display: block;
+		box-sizing: border-box;
+	}
+
+	.wrapper-profile-sections {
+		padding: 15px;
+		max-width: 1200px;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+
+	.wrapper-profile-section-container-one .wrapper-profile-section-one {
+		border: 2px solid $base-color;
+	}
+
+	.wrapper-profile-section-container-two .u-field-value {
+		word-break: break-all;
+	}
+
+	#u-field-value-username {
+		white-space: nowrap;
+		max-width: 100%;
+		width: auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+// account page
+
+.account-settings-sections .section {
+	margin: 0;
+
+	.account-settings-section-body .u-field .field select {
+		height: 48px;
+	}
+}

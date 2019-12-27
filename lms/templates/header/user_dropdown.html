@@ -16,18 +16,18 @@ from openedx.features.enterprise_support.utils import get_enterprise_learner_gen
 self.real_user = getattr(user, 'real_user', user)
 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
 username = self.real_user.username
-resume_block = retrieve_last_sitewide_block_completed(self.real_user)
+resume_block = retrieve_last_sitewide_block_completed(username)
 displayname = get_enterprise_learner_generic_name(request) or username
 %>
 
-<div class="nav-item hidden-mobile">
+<div class="nav-item">
     <a href="${reverse('dashboard')}" class="menu-title">
         <img class="user-image-frame" src="${profile_image_url}" alt="">
         <span class="sr-only">${_("Dashboard for:")}</span>
         <span class="username">${displayname}</span>
     </a>
 </div>
-<div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
+<div class="nav-item nav-item-dropdown" tabindex="-1">
     <div class="toggle-user-dropdown" role="button" aria-label=${_("Options Menu")} aria-expanded="false" tabindex="0" aria-controls="user-menu">
         <span class="fa fa-caret-down" aria-hidden="true"></span>
     </div>
