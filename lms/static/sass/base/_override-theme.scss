@@ -60,3 +60,26 @@
         }
     }
 }
+
+//hide register fields
+
+@mixin visibility-hide {
+    visibility: hidden;
+    height: 0;
+}
+
+.view-register .register form .instructions,
+.action.action-primary.action-update.register-button,
+.group.group-form.group-form-requiredinformation {
+    @include visibility-hide;
+}
+
+.group.group-form.group-form-requiredinformation {
+    padding: 0;
+}
+
+//centered sign up btn
+
+.register .form-actions.form-third-party-auth {
+    text-align: center;
+}
