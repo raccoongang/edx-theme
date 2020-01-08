@@ -26,5 +26,10 @@
         img {
             margin: 0 0 12px;
         }
+        &.passed {
+            pointer-events: none;
+            opacity: .4;
+            cursor: default;
+        }
     }
 }
