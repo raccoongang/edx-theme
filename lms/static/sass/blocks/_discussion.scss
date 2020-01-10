@@ -276,6 +276,7 @@ section.discussion {
 .view-discussion-home {
 	display: block;
 	padding-left: 0;
+	word-break: break-word;
 
 	@media (max-width: 991px) {
 		.home-helpgrid,
@@ -363,4 +364,16 @@ section.discussion {
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 		max-width: 100%;
 	}
+}
+
+.wmd-preview,
+.discussion-post,
+.comments {
+	word-break: break-word;
+}
+
+.forum-nav-thread-title {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
