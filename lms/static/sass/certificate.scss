@@ -127,7 +127,7 @@ a.action {
     }
 
     .accomplishment-main {
-        background: rgba(79, 88, 92, 0.1) !important;
+        background: rgba(79, 88, 92, .1) !important;
 
         @media print {
             background: none !important;
@@ -151,20 +151,20 @@ a.action {
             flex-wrap: nowrap;
             align-items: center;
             min-height: 152px;
-            margin: 0;
+            margin: -152px 0 0 !important;
             padding: 22px 16px 16px;
             text-align: left;
             background: transparent;
-            margin-top: -152px;
             width: 100%;
 
             @media print {
                 min-height: 120px;
-                margin-top: -120px;
+                margin-top: -120px !important;
             }
         }
 
         .accomplishment-type-symbol {
+            display: block !important;
             width: 70%;
             max-height: 80px;
             margin: 0 auto 0 0;
@@ -388,6 +388,10 @@ a.action {
     }
 
     .wrapper-accomplishment-metadata {
+        @media print {
+            display: none;
+        }
+
         .accomplishment-metadata-title {
             border-bottom-color: #ced8dc;
             font-size: 0.875rem;
@@ -426,6 +430,23 @@ a.action {
                     font-size: 0.75rem;
                     line-height: 1.5;
                 }
+            }
+        }
+    }
+
+    .certificate-bottom {
+        display: none;
+
+        @media print {
+            display: block;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            color: #424141;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+
+            .certificate-bottom-value {
+                font-weight: 600;
             }
         }
     }

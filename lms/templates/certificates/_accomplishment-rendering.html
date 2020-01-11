@@ -15,18 +15,14 @@ course_mode_class = course_mode if course_mode else ''
                 </div>
 
                 <span class="accomplishment-type-label hd-4">
-                    <div class="accomplishment-type-label-name">
-                        ${_("Certificate")}
-                    </div>
-                    <div class="accomplishment-type-label-date">
-                        Bиданий 30.9.19 <!-- ToDo: add translation and remove hardcode for date -->
-                    </div>
+                    <div class="accomplishment-type-label-name">${_("Certificate")}</div>
+                    <div class="accomplishment-type-label-date">Bиданий ${certificate_date_issued_digits}</div>
                 </span>
             </div>
 
             <div class="wrapper-statement-and-signatories">
                 <div class="accomplishment-statement">
-                    <p>Цей сертифiкат засвiдчує, що</p> <!-- ToDo: add translation -->
+                    <p>Цей сертифiкат засвiдчує, що</p>
                     <p class="accomplishment-recipient hd-1 emphasized">
                         ${accomplishment_copy_name or accomplishment_copy_username}
                     </p>
@@ -56,6 +52,11 @@ course_mode_class = course_mode if course_mode else ''
                     </div>
                 </div>
                 % endif
+
+                <div class="certificate-bottom">
+                    <span class="certificate-bottom-title">${certificate_id_number_title}:</span>
+                    <span class="certificate-bottom-value">${certificate_id_number}</span>
+                </div>
             </div>
 
         </div>
