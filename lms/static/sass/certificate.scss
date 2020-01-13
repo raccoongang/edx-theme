@@ -1,7 +1,8 @@
 @import "const";
+@import "blocks/fonts";
 
 *:not(.fa):not(.glyphicon):not([class*='sorting']):not([class*="icon-cc"]) {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-family: $general-font-family !important;
 }
 
 @media print and (color) {
@@ -178,6 +179,7 @@ a.action {
                 display: inline-block;
                 width: auto;
                 max-width: 30%;
+                max-height: 100%;
                 margin: 0 1.3%;
 
                 @media print {
@@ -205,7 +207,7 @@ a.action {
         }
 
         .accomplishment-type-label-date {
-            font-size: 26px;
+            font-size: 22px;
             line-height: 30px;
             font-style: italic;
             font-weight: normal;
@@ -333,6 +335,8 @@ a.action {
                 margin-bottom: 26px;
                 color: #014289;
                 margin-left: 0;
+                padding-left: 58px;
+                position: relative;
 
                 @media print {
                     font-size: 32px;
@@ -384,6 +388,12 @@ a.action {
                         }
                     }
                 }
+            }
+
+            &.hd-1:before {
+                position: absolute;
+                left: 0;
+                top: 10px;
             }
         }
     }
