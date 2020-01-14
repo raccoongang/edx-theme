@@ -110,7 +110,7 @@ from openedx.core.lib.courses import course_image_url
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
 
-<section class="course-info">
+<section class="course-info course-info--mama">
   <header class="course-profile">
     <div class="intro-inner-wrapper">
       <div class="table">
@@ -129,7 +129,20 @@ from openedx.core.lib.courses import course_image_url
             <p class="intro__text">${get_course_about_section(request, course, 'short_description')}</p>
           </h3>
         </div>
-
+        <ul class="course-info-list">
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Когда</span>
+            <p class="course-info-list__title">12 ноября-13 января</p>
+          </li>
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Формат обучения</span>
+            <p class="course-info-list__title">вебинары по вечерам практика</p>
+          </li>
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Уровень</span>
+            <p class="course-info-list__title">с нуля</p>
+          </li>
+        </ul>
         <div class="main-cta">
         %if user.is_authenticated() and registered:
           %if show_courseware_link:
@@ -182,9 +195,10 @@ from openedx.core.lib.courses import course_image_url
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="${href_class}">
+          <!-- <a href="${reg_href}" class="${href_class}">
             Записаться
-          </a>
+          </a> -->
+
           <div id="register_error"></div>
         %endif
         </div>
@@ -314,15 +328,79 @@ from openedx.core.lib.courses import course_image_url
     %endif
 
     <div class="details">
+      <!-- <div class="remove-this-div">
       % if staff_access and studio_url is not None:
         <div class="wrap-instructor-info studio-view">
           <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
         </div>
       % endif
+      </div> -->
 
-      <div class="inner-wrapper">
+      <!-- <div class="inner-wrapper">
         ${get_course_about_section(request, course, "overview")}
-      </div>
+      </div> -->
+      <ul class="course-about-list">
+        <li class="course-about-list__item">
+          <div class="course-about-list__title">
+            <img src="/static/edx-theme/images/course-about-1.svg" alt="">
+            <span>Работать с ценностями бренда</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+          </p>
+        </li>
+        <!-- 2 -->
+        <li class="course-about-list__item">
+          <div class="course-about-list__title">
+            <img src="/static/edx-theme/images/course-about-2.svg" alt="">
+            <span>Правильно общаться</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+          </p>
+        </li>
+        <!-- 3 -->
+        <li class="course-about-list__item">
+          <div class="course-about-list__title">
+            <img src="/static/edx-theme/images/course-about-3.svg" alt="">
+            <span>Проводить мероприятия</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+          </p>
+        </li>
+        <!-- 4 -->
+        <li class="course-about-list__item">
+          <div class="course-about-list__title">
+            <img src="/static/edx-theme/images/course-about-4.svg" alt="">
+            <span>Оценивать результат</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+          </p>
+        </li>
+        <!-- 5 -->
+        <li class="course-about-list__item">
+          <div class="course-about-list__title">
+            <img src="/static/edx-theme/images/course-about-5.svg" alt="">
+            <span>Вовлекать аудиторию</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+          </p>
+        </li>
+        <!-- 6 -->
+        <li class="course-about-list__item">
+          <div class="course-about-list__title">
+            <img src="/static/edx-theme/images/course-about-6.svg" alt="">
+            <span>Формировать ядро общества</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+          </p>
+        </li>
+      </ul>
+
   </div>
 
     

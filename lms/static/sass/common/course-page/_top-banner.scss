@@ -1,0 +1,46 @@
+// remove this
+.course-info header.course-profile .intro-inner-wrapper .media{
+    display: none;
+}
+// remove this end
+.course-info {
+    &--mama {
+        header{
+            &.course-profile {
+                background: $gradient6;
+                .intro-inner-wrapper {
+                    .intro{
+                        width: 100%;
+                        padding-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+.course-info-list {
+    display: flex;
+    list-style: none;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+    &__item {
+        flex-grow: 1;
+        font-family: 'Artegra Sans';
+        color: #FFF;
+        margin-right: 36px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__sub-title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 19px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
