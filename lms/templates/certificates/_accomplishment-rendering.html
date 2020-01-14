@@ -24,13 +24,13 @@ course_mode_class = course_mode if course_mode else ''
 
                 <span class="accomplishment-type-label hd-4">
                     <div class="accomplishment-type-label-name">${_("Certificate")}</div>
-                    <div class="accomplishment-type-label-date">Bиданий ${certificate_date_issued_digits}</div>
+                    <div class="accomplishment-type-label-date">${_("Issued on")} ${certificate_date_issued}</div>
                 </span>
             </div>
 
             <div class="wrapper-statement-and-signatories">
                 <div class="accomplishment-statement">
-                    <p>Цей сертифiкат засвiдчує, що</p>
+                    <p>${_("This certificate certifies that")}</p>
                     <p class="accomplishment-recipient hd-1 emphasized">
                         ${accomplishment_copy_name or accomplishment_copy_username}
                     </p>
