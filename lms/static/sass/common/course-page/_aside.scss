@@ -1,0 +1,119 @@
+.course-sidebar{
+    &--mama{
+        position: relative;
+    }
+}
+.course-info {
+    .course-sidebar {
+        &--mama{
+            .important-dates {
+                width: 100%;
+                padding: 0 22px;
+                order: 0;
+                box-sizing: border-box;
+                li{
+                    margin-right: 0;
+                    .important-dates-item-title, .important-dates-item-text{
+                        color: #FFF;
+                        font-family: 'Artegra Sans';
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    .icon{
+                        display: none;
+                    }
+                }
+                .important-dates-item{
+                    justify-content: space-between;
+                }
+            }
+            .course-sign-up-terms{
+                display: flex;
+                justify-content: center;
+                margin: 30px 0 20px;
+                span{
+                    display: block;
+                    font-family: 'Artegra Sans';
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    margin-right: 6px;
+                }
+                img{
+                    flex: none;
+                }
+            }
+            .course-sign-up-video-text{
+                span{
+                    display: block;
+                    text-align: center;
+                    font-family: 'Artegra Sans';
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #FFFFFF;
+                    padding: 17px 7px 5px;
+                }
+            }
+            .course-sign-up-video{
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
+                width: 270px;
+                height: 152px;
+            }
+            .course-sign-up-button{
+                position: relative;
+                padding-bottom: 32px;
+                margin: 0 22px 13px;
+                &:before{
+                    content: '';
+                    display: block;
+                    background-color: #BDBDBD;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 132px;
+                    height: 1px;
+                }
+                a{
+                    font-family: 'Artegra Sans';
+                    font-weight: 600;
+                    font-size: 16px;
+                    background: linear-gradient(289.35deg, #392765 0%, #009688 100%);
+                    border-radius: 46px;
+                    padding: 16px 10px;
+                    text-align: center;
+                    color: #FFF;
+                    display: block;
+                }
+            }
+            .course-sign-up-program{
+                margin: 0 22px;
+                a{
+                    color: #FFFFFF;
+                    font-family: 'Artegra Sans';
+                    font-weight: 600;
+                    font-size: 16px;
+                    border-radius: 24px;
+                    border: 1px solid #019789;
+                    padding: 16px 10px;
+                    text-align: center;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.course-summary{
+    &--aside{
+        position: absolute;
+        top: -233px;
+        right: 0;
+        background-color: #673AB7;
+        border-radius: 24px;
+        width: 270px;
+        flex-direction: column;
+        padding-bottom: 45px;
+    }
+}

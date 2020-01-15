@@ -1,0 +1,31 @@
+.course-teacher-persone{
+    display: flex;
+    &__image{
+        flex: none;
+        width: 170px;
+        height: 170px;
+        margin-right: 30px;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    &__name{
+        color: #392765;
+        font-family: 'Artegra Sans';
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 25px;
+    }
+    &__content{
+        p{
+            color: #000000;
+            font-family: 'Artegra Sans';
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

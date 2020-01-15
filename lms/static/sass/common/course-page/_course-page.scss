@@ -1,6 +1,30 @@
+.course-info {
+    .course-sidebar{
+        > section.course-page-section{
+            box-shadow: none;
+            border: 0;
+        }
+    }
+}
+.course-page-section{
+    max-width: 870px;
+    margin-bottom: 86px;
+    li{
+        margin-bottom: 0;
+    }
+    h2, .h2{
+        font-family: 'Artegra Sans';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: #673AB7;
+        margin-bottom: 45px;
+    }
+}
 @import "about";
 @import "how-to";
 @import "program";
 @import "result";
 @import "top-banner";
-
+@import "teacher";
+@import "aside";

@@ -1,0 +1,41 @@
+.course-result-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    &__item{
+        width: 33.3333%;
+        position: relative;
+        height: 100%;
+        flex-grow: 1;
+        &:nth-child(1){
+            background-color: #009688;
+        }
+        &:nth-child(2){
+            background-color: #FE9800;
+            z-index: 1;
+            margin: 70px 0 0 -40px;
+        }
+        &:nth-child(3){
+            background-color: #673AB7;
+            z-index: 2;
+            margin: 0 0 0 -40px;
+        }
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        padding: 24px 25px;
+        box-sizing: border-box;
+    }
+    &__image{
+        flex: none;
+        margin-right: 27px;
+    }
+    &__text{
+        font-family: 'Artegra Sans';
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFF;
+    }
+}
