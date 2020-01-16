@@ -2,7 +2,7 @@
     position: relative;
 }
 .header__holder {
-    padding: 18px 0;
+    padding: 8px 0;
     max-width: $desktop-size;
     margin: 0 auto;
     display: flex;
@@ -37,6 +37,8 @@ a.header__logo,
     display: flex;
     align-items: center;
     transition: transform .2s;
+    width: 70px;
+    height: 72px;
 
     &:hover {
         color: #fff;
