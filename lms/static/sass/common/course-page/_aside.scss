@@ -14,7 +14,7 @@
                 li{
                     margin-right: 0;
                     .important-dates-item-title, .important-dates-item-text{
-                        color: #FFF;
+                        color: $white;
                         font-family: 'Artegra Sans';
                         font-weight: 600;
                         font-size: 16px;
@@ -37,7 +37,7 @@
                     font-family: 'Artegra Sans';
                     font-size: 16px;
                     line-height: 24px;
-                    color: #FFFFFF;
+                    color: $white;
                     margin-right: 6px;
                 }
                 img{
@@ -51,7 +51,7 @@
                     font-family: 'Artegra Sans';
                     font-size: 12px;
                     line-height: 18px;
-                    color: #FFFFFF;
+                    color: $white;
                     padding: 17px 7px 5px;
                 }
             }
@@ -80,18 +80,18 @@
                     font-family: 'Artegra Sans';
                     font-weight: 600;
                     font-size: 16px;
-                    background: linear-gradient(289.35deg, #392765 0%, #009688 100%);
+                    background: linear-gradient(289.35deg, $violet-dark 0%, $green 100%);
                     border-radius: 46px;
                     padding: 16px 10px;
                     text-align: center;
-                    color: #FFF;
+                    color: $white;
                     display: block;
                 }
             }
             .course-sign-up-program{
                 margin: 0 22px;
                 a{
-                    color: #FFFFFF;
+                    color: $white;
                     font-family: 'Artegra Sans';
                     font-weight: 600;
                     font-size: 16px;
@@ -110,7 +110,7 @@
         position: absolute;
         top: -233px;
         right: 0;
-        background-color: #673AB7;
+        background-color: $violet;
         border-radius: 24px;
         width: 270px;
         flex-direction: column;

@@ -9,15 +9,15 @@
         height: 100%;
         flex-grow: 1;
         &:nth-child(1){
-            background-color: #009688;
+            background-color: $green;
         }
         &:nth-child(2){
-            background-color: #FE9800;
+            background-color: $orange;
             z-index: 1;
             margin: 70px 0 0 -40px;
         }
         &:nth-child(3){
-            background-color: #673AB7;
+            background-color: $violet;
             z-index: 2;
             margin: 0 0 0 -40px;
         }
@@ -36,6 +36,6 @@
         font-family: 'Artegra Sans';
         font-size: 16px;
         line-height: 24px;
-        color: #FFF;
+        color: $white;
     }
 }

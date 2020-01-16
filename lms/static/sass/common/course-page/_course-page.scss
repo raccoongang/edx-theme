@@ -1,3 +1,12 @@
+@import "vars";
+@import "about";
+@import "how-to";
+@import "program";
+@import "result";
+@import "top-banner";
+@import "teacher";
+@import "aside";
+
 .course-info {
     .course-sidebar{
         > section.course-page-section{
@@ -17,14 +26,7 @@
         font-weight: 700;
         font-size: 30px;
         line-height: 36px;
-        color: #673AB7;
+        color: $violet;
         margin-bottom: 45px;
     }
 }
-@import "about";
-@import "how-to";
-@import "program";
-@import "result";
-@import "top-banner";
-@import "teacher";
-@import "aside";

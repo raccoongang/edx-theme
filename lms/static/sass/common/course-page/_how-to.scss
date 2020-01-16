@@ -16,8 +16,8 @@
         box-sizing: border-box;
         &:nth-child(1){
             #{$c}__number{
-                border: 0.2px solid #009688;
-                color: #009688;
+                border: 0.2px solid $green;
+                color: $green;
                 &:before{
                     background-image: url('../images/course-how-to-arrow-green.svg');
                 }
@@ -25,8 +25,8 @@
         }
         &:nth-child(2){
             #{$c}__number{
-                border: 0.2px solid #673AB7;
-                color: #673AB7;
+                border: 0.2px solid $violet;
+                color: $violet;
                 &:before{
                     background-image: url('../images/course-how-to-arrow-violet.svg');
                 }
@@ -34,8 +34,8 @@
         }
         &:nth-child(3){
             #{$c}__number{
-                border: 0.2px solid #FE9800;
-                color: #FE9800;
+                border: 0.2px solid $orange;
+                color: $orange;
             }
         }
     }
@@ -75,6 +75,6 @@
         font-family: 'Artegra Sans';
         font-size: 16px;
         line-height: 24px;
-        color: #000000;
+        color: $black;
     }
 }
