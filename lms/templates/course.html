@@ -13,7 +13,7 @@ from courseware.courses import get_course
         <img src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
         <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
       </div>
-    </header>
+    </header> 
     <div class="course-info" aria-hidden="true">
       <h2 class="course-name">
         <!-- <span class="course-organization">${course.display_org_with_default}</span>
@@ -40,9 +40,21 @@ from courseware.courses import get_course
           course_date_string = ''
       %>
       % if course.advertised_start is not None:
-          <div class="course-date" aria-hidden="true"><mark><span class="icon fa fa-calendar" aria-hidden="true"></span> ${_("Starts")}:</mark> ${course.advertised_start}</div>
+          <div class="course-date" aria-hidden="true">
+            <mark>
+              <span class="icon fa fa-calendar" aria-hidden="true"></span> 
+                ${_("Starts")}:
+            </mark> 
+            ${course.advertised_start}
+          </div>
       % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate"><mark><span class="icon fa fa-calendar" aria-hidden="true"></span> ${_("Course starts: ")}</mark>${course_date_string_format}</div>
+          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate">
+            <mark>
+              <span class="icon fa fa-calendar" aria-hidden="true"></span> 
+                ## ${_("Course starts: ")}
+            </mark>
+            ${course_date_string_format}
+          </div>
           <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
       % endif
     </div>

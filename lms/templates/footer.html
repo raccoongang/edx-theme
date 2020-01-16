@@ -18,15 +18,64 @@
         dir=${bidi}
       % endif
     >
-      <div class="colophon">
+      <div class="footer-top">
+        <div class="footer-top__logo">
+          <a class="footer-top__link" href=""></a>
+        </div>
+        <div class="footer-top__subscribe-text">
+          Хотите знать больше?
+          <span>Подпишитесь на наши новости</span>
+        </div>
+        <div class="footer-top__subscribe">
+          <form>
+            <div class="footer-subscribe-form">
+              <input class="footer-subscribe-form__input" type="text">
+              <button class="footer-subscribe-form__btn">Подписаться</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="colophon footer-content">
+        <div class="footer-content__copy">
+          &copy; 2010 — 2020
+          <a href="">Условия пользования сервисом</a>
+        </div>
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
               <li><a href="/courses">Курсы</a></li>
               <li><a href="/about">О проекте</a></li>
               <li><a href="/honor">Пользовательское соглашение</a></li>
+              <li><a href="">Корпоративное обучение</a></li>
+              <li><a href="">Каталоог курсов</a></li>
+              <li><a href="">Корпоративное обучение</a></li>
+              <li><a href="">Программы лояльности</a></li>
+              <li><a href="">Каталог профессий</a></li>
+              <li><a href="">Наши партнеры</a></li>
+              <li><a href="">Стать преподавателем</a></li>
           </ol>
         </nav>
-
+        <div class="footer-socials">
+            <ul class="footer-socials-list">
+              <li><a href=""><img src="/static/${settings.DEFAULT_SITE_THEME}/images/entypo-social_facebook-with-circle.svg" alt=""></a></li>
+              <li><a href=""><img src="/static/${settings.DEFAULT_SITE_THEME}/images/entypo-social_vk-with-circle.svg" alt=""></a></li>
+              <li><a href=""><img src="/static/${settings.DEFAULT_SITE_THEME}/images/entypo-social_skype-with-circle.svg" alt=""></a></li>
+              <li><a href=""><img src="/static/${settings.DEFAULT_SITE_THEME}/images/entypo-social_youtube-with-circle.svg" alt=""></a></li>
+            </ul>
+            <ul class="footer-socials-channels">
+              <li>
+                  <a href="">
+                    <img src="/static/${settings.DEFAULT_SITE_THEME}/images/fa-brands_telegram.svg" alt="">
+                    <span>канал в telegram</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                    <img src="/static/${settings.DEFAULT_SITE_THEME}/images/fa-brands_telegram.svg" alt="">
+                    <span>чат в telegram</span>
+                  </a>
+              </li>
+            </ul>
+        </div>
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
         % endif
