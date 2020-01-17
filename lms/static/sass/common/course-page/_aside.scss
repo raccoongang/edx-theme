@@ -1,4 +1,5 @@
 .course-sidebar{
+    width: 270px;
     &--mama{
         position: relative;
     }
@@ -107,8 +108,8 @@
 }
 .course-summary{
     &--aside{
-        position: absolute;
-        top: -233px;
+        position: sticky;
+        top: 120px;
         right: 0;
         background-color: $violet;
         border-radius: 24px;

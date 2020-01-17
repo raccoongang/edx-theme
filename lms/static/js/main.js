@@ -80,6 +80,14 @@ $(document).ready(function () {
         $('.course-program-list__content').not($answer).slideUp(400).parent().removeClass('is-open');
         $answer.slideToggle(400).parent().toggleClass('is-open');
     });
+
+    // course page about anchor
+    $(".js-anchor").on("click", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top + 20;
+        $('body,html').animate({scrollTop: top}, 700);
+    });
 });
 
 
