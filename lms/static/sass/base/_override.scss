@@ -18,9 +18,13 @@
     padding: 20px;
     overflow: hidden;
     position: relative;
-
+    a{
+        &:hover, &:active{
+            border-bottom: 0;
+        }
+    }
     @media (min-width: 1200px) {
-        padding: 20px 0;
+        padding: 40px 0 20px;
     }
 }
 
@@ -38,6 +42,7 @@
     color: #000;
     font-size: 10px;
     text-align: center;
+
     @media (min-width: $mobile-size) {
         text-align: left;
         font-size: 14px;
@@ -338,16 +343,6 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         height: auto;
     }
 
-    &:after {
-        content: '';
-        height: 3px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: $gradient2;
-    }
-
     &:before {
         height: 328px;
 
@@ -407,10 +402,11 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     }
 }
 
-// footer redisign
+// footer redesign
 .footer-top{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 48px;
     &__link{
         background-image: url('../images/footer-logo.svg');
         background-repeat: no-repeat;
@@ -431,9 +427,6 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
             font-weight: 400;
         }
     }
-    &__subscribe{
-
-    }
 }
 
 .footer-subscribe-form{
@@ -445,11 +438,16 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         border-radius: 46px;
         background-color: #fff;
         font-family: 'Artegra Sans' !important;
-        font-style: 400;
+        font-weight: 400;
         font-size: 16px;
-        padding: 12px 25px;
+        font-style: normal;
+        padding: 2px 25px;
+        height: 48px;
+        min-width: 370px;
         margin-right: 40px;
         box-shadow: none;
+        box-sizing: border-box;
+        outline: none;
     }
     &__btn{
         background: $theme-header-btn-color;
@@ -464,47 +462,68 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         border: 0;
         text-shadow: none;
         text-transform: none;
+        box-shadow: none;
         &:hover{
-            background: #673AB7;
+            background: #673AB7 !important;
+        }
+    }
+}
+
+.wrapper-footer {
+    background: #2D2443;
+    footer#footer-openedx {
+        .colophon {
+            margin-right: 0;
+            display: flex;
+            justify-content: space-between;
+            .nav-colophon{
+                max-width: 500px;
+                ol{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -15px 15px;
+                    li{
+                        width: 50%;
+                        padding: 0 15px;
+                        box-sizing: border-box;
+                        float: none;
+                        margin-right: 0;
+                        a{
+                            font-family: 'Artegra Sans' !important;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 24px;
+                            &:hover{
+                                color: #009688;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 .footer-content {
-    margin-right: 0;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 0;
+    margin-bottom: 100px;
     &__copy{
         font-family: 'Artegra Sans' !important;
         font-size: 12px;
         line-height: 18px;
         color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        margin: auto 0;
         a{
-            color: #FFFFFF;
-
-        }
-    }
-    .nav-colophon{
-        ol{
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px 15px;
-            li{
-                width: 50%;
-                padding: 0 15px;
-                float: none;
-                margin-right: 0;
-                a{
-                    font-family: 'Artegra Sans';
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 24px;
-                    &:hover{
-                        color: #009688;
-                    }
-                }
+            color: #FFFFFF !important;
+            display: block;
+            border-bottom: 0;
+            margin-top: 6px;
+            &:hover{
+                text-decoration: underline;
+                color: $theme-header-btn-color !important;
             }
+
         }
     }
 }
@@ -519,6 +538,20 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         &:last-child{
             margin-right: 0;
         }
+        .svg-icon{
+            width: 24px;
+            height: 24px;
+            fill: #FFFFFF;
+            transition: all 200ms ease;
+            &:hover{
+                fill: $theme-header-btn-color;
+            }
+        }
+        a{
+            &:hover{
+                border-bottom: 0;
+            }
+        }
     }
 }
 
@@ -527,10 +560,32 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     margin: 0;
     list-style: none;
     li{
-        display: flex;
-        align-items: center;
-        img{
+        margin-bottom: 25px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            &:hover{
+                border-bottom: 0;
+                span{
+                    color: $theme-header-btn-color;
+                }
+                .svg-icon{
+                    fill: $theme-header-btn-color;
+                }
+            }
+        }
+        .svg-icon{
             flex: none;
+            width: 24px;
+            height: 24px;
+            fill: #FFFFFF;
+            transition: all 200ms ease;
+            &:hover{
+                fill: $theme-header-btn-color;
+            }
         }
         span{
             display: block;
@@ -538,6 +593,8 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
             font-size: 16px;
             line-height: 24px;
             color: #FFFFFF;
+            margin-left: 10px;
+            transition: all 200ms ease;
         }
     }
 }
@@ -553,22 +610,47 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 }
 
 .highlighted-courses .courses .course a {
-    padding-bottom: 76px;
+    padding-bottom: 24px;
+    overflow: hidden;
 }
 
 .courses-container .courses .course .course-info {
     height: auto;
     background: #fff;
-    padding: 30px 100px;
+    padding: 30px 100px 0;
 }
 
 .courses-container .courses .course {
     border-bottom: none;
     border-radius: 46px;
-    overflow: hidden;
     margin-bottom: 0;
-    height: 100%;
     background: #fff;
+    border: 0;
+    position: relative;
+    z-index: 1;
+    a{
+        border-radius: 46px;
+    }
+    &:before,
+    &:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 10px;
+        left: 0;
+        width: 50%;
+        top: 80%;
+        max-width: 300px;
+        background: rgba(178, 223, 219, .9);
+        box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
+        transform: rotate(-3deg);
+        border-radius: 46px;
+    }
+    &:after{
+        transform: rotate(3deg);
+        right: 0;
+        left: auto;
+    }
     .course-info {
         .course-code,
         .course-organization {
@@ -2535,11 +2617,12 @@ body.menu-open {
 }
 .theme-footer_holder {
     position: relative;
-    padding: 0 20px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
-
+    .svg-icon{
+        margin-left: 11px;
+    }
     @media (max-width: $tablet-size) {
         flex-direction: column;
         align-items: center;
@@ -2551,11 +2634,14 @@ body.menu-open {
     color: #fff !important;
     display: flex;
     font-size: 12px;
-    line-height: 1.2px;
+    font-family: 'Artegra Sans' !important;
 }
 
-.theme-footer_holder .footer-support a:first-of-type {
-    margin-right: 15px;
+.theme-footer_holder .footer-support a {
+    margin-right: 33px;
+    &:last-child{
+        margin-right: 0;
+    }
 }
 
 body footer .raccoon__logo {
@@ -2563,23 +2649,24 @@ body footer .raccoon__logo {
     display: flex;
     align-items: center;
     color: #fff !important;
-    margin-left: 8px;
-
     &:hover {
         border-bottom: none;
     }
 }
 
-.svg-raccoon {
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 .svg-edx {
     width: 58px;
-    height: 36px;
+    height: 12px;
+}
+
+.svg-raccoon {
+    width: 123px;
+    height: 25px;
+}
+
+.svg-skillonomy {
+    width: 104px;
+    height: 19px;
 }
 
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.add-to-cart {
