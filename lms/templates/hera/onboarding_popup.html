@@ -1,0 +1,12 @@
+<div id="onboarding-pop-up">
+    <div class="slider-holder">
+        % if onboarding_pages:
+          % for page in onboarding_pages:
+            <div class="slider-item">
+              ${page['content'] | n}
+            </div>
+          % endfor
+        %endif
+      </div>
+    </div>
+  </div>

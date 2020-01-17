@@ -47,7 +47,7 @@ $(document).ready(function () {
   });
 
   // Initialize the plugin
-  $('#pop-up').popup({
+  $('#onboarding-pop-up').popup({
     closebutton: true,
     scrolllock: true,
     transition: 'all 0.3s',
