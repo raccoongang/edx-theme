@@ -3,6 +3,7 @@
 <%!
 import urllib
 
+from django.utils import timezone
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 from django.core.urlresolvers import reverse
@@ -81,7 +82,20 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         % if course.display_organization:
             ${course.display_organization}
         % endif
-        </strong>
+      </strong>
+      <%
+      current_time = timezone.now()
+      if course.has_ended():
+          status = _("The course has ended")
+      else:
+          if course.enrollment_start and current_time < course.enrollment_start:
+              status = _("Will start soon")
+          elif current_time < course.start:
+              status = _("The enrollment is open")
+          else:
+              status = _("The course is on")
+      %>
+      <div>${status}</div>
         <div class="course-info">
           <span class="info-university">${course_overview.display_org_with_default} - </span>
           <span class="info-course-id">${course_overview.display_number_with_default}</span>
@@ -318,7 +332,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         </span>
       % endif
     </div>
-      
+
   </section>
   <footer class="wrapper-messages-primary">
     <ul class="messages-list">
