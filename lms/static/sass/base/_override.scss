@@ -2689,6 +2689,11 @@ body footer .raccoon__logo {
 
 .highlighted-courses .courses .course {
     padding-bottom: 0;
+    box-shadow: 0 2px 7px 0px rgba(178, 223, 219, .4);
+
+    &:hover{
+        box-shadow: 0 2px 7px 0px rgba(178, 223, 219, .9);
+    }
 }
 
 .course-summary {
