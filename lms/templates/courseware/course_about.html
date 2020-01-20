@@ -469,7 +469,24 @@ from openedx.core.lib.courses import course_image_url
         <span>Смотреть вводную лекцию</span>
       </div>
       <div class="course-sign-up-video">
-
+        % if get_course_about_section(request, course, "video"):
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <img src="${course_image_urls['large']}" alt="" />
+            <div class="play-intro">
+              <svg class="svg-icon" viewBox="0 0 16 16">
+                <use xlink:href="#aside-play-button"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+        %else:
+        <div class="media">
+          <div class="hero">
+            <img src="https://placeimg.com/1024/768/any" alt="" />
+          </div>
+        </div>
+        % endif
       </div>
       <div class="course-sign-up-terms">
         <span>БЕСПЛАТНО</span>

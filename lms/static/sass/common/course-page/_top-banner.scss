@@ -13,6 +13,20 @@
                     .intro{
                         width: 100%;
                         padding-bottom: 50px;
+                        padding: 98px 0 50px;
+
+                        > .heading-group {
+                            h1{
+                                font-size: 30px;
+                                line-height: 36px;
+                                font-weight: 700;
+                                font-family: $font-family;
+                                max-width: 467px;
+                            }
+                        }
+                    }
+                    .table{
+                        max-width: 870px;
                     }
                 }
             }
@@ -22,7 +36,6 @@
 .course-info-list {
     display: flex;
     list-style: none;
-    max-width: 870px;
     margin: 0;
     padding: 0;
     &__item {
@@ -34,10 +47,12 @@
         }
     }
     &__sub-title {
+        display: block;
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 19px;
         font-family: $font-family;
+        margin-bottom: 20px;
     }
     &__title {
         font-weight: 600;
