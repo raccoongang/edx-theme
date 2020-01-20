@@ -1,5 +1,5 @@
 .course-sidebar{
-    width: 270px;
+    margin-top: -273px;
     &--mama{
         position: relative;
     }
@@ -12,6 +12,7 @@
                 padding: 0 22px;
                 order: 0;
                 box-sizing: border-box;
+                margin-bottom: 22px;
                 li{
                     margin-right: 0;
                     .important-dates-item-title, .important-dates-item-text{
@@ -20,6 +21,10 @@
                         font-weight: 600;
                         font-size: 16px;
                         line-height: 24px;
+                        width: 50%;
+                    }
+                    .important-dates-item-text{
+                        text-align: right;
                     }
                     .icon{
                         display: none;
@@ -32,17 +37,61 @@
             .course-sign-up-terms{
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 margin: 30px 0 20px;
                 span{
                     display: block;
                     font-family: $font-family;
                     font-size: 16px;
-                    line-height: 24px;
                     color: $white;
                     margin-right: 6px;
                 }
-                img{
-                    flex: none;
+            }
+            .course-sign-up-terms-tooltip{
+                position: relative;
+                .svg-icon{
+                    width: 16px;
+                    height: 16px;
+                    fill: none;
+                    cursor: pointer;
+                }
+                &__text{
+                    background-color: #fff;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: $violet-dark;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    width: 150px;
+                    transition: all 200ms ease;
+                    &:before{
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 7px solid #FFF;
+                        position: absolute;
+                        content: '';
+                        bottom: -7px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                }
+                &:hover{
+                    .course-sign-up-terms-tooltip__text{
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 10;
+                        bottom: 30px;
+                    }
                 }
             }
             .course-sign-up-video-text{
@@ -63,8 +112,8 @@
             }
             .course-sign-up-button{
                 position: relative;
-                padding-bottom: 32px;
-                margin: 0 22px 13px;
+                padding-bottom: 13px;
+                margin: 0 22px 32px;
                 &:before{
                     content: '';
                     display: block;
@@ -87,6 +136,9 @@
                     text-align: center;
                     color: $white;
                     display: block;
+                    &:hover{
+                        background: linear-gradient(5deg, $violet-dark 0%, $green 100%);
+                    }
                 }
             }
             .course-sign-up-program{
@@ -96,11 +148,14 @@
                     font-family: $font-family;
                     font-weight: 600;
                     font-size: 16px;
-                    border-radius: 24px;
+                    border-radius: 46px;
                     border: 1px solid #019789;
                     padding: 16px 10px;
                     text-align: center;
                     display: block;
+                    &:hover{
+                        background-color: #019789;
+                    }
                 }
             }
         }

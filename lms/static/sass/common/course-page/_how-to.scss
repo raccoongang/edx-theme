@@ -44,14 +44,18 @@
         height: 168px;
         border-radius: 50%;
         box-shadow: inset 0px 4px 16px rgba(178, 223, 219, 0.25);
-        font-family: $font-family;
-        font-weight: 700;
-        font-size: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 28px;
         position: relative;
+        span{
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 80px;
+            display: block;
+            margin-top: 15px;
+        }
         &:before{
             content: '';
             display: block;

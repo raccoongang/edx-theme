@@ -7,6 +7,9 @@
 @import "teacher";
 @import "aside";
 
+.course-page-about-main-content{
+    max-width: 870px;
+}
 .course-info {
     .course-sidebar{
         > section.course-page-section{
@@ -16,7 +19,6 @@
     }
 }
 .course-page-section{
-    max-width: 870px;
     margin-bottom: 86px;
     li{
         margin-bottom: 0;
@@ -37,4 +39,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    &:after{
+        display: none !important;
+    }
 }

@@ -336,7 +336,7 @@ from openedx.core.lib.courses import course_image_url
       <h2 class="h2">Как проходит обучение</h2>
       <ul class="course-how-to-list">
         <li class="course-how-to-list__item">
-          <div class="course-how-to-list__number">1</div>
+          <div class="course-how-to-list__number"><span>1</span></div>
           <div class="course-how-to-list__title">Просмотр видео-лекций</div>
           <p>
             Достижения и регалии Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -344,7 +344,7 @@ from openedx.core.lib.courses import course_image_url
         </li>
         <!-- 2 -->
         <li class="course-how-to-list__item">
-          <div class="course-how-to-list__number">2</div>
+          <div class="course-how-to-list__number"><span>2</span></div>
           <div class="course-how-to-list__title">Домашнее задание</div>
           <p>
             Достижения и регалии Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -352,7 +352,7 @@ from openedx.core.lib.courses import course_image_url
         </li>
         <!-- 3 -->
         <li class="course-how-to-list__item">
-          <div class="course-how-to-list__number">3</div>
+          <div class="course-how-to-list__number"><span>3</span></div>
           <div class="course-how-to-list__title">Комментарии преподавателя</div>
           <p>
             Достижения и регалии Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -473,7 +473,14 @@ from openedx.core.lib.courses import course_image_url
       </div>
       <div class="course-sign-up-terms">
         <span>БЕСПЛАТНО</span>
-        <img src="/static/edx-theme/images/ico_terms.svg" alt="">
+        <div class="course-sign-up-terms-tooltip">
+          <svg class="svg-icon" viewBox="0 0 16 16">
+            <use xlink:href="#ico_terms"></use>
+          </svg>
+          <div class="course-sign-up-terms-tooltip__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, cupiditate!
+          </div>
+        </div>
       </div>
       <div class="course-sign-up-button">
         <a href="">Записаться на курс</a>
