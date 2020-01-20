@@ -1,5 +1,6 @@
 .course-sidebar{
     margin-top: -272px;
+
     &--mama{
         position: relative;
         z-index: 20;
@@ -8,12 +9,14 @@
 .course-info {
     .course-sidebar {
         &--mama{
+
             .important-dates {
                 width: 100%;
                 padding: 0 22px;
                 order: 0;
                 box-sizing: border-box;
                 margin-bottom: 22px;
+
                 li{
                     margin-right: 0;
                     .important-dates-item-title, .important-dates-item-text{
@@ -24,9 +27,11 @@
                         line-height: 24px;
                         width: 50%;
                     }
+
                     .important-dates-item-text{
                         text-align: right;
                     }
+
                     .icon{
                         display: none;
                     }
@@ -40,6 +45,7 @@
                 justify-content: center;
                 align-items: center;
                 margin: 30px 0 20px;
+
                 span{
                     display: block;
                     font-family: $font-family;
@@ -50,12 +56,14 @@
             }
             .course-sign-up-terms-tooltip{
                 position: relative;
+
                 .svg-icon{
                     width: 16px;
                     height: 16px;
                     fill: none;
                     cursor: pointer;
                 }
+
                 &__text{
                     background-color: #fff;
                     font-size: 16px;
@@ -72,6 +80,7 @@
                     box-sizing: border-box;
                     width: 150px;
                     transition: all 200ms ease;
+
                     &:before{
                         width: 0;
                         height: 0;
@@ -96,6 +105,7 @@
                 }
             }
             .course-sign-up-video-text{
+
                 span{
                     display: block;
                     text-align: center;
@@ -106,21 +116,26 @@
                     padding: 17px 7px 5px;
                 }
             }
+            
             .course-sign-up-video{
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
                 width: 270px;
                 height: 152px;
+
                 .media{
                     height: 100%;
+
                     .hero{
                         position: relative;
                         height: 100%;
+
                         img{
                             display: block;
                             width: 100%;
                             height: 152px;
                             object-fit: cover;
                         }
+
                         .play-intro{
                             cursor: pointer;
                             position: absolute;
@@ -137,6 +152,7 @@
                 position: relative;
                 padding-bottom: 13px;
                 margin: 0 22px 32px;
+
                 &:before{
                     content: '';
                     display: block;
@@ -149,6 +165,7 @@
                     width: 132px;
                     height: 1px;
                 }
+
                 a{
                     font-family: $font-family;
                     font-weight: 600;
@@ -159,6 +176,7 @@
                     text-align: center;
                     color: $white;
                     display: block;
+
                     &:hover{
                         background: linear-gradient(5deg, $violet-dark 0%, $green 100%);
                     }
@@ -166,6 +184,7 @@
             }
             .course-sign-up-program{
                 margin: 0 22px;
+                
                 a{
                     color: $white;
                     font-family: $font-family;

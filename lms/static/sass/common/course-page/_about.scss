@@ -4,22 +4,27 @@
     list-style: none;
     margin: 0 -15px;
     padding: 0;
+
     li{
         margin-bottom: 50px !important;
     }
+
     &__item {
         width: 33.3333%;
         padding: 0 15px;
         font-family: $font-family;
         box-sizing: border-box;
     }
+
     &__title {
         display: flex;
         align-items: center;
         margin-bottom: 40px;
+
         img{
             flex: none;
         }
+        
         span {
             display: block;
             color: $color6;

@@ -7,15 +7,19 @@
     padding: 0;
     list-style: none;
     $c: &;
+
     &__item{
         &.is-open{
+
             #{$c}__head{
+                
                 &:after{
                     transform: rotate(90deg);
                 }
             }
         }
     }
+
     &__head{
         font-family: $font-family;
         font-weight: 300;
@@ -40,6 +44,7 @@
             width: 8px;
             height: 8px;
         }
+
         &:after{
             content: '';
             display: block;
@@ -53,6 +58,7 @@
             transition: transform 400ms ease;
         }
     }
+    
     &__content{
         display: none;
         ol{

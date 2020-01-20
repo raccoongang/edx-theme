@@ -118,7 +118,6 @@ from openedx.core.lib.courses import course_image_url
         <div class="heading-group">
           <h1>
             ${course.display_name_with_default_escaped}
-            <!-- <button type="button">${course.display_org_with_default | h}</button> -->
           </h1>
           <span class="intro__school">
           % if course.display_organization:
@@ -195,10 +194,6 @@ from openedx.core.lib.courses import course_image_url
             else:
               href_class = "register"
           %>
-          <!-- <a href="${reg_href}" class="${href_class}">
-            Записаться
-          </a> -->
-
           <div id="register_error"></div>
         %endif
         </div>
@@ -231,17 +226,6 @@ from openedx.core.lib.courses import course_image_url
     
     <div class="course-page-about-main-content">
     <div class="details">
-      <!-- <div class="remove-this-div">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
-        </div>
-      % endif
-      </div> -->
-
-      <!-- <div class="inner-wrapper">
-        ${get_course_about_section(request, course, "overview")}
-      </div> -->
       <section class="course-about course-page-section">
         <h2 class="h2">Чему вы научитесь</h2>
         <ul class="course-about-list">
@@ -462,9 +446,6 @@ from openedx.core.lib.courses import course_image_url
   </div>
   <div class="course-sidebar course-sidebar--mama">
     <div class="course-summary course-summary--aside">
-      <!-- <div class="social">
-        <%include file="course_about_sidebar_header.html" />
-      </div> -->
       <div class="course-sign-up-video-text">
         <span>Смотреть вводную лекцию</span>
       </div>
@@ -580,25 +561,6 @@ from openedx.core.lib.courses import course_image_url
           <a class="js-anchor" href="#course-program">Программа курса</a>
         </div>
   </div>
-  <div class="remove-this-div">
-      ## Course reviews tool
-      % if reviews_fragment_view:
-      ${HTML(reviews_fragment_view.body_html())}
-      % endif
-
-      ## For now, ocw links are the only thing that goes in additional resources
-      % if get_course_about_section(request, course, "ocw_links"):
-      <div class="additional-resources">
-        <header>
-          <h1>${_("Additional Resources")}</h1>
-      </div>
-
-        <div>
-          ## "MITOpenCourseware" should *not* be translated
-          <h2 class="opencourseware">MITOpenCourseware</h2>
-            ${get_course_about_section(request, course, "ocw_links")}
-        </div>
-    </div>
     %endif
     </div>
   </div>

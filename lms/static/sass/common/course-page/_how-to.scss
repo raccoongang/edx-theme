@@ -9,12 +9,15 @@
     display: flex;
     flex-wrap: wrap;
     $c: &;
+
     &__item{
         width: 33.3333%;
         padding: 0 15px;
         text-align: center;
         box-sizing: border-box;
+
         &:nth-child(1){
+
             #{$c}__number{
                 border: 0.2px solid $green;
                 color: $green;
@@ -23,7 +26,9 @@
                 }
             }
         }
+
         &:nth-child(2){
+
             #{$c}__number{
                 border: 0.2px solid $violet;
                 color: $violet;
@@ -33,6 +38,7 @@
             }
         }
         &:nth-child(3){
+
             #{$c}__number{
                 border: 0.2px solid $orange;
                 color: $orange;
@@ -49,6 +55,7 @@
         justify-content: center;
         margin: 0 auto 28px;
         position: relative;
+
         span{
             font-family: $font-family;
             font-weight: 700;
@@ -56,6 +63,7 @@
             display: block;
             margin-top: 15px;
         }
+
         &:before{
             content: '';
             display: block;
@@ -68,6 +76,7 @@
             background-repeat: no-repeat;
         }
     }
+    
     &__title{
         font-family: $font-family;
         font-weight: 600;
@@ -75,6 +84,7 @@
         line-height: 32px;
         margin-bottom: 20px;
     }
+
     p{
         font-family: $font-family;
         font-size: 16px;

@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     display: flex;
+
     &__item{
         width: 33.3333%;
         position: relative;
@@ -22,16 +23,19 @@
             margin: 0 0 0 -40px;
         }
     }
+
     &__container{
         display: flex;
         align-items: center;
         padding: 24px 25px;
         box-sizing: border-box;
     }
+
     &__image{
         flex: none;
         margin-right: 27px;
     }
+    
     &__text{
         font-family: $font-family;
         font-size: 16px;
