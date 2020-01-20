@@ -36,7 +36,10 @@
 }
 
 .promo-section__title {
-    font: bold 60px/72px 'Artegra Sans', sans-serif;
+    font-family: 'Artegra Sans', sans-serif !important;
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 700;
     display: block;
     text-align: left;
     color: #fff;
@@ -46,8 +49,8 @@
 .promo-section__wrapper {
     max-width: 500px;
     position: absolute;
-    left: $margin*2;
-    top: 150px;
+    left: 0;
+    top: 180px;
 }
 
 .promo-section__description {
