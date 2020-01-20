@@ -9,14 +9,14 @@
         margin: 0 0 32px;
     }
 
-    &__body {
+    &-body {
         position: static;
     }
 
-    &__progress {
+    &-progress {
         position: static;
 
-        &__header {
+        &-header {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -30,18 +30,10 @@
             }
         }
 
-        &__body {
+        &-body {
             display: flex;
             justify-content: space-evenly;
             position: relative;
-
-            &__bg {
-                position: absolute;
-                right: auto;
-                left: auto;
-                top: 0;
-                width: 100%;
-            }
 
             &__item {
                 display: flex;
@@ -57,11 +49,11 @@
                     flex-direction: column-reverse;
                     padding-top: 16px;
 
-                    .dna__connector__img {
+                    .dna-connector__img {
                         transform: rotate(180deg);
                     }
 
-                    .dna__text.is-bottom:before {
+                    .dna-text:before {
                         transform: translateX(-50%) rotate(180deg);
                     }
                 }
@@ -162,55 +154,38 @@
 }
 
 .dna {
-    &__text {
+    &-text {
         padding: 26px 0 20px;
         position: relative;
 
-        .title {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 38px;
+            height: 74px;
+            background: #e1e5e8;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            transform: translateX(-50%);
+        }
+
+        &__title {
             position: relative;
             display: block;
             font-size: 14px;
             font-weight: 600;
         }
 
-        .points {
+        &__points {
             position: relative;
             font-size: 10px;
             display: block;
         }
-
-        &.is-bottom {
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 50%;
-                width: 38px;
-                height: 74px;
-                background: #e1e5e8;
-                border-top-left-radius: 16px;
-                border-top-right-radius: 16px;
-                transform: translateX(-50%);
-            }
-        }
-
-        &.is-top {
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 50%;
-                width: 38px;
-                height: 74px;
-                background: #e1e5e8;
-                border-bottom-left-radius: 16px;
-                border-bottom-right-radius: 16px;
-                transform: translateX(-50%);
-            }
-        }
     }
 
-    &__connector {
+    &-connector {
         position: static;
 
         &__img {
@@ -218,7 +193,7 @@
         }
     }
 
-    &__icon {
+    &-icon {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -237,7 +212,8 @@
         }
     }
 
-    &__unlocked {
+    &-locked,
+    &-unlocked {
         height: 100%;
         position: relative;
 
@@ -252,7 +228,9 @@
             background: #e1e5e8;
             margin-top: -1px;
         }
+    }
 
+    &-unlocked {
         &:after {
             content: '';
             width: 22px;
@@ -266,21 +244,12 @@
             background: transparent;
         }
     }
+}
 
-    &__locked {
-        height: 100%;
-        position: relative;
-
-        &:before {
-            content: '';
-            width: 38px;
-            height: 152px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background: #e1e5e8;
-            margin-top: -1px;
-        }
-    }
+.hera-dna-bg {
+    position: absolute;
+    right: auto;
+    left: auto;
+    top: 0;
+    width: 100%;
 }
