@@ -9,6 +9,7 @@
     $c: &;
 
     &__item{
+
         &.is-open{
 
             #{$c}__head{
@@ -33,6 +34,7 @@
         position: relative;
         box-sizing: border-box;
         cursor: pointer;
+
         &:before{
             content: '';
             position: absolute;
@@ -62,12 +64,14 @@
     &__content{
         display: none;
         ol{
+
             li{
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 24px;
                 color: $violet-dark;
             }
+
         }
     }
 }

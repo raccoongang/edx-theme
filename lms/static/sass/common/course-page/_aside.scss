@@ -1,14 +1,14 @@
 .course-sidebar{
     margin-top: -272px;
 
-    &--mama{
+    &_mama{
         position: relative;
         z-index: 20;
     }
 }
 .course-info {
     .course-sidebar {
-        &--mama{
+        &_mama{
 
             .important-dates {
                 width: 100%;
@@ -36,9 +36,11 @@
                         display: none;
                     }
                 }
+
                 .important-dates-item{
                     justify-content: space-between;
                 }
+
             }
             .course-sign-up-terms{
                 display: flex;
@@ -204,7 +206,7 @@
     }
 }
 .course-summary{
-    &--aside{
+    &_aside{
         position: sticky;
         top: 120px;
         right: 0;

@@ -2,6 +2,7 @@
     border: 0;
     box-shadow: none;
 }
+
 .course-how-to-list{
     margin: 0 -15px;
     padding: 0;
@@ -16,11 +17,12 @@
         text-align: center;
         box-sizing: border-box;
 
-        &:nth-child(1){
+        &:nth-child(1) {
 
             #{$c}__number{
                 border: 0.2px solid $green;
                 color: $green;
+
                 &:before{
                     background-image: url('../images/course-how-to-arrow-green.svg');
                 }
@@ -37,6 +39,7 @@
                 }
             }
         }
+
         &:nth-child(3){
 
             #{$c}__number{
@@ -45,6 +48,7 @@
             }
         }
     }
+
     &__number{
         width: 168px;
         height: 168px;
@@ -56,7 +60,7 @@
         margin: 0 auto 28px;
         position: relative;
 
-        span{
+        span {
             font-family: $font-family;
             font-weight: 700;
             font-size: 80px;
@@ -64,7 +68,7 @@
             margin-top: 15px;
         }
 
-        &:before{
+        &:before {
             content: '';
             display: block;
             position: absolute;
