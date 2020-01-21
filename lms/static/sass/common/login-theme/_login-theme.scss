@@ -27,20 +27,24 @@ a.login-theme,
         top: 315px;
         left: 50px;
     }
+    
     .course-actions & {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     &_other {
         display: none;
         @media (min-width: $tablet-size) {
             display: inline-block;
         }
     }
+
     &_margin {
         margin-right: 10px;
         margin-left: auto;
     }
+
     &_login {
         color: $color6;
         background: none;
