@@ -1,5 +1,5 @@
 .hera-dashboard {
-    width: 1200px;
+    width: 100%;
     max-width: 1200px;
     margin: 22px auto;
 
@@ -39,6 +39,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 125px;
+                min-height: 185px;
                 text-align: center;
                 box-sizing: border-box;
                 margin: 20px 0 0;
@@ -48,10 +49,6 @@
                 &.is-reverse {
                     flex-direction: column-reverse;
                     padding-top: 16px;
-
-                    .dna-connector__img {
-                        transform: rotate(180deg);
-                    }
 
                     .dna-text:before {
                         transform: translateX(-50%) rotate(180deg);
@@ -210,6 +207,12 @@
             display: block;
             width: 18px;
         }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &-locked,
@@ -227,6 +230,7 @@
             transform: translate(-50%, -50%);
             background: #e1e5e8;
             margin-top: -1px;
+            pointer-events: none;
         }
     }
 
@@ -242,6 +246,7 @@
             border-radius: 50%;
             border: 6px solid #4e79b5;
             background: transparent;
+            pointer-events: none;
         }
     }
 }
