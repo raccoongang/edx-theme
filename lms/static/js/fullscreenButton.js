@@ -6,7 +6,6 @@ $(function () {
 
     function toggleFullScreen() {
         var fullscreen = document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
-        console.log(fs);
         if (!fullscreen) {
             if (main.msRequestFullscreen) {
                 main.msRequestFullscreen();
@@ -33,19 +32,22 @@ $(function () {
     }
 
     var cahngeXlink = function cahngeXlink(val) {
-        document.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', val);
+        document.querySelector('.fullscreen-button use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', val);
     };
 
     if (fs) {
-        fs.addEventListener('click', function () {
-            toggleFullScreen();
-        });
-        $(document).keyup(function(e) {
+        fs.addEventListener('click', toggleFullScreen);
+        document.addEventListener("fullscreenchange", onFullScreenChange, false);
+        document.addEventListener("webkitfullscreenchange", onFullScreenChange, false);
+        document.addEventListener("mozfullscreenchange", onFullScreenChange, false);
+        document.addEventListener('MSFullscreenChange', onFullScreenChange, false);
+
+        function onFullScreenChange() {
             var fullscreen = document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
-            if (fullscreen && e.keyCode == 27) {
-                toggleFullScreen();
+
+            if (!fullscreen) {
                 cahngeXlink('#ico-fs-expand');
             }
-        });
+        }
     }
-})
+});
