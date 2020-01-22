@@ -359,6 +359,11 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     
 }
 // course partners
+.course-partners {
+    overflow: hidden;
+    width: 100%;
+}
+
 .course-partners-list{
     display: flex;
     flex-wrap: wrap;
@@ -442,6 +447,20 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         color: $color7;
         margin-bottom: 34px;
     }
+
+    @media (max-width: $tablet-size) {
+        h2,.h2{
+            font-size: 26px;
+            line-height: 30px;
+        }
+    }
+
+    @media (max-width: $mobile-size) {
+        h2,.h2{
+            font-size: 22px;
+            line-height: 26px;
+        }
+    }
 }
 
 .courses-container .courses .course .course-info .course-date {
@@ -465,30 +484,61 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
-    &__link{
+
+    &__link {
         width: 63px;
         height: 56px;
         display: block;
     }
-    &__subscribe-text{
+
+    &__subscribe-text {
         font-family: 'Artegra Sans' !important;
         font-weight: 700;
         font-size: 30px;
         line-height: 36px;
         color: #009688;
-        span{
+
+        span {
             display: block;
             font-size: 16px;
             line-height: 24px;
             font-weight: 400;
         }
     }
+
+    @media (max-width: $laptop-size) {
+        &__subscribe-text {
+            font-size: 25px;
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        &__subscribe-text {
+            display: none;
+        }
+
+        &__subscribe {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+    }
+
+    @media (max-width: $mobile-size) {
+        flex-direction: column;
+        &__logo{
+            margin: 0 auto 20px;
+        }
+
+        &__subscribe {
+            margin-left: 0;
+        }
+    }
 }
 
-.footer-subscribe-form{
+.footer-subscribe-form {
     display: flex;
     align-items: center;
-    input{
+    input {
         border: 1px solid #00796B;
         box-sizing: border-box;
         border-radius: 46px;
@@ -505,6 +555,7 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         box-sizing: border-box;
         outline: none;
     }
+
     &__btn{
         background: $theme-header-btn-color;
         color: #FFF;
@@ -521,6 +572,35 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         box-shadow: none;
         &:hover{
             background: #673AB7 !important;
+        }
+    }
+
+    @media (max-width: $laptop-size) {
+        input {
+            min-width: 280px;
+            margin-right: 20px;
+        }
+        
+        &__btn {
+            padding: 13px 20px;
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        input {
+            min-width: auto;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $mobile-size) {
+        input{
+            margin-right: 10px;
+        }
+
+        &__btn{
+            padding: 11px 9px;
+            font-size: 13px;
         }
     }
 }
@@ -559,6 +639,52 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
             }
         }
     }
+
+    @media (max-width: $laptop-size) {
+        footer#footer-openedx {
+            .colophon {
+                
+                .nav-colophon{
+                    ol{
+                        
+                        li{
+                            a{
+                                font-size: 15px;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        footer#footer-openedx {
+            .colophon {
+                
+                .nav-colophon{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 414px) {
+        footer#footer-openedx {
+            .colophon {
+                
+                .nav-colophon { 
+                    
+                    ol {
+                        li {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .footer-content {
@@ -570,7 +696,7 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         color: #FFFFFF;
         display: flex;
         flex-direction: column;
-        margin: auto 0;
+        margin: auto 15px auto 0;
         a{
             color: #FFFFFF !important;
             display: block;
@@ -581,6 +707,14 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
                 color: $theme-header-btn-color !important;
             }
 
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        margin-bottom: 60px;
+        flex-direction: column;
+        &__copy {
+            margin: 0 auto 20px;
         }
     }
 }
@@ -609,6 +743,9 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
                 border-bottom: 0;
             }
         }
+    }
+    @media (max-width: $tablet-size) {
+        justify-content: center;
     }
 }
 
@@ -654,6 +791,32 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
             transition: all 200ms ease;
         }
     }
+
+    @media (max-width: $laptop-size) {
+        li {
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        li{
+            width: 50%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    @media (max-width: 414px) {
+        li {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .courses-container .highlighted-courses .courses .course .course-info .course-date {
@@ -664,6 +827,10 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     color: $color7;
     padding: 0;
     margin-left: 45px;
+
+    @media (max-width: $tablet-size) {
+        margin-left: 0;
+    }
 }
 
 .highlighted-courses .courses .course a {
@@ -2679,6 +2846,10 @@ body.menu-open {
     @media (max-width: $tablet-size) {
         flex-direction: column;
         align-items: center;
+
+        .svg-icon{
+            margin-left: 0;
+        }
     }
 }
 .theme-footer_holder .footer-support {
@@ -2688,12 +2859,26 @@ body.menu-open {
     display: flex;
     font-size: 12px;
     font-family: 'Artegra Sans' !important;
+
+    @media (max-width: $tablet-size) {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .theme-footer_holder .footer-support a {
     margin-right: 33px;
     &:last-child{
         margin-right: 0;
+    }
+
+    @media (max-width: $tablet-size) {
+        margin-right: 0;
+        margin-bottom: 20px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 }
 

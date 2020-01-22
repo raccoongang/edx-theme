@@ -1,8 +1,11 @@
 .tree-blocks {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
+    padding: 0 15px;
+    box-sizing: border-box;
     margin: 0 auto 40px;
 
     @media (max-width: $desktop-size) {
@@ -16,11 +19,20 @@
 
 .tree-blocks__holder {
     width: 30%;
-    padding: 0 0 30px;
+    padding: 0 0 30px 47px;
+    box-sizing: border-box;
+
+    @media (max-width: $laptop-size) {
+        padding-left: 0;
+    }
+
+    @media (max-width: $tablet-size) {
+        width: 100%;
+        margin: 0 auto 30px;
+    }
 
     @media (max-width: $mobile-size) {
-        width: 90%;
-        margin: 0 auto 30px;
+        margin: 0 auto 20px;
     }
 }
 
@@ -37,6 +49,14 @@
     @media (max-width: $desktop-size) {
         max-height: 79px;
     }
+
+    @media (max-width: $laptop-size) {
+        font: 600 20px/26px 'Artegra Sans', sans-serif;
+    }
+
+    @media (max-width: $mobile-size) {
+        font: 600 16px/22px 'Artegra Sans', sans-serif;
+    }
 }
 
 .tree-blocks__text {
@@ -49,18 +69,21 @@
     width: 58px;
     height: 58px;
     background: url('../images/tree-bloks-ico-1.svg') no-repeat 50%;
+    flex: none;
 }
 
 .tree-blocks__ico2 {
     width: 58px;
     height: 58px;
     background: url('../images/tree-bloks-ico-2.svg') no-repeat 50%;
+    flex: none;
 }
 
 .tree-blocks__ico3 {
     width: 58px;
     height: 58px;
     background: url('../images/tree-bloks-ico-3.svg') no-repeat 50%;
+    flex: none;
 }
 
 .tree-blocks__wrapper {

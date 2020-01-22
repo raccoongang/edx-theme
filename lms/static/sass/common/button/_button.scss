@@ -15,4 +15,13 @@ body .learn-link {
     padding: 16px 36px;
     font: 600 16px/24px 'Artegra Sans', sans-serif;
     color: $theme-header-btn-color;
+
+    @media (max-width: $laptop-size) {
+        font: 600 15px/24px 'Artegra Sans', sans-serif;
+    }
+
+    @media (max-width: $mobile-size) {
+        font: 600 12px/24px 'Artegra Sans', sans-serif;
+        padding: 9px 11px;
+    }
 }
