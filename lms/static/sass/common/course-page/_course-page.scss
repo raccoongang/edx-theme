@@ -9,6 +9,8 @@
 
 .course-page-about-main-content{
     max-width: 870px;
+    padding-right: 30px;
+    box-sizing: border-box;
 }
 .course-info {
     .course-sidebar{
@@ -43,8 +45,16 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
     &:after{
         display: none !important;
+    }
+
+    @media (max-width: $laptop-size) {
+        flex-direction: column;
+        overflow: hidden;
     }
 }

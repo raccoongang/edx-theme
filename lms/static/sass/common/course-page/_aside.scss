@@ -5,6 +5,17 @@
         position: relative;
         z-index: 20;
     }
+
+    @media (max-width: $desktop-size) {
+        margin-right: 15px;
+    }
+
+    @media (max-width: $laptop-size) {
+        margin-top: 0;
+        &_mama {
+            order: -1;
+        }
+    }
 }
 .course-info {
     .course-sidebar {
@@ -215,5 +226,9 @@
         width: 270px;
         flex-direction: column;
         padding-bottom: 45px;
+    }
+
+    @media (max-width: $laptop-size) {
+        position: static;
     }
 }
