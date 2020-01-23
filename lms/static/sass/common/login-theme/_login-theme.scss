@@ -10,7 +10,7 @@ a.login-theme,
     letter-spacing: 0;
     padding: 16px 36px;
     text-transform: uppercase;
-    transition: background .3s;
+    transition: background .3s linear;
     text-align: center;
 
     &:hover {
@@ -27,7 +27,7 @@ a.login-theme,
         top: 315px;
         left: 50px;
     }
-    
+
     .course-actions & {
         padding-left: 10px;
         padding-right: 10px;
