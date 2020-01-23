@@ -1,0 +1,255 @@
+.course-sidebar{
+    margin-top: -272px;
+
+    &_mama{
+        position: relative;
+        z-index: 20;
+    }
+
+    @media (max-width: $desktop-size) {
+        margin-right: 15px;
+    }
+
+    @media (max-width: $laptop-size) {
+        margin: 0 auto;
+        &_mama {
+            order: -1;
+        }
+    }
+}
+.course-info {
+    .course-sidebar {
+        &_mama{
+
+            .important-dates {
+                width: 100%;
+                padding: 0 22px;
+                order: 0;
+                box-sizing: border-box;
+                margin-bottom: 22px;
+
+                li{
+                    margin-right: 0;
+                    .important-dates-item-title, .important-dates-item-text{
+                        color: $white;
+                        font-family: $font-family;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                        width: 50%;
+                    }
+
+                    .important-dates-item-text{
+                        text-align: right;
+                    }
+
+                    .icon{
+                        display: none;
+                    }
+                }
+
+                .important-dates-item{
+                    justify-content: space-between;
+                }
+
+            }
+            .course-sign-up-terms{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0 20px;
+
+                span{
+                    display: block;
+                    font-family: $font-family;
+                    font-size: 16px;
+                    color: $white;
+                    margin-right: 6px;
+                }
+            }
+            .course-sign-up-terms-tooltip{
+                position: relative;
+
+                .svg-icon{
+                    width: 16px;
+                    height: 16px;
+                    fill: none;
+                    cursor: pointer;
+                }
+
+                &__text{
+                    background-color: #fff;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: $violet-dark;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    width: 150px;
+                    transition: all 200ms ease;
+
+                    &:before{
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 7px solid #FFF;
+                        position: absolute;
+                        content: '';
+                        bottom: -7px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                }
+                &:hover{
+                    .course-sign-up-terms-tooltip__text{
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 10;
+                        bottom: 30px;
+                    }
+                }
+            }
+            .course-sign-up-video-text{
+
+                span{
+                    display: block;
+                    text-align: center;
+                    font-family: $font-family;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: $white;
+                    padding: 17px 7px 5px;
+                }
+            }
+            
+            .course-sign-up-video{
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
+                width: 270px;
+                height: 152px;
+
+                .media{
+                    height: 100%;
+
+                    .hero{
+                        position: relative;
+                        height: 100%;
+
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 152px;
+                            object-fit: cover;
+                        }
+
+                        .play-intro{
+                            cursor: pointer;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 36px;
+                            height: 36px;
+                        }
+                    }
+                }
+            }
+            .course-sign-up-button{
+                position: relative;
+                padding-bottom: 13px;
+                margin: 0 22px 32px;
+
+                &:before{
+                    content: '';
+                    display: block;
+                    background-color: #BDBDBD;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 132px;
+                    height: 1px;
+                }
+
+                a{
+                    font-family: $font-family;
+                    font-weight: 600;
+                    font-size: 16px;
+                    background: linear-gradient(289.35deg, $violet-dark 0%, $green 100%);
+                    border-radius: 46px;
+                    padding: 16px 10px;
+                    text-align: center;
+                    color: $white;
+                    display: block;
+
+                    &:hover{
+                        background: linear-gradient(5deg, $violet-dark 0%, $green 100%);
+                    }
+                }
+            }
+            .course-sign-up-program{
+                margin: 0 22px;
+                
+                a{
+                    color: $white;
+                    font-family: $font-family;
+                    font-weight: 600;
+                    font-size: 16px;
+                    border-radius: 46px;
+                    border: 1px solid #019789;
+                    padding: 16px 10px;
+                    text-align: center;
+                    display: block;
+                    &:hover{
+                        background-color: #019789;
+                    }
+                }
+            }
+
+            @media (max-width: $laptop-size) {
+                .course-sign-up-video {
+                    height: 300px;
+                    width: 100%;
+
+                    .media {
+                        .hero {
+                            img {
+                                height: 300px;
+                            }
+                        }
+                    }
+                }
+
+                .important-dates {
+                    align-items: inherit;
+                }
+            }
+        }
+    }
+}
+.course-summary{
+    &_aside{
+        position: sticky;
+        top: 120px;
+        right: 0;
+        background-color: $violet;
+        border-radius: 24px;
+        width: 270px;
+        flex-direction: column;
+        padding-bottom: 45px;
+    }
+
+    @media (max-width: $laptop-size) {
+        position: static;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}

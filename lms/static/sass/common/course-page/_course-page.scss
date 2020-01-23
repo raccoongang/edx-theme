@@ -1,0 +1,85 @@
+@import "vars";
+@import "about";
+@import "how-to";
+@import "program";
+@import "result";
+@import "top-banner";
+@import "teacher";
+@import "aside";
+
+.course-page-about-main-content{
+    max-width: 870px;
+    padding-right: 30px;
+    box-sizing: border-box;
+
+    @media (max-width: $laptop-size) {
+        max-width: 100%;
+        padding-right: 0;
+    }
+}
+.course-info {
+    .course-sidebar{
+
+        > section.course-page-section{
+            box-shadow: none;
+            border: 0;
+        }
+
+    }
+
+    @media (max-width: $laptop-size) {
+        .course-sidebar{
+            width: 50%;
+        }
+    }
+
+    @media (max-width: $mobile-size) {
+        .course-sidebar{
+            width: 100%;
+        }
+    }
+}
+.course-page-section{
+    margin-bottom: 86px;
+
+    li{
+        margin-bottom: 0;
+    }
+
+    h2, .h2{
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: $violet;
+        margin-bottom: 45px;
+    }
+
+    @media (max-width: $mobile-size) {
+        margin-bottom: 60px;
+    }
+}
+.content-wrapper{
+    padding-top: 91px;
+}
+.course-about-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1230px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    &:after{
+        display: none !important;
+    }
+
+    @media (max-width: $laptop-size) {
+        flex-direction: column;
+        overflow: hidden;
+        padding-right: 15px;
+    }
+
+    @media (max-width: $tablet-size) {
+        padding-bottom: 60px;
+    }
+}

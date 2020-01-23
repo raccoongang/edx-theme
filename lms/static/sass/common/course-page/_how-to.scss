@@ -1,0 +1,128 @@
+.course-how-to{
+    border: 0;
+    box-shadow: none;
+}
+
+.course-how-to-list{
+    margin: 0 -15px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    $c: &;
+
+    &__item{
+        width: 33.3333%;
+        padding: 0 15px;
+        text-align: center;
+        box-sizing: border-box;
+
+        &:nth-child(1) {
+
+            #{$c}__number{
+                border: 0.2px solid $green;
+                color: $green;
+
+                &:before{
+                    background-image: url('../images/course-how-to-arrow-green.svg');
+                }
+            }
+        }
+
+        &:nth-child(2){
+
+            #{$c}__number{
+                border: 0.2px solid $violet;
+                color: $violet;
+                &:before{
+                    background-image: url('../images/course-how-to-arrow-violet.svg');
+                }
+            }
+        }
+
+        &:nth-child(3){
+
+            #{$c}__number{
+                border: 0.2px solid $orange;
+                color: $orange;
+            }
+        }
+    }
+
+    &__number{
+        width: 168px;
+        height: 168px;
+        border-radius: 50%;
+        box-shadow: inset 0px 4px 16px rgba(178, 223, 219, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 28px;
+        position: relative;
+
+        span {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 80px;
+            display: block;
+            margin-top: 15px;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(-100% + 50px);
+            width: 100px;
+            height: 8px;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    &__title{
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-family: $font-family;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+    }
+
+    @media (max-width: $desktop-size) {
+        &__number {
+            width: 140px;
+            height: 140px;
+
+            &:before {
+                right: calc(-100% + 30px);
+            }
+        }
+    }
+
+    @media (max-width: $mobile-large) {
+        flex-direction: column;
+
+        &__item {
+            width: 100%;
+            margin-bottom: 40px !important;
+
+            &:last-child{
+                margin-bottom: 0 !important;
+            }
+        }
+
+        &__number {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

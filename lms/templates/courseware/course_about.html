@@ -110,7 +110,7 @@ from openedx.core.lib.courses import course_image_url
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
 
-<section class="course-info">
+<section class="course-info course-info_mama">
   <header class="course-profile">
     <div class="intro-inner-wrapper">
       <div class="table">
@@ -118,7 +118,6 @@ from openedx.core.lib.courses import course_image_url
         <div class="heading-group">
           <h1>
             ${course.display_name_with_default_escaped}
-            <!-- <button type="button">${course.display_org_with_default | h}</button> -->
           </h1>
           <span class="intro__school">
           % if course.display_organization:
@@ -129,7 +128,20 @@ from openedx.core.lib.courses import course_image_url
             <p class="intro__text">${get_course_about_section(request, course, 'short_description')}</p>
           </h3>
         </div>
-
+        <ul class="course-info-list">
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Когда</span>
+            <p class="course-info-list__title">12 ноября-13 января</p>
+          </li>
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Формат обучения</span>
+            <p class="course-info-list__title">вебинары по вечерам практика</p>
+          </li>
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Уровень</span>
+            <p class="course-info-list__title">с нуля</p>
+          </li>
+        </ul>
         <div class="main-cta">
         %if user.is_authenticated() and registered:
           %if show_courseware_link:
@@ -182,9 +194,6 @@ from openedx.core.lib.courses import course_image_url
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="${href_class}">
-            Записаться
-          </a>
           <div id="register_error"></div>
         %endif
         </div>
@@ -213,121 +222,346 @@ from openedx.core.lib.courses import course_image_url
       </div>
   </header>
 
-  <div class="container">
-    <div class="course-sidebar">
-      <div class="course-summary">
-        <%include file="course_about_sidebar_header.html" />
-        <ol class="important-dates">
-            <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
-            % if not course.start_date_is_still_default:
-                <%
-                    course_start_date = course.start
-                %>
-              <li class="important-dates-item">
-                <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Classes Start")}</p>
-                % if isinstance(course_start_date, str):
-                    <span class="important-dates-item-text start-date">${course_start_date}</span>
-                % else:
-                    <%
-                       course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                    %>
-                    <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-                % endif
-              </li>
-            % endif
-              ## We plan to ditch end_date (which is not stored in course metadata),
-              ## but for backwards compatibility, show about/end_date blob if it exists.
-              % if get_course_about_section(request, course, "end_date") or course.end:
+  <div class="container course-about-container">
+    
+    <div class="course-page-about-main-content">
+    <div class="details">
+      <section class="course-about course-page-section">
+        <h2 class="h2">Чему вы научитесь</h2>
+        <ul class="course-about-list">
+          <li class="course-about-list__item"> 
+            <div class="course-about-list__title">
+              <img src="/static/edx-theme/images/course-about-1.svg" alt="">
+              <span>Работать с ценностями бренда</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+            </p>
+          </li>
+          <!-- 2 -->
+          <li class="course-about-list__item">
+            <div class="course-about-list__title">
+              <img src="/static/edx-theme/images/course-about-2.svg" alt="">
+              <span>Правильно общаться</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+            </p>
+          </li>
+          <!-- 3 -->
+          <li class="course-about-list__item">
+            <div class="course-about-list__title">
+              <img src="/static/edx-theme/images/course-about-3.svg" alt="">
+              <span>Проводить мероприятия</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+            </p>
+          </li>
+          <!-- 4 -->
+          <li class="course-about-list__item">
+            <div class="course-about-list__title">
+              <img src="/static/edx-theme/images/course-about-4.svg" alt="">
+              <span>Оценивать результат</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+            </p>
+          </li>
+          <!-- 5 -->
+          <li class="course-about-list__item">
+            <div class="course-about-list__title">
+              <img src="/static/edx-theme/images/course-about-5.svg" alt="">
+              <span>Вовлекать аудиторию</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+            </p>
+          </li>
+          <!-- 6 -->
+          <li class="course-about-list__item">
+            <div class="course-about-list__title">
+              <img src="/static/edx-theme/images/course-about-6.svg" alt="">
+              <span>Формировать ядро общества</span>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+            </p>
+          </li>
+        </ul>
+      </section>
+  </div>
+    <section class="course-result course-page-section">
+      <h2 class="h2">Результат того стоит</h2>
+      <ul class="course-result-list">
+        <li class="course-result-list__item">
+          <div class="course-result-list__container">
+            <img class="course-result-list__image" src="/static/edx-theme/images/course-result-1.svg" alt="">
+            <span class="course-result-list__text">Выстроите развитие сообщества по прогнозам</span>
+          </div>
+        </li>
+        <!-- 2 -->
+        <li class="course-result-list__item">
+          <div class="course-result-list__container">
+            <img class="course-result-list__image" src="/static/edx-theme/images/course-result-2.svg" alt="">
+            <span class="course-result-list__text">Заведете полезные контакты с практикующими экспертами и коллегами</span>
+          </div>
+        </li>
+        <!-- 3 -->
+        <li class="course-result-list__item">
+          <div class="course-result-list__container">
+            <img class="course-result-list__image" src="/static/edx-theme/images/course-result-3.svg" alt="">
+            <span class="course-result-list__text">Получите фундамент для профессионального роста до уровня миддл</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="course-how-to course-page-section">
+      <h2 class="h2">Как проходит обучение</h2>
+      <ul class="course-how-to-list">
+        <li class="course-how-to-list__item">
+          <div class="course-how-to-list__number"><span>1</span></div>
+          <div class="course-how-to-list__title">Просмотр видео-лекций</div>
+          <p>
+            Достижения и регалии Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </li>
+        <!-- 2 -->
+        <li class="course-how-to-list__item">
+          <div class="course-how-to-list__number"><span>2</span></div>
+          <div class="course-how-to-list__title">Домашнее задание</div>
+          <p>
+            Достижения и регалии Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </li>
+        <!-- 3 -->
+        <li class="course-how-to-list__item">
+          <div class="course-how-to-list__number"><span>3</span></div>
+          <div class="course-how-to-list__title">Комментарии преподавателя</div>
+          <p>
+            Достижения и регалии Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="course-program course-page-section" id="course-program">
+      <h2 class="h2">Программа курса</h2>
+      <ul class="course-program-list">
+        <li class="course-program-list__item">
+          <div class="course-program-list__head">Название урока</div>
+          <div class="course-program-list__content">
+            <ol>
+              <li>Название урока</li>
+              <li>Название урока</li>
+              <li>Название урока</li>
+            </ol>
+          </div>
+        </li>
+        <!-- 2 -->
+        <li class="course-program-list__item">
+          <div class="course-program-list__head">Название урока</div>
+          <div class="course-program-list__content">
+            <ol>
+              <li>Название урока</li>
+              <li>Название урока</li>
+              <li>Название урока</li>
+            </ol>
+          </div>
+        </li>
+        <!-- 3 -->
+        <li class="course-program-list__item">
+          <div class="course-program-list__head">Название урока</div>
+          <div class="course-program-list__content">
+            <ol>
+              <li>Название урока</li>
+              <li>Название урока</li>
+              <li>Название урока</li>
+            </ol>
+          </div>
+        </li>
+        <!-- 4 -->
+        <li class="course-program-list__item">
+          <div class="course-program-list__head">Название урока</div>
+          <div class="course-program-list__content">
+            <ol>
+              <li>Название урока</li>
+              <li>Название урока</li>
+              <li>Название урока</li>
+            </ol>
+          </div>
+        </li>
+        <!-- 5 -->
+        <li class="course-program-list__item">
+          <div class="course-program-list__head">Название урока</div>
+          <div class="course-program-list__content">
+            <ol>
+              <li>Название урока</li>
+              <li>Название урока</li>
+              <li>Название урока</li>
+            </ol>
+          </div>
+        </li>
+        <!-- 6 -->
+        <li class="course-program-list__item">
+          <div class="course-program-list__head">Название урока</div>
+          <div class="course-program-list__content">
+            <ol>
+              <li>Название урока</li>
+              <li>Название урока</li>
+              <li>Название урока</li>
+            </ol>
+          </div>
+        </li>
+        <!-- 7 -->
+        <li class="course-program-list__item">
+          <div class="course-program-list__head">Название урока</div>
+          <div class="course-program-list__content">
+            <ol>
+              <li>Название урока</li>
+              <li>Название урока</li>
+              <li>Название урока</li>
+            </ol>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="course-teacher course-page-section">
+      <h2 class="h2">Преподаватель курса</h2>
+      <div class="course-teacher-persone">
+        <div class="course-teacher-persone__image">
+          <img class="course-result-list__image" src="/static/edx-theme/images/course-teacher.png" alt="">
+        </div>
+        <div class="course-teacher-persone__content">
+          <div class="course-teacher-persone__name">Иванов Александр</div>
+          <p>
+            Генеральный директор агентства интернет-маркетинга Level-Ads, совладелец компании HelpTrucks LLC. 
+            Специализируется на контекстной рекламе и SEO-продвижении.
+            В маркетинге более 7 лет, специалист комплексного интернет-продвижения, сторонник UX подхода.
+            Более 3 лет занимается продвижением на западные рынки - США, Канаду и Австралию.
+            Продвигал digital-проекты с аудиторией более, чем 1 000 000 пользователей в месяц
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="course-sidebar course-sidebar_mama">
+    <div class="course-summary course-summary_aside">
+      <div class="course-sign-up-video-text">
+        <span>Смотреть вводную лекцию</span>
+      </div>
+      <div class="course-sign-up-video">
+        % if get_course_about_section(request, course, "video"):
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <img src="${course_image_urls['large']}" alt="" />
+            <div class="play-intro">
+              <svg class="svg-icon" viewBox="0 0 16 16">
+                <use xlink:href="#aside-play-button"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+        %else:
+        <div class="media">
+          <div class="hero">
+            <img src="https://placeimg.com/1024/768/any" alt="" />
+          </div>
+        </div>
+        % endif
+      </div>
+      <div class="course-sign-up-terms">
+        <span>БЕСПЛАТНО</span>
+        <div class="course-sign-up-terms-tooltip">
+          <svg class="svg-icon" viewBox="0 0 16 16">
+            <use xlink:href="#ico_terms"></use>
+          </svg>
+          <div class="course-sign-up-terms-tooltip__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, cupiditate!
+          </div>
+        </div>
+      </div>
+      <div class="course-sign-up-button">
+        <a href="">Записаться на курс</a>
+      </div>
+      <ol class="important-dates">
+          <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
+          % if not course.start_date_is_still_default:
+              <%
+                  course_start_date = course.start
+              %>
+            <li class="important-dates-item">
+              <span class="icon fa fa-calendar" aria-hidden="true"></span>
+              <p class="important-dates-item-title">${_("Classes Start")}</p>
+              % if isinstance(course_start_date, str):
+                  <span class="important-dates-item-text start-date">${course_start_date}</span>
+              % else:
                   <%
-                      course_end_date = course.end
+                     course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
                   %>
-  
-              <li class="important-dates-item">
-                  <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                  <p class="important-dates-item-title">${_("Classes End")}</p>
-                    % if isinstance(course_end_date, str):
-                        <span class="important-dates-item-text final-date">${course_end_date}</span>
-                    % else:
-                      <%
-                          course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                      %>
-                      <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-                    % endif
-              </li>
+                  <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
               % endif
-  
-            % if get_course_about_section(request, course, "effort"):
-              <li class="important-dates-item"><span class="icon fa fa-pencil" aria-hidden="true"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
-            % endif
-  
-            ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
-  
-            %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
-              <li class="important-dates-item">
-                <span class="icon fa fa-money" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Price")}</p>
-                <span class="important-dates-item-text">${course_price}</span>
-              </li>
-            %endif
-  
-            % if pre_requisite_courses:
-            <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
-            <li class="prerequisite-course important-dates-item">
-              <span class="icon fa fa-list-ul" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Prerequisites")}</p>
-              ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
-              <span class="important-dates-item-text pre-requisite"><a href="${prc_target}">${pre_requisite_courses[0]['display']}</a></span>
-              <p class="tip">
-              ${_("You must successfully complete {link_start}{prc_display}{link_end} before you begin this course.").format(
-                link_start='<a href="{}">'.format(prc_target),
-                link_end='</a>',
-                prc_display=pre_requisite_courses[0]['display'],
-              )}
-              </p>
+            </li>
+          % endif
+            ## We plan to ditch end_date (which is not stored in course metadata),
+            ## but for backwards compatibility, show about/end_date blob if it exists.
+            % if get_course_about_section(request, course, "end_date") or course.end:
+                <%
+                    course_end_date = course.end
+                %>
+
+            <li class="important-dates-item">
+                <span class="icon fa fa-calendar" aria-hidden="true"></span>
+                <p class="important-dates-item-title">${_("Classes End")}</p>
+                  % if isinstance(course_end_date, str):
+                      <span class="important-dates-item-text final-date">${course_end_date}</span>
+                  % else:
+                    <%
+                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
+                    %>
+                    <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
+                  % endif
             </li>
             % endif
-            % if get_course_about_section(request, course, "prerequisites"):
-              <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
-            % endif
-          </ol>
-    </div>
 
-      ## Course reviews tool
-      % if reviews_fragment_view:
-       ${HTML(reviews_fragment_view.body_html())}
-      % endif
+          % if get_course_about_section(request, course, "effort"):
+            <li class="important-dates-item"><span class="icon fa fa-pencil" aria-hidden="true"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
+          % endif
 
-      ## For now, ocw links are the only thing that goes in additional resources
-      % if get_course_about_section(request, course, "ocw_links"):
-      <div class="additional-resources">
-        <header>
-          <h1>${_("Additional Resources")}</h1>
-      </div>
+          ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
 
-        <div>
-          ## "MITOpenCourseware" should *not* be translated
-          <h2 class="opencourseware">MITOpenCourseware</h2>
-             ${get_course_about_section(request, course, "ocw_links")}
+          %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
+            <li class="important-dates-item">
+              <span class="icon fa fa-money" aria-hidden="true"></span>
+              <p class="important-dates-item-title">${_("Price")}</p>
+              <span class="important-dates-item-text">${course_price}</span>
+            </li>
+          %endif
+
+          % if pre_requisite_courses:
+          <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
+          <li class="prerequisite-course important-dates-item">
+            <span class="icon fa fa-list-ul" aria-hidden="true"></span>
+            <p class="important-dates-item-title">${_("Prerequisites")}</p>
+            ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
+            <span class="important-dates-item-text pre-requisite"><a href="${prc_target}">${pre_requisite_courses[0]['display']}</a></span>
+            <p class="tip">
+            ${_("You must successfully complete {link_start}{prc_display}{link_end} before you begin this course.").format(
+              link_start='<a href="{}">'.format(prc_target),
+              link_end='</a>',
+              prc_display=pre_requisite_courses[0]['display'],
+            )}
+            </p>
+          </li>
+          % endif
+          % if get_course_about_section(request, course, "prerequisites"):
+            <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
+          % endif
+        </ol>
+        <div class="course-sign-up-program">
+          <a class="js-anchor" href="#course-program">Программа курса</a>
         </div>
-    </div>
-    %endif
-
-    <div class="details">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
-        </div>
-      % endif
-
-      <div class="inner-wrapper">
-        ${get_course_about_section(request, course, "overview")}
-      </div>
   </div>
-
-    
-    
-
+    </div>
   </div>
 
   </div>

@@ -509,7 +509,11 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     box-sizing: border-box;
     padding: 24px;
     @media (min-width: $desktop-size) {
-        padding: 0;
+        padding: 0 15px;
+    }
+
+    @media (max-width: $desktop-size) {
+        padding: 20px 15px;
     }
 }
 
@@ -731,7 +735,7 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 }
 .course-info .course-sidebar {
     float: none;
-    width: 100%;
+    width: 270px;
 }
 .course-info .details h2 {
     margin: 0 0 50px;
@@ -2431,13 +2435,6 @@ body footer .raccoon__logo {
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
-    @media (max-width: $desktop-size) {
-        padding: 0 30px;
-    }
-    @media (max-width: $tablet-size) {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 .course-info .course-sidebar header {
