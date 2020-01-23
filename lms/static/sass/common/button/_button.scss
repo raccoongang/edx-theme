@@ -6,3 +6,22 @@ body .button {
     padding: 12px 35px 11px 35px;
     font-size: 14px;
 }
+
+body .learn-link {
+    border: 1px solid $theme-header-btn-color;
+    box-sizing: border-box;
+    text-shadow: 0px 4px 4px rgba(0, 150, 136, 0.2);
+    border-radius: 46px;
+    padding: 16px 36px;
+    font: 600 16px/24px 'Artegra Sans', sans-serif;
+    color: $theme-header-btn-color;
+
+    @media (max-width: $laptop-size) {
+        font: 600 15px/24px 'Artegra Sans', sans-serif;
+    }
+
+    @media (max-width: $mobile-size) {
+        font: 600 12px/24px 'Artegra Sans', sans-serif;
+        padding: 9px 11px;
+    }
+}

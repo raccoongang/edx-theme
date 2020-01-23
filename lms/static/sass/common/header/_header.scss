@@ -7,8 +7,8 @@
     background-color: #fff;
 }
 .header__holder {
-    padding: 18px 0;
-    max-width: $desktop-size;
+    padding: 8px 15px;
+    max-width: 1230px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
@@ -20,7 +20,7 @@
         justify-content: space-between;
     }
     @media (min-width: $desktop-size) {
-        padding: 18px 0;
+        padding: 18px 15px;
         background: none;
     }
     
@@ -42,6 +42,8 @@ a.header__logo,
     display: flex;
     align-items: center;
     transition: transform .2s;
+    width: 70px;
+    height: 72px;
 
     &:hover {
         color: #fff;
@@ -57,8 +59,14 @@ a.header__logo,
             color: #000;
         }
     }
-    .menu-open & {
-        transform: translate(120%, 0);
+    // .menu-open & {
+    //     transform: translate(120%, 0);
+    // }
+
+    @media (max-width: $mobile-size) {
+       width: 48px;
+       height: 50px; 
+       margin-right: 16px;
     }
 }
 .header__logo-white {
@@ -72,6 +80,10 @@ a.header__logo,
     .is-authenticated &,
     .header__other & {
         display: none;
+    }
+
+    @media (max-width: $mobile-size) {
+        width: 100%;
     }
 }
 .header__logo-dark {
@@ -87,6 +99,10 @@ a.header__logo,
     }
     .footer-about-openedx & {
         display: block;
+    }
+
+    @media (max-width: $mobile-size) {
+        width: 100%;
     }
 }
 .header__helper {
@@ -119,18 +135,18 @@ a.header__logo,
 }
 .header__opener {
     position: absolute;
-    border-top: 2px solid $color1;
-    border-bottom: 2px solid $color1;
+    border-top: 2px solid $theme-header-btn-color;
+    border-bottom: 2px solid $theme-header-btn-color;
     transition: transform .2s;
     width: 18px;
     height: 8px;
-    left: 20px;
+    left: 15px;
     top: 26px;
 
     &:after {
         content: '';
         height: 2px;
-        background: $color1;
+        background: $theme-header-btn-color;
         position: absolute;
         width: 100%;
         top: 3px;

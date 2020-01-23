@@ -11,10 +11,10 @@ from django.utils.translation import ugettext as _
 
 <ul class="main-nav">
   <li class="main-nav__item">
-    <a class="main-nav__link" href="/">${_("Main page")}</a>
+    <a class="main-nav__link" href="/courses">Все курсы</a>
   </li>
   <li class="main-nav__item">
-    <a class="main-nav__link" href="/courses">${_("Courses")}</a>
+    <a class="main-nav__link" href="/">О проекте</a>
   </li>
   <!-- <li class="main-nav__item">
     <a class="main-nav__link" href="/schools">Школы</a>
@@ -27,23 +27,24 @@ from django.utils.translation import ugettext as _
   </li>
 </ul>
 
-
-<%block name="navigation_other_global_links">
-% if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-  % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-      <a class="login-theme login-theme_register login-theme_other" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-  % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
-      <a class="login-theme login-theme_register login-theme_other" href="/register${login_query()}">${_("Register")}</a>
-  % endif
-% endif
-</%block>
+<a href="#" class="learn-link">Преподавайте на МАМА</a>
 
 <%block name="navigation_sign_in">
     % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
       % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-        <a class="login-theme login-theme_other" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+        <a class="login-theme login-theme_login login-theme_margin login-theme_other" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
       % else:
-        <a class="login-theme login-theme_other" href="/login${login_query()}">${_("Sign in")}</a>
+        <a class="login-theme login-theme_login login-theme_margin login-theme_other" href="/login${login_query()}">${_("Sign in")}</a>
       % endif
     % endif
+</%block>
+
+<%block name="navigation_other_global_links">
+% if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+  % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+      <a class="login-theme login-theme_other" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+  % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
+      <a class="login-theme login-theme_other" href="/register${login_query()}">${_("Register")}</a>
+  % endif
+% endif
 </%block>

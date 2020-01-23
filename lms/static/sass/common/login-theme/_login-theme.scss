@@ -1,20 +1,21 @@
 a.login-theme,
 .login-theme {
-    background: #f39b08;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.10);
-    border-radius: 4px;
+    background: $theme-header-btn-color;
+    box-shadow: none;
+    font: 600 16px/24px 'Artegra Sans', sans-serif;
+    border-radius: 46px;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
     color: #fff;
     letter-spacing: 0;
-    padding: 11px 42px 12px;
+    padding: 16px 36px;
     text-transform: uppercase;
-    transition: background color .3s linear .3s;
+    transition: background .3s linear;
     text-align: center;
 
     &:hover {
-        background: #fff;
-        color: #000;
+        background: $color6;
+        color: #fff;
     }
 
     @media (min-width: $tablet-size) {
@@ -26,18 +27,31 @@ a.login-theme,
         top: 315px;
         left: 50px;
     }
+
     .course-actions & {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     &_other {
         display: none;
         @media (min-width: $tablet-size) {
             display: inline-block;
         }
     }
-    &_register {
+
+    &_margin {
         margin-right: 10px;
         margin-left: auto;
+    }
+
+    &_login {
+        color: $color6;
+        background: none;
+
+        &:hover {
+            background: none;
+            color: $color6;
+        }
     }
 }
