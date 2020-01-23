@@ -4,22 +4,22 @@
 }
 // remove this end
 .course-info {
-    &--mama {
-        header{
+    &_mama {
+        header {
             &.course-profile {
                 background: $gradient6;
                 margin-bottom: 40px;
 
                 .intro-inner-wrapper {
 
-                    .intro{
+                    .intro {
                         width: 100%;
                         padding-bottom: 50px;
                         padding: 98px 0 50px;
 
                         > .heading-group {
 
-                            h1{
+                            h1 {
                                 font-size: 30px;
                                 line-height: 36px;
                                 font-weight: 700;
@@ -29,8 +29,52 @@
                         }
                     }
 
-                    .table{
+                    .table {
                         max-width: 870px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $desktop-size) {
+            header {
+                &.course-profile {
+                    .intro-inner-wrapper {
+                        .table{
+                            padding-right: 120px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $laptop-size) {
+            header {
+                &.course-profile {
+                    .intro-inner-wrapper {
+                        .table{
+                            padding-right: 0;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $tablet-size) {
+            header {
+                &.course-profile {
+                    .intro-inner-wrapper {
+                        .intro{
+                            background: transparent;
+                            padding: 20px 0;
+                            > .heading-group {
+                                h1 {
+                                    color: #FFFFFF;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -66,5 +110,20 @@
         font-size: 24px;
         line-height: 32px;
         font-family: $font-family;
+    }
+
+    @media (max-width: $mobile-size) {
+        flex-direction: column;
+
+        &__item {
+            margin: 0 0 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        &__title {
+            margin-bottom: 5px;
+        }
     }
 }

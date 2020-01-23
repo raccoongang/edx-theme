@@ -11,6 +11,11 @@
     max-width: 870px;
     padding-right: 30px;
     box-sizing: border-box;
+
+    @media (max-width: $laptop-size) {
+        max-width: 100%;
+        padding-right: 0;
+    }
 }
 .course-info {
     .course-sidebar{
@@ -20,6 +25,18 @@
             border: 0;
         }
 
+    }
+
+    @media (max-width: $laptop-size) {
+        .course-sidebar{
+            width: 50%;
+        }
+    }
+
+    @media (max-width: $mobile-size) {
+        .course-sidebar{
+            width: 100%;
+        }
     }
 }
 .course-page-section{
@@ -37,6 +54,10 @@
         color: $violet;
         margin-bottom: 45px;
     }
+
+    @media (max-width: $mobile-size) {
+        margin-bottom: 60px;
+    }
 }
 .content-wrapper{
     padding-top: 91px;
@@ -47,7 +68,6 @@
     width: 100%;
     max-width: 1230px;
     padding-left: 15px;
-    padding-right: 15px;
     box-sizing: border-box;
     &:after{
         display: none !important;
@@ -56,5 +76,10 @@
     @media (max-width: $laptop-size) {
         flex-direction: column;
         overflow: hidden;
+        padding-right: 15px;
+    }
+
+    @media (max-width: $tablet-size) {
+        padding-bottom: 60px;
     }
 }

@@ -95,4 +95,34 @@
         line-height: 24px;
         color: $black;
     }
+
+    @media (max-width: $desktop-size) {
+        &__number {
+            width: 140px;
+            height: 140px;
+
+            &:before {
+                right: calc(-100% + 30px);
+            }
+        }
+    }
+
+    @media (max-width: $mobile-large) {
+        flex-direction: column;
+
+        &__item {
+            width: 100%;
+            margin-bottom: 40px !important;
+
+            &:last-child{
+                margin-bottom: 0 !important;
+            }
+        }
+
+        &__number {
+            &:before {
+                display: none;
+            }
+        }
+    }
 }

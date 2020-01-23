@@ -509,7 +509,11 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     box-sizing: border-box;
     padding: 24px;
     @media (min-width: $desktop-size) {
-        padding: 0;
+        padding: 0 15px;
+    }
+
+    @media (max-width: $desktop-size) {
+        padding: 20px 15px;
     }
 }
 

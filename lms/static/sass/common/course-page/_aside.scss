@@ -11,7 +11,7 @@
     }
 
     @media (max-width: $laptop-size) {
-        margin-top: 0;
+        margin: 0 auto;
         &_mama {
             order: -1;
         }
@@ -213,6 +213,25 @@
                     }
                 }
             }
+
+            @media (max-width: $laptop-size) {
+                .course-sign-up-video {
+                    height: 300px;
+                    width: 100%;
+
+                    .media {
+                        .hero {
+                            img {
+                                height: 300px;
+                            }
+                        }
+                    }
+                }
+
+                .important-dates {
+                    align-items: inherit;
+                }
+            }
         }
     }
 }
@@ -230,5 +249,7 @@
 
     @media (max-width: $laptop-size) {
         position: static;
+        width: 100%;
+        margin-bottom: 40px;
     }
 }
