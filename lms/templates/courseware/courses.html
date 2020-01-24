@@ -1,3 +1,4 @@
+<%namespace file='../main.html' import="login_query"/>
 <%!
   import json
   from django.utils.translation import ugettext as _
@@ -33,7 +34,6 @@
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="find-courses">
       <section class="courses-container">
-        <h2 class="h2">Курсы, которые скоро начнутся</h2>
         % if course_discovery_enabled:
         <div id="discovery-form" role="search" aria-label="course" class="wrapper-search-context">
           <form class="wrapper-search-input">
@@ -54,7 +54,7 @@
         <div id="filter-bar" class="filters hide-phone is-collapsed">
         </div>
         % endif
-
+        <h2 class="h2">Курсы, которые скоро начнутся</h2>
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
           <ul class="courses-listing">
             %for course in courses:
@@ -64,16 +64,9 @@
             %endfor
           </ul>
         </div>
-
-
-        % if course_discovery_enabled:
-        <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
-          <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
-          <section class="search-facets-lists">
-          </section>
-        </aside>
-        % endif
-
+        <div class="courses-register">
+          <a class="login-theme login-theme_other" href="/register${login_query()}">${_("Register")}</a>
+        </div>
       </section>
     </section>
 </main>

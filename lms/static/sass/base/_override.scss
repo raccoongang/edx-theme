@@ -324,14 +324,71 @@ hr.other {
     padding: 0 15px;
     box-sizing: border-box;
 
+    h2, 
+    .h2 {
+        font-family: 'Artegra Sans', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: $color7;
+        margin-bottom: 45px;
+    }
+
     .courses {
         .course {
             .course-image {
                 .cover-image {
                     height: 328px;
                     position: relative;
+                    &:before {
+                        height: 100%;
+                        background: rgba(178, 223, 219, .9);
+                    }
+
+                    .learn-more {
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: $theme-header-btn-color;
+                    }
                 }
             }
+        }
+
+        @media (max-width: $tablet-size) {
+            .course {
+                .course-image {
+                    .cover-image {
+                        height: auto;
+                        min-height: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        h2,
+        .h2 {
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.courses-register {
+    text-align: center;
+    margin-bottom: 30px;
+
+    .login-theme{
+        background-color: transparent;
+        font-size: 16px;
+        color: $theme-header-btn-color;
+        border: 1px solid $theme-header-btn-color;
+        text-transform: none;
+        &:hover{
+            background-color: $theme-header-btn-color;
+            color: #FFF;
         }
     }
 }
@@ -438,7 +495,8 @@ hr.other {
 
 .course-page-section{
     margin-bottom: 50px;
-    h2,.h2{
+    h2,
+    .h2{
         font-family: 'Artegra Sans' !important;
         font-weight: 700;
         font-size: 30px;
@@ -448,14 +506,16 @@ hr.other {
     }
 
     @media (max-width: $tablet-size) {
-        h2,.h2{
+        h2,
+        .h2{
             font-size: 26px;
             line-height: 30px;
         }
     }
 
     @media (max-width: $mobile-size) {
-        h2,.h2{
+        h2,
+        .h2{
             font-size: 22px;
             line-height: 26px;
         }
@@ -849,6 +909,60 @@ hr.other {
     }
 }
 
+.courses-listing {
+    .courses-listing-item {
+        .course-date {
+            margin-left: 35px;
+            &__text {
+                display: flex;
+                align-items: center;
+                margin-bottom: 22px;
+                
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                .svg-icon {
+                    flex: none;
+                    margin-right: 27px;
+                    width: 24px;
+                    height: 24px;
+                }
+            
+                span {
+                    display: block;
+                    font-family: 'Artegra Sans', sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $color7;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: $tablet-size) {
+        .courses-listing-item {
+            .course-date {
+                margin-left: 0;
+                padding: 0 !important;
+                &__text {
+                    margin-bottom: 12px;
+
+                    .svg-icon {
+                        margin-right: 12px;
+                    }
+
+                    span{
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .highlighted-courses .courses .course a {
     padding-bottom: 24px;
     overflow: hidden;
@@ -912,6 +1026,13 @@ hr.other {
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
+    height: auto;
+    min-height: 57px;
+
+    @media (max-width: $tablet-size) {
+        padding: 0;
+        min-height: auto;
+    }
 }
 
 .highlighted-courses .courses .course a {
@@ -2031,7 +2152,7 @@ body.view-in-course .wrapper-course-material .course-material {
 }
 .find-courses {
     .courses-container {
-        padding: 40px 0 0;
+        padding: 40px 15px 0;
         .courses {
             width: 100% !important;
             margin-right: 0 !important;
@@ -2042,6 +2163,76 @@ body.view-in-course .wrapper-course-material .course-material {
                     padding: 0 15px;
                     box-sizing: border-box;
                     margin: 0 0 73px !important;
+                }
+            }
+        }
+    }
+
+    .wrapper-search-context {
+        max-width: 100%;
+        margin-bottom: 70px;
+
+        .wrapper-search-input {
+            width: 100%;
+            max-width: 570px;
+            float: none;
+    
+            .discovery-input {
+                border: 1px solid #B2DFDB;
+                box-sizing: border-box;
+                box-shadow: inset 0px 4px 10px rgba(60, 182, 181, 0.15);
+                border-radius: 46px;
+                height: 46px;
+                padding-right: 55px;
+                padding-left: 35px;
+
+                ::-webkit-input-placeholder {
+                    color: $theme-header-link-color;
+                }
+                ::-moz-placeholder { 
+                    color: $theme-header-link-color;
+                }
+                :-ms-input-placeholder { 
+                    color: $theme-header-link-color;
+                }
+                :-moz-placeholder { 
+                    color: $theme-header-link-color;
+                }
+            }
+
+            .discovery-submit {
+                background: transparent;
+                height: 46px;
+                line-height: 46px;
+                margin-right: 10px;
+
+                &:hover {
+                    background: transparent !important;
+                }
+
+                .icon{
+                    background-image: url('../images/ico-search.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 22px;
+                    height: 18px;
+                    background-size: cover;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        .courses-container {
+            .courses {
+                .courses-listing {
+                    .courses-listing-item {
+                        width: 100% !important;
+                        margin-bottom: 40px !important;
+                    }
                 }
             }
         }
@@ -2665,6 +2856,7 @@ body .empty-dashboard-message a {
     background: $theme-header-btn-color;
     top: 50%;
     margin: -25px 0 0;
+
 }
 
 body.view-in-course .course-wrapper,
