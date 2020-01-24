@@ -442,7 +442,8 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 
 .course-page-section{
     margin-bottom: 50px;
-    h2,.h2{
+    h2,
+    .h2{
         font-family: 'Artegra Sans' !important;
         font-weight: 700;
         font-size: 30px;
@@ -452,16 +453,18 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
     }
 
     @media (max-width: $tablet-size) {
-        h2,.h2{
-            font-size: 26px;
-            line-height: 30px;
+        h2,
+        .h2{
+            font-size: 26px !important;
+            line-height: 30px !important;
         }
     }
 
     @media (max-width: $mobile-size) {
-        h2,.h2{
-            font-size: 22px;
-            line-height: 26px;
+        h2,
+        .h2{
+            font-size: 22px !important;
+            line-height: 26px !important;
         }
     }
 }
@@ -557,6 +560,18 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
         box-shadow: none;
         box-sizing: border-box;
         outline: none;
+        &::-webkit-input-placeholder {
+            color: $theme-header-link-color;
+        }
+        &::-moz-placeholder { 
+            color: $theme-header-link-color;
+        }
+        &:-ms-input-placeholder { 
+            color: $theme-header-link-color;
+        }
+        &:-moz-placeholder { 
+            color: $theme-header-link-color;
+        }
     }
 
     &__btn{
@@ -612,6 +627,22 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
             font-size: 13px;
         }
     }
+
+    @media (max-width: 414px) {
+        flex-direction: column;
+
+        &__input {
+            margin: 0 0 15px;
+        }
+
+        input {
+            margin-right: 0;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
 }
 
 .wrapper-footer {
@@ -651,10 +682,18 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
                 }
             }
         }
+
+        a {
+            &:hover {
+                border-bottom: 0;
+                color: #FFF;
+            }
+        }
+
     }
 
     a {
-        &:focus, &:active{
+        &:focus, &:active {
             border-bottom: 0;
             color: #FFF;
         }
