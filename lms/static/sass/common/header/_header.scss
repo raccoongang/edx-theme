@@ -24,7 +24,7 @@
         padding: 18px 15px;
         background: none;
     }
-    
+
 }
 a.header__logo,
 .header__logo {
@@ -136,6 +136,7 @@ a.header__logo,
     height: 8px;
     left: 15px;
     top: 26px;
+    z-index: 999;
 
     &:after {
         content: '';
@@ -154,5 +155,21 @@ a.header__logo,
     }
     .menu-open & {
         transform: translate(265px, 0);
+    }
+}
+
+body.menu-open {
+    .header {
+        &__opener {
+            left: -35px;
+            top: 15px;
+            border-bottom: 0;
+            transform: translate(265px, 0) rotate(45deg);
+
+            &:after {
+                transform: rotate(90deg);
+                margin-top: -5px;
+            }
+        }
     }
 }

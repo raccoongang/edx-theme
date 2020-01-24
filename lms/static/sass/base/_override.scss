@@ -324,7 +324,7 @@ hr.other {
     padding: 0 15px;
     box-sizing: border-box;
 
-    h2, 
+    h2,
     .h2 {
         font-family: 'Artegra Sans', sans-serif;
         font-weight: 700;
@@ -508,16 +508,16 @@ hr.other {
     @media (max-width: $tablet-size) {
         h2,
         .h2{
-            font-size: 26px;
-            line-height: 30px;
+            font-size: 26px !important;
+            line-height: 30px !important;
         }
     }
 
     @media (max-width: $mobile-size) {
         h2,
         .h2{
-            font-size: 22px;
-            line-height: 26px;
+            font-size: 22px !important;
+            line-height: 26px !important;
         }
     }
 }
@@ -613,6 +613,18 @@ hr.other {
         box-shadow: none;
         box-sizing: border-box;
         outline: none;
+        &::-webkit-input-placeholder {
+            color: $theme-header-link-color;
+        }
+        &::-moz-placeholder {
+            color: $theme-header-link-color;
+        }
+        &:-ms-input-placeholder {
+            color: $theme-header-link-color;
+        }
+        &:-moz-placeholder {
+            color: $theme-header-link-color;
+        }
     }
 
     &__btn{
@@ -668,6 +680,22 @@ hr.other {
             font-size: 13px;
         }
     }
+
+    @media (max-width: 414px) {
+        flex-direction: column;
+
+        &__input {
+            margin: 0 0 15px;
+        }
+
+        input {
+            margin-right: 0;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
 }
 
 .wrapper-footer {
@@ -707,10 +735,18 @@ hr.other {
                 }
             }
         }
+
+        a {
+            &:hover {
+                border-bottom: 0;
+                color: #FFF;
+            }
+        }
+
     }
 
     a {
-        &:focus, &:active{
+        &:focus, &:active {
             border-bottom: 0;
             color: #FFF;
         }
@@ -917,7 +953,7 @@ hr.other {
                 display: flex;
                 align-items: center;
                 margin-bottom: 22px;
-                
+
                 &:last-child{
                     margin-bottom: 0;
                 }
@@ -928,7 +964,7 @@ hr.other {
                     width: 24px;
                     height: 24px;
                 }
-            
+
                 span {
                     display: block;
                     font-family: 'Artegra Sans', sans-serif;
@@ -940,7 +976,7 @@ hr.other {
             }
         }
     }
-    
+
     @media (max-width: $tablet-size) {
         .courses-listing-item {
             .course-date {
@@ -1018,7 +1054,6 @@ hr.other {
 }
 
 .courses-container .courses .course .course-info .course-title {
-    color: #000;
     font-family: 'Artegra Sans', sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -2176,7 +2211,7 @@ body.view-in-course .wrapper-course-material .course-material {
             width: 100%;
             max-width: 570px;
             float: none;
-    
+
             .discovery-input {
                 border: 1px solid #B2DFDB;
                 box-sizing: border-box;
@@ -2189,13 +2224,13 @@ body.view-in-course .wrapper-course-material .course-material {
                 ::-webkit-input-placeholder {
                     color: $theme-header-link-color;
                 }
-                ::-moz-placeholder { 
+                ::-moz-placeholder {
                     color: $theme-header-link-color;
                 }
-                :-ms-input-placeholder { 
+                :-ms-input-placeholder {
                     color: $theme-header-link-color;
                 }
-                :-moz-placeholder { 
+                :-moz-placeholder {
                     color: $theme-header-link-color;
                 }
             }
@@ -2856,7 +2891,6 @@ body .empty-dashboard-message a {
     background: $theme-header-btn-color;
     top: 50%;
     margin: -25px 0 0;
-
 }
 
 body.view-in-course .course-wrapper,
