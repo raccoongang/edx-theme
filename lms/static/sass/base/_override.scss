@@ -317,27 +317,23 @@ hr.other {
     @media (min-width: $desktop-size) {
         justify-content: flex-start;
     }
-
-    .courses-listing-item {
-        width: 100%;
-        max-width: 277px;
-        @media (min-width: $tablet-size) {
-            margin-right: 32px;
-        }
-    }
-}
-body .find-courses .courses-container .courses .courses-listing .courses-listing-item {
-    width: 100% !important;
-    max-width: 277px;
-    @media (min-width: $tablet-size) {
-        margin-right: 32px;
-    }
 }
 
 .courses-container {
     max-width: 1230px;
     padding: 0 15px;
     box-sizing: border-box;
+
+    .courses {
+        .course {
+            .course-image {
+                .cover-image {
+                    height: 328px;
+                    position: relative;
+                }
+            }
+        }
+    }
 }
 
 .courses-container .courses {
@@ -909,6 +905,13 @@ body .find-courses .courses-container .courses .courses-listing .courses-listing
 
 .courses-container .courses .course .course-info .course-title {
     color: #000;
+    font-family: 'Artegra Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.001em;
+    text-transform: uppercase;
+    color: #212121;
 }
 
 .highlighted-courses .courses .course a {
@@ -2026,12 +2029,29 @@ body.view-in-course .wrapper-course-material .course-material {
 .wrapper-course-material .course-material {
     margin-bottom: 50px;
 }
-.find-courses .courses-container .courses .courses-listing .courses-listing-item {
-    max-height: none;
+.find-courses {
+    .courses-container {
+        padding: 40px 0 0;
+        .courses {
+            width: 100% !important;
+            margin-right: 0 !important;
+            .courses-listing {
+                .courses-listing-item {
+                    max-height: none;
+                    width: 50% !important;
+                    padding: 0 15px;
+                    box-sizing: border-box;
+                    margin: 0 0 73px !important;
+                }
+            }
+        }
+    }
 }
 .find-courses .courses .course a {
     height: 100%;
     background: #fff;
+    padding-bottom: 24px;
+    overflow: hidden;
 }
 .login-register .login-provider.button-oa2-facebook {
     background: #fff;
