@@ -132,7 +132,7 @@ hr.other {
             width: auto;
         }
     }
-    
+
     #register-form.form-wrapper {
         padding: 20px 16px 210px;
         box-sizing: border-box;
@@ -153,7 +153,7 @@ hr.other {
             right: 20px;
             bottom: 20px;
             top: auto;
-            
+
             @media (min-width: $tablet-size) {
                 text-align: center;
                 position: absolute;
@@ -204,7 +204,7 @@ hr.other {
             transform: translate(0, 0);
             left: auto;
         }
-        
+
     }
     .action.action-primary.action-update {
         width: 100%;
@@ -324,7 +324,7 @@ hr.other {
     padding: 0 15px;
     box-sizing: border-box;
 
-    h2, 
+    h2,
     .h2 {
         font-family: 'Artegra Sans', sans-serif;
         font-weight: 700;
@@ -412,7 +412,7 @@ hr.other {
             height: auto;
         }
     }
-    
+
 }
 // course partners
 .course-partners {
@@ -508,16 +508,16 @@ hr.other {
     @media (max-width: $tablet-size) {
         h2,
         .h2{
-            font-size: 26px;
-            line-height: 30px;
+            font-size: 26px !important;
+            line-height: 30px !important;
         }
     }
 
     @media (max-width: $mobile-size) {
         h2,
         .h2{
-            font-size: 22px;
-            line-height: 26px;
+            font-size: 22px !important;
+            line-height: 26px !important;
         }
     }
 }
@@ -613,6 +613,18 @@ hr.other {
         box-shadow: none;
         box-sizing: border-box;
         outline: none;
+        &::-webkit-input-placeholder {
+            color: $theme-header-link-color;
+        }
+        &::-moz-placeholder {
+            color: $theme-header-link-color;
+        }
+        &:-ms-input-placeholder {
+            color: $theme-header-link-color;
+        }
+        &:-moz-placeholder {
+            color: $theme-header-link-color;
+        }
     }
 
     &__btn{
@@ -632,7 +644,7 @@ hr.other {
         &:hover{
             background: #673AB7 !important;
         }
-        
+
         &:focus {
             &:not(:disabled) {
                 box-shadow: none;
@@ -645,7 +657,7 @@ hr.other {
             min-width: 280px;
             margin-right: 20px;
         }
-        
+
         &__btn {
             padding: 13px 20px;
         }
@@ -666,6 +678,22 @@ hr.other {
         &__btn{
             padding: 11px 9px;
             font-size: 13px;
+        }
+    }
+
+    @media (max-width: 414px) {
+        flex-direction: column;
+
+        &__input {
+            margin: 0 0 15px;
+        }
+
+        input {
+            margin-right: 0;
+        }
+
+        &__btn {
+            width: 100%;
         }
     }
 }
@@ -707,10 +735,18 @@ hr.other {
                 }
             }
         }
+
+        a {
+            &:hover {
+                border-bottom: 0;
+                color: #FFF;
+            }
+        }
+
     }
 
     a {
-        &:focus, &:active{
+        &:focus, &:active {
             border-bottom: 0;
             color: #FFF;
         }
@@ -719,10 +755,10 @@ hr.other {
     @media (max-width: $laptop-size) {
         footer#footer-openedx {
             .colophon {
-                
+
                 .nav-colophon{
                     ol{
-                        
+
                         li{
                             a{
                                 font-size: 15px;
@@ -738,7 +774,7 @@ hr.other {
     @media (max-width: $tablet-size) {
         footer#footer-openedx {
             .colophon {
-                
+
                 .nav-colophon{
                     max-width: 100%;
                 }
@@ -749,9 +785,9 @@ hr.other {
     @media (max-width: 414px) {
         footer#footer-openedx {
             .colophon {
-                
-                .nav-colophon { 
-                    
+
+                .nav-colophon {
+
                     ol {
                         li {
                             width: 100%;
@@ -917,7 +953,7 @@ hr.other {
                 display: flex;
                 align-items: center;
                 margin-bottom: 22px;
-                
+
                 &:last-child{
                     margin-bottom: 0;
                 }
@@ -928,7 +964,7 @@ hr.other {
                     width: 24px;
                     height: 24px;
                 }
-            
+
                 span {
                     display: block;
                     font-family: 'Artegra Sans', sans-serif;
@@ -940,7 +976,7 @@ hr.other {
             }
         }
     }
-    
+
     @media (max-width: $tablet-size) {
         .courses-listing-item {
             .course-date {
@@ -1164,7 +1200,7 @@ hr.other {
 }
 
 .intro__school {
-    
+
     line-height: 1.3;
     color: #000;
     display: block;
@@ -1212,7 +1248,7 @@ hr.other {
     }
 
     .user-menu {
-        .main-nav & { 
+        .main-nav & {
             width: 100%;
         }
     }
@@ -1252,7 +1288,7 @@ hr.other {
         position: relative;
         display: flex;
 
-        .main-nav & { 
+        .main-nav & {
             border-bottom: 1px solid #F5F5F5;
 
             &:first-child {
@@ -1278,7 +1314,7 @@ hr.other {
         &.expanded {
             display: block;
         }
-        .main-nav & { 
+        .main-nav & {
             position: static;
             width: 100%;
             background: transparent;
@@ -1315,7 +1351,7 @@ hr.other {
         &:first-child {
             border: none;
         }
-        .main-nav & { 
+        .main-nav & {
             border-top: 1px solid #F5F5F5;
         }
     }
@@ -1334,7 +1370,7 @@ hr.other {
             color: #000;
             background: #D6F6F4;
         }
-        .main-nav & { 
+        .main-nav & {
             padding-left: 46px;
         }
     }
@@ -1558,7 +1594,7 @@ hr.other {
     width: 100%;
     margin-bottom: 16px;
     max-height: none;
-    
+
     @media (min-width: $tablet-size) {
         width: 245px;
         height: 136px;
@@ -1700,7 +1736,7 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
     box-shadow: none;
     border: none;
     background: none;
-    
+
     &:after,
     &:before {
         display: none;
@@ -1786,7 +1822,7 @@ body {
         display: flex;
         width: 100%;
         flex-direction: column;
-        
+
         .section {
             flex: 0 0 66%;
             &:last-child {
@@ -1960,7 +1996,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     flex-wrap: wrap;
     @media (min-width: $tablet-size) {
         flex-wrap: nowrap;
-    }   
+    }
 }
 .wrapper-course-material .course-material .tabs.course-tabs {
     width: 272px;
@@ -2190,7 +2226,7 @@ body.view-in-course .wrapper-course-material .course-material {
             width: 100%;
             max-width: 570px;
             float: none;
-    
+
             .discovery-input {
                 border: 1px solid #B2DFDB;
                 box-sizing: border-box;
@@ -2209,19 +2245,19 @@ body.view-in-course .wrapper-course-material .course-material {
                 &::-webkit-input-placeholder {
                     color: $theme-header-link-color;
                 }
-                &::-moz-placeholder { 
+                &::-moz-placeholder {
                     color: $theme-header-link-color;
                 }
-                &:-ms-input-placeholder { 
+                &:-ms-input-placeholder {
                     color: $theme-header-link-color;
                 }
-                &:-moz-placeholder { 
+                &:-moz-placeholder {
                     color: $theme-header-link-color;
                 }
-                
+
             }
 
-            
+
 
             .discovery-submit {
                 background: transparent;
@@ -2280,7 +2316,7 @@ body.view-in-course .wrapper-course-material .course-material {
         transform: translateX(0);
         margin: 0;
     }
-    
+
     &:hover {
         border: 1px solid #c8c8c8;
     }
@@ -2414,7 +2450,7 @@ body .login .form-actions button[type="submit"] {
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
     border: 2px solid $theme-btn-white-border !important;
-    
+
     &:active,
     &:focus {
         border-color: $theme-btn-white-border;
@@ -2472,7 +2508,7 @@ body .login .form-actions button[type="submit"] {
     color: $theme-btn-white-text-color;
     box-shadow: none !important;
     border: 2px solid $theme-btn-white-border !important;
-    
+
     &:active,
     &:focus {
         border-color: $theme-btn-white-border;
@@ -2498,7 +2534,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
     transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
-    
+
     &:active,
     &:focus {
         border-color: $theme-btn-white-border;
@@ -2543,7 +2579,7 @@ body .discussion-module .btn {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
-    
+
     &:active,
     &:focus {
         background: $theme-btn-white-bg !important;
@@ -2562,7 +2598,7 @@ body .courseware-bookmarks-button .bookmarks-list-button.is-active {
     background: $theme-btn-white-bg;
     color: $theme-btn-white-text-color;
     border-color: $theme-btn-white-border;
-    
+
     &:active,
     &:focus {
         background: $theme-btn-white-bg;
@@ -2637,7 +2673,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     color: #000;
     text-shadow: none;
     border-radius: 2px;
-    
+
     &:active,
     &:focus {
         background: $theme-btn-bg;
@@ -2657,7 +2693,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     &:focus {
         border-color: $theme-btn-bg;
     }
-    
+
 }
 .button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
@@ -2732,9 +2768,9 @@ body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 }
 .light-button:hover:not(:disabled),
 div.history-controls input[type="submit"]:hover:not(:disabled),
-a.light-button:hover:not(:disabled), 
-div.info-wrapper section.handouts ol li div.hitarea:hover+h4.light-button:not(:disabled), 
-div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:disabled), 
+a.light-button:hover:not(:disabled),
+div.info-wrapper section.handouts ol li div.hitarea:hover+h4.light-button:not(:disabled),
+div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:disabled),
 .gray-button:hover:not(:disabled),
 .button:hover:not(:disabled),
 .xmodule_display.xmodule_LTIModule div.lti .wrapper-lti-link .lti-link .link_lti_new_window:hover:not(:disabled) {
@@ -2761,12 +2797,12 @@ body .wmd-prompt-dialog .btn-brand:focus {
 }
 // end btns
 
-.view-dashboard.is-authenticated .wrapper-preview-menu, 
+.view-dashboard.is-authenticated .wrapper-preview-menu,
 .view-dashboard.is-authenticated .content-wrapper {
     position: relative;
     z-index: auto;
 }
-.modal .inner-wrapper, 
+.modal .inner-wrapper,
 .leanModal_box .inner-wrapper {
     box-sizing: border-box;
 }
@@ -2883,7 +2919,7 @@ body .empty-dashboard-message a {
 }
 
 body.view-in-course .course-wrapper,
-body.view-in-course .profile-wrapper, 
+body.view-in-course .profile-wrapper,
 body.view-in-course .instructor-dashboard-wrapper-2,
 body.view-in-course .wiki-wrapper,
 body.view-in-course .teams-wrapper,
@@ -3014,7 +3050,7 @@ div.info-wrapper {
 body.view-in-course .window-wrap {
     min-width: auto;
 }
-body.view-in-course .wrapper-course-material, 
+body.view-in-course .wrapper-course-material,
 body.view-in-course .wrapper-preview-menu {
     position: relative;
     z-index: 2;
@@ -3039,7 +3075,7 @@ body .wrapper-account-settings .account-settings-container {
 }
 .account-settings-sections {
     padding: 0 20px;
-    @media (min-width: $tablet-size) { 
+    @media (min-width: $tablet-size) {
         padding: 0;
     }
 }
@@ -3087,7 +3123,7 @@ body.menu-open {
     box-sizing: border-box;
     max-width: none;
     @media (max-width: $desktop-size) {
-        
+
     }
     @media (max-width: $tablet-size) {
         width: 100%;
@@ -3495,7 +3531,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
 }
 
 .account-settings-section-body.accountsTabSections-section-body {
-    
+
     @media (max-width: $tablet-size) {
         width: 100%;
         display: flex;

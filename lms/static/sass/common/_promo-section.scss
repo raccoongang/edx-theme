@@ -55,8 +55,9 @@
     margin-bottom: 30px;
 
     @media (max-width: $mobile-size) {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 22px;
     }
 }
 
@@ -66,12 +67,16 @@
     left: 15px;
     top: 180px;
 
+    @media (max-width: $tablet-size) {
+        top: inherit;
+        bottom: 40px;
+    }
+
     @media (max-width: $mobile-size) {
+        bottom: 30px;
         width: 100%;
         padding-right: 30px;
         box-sizing: border-box;
-        top: 50%;
-        transform: translateY(-50%);
     }
 }
 
