@@ -2233,26 +2233,43 @@ body.view-in-course .wrapper-course-material .course-material {
                 box-shadow: inset 0px 4px 10px rgba(60, 182, 181, 0.15);
                 border-radius: 46px;
                 height: 46px;
+                line-height: 46px;
                 padding-right: 55px;
+                font-family: "Open Sans", sans-serif;
                 padding-left: 35px;
-                font-size: 14px;
-                font-family: 'Artegra Sans' !important;
+                font-size: 16px;
 
                 &:-webkit-autofill::first-line {
-                    font-size: 14px;
+                    color: $theme-header-link-color;
+                    font-size: 16px !important;
+                    font-family: "Open Sans", sans-serif;
+                    line-height: 46px;
                 }
 
                 &::-webkit-input-placeholder {
                     color: $theme-header-link-color;
+                    font-size: 16px !important;
+                    font-family: "Open Sans", sans-serif;
+                    line-height: 46px;
+
                 }
                 &::-moz-placeholder {
                     color: $theme-header-link-color;
+                    font-size: 16px !important;
+                    font-family: "Open Sans", sans-serif;
+                    line-height: 46px;
                 }
                 &:-ms-input-placeholder {
                     color: $theme-header-link-color;
+                    font-size: 16px !important;
+                    font-family: "Open Sans", sans-serif;
+                    line-height: 46px;
                 }
                 &:-moz-placeholder {
                     color: $theme-header-link-color;
+                    font-size: 16px !important;
+                    font-family: "Open Sans", sans-serif;
+                    line-height: 46px;
                 }
 
             }
