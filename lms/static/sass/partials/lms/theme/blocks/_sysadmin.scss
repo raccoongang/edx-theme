@@ -1,0 +1,73 @@
+.sysadmin-dashboard-wrapper {
+    background: $white;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+
+    .instructor-nav a {
+        padding: 5px 0;
+
+        &.active-section {
+            color: #000;
+        }
+    }
+
+    .form-actions button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    ol {
+        word-break: break-all;
+    }
+
+    table.stat_table {
+        width: 100%;
+        word-break: break-all;
+    }
+
+    .sysadmin-dashboard-content {
+        margin: 20px 0;
+    }
+
+    .list-input {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 10px;
+
+        li {
+            padding-bottom: 15px;
+
+            input:not([type="checkbox"]) {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.instructor-dashboard-wrapper-2 {
+    .bottom-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+            margin: 0;
+        }
+    }
+
+    section#membership.idash-section {
+        .member-lists-management,
+        .member-lists-management-ccx {
+            .auth-list-container .member-list-widget input.add[type="button"] {
+                position: relative;
+                margin: 0;
+                right: auto;
+            }
+        }
+    }
+}

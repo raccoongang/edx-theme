@@ -1,0 +1,133 @@
+// Linear backgorund gradient
+//************************************************************************//
+@mixin linear-gradient($pos, $G1, $G2: null, $G3: null, $G4: null, $G5: null, $G6: null, $G7: null, $G8: null, $G9: null, $G10: null, $fallback: null) {
+    // Detect what type of value exists in $pos
+    $pos-type: type-of(nth($pos, 1));
+    $pos-spec: null;
+    $pos-degree: null;
+
+    // If $pos is missing from mixin, reassign vars and add default position
+    @if ($pos-type == color) or (nth($pos, 1) == "transparent") {
+        $G10: $G9;
+        $G9: $G8;
+        $G8: $G7;
+        $G7: $G6;
+        $G6: $G5;
+        $G5: $G4;
+        $G4: $G3;
+        $G3: $G2;
+        $G2: $G1;
+        $G1: $pos;
+        $pos: null;
+    }
+
+    @if $pos {
+        $positions: _linear-positions-parser($pos);
+        $pos-degree: nth($positions, 1);
+        $pos-spec: nth($positions, 2);
+    }
+
+    $full: $G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10;
+
+    // Set $G1 as the default fallback color
+    $fallback-color: nth($G1, 1);
+
+    // If $fallback is a color use that color as the fallback color
+    @if (type-of($fallback) == color) or ($fallback == "transparent") {
+        $fallback-color: $fallback;
+    }
+
+    background-color: $fallback-color;
+    background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
+    background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
+}
+
+// Simple Button
+//************************************************************************//
+@mixin simple($mixin-color, $grayscale: false, $textsize: inherit, $padding: 7px 18px) {
+    $initial-color: $mixin-color;
+    $color: hsl(0, 0, 100%);
+    $border: adjust-color($mixin-color, $saturation: 9%, $lightness: -14%);
+    $inset-shadow: adjust-color($mixin-color, $saturation: -8%, $lightness: 15%);
+    $stop-gradient: adjust-color($mixin-color, $saturation: 9%, $lightness: -11%);
+    $text-shadow: adjust-color($mixin-color, $saturation: 15%, $lightness: -18%);
+
+    @if is-light($mixin-color) {
+        $color: hsl(0, 0, 20%);
+        $text-shadow: adjust-color($mixin-color, $saturation: 10%, $lightness: 4%);
+    }
+
+    @if $grayscale == true {
+        $border: grayscale($border);
+        $inset-shadow: grayscale($inset-shadow);
+        $stop-gradient: grayscale($stop-gradient);
+        $text-shadow: grayscale($text-shadow);
+    }
+
+    border: 1px solid $border;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 $inset-shadow;
+    color: $color;
+    display: inline-block;
+    font-size: $textsize;
+    font-weight: 700;
+
+    @include linear-gradient ($mixin-color, $stop-gradient);
+
+    padding: $padding;
+    text-decoration: none;
+    text-shadow: 0 1px 0 $text-shadow;
+    background-clip: padding-box;
+
+    // rewrite default (grey) button
+    @if ($initial-color == #f2f2f2) or ($initial-color == #eee) or ($initial-color == #f1f1f1) {
+        $mixin-color: $base-color;
+
+        background: $white;
+        color: $base-color;
+        border-color: currentColor;
+    }
+
+    &:hover:not(:disabled) {
+        $base-color-hover: adjust-color($mixin-color, $saturation: -4%, $lightness: -5%);
+        $inset-shadow-hover: adjust-color($mixin-color, $saturation: -7%, $lightness: 5%);
+        $stop-gradient-hover: adjust-color($mixin-color, $saturation: 8%, $lightness: -14%);
+
+        @if $grayscale == true {
+            $base-color-hover: grayscale($base-color-hover);
+            $inset-shadow-hover: grayscale($inset-shadow-hover);
+            $stop-gradient-hover: grayscale($stop-gradient-hover);
+        }
+
+        background: $mixin-color;
+        box-shadow: inset 0 1px 0 0 $inset-shadow-hover;
+        cursor: pointer;
+
+        @include linear-gradient ($base-color-hover, $stop-gradient-hover);
+
+        transition: color .25s ease-in-out, background .25s ease-in-out, box-shadow .25s ease-in-out;
+
+        // rewrite default (grey) button
+        @if ($initial-color == #f2f2f2) or ($initial-color == #eee) or ($initial-color == #f1f1f1) {
+            $text-shadow: adjust-color($mixin-color, $saturation: 15%, $lightness: -18%);
+
+            color: $white;
+            text-shadow: 0 1px 0 $text-shadow;
+            border-color: $text-shadow;
+        }
+    }
+
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+        $border-active: adjust-color($mixin-color, $saturation: 9%, $lightness: -14%);
+        $inset-shadow-active: adjust-color($mixin-color, $saturation: 7%, $lightness: -17%);
+
+        @if $grayscale == true {
+            $border-active: grayscale($border-active);
+            $inset-shadow-active: grayscale($inset-shadow-active);
+        }
+
+        border: 1px solid $border-active;
+        box-shadow: inset 0 0 4px 1px $inset-shadow-active, inset 0 0 4px 1px $inset-shadow-active;
+    }
+}

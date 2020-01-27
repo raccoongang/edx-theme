@@ -1,0 +1,234 @@
+header.global-header {
+    border-bottom: none;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .75);
+    padding: 30px 0;
+    background: $header-bg;
+
+    .main-header {
+        padding: 0 $padding*2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        .main {
+            float: none;
+            display: flex;
+            padding: 0 $padding*2;
+            margin: 0;
+
+            .nav-tab {
+                margin: 0 $margin/2;
+
+                a {
+                    &:hover {
+                        color: $link-hover;
+                        border-color: $link-hover;
+                    }
+
+                    &.active {
+                        color: $link-color;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        .secondary {
+            float: none;
+            display: flex;
+            margin: 0;
+            align-items: center;
+
+            .nav-item a {
+                transition: all .2s ease;
+                text-transform: uppercase;
+                border-radius: 2px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 9px 10px;
+
+                &:hover {
+                    color: $link-hover;
+                }
+            }
+
+            & > div {
+                display: flex;
+            }
+
+            .dropdown-user-menu {
+                top: 74px;
+
+                .dropdown-item a {
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        .main,
+        .secondary {
+            .nav-item {
+                margin: 0 0 0 $margin;
+                padding: 0;
+            }
+        }
+    }
+
+    .nav-links .main .nav-tab a,
+    .main .nav-item a {
+        border: none;
+        padding: 5px;
+        color: $header-nav-link-color;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+
+        &:hover {
+            border: none;
+            color: $header-nav-link-color-hover;
+        }
+    }
+
+    .hamburger-menu {
+        top: 50%;
+        margin-top: -15px;
+
+        .line {
+            background: $base-color;
+        }
+    }
+
+    .header-logo {
+        margin: 0;
+
+        a {
+            margin: 0;
+
+            @media (max-width: 991px) {
+                height: auto;
+            }
+
+            .logo {
+                height: $header-logo-height;
+
+                @media (max-width: 991px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .mobile-menu .mobile-nav-link a {
+        color: $link-color;
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+
+    .menu-title {
+        display: flex;
+        align-items: center;
+
+        .username {
+            max-width: 120px;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .course-header {
+        padding: 10px 20px;
+        text-align: center;
+        word-break: break-word;
+    }
+}
+
+nav.wrapper-preview-menu,
+body.view-in-course .wrapper-preview-menu {
+    background: #c8c8c8;
+    padding: 15px !important;
+
+    .preview-menu {
+        padding: 0 !important;
+    }
+
+    .preview-actions,
+    .action-preview {
+        max-width: 100%;
+    }
+
+    label {
+        color: #3c3c3c !important;
+        -webkit-font-smoothing: inherit !important;
+        text-shadow: none;
+    }
+}
+
+.course-info header.course-profile {
+    height: auto;
+    padding-top: 0;
+}
+
+.home > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @media (max-width: 760px) {
+        min-height: 485px;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block;
+    }
+
+    .outer-wrapper {
+        @media (min-width: 760px) {
+            padding: 20px;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: table;
+            min-height: 420px;
+            box-sizing: border-box;
+        }
+    }
+
+    .title {
+        width: 100%;
+        margin-left: 0;
+        min-height: auto;
+        background: rgba(255, 255, 255, .2);
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        > .heading-group {
+            width: 100%;
+
+            h1,
+            p {
+                color: $white;
+                text-align: center;
+            }
+        }
+    }
+}

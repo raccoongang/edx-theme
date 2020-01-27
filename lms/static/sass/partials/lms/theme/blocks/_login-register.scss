@@ -1,0 +1,130 @@
+.login-register-content {
+    background: none;
+    margin-top: 0;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        display: block;
+    }
+}
+
+.login-register {
+    max-width: 100%;
+    width: 100%;
+
+    .form-field {
+        &.select-gender,
+        &.select-year_of_birth {
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .section-title.lines {
+        text-align: left;
+        z-index: 1;
+
+        &:after {
+            display: none;
+        }
+
+        .text {
+            background: transparent;
+            font-size: 24px;
+            padding: 0;
+        }
+    }
+}
+
+.view-passwordreset {
+    .introduction,
+    .login {
+        max-width: 100%;
+    }
+}
+
+.view-login,
+.view-register {
+    .login,
+    .register {
+        max-width: 100%;
+
+        @media screen and (max-width: 960px) {
+            .content,
+            .content + aside {
+                width: 100%;
+            }
+        }
+    }
+
+    .introduction {
+        max-width: 100%;
+
+        header {
+            height: auto;
+            min-height: 120px;
+
+            @media screen and (max-width: 960px) {
+                padding-bottom: 10px;
+            }
+
+            .title {
+                @media screen and (max-width: 960px) {
+                    position: relative;
+                    left: 15px;
+                    max-width: calc(100% - 30px);
+                }
+            }
+        }
+    }
+}
+
+.view-register .register {
+    .btn-login {
+        background: transparent;
+        border: none;
+        padding: 15px 0;
+
+        &:hover {
+            background: transparent;
+        }
+
+        .title {
+            font-weight: 700;
+        }
+    }
+
+    .content select {
+        height: 43px;
+        display: block;
+        margin: 0 0 5px;
+    }
+
+    form .group-form-personalinformation {
+        .field-group {
+            width: 100%;
+            margin-bottom: 20px;
+
+            .field {
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        .list-input {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .field-education-level {
+            width: 100%;
+        }
+
+        .field-gender,
+        .field-yob {
+            width: calc(50% - 5px);
+        }
+    }
+}

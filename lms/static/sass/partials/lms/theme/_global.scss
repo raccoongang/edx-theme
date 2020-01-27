@@ -1,0 +1,37 @@
+*:not(.fa):not(.glyphicon):not([class*="sorting"]):not([class*="icon-cc"]):not([class*="mce-"]):not([class*="fa-"]) {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+html,
+body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.theme-content {
+    flex: 1 0 auto;
+}
+
+.theme-footer {
+    flex-shrink: 0;
+}
+
+%modal {
+    box-sizing: border-box;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    overflow: auto;
+}

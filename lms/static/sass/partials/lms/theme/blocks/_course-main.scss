@@ -1,0 +1,297 @@
+.find-courses,
+.university-profile {
+    background: $body-bg;
+}
+
+.content-wrapper {
+    .course-tabs .nav-item .nav-link {
+        padding: 18px 15px 15px;
+
+        @media screen and (max-width: 760px) {
+            padding: 15px 15px 5px;
+        }
+    }
+
+    #course-outline-block-tree .accordion-trigger .fa {
+        .rtl & {
+            transform: rotate(180deg) !important;
+
+            &.fa-rotate-90 {
+                transform: rotate(-90deg) !important;
+            }
+        }
+    }
+
+    .wrap-instructor-info {
+        @media (max-width: 767px) {
+            @include clearfix();
+
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+#course-container {
+    .page-header,
+    .page-content {
+        padding: 20px;
+
+        .page-header-search {
+            max-width: 100%;
+
+            .search-form {
+                max-width: 100%;
+                box-sizing: border-box;
+                overflow: hidden;
+                display: flex;
+            }
+
+            .search-field,
+            .search-button {
+                line-height: 20px;
+                box-sizing: border-box;
+                font-weight: 400;
+            }
+
+            .search-field,
+            .search-input {
+                &::placeholder,
+                &:-ms-input-placeholder {
+                    font-weight: 400;
+                    color: #d8d8d8;
+                    opacity: 1;
+                }
+            }
+
+            .search-input:focus {
+                box-shadow: none;
+            }
+
+            .search-field:focus {
+                outline: none;
+                border-color: $btn-bg-hover;
+            }
+
+            .search-button {
+                border-color: $base-color;
+                color: $base-color;
+
+                &:hover,
+                &:focus,
+                &.is-hovered,
+                &.is-focused {
+                    color: $white;
+                    border-color: $btn-bg-hover;
+                    background: $btn-bg-hover;
+                }
+            }
+        }
+    }
+
+    .page-header {
+        word-break: break-word;
+    }
+}
+
+.has-breadcrumbs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a:visited:not(.btn) {
+        color: $link-color;
+    }
+}
+
+button.bookmark-button:not(.disabled) {
+    &:hover,
+    &:focus {
+        border-color: transparent;
+        color: $link-hover;
+        text-shadow: none;
+    }
+}
+
+.search-results {
+    .result-link,
+    .result-excerpt {
+        color: $link-color;
+    }
+}
+
+.course-bookmarks .bookmarks-results-list .bookmarks-results-list-item {
+    color: $link-color;
+
+    &:hover {
+        text-decoration: none;
+        border-color: $link-hover;
+
+        .list-item-breadcrumbtrail {
+            color: $link-hover;
+        }
+    }
+
+    &:focus {
+        text-decoration: none;
+    }
+
+    &:before {
+        color: inherit;
+    }
+}
+
+.xblock.xmodule_display {
+    #sequence-list li button {
+        overflow: hidden;
+    }
+
+    &.xmodule_HtmlModule {
+        img {
+            max-width: 100%;
+
+            @media screen and (max-width: 760px) {
+                display: block;
+                margin: 0 auto 10px;
+                float: none;
+            }
+        }
+
+        #periodic-table-wrapper {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            .zooming-image-place .loupe img {
+                max-width: 100%;
+                width: 1080px;
+            }
+        }
+
+        #headerDiv,
+        #contentDiv {
+            @include clearfix();
+
+            max-width: 100%;
+
+            a {
+                margin: 0 5px;
+                position: relative;
+                top: -3px;
+
+                &:hover,
+                &:focus {
+                    color: $link-hover;
+                }
+            }
+        }
+
+        section.tool-wrapper {
+            @media screen and (max-width: 760px) {
+                display: block;
+                max-width: 100%;
+                margin: 0;
+            }
+
+            div#controlls-container,
+            div#graph-container {
+                @media screen and (max-width: 760px) {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.xmodule_VideoModule .video {
+        .video-wrapper {
+            @media screen and (max-width: 760px) {
+                margin: 0 auto 15px;
+                width: 100% !important;
+            }
+
+            .video-player {
+                @media screen and (max-width: 760px) {
+                    min-height: 150px;
+                }
+            }
+
+            .video-player-pre,
+            .video-player-post {
+                @media screen and (max-width: 760px) {
+                    display: none;
+                }
+            }
+        }
+
+        .subtitles {
+            @media screen and (max-width: 760px) {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &.xmodule_CapaModule .problem {
+        .imageinput + div,
+        .wrapper-problem-response {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .wrapper-problem-response center {
+            @media screen and (max-width: 760px) {
+                padding: 0;
+                margin: 0;
+                border: none;
+            }
+        }
+
+        .inputtype.option-input {
+            margin-top: 0;
+        }
+    }
+
+    &.xmodule_SequenceModule .sequence-nav-button {
+        color: #333;
+
+        &:hover {
+            color: $base-color;
+
+            @media screen and (max-width: 575px) {
+                color: $white;
+            }
+        }
+
+        .icon {
+            color: inherit !important;
+        }
+    }
+
+    &.xblock-student_view-openassessment .openassessment .openassessment__steps__step .step__status {
+        @media screen and (max-width: 760px) {
+            display: inline-block;
+        }
+    }
+}
+
+.course-wrapper .course-content {
+    .staff-modal,
+    .history-modal {
+        @extend %modal;
+    }
+}
+
+.section-update-message,
+.all-updates {
+    word-break: break-word;
+}
+
+.page-banner,
+#course-container {
+    .enroll-btn {
+        border: none;
+        padding: 0;
+    }
+}

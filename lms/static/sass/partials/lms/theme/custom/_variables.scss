@@ -1,4 +1,4 @@
-$base-color: #44b759;
+$base-color: #47bded;
 $margin: 10px;
 $padding: 10px;
 
@@ -74,11 +74,3 @@ $certificate-borders-color: $base-color;
 $ribbon-corners-color: lighten($base-color, 1%);
 $ribbon-triangle-color: darken($base-color, 4%);
 $certificate-borders-color: lighten($base-color, 8%);
-
-//our overrides for settings we want to change
-$img-path: "../images" !default;
-$font-path: "../fonts" !default;
-
-@import "mixin";
-@import "custom/variables";
-@import "edx-bootstrap/sass/open-edx/theme";

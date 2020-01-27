@@ -1,0 +1,68 @@
+.view-profile {
+    word-break: break-word;
+
+    .profile-self .wrapper-profile-field-account-privacy {
+        padding: 0 15px;
+        display: block;
+
+        .u-field {
+            padding: 15px 0;
+        }
+
+        .u-field-title,
+        .u-field-value,
+        .u-field-account_privacy .btn-change-privacy {
+            vertical-align: middle;
+        }
+
+        .u-field-title {
+            margin-right: 10px;
+        }
+
+        .u-field-value {
+            margin-left: 0;
+        }
+
+        .u-field-account_privacy {
+            @media (max-width: 768px) {
+                display: block;
+                max-width: 100%;
+                min-width: auto;
+            }
+
+            .btn-change-privacy {
+                padding: 7px 20px;
+            }
+        }
+
+        .wrapper-profile-records button {
+            @include simple($base-color);
+
+            @media (max-width: 768px) {
+                display: block;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .wrapper-profile-section-container-one .wrapper-profile-section-one {
+        border: 2px solid $base-color;
+    }
+
+    #u-field-value-username {
+        white-space: nowrap;
+        max-width: 100%;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .wrapper-profile-sections {
+        word-break: break-word;
+    }
+
+    .certificate-card .card-logo {
+        flex-shrink: 0;
+    }
+}

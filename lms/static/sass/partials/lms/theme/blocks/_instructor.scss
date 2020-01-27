@@ -1,0 +1,538 @@
+.view-instructordash {
+    .instructor-dashboard-content-2 {
+        padding: 20px;
+
+        textarea {
+            display: block;
+            width: 100% !important;
+
+            &#notes,
+            &#certificate-invalidation-notes {
+                height: 100px;
+            }
+        }
+
+        textarea,
+        input:not(#browseBtn-bulk-csv) {
+            max-width: 100%;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            max-width: 100%;
+            overflow: hidden;
+            display: inline-block;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        button.btn-blue,
+        input.btn-blue:not([type="button"]) {
+            @include simple($base-color);
+
+            font-weight: 700;
+            border-radius: 3px;
+            line-height: 1.3;
+            font-size: .8125em;
+        }
+
+        .btn-blue,
+        input[type="button"],
+        button:not(.btn-link) {
+            margin: 10px 0;
+        }
+
+        .instructor-nav .nav-item .btn-link {
+            border-bottom: 3px solid transparent;
+
+            &:hover,
+            &:focus {
+                color: $base-color;
+            }
+        }
+
+        .mce-btn {
+            border-radius: 3px;
+
+            button:not(:disabled) {
+                margin: 0;
+                border: none;
+                border-radius: 3px;
+
+                &:hover {
+                    box-shadow: inset 0 1px 0 0 #fefefe;
+                    background-color: #e4e4e4;
+                    background-image: linear-gradient(#e4e4e4, #d1c9c9);
+                    text-shadow: none;
+                    color: #626b73;
+                }
+
+                &:focus {
+                    box-shadow: inset 0 0 8px 4px #cac2c2, inset 0 0 8px 4px #cac2c2;
+                }
+            }
+        }
+
+        ul li {
+            margin-bottom: 5px;
+            word-break: break-word;
+        }
+
+        .list-input {
+            word-break: break-word;
+        }
+
+        .instructor-nav .nav-item .btn-link:hover {
+            text-decoration: none !important;
+        }
+
+        #bulk-white-list-exception-form .customBrowseBtn {
+            display: block;
+            width: auto;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 400px) {
+                width: 248px;
+            }
+
+            .enhanced-input-file {
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+
+            .file-browse {
+                height: 30px;
+                background: transparent !important;
+                width: auto;
+
+                @media screen and (max-width: 600px) {
+                    width: calc(100% + 5px);
+                }
+
+                .browse {
+                    position: relative;
+                    z-index: 10;
+                    pointer-events: none;
+                    padding: 6px 10px;
+                    float: right;
+                    white-space: nowrap;
+                    width: auto;
+
+                    @media screen and (max-width: 400px) {
+                        margin-left: 181px;
+                    }
+                }
+
+                .file_field {
+                    height: 100%;
+                    width: 431px;
+                    left: -95px;
+                    padding-top: 1px;
+
+                    &::-ms-browse {
+                        display: none;
+                    }
+
+                    // styles for Firefox
+                    @supports (-moz-appearance:none) {
+                        left: -86px;
+                    }
+
+                    // styles for IE10+
+                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                        height: 40px;
+                        margin-top: -6px;
+                        display: inline-block;
+                    }
+
+                    // styles for Edge
+                    @supports (-ms-ime-align:auto) {
+                        padding-left: 5px;
+                        padding-top: 0;
+                        width: 100%;
+                        left: 0;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        width: 410px;
+                        top: 0;
+                        left: -227px;
+                    }
+                }
+            }
+        }
+
+        .customBrowseBtn + .upload-csv-button {
+            display: inline-block;
+            vertical-align: bottom;
+            margin-bottom: 0 !important;
+        }
+
+        section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget .bottom-bar {
+            flex-wrap: wrap;
+
+            input[type="button"].add {
+                position: static;
+            }
+
+            .add-field {
+                min-width: 225px;
+            }
+
+            label,
+            label input,
+            input[type="button"].add {
+                display: inline-block;
+                margin: 5px 0;
+
+                @media (max-width: 400px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        section.idash-section#discussions_management {
+            .division-scheme-container .two-column-layout {
+                @media screen and (max-width: 760px) {
+                    max-width: 100% !important;
+                    margin-bottom: 10px;
+                    padding: 0 !important;
+                }
+            }
+
+            .form-actions .form-submit {
+                line-height: 1.3;
+                font-size: .8125em;
+            }
+        }
+
+        .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
+            word-break: break-word;
+        }
+
+        section.idash-section#certificates {
+            .white-listed-students,
+            .invalidation-history,
+            .certificate-generation-history-content {
+                table {
+                    @media screen and (max-width: 760px) {
+                        max-width: 100%;
+                        display: block;
+                        overflow-x: auto;
+                    }
+
+                    thead,
+                    tbody {
+                        @media screen and (max-width: 760px) {
+                            overflow: auto;
+                        }
+                    }
+                }
+            }
+
+            .add-certificate-invalidation {
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                div {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        section.idash-section#open_response_assessment .open-response-assessment {
+            max-width: 100%;
+            overflow-x: auto;
+
+            .ora-summary-title {
+                color: $base-color;
+            }
+
+            .backgrid {
+                .total,
+                .name,
+                .parent_name {
+                    @media (max-width: 1200px) {
+                        width: 150px;
+                        white-space: normal;
+                    }
+                }
+            }
+
+            .uri-cell {
+                @media (max-width: 1200px) {
+                    white-space: normal;
+                }
+            }
+        }
+
+        section.idash-section#cohort_management {
+            .wrapper-tabs .tab.is-selected .toggle-button {
+                margin: 10px 10px 0 0;
+            }
+
+            .cohort-management-settings .form-cancel {
+                padding: 8px 17px;
+                margin: 10px 10px 0 0;
+            }
+
+            .has-other-input-text {
+                max-width: 100%;
+            }
+
+            .cohort-management-nav {
+                .cohort-management-nav-form {
+                    @media (max-width: 400px) {
+                        width: 100%;
+                    }
+                }
+
+                .action-create {
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        section.idash-section#send_email .list-fields .field ul {
+            padding-left: 10px;
+            width: 30% !important;
+            vertical-align: top;
+
+            @media screen and (max-width: 768px) {
+                width: 100% !important;
+                display: block !important;
+            }
+
+            &.email-targets-secondary {
+                columns: 1;
+            }
+        }
+
+        section#certificates.idash-section {
+            .white-listed-students table,
+            .invalidation-history table {
+                table-layout: auto;
+
+                tr {
+                    td,
+                    th {
+                        border: 1px solid #e4e4e4;
+
+                        button.delete-exception {
+                            min-width: 160px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .enrollment-wrapper {
+            table {
+                width: 100%;
+
+                caption {
+                    padding: 10px;
+                }
+
+                th {
+                    text-align: left;
+                }
+
+                td {
+                    text-align: center;
+                }
+
+                th,
+                td {
+                    padding: 5px 10px;
+                    border: 1px solid #ccc;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .mce-window.mce-in {
+        @media screen and (max-width: 768px) {
+            width: 460px !important;
+            max-width: calc(100% - 20px);
+            box-sizing: border-box;
+            left: 50% !important;
+            top: 50% !important;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            margin: 0 !important;
+            height: auto !important;
+
+            *:not(.mce-close):not(.mce-i-checkbox) {
+                position: static;
+                height: auto !important;
+                width: auto !important;
+            }
+
+            .mce-window-head {
+                position: relative !important;
+
+                .mce-close {
+                    border: none;
+                }
+            }
+
+            .mce-abs-layout,
+            .mce-foot {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            .mce-foot {
+                display: flex;
+                justify-content: flex-end;
+
+                .mce-abs-layout {
+                    height: auto !important;
+                }
+            }
+
+            .mce-formitem {
+                margin-bottom: 10px;
+                padding: 0 10px;
+
+                & + .mce-last.mce-abs-layout-item .mce-formitem.mce-first {
+                    margin-top: 0;
+                }
+
+                &.mce-first {
+                    margin-top: 10px;
+                }
+
+                .mce-label.mce-first {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                .mce-checkbox {
+                    margin-top: 5px;
+                }
+
+                .mce-combobox {
+                    display: block;
+                    width: 100% !important;
+                }
+
+                .mce-textbox {
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    &:not([size="3"]) {
+                        width: 100% !important;
+                        box-sizing: border-box;
+                    }
+
+                    & + .mce-label {
+                        margin: 0 5px;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+                .mce-listbox {
+                    width: 100% !important;
+
+                    button {
+                        width: 100% !important;
+                        border: 1px solid #c5c5c5 !important;
+                        position: relative !important;
+
+                        .mce-caret {
+                            position: absolute !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mce-foot {
+            .mce-abs-layout {
+                height: auto !important;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+        }
+
+        .mce-btn:not(.mce-listbox) {
+            border: none !important;
+            background: none !important;
+            height: auto !important;
+            position: static !important;
+            display: inline-block;
+            vertical-align: middle;
+
+            & + .mce-btn {
+                margin-left: 5px;
+            }
+
+            &.mce-primary button {
+                width: 100% !important;
+                border: 1px solid $base-color !important;
+                color: $base-color;
+
+                &:hover,
+                &:focus {
+                    color: $white;
+                    border-color: $btn-bg-hover !important;
+                }
+            }
+        }
+
+        .mce-primary + .mce-last button {
+            border: 1px solid transparent;
+        }
+
+        .mce-listbox button {
+            border: 1px solid #c5c5c5 !important;
+            box-shadow: none;
+        }
+    }
+
+    .mce-floatpanel.mce-fixed {
+        @media screen and (max-width: 768px) {
+            width: 440px !important;
+            max-width: calc(100% - 40px);
+            box-sizing: border-box;
+            left: 50% !important;
+            transform: translateX(-50%);
+        }
+    }
+
+    .slick-header-column.ui-state-default {
+        height: auto;
+    }
+}
+
+div.gradebook-wrapper section.gradebook-content {
+    .student-table {
+        min-width: 125px;
+
+        a {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+    }
+
+    .grades {
+        max-width: calc(100% - 125px);
+    }
+
+    .grade-table {
+        width: 100%;
+    }
+}

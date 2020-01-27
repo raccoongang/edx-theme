@@ -1,0 +1,195 @@
+body.view-wiki {
+    &.lang_ar .wiki-wrapper section.wiki {
+        text-align: start;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        label {
+            text-align: start;
+        }
+
+        .nav-tabs a .icon,
+        .breadcrumb li a .icon {
+            float: right;
+        }
+
+        .CodeMirror-scroll {
+            margin-left: -30px;
+            margin-right: 0;
+        }
+    }
+
+    .wiki-wrapper section.wiki {
+        .btn {
+            padding: 7px 18px !important;
+
+            &:not(.btn-primary):not(.btn-danger):not(.paragon__btn):focus {
+                color: $base-color;
+            }
+        }
+
+        .paragon__alert-warning {
+            border-bottom: 1px solid #c8c8c8;
+        }
+
+        .paragon__alert-dismissible .paragon__close {
+            background: none;
+            padding: 8px 15px;
+        }
+
+        .paragon__close:not(:disabled):not(.paragon__disabled) {
+            &:focus,
+            &:active {
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        .breadcrumbs-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: auto;
+
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                @include clearfix();
+
+                display: block;
+            }
+        }
+
+        .main-article {
+            padding: 20px;
+            word-break: break-word;
+
+            @media screen and (max-width: 760px) {
+                width: 100%;
+            }
+
+            .lead {
+                margin-bottom: 15px;
+            }
+        }
+
+        .article-functions {
+            padding: 20px;
+
+            @media screen and (max-width: 760px) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: 760px) {
+                padding: 20px 20px 10px;
+            }
+        }
+
+        #hint_id_content {
+            @media screen and (max-width: 600px) {
+                position: static;
+            }
+        }
+
+        .form-actions {
+            @media screen and (max-width: 480px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+        }
+
+        .btn-group,
+        .input-prepend {
+            margin: 5px 0;
+        }
+
+        .modal {
+            @extend %modal;
+        }
+
+        section.delete {
+            padding-bottom: 20px;
+        }
+
+        .row-fluid {
+            margin-bottom: 20px;
+
+            h2 {
+                margin: 15px 0 10px;
+                font-weight: 700;
+                color: #313131;
+            }
+        }
+
+        .article-wrapper {
+            @media screen and (max-width: 760px) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .settings-form {
+                .page-header {
+                    margin-bottom: 20px;
+                    padding: 10px 0;
+                }
+
+                #div_id_group_read,
+                #div_id_group_write,
+                #div_id_other_read,
+                #div_id_other_write {
+                    display: flex;
+                    align-items: center;
+
+                    .controls {
+                        order: 1;
+                        margin-right: 10px;
+                        position: relative;
+                        top: -1px;
+                    }
+
+                    label {
+                        order: 2;
+                        margin: 0;
+                    }
+                }
+
+                #div_id_locked,
+                #div_id_recursive {
+                    .controls {
+                        display: flex;
+                        align-items: center;
+
+                        input {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    label {
+                        display: block;
+                    }
+                }
+
+                #id_owner_username {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .wiki-article p {
+                line-height: 20px;
+            }
+        }
+
+        .CodeMirror-scroll {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}
