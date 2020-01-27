@@ -1,0 +1,198 @@
+.view-teams.view-in-course {
+    .action-edit-team {
+        border: 1px solid $base-color;
+        border-radius: 3px;
+        padding: 10px 20px;
+
+        &:hover {
+            border-color: $base-color;
+            background: $base-color !important;
+        }
+    }
+
+    button.action-primary {
+        border: 1px solid $base-color;
+        border-radius: 3px;
+        box-shadow: none;
+
+        &:hover {
+            border-color: $btn-bg-hover;
+        }
+    }
+
+    button.action-cancel {
+        border: 1px solid $base-color;
+        border-radius: 3px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .action-remove-member {
+        margin: 10px 0;
+        vertical-align: middle;
+    }
+
+    .card {
+        @media screen and (max-width: 768px) {
+            width: 48%;
+            margin: 20px .7%;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .wrapper-card-core {
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (max-width: 500px) {
+                flex-direction: column;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &.list-card {
+            .card-core {
+                width: auto;
+
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
+            }
+
+            .card-actions {
+                width: auto;
+                text-align: right;
+
+                @media screen and (max-width: 500px) {
+                    text-align: left;
+                    float: none;
+                }
+
+                .action-view {
+                    @media screen and (max-width: 500px) {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .page-header-search .action-search {
+        padding: 6px 10px;
+    }
+
+    .page-header.has-secondary {
+        .page-header-main {
+            width: 62%;
+            margin-right: 2%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin: 0 0 15px;
+            }
+        }
+
+        .page-header-secondary {
+            width: 34%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        .form-actions {
+            margin-top: 0;
+
+            .action-primary,
+            .btn-secondary {
+                margin: 0 0 5px 5px;
+            }
+        }
+    }
+
+    .teams-content .teams-main .team-edit-fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .team-required-fields,
+        .team-optional-fields {
+            width: 46%;
+            margin: 0 1%;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin: 0 0 20px;
+            }
+        }
+
+        .team-required-fields {
+            .u-field {
+                margin-right: 0;
+            }
+        }
+
+        .vertical-line {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    .team-profile {
+        display: flex;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+
+            .page-content-main,
+            .page-content-secondary {
+                width: 100%;
+                margin: 0 0 20px;
+            }
+        }
+
+        .leave-team-link {
+            &:hover,
+            &:focus {
+                border: none;
+                color: $link-hover;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .edit-members {
+        .member-info-container {
+            margin-right: 10px;
+        }
+    }
+
+    .prompt.warning {
+        max-width: calc(100% - 20px);
+        vertical-align: middle;
+
+        .copy {
+            border-top-color: $base-color;
+        }
+
+        .action-secondary {
+            padding: 4px 20px 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+
+    .wrapper-msg {
+        max-width: 100%;
+    }
+}

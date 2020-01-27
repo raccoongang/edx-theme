@@ -116,9 +116,7 @@ from six import string_types
       <div class="table">
       <section class="intro">
         <div class="heading-group">
-          <h1>
-            ${course.display_name_with_default}
-          </h1>
+          <h1>${course.display_name_with_default}</h1>
           <br />
           <span>${course.display_org_with_default}</span>
         </div>
@@ -201,14 +199,14 @@ from six import string_types
       % if get_course_about_section(request, course, "video"):
       <a href="#video-modal" class="media" rel="leanModal">
         <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
+          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" />
           <div class="play-intro"></div>
         </div>
       </a>
       %else:
       <div class="media">
         <div class="hero">
-          <img src="${course_image_urls['large']}" alt="" />
+          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" />
         </div>
       </div>
       % endif

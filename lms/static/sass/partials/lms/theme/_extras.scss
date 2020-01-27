@@ -6,20 +6,26 @@
 // partials directly into this file so that you can break your
 // rules into modular pieces.
 
-.find-courses .search-facets .facet-option:hover,
-.find-courses .search-facets .facet-option:focus {
-    background: $facet-background-color-theme;
-}
-
-.find-courses .discovery-submit:hover {
-    background: $m-blue-l1;
-}
-
-//remove pseudo element for footer at bottom
-.wrapper-footer:after {
-    display: none;
-}
-
-.discussion-body:after {
-    display: none !important;
-}
+@import "./global";
+@import "./blocks/paralax-img";
+@import "./blocks/about";
+@import "./blocks/course-main";
+@import "./blocks/courses-index-page";
+@import "./blocks/dashboard";
+@import "./blocks/discussion";
+@import "./blocks/footer";
+@import "./blocks/form-elements";
+@import "./blocks/fullscreen-button";
+@import "./blocks/header";
+@import "./blocks/instructor";
+@import "./blocks/login-register";
+@import "./blocks/profile";
+@import "./blocks/account";
+@import "./blocks/progress";
+@import "./blocks/shopping-cart";
+@import "./blocks/slider";
+@import "./blocks/sysadmin";
+@import "./blocks/textblock";
+@import "./blocks/wiki";
+@import "./blocks/teams";
+@import "./custom/overide";

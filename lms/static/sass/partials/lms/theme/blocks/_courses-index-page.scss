@@ -1,0 +1,129 @@
+.courses-container {
+    .highlighted-courses {
+        @include clearfix();
+
+        padding-top: 45px;
+        margin-bottom: 20px;
+    }
+
+    .courses {
+        &:not(.no-course-discovery) {
+            @media screen and (max-width: 540px) {
+                width: 100% !important;
+                margin-right: 0 !important;
+                float: none;
+            }
+        }
+
+        .courses-listing {
+            .home & {
+                @media (max-width: 989px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                @media (max-width: 767px) {
+                    padding: 0 20px;
+                }
+            }
+
+            .course {
+                .course-info {
+                    .course-title {
+                        color: #1f1f1f;
+                        font-size: 14px;
+                        margin: 5px 0;
+                        height: 96px;
+                        overflow: hidden;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+
+                    .course-organization,
+                    .course-code {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .cover-image {
+                    &:before,
+                    .learn-more {
+                        transition: all .25s ease !important;
+                    }
+
+                    .learn-more {
+                        border: 3px solid $white;
+                        background: none;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapper-search-context .search-status-label {
+        word-break: break-word;
+    }
+
+    aside.search-facets {
+        &.phone-menu {
+            overflow: hidden;
+        }
+
+        .name {
+            display: inline-block;
+            max-width: calc(100% - 35px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: normal;
+        }
+
+        &:last-child {
+            @media screen and (max-width: 768px) {
+                margin: 15px 0;
+            }
+        }
+
+        .facet-option {
+            &:hover,
+            &:focus {
+                background: $base-color;
+            }
+        }
+    }
+
+    .discovery-submit:hover {
+        background: $m-blue-l1;
+    }
+
+    .courses-more {
+        margin-right: 0;
+        text-align: center;
+        clear: both;
+
+        a {
+            color: $white;
+            background: $base-color;
+            border-radius: 2px;
+            padding: 8px 25px;
+            font-size: 14px;
+            display: inline-block;
+            line-height: 20px;
+
+            &:after {
+                display: none;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: $btn-bg-hover;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}

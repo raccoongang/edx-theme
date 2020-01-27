@@ -1,0 +1,147 @@
+.course-info {
+    header.course-profile {
+        height: auto;
+        margin: 0 -20px;
+        width: auto;
+        padding: 0 0 20px;
+
+        @media screen and (max-width: 767px) {
+            margin: 0;
+            padding: 0 20px 20px;
+            overflow: visible;
+        }
+
+        .intro-inner-wrapper {
+            border-color: #ccc;
+
+            .intro {
+                word-break: break-word;
+
+                @media screen and (max-width: 767px) {
+                    width: auto;
+                    order: 2;
+                }
+
+                .main-cta {
+                    span.register,
+                    span.add-to-cart {
+                        padding: 12px 10px;
+
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    strong {
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                    }
+
+                    > a.find-courses,
+                    a.register,
+                    a.add-to-cart {
+                        transition: all .2s ease;
+                        display: inline-block;
+                        background: $base-color;
+                        color: $white;
+                        border: none;
+                        text-transform: uppercase;
+                        border-radius: 0;
+                        text-shadow: none;
+                        box-shadow: none;
+
+                        &:active,
+                        &:focus {
+                            background: $base-color;
+                        }
+
+                        &:hover,
+                        &:focus:hover {
+                            background: $btn-bg-hover;
+                        }
+
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                > .heading-group h1 span {
+                    display: inline-block;
+                    background: $base-color;
+                    color: $white;
+                    text-shadow: none;
+                    font-size: 18px;
+                    line-height: normal;
+                    vertical-align: top;
+                    padding: 4px 20px;
+                    margin: 5px 0 0 5px;
+                }
+            }
+
+            & > div.table {
+                @media screen and (max-width: 767px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .media {
+                @media screen and (max-width: 767px) {
+                    width: auto;
+                    order: 1;
+                }
+
+                .hero {
+                    border: none;
+
+                    img {
+                        display: block;
+                        max-width: 100%;
+                        max-height: 300px;
+                        width: auto;
+                        margin: auto;
+                        border: 1px solid #646464;
+                    }
+                }
+            }
+        }
+    }
+
+    .details .teacher-image {
+        .rtl & {
+            margin: 0 0 0 15px !important;
+        }
+    }
+
+    .course-sidebar {
+        word-break: break-word;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+}
+
+.modal.video-modal,
+.video-modal.leanModal_box,
+.video-modal.entitlement-unenrollment-modal {
+    @media screen and (max-width: 560px) {
+        max-width: 90%;
+        transform: translateX(-50%);
+        margin: 0 !important;
+    }
+
+    .inner-wrapper,
+    iframe {
+        box-sizing: border-box;
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+    }
+}
