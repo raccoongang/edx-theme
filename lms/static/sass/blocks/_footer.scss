@@ -7,6 +7,10 @@
 	box-shadow: none !important;
 	border-top: none !important;
 
+	@media (max-width: $build-footer-mobile) {
+		padding-top: 30px !important;
+	}
+
 	footer#footer-openedx {
 		width: 100%;
 		max-width: 1200px !important;
@@ -96,7 +100,6 @@
 		align-items: center;
 		font-size: 12px;
 		margin: 0 !important;
-		width: 275px;
 		position: relative;
 		top: 9px;
 
