@@ -20,106 +20,72 @@
     <div class="colophon">
 
       <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
-            </li>
-            <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
-            </li>
-            <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
-            </li>
-        </ol>
+        <div class="menu-item">
+          <h4 class="h4">Company</h4>
+          <ul class="menu-item-list">
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="/about">${_("About")}</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="/privacy">${_("Privacy Policy")}</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="/tos">${_("Terms of Service")}</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Blogs</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Careers</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Blogs</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Customers</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="menu-item">
+          <h4 class="h4">Get Help</h4>
+          <ul class="menu-item-list">
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Events</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Leadership</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Newsroom</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Offices</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="footer-flex">
-        <p class="footer-support">
-          <span>${_("Built on")}</span>
-          <a target="_blank" href="${footer['openedx_link']['url']}">
-            <svg class="svg-edx"  viewBox="0 0 100 70">
-              <use xlink:href="#logo-edx" />
-            </svg>
-          </a>
-          <span>${_("by")}</span>
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            <em>RACCOONGANG</em>
-            <svg class="svg-raccoon"  viewBox="0 0 100 100">
-              <use xlink:href="#logo-raccoon" />
-            </svg>
-          </a>
-        </p>
-        <ul class="icon-list">
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-facebook" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-twitter" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-instagram" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-linkedin" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-youtube" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-odnoklassniki" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vimeo" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vk" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-behance" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-google-plus" />
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="menu-item">
+          <ul class="menu-item-list">
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Terms & Agreement</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Privacy Policy</a></li>
+            <li class="menu-item-list__item"><a class="menu-item-list__link" href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-socials">
+          <ul class="icon-list">
+            <li class="icon-list_item">
+              <a href="https://www.twitter.com/gigamon" target="_blank" class="icon-list_link">
+                <svg class="icon-list_svg" viewBox="0 0 35 35">
+                  <use xlink:href="#footer-twitter" />
+                </svg>
+              </a>
+            </li>
+            <li class="icon-list_item">
+              <a href="https://www.youtube.com/channel/UC6Vd7BRPT3wDE9DkEJNYinA" target="_blank" class="icon-list_link">
+                <svg class="icon-list_svg" viewBox="0 0 35 35">
+                  <use xlink:href="#footer-youtube" />
+                </svg>
+              </a>
+            </li>
+            <li class="icon-list_item">
+              <a href="https://www.facebook.com/gigamon/" target="_blank" class="icon-list_link">
+                <svg class="icon-list_svg" viewBox="0 0 35 35">
+                  <use xlink:href="#footer-facebook" />
+                </svg>
+              </a>
+            </li>
+            <li class="icon-list_item">
+              <a href="https://www.linkedin.com/company/gigamon" target="_blank" class="icon-list_link">
+                <svg class="icon-list_svg" viewBox="0 0 35 35">
+                  <use xlink:href="#footer-linked-in" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="footer-socials__copy">
+            &copy;Gigamon 2020
+          </div>
+        </div>
         <div class="footer-logo-holder">
           <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.svg"></a>
         </div>

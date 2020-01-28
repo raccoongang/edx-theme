@@ -31,7 +31,36 @@
 
 			.nav-colophon {
 				text-align: center;
-				margin: 0 0 30px;
+				margin: 0 -20px;
+				display: flex;
+
+				.menu-item {
+					width: 50%;
+					padding: 0 20px;
+					box-sizing: border-box;
+					h4, 
+					.h4 {
+						font: 700 14px/24px 'Century Gothic' !important;
+						text-align: left;
+						text-transform: uppercase;
+						color: $footer-support-text-and-logo;
+						margin-bottom: 10px;
+					}
+				}
+
+				.menu-item-list {
+					display: flex;
+					flex-wrap: wrap;
+
+					li {
+						float: none;
+						a{
+							color: $footer-social-link-bg;
+							font: 400 14px/24px 'Century Gothic' !important;
+
+						}
+					}
+				}
 
 				@media (max-width: $build-footer-mobile) {
 					margin: 0 0 35px;
@@ -71,6 +100,36 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+		border-top: 1px solid #707070;
+		padding-top: 25px;
+		margin-top: 20px;
+
+		.menu-item-list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				margin-right: 15px;
+				&:last-child {
+					margin-right: 0;
+				}
+
+				a{
+					color: $footer-social-link-bg !important;
+					font: 400 14px/24px 'Century Gothic' !important;
+				}
+			}
+		}
+
+		.footer-socials {
+			&__copy {
+				color: $footer-social-link-bg;
+				font: 400 14px/24px 'Century Gothic' !important;
+			}
+		}
 
 		> * {
 			@media screen and (max-width: $build-footer-mobile) {
@@ -159,7 +218,7 @@
 
 	.icon-list {
 		text-align: center;
-		margin: 0;
+		margin: 0 0 25px;
 		padding: 0;
 		list-style: none;
 
