@@ -2228,53 +2228,38 @@ body.view-in-course .wrapper-course-material .course-material {
             float: none;
 
             .discovery-input {
+                $selfFont: 16px/46px "Open Sans", sans-serif;
                 border: 1px solid #B2DFDB;
                 box-sizing: border-box;
                 box-shadow: inset 0px 4px 10px rgba(60, 182, 181, 0.15);
                 border-radius: 46px;
                 height: 46px;
-                line-height: 46px;
                 padding-right: 55px;
-                font-family: "Open Sans", sans-serif;
+                font: $selfFont;
                 padding-left: 35px;
-                font-size: 16px;
 
                 &:-webkit-autofill::first-line {
                     color: $theme-header-link-color;
-                    font-size: 16px !important;
-                    font-family: "Open Sans", sans-serif;
-                    line-height: 46px;
+                    font: $selfFont;
                 }
 
                 &::-webkit-input-placeholder {
                     color: $theme-header-link-color;
-                    font-size: 16px !important;
-                    font-family: "Open Sans", sans-serif;
-                    line-height: 46px;
-
+                    font: $selfFont;
                 }
                 &::-moz-placeholder {
                     color: $theme-header-link-color;
-                    font-size: 16px !important;
-                    font-family: "Open Sans", sans-serif;
-                    line-height: 46px;
+                    font: $selfFont;
                 }
                 &:-ms-input-placeholder {
                     color: $theme-header-link-color;
-                    font-size: 16px !important;
-                    font-family: "Open Sans", sans-serif;
-                    line-height: 46px;
+                    font: $selfFont;
                 }
                 &:-moz-placeholder {
                     color: $theme-header-link-color;
-                    font-size: 16px !important;
-                    font-family: "Open Sans", sans-serif;
-                    line-height: 46px;
+                    font: $selfFont;
                 }
-
             }
-
-
 
             .discovery-submit {
                 background: transparent;
