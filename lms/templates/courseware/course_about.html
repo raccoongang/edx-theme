@@ -130,16 +130,17 @@ from openedx.core.lib.courses import course_image_url
         </div>
         <ul class="course-info-list">
           <li class="course-info-list__item">
+
             <span class="course-info-list__sub-title">Когда</span>
-            <p class="course-info-list__title">12 ноября-13 января</p>
+            <p class="course-info-list__title">${course_start_end_date}</p>
           </li>
           <li class="course-info-list__item">
             <span class="course-info-list__sub-title">Формат обучения</span>
-            <p class="course-info-list__title">вебинары по вечерам практика</p>
+            <p class="course-info-list__title">${_(course.learning_format)}</p>
           </li>
           <li class="course-info-list__item">
             <span class="course-info-list__sub-title">Уровень</span>
-            <p class="course-info-list__title">с нуля</p>
+            <p class="course-info-list__title">${_(course.qualification_level)}</p>
           </li>
         </ul>
         <div class="main-cta">
@@ -184,7 +185,7 @@ from openedx.core.lib.courses import course_image_url
           </a>
           <div id="register_error"></div>
         %else:
-          <% 
+          <%
             if ecommerce_checkout:
               reg_href = ecommerce_checkout_link
             else:
@@ -223,19 +224,19 @@ from openedx.core.lib.courses import course_image_url
   </header>
 
   <div class="container course-about-container">
-    
+
     <div class="course-page-about-main-content">
     <div class="details">
       <section class="course-about course-page-section">
         <h2 class="h2">Чему вы научитесь</h2>
         <ul class="course-about-list">
-          <li class="course-about-list__item"> 
+          <li class="course-about-list__item">
             <div class="course-about-list__title">
               <img src="/static/edx-theme/images/course-about-1.svg" alt="">
               <span>Работать с ценностями бренда</span>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             </p>
           </li>
           <!-- 2 -->
@@ -245,7 +246,7 @@ from openedx.core.lib.courses import course_image_url
               <span>Правильно общаться</span>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             </p>
           </li>
           <!-- 3 -->
@@ -255,7 +256,7 @@ from openedx.core.lib.courses import course_image_url
               <span>Проводить мероприятия</span>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             </p>
           </li>
           <!-- 4 -->
@@ -265,7 +266,7 @@ from openedx.core.lib.courses import course_image_url
               <span>Оценивать результат</span>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             </p>
           </li>
           <!-- 5 -->
@@ -275,7 +276,7 @@ from openedx.core.lib.courses import course_image_url
               <span>Вовлекать аудиторию</span>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             </p>
           </li>
           <!-- 6 -->
@@ -285,7 +286,7 @@ from openedx.core.lib.courses import course_image_url
               <span>Формировать ядро общества</span>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             </p>
           </li>
         </ul>
@@ -344,105 +345,27 @@ from openedx.core.lib.courses import course_image_url
         </li>
       </ul>
     </section>
-    <section class="course-program course-page-section" id="course-program">
-      <h2 class="h2">Программа курса</h2>
-      <ul class="course-program-list">
-        <li class="course-program-list__item">
-          <div class="course-program-list__head">Название урока</div>
-          <div class="course-program-list__content">
-            <ol>
-              <li>Название урока</li>
-              <li>Название урока</li>
-              <li>Название урока</li>
-            </ol>
-          </div>
-        </li>
-        <!-- 2 -->
-        <li class="course-program-list__item">
-          <div class="course-program-list__head">Название урока</div>
-          <div class="course-program-list__content">
-            <ol>
-              <li>Название урока</li>
-              <li>Название урока</li>
-              <li>Название урока</li>
-            </ol>
-          </div>
-        </li>
-        <!-- 3 -->
-        <li class="course-program-list__item">
-          <div class="course-program-list__head">Название урока</div>
-          <div class="course-program-list__content">
-            <ol>
-              <li>Название урока</li>
-              <li>Название урока</li>
-              <li>Название урока</li>
-            </ol>
-          </div>
-        </li>
-        <!-- 4 -->
-        <li class="course-program-list__item">
-          <div class="course-program-list__head">Название урока</div>
-          <div class="course-program-list__content">
-            <ol>
-              <li>Название урока</li>
-              <li>Название урока</li>
-              <li>Название урока</li>
-            </ol>
-          </div>
-        </li>
-        <!-- 5 -->
-        <li class="course-program-list__item">
-          <div class="course-program-list__head">Название урока</div>
-          <div class="course-program-list__content">
-            <ol>
-              <li>Название урока</li>
-              <li>Название урока</li>
-              <li>Название урока</li>
-            </ol>
-          </div>
-        </li>
-        <!-- 6 -->
-        <li class="course-program-list__item">
-          <div class="course-program-list__head">Название урока</div>
-          <div class="course-program-list__content">
-            <ol>
-              <li>Название урока</li>
-              <li>Название урока</li>
-              <li>Название урока</li>
-            </ol>
-          </div>
-        </li>
-        <!-- 7 -->
-        <li class="course-program-list__item">
-          <div class="course-program-list__head">Название урока</div>
-          <div class="course-program-list__content">
-            <ol>
-              <li>Название урока</li>
-              <li>Название урока</li>
-              <li>Название урока</li>
-            </ol>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section class="course-teacher course-page-section">
-      <h2 class="h2">Преподаватель курса</h2>
-      <div class="course-teacher-persone">
-        <div class="course-teacher-persone__image">
-          <img class="course-result-list__image" src="/static/edx-theme/images/course-teacher.png" alt="">
-        </div>
-        <div class="course-teacher-persone__content">
-          <div class="course-teacher-persone__name">Иванов Александр</div>
-          <p>
-            Генеральный директор агентства интернет-маркетинга Level-Ads, совладелец компании HelpTrucks LLC. 
-            Специализируется на контекстной рекламе и SEO-продвижении.
-            В маркетинге более 7 лет, специалист комплексного интернет-продвижения, сторонник UX подхода.
-            Более 3 лет занимается продвижением на западные рынки - США, Канаду и Австралию.
-            Продвигал digital-проекты с аудиторией более, чем 1 000 000 пользователей в месяц
-          </p>
-        </div>
-      </div>
-    </section>
+    % if blocks.get('children'):
+      <section class="course-program course-page-section" id="course-program">
+        <h2 class="h2">Программа курса</h2>
+        <ul class="course-program-list">
+        % for section in blocks.get('children'):
+          <li class="course-program-list__item">
+            <div class="course-program-list__head">${section['display_name']}</div>
+            <div class="course-program-list__content">
+              <ol>
+              % for subsection in section.get('children', []):
+                <li>${subsection['display_name']}</li>
+              % endfor
+              </ol>
+            </div>
+        % endfor
+        </ul>
+      </section>
+    % endif
+    % if get_course_about_section(request, course, "overview"):
+       ${get_course_about_section(request, course, "overview")}
+    % endif
   </div>
   <div class="course-sidebar course-sidebar_mama">
     <div class="course-summary course-summary_aside">
@@ -470,7 +393,7 @@ from openedx.core.lib.courses import course_image_url
         % endif
       </div>
       <div class="course-sign-up-terms">
-        <span>БЕСПЛАТНО</span>
+        <span>${course.price}</span>
         <div class="course-sign-up-terms-tooltip">
           <svg class="svg-icon" viewBox="0 0 16 16">
             <use xlink:href="#ico_terms"></use>
@@ -485,57 +408,70 @@ from openedx.core.lib.courses import course_image_url
       </div>
       <ol class="important-dates">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
-          % if not course.start_date_is_still_default:
-              <%
-                  course_start_date = course.start
-              %>
+          % if get_course_about_section(request, course, 'effort'):
+            <%
+            effort = get_course_about_section(request, course, 'effort').split(':')[0].strip()
+            if effort[0] == '0':
+              effort = effort[1]
+            %>
             <li class="important-dates-item">
               <span class="icon fa fa-calendar" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Classes Start")}</p>
-              % if isinstance(course_start_date, str):
-                  <span class="important-dates-item-text start-date">${course_start_date}</span>
-              % else:
-                  <%
-                     course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                  %>
-                  <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-              % endif
+              <p class="important-dates-item-title">занятость</p>
+              <span class="important-dates-item-text">${effort} ч./нед</span>
             </li>
           % endif
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.
-            % if get_course_about_section(request, course, "end_date") or course.end:
-                <%
-                    course_end_date = course.end
-                %>
-
+          % if course.end:
             <li class="important-dates-item">
-                <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Classes End")}</p>
-                  % if isinstance(course_end_date, str):
-                      <span class="important-dates-item-text final-date">${course_end_date}</span>
-                  % else:
-                    <%
-                        course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                    %>
-                    <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-                  % endif
+              <span class="icon fa fa-calendar" aria-hidden="true"></span>
+              <p class="important-dates-item-title">продолжительность</p>
+              <span class="important-dates-item-text">${duration} нед.</span>
             </li>
-            % endif
-
-          % if get_course_about_section(request, course, "effort"):
-            <li class="important-dates-item"><span class="icon fa fa-pencil" aria-hidden="true"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
           % endif
-
+          % if course.number_of_lections:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">лекций</p>
+              <span class="important-dates-item-text">${course.number_of_lections}</span>
+            </li>
+          % endif
+          % if course.number_of_videos:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">видео</p>
+              <span class="important-dates-item-text">${course.number_of_videos}</span>
+            </li>
+          % endif
+          % if course.number_of_homeworks:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">домашних заданий</p>
+              <span class="important-dates-item-text">${course.number_of_homeworks}</span>
+            </li>
+          % endif
+          % if course.number_of_tests:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">тестов</p>
+              <span class="important-dates-item-text">${course.number_of_tests}</span>
+            </li>
+          % endif
           ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
 
-          %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
+          %if course.language:
             <li class="important-dates-item">
               <span class="icon fa fa-money" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Price")}</p>
-              <span class="important-dates-item-text">${course_price}</span>
+              <p class="important-dates-item-title">язык обучения</p>
+              <span class="important-dates-item-text">${_(course.language)}</span>
             </li>
           %endif
+
+          <li class="important-dates-item">
+            <span class="icon fa fa-pencil" aria-hidden="true"></span>
+            <p class="important-dates-item-title">доступ</p>
+            <span class="important-dates-item-text">${_(course.course_availability)}</span>
+          </li>
 
           % if pre_requisite_courses:
           <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
