@@ -326,10 +326,7 @@ hr.other {
 
     h2,
     .h2 {
-        font-family: 'Artegra Sans', sans-serif;
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 36px;
+        font: 30px/36px 700 'Artegra Sans', sans-serif;
         color: $color7;
         margin-bottom: 45px;
     }
@@ -369,8 +366,7 @@ hr.other {
     @media (max-width: $tablet-size) {
         h2,
         .h2 {
-            font-size: 22px;
-            line-height: 26px;
+            font: 22px/26px;
             margin-bottom: 25px;
         }
     }
@@ -966,11 +962,8 @@ hr.other {
                 }
 
                 span {
+                    font: 16px/24px 600 'Artegra Sans', sans-serif
                     display: block;
-                    font-family: 'Artegra Sans', sans-serif;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 24px;
                     color: $color7;
                 }
             }
@@ -1055,10 +1048,7 @@ hr.other {
 
 .courses-container .courses .course .course-info .course-title {
     color: #000;
-    font-family: 'Artegra Sans', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 24px;
+    font: 18px/24px 600 'Artegra Sans', sans-serif;
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
