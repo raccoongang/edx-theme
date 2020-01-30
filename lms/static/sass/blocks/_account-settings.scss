@@ -37,6 +37,10 @@
         padding-top: 0;
     }
 
+    .account-settings-container {
+        padding-bottom: 0;
+    }
+
     .account-settings-sections .section .account-settings-section-body {
         display: flex;
         flex-wrap: wrap;
@@ -133,9 +137,15 @@
             }
         }
 
-        .u-field.u-field-dropdown .u-field-value .u-field-title {
-            margin-bottom: 0.625rem;
-            line-height: 16px;
+        .u-field {
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.u-field-dropdown .u-field-value .u-field-title {
+                margin-bottom: 0.625rem;
+                line-height: 16px;
+            }
         }
     }
 }
