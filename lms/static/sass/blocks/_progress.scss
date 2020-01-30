@@ -89,3 +89,27 @@
         }
     }
 }
+
+.terms-of-service-wrapper {
+    padding: 0 10px 10px;
+
+    input {
+        margin-right: 5px;
+    }
+
+    .terms-of-service-error {
+        font-size: 12px;
+        color: #721c24;
+        background-color: #f8d7da;
+        position: relative;
+        padding: 5px;
+        border: 1px solid #f5c6cb;
+        margin: 3px 0;
+        width: 50%;
+        box-sizing: border-box;
+
+        @media (max-width: 760px) {
+            width: 100%;
+        }
+    }
+}
