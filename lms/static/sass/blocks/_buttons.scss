@@ -28,10 +28,13 @@ input[type="submit"] {
 .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
 .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .btn-change-privacy,
 .wiki-wrapper section.wiki .btn.btn-primary,
+#forgot-password-modal #password-reset .form-actions button[type="submit"],
 .find-courses .discovery-submit,
 .modal .inner-wrapper form .submit input[type="submit"],
 .dashboard .search-results .search-load-next,
-.view-instructordash .mce-window.mce-in .mce-btn.mce-primary:not(.mce-listbox) button {
+.view-instructordash .mce-window.mce-in .mce-btn.mce-primary:not(.mce-listbox) button,
+.view-teams .page-header-search .action-search,
+.view-teams .action-primary {
 	transition: all 0.2s ease !important;
 	display: inline-block;
 	background: $theme-btn-bg !important;
@@ -86,7 +89,12 @@ input[type="submit"] {
 .page-header-search .search-form .search-button,
 .wiki-wrapper section.wiki a.btn,
 .wiki-wrapper section.wiki #id_revision + .btn,
-.view-instructordash .mce-window.mce-in .mce-btn:not(.mce-listbox) button {
+.view-instructordash .mce-window.mce-in .mce-btn:not(.mce-listbox) button,
+.view-teams .card .card-actions .action-view,
+.view-teams .action-cancel,
+.view-teams .page-header.has-secondary .page-header-secondary .btn-secondary,
+.view-teams .edit-members .action-remove-member,
+.view-teams .prompt.warning .action-secondary {
 	transition: all 0.2s ease !important;
 	background: $theme-btn-white-bg !important;
 	border: 1px solid $theme-btn-white-border !important;
