@@ -1499,6 +1499,8 @@ body .courses-container .courses .course .course-info {
     background: $course-bg;
 
     .course-date {
+        display: none;
+        visibility: hidden;
         padding: 0 15px;
         line-height: normal;
     }
@@ -2737,6 +2739,8 @@ section.wiki .table.table-striped {
 
                         .info-date-block {
                             color: #5e5e5e;
+                            display: none;
+                            visibility: hidden;
                         }
                     }
                 }
