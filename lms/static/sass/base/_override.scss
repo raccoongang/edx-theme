@@ -1051,7 +1051,7 @@ hr.other {
         position: absolute;
         content: "";
         bottom: 10px;
-        left: 0;
+        left: 2px;
         width: 50%;
         top: 80%;
         max-width: 300px;
@@ -1062,7 +1062,7 @@ hr.other {
     }
     &:after{
         transform: rotate(3deg);
-        right: 0;
+        right: 2px;
         left: auto;
     }
     .course-info {
@@ -3133,18 +3133,27 @@ body.menu-open {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 -15px;
+    margin: 0 -60px;
+
+    @media (max-width: $laptop-size) {
+        margin: 0 -30px;
+    }
 }
 .courses-container .highlighted-courses .courses .courses-listing .courses-listing-item {
     width: 50%;
     margin-right: 0;
-    padding: 0 15px;
-    margin: 0 0 30px;
+    padding: 0 60px;
+    margin: 0 0 120px;
     box-sizing: border-box;
     max-width: none;
-    @media (max-width: $desktop-size) {
+    display: flex;
+    flex-direction: column;
 
+    @media (max-width: $laptop-size) {
+        padding: 0 30px;
+        margin-bottom: 60px;
     }
+    
     @media (max-width: $tablet-size) {
         width: 100%;
         margin-bottom: 40px;
@@ -3236,6 +3245,9 @@ body footer .raccoon__logo {
 
 .highlighted-courses .courses .course {
     padding-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 2px 7px 0px rgba(178, 223, 219, .4);
 
     &:hover{

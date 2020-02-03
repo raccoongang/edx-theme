@@ -17,6 +17,14 @@
     position: relative;
     box-sizing: border-box;
 
+    .login-theme {
+        text-transform: none;
+    }
+
+    .login-theme_margin {
+        text-transform: uppercase;
+    }
+
     @media (min-width: $tablet-size) {
         justify-content: space-between;
     }
@@ -149,12 +157,19 @@ a.header__logo,
         top: 3px;
         left: 0;
     }
+
     &:hover {
         cursor: pointer;
     }
+
     @media (min-width: $tablet-size) {
         display: none;
     }
+
+    @media (min-width: $mobile-size) {
+        top: 20px;
+    }
+
     .menu-open & {
         transform: translate(265px, 0);
     }
