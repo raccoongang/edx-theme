@@ -16,6 +16,12 @@
           </li>
         %endfor
         </ul>
+        ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
+        % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
+        <div class="courses-more">
+          <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
+        </div>
+        % endif
       </section>
       <section class="course-partners course-page-section">
         <h2 class="h2">Наши партнеры</h2>
@@ -58,13 +64,6 @@
           </li>
         </ul>
       </section>
-    ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
-      % if settings.HOMEPAGE_COURSE_MAX and len(courses) > settings.HOMEPAGE_COURSE_MAX:
-      <div class="courses-more">
-        <a class="courses-more-cta" href="${marketing_link('COURSES')}"> ${_("View all Courses")} </a>
-      </div>
     % endif
-    % endif
-
   </section>
 </section>
