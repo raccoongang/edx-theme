@@ -351,6 +351,33 @@ hr.other {
             }
         }
 
+        .courses-more {
+            text-align: center;
+            margin: 40px 0 0 0;
+
+            @media (max-width: $mobile-size) {
+                margin-top: 20px;
+            }
+        }
+
+        .courses-more-cta {
+            color: $theme-header-btn-color;
+            font: 600 16px/24px 'Artegra Sans', sans-serif !important;
+            border-radius: 46px;
+            border: 1px solid $theme-header-btn-color;
+            padding: 16px 30px;
+            display: inline-block;
+
+            &:after {
+                display: none;
+            }
+
+            &:hover {
+                background-color: $theme-header-btn-color;
+                color: $theme-btn-text-color;
+            }
+        }
+
         @media (max-width: $tablet-size) {
             .course {
                 .course-image {
@@ -1395,10 +1422,11 @@ hr.other {
 }
 .course-info .course-sidebar .important-dates {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     padding: 0;
     margin: 0;
+    max-height: 150px;
+    overflow: auto;
 }
 .course-info .course-sidebar .important-dates li {
     border-bottom: none;
