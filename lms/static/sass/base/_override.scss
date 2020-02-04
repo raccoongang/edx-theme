@@ -2289,6 +2289,11 @@ body.view-in-course .wrapper-course-material .course-material {
                     background: transparent !important;
                 }
 
+                &:focus {
+                    background: transparent;
+                    outline: none;
+                }
+
                 .icon{
                     background-image: url('../images/ico-search.svg');
                     background-repeat: no-repeat;
