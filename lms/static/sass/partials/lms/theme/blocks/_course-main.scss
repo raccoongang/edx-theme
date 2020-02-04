@@ -30,6 +30,10 @@
             margin-bottom: 5px;
         }
     }
+
+    .course-sidebar {
+        word-break: break-word;
+    }
 }
 
 #course-container {
@@ -76,6 +80,7 @@
             .search-button {
                 border-color: $base-color;
                 color: $base-color;
+                flex-shrink: 0;
 
                 &:hover,
                 &:focus,
