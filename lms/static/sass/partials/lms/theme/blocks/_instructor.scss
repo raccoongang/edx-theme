@@ -207,7 +207,7 @@
             }
         }
 
-        .instructor-dashboard-wrapper-2 section.idash-section#student_admin .location-example {
+        section.idash-section#student_admin .location-example {
             word-break: break-word;
         }
 
@@ -231,6 +231,11 @@
                 }
             }
 
+            .certificate-generation-history-content table th {
+                white-space: nowrap;
+                padding-right: 10px;
+            }
+
             .add-certificate-invalidation {
                 label {
                     display: block;
@@ -239,6 +244,22 @@
 
                 div {
                     margin-bottom: 10px;
+                }
+            }
+
+            .white-listed-students table,
+            .invalidation-history table {
+                table-layout: auto;
+
+                tr {
+                    td,
+                    th {
+                        border: 1px solid #e4e4e4;
+
+                        button.delete-exception {
+                            min-width: 160px;
+                        }
+                    }
                 }
             }
         }
@@ -311,27 +332,14 @@
             }
         }
 
-        section#certificates.idash-section {
-            .white-listed-students table,
-            .invalidation-history table {
-                table-layout: auto;
-
-                tr {
-                    td,
-                    th {
-                        border: 1px solid #e4e4e4;
-
-                        button.delete-exception {
-                            min-width: 160px;
-                        }
-                    }
-                }
-            }
+        section.idash-section#data_download .problem-browser input {
+            vertical-align: middle;
         }
 
         .enrollment-wrapper {
             table {
                 width: 100%;
+                table-layout: auto;
 
                 caption {
                     padding: 10px;

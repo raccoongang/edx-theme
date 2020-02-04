@@ -7,6 +7,12 @@
         @media screen and (max-width: 760px) {
             padding: 15px 10px 5px;
         }
+
+        &.active,
+        &:visited.active {
+            color: $link-color;
+            border-bottom-color: $link-color;
+        }
     }
 }
 

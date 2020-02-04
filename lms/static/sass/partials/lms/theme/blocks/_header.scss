@@ -62,6 +62,10 @@ header.global-header {
                 &:hover {
                     color: $link-hover;
                 }
+
+                &.register-btn:hover {
+                    color: $white;
+                }
             }
 
             & > div {
@@ -199,7 +203,12 @@ body.view-in-course .wrapper-preview-menu {
     }
 
     .outer-wrapper {
-        @media (min-width: 760px) {
+        min-width: 700px;
+
+        @media (max-width: 760px) {
+            width: 700px;
+            min-width: auto;
+            max-width: 100%;
             padding: 20px;
         }
 
@@ -207,6 +216,10 @@ body.view-in-course .wrapper-preview-menu {
             display: table;
             min-height: 420px;
             box-sizing: border-box;
+        }
+
+        .course-search {
+            @include clearfix();
         }
     }
 
