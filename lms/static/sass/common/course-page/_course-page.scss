@@ -8,13 +8,12 @@
 @import "aside";
 
 .course-page-about-main-content{
-    max-width: 870px;
-    padding-right: 30px;
-    box-sizing: border-box;
+    width: 100%;
+    margin-right: 30px;
 
     @media (max-width: $laptop-size) {
         max-width: 100%;
-        padding-right: 0;
+        margin-right: 0;
     }
 }
 .course-info {
