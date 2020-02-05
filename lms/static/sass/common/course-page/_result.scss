@@ -19,7 +19,7 @@
             z-index: 1;
             margin: 70px 0 0 -40px;
         }
-        
+
         &:nth-child(3){
             background-color: $violet;
             z-index: 2;
@@ -35,10 +35,24 @@
     }
 
     &__image{
+        width: 45px;
+        height: 40px;
         flex: none;
-        margin-right: 27px;
+        margin-right: 20px;
     }
-    
+
+    &__image1{
+        background: url('../images/course-result-1.svg') no-repeat 50%;
+    }
+
+    &__image2{
+        background: url('../images/course-result-2.svg') no-repeat 50%;
+    }
+
+    &__image3{
+        background: url('../images/course-result-3.svg') no-repeat 50%;
+    }
+
     &__text{
         font-family: $font-family;
         font-size: 16px;
@@ -65,7 +79,7 @@
             padding: 20px;
         }
 
-        &__image {
+        &__image{
             margin-right: 20px;
         }
     }
