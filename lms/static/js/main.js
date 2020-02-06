@@ -30,4 +30,10 @@ $(document).ready(function () {
             top = $(id).offset().top - 120;
         $('body,html').animate({scrollTop: top}, 700);
     });
+
+    // popup init
+    $('#aside-popup').popup({
+        transition: 'all 0.3s',
+        scrolllock: true
+    });
 });
