@@ -139,7 +139,7 @@ hr.other {
 .login-register {
     padding: 0 15px;
     box-sizing: border-box;
-    max-width: 680px;
+    max-width: 710px;
     border-radius: 24px;
     position: relative;
     margin-bottom: 50px;
@@ -303,14 +303,50 @@ hr.other {
         .login-form {
             max-width: 370px;
         }
+
+        @media (max-width: $tablet-size) {
+            .login-form {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+
+            .form-wrapper {
+                padding: 20px 20px 95px;
+
+                .toggle-form {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0 20px;
+                    bottom: 20px;
+                    max-width: 100%;
+
+                    .text {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
     }
 
     #login-anchor {
-        .form-wrapper {
 
-            .toggle-form {
-                bottom: 50px;
+        @media (max-width: $tablet-size) {
+            .form-controls {
+                border-bottom: 6px solid $theme-header-btn-color;
+                width: auto;
+                margin: 0;
+                padding: 0 0 16px;
             }
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        &:before {
+            left: 20px;
+        }
+
+        &:after {
+            right: 20px;
         }
     }
 }
@@ -379,15 +415,9 @@ hr.other {
     }
     .forgot-password.field-link {
         position: absolute;
-        bottom: -151px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        @media (min-width: $tablet-size) {
-            bottom: -100px;
-            transform: translate(0, 0);
-            left: auto;
-        }
-
+        bottom: -100px;
+        transform: translate(0, 0);
+        left: auto;
     }
     .action.action-primary.action-update {
         background: $theme-header-btn-color;
