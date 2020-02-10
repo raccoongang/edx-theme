@@ -103,9 +103,6 @@ hr.other {
 }
 .login-providers + .section-title.lines {
     display: none;
-    @media (min-width: $tablet-size) {
-        display: block;
-    }
 }
 
 .register-bg {
@@ -227,7 +224,7 @@ hr.other {
                     }
                 }
 
-                &.checkbox-remember {
+                &.checkbox-remember, &.checkbox-honor_code {
                     margin-bottom: 70px;
 
                     label {
@@ -494,6 +491,7 @@ hr.other {
         text-transform: uppercase;
         font: 600 18px/24px 'Artegra Sans', sans-serif !important;
         text-decoration: none;
+        flex: none;
 
         &:hover {
             text-decoration: underline;
@@ -545,6 +543,8 @@ hr.other {
 
         .text {
             font: 400 16px 'Artegra Sans', sans-serif !important;
+            text-align: left;
+            margin-right: 15px;
         }
     }
     .form-field .field-link {
