@@ -151,31 +151,34 @@ hr.other {
     box-sizing: border-box;
     max-width: 710px;
     border-radius: 24px;
-    position: relative;
     margin-bottom: 50px;
     z-index: 10;
     background: transparent;
 
-    &:before,
-    &:after {
-        z-index: -1;
-        position: absolute;
-        content: "";
-        bottom: 10px;
-        left: 16px;
-        width: 50%;
-        top: 93%;
-        max-width: 300px;
-        background: rgba(178, 223, 219, .9);
-        box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
-        transform: rotate(-3deg);
-        border-radius: 46px;
-    }
-    
-    &:after{
-        transform: rotate(3deg);
-        right: 16px;
-        left: auto;
+    .form-type {
+        position: relative;
+
+        &:before,
+        &:after {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            bottom: 10px;
+            left: 16px;
+            width: 50%;
+            top: 93%;
+            max-width: 300px;
+            background: rgba(178, 223, 219, .9);
+            box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
+            transform: rotate(-3deg);
+            border-radius: 46px;
+        }
+        
+        &:after{
+            transform: rotate(3deg);
+            right: 16px;
+            left: auto;
+        }
     }
 
     .message-copy {
@@ -224,7 +227,8 @@ hr.other {
                     }
                 }
 
-                &.checkbox-remember, &.checkbox-honor_code {
+                &.checkbox-remember, 
+                &.checkbox-honor_code {
                     margin-bottom: 70px;
 
                     label {
@@ -320,6 +324,10 @@ hr.other {
                 margin-top: 40px;
             }
 
+            .register-form {
+                margin-top: 40px;
+            }
+
             .form-wrapper {
                 padding: 20px 20px 95px;
 
@@ -391,7 +399,7 @@ hr.other {
         }
     }
 
-    #login-anchor {
+    .form-type {
 
         @media (max-width: $tablet-size) {
             .form-controls {
@@ -402,6 +410,41 @@ hr.other {
             }
         }
     }
+
+    #register-anchor {
+        .form-wrapper {
+            padding-bottom: 70px;
+            margin-bottom: 100px;
+
+            .toggle-form {
+                bottom: -80px;
+            }
+
+            .form-field {
+                &.checkbox-honor_code {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        @media (max-width: $mobile-size) {
+            .form-wrapper {
+                padding-bottom: 30px;
+
+                .toggle-form {
+                    bottom: -110px;
+                }
+
+                .form-field {
+                    &.checkbox-honor_code {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+        }
+    }
+
 
     @media (max-width: $tablet-size) {
         &:before {
