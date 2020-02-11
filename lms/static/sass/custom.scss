@@ -40,6 +40,24 @@ body {
 	background: $body-bg !important;
 	position: relative;
 	line-height: 1.2;
+
+	.xmodule_display.xmodule_SequenceModule .sequence-nav {
+		display: none;
+		visibility: hidden;
+	}
+
+	.container>div {
+		box-shadow: none;
+		border: none;
+	}
+
+	.course-wrapper .xblock {
+		max-width: 100% !important;
+	}
+}
+
+#main {
+	padding: 0;
 }
 
 .holder,
