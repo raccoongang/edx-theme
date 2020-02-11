@@ -188,7 +188,7 @@ from pipeline_mako import render_require_js_path_overrides
 % endif
     <a class="nav-skip sr-only sr-only-focusable" href="#main">${_("Skip to main content")}</a>
 
-    % if not disable_header:
+    % if not disable_header and user.is_authenticated():
         <%include file="${static.get_template_path('header.html')}" args="online_help_token=online_help_token" />
         <%include file="/preview_menu.html" />
     % endif

@@ -209,14 +209,15 @@ input[type="submit"] {
 		border: none;
 		outline: none;
 		min-height: 40px;
-		padding: 22px 15px;
+		padding: 16px 15px;
 		font-weight: 700;
 		line-height: 1;
 		color: #fff;
 		background: $btn-main;
 		box-shadow: none;
 		text-shadow: none;
-		transition: all .3s ease-in-out;
+		text-transform: uppercase;
+		transition: all .4s ease-in-out;
 
 		&:hover {
 			opacity: .75;

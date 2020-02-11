@@ -27,6 +27,10 @@
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
+*:focus {
+	outline: none !important;
+}
+
 html, body {
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: auto;
@@ -126,5 +130,23 @@ body {
 
 	.wrapper-footer {
 		overflow: hidden;
+	}
+}
+
+.index-wrapper {
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: c;
+}
+
+.index-img {
+	display: block;
+	position: relative;
+	margin: 0 0 48px;
+
+	img {
+		display: block;
+		width: 100%;
 	}
 }
