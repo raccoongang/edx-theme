@@ -33,10 +33,10 @@
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
     font-size: 14px;
-    color: #fff;
+    color: $theme-header-btn-color;
 
     &:hover {
-        color: #fff;
+        color: $color7;
         border: none;
     }
 }
@@ -1014,6 +1014,7 @@ hr.other {
                     display: flex;
                     flex-wrap: wrap;
                     margin: 0 -15px 15px;
+                    justify-content: flex-start;
                     li{
                         width: 50%;
                         padding: 0 15px;
@@ -1026,9 +1027,6 @@ hr.other {
                             font-size: 16px;
                             line-height: 24px;
                             display: inline-block;
-                            &:hover{
-                                color: #009688;
-                            }
 
                             &:focus, &:active {
                                 color: #FFF;
@@ -2617,24 +2615,7 @@ body.view-in-course .wrapper-course-material .course-material {
     padding-bottom: 24px;
     overflow: hidden;
 }
-.login-register .login-provider.button-oa2-facebook {
-    background: #fff;
-    color: #000;
-    border: 1px solid #c8c8c8;
-    margin-bottom: 16px;
-    width: 100%;
-    @media (min-width: $tablet-size) {
-        width: 134px;
-    }
-    @media (min-width: $desktop-size) {
-        transform: translateX(0);
-        margin: 0;
-    }
 
-    &:hover {
-        border: 1px solid #c8c8c8;
-    }
-}
 .login-register .login-provider.button-oa2-vk-oauth2 {
     background: #fff;
     color: #000;
@@ -2653,7 +2634,6 @@ body.view-in-course .wrapper-course-material .course-material {
     }
 }
 .login-register .login-provider.button-oa2-google-oauth2 {
-    background: #fff;
 
     @media (max-width: $tablet-size) {
         width: 100%;
@@ -3471,17 +3451,44 @@ body.menu-open {
         }
     }
 }
-.theme-footer_holder .footer-support {
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff !important;
-    display: flex;
-    font-size: 12px;
-    font-family: 'Artegra Sans' !important;
+.theme-footer_holder {
+    .footer-support {
+        color: #fff !important;
+        font-size: 12px;
+        font-family: 'Artegra Sans' !important;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a,
+            .svg-icon,
+            span {
+                height: 26px;
+                line-height: 26px;
+            }
+        }
+    }
 
     @media (max-width: $tablet-size) {
-        flex-direction: column;
-        justify-content: center;
+        .footer-support {
+            flex-direction: column;
+            justify-content: center;
+
+            &__item {
+                margin-right: 0;
+            }
+        }
     }
 }
 
@@ -3502,13 +3509,19 @@ body.menu-open {
 }
 
 body footer .raccoon__logo {
-    font-size: 12px;
     display: flex;
     align-items: center;
     color: #fff !important;
+    margin-left: 9px;
+
     &:hover {
         border-bottom: none;
     }
+
+    span{
+        font-size: 16px;
+    }
+    
 }
 
 .svg-edx {
@@ -3517,8 +3530,8 @@ body footer .raccoon__logo {
 }
 
 .svg-raccoon {
-    width: 123px;
-    height: 25px;
+    width: 20px;
+    height: 16px;
 }
 
 .svg-skillonomy {

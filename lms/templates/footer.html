@@ -41,21 +41,14 @@
       </div>
       <div class="colophon footer-content">
         <div class="footer-content__copy">
-          &copy; 2010 — 2020
-          <a href="">Условия пользования сервисом</a>
+          &copy; 2017 - 2020
+          <a href="/honor" target="_blank">Условия использования сервиса</a>
         </div>
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
-              <li><a href="/courses">Курсы</a></li>
-              <li><a href="/about">О проекте</a></li>
-              <li><a href="/honor">Пользовательское соглашение</a></li>
-              <li><a href="">Корпоративное обучение</a></li>
-              <li><a href="">Каталоог курсов</a></li>
-              <li><a href="">Корпоративное обучение</a></li>
-              <li><a href="">Программы лояльности</a></li>
-              <li><a href="">Каталог профессий</a></li>
-              <li><a href="">Наши партнеры</a></li>
-              <li><a href="">Стать преподавателем</a></li>
+              <li><a href="/honor">О нас</a></li>
+              <li><a href="/courses" target="_blank">Каталог курсов</a></li>
+              <li><a href="">Преподавайте на МАМА</a></li>
           </ol>
         </nav>
         <div class="footer-socials">
@@ -91,7 +84,7 @@
             </ul>
             <ul class="footer-socials-channels">
               <li>
-                  <a href="">
+                  <a href="https://t.me/mamamobytize" target="_blank">
                     <svg class="svg-icon" viewBox="0 0 24 24">
                       <use xlink:href="#fa-brands_telegram"></use>
                     </svg>
@@ -99,7 +92,7 @@
                   </a>
               </li>
               <li>
-                  <a href="">
+                  <a href="https://t.me/mama_discussion" target="_blank">
                     <svg class="svg-icon" viewBox="0 0 24 24">
                       <use xlink:href="#fa-brands_telegram"></use>
                     </svg>
@@ -122,26 +115,33 @@
       ## which are not technically powered by OpenEdX.
       % if not hide_openedx_link:
       <div class="theme-footer_holder">
-        <div class="footer-support">
-          Платформа на
-          <a target="_blank" href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer">
-            <svg class="svg-icon svg-edx" viewBox="0 0 59 12">
-              <use xlink:href="#openedex-logo"></use>
-            </svg>
-          </a>
-          Разработка
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            <svg class="svg-icon svg-raccoon" viewBox="0 0 123 25">
-              <use xlink:href="#racoon-footer-logo"></use>
-            </svg>
-          </a>
-          совместно со
-          <a target="_blank" href="https://skillonomy.org/">
-            <svg class="svg-icon svg-skillonomy" viewBox="0 0 104 19">
-              <use xlink:href="#skillonomy_logo"></use>
-            </svg>
-          </a>
-        </div>
+        <ul class="footer-support">
+          <li class="footer-support__item">
+            <span>Платформа на</span>
+            <a target="_blank" href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer">
+              <svg class="svg-icon svg-edx" viewBox="0 0 59 12">
+                <use xlink:href="#openedex-logo"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-support__item">
+            <span>Разработка</span>
+            <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
+              <span>Raccoon Gang</span>
+              <svg class="svg-icon svg-raccoon" viewBox="0 0 20 16">
+                <use xlink:href="#racoon-footer-logo"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-support__item">
+            <span>совместно со</span>
+            <a target="_blank" href="https://skillonomy.org/">
+              <svg class="svg-icon svg-skillonomy" viewBox="0 0 104 19">
+                <use xlink:href="#skillonomy_logo"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
       % endif
     </footer>
