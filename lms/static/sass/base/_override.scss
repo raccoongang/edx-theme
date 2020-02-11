@@ -3451,17 +3451,44 @@ body.menu-open {
         }
     }
 }
-.theme-footer_holder .footer-support {
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff !important;
-    display: flex;
-    font-size: 12px;
-    font-family: 'Artegra Sans' !important;
+.theme-footer_holder {
+    .footer-support {
+        color: #fff !important;
+        font-size: 12px;
+        font-family: 'Artegra Sans' !important;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a,
+            .svg-icon,
+            span {
+                height: 26px;
+                line-height: 26px;
+            }
+        }
+    }
 
     @media (max-width: $tablet-size) {
-        flex-direction: column;
-        justify-content: center;
+        .footer-support {
+            flex-direction: column;
+            justify-content: center;
+
+            &__item {
+                margin-right: 0;
+            }
+        }
     }
 }
 
