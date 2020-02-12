@@ -32,6 +32,9 @@ $(document).ready(function () {
     });
 
     // popup init
-    
+    $('#aside-popup').popup({
+        transition: 'all 0.3s',
+        scrolllock: true
+    });
 
 });
