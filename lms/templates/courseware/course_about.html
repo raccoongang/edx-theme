@@ -20,9 +20,15 @@ from openedx.core.lib.courses import course_image_url
 <%block name="js_extra">
   <script type="text/javascript">
   (function() {
-    $(".register").click(function(event) {
-      $("#class_enroll_form").submit();
+    $(".register").on('click', function(event) {
       event.preventDefault();
+      $("#class_enroll_form").submit();
+    });
+
+    $('#aside-popup').popup({
+      onclose: function() {
+        $("#class_enroll_form").submit();
+      }
     });
 
     % if can_add_course_to_cart:
@@ -233,7 +239,7 @@ from openedx.core.lib.courses import course_image_url
         <div class="main-cta">
           %if user.is_authenticated() and registered:
             %if show_courseware_link:
-              <a href="javascrip:;" class="aside-popup_open">
+              <a href="${course_target}">
               ${_("View Course")}
               </a>
             %endif
@@ -281,6 +287,8 @@ from openedx.core.lib.courses import course_image_url
                 href_class = "add-to-cart"
               else:
                 href_class = "register"
+                if user.is_authenticated():
+                  href_class = "aside-popup_open"
             %>
             <a href="${reg_href}" class="${href_class}">
               Записаться

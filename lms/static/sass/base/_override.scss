@@ -272,15 +272,6 @@ hr.other {
         flex-direction: row-reverse;
         align-items: center;
     }
-    .register-oa2-facebook {
-        width: 100%;
-        margin-bottom: 16px;
-        @media (min-width: $tablet-size) {
-            transform: translate(105%);
-            width: 130px;
-            margin: 0;
-        }
-    }
     .register-oa2-vk-oauth2 {
         width: 100%;
         @media (min-width: $tablet-size) {
@@ -2337,24 +2328,6 @@ body.view-in-course .wrapper-course-material .course-material {
     padding-bottom: 24px;
     overflow: hidden;
 }
-.login-register .login-provider.button-oa2-facebook {
-    background: #fff;
-    color: #000;
-    border: 1px solid #c8c8c8;
-    margin-bottom: 16px;
-    width: 100%;
-    @media (min-width: $tablet-size) {
-        width: 134px;
-    }
-    @media (min-width: $desktop-size) {
-        transform: translateX(0);
-        margin: 0;
-    }
-
-    &:hover {
-        border: 1px solid #c8c8c8;
-    }
-}
 .login-register .login-provider.button-oa2-vk-oauth2 {
     background: #fff;
     color: #000;
@@ -2372,14 +2345,7 @@ body.view-in-course .wrapper-course-material .course-material {
         border: 1px solid #c8c8c8;
     }
 }
-.login-register .login-provider.button-oa2-google-oauth2 {
-    background: #fff;
 
-    @media (max-width: $tablet-size) {
-        width: 100%;
-    }
-
-}
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
     display: flex;
