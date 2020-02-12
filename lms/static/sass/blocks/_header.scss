@@ -1,6 +1,6 @@
 .global-header {
 	padding: 0;
-	border-bottom: 3px solid $header-border;
+	border: none;
 	position: relative;
 	overflow: visible;
 	background: $header-bg;
@@ -19,10 +19,6 @@
 		height: $header-height;
 		position: relative;
 
-		@media screen and (max-width: $build-header-menu-tablet) {
-			display: block;
-		}
-
 		.header-logo {
 			display: block;
 			margin: 0;
@@ -36,8 +32,10 @@
 
 			a {
 				margin: 0;
-				transition: opacity .15s ease;
+				transition: opacity .15s ease-in-out;
 				height: auto;
+				pointer-events: none;
+				cursor: default;
 
 				&:hover {
 					opacity: .8;
@@ -52,17 +50,12 @@
 		}
 
 		.nav-links {
+			display: flex;
+			border-top: none;
 			flex-grow: 1;
 			align-items: center;
 			font-size: 16px !important;
-			display: none;
-			border-top: 1px solid #6e6e6e;
 			justify-content: flex-end;
-
-			@media (min-width: $build-header-menu-tablet + 1) {
-				display: flex;
-				border-top: none;
-			}
 
 			&.nav-links_not-authenticated .main {
 				@media (max-width: $build-header-menu-tablet) {
@@ -175,7 +168,7 @@
 
 				.user-dropdown-wrapper {
 					display: flex;
-					align-items: center;
+					align-items: flex-end;
 				}
 
 				.nav-item {
@@ -276,31 +269,40 @@
 					width: 115px;
 					right: 0;
 					z-index: 20;
-					border: 1px solid #313131;
+					border: 1px solid #2b6797;
+					border-radius: 4px;
 					position: absolute;
 					background-color: #fff;
 					color: #313131;
-					top: 55px;
+					top: 22px;
 
 					.dropdown-item {
 						display: block;
 						cursor: pointer;
 						overflow: hidden;
 						padding: 0;
+						transition: all .3s ease-in-out;
 
 						&:not(:last-child) {
-							border-bottom: 1px solid #e7e7e7;
+							border-bottom: 1px solid #ccc;
+						}
+
+						&:hover {
+							color: #fff;
+							background-color: #2b6797;
+
+							a {
+								color: inherit !important
+							}
 						}
 					}
 				}
 
 				.toggle-user-dropdown {
-					padding: 5px 3px;
-
-					.fa {
-						position: relative;
-						top: 3px;
-					}
+					position: relative;
+					padding: 0 3px;
+					line-height: 1;
+					top: -1px;
 
 					&:hover,
 					&:focus {
@@ -407,9 +409,9 @@
 			}
 		}
 
-		@media (max-width: $build-header-menu-tablet) {
-			display: block;
-		}
+		//@media (max-width: $build-header-menu-tablet) {
+		//	display: block;
+		//}
 
 		&.open + .nav-links {
 			@media (max-width: $build-header-menu-tablet) {
@@ -518,8 +520,9 @@ div.mobile-menu {
 section.home {
 	> header,
 	.slider {
-		height: calc(100vh - 68px);
-		background: url('../images/main-bg.png') no-repeat;
+		height: 100vh;
+		box-shadow: none;
+		background: #fff;
 		background-size: cover;
 		text-align: center;
 		display: flex;

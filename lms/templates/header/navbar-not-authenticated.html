@@ -42,25 +42,4 @@ from six import text_type
     %endif
   % endif
   </div>
-  <div class="secondary">
-      % if allows_login:
-        % if restrict_enroll_for_course:
-          <div class="mobile-nav-item nav-item">
-            <a class="register-btn btn" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
-          </div>
-          <div class="mobile-nav-item nav-item">
-            <a class="sign-in-btn btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
-          </div>
-        % else:
-          % if allow_public_account_creation:
-            <div class="mobile-nav-item nav-item">
-              <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
-            </div>
-          % endif
-          <div class="mobile-nav-item nav-item">
-            <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
-          </div>
-        % endif
-      % endif
-  </div>
 </nav>
