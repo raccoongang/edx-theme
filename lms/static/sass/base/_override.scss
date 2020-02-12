@@ -227,6 +227,7 @@ hr.other {
                     }
                 }
 
+
                 &.checkbox-remember, 
                 &.checkbox-honor_code {
                     margin-bottom: 70px;
@@ -1409,7 +1410,6 @@ hr.other {
     text-transform: uppercase;
     color: #212121;
     height: auto;
-    margin-bottom: 0;
 
     @media (max-width: $tablet-size) {
         padding: 0;
@@ -2687,6 +2687,10 @@ body.view-in-course .wrapper-course-material .course-material {
         border: 1px solid #c8c8c8;
     }
 }
+
+    @media (max-width: $tablet-size) {
+        width: 100%;
+    }
 
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
