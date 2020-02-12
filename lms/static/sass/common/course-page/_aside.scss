@@ -27,6 +27,26 @@
                 order: 0;
                 box-sizing: border-box;
                 margin-bottom: 22px;
+                scrollbar-color: $violet-dark $theme-header-btn-color; // mozilla scrollbar colors
+                scrollbar-width: thin; // mozilla scrollbar width
+
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: none;
+                    border-radius: 3px;
+                    background-color: transparent;
+                }
+
+                &::-webkit-scrollbar {
+                    border-radius: 3px;
+                    width: 8px;
+                    background-color: $theme-header-btn-color;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 3px;
+                    -webkit-box-shadow: none;
+                    background-color: $violet-dark;
+                }
 
                 li{
                     margin-right: 0;
@@ -37,7 +57,7 @@
                         font-weight: 600;
                         font-size: 16px;
                         line-height: 24px;
-                        width: 50%;
+                        flex-grow: 1;
                     }
 
                     .important-dates-item-text{
@@ -266,7 +286,7 @@
 .course-summary{
     &_aside {
         position: sticky;
-        top: 120px;
+        top: 100px;
         right: 0;
         background-color: $violet;
         border-radius: 24px;

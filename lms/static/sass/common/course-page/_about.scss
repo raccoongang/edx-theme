@@ -24,7 +24,7 @@
         img{
             flex: none;
         }
-        
+
         span {
             display: block;
             color: $color6;
@@ -32,6 +32,36 @@
             font-size: 16px;
             line-height: 24px;
             margin-left: 20px;
+        }
+    }
+
+    &__ico {
+        width: 40px;
+        height: 40px;
+        flex: none;
+
+        &_1 {
+            background: url('../images/course-about-1.svg') no-repeat 50%;
+        }
+
+        &_2 {
+            background: url('../images/course-about-2.svg') no-repeat 50%;
+        }
+
+        &_3 {
+            background: url('../images/course-about-3.svg') no-repeat 50%;
+        }
+
+        &_4 {
+            background: url('../images/course-about-4.svg') no-repeat 50%;
+        }
+
+        &_5 {
+            background: url('../images/course-about-5.svg') no-repeat 50%;
+        }
+
+        &_6 {
+            background: url('../images/course-about-6.svg') no-repeat 50%;
         }
     }
 
@@ -55,7 +85,7 @@
         }
 
         li {
-            margin-bottom: 40px !important; 
+            margin-bottom: 40px !important;
         }
     }
 }
