@@ -151,31 +151,34 @@ hr.other {
     box-sizing: border-box;
     max-width: 710px;
     border-radius: 24px;
-    position: relative;
     margin-bottom: 50px;
     z-index: 10;
     background: transparent;
 
-    &:before,
-    &:after {
-        z-index: -1;
-        position: absolute;
-        content: "";
-        bottom: 10px;
-        left: 16px;
-        width: 50%;
-        top: 93%;
-        max-width: 300px;
-        background: rgba(178, 223, 219, .9);
-        box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
-        transform: rotate(-3deg);
-        border-radius: 46px;
-    }
-    
-    &:after{
-        transform: rotate(3deg);
-        right: 16px;
-        left: auto;
+    .form-type {
+        position: relative;
+
+        &:before,
+        &:after {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            bottom: 10px;
+            left: 16px;
+            width: 50%;
+            top: 93%;
+            max-width: 300px;
+            background: rgba(178, 223, 219, .9);
+            box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
+            transform: rotate(-3deg);
+            border-radius: 46px;
+        }
+        
+        &:after{
+            transform: rotate(3deg);
+            right: 16px;
+            left: auto;
+        }
     }
 
     .message-copy {
@@ -224,7 +227,8 @@ hr.other {
                     }
                 }
 
-                &.checkbox-remember, &.checkbox-honor_code {
+                &.checkbox-remember, 
+                &.checkbox-honor_code {
                     margin-bottom: 70px;
 
                     label {
@@ -320,6 +324,10 @@ hr.other {
                 margin-top: 40px;
             }
 
+            .register-form {
+                margin-top: 40px;
+            }
+
             .form-wrapper {
                 padding: 20px 20px 95px;
 
@@ -364,6 +372,7 @@ hr.other {
             &:hover {
                 background: transparent !important;
                 background-color: $color6;
+                border: 0;
             }
 
             span {
@@ -391,7 +400,7 @@ hr.other {
         }
     }
 
-    #login-anchor {
+    .form-type {
 
         @media (max-width: $tablet-size) {
             .form-controls {
@@ -402,6 +411,41 @@ hr.other {
             }
         }
     }
+
+    #register-anchor {
+        .form-wrapper {
+            padding-bottom: 70px;
+            margin-bottom: 100px;
+
+            .toggle-form {
+                bottom: -80px;
+            }
+
+            .form-field {
+                &.checkbox-honor_code {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        @media (max-width: $mobile-size) {
+            .form-wrapper {
+                padding-bottom: 30px;
+
+                .toggle-form {
+                    bottom: -110px;
+                }
+
+                .form-field {
+                    &.checkbox-honor_code {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+        }
+    }
+
 
     @media (max-width: $tablet-size) {
         &:before {
@@ -556,15 +600,6 @@ hr.other {
         flex-direction: row-reverse;
         align-items: center;
     }
-    .register-oa2-facebook {
-        width: 100%;
-        margin-bottom: 16px;
-        @media (min-width: $tablet-size) {
-            transform: translate(105%);
-            width: 130px;
-            margin: 0;
-        }
-    }
     .register-oa2-vk-oauth2 {
         width: 100%;
         @media (min-width: $tablet-size) {
@@ -604,9 +639,8 @@ hr.other {
     padding: 0 15px;
     box-sizing: border-box;
 
-    h2,
     .h2 {
-        font: 30px/36px 700 'Artegra Sans', sans-serif;
+        font: 700 30px/36px 'Artegra Sans', sans-serif;
         color: $color7;
         margin-bottom: 45px;
     }
@@ -617,6 +651,12 @@ hr.other {
                 .cover-image {
                     height: 328px;
                     position: relative;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
                     &:before {
                         height: 100%;
                         background: rgba(178, 223, 219, .9);
@@ -826,6 +866,8 @@ hr.other {
 }
 
 .courses-container .courses .course .course-info .course-date {
+    padding: 0;
+    line-height: initial;
 
     mark {
         color: $color1;
@@ -1268,7 +1310,7 @@ hr.other {
                 }
 
                 span {
-                    font: 16px/24px 600 'Artegra Sans', sans-serif;
+                    font: 600 16px/24px 'Artegra Sans', sans-serif !important;
                     display: block;
                     color: $color7;
                 }
@@ -1327,6 +1369,9 @@ hr.other {
     border: 0;
     position: relative;
     z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     a{
         border-radius: 46px;
     }
@@ -1359,13 +1404,12 @@ hr.other {
 }
 
 .courses-container .courses .course .course-info .course-title {
-    color: #000;
-    font: 18px/24px 600 'Artegra Sans', sans-serif;
+    font: 600 18px/24px 'Artegra Sans', sans-serif !important;
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
     height: auto;
-    min-height: 57px;
+    margin-bottom: 0;
 
     @media (max-width: $tablet-size) {
         padding: 0;
@@ -1433,13 +1477,14 @@ hr.other {
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
+    margin-bottom: 15px;
+    flex: 1;
 }
 
 .course-info__school {
     font-size: 16px;
     color: #ff6f00;
     display: block;
-    margin-bottom: 16px;
 }
 
 .courses-container .courses .courses-listing .courses-listing-item {
@@ -2501,9 +2546,14 @@ body.view-in-course .wrapper-course-material .course-material {
                 .courses-listing-item {
                     max-height: none;
                     width: 50% !important;
-                    padding: 0 15px;
+                    padding: 0 60px;
                     box-sizing: border-box;
-                    margin: 0 0 73px !important;
+                    margin: 0 0 120px !important;
+
+                    @media (max-width: $laptop-size) {
+                        padding: 0 30px;
+                        margin: 0 0 60px !important;
+                    }
                 }
             }
         }
@@ -2602,7 +2652,10 @@ body.view-in-course .wrapper-course-material .course-material {
                 .courses-listing {
                     .courses-listing-item {
                         width: 100% !important;
-                        margin-bottom: 40px !important;
+                        max-width: 400px;
+                        margin: 0 auto 40px auto !important;
+                        float: none;
+                        clear: none;
                     }
                 }
             }
@@ -2614,8 +2667,9 @@ body.view-in-course .wrapper-course-material .course-material {
     background: #fff;
     padding-bottom: 24px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-
 .login-register .login-provider.button-oa2-vk-oauth2 {
     background: #fff;
     color: #000;
@@ -2639,7 +2693,6 @@ body.view-in-course .wrapper-course-material .course-material {
         width: 100%;
     }
 
-}
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
     display: flex;
