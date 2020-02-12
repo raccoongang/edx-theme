@@ -173,7 +173,7 @@ hr.other {
             transform: rotate(-3deg);
             border-radius: 46px;
         }
-        
+
         &:after{
             transform: rotate(3deg);
             right: 16px;
@@ -227,7 +227,7 @@ hr.other {
                     }
                 }
 
-                &.checkbox-remember, 
+                &.checkbox-remember,
                 &.checkbox-honor_code {
                     margin-bottom: 70px;
 
@@ -598,15 +598,6 @@ hr.other {
     .form-field.checkbox-honor_code {
         flex-direction: row-reverse;
         align-items: center;
-    }
-    .register-oa2-facebook {
-        width: 100%;
-        margin-bottom: 16px;
-        @media (min-width: $tablet-size) {
-            transform: translate(105%);
-            width: 130px;
-            margin: 0;
-        }
     }
     .register-oa2-vk-oauth2 {
         width: 100%;
@@ -2676,13 +2667,7 @@ body.view-in-course .wrapper-course-material .course-material {
         border: 1px solid #c8c8c8;
     }
 }
-.login-register .login-provider.button-oa2-google-oauth2 {
 
-    @media (max-width: $tablet-size) {
-        width: 100%;
-    }
-
-}
 .wrapper-account-settings .wrapper-header {
     max-width: 1200px;
     display: flex;
@@ -3470,7 +3455,7 @@ body.menu-open {
         padding: 0 30px;
         margin-bottom: 60px;
     }
-    
+
     @media (max-width: $tablet-size) {
         width: 100%;
         margin-bottom: 40px;
@@ -3564,7 +3549,7 @@ body footer .raccoon__logo {
     span{
         font-size: 16px;
     }
-    
+
 }
 
 .svg-edx {
