@@ -18,7 +18,7 @@ $slick-opacity-not-active: .25 !default;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
-    background: url("#{$img-path}/slider-arrow.png") no-repeat center center !important;
+    background: url("#{$static-path}/images/slider-arrow.png") no-repeat center center !important;
     background-size: contain !important;
     color: transparent;
     top: 50%;
@@ -164,7 +164,7 @@ $slick-opacity-not-active: .25 !default;
     }
 
     .slick-loading & {
-        background: $white url("#{$img-path}/ajax-loader.gif") center center no-repeat;
+        background: $white url("#{$static-path}/images/ajax-loader.gif") center center no-repeat;
     }
 
     &.dragging {
@@ -296,7 +296,7 @@ section.home > .slider {
 
         .outer-wrapper {
             min-height: 420px;
-            background: url("#{$img-path}/background.jpg") no-repeat 50% 50%;
+            background: url("#{$static-path}/images/background.jpg") no-repeat 50% 50%;
             background-size: cover;
             align-items: center;
 
@@ -322,12 +322,12 @@ section.home > .slider {
             }
 
             &:first-child {
-                background: url("#{$img-path}/background.jpg") no-repeat 50% 50%;
+                background: url("#{$static-path}/images/background.jpg") no-repeat 50% 50%;
                 background-size: cover;
             }
 
             &:nth-child(2) {
-                background: url("#{$img-path}/background2.jpg") no-repeat 50% 50%;
+                background: url("#{$static-path}/images/background2.jpg") no-repeat 50% 50%;
                 background-size: cover;
             }
         }
