@@ -200,6 +200,15 @@ hr.other {
                 box-shadow: none;
                 height: 0;
             }
+
+            .title-wrapper {
+                display: flex;
+            }
+
+            .form-feedback-error {
+                width: 100%;
+                margin-left: 30px;
+            }
         }
 
         .register-form,
@@ -262,7 +271,8 @@ hr.other {
                         }
 
                         &:checked + label:before {
-                            background-color: #B2DFDB;
+                            background-color: $theme-header-btn-color;
+                            border: 1px solid $theme-header-btn-color;
                         }
                     }
                 }
@@ -321,6 +331,9 @@ hr.other {
         @media (max-width: $tablet-size) {
             .login-form {
                 max-width: 100%;
+            }
+
+            .register-form {
                 margin-top: 40px;
             }
 
@@ -340,6 +353,14 @@ hr.other {
 
                     .text {
                         margin-bottom: 5px;
+                    }
+                }
+
+                .form-feedback-error {
+                    margin: 0;
+
+                    .submission-error {
+                        margin-top: 25px;
                     }
                 }
             }
@@ -375,6 +396,12 @@ hr.other {
                 border: 0;
             }
 
+            &:focus {
+                outline: none;
+                background-color: transparent;
+                background: transparent;
+            }
+
             span {
                 display: none;
             }
@@ -384,18 +411,33 @@ hr.other {
                 position: static;
                 width: 100%;
                 height: 100%;
+                transition: all 200ms ease;
 
                 &:before {
                     display: none;
+                }
+
+                &:focus {
+                    outline: none;
                 }
             }
 
             .fa-facebook {
                 background-image: url('../images/facebook-round.svg');
+
+                &:hover,
+                &:focus {
+                    background-image: url('../images/facebook-round-green.svg');
+                }
             }
 
             .fa-google-plus {
                 background-image: url('../images/gmail-round.svg');
+
+                &:hover,
+                &:focus {
+                    background-image: url('../images/gmail-round-green.svg');
+                }
             }
         }
     }
@@ -406,7 +448,7 @@ hr.other {
             .form-controls {
                 border-bottom: 6px solid $theme-header-btn-color;
                 width: auto;
-                margin: 0;
+                margin: 0 0 30px;
                 padding: 0 0 16px;
             }
         }
@@ -446,7 +488,6 @@ hr.other {
         }
     }
 
-
     @media (max-width: $tablet-size) {
         &:before {
             left: 20px;
@@ -482,6 +523,8 @@ hr.other {
         margin: 0 0 20px;
         color: $color7;
         font: 700 30px/36px 'Artegra Sans', sans-serif !important;
+        height: 100%;
+        flex: none;
     }
     .tip.tip-input {
         font-size: 12px;
@@ -595,6 +638,15 @@ hr.other {
         color: $theme-header-btn-color;
         text-transform: uppercase;
         font: 600 18px/24px 'Artegra Sans', sans-serif !important;
+
+        &:hover {
+            outline: none;
+        }
+
+        &:focus {
+            outline: none;
+            text-decoration: underline;
+        }
     }
     .form-field.checkbox-honor_code {
         flex-direction: row-reverse;
@@ -2660,7 +2712,6 @@ body.view-in-course .wrapper-course-material .course-material {
     padding-bottom: 24px;
     overflow: hidden;
 }
-
 .login-register .login-provider.button-oa2-vk-oauth2 {
     background: #fff;
     color: #000;
@@ -4046,7 +4097,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
 
     @media (max-width: $tablet-size) {
         margin-bottom: 80px;
-        
+
         h2 {
             font: 700 24px/30px 'Artegra Sans', sans-serif !important;
             margin-bottom: 20px;
