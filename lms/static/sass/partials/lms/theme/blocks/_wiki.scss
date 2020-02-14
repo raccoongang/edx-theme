@@ -1,26 +1,32 @@
 body.view-wiki {
-    &.lang_ar .wiki-wrapper section.wiki {
-        text-align: start;
+    &.lang_ar {
+        .course-tabs {
+            text-align: right;
+        }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        label {
+        .wiki-wrapper section.wiki {
             text-align: start;
-        }
 
-        .nav-tabs a .icon,
-        .breadcrumb li a .icon {
-            float: right;
-        }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            label {
+                text-align: start;
+            }
 
-        .CodeMirror-scroll {
-            margin-left: -30px;
-            margin-right: 0;
+            .nav-tabs a .icon,
+            .breadcrumb li a .icon {
+                float: right;
+            }
+
+            .CodeMirror-scroll {
+                margin-left: -30px;
+                margin-right: 0;
+            }
         }
     }
 

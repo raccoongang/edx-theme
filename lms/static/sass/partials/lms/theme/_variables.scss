@@ -75,10 +75,6 @@ $ribbon-corners-color: lighten($base-color, 1%);
 $ribbon-triangle-color: darken($base-color, 4%);
 $certificate-borders-color: lighten($base-color, 8%);
 
-//our overrides for settings we want to change
-$img-path: "../images" !default;
-$font-path: "../fonts" !default;
-
 @import "mixin";
 @import "custom/variables";
 @import "edx-bootstrap/sass/open-edx/theme";
