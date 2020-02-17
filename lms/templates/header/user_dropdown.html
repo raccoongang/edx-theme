@@ -31,9 +31,6 @@ displayname = get_enterprise_learner_generic_name(request) or username
         <span class="fa fa-caret-down" aria-hidden="true"></span>
     </div>
     <div class="dropdown-user-menu hidden" aria-label=${_("More Options")} role="menu" id="user-menu" tabindex="-1">
-        % if resume_block:
-            <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${resume_block}" role="menuitem">${_("Resume your last course")}</a></div>
-        % endif
         % if is_onboarding_passed:
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a class="onboarding-pop-up_open" href="javascript:void(0)" role="menuitem">${_("Game Rules")}</a></div>
         % endif
