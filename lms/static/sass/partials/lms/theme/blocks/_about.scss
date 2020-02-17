@@ -14,6 +14,7 @@
                 span.register,
                 span.add-to-cart {
                     padding: 12px 10px;
+                    line-height: 21px;
 
                     @media screen and (max-width: 767px) {
                         width: 100%;
@@ -23,6 +24,8 @@
                 }
 
                 strong {
+                    color: $white;
+
                     @media screen and (max-width: 767px) {
                         width: 100%;
                         padding-left: 10px;
@@ -33,25 +36,8 @@
                 > a.find-courses,
                 a.register,
                 a.add-to-cart {
-                    transition: all .2s ease;
-                    display: inline-block;
-                    background: $base-color;
                     color: $white;
-                    border: none;
-                    text-transform: uppercase;
-                    border-radius: 0;
                     text-shadow: none;
-                    box-shadow: none;
-
-                    &:active,
-                    &:focus {
-                        background: $base-color;
-                    }
-
-                    &:hover,
-                    &:focus:hover {
-                        background: $btn-bg-hover;
-                    }
 
                     @media screen and (max-width: 767px) {
                         width: 100%;
@@ -59,7 +45,7 @@
                 }
             }
 
-            > .heading-group h1 span {
+            > .heading-group span {
                 display: inline-block;
                 background: $base-color;
                 color: $white;
@@ -69,6 +55,7 @@
                 vertical-align: top;
                 padding: 4px 20px;
                 margin: 5px 0 0 5px;
+                border-radius: 5px;
             }
         }
 
@@ -89,6 +76,7 @@
                 border: none;
 
                 img {
+                    box-sizing: border-box;
                     display: block;
                     max-width: 100%;
                     max-height: 300px;
