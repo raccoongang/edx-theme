@@ -281,10 +281,14 @@ button.bookmark-button:not(.disabled) {
     }
 }
 
-.course-wrapper .course-content {
-    .staff-modal,
-    .history-modal {
-        @extend %modal;
+.course-wrapper {
+    box-sizing: border-box;
+
+    .course-content {
+        .staff-modal,
+        .history-modal {
+            @extend %modal;
+        }
     }
 }
 
