@@ -83,12 +83,17 @@
 
   <div class="footer-controls" aria-label="${_('Section')}">
     <div class="footer-controls-buttons-holder">
-      <button class="btn btn-prev sequence-nav-button button-previous">
-        ${_('Previous')}
-      </button>
-      <button class="btn btn-primary sequence-nav-button button-next">
-        ${_('Next')}
-      </button>
+      <div class="js-show-hide-warning-message">
+        ${_('It seems like you haven't fully interacted with the table. Give it another try. If you'd like to exit, press next again')}!
+      </div>
+      <div class="footer-controls-btns">
+        <button class="btn btn-prev sequence-nav-button button-previous">
+          ${_('Previous')}
+        </button>
+        <button class="btn btn-primary sequence-nav-button button-next">
+          ${_('Next')}
+        </button>
+      </div>
     </div>
   </div>
 </div>
