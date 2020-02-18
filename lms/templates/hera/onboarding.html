@@ -3,8 +3,15 @@
 
 % for page in pages:
 
-    <div class="page-holder" data-page-name="${page['name']}" style="display: ${'block' if page['name'] == current_page else 'none'}; ">
-        ${page['content'] | n}
+    <div class="page-holder onboarding-container" data-page-name="${page['name']}" style="display: ${'block' if page['name'] == current_page else 'none'}; ">
+        <div class="onboarding-holder">
+            <div class="onboarding-content">
+                ${page['content'] | n}
+            </div>
+            <div class="mascot">
+                <img class="mascot-image" src="/static/${settings.DEFAULT_SITE_THEME}/images/mascots/mascot_general.svg" alt="HERA-mascot" />
+            </div>
+        </div>
     </div>
 
 % endfor
