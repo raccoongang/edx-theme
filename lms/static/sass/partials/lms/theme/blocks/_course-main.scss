@@ -22,15 +22,6 @@
         }
     }
 
-    .wrap-instructor-info {
-        @media (max-width: 767px) {
-            @include clearfix();
-
-            display: block;
-            margin-bottom: 5px;
-        }
-    }
-
     .course-sidebar {
         word-break: break-word;
     }
@@ -256,6 +247,10 @@ button.bookmark-button:not(.disabled) {
         .inputtype.option-input {
             margin-top: 0;
         }
+
+        button.btn-default:hover {
+            background: $link-hover;
+        }
     }
 
     &.xmodule_SequenceModule .sequence-nav-button {
@@ -298,5 +293,39 @@ button.bookmark-button:not(.disabled) {
     .enroll-btn {
         border: none;
         padding: 0;
+    }
+}
+
+.wrap-instructor-info {
+    .content-wrapper &,
+    .view-progress #course-info-progress & {
+        @media (max-width: 767px) {
+            @include clearfix();
+
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+
+    a.instructor-info-action:not(.btn) {
+        text-transform: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+        &:visited {
+            color: $link-color;
+        }
+
+        &:hover,
+        &:visited:hover {
+            color: $white;
+        }
+
+        &:focus {
+            color: $link-color;
+        }
     }
 }
