@@ -639,7 +639,6 @@ hr.other {
     padding: 0 15px;
     box-sizing: border-box;
 
-    h2,
     .h2 {
         font: 700 30px/36px 'Artegra Sans', sans-serif;
         color: $color7;
@@ -861,6 +860,8 @@ hr.other {
 }
 
 .courses-container .courses .course .course-info .course-date {
+    padding: 0;
+    line-height: initial;
 
     mark {
         color: $color1;
@@ -1303,7 +1304,7 @@ hr.other {
                 }
 
                 span {
-                    font: 16px/24px 600 'Artegra Sans', sans-serif;
+                    font: 600 16px/24px 'Artegra Sans', sans-serif !important;
                     display: block;
                     color: $color7;
                 }
@@ -1395,12 +1396,13 @@ hr.other {
 
 .courses-container .courses .course .course-info .course-title {
     color: #000;
-    font: 18px/24px 600 'Artegra Sans', sans-serif;
+    font: 600 18px/24px 'Artegra Sans', sans-serif;
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
     height: auto;
     min-height: 57px;
+    margin-bottom: 0;
 
     @media (max-width: $tablet-size) {
         padding: 0;
@@ -1468,13 +1470,13 @@ hr.other {
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
+    margin-bottom: 15px;
 }
 
 .course-info__school {
     font-size: 16px;
     color: #ff6f00;
     display: block;
-    margin-bottom: 16px;
 }
 
 .courses-container .courses .courses-listing .courses-listing-item {
