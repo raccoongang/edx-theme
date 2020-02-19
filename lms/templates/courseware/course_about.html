@@ -297,61 +297,6 @@ from openedx.core.lib.courses import course_image_url
           %endif
           </div>
       </div>
-       <!-- Add content to the popup -->
-      <div id="aside-popup" class="modal-body">
-        <div class="modal-container">
-          <div class="modal-header">
-            <div class="modal-header__title">
-              Поздравляем, вы записались на курс
-            </div>
-          </div>
-          <div class="modal-content">
-            <div class="modal-content__course-name">
-              ${course.display_name_with_default_escaped}
-            </div>
-          </div>
-          <div class="modal-socials">
-            <div class="modal-socials__title">
-              Расскажите об этом друзьям:
-            </div>
-            <ul class="footer-socials-list">
-              <li>
-                <a href="">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#entypo-social_facebook-with-circle"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#entypo-social_vk-with-circle"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#entypo-social_skype-with-circle"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#entypo-social_youtube-with-circle"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <a href="${course_target}" class="aside-popup_close">
-          <svg class="svg-icon" viewBox="0 0 24 24">
-            <use xlink:href="#close-btn"></use>
-          </svg>
-        </a>
-      </div>
       <ol class="important-dates">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
           % if get_course_about_section(request, course, 'effort'):
@@ -449,6 +394,61 @@ from openedx.core.lib.courses import course_image_url
   </div>
 </div>
 <div>
+</div>
+
+<div id="aside-popup" class="modal-body">
+  <div class="modal-container">
+    <div class="modal-header">
+      <div class="modal-header__title">
+        Поздравляем, вы записались на курс
+      </div>
+    </div>
+    <div class="modal-content">
+      <div class="modal-content__course-name">
+        ${course.display_name_with_default_escaped}
+      </div>
+    </div>
+    <div class="modal-socials">
+      <div class="modal-socials__title">
+        Расскажите об этом друзьям:
+      </div>
+      <ul class="footer-socials-list">
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_facebook-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_vk-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_skype-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_youtube-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <a href="${course_target}" class="aside-popup_close">
+    <svg class="svg-icon" viewBox="0 0 24 24">
+      <use xlink:href="#close-btn"></use>
+    </svg>
+  </a>
 </div>
 
 ## Need to put this hidden form on the page so that the registration button works.
