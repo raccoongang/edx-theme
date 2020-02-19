@@ -1,0 +1,23 @@
+.program-details {
+    .course-list-headings {
+        overflow: hidden;
+    }
+
+    .program-details-wrapper .course-list-headings .motivating-section,
+    aside.program-sidebar .motivating-section {
+        @media (max-width: 768px) {
+            max-width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+.sidebar {
+    .aside {
+        padding: 20px 10px;
+
+        .program-advertise .ad-link .new-programs-btn {
+            @include simple($base-color);
+        }
+    }
+}
