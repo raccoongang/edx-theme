@@ -117,21 +117,20 @@ from six import string_types
       <section class="intro">
         <div class="heading-group">
           <h1>${course.display_name_with_default}</h1>
-          <br />
           <span>${course.display_org_with_default}</span>
         </div>
 
         <div class="main-cta">
         %if user.is_authenticated and registered:
           %if show_courseware_link:
-            <a href="${course_target}">
+          <a href="${course_target}">
           %endif
 
-          <span class="register disabled">${_("You are enrolled in this course")}</span>
+            <span class="register disabled">${_("You are enrolled in this course")}</span>
 
           %if show_courseware_link:
             <strong>${_("View Course")}</strong>
-            </a>
+          </a>
           %endif
 
         %elif in_cart:
