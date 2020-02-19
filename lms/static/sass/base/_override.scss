@@ -3963,3 +3963,151 @@ body.view-profile .profile-section-two-fields .u-field-value {
         flex-direction: column;
     }
 }
+
+.honor-bg {
+    position: relative;
+    max-height: 432px;
+    overflow: hidden;
+    margin-bottom: 70px;
+
+    h1 {
+        position: absolute;
+        top: 146px;
+        left: 0;
+        right: 0;
+        font: 700 60px/72px 'Artegra Sans', sans-serif !important;
+        color: $theme-btn-text-color;
+        max-width: 1230px;
+        padding: 0 15px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    img{
+        margin: 0;
+        height: 100%;
+    }
+
+    @media (max-width: $tablet-size) {
+        margin-bottom: 40px;
+
+        h1 {
+            font: 700 40px/58px 'Artegra Sans', sans-serif !important;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    @media (max-width: $mobile-size) {
+        min-height: 200px;
+
+        h1 {
+            font: 700 32px/40px 'Artegra Sans', sans-serif !important;
+        }
+
+        img {
+            min-height: 200px;
+            object-fit: cover;
+        }
+    }
+}
+
+.container.honor {
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 160px;
+
+    h2 {
+        font: 700 30px/36px 'Artegra Sans', sans-serif !important;
+        color: $color7;
+        margin-bottom: 46px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0 0 0 12px;
+        margin: 0 0 86px;
+        box-sizing: border-box;
+
+        li {
+            font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+            color: $theme-header-link-color;
+            position: relative;
+            margin-bottom: 24px;
+            padding-left: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: '';
+                background-color: $theme-header-btn-color;
+                border-radius: 12px;
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+            }
+        }
+    }
+
+    ol {
+        list-style: none;
+        counter-reset: customCounter;
+        padding: 0 0 0 12px;
+        margin: 0 0 86px;
+        box-sizing: border-box;
+
+        li {
+            font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+            color: $theme-header-link-color;
+            position: relative;
+            margin-bottom: 24px;
+            padding-left: 30px;
+            counter-increment: customCounter;
+            color: $theme-header-link-color;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: counter(customCounter);
+                position: absolute;
+                top: 3px;
+                left: 0;
+                font: 600 12px/18px 'Artegra Sans', sans-serif;
+                color: $theme-header-btn-color;
+            }
+        }
+    }
+
+    p {
+        font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+        color: #000000;
+    }
+
+    @media (max-width: $tablet-size) {
+        margin-bottom: 80px;
+        
+        h2 {
+            font: 700 24px/30px 'Artegra Sans', sans-serif !important;
+            margin-bottom: 20px;
+        }
+
+        ul,
+        ol {
+            padding: 0;
+            margin-bottom: 40px;
+
+            li {
+                margin-bottom: 15px;
+                padding-left: 20px;
+            }
+        }
+    }
+}
