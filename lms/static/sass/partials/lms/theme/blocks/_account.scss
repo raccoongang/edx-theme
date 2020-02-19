@@ -1,7 +1,28 @@
 .account-settings-sections .section {
     margin: 0;
 
-    .account-settings-section-body .u-field .field select {
-        height: 48px;
+    .account-settings-section-body {
+        .u-field {
+            .field select {
+                height: 48px;
+            }
+
+            .u-field-value {
+                @media (max-width: 991px) {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+
+        .u-field-social {
+            @media (max-width: 768px) {
+                width: calc(50% - 25px);
+            }
+
+            @media (max-width: 550px) {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
     }
 }
