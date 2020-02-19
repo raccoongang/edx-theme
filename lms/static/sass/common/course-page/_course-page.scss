@@ -60,7 +60,11 @@
     }
 }
 .content-wrapper{
-    padding-top: 70px;
+    padding-top: 72px;
+
+    @media (max-width: $mobile-size) {
+        padding-top: 52px;
+    }
 }
 .course-about-container{
     display: flex;
