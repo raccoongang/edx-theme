@@ -227,27 +227,63 @@
 
 #onboarding-pop-up {
     transform: scale(0.8);
+}
 
-    .popup_close {
-        position: absolute;
-        right: 5px;
-        top: 10px;
-        background: none;
-        box-shadow: none;
-        outline: none;
-        border: none;
-        text-shadow: none;
-        color: #555555;
-        font-weight: bold;
-        font-size: 42px;
-        transition: all .3s ease-in-out;
+.popup_close {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    text-shadow: none;
+    color: #555555;
+    font-weight: bold;
+    font-size: 42px;
+    transition: all .3s ease-in-out;
 
-        &:hover {
-            opacity: .75;
-        }
+    &:hover {
+        opacity: .75;
     }
 }
 
 .popup_visible #onboarding-pop-up {
     transform: scale(1);
+}
+
+// Continue course modal window
+#modal-continue {
+    background: #fff;
+    width: 1120px;
+    max-width: 1120px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+
+    .onboarding-holder {
+        margin-bottom: 0;
+        padding: 20px;
+    }
+
+    .onboarding-text-block {
+        text-align: center;
+    }
+
+    .footer-controls-buttons-holder {
+        border: none;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 6px;
+            line-height: 1;
+
+            &-prev {
+                background: #fff;
+            }
+        }
+    }
 }
