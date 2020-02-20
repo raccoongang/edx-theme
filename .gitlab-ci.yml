@@ -1,0 +1,12 @@
+stages:
+    - linting
+
+stylelint:
+    stage: linting
+    image: pipelinecomponents/stylelint:latest
+    script:
+        - stylelint 'lms/**/*.scss' --config .stylelintrc
+        - stylelint 'cms/**/*.scss' --config .stylelintrc
+    allow_failure: true
+    only:
+        - merge_requests
