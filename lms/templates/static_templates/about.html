@@ -1,0 +1,36 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container static-page-container">
+        <h1>
+            <%block name="pageheader">${page_header or _("RYPE TRAINING & CONSULTING, LLC")}</%block>
+        </h1>
+        % if page_content:
+            ${page_content}
+        % else:
+            <h2 class="align-center">
+                <span class="first-letter">${_("Reach")}</span>
+                <span class="first-letter">${_("Your")}</span>
+                <span class="first-letter">${_("Potential and")}</span>
+                <span class="first-letter">${_("Excel")}</span>
+            </h2>
+            <p>${_("Our logo, the acorn, is the symbol for \"potential.\" RYPE is the acronym for \"Reach Your Potential and Excel.\" RYPE Training & Consulting, LLC is a minority women-owned business enterprise offering online professional development and business competence training to individuals, groups, and small-to-medium sized enterprises (SMEs) across industries.")}</p>
+            <p>${_("RYPE uses the Open edX online educational platform to design and deliver online training in selfpace eLearning, blending and instructor-led formats. The Open edX system was developed by edX, Inc. and co-founded by Harvard and MIT. It is a high-quality eLearning platform used by leading educational institutions and organizations globally for educational, workforce and corporate training and development.")}</p>
+            <p>${_("Dr. Martha Davidson is the founder of RYPE and former owner of the Thinking and Learning Center. She is a supply chain and business professional, trainer and business instructor with real world work experience from industry-leading companies, including Hewlett-Packard (HP), Alcoa aka Arconic, Grainger, Marconi Communications, and Cuyahoga Community College. She is a Certified Purchasing Manager (C.P.M.), who has worked in purchasing, supply chain management, logistics, production and manufacturing, distribution, operations, and small business management. She also teaches courses in each of these areas. Her goal is help individuals \"reach their potential and excel\" to meet the demands of today's competitive and global business market.")}</p>
+            <p>${_("RYPE's team is a network of qualified consultants, business and educational professionals, and trainers with a wealth of experience in eLearning, IT and project management. The team designs and delivers training and eLearning solutions, which influence a higher order of thinking, experiential learning, skills, and personal development. Our interactive and simulation-based training approach introduces emerging 21st-century concepts, practices, and resources, which can be readily applied to improve knowledge and work performance.")}</p>
+            <p>${_("Our training is developed around our own Smart Business Model. Our common series of online courses include, but are not limited to:")}</p>
+            <p>${_("Entrepreneurship / Business Strategies / Culture / Critical and Parallel Thinking / Industry Context and Structure / and Competence building.")}</p>
+            <p>${_("We also offer instructional design and customized training services. RYPE has performed training, eLearning, instructional design, and consulting services for small businesses and non-profit organizations in Cleveland, Ohio, and the surrounding area. We look forward to serving you.")}</p>
+            <p>
+                ${_("Please contact us at")}
+                <a href="mailto:info@rypetraining-consulting.com">info@rypetraining-consulting.com</a>
+                ${_("for more information.")}
+            </p>
+            <p>${_("Thank you")}</p>
+        % endif
+    </section>
+</main>

@@ -1,0 +1,112 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container static-page-container">
+        <h1>
+            <%block name="pageheader">${page_header or _("Terms of Service Agreement for RYPE Training")}</%block>
+        </h1>
+        <%block name="pagecontent">
+        % if page_content:
+            ${page_content}
+        % else:
+            <p>${_("The RYPE Training website (\"Training Site\") is owned and operated by RYPE Training & Consulting, LLC (\"RYPE\"). The purpose is to provide online professional development and business-competence training courses in eLearning, blended, and instructor-led formats. The \"Training Site\" is built on a secure Open edX platform, which is an open-source online education system developed by edX, Inc.")}</p>
+            <h2 class="counter">${_("Terms of Service")}</h2>
+            <p>${_("The following represents the Terms of Service (\"ToS\") (\"Agreement\"), which governs the use of the Training Site. Trainees must accept the ToS and agree to be bound by this Agreement, which will be between the trainee and RYPE also referred to as the \"Parties.\"")}</p>
+            <p>${_("RYPE reserves the right to revise the Agreement without notice and with changes that are effective immediately. The date of revision will appear on the Agreement. It will be the trainee's responsibility to check the Agreement periodically. A trainee's continued use of the Training Site after revisions have been made to the Agreement will imply acceptance of the changes.")}</p>
+            <h2 class="counter">${_("Acceptable Use")}</h2>
+            <p>${_("Use of the Training Site consists of registering, enrolling and participating in online training courses, accessing \"Training Materials,\" submitting coursework, participating in online communication, discussions and interactive activities, and using electronic resources. RYPE makes training content available 365 days a year 24 hours a day and grants eligible Trainees a non-exclusive and non-transferable right to use \"Training Material\" for specified terms. RYPE reserves the right to make changes to \"Training Material\" and terms and to restrict access to part or all of the Training Site at its sole discretion.")}</p>
+            <h3 class="counter">${_("Terms and Conditions of Use")}</h3>
+            <p>${_("The following terms and conditions of acceptable use must be followed.")}</p>
+            <ul>
+                <li>${_("Eligible trainees must be at least 18 years of age, a resident of the United States and meet course prerequisites to register and enroll.")}</li>
+                <li>${_("Trainees must adhere to the ToS stated and exhibit professional and ethical behavior and netiquette (online etiquette) when using the Training Site.")}</li>
+                <li>${_("Trainees must use the Training Site responsibly and in a manner that will not damage, disrupt or overburden the computer network connected to the Open edX server, interfere with the Training Site's performance, or otherwise interrupt accessibility and use.")}</li>
+                <li>${_("Trainees must use the Training Site for personal use only.")}</li>
+                <li>${_("One individual or cohort (group) of two or more individuals can enroll in a course.")}</li>
+            </ul>
+            <h4 class="counter">${_("Trainees must not:")}</h4>
+            <ul>
+                <li>${_("circumvent the computer network through unauthorized use, such as (hacking), login and password overrides, or other invasive methods.")}</li>
+                <li>${_("input, submit, store, transmit, send, upload or link to materials or communication deemed by RYPE to be inappropriate, deceptive, unethical, offensive, unlawful, threatening, discriminating, or damaging in any manner.")}</li>
+                <li>${_("extract, collect, and distribute data for use in any marketing-related activities.")}</li>
+                <li>${_("input, submit, store, transmit, send, or upload content which consists of, is linked to, or affected with malicious computer software or computer viruses.")}</li>
+                <li>${_("collect the personal data of individuals and companies included in the Training Site and contact them.")}</li>
+                <li>${_("submit coursework that is plagiar")}ized.
+                <li>${_("reproduce, redistribute, republish, display, share, communicate or exploit the Training Materials publicly.")}</li>
+                <li>${_("attempt to bypass restrictions to the Training Site imposed by RYPE.")}</li>
+                <li>${_("submit or link to unsolicited advertising, promotional materials, or other forms of solicitation.")}</li>
+                <li>${_("collect and use data from the Training Site for data analyses.")}</li>
+            </ul>
+            <h2 class="counter">${_("Copyright - Training Materials")}</h2>
+            <ul>
+                <li>${_("All intellectual property (\"Training Material\") in the Training Site includes without limitation course content, written and audio narratives, documentation, graphics, logo, images, videos, scripts, discussions, web pages, certificates, and communication, which are owned exclusively by RYPE or its suppliers and licensors and are protected by U.S. copyright and intellectual property laws. All rights are reserved.")}</li>
+                <li>${_("Trainees are granted non-exclusive, non-transferrable, and revocable access to the Training Site and its Training Materials for the purpose of online training only. Trainees are not authorized to copy, reproduce, duplicate, photograph, distribute, publish, sell, revise, transfer, transmit, license, sublicense, share in public, or reuse the intellectual property \"Training Material\" owned by RYPE or its suppliers and licensors as cited in section 3a.")}</li>
+            </ul>
+            <h2 class="counter">${_("Registration, Login and User Accounts")}</h2>
+            <ul>
+                <li>${_("The training Site will be available through computer and mobile access. Trainees are responsible for maintaining access to computer, Internet, email, telecommunication, and other equipment required to use the Training Site.")}</li>
+                <li>${_("Eligible trainees who agree to the ToS and meet course prerequisites will be authorized to register and receive login credentials (user ID and password) to access the Training Site and enroll in courses.")}</li>
+                <li>${_("Trainees will be required to provide personal information, such as a name, email address, etc. and may also be prompted to provide additional information. All information provided by trainees must be authentic and current. Information submitted will be protected under our terms and conditions of security, confidentiality and privacy.")}</li>
+                <li>${_("Login credentials are non-transferrable and are only to be used by the person to whom they are assigned. Trainees must not allow anyone to use their login credentials or otherwise have access to the Training Site. Furthermore, a registered trainee cannot use another trainee's account to access the Site.")}</li>
+            </ul>
+            <h3 class="counter">${_("Trainees must:")}</h3>
+            <ul>
+                <li>${_("keep login credentials confidential.")}</li>
+                <li>${_("not use login credentials to pose as another individual.")}</li>
+                <li>${_("notify RYPE via email immediately of unauthorized disclosure or use of a login credentials.")}</li>
+                <li>${_("be responsible for unauthorized use of the Training Site, which arises from neglect or oversight in keeping a user ID and password confidential.")}</li>
+                <li>${_("notify RYPE immediately of any unauthorized use of their user account or the Training Site.")}</li>
+            </ul>
+            <h2 class="counter">${_("Trainee's Coursework")}</h2>
+            <ul>
+                <li>${_("A trainee's \"coursework\" includes all documentation, graphics, images, videos, files, discussions and communication submitted to the Training Site.")}</li>
+                <li>${_("Trainees grant RYPE non-exclusive, non-transferrable, irrevocable, and royalty-free license and permission to access, process, reproduce, publish, grade, and distribute coursework relative to the Training Site and courses.")}</li>
+                <li>${_("All quotes or references to books, papers, authors, videos, charts, etc. used in coursework must include citations and references to credit the original source of the material.")}</li>
+                <li>${_("A Trainee's coursework must not be unlawful or give rise to legal action. Notwithstanding, trainees must warrant that all coursework submitted to the Training Site is in accordance with the ToS in this Agreement and is not a violation or infringement on the rights or privacy of RYPE, third parties, licensors or other trainees. Trainees shall indemnify and hold RYPE harmless against claims that arise from coursework submitted or used unlawfully.")}</li>
+            </ul>
+            <h2 class="counter">${_("ADA Compliance and Accessibility")}</h2>
+            <p>${_("According to the United States Department of Justice (\"DOJ\"), on April 2, 2015,")}</p>
+            <p>
+                ${_("settlement was reached with edX, Inc., provider of Massive Open Online Courses \"MOOC', to make its Website, online platform and mobile applications accessible under the Americans with Disabilities Act\" (ADA). Accordingly, the edX has modified it website, platform and mobile applications to conform to the Web Content Accessibility Guidelines (WCAG) 2.0 AA, which are industry guidelines for making web content accessible to users with disabilities")}
+                (<a href="https://www.justice.gov/opa/pr/justice-department-reaches-settlement-edx-inc-provider-massive-open-online-courses-make-its" target="_blank">${_("2015, April 2, US DOJ")}</a>).
+            </p>
+            <h2 class="counter">${_("Cancellation and Suspension of Accounts")}</h2>
+            <ul>
+                <li>${_("RYPE the reserves to restrict access to the Training Site.")}</li>
+                <li>${_("RYPE reserves the right to suspend or cancel a Trainee's account without notice.")}</li>
+                <li>${_("RYPE reserves the right to delete or unpublish content if the Trainee is in breach of the ToS Agreement.")}</li>
+                <li>${_("Trainees may cancel an account through the Training Site.")}</li>
+            </ul>
+            <h2 class="counter">${_("Fees and Payment")}</h2>
+            <p>The price of a course includes all Training Materials and is charged per individual Trainee, unless otherwise noted.</p>
+            <ul>
+                <li>${_("Invoices will be issued for courses and are payable upon receipt.")}</li>
+                <li>${_("The price of a course must be paid in full, prior to enrollment.")}</li>
+                <li>${_("Payments are non-refundable, unless the course is cancelled by RYPE.")}</li>
+                <li>${_("A 10% discount is available for cohorts of ten or more Trainees.")}</li>
+            </ul>
+            <h2 class="counter">${_("Security")}</h2>
+            <ul>
+                <li>${_("The professional services of a third-party Open edX provider are used to maintain and service the Training Site.")}</li>
+                <li>${_("The provider implements safeguards through technical measures and an SSL Agreement, which secure content and protect the integrity, confidentiality, and privacy of information.")}</li>
+                <li>${_("Updates will be made on a continuous basis to maintain a high level of security.")}</li>
+            </ul>
+            <h2 class="counter">${_("Force Majeure and Governing Law")}</h2>
+            <ul>
+                <li>${_("RYPE shall not be held responsible for issues that impact the performance or availability of the Training Site, due to circumstances that which are an act of God and beyond RYPE's control.")}</li>
+                <li>${_("The terms and conditions of services shall be regulated in accordance with the laws of the State of Ohio. The Parties agree to use this jurisdiction if legal proceedings arise from all or part of this Agreement.")}</li>
+            </ul>
+            <p>
+                ${_("Please contact RYPE at")}
+                <a href="mailto:info@rypetraining-consulting.com ">${_("info@rypetraining-consulting.com")}</a>
+                ${_("if you have any questions.")}
+            </p>
+            <p>${_("Thank you")}</p>
+        % endif
+        </%block>
+    </section>
+</main>

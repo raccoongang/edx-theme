@@ -4,8 +4,13 @@
   from django.core.urlresolvers import reverse
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
+
+  from datetime import datetime
 %>
-<% footer = get_footer(is_secure=is_secure) %>
+<%
+  footer = get_footer(is_secure=is_secure)
+  year = datetime.now().strftime("%Y")
+%>
 <%namespace name='static' file='static_content.html'/>
 
 <div class="wrapper wrapper-footer">
@@ -25,7 +30,7 @@
               <a href="/about">${_("About")}</a>
             </li>
             <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
+              <a href="https://university.raccoongang.com/privacy" target="_blank">${_("Privacy Policy")}</a>
             </li>
             <li class="nav-colophon-03">
               <a href="/tos">${_("Terms of Service")}</a>
@@ -33,97 +38,27 @@
         </ol>
       </nav>
       <div class="footer-flex">
-        <p class="footer-support">
-          <span>${_("Built on")}</span>
-          <a target="_blank" href="${footer['openedx_link']['url']}">
-            <svg class="svg-edx"  viewBox="0 0 100 70">
-              <use xlink:href="#logo-edx" />
-            </svg>
-          </a>
-          <span>${_("by")}</span>
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            <em>RACCOONGANG</em>
-            <svg class="svg-raccoon"  viewBox="0 0 100 100">
-              <use xlink:href="#logo-raccoon" />
-            </svg>
-          </a>
-        </p>
         <ul class="icon-list">
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-facebook" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
+            <a href="https://twitter.com/marthadavidson_" target="_blank" class="icon-list_link">
               <svg class="icon-list_svg" viewBox="0 0 35 35">
                 <use xlink:href="#ico-twitter" />
               </svg>
             </a>
           </li>
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-instagram" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
+            <a href="https://www.linkedin.com/in/dr-martha-davidson-ed-d-mba-c-p-m-b429275/" target="_blank" class="icon-list_link">
               <svg class="icon-list_svg" viewBox="0 0 35 35">
                 <use xlink:href="#ico-linkedin" />
               </svg>
             </a>
           </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-youtube" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-odnoklassniki" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vimeo" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vk" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-behance" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-google-plus" />
-              </svg>
-            </a>
-          </li>
         </ul>
         <div class="footer-logo-holder">
-          <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.svg"></a>
+          <a href="/"><img alt="organization logo" src="/static/${settings.FEATURES.get('RYPE_TRAINING_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.svg"></a>
         </div>
       </div>
+      <div class="footer-copyright">${_("Copyright {year} by RYPE Training & Consulting, LLC").format(year=year)}</div>
     </div>
   </footer>
 </div>

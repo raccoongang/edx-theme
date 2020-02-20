@@ -31,10 +31,10 @@
 
 			.nav-colophon {
 				text-align: center;
-				margin: 0 0 30px;
+				margin: 0 0 15px;
 
 				@media (max-width: $build-footer-mobile) {
-					margin: 0 0 35px;
+					margin: 0 0 20px;
 				}
 
 				ol {
@@ -52,7 +52,7 @@
 							color: $footer-nav-link-color;
 							text-transform: uppercase;
 							font-size: 12px;
-							font-weight: 700;
+							font-weight: 400;
 
 							&:focus,
 							&:hover {
@@ -69,8 +69,10 @@
 	.footer-flex {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+		position: relative;
+		margin-bottom: 15px;
 
 		> * {
 			@media screen and (max-width: $build-footer-mobile) {
@@ -137,10 +139,16 @@
 
 	.footer-logo-holder {
 		width: 275px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
 
 		@media screen and (max-width: $build-footer-mobile) {
 			order: 1;
-			margin-bottom: 38px;
+			margin-bottom: 15px;
+			position: static;
+			transform: none;
 		}
 
 		a {
@@ -170,14 +178,6 @@
 		padding: 0;
 		list-style: none;
 
-		@media (max-width: $build-footer-mobile) {
-			margin-bottom: 15px;
-		}
-
-		@media (max-width: $breakpoint-mobile) {
-			margin-bottom: 11px;
-		}
-
 		&_item {
 			margin: 0 2px;
 			display: inline-block;
@@ -203,5 +203,11 @@
 				opacity: 0.8;
 			}
 		}
+	}
+
+	.footer-copyright {
+		color: $footer-support-text-and-logo;
+		font-size: 12px;
+		line-height: 14px;
 	}
 }

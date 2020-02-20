@@ -186,3 +186,15 @@ input[type="submit"] {
 		background: lighten(#f94d45, 20%) !important;
 	}
 }
+
+// gradient buttons
+.courses-container .courses-more .courses-more-cta,
+.global-header .main-header .nav-links .secondary a.register-btn,
+.global-header .main-header .nav-links .secondary a.sign-in-btn {
+	background: transparent linear-gradient(90deg, #00d47e 0%, #aad444 100%) 0 0 no-repeat padding-box !important;
+	transition: opacity .2s linear;
+
+	&:hover {
+		opacity: .8;
+	}
+}

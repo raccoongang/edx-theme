@@ -442,7 +442,22 @@ button.prerequisite-button .fa {
 
 .courses-container {
 	.courses .course {
-		border-bottom-color: $courses-border-color;
+		border-bottom-color: transparent;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -3px;
+			left: -1px;
+			border-radius: 0 0 2px 2px;
+			width: calc(100% + 2px);
+			height: 3px;
+			background: transparent linear-gradient(90deg, #00d47e 0%, #aad444 100%) 0 0 no-repeat padding-box;
+		}
+		
+		&:hover:after {
+			background: #c0c0c0;
+		}
 	}
 
 	.courses-more {
@@ -463,13 +478,6 @@ button.prerequisite-button .fa {
 
 			&:after {
 				display: none;
-			}
-
-			&:hover,
-			&:focus,
-			&:active {
-				background: $theme-btn-bg-hover;
-				color: $theme-btn-text-color;
 			}
 		}
 	}
@@ -498,8 +506,6 @@ button.prerequisite-button .fa {
     }
 }
 
-.about {
-	.group-form-requiredinformation {
-		margin: 20px 0;
-	}
+.about .group-form-requiredinformation {
+	margin: 20px 0;
 }
