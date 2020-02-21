@@ -1,14 +1,21 @@
 .promo-section {
-    background: #fff url('../images/background2.png') no-repeat;
-    background-size: 100%;
     margin-bottom: 92px;
     position: relative;
-    padding-top: 48%;
 
     @media (max-width: $mobile-size) {
-        background-size: cover;
-        padding-top: 0;
         margin-bottom: 60px;
+    }
+}
+
+.promo-section__bg {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
+
+    @media (max-width: $mobile-size) {
+        min-height: 380px;
+        object-fit: cover;
     }
 }
 
@@ -24,9 +31,6 @@
     height: 100%;
 
     @media (max-width: $mobile-size) {
-        min-height: 380px;
-        position: static;
-        transform: translateX(0);
         padding: 30px 15px;
         box-sizing: border-box;
     }
