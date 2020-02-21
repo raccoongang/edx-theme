@@ -9,6 +9,7 @@ from django.utils.translation import ugettext as _
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
 from openedx.core.djangoapps.user_api.accounts.utils import retrieve_last_sitewide_block_completed
 from openedx.features.enterprise_support.utils import get_enterprise_learner_generic_name
+from hera.models import ActiveCourseSetting
 %>
 
 <%
@@ -33,6 +34,9 @@ displayname = get_enterprise_learner_generic_name(request) or username
     <div class="dropdown-user-menu hidden" aria-label=${_("More Options")} role="menu" id="user-menu" tabindex="-1">
         % if is_onboarding_passed:
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a class="onboarding-pop-up_open" href="javascript:void(0)" role="menuitem">${_("Game Rules")}</a></div>
+        % endif
+        % if user and user.is_staff:
+            <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('instructor_dashboard', args=(ActiveCourseSetting.last(),))}" role="menuitem">${_("Instructor")}</a></div>
         % endif
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></div>
     </div>
