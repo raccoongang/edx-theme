@@ -12,12 +12,10 @@
     }
 }
 
-.sidebar {
-    .aside {
-        padding: 20px 10px;
+.sidebar .aside.program-advertise {
+    padding: 20px 10px;
 
-        .program-advertise .ad-link .new-programs-btn {
-            @include simple($base-color);
-        }
+    .ad-link .new-programs-btn {
+        @include simple($base-color);
     }
 }
