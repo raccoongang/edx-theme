@@ -372,6 +372,7 @@ hr.other {
             &:hover {
                 background: transparent !important;
                 background-color: $color6;
+                border: 0;
             }
 
             span {
@@ -638,9 +639,8 @@ hr.other {
     padding: 0 15px;
     box-sizing: border-box;
 
-    h2,
     .h2 {
-        font: 30px/36px 700 'Artegra Sans', sans-serif;
+        font: 700 30px/36px 'Artegra Sans', sans-serif;
         color: $color7;
         margin-bottom: 45px;
     }
@@ -860,6 +860,8 @@ hr.other {
 }
 
 .courses-container .courses .course .course-info .course-date {
+    padding: 0;
+    line-height: initial;
 
     mark {
         color: $color1;
@@ -1302,7 +1304,7 @@ hr.other {
                 }
 
                 span {
-                    font: 16px/24px 600 'Artegra Sans', sans-serif;
+                    font: 600 16px/24px 'Artegra Sans', sans-serif !important;
                     display: block;
                     color: $color7;
                 }
@@ -1394,12 +1396,13 @@ hr.other {
 
 .courses-container .courses .course .course-info .course-title {
     color: #000;
-    font: 18px/24px 600 'Artegra Sans', sans-serif;
+    font: 600 18px/24px 'Artegra Sans', sans-serif;
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
     height: auto;
     min-height: 57px;
+    margin-bottom: 0;
 
     @media (max-width: $tablet-size) {
         padding: 0;
@@ -1467,13 +1470,13 @@ hr.other {
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
+    margin-bottom: 15px;
 }
 
 .course-info__school {
     font-size: 16px;
     color: #ff6f00;
     display: block;
-    margin-bottom: 16px;
 }
 
 .courses-container .courses .courses-listing .courses-listing-item {
@@ -2535,9 +2538,14 @@ body.view-in-course .wrapper-course-material .course-material {
                 .courses-listing-item {
                     max-height: none;
                     width: 50% !important;
-                    padding: 0 15px;
+                    padding: 0 60px;
                     box-sizing: border-box;
-                    margin: 0 0 73px !important;
+                    margin: 0 0 120px !important;
+
+                    @media (max-width: $laptop-size) {
+                        padding: 0 30px;
+                        margin: 0 0 60px !important;
+                    }
                 }
             }
         }
@@ -2636,7 +2644,10 @@ body.view-in-course .wrapper-course-material .course-material {
                 .courses-listing {
                     .courses-listing-item {
                         width: 100% !important;
-                        margin-bottom: 40px !important;
+                        max-width: 400px;
+                        margin: 0 auto 40px !important;
+                        float: none;
+                        clear: none;
                     }
                 }
             }

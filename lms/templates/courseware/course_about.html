@@ -86,7 +86,10 @@ import urllib
 
     $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
       if(xhr.status == 200) {
-        if (xhr.responseText != "")  {
+        if (xhr.responseText == "") {
+          location.href = "${reverse('dashboard')}";
+        }
+        else {
           location.href = xhr.responseText;
         }
       } else if (xhr.status == 403) {
@@ -286,7 +289,7 @@ import urllib
               else:
                 href_class = "register"
                 if user.is_authenticated():
-                  href_class += " aside-popup_open"
+                  href_class = "aside-popup_open"
             %>
             <a href="${reg_href}" class="${href_class}">
               Записаться
@@ -354,7 +357,7 @@ import urllib
                 <a href="${tweet_action}" target="_blank">
                   <svg class="svg-icon" viewBox="0 0 24 24">
                     <use xlink:href="#ico-twitter"></use>
-                  </svg> 
+                  </svg>
                 </a>
               </li>
               <li>
@@ -470,6 +473,61 @@ import urllib
   </div>
 </div>
 <div>
+</div>
+
+<div id="aside-popup" class="modal-body">
+  <div class="modal-container">
+    <div class="modal-header">
+      <div class="modal-header__title">
+        Поздравляем, вы записались на курс
+      </div>
+    </div>
+    <div class="modal-content">
+      <div class="modal-content__course-name">
+        ${course.display_name_with_default_escaped}
+      </div>
+    </div>
+    <div class="modal-socials">
+      <div class="modal-socials__title">
+        Расскажите об этом друзьям:
+      </div>
+      <ul class="footer-socials-list">
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_facebook-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_vk-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_skype-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_youtube-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <a href="${course_target}" class="aside-popup_close">
+    <svg class="svg-icon" viewBox="0 0 24 24">
+      <use xlink:href="#close-btn"></use>
+    </svg>
+  </a>
 </div>
 
 ## Need to put this hidden form on the page so that the registration button works.
