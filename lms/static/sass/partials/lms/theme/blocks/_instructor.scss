@@ -315,6 +315,14 @@
                     margin: 5px 0;
                 }
             }
+
+            .link-cross-reference:not(.disabled) {
+                &:hover,
+                &:focus {
+                    border-color: transparent;
+                    text-decoration: none !important;
+                }
+            }
         }
 
         section.idash-section#send_email .list-fields .field ul {
