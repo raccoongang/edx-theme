@@ -86,7 +86,7 @@ import urllib
 
     $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
       if(xhr.status == 200) {
-        if (xhr.responseText == "") {
+        if (xhr.responseText != "") {
           location.href = "${reverse('dashboard')}";
         }
         else {
@@ -289,7 +289,7 @@ import urllib
               else:
                 href_class = "register"
                 if user.is_authenticated():
-                  href_class = "aside-popup_open"
+                  href_class += "aside-popup_open"
             %>
             <a href="${reg_href}" class="${href_class}">
               Записаться
