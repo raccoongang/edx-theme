@@ -371,3 +371,18 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
     border-radius: 4px;
 }
+
+.wmd-panel {
+    .wmd-button-row {
+        @media (max-width: 768px) {
+            height: auto;
+        }
+    }
+
+    .wmd-button,
+    .wmd-spacer {
+        @media (max-width: 768px) {
+            position: static;
+        }
+    }
+}
