@@ -651,6 +651,12 @@ hr.other {
                 .cover-image {
                     height: 328px;
                     position: relative;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
                     &:before {
                         height: 100%;
                         background: rgba(178, 223, 219, .9);
@@ -1363,6 +1369,9 @@ hr.other {
     border: 0;
     position: relative;
     z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     a{
         border-radius: 46px;
     }
@@ -1396,12 +1405,11 @@ hr.other {
 
 .courses-container .courses .course .course-info .course-title {
     color: #000;
-    font: 600 18px/24px 'Artegra Sans', sans-serif;
+    font: 600 18px/24px 'Artegra Sans', sans-serif !important;
     letter-spacing: 0.001em;
     text-transform: uppercase;
     color: #212121;
     height: auto;
-    min-height: 57px;
     margin-bottom: 0;
 
     @media (max-width: $tablet-size) {
@@ -1471,6 +1479,7 @@ hr.other {
     text-transform: uppercase;
     color: #212121;
     margin-bottom: 15px;
+    flex: 1;
 }
 
 .course-info__school {
@@ -2659,6 +2668,8 @@ body.view-in-course .wrapper-course-material .course-material {
     background: #fff;
     padding-bottom: 24px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .login-register .login-provider.button-oa2-vk-oauth2 {
