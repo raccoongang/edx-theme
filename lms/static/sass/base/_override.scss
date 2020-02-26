@@ -1752,6 +1752,13 @@ div {
                     }
                 }
             }
+
+            .capa_inputtype.imageinput [id^="answer_"] {
+                .rtl & {
+                    left: auto;
+                    right: 0;
+                }
+            }
         }
 
         .wrapper-problem-response {
