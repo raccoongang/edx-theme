@@ -19,7 +19,7 @@ from openedx.core.djangolib.markup import HTML, Text
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
                 <div class="h1-img">
-                  <img src="/static/${settings.DEFAULT_SITE_THEME}/images/h1-sign.svg" alt="/">
+                  <img src="/static/${settings.FEATURES.get('SANAK_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/h1-sign.svg" alt="/">
                 </div>
               % endif
             </div>
