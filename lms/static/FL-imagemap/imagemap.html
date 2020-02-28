@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+<script type="text/javascript">
+var revert = new Array();
+var inames = new Array('map','map','map','map','map','map','map');
+
+
+// Preload
+if (document.images) {
+  var flipped = new Array();
+  for(i=0; i< inames.length; i++) {
+    flipped[i] = new Image();
+    flipped[i].src = inames[i]+"2.png";
+  }
+ for(i=1; i< inames.length; i++) {
+    flipped[i] = new Image();
+    flipped[i].src = inames[i]+"3.png";
+ }
+  for(i=2; i< inames.length; i++) {
+    flipped[i] = new Image();
+    flipped[i].src = inames[i]+"4.png";
+ }
+ 
+for(i=3; i< inames.length; i++) {
+    flipped[i] = new Image();
+    flipped[i].src = inames[i]+"5.png";
+	
+ }
+for(i=4; i< inames.length; i++) {
+    flipped[i] = new Image();
+    flipped[i].src = inames[i]+"6.png";
+	
+ } 
+ for(i=5; i< inames.length; i++) {
+    flipped[i] = new Image();
+    flipped[i].src = inames[i]+"7.png";
+	
+ }
+ for(i=6; i< inames.length; i++) {
+    flipped[i] = new Image();
+    flipped[i].src = inames[i]+"8.png";
+	
+ 	
+	
+ }
+function over(num) {
+  if(document.images) {
+    revert[num] = document.images[inames[num]].src;
+    document.images[inames[num]].src = flipped[num].src;
+  }
+}
+function out(num) {
+  if(document.images) document.images[inames[num]].src = revert[num];
+}
+}
+</script>
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" valign="middle">
+
+
+<img src="map1.png" name="map" border="0" usemap="#mapMap">
+<map name="mapMap">
+
+ 
+  
+<area shape="rect" coords="0,111,278,174" href="https://sanak-bw.fastlane.live/courses/course-v1:sanakbw+AZ-900.1+2019_T2/about" target="_top" onMouseOver="over(0)"onMouseOut="out(0)">
+
+<area shape="rect" coords="401,0,679,63" href="https://sanak-bw.fastlane.live/courses/course-v1:sanakbw+AZ-103.1+2019_T3/about" target="_top" onMouseOver="over(1)"onMouseOut="out(1)">
+
+<area shape="rect" coords="400,110,678,173" href="https://sanak-bw.fastlane.live/courses/course-v1:sanakbw+AZ-203.1+2019_T2/about" target="_top" onMouseOver="over(2)"onMouseOut="out(2)">
+ 
+<area shape="rect" coords="400,220,678,283" href="https://sanak-bw.fastlane.live/courses/course-v1:sanakbw+AZ-500.0+2019_T2/about" target="_top" onMouseOver="over(3)"onMouseOut="out(3)">
+
+<area shape="rect" coords="817,56,1095,119" href="https://sanak-bw.fastlane.live/courses/course-v1:sanakbw+AZ-400.1+2019_T1/about" target="_top" onMouseOver="over(4)"onMouseOut="out(4)">
+
+<area shape="rect" coords="712,394,814,454" href="https://sanak-bw.fastlane.live/courses/course-v1:sanakbw+AZ-300.1+2019_T1/about" target="_top" onMouseOver="over(5)"onMouseOut="out(5)">
+
+<area shape="rect" coords="818,396,919,456" href="https://sanak-bw.fastlane.live/courses/course-v1:sanakbw+AZ-301.1+2019_T1/about" target="_top" onMouseOver="over(6)"onMouseOut="out(6)">
+ 
+</map>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
