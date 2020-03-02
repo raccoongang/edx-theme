@@ -442,30 +442,23 @@ import urllib
       </div>
       <ul class="footer-socials-list">
         <li>
-          <a href="">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=${ urllib.quote(request.build_absolute_uri(), safe='') }" target="_blank">
             <svg class="svg-icon" viewBox="0 0 24 24">
               <use xlink:href="#entypo-social_facebook-with-circle"></use>
             </svg>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="${tweet_action}" target="_blank">
             <svg class="svg-icon" viewBox="0 0 24 24">
-              <use xlink:href="#entypo-social_vk-with-circle"></use>
+              <use xlink:href="#ico-twitter"></use>
             </svg>
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="${email_subject}" target="_blank">
             <svg class="svg-icon" viewBox="0 0 24 24">
-              <use xlink:href="#entypo-social_skype-with-circle"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <svg class="svg-icon" viewBox="0 0 24 24">
-              <use xlink:href="#entypo-social_youtube-with-circle"></use>
+              <use xlink:href="#ico-gmail"></use>
             </svg>
           </a>
         </li>
