@@ -139,6 +139,34 @@ body {
 	width: 100%;
 	box-sizing: border-box;
 
+	&__holder {
+		width: 100%;
+		max-width: 1200px;
+		overflow: auto;
+	}
+
+	&__sign {
+		display: flex;
+		justify-content: space-around;
+		font-size: 20px;
+		font-weight: 600;
+
+		@media screen and (max-width: 959px) {
+			display: none;
+			visibility: hidden;
+		}
+
+		div {
+			&:first-child {
+				margin-left: -170px;
+			}
+
+			&:last-child {
+				margin-right: -26px;
+			}
+		}
+	}
+
 	iframe {
 		border: none !important;
 		overflow: hidden !important;

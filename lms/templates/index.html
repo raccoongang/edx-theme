@@ -44,7 +44,20 @@ from openedx.core.djangolib.markup import HTML, Text
 
       <!-- Flane iframe with courses -->
       <div class="home-flane-iframe">
-        <iframe src="${static.url('FL-imagemap/imagemap.html')}" frameborder="0"></iframe>
+        <h1 class="home-flane-iframe__title">
+          Azure applications and infrastructure certifications
+        </h1>
+        <div class="home-flane-iframe__holder">
+          <div class="home-flane-iframe__sign">
+            <div>
+              Fundamentals
+            </div>
+            <div>
+              Role-based
+            </div>
+          </div>
+          <iframe src="${static.url('FL-imagemap/imagemap.html')}" frameborder="0"></iframe>
+        </div>
       </div>
 
       <%include file="${courses_list}" />
