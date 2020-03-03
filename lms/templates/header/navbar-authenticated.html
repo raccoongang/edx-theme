@@ -32,4 +32,10 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
       <%include file="user_dropdown.html"/>
     </div>
   </div>
+  % if show_coins:
+    <div class="user-coins-wrapper">
+      <span class="user-coins">${user_coins}</span>
+      <img class="coins-icon" src="${coins_img_url or '/static/{}/images/coins.svg'.format(settings.DEFAULT_SITE_THEME)}" alt="${_('User coins')}"/>
+    </div>
+  % endif
 </div>
