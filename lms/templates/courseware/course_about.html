@@ -7,6 +7,7 @@ from django.conf import settings
 from edxmako.shortcuts import marketing_link
 from openedx.core.djangolib.markup import HTML
 from openedx.core.lib.courses import course_image_url
+import urllib
 %>
 
 <%inherit file="../main.html" />
@@ -20,9 +21,15 @@ from openedx.core.lib.courses import course_image_url
 <%block name="js_extra">
   <script type="text/javascript">
   (function() {
-    $(".register").click(function(event) {
-      $("#class_enroll_form").submit();
+    $(".register").on('click', function(event) {
       event.preventDefault();
+      $("#class_enroll_form").submit();
+    });
+
+    $('#aside-popup').popup({
+      onclose: function() {
+        location.href = "${reverse('dashboard')}";
+      }
     });
 
     % if can_add_course_to_cart:
@@ -79,10 +86,7 @@ from openedx.core.lib.courses import course_image_url
 
     $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
       if(xhr.status == 200) {
-        if (xhr.responseText == "") {
-          location.href = "${reverse('dashboard')}";
-        }
-        else {
+        if (xhr.responseText != "")  {
           location.href = xhr.responseText;
         }
       } else if (xhr.status == 403) {
@@ -110,7 +114,7 @@ from openedx.core.lib.courses import course_image_url
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
 
-<section class="course-info">
+<section class="course-info course-info_mama">
   <header class="course-profile">
     <div class="intro-inner-wrapper">
       <div class="table">
@@ -118,7 +122,6 @@ from openedx.core.lib.courses import course_image_url
         <div class="heading-group">
           <h1>
             ${course.display_name_with_default_escaped}
-            <!-- <button type="button">${course.display_org_with_default | h}</button> -->
           </h1>
           <span class="intro__school">
           % if course.display_organization:
@@ -129,66 +132,21 @@ from openedx.core.lib.courses import course_image_url
             <p class="intro__text">${get_course_about_section(request, course, 'short_description')}</p>
           </h3>
         </div>
+        <ul class="course-info-list">
+          <li class="course-info-list__item">
 
-        <div class="main-cta">
-        %if user.is_authenticated() and registered:
-          %if show_courseware_link:
-            <a href="${course_target}">
-            ${_("View Course")}
-            </a>
-          %endif
-
-        %elif in_cart:
-          <span class="add-to-cart">
-            ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
-          </span>
-        % elif is_course_full:
-          <span class="register disabled">
-            ${_("Course is full")}
-          </span>
-        % elif invitation_only and not can_enroll:
-          <span class="register disabled">${_("Enrollment in this course is by invitation only")}</span>
-        ## Shib courses need the enrollment button to be displayed even when can_enroll is False,
-        ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
-        ## so that they can register and become a real user that can enroll.
-        % elif not is_shib_course and not can_enroll:
-          <span class="register disabled">${_("Enrollment is Closed")}</span>
-        %elif can_add_course_to_cart:
-          <%
-          if user.is_authenticated():
-            reg_href = "#"
-            reg_element_id = "add_to_cart_post"
-          else:
-            reg_href = reg_then_add_to_cart_link
-            reg_element_id = "reg_then_add_to_cart"
-          %>
-          <% if ecommerce_checkout:
-              reg_href = ecommerce_checkout_link
-              reg_element_id = ""
-          %>
-          <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
-            ${_("Add {course_name} to Cart <span>({price} USD)</span>")\
-              .format(course_name=course.display_number_with_default, price=course_price)}
-          </a>
-          <div id="register_error"></div>
-        %else:
-          <% 
-            if ecommerce_checkout:
-              reg_href = ecommerce_checkout_link
-            else:
-              reg_href="#"
-            if professional_mode:
-              href_class = "add-to-cart"
-            else:
-              href_class = "register"
-          %>
-          <a href="${reg_href}" class="${href_class}">
-            Записаться
-          </a>
-          <div id="register_error"></div>
-        %endif
-        </div>
-
+            <span class="course-info-list__sub-title">Когда</span>
+            <p class="course-info-list__title">${course_start_end_date}</p>
+          </li>
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Формат обучения</span>
+            <p class="course-info-list__title">${_(course.learning_format)}</p>
+          </li>
+          <li class="course-info-list__item">
+            <span class="course-info-list__sub-title">Уровень</span>
+            <p class="course-info-list__title">${_(course.qualification_level)}</p>
+          </li>
+        </ul>
       </section>
       % if get_course_about_section(request, course, "video"):
       <div class="media">
@@ -212,125 +170,306 @@ from openedx.core.lib.courses import course_image_url
     </div>
       </div>
   </header>
-
-  <div class="container">
-    <div class="course-sidebar">
-      <div class="course-summary">
-        <%include file="course_about_sidebar_header.html" />
-        <ol class="important-dates">
-            <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
-            % if not course.start_date_is_still_default:
-                <%
-                    course_start_date = course.start
-                %>
-              <li class="important-dates-item">
-                <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Classes Start")}</p>
-                % if isinstance(course_start_date, str):
-                    <span class="important-dates-item-text start-date">${course_start_date}</span>
-                % else:
-                    <%
-                       course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                    %>
-                    <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-                % endif
-              </li>
-            % endif
-              ## We plan to ditch end_date (which is not stored in course metadata),
-              ## but for backwards compatibility, show about/end_date blob if it exists.
-              % if get_course_about_section(request, course, "end_date") or course.end:
-                  <%
-                      course_end_date = course.end
-                  %>
-  
-              <li class="important-dates-item">
-                  <span class="icon fa fa-calendar" aria-hidden="true"></span>
-                  <p class="important-dates-item-title">${_("Classes End")}</p>
-                    % if isinstance(course_end_date, str):
-                        <span class="important-dates-item-text final-date">${course_end_date}</span>
-                    % else:
-                      <%
-                          course_date_string = course_end_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                      %>
-                      <span class="important-dates-item-text final-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}"></span>
-                    % endif
-              </li>
-              % endif
-  
-            % if get_course_about_section(request, course, "effort"):
-              <li class="important-dates-item"><span class="icon fa fa-pencil" aria-hidden="true"></span><p class="important-dates-item-title">${_("Estimated Effort")}</p><span class="important-dates-item-text effort">${get_course_about_section(request, course, "effort")}</span></li>
-            % endif
-  
-            ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
-  
-            %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
-              <li class="important-dates-item">
-                <span class="icon fa fa-money" aria-hidden="true"></span>
-                <p class="important-dates-item-title">${_("Price")}</p>
-                <span class="important-dates-item-text">${course_price}</span>
-              </li>
+  <div class="container course-about-container">
+    <div class="course-page-about-main-content">
+    % if get_course_about_section(request, course, "overview"):
+       ${get_course_about_section(request, course, "overview")}
+    % endif
+    % if blocks.get('children'):
+      <section class="course-program course-page-section" id="course-program">
+        <h2 class="h2">Программа курса</h2>
+        <ul class="course-program-list">
+        % for section in blocks.get('children'):
+          <li class="course-program-list__item">
+            <div class="course-program-list__head">${section['display_name']}</div>
+            <div class="course-program-list__content">
+              <ol>
+              % for subsection in section.get('children', []):
+                <li>${subsection['display_name']}</li>
+              % endfor
+              </ol>
+            </div>
+        % endfor
+        </ul>
+      </section>
+    % endif
+    % if get_course_about_section(request, course, "overview_teacher"):
+      ${get_course_about_section(request, course, "overview_teacher")}
+    % endif
+  </div>
+  <div class="course-sidebar course-sidebar_mama">
+    <div class="course-summary course-summary_aside">
+      <div class="course-sign-up-video-text">
+        <span>Смотреть вводную лекцию</span>
+      </div>
+      <div class="course-sign-up-video">
+        % if get_course_about_section(request, course, "video"):
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <img src="${course_image_urls['large']}" alt="" />
+            <div class="play-intro">
+              <svg class="svg-icon" viewBox="0 0 16 16">
+                <use xlink:href="#aside-play-button"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+        %else:
+        <div class="media">
+          <div class="hero">
+            <img src="https://placeimg.com/1024/768/any" alt="" />
+          </div>
+        </div>
+        % endif
+      </div>
+      <div class="course-sign-up-terms">
+        <span>${course.price}</span>
+        <div class="course-sign-up-terms-tooltip">
+          <svg class="svg-icon" viewBox="0 0 16 16">
+            <use xlink:href="#ico_terms"></use>
+          </svg>
+          <div class="course-sign-up-terms-tooltip__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, cupiditate!
+          </div>
+        </div>
+      </div>
+      <div class="course-sign-up-button">
+        <div class="main-cta">
+          %if user.is_authenticated() and registered:
+            %if show_courseware_link:
+              <a href="${course_target}">
+              ${_("View Course")}
+              </a>
             %endif
-  
-            % if pre_requisite_courses:
-            <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
-            <li class="prerequisite-course important-dates-item">
-              <span class="icon fa fa-list-ul" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Prerequisites")}</p>
-              ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
-              <span class="important-dates-item-text pre-requisite"><a href="${prc_target}">${pre_requisite_courses[0]['display']}</a></span>
-              <p class="tip">
-              ${_("You must successfully complete {link_start}{prc_display}{link_end} before you begin this course.").format(
-                link_start='<a href="{}">'.format(prc_target),
-                link_end='</a>',
-                prc_display=pre_requisite_courses[0]['display'],
-              )}
-              </p>
+
+          %elif in_cart:
+            <span class="add-to-cart">
+              ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
+            </span>
+          % elif is_course_full:
+            <span class="register disabled">
+              ${_("Course is full")}
+            </span>
+          % elif invitation_only and not can_enroll:
+            <span class="register disabled">${_("Enrollment in this course is by invitation only")}</span>
+          ## Shib courses need the enrollment button to be displayed even when can_enroll is False,
+          ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
+          ## so that they can register and become a real user that can enroll.
+          % elif not is_shib_course and not can_enroll:
+            <span class="register disabled">${_("Enrollment is Closed")}</span>
+          %elif can_add_course_to_cart:
+            <%
+            if user.is_authenticated():
+              reg_href = "#"
+              reg_element_id = "add_to_cart_post"
+            else:
+              reg_href = reg_then_add_to_cart_link
+              reg_element_id = "reg_then_add_to_cart"
+            %>
+            <% if ecommerce_checkout:
+                reg_href = ecommerce_checkout_link
+                reg_element_id = ""
+            %>
+            <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
+              ${_("Add {course_name} to Cart <span>({price} USD)</span>")\
+                .format(course_name=course.display_number_with_default, price=course_price)}
+            </a>
+            <div id="register_error"></div>
+          %else:
+            <%
+              if ecommerce_checkout:
+                reg_href = ecommerce_checkout_link
+              else:
+                reg_href="#"
+              if professional_mode:
+                href_class = "add-to-cart"
+              else:
+                href_class = "register"
+                if user.is_authenticated():
+                  href_class += " aside-popup_open"
+            %>
+            <a href="${reg_href}" class="${href_class}">
+              Записаться
+            </a>
+            <div id="register_error"></div>
+          %endif
+          </div>
+      </div>
+       <%
+        site_domain = static.get_value('site_domain', settings.SITE_NAME)
+        platform_name = static.get_platform_name()
+
+        ## Translators: This text will be automatically posted to the student's
+        ## Twitter account. {url} should appear at the end of the text.
+        tweet_text = _("I just enrolled in {number} {title} through {account}: {url}").format(
+            number=course.number,
+            title=course.display_name_with_default_escaped,
+            account=static.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),
+            url=u"http://{domain}{path}".format(
+                domain=site_domain,
+                path=reverse('about_course', args=[course.id.to_deprecated_string()])
+            )
+        )
+        tweet_action = u"http://twitter.com/intent/tweet?text={tweet_text}".format(tweet_text=tweet_text.replace(u"+", u"%2b"))
+
+        email_subject = u"mailto:?subject={subject}&body={body}".format(
+            subject=_("Take a course with {platform} online").format(platform=platform_name),
+            body=_("I just enrolled in {number} {title} through {platform} {url}").format(
+                number=course.number,
+                title=course.display_name_with_default_escaped,
+                platform=platform_name,
+                url=u"http://{domain}{path}".format(
+                    domain=site_domain,
+                    path=reverse('about_course', args=[course.id.to_deprecated_string()]),
+                )
+            )
+        ).replace(u" ", u"%20")
+      %>
+      <ol class="important-dates">
+          <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span></li>
+          % if get_course_about_section(request, course, 'effort'):
+            <%
+            effort = get_course_about_section(request, course, 'effort').split(':')[0].strip()
+            if effort[0] == '0':
+              effort = effort[1]
+            %>
+            <li class="important-dates-item">
+              <span class="icon fa fa-calendar" aria-hidden="true"></span>
+              <p class="important-dates-item-title">занятость</p>
+              <span class="important-dates-item-text">${effort} ч./нед</span>
             </li>
-            % endif
-            % if get_course_about_section(request, course, "prerequisites"):
-              <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
-            % endif
-          </ol>
-    </div>
+          % endif
+            ## We plan to ditch end_date (which is not stored in course metadata),
+            ## but for backwards compatibility, show about/end_date blob if it exists.
+          % if course.end:
+            <li class="important-dates-item">
+              <span class="icon fa fa-calendar" aria-hidden="true"></span>
+              <p class="important-dates-item-title">продолжительность</p>
+              <span class="important-dates-item-text">${duration} нед.</span>
+            </li>
+          % endif
+          % if course.number_of_lections:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">лекций</p>
+              <span class="important-dates-item-text">${course.number_of_lections}</span>
+            </li>
+          % endif
+          % if course.number_of_videos:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">видео</p>
+              <span class="important-dates-item-text">${course.number_of_videos}</span>
+            </li>
+          % endif
+          % if course.number_of_homeworks:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">домашних заданий</p>
+              <span class="important-dates-item-text">${course.number_of_homeworks}</span>
+            </li>
+          % endif
+          % if course.number_of_tests:
+            <li class="important-dates-item">
+              <span class="icon fa fa-pencil" aria-hidden="true"></span>
+              <p class="important-dates-item-title">тестов</p>
+              <span class="important-dates-item-text">${course.number_of_tests}</span>
+            </li>
+          % endif
+          ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
 
-      ## Course reviews tool
-      % if reviews_fragment_view:
-       ${HTML(reviews_fragment_view.body_html())}
-      % endif
+          %if course.language:
+            <li class="important-dates-item">
+              <span class="icon fa fa-money" aria-hidden="true"></span>
+              <p class="important-dates-item-title">язык обучения</p>
+              <span class="important-dates-item-text">${_(course.language)}</span>
+            </li>
+          %endif
 
-      ## For now, ocw links are the only thing that goes in additional resources
-      % if get_course_about_section(request, course, "ocw_links"):
-      <div class="additional-resources">
-        <header>
-          <h1>${_("Additional Resources")}</h1>
-      </div>
+          <li class="important-dates-item">
+            <span class="icon fa fa-pencil" aria-hidden="true"></span>
+            <p class="important-dates-item-title">доступ</p>
+            <span class="important-dates-item-text">${_(course.course_availability)}</span>
+          </li>
 
-        <div>
-          ## "MITOpenCourseware" should *not* be translated
-          <h2 class="opencourseware">MITOpenCourseware</h2>
-             ${get_course_about_section(request, course, "ocw_links")}
+          % if pre_requisite_courses:
+          <% prc_target = reverse('about_course', args=[unicode(pre_requisite_courses[0]['key'])]) %>
+          <li class="prerequisite-course important-dates-item">
+            <span class="icon fa fa-list-ul" aria-hidden="true"></span>
+            <p class="important-dates-item-title">${_("Prerequisites")}</p>
+            ## Multiple pre-requisite courses are not supported on frontend that's why we are pulling first element
+            <span class="important-dates-item-text pre-requisite"><a href="${prc_target}">${pre_requisite_courses[0]['display']}</a></span>
+            <p class="tip">
+            ${_("You must successfully complete {link_start}{prc_display}{link_end} before you begin this course.").format(
+              link_start='<a href="{}">'.format(prc_target),
+              link_end='</a>',
+              prc_display=pre_requisite_courses[0]['display'],
+            )}
+            </p>
+          </li>
+          % endif
+          % if get_course_about_section(request, course, "prerequisites"):
+            <li class="important-dates-item"><span class="icon fa fa-book" aria-hidden="true"></span><p class="important-dates-item-title">${_("Requirements")}</p><span class="important-dates-item-text prerequisites">${get_course_about_section(request, course, "prerequisites")}</span></li>
+          % endif
+        </ol>
+        <div class="course-sign-up-program">
+          <a class="js-anchor" href="#course-program">Программа курса</a>
         </div>
+  </div>
     </div>
-    %endif
+  </div>
 
-    <div class="details">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
-        </div>
-      % endif
+  </div>
+</div>
+<div>
+</div>
 
-      <div class="inner-wrapper">
-        ${get_course_about_section(request, course, "overview")}
+<div id="aside-popup" class="modal-body">
+  <div class="modal-container">
+    <div class="modal-header">
+      <div class="modal-header__title">
+        Поздравляем, вы записались на курс
       </div>
+    </div>
+    <div class="modal-content">
+      <div class="modal-content__course-name">
+        ${course.display_name_with_default_escaped}
+      </div>
+    </div>
+    <div class="modal-socials">
+      <div class="modal-socials__title">
+        Расскажите об этом друзьям:
+      </div>
+      <ul class="footer-socials-list">
+        <li>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=${ urllib.quote(request.build_absolute_uri(), safe='') }" target="_blank">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#entypo-social_facebook-with-circle"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="${tweet_action}" target="_blank">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#ico-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="${email_subject}" target="_blank">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <use xlink:href="#ico-gmail"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-
-    
-    
-
-  </div>
-
-  </div>
+  <a href="${course_target}" class="aside-popup_close">
+    <svg class="svg-icon" viewBox="0 0 24 24">
+      <use xlink:href="#close-btn"></use>
+    </svg>
+  </a>
 </div>
 
 ## Need to put this hidden form on the page so that the registration button works.

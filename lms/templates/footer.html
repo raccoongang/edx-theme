@@ -18,15 +18,89 @@
         dir=${bidi}
       % endif
     >
-      <div class="colophon">
+      <div class="footer-top">
+        <div class="footer-top__logo">
+          <a class="footer-top__link" href="">
+            <svg class="svg-icon" viewBox="0 0 63 56">
+              <use xlink:href="#footer-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-top__subscribe-text">
+          Хотите знать больше?
+          <span>Подпишитесь на наши новости</span>
+        </div>
+        <div class="footer-top__subscribe">
+          <form>
+            <div class="footer-subscribe-form">
+              <input class="footer-subscribe-form__input" type="text" placeholder="email">
+              <button class="footer-subscribe-form__btn">Подписаться</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="colophon footer-content">
+        <div class="footer-content__copy">
+          &copy; 2017 - 2020
+          <a href="/honor" target="_blank">Условия использования сервиса</a>
+        </div>
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
-              <li><a href="/courses">${_("Courses")}</a></li>
-              <li><a href="/about">${_("About us")}</a></li>
-              <li><a href="/honor">${_("Terms of use")}</a></li>
+              <li><a href="/about">О нас</a></li>
+              <li><a href="/courses" target="_blank">Каталог курсов</a></li>
+              <li><a href="">Преподавайте на МАМА</a></li>
           </ol>
         </nav>
-
+        <div class="footer-socials">
+            <ul class="footer-socials-list">
+              <li>
+                <a href="">
+                  <svg class="svg-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#entypo-social_facebook-with-circle"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="svg-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#entypo-social_vk-with-circle"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="svg-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#entypo-social_skype-with-circle"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="svg-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#entypo-social_youtube-with-circle"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <ul class="footer-socials-channels">
+              <li>
+                  <a href="https://t.me/mamamobytize" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                      <use xlink:href="#fa-brands_telegram"></use>
+                    </svg>
+                    <span>канал в telegram</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://t.me/mama_discussion" target="_blank">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                      <use xlink:href="#fa-brands_telegram"></use>
+                    </svg>
+                    <span>чат в telegram</span>
+                  </a>
+              </li>
+            </ul>
+        </div>
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
         % endif
@@ -41,31 +115,33 @@
       ## which are not technically powered by OpenEdX.
       % if not hide_openedx_link:
       <div class="theme-footer_holder">
-        <p class="footer-support">Built on
-          <a target="_blank" href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer">
-            <svg class="svg-edx" viewBox="0 0 100 70">
-              <use xlink:href="#logo-edx"></use>
-            </svg>
-          </a>
-          by
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            RACCOONGANG
-            <svg class="svg-raccoon" viewBox="0 0 100 100">
-              <use xlink:href="#logo-raccoon"></use>
-            </svg>
-          </a>
-          and
-          <a target="_blank" href="https://skillonomy.org/" class="">
-            <img class="skillonomy__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo_skillonomy.png" alt="skillonomy">
-          </a>
-        </p>
-      <div class="footer-about-openedx">
-        <p>
-          <a href="/">
-            <img class="header__logo-dark" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png" alt="MAMA">
-          </a>
-        </p>
-      </div>
+        <ul class="footer-support">
+          <li class="footer-support__item">
+            <span>Платформа на</span>
+            <a target="_blank" href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer">
+              <svg class="svg-icon svg-edx" viewBox="0 0 59 12">
+                <use xlink:href="#openedex-logo"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-support__item">
+            <span>Разработка</span>
+            <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
+              <span>Raccoon Gang</span>
+              <svg class="svg-icon svg-raccoon" viewBox="0 0 20 16">
+                <use xlink:href="#racoon-footer-logo"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-support__item">
+            <span>совместно со</span>
+            <a target="_blank" href="https://skillonomy.org/">
+              <svg class="svg-icon svg-skillonomy" viewBox="0 0 104 19">
+                <use xlink:href="#skillonomy_logo"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
       % endif
     </footer>

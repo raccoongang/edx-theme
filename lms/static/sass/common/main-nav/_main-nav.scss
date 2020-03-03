@@ -6,7 +6,7 @@
     height: 100vh;
     min-width: 262px;
     margin: 0;
-    transform: translate(-100%, 0);
+    transform: translate(calc(-100% - 30px), 0);
     list-style: none;
     transition: transform .2s;
     @media (min-width: $tablet-size) {
@@ -17,6 +17,14 @@
         position: static;
         transform: translate(0, 0);
         box-shadow: none;
+        margin: 0 auto 0 30px;
+    }
+
+    @media (max-width: $laptop-size) {
+        margin: 0 auto 0 20px;
+    }
+
+    @media (max-width: $tablet-size) {
         margin: 0 auto;
     }
 
@@ -28,30 +36,30 @@
 }
 a.main-nav__link,
 .main-nav__link {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: 'Artegra Sans', sans-serif;
     font-size: 14px;
-    color: #000;
+    color: $theme-header-link-color;
     letter-spacing: 0;
     display: block;
     
     &:focus,
     &:hover {
-        color: #000;
+        color: $theme-header-link-color;
     }
     @media (min-width: $tablet-size) {
-        text-transform: uppercase;
-        color: #000;
+        text-transform: none;
+        color: $theme-header-link-color;
 
         &:focus,
         &:hover {
-            color: #000;
+            color: $theme-header-link-color;
         }
     }
 
     .header__other &,
     .view-in-course &,
     .is-authenticated & {
-        color: #000;
+        color: $theme-header-link-color;
 
         &:focus,
         &:hover {
@@ -64,31 +72,14 @@ a.main-nav__link,
     padding: 16px;
     border-bottom: 1px solid #F5F5F5;
     margin-bottom: 0;
-
-    &:last-child {
-        margin-right: 0;
-    }
-
     @media (min-width: $tablet-size) {
         padding: 0;
         border-bottom: 0;
-        margin-right: 40px;
+        margin-right: 16px;
+    }
 
-        &:after {
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 2px;
-            width: 12px;
-            height: 12px;
-            background: #B3B3B3;
-            border-radius: 50%;
-        }
-
-        &:hover:after {
-            background: #ff6f00;
-            transition: background .3s linear .1s;
-        }
+    &:last-child {
+        margin-right: 0;
     }
 
     &_mobile {
@@ -96,5 +87,9 @@ a.main-nav__link,
         @media (min-width: $tablet-size) {
             display: none;
         }
+    }
+
+    @media (max-width: $tablet-size) {
+        padding-right: 35px;
     }
 }

@@ -1,9 +1,15 @@
 .header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    background-color: #fff;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .2);
 }
 .header__holder {
-    padding: 18px 0;
-    max-width: $desktop-size;
+    padding: 1px 15px;
+    max-width: 1230px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
@@ -11,21 +17,22 @@
     position: relative;
     box-sizing: border-box;
 
+    .login-theme {
+        text-transform: none;
+    }
+
+    .login-theme_margin {
+        text-transform: uppercase;
+    }
+
     @media (min-width: $tablet-size) {
         justify-content: space-between;
     }
     @media (min-width: $desktop-size) {
-        padding: 18px 0;
+        padding: 1px 15px;
         background: none;
     }
-    
-    .error-404 &,
-    .header__other &,
-    .view-in-course &,
-    .is-authenticated & {
-        padding: 20px 0;
-        background: transparent;
-    }
+
 }
 a.header__logo,
 .header__logo {
@@ -37,11 +44,13 @@ a.header__logo,
     display: flex;
     align-items: center;
     transition: transform .2s;
+    width: 70px;
+    height: 70px;
 
     &:hover {
         color: #fff;
     }
-    
+
     .error-404 &,
     .header__other &,
     .view-in-course &,
@@ -52,13 +61,20 @@ a.header__logo,
             color: #000;
         }
     }
-    .menu-open & {
-        transform: translate(120%, 0);
+    // .menu-open & {
+    //     transform: translate(120%, 0);
+    // }
+
+    @media (max-width: $mobile-size) {
+       width: 48px;
+       height: 50px;
+       margin-right: 16px;
     }
 }
 .header__logo-white {
     display: block;
     width: 177px;
+    height: 100%;
     margin-right: 5px;
 
     .error-404 &,
@@ -68,10 +84,15 @@ a.header__logo,
     .header__other & {
         display: none;
     }
+
+    @media (max-width: $mobile-size) {
+        width: 100%;
+    }
 }
 .header__logo-dark {
     display: none;
     width: 177px;
+    height: 100%;
     margin-right: 5px;
 
     .error-404 &,
@@ -82,6 +103,10 @@ a.header__logo,
     }
     .footer-about-openedx & {
         display: block;
+    }
+
+    @media (max-width: $mobile-size) {
+        width: 100%;
     }
 }
 .header__helper {
@@ -104,7 +129,7 @@ a.header__logo,
     @media (min-width: $desktop-size) {
         display: none;
     }
-    
+
     .error-404 &,
     .header__other &,
     .view-in-course &,
@@ -114,40 +139,54 @@ a.header__logo,
 }
 .header__opener {
     position: absolute;
-    border-top: 2px solid $color1;
-    border-bottom: 2px solid $color1;
+    border-top: 2px solid $theme-header-btn-color;
+    border-bottom: 2px solid $theme-header-btn-color;
     transition: transform .2s;
     width: 18px;
     height: 8px;
-    left: 20px;
-    top: 26px;
+    left: 15px;
+    top: 20px;
+    z-index: 999;
 
     &:after {
         content: '';
         height: 2px;
-        background: $color1;
+        background: $theme-header-btn-color;
         position: absolute;
         width: 100%;
         top: 3px;
         left: 0;
     }
+
     &:hover {
         cursor: pointer;
     }
+
     @media (min-width: $tablet-size) {
         display: none;
     }
+
+    @media (min-width: $mobile-size) {
+        top: 30px;
+    }
+
     .menu-open & {
         transform: translate(265px, 0);
     }
-    .error-404 &,
-    .header__other &,
-    .view-in-course &,
-    .is-authenticated & {
-        border-color: #ff6f00;
+}
 
-        &:after {
-            background: #ff6f00;
+body.menu-open {
+    .header {
+        &__opener {
+            left: -35px;
+            top: 15px;
+            border-bottom: 0;
+            transform: translate(265px, 0) rotate(45deg);
+
+            &:after {
+                transform: rotate(90deg);
+                margin-top: -5px;
+            }
         }
     }
 }
