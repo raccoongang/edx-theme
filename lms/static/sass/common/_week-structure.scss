@@ -1,51 +1,95 @@
-.week-structure {
-    width: 100%;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
-    @media (min-width: $tablet-size) {
-        flex-direction: row;
+.week_holder {
+    position: relative;
+    z-index: 1;
+
+    &:before,
+    &:after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 12px;
+        left: 6px;
+        width: 50%;
+        top: 93%;
+        max-width: 180px;
+        background: rgba(178, 223, 219, .9);
+        box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
+        transform: rotate(-3deg);
+        border-radius: 46px;
+    }
+
+    &:after{
+        transform: rotate(3deg);
+        right: 6px;
+        left: auto;
+    }
+    
+    &__title {
+        font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+        color: $theme-header-link-color;
+        margin-left: 30px;
     }
 }
+
+.week-structure-container {
+    border: 0.2px solid $theme-header-btn-color;
+    box-sizing: border-box;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 2px 7px 0 rgba(178, 223, 219, .4);
+    padding: 32px 16px;
+    background-color: $theme-btn-text-color;
+    box-sizing: border-box;
+    transition: all 400ms ease-in-out;
+}
+
 .week-structure__name {
-    font-size: 16px;
-    line-height: 30px;
-    width: 241px;
-    min-width: 241px;
-    text-align: right;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto 16px;
-    text-transform: uppercase;
-    color: #082561;
-    @media (min-width: $tablet-size) {
-        color: #000;
-        order: 2;
-        margin: 0 0 0 60px;
-        text-transform: none;
-        flex-direction: row;
-        padding-left: 24px;
-    }
-    @media (min-width: $tablet-size) {
-        padding-left: 0;
+    font: 600 16px/24px 'Artegra Sans', sans-serif !important;
+    color: $color6;
+    position: relative;
+    cursor: pointer;
+    padding: 20px 30px 20px 30px;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 28px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $theme-header-btn-color;
     }
 
-    .week-structure:nth-child(2n) & {
-        @media (min-width: $tablet-size) {
-            order: 1;
-            text-align: left;
-            margin-left: 0;
-            margin-right: 60px;
-            justify-content: flext-start;
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 25px;
+        right: 0;
+        background-image: url('../images/arrow-right.svg');
+        background-size: contain;
+        width: 16px;
+        height: 16px;
+        transition: all 200ms ease;
+    }
+
+    &.is-active {
+        &:after {
+            transform: rotate(90deg);
         }
     }
+}
+.week-structure__box {
+    display: none;
+    margin: 0 0 20px;
+}
 
-    strong {
-        font-weight: normal;
-        word-break: break-all;
+.week-structure {
+    border-bottom: 1px solid #B2DFDB;
+
+    &:last-child {
+        border-bottom: 0;
     }
 }
 .week-structure__ico {
@@ -72,100 +116,55 @@
         background: url("../images/info-ico-2.png") no-repeat 50%;
     }
 }
-.week-structure__box {
-    border-radius: 4px;
-    width: 272px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    position: relative;
-    padding: 16px;
-    min-height: 182px;
-    box-shadow: 0 0 20px 10px rgba(0,0,0,0.07);
-    @media (min-width: $tablet-size) {
-        padding: 16px 0 22px 0;
-        border-radius: 0;
-        order: 1;
-        box-shadow: none;
-        width: 100%;
-        margin: 0;
-    }
 
-    .week-structure:nth-child(2n) & {
-        @media (min-width: $tablet-size) {
-            order: 2;
-            padding-left: 106px;
-        }
-    }
-}
 .week-structure__helper {
+    border: 1px solid $theme-header-btn-color;
+    border-radius: 6px;
+    width: 16px;
+    height: 16px;
+    background-color: #E0F2F1;
+    flex: none;
     position: absolute;
-    top: 0;
-    right: 41px;
-    height: 100%;
-    width: 140%;
-    transform: skew(20deg);
-    background: #f0f0f0;
-    border-bottom: 3px solid $color1;
-    display: none;
-    @media (min-width: $tablet-size) {
-        display: block;
-    }
+    top: 2px;
+    left: 0;
 
-    .week-structure:nth-child(2n) & {
-        right: auto;
-        left: 41px;
-        background: #f0f0f0;
-        border-bottom: 3px solid $color1;
+    &.is-checked {
+        background-color: $theme-header-btn-color;
     }
 }
+
 .week-structure__list {
-    margin: 0;
-    padding: 0 0 0 15px;
     list-style: none;
-    @media (min-width: $tablet-size) {
-        padding-left: 39px;
-        column-count: 2;
-        column-gap: 50px;
-        max-width: 75%;
-    }
-    @media (min-width: $desktop-size) {
-        padding-left: 0;
-    }
+    padding: 0;
+    margin: 0;
+    counter-reset: list-counter;
 }
 .week-structure__list-item {
-    position: relative;
-    color: #000;
-    font-size: 14px;
-    line-height: 18px;
     margin-bottom: 8px;
-    @media (min-width: $tablet-size) {
-        font-size: 20px;
-        line-height: 30px;
-        color: #fff;
-    }
+    counter-increment: list-counter;
+    padding-left: 60px;
+    position: relative;
+    display: flex;
 
-    &:after {
-        content: '';
+    &:before {
+        content: counter(list-counter) ". ";
         position: absolute;
-        left: -15px;
-        top: 14px;
-        width: 6px;
-        height: 6px;
-        background: #000;
-        border-radius: 50%;
-        @media (min-width: $tablet-size) {
-            background: #000;
-            width: 8px;
-            height: 8px;
-        }
+        left: 35px;
+        top: 3px;
+        color: #000000;
+        font: 600 12px/18px 'Artegra Sans', sans-serif !important;
     }
 
     a {
-        font-size: 14px;
-        line-height: 18px;
-        color: #000;
-        @media (min-width: $tablet-size) {
-            color: #000;
+        font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+        color: $color6;
+
+        &:hover {
+            color: lighten($color6, 15%);
         }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }

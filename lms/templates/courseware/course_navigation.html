@@ -31,34 +31,34 @@ if course is not None:
 
 % if disable_tabs is UNDEFINED or not disable_tabs:
     <nav class="${active_page} wrapper-course-material" aria-label="${_('Course Material')}">
-        <div class="course-material">
-            <%
-            tab_list = get_course_tab_list(request, course)
-            tabs_tmpl = static.get_template_path('/courseware/tabs.html')
-            %>
-            <div class="course-material__box">
-                <h2 class="course-material__heading">${course.display_name_with_default}</h2>
-                <strong class="course-material__school">
-                % if course.display_organization:
-                    ${course.display_organization}
-                % endif
-                </strong>
-            </div>
-            <div class="course-tabs__holder">
-                <div class="course-tabs__helper"></div>
-                <ol class="tabs course-tabs" id="course__tabs">
-                    <%include file="${tabs_tmpl}" args="tab_list=tab_list,active_page=active_page,default_tab=default_tab,tab_image=tab_image" />
-                    <%block name="extratabs" />
-                </ol>
+        <div class="course-overview-bg">
+            <div class="course-overview-bg__container">
+                <h2 class="h2">${course.display_name_with_default}</h2>
+                <div class="course-material">
+                    <%
+                    tab_list = get_course_tab_list(request, course)
+                    tabs_tmpl = static.get_template_path('/courseware/tabs.html')
+                    %>
+                    <div class="course-material__box">
+                        <strong class="course-material__school">
+                        % if course.display_organization:
+                            ${course.display_organization}
+                        % endif
+                        </strong>
+                    </div>
+                    <div class="course-tabs__holder">
+                        <div class="course-tabs__helper js-tabs-mobile-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ol class="tabs course-tabs" id="course__tabs">
+                            <%include file="${tabs_tmpl}" args="tab_list=tab_list,active_page=active_page,default_tab=default_tab,tab_image=tab_image" />
+                            <%block name="extratabs" />
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 %endif
-<script>
-    var btn = document.getElementById('course__tabs'),
-    body = document.body;
-    function btnToggle() {
-       body.classList.toggle('course__tabs-open');
-    }
-    btn.addEventListener('click', btnToggle);
-</script>
