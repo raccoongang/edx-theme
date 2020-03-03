@@ -8,7 +8,7 @@
                         ${page['content'] | n}
                     </div>
                     <div class="mascot">
-                        <img class="mascot-image" src="/static/${settings.DEFAULT_SITE_THEME}/images/mascots/mascot_general.svg" alt="HERA-mascot" />
+                        <img class="mascot-image" src="${onboarding_mascot or '/static/{}/images/mascots/mascot_general.svg'.format(settings.DEFAULT_SITE_THEME)}" alt="HERA-mascot" />
                     </div>
                 </div>
             </div>
