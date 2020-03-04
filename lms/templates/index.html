@@ -18,13 +18,13 @@ from openedx.core.djangolib.markup import HTML, Text
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
               % else:
-                <div class="h1-img">
-                  <object
-                          type="image/svg+xml"
-                          data="/static/${settings.FEATURES.get('SANAK_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/h1-sign.svg">
-                    <img src="/static/${settings.FEATURES.get('SANAK_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/h1-sign.svg" alt="/">
-                  </object>
-                </div>
+                <h1>
+                  Willkommen auf der
+                  <br>
+                  Open edX Demo-Plattform für die
+                  <br>
+                  Sanitätsakademie der Bundeswehr
+                </h1>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
@@ -49,7 +49,7 @@ from openedx.core.djangolib.markup import HTML, Text
       <!-- Flane iframe with courses -->
       <div class="home-flane-iframe">
         <h1 class="home-flane-iframe__title">
-          Azure applications and infrastructure certifications
+          Azure-Anwendungen und Infrastruktur-Zertifizierungen
         </h1>
         <div class="home-flane-iframe__holder">
           <div class="home-flane-iframe__sign">
