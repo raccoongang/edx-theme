@@ -9,7 +9,6 @@ from django.utils.translation import ugettext as _
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
 from openedx.core.djangoapps.user_api.accounts.utils import retrieve_last_sitewide_block_completed
 from openedx.features.enterprise_support.utils import get_enterprise_learner_generic_name
-from hera.models import ActiveCourseSetting
 %>
 
 <%
@@ -35,11 +34,8 @@ displayname = get_enterprise_learner_generic_name(request) or username
         % if is_onboarding_passed:
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a class="onboarding-pop-up_open" href="javascript:void(0)" role="menuitem">${_("Game Rules")}</a></div>
         % endif
-        <% 
-            active_course_id = ActiveCourseSetting.get()
-        %>
-        % if user and user.is_staff and active_course_id:
-            <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('instructor_dashboard', args=(active_course_id,))}" role="menuitem">${_("Instructor")}</a></div>
+        % if staff_access and course:
+            <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('instructor_dashboard', args=(course.id,))}" role="menuitem">${_("Instructor")}</a></div>
         % endif
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></div>
     </div>
