@@ -113,6 +113,10 @@ from pipeline_mako import render_require_js_path_overrides
   <!-- Include jQuery Popup Overlay -->
   <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 
+  <!--  CDN for select2 plugin -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
   % if uses_bootstrap:
     ## xss-lint: disable=mako-invalid-js-filter
     <script type="text/javascript" src="${static.url('common/js/vendor/bootstrap.bundle.js')}"></script>
