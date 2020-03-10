@@ -1339,6 +1339,53 @@ hr.other {
     }
 }
 
+.header-socials {
+    max-width: 270px;
+
+    .u-field-title {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font: 600 18px/24px 'Artegra Sans', Arial, sans-serif !important;
+        color: $theme-btn-text-color;
+        text-transform: uppercase;
+    }
+}
+
+.header-socials-list{
+    padding: 0;
+    margin: 0 0 25px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li{
+        margin-right: 25px;
+        &:last-child{
+            margin-right: 0;
+        }
+
+        .svg-icon{
+            width: 24px;
+            height: 24px;
+            fill: $theme-btn-text-color;
+            transition: all 200ms ease;
+
+            &.disabled {
+                fill: #B2DFDB;
+            }
+        }
+        a{
+            &:hover{
+                border-bottom: 0;
+            }
+        }
+    }
+    @media (max-width: $tablet-size) {
+        justify-content: center;
+    }
+}
+
 .footer-socials-channels{
     padding: 0;
     margin: 0;
@@ -2474,7 +2521,8 @@ body {
             &:last-child {
                 flex: 0 0 33%;
                 .account-settings-section-body.aboutTabSections-section-body {
-                    display: block;
+                    display: flex;
+                    flex-wrap: wrap;
                 }
             }
             @media screen and (max-width: 768px) {
@@ -2503,39 +2551,38 @@ body {
     .account-settings-section-body.aboutTabSections-section-body {
         display: flex;
         flex-wrap: wrap;
+        margin: 0 -70px;
+
+        @media (max-width: $laptop-size) {
+            margin: 0 -35px;
+        }
+        @media (max-width: $tablet-size) {
+            margin: 0 -15px;
+        }
+        @media (max-width: $mobile-size) {
+            flex-direction: column;
+        }
+
         .u-field {
             flex: 0 0 50%;
-            padding: 0;
+            max-width: 50%;
+            padding: 0 70px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
 
-            @media screen and (min-width: $tablet-size) {
+            @media (max-width: $laptop-size) {
+                padding: 0 35px;
+            }
+            @media (max-width: $tablet-size) {
                 padding: 0 15px;
+            }
+            @media (max-width: $mobile-size) {
+                max-width: 100%;
             }
         }
     }
-    .account-settings-sections .section .account-settings-section-body .u-field {
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-            flex: 0 0 100%;
-            width: 100%;
-        }
-    }
-    .account-settings-sections .section .account-settings-section-body .u-field,
-    .account-settings-sections .section {
-        border-bottom: 0;
-        margin-bottom: 10px;
-    }
-    .account-settings-sections .section .account-settings-section-body .u-field .field .field-input,
-    .account-settings-sections .section .account-settings-section-body .u-field .field select {
-        background: #F5F5F5;
-        height: 40px;
-        width: 100% !important;
-        border-radius: 4px;
-        border: 0;
-        padding: 0 0 0 44px;
-    }
+    
     .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down::after {
         border-top: 7px solid #ff6f00;
         z-index: 10;
@@ -2552,9 +2599,7 @@ body {
         white-space: normal;
         border: 1px solid transparent;
     }
-    .account-settings-sections .section .account-settings-section-body .u-field.u-field-username,
-    .account-settings-sections .section .account-settings-section-body .u-field .field .field-label,
-    .account-settings-sections .section .account-settings-header-subtitle {
+    .account-settings-sections .section .account-settings-section-body .u-field.u-field-username {
         display: none;
     }
     .user .user-dropdown-menu {
@@ -2871,12 +2916,6 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     }
 }
 
-.wrapper-account-settings .wrapper-header {
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    border: none;
-}
 .wrapper-account-settings .wrapper-header .header-title {
     margin: 0;
     padding: 0;
@@ -4264,12 +4303,361 @@ body.view-in-course {
     }
 }
 body .wrapper-account-settings .account-settings-container {
-    padding: 0;
+    padding: 0 15px;
+    margin-bottom: 140px;
+
+    @media (max-width: $tablet-size) {
+        margin-bottom: 70px;
+    }
+    @media (max-width: $mobile-size) {
+        margin-bottom: 40px;
+    }
 }
+
+.wrapper-account-settings {
+    .account_settings_bg {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background: linear-gradient(286.04deg, $theme-header-link-color 0%, $theme-header-btn-color 100%);
+    
+        &__container {
+            padding: 70px 15px 35px;
+            box-sizing: border-box;
+            max-width: 1230px;
+            width: 100%;
+            margin: 0 auto;
+
+            @media (max-width: $tablet-size) {
+                padding: 35px 15px;
+            }
+        }
+
+        h2,
+        .h2 {
+            font: 700 60px/72px 'Artegra Sans', Arial, sans-serif !important;
+            color: $theme-btn-white-text-color;
+            margin-bottom: 80px;
+            @media (max-width: $tablet-size) {
+                font: 700 32px/38px 'Artegra Sans', Arial, sans-serif !important;
+                margin-bottom: 40px;
+            }
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 85px;
+            box-sizing: border-box;
+            @media (max-width: $laptop-size) {
+                padding: 0;
+            }
+            @media (max-width: $mobile-size) {
+                flex-direction: column;
+            }
+
+            .account-settings-container {
+                margin-bottom: 0;
+            }
+        }
+
+        .view-profile {
+            .profile-image-field {
+                @media (max-width: $tablet-size) {
+                    margin-bottom: 25px;
+                }
+                .image-wrapper {
+                    .image-frame {
+                        border-radius: 50%;
+                    }
+
+                    .u-field-upload-button {
+                        border-radius: 50%;
+                    }
+
+                    .upload-button-title,
+                    .upload-button-icon {
+                        font-size: 14px;
+                        color: $color7;
+                    }
+
+                    .upload-button-input {
+                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: -1;
+                    }
+
+                    .u-field-remove-button {
+                        text-shadow: none;
+                        color: $theme-btn-white-text-color;
+                        box-shadow: none;
+
+                        &:hover {
+                            color: $color7;
+                        }
+                    }
+                }
+            }
+
+            .password-reset-field {
+                max-width: 200px;
+                width: 100%;
+                position: relative;
+
+                .u-field-password {
+                    &.is-visible {
+                        .u-field-value {
+                            .field-label {
+                                display: none;
+                            }
+                        }
+                    }
+                    .u-field-value {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 0;
+                        width: 100%;
+                        max-width: 200px;
+        
+                        .field-label {
+                            font: 600 18px/24px 'Artegra Sans', Arial, sans-serif !important;
+                            color: $theme-btn-text-color;
+                            text-transform: uppercase;
+                            display: block;
+                            width: 100%;
+                            margin-top: 25px;
+                            text-align: center;
+                        }
+        
+                        .u-field-link-title-password {
+                            font-size: 0;
+                            background-image: url('../images/icon-lock.svg');
+                            width: 33px;
+                            height: 43px;
+                            margin: 0 auto;
+                            border: 0;
+                            background-color: transparent;
+                            padding: 0;
+                            box-shadow: none;
+                            order: -1;
+        
+                            &:hover {
+                                opacity: .7;
+                            }
+                        }
+                    }
+                }
+
+                .u-field-message-help {
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                }
+
+                .field {
+                    &:before {
+                        display: none;
+                    }
+                }
+                .u-field-message {
+                    width: 100%;
+                }
+                .u-field-message-notification {
+                    font: 400 12px/ 16px 'Artegra Sans', Arial, sans-serif !important;
+                    color: $theme-btn-text-color;
+                    margin-top: 25px;
+                    display: block;
+                }
+            }
+        }
+    }
+    .account-settings-container {
+        .account-settings-header-subtitle {
+            display: none;
+        }
+    }
+}
+
 .account-settings-sections {
-    padding: 0 20px;
-    @media (min-width: $tablet-size) {
-        padding: 0;
+    .section-header {
+        font: 700 30px/36px 'Artegra Sans', sans-serif !important;
+        color: $color7;
+        margin-bottom: 25px;
+
+        @media (max-width: $mobile-size) {
+            padding-top: 0;
+        }
+    }
+
+    @at-root {
+        .select2-container--default {
+            .select2-dropdown {
+                border: 1px solid #B2DFDB;
+                border-radius: 0 0 23px 23px;
+                overflow: hidden;
+                z-index: 100;
+            }
+
+            .select2-results {
+                &__option {
+                    font: 400 16px/40px 'Open Sans', sans-serif !important;
+                    color: $theme-header-link-color;
+                    padding: 0 0 0 31px;
+    
+                    &.select2-results__option--highlighted {
+                        background-color: $color6;
+                    }
+                }
+    
+                &__options {
+                    &::-webkit-scrollbar {
+                        background: transparent;
+                        width: 10px;
+                    }
+    
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $theme-header-btn-color;
+                        border-radius: 23px;
+                        width: 10px;
+                    }
+                }
+            }
+        }
+
+        .select2-container--open {
+            .select2-dropdown--below {
+                border-top: 0;
+            }
+        } 
+    }
+
+    .section {
+        border-bottom: 0;
+        
+        .account-settings-section-body {
+            .u-field {
+                border-bottom: 0;
+                margin-bottom: 35px;
+
+                @media (max-width: $mobile-size) {
+                    width: 100%;
+                }
+
+                &-value {
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                .field {
+                    margin: 0;
+
+                    .field-input {
+                        border: 1px solid #B2DFDB;
+                        box-sizing: border-box;
+                        box-shadow: inset 0px 4px 10px rgba(82, 129, 129, .15);
+                        border-radius: 46px;
+                        padding: 2px 30px;
+                        height: 48px;
+                        width: 100%;
+                        font: 400 16px 'Open Sans', sans-serif !important;
+                        color: $color6;
+                        transition: all 200ms ease;
+
+                        &:focus {
+                            outline: none;
+                            box-shadow: 0 2px 7px rgba(60, 182, 181, .5);
+                        }
+                    }
+
+                    select {
+                        padding: 0;
+                        border: 0;
+                    }
+
+                    .icon-caret-down {
+                        display: none;
+                    }
+
+                    .field-label {
+                        font: 400 16px/24px 'Open Sans', sans-serif !important;
+                        color: #757575;
+                        margin: 0 0 3px 31px;
+                    }
+                }
+
+                .u-field-message-help {
+                    display: none;
+                }
+
+                &.u-field-dropdown {
+                    .select2-container--default {
+                        .select2-selection {
+                            &--single {
+                                border: 1px solid #B2DFDB;
+                                box-sizing: border-box;
+                                box-shadow: inset 0 4px 10px rgba(60, 182, 181, .15);
+                                border-radius: 46px;
+                                height: 48px;
+
+                                .select2-selection {
+                                    &__arrow {
+                                        height: 48px;
+                                        width: 48px;
+                                        top: 0;
+        
+                                        b {
+                                            border: 0;
+                                            background-image: url('../images/arrow_little_down.svg');
+                                            width: 16px;
+                                            height: 16px;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            transform: translateY(-50%);
+                                            transform-origin: 50% 0;
+                                            margin: 0;
+                                            left: 0;
+                                        }
+                                    }
+        
+                                    &__rendered {
+                                        font: 400 16px/48px 'Open Sans', sans-serif !important;
+                                        color: $theme-header-link-color;
+                                        height: 100%;
+                                        padding: 0 65px 0 31px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .select2-container--default.select2-container--focus {
+                        .select2-selection--single {
+                            outline: none;
+                        }
+                    }
+
+                    .select2-container--default.select2-container--open {
+                        .select2-selection--single {
+                            border-bottom: 0;
+                            border-radius: 23px 23px 0 0;
+
+                            .select2-selection {
+                                &__arrow {
+                                    b {
+                                        transform: scale(-1) translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification {
