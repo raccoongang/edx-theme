@@ -2,12 +2,10 @@
     width: 100%;
     max-width: 1200px;
     margin: 22px auto;
-    position: relative;
 
     &__header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin: 0 0 32px;
     }
 
@@ -27,53 +25,32 @@
                 box-sizing: border-box;
                 text-align: center;
                 line-height: 1.3;
-                padding: 0 0 36px;
-                min-height: 98px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                padding: 26px 0 0;
             }
         }
 
         &-body {
             display: flex;
+            justify-content: space-evenly;
             position: relative;
-            padding: 0 15px 28px;
 
             &__item {
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
                 flex-direction: column;
-                width: 90px;
+                width: 125px;
                 min-height: 185px;
                 text-align: center;
                 box-sizing: border-box;
+                margin: 5px 0 0;
+                padding: 0 15px 0;
                 position: relative;
-                margin-right: 4px;
-                z-index: 1;
 
-                &:nth-child(2),
-                &:nth-child(6) {
-                    margin-right: 116px;
-                }
+                &.is-reverse {
+                    flex-direction: column-reverse;
+                    padding-top: 16px;
 
-                &:nth-child(4) {
-                    margin-right: 130px;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                &:nth-child(2n) {
-                    .dna-unlocked {
-                        flex-direction: column-reverse;
-                    }
-
-                    .dna-connector {
-                        transform: rotate(180deg);
+                    .dna-text:before {
+                        transform: translateX(-50%) rotate(180deg);
                     }
                 }
             }
@@ -85,17 +62,15 @@
     position: static;
 
     &__title {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         color: #4b4e4e;
         position: static;
         margin: 0 0 6px;
-        padding: 0 6px;
-        text-align: center;
     }
 
     &__status {
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 600;
         color: #44b6cf;
         position: static;
@@ -104,43 +79,39 @@
 
 .hera-message {
     display: flex;
-    align-items: center;
-    justify-content: center;
 
     &__text {
-        box-sizing: border-box;
-        padding: 42px 20px;
-        background: $onboarding-content-bg;
+        padding: 28px;
+        background: #d6d8d8;
         border-radius: 26px;
         position: relative;
-        color: #222524;
+        color: #545656;
         text-align: center;
-        max-width: 332px;
+        max-width: 175px;
         font-size: 18px;
 
         p {
             position: relative;
             z-index: 1;
         }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 85px 85px 0 0;
+            border-color: #d6d8d8 transparent transparent transparent;
+            position: absolute;
+            top: 20px;
+            right: -24px;
+            -webkit-transform: rotate(360deg);
+        }
     }
 }
 
 .hera-mascot {
-    position: relative;
-
-    &:before {
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 25px 25px 0 0;
-        border-color: $onboarding-content-bg transparent transparent transparent;
-        position: absolute;
-        top: 50%;
-        left: -4px;
-        transform: translateY(-50%);
-        -webkit-transform: rotate(360deg) translateY(-50%);
-    }
+    position: static;
 
     &__img {
         display: block;
@@ -151,11 +122,10 @@
 
 .hera-grades {
     display: flex;
-    margin-top: 20px;
     margin-left: 36px;
 
     &__item {
-        margin-right: 30px;
+        margin-right: 12px;
         text-align: center;
 
         &:last-child {
@@ -165,14 +135,11 @@
 
     &__img {
         display: block;
-        width: 85px;
-        height: 85px;
-        margin: 0 auto 10px;
+        margin: 0 auto 6px;
     }
 
     &__points {
         font-size: 12px;
-        margin: 0 auto 10px;
     }
 
     &__title {
@@ -183,12 +150,42 @@
 }
 
 .dna {
-    &-connector {
+    &-text {
+        padding: 26px 0 20px;
         position: relative;
 
-        &__img {
-            display: block;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
             width: 38px;
+            height: 74px;
+            background: #e1e5e8;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            transform: translateX(-50%);
+        }
+
+        &__title {
+            position: relative;
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        &__points {
+            position: relative;
+            font-size: 10px;
+            display: block;
+        }
+    }
+
+    &-connector {
+        position: static;
+
+        &__img {
+            position: static;
         }
     }
 
@@ -202,9 +199,8 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 52px;
-        height: 52px;
-        z-index: 2;
+        width: 40px;
+        height: 40px;
 
         &__img {
             display: block;
@@ -212,29 +208,21 @@
         }
 
         a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             width: 100%;
             height: 100%;
-        }
-
-        i {
-            color: #4e79b5;
-            font-size: 26px;
         }
     }
 
     &-locked,
     &-unlocked {
-        display: flex;
-        height: 146px;
+        height: 100%;
         position: relative;
 
         &:before {
             content: '';
             width: 38px;
-            height: 100%;
+            height: 128px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -248,8 +236,8 @@
     &-unlocked {
         &:after {
             content: '';
-            width: 32px;
-            height: 32px;
+            width: 22px;
+            height: 22px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -258,20 +246,14 @@
             border: 6px solid #4e79b5;
             background: transparent;
             pointer-events: none;
-            z-index: 3;
         }
     }
 }
 
 .hera-dna-bg {
     position: absolute;
-    pointer-events: none;
-    left: 0;
-    bottom: 0;
+    right: auto;
+    left: auto;
+    top: 0;
     width: 100%;
-
-    &__img {
-        display: block;
-        width: 100%;
-    }
 }
