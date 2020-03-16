@@ -1043,6 +1043,9 @@ hr.other {
         }
 
         &:focus {
+            outline: none;
+            background: $theme-btn-text-color !important;
+            color: $theme-header-btn-color;
             &:not(:disabled) {
                 box-shadow: none;
             }
@@ -1093,6 +1096,11 @@ hr.other {
             width: 100%;
         }
     }
+}
+
+.email-subscribe-alert {
+    color: #FFF;
+    margin-left: 25px;
 }
 
 .wrapper-footer {
