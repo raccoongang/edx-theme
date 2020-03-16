@@ -397,7 +397,7 @@ from pipeline_mako import render_require_js_path_overrides
 </html>
 
 <%def name="hinted_tpa_login_query()">${
-  u"?next={0}?tpa_hint={1}".format(urlquote_plus(login_redirect_url), urlquote_plus(tpa_hint)) if login_redirect_url else "?next=/dashboard?tpa_hint={0}".format(urlquote_plus(tpa_hint))
+  u"?next={0}?tpa_hint={1}".format(urlquote_plus(login_redirect_url), tpa_hint) if login_redirect_url else "?next={0}?tpa_hint={1}".format(reverse('dashboard'), tpa_hint)
 }</%def>
 
 <%def name="regular_login_query()">${
