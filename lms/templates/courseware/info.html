@@ -84,10 +84,6 @@ from courseware.courses import get_course_about_section
                 </a>
               </div>
             % endif
-
-            <!--<h3 class="hd hd-3">${_("Course Updates and News")}</h3>-->
-            <!--${HTML(get_course_info_section(request, masquerade_user, course, 'updates'))}-->
-
           </section>
           <div class="week_holder">
             <div class="week-structure-container">
@@ -264,12 +260,6 @@ from courseware.courses import get_course_about_section
               </ul>
             </div>
           </div>
-        </div>
-        <div class="page-header-main">
-            <!--<h2 class="page-header-main__title">Добро пожаловать на курс!</h2>-->
-            <!-- <div class="page-header-main__subtitle">
-                ${HTML(get_course_info_section(request, masquerade_user, course, 'updates'))}
-            </div> -->
         </div>
         % if get_course_about_section(request, course, "overview_teacher"):
           ${get_course_about_section(request, course, "overview_teacher") | n}

@@ -45,7 +45,7 @@ $(document).ready(function () {
     });
     // show/hide course program on the info page
     $('.js-course-program').on('click', function() {
-        $('#main > .container').toggleClass('panel-is-hide');
+        $('.course-wrapper').toggleClass('panel-is-hide');
     });
 
     // referral btn on the info page

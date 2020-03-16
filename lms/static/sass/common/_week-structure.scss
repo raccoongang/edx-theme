@@ -25,9 +25,21 @@
     }
     
     &__title {
-        font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+        font: 400 16px/24px 'Artegra Sans', Arial, sans-serif !important;
         color: $theme-header-link-color;
-        margin-left: 30px;
+        display: inline-flex;
+        align-items: center;
+
+        .svg-icon {
+            flex: none;
+            margin-right: 10px;
+            width: 18px;
+            fill: $theme-header-link-color;
+
+            &_next {
+                display: none;
+            }
+        }
     }
 }
 
@@ -43,7 +55,7 @@
 }
 
 .week-structure__name {
-    font: 600 16px/24px 'Artegra Sans', sans-serif !important;
+    font: 600 16px/24px 'Artegra Sans', Arial, sans-serif !important;
     color: $color6;
     position: relative;
     cursor: pointer;
@@ -152,11 +164,11 @@
         left: 35px;
         top: 3px;
         color: #000000;
-        font: 600 12px/18px 'Artegra Sans', sans-serif !important;
+        font: 600 12px/18px 'Artegra Sans', Arial, sans-serif !important;
     }
 
     a {
-        font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+        font: 400 16px/24px 'Artegra Sans', Arial, sans-serif !important;
         color: $color6;
 
         &:hover {
