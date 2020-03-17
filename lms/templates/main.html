@@ -106,17 +106,19 @@ from pipeline_mako import render_require_js_path_overrides
 
   <%static:webpack entry="commons"/>
 
-  <!--  CDN for slick slider-->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-  <!-- Include jQuery Popup Overlay -->
-  <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+  
 
   % if uses_bootstrap:
     ## xss-lint: disable=mako-invalid-js-filter
     <script type="text/javascript" src="${static.url('common/js/vendor/bootstrap.bundle.js')}"></script>
   % endif
+
+    <!--  CDN for slick slider-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Include jQuery Popup Overlay -->
+    <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
 
   <script>
     window.baseUrl = "${settings.STATIC_URL | n, js_escaped_string}";
