@@ -396,8 +396,16 @@ from pipeline_mako import render_require_js_path_overrides
 </body>
 </html>
 
-<%def name="login_query()">${
+<%def name="hinted_tpa_login_query()">${
+  u"?next={0}?tpa_hint={1}".format(urlquote_plus(login_redirect_url), tpa_hint) if login_redirect_url else "?next={0}?tpa_hint={1}".format(reverse('dashboard'), tpa_hint)
+}</%def>
+
+<%def name="regular_login_query()">${
   u"?next={0}".format(urlquote_plus(login_redirect_url)) if login_redirect_url else ""
+}</%def>
+
+<%def name="login_query()">${
+  hinted_tpa_login_query() if tpa_hint else regular_login_query()
 }</%def>
 
 <!-- Performance beacon for onload times -->

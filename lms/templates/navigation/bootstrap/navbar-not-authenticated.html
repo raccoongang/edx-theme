@@ -32,15 +32,6 @@ from django.utils.translation import ugettext as _
         <a class="nav-link mt-2" href="/courses">${_('Explore courses')}</a>
       </li>
     %endif
-    % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
-      <li class="nav-item">
-        <a class="nav-link mt-2 btn-register" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
-      </li>
-    % elif static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION')):
-      <li class="nav-item">
-        <a class="nav-link mt-2" href="/register${login_query()}">${_("Register")}</a>
-      </li>
-    % endif
   % endif
   </ul>
   <ul class="navbar-nav">
