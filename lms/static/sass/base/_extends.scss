@@ -1,0 +1,40 @@
+%checkbox {
+    label {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        input[type="checkbox"] {
+            display: none;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        input[type="checkbox"]+.label-text {
+            display: flex;
+            font: 400 12px/24px 'Artegra Sans', Arial, !important;
+            color: $color6;
+            padding-left: 40px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                border: 1px solid #B2DFDB;
+                box-shadow: inset 0px 4px 10px rgba(60, 182, 181, 0.15);
+                border-radius: 4px;
+                transition: all 200ms ease;
+                box-sizing: border-box;
+            }
+        }
+        
+        input[type="checkbox"]:checked+.label-text:before {
+            background-color: $theme-header-btn-color;
+            border: 1px solid $theme-header-btn-color;
+        }
+    }
+}
