@@ -31,12 +31,13 @@
           <span>Подпишитесь на наши новости</span>
         </div>
         <div class="footer-top__subscribe">
-          <form>
+          <form id="footer-subscribe-form" method='post'>
             <div class="footer-subscribe-form">
-              <input class="footer-subscribe-form__input" type="text" placeholder="email">
+              <input class="footer-subscribe-form__input" type="text" placeholder="email" name="email">
               <button class="footer-subscribe-form__btn">Подписаться</button>
             </div>
           </form>
+          <span class="email-subscribe-alert hidden"></span>
         </div>
       </div>
       <div class="colophon footer-content">
@@ -160,3 +161,18 @@
 % if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
   <%include file="widgets/cookie-consent.html" />
 % endif
+  <script type="text/javascript">
+    $(".footer-subscribe-form__btn").on('click', function(event){
+      event.preventDefault();
+      $.ajax({
+          url: "${reverse('subscribe_platform_updates')}",
+          type: "POST",
+          data: $('#footer-subscribe-form').serializeArray(),
+          success: function(msg) {
+            var message = $('.email-subscribe-alert')
+            message.text(msg)
+            message.removeClass('hidden')
+          }
+        })
+    })
+  </script>
