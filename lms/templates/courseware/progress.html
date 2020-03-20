@@ -43,7 +43,7 @@
   <!--theme creation-->
   <div class="progress__main-wrapper">
     %if courseware_summary:
-      <div class="progress__score-wrapper">
+      <div class="progress__container">
         <%def name="pointending()">
           %if points_difference%10 == 1:
             балл
@@ -55,80 +55,111 @@
             баллов
           %endif
         </%def>
-        <div class="progress__score-holder">
-          <p class="progress__main-progress">Твой прогресс по курсу: <strong>${persentage_current} / 100</strong></p>
-          <div class="progress__score-subholder">
-            %if assessment_current:
-              <p class="progress__score">Оценка: <strong>${assessment_current} из ${assessment_maximum}</strong></p>
-            %if assessment_current != assessment_maximum:
-              <p class="progress__score-remaining">(необходимо набрать еще ${points_difference} баллов, чтобы
-                получить ${assessment_next}
-                из ${assessment_maximum})</p>
-            %endif
-            %else:
-              <p class="progress__score">Оценка: <strong>O из ${assessment_maximum}</strong></p>
-              <p class="progress__score-remaining">(необходимо набрать еще ${points_difference} ${pointending()} чтобы
-                получить ${assessment_minimum}
-                из ${assessment_maximum})</p>
-            %endif
+        <div class="info-wrapper">
+          <div class="week_holder">
+            <div class="week-structure-container">
+              % if blocks.get('children'):
+                % for section in blocks.get('children'):
+                <section class="week-structure">
+                    <div class="week-structure__name">
+                      <span class="week-structure__ico"></span>
+                      <strong>${ section['display_name'] }</strong>
+                    </div>
+                    <div class="week-structure__box">
+                        <ul class="week-structure__list">
+                          % for subsection in section.get('children', []):
+                            <%
+                            is_checked = ''
+                            if subsection['last_accessed']:
+                              is_checked = 'is-checked'
+                            %>
+                            <li class="week-structure__list-item">
+                                <div class="week-structure__helper ${is_checked}"></div>
+                                <a
+                                class="outline-item focusable"
+                                href="${ subsection['lms_web_url'] }"
+                                id="${ subsection['id'] }"
+                              >
+                              ${ subsection['display_name'] }</a>
+                            </li>
+                          % endfor
+                        </ul>
+                    </div>
+                </section>
+                % endfor
+              % endif
+              </div>
           </div>
         </div>
-      </div>
-      <div class="progress__static-text-holder">
-        <div class="progress__gradient-line"></div>
-        <div class="progress__static-text">Ниже представлена детальная информация по баллам за задания, в % :</div>
-      </div>
-      <section class="progress__holder">
-        %for counter, chapter in enumerate(courseware_summary, start=1):
-          %if not chapter['display_name'] == "hidden":
-          <%
-            a = 'images/progress{}.svg'.format(counter)
-          %>
-            <div class="progress__item-wrapper">
-              <section class="progress__item">
-                <div class="progress__image-holder">
-                  <img class="progress__image" src="${static.url(a)}" alt="">
-                </div>
-                <h3 class="progress__title">${ chapter['display_name']}</h3><!--Section Name-->
-                <div class="progress__inner-holder">
-                  <div class="progress__ol-block">
-                    %for section in chapter['sections']:
-                    <%
-                      earned = section.all_total.earned
-                      total = section.all_total.possible
-                      percentageString = "{0:.0%}".format(float(earned)/total) if total > 0 else "0%"
-                    %>
-                    <div class="progress__wrapper">
-                    % if not loop.last:
-                      <div class="progress__subtitle">
-                    % else:
-                      <div class="progress__total-result">
-                    %endif
-                      <h4>${section.display_name}</h4><!--Subsection Name-->
-                    </div>
-                      <div class="progress__in-wrapper">
-                        %if len(section.problem_scores.values()) > 0:
-                          <div class="progress__bar-holder">
-                            <p class="progress__bar" style="width: ${percentageString}"></p>
-                            <p class="progress__number">${percentageString[0:-1]}%</p>
-                          </div><!--Subsection Percent-->
-                        %else:
-                          <div class="progress__bar-holder"><p class="progress__bar" style="width: 0%"></p></div>
-                          <!--Section Percent-->
-                        %endif
-                      </div>
-                    </div>
-                    %endfor
-                  </div>
-                  </div>
-              </section>
+        <div class="progress-content">
+          <div class="progress-status">
+            <div class="progress-status__assessment">
+              Твой прогресс по курсу: 
+              <span>${persentage_current} / 100</span>
             </div>
-          %endif
-        %endfor
-      </section>
+            <div class="progress-status__rating">
+              %if assessment_current:
+                <p class="progress-status__score">Оценка: <span>${assessment_current} из ${assessment_maximum}</span></p>
+              %if assessment_current != assessment_maximum:
+                <p class="progress-status__score-remaining">(необходимо набрать еще ${points_difference} баллов, чтобы
+                  получить ${assessment_next}
+                  из ${assessment_maximum})</p>
+              %endif
+              %else:
+                <p class="progress-status__score">Оценка: <span>O из ${assessment_maximum}</span></p>
+                <p class="progress-status__score-remaining">(необходимо набрать еще ${points_difference} ${pointending()} чтобы
+                  получить ${assessment_minimum}
+                  из ${assessment_maximum})</p>
+              %endif
+            </div>
+          </div>
+          <section class="progress-sections">
+            <div class="progress-icon">%</div>
+            %for counter, chapter in enumerate(courseware_summary, start=1):
+              %if not chapter['display_name'] == "hidden":
+                <div class="progress-sections__item-wrapper">
+                  <section class="progress-sections__item">
+                    <h3 class="progress-sections__title">${ chapter['display_name']}</h3><!--Section Name-->
+                    <div class="progress-sections__inner-holder">
+                      <div class="progress-sections__ol-block">
+                        %for section in chapter['sections']:
+                        <%
+                          earned = section.all_total.earned
+                          total = section.all_total.possible
+                          percentageString = "{0:.0%}".format(float(earned)/total) if total > 0 else "0%"
+                        %>
+                        <div class="progress-sections__wrapper">
+                        % if not loop.last:
+                          <div class="progress-sections__subtitle">
+                        % else:
+                          <div class="progress-sections__total-result">
+                        %endif
+                          <h4>${section.display_name}</h4><!--Subsection Name-->
+                        </div>
+                          <div class="progress-sections__in-wrapper">
+                            %if len(section.problem_scores.values()) > 0:
+                              <div class="progress-sections__bar-holder">
+                                <p class="progress-sections__bar" style="width: ${percentageString}"></p>
+                                <p class="progress-sections__number">${percentageString[0:-1]}%</p>
+                              </div><!--Subsection Percent-->
+                            %else:
+                              <div class="progress-sections__bar-holder"><p class="progress-sections__bar" style="width: 0%"></p></div>
+                              <!--Section Percent-->
+                            %endif
+                          </div>
+                        </div>
+                        %endfor
+                      </div>
+                      </div>
+                  </section>
+                </div>
+              %endif
+            %endfor
+          </section>
+        </div>
+      </div>
     %endif
   </div>
-  <iframe src="${reverse('learner_performance_progress', kwargs={'course_id': course.id, 'student_id':student.id})}" width="1140px" height="500"></iframe>
   <!--end-->
 </main>
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
