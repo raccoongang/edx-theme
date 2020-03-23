@@ -166,6 +166,10 @@ body {
 	position: relative;
 	margin: 0 0 48px;
 
+	@media screen and (max-width: 759px) {
+		margin: 0 0 32px;
+	}
+
 	img {
 		display: block;
 		width: 100%;
@@ -178,5 +182,9 @@ body {
 }
 
 .footer-controls-buttons-holder {
-	margin: 15px 0 0;
+	margin: 15px 0 15px;
+}
+
+.content-wrapper .page-content-container {
+	overflow: auto;
 }

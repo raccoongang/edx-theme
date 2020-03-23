@@ -4,6 +4,10 @@
     margin: 22px auto;
     position: relative;
 
+    @media screen and (max-width: 1199px){
+        padding: 0 15px;
+    }
+
     &__header {
         display: flex;
         align-items: center;
@@ -46,7 +50,8 @@
                 align-items: center;
                 justify-content: space-between;
                 flex-direction: column;
-                width: 90px;
+                min-width: 90px;
+                max-width: 90px;
                 min-height: 185px;
                 text-align: center;
                 box-sizing: border-box;
@@ -115,7 +120,7 @@
         position: relative;
         color: #222524;
         text-align: center;
-        max-width: 332px;
+        width: 332px;
         font-size: 18px;
 
         p {
@@ -268,7 +273,7 @@
     pointer-events: none;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 1130px;
 
     &__img {
         display: block;
