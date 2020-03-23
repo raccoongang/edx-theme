@@ -76,9 +76,13 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   <div class="secondary secondary_authenticated">
     <div class="user-dropdown-wrapper">
       <%include file="user_dropdown.html"/>
-    </div>
-    <div class="mobile-nav-item nav-item">
-      <a class="help-link" href="${help_link}" target="_blank"><svg><use xlink:href="#ico-help"></use></svg>${_("Help")}</a>
+
+      <a href="https://helpcenter.fastlane.live/"
+         target="_blank"
+         title="Help Center"
+         class="doc-link">
+        <img src="/static/${settings.FEATURES.get('FASTLANE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/help-icon.svg" alt="Help Center" title="Help Center">
+      </a>
     </div>
   </div>
 </div>

@@ -423,7 +423,16 @@ button.prerequisite-button .fa {
 
 .courses-container {
 	.courses .course {
-		border-bottom-color: $courses-border-color;
+		background: $course-bg;
+		box-shadow: none;
+		border: none;
+		border-bottom: 3px solid transparent;
+
+		&:hover {
+			background: $course-bg;
+			border-color: $courses-border-color;
+			box-shadow: none;
+		}
 	}
 
 	.courses-more {

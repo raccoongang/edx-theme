@@ -4,6 +4,7 @@
 	background: none !important;
 	line-height: 45px !important;
 	box-sizing: border-box;
+	font-family: "Gilroy-Regular", Arial, Helvetica, sans-serif !important;
 }
 
 .highlighted-courses {
@@ -36,14 +37,19 @@
 		transition: all 0.25s ease !important;
 	}
 
+	.course-info .course-organization,
+	.course-info .course-code {
+		font-size: 16px;
+		color: #2e2e2e;
+	}
+
 	.course-info .course-title {
 		color: $course-link-color;
-		font-size: 14px;
+		font-size: 18px;
 		margin: 5px 0;
 		height: 96px;
 		overflow: hidden;
-		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 	}
 }
 
