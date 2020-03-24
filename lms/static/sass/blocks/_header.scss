@@ -24,22 +24,14 @@
 			}
 			a {
 				margin: 0;
-				height: 44px;
 				.logo {
 					display: block;
 					margin: 0 !important;
-					height: 100%;
+					height: auto;
 				}
 			}
 			.course-header {
 				margin-top: 0;
-			}
-			@media screen and (max-width: 992px) {
-				a{
-					height: 40px;
-					position: relative;
-					bottom: -4px;
-				}
 			}
 		}
 		.nav-links {
@@ -195,16 +187,12 @@ section.home {
 
 		.outer-wrapper {
 			width: 100%;
-			padding: 15px 30px;
+			padding: 15px;
 
 			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 				display: table;
 				min-height: 450px;
 				box-sizing: border-box;
-			}
-
-			@media screen and (max-width: 767px){
-				padding: 15px;
 			}
 
 			.title {
