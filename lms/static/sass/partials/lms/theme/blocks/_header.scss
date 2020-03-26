@@ -66,6 +66,15 @@ header.global-header {
                 &.register-btn:hover {
                     color: $white;
                 }
+
+                &.sign-in-btn,
+                &.shopping-cart {
+                    border-color: $base-color;
+
+                    &:hover {
+                        color: $base-color;
+                    }
+                }
             }
 
             & > div {
