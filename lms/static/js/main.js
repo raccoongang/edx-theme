@@ -180,5 +180,35 @@ $(document).ready(function () {
     };
     
     })(window.jQuery);
+
+    // more/less on the news page
+    $(".course-news__item").each(function(i, element) {
+        var self = $(this);
+        var $content = self.find($(".course-news__text"));
+        var $link = self.find($(".course-news__actions button"));
+        var max_length = 100;
+        var short_content = $content.html().substring(0, max_length);
+        var long_content = $content.html().substring(0);
+        var _openClass = 'is-open';
+
+        if ( $content.text().length > max_length ) {
+            self.removeClass('is-visible');
+            $content.html(short_content);
+        } else {
+            self.addClass('is-visible');
+        }
+
+        $link.on('click', function() {
+            self.toggleClass(_openClass);
+            $(".course-news__text").html(short_content);
+
+            if ( self.hasClass(_openClass) ) {
+                $(".course-news__item").removeClass(_openClass);
+                self.addClass(_openClass);
+                $content.html(long_content);
+            }
+        });
+    });
+
 });
 
