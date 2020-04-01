@@ -1,34 +1,5 @@
-*:not(.fa){
-    font-family: Verdana,Geneva,sans-serif,sans-serif !important;
-}
-.window-wrap {
-    overflow: hidden;
-}
-
-.wrapper-footer {
-    box-shadow: none;
-    border-top: none;
-    padding: 0;
-    background: #565656;
-}
-
-.wrapper-footer footer#footer-openedx {
-    box-sizing: border-box;
-    max-width: 1230px;
-    padding: 20px 15px;
-    overflow: hidden;
-    position: relative;
-
-    a{
-         &:focus, &:active {
-            border-bottom: 0;
-            color: #FFF;
-         }
-    }
-
-    @media (min-width: 1200px) {
-        padding: 40px 15px 20px;
-    }
+*:not(.fa) {
+    font-family: Verdana, Geneva, sans-serif !important;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
@@ -52,10 +23,6 @@
     }
 }
 
-.wrapper-footer footer#footer-openedx .colophon .nav-colophon {
-    margin-bottom: 16px;
-}
-
 .wrapper-footer footer#footer-openedx .footer-about-openedx a {
     color: #ff6f00;
     font-size: 24px;
@@ -72,13 +39,10 @@ body .wrapper-footer footer#footer-openedx .footer-about-openedx {
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li.desktop {
     display: none;
+
     @media (min-width: $tablet-size) {
         display: block;
     }
-}
-
-.wrapper-footer footer#footer-openedx .colophon {
-    width: 100%;
 }
 
 .wrapper-footer footer#footer-openedx ol {
@@ -94,13 +58,16 @@ hr {
     margin-bottom: 90px;
     border-top: none;
     display: none;
+
     @media (min-width: $desktop-size) {
         display: block;
     }
 }
+
 hr.other {
     background: $gradient3;
 }
+
 .login-providers + .section-title.lines {
     display: none;
 }
@@ -119,9 +86,9 @@ hr.other {
 
     &__title {
         color: $theme-btn-text-color;
-        font: 600 30px/36px 'Artegra Sans', Arial, sans-serif !important;
+        font: 600 30px/36px "Artegra Sans", Arial, sans-serif !important;
         margin: 0 0 20px 55px;
-        
+
         @media (max-width: $tablet-size) {
             margin-left: 0;
             text-align: center;
@@ -156,6 +123,15 @@ hr.other {
     .form-type {
         position: relative;
 
+        @media (max-width: $tablet-size) {
+            .form-controls {
+                border-bottom: 6px solid $theme-header-btn-color;
+                width: auto;
+                margin: 0 0 30px;
+                padding: 0 0 16px;
+            }
+        }
+
         &:before,
         &:after {
             z-index: -1;
@@ -172,7 +148,7 @@ hr.other {
             border-radius: 46px;
         }
 
-        &:after{
+        &:after {
             transform: rotate(3deg);
             right: 16px;
             left: auto;
@@ -180,7 +156,7 @@ hr.other {
     }
 
     .message-copy {
-        font: 400 12px/16px 'Artegra Sans', Arial, sans-serif !important;
+        font: 400 12px/16px "Artegra Sans", Arial, sans-serif !important;
     }
 
     #register-anchor,
@@ -190,9 +166,10 @@ hr.other {
 
         .form-wrapper {
             border-radius: 24px;
-            box-shadow: 0 2px 7px 0px rgba(178, 223, 219, .4);
+            box-shadow: 0 2px 7px 0 rgba(178, 223, 219, .4);
             padding: 56px 56px 130px 56px;
             box-sizing: border-box;
+
             &.hidden {
                 padding: 0;
                 box-shadow: none;
@@ -228,7 +205,7 @@ hr.other {
 
                     .label-text {
                         color: #757575;
-                        font: 400 16px/24px 'Open Sans', Arial, sans-serif !important;
+                        font: 400 16px/24px "Open Sans", Arial, sans-serif !important;
                         display: block;
                         margin: 0 0 5px 30px;
                     }
@@ -243,9 +220,10 @@ hr.other {
                         cursor: pointer;
                         display: flex;
                         align-items: center;
+
                         .label-text {
                             display: inline;
-                            font: 400 16px/26px 'Artegra Sans', Arial, sans-serif !important;
+                            font: 400 16px/26px "Artegra Sans", Arial, sans-serif !important;
                             color: $color6;
                             margin: 0 0 0 14px;
                         }
@@ -256,13 +234,13 @@ hr.other {
                         opacity: 0;
 
                         + label:before {
-                            content: '';
+                            content: "";
                             top: 0;
                             left: 0;
                             width: 24px;
                             height: 24px;
-                            border: 1px solid #B2DFDB;
-                            box-shadow: inset 0px 4px 10px rgba(60, 182, 181, 0.15);
+                            border: 1px solid $color10;
+                            box-shadow: inset 0 4px 10px rgba(60, 182, 181, .15);
                             border-radius: 4px;
                             flex: none;
                             transition: all 200ms ease;
@@ -276,25 +254,25 @@ hr.other {
                 }
 
                 input {
-                    border: 1px solid #B2DFDB;
-                    box-shadow: inset 0px 4px 10px rgba(60, 182, 181, .15);
+                    border: 1px solid $color10;
+                    box-shadow: inset 0 4px 10px rgba(60, 182, 181, .15);
                     border-radius: 46px;
                     background: $theme-btn-text-color;
                     color: $theme-header-link-color;
                     padding: 11px 15px 11px 30px;
                     box-sizing: border-box;
                     height: auto;
-                    font: 400 16px 'Open Sans', Arial, sans-serif !important;
+                    font: 400 16px "Open Sans", Arial, sans-serif !important;
                     transition: all 200ms ease;
 
                     &:focus {
                         outline: none;
-                        box-shadow: 0px 2px 7px rgba(60, 182, 181, .5);
+                        box-shadow: 0 2px 7px rgba(60, 182, 181, .5);
                     }
 
                     &:-webkit-autofill::first-line {
                         color: $theme-header-link-color;
-                        font: 400 16px 'Open Sans', Arial, sans-serif !important;
+                        font: 400 16px "Open Sans", Arial, sans-serif !important;
                     }
 
                     &::-webkit-input-placeholder {
@@ -335,10 +313,6 @@ hr.other {
                 margin-top: 40px;
             }
 
-            .register-form {
-                margin-top: 40px;
-            }
-
             .form-wrapper {
                 padding: 20px 20px 95px;
 
@@ -371,7 +345,7 @@ hr.other {
         top: -85px;
         left: 55px;
         display: flex;
-        
+
         .section-title {
             &.lines {
                 display: none;
@@ -398,8 +372,8 @@ hr.other {
 
             &:focus {
                 outline: none;
-                background-color: transparent;
                 background: transparent;
+                background-color: transparent;
             }
 
             span {
@@ -423,33 +397,21 @@ hr.other {
             }
 
             .fa-facebook {
-                background-image: url('../images/facebook-round.svg');
+                background-image: url("../images/facebook-round.svg");
 
                 &:hover,
                 &:focus {
-                    background-image: url('../images/facebook-round-green.svg');
+                    background-image: url("../images/facebook-round-green.svg");
                 }
             }
 
             .fa-google-plus {
-                background-image: url('../images/gmail-round.svg');
+                background-image: url("../images/gmail-round.svg");
 
                 &:hover,
                 &:focus {
-                    background-image: url('../images/gmail-round-green.svg');
+                    background-image: url("../images/gmail-round-green.svg");
                 }
-            }
-        }
-    }
-
-    .form-type {
-
-        @media (max-width: $tablet-size) {
-            .form-controls {
-                border-bottom: 6px solid $theme-header-btn-color;
-                width: auto;
-                margin: 0 0 30px;
-                padding: 0 0 16px;
             }
         }
     }
@@ -484,7 +446,6 @@ hr.other {
                     }
                 }
             }
-
         }
     }
 
@@ -512,8 +473,9 @@ hr.other {
 
 .login-register-content .login-register {
     width: 100%;
+
     .form-wrapper {
-        background: #fff;
+        background: $theme-btn-text-color;
         z-index: 1;
         position: relative;
         border-radius: 0;
@@ -522,43 +484,51 @@ hr.other {
     h2 {
         margin: 0 0 20px;
         color: $color7;
-        font: 700 30px/36px 'Artegra Sans', Arial, sans-serif !important;
+        font: 700 30px/36px "Artegra Sans", Arial, sans-serif !important;
         height: 100%;
         flex: none;
     }
+
     .tip.tip-input {
         font-size: 12px;
     }
+
     .form-field input {
-        background: #F5F5F5;
+        background: #f5f5f5;
         height: 40px;
         width: 100%;
         border-radius: 4px;
         border: 0;
         padding-left: 30px;
     }
-    .form-field input[type=checkbox] {
+
+    .form-field input[type="checkbox"] {
         height: auto;
         margin-bottom: -3px;
     }
+
     .input-block.checkbox {
         width: auto;
     }
+
     .label-text {
         font-size: 14px;
     }
+
     .toggle-form {
         font-size: 14px;
     }
+
     .forgot-password.field-link {
         position: absolute;
         bottom: -100px;
         transform: translate(0, 0);
         left: auto;
     }
+
     .action.action-primary.action-update {
         background: $theme-header-btn-color;
-        font: 600 16px/24px 'Artegra Sans', Arial, sans-serif;
+        font: 600 16px/24px "Artegra Sans", Arial, sans-serif;
         border-radius: 46px;
         color: #fff;
         letter-spacing: 0;
@@ -573,49 +543,13 @@ hr.other {
             color: #fff;
         }
     }
+
     .form-toggle {
         color: $theme-header-btn-color;
         text-transform: uppercase;
-        font: 600 18px/24px 'Artegra Sans', Arial, sans-serif !important;
+        font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
         text-decoration: none;
         flex: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    .form-field {
-        position: relative;
-        &:before {
-            font-family: FontAwesome;
-            position: absolute;
-            top: 47px;
-            left: 8px;
-            transform: translate(0, -63%);
-            color: #B3B3B3;
-        }
-        &.email-email:before {
-            content: '\f0e0';
-        }
-        &.password-password:before {
-            content: '\f023';
-        }
-        &.checkbox-remember {
-            .label-text {
-                display: inline;
-            }
-        }
-        &.text-name:before,
-        &.text-username:before {
-            content: '\f007';
-        }
-    }
-    .form-field label.error ~ input {
-        border: 1px solid #D0021B;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    }
-    .toggle-form {
         position: absolute;
         bottom: 50px;
         left: 0;
@@ -624,20 +558,61 @@ hr.other {
         display: none;
         max-width: 370px;
         margin: 0 auto;
-        display: flex;
         justify-content: space-between;
         right: 0;
 
         .text {
-            font: 400 16px 'Artegra Sans', Arial, sans-serif !important;
+            font: 400 16px "Artegra Sans", Arial, sans-serif !important;
             text-align: left;
             margin-right: 15px;
         }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
+
+    .form-field {
+        position: relative;
+
+        &:before {
+            font-family: FontAwesome, sans-serif;
+            position: absolute;
+            top: 47px;
+            left: 8px;
+            transform: translate(0, -63%);
+            color: #b3b3b3;
+        }
+
+        &.email-email:before {
+            content: "\f0e0";
+        }
+
+        &.password-password:before {
+            content: "\f023";
+        }
+
+        &.checkbox-remember {
+            .label-text {
+                display: inline;
+            }
+        }
+
+        &.text-name:before,
+        &.text-username:before {
+            content: "\f007";
+        }
+    }
+
+    .form-field label.error ~ input {
+        border: 1px solid #d0021b;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+    }
+
     .form-field .field-link {
         color: $theme-header-btn-color;
         text-transform: uppercase;
-        font: 600 18px/24px 'Artegra Sans', Arial, sans-serif !important;
+        font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
 
         &:hover {
             outline: none;
@@ -648,12 +623,15 @@ hr.other {
             text-decoration: underline;
         }
     }
+
     .form-field.checkbox-honor_code {
         flex-direction: row-reverse;
         align-items: center;
     }
+
     .register-oa2-vk-oauth2 {
         width: 100%;
+
         @media (min-width: $tablet-size) {
             transform: translate(-105%);
             width: 130px;
@@ -667,11 +645,13 @@ hr.other {
     right: 20px;
     bottom: 24px;
     top: auto;
+
     @media (min-width: $tablet-size) {
         left: 0;
         right: 0;
         bottom: 32px;
     }
+
     .button {
         margin: 0;
     }
@@ -681,8 +661,56 @@ hr.other {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     @media (min-width: $desktop-size) {
         justify-content: flex-start;
+    }
+
+    .courses-listing-item {
+        .course-date {
+            margin-left: 35px;
+
+            @media (max-width: $tablet-size) {
+                margin-left: 0;
+                padding: 0 !important;
+            }
+
+            &__text {
+                display: flex;
+                align-items: center;
+                margin-bottom: 22px;
+
+                @media (max-width: $tablet-size) {
+                    margin-bottom: 12px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .svg-icon {
+                    flex: none;
+                    margin-right: 27px;
+                    width: 24px;
+                    height: 24px;
+
+                    @media (max-width: $tablet-size) {
+                        margin-right: 12px;
+                    }
+                }
+
+                span {
+                    font: 600 16px/24px "Artegra Sans", Arial, sans-serif !important;
+                    display: block;
+                    color: $color7;
+
+                    @media (max-width: $tablet-size) {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -692,18 +720,78 @@ hr.other {
     box-sizing: border-box;
 
     .h2 {
-        font: 700 30px/36px 'Artegra Sans', Arial, sans-serif;
+        font: 700 30px/36px "Artegra Sans", Arial, sans-serif;
         color: $color7;
         margin-bottom: 45px;
 
         @media (max-width: $tablet-size) {
-            font: 22px/26px 'Artegra Sans', Arial, sans-serif;
+            font: 22px/26px "Artegra Sans", Arial, sans-serif;
             margin-bottom: 25px;
         }
     }
 
     .courses {
+        padding: 0;
+
         .course {
+            border-bottom: none;
+            border-radius: 46px;
+            margin-bottom: 0;
+            background: #fff;
+            border: 0;
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                border-radius: 46px;
+            }
+
+            &:before,
+            &:after {
+                z-index: -1;
+                position: absolute;
+                content: "";
+                bottom: 10px;
+                left: 2px;
+                width: 50%;
+                top: 80%;
+                max-width: 300px;
+                background: rgba(178, 223, 219, .9);
+                box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
+                transform: rotate(-3deg);
+                border-radius: 46px;
+            }
+
+            &:after {
+                transform: rotate(3deg);
+                right: 2px;
+                left: auto;
+            }
+
+            .course-info {
+                height: 100%;
+                background: #fff;
+                padding: 30px 100px 0;
+                display: flex;
+                flex-direction: column;
+
+                @media (max-width: $laptop-size) {
+                    padding: 30px 50px 0;
+                }
+
+                @media (max-width: $tablet-size) {
+                    padding: 30px 20px 0;
+                }
+
+                .course-code,
+                .course-organization {
+                    display: none;
+                }
+            }
+
             .course-image {
                 .cover-image {
                     height: 328px;
@@ -744,7 +832,7 @@ hr.other {
 
         .courses-more-cta {
             color: $theme-header-btn-color;
-            font: 600 16px/24px 'Artegra Sans', Arial, sans-serif !important;
+            font: 600 16px/24px "Artegra Sans", Arial, sans-serif !important;
             border-radius: 46px;
             border: 1px solid $theme-header-btn-color;
             padding: 16px 30px;
@@ -766,21 +854,18 @@ hr.other {
     text-align: center;
     margin-bottom: 30px;
 
-    .login-theme{
+    .login-theme {
         background-color: transparent;
         font-size: 16px;
         color: $theme-header-btn-color;
         border: 1px solid $theme-header-btn-color;
         text-transform: none;
-        &:hover{
+
+        &:hover {
             background-color: $theme-header-btn-color;
-            color: #FFF;
+            color: $theme-btn-text-color;
         }
     }
-}
-
-.courses-container .courses {
-    padding: 0;
 }
 
 .courses-container .highlighted-courses .courses .course .course-image .cover-image {
@@ -794,32 +879,35 @@ hr.other {
     &:before {
         height: 328px;
         background-color: rgba(178, 223, 219, .9);
+
         @media (max-width: $desktop-size) {
             height: auto;
         }
     }
-
 }
-// course partners
+
 .course-partners {
     overflow: hidden;
     width: 100%;
 }
 
-.course-partners-list{
+.course-partners-list {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
-    &__item{
+
+    &__item {
         width: 25%;
         border-bottom: 1px solid $theme-header-btn-color;
         border-right: 1px solid $theme-header-btn-color;
         box-sizing: border-box;
+
         &:nth-child(4n+4) {
             border-right: 0;
         }
+
         &:nth-last-of-type(-n+4) {
             border-bottom: 0;
         }
@@ -864,7 +952,8 @@ hr.other {
             }
         }
     }
-    &__image{
+
+    &__image {
         display: block;
         max-width: 153px;
         max-height: 101px;
@@ -935,7 +1024,7 @@ hr.other {
         position: relative;
 
         &:before {
-            content: '';
+            content: "";
             background-color: rgba(103, 58, 183, .4);
             position: absolute;
             top: 0;
@@ -963,11 +1052,12 @@ hr.other {
     }
 }
 
-.course-page-section{
+.course-page-section {
     margin-bottom: 50px;
+
     h2,
-    .h2{
-        font-family: 'Artegra Sans' !important;
+    .h2 {
+        font-family: "Artegra Sans", Arial, sans-serif !important;
         font-weight: 700;
         font-size: 30px;
         line-height: 36px;
@@ -977,7 +1067,7 @@ hr.other {
 
     @media (max-width: $tablet-size) {
         h2,
-        .h2{
+        .h2 {
             font-size: 26px !important;
             line-height: 30px !important;
         }
@@ -985,7 +1075,7 @@ hr.other {
 
     @media (max-width: $mobile-size) {
         h2,
-        .h2{
+        .h2 {
             font-size: 22px !important;
             line-height: 26px !important;
         }
@@ -1001,20 +1091,21 @@ hr.other {
         background: none;
         border-radius: 0;
         font-style: normal;
-        font-weight: normal;
-        .icon{
-            &:before{
+        font-weight: 400;
+
+        .icon {
+            &:before {
                 color: $color7;
             }
         }
     }
 }
 
-// footer redesign
-.footer-top{
+.footer-top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
+    width: 100%;
 
     @media (max-width: $mobile-size) {
         flex-direction: column;
@@ -1027,7 +1118,7 @@ hr.other {
     }
 
     &__subscribe-text {
-        font-family: 'Artegra Sans' !important;
+        font-family: "Artegra Sans", Arial, sans-serif !important;
         font-weight: 700;
         font-size: 30px;
         line-height: 36px;
@@ -1054,6 +1145,7 @@ hr.other {
             flex-grow: 1;
             margin-left: 20px;
         }
+
         @media (max-width: $mobile-size) {
             margin-left: 0;
         }
@@ -1069,12 +1161,13 @@ hr.other {
 .footer-subscribe-form {
     display: flex;
     align-items: center;
+
     input {
-        border: 1px solid #00796B;
+        border: 1px solid #00796b;
         box-sizing: border-box;
         border-radius: 46px;
         background-color: #fff;
-        font-family: 'Artegra Sans' !important;
+        font-family: "Artegra Sans", Arial, sans-serif !important;
         font-weight: 400;
         font-size: 16px;
         font-style: normal;
@@ -1083,27 +1176,30 @@ hr.other {
         min-width: 370px;
         margin-right: 40px;
         box-shadow: none;
-        box-sizing: border-box;
         outline: none;
+
         &::-webkit-input-placeholder {
             color: $theme-header-link-color;
         }
+
         &::-moz-placeholder {
             color: $theme-header-link-color;
         }
+
         &:-ms-input-placeholder {
             color: $theme-header-link-color;
         }
+
         &:-moz-placeholder {
             color: $theme-header-link-color;
         }
     }
 
-    &__btn{
+    &__btn {
         background: $theme-header-btn-color;
-        color: #FFF;
+        color: $theme-btn-text-color;
         border-radius: 46px;
-        font-family: 'Artegra Sans' !important;
+        font-family: "Artegra Sans", Arial, sans-serif !important;
         font-weight: 600;
         font-size: 16px;
         box-sizing: border-box;
@@ -1113,14 +1209,16 @@ hr.other {
         text-shadow: none;
         text-transform: none;
         box-shadow: none;
-        &:hover{
-            background: #673AB7 !important;
+
+        &:hover {
+            background: $color7 !important;
         }
 
         &:focus {
             outline: none;
             background: $theme-btn-text-color !important;
             color: $theme-header-btn-color;
+
             &:not(:disabled) {
                 box-shadow: none;
             }
@@ -1146,11 +1244,11 @@ hr.other {
     }
 
     @media (max-width: $mobile-size) {
-        input{
+        input {
             margin-right: 10px;
         }
 
-        &__btn{
+        &__btn {
             padding: 11px 9px;
             font-size: 13px;
         }
@@ -1174,71 +1272,96 @@ hr.other {
 }
 
 .email-subscribe-alert {
-    color: #FFF;
+    color: $theme-btn-text-color;
     margin-left: 25px;
 }
 
 .wrapper-footer {
-    background: #2D2443;
+    box-shadow: none;
+    border-top: none;
+    padding: 0;
+    background: #2d2443;
+
     footer#footer-openedx {
+        box-sizing: border-box;
+        max-width: 1230px;
+        padding: 20px 15px;
+        overflow: hidden;
+        position: relative;
+
+        a {
+            &:focus,
+            &:active {
+                color: $theme-btn-text-color;
+                border-bottom: 0;
+            }
+
+            &:hover {
+                border-bottom: 0;
+                color: $theme-btn-text-color;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            padding: 40px 15px 20px;
+        }
+
         .colophon {
             margin-right: 0;
             display: flex;
             justify-content: space-between;
-            .nav-colophon{
+            width: 100%;
+
+            .nav-colophon {
                 max-width: 500px;
-                ol{
+                margin-bottom: 16px;
+
+                ol {
                     display: flex;
                     flex-wrap: wrap;
                     margin: 0 -15px 15px;
                     justify-content: flex-start;
-                    li{
+
+                    li {
                         width: 50%;
                         padding: 0 15px;
                         box-sizing: border-box;
                         float: none;
                         margin-right: 0;
-                        a{
-                            font-family: 'Artegra Sans' !important;
+
+                        a {
+                            font-family: "Artegra Sans", Arial, sans-serif !important;
                             font-weight: 600;
                             font-size: 16px;
                             line-height: 24px;
                             display: inline-block;
 
-                            &:focus, &:active {
-                                color: #FFF;
+                            &:focus,
+                            &:active {
+                                color: $theme-btn-text-color;
                             }
                         }
                     }
                 }
             }
         }
-
-        a {
-            &:hover {
-                border-bottom: 0;
-                color: #FFF;
-            }
-        }
-
     }
 
     a {
-        &:focus, &:active {
+        &:focus,
+        &:active {
             border-bottom: 0;
-            color: #FFF;
+            color: $theme-btn-text-color;
         }
     }
 
     @media (max-width: $laptop-size) {
         footer#footer-openedx {
             .colophon {
-
-                .nav-colophon{
-                    ol{
-
-                        li{
-                            a{
+                .nav-colophon {
+                    ol {
+                        li {
+                            a {
                                 font-size: 15px;
                                 line-height: 22px;
                             }
@@ -1252,8 +1375,7 @@ hr.other {
     @media (max-width: $tablet-size) {
         footer#footer-openedx {
             .colophon {
-
-                .nav-colophon{
+                .nav-colophon {
                     max-width: 100%;
                 }
             }
@@ -1263,9 +1385,7 @@ hr.other {
     @media (max-width: 414px) {
         footer#footer-openedx {
             .colophon {
-
                 .nav-colophon {
-
                     ol {
                         li {
                             width: 100%;
@@ -1279,104 +1399,172 @@ hr.other {
 
 .footer-content {
     margin-bottom: 50px;
-    &__copy{
-        font-family: 'Artegra Sans' !important;
+
+    &__copy {
+        font-family: "Artegra Sans", Arial, sans-serif !important;
         font-size: 12px;
         line-height: 18px;
-        color: #FFFFFF;
+        color: $theme-btn-text-color;
         display: flex;
         flex-direction: column;
         margin: auto 15px auto 0;
-        a{
-            color: #FFFFFF !important;
+
+        a {
+            color: $theme-btn-text-color !important;
             display: block;
             border-bottom: 0;
             margin-top: 6px;
-            &:hover{
+
+            &:hover {
                 text-decoration: underline;
                 color: $theme-header-btn-color !important;
             }
-
         }
     }
 
     @media (max-width: $tablet-size) {
         margin-bottom: 30px;
         flex-direction: column;
+
         &__copy {
             margin: 0 auto 20px;
         }
     }
 }
 
-.footer-socials-list{
+.footer-socials-list {
     padding: 0;
     margin: 0 0 25px;
     list-style: none;
     display: flex;
-    li{
+
+    li {
         margin-right: 25px;
-        &:last-child{
+
+        &:last-child {
             margin-right: 0;
         }
-        .svg-icon{
+
+        .svg-icon {
             width: 24px;
             height: 24px;
-            fill: #FFFFFF;
+            fill: $theme-btn-text-color;
             transition: all 200ms ease;
-            &:hover{
+
+            &:hover {
                 fill: $theme-header-btn-color;
             }
         }
-        a{
-            &:hover{
+
+        a {
+            &:hover {
                 border-bottom: 0;
             }
         }
     }
+
     @media (max-width: $tablet-size) {
         justify-content: center;
     }
 }
 
-.footer-socials-channels{
+.header-socials {
+    max-width: 270px;
+
+    .u-field-title {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
+        color: $theme-btn-text-color;
+        text-transform: uppercase;
+    }
+}
+
+.header-socials-list {
+    padding: 0;
+    margin: 0 0 25px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .svg-icon {
+            width: 24px;
+            height: 24px;
+            fill: $theme-btn-text-color;
+            transition: all 200ms ease;
+
+            &.disabled {
+                fill: $color10;
+            }
+        }
+
+        a {
+            &:hover {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: $tablet-size) {
+        justify-content: center;
+    }
+}
+
+.footer-socials-channels {
     padding: 0;
     margin: 0;
     list-style: none;
-    li{
+
+    li {
         margin-bottom: 25px;
-        &:last-child{
+
+        &:last-child {
             margin-bottom: 0;
         }
-        a{
+
+        a {
             display: flex;
             align-items: center;
-            &:hover{
+
+            &:hover {
                 border-bottom: 0;
-                span{
+
+                span {
                     color: $theme-header-btn-color;
                 }
-                .svg-icon{
+
+                .svg-icon {
                     fill: $theme-header-btn-color;
                 }
             }
         }
-        .svg-icon{
+
+        .svg-icon {
             flex: none;
             width: 24px;
             height: 24px;
-            fill: #FFFFFF;
+            fill: $theme-btn-text-color;
             transition: all 200ms ease;
-            &:hover{
+
+            &:hover {
                 fill: $theme-header-btn-color;
             }
         }
-        span{
+
+        span {
             display: block;
-            font-family: Artegra Sans;
+            font-family: "Artegra Sans", Arial, sans-serif;
             font-size: 16px;
             line-height: 24px;
-            color: #FFFFFF;
+            color: $theme-btn-text-color;
             margin-left: 10px;
             transition: all 200ms ease;
         }
@@ -1394,7 +1582,8 @@ hr.other {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -15px;
-        li{
+
+        li {
             width: 50%;
             padding: 0 15px;
             box-sizing: border-box;
@@ -1410,7 +1599,7 @@ hr.other {
 }
 
 .courses-container .highlighted-courses .courses .course .course-info .course-date {
-    font-family: 'Artegra Sans' !important;
+    font-family: "Artegra Sans", Arial, sans-serif !important;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -1424,124 +1613,18 @@ hr.other {
     }
 }
 
-.courses-listing {
-    .courses-listing-item {
-        .course-date {
-            margin-left: 35px;
-            &__text {
-                display: flex;
-                align-items: center;
-                margin-bottom: 22px;
-
-                &:last-child{
-                    margin-bottom: 0;
-                }
-
-                .svg-icon {
-                    flex: none;
-                    margin-right: 27px;
-                    width: 24px;
-                    height: 24px;
-                }
-
-                span {
-                    font: 600 16px/24px 'Artegra Sans', Arial, sans-serif !important;
-                    display: block;
-                    color: $color7;
-                }
-            }
-        }
-    }
-
-    @media (max-width: $tablet-size) {
-        .courses-listing-item {
-            .course-date {
-                margin-left: 0;
-                padding: 0 !important;
-                &__text {
-                    margin-bottom: 12px;
-
-                    .svg-icon {
-                        margin-right: 12px;
-                    }
-
-                    span{
-                        font-size: 14px;
-                        line-height: 20px;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .highlighted-courses .courses .course a {
     padding-bottom: 24px;
     overflow: hidden;
-}
-
-.courses-container .courses .course .course-info {
     height: 100%;
     background: #fff;
-    padding: 30px 100px 0;
     display: flex;
     flex-direction: column;
-
-    @media (max-width: $laptop-size) {
-        padding: 30px 50px 0;
-    }
-
-    @media (max-width: $tablet-size) {
-        padding: 30px 20px 0;
-    }
-}
-
-.courses-container .courses .course {
-    border-bottom: none;
-    border-radius: 46px;
-    margin-bottom: 0;
-    background: #fff;
-    border: 0;
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    a{
-        border-radius: 46px;
-    }
-    &:before,
-    &:after {
-        z-index: -1;
-        position: absolute;
-        content: "";
-        bottom: 10px;
-        left: 2px;
-        width: 50%;
-        top: 80%;
-        max-width: 300px;
-        background: rgba(178, 223, 219, .9);
-        box-shadow: 0 15px 10px rgba(178, 223, 219, .9);
-        transform: rotate(-3deg);
-        border-radius: 46px;
-    }
-    &:after{
-        transform: rotate(3deg);
-        right: 2px;
-        left: auto;
-    }
-    .course-info {
-        .course-code,
-        .course-organization {
-            display: none;
-        }
-    }
 }
 
 .courses-container .courses .course .course-info .course-title {
-    color: #000;
-    font: 600 18px/24px 'Artegra Sans', Arial, sans-serif !important;
-    letter-spacing: 0.001em;
+    font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
+    letter-spacing: .001em;
     text-transform: uppercase;
     color: #212121;
     height: auto;
@@ -1553,27 +1636,12 @@ hr.other {
     }
 }
 
-.highlighted-courses .courses .course a {
-    height: 100%;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-}
-
-.highlighted-courses .courses .course {
-    padding-bottom: 76px;
-}
-
-.highlighted-courses .courses .course:hover {
-    box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.5);
-    background: #fff;
-}
-
 .course-info__list {
     margin: 0;
     padding: 0 0 0 16px;
     list-style: none;
 }
+
 .course-info__description {
     font-size: 14px;
     line-height: 23px;
@@ -1594,7 +1662,7 @@ hr.other {
     margin-bottom: 8px;
 
     &:after {
-        content: '';
+        content: "";
         width: 8px;
         height: 8px;
         position: absolute;
@@ -1606,11 +1674,11 @@ hr.other {
 }
 
 .courses-container .courses .course .course-info h2 {
-    font-family: 'Artegra Sans' !important;
+    font-family: "Artegra Sans", Arial, sans-serif !important;
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: 0.001em;
+    letter-spacing: .001em;
     text-transform: uppercase;
     color: #212121;
     margin-bottom: 15px;
@@ -1626,6 +1694,7 @@ hr.other {
 .courses-container .courses .courses-listing .courses-listing-item {
     max-height: none;
     margin: 0 24px 30px;
+
     @media (min-width: $desktop-size) {
         margin: 0 30px 50px 0;
 
@@ -1639,7 +1708,8 @@ hr.other {
     box-shadow: none;
     border: none;
     padding: 0;
-    background: #F5F5F5;
+    background: #f5f5f5;
+
     @media (min-width: $tablet-size) {
         background: $gradient3;
     }
@@ -1653,6 +1723,7 @@ hr.other {
     width: 100%;
     box-sizing: border-box;
     padding: 24px;
+
     @media (min-width: $desktop-size) {
         padding: 0 15px;
     }
@@ -1660,13 +1731,6 @@ hr.other {
     @media (max-width: $desktop-size) {
         padding: 20px 15px;
     }
-}
-
-.course-info header.course-profile .intro-inner-wrapper .intro > .heading-group {
-    border-bottom: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
 }
 
 .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1 {
@@ -1677,6 +1741,7 @@ hr.other {
     text-transform: uppercase;
     margin-bottom: 4px;
     width: 100%;
+
     @media (min-width: $tablet-size) {
         font-size: 24px;
         line-height: 30px;
@@ -1685,12 +1750,12 @@ hr.other {
 }
 
 .intro__school {
-
     line-height: 1.3;
     color: #000;
     display: block;
     font-style: italic;
     margin-bottom: 10px;
+
     @media (min-width: $tablet-size) {
         font-size: 20px;
         color: #fff;
@@ -1703,8 +1768,9 @@ hr.other {
     font-size: 18px;
     line-height: 27px;
     font-style: italic;
-    font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif;
+    font-family: "Open Sans", Verdana, Geneva, sans-serif;
     margin-bottom: 56px;
+
     @media (min-width: $tablet-size) {
         color: #fff;
     }
@@ -1719,6 +1785,7 @@ hr.other {
     margin: 0;
     list-style: none;
     display: none;
+
     @media (min-width: $tablet-size) {
         display: flex;
     }
@@ -1753,10 +1820,12 @@ hr.other {
         &:hover {
             color: #000;
         }
+
         .main-nav & {
             margin-left: 16px;
         }
     }
+
     .user-image-frame {
         width: 36px;
         height: 36px;
@@ -1769,19 +1838,21 @@ hr.other {
             height: 22px;
         }
     }
+
     .primary {
         position: relative;
         display: flex;
 
         .main-nav & {
-            border-bottom: 1px solid #F5F5F5;
+            border-bottom: 1px solid #f5f5f5;
 
             &:first-child {
                 border-bottom: none;
-                padding: 12px 0px;
+                padding: 12px 0;
             }
         }
     }
+
     .user-dropdown-menu {
         position: absolute;
         right: 0;
@@ -1801,6 +1872,7 @@ hr.other {
         &.expanded {
             display: block;
         }
+
         .main-nav & {
             position: static;
             width: 100%;
@@ -1808,6 +1880,7 @@ hr.other {
             border-radius: 0;
         }
     }
+
     .user-dropdown {
         border: none;
         background: none;
@@ -1830,36 +1903,41 @@ hr.other {
             top: -2px;
         }
     }
+
     .item {
         margin-bottom: 0;
         padding: 0;
 
         .main-nav & {
-            border-top: 1px solid #F5F5F5;
+            border-top: 1px solid #f5f5f5;
         }
     }
+
     a.user-dropdown-menuitem,
     a.dropdown-menuitem,
     .dropdown-menuitem {
         display: block;
         color: $theme-btn-white-text-color;
         padding: 16px;
-        font: 400 20px/24px 'Artegra Sans', Arial, sans-serif !important;
+        font: 400 20px/24px "Artegra Sans", Arial, sans-serif !important;
 
         &:focus,
         &:hover {
             background-color: rgba(178, 223, 219, 1);
         }
+
         .main-nav & {
             padding-left: 46px;
         }
     }
 }
+
 .course-info .details {
     float: none;
     width: 100%;
     flex-wrap: wrap;
 }
+
 .inner-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1871,26 +1949,21 @@ hr.other {
         padding: 0 30px;
         box-sizing: border-box;
     }
-
 }
+
 .course-info .course-sidebar {
     float: none;
     width: 270px;
 }
+
 .course-info .details h2 {
     margin: 0 0 50px;
 }
+
 .course-info .container {
     max-width: 1200px;
 }
-.course-info .course-sidebar .important-dates {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    max-height: 150px;
-    overflow: auto;
-}
+
 .course-info .course-sidebar .important-dates li {
     border-bottom: none;
     padding-bottom: 0;
@@ -1903,26 +1976,30 @@ hr.other {
         margin-right: 0;
     }
 
-    img{
+    img {
         margin-right: 6px;
     }
 }
+
 .course-info .course-sidebar .important-dates li .important-dates-item-title {
     color: #000;
     margin-right: 8px;
     font-size: 14px;
     line-height: 1.3;
 }
+
 .course-info .course-sidebar .important-dates li .important-dates-item-text {
     color: #000;
-    font-weight: normal;
+    font-weight: 400;
 }
+
 .course-info header.course-profile .intro-inner-wrapper .intro {
     width: 100%;
     padding: 16px;
     background: #fff;
     margin: 0 auto;
     box-sizing: border-box;
+
     @media (min-width: $tablet-size) {
         width: 40%;
         background: transparent;
@@ -1944,15 +2021,16 @@ hr.other {
     }
 
     &__name {
-        font: 700 60px/72px 'Artegra Sans', Arial, sans-sefif !important;
+        font: 700 60px/72px "Artegra Sans", Arial, sans-serif !important;
         color: $theme-btn-text-color;
         margin-bottom: 20px;
     }
 
     @media (max-width: $mobile-size) {
         padding: 15px 0;
+
         &__name {
-            font: 700 40px/50px 'Artegra Sans', Arial, sans-sefif !important;
+            font: 700 40px/50px "Artegra Sans", Arial, sans-serif !important;
             margin-bottom: 15px;
         }
     }
@@ -1973,14 +2051,14 @@ hr.other {
     }
 
     &__courses {
-        font: 400 24px/32px 'Artegra Sans', Arial, sans-sefif !important;
+        font: 400 24px/32px "Artegra Sans", Arial, sans-serif !important;
         color: $theme-btn-text-color;
         margin-bottom: 20px;
     }
 
     &__text {
-        font: 400 16px/24px 'Artegra Sans', Arial, sans-sefif !important;
-        color: #B2DFDB;
+        font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
+        color: $color10;
     }
 
     @media (max-width: $mobile-size) {
@@ -1998,24 +2076,15 @@ hr.other {
     width: 100%;
     float: none;
 }
+
 .dashboard-search-bar {
     display: none;
 }
-.dashboard .my-courses {
-    float: none;
-    width: 100%;
-    position: relative;
 
-    h2,
-    .h2 {
-        font: 700 30px/36px 'Artegra Sans', Arial, sans-serif !important;
-        color: $color7;
-        margin-bottom: 25px;
-    }
-}
 .dashboard .my-courses .course .details .course-info {
     display: none;
 }
+
 .dashboard .my-courses .listing-courses .course-item {
     margin-bottom: 48px;
     min-height: 263px;
@@ -2028,7 +2097,7 @@ hr.other {
         min-height: auto;
         margin-bottom: 30px;
         padding-bottom: 25px;
-        border-bottom: 1px solid #dddddd;
+        border-bottom: 1px solid #ddd;
 
         &:last-of-type {
             border-bottom: 0;
@@ -2036,38 +2105,34 @@ hr.other {
             margin-bottom: 0;
         }
     }
-
 }
+
 .dashboard .my-courses .listing-courses .course-item .course-container {
     border: none;
 }
+
 .dashboard .my-courses .wrapper-header-courses .header-courses,
 .dashboard .my-courses .wrapper-header-courses {
     border: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 24px;
     line-height: 40px;
     color: #062860;
     display: none;
+
     @media (min-width: $tablet-size) {
         padding-left: 20px;
     }
+
     @media (min-width: $desktop-size) {
         padding-left: 0;
     }
 }
+
 .dashboard .my-courses .wrapper-header-courses {
     margin-bottom: 50px;
 }
-.dashboard .my-courses .course .details .wrapper-course-image {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    position: relative;
-    padding: 0;
-    box-sizing: border-box;
-    float: none;
-}
+
 .details {
     display: flex;
     justify-content: space-between;
@@ -2077,6 +2142,7 @@ hr.other {
 
     &_desktop {
         display: none;
+
         @media (min-width: $desktop-size) {
             display: block;
         }
@@ -2086,22 +2152,11 @@ hr.other {
         flex-direction: column;
     }
 }
-.dashboard .my-courses .course .details .wrapper-course-details {
-    margin-left: 60px;
-    max-width: 240px;
-    float: none;
-    flex: none;
 
-    @media (max-width: 414px) {
-        width: 100%;
-    }
-}
-.dashboard .my-courses .course {
-    margin: 0;
-}
 .dashboard .my-courses .course .details:after {
     display: none;
 }
+
 .dashboard .my-courses .course .details .wrapper-course-actions {
     float: none;
     width: auto;
@@ -2118,13 +2173,16 @@ hr.other {
         padding: 0;
     }
 }
+
 .dashboard .my-courses .course .details .enter-course {
     float: none;
     margin-right: 10px;
 }
+
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more {
     float: none;
 }
+
 .dashboard .my-courses .course .details .wrapper-course-image .cover {
     border: none;
     float: none;
@@ -2137,17 +2195,39 @@ hr.other {
 
 .dashboard {
     .my-courses {
+        float: none;
+        width: 100%;
+        position: relative;
         margin-bottom: 0;
 
+        h2,
+        .h2 {
+            font: 700 30px/36px "Artegra Sans", Arial, sans-serif !important;
+            color: $color7;
+            margin-bottom: 25px;
+        }
+
         .course {
+            margin: 0;
+
             .details {
                 .wrapper-course-image {
+                    margin: 0;
+                    width: 100%;
+                    display: flex;
+                    position: relative;
+                    padding: 0;
+                    box-sizing: border-box;
+                    float: none;
+
                     @media (max-width: $tablet-size) {
                         order: -1;
                     }
+
                     @media (max-width: $mobile-size) {
                         flex-direction: column;
                     }
+
                     .dashboard-image {
                         position: relative;
                         padding-left: 106px;
@@ -2156,24 +2236,27 @@ hr.other {
                         max-width: 369px;
 
                         &:before {
-                            content: '';
+                            content: "";
                             position: absolute;
                             left: 0;
                             top: 0;
-                            background: linear-gradient(90deg, $theme-header-btn-color 0%, #B2DFDB 100%);
+                            background: linear-gradient(90deg, $theme-header-btn-color 0%, $color10 100%);
                             width: 237px;
                             height: 264px;
                         }
 
                         @media (max-width: $laptop-size) {
                             padding-left: 0;
+
                             &:before {
                                 display: none;
                             }
                         }
+
                         @media (max-width: $tablet-size) {
                             max-width: 200px;
                         }
+
                         @media (max-width: $mobile-size) {
                             margin: 0 auto 20px;
                         }
@@ -2188,41 +2271,55 @@ hr.other {
                         }
 
                         &__status {
-                            font: 600 12px/18px 'Artegra Sans', Arial, sans-serif !important;
+                            font: 600 12px/18px "Artegra Sans", Arial, sans-serif !important;
                             color: #212121;
                             margin-bottom: 1px;
                         }
 
                         &__date {
-                            font: 400 20px/24px 'Artegra Sans', Arial, sans-serif !important;
+                            font: 400 20px/24px "Artegra Sans", Arial, sans-serif !important;
                             color: $color6;
                         }
 
                         .course-description-information {
                             margin-bottom: 60px;
+
                             @media (max-width: $mobile-size) {
                                 margin-bottom: 30px;
-
                             }
                         }
 
                         .course-checkbox {
                             margin: auto 0 30px;
+
                             @media (max-width: $mobile-size) {
                                 margin: 0 auto;
                             }
+
                             @extend %checkbox;
                         }
                     }
                 }
+
                 .wrapper-course-details {
+                    margin-left: 60px;
+                    max-width: 240px;
+                    float: none;
+                    flex: none;
+
                     @media (max-width: $laptop-size) {
                         margin-left: 30px;
                     }
+
                     @media (max-width: $tablet-size) {
                         margin: 20px auto 0;
                     }
+
+                    @media (max-width: 414px) {
+                        width: 100%;
+                    }
                 }
+
                 .wrapper-messages-primary {
                     @media (max-width: $laptop-size) {
                         margin-left: 378px;
@@ -2257,20 +2354,24 @@ hr.other {
     line-height: 1.3;
     color: #ff6f00;
     margin-bottom: 8px;
+
     @media (min-width: $tablet-size) {
         display: none;
     }
 }
+
 .wrapper-course-image__mobile-school {
     padding: 0 16px;
     font-size: 14px;
     line-height: 1.3;
     color: #ff6f00;
     margin-bottom: 16px;
+
     @media (min-width: $tablet-size) {
         display: none;
     }
 }
+
 .dashboard .my-courses .course .details .wrapper-course-image .cover .course-image {
     border-radius: 50%;
     width: 263px;
@@ -2281,6 +2382,7 @@ hr.other {
         height: 200px;
     }
 }
+
 .dashboard .my-courses .listing-courses ul.wrapper-course-image__list {
     margin: 0;
     padding: 0 0 0 20px;
@@ -2290,15 +2392,18 @@ hr.other {
     height: 141px;
     overflow: hidden;
 }
+
 .wrapper-course-image__list {
     display: flex;
     flex-direction: column;
     width: 100%;
+
     @media (min-width: $tablet-size) {
         display: block;
         width: auto;
     }
 }
+
 .dashboard .my-courses .listing-courses .wrapper-course-image__text {
     color: #000;
     max-width: 545px;
@@ -2311,6 +2416,7 @@ hr.other {
     max-height: 148px;
     overflow: hidden;
     padding: 0 16px;
+
     @media (min-width: $tablet-size) {
         color: #fff;
         font-size: 20px;
@@ -2318,6 +2424,7 @@ hr.other {
         padding: 9;
     }
 }
+
 .dashboard .my-courses .listing-courses li.wrapper-course-image__list-item {
     position: relative;
     font-size: 20px;
@@ -2330,8 +2437,9 @@ hr.other {
     &:last-child {
         margin-bottom: 0;
     }
+
     &:after {
-        content: '';
+        content: "";
         width: 11px;
         height: 11px;
         border-radius: 50%;
@@ -2344,7 +2452,7 @@ hr.other {
 
 .dashboard .my-courses .course .details .course-title a,
 .dashboard .my-courses .course .details .course-title span {
-    font: 600 24px/32px 'Artegra Sans', Arial, sans-serif !important;
+    font: 600 24px/32px "Artegra Sans", Arial, sans-serif !important;
     text-overflow: ellipsis;
     overflow: hidden;
     display: block;
@@ -2358,31 +2466,38 @@ hr.other {
         color: $theme-header-link-color;
     }
 }
+
 .dashboard .my-courses .course .details .course-title {
     display: none;
+
     @media (min-width: $tablet-size) {
         display: block;
     }
 }
+
 .dashboard .my-courses .course .details .course-school {
     font-size: 20px;
     line-height: 30px;
     color: #000;
     margin-bottom: 50px;
     display: none;
+
     @media (min-width: $tablet-size) {
         display: block;
     }
 }
+
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .action-more {
     display: none;
 }
+
 body .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown {
     display: block;
     position: static;
     max-width: none;
     pointer-events: auto;
 }
+
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-dropdown-list {
     margin: 0;
     padding: 0;
@@ -2396,6 +2511,7 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
         display: none;
     }
 }
+
 .dashboard .my-courses .course .details .course-actions {
     text-align: center;
 
@@ -2403,6 +2519,7 @@ body .dashboard .my-courses .course .details .course-actions .wrapper-action-mor
         width: 100%;
     }
 }
+
 body .dashboard .my-courses .course .details .course-actions .action {
     float: none;
     border: none;
@@ -2411,16 +2528,18 @@ body .dashboard .my-courses .course .details .course-actions .action {
     border-radius: 50%;
     color: #fff;
     padding: 9px 9px 10px;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.10);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .1);
 
     &:hover {
         border: none;
     }
 }
+
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action:focus,
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action:hover {
     border: none;
 }
+
 .container,
 section.outside-app,
 .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy,
@@ -2429,6 +2548,7 @@ section.outside-app,
     max-width: 1200px;
     min-width: auto;
 }
+
 .container.dashboard {
     position: relative;
     padding: 65px 15px 40px;
@@ -2441,34 +2561,39 @@ section.outside-app,
         margin-bottom: 0;
     }
 }
+
 .view-dashboard.is-authenticated {
     .wrapper-msg.urgency-high {
-        background: none;
+        background: $gradient2;
     }
+
     .wrapper-preview-menu,
     .content-wrapper {
         position: relative;
-        z-index: 1;
+        z-index: auto;
     }
+
     .title:after {
         display: none;
     }
+
     .title {
         box-shadow: none;
         transform: translate(0);
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
+
     .dashboard-search-bar {
         display: none;
     }
+
     .dashboard .my-courses {
         width: auto;
         float: none;
     }
 }
 
-//profile settings
 body {
     .account-settings-tabpanels {
         display: flex;
@@ -2477,27 +2602,34 @@ body {
 
         .section {
             flex: 0 0 66%;
+
             &:last-child {
                 flex: 0 0 33%;
+
                 .account-settings-section-body.aboutTabSections-section-body {
-                    display: block;
+                    display: flex;
+                    flex-wrap: wrap;
                 }
             }
+
             @media screen and (max-width: 768px) {
                 flex-direction: column;
                 flex: 0 0 100% !important;
             }
         }
+
         .u-field-message {
             padding: 0 !important;
             width: 100%;
         }
+
         .u-field-value.field {
             width: 100% !important;
             margin-bottom: 10px;
             padding-left: 0;
+
             input {
-                background: #F5F5F5;
+                background: #f5f5f5;
                 height: 40px;
                 width: 100% !important;
                 border-radius: 4px;
@@ -2506,125 +2638,140 @@ body {
             }
         }
     }
+
     .account-settings-section-body.aboutTabSections-section-body {
         display: flex;
         flex-wrap: wrap;
+        margin: 0 -70px;
+
+        @media (max-width: $laptop-size) {
+            margin: 0 -35px;
+        }
+
+        @media (max-width: $tablet-size) {
+            margin: 0 -15px;
+        }
+
+        @media (max-width: $mobile-size) {
+            flex-direction: column;
+        }
+
         .u-field {
             flex: 0 0 50%;
-            padding: 0;
+            max-width: 50%;
+            padding: 0 70px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
 
-            @media screen and (min-width: $tablet-size) {
+            @media (max-width: $laptop-size) {
+                padding: 0 35px;
+            }
+
+            @media (max-width: $tablet-size) {
                 padding: 0 15px;
+            }
+
+            @media (max-width: $mobile-size) {
+                max-width: 100%;
             }
         }
     }
-    .account-settings-sections .section .account-settings-section-body .u-field {
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-            flex: 0 0 100%;
-            width: 100%;
-        }
-    }
-    .account-settings-sections .section .account-settings-section-body .u-field,
-    .account-settings-sections .section {
-        border-bottom: 0;
-        margin-bottom: 10px;
-    }
-    .account-settings-sections .section .account-settings-section-body .u-field .field .field-input,
-    .account-settings-sections .section .account-settings-section-body .u-field .field select {
-        background: #F5F5F5;
-        height: 40px;
-        width: 100% !important;
-        border-radius: 4px;
-        border: 0;
-        padding: 0 0 0 44px;
-    }
-    .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down::after {
+
+    .account-settings-sections .section .account-settings-section-body .u-field .field select ~ .icon-caret-down:after {
         border-top: 7px solid #ff6f00;
         z-index: 10;
         bottom: 16px;
     }
+
     .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link {
         background: #ff6f00;
         color: #fff;
-        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, .1);
         border-radius: 4px;
         padding: 12px 15px;
         font-size: 14px;
-        border: 0;
         white-space: normal;
         border: 1px solid transparent;
     }
-    .account-settings-sections .section .account-settings-section-body .u-field.u-field-username,
-    .account-settings-sections .section .account-settings-section-body .u-field .field .field-label,
-    .account-settings-sections .section .account-settings-header-subtitle {
+
+    .account-settings-sections .section .account-settings-section-body .u-field.u-field-username {
         display: none;
     }
+
     .user .user-dropdown-menu {
-        z-index: 2;
+        z-index: 100;
     }
+
     .u-field {
         .u-field-value {
-                padding-left: 50px;
-                position: relative;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    left: 16px;
-                    top: 50%;
-                    transform: translate(0,-50%);
-                    width: 16px;
-                    height: 16px;
-                    background-repeat: no-repeat;
-                    z-index: 12;
-                    background-size: contain;
-                }
+            padding-left: 50px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: 16px;
+                height: 16px;
+                background-repeat: no-repeat;
+                z-index: 12;
+                background-size: contain;
             }
+        }
+
         &-name {
             .u-field-value:before {
-                background-image: url('../images/ico-user.svg');
+                background-image: url("../images/ico-user.svg");
             }
         }
+
         &-email {
             .u-field-value:before {
-                background-image: url('../images/ico-mail.svg');
+                background-image: url("../images/ico-mail.svg");
             }
         }
+
         &-pref-lang,
         &-language_proficiencies {
             .u-field-value:before {
-                background-image: url('../images/ico-lang.svg');
+                background-image: url("../images/ico-lang.svg");
             }
         }
+
         &-country {
             .u-field-value:before {
-                background-image: url('../images/ico-region.svg');
+                background-image: url("../images/ico-region.svg");
             }
         }
+
         &-time_zone {
             .u-field-value:before {
-                background-image: url('../images/ico-time.svg');
+                background-image: url("../images/ico-time.svg");
             }
         }
+
         &-level_of_education {
             .u-field-value:before {
-                background-image: url('../images/ico-house.svg');
+                background-image: url("../images/ico-house.svg");
             }
         }
+
         &-gender {
             .u-field-value:before {
-                background-image: url('../images/ico-gender.svg');
+                background-image: url("../images/ico-gender.svg");
             }
         }
+
         &-year_of_birth {
             .u-field-value:before {
-                background-image: url('../images/ico-birth.svg');
+                background-image: url("../images/ico-birth.svg");
             }
         }
     }
+
     .account-settings-sections .section-header {
         margin-bottom: 30px;
         font-size: 24px;
@@ -2649,6 +2796,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
     .course__tabs-open & {
         background: #ccc;
+
         @media (min-width: $tablet-size) {
             background: transparent;
         }
@@ -2657,6 +2805,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 
 .wrapper-course-material ol.course-tabs li a {
     display: none;
+
     @media (min-width: $tablet-size) {
         display: block;
     }
@@ -2664,6 +2813,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     .course__tabs-open & {
         color: #000 !important;
         display: inline-block;
+
         @media (min-width: $tablet-size) {
             display: block;
             color: #fff !important;
@@ -2674,22 +2824,26 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 .course-material__box {
     display: none;
 }
+
 .course-material__heading {
     color: #fff;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 24px;
     line-height: 1.3;
     margin-bottom: 4px;
+
     @media (min-width: $tablet-size) {
         color: #000;
         font-size: 24px;
     }
 }
+
 .course-material__school {
     color: #fff;
     font-size: 14px;
     line-height: 1.3;
-    font-weight: normal;
+    font-weight: 400;
+
     @media (min-width: $tablet-size) {
         color: #062860;
         font-size: 20px;
@@ -2703,23 +2857,26 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     color: #000;
     margin: 0 0 16px;
 }
+
 .page-header-main__subtitle {
     font-size: 20px;
     line-height: 30px;
     color: #000;
     margin-bottom: 50px;
     padding: 0 24px;
+
     @media (min-width: $tablet-size) {
         padding: 0;
     }
 
     ol {
         li {
-            font: 400 12px/18px 'Artegra Sans', sans-serif !important;
-            color: #000000;
+            font: 400 12px/18px "Artegra Sans", sans-serif !important;
+            color: $color10;
         }
     }
 }
+
 .course-info .container .wrap-instructor-info.studio-view {
     width: 100%;
     margin-bottom: 50px;
@@ -2728,9 +2885,11 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 .find-courses {
     .courses-container {
         padding: 40px 15px 0;
+
         .courses {
             width: 100% !important;
             margin-right: 0 !important;
+
             .courses-listing {
                 .courses-listing-item {
                     max-height: none;
@@ -2751,11 +2910,12 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     .loading-spinner {
         background: transparent;
         top: 0;
+
         &:before {
             position: absolute;
             top: 11px;
             left: 0;
-            content: '';
+            content: "";
             background-color: #fff;
             width: 100%;
             height: 26px;
@@ -2770,16 +2930,16 @@ body .account-settings-sections .section .account-settings-section-body .u-field
             width: 100%;
             max-width: 570px;
             float: none;
+            $selfFont: 16px/46px "Open Sans", arial, sans-serif;
 
             .discovery-input {
-                $selfFont: 16px/46px 'Open Sans', Arial, sans-serif;
-                border: 1px solid #B2DFDB;
+                font: $selfFont;
+                border: 1px solid $color10;
                 box-sizing: border-box;
-                box-shadow: inset 0px 4px 10px rgba(60, 182, 181, 0.15);
+                box-shadow: inset 0 4px 10px rgba(60, 182, 181, .15);
                 border-radius: 46px;
                 height: 46px;
                 padding-right: 55px;
-                font: $selfFont;
                 padding-left: 35px;
 
                 &:-webkit-autofill::first-line {
@@ -2791,14 +2951,17 @@ body .account-settings-sections .section .account-settings-section-body .u-field
                     color: $theme-header-link-color;
                     font: $selfFont;
                 }
+
                 &::-moz-placeholder {
                     color: $theme-header-link-color;
                     font: $selfFont;
                 }
+
                 &:-ms-input-placeholder {
                     color: $theme-header-link-color;
                     font: $selfFont;
                 }
+
                 &:-moz-placeholder {
                     color: $theme-header-link-color;
                     font: $selfFont;
@@ -2820,13 +2983,14 @@ body .account-settings-sections .section .account-settings-section-body .u-field
                     outline: none;
                 }
 
-                .icon{
-                    background-image: url('../images/ico-search.svg');
+                .icon {
+                    background-image: url("../images/ico-search.svg");
                     background-repeat: no-repeat;
                     background-position: center;
                     width: 22px;
                     height: 18px;
                     background-size: cover;
+
                     &:before {
                         display: none;
                     }
@@ -2851,6 +3015,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         }
     }
 }
+
 .find-courses .courses .course a {
     height: 100%;
     background: #fff;
@@ -2859,14 +3024,17 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     display: flex;
     flex-direction: column;
 }
+
 .login-register .login-provider.button-oa2-vk-oauth2 {
     background: #fff;
     color: #000;
     border: 1px solid #c8c8c8;
     width: 100%;
+
     @media (min-width: $tablet-size) {
         width: 134px;
     }
+
     @media (min-width: $desktop-size) {
         transform: translateX(-140px);
         margin: 0;
@@ -2877,12 +3045,6 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     }
 }
 
-.wrapper-account-settings .wrapper-header {
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    border: none;
-}
 .wrapper-account-settings .wrapper-header .header-title {
     margin: 0;
     padding: 0;
@@ -2891,11 +3053,13 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     line-height: 30px;
     color: $color1;
     display: none;
+
     @media (min-width: $tablet-size) {
         width: 240px;
         display: block;
     }
 }
+
 .wrapper-account-settings .wrapper-header .account-nav {
     width: 100%;
     position: relative;
@@ -2904,28 +3068,31 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     justify-content: space-between;
     padding: 35px 0 24px;
     background: $gradient2;
+
     @media (min-width: $tablet-size) {
         background: transparent;
         padding: 35px 0 24px 100px;
     }
 
     &:after {
-        content: '';
+        content: "";
         position: absolute;
         left: 41px;
         top: 0;
         height: 100%;
         width: 140%;
         background: $gradient2;
-        box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: -1px 2px 7px 0 rgba(0, 0, 0, .5);
         transform: skew(20deg);
         display: none;
+
         @media (min-width: $tablet-size) {
             display: block;
         }
     }
+
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 24px;
@@ -2933,11 +3100,13 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         height: 3px;
         background: #fff;
         z-index: 1;
+
         @media (min-width: $tablet-size) {
             left: 100px;
         }
     }
 }
+
 .wrapper-account-settings .wrapper-header .account-nav .account-nav-link {
     position: relative;
     z-index: 1;
@@ -2946,6 +3115,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
     line-height: 1.3;
     border-bottom: 3px solid transparent !important;
     padding: 5px 10px 23px;
+
     @media (min-width: $tablet-size) {
         padding: 5px 20px 23px;
         font-size: 20px;
@@ -2956,6 +3126,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
         border-bottom: 3px solid #ff6f00 !important;
     }
 }
+
 .wrapper-account-settings .wrapper-header .account-nav button.active {
     border-bottom: 3px solid #ff6f00 !important;
 
@@ -2968,11 +3139,7 @@ body .account-settings-sections .section .account-settings-section-body .u-field
 .course-info .course-sidebar .important-dates li:first-child {
     display: none;
 }
-body .user .user-dropdown-menu {
-    z-index: 100;
-}
 
-//btns
 body.view-register .form-actions button[type="submit"],
 body.view-login .form-actions button[type="submit"],
 body .login .form-actions button[type="submit"] {
@@ -2989,12 +3156,14 @@ body .login .form-actions button[type="submit"] {
         color: $theme-btn-white-text-color;
         box-shadow: none;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
 }
+
 body .login-register {
     .action-primary {
         background: $theme-btn-bg;
@@ -3007,12 +3176,14 @@ body .login-register {
             background: $theme-btn-bg;
             text-shadow: none;
         }
+
         &:hover {
             background: $theme-btn-bg-hover;
             box-shadow: none;
             text-shadow: none;
         }
     }
+
     .nav-btn {
         background: $theme-btn-white-bg;
         color: $theme-btn-white-text-color;
@@ -3025,6 +3196,7 @@ body .login-register {
             color: $theme-btn-white-text-color;
             box-shadow: none;
         }
+
         &:hover {
             color: $theme-btn-white-text-color-hover;
             background: $theme-btn-white-bg-hover;
@@ -3032,6 +3204,7 @@ body .login-register {
         }
     }
 }
+
 body .view-login .form-actions button[type="submit"],
 body .login .form-actions button[type="submit"] {
     white-space: nowrap;
@@ -3047,12 +3220,14 @@ body .login .form-actions button[type="submit"] {
         color: $theme-btn-white-text-color;
         box-shadow: none;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
 }
+
 .login-register .login-provider,
 body .dashboard .my-courses .course .details .enter-course.archived,
 .account-settings-sections .section .account-settings-section-body .u-field .field .u-field-link,
@@ -3060,7 +3235,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
 .btn-small.new-post-btn,
 .btn-small.search-button,
 .dashboard .my-courses .course .details .enter-course {
-    font: 600 16px 'Artegra Sans', Arial, sans-serif !important;
+    font: 600 16px "Artegra Sans", Arial, sans-serif !important;
     border-radius: 46px;
     white-space: nowrap;
     background: $theme-header-btn-color;
@@ -3070,7 +3245,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
     box-sizing: border-box;
     display: block;
     margin: 0 0 25px;
-    transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out, border-color 0.25s ease-in-out;
+    transition: color .25s ease-in-out, background .25s ease-in-out, box-shadow .25s ease-in-out, border-color .25s ease-in-out;
 
     &:active,
     &:focus {
@@ -3079,6 +3254,7 @@ body .dashboard .my-courses .course .details .enter-course.archived,
         color: $theme-btn-white-text-color;
         box-shadow: none;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover;
         background: $color7 !important;
@@ -3110,7 +3286,6 @@ body .dashboard .my-courses .course .details .enter-course.archived,
     }
 }
 
-
 body .discussion-module .btn {
     white-space: nowrap;
     background: $theme-btn-white-bg;
@@ -3123,12 +3298,14 @@ body .discussion-module .btn {
         color: $theme-btn-white-text-color !important;
         border-color: $theme-btn-white-border !important;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover !important;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border !important;
     }
 }
+
 body .courseware-bookmarks-button .bookmarks-list-button,
 body .courseware-bookmarks-button .bookmarks-list-button.is-active {
     white-space: nowrap;
@@ -3142,12 +3319,14 @@ body .courseware-bookmarks-button .bookmarks-list-button.is-active {
         color: $theme-btn-white-text-color !important;
         border-color: $theme-btn-white-border;
     }
+
     &:hover {
         color: $theme-btn-white-text-color-hover !important;
         background: $theme-btn-white-bg-hover !important;
         border-color: $theme-btn-white-border;
     }
 }
+
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a,
 body #forgot-password-modal #password-reset .form-actions button[type="submit"],
 body .find-courses .discovery-submit,
@@ -3164,7 +3343,7 @@ body .instructor-dashboard-wrapper-2 section.idash-section#cohort_management .co
 body .wrapper-msg.wrapper-auto-cert .auto-cert-message .has-actions .msg-actions .btn,
 body .dashboard .my-courses .course .wrapper-messages-primary .message.message-status.course-status-certavailable .actions-primary .action-certificate .btn,
 body section.wiki .btn.btn-primary,
-body .forum-new-post-form .post-type-input:checked+.post-type-label,
+body .forum-new-post-form .post-type-input:checked + .post-type-label,
 body .discussion-module .btn-brand,
 body .btn-brand,
 body .home .page-header-secondary,
@@ -3178,6 +3357,7 @@ body .search-bar .search-button {
     border: none;
     background: $theme-btn-bg;
     color: $theme-btn-text-color;
+
     &:focus:not(:disabled),
     &:active,
     &:focus {
@@ -3186,6 +3366,7 @@ body .search-bar .search-button {
         border: none;
         box-shadow: none !important;
     }
+
     &:hover:not(:disabled),
     &:hover {
         // background: $theme-btn-bg-hover !important;
@@ -3194,6 +3375,7 @@ body .search-bar .search-button {
         color: $theme-btn-text-color;
     }
 }
+
 body .instructor-dashboard-wrapper-2 section.idash-section#membership .member-lists-management .auth-list-container .member-list-widget input[type="button"].add:hover:not(:disabled),
 body .instructor-dashboard-content-2 input[type="button"]:hover:not(:disabled),
 body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
@@ -3201,6 +3383,7 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
     border-color: $theme-btn-bg;
     white-space: nowrap;
 }
+
 .button,
 .heading-group button,
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
@@ -3216,98 +3399,118 @@ body .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.
         background: $theme-btn-bg;
         box-shadow: none;
     }
+
     &:hover {
         background: $theme-btn-bg-hover;
     }
 }
+
 .heading-group button {
     white-space: nowrap;
     border-color: $theme-btn-bg;
+
     &:hover {
-         border-color: $theme-btn-bg-hover;
+        border-color: $theme-btn-bg-hover;
     }
+
     &:active,
     &:focus {
         border-color: $theme-btn-bg;
     }
-
 }
+
 .button:hover:not(:disabled),
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled) {
     background: $theme-btn-bg-hover;
 }
+
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:hover,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button:active,
 body .xmodule_display.xmodule_SequenceModule .sequence-nav button.active {
     border-bottom-color: $theme-btn-bg;
 }
+
 body .discussion.inline-discussion .new-post-article .add-post-cancel {
     color: $theme-btn-bg;
 }
+
 .discussion-module .btn-brand,
-.forum-new-post-form .post-type-input:checked+.post-type-label,
-body .edit-post-form .post-type-input:checked+.post-type-label {
+.forum-new-post-form .post-type-input:checked + .post-type-label,
+body .edit-post-form .post-type-input:checked + .post-type-label {
     background-color: $theme-btn-bg;
 }
+
 body .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 .rtl .wrapper-msg.wrapper-auto-cert .auto-cert-message,
 .date-summary-container .date-summary-todays-date {
     border-left-color: $theme-btn-bg;
 }
+
 .rtl .date-summary-container .date-summary-todays-date {
     border-right-color: $theme-btn-bg;
 }
+
 .rtl section.wiki .table.table-striped th {
     width: 100%;
 }
+
 .rtl.discussion .comments .comment-form .wmd-input {
     min-height: 50px;
 }
+
 .rtl.discussion .response-actions-list {
     text-align: left;
 }
+
 .rtl .discussion-response .response-header-actions {
     right: initial;
     left: 10px;
 }
-.rtl .instructor-dashboard-wrapper-2 section.idash-section#membership .enroll-option .has-hint:hover>.hint {
+
+.rtl .instructor-dashboard-wrapper-2 section.idash-section#membership .enroll-option .has-hint:hover > .hint {
     right: 270px;
 }
+
 .has-breadcrumbs .breadcrumbs .all-topics:focus {
     background: none;
 }
-.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group {
+
+.course-info header.course-profile .intro-inner-wrapper .intro > .heading-group {
+    border-bottom: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+
     .button {
         border: none;
     }
 }
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.disabled {
     span {
         color: lighten(#222, .5);
     }
 }
-.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next,
-.xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous {
-    span {
-        color: #222;
-    }
-}
+
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register {
     border: none;
     width: 100%;
+
     @media (min-width: $tablet-size) {
         width: 48.82117%;
     }
+
     @media (max-width: $tablet-size) {
         background: $color1;
         color: #fff;
     }
 }
+
 .light-button:hover:not(:disabled),
 div.history-controls input[type="submit"]:hover:not(:disabled),
 a.light-button:hover:not(:disabled),
-div.info-wrapper section.handouts ol li div.hitarea:hover+h4.light-button:not(:disabled),
-div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:disabled),
+div.info-wrapper section.handouts ol li div.hitarea:hover + h4.light-button:not(:disabled),
+div.info-wrapper section.handouts ol li div.hitarea:focus + h4.light-button:not(:disabled),
 .gray-button:hover:not(:disabled),
 .button:hover:not(:disabled),
 .xmodule_display.xmodule_LTIModule div.lti .wrapper-lti-link .lti-link .link_lti_new_window:hover:not(:disabled) {
@@ -3315,6 +3518,7 @@ div.info-wrapper section.handouts ol li div.hitarea:focus+h4.light-button:not(:d
         box-shadow: none;
     }
 }
+
 body .discussion-module .btn:hover,
 body .wmd-prompt-dialog .btn:hover,
 body .discussion-module .btn-brand:hover,
@@ -3332,30 +3536,26 @@ body .wmd-prompt-dialog .btn-brand:focus {
     color: $theme-btn-text-color !important;
     white-space: nowrap;
 }
-// end btns
 
-.view-dashboard.is-authenticated .wrapper-preview-menu,
-.view-dashboard.is-authenticated .content-wrapper {
-    position: relative;
-    z-index: auto;
-}
 .modal .inner-wrapper,
 .leanModal_box .inner-wrapper {
     box-sizing: border-box;
 }
+
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action-unenroll {
     display: block;
-    font: 600 16px/24px 'Artegra Sans', Arial, sans-serif !important;
+    font: 600 16px/24px "Artegra Sans", Arial, sans-serif !important;
     color: $theme-header-link-color;
     background: transparent;
     border-radius: 0;
     padding: 0;
     box-shadow: none;
 
-    &:hover{
+    &:hover {
         color: $theme-header-btn-color;
     }
 }
+
 .dashboard .my-courses .course .details .course-actions .wrapper-action-more .actions-dropdown .actions-item .action-email-settings {
     width: 36px;
     height: 38px;
@@ -3365,7 +3565,7 @@ body .wmd-prompt-dialog .btn-brand:focus {
     color: #ccc !important;
 
     &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -3378,40 +3578,41 @@ body .wmd-prompt-dialog .btn-brand:focus {
         color: #ccc !important;
     }
 }
+
 .modal .inner-wrapper {
     margin-bottom: 0;
 }
+
 #orders-tab {
     display: none;
 }
+
 .dashboard-banner .wrapper-msg .msg {
     border: none;
 }
-.view-dashboard.is-authenticated .wrapper-msg.urgency-high {
-    background: $gradient2;
-}
+
 .dashboard-notifications {
     position: relative;
     margin: 0 0 -3px;
     z-index: 1;
 }
-.view-dashboard.is-authenticated .title {
-    text-align: left;
-}
+
 .empty-dashboard-message {
     border: none;
     background: transparent;
     padding: 0;
 }
+
 .empty-dashboard-message p {
-    color: #3A3D3F;
+    color: #3a3d3f;
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 16px;
 }
+
 body .empty-dashboard-message a {
     background: #ff6f00;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.10);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .1);
     border-radius: 4px;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
@@ -3422,9 +3623,11 @@ body .empty-dashboard-message a {
     transition: background .3s linear .3s;
     text-align: center;
 }
+
 .modal.video-modal .inner-wrapper {
     width: 580px;
 }
+
 .course-info header.course-profile .intro-inner-wrapper .media .hero .play-intro {
     color: #fff;
     border: none;
@@ -3435,21 +3638,22 @@ body .empty-dashboard-message a {
         margin-left: -10px;
         margin-top: -14px;
         color: #000;
-        content: '';
+        content: "";
         border-top: 15px solid transparent;
         border-right: 25px solid transparent;
         border-bottom: 15px solid transparent;
         border-left: 25px solid #000;
     }
 }
+
 .course-info header.course-profile .intro-inner-wrapper .media:hover .play-intro {
     background: #ff6f00;
 }
+
 .courses-container .highlighted-courses .courses .course .course-image .cover-image .learn-more {
     background: $theme-header-btn-color;
     top: 50%;
     margin: -25px 0 0;
-
 }
 
 body.view-in-course .course-wrapper,
@@ -3460,9 +3664,11 @@ body.view-in-course .teams-wrapper,
 body.view-in-course .static_tab_wrapper {
     max-width: 1200px;
 }
-.course-wrapper .course-content .vert-mod .vert>.xblock-student_view {
+
+.course-wrapper .course-content .vert-mod .vert > .xblock-student_view {
     border-bottom: none;
 }
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button {
     margin: 0 3px;
     border: none;
@@ -3472,17 +3678,14 @@ body.view-in-course .static_tab_wrapper {
 
     &:hover {
         background: $theme-header-btn-color;
+        border: none;
     }
 
     .icon {
         display: none;
     }
-
-    &:hover {
-        border: none;
-    }
-
 }
+
 body.view-in-course {
     .course-wrapper {
         border: none;
@@ -3514,6 +3717,7 @@ body.view-in-course {
                     margin: 0 0 30px;
                 }
             }
+
             .week-structure-container {
                 opacity: 0;
                 visibility: hidden;
@@ -3536,7 +3740,7 @@ body.view-in-course {
 
             .week_holder {
                 &__title {
-                    border: 1px solid #B2DFDB;
+                    border: 1px solid $color10;
                     border-radius: 24px;
                     padding: 10px 24px;
                     box-sizing: border-box;
@@ -3546,6 +3750,7 @@ body.view-in-course {
 
                     .svg-icon {
                         display: none;
+
                         &_next {
                             display: block;
                             margin: 0 0 0 10px;
@@ -3572,7 +3777,7 @@ body.view-in-course {
 
         h2 {
             &.hd-2 {
-                font: 700 24px/32px 'Artegra Sans', sans-serif !important;
+                font: 700 24px/32px "Artegra Sans", sans-serif !important;
                 color: $color6;
                 margin-bottom: 15px;
             }
@@ -3592,9 +3797,10 @@ body.view-in-course {
 
             p {
                 margin: 0 0 15px;
+
                 span {
-                    font: 400 16px/24px 'Artegra Sans', sans-serif !important;
-                    color: #000000;
+                    font: 400 16px/24px "Artegra Sans", sans-serif !important;
+                    color: #000;
                     letter-spacing: 0 !important;
                 }
             }
@@ -3607,26 +3813,29 @@ body.view-in-course {
 
                 .nav-item {
                     margin: 0;
-                    font: 600 12px/18px 'Artegra Sans', sans-serif !important;
+                    font: 600 12px/18px "Artegra Sans", sans-serif !important;
                     color: #039e8c;
 
                     a {
-                        font: 600 12px/18px 'Artegra Sans', sans-serif !important;
-                        color: #00796B;
+                        font: 600 12px/18px "Artegra Sans", sans-serif !important;
+                        color: #00796b;
 
                         &:hover {
                             color: $theme-header-btn-color;
                         }
                     }
                 }
+
                 .fa-angle-right {
                     margin: 0 5px;
-                    color: #00796B;
+                    color: #00796b;
                 }
             }
+
             .instructor-info-action {
                 display: none;
             }
+
             .xmodule_display {
                 &.xmodule_VideoModule {
                     .video {
@@ -3637,11 +3846,12 @@ body.view-in-course {
                         .subtitles {
                             display: none;
                         }
+
                         .video-wrapper {
                             float: none;
                             margin-right: 0;
                             width: 100%;
-                            background-color: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
+                            background-color: linear-gradient(180deg, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, 0) 100%), #c4c4c4;
 
                             .video-controls {
                                 display: none;
@@ -3653,6 +3863,7 @@ body.view-in-course {
                         }
                     }
                 }
+
                 .discussion-module {
                     display: none;
                 }
@@ -3671,7 +3882,7 @@ body.view-in-course {
                     margin: 0 10px 0 0;
 
                     a {
-                        font: 400 16px/24px 'Artegra Sans', sans-serif !important;
+                        font: 400 16px/24px "Artegra Sans", sans-serif !important;
                         color: $theme-btn-text-color !important;
                         padding: 6px 14px;
                         border: 1px solid transparent;
@@ -3683,8 +3894,8 @@ body.view-in-course {
 
                         &:hover,
                         &:visited {
-                            border: 1px solid #B2DFDB;
-                            border-bottom-color: #B2DFDB !important;
+                            border: 1px solid $color10;
+                            border-bottom-color: $color10 !important;
                             color: $theme-btn-text-color !important;
 
                             @media (max-width: $tablet-size) {
@@ -3694,11 +3905,11 @@ body.view-in-course {
 
                         &.active {
                             color: $color6;
-                            border: 1px solid #B2DFDB;
+                            border: 1px solid $color10;
 
                             &:visited,
                             &:hover {
-                                border-bottom-color: #B2DFDB;
+                                border-bottom-color: $color10;
                                 color: $color6;
                             }
                         }
@@ -3741,6 +3952,7 @@ body.view-in-course {
 
                     &__helper {
                         width: 18px;
+
                         span {
                             display: block;
                             background-color: $theme-btn-text-color;
@@ -3758,9 +3970,11 @@ body.view-in-course {
                                 &:first-child {
                                     transform: rotate(45deg);
                                 }
+
                                 &:nth-child(2) {
                                     display: none;
                                 }
+
                                 &:last-child {
                                     transform: rotate(-45deg);
                                     margin-top: -5px;
@@ -3778,7 +3992,7 @@ body.view-in-course {
             .course-material {
                 .course-tabs {
                     li {
-                        a{
+                        a {
                             display: block;
                         }
                     }
@@ -3787,6 +4001,7 @@ body.view-in-course {
         }
     }
 }
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.focused,
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button:hover,
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button:active,
@@ -3798,39 +4013,48 @@ body.view-in-course {
     border: none;
     padding-top: 0;
 }
+
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-next span,
 .xmodule_display.xmodule_SequenceModule .sequence-nav-button.button-previous span {
     color: #fff;
 }
-// sticky footer
+
 .window-wrap {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow: hidden;
 }
+
 .content-wrapper {
     flex: 1;
 }
+
 div.info-wrapper {
     background: #fff;
 }
+
 .wrapper-preview-menu {
     width: 100%;
 }
-.course-info header.course-profile .intro-inner-wrapper>div.table {
+
+.course-info header.course-profile .intro-inner-wrapper > div.table {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
+
     @media (min-width: $tablet-size) {
         flex-direction: row;
         justify-content: space-between;
     }
 }
+
 .course-info header.course-profile .intro-inner-wrapper .media {
     display: block;
     width: 100%;
     margin: 25px auto 0;
     padding: 0;
+
     @media (min-width: $tablet-size) {
         max-height: 350px;
         max-width: 625px;
@@ -3839,10 +4063,11 @@ div.info-wrapper {
         margin: 25px 0;
     }
 }
+
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a {
     display: inline-block;
     padding: 11px 21px 12px;
-    box-shadow: 0 0 6px 2px rgba(0,0,0,0.10);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .1);
     border-radius: 4px;
 
     strong {
@@ -3850,6 +4075,7 @@ div.info-wrapper {
         width: auto;
     }
 }
+
 .container.about.honor {
     line-height: 1.3;
 }
@@ -3860,6 +4086,7 @@ div.info-wrapper {
     border-bottom: 6px solid #ff6f00;
     padding: 0 16px 16px;
     margin: 0 -16px;
+
     @media (min-width: $tablet-size) {
         padding: 0 40px 16px;
         margin: -16px -40px 16px;
@@ -3872,22 +4099,28 @@ div.info-wrapper {
         color: #000;
         text-decoration: none;
     }
+
     .form-controls__link_active {
-        font-weight: bold;
+        font-weight: 700;
     }
 }
+
 .form-header {
     display: none;
+
     @media (min-width: $tablet-size) {
         display: block;
     }
 }
+
 .media-wrapper-inner iframe {
     width: 100%;
 }
+
 body.view-in-course .window-wrap {
     min-width: auto;
 }
+
 body.view-in-course .wrapper-course-material,
 body.view-in-course .wrapper-preview-menu {
     position: relative;
@@ -3915,17 +4148,17 @@ body.view-in-course .wrapper-preview-menu {
 
     h2,
     .h2 {
-        font: 600 24px/32px 'Open Sans', sans-serif !important;
+        font: 600 24px/32px "Open Sans", sans-serif !important;
         color: $theme-btn-white-text-color;
         text-transform: uppercase;
         max-width: 500px;
-        margin: 0;
+        margin: 0 15px 0 0;
     }
 
     @media (max-width: $mobile-size) {
         h2,
         .h2 {
-            font: 600 18px/28px 'Open Sans', sans-serif !important;
+            font: 600 18px/28px "Open Sans", sans-serif !important;
         }
     }
 }
@@ -3941,6 +4174,7 @@ body.view-in-course {
 
         .info-wrapper {
             flex: none;
+            width: 100%;
             max-width: 353px;
 
             @media (max-width: $tablet-size) {
@@ -3957,9 +4191,10 @@ body.view-in-course {
             .page-header-main {
                 width: auto;
                 display: block;
+
                 &__subtitle {
                     h2 {
-                        font: 700 30px/36px 'Artegra Sans', sans-serif !important;
+                        font: 700 30px/36px "Artegra Sans", sans-serif !important;
                         color: $color7;
                         margin: 0 0 20px;
                     }
@@ -4001,7 +4236,7 @@ body.view-in-course {
     margin: 35px 0 70px;
 
     &__title {
-        font: 400 24px/32px 'Artegra Sans', sans-serif !important;
+        font: 400 24px/32px "Artegra Sans", sans-serif !important;
         color: $color6;
         margin-bottom: 22px;
     }
@@ -4032,7 +4267,7 @@ body.view-in-course {
     ul {
         list-style: none;
         padding: 0;
-        margin: 0px;
+        margin: 0;
 
         li {
             margin-bottom: 24px;
@@ -4048,7 +4283,7 @@ body.view-in-course {
                 span {
                     display: block;
                     color: $theme-header-btn-color;
-                    font: 600 16px/24px 'Artegra Sans', sans-serif !important;
+                    font: 600 16px/24px "Artegra Sans", sans-serif !important;
 
                     &.tooltip-info {
                         position: relative;
@@ -4174,19 +4409,20 @@ body.view-in-course {
     flex-wrap: wrap;
 
     &__item {
-         width: 50%;
-         padding: 0 56px;
-         box-sizing: border-box;
-         margin-bottom: 5px !important;
+        width: 50%;
+        padding: 0 56px;
+        box-sizing: border-box;
+        margin-bottom: 5px !important;
     }
+
     &__title {
-        font: 400 12px/18px 'Artegra Sans', sans-serif !important;
+        font: 400 12px/18px "Artegra Sans", sans-serif !important;
         color: $theme-header-btn-color;
         margin-bottom: 1px;
     }
 
     &__text {
-        font: 400 20px/24px 'Artegra Sans', sans-serif !important;
+        font: 400 20px/24px "Artegra Sans", sans-serif !important;
         color: $color6;
     }
 
@@ -4230,11 +4466,13 @@ body.view-in-course {
     .sequence-nav-button.button-next,
     .sequence-nav-button.button-previous {
         display: none;
+
         @media (min-width: $tablet-size) {
             display: block;
         }
     }
 }
+
 .xmodule_display.xmodule_SequenceModule nav.sequence-bottom {
     justify-content: space-between;
     margin-top: 0;
@@ -4248,6 +4486,7 @@ body.view-in-course {
 
         &:focus {
             outline: none;
+
             .icon {
                 color: $theme-header-btn-color;
             }
@@ -4260,30 +4499,388 @@ body.view-in-course {
         &:hover {
             background: $theme-header-btn-color;
 
-            span {
-
-            }
             .icon {
                 color: $theme-btn-text-color;
             }
         }
     }
 }
+
 body .wrapper-account-settings .account-settings-container {
-    padding: 0;
-}
-.account-settings-sections {
-    padding: 0 20px;
-    @media (min-width: $tablet-size) {
-        padding: 0;
+    padding: 0 15px;
+    margin-bottom: 140px;
+
+    @media (max-width: $tablet-size) {
+        margin-bottom: 70px;
+    }
+
+    @media (max-width: $mobile-size) {
+        margin-bottom: 40px;
     }
 }
+
+.wrapper-account-settings {
+    .account_settings_bg {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background: linear-gradient(286.04deg, $theme-header-link-color 0%, $theme-header-btn-color 100%);
+
+        &__container {
+            padding: 70px 15px 35px;
+            box-sizing: border-box;
+            max-width: 1230px;
+            width: 100%;
+            margin: 0 auto;
+
+            @media (max-width: $tablet-size) {
+                padding: 35px 15px;
+            }
+        }
+
+        h2,
+        .h2 {
+            font: 700 60px/72px "Artegra Sans", Arial, sans-serif !important;
+            color: $theme-btn-white-text-color;
+            margin-bottom: 80px;
+
+            @media (max-width: $tablet-size) {
+                font: 700 32px/38px "Artegra Sans", Arial, sans-serif !important;
+                margin-bottom: 40px;
+            }
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 85px;
+            box-sizing: border-box;
+
+            @media (max-width: $laptop-size) {
+                padding: 0;
+            }
+
+            @media (max-width: $mobile-size) {
+                flex-direction: column;
+            }
+
+            .account-settings-container {
+                margin-bottom: 0;
+            }
+        }
+
+        .view-profile {
+            .profile-image-field {
+                @media (max-width: $tablet-size) {
+                    margin-bottom: 25px;
+                }
+
+                .image-wrapper {
+                    .image-frame {
+                        border-radius: 50%;
+                    }
+
+                    .u-field-upload-button {
+                        border-radius: 50%;
+                    }
+
+                    .upload-button-title,
+                    .upload-button-icon {
+                        font-size: 14px;
+                        color: $color7;
+                    }
+
+                    .upload-button-input {
+                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: -1;
+                    }
+
+                    .u-field-remove-button {
+                        text-shadow: none;
+                        color: $theme-btn-white-text-color;
+                        box-shadow: none;
+
+                        &:hover {
+                            color: $color7;
+                        }
+                    }
+                }
+            }
+
+            .password-reset-field {
+                max-width: 200px;
+                width: 100%;
+                position: relative;
+
+                .u-field-password {
+                    &.is-visible {
+                        .u-field-value {
+                            .field-label {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .u-field-value {
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 0;
+                        width: 100%;
+                        max-width: 200px;
+
+                        .field-label {
+                            font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
+                            color: $theme-btn-text-color;
+                            text-transform: uppercase;
+                            display: block;
+                            width: 100%;
+                            margin-top: 25px;
+                            text-align: center;
+                        }
+
+                        .u-field-link-title-password {
+                            font-size: 0;
+                            background-image: url("../images/icon-lock.svg");
+                            width: 33px;
+                            height: 43px;
+                            margin: 0 auto;
+                            border: 0;
+                            background-color: transparent;
+                            padding: 0;
+                            box-shadow: none;
+                            order: -1;
+
+                            &:hover {
+                                opacity: .7;
+                            }
+                        }
+                    }
+                }
+
+                .u-field-message-help {
+                    display: none;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                }
+
+                .field {
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                .u-field-message {
+                    width: 100%;
+                }
+
+                .u-field-message-notification {
+                    font: 400 12px/ 16px "Artegra Sans", Arial, sans-serif !important;
+                    color: $theme-btn-text-color;
+                    margin-top: 25px;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .account-settings-container {
+        .account-settings-header-subtitle {
+            display: none;
+        }
+    }
+}
+
+.account-settings-sections {
+    @at-root {
+        .select2-container--default {
+            .select2-dropdown {
+                border: 1px solid $color10;
+                border-radius: 0 0 23px 23px;
+                overflow: hidden;
+                z-index: 100;
+            }
+
+            .select2-results {
+                &__option {
+                    font: 400 16px/40px "Open Sans", sans-serif !important;
+                    color: $theme-header-link-color;
+                    padding: 0 0 0 31px;
+
+                    &.select2-results__option--highlighted {
+                        background-color: $color6;
+                    }
+                }
+
+                &__options {
+                    &::-webkit-scrollbar {
+                        background: transparent;
+                        width: 10px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $theme-header-btn-color;
+                        border-radius: 23px;
+                        width: 10px;
+                    }
+                }
+            }
+        }
+
+        .select2-container--open {
+            .select2-dropdown--below {
+                border-top: 0;
+            }
+        }
+    }
+
+    .section-header {
+        font: 700 30px/36px "Artegra Sans", sans-serif !important;
+        color: $color7;
+        margin-bottom: 25px;
+
+        @media (max-width: $mobile-size) {
+            padding-top: 0;
+        }
+    }
+
+    .section {
+        border-bottom: 0;
+
+        .account-settings-section-body {
+            .u-field {
+                border-bottom: 0;
+                margin-bottom: 35px;
+
+                @media (max-width: $mobile-size) {
+                    width: 100%;
+                }
+
+                &-value {
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                .field {
+                    margin: 0;
+
+                    .field-input {
+                        border: 1px solid $color10;
+                        box-sizing: border-box;
+                        box-shadow: inset 0 4px 10px rgba(82, 129, 129, .15);
+                        border-radius: 46px;
+                        padding: 2px 30px;
+                        height: 48px;
+                        width: 100%;
+                        font: 400 16px "Open Sans", sans-serif !important;
+                        color: $color6;
+                        transition: all 200ms ease;
+
+                        &:focus {
+                            outline: none;
+                            box-shadow: 0 2px 7px rgba(60, 182, 181, .5);
+                        }
+                    }
+
+                    select {
+                        padding: 0;
+                        border: 0;
+                    }
+
+                    .icon-caret-down {
+                        display: none;
+                    }
+
+                    .field-label {
+                        font: 400 16px/24px "Open Sans", sans-serif !important;
+                        color: #757575;
+                        margin: 0 0 3px 31px;
+                    }
+                }
+
+                .u-field-message-help {
+                    display: none;
+                }
+
+                &.u-field-dropdown {
+                    .select2-container--default {
+                        .select2-selection {
+                            &--single {
+                                border: 1px solid $color10;
+                                box-sizing: border-box;
+                                box-shadow: inset 0 4px 10px rgba(60, 182, 181, .15);
+                                border-radius: 46px;
+                                height: 48px;
+
+                                .select2-selection {
+                                    &__arrow {
+                                        height: 48px;
+                                        width: 48px;
+                                        top: 0;
+
+                                        b {
+                                            border: 0;
+                                            background-image: url("../images/arrow_little_down.svg");
+                                            width: 16px;
+                                            height: 16px;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            transform: translateY(-50%);
+                                            transform-origin: 50% 0;
+                                            margin: 0;
+                                            left: 0;
+                                        }
+                                    }
+
+                                    &__rendered {
+                                        font: 400 16px/48px "Open Sans", sans-serif !important;
+                                        color: $theme-header-link-color;
+                                        height: 100%;
+                                        padding: 0 65px 0 31px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .select2-container--default.select2-container--focus {
+                        .select2-selection--single {
+                            outline: none;
+                        }
+                    }
+
+                    .select2-container--default.select2-container--open {
+                        .select2-selection--single {
+                            border-bottom: 0;
+                            border-radius: 23px 23px 0 0;
+
+                            .select2-selection {
+                                &__arrow {
+                                    b {
+                                        transform: scale(-1) translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .account-settings-sections .section .account-settings-section-body .u-field .u-field-message .u-field-message-notification {
     padding: 0;
     z-index: 100;
     height: 24px;
     position: relative;
 }
+
 .wrapper-footer footer#footer-openedx p a {
     color: $color1;
 
@@ -4291,23 +4888,18 @@ body .wrapper-account-settings .account-settings-container {
         border-bottom: none;
     }
 }
-.modal,
-.leanModal_box {
-    margin-left: 0 !important;
-    box-sizing: border-box;
-    max-width: 480px !important;
-    width: 100%;
-    transform: translateX(-50%);
-}
+
 .modal .inner-wrapper form,
 .leanModal_box .inner-wrapper form {
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
 }
+
 body.menu-open {
     overflow: hidden;
 }
+
 .courses-container .courses .courses-listing {
     display: flex;
     flex-wrap: wrap;
@@ -4318,9 +4910,9 @@ body.menu-open {
         margin: 0 -30px;
     }
 }
+
 .courses-container .highlighted-courses .courses .courses-listing .courses-listing-item {
     width: 50%;
-    margin-right: 0;
     padding: 0 60px;
     margin: 0 0 120px;
     box-sizing: border-box;
@@ -4368,7 +4960,7 @@ body.menu-open {
         .close-modal {
             width: 24px;
             height: 24px;
-            background-image: url('../images/close-modal.svg') !important;
+            background-image: url("../images/close-modal.svg") !important;
             padding: 0;
             border-radius: 0;
             display: block;
@@ -4397,17 +4989,17 @@ body.menu-open {
         }
 
         #unenrollment-modal-title {
-            font: 400 18px/24px 'Artegra Sans', Arial, sans-serif !important;
+            font: 400 18px/24px "Artegra Sans", Arial, sans-serif !important;
             color: $theme-btn-text-color;
             margin-bottom: 25px;
-
         }
 
         form#unenroll_form {
             padding: 0;
             margin: 0 auto;
+
             input[type="submit"] {
-                font: 600 16px/24px 'Artegra Sans', Arial, sans-serif !important;
+                font: 600 16px/24px "Artegra Sans", Arial, sans-serif !important;
                 background: $theme-btn-white-text-color !important;
                 color: $theme-header-btn-color !important;
                 padding: 15.5px 25px;
@@ -4416,17 +5008,17 @@ body.menu-open {
                 transition: all 200ms ease;
 
                 &:hover {
-                    background: #B2DFDB !important;
+                    background: $color10 !important;
                     color: $theme-header-btn-color !important;
                 }
 
                 &:focus {
                     outline: none;
-                    background: #B2DFDB !important;
+                    background: $color10 !important;
                 }
 
                 @media (max-width: $mobile-size) {
-                    font: 600 14px/18px 'Artegra Sans', Arial, sans-serif !important;
+                    font: 600 14px/18px "Artegra Sans", Arial, sans-serif !important;
                     padding: 15px 12px;
                 }
             }
@@ -4439,23 +5031,24 @@ body.menu-open {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    .svg-icon{
-        margin-left: 11px;
-    }
+
     @media (max-width: $tablet-size) {
         flex-direction: column;
         align-items: center;
+    }
 
-        .svg-icon{
+    .svg-icon {
+        margin-left: 11px;
+
+        @media (max-width: $tablet-size) {
             margin-left: 0;
         }
     }
-}
-.theme-footer_holder {
+
     .footer-support {
         color: #fff !important;
         font-size: 12px;
-        font-family: 'Artegra Sans' !important;
+        font-family: "Artegra Sans", Arial, sans-serif !important;
         display: flex;
         align-items: center;
         margin: 0;
@@ -4494,7 +5087,8 @@ body.menu-open {
 
 .theme-footer_holder .footer-support a {
     margin-right: 33px;
-    &:last-child{
+
+    &:last-child {
         margin-right: 0;
     }
 
@@ -4502,7 +5096,7 @@ body.menu-open {
         margin-right: 0;
         margin-bottom: 20px;
 
-        &:last-child{
+        &:last-child {
             margin-bottom: 0;
         }
     }
@@ -4518,10 +5112,9 @@ body footer .raccoon__logo {
         border-bottom: none;
     }
 
-    span{
+    span {
         font-size: 16px;
     }
-
 }
 
 .svg-edx {
@@ -4555,10 +5148,11 @@ body footer .raccoon__logo {
     height: 100%;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 7px 0px rgba(178, 223, 219, .4);
+    box-shadow: 0 2px 7px 0 rgba(178, 223, 219, .4);
 
-    &:hover{
-        box-shadow: 0 2px 7px 0px rgba(178, 223, 219, .9);
+    &:hover {
+        background: $theme-btn-text-color;
+        box-shadow: 0 2px 7px 0 rgba(178, 223, 219, .9);
     }
 }
 
@@ -4584,6 +5178,13 @@ body footer .raccoon__logo {
 
 .course-info .course-sidebar .important-dates {
     order: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow: auto;
+
     @media (max-width: $tablet-size) {
         align-items: center;
     }
@@ -4599,8 +5200,11 @@ body footer .raccoon__logo {
     width: 100%;
 }
 
-.modal, .leanModal_box {
+.modal,
+.leanModal_box {
     box-sizing: border-box;
+    max-width: 480px !important;
+    width: 100%;
     margin: 0 !important;
     top: 50% !important;
     transform: translate(-50%, -50%);
@@ -4631,10 +5235,11 @@ body footer .raccoon__logo {
     word-break: break-word;
 }
 
-.course-content{
+.course-content {
     .bookmark-button-wrapper {
         display: none;
     }
+
     .page-header {
         border-bottom: 0;
         padding: 0;
@@ -4671,7 +5276,7 @@ body .sga-block {
     .grade-modal {
         top: 50% !important;
         left: 50% !important;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         margin: 0 !important;
         height: auto;
         padding: 20px;
@@ -4710,7 +5315,7 @@ body .login-register .form-field.select-year_of_birth {
 .course-info .course-sidebar header .social-sharing .share.share__twitter {
     width: 37px;
     height: 37px;
-    background-image: url('../images/share_twitter.png');
+    background-image: url("../images/share_twitter.png");
 
     .fa {
         display: none;
@@ -4720,7 +5325,7 @@ body .login-register .form-field.select-year_of_birth {
 .course-info .course-sidebar header .social-sharing .share.share__facebook {
     width: 37px;
     height: 37px;
-    background-image: url('../images/share_facebook.png');
+    background-image: url("../images/share_facebook.png");
 
     .fa {
         display: none;
@@ -4730,7 +5335,7 @@ body .login-register .form-field.select-year_of_birth {
 .course-info .course-sidebar header .social-sharing .share.share__mail {
     width: 37px;
     height: 37px;
-    background-image: url('../images/share_mail.png');
+    background-image: url("../images/share_mail.png");
 
     .fa {
         display: none;
@@ -4748,11 +5353,11 @@ body .login-register .form-field.select-year_of_birth {
 
     h1 {
         font-size: 20px;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     h2 {
-        font-weight: bold;
+        font-weight: 700;
     }
 
     li {
@@ -4760,7 +5365,7 @@ body .login-register .form-field.select-year_of_birth {
     }
 
     abbr {
-        font-weight: bold;
+        font-weight: 700;
         border: none;
         text-decoration: none;
     }
@@ -4801,7 +5406,7 @@ body .login-register .form-field.select-year_of_birth {
     position: relative;
 
     &:after {
-        content: '';
+        content: "";
         width: 22px;
         height: 22px;
         position: absolute;
@@ -4856,7 +5461,7 @@ body .find-courses .search-facets.phone-menu {
 
 body .account-settings-sections .section .account-settings-section-body .u-field .social-field-linked .u-field-social-help {
     display: inline-block;
-    padding: 0px 0 6px;
+    padding: 0 0 6px;
     text-align: center;
 }
 
@@ -4880,7 +5485,6 @@ body.view-profile .profile-section-two-fields .u-field-value {
 }
 
 .account-settings-section-body.accountsTabSections-section-body {
-
     @media (max-width: $tablet-size) {
         width: 100%;
         display: flex;
@@ -4894,6 +5498,10 @@ body.view-profile .profile-section-two-fields .u-field-value {
     z-index: 999;
 }
 
+body.modal-is-open {
+    overflow: hidden;
+}
+
 .honor-bg {
     position: relative;
     max-height: 432px;
@@ -4905,7 +5513,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
         top: 146px;
         left: 0;
         right: 0;
-        font: 700 60px/72px 'Artegra Sans', Arial, sans-serif !important;
+        font: 700 60px/72px "Artegra Sans", Arial, sans-serif !important;
         color: $theme-btn-text-color;
         max-width: 1230px;
         padding: 0 15px;
@@ -4915,7 +5523,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
         box-sizing: border-box;
     }
 
-    img{
+    img {
         margin: 0;
         height: 100%;
     }
@@ -4924,7 +5532,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
         margin-bottom: 40px;
 
         h1 {
-            font: 700 40px/58px 'Artegra Sans', Arial, sans-serif !important;
+            font: 700 40px/58px "Artegra Sans", Arial, sans-serif !important;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -4934,7 +5542,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
         min-height: 200px;
 
         h1 {
-            font: 700 32px/40px 'Artegra Sans', Arial, sans-serif !important;
+            font: 700 32px/40px "Artegra Sans", Arial, sans-serif !important;
         }
 
         img {
@@ -4950,7 +5558,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
     margin-bottom: 160px;
 
     h2 {
-        font: 700 30px/36px 'Artegra Sans', Arial, sans-serif !important;
+        font: 700 30px/36px "Artegra Sans", Arial, sans-serif !important;
         color: $color7;
         margin-bottom: 46px;
     }
@@ -4962,7 +5570,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
         box-sizing: border-box;
 
         li {
-            font: 400 16px/24px 'Artegra Sans', Arial, sans-serif !important;
+            font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
             color: $theme-header-link-color;
             position: relative;
             margin-bottom: 24px;
@@ -4973,7 +5581,7 @@ body.view-profile .profile-section-two-fields .u-field-value {
             }
 
             &:before {
-                content: '';
+                content: "";
                 background-color: $theme-header-btn-color;
                 border-radius: 12px;
                 position: absolute;
@@ -4993,13 +5601,12 @@ body.view-profile .profile-section-two-fields .u-field-value {
         box-sizing: border-box;
 
         li {
-            font: 400 16px/24px 'Artegra Sans', Arial, sans-serif !important;
+            font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
             color: $theme-header-link-color;
             position: relative;
             margin-bottom: 24px;
             padding-left: 30px;
             counter-increment: customCounter;
-            color: $theme-header-link-color;
 
             &:last-child {
                 margin-bottom: 0;
@@ -5010,22 +5617,22 @@ body.view-profile .profile-section-two-fields .u-field-value {
                 position: absolute;
                 top: 3px;
                 left: 0;
-                font: 600 12px/18px 'Artegra Sans', Arial, sans-serif;
+                font: 600 12px/18px "Artegra Sans", Arial, sans-serif;
                 color: $theme-header-btn-color;
             }
         }
     }
 
     p {
-        font: 400 16px/24px 'Artegra Sans', Arial, sans-serif !important;
-        color: #000000;
+        font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
+        color: #000;
     }
 
     @media (max-width: $tablet-size) {
         margin-bottom: 80px;
 
         h2 {
-            font: 700 24px/30px 'Artegra Sans', Arial, sans-serif !important;
+            font: 700 24px/30px "Artegra Sans", Arial, sans-serif !important;
             margin-bottom: 20px;
         }
 

@@ -1,0 +1,130 @@
+.course-news {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    $parent: &;
+
+    &__item {
+        margin-bottom: 50px !important;
+
+        &.is-visible {
+            #{$parent}__actions {
+                display: none;
+                opacity: 0;
+            }
+        }
+
+        &.is-open {
+            #{$parent}__actions {
+                button {
+                    display: none;
+
+                    &:nth-child(2) {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    &__title {
+        font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
+        color: $color7;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+    }
+
+    &__date {
+        font: 600 12px/18px "Artegra Sans", Arial, sans-serif !important;
+        color: #757575;
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
+        color: $color8;
+        max-width: 670px;
+
+        p {
+            font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
+            color: $color8;
+        }
+    }
+
+    &__actions {
+        margin-top: 15px;
+
+        button {
+            border: 0;
+            outline: none;
+            font: 600 14px/18px "Artegra Sans", Arial, sans-serif !important;
+            background-color: $theme-header-btn-color;
+            color: $theme-btn-text-color;
+            border-radius: 46px;
+            padding: 12px 30px 10px;
+            display: flex;
+            align-items: center;
+
+            .svg-icon {
+                fill: $theme-btn-text-color;
+                width: 12px;
+                height: 12px;
+                display: block;
+                flex: none;
+                margin-left: 10px;
+            }
+
+            &:hover {
+                background-color: $color6;
+            }
+
+            &:nth-child(2) {
+                display: none;
+
+                .svg-icon {
+                    transform: scale(-1);
+                }
+            }
+        }
+    }
+}
+
+body.news-page {
+    .content-wrapper {
+        max-width: 100%;
+        padding-bottom: 0;
+        margin-bottom: 130px;
+
+        @media (max-width: $tablet-size) {
+            margin-bottom: 70px;
+        }
+
+        .container {
+            border: 0;
+
+            .info-wrapper {
+                @media (max-width: $tablet-size) {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+
+        .tabs {
+            padding: 0;
+        }
+
+        .page-content {
+            padding: 0;
+        }
+    }
+
+    .header {
+        &__opener {
+            height: 12px;
+        }
+    }
+}
