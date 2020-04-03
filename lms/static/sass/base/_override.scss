@@ -1437,6 +1437,7 @@ hr.other {
     margin: 0 0 25px;
     list-style: none;
     display: flex;
+    justify-content: center;
 
     li {
         margin-right: 25px;
@@ -1461,10 +1462,6 @@ hr.other {
                 border-bottom: 0;
             }
         }
-    }
-
-    @media (max-width: $tablet-size) {
-        justify-content: center;
     }
 }
 
