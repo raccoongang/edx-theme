@@ -1310,17 +1310,27 @@ hr.other {
             margin-right: 0;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
 
             .nav-colophon {
                 max-width: 500px;
+                width: 100%;
                 margin-bottom: 16px;
+
+                @media (max-width: $tablet-size) {
+                    max-width: 100%;
+                }
 
                 ol {
                     display: flex;
                     flex-wrap: wrap;
                     margin: 0 -15px 15px;
                     justify-content: flex-start;
+
+                    @media (max-width: $tablet-size) {
+                        justify-content: center;
+                    }
 
                     li {
                         width: 50%;
@@ -1329,12 +1339,27 @@ hr.other {
                         float: none;
                         margin-right: 0;
 
+                        @media (max-width: $tablet-size) {
+                            width: 100%;
+                            text-align: center;
+                            margin-bottom: 5px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+
                         a {
                             font-family: "Artegra Sans", Arial, sans-serif !important;
                             font-weight: 600;
                             font-size: 16px;
                             line-height: 24px;
                             display: inline-block;
+
+                            @media (max-width: $laptop-size) {
+                                font-size: 15px;
+                                line-height: 22px;
+                            }
 
                             &:focus,
                             &:active {
@@ -1352,47 +1377,6 @@ hr.other {
         &:active {
             border-bottom: 0;
             color: $theme-btn-text-color;
-        }
-    }
-
-    @media (max-width: $laptop-size) {
-        footer#footer-openedx {
-            .colophon {
-                .nav-colophon {
-                    ol {
-                        li {
-                            a {
-                                font-size: 15px;
-                                line-height: 22px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @media (max-width: $tablet-size) {
-        footer#footer-openedx {
-            .colophon {
-                .nav-colophon {
-                    max-width: 100%;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 414px) {
-        footer#footer-openedx {
-            .colophon {
-                .nav-colophon {
-                    ol {
-                        li {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -1429,6 +1413,14 @@ hr.other {
         &__copy {
             margin: 0 auto 20px;
         }
+    }
+}
+
+.footer-socials {
+    @media (max-width: $tablet-size) {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -1587,6 +1579,10 @@ hr.other {
             width: 50%;
             padding: 0 15px;
             box-sizing: border-box;
+
+            a {
+                justify-content: center;
+            }
         }
     }
 
