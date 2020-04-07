@@ -107,6 +107,10 @@
     }
 }
 
+.in-progress {
+    color: #e67312;
+}
+
 .hera-message {
     display: flex;
     align-items: center;
@@ -264,6 +268,12 @@
             background: transparent;
             pointer-events: none;
             z-index: 3;
+        }
+
+        &.is-in-progress {
+            &:after {
+                border-color: #e67312;
+            }
         }
     }
 }
