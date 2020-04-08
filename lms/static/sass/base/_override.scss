@@ -89,6 +89,12 @@ hr.other {
         font: 600 30px/36px "Artegra Sans", Arial, sans-serif !important;
         margin: 0 0 20px 55px;
 
+        &.is-hidden {
+            display: none;
+            opacity: 0;
+            z-index: -1;
+        }
+
         @media (max-width: $tablet-size) {
             margin-left: 0;
             text-align: center;
@@ -160,6 +166,8 @@ hr.other {
     }
 
     #register-anchor,
+    #password-reset-anchor,
+    #password-reset-confirm-anchor,
     #login-anchor {
         min-width: 100%;
         max-width: 100%;
@@ -187,6 +195,8 @@ hr.other {
         }
 
         .register-form,
+        #passwordreset-form,
+        .password-reset-form,
         .login-form {
             max-width: 470px;
             margin: 0 auto;
@@ -304,6 +314,30 @@ hr.other {
             max-width: 370px;
         }
 
+        .password-reset-form {
+            .action-label {
+                font: 400 13px/18px "Artegra Sans", Arial, sans-serif !important;
+                color: $color6;
+                margin-bottom: 25px;
+            }
+        }
+
+        #passwordreset-form {
+            #new_password_help_text {
+                font: 400 13px/18px "Artegra Sans", Arial, sans-serif !important;
+                color: $color6;
+                margin-bottom: 15px;
+            }
+
+            .section-title {
+                &.lines {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
         @media (max-width: $tablet-size) {
             .login-form {
                 max-width: 100%;
@@ -335,6 +369,17 @@ hr.other {
                         margin-top: 25px;
                     }
                 }
+            }
+        }
+    }
+
+    #password-reset-anchor,
+    #password-reset-confirm-anchor {
+        .form-wrapper {
+            padding: 56px;
+
+            @media (max-width: $tablet-size) {
+                padding: 20px;
             }
         }
     }
@@ -466,6 +511,12 @@ hr.other {
     }
 }
 
+body.view-passwordreset {
+    .login-register-content {
+        margin-top: 0;
+    }
+}
+
 .login-register-content {
     margin-top: -221px;
     background: transparent;
@@ -517,6 +568,22 @@ hr.other {
 
     .toggle-form {
         font-size: 14px;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        max-width: 370px;
+        margin: 0 auto;
+        justify-content: space-between;
+        right: 0;
+
+        .text {
+            font: 400 16px "Artegra Sans", Arial, sans-serif !important;
+            text-align: left;
+            margin-right: 15px;
+        }
     }
 
     .forgot-password.field-link {
@@ -550,16 +617,6 @@ hr.other {
         font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
         text-decoration: none;
         flex: none;
-        position: absolute;
-        bottom: 50px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        display: none;
-        max-width: 370px;
-        margin: 0 auto;
-        justify-content: space-between;
-        right: 0;
 
         .text {
             font: 400 16px "Artegra Sans", Arial, sans-serif !important;
@@ -1310,17 +1367,27 @@ hr.other {
             margin-right: 0;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
 
             .nav-colophon {
                 max-width: 500px;
+                width: 100%;
                 margin-bottom: 16px;
+
+                @media (max-width: $tablet-size) {
+                    max-width: 100%;
+                }
 
                 ol {
                     display: flex;
                     flex-wrap: wrap;
                     margin: 0 -15px 15px;
                     justify-content: flex-start;
+
+                    @media (max-width: $tablet-size) {
+                        justify-content: center;
+                    }
 
                     li {
                         width: 50%;
@@ -1329,12 +1396,27 @@ hr.other {
                         float: none;
                         margin-right: 0;
 
+                        @media (max-width: $tablet-size) {
+                            width: 100%;
+                            text-align: center;
+                            margin-bottom: 5px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+
                         a {
                             font-family: "Artegra Sans", Arial, sans-serif !important;
                             font-weight: 600;
                             font-size: 16px;
                             line-height: 24px;
                             display: inline-block;
+
+                            @media (max-width: $laptop-size) {
+                                font-size: 15px;
+                                line-height: 22px;
+                            }
 
                             &:focus,
                             &:active {
@@ -1352,47 +1434,6 @@ hr.other {
         &:active {
             border-bottom: 0;
             color: $theme-btn-text-color;
-        }
-    }
-
-    @media (max-width: $laptop-size) {
-        footer#footer-openedx {
-            .colophon {
-                .nav-colophon {
-                    ol {
-                        li {
-                            a {
-                                font-size: 15px;
-                                line-height: 22px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @media (max-width: $tablet-size) {
-        footer#footer-openedx {
-            .colophon {
-                .nav-colophon {
-                    max-width: 100%;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 414px) {
-        footer#footer-openedx {
-            .colophon {
-                .nav-colophon {
-                    ol {
-                        li {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
         }
     }
 }
@@ -1432,11 +1473,20 @@ hr.other {
     }
 }
 
+.footer-socials {
+    @media (max-width: $tablet-size) {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
 .footer-socials-list {
     padding: 0;
     margin: 0 0 25px;
     list-style: none;
     display: flex;
+    justify-content: center;
 
     li {
         margin-right: 25px;
@@ -1461,10 +1511,6 @@ hr.other {
                 border-bottom: 0;
             }
         }
-    }
-
-    @media (max-width: $tablet-size) {
-        justify-content: center;
     }
 }
 
@@ -1587,6 +1633,10 @@ hr.other {
             width: 50%;
             padding: 0 15px;
             box-sizing: border-box;
+
+            a {
+                justify-content: center;
+            }
         }
     }
 
@@ -2464,14 +2514,6 @@ hr.other {
 
     &:hover {
         color: $theme-header-link-color;
-    }
-}
-
-.dashboard .my-courses .course .details .course-title {
-    display: none;
-
-    @media (min-width: $tablet-size) {
-        display: block;
     }
 }
 

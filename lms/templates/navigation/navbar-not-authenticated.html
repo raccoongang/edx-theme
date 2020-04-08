@@ -27,8 +27,6 @@ from django.utils.translation import ugettext as _
   </li>
 </ul>
 
-<a href="#" class="learn-link">Преподавайте на МАМА</a>
-
 <%block name="navigation_sign_in">
     % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
       % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
