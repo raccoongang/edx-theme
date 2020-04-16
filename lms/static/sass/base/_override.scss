@@ -2677,16 +2677,8 @@ section.outside-app,
             @extend %custom-select;
         }
 
-        .u-field {
-            &.editable-toggle {
-                &.mode-display {
-                    &:hover {
-                        .message-can-edit {
-                            color: $theme-header-btn-color;
-                        }
-                    }
-                }
-            }
+        .u-field.editable-toggle.mode-display:hover .message-can-edit { 
+            color: $theme-header-btn-color;
         }
     }
 
@@ -2739,7 +2731,7 @@ section.outside-app,
                 }
             }
 
-            &.editable-toggle{
+            &.editable-toggle {
                 &.mode-display {
                     .message-can-edit {
                         color: $theme-header-btn-color;
