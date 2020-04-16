@@ -2591,6 +2591,173 @@ section.outside-app,
     min-width: auto;
 }
 
+.view-profile {
+    .wrapper-profile {
+        margin-bottom: 120px;
+
+        @media (max-width: $mobile-size) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .profile-self,
+    .profile-other {
+        .wrapper-profile-field-account-privacy {
+            background-color: $color9;
+            border: 1px solid $theme-header-btn-color;
+
+            .u-field-account_privacy {
+                max-width: 1230px;
+                padding: 0 15px;
+            }
+
+            .u-field-title {
+                color: $theme-btn-text-color;
+                vertical-align: middle;
+                font: 600 18px/22px $default-font;
+
+                @media (max-width: $tablet-size) {
+                    font: 600 16px/20px $default-font;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+            }
+
+            .u-field-value {
+                min-width: 290px;
+                vertical-align: middle;
+
+                @extend %custom-select;
+
+                @media (max-width: $tablet-size) {
+                    padding: 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .u-field-account_privacy {
+            max-width: 1230px;
+            padding: 0 15px;
+
+            @media (max-width: $tablet-size) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+
+    .profile-section-one-fields {
+        width: 100%;
+        max-width: 400px;
+
+        @media (max-width: $mobile-size) {
+            margin-left: 0;
+            max-width: 100%;
+        }
+
+        span:not(.fa) {
+            font: 400 14px/18px $default-font;
+        }
+
+        .u-field-value {
+            width: 290px;
+            box-sizing: border-box;
+
+            @media (max-width: $mobile-size) {
+                width: 100%;
+            }
+
+            .u-field-value-display {
+                display: none;
+                opacity: 0;
+            }
+
+            @extend %custom-select;
+        }
+
+        .u-field.editable-toggle.mode-display:hover .message-can-edit { 
+            color: $theme-header-btn-color;
+        }
+    }
+
+    .wrapper-profile-section-one {
+        @media (max-width: $mobile-size) {
+            margin-left: 0;
+        }
+
+        .profile-image-field {
+            @extend %image-profile;
+
+            @media (max-width: $mobile-size) {
+                float: none;
+                margin-bottom: 20px;
+
+                .image-wrapper {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .profile-section-two-fields {
+        .u-field {
+            &.mode-placeholder {
+                &:hover {
+                    border: 2px dashed $theme-header-btn-color;
+
+                    .u-field-value {
+                        .u-field-value-readonly {
+                            color: $theme-header-btn-color;
+                        }
+                    }
+
+                    .u-field-title,
+                    span {
+                        color: $theme-header-btn-color;
+                    }
+                }
+
+                .u-field-title,
+                span:not(.fa) {
+                    font: 600 18px/22px $default-font;
+                }
+
+                .u-field-value {
+                    .u-field-value-readonly {
+                        font: 400 14px/18px $default-font;
+                    }
+                }
+            }
+
+            &.editable-toggle {
+                &.mode-display {
+                    .message-can-edit {
+                        color: $theme-header-btn-color;
+                    }
+                }
+            }
+
+            textarea {
+                border: 1px solid $theme-header-btn-color;
+            }
+        }
+
+        .u-field-title {
+            font: 600 18px/22px $default-font;
+
+            span {
+                margin: 0 10px 0;
+            }
+        }
+
+        .u-field-value {
+            font: 400 14px/18px $default-font;
+        }
+    }
+}
+
 .container.dashboard {
     position: relative;
     padding: 65px 15px 40px;
@@ -4619,38 +4786,7 @@ body .wrapper-account-settings .account-settings-container {
                     margin-bottom: 25px;
                 }
 
-                .image-wrapper {
-                    .image-frame {
-                        border-radius: 50%;
-                    }
-
-                    .u-field-upload-button {
-                        border-radius: 50%;
-                    }
-
-                    .upload-button-title,
-                    .upload-button-icon {
-                        font-size: 14px;
-                        color: $color7;
-                    }
-
-                    .upload-button-input {
-                        display: none;
-                        opacity: 0;
-                        visibility: hidden;
-                        z-index: -1;
-                    }
-
-                    .u-field-remove-button {
-                        text-shadow: none;
-                        color: $theme-btn-white-text-color;
-                        box-shadow: none;
-
-                        &:hover {
-                            color: $color7;
-                        }
-                    }
-                }
+                @extend %image-profile;
             }
 
             .password-reset-field {
@@ -4850,66 +4986,7 @@ body .wrapper-account-settings .account-settings-container {
                 }
 
                 &.u-field-dropdown {
-                    .select2-container--default {
-                        .select2-selection {
-                            &--single {
-                                border: 1px solid $color10;
-                                box-sizing: border-box;
-                                box-shadow: inset 0 4px 10px rgba(60, 182, 181, .15);
-                                border-radius: 46px;
-                                height: 48px;
-
-                                .select2-selection {
-                                    &__arrow {
-                                        height: 48px;
-                                        width: 48px;
-                                        top: 0;
-
-                                        b {
-                                            border: 0;
-                                            background-image: url("../images/arrow_little_down.svg");
-                                            width: 16px;
-                                            height: 16px;
-                                            background-repeat: no-repeat;
-                                            background-position: center;
-                                            transform: translateY(-50%);
-                                            transform-origin: 50% 0;
-                                            margin: 0;
-                                            left: 0;
-                                        }
-                                    }
-
-                                    &__rendered {
-                                        font: 400 16px/48px "Open Sans", sans-serif !important;
-                                        color: $theme-header-link-color;
-                                        height: 100%;
-                                        padding: 0 65px 0 31px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .select2-container--default.select2-container--focus {
-                        .select2-selection--single {
-                            outline: none;
-                        }
-                    }
-
-                    .select2-container--default.select2-container--open {
-                        .select2-selection--single {
-                            border-bottom: 0;
-                            border-radius: 23px 23px 0 0;
-
-                            .select2-selection {
-                                &__arrow {
-                                    b {
-                                        transform: scale(-1) translateY(-50%);
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    @extend %custom-select;
                 }
             }
         }

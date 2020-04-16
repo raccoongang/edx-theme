@@ -38,3 +38,103 @@
         }
     }
 }
+
+%custom-select {
+    .select2-container--default {
+        .select2-selection {
+            &--single {
+                border: 1px solid $color10;
+                box-sizing: border-box;
+                box-shadow: inset 0 4px 10px rgba(60, 182, 181, .15);
+                border-radius: 46px;
+                height: 48px;
+
+                .select2-selection {
+                    &__arrow {
+                        height: 48px;
+                        width: 48px;
+                        top: 0;
+
+                        b {
+                            border: 0;
+                            background: url("../images/arrow_little_down.svg") no-repeat center center;
+                            width: 16px;
+                            height: 16px;
+                            transform: translateY(-50%);
+                            transform-origin: 50% 0;
+                            margin: 0;
+                            left: 0;
+                        }
+                    }
+
+                    &__rendered {
+                        font: 400 16px/48px "Open Sans", Arial, sans-serif !important;
+                        color: $theme-header-link-color;
+                        height: 100%;
+                        padding: 0 65px 0 31px;
+                    }
+                }
+            }
+        }
+
+        &.select2-container {
+            &--focus {
+                .select2-selection--single {
+                    outline: none;
+                    box-shadow: 0 4px 10px rgba(60, 182, 181, .15);
+                }
+            }
+
+            &--open {
+                .select2-selection--single {
+                    border-bottom: 0;
+                    border-radius: 23px 23px 0 0;
+
+                    .select2-selection__arrow b {
+                        transform: scale(-1) translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+%image-profile {
+    .image-wrapper {
+        .image-frame,
+        .u-field-upload-button {
+            border-radius: 50%;
+
+            &:hover {
+                border-color: $theme-header-btn-color;
+            }
+        }
+
+        .upload-button-title,
+        .upload-button-icon {
+            font-size: 14px;
+            color: $color7;
+        }
+
+        .upload-button-input {
+            clip: rect(1px, 1px, 1px, 1px);
+            position: absolute;
+            margin: -1px;
+            height: 1px;
+            width: 1px;
+            border: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .u-field-remove-button {
+            text-shadow: none;
+            color: $theme-btn-white-text-color;
+            box-shadow: none;
+
+            &:hover {
+                color: $color7;
+            }
+        }
+    }
+}
