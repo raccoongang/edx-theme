@@ -57,11 +57,9 @@
 
                         b {
                             border: 0;
-                            background-image: url("../images/arrow_little_down.svg");
+                            background: url("../images/arrow_little_down.svg") no-repeat center center;
                             width: 16px;
                             height: 16px;
-                            background-repeat: no-repeat;
-                            background-position: center;
                             transform: translateY(-50%);
                             transform-origin: 50% 0;
                             margin: 0;
@@ -78,22 +76,21 @@
                 }
             }
         }
-    }
 
-    .select2-container--default.select2-container--focus {
-        .select2-selection--single {
-            outline: none;
-        }
-    }
+        &.select2-container {
+            &--focus {
+                .select2-selection--single {
+                    outline: none;
+                    box-shadow: 0 4px 10px rgba(60, 182, 181, .15);
+                }
+            }
 
-    .select2-container--default.select2-container--open {
-        .select2-selection--single {
-            border-bottom: 0;
-            border-radius: 23px 23px 0 0;
+            &--open {
+                .select2-selection--single {
+                    border-bottom: 0;
+                    border-radius: 23px 23px 0 0;
 
-            .select2-selection {
-                &__arrow {
-                    b {
+                    .select2-selection__arrow b {
                         transform: scale(-1) translateY(-50%);
                     }
                 }
@@ -104,13 +101,10 @@
 
 %image-profile {
     .image-wrapper {
-        .image-frame {
-            border-radius: 50%;
-        }
-
+        .image-frame,
         .u-field-upload-button {
             border-radius: 50%;
-            
+
             &:hover {
                 border-color: $theme-header-btn-color;
             }
@@ -123,10 +117,14 @@
         }
 
         .upload-button-input {
-            display: none;
-            opacity: 0;
-            visibility: hidden;
-            z-index: -1;
+            clip: rect(1px, 1px, 1px, 1px);
+            position: absolute;
+            margin: -1px;
+            height: 1px;
+            width: 1px;
+            border: 0;
+            padding: 0;
+            overflow: hidden;
         }
 
         .u-field-remove-button {
