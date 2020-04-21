@@ -956,17 +956,46 @@ body.view-passwordreset {
     list-style: none;
 
     &__item {
-        width: 25%;
+        width: 20%;
         border-bottom: 1px solid $theme-header-btn-color;
         border-right: 1px solid $theme-header-btn-color;
         box-sizing: border-box;
 
-        &:nth-child(4n+4) {
+        a {
+            display: block;
+            margin: 0 10px;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+
+        &:nth-child(5n+5) {
             border-right: 0;
         }
 
         &:nth-last-of-type(-n+4) {
             border-bottom: 0;
+        }
+
+        @media (max-width: $laptop-size) {
+            width: 25%;
+
+            &:nth-child(5n+5) {
+                border-right: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-child(4n+4) {
+                border-right: 0;
+            }
+
+            &:nth-last-of-type(-n+4) {
+                border-bottom: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-last-of-type(-n+3) {
+                border-bottom: 0;
+            }
         }
 
         @media (max-width: $tablet-size) {
@@ -980,11 +1009,15 @@ body.view-passwordreset {
                 border-right: 0;
             }
 
+            &:nth-last-of-type(-n+3) {
+                border-bottom: 1px solid $theme-header-btn-color;
+            }
+
             &:nth-last-of-type(-n+4) {
                 border-bottom: 1px solid $theme-header-btn-color;
             }
 
-            &:nth-last-of-type(-n+3) {
+            &:nth-last-of-type(-n+1) {
                 border-bottom: 0;
             }
         }
@@ -1006,6 +1039,10 @@ body.view-passwordreset {
 
             &:nth-last-of-type(-n+3) {
                 border-bottom: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-last-of-type(-n+1) {
+                border-bottom: 0;
             }
         }
     }
