@@ -956,17 +956,46 @@ body.view-passwordreset {
     list-style: none;
 
     &__item {
-        width: 25%;
+        width: 20%;
         border-bottom: 1px solid $theme-header-btn-color;
         border-right: 1px solid $theme-header-btn-color;
         box-sizing: border-box;
 
-        &:nth-child(4n+4) {
+        a {
+            display: block;
+            margin: 0 10px;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+
+        &:nth-child(5n+5) {
             border-right: 0;
         }
 
         &:nth-last-of-type(-n+4) {
             border-bottom: 0;
+        }
+
+        @media (max-width: $laptop-size) {
+            width: 25%;
+
+            &:nth-child(5n+5) {
+                border-right: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-child(4n+4) {
+                border-right: 0;
+            }
+
+            &:nth-last-of-type(-n+4) {
+                border-bottom: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-last-of-type(-n+3) {
+                border-bottom: 0;
+            }
         }
 
         @media (max-width: $tablet-size) {
@@ -980,11 +1009,15 @@ body.view-passwordreset {
                 border-right: 0;
             }
 
+            &:nth-last-of-type(-n+3) {
+                border-bottom: 1px solid $theme-header-btn-color;
+            }
+
             &:nth-last-of-type(-n+4) {
                 border-bottom: 1px solid $theme-header-btn-color;
             }
 
-            &:nth-last-of-type(-n+3) {
+            &:nth-last-of-type(-n+1) {
                 border-bottom: 0;
             }
         }
@@ -1006,6 +1039,10 @@ body.view-passwordreset {
 
             &:nth-last-of-type(-n+3) {
                 border-bottom: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-last-of-type(-n+1) {
+                border-bottom: 0;
             }
         }
     }
@@ -3872,6 +3909,182 @@ body.view-in-course .wiki-wrapper,
 body.view-in-course .teams-wrapper,
 body.view-in-course .static_tab_wrapper {
     max-width: 1200px;
+}
+
+.view-instructordash {
+    hr {
+        background: linear-gradient(322.29deg, $color6 0, $theme-header-btn-color 100%);
+    }
+
+    .container > div {
+        @media (max-width: $tablet-size) {
+            border: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+.instructor-dashboard-content-2 {
+    @media (max-width: $tablet-size) {
+        padding: 40px 0;
+    }
+
+    @media (max-width: $mobile-size) {
+        padding: 40px 0 0;
+    }
+
+    .instructor-nav .nav-item {
+        @media (max-width: $mobile-size) {
+            display: block;
+        }
+    }
+}
+
+.instructor-dashboard-wrapper-2 {
+    $selfFont: #2d2443;
+
+    %bg-color-important {
+        background: $theme-header-btn-color !important;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $theme-header-link-color !important;
+        }
+    }
+
+    %bg-color {
+        background: $theme-header-btn-color;
+
+        &:hover:not(:disabled),
+        &:focus,
+        &:active {
+            background: $theme-header-link-color;
+        }
+    }
+
+    .wrap-instructor-info {
+        @media (max-width: $tablet-size) {
+            display: block;
+        }
+
+        .instructor-info-action {
+            @media (max-width: $tablet-size) {
+                float: none;
+                margin: 15px 0;
+                display: inline-block;
+            }
+        }
+    }
+
+    section.idash-section {
+        input[type="button"] {
+            white-space: normal;
+
+            @extend %bg-color;
+
+            @media (max-width: $mobile-size) {
+                width: 100%;
+            }
+        }
+
+        &#cohort_management .cohort-management-settings .form-submit {
+            @extend %bg-color;
+        }
+
+        &#discussions_management {
+            .division-scheme-container .division-scheme-item {
+                @media (max-width: $mobile-size) {
+                    float: none;
+                    max-width: 100%;
+                    padding: 0;
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .form-submit {
+                @extend %bg-color;
+
+                border: 0;
+                background-image: none;
+                box-shadow: none;
+
+                &:hover:not(:disabled) {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        &#student_admin {
+            @media (max-width: 767px) {
+                input[type="text"] {
+                    width: 100%;
+                }
+
+                .location-example {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    display: block;
+                }
+            }
+        }
+
+        &#membership .member-lists-management .auth-list-container .member-list-widget {
+            @media (max-width: $mobile-size) {
+                .member-list {
+                    overflow-x: scroll;
+
+                    table {
+                        width: 600px;
+                    }
+                }
+
+                .bottom-bar {
+                    .add {
+                        position: static !important;
+                        margin-top: 10px;
+                    }
+
+                    input[type="text"] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .message-actions .action-create {
+        @extend %bg-color-important;
+    }
+
+    .bottom-bar .add {
+        @extend %bg-color-important;
+    }
+
+    .instructor-nav .nav-item .btn-link {
+        color: $selfFont;
+
+        @media (max-width: $laptop-size) {
+            padding: 10px 15px;
+        }
+
+        &.active-section {
+            color: $selfFont;
+        }
+
+        &:hover {
+            color: #c2387d;
+        }
+    }
+
+    .search-bar .search-button {
+        @extend %bg-color;
+    }
 }
 
 .course-wrapper .course-content .vert-mod .vert > .xblock-student_view {
