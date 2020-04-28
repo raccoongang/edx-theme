@@ -1,0 +1,10 @@
+<%page expression_filter="h"/>
+<%! from openedx.core.djangolib.markup import HTML %>
+
+<div class="vert-mod">
+% for idx, item in enumerate(items):
+  <div class="vert vert-${idx}" data-id="${item['id']}">
+    ${HTML(item['content'])}
+  </div>
+% endfor
+</div>

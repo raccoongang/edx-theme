@@ -1,8 +1,8 @@
-$base-color: #47bded;
+$base-color: #7f7f7f;
 $base-color2: #44b759;
 $base-color2-hover: lighten($base-color2, 10%);
 //body background
-$body-bg: #eee;
+$body-bg: #fff;
 // logo
 $header-logo-height: 35px;
 $footer-logo-height: $header-logo-height;
@@ -11,7 +11,9 @@ $certificate-logo-height: $header-logo-height;
 $links-color: $base-color;
 $links-color-hover: lighten($links-color, 10%);
 //settings for header
-$header-bg: #fff;
+$header-height: 64px;
+$header-bg: #f0f0f0;
+$header-border: #2b5279;
 $header-nav-link-color: $base-color2;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $dropdown-menu-link-color: $base-color;
@@ -44,6 +46,7 @@ $footer-nav-link-color-hover: rgba(255,255,255, .8);
 $footer-support-text-and-logo: #fff;
 $footer-social-link-bg: #44b759;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
+$footer-border-color: #ccc;
 //btn
 $theme-btn-bg: $base-color;
 $theme-btn-text-color: #fffefe;
@@ -78,11 +81,21 @@ $course-bg: #fff;
 $ribbon-corners-color: lighten($base-color, 5%);
 $ribbon-triangle-color: darken($base-color, 5%);
 $certificate-borders-color: lighten($base-color, 8%);
+//onboarding pages
+$onboarding-content-bg: #f2f2f2;
+$onboarding-item-border: #d7d7d7;
+$colored-1: #29abe2;
+$colored-2: #00A99D;
+$colored-3: #F7931E;
+//selection page
+$color-text-selection: #222;
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;
 $delete-button: red;
 $white: #fff;
+$btn-main: #2b6797;
+$main-title: #2B5279;
 
 // breakpoints
 $breakpoint-mobile: 760px;

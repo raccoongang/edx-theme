@@ -19,9 +19,16 @@
 @import "blocks/slider";
 @import "blocks/textblock";
 @import "blocks/shopping-cart";
+@import "blocks/onboarding";
+@import "blocks/selection";
+@import "blocks/dashboard-hera";
 
 *:not(.fa):not(.glyphicon):not([class*='sorting']):not([class*="icon-cc"]) {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+*:focus {
+	outline: none !important;
 }
 
 html, body {
@@ -33,6 +40,24 @@ body {
 	background: $body-bg !important;
 	position: relative;
 	line-height: 1.2;
+
+	.xmodule_display.xmodule_SequenceModule .sequence-nav {
+		display: none;
+		visibility: hidden;
+	}
+
+	.container>div {
+		box-shadow: none;
+		border: none;
+	}
+
+	.course-wrapper .xblock {
+		max-width: 100% !important;
+	}
+}
+
+#main {
+	padding: 0;
 }
 
 .holder,
@@ -55,6 +80,14 @@ body {
 	}
 }
 
+.holder {
+	&.holder__full-width {
+		display: block;
+		width: 100%;
+		max-width: initial;
+	}
+}
+
 body.view-in-course .instructor-dashboard-wrapper-2,
 body.view-in-course .wiki-wrapper {
 	max-width: 1170px;
@@ -65,9 +98,10 @@ body.view-in-course .wiki-wrapper {
 }
 
 .content-wrapper {
+	box-sizing: border-box;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0;
-	background: #eeeeee;
 }
 
 .window-wrap,
@@ -82,7 +116,6 @@ body.view-in-course .wiki-wrapper {
 #content {
 	flex: 1 1 auto;
 	width: 100%;
-	margin-bottom: 40px;
 }
 
 .window-wrap {
@@ -94,7 +127,8 @@ body.view-in-course .wiki-wrapper {
 }
 
 .wrapper-preview-menu {
-	width: 100%;
+	display: none;
+	visibility: hidden;
 }
 
 body {
@@ -118,4 +152,57 @@ body {
 	.wrapper-footer {
 		overflow: hidden;
 	}
+}
+
+.index-wrapper {
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.index-img {
+	display: block;
+	position: relative;
+	margin: 0 0 48px;
+
+	@media screen and (max-width: 759px) {
+		margin: 0 0 32px;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.js-show-hide-warning-message {
+	font-size: 12px;
+	margin-right: 8px;
+}
+
+.footer-controls-buttons-holder {
+	margin: 15px 0 15px;
+}
+
+.content-wrapper .page-content-container {
+	overflow: auto;
+}
+
+// Page not found (ask teacher) styles
+.not-found-holder {
+	max-width: 1200px;
+	text-align: center;
+	padding: 0 20px;
+	margin: 80px 0;
+}
+
+.not-found-title {
+	color: #646464;
+	font-size: 19px;
+	margin: 0 0 40px;
+}
+
+.not-found-text {
+	font-size: 16px;
 }

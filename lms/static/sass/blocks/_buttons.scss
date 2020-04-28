@@ -178,3 +178,71 @@ input[type="submit"] {
 		background: lighten(#f94d45, 20%) !important;
 	}
 }
+
+.btn {
+	&.btn-primary,
+	&.btn-prev {
+		box-sizing: border-box;
+		border: 1px solid $base-color;
+		height: 40px !important;
+		padding: .5rem 1.25rem !important;
+		line-height: 1;
+		min-width: auto !important;
+		max-width: 100% !important;
+
+		@media screen and (max-width: 759px) {
+			padding: 8px !important;
+			font-size: 12px !important;
+		}
+	}
+	&.btn-prev {
+		background: none;
+		color: $base-color;
+		transition: all 0.2s ease !important;
+		display: inline-block;
+		text-transform: uppercase;
+		border-radius: 2px !important;
+		text-shadow: none !important;
+		box-shadow: none !important;
+		font-size: 16px;
+		font-weight: normal;
+		margin-left: 12px;
+
+		&:hover {
+			color: #fff;
+			background: $base-color !important;
+			border: 1px solid $base-color !important;
+		}
+	}
+	&.btn-main {
+		display: block;
+		margin: 0 auto;
+		width: 435px;
+		border-radius: 40px;
+		box-sizing: border-box;
+		border: none;
+		outline: none;
+		min-height: 40px;
+		padding: 18px 28px;
+		font-weight: 700;
+		line-height: 1;
+		color: #fff;
+		background: $btn-main;
+		box-shadow: none;
+		text-shadow: none;
+		text-transform: uppercase;
+		transition: all .4s ease-in-out;
+
+		&:hover {
+			opacity: .75;
+			background-image: none;
+			background-color: $btn-main;
+		}
+
+		@media screen and (max-width: 759px) {
+			display: inline-block;
+			width: auto;
+			font-size: 12px;
+		}
+	}
+}

@@ -40,32 +40,18 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
         % endif
         <div class="main-header">
             <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-            <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
+<!--            <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">-->
+<!--                <span class="line"></span>-->
+<!--                <span class="line"></span>-->
+<!--                <span class="line"></span>-->
+<!--                <span class="line"></span>-->
+<!--            </div>-->
             % if user.is_authenticated:
                 <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
             % else:
                 <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
             % endif
         </div>
-        % if course:
-        <div class="course-header">
-            <span class="provider">${course.display_org_with_default}:</span>
-            <span class="course-number">${course.display_number_with_default}</span>
-            <%
-            display_name = course.display_name_with_default
-            if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-                ccx = get_current_ccx(course.id)
-                if ccx:
-                    display_name = ccx.display_name
-                %>
-            <span class="course-name">${display_name}</span>
-        </div>
-        % endif
         <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
     </div>
 </header>

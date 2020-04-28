@@ -1,27 +1,23 @@
 .global-header {
-	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
 	padding: 0;
-	border-bottom: none;
+	border: none;
 	position: relative;
 	overflow: visible;
 	background: $header-bg;
 	z-index: 11;
 
+	.holder {
+		max-width: 100%;
+	}
+
 	.main-header {
+		box-sizing: border-box;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 22px 0 23px;
-		height: auto;
+		padding: 12px 0;
+		height: $header-height;
 		position: relative;
-
-		@media screen and (max-width: $build-header-menu-tablet) {
-			display: block;
-		}
-
-		@media screen and (min-width: $breakpoint-tablet) {
-			padding: 30px 0;
-		}
 
 		.header-logo {
 			display: block;
@@ -36,8 +32,10 @@
 
 			a {
 				margin: 0;
-				transition: opacity .15s ease;
+				transition: opacity .15s ease-in-out;
 				height: auto;
+				pointer-events: none;
+				cursor: default;
 
 				&:hover {
 					opacity: .8;
@@ -52,17 +50,12 @@
 		}
 
 		.nav-links {
+			display: flex;
+			border-top: none;
 			flex-grow: 1;
 			align-items: center;
 			font-size: 16px !important;
-			display: none;
-			border-top: 1px solid #6e6e6e;
 			justify-content: flex-end;
-
-			@media (min-width: $build-header-menu-tablet + 1) {
-				display: flex;
-				border-top: none;
-			}
 
 			&.nav-links_not-authenticated .main {
 				@media (max-width: $build-header-menu-tablet) {
@@ -175,7 +168,7 @@
 
 				.user-dropdown-wrapper {
 					display: flex;
-					align-items: center;
+					align-items: flex-end;
 				}
 
 				.nav-item {
@@ -273,33 +266,43 @@
 				}
 
 				.dropdown-user-menu {
+					width: 115px;
 					right: 0;
 					z-index: 20;
-					border: 1px solid #313131;
+					border: 1px solid #2b6797;
+					border-radius: 4px;
 					position: absolute;
 					background-color: #fff;
 					color: #313131;
-					top: 55px;
+					top: 22px;
 
 					.dropdown-item {
 						display: block;
 						cursor: pointer;
 						overflow: hidden;
 						padding: 0;
+						transition: all .3s ease-in-out;
 
 						&:not(:last-child) {
-							border-bottom: 1px solid #e7e7e7;
+							border-bottom: 1px solid #ccc;
+						}
+
+						&:hover {
+							color: #fff;
+							background-color: #2b6797;
+
+							a {
+								color: inherit !important
+							}
 						}
 					}
 				}
 
 				.toggle-user-dropdown {
-					padding: 5px 3px;
-
-					.fa {
-						position: relative;
-						top: 3px;
-					}
+					position: relative;
+					padding: 0 3px;
+					line-height: 1;
+					top: -1px;
 
 					&:hover,
 					&:focus {
@@ -345,7 +348,7 @@
 	}
 
 	.hamburger-menu {
-		top: 25px;
+		top: 18px;
 		right: 15px;
 		left: inherit;
 		position: absolute;
@@ -356,10 +359,6 @@
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
 		box-sizing: border-box;
-
-		@media screen and (min-width: $breakpoint-tablet) {
-			top: 32px;
-		}
 
 		&.open {
 			.line {
@@ -410,9 +409,9 @@
 			}
 		}
 
-		@media (max-width: $build-header-menu-tablet) {
-			display: block;
-		}
+		//@media (max-width: $build-header-menu-tablet) {
+		//	display: block;
+		//}
 
 		&.open + .nav-links {
 			@media (max-width: $build-header-menu-tablet) {
@@ -521,8 +520,9 @@ div.mobile-menu {
 section.home {
 	> header,
 	.slider {
-		min-height: 485px;
-		background: url('../images/background.jpg') no-repeat 50% 50%;
+		height: 100vh;
+		box-shadow: none;
+		background: #fff;
 		background-size: cover;
 		text-align: center;
 		display: flex;
@@ -530,10 +530,6 @@ section.home {
 		justify-content: center;
 		color: #fff;
 		position: relative;
-
-		@media (min-width: $breakpoint-mobile) {
-			min-height: 420px;
-		}
 
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 			display: block;
@@ -577,23 +573,15 @@ section.home {
 					text-align: center;
 
 					h1 {
-						font-size: 30px;
+						font-size: 72px;
+						font-weight: 400;
 						line-height: 1.2;
-						color: $promo-box-text-color;
-						font-weight: bold;
-						text-shadow: $promo-box-text-shadow;
-						margin-bottom: 30px;
-						text-transform: uppercase;
+						color: $main-title;
+						margin-bottom: 28px;
 						text-align: center !important;
 
-						@media screen and (min-width: $breakpoint-mobile) {
-							font-size: 42px;
-							margin-bottom: 20px;
-						}
-
-						@media screen and (min-width: $breakpoint-tablet) {
+						@media screen and (max-width: $breakpoint-mobile) {
 							font-size: 52px;
-							margin-bottom: 15px;
 						}
 					}
 
@@ -714,4 +702,67 @@ section.home {
 .wrapper-preview-menu .preview-actions .action-preview .action-preview-select,
 .u-field-value select {
 	padding: 0 5px;
+}
+
+.heading-group {
+	position: relative;
+
+	.mascot {
+		position: absolute;
+		right: -202px;
+		bottom: -55px;
+
+		@media screen and (max-width: $build-header-menu-tablet) {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	.mascot-quote {
+		display: inline-block;
+		padding: 28px;
+		position: absolute;
+		top: -120px;
+		left: 82px;
+		color: #fff;
+		font-size: 22px;
+		background: #6b9d9c;
+		border-radius: 50px;
+	}
+
+	.mascot-quote:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 41px solid transparent;
+		border-top-color: #6b9d9c;
+		border-bottom: 0;
+		border-left: 0;
+		margin-left: -38.5px;
+		margin-bottom: -28px;
+	}
+}
+
+// User coins in the header
+.user-coins-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.user-coins {
+	line-height: 1;
+	margin-top: 3px;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+.coins-icon {
+	display: block;
+	width: 35px;
+	max-width: initial;
+	margin-left: 6px;
 }

@@ -1,0 +1,19 @@
+<div id="onboarding-pop-up">
+    <div class="slider-holder">
+        % if onboarding_pages:
+          % for page in onboarding_pages:
+            <div class="slider-item">
+                <div class="onboarding-holder">
+                    <div class="onboarding-content">
+                        ${page['content'] | n}
+                    </div>
+                    <div class="mascot">
+                        <img class="mascot-image" src="${onboarding_mascot or '/static/{}/images/mascots/mascot_general.svg'.format(settings.DEFAULT_SITE_THEME)}" alt="HERA-mascot" />
+                    </div>
+                </div>
+            </div>
+          % endfor
+        %endif
+      </div>
+    </div>
+</div>

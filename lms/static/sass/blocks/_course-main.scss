@@ -81,7 +81,8 @@ body.view-in-course {
 
 #course-container {
 	max-width: 1170px;
-	padding: 0 15px;
+	padding: 0;
+	border: none;
 
 	.page-header {
 		padding: 20px;
@@ -457,6 +458,8 @@ button.prerequisite-button .fa {
 }
 
 .course-wrapper .course-content {
+	padding: 0 15px;
+
 	.staff-modal,
 	.history-modal {
 		top: 50% !important;

@@ -31,6 +31,21 @@ include_special_exams = settings.FEATURES.get('ENABLE_SPECIAL_EXAMS', False) and
 
 <%block name="header_extras">
 
+<!--  CDN for select2 plugin -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+<script>
+    // disable error messages
+    $.validator.setDefaults({
+        errorPlacement: function(error,element) {
+            return true;
+        }
+    });
+</script>
+
 % for template_name in ["image-modal"]:
 <script type="text/template" id="${template_name}-tpl">
     <%static:include path="common/templates/${template_name}.underscore" />
@@ -161,41 +176,6 @@ lang="${course.language}"
     </div>
     % endif
     <section class="course-content" id="course-content">
-        <header class="page-header has-secondary">
-            <div class="page-header-main">
-                <nav aria-label="${_('Course')}" class="sr-is-focusable" tabindex="-1">
-                    <div class="has-breadcrumbs">
-                        <div class="breadcrumbs">
-                            % if COURSE_OUTLINE_PAGE_FLAG.is_enabled(course.id):
-                            <span class="nav-item nav-item-course">
-                                    <a href="${course_url}">${course_home_page_title(course)}</a>
-                                </span>
-                            <span class="icon fa fa-angle-right" aria-hidden="true"></span>
-                            % endif
-                            % if chapter:
-                            <span class="nav-item nav-item-chapter" data-course-position="${course.position}" data-chapter-position="${chapter.position}">
-                                    <a href="${course_url}#${unicode(chapter.location)}">${chapter.display_name_with_default}</a>
-                                </span>
-                            <span class="icon fa fa-angle-right" aria-hidden="true"></span>
-                            % endif
-                            % if section:
-                            <span class="nav-item nav-item-section">
-                                    <a href="${course_url}#${unicode(section.location)}">${section.display_name_with_default}</a>
-                                </span>
-                            <span class="icon fa fa-angle-right" aria-hidden="true"></span>
-                            % endif
-                            <span class="nav-item nav-item-sequence">${sequence_title}</span>
-                        </div>
-                        <i class="fullscreen-button fs-expand" aria-hidden="true" id="fullscreen">
-                            <svg>
-                                <use xlink:href="#ico-fs-expand"></use>
-                            </svg>
-                        </i>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
         <main id="main" tabindex="-1" aria-label="Content">
             % if getattr(course, 'entrance_exam_enabled') and \
             getattr(course, 'entrance_exam_minimum_score_pct') and \
@@ -239,18 +219,6 @@ lang="${course.language}"
 
 </div>
 ${HTML(course_sock_fragment.body_html())}
-</div>
-<div class="container-footer">
-    % if settings.FEATURES.get("LICENSING", False):
-    <div class="course-license">
-        % if getattr(course, "license", None):
-        <%include file="../license.html" args="license=course.license" />
-        % else:
-        ## Default course license: All Rights Reserved, if none is explicitly set.
-        <%include file="../license.html" args="license='all-rights-reserved'" />
-        % endif
-    </div>
-    % endif
 </div>
 % if course.show_calculator or is_edxnotes_enabled(course, request.user):
 <nav class="nav-utilities ${"has-utility-calculator" if course.show_calculator else ""}" aria-label="${_('Course Utilities')}">

@@ -1,0 +1,12 @@
+<%page expression_filter="h"/>
+<%inherit file="/main.html" />
+
+<div class="not-found-holder">
+    <h1 class="not-found-title">
+        Please wait for your teacher before proceeding.
+        <br>
+    </h1>
+    <p class="not-found-text">
+        If you still have trouble, please email <a href="mailto:${settings.DEFAULT_FROM_EMAIL}" class="not-found-link" target="_blank">${settings.DEFAULT_FROM_EMAIL}</a>
+    </p>
+</div>

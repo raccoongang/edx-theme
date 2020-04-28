@@ -27,58 +27,15 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 %>
 
 <div class="nav-links">
-  <div class="main">
-    % if show_dashboard_tabs:
-      <div class="mobile-nav-item nav-item nav-tab mobile-nav-item-hide">
-        <a class="${'active ' if reverse('courses') == request.path else ''}tab-nav-link" href="${reverse('courses')}">
-          ${_("Find courses")}
-        </a>
-      </div>
-      % if show_program_listing:
-        <div class="mobile-nav-item nav-item nav-tab">
-          <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link" href="${reverse('program_listing_view')}">
-            ${_("Programs")}
-          </a>
-        </div>
-      % endif
-      % if show_journal_listing:
-        <div class="mobile-nav-item nav-item nav-tab">
-          <a class="${'active ' if reverse('openedx.journals.dashboard') in request.path else ''}tab-nav-link" href="${reverse('openedx.journals.dashboard')}">
-            ${_("Journals")}
-          </a>
-        </div>
-      % endif
-      <div class="mobile-nav-item nav-item nav-tab mobile-nav-item-hide">
-        <a class="${'active ' if '/u/' in request.path  else ''}tab-nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">
-          ${_("Profile")}
-        </a>
-      </div>
-    % endif
-    % if show_explore_courses:
-      <div class="mobile-nav-item nav-item nav-tab">
-        <a class="tab-nav-link" href="${reverse('dashboard')}">${_("Courses")}</a>
-      </div>
-    % endif
-    % if show_sysadmin_dashboard:
-      <div class="mobile-nav-item nav-item nav-tab">
-        ## Translators: This is short for "System administration".
-        <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
-      </div>
-    % endif
-    % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
-      <div class="mobile-nav-item nav-item nav-tab">
-        <a class="tab-nav-link shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
-          <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
-        </a>
-      </div>
-    % endif
-  </div>
   <div class="secondary secondary_authenticated">
     <div class="user-dropdown-wrapper">
       <%include file="user_dropdown.html"/>
     </div>
-    <div class="mobile-nav-item nav-item">
-      <a class="help-link" href="${help_link}" target="_blank"><svg><use xlink:href="#ico-help"></use></svg>${_("Help")}</a>
-    </div>
   </div>
+  % if show_coins:
+    <div class="user-coins-wrapper">
+      <span class="user-coins">${user_coins}</span>
+      <img class="coins-icon" src="${coins_img_url or '/static/{}/images/coins.svg'.format(settings.DEFAULT_SITE_THEME)}" alt="${_('User coins')}"/>
+    </div>
+  % endif
 </div>
