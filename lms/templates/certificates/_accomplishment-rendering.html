@@ -14,7 +14,23 @@ course_mode_class = course_mode if course_mode else ''
             </span>
             <span class="general-text">засвідчує, що</span>
         </div>
-        <strong class="user-name">${(accomplishment_copy_name or accomplishment_copy_username) | h}</strong>
+        % if accomplishment_copy_name:
+            % if len(accomplishment_copy_name) > 65:
+                <strong class="user-name-verylongname">${ accomplishment_copy_name | h}</strong>
+            % elif len(accomplishment_copy_name) > 36:
+                <strong class="user-name-longname">${ accomplishment_copy_name | h}</strong>
+            % else:
+                <strong class="user-name">${ accomplishment_copy_name | h}</strong>
+            % endif
+        % else:
+            % if len(accomplishment_copy_username) > 65:    
+                <strong class="user-name-verylongname">${ accomplishment_copy_username | h}</strong>
+            % elif len(accomplishment_copy_username) > 36:    
+                <strong class="user-name-longname">${ accomplishment_copy_username | h}</strong>
+            % else:
+                <strong class="user-name">${ accomplishment_copy_username | h}</strong>
+            % endif
+        % endif
         <div class="ribbon">
             <span class="results-title" ><u>${certificate_date_issued}</u> склав(ла) Hard Skills Exam за напрямком ${organization_long_name} та отримав(ла)</span>
             <span class="results-title"><u>${percent}</u> балів зі 100 можливих з таким розподілом балів:</span>
