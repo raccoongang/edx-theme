@@ -22,7 +22,7 @@
         <nav class="nav-colophon" aria-label="${_('About')}">
           <div class="logo-footer">
             <a href="/">
-              <img src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.png" alt="MAMA">
+              <img src="/static/${settings.FEATURES.get('FREETEAM_SITE_THEME',settings.DEFAULT_SITE_THEME)}/images/footer-logo.png" alt="MAMA">
             </a>
           </div>
         </nav>
@@ -52,7 +52,7 @@
             </svg>
             </span>
           and
-            <img class="skillonomy__logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo_skillonomy.png" alt="skillonomy">
+            <img class="skillonomy__logo" src="/static/${settings.FEATURES.get('FREETEAM_SITE_THEME',settings.DEFAULT_SITE_THEME)}/images/logo_skillonomy.png" alt="skillonomy">
         </p>
         <ul class="footer-socials-list">
           <li class="footer-socials-list-item">
