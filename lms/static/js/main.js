@@ -200,13 +200,7 @@ $(document).ready(function () {
 
         $link.on('click', function() {
             self.toggleClass(_openClass);
-            $(".course-news__text").html(short_content);
-
-            if ( self.hasClass(_openClass) ) {
-                $(".course-news__item").removeClass(_openClass);
-                self.addClass(_openClass);
-                $content.html(long_content);
-            }
+            self.hasClass(_openClass) ? $content.html(long_content) : $content.html(short_content);
         });
     });
 
