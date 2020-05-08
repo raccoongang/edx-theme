@@ -4296,8 +4296,8 @@ body.view-in-course {
     .wrapper-course-material {
         .course-material {
             padding: 0;
-            margin: 0;
-            flex: none;
+            margin: 20px 0;
+            flex-grow: 1;
 
             .course-tabs {
                 li {
@@ -4345,10 +4345,12 @@ body.view-in-course {
         display: none;
     }
 
-    @media (max-width: $laptop-size) {
+    @media (max-width: $tablet-size) {
         .wrapper-course-material {
             .course-material {
                 position: relative;
+                display: flex;
+                justify-content: flex-end;
 
                 .course-tabs {
                     opacity: 0;
@@ -4555,7 +4557,7 @@ body.view-in-course .wrapper-preview-menu {
 
 .course-overview-bg {
     background: linear-gradient(322.29deg, $color6 0%, $theme-header-btn-color 100%);
-    padding: 30px 0;
+    padding: 10px 0;
     box-sizing: border-box;
 
     &__container {
@@ -4566,6 +4568,11 @@ body.view-in-course .wrapper-preview-menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: $tablet-size) {
+            flex-wrap: nowrap;
+        }
     }
 
     h2,
@@ -4573,8 +4580,12 @@ body.view-in-course .wrapper-preview-menu {
         font: 600 24px/32px "Open Sans", sans-serif !important;
         color: $theme-btn-white-text-color;
         text-transform: uppercase;
-        max-width: 500px;
-        margin: 0 15px 0 0;
+        min-width: 400px;
+        margin: 20px 15px 20px 0;
+
+        @media (max-width: $tablet-size) {
+            min-width: auto;
+        }
     }
 
     @media (max-width: $mobile-size) {
