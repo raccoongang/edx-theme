@@ -1,0 +1,135 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<%include file="../svg-sprite.html"/>
+
+<main class="accomplishment accomplishment-main">
+
+    <div class="wrapper-accomplishment-rendering">
+        <div class="accomplishment-rendering">
+
+            <div class="accomplishment-type">
+                <span class="accomplishment-type-label hd-4">${document_title}</span>
+            </div>
+
+            <div class="wrapper-statement-and-signatories">
+                <div class="accomplishment-statement">
+                    <div class="accomplishment-statement__name">
+                        <svg class="svg-icon" viewBox="0 0 395 44">
+                            <use xlink:href="#certificate_text"></use>
+                        </svg>
+                    </div>
+                    <div class="accomplishment-statement__logo">
+                        <svg class="svg-icon" viewBox="0 0 105.9 94.3">
+                            <use xlink:href="#mama_logo"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                % if mode != 'base':
+                <div class="accomplishment-signatories-wrapper">
+                    <div class="accomplishment-signatories accomplishment-signatories-body">
+                        <div class="accomplishment-signatories-body__text">
+                            Данный сертификат подтверждает, что
+                        </div>
+                        <div class="accomplishment-signatories-body__name">
+                            ${accomplishment_copy_name | h}
+                        </div>
+                        <div class="accomplishment-signatories-body__text">
+                            прошел(ла) и успешно сдал(а) тесты и задания по курсу
+                        </div>
+                        <div class="accomplishment-signatories-body__name accomplishment-signatories-body__name_course">
+                            &laquo;${accomplishment_copy_course_name}&raquo;
+                        </div>
+
+                        <div class="accomplishment-signatories-body__text">
+                            в онлайн-академии Major Affiliate Marketing Academy, направленный на обретение базовых знаний профессии аккаунт менеджера в сфере аффилейт маркетинга
+                        </div>
+                    </div>
+                    <div class="accomplishment-signatories-result">
+                        <div class="accomplishment-signatories-result__text">
+                            ИТОГОВЫЙ РЕЗУЛЬТАТ:
+                        </div>
+                        <div class="accomplishment-signatories-result__text">
+                            ${grade_percentage}% (max 100%)
+                        </div>
+                        <div class="accomplishment-signatories-result__text">
+                            ${points_earned} балла (max ${points_total} балла)
+                        </div>
+                    </div>
+                </div>
+                % endif
+            </div>
+
+            <div class="accomplishment-info">
+                <ul class="accomplishment-info-list">
+                    <li class="accomplishment-info-list__item">
+                        <div class="accomplishment-info-list__title">
+                            ${certificate_date_issued_title}
+                        </div>
+                        <div class="accomplishment-info-list__content">
+                            % if course_end_date:
+                                ${course_end_date}
+                            % else:
+                                ${certificate_date_issued}
+                            % endif
+                        </div>
+                    </li>
+                    <li class="accomplishment-info-list__item">
+                        <div class="accomplishment-info-list__title">
+                            ${certificate_id_number_title}:
+                        </div>
+                        <div class="accomplishment-info-list__content">
+                            ${certificate_id_number}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="accomplishment-seal">
+                <svg class="svg-icon" viewBox="0 0 447 446.5">
+                    <use xlink:href="#mama_seal_02"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper-accomplishment-metadata">
+        <div class="accomplishment-metadata">
+            <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about | h}</h2>
+
+            <div class="wrapper-metadata">
+                <dl class="metadata accomplishment-recipient">
+                    <dt class="label sr-only">Awarded to:</dt>
+                    <dd class="value copy copy-meta">
+                        <span class="recipient-img">
+                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="">
+                        </span>
+                        <div class="recipient-details">
+                            <h3 class="recipient-name">${accomplishment_copy_name | h}</h3>
+                            <p class="recipient-username">${accomplishment_copy_username} @ ${platform_name}</p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="metadata accomplishment-id">
+                    <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
+                    <dd class="value copy copy-base">${certificate_id_number}</dd>
+                </dl>
+                <dl class="metadata accomplishment-date">
+                    <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+                    <dd class="value copy copy-base">
+                        % if course_end_date:
+                            ${course_end_date}
+                        % else:
+                            ${certificate_date_issued}
+                        % endif
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</main>
