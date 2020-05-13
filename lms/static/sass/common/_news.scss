@@ -4,6 +4,30 @@
     list-style: none;
     $parent: &;
 
+    %default-values {
+        p {
+            font: 400 16px/24px $default-font;
+            color: $color8;
+        }
+
+        *:not(.fa) {
+            font-family: $default-font;
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: $theme-header-btn-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
     &__item {
         margin-bottom: 50px !important;
 
@@ -32,27 +56,26 @@
     }
 
     &__title {
-        font: 600 18px/24px "Artegra Sans", Arial, sans-serif !important;
+        font: 600 18px/24px $default-font;
         color: $color7;
         text-transform: uppercase;
         margin-bottom: 3px;
+
+        @extend %default-values;
     }
 
     &__date {
-        font: 600 12px/18px "Artegra Sans", Arial, sans-serif !important;
+        font: 600 12px/18px $default-font;
         color: #757575;
         margin-bottom: 5px;
     }
 
     &__text {
-        font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
+        font: 400 16px/24px $default-font;
         color: $color8;
         max-width: 670px;
 
-        p {
-            font: 400 16px/24px "Artegra Sans", Arial, sans-serif !important;
-            color: $color8;
-        }
+        @extend %default-values;
     }
 
     &__actions {
@@ -61,7 +84,7 @@
         button {
             border: 0;
             outline: none;
-            font: 600 14px/18px "Artegra Sans", Arial, sans-serif !important;
+            font: 600 14px/18px $default-font;
             background-color: $theme-header-btn-color;
             color: $theme-btn-text-color;
             border-radius: 46px;
