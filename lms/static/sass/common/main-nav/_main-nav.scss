@@ -36,12 +36,12 @@
 }
 a.main-nav__link,
 .main-nav__link {
-    font-family: 'Artegra Sans', sans-serif;
+    font-family: $default-font;
     font-size: 14px;
     color: $theme-header-link-color;
     letter-spacing: 0;
     display: block;
-    
+
     &:focus,
     &:hover {
         color: $theme-header-link-color;
