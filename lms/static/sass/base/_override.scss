@@ -1958,6 +1958,21 @@ body.view-passwordreset {
             background: transparent;
             border-radius: 0;
         }
+
+        @media (max-width: $tablet-size) {
+            .dropdown-menuitem,
+            .user-dropdown-menuitem {
+                color: $color6;
+                font: 400 14px/16px $default-font;
+                padding: 15px 16px;
+                text-align: left;
+
+                &:hover,
+                &:focus {
+                    background: none;
+                }
+            }
+        }
     }
 
     .user-dropdown {
@@ -1998,7 +2013,7 @@ body.view-passwordreset {
         display: block;
         color: $theme-btn-white-text-color;
         padding: 16px;
-        font: 400 20px/24px "Artegra Sans", Arial, sans-serif !important;
+        font: 400 20px/24px $default-font;
 
         &:focus,
         &:hover {
@@ -2007,6 +2022,10 @@ body.view-passwordreset {
 
         .main-nav & {
             padding-left: 46px;
+
+            @media (max-width: $tablet-size) {
+                padding-left: 15px;
+            }
         }
     }
 }
@@ -4908,6 +4927,7 @@ body.view-in-course {
         padding: 12px 25px;
         display: flex;
         align-items: center;
+        z-index: 10;
 
         &:focus {
             outline: none;
