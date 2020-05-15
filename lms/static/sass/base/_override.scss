@@ -1888,6 +1888,7 @@ body.view-passwordreset {
         max-width: 200px;
         overflow: hidden;
         text-overflow: ellipsis;
+        font: 400 14px/16px $default-font;
     }
 
     .user-link {
@@ -1945,7 +1946,7 @@ body.view-passwordreset {
         list-style: none;
         width: 168px;
         overflow: hidden;
-        margin-top: 13px;
+        margin-top: 14px;
         text-align: center;
 
         &.expanded {
@@ -1980,7 +1981,7 @@ body.view-passwordreset {
         background: none;
         box-shadow: none;
         text-shadow: none;
-        color: #ff6f00;
+        color: $theme-header-btn-color;
         padding: 0 8px;
 
         &:focus,
@@ -1994,7 +1995,8 @@ body.view-passwordreset {
 
         .fa-sort-desc {
             position: relative;
-            top: -2px;
+            top: -5px;
+            font-size: 18px;
         }
     }
 
