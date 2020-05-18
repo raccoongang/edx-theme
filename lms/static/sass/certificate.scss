@@ -3,28 +3,31 @@
 }
 
 .layout-accomplishment {
-    &.certificate-verified {
-        .accomplishment-rendering {
-            border: 1px solid #ccc;
-            box-shadow: 5px 5px 5px rgba(122, 122, 122, .5);
-            background: #fff;
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            padding: 38px 40px;
+    &.certificate-verified .accomplishment-rendering {
+        background-image: none;
+        border-color: $gray-color;
+    }
 
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                opacity: .05;
-                background: #fff url("../images/mama_seal.svg") -500px 20% no-repeat;
-                background-size: 120%;
-                z-index: -1;
-            }
+    .accomplishment-rendering {
+        border: 1px solid $gray-color;
+        box-shadow: 5px 5px 5px rgba(122, 122, 122, .5);
+        background: $theme-btn-text-color;
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        padding: 38px 40px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .05;
+            background: $theme-btn-text-color url("../images/mama_seal.svg") -500px 20% no-repeat;
+            background-size: 120%;
+            z-index: -1;
         }
     }
 }
