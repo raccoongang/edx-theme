@@ -1,3 +1,5 @@
+@import "../utils/const";
+
 *:not(.fa) {
     font-family: Verdana, Arial, sans-serif !important;
 }
@@ -34,6 +36,12 @@
     &.certificate-honor .accomplishment-rendering .accomplishment-type {
         margin-top: -5rem;
     }
+}
+
+.wrapper-banner-user {
+    margin-top: 0;
+    box-shadow: inset 0 .125rem .125rem 0 #7861a8;
+    background: linear-gradient(322deg, $color6 0%, $theme-header-btn-color 100%);
 }
 
 .accomplishment-rendering {
@@ -153,5 +161,9 @@
             margin-right: 0;
             width: 100%;
         }
+    }
+
+    .accomplishment-type {
+        display: none;
     }
 }
