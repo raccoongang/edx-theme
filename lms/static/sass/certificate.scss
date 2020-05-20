@@ -8,6 +8,10 @@
     &.certificate-verified .accomplishment-rendering {
         background-image: none;
         border-color: $gray-color;
+
+        .accomplishment-type-label {
+            color: #111;
+        }
     }
 
     .accomplishment-rendering {
@@ -86,7 +90,7 @@
 }
 
 .accomplishment-signatories-result {
-    width: 300px;
+    width: 11cm;
     color: #21bcac;
     font-weight: 700;
     font-size: 14px;
@@ -151,6 +155,12 @@
 }
 
 @media print {
+    @page {
+        size: auto;
+        margin: 0;
+        border: 0;
+    }
+
     .wrapper-statement-and-signatories {
         border: 0 !important;
     }
