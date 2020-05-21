@@ -8,6 +8,14 @@
     &.certificate-verified .accomplishment-rendering {
         background-image: none;
         border-color: $gray-color;
+
+        .accomplishment-type-label {
+            color: #111;
+        }
+    }
+
+    .accomplishment-type-label {
+        width: 100%;
     }
 
     .accomplishment-rendering {
@@ -93,6 +101,7 @@
     line-height: 22px;
     text-align: right;
     height: 100%;
+    flex-shrink: 0;
 }
 
 .accomplishment-signatories-body {
@@ -151,19 +160,43 @@
 }
 
 @media print {
+    @page {
+        size: auto;
+        margin: 0;
+        border: 0;
+    }
+
+    html,
+    body {
+        height: auto;
+        margin: 0 !important;
+    }
+
     .wrapper-statement-and-signatories {
         border: 0 !important;
     }
 
-    .accomplishment-rendering {
+    .layout-accomplishment {
+        .wrapper-accomplishment-rendering {
+            margin-bottom: 0;
+        }
+
+        .accomplishment-rendering {
+            max-width: 100%;
+
+            @media (orientation: landscape) {
+                height: 20.9cm;
+            }
+        }
+
         .accomplishment-statement {
             margin-left: 0;
             margin-right: 0;
             width: 100%;
         }
-    }
 
-    .accomplishment-type {
-        display: none;
+        .accomplishment-type {
+            display: none;
+        }
     }
 }
