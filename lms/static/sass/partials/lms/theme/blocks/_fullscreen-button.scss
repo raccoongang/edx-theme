@@ -22,9 +22,30 @@
 .view-in-course .course-content {
     background: $body-bg;
 
-    &:-webkit-full-screen,
-    &:-moz-full-screen,
-    &:-ms-fullscreen,
+    &:-webkit-full-screen {
+        overflow: auto;
+        width: 100% !important;
+        display: block !important;
+        background: $white !important;
+        margin: 0 !important;
+    }
+
+    &:-moz-full-screen {
+        overflow: auto;
+        width: 100% !important;
+        display: block !important;
+        background: $white !important;
+        margin: 0 !important;
+    }
+
+    &:-ms-fullscreen {
+        overflow: auto;
+        width: 100% !important;
+        display: block !important;
+        background: $white !important;
+        margin: 0 !important;
+    }
+
     &:fullscreen {
         overflow: auto;
         width: 100% !important;
