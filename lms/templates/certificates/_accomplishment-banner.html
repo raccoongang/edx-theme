@@ -42,7 +42,7 @@ from django.template.defaultfilters import escapejs
         <div class="message message-block message-notice">
             <h2 class="message-title hd-5 emphasized">${accomplishment_banner_opening | h}</h2>
             <div class="wrapper-copy-and-actions">
-                <p class="message-copy copy copy-base emphasized">Поздравляем! Эта страница содержит достижения слушателя Мajor Affiliate Marketing Academy.</p>
+                <p class="message-copy copy copy-base emphasized">${_("Congratulations! This page contains student achievements of the Major Affiliate Marketing Academy.")}</p>
                 <div class="message-actions">
                     <h3 class="sr-only">${_("Print or share your certificate:")}</h3>
                     % if facebook_share_enabled:
