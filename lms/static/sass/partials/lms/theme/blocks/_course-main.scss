@@ -251,6 +251,13 @@ button.bookmark-button:not(.disabled) {
         button.btn-default:hover {
             background: $link-hover;
         }
+
+        .capa_inputtype.imageinput [id^="answer_"] {
+            .rtl & {
+                left: auto;
+                right: 0;
+            }
+        }
     }
 
     &.xmodule_SequenceModule .sequence-nav-button {

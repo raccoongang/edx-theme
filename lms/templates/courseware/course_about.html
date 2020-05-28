@@ -118,6 +118,8 @@ from six import string_types
         <div class="heading-group">
           <h1>${course.display_name_with_default}</h1>
           <span>${course.display_org_with_default}</span>
+          <br>
+          <p>${get_course_about_section(request, course, 'short_description')}</p>
         </div>
 
         <div class="main-cta">
