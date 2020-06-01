@@ -1,5 +1,5 @@
 .wrapper-footer {
-	padding: 44px 0 !important;
+	padding: 44px 0 60px !important;
 	text-align: center;
 	background: $footer-bg;
 	color: #fff;
@@ -52,7 +52,7 @@
 							color: $footer-nav-link-color;
 							text-transform: uppercase;
 							font-size: 12px;
-							font-weight: 700;
+							font-weight: 500;
 
 							&:focus,
 							&:hover {
@@ -69,8 +69,9 @@
 	.footer-flex {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+		position: relative;
 
 		> * {
 			@media screen and (max-width: $build-footer-mobile) {
@@ -136,15 +137,25 @@
 	}
 
 	.footer-logo-holder {
-		width: 275px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
 
 		@media screen and (max-width: $build-footer-mobile) {
+			position: static;
+			transform: initial;
 			order: 1;
 			margin-bottom: 38px;
 		}
 
 		a {
 			float: right;
+			transition: all .3s ease-in-out !important;
+
+			&:hover {
+				opacity: .75;
+			}
 
 			@media screen and (max-width: $build-footer-mobile) {
 				float: none;

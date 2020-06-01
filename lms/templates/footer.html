@@ -22,106 +22,52 @@
       <nav class="nav-colophon" aria-label="${_('About')}">
         <ol>
             <li class="nav-colophon-01">
-              <a href="/about">${_("About")}</a>
+              <a href="https://www.physiou.com/about" target="_blank">${_("About")}</a>
+            </li>
+            <li class="nav-colophon-01">
+              <a href="mailto:care@physiou.com?subject=Web:Contact us" target="_blank">${_("Contact")}</a>
             </li>
             <li class="nav-colophon-02">
-              <a href="/privacy">${_("Privacy Policy")}</a>
+              <a href="https://www.physiou.com/privacy-policy" target="_blank">${_("Privacy Policy")}</a>
             </li>
             <li class="nav-colophon-03">
-              <a href="/tos">${_("Terms of Service")}</a>
+              <a href="https://www.physiou.com/tos" target="_blank">${_("Terms of Service")}</a>
             </li>
         </ol>
       </nav>
       <div class="footer-flex">
-        <p class="footer-support">
-          <span>${_("Built on")}</span>
-          <a target="_blank" href="${footer['openedx_link']['url']}">
-            <svg class="svg-edx"  viewBox="0 0 100 70">
-              <use xlink:href="#logo-edx" />
-            </svg>
-          </a>
-          <span>${_("by")}</span>
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            <em>RACCOONGANG</em>
-            <svg class="svg-raccoon"  viewBox="0 0 100 100">
-              <use xlink:href="#logo-raccoon" />
-            </svg>
-          </a>
-        </p>
         <ul class="icon-list">
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
+            <a href="https://www.facebook.com/PhysioU/" target="_blank" class="icon-list_link">
               <svg class="icon-list_svg" viewBox="0 0 35 35">
                 <use xlink:href="#ico-facebook" />
               </svg>
             </a>
           </li>
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-twitter" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-instagram" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-linkedin" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
+            <a href="https://www.youtube.com/PhysioU" target="_blank" class="icon-list_link">
               <svg class="icon-list_svg" viewBox="0 0 35 35">
                 <use xlink:href="#ico-youtube" />
               </svg>
             </a>
           </li>
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
+            <a href="https://twitter.com/physio_u" target="_blank" class="icon-list_link">
               <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-odnoklassniki" />
+                <use xlink:href="#ico-twitter" />
               </svg>
             </a>
           </li>
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
+            <a href="https://www.instagram.com/physio_u/" target="_blank" class="icon-list_link">
               <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vimeo" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vk" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-behance" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-google-plus" />
+                <use xlink:href="#ico-instagram" />
               </svg>
             </a>
           </li>
         </ul>
         <div class="footer-logo-holder">
-          <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.svg"></a>
+          <a href="/"><img alt="organization logo" src="/static/${settings.FEATURES.get('PHYSIOU_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/footer-logo.svg"></a>
         </div>
       </div>
     </div>
