@@ -345,21 +345,17 @@
 	}
 
 	.hamburger-menu {
-		top: 25px;
+		top: 50%;
 		right: 15px;
 		left: inherit;
 		position: absolute;
 		width: 30px;
 		height: 30px;
 		padding-bottom: 0;
-		transform: rotate(0deg);
+		transform: rotate(0deg) translateY(-50%);
 		transition: 0.5s ease-in-out;
 		cursor: pointer;
 		box-sizing: border-box;
-
-		@media screen and (min-width: $breakpoint-tablet) {
-			top: 32px;
-		}
 
 		&.open {
 			.line {
