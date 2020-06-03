@@ -33,32 +33,40 @@ course_mode_class = course_mode if course_mode else ''
                 <div class="accomplishment-signatories-wrapper">
                     <div class="accomplishment-signatories accomplishment-signatories-body">
                         <div class="accomplishment-signatories-body__text">
-                            Данный сертификат подтверждает, что
+                            ${_("This is to certify that")}
                         </div>
                         <div class="accomplishment-signatories-body__name">
                             ${accomplishment_copy_name | h}
                         </div>
                         <div class="accomplishment-signatories-body__text">
-                            прошел(ла) и успешно сдал(а) тесты и задания по курсу
+                            ${_("successfully completed and received a passing grade in:")}
                         </div>
                         <div class="accomplishment-signatories-body__name accomplishment-signatories-body__name_course">
-                            &laquo;${accomplishment_copy_course_name}&raquo;
-                        </div>
-
-                        <div class="accomplishment-signatories-body__text">
-                            в онлайн-академии Major Affiliate Marketing Academy, направленный на обретение базовых знаний профессии аккаунт менеджера в сфере аффилейт маркетинга
+                            ${_("\"{accomplishment_copy_course_name}\"").format(
+                                accomplishment_copy_course_name=accomplishment_copy_course_name
+                            )}
                         </div>
                     </div>
                     <div class="accomplishment-signatories-result">
                         <div class="accomplishment-signatories-result__text">
-                            ИТОГОВЫЙ РЕЗУЛЬТАТ:
+                            ${_("COURSE GRADE PERFORMANCE:")}
                         </div>
                         <div class="accomplishment-signatories-result__text">
                             ${grade_percentage}% (max 100%)
                         </div>
                         <div class="accomplishment-signatories-result__text">
-                            ${points_earned} баллов (max ${points_total} баллов)
+                            ${
+                                _("with {points_earned} points (max {points_total} points)").format(
+                                    points_earned=points_earned,
+                                    points_total=points_total
+                                )
+                            }
                         </div>
+                    </div>
+                </div>
+                <div class="accomplishment-signatories-wrapper-bottom accomplishment-signatories-body">
+                    <div class="accomplishment-signatories-body__text">
+                        ${_("a course offered by Major Affiliate Marketing Academy (MAMA) aimed at gaining basic knowledge for the account manager career in the field of affiliate marketing.")}
                     </div>
                 </div>
                 % endif
