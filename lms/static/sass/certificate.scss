@@ -4,6 +4,20 @@
     font-family: Verdana, Arial, sans-serif !important;
 }
 
+@media print {
+    @page {
+        size: auto;
+        margin: 0;
+        border: 0;
+    }
+
+    body,
+    html {
+        height: auto;
+        margin: 0 !important;
+    }
+}
+
 .layout-accomplishment {
     &.certificate-verified .accomplishment-rendering {
         background-image: none;
@@ -192,9 +206,13 @@
 
         .accomplishment-rendering {
             max-width: 100%;
+            height: 20.9cm;
 
-            @media (orientation: landscape) {
-                height: 20.9cm;
+            // fix for safari
+
+            &:not(:root:root) {
+                height: 15.5cm;
+                padding-top: 15px;
             }
         }
 
@@ -212,5 +230,11 @@
     .accomplishment-signatories-wrapper-bottom {
         max-width: 100%;
         width: 14cm;
+    }
+
+    // fix for safari
+
+    .accomplishment-seal:not(:root:root) {
+        right: 15px;
     }
 }
