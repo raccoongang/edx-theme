@@ -1,4 +1,4 @@
-<%! from django.utils.translation import ugettext as _ %>
+<%! from django.utils.translation import ugettext as _, get_language %>
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
@@ -41,9 +41,15 @@ course_mode_class = course_mode if course_mode else ''
                         <div class="accomplishment-signatories-body__text">
                             ${_("successfully completed and received a passing grade in:")}
                         </div>
+                        <%
+                        if eng_cert_course_name and get_language() == "en":
+                            course_name = eng_cert_course_name
+                        else:
+                            course_name = accomplishment_copy_course_name
+                        %>
                         <div class="accomplishment-signatories-body__name accomplishment-signatories-body__name_course">
                             ${_("\"{accomplishment_copy_course_name}\"").format(
-                                accomplishment_copy_course_name=accomplishment_copy_course_name
+                                accomplishment_copy_course_name=course_name
                             )}
                         </div>
                     </div>
