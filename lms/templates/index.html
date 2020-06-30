@@ -126,6 +126,27 @@ from openedx.core.djangolib.markup import HTML, Text
       <script src="${static.url('js/slick.min.js')}"></script>
       <script src="${static.url('js/slider.js')}"></script>
       -->
+      <article class="index-text-info">
+        <h2 class="h2">${_("The way that the Digital Skills Lab delivers on-line learning is changing.")}</h2>
+        <p>
+          ${_("We are pleased to announce a new range of courses and resources to improve your digital skills, which now will be available to you directly through")}
+          <a class="index-text-info__link" target="_blank" href="https://moodle.lse.ac.uk/course/index.php?categoryid=155">${_("LSE's Moodle")}</a>
+        </p>
+        <p>
+          <a class="index-text-info__link index-text-info__link-styled" target="_blank" href="https://moodle.lse.ac.uk/course/index.php?categoryid=155">${_("Go to the new course offer")}</a>
+        </p>
+        <p>
+          ${_("Please note that the range of courses and resources available will keep growing during this summer, please follow us in")}
+          <a class="index-text-info__link" target="_blank" href="https://studenthub.lse.ac.uk/channel/4226]">${_("Student Hub")}</a>
+          ${_("or")}
+          <a class="index-text-info__link" target="_blank" href="https://lse.eu.qualtrics.com/jfe/form/SV_5inxFR5X6KDPfuZ">${_("subscribe to our newsletter")}</a>
+          ${_("to get updates about new courses.")}
+        </p>
+        <p>
+          ${_("Some of the courses previously provided through this platform are no longer available. If you have any queries or concerns, please")}
+          <a class="index-text-info__link" href="mailto:Digital.Skills.Lab@lse.ac.uk">${_("contact the Digital Skills Lab")}</a>
+        </p>
+      </article>
       <%include file="${courses_list}" />
 
     </section>

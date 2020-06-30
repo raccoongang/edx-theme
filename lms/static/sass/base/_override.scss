@@ -877,14 +877,11 @@ body .wmd-prompt-dialog .btn-brand:focus {
                     margin-bottom: 50px;
                     text-transform: uppercase;
                     font-family: "SegoeUI","Open Sans",Verdana,Geneva,sans-serif;
-                    @media screen and (min-width: 760px) {
-                        font-size: 52px;
-                    }
                 }
                 span {
                     display: block;
                     text-align: center;
-                    font-size: 34px;
+                    font-size: 24px;
                     line-height: 1.3;
                     text-shadow: $promo-box-text-shadow;
                     color: $promo-box-text-color;
@@ -3885,5 +3882,77 @@ body .login-register .section-title.lines .text {
         line-height: 35px;
         text-align: center;
         color: #fff;
+    }
+}
+
+.index-text-info {
+    text-align: center;
+    margin: 60px auto 30px;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 767px) {
+        margin: 40px auto 20px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 42px;
+        margin-bottom: 30px;
+        color: $base-color2;
+        font-weight: 600;
+
+        @media screen and (max-width: 767px) {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-size: 18px;
+        line-height: 1.6;
+        color: $base-color2;
+
+        &:hover,
+        &:focus,
+        &:visited,
+        &:visited:hover,
+        &:visited:focus { 
+            text-decoration: none;
+            opacity: 1;
+            color: $base-color2;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        &-styled {
+            color: $base-color !important;
+            font-size: 26px;
+            font-weight: 700;
+
+            @media screen and (max-width: 767px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
     }
 }
