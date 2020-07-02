@@ -1,0 +1,25 @@
+<%def name="online_help_token()"><% return "course" %></%def>
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _, get_language
+%>
+<%page args="module" expression_filter="h"/>
+<article class="course" id="${module['uid']}" role="region" aria-label="${module['title']}">
+  <a href="${module['url']}" target="_blank">
+    <header class="course-image">
+      <div class="cover-image">
+        <img src="${module['icon_url']}" alt="${module['title']}" />
+        <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
+      </div>
+    </header>
+    <div class="course-info" aria-hidden="true">
+      <h2 class="course-name">
+        <span class="course-organization">Level: ${', '.join(module['levels'])}</span>
+        <span class="course-code">Roles: ${', '.join(module['roles'])}</span>
+        <span class="course-title">${module['title']}</span>
+      </h2>
+    </div>
+  </a>
+</article>
+
+

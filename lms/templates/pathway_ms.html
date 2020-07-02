@@ -1,0 +1,25 @@
+<%def name="online_help_token()"><% return "course" %></%def>
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _, get_language
+%>
+<%page args="pathway" expression_filter="h"/>
+<article class="course" id="${pathway['uid']}" role="region" aria-label="${pathway['title']}">
+  <a href="${pathway['url']}" target="_blank">
+    <header class="course-image">
+      <div class="cover-image">
+        <img src="${pathway['icon_url']}" alt="${pathway['title']}" />
+        <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
+      </div>
+    </header>
+    <div class="course-info" aria-hidden="true">
+      <h2 class="course-name">
+        <span class="course-organization">Level: ${', '.join(pathway['levels'])}</span>
+        <span class="course-code">Roles: ${', '.join(pathway['roles'])}</span>
+        <span class="course-title">${pathway['title']}</span>
+      </h2>
+    </div>
+  </a>
+</article>
+
+

@@ -7,6 +7,7 @@
 
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
       <section class="courses">
+        <h2>Platform Courses</h2>
         <ul class="courses-listing">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses[:homepage_course_max]:
@@ -23,6 +24,28 @@
       </div>
     % endif
     % endif
+
+    <section class="courses">
+      <h2>MS Modules</h2>
+      <ul class="courses-listing">
+        %for module in modules_ms:
+        <li class="courses-listing-item">
+            <%include file="module_ms.html" args="module=module" />
+        </li>
+        %endfor
+      </ul>
+    </section>
+
+    <section class="courses">
+      <h2>MS Pathways</h2>
+      <ul class="courses-listing">
+        %for pathway in pathways_ms:
+        <li class="courses-listing-item">
+            <%include file="pathway_ms.html" args="pathway=pathway" />
+        </li>
+        %endfor
+      </ul>
+    </section>
 
   </section>
 </section>
