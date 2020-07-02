@@ -216,8 +216,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
                     % if share_settings.get('DASHBOARD_FACEBOOK', False):
                         <%
                           facebook_share_url = "{url}?{utm_params}".format(url=share_url.encode('utf-8'), utm_params=encoded_utm_parameters['facebook'])
-                          share_text = _("I'm taking {course_name} online with {facebook_brand}. Check it out!").format(course_name=course_overview.display_name_with_default, facebook_brand=share_settings.get('FACEBOOK_BRAND', 'edX.org'))
-                          query_params = urllib.urlencode((('u', facebook_share_url), ('quote', share_text.encode('utf-8')),))
+                          query_params = urllib.urlencode((('u', facebook_share_url), ))
                           facebook_url = 'https://www.facebook.com/sharer/sharer.php?{query}'.format(query=query_params)
                           share_msg = _("Share {course_name} on Facebook").format(course_name=course_overview.display_name_with_default)
                         %>
