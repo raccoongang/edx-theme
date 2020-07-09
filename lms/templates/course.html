@@ -48,28 +48,29 @@ from courseware.courses import get_course
               course_date_string = ''
           %>
           <div class="course-date">
+            <div class="course-date__text localized_datetime" aria-hidden="true" data-format="shortDate">
+              <svg class="svg-icon" viewBox="0 0 24 24">
+                <use xlink:href="#ic-round-people-outline"></use>
+              </svg>
+              <span>${status}</span>
+            </div>
+            <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
             % if course.advertised_start is not None:
-                <div class="course-date__text">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#ic-round-people-outline"></use>
-                  </svg>
-                  <span>${course.advertised_start}</span>
-                </div>
+              <div class="course-date__text">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#ic-round-clock"></use>
+                </svg>
+                <span>${course.advertised_start}</span>
+              </div>
             % else:
-                <div class="course-date__text localized_datetime" aria-hidden="true" data-format="shortDate">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#ic-round-people-outline"></use>
-                  </svg>
-                  <span>${status}</span>
-                </div>
-                <div style="display:none" class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts: {date}")}"></div>
-            % endif
+
             <div class="course-date__text">
               <svg class="svg-icon" viewBox="0 0 24 24">
                 <use xlink:href="#ic-round-clock"></use>
               </svg>
               <span>${course_date_string_format}</span>
             </div>
+            % endif
             <div class="course-date__text">
               <svg class="svg-icon" viewBox="0 0 24 24">
                 <use xlink:href="#ic-round-dollar"></use>
