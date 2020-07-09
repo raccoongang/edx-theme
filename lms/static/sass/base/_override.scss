@@ -957,6 +957,9 @@ body.view-passwordreset {
 
     &__item {
         width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-bottom: 1px solid $theme-header-btn-color;
         border-right: 1px solid $theme-header-btn-color;
         box-sizing: border-box;
@@ -989,10 +992,6 @@ body.view-passwordreset {
                 border-right: 0;
             }
 
-            &:nth-last-of-type(-n+5) {
-                border-bottom: 1px solid $theme-header-btn-color;
-            }
-
             &:nth-last-of-type(-n+4) {
                 border-bottom: 0;
             }
@@ -1009,11 +1008,11 @@ body.view-passwordreset {
                 border-right: 0;
             }
 
-            &:nth-last-of-type(-n+4) {
+            &:nth-last-of-type(-n+5) {
                 border-bottom: 1px solid $theme-header-btn-color;
             }
 
-            &:nth-last-of-type(-n+2) {
+            &:nth-last-of-type(-n+3) {
                 border-bottom: 0;
             }
         }
@@ -1041,12 +1040,11 @@ body.view-passwordreset {
 
     &__image {
         display: block;
-        max-width: 153px;
-        max-height: 101px;
+        max-height: 120px;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        margin: auto;
+        margin: 10px auto;
     }
 }
 
