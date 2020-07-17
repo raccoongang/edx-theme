@@ -211,7 +211,7 @@
             // fix for safari
 
             &:not(:root:root) {
-                height: 15.5cm;
+                height: 17cm;
                 padding-top: 15px;
             }
         }
@@ -230,11 +230,16 @@
     .accomplishment-signatories-wrapper-bottom {
         max-width: 100%;
         width: 14cm;
+
+        &:not(:root:root) {
+            width: 13cm;
+        }
     }
 
     // fix for safari
 
     .accomplishment-seal:not(:root:root) {
         right: 15px;
+        bottom: 100px;
     }
 }
