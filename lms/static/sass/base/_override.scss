@@ -4235,6 +4235,16 @@ body.view-in-course {
                 display: none;
             }
 
+            .proctored-exam {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    display: block;
+                    margin-bottom: 0;
+                }
+            }
+
             p {
                 margin: 0 0 15px;
 
@@ -6440,6 +6450,67 @@ body.discussion-page {
                     }
                 }
             }
+        }
+    }
+}
+
+.proctored_exam_status .exam-timer {
+    display: flex;
+
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+
+    &.low-time .pull-right .exam-button-turn-in-exam:hover {
+        color: $theme-btn-text-color;
+    }
+
+    .exam-button-turn-in-exam {
+        font-size: 12px !important;
+        background-color: $orange-color !important;
+    }
+
+    .pull-right {
+        flex: none;
+        height: 100%;
+        margin-top: 0;
+
+        b {
+            color: $orange-color !important;
+        }
+
+        .exam-button-turn-in-exam:hover {
+            background-color: rgba($orange-color, .8) !important;
+        }
+    }
+
+    .exam-text {
+        width: 100%;
+        display: block;
+        margin-right: 20px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 15px !important;
+
+        .pull-right {
+            float: none !important;
+            margin: 0 !important;
+
+            b {
+                font-size: 12px;
+            }
+        }
+
+        .exam-text {
+            width: 100% !important;
+            margin-bottom: 20px !important;
+            font-size: 12px;
+            margin-right: 0;
+        }
+
+        .exam-button-turn-in-exam {
+            margin-right: 5px;
         }
     }
 }
