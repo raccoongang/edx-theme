@@ -1,4 +1,6 @@
 <%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+
 <div class="wrapper-footer">
 
     <footer class="footer-app" role="contentinfo" id="company-info">
@@ -8,7 +10,10 @@
         <nav class="footer-app-nav">
             <ul class="list list-legal">
                 <li class="nav-item">
-                    <a class="action btn btn-small btn-link" href="${company_tos_url}">${company_tos_urltext}</a>
+                    <a class="action btn btn-small btn-link" href="/tos">${_("Terms of Service")}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="action btn btn-small btn-link" href="/honor">${_("Honor Code")}</a>
                 </li>
                 <li class="nav-item">
                     <a class="action btn btn-small btn-link" href="${company_privacy_url}">${company_privacy_urltext}</a>

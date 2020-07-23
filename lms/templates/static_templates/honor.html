@@ -1,0 +1,25 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Honor Code")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">${page_header or _("Honor Code")}</%block>
+        </h1>
+        <%block name="pagecontent">
+        % if page_content:
+            ${page_content}
+        % else:
+        <p>
+            PhysioU is committed to our users’ professional learning and growth. We strive to create a learning environment that is challenging and supportive. We value integrity as foundation to intellectual discovery, meaningful partnership and hold honesty, trust, civility and community as basic values in our community
+        </p>
+        <p>
+            “As a user of this PhysioU learning platform, I will commit to practising integrity and civility in the use of resources I have access to, and in my interactions towards other users and administrators of this platform. I am aware that cheating, plagiarizing, illegal sharing or misrepresenting any ideas or content violates the standards of this community and will result in consequences outlined in the Terms of Service, which may include termination of my access to these resources.”
+        </p>
+        % endif
+        </%block>
+    </section>
+</main>
