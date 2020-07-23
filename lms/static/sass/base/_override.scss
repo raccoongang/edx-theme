@@ -1089,7 +1089,7 @@ body.view-passwordreset {
             }
         }
 
-        @media (max-width: 414px) {
+        @media (max-width: $xs) {
             width: 100%;
 
             &:nth-child(1) {
@@ -1218,9 +1218,7 @@ body.view-passwordreset {
 
         span {
             display: block;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 400;
+            font: 400 16px/24px $default-font;
         }
     }
 
@@ -1293,6 +1291,7 @@ body.view-passwordreset {
         text-shadow: none;
         text-transform: none;
         box-shadow: none;
+        transition: all 200ms ease;
 
         &:hover {
             background: $color7 !important;
@@ -1338,7 +1337,7 @@ body.view-passwordreset {
         }
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: $xs) {
         flex-direction: column;
 
         &__input {
@@ -1394,22 +1393,33 @@ body.view-passwordreset {
             margin-right: 0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             width: 100%;
+            float: none;
+
+            @media (max-width: $tablet-size) {
+                flex-wrap: wrap;
+            }
+
+            @media (max-width: $xs) {
+                flex-direction: column;
+            }
 
             .nav-colophon {
-                max-width: 500px;
-                width: 100%;
-                margin-bottom: 16px;
+                margin: 0 15px;
 
                 @media (max-width: $tablet-size) {
-                    max-width: 100%;
+                    width: 50%;
+                    margin: 0;
+                }
+
+                @media (max-width: $xs) {
+                    width: 100%;
                 }
 
                 ol {
                     display: flex;
-                    flex-wrap: wrap;
-                    margin: 0 -15px 15px;
+                    flex-direction: column;
+                    margin: 0;
                     justify-content: flex-start;
 
                     @media (max-width: $tablet-size) {
@@ -1417,8 +1427,7 @@ body.view-passwordreset {
                     }
 
                     li {
-                        width: 50%;
-                        padding: 0 15px;
+                        padding: 0;
                         box-sizing: border-box;
                         float: none;
                         margin-right: 0;
@@ -1434,11 +1443,12 @@ body.view-passwordreset {
                         }
 
                         a {
-                            font-family: "Artegra Sans", Arial, sans-serif !important;
+                            font-family: $default-font;
                             font-weight: 600;
                             font-size: 16px;
                             line-height: 24px;
                             display: inline-block;
+                            text-transform: uppercase;
 
                             @media (max-width: $laptop-size) {
                                 font-size: 15px;
@@ -1446,8 +1456,9 @@ body.view-passwordreset {
                             }
 
                             &:focus,
+                            &:hover,
                             &:active {
-                                color: $theme-btn-text-color;
+                                color: $theme-btn-text-color !important;
                             }
                         }
                     }
@@ -1467,44 +1478,137 @@ body.view-passwordreset {
 
 .footer-content {
     margin-bottom: 50px;
+}
 
-    &__copy {
-        font-family: "Artegra Sans", Arial, sans-serif !important;
-        font-size: 12px;
-        line-height: 18px;
-        color: $theme-btn-text-color;
-        display: flex;
-        flex-direction: column;
-        margin: auto 15px auto 0;
-
-        a {
-            color: $theme-btn-text-color !important;
-            display: block;
-            border-bottom: 0;
-            margin-top: 6px;
-
-            &:hover {
-                text-decoration: underline;
-                color: $theme-header-btn-color !important;
-            }
-        }
-    }
+.theme-footer-links {
+    font: 400 12px/18px $default-font;
+    color: $theme-btn-text-color;
+    display: flex;
+    flex-direction: column;
+    margin: auto 20px auto 0;
 
     @media (max-width: $tablet-size) {
-        margin-bottom: 30px;
+        margin: 0 0 30px;
         flex-direction: column;
+        text-align: center;
+    }
 
-        &__copy {
-            margin: 0 auto 20px;
+    span {
+        display: block;
+        margin-bottom: 15px;
+        font-family: $default-font;
+    }
+
+    a {
+        color: $color1 !important;
+        display: block;
+        border-bottom: 0;
+        font-family: $default-font;
+
+        &:hover {
+            text-decoration: underline;
+            color: $theme-btn-white-text-color !important;
+        }
+    }
+}
+
+.footer-info {
+    display: flex;
+
+    @media (max-width: $tablet-size) {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    @media (max-width: $xs) {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    &__item {
+        max-width: 260px;
+        margin: 0 20px;
+
+        @media (max-width: $tablet-size) {
+            max-width: 100%;
+            width: 50%;
+            margin: 0;
+
+            &:first-child {
+                margin-right: 20px;
+
+                @media (max-width: $xs) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @media (max-width: $xs) {
+            width: 100%;
+            margin: 0 0 30px;
+            text-align: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            color: $color1;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            font: 400 16px/22px $default-font;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: $theme-btn-text-color !important;
+                    font: 300 14px/18px $default-font;
+
+                    &:hover {
+                        color: $color1 !important;
+                    }
+
+                    span {
+                        color: $color1;
+                        font-family: $default-font;
+
+                        &:hover {
+                            color: $theme-btn-text-color;
+                        }
+                    }
+                }
+
+                span {
+                    color: $color1;
+                    font-size: 14px;
+                    font-family: $default-font;
+                }
+            }
         }
     }
 }
 
 .footer-socials {
     @media (max-width: $tablet-size) {
+        width: 50%;
+    }
+
+    @media (max-width: $xs) {
         width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
 
@@ -1513,7 +1617,10 @@ body.view-passwordreset {
     margin: 0 0 25px;
     list-style: none;
     display: flex;
-    justify-content: center;
+
+    @media (max-width: $xs) {
+        justify-content: center;
+    }
 
     li {
         margin-right: 25px;
@@ -1634,9 +1741,7 @@ body.view-passwordreset {
 
         span {
             display: block;
-            font-family: "Artegra Sans", Arial, sans-serif;
-            font-size: 16px;
-            line-height: 24px;
+            font: 400 16px/24px $default-font;
             color: $theme-btn-text-color;
             margin-left: 10px;
             transition: all 200ms ease;
@@ -1657,7 +1762,6 @@ body.view-passwordreset {
         margin: 0 -15px;
 
         li {
-            width: 50%;
             padding: 0 15px;
             box-sizing: border-box;
 
@@ -1667,7 +1771,7 @@ body.view-passwordreset {
         }
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: $xs) {
         li {
             width: 100%;
             margin-bottom: 15px;
@@ -2413,7 +2517,7 @@ body.view-passwordreset {
                         margin: 20px auto 0;
                     }
 
-                    @media (max-width: 414px) {
+                    @media (max-width: $xs) {
                         width: 100%;
                     }
                 }
@@ -4913,7 +5017,7 @@ body.view-in-course {
         }
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: $xs) {
         margin: 0;
 
         &__item {
@@ -5420,7 +5524,6 @@ body.menu-open {
     .footer-support {
         color: #fff !important;
         font-size: 12px;
-        font-family: "Artegra Sans", Arial, sans-serif !important;
         display: flex;
         align-items: center;
         margin: 0;
@@ -5441,6 +5544,10 @@ body.menu-open {
             span {
                 height: 26px;
                 line-height: 26px;
+            }
+
+            span {
+                font-family: $default-font;
             }
         }
     }
