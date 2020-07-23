@@ -1,5 +1,15 @@
 @font-face {
     font-family: "Artegra Sans";
+    src: local("Artegra Sans Light"),
+        local("Artegra-Sans-Light"),
+        url("../fonts/ArtegraSans-Light.woff2") format("woff2"),
+        url("../fonts/ArtegraSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Artegra Sans";
     src: url("../fonts/ArtegraSans-Regular.eot");
     src: url("../fonts/ArtegraSans-Regular.eot?#iefix") format("embedded-opentype"),
         url("../fonts/ArtegraSans-Regular.woff2") format("woff2"),

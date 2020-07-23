@@ -41,68 +41,98 @@
         </div>
       </div>
       <div class="colophon footer-content">
-        <div class="footer-content__copy">
-          &copy; 2017 - 2020
-          <a href="https://courses.mama-edu.com/policy" target="_blank">${_("Privacy policy")}</a>
-          <a href="https://courses.mama-edu.com/honor" target="_blank">${_("Terms of Use")}</a>
-          <a href="https://courses.mama-edu.com/public-oferta" target="_blank">${_("Public offer")}</a>
+        <div class="footer-socials">
+          <ul class="footer-socials-list">
+            <li>
+              <a href="https://www.facebook.com/Major-Affiliate-Marketing-Academy-112936927016134/?modal=admin_todo_tour" target="_blank">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#entypo-social_facebook-with-circle"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCpltLCXxzX2YmBTHQMn8Q6w?view_as=subscriber" target="_blank">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#entypo-social_youtube-with-circle"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/mama.education/" target="_blank">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#ico-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-socials-channels">
+            <li>
+                <a href="https://t.me/mama_edu" target="_blank">
+                  <svg class="svg-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#fa-brands_telegram"></use>
+                  </svg>
+                  <span>канал в telegram</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/mama_discussion" target="_blank">
+                  <svg class="svg-icon" viewBox="0 0 24 24">
+                    <use xlink:href="#fa-brands_telegram"></use>
+                  </svg>
+                  <span>чат в telegram</span>
+                </a>
+            </li>
+          </ul>
         </div>
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
               <li><a href="https://courses.mama-edu.com/about-us" target="_blank">О нас</a></li>
-              <li><a href="/courses" target="_blank">Каталог курсов</a></li>
+              <li><a href="/courses" target="_blank">Все курсы</a></li>
           </ol>
         </nav>
-        <div class="footer-socials">
-            <ul class="footer-socials-list">
-              <li>
-                <a href="https://www.facebook.com/Major-Affiliate-Marketing-Academy-112936927016134/?modal=admin_todo_tour" target="_blank">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#entypo-social_facebook-with-circle"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCpltLCXxzX2YmBTHQMn8Q6w?view_as=subscriber" target="_blank">
-                  <svg class="svg-icon" viewBox="0 0 24 24">
-                    <use xlink:href="#entypo-social_youtube-with-circle"></use>
-                  </svg>
-                </a>
-              </li>
+        <div class="footer-info">
+          <div class="footer-info__item">
+            <h3>Для преподавателей и спонсоров:</h3>
+            <ul>
+              <li><a href="mailto:bizdev@mama-edu.com"><span>bizdev@mama-edu.com</span></a></li>
+              <li><a href="tel:+380637047052">+38 063 704 70 52</a></li>
+              <li><a href="tel:+79697776250">+7 969 777 62 50</a></li>
+              <li><a href="https://t.me/bizdev_mama" target="_blank">@Bizdev_MAMA</a></li>
             </ul>
-            <ul class="footer-socials-channels">
+          </div>
+          <div class="footer-info__item">
+            <h3>Для студентов:</h3>
+            <ul>
+              <li><a href="mailto:support@mama-edu.com"><span>support@mama-edu.com</span></a></li>
               <li>
-                  <a href="https://t.me/mama_edu" target="_blank">
-                    <svg class="svg-icon" viewBox="0 0 24 24">
-                      <use xlink:href="#fa-brands_telegram"></use>
-                    </svg>
-                    <span>канал в telegram</span>
-                  </a>
+                <a href="tel:+380947100323">+38 094 710 03 23</a>
+                <span>(Интертелеком)</span>
               </li>
               <li>
-                  <a href="https://t.me/mama_discussion" target="_blank">
-                    <svg class="svg-icon" viewBox="0 0 24 24">
-                      <use xlink:href="#fa-brands_telegram"></use>
-                    </svg>
-                    <span>чат в telegram</span>
-                  </a>
+                <a href="tel:+79697776250">+7 969 777 62 50</a>
+                <span>(Билайн)</span>
               </li>
+              <li><a href="https://t.me/mama_support" target="_blank">@mama_support</a></li>
             </ul>
+          </div>
         </div>
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
         % endif
-
-
         ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
       </div>
-
       ## Please leave this link and use one of the logos provided
       ## The OpenEdX link may be hidden when this view is served
       ## through an API to partner sites (such as marketing sites or blogs),
       ## which are not technically powered by OpenEdX.
       % if not hide_openedx_link:
       <div class="theme-footer_holder">
+        <div class="theme-footer-links">
+          <span>&copy; 2017 - 2020</span>
+          <a href="https://courses.mama-edu.com/policy" target="_blank">${_("Privacy policy")}</a>
+          <a href="https://courses.mama-edu.com/honor" target="_blank">${_("Terms of Use")}</a>
+          <a href="https://courses.mama-edu.com/public-oferta" target="_blank">${_("Public offer")}</a>
+        </div>
         <ul class="footer-support">
           <li class="footer-support__item">
             <span>Платформа на</span>
