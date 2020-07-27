@@ -18,12 +18,18 @@
 }
 
 .courses-container {
-	.courses .course .course-info .course-title {
-		color: $course-link-color;
-		font-size: 18px;
-		margin: 5px 0;
-		height: 96px;
-		overflow: hidden;
+	.courses .course .course-info {
+		.course-title {
+			color: $course-link-color;
+			font-size: 18px;
+			margin: 5px 0;
+			height: 119px;
+			overflow: hidden;
+		}
+
+		.course-code {
+			display: none;
+		}
 	}
 
 	.courses-more {
