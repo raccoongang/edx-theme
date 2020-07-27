@@ -340,3 +340,25 @@ button.bookmark-button:not(.disabled) {
         }
     }
 }
+
+.proctored_exam_status {
+    &.is-fixed {
+        z-index: 12;
+    }
+
+    .exam-timer {
+        @media (max-width: 767px) {
+            padding: 15px !important;
+
+            .pull-right {
+                float: none !important;
+                margin: 0 !important;
+            }
+
+            .exam-text {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+}
