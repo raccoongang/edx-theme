@@ -1,0 +1,38 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>${_("Contact")}</h1>
+        <div class="contact-info">
+            <div class="contact-info__item">
+              <h3>${_("For teachers and sponsors")}:</h3>
+              <ul>
+                <li><a href="mailto:bizdev@mama-edu.com"><span>bizdev@mama-edu.com</span></a></li>
+                <li><a href="tel:+380637047052">+38 063 704 70 52</a></li>
+                <li><a href="tel:+79697776250">+7 969 777 62 50</a></li>
+                <li><a href="https://t.me/bizdev_mama" target="_blank">@Bizdev_MAMA</a></li>
+              </ul>
+            </div>
+            <div class="contact-info__item">
+              <h3>${_("For students")}:</h3>
+              <ul>
+                <li><a href="mailto:support@mama-edu.com"><span>support@mama-edu.com</span></a></li>
+                <li>
+                  <a href="tel:+380947100323">+38 094 710 03 23</a>
+                  <span>(${_("Intertelecom")})</span>
+                </li>
+                <li>
+                  <a href="tel:+79697776250">+7 969 777 62 50</a>
+                  <span>(${_("Beeline")})</span>
+                </li>
+                <li><a href="https://t.me/mama_support" target="_blank">@mama_support</a></li>
+              </ul>
+            </div>
+          </div>
+
+    </section>
+</main>
