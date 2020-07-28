@@ -396,3 +396,25 @@
         }
     }
 }
+
+.wmd-panel,
+.discussion-post .post-body,
+.discussion-comment .response-body,
+.discussion-response .response-body {
+    blockquote {
+        margin: 1em;
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: .25em solid #dfe2e5;
+    }
+
+    code {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: .2rem .4rem;
+        font-size: 90%;
+        color: #bd4147;
+        background-color: #f5f5f5;
+        border-radius: 30px;
+    }
+}
