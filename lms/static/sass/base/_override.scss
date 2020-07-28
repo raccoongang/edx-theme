@@ -1601,6 +1601,43 @@ body.view-passwordreset {
     }
 }
 
+.contact-info {
+    display: flex;
+    text-align: left;
+
+    @media (max-width: $xs) {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    &__item {
+        width: 50%;
+
+        @media (max-width: $xs) {
+            width: 100%;
+            margin: 0 0 30px;
+            text-align: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            font: 400 16px/22px $default-font;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    }
+}
+
 .footer-socials {
     @media (max-width: $tablet-size) {
         width: 50%;
@@ -2829,7 +2866,7 @@ section.outside-app,
             @extend %custom-select;
         }
 
-        .u-field.editable-toggle.mode-display:hover .message-can-edit { 
+        .u-field.editable-toggle.mode-display:hover .message-can-edit {
             color: $theme-header-btn-color;
         }
     }
