@@ -344,6 +344,97 @@
             vertical-align: middle;
         }
 
+        section.idash-section#special_exams {
+            h3.ui-accordion-header {
+                padding-left: 30px;
+            }
+
+            .ecommerce-wrapper,
+            .proctoring-wrapper {
+                span.tip {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @media screen and (max-width: 480px) {
+                        flex-direction: column;
+                    }
+
+                    .add {
+                        float: none;
+
+                        @media screen and (max-width: 480px) {
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .top-header {
+                .search-attempts {
+                    @media screen and (max-width: 900px) {
+                        float: none;
+                        width: 75%;
+                        position: relative;
+
+                        input {
+                            width: 100%;
+                            padding-right: 75px;
+                        }
+
+                        span:not(.icon) {
+                            position: absolute;
+                            top: 0;
+                            padding: 7px 8px;
+
+                            &.clear-search {
+                                right: 0;
+                            }
+
+                            &.search {
+                                right: 33px;
+                            }
+                        }
+
+                        span {
+                            &:first-child {
+                                margin-right: 0;
+                            }
+
+                            &.icon {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        width: 100%;
+                    }
+                }
+
+                .pagination {
+                    width: auto;
+
+                    @media screen and (max-width: 900px) {
+                        display: flex;
+                        float: none;
+                        margin-top: 10px;
+                        width: 100%;
+
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .ui-accordion .ui-accordion-content {
+                @media screen and (max-width: 767px) {
+                    padding: 15px;
+                }
+            }
+        }
+
         .enrollment-wrapper {
             table {
                 width: 100%;
@@ -530,6 +621,32 @@
 
     .slick-header-column.ui-state-default {
         height: auto;
+    }
+
+    .modal {
+        position: static;
+
+        @media screen and (max-width: 680px) {
+            width: 100%;
+        }
+    }
+
+    #modalContainer {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        max-width: calc(100% - 20px);
+        max-height: calc(100% - 20px);
+        overflow: auto;
+
+        @media screen and (max-width: 680px) {
+            width: 90%;
+        }
+    }
+
+    #modalCloseButton {
+        right: -15px !important;
     }
 }
 
