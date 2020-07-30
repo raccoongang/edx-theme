@@ -954,6 +954,7 @@ body.view-passwordreset {
     margin: 0;
     padding: 0;
     list-style: none;
+    $self: &;
 
     &__item {
         width: 20%;
@@ -967,6 +968,7 @@ body.view-passwordreset {
         a {
             display: block;
             margin: 0 5px;
+            width: 100%;
 
             &:hover {
                 opacity: .7;
@@ -992,8 +994,20 @@ body.view-passwordreset {
                 border-right: 0;
             }
 
-            &:nth-last-of-type(-n+4) {
+            &:nth-last-of-type(-n+5) {
+                border-bottom: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-last-of-type(-n+2) {
+                border-bottom: 1px solid $theme-header-btn-color;
+            }
+
+            &:nth-last-of-type(-n+2) {
                 border-bottom: 0;
+            }
+
+            &:last-child {
+                border-right: 0;
             }
         }
 
@@ -1012,7 +1026,7 @@ body.view-passwordreset {
                 border-bottom: 1px solid $theme-header-btn-color;
             }
 
-            &:nth-last-of-type(-n+3) {
+            &:nth-last-of-type(-n+2) {
                 border-bottom: 0;
             }
         }
@@ -1035,6 +1049,14 @@ body.view-passwordreset {
             &:nth-last-of-type(-n+2) {
                 border-bottom: 0;
             }
+        }
+
+        &-increased #{$self}__image {
+            object-fit: cover;
+        }
+
+        &-decreased #{$self}__image {
+            width: 85%;
         }
     }
 
