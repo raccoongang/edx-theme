@@ -2,8 +2,14 @@
 	header.course-profile {
 		padding: 20px 0;
 		height: auto;
+		box-shadow: none !important;
+		border-bottom: none !important;
+		background: none !important;
 
 		.intro-inner-wrapper {
+			box-shadow: none !important;
+			background: rgb(155, 232, 190) !important;
+
 			.intro {
 				@media screen and (max-width: 767px) {
 					width: auto;
@@ -30,17 +36,22 @@
 					}
 				}
 
-				> .heading-group h1 span {
-					display: inline-block;
-					background: $theme-btn-bg;
-					color: $theme-btn-text-color;
-					text-shadow: none;
-					font-size: 18px;
-					line-height: normal;
-					vertical-align: top;
-					padding: 4px 20px;
-					margin: 5px 0 0 5px;
-				}
+				> .heading-group {
+					border-bottom: none !important;
+					box-shadow: none !important;
+
+					h1 span {
+						display: inline-block;
+						background: $theme-btn-bg;
+						color: $theme-btn-text-color;
+						text-shadow: none;
+						font-size: 18px;
+						line-height: normal;
+						vertical-align: top;
+						padding: 4px 20px;
+						margin: 5px 0 0 5px;
+					}
+				} 
 			}
 
 			&>div.table {

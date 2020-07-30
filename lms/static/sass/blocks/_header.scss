@@ -5,7 +5,8 @@
 	position: relative;
 	overflow: visible;
 	background: $header-bg;
-	z-index: 11;
+    z-index: 11;
+    box-shadow: none !important;
 
 	.main-header {
 		display: flex;
@@ -13,7 +14,8 @@
 		align-items: center;
 		padding: 22px 0 23px;
 		height: auto;
-		position: relative;
+        position: relative;
+        border-bottom: 2px solid #000;
 
 		@media screen and (max-width: $build-header-menu-tablet) {
 			display: block;
@@ -313,7 +315,7 @@
 	}
 
 	.course-header {
-		margin-top: 0;
+		margin-top: 20px;
 		color: #313131;
 		text-align: center;
 		padding-bottom: 20px;
@@ -445,8 +447,10 @@
 		color: $theme-btn-text-color !important;
 		border: none !important;
 		text-transform: uppercase;
-		border-radius: 2px !important;
-		text-align: center;
+		border-radius: 20px !important;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
 
 		@media (max-width: $build-header-menu-tablet) {
 			min-width: 290px;
@@ -457,6 +461,26 @@
 			width: 100%;
 			min-width: 0;
 		}
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			content: "";
+			background: linear-gradient(90deg,#4f4fff,#bb829e);
+			border-radius: 33px;
+			opacity: 0;
+            transition: .5s;
+            z-index: 1;
+        }
+        
+        span {
+            position: relative;
+            z-index: 2;
+        }
 
 		&:active,
 		&:focus {
@@ -469,6 +493,11 @@
 
 		&:hover {
 			background: $theme-btn-bg-hover !important;
+			color: #000;
+
+			&:after {
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -550,8 +579,7 @@ section.home {
 			top: -100px;
 			width: 100%;
 			height: calc(100% + 200px); /* картинка паралакса всегда больше нашего баннера, при скролинге не появится пустутота под баннером */
-			background: #040404 url('#{$img-path}/background.jpg') no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
-			background-size: cover;
+			background: #e7eef3 no-repeat 50% 50%; /* высота картинки - желательно не меньше 600px по высоте */
 		}
 
 		.outer-wrapper {
