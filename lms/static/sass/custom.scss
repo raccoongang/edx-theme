@@ -125,3 +125,73 @@ body {
 .login.container {
 	background: none !important;
 }
+
+.header__icons {
+	display: flex;
+}
+
+.header__ministry {
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.logo-ministry {
+    width: 48px;
+    height: 48px;
+}
+
+.logo-ministry__icon {
+    min-width: 48px;
+    max-width: 48px;
+    min-height: 48px;
+    max-height: 48px;
+}
+
+.main-logo {
+    display: block;
+    width: 138px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.main-logo_disabled {
+    pointer-events: none;
+}
+
+.main-logo__link {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-logo__icon {
+    width: 48px;
+    height: 48px;
+}
+
+.main-logo__text {
+    width: 78px;
+    height: 30px;
+    margin: 4px 0 0 9px;
+}
+
+.footer__project-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+
+.footer__ministry-logo {
+    display: block;
+    width: 160px;
+    max-width: 241px;
+    margin-top: 21px;
+}
+
+.footer__icon {
+    min-width: 241px;
+    max-width: 241px;
+    min-height: 30px;
+    max-height: 30px;
+}
