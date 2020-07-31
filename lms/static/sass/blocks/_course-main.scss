@@ -371,13 +371,23 @@ section.tool-wrapper {
 }
 
 .find-courses {
-	.search-facets:last-child {
-		.search-facets:last-child {
-			@media screen and (max-width: 540px) and (min-width: 320px) {
-				margin: 15px 0;
-			}
-		}
-	}
+    .search-facets {
+        &:last-child {
+            .search-facets:last-child {
+                @media screen and (max-width: 540px) and (min-width: 320px) {
+                    margin: 15px 0;
+                }
+            }
+        }
+
+        .name {
+            display: inline-block;
+            max-width: calc(100% - 35px);
+            white-space: normal;
+            word-break: break-word;
+            line-height: normal;
+        }
+    }
 
 	.wrapper-search-context .search-status-label {
 		word-break: break-word;
