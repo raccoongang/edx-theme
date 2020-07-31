@@ -36,12 +36,11 @@ input[type="submit"] {
 	display: inline-block;
 	background: $theme-btn-bg !important;
 	color: $theme-btn-text-color !important;
-	border: none !important;
 	text-transform: uppercase;
 	border-radius: 2px !important;
 	text-shadow: none !important;
 	box-shadow: none !important;
-	border: 1px solid #000;
+	border: 1px solid #000 !important;
 
 	&:active,
 	&:focus {
@@ -51,7 +50,7 @@ input[type="submit"] {
 	&:focus:hover,
 	&:hover {
 		background: $theme-btn-bg-hover !important;
-		color: #000;
+		color: #000 !important;
 	}
 }
 

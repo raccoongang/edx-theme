@@ -327,7 +327,7 @@
 	}
 
 	.main .nav-item a {
-		border: 2px solid $header-nav-link-color !important;
+		border: none !important;
 		padding: 6px 25px !important;
 		position: relative;
 		color: $header-nav-link-color !important;
@@ -338,7 +338,8 @@
 		&:focus,
 		&:hover {
 			color: $header-nav-link-color-hover !important;
-			border-color: $header-nav-link-color-hover !important;
+            border-color: none !important;
+            color: #616365 !important;
 		}
 	}
 

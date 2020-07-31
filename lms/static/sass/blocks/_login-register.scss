@@ -58,9 +58,11 @@
 			background: transparent;
 			border: none;
 			padding: 15px 0;
+			border: 1px solid #000;
 
 			&:hover {
 				background: transparent;
+				color: #000;
 			}
 
 			.title {
@@ -88,6 +90,7 @@
 
 .register .btn-brand.btn-login {
 	background: transparent !important;
+	border: none !important;
 }
 
 .login .orn-plus,
