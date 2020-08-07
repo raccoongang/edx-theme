@@ -17,6 +17,9 @@ from django.utils.translation import ugettext as _
   <div class="main-nav__item">
     <a class="main-nav__link" href="/courses">${_("Courses")}</a>
   </div>
+  <div class="main-nav__item">
+    <a class="main-nav__link" target="_blank" href="https://courses.mama-edu.com/teachers">${_("For teachers")}</a>
+  </div>
     %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
       <div class="main-nav__item">
         ## Translators: This is short for "System administration".
