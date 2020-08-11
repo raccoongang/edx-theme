@@ -1,12 +1,7 @@
-stages:
-    - linting
-
-stylelint:
-    stage: linting
-    image: pipelinecomponents/stylelint:latest
+touch-deploy:
+    stage: deploy
     script:
-        - stylelint 'lms/**/*.scss' --config .stylelintrc
-        - stylelint 'cms/**/*.scss' --config .stylelintrc
-    allow_failure: true
+        - apk add curl
+        - "curl -X POST -F token=$TRIGGER_TOKEN -F ref=master https://gitlab.raccoongang.com/api/v4/projects/841/trigger/pipeline"
     only:
-        - merge_requests
+        - master
