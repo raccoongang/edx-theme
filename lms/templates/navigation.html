@@ -52,7 +52,7 @@ site_status_msg = get_site_status_msg(course_id)
     <div class="theme-main-nav_logo">
       <a href="${marketing_link('ROOT')}">
         <span class="theme-nav-wrapper_logo-holder theme-nav-wrapper_logo-holder_small">
-            <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.svg" alt="logo" width="90"/>
+            <img src="/static/${settings.FEATURES.get('MARVEL_YELLOW_DEFAULT_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/header-info/logo.svg" alt="logo" width="90"/>
         </span>
       </a>
     </div>
@@ -140,7 +140,7 @@ site_status_msg = get_site_status_msg(course_id)
         <a href="${marketing_link('ROOT')}">
           <%block name="navigation_logo">
               <span class="theme-nav-wrapper_logo-holder">
-                <img src="/static/${settings.DEFAULT_SITE_THEME}/images/header-info/logo.svg" alt="logo" width="130">
+                <img src="/static/${settings.FEATURES.get('MARVEL_YELLOW_DEFAULT_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/header-info/logo.svg" alt="logo" width="130">
               </span>
           </%block>
         </a>
