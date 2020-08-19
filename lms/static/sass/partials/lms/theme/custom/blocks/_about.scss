@@ -2,21 +2,30 @@
     .content-wrapper {
         margin-top: 0;
         font-size: 14px;
+
+        @media screen and (max-width: 767px) {
+            .wrap-instructor-info:after {
+                display: none;
+            }
+        }
     }
 }
 
 .course-info {
     .about-page-container {
         display: flex;
-        flex-wrap: wrap;
-        padding: 0 3rem;
+        padding: 0 30px;
         max-width: 1600px;
+
+        @media screen and (max-width: $tablet-size) {
+            flex-direction: column;
+        }
     }
 
     .details {
         width: auto;
         flex-grow: 1;
-        padding: 3rem 0 5rem;
+        padding: 30px 0 50px;
 
         @media screen and (min-width: 767px) {
             margin-right: 0;
@@ -25,16 +34,16 @@
 
         h2 {
             color: $base-color !important;
-            font-size: 3.2rem !important;
+            font-size: 32px !important;
             font-weight: 300 !important;
-            margin: 4rem 0 3rem !important;
+            margin: 40px 0 30px !important;
             line-height: 130% !important;
         }
 
         p {
             line-height: 150%;
-            font-size: 1.4rem;
-            margin: 0.5rem 0;
+            font-size: 14px;
+            margin: 5px 0;
         }
     }
 
@@ -42,43 +51,52 @@
         float: none;
         flex: none;
         width: 30%;
-        max-width: 32rem;
-        padding: 5rem 0;
-        margin: 1rem 5rem 1rem 0;
+        max-width: 320px;
+        padding: 50px 0;
+        margin: 10px 50px 10px 0;
+
+        @media screen and (max-width: $tablet-size) {
+            width: 100%;
+            max-width: 100%;
+            margin: 10px 0;
+        }
 
         .important-dates {
             padding: 0;
 
             li {
-                font-size: 1.6rem;
-                padding: 2.6rem 0;
-                border-bottom: .1rem solid rgba($black, .2);
-                margin: .5rem 0;
+                font-size: 16px;
+                padding: 26px 0;
+                border-bottom: 1px solid rgba($black, .2);
+                margin: 5px 0;
+                display: flex;
 
                 &:last-child {
                     border-bottom: 0;
                 }
 
                 .icon {
-                    margin: 0 1.5rem 0 0;
-                    font-size: 1.6rem;
+                    margin: 0 15px 0 0;
+                    font-size: 16px;
                     color: rgba($black, .75);
                     opacity: 1;
+                    float: none;
                 }
     
                 .important-dates-item-title {
-                    width: 13rem;
-                    margin-right: 1.5rem;
+                    width: 130px;
+                    margin-right: 15px;
                     font-weight: 300;
-                    font-size: 1.4rem;
+                    font-size: 14px;
                     color: $black;
                     opacity: 1;
+                    float: none;
                 }
     
                 .important-dates-item-text {
                     float: none;
                     color: $base-color;
-                    font-size: 1.6rem;
+                    font-size: 16px;
                     font-weight: 400;
                 }
             }
@@ -105,12 +123,16 @@
         background: none;
         border-bottom: 0;
         box-shadow: none;
-        padding: 9rem 0;
+        padding: 90px 0;
         margin: 0 -20px;
         width: auto;
         display: flex;
         align-items: center;
         box-sizing: border-box;
+
+        @media screen and (max-width: $tablet-size) {
+            margin: 0;
+        }
 
         &:before {
             content: "";
@@ -129,16 +151,20 @@
             box-shadow: none;
             max-width: 1600px;
             width: 100%;
-            padding-left: 3rem;
-            padding-right: 3rem;
+            padding-left: 30px;
+            padding-right: 30px;
             z-index: 3;
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: $mobile-large) {
                 min-width: auto;
             }
 
             > div.table {
                 display: flex;
+
+                @media screen and (max-width: $tablet-size) {
+                    flex-direction: column;
+                }
             }
 
             .media {
@@ -146,13 +172,23 @@
                 padding: 0;
                 max-width: 320px;
                 width: 100%;
-                margin-right: 5rem;
+                margin-right: 50px;
+
+                @media screen and (max-width: $tablet-size) {
+                    margin: 0 0 30px;
+                    max-width: 100%;
+                }
 
                 .hero {
                     overflow: visible;
                     img {
                         border: 0;
-                        box-shadow: 0 0 2rem 0 rgba($black, .75);
+                        box-shadow: 0 0 20px 0 rgba($black, .75);
+
+                        @media screen and (max-width: $tablet-size) {
+                            width: 100%;
+                            max-height: 100%;
+                        }
                     }
                 }
             }
@@ -169,19 +205,24 @@
                     padding-bottom: 0;
 
                     h1 {
-                        font-size: 5.2rem;
+                        font-size: 52px;
                         font-weight: 300;
                         color: $white;
                         text-shadow: none;
-                        margin: -1.9rem 0 3rem;
+                        margin: -19px 0 30px;
+
+                        @media screen and (max-width: $tablet-size) {
+                            font-size: 32px;
+                            margin: 0 0 30px;
+                        }
                     }
 
                     p {
                         font-weight: 400;
-                        font-size: 1.8rem;
+                        font-size: 18px;
                         line-height: 150%;
                         color: $white;
-                        margin: -1rem 0 3rem;
+                        margin: -10px 0 30px;
                     }
                 }
 
@@ -195,7 +236,9 @@
                     }
 
                     a {
-                        display: inline-block;
+                        display: block;
+                        margin: 10px 20px 10px 0;
+                        height: 100%;
 
                         @extend %btn-default;
                         @extend %button-hover-animation;
@@ -214,7 +257,8 @@
                     }
 
                     .wrap-instructor-info {
-                        margin-left: 2rem;
+                        height: 100%;
+                        margin-bottom: 0;
                     }
                 }
             }

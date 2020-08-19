@@ -136,6 +136,55 @@ from student.models import CourseEnrollment
 
 <main id="main" aria-label="Content" tabindex="-1">
     <div class="dashboard holder" id="dashboard-main">
+      <div class="side-container">
+        %if display_sidebar_account_activation_message:
+          <div class="sidebar-notification">
+            <%include file="${static.get_template_path('registration/account_activation_sidebar_notice.html')}" />
+          </div>
+        %endif
+
+        % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
+          <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
+            <form class="search-form">
+              <label for="dashboard-search-input">${_("Search Your Courses")}</label>
+              <div class="search-field-wrapper">
+                <input id="dashboard-search-input" type="text" class="search-field"/>
+                <button type="submit" class="search-button" title="${_('Search')}">
+                  <span class="icon fa fa-search" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="cancel-button" title="${_('Clear search')}">
+                  <span class="icon fa fa-remove" aria-hidden="true"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="dashboard-search-results" class="search-results dashboard-search-results"></div>
+        % endif
+
+        % if display_sidebar_on_dashboard:
+          <div class="profile-sidebar" id="profile-sidebar" role="region" aria-label="Account Status Info">
+            <header class="profile">
+              <h2 class="account-status-title sr">${_("Account Status Info")}: </h2>
+            </header>
+            <div class="user-info">
+              <ul>
+
+                % if len(order_history_list):
+                <li class="order-history">
+                  <span class="title">${_("Order History")}</span>
+                  % for order_history_item in order_history_list:
+                    <span><a href="${order_history_item['receipt_url']}" target="_blank" class="edit-name">${order_history_item['order_date']}</a></span>
+                  % endfor
+                </li>
+                % endif
+
+                <%include file="${static.get_template_path('dashboard/_dashboard_status_verification.html')}" />
+
+              </ul>
+            </div>
+          </div>
+        % endif
+      </div>
       <div class="main-container">
         <div class="my-courses" id="my-courses">
           % if display_dashboard_courses:
@@ -245,67 +294,11 @@ from student.models import CourseEnrollment
           % endif
         </div>
       </div>
-      <div class="side-container">
-        %if display_sidebar_account_activation_message:
-          <div class="sidebar-notification">
-            <%include file="${static.get_template_path('registration/account_activation_sidebar_notice.html')}" />
-          </div>
-        %endif
-
-        % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
-          <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
-            <form class="search-form">
-              <label for="dashboard-search-input">${_("Search Your Courses")}</label>
-              <div class="search-field-wrapper">
-                <input id="dashboard-search-input" type="text" class="search-field"/>
-                <button type="submit" class="search-button" title="${_('Search')}">
-                  <span class="icon fa fa-search" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="cancel-button" title="${_('Clear search')}">
-                  <span class="icon fa fa-remove" aria-hidden="true"></span>
-                </button>
-              </div>
-            </form>
-          </div>
-          <div id="dashboard-search-results" class="search-results dashboard-search-results"></div>
-        % endif
-
-        % if display_sidebar_on_dashboard:
-          <div class="profile-sidebar" id="profile-sidebar" role="region" aria-label="Account Status Info">
-            <header class="profile">
-              <h2 class="account-status-title sr">${_("Account Status Info")}: </h2>
-            </header>
-            <div class="user-info">
-              <ul>
-
-                % if len(order_history_list):
-                <li class="order-history">
-                  <span class="title">${_("Order History")}</span>
-                  % for order_history_item in order_history_list:
-                    <span><a href="${order_history_item['receipt_url']}" target="_blank" class="edit-name">${order_history_item['order_date']}</a></span>
-                  % endfor
-                </li>
-                % endif
-
-                <%include file="${static.get_template_path('dashboard/_dashboard_status_verification.html')}" />
-
-              </ul>
-            </div>
-          </div>
-        % endif
-      </div>
     </div>
 </main>
 
 <div id="email-settings-modal" class="modal" aria-hidden="true">
   <div class="inner-wrapper" role="dialog" aria-labelledby="email-settings-title">
-    <button class="close-modal">
-      <span class="icon fa fa-remove" aria-hidden="true"></span>
-      <span class="sr">
-        ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
-        ${_("Close")}
-      </span>
-    </button>
 
     <header>
       <h2 id="email-settings-title">
@@ -320,9 +313,21 @@ from student.models import CourseEnrollment
 
     <form id="email_settings_form" method="post">
       <input name="course_id" id="email_settings_course_id" type="hidden" />
-      <label><input type="checkbox" id="receive_emails" name="receive_emails" />${_("Receive course emails")} </label>
-      <div class="submit">
-        <input type="submit" id="submit" value="${_('Save Settings')}" />
+      <label class="modal-email-label">
+        ${_("Receive course emails")}
+        <input type="checkbox" id="receive_emails" name="receive_emails" />
+      </label>
+      <div class="modal-footer">
+        <div class="submit">
+          <input type="submit" id="submit" value="${_('Save Settings')}" />
+        </div>
+        <button class="close-modal">
+          <span>${_("Close")}</span>
+          <span class="sr">
+            ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
+            ${_("Close")}
+          </span>
+        </button>
       </div>
     </form>
   </div>
@@ -330,14 +335,7 @@ from student.models import CourseEnrollment
 
 <div id="unenroll-modal" class="modal unenroll-modal" aria-hidden="true">
   <div class="inner-wrapper" role="dialog" aria-labelledby="unenrollment-modal-title" aria-live="polite">
-    <button class="close-modal">
-      <span class="icon fa fa-remove" aria-hidden="true"></span>
-      <span class="sr">
-        ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
-        ${_("Close")}
-      </span>
-    </button>
-
+    
     <header class="unenroll-header">
       <h2 id="unenrollment-modal-title">
         <span id='track-info'></span>
@@ -350,13 +348,22 @@ from student.models import CourseEnrollment
       <hr/>
     </header>
     <div id="unenroll_error" class="modal-form-error"></div>
-    <form id="unenroll_form" method="post" data-remote="true" action="${reverse('change_enrollment')}">
-      <input name="course_id" id="unenroll_course_id" type="hidden" />
-      <input name="enrollment_action" type="hidden" value="unenroll" />
-      <div class="submit">
-        <input class="submit-button" name="submit" type="submit" value="${_('Unenroll')}" />
-      </div>
-    </form>
+    <div class="modal-footer">
+      <form id="unenroll_form" method="post" data-remote="true" action="${reverse('change_enrollment')}">
+        <input name="course_id" id="unenroll_course_id" type="hidden" />
+        <input name="enrollment_action" type="hidden" value="unenroll" />
+        <div class="submit">
+          <input class="submit-button" name="submit" type="submit" value="${_('Unenroll')}" />
+        </div>
+      </form>
+      <button class="close-modal">
+        <span>${_("Close")}</span>
+        <span class="sr">
+          ## Translators: this is a control to allow users to exit out of this modal interface (a menu or piece of UI that takes the full focus of the screen)
+          ${_("Close")}
+        </span>
+      </button>
+    </div>
   </div>
 </div>
 
