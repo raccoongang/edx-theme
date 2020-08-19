@@ -1,0 +1,89 @@
+.login-register-content {
+    h2 {
+        color: #646464;
+        font-weight: 300;
+        margin: 24px 0;
+    }
+
+    .login-register {
+        background: #fff;
+        max-width: 500px !important;
+        margin: 10px auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+
+        .toggle-form {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, .2);
+        }
+
+        .form-field {
+            margin: 10px 0 20px;
+
+            label {
+                font-size: 14px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                box-shadow: none;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, .4);
+                padding: 10px 5px;
+                height: auto;
+                color: #141414;
+                outline: none;
+
+                @include placeholder {
+                    color: #929292;
+                }
+            }
+
+            textarea {
+                box-shadow: none;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, .4);
+                padding: 10px 5px;
+                color: #141414;
+                outline: none;
+
+                @include placeholder {
+                    color: #929292;
+                }
+            }
+
+            select {
+                outline: none;
+            }
+
+            .tip,
+            .plaintext-field {
+                color: rgba(0, 0, 0, .7);
+                font-size: 14px;
+            }
+
+            .field-link {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+        }
+
+        .action-primary {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            font-weight: 400;
+            border-radius: 5px;
+            position: relative;
+            padding: 15px 20px;
+
+            @extend %button-hover-animation;
+        }
+    }
+}

@@ -1,1 +1,22 @@
 // custom theme styles
+
+@import "variables";
+@import "extends";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/login-register";
+@import "blocks/about";
+
+html {
+    font-size: 10px;
+}
+
+.content-wrapper {
+    //max-width: 1580px;
+    //box-sizing: border-box;
+    //margin: 0 auto;
+}
+
+.theme-content {
+    background: $body-bg;
+}

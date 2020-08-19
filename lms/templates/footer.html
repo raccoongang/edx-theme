@@ -19,82 +19,40 @@
       dir=${bidi}
     % endif
   >
-  <ul class="footer-list">
-    <li class="footer-list_item">
-      <a href="/about" class="footer-list_link">${_('About')}</a>
-    </li>
-    <li class="footer-list_item">
-      <a href="/privacy" class="footer-list_link">${_('Privacy Policy')}</a>
-    </li>
-    <li class="footer-list_item">
-      <a href="/tos" class="footer-list_link">${_('Terms of Service')}</a>
-    </li>
-  </ul>
-  <div class="theme-footer_holder">
-    <ul class="icon-list">
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-facebook" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-twitter" />
-          </svg>
-        </a></li>
-      <!-- <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon">
-            <use xlink:href="#ico-youtube" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-linkedin" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-behance" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-instagram" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-odnoklassniki" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-vimeo" />
-          </svg>
-        </a></li>
-      <li class="icon-list_item"><a href="#" class="icon-list_link" target="_blank">
-          <svg class="icon-list_icon" viewBox="0 0 35 35">
-            <use xlink:href="#ico-vk" />
-          </svg>
-        </a></li> -->
-    </ul>
-    <a class="logo-footer" href="/">
-      <img src="/static/${settings.FEATURES.get('BASE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo-footer.svg" alt="footer logo">
-    </a>
-    <p class="footer-support">Built on 
-      <a target="_blank" href="https://open.edx.org/">
-        <svg class="svg-edx"  viewBox="0 0 100 70">
-          <use xlink:href="#logo-edx" />
-        </svg>
-      </a>
-      by RACCOONGANG 
-      <a target="_blank" href="https://raccoongang.com/">
-        <svg class="svg-raccoon"  viewBox="0 0 100 100">
-          <use xlink:href="#logo-raccoon" />
-        </svg>
-      </a>
-    </p>
-  </div>
+    <div class="main-wrapper">
+      <div class="footer-main">
+        <div class="footer-logo">
+          <img class="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-small.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+        </div>
+        <div class="footer-nav">
+          <p>© 2020 ${_("University of Washington")} | ${_("Seattle, WA. All rights reserved.")}</p>
+          <ul class="footer-links">
+            <li><a href="/help">${_("Help Center")}</a></li>
+            <li><a href="/contact">${_("Contact Us")}</a></li>
+            <li><a href="http://www.washington.edu/online/privacy">${_("Privacy")}</a></li>
+            <li><a href="http://www.washington.edu/online/terms">${_("Terms")}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="powered-by">
+        <p class="footer-support">Built on
+          <a target="_blank" href="https://open.edx.org/">
+            <svg class="svg-edx"  viewBox="0 0 100 70">
+              <use xlink:href="#logo-edx" />
+            </svg>
+          </a>
+          by RACCOONGANG
+          <a target="_blank" href="https://raccoongang.com/">
+            <svg class="svg-raccoon"  viewBox="0 0 100 100">
+              <use xlink:href="#logo-raccoon" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="edx-disclaimer">
+      <p>edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc.</p>
+    </div>
   </footer>
 </div>
 % if include_dependencies:

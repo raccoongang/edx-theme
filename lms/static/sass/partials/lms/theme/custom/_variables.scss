@@ -1,4 +1,4 @@
-$base-color: #47bded;
+$base-color: #4b2e83;
 $margin: 10px;
 $padding: 10px;
 
@@ -55,16 +55,16 @@ $footer-logo-height: $header-logo-height;
 $certificate-logo-height: $header-logo-height;
 
 //settings for header
-$header-bg: #fff;
-$header-nav-link-color: $base-color;
+$header-bg: $base-color;
+$header-nav-link-color: #fff;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 
 //settings for footer
-$footer-bg: #2a374a;
-$footer-nav-link-color: #fff;
-$footer-nav-link-color-hover: rgba(255, 255, 255, .8);
-$footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #44b759;
+$footer-bg: #eee;
+$footer-nav-link-color: #262626;
+$footer-nav-link-color-hover: #4d4d4d;
+$footer-support-text-and-logo: #262626;
+$footer-social-link-bg: #262626;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
 
 //certificate
@@ -74,3 +74,24 @@ $certificate-borders-color: $base-color;
 $ribbon-corners-color: lighten($base-color, 1%);
 $ribbon-triangle-color: darken($base-color, 4%);
 $certificate-borders-color: lighten($base-color, 8%);
+
+//custom
+$white: #fff;
+$body-bg: #f5f5f5;
+$border-radius: .5rem;
+$black: #000;
+
+@mixin placeholder {
+    &::placeholder {
+        @content;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-ms-input-placeholder {
+        @content;
+    }
+}

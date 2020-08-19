@@ -47,19 +47,23 @@ from six import text_type
       % if allows_login:
         % if restrict_enroll_for_course:
           <div class="mobile-nav-item hidden-mobile nav-item">
-            <a class="register-btn btn" href="${reverse('course-specific-register', args=[text_type(course.id)])}">${_("Register")}</a>
-          </div>
-          <div class="mobile-nav-item hidden-mobile nav-item">
             <a class="sign-in-btn btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
           </div>
         % else:
-          % if allow_public_account_creation:
-            <div class="mobile-nav-item hidden-mobile nav-item">
-              <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
-            </div>
-          % endif
           <div class="mobile-nav-item hidden-mobile nav-item">
             <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
+          </div>
+          <div class="mobile-nav-item hidden-mobile nav-item">
+            <button class="site-menu-toggle">
+              <span class="toggle-bar"></span>
+              <span class="toggle-bar"></span>
+              <span class="toggle-bar"></span>
+            </button>
+            <ul class="slide-menu">
+              <li><a href="#">Sign In</a></li>
+              <li><a href="/help">${_("Help Center")}</a></li>
+              <li><a href="/contact">${_("Contact Us")}</a></li>
+            </ul>
           </div>
         % endif
       % endif
