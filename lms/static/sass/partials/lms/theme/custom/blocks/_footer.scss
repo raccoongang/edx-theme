@@ -1,0 +1,81 @@
+.theme-footer {
+    .theme-footer_wrapper {
+        max-width: 1580px;
+        box-sizing: border-box;
+        padding: 40px 20px 60px;
+
+        .main-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer-main {
+                display: flex;
+                align-items: center;
+
+                .footer-logo {
+                    padding: 10px 30px 10px 0;
+                    border-right: 1px solid rgba(0, 0, 0, .3);
+                    margin-right: 30px;
+
+                    .logo {
+                        display: block;
+                        width: 60px;
+                        height: 40px;
+                        opacity: .5;
+                    }
+                }
+
+                .footer-nav p {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+
+                .footer-links {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+
+                    li {
+                        font-size: 14px;
+                        margin: 5px 15px 5px 0;
+
+                        a {
+                            color: $footer-nav-link-color;
+
+                            &:hover {
+                                color: $footer-nav-link-color-hover;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .powered-by {
+                opacity: .5;
+                transition: all .2s ease;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                .footer-support {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                }
+            }
+        }
+
+        .edx-disclaimer {
+            border-top: 1px solid rgba(38, 38, 38, .25);
+            padding-top: 35px;
+            margin-top: 35px;
+            text-align: center;
+            color: rgba(38, 38, 38, .5);
+            font-size: 10px;
+        }
+    }
+}

@@ -106,19 +106,34 @@ from six import string_types
   <script src="${static.url('js/course_info.js')}"></script>
 </%block>
 
+<%block name="bodyclass">about-page</%block>
 <%block name="pagetitle">${course.display_name_with_default}</%block>
 
 <section class="course-info">
 
   <%block name="course_about_header">
   <header class="course-profile">
+    <img class="course-profile__bg-image" src="${course_image_urls['large']}" alt="">
     <div class="intro-inner-wrapper">
       <div class="table">
+      % if get_course_about_section(request, course, "video"):
+      <a href="#video-modal" class="media" rel="leanModal">
+        <div class="hero">
+          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" />
+          <div class="play-intro"></div>
+        </div>
+      </a>
+      %else:
+      <div class="media">
+        <div class="hero">
+          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" />
+        </div>
+      </div>
+      % endif
       <section class="intro">
         <div class="heading-group">
           <h1>${course.display_name_with_default}</h1>
-          <span>${course.display_org_with_default}</span>
-          <br>
+          <!-- <span>${course.display_org_with_default}</span> -->
           <p>${get_course_about_section(request, course, 'short_description')}</p>
         </div>
 
@@ -128,12 +143,18 @@ from six import string_types
           <a href="${course_target}">
           %endif
 
-            <span class="register disabled">${_("You are enrolled in this course")}</span>
+            <!-- <span class="register disabled">${_("You are enrolled in this course")}</span> -->
 
           %if show_courseware_link:
             <strong>${_("View Course")}</strong>
           </a>
           %endif
+
+          % if staff_access and studio_url is not None:
+            <div class="wrap-instructor-info studio-view">
+              <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
+            </div>
+          % endif
 
         %elif in_cart:
           <span class="add-to-cart">
@@ -197,45 +218,15 @@ from six import string_types
         </div>
 
       </section>
-      % if get_course_about_section(request, course, "video"):
-      <a href="#video-modal" class="media" rel="leanModal">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" />
-          <div class="play-intro"></div>
-        </div>
-      </a>
-      %else:
-      <div class="media">
-        <div class="hero">
-          <img src="${course_image_urls['large']}" alt="${course.display_name_with_default}" />
-        </div>
-      </div>
-      % endif
     </div>
       </div>
   </header>
   </%block>
 
-  <div class="container">
-
-    <%block name="course_about_details">
-    <div class="details">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
-        </div>
-      % endif
-
-      <div class="inner-wrapper">
-        ${HTML(get_course_about_section(request, course, "overview"))}
-      </div>
-    </div>
-    </%block>
+  <div class="container about-page-container">
 
     <div class="course-sidebar">
       <div class="course-summary">
-
-        <%include file="course_about_sidebar_header.html" />
 
         <%block name="course_about_important_dates">
         <ol class="important-dates">
@@ -345,7 +336,15 @@ from six import string_types
         </section>
       % endif
     %endif
+
   </div>
+  <%block name="course_about_details">
+  <div class="details">
+    <div class="inner-wrapper">
+      ${HTML(get_course_about_section(request, course, "overview"))}
+    </div>
+  </div>
+  </%block>
 
   </div>
 </div>
