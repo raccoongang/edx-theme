@@ -76,10 +76,16 @@ $ribbon-triangle-color: darken($base-color, 4%);
 $certificate-borders-color: lighten($base-color, 8%);
 
 //custom
+$text: #313131;
 $white: #fff;
 $body-bg: #f5f5f5;
-$border-radius: .5rem;
+$border-radius: 5px;
 $black: #000;
+
+// responsive
+
+$tablet-size: 991px;
+$mobile-large: 768px;
 
 @mixin placeholder {
     &::placeholder {
