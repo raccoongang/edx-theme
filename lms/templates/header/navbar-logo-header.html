@@ -17,6 +17,7 @@ from branding import api as branding_api
   <a href="/">
     <%block name="navigation_logo">
       <img class="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+      <img class="logo logo_mobile" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-mobile.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
     </%block>
   </a>
 </h1>

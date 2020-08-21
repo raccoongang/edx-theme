@@ -9,26 +9,55 @@
             justify-content: space-between;
             align-items: center;
 
+            @media screen and (max-width: $tablet-size) {
+                flex-direction: column;
+            }
+
             .footer-main {
                 display: flex;
                 align-items: center;
 
+                @media screen and (max-width: $tablet-size) {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
                 .footer-logo {
                     padding: 10px 30px 10px 0;
-                    border-right: 1px solid rgba(0, 0, 0, .3);
+                    border-right: 1px solid rgba($black, .3);
                     margin-right: 30px;
+
+                    @media screen and (max-width: $tablet-size) {
+                        flex-direction: column;
+                        width: 100%;
+                        margin: 0 0 30px;
+                        padding: 0 0 30px;
+                        border-right: 0;
+                        border-bottom: 1px solid rgba($black, .3);
+                    }
 
                     .logo {
                         display: block;
                         width: 60px;
                         height: 40px;
                         opacity: .5;
+
+                        @media screen and (max-width: $tablet-size) {
+                            margin: 0 auto;
+                        }
                     }
                 }
 
-                .footer-nav p {
-                    font-size: 12px;
-                    margin-bottom: 10px;
+                .footer-nav {
+                    @media screen and (max-width: $tablet-size) {
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        margin-bottom: 10px;
+                    }
                 }
 
                 .footer-links {
@@ -36,6 +65,11 @@
                     padding: 0;
                     list-style: none;
                     display: flex;
+
+                    @media screen and (max-width: $tablet-size) {
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    }
 
                     li {
                         font-size: 14px;

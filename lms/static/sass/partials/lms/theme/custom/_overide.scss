@@ -5,15 +5,47 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/login-register";
+@import "blocks/404";
 @import "blocks/about";
 @import "blocks/dashboard";
 
-.content-wrapper {
-    //max-width: 1580px;
-    //box-sizing: border-box;
-    //margin: 0 auto;
-}
-
 .theme-content {
     background: $body-bg;
+}
+
+body {
+    &.index-page {
+        .theme-content,
+        .window-wrap {
+            background: $white;
+        }
+    }
+
+    &.menu-is-open {
+        overflow: hidden;
+    }
+}
+
+.index-content {
+    padding: 85px 0;
+
+    &__wrapper {
+        max-width: 1600px;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+
+    p {
+        text-align: center;
+        color: $black;
+        margin-bottom: 5px;
+
+        a {
+            color: $blue !important;
+        }
+
+        + p {
+            margin-top: 0;
+        }
+    }
 }
