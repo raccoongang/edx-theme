@@ -273,7 +273,7 @@ from student.models import CourseEnrollment
                 </li>
                 % endif
 
-                % if not settings.FEATURES.get('AUTO_SOFTWARE_SECURE_PHOTO_VERIFICATION'):
+                % if not configuration_helpers.get_value('AUTO_SOFTWARE_SECURE_PHOTO_VERIFICATION', settings.FEATURES.get('AUTO_SOFTWARE_SECURE_PHOTO_VERIFICATION', False)):
                   <%include file="${static.get_template_path('dashboard/_dashboard_status_verification.html')}" />
                 % endif
 
