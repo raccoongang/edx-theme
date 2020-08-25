@@ -4,6 +4,7 @@
 from django.utils.translation import ugettext as _
 from django.utils.translation import pgettext
 from django.urls import reverse
+from cms.djangoapps.contentstore.utils import is_self_paced
 from courseware.courses import get_course_about_section
 from django.conf import settings
 from six import text_type
@@ -231,23 +232,10 @@ from six import string_types
         <%block name="course_about_important_dates">
         <ol class="important-dates">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default}</span></li>
-          % if not course.start_date_is_still_default:
-              <%
-                  course_start_date = course.advertised_start or course.start
-              %>
-            <li class="important-dates-item">
-              <span class="icon fa fa-calendar" aria-hidden="true"></span>
-              <p class="important-dates-item-title">${_("Classes Start")}</p>
-              % if isinstance(course_start_date, string_types):
-                  <span class="important-dates-item-text start-date">${course_start_date}</span>
-              % else:
-                  <%
-                     course_date_string = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
-                  %>
-                  <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}"></span>
-              % endif
-            </li>
-          % endif
+          <li class="important-dates-item">
+            <span class="icon fa fa-calendar" aria-hidden="true"></span>
+            <p class="important-dates-item-title">${_("Self-Paced") if is_self_paced(course) else _("Instructor-Paced")}</p>
+          </li>
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.
             % if course.end:
