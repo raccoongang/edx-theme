@@ -1,4 +1,3 @@
-<%page expression_filter="h"/>
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
 <%!
@@ -8,6 +7,7 @@ from django.urls import reverse
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
+<%block name="bodyclass">index-page</%block>
 <%block name="separator"></%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
@@ -22,27 +22,21 @@ from openedx.core.djangolib.markup import HTML, Text
                 <%include file="index_overlay.html" />
               % endif
             </div>
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <div class="course-search">
-                <form method="get" action="/courses">
-                  <label><span class="sr">${_("Search for a course")}</span>
-                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                  </label>
-                  <button class="search-button" type="submit">
-                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                  </button>
-                </form>
-              </div>
-            % endif
-
           </div>
 
           <%include file="index_promo_video.html" />
         </div>
-
       </header>
-      <%include file="${courses_list}" />
-
+      <section class="index-content">
+        <div class="index-content__wrapper">
+          <p>
+            ${_('Note: Before you can register for courses, you must apply and be accepted to a program.')}
+          </p>
+          <p>
+            ${_("To apply, visit the {link_start}UW Professional & Continuing Education website.{link_end}").format(link_start=u"<a href=''>", link_end=u"</a>")}
+          </p>
+        </div>
+      </section>
     </section>
 </main>
 

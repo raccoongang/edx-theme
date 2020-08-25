@@ -41,9 +41,8 @@ $(document).ready(function () {
 
   // nav menu toggle
 
-  $( ".site-menu-toggle" ).click(function() {
-    $(this).toggleClass('active');
-    $('.slide-menu').toggleClass('active');
+  $(".js-header-menu").on("click", function() {
+    $("body").toggleClass("menu-is-open");
   });
 
 });

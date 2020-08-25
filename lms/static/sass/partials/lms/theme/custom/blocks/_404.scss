@@ -1,0 +1,44 @@
+// Path to html: edx-platform/lms/templates/static_templates/404.html
+
+section.outside-app {
+    text-align: center;
+    padding: 60px 0 110px;
+
+    .error-image .svg-icon {
+        fill: $base-color;
+        max-width: 480px;
+    }
+
+    h1 {
+        font-size: 42px;
+        font-weight: 300;
+        color: $black;
+        margin: 40px 0 20px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 34px;
+        }
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 400;
+        color: $footer-nav-link-color;
+        margin: 10px 0;
+
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+
+    .error-text {
+        font-size: 14px;
+        font-weight: 400;
+        color: $footer-nav-link-color;
+
+        a {
+            color: $blue;
+            font-weight: 700;
+        }
+    }
+}
