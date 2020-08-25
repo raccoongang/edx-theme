@@ -1,0 +1,36 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='../static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Page Not Found")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="outside-app">
+        <div class="error-image">
+            <svg class="svg-icon"  viewBox="0 0 283.5 153.4">
+                <use xlink:href="#404-graphic" />
+            </svg>
+        </div>
+        <h1>
+            <%block name="pageheader">${page_header or _("Page not found :(")}</%block>
+        </h1>
+        <div class="error-text">
+            <%block name="pagecontent">
+                % if page_content:
+                    ${page_content}
+                % else:
+                    ${Text(_('{title_tag_start}Oh no! It seems you have tried to explore a page that doesn\'t exist!{title_tag_end} We recommend that you go back to {link_start}our homepage{link_end} and continue your explorations from there.')).format(
+                    link_start=HTML('<a href="/">'),
+                    link_end=HTML('</a>'),
+                    title_tag_start=HTML('<h3>'),
+                    title_tag_end=HTML('</h3>')
+                    )}
+                % endif
+            </%block>
+        </div>
+    </section>
+</main>
