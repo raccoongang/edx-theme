@@ -1,199 +1,205 @@
 .login-register-content {
-	background: none;
+    background: none;
 
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-		display: block;
-	}
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        display: block;
+    }
 }
 
 .login-register {
-	max-width: 1170px;
-	padding: 0 15px;
-	width: 100%;
-	box-sizing: border-box;
+    max-width: 1170px;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
 
-	.section-title.lines .text {
-		background: $body-bg;
-	}
+    .section-title.lines .text {
+        background: $body-bg;
+    }
 
-	.action-primary {
-		text-transform: none !important;
-	}
+    .action-primary {
+        text-transform: none !important;
+    }
 }
 
 .view-register .register .form-actions.form-third-party-auth,
 .view-login .login .form-actions.form-third-party-auth {
-	.form-wrapper .login-providers {
-		text-align: left;
-		padding-top: 20px;
-	}
+    .form-wrapper .login-providers {
+        text-align: left;
+        padding-top: 20px;
+    }
 
-	.login-provider {
-		padding: 0 0 0 40px !important;
-		text-align: left !important;
-		position: relative;
-		margin-right: 5px;
-		margin-bottom: 10px;
-		width: 130px;
-		height: 35px;
-		text-shadow: none;
-		text-transform: none;
-		font-size: 12px;
-		line-height: 17.76px;
-		border: 1px solid #c8c8c8;
-		background: transparent;
-		border-radius: 2px;
-		box-shadow: none;
-		transition: all 0.25s linear 0s;
-		font-weight: 400 !important;
+    .login-provider {
+        padding: 0 0 0 40px !important;
+        text-align: left !important;
+        position: relative;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 130px;
+        height: 35px;
+        text-shadow: none;
+        text-transform: none;
+        font-size: 12px;
+        line-height: 17.76px;
+        border: 1px solid #c8c8c8;
+        background: transparent;
+        border-radius: 2px;
+        box-shadow: none;
+        transition: all 0.25s linear 0s;
+        font-weight: 400 !important;
 
-		.icon {
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 30px;
-			bottom: 0;
-			background: #126f9a;
-			line-height: 35px;
-			text-align: center;
-			color: #fff;
-		}
+        .icon {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 30px;
+            bottom: 0;
+            background: #126f9a;
+            line-height: 35px;
+            text-align: center;
+            color: #fff;
+        }
 
-		span {
-			color: inherit;
+        span {
+            color: inherit;
 
-			&:not(.fa){
-				font-family: "Open Sans" !important;
-			}
-		}
+            &:not(.fa) {
+                font-family: "Open Sans" !important;
+            }
+        }
 
-		&.button-oa2-facebook {
-			color: #3B5998;
+        &.button-oa2-facebook {
+            color: #3B5998;
 
-			&:hover,
-			&:focus {
-				box-shadow: 0 2px 1px 0 #30487C;
-				background: #3B5998;
-				border: 1px solid #263A62;
-				color: #fff;
-			}
+            &:hover,
+            &:focus {
+                box-shadow: 0 2px 1px 0 #30487C;
+                background: #3B5998;
+                border: 1px solid #263A62;
+                color: #fff;
+            }
 
-			.icon {
-				background: #3B5998;
-			}
-		}
+            .icon {
+                background: #3B5998;
+            }
+        }
 
-		&.button-oa2-google-oauth2 {
-			color: #DD4B39;
+        &.button-oa2-google-oauth2 {
+            color: #DD4B39;
 
-			&:hover,
-			&:focus {
-				box-shadow: 0 2px 1px 0 #8D3024;
-				background: #DD4B39;
-				border: 1px solid #A5382B;
-				color: #fff;
-			}
+            &:hover,
+            &:focus {
+                box-shadow: 0 2px 1px 0 #8D3024;
+                background: #DD4B39;
+                border: 1px solid #A5382B;
+                color: #fff;
+            }
 
-			.icon {
-				background: #DD4B39;
-			}
-		}
-	}
+            .icon {
+                background: #DD4B39;
+            }
+        }
+    }
 }
 
 .view-register .introduction,
 .view-login .introduction,
 .view-passwordreset .introduction,
 .view-passwordreset .login {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .view-login,
 .view-register {
-	.login,
-	.register {
-		max-width: 100%;
-		@media screen and (max-width: 960px) {
-			.content,
-			.content + aside {
-				width: 100%;
-			}
-		}
-	}
+    .login,
+    .register {
+        max-width: 100%;
+        @media screen and (max-width: 960px) {
+            .content,
+            .content + aside {
+                width: 100%;
+            }
+        }
+    }
 
-	.introduction header {
-		height: auto;
-		min-height: 120px;
+    .introduction header {
+        height: auto;
+        min-height: 120px;
 
-		@media screen and (max-width: 960px) {
-			padding-bottom: 10px;
-		}
+        @media screen and (max-width: 960px) {
+            padding-bottom: 10px;
+        }
 
-		.title {
-			@media screen and (max-width: 960px) {
-				position: relative;
-				left: 15px;
-				max-width: calc(100% - 30px);
-			}
-		}
-	}
+        .title {
+            @media screen and (max-width: 960px) {
+                position: relative;
+                left: 15px;
+                max-width: calc(100% - 30px);
+            }
+        }
+    }
 
-	.modal {
-		box-sizing: border-box;
-		max-width: 95%;
-		transform: translateX(-50%);
-		margin: 0 !important;
-		left: 50% !important;
-	}
+    .modal {
+        box-sizing: border-box;
+        max-width: 95%;
+        transform: translateX(-50%);
+        margin: 0 !important;
+        left: 50% !important;
+    }
 }
 
 .view-register {
-	.register {
-		.btn-login {
-			background: transparent;
-			border: none;
-			padding: 15px 0;
+    .register {
+        .btn-login {
+            background: transparent;
+            border: none;
+            padding: 15px 0;
 
-			&:hover {
-				background: transparent;
-			}
+            &:hover {
+                background: transparent;
+            }
 
-			.title {
-				font-weight: 700;
-			}
-		}
+            .title {
+                font-weight: 700;
+            }
+        }
 
-		.content {
-			select {
-				height: 43px;
-				display: block;
-				margin: 0 0 5px;
-				padding: 0 10px;
-				width: 100%;
-			}
-		}
-	}
+        .content {
+            select {
+                height: 43px;
+                display: block;
+                margin: 0 0 5px;
+                padding: 0 10px;
+                width: 100%;
+            }
+        }
+    }
 }
 
 .view-register .introduction header .title .title-super,
 .view-login .introduction header .title .title-super,
 .view-passwordreset .introduction header .title .title-super {
-	color: $base-color;
+    color: $base-color;
 }
 
 .register .btn-brand.btn-login {
-	background: transparent !important;
+    background: transparent !important;
 }
 
-.login-register .section-title.lines {
-	text-align: left;
+.login-register {
+    .section-title.lines {
+        text-align: left;
 
-	&:after {
-		display: none;
-	}
-	.text {
-		background: transparent;
-		font-size: 24px;
-		padding: 0;
-	}
+        &:after {
+            display: none;
+        }
+        .text {
+            background: transparent;
+            font-size: 24px;
+            padding: 0;
+        }
+    }
+
+    #register-form .form-field.checkbox-optional_fields_toggle {
+        display: none;
+    }
 }
