@@ -1,0 +1,129 @@
+body {
+    .content-wrapper {
+        .course-tabs {
+            padding: 10px 30px 0;
+            margin: 10px auto 20px;
+            max-width: 1600px;
+
+            .nav-item,
+            .tab {
+                margin: 10px 0;
+
+                &.active .nav-link {
+                    background-color: $black;
+                    color: $white;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
+                .nav-link,
+                a {
+                    font-size: 16px;
+                    padding: 11px 15px;
+                    border-radius: $border-radius;
+                    border: 0;
+                    color: $black;
+                    position: relative;
+
+                    &.active {
+                        background-color: $black;
+                        color: $white !important;
+
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        height: 2px;
+                        width: 0;
+                        background-color: $base-color;
+                        transition: all 200ms ease;
+                    }
+
+                    &:hover {
+                        color: $black;
+
+                        &:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page-content-container,
+    .course-content {
+        background-color: $white;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .course-outline .block-tree .section .section-name:hover,
+    button.accordion-trigger:hover,
+    button.prerequisite-button:hover,
+    .course-outline .block-tree .section ol.outline-item .subsection .vertical a.outline-item:hover {
+        background-color: #efebf8;
+    }
+
+    .course-outline .block-tree .section ol.outline-item .subsection .vertical a.outline-item {
+        padding-left: 15px;
+    }
+
+    .page-header {
+        padding: 20px 40px;
+
+        .page-header-secondary {
+            .btn-primary {
+                font-size: 14px;
+                padding: 11.5px 20px;
+
+                @extend %button-hover-animation;
+            }
+        }
+
+        .page-header-main {
+            .page-title {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .wiki-wrapper section.wiki .breadcrumbs-header {
+        background-color: $white !important;
+    }
+}
+
+#course-container .page-header .page-header-search .search-button, 
+#course-container .page-content .page-header-search .search-button {
+    color: $white;
+}
+
+#course-container .page-header .page-header-search .input-group-btn .search-button {
+    color: $base-color;
+
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+}
+
+#expand-collapse-outline-all-button {
+    font-size: 14px;
+    padding: 11.5px 20px;
+}
+
+.wrapper-course-material .course-material .course-tabs .tab a {
+    @media screen and (max-width: 760px) {
+        padding: 18px 15px 15px;
+    }
+}

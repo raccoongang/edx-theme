@@ -38,6 +38,10 @@
                 color: #141414;
                 outline: none;
 
+                &:-webkit-autofill::first-line {
+                    font-size: 16px;
+                }
+
                 @include placeholder {
                     color: #929292;
                 }

@@ -31,7 +31,7 @@ from openedx.features.enterprise_support.utils import get_enterprise_learner_gen
 
 <div class="nav-links">
   <div class="secondary">
-    <div class="mobile-nav-item hidden-mobile nav-item">
+    <div class="nav-item mobile-nav-item hidden-mobile">
       <a href="${reverse('dashboard')}" role="menuitem">${_("Dashboard")}</a>
     </div>
     % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor

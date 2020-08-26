@@ -13,18 +13,22 @@ header.global-header {
         }
     }
 
-    .header-logo a .logo {
-        height: 60px;
+    .header-logo {
+        flex: none;
 
-        &_mobile {
-            display: none;
-        }
-
-        @media screen and (max-width: 767px) {
-            display: none;
+        a .logo {
+            height: 60px;
 
             &_mobile {
-                display: block;
+                display: none;
+            }
+
+            @media screen and (max-width: 767px) {
+                display: none;
+
+                &_mobile {
+                    display: block;
+                }
             }
         }
     }
@@ -42,9 +46,9 @@ header.global-header {
                 align-items: center;
             }
 
-            .mobile-nav-item {
-                @media screen and (max-width: $tablet-size) {
-                    display: none;
+            @media screen and (max-width: 767px) {
+                .hidden-mobile {
+                    display: none !important;
                 }
             }
 
@@ -238,6 +242,42 @@ header.global-header {
             }
         }
     }
+
+    .course-header {
+        display: flex;
+        word-break: normal;
+        color: rgba($white, .6);
+        font-size: 16px;
+        font-weight: 300;
+        margin-left: 20px;
+        flex: none;
+        border-left: 1px solid rgba($black, .25);
+        padding: 8px 0 8px 20px;
+        max-width: 235px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media screen and (max-width: 1080px) {
+            display: none;
+        }
+
+        span {
+            display: block;
+            margin-right: 10px;
+
+            &.course-name {
+                max-width: 130px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 .home > header {
@@ -280,7 +320,7 @@ header.global-header {
                 color: $white;
                 border: 2px solid $white;
                 text-decoration: none;
-                padding: 15px 30px;
+                padding: 16.5px 30px;
                 border-radius: 5px;
                 display: inline-block;
                 vertical-align: top;
@@ -290,6 +330,35 @@ header.global-header {
                     opacity: .7;
                 }
             }
+        }
+    }
+}
+
+body {
+    nav.wrapper-preview-menu {
+        background: #35215d !important;
+        padding: 20px 15px !important;
+
+        .preview-menu {
+            padding: 0 15px !important;
+        }
+    }
+
+    .wrapper-preview-menu {
+        .preview-menu {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .preview-actions .action-preview .action-preview-label {
+            color: $white !important;
+            font-size: 14px;
+        }
+
+        select.action-preview-select {
+            height: 23px !important;
+            width: 242px;
+            font-size: 14px !important;
         }
     }
 }

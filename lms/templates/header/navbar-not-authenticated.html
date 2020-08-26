@@ -22,28 +22,26 @@ from six import text_type
 <nav class="nav-links" aria-label=${_("Supplemental Links")}>
   <div class="secondary">
     <div>
-      % if allows_login:
-        % if restrict_enroll_for_course:
-          <div class="mobile-nav-item hidden-mobile nav-item">
-            <a class="sign-in-btn btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
-          </div>
-        % else:
-          <div class="mobile-nav-item hidden-mobile nav-item">
-            <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
-          </div>
-          <div class="mobile-nav-item hidden-mobile nav-item">
-            <button class="site-menu-toggle js-header-menu">
-              <span class="toggle-bar"></span>
-              <span class="toggle-bar"></span>
-              <span class="toggle-bar"></span>
-            </button>
-            <ul class="slide-menu">
-              <li><a href="/login${login_query()}">Sign In</a></li>
-              <li><a href="/help">${_("Help Center")}</a></li>
-              <li><a href="/contact">${_("Contact Us")}</a></li>
-            </ul>
-          </div>
-        % endif
+      % if restrict_enroll_for_course:
+        <div class="mobile-nav-item hidden-mobile nav-item">
+          <a class="sign-in-btn btn" href="${reverse('course-specific-login', args=[text_type(course.id)])}${login_query()}">${_("Sign in")}</a>
+        </div>
+      % else:
+        <div class="mobile-nav-item hidden-mobile nav-item">
+          <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign in")}</a>
+        </div>
+        <div class="mobile-nav-item nav-item">
+          <button class="site-menu-toggle js-header-menu">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
+          <ul class="slide-menu">
+            <li><a href="/login${login_query()}">Sign In</a></li>
+            <li><a href="/help">${_("Help Center")}</a></li>
+            <li><a href="/contact">${_("Contact Us")}</a></li>
+          </ul>
+        </div>
       % endif
     </div>
   </div>

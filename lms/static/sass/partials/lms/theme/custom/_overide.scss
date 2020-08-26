@@ -8,6 +8,7 @@
 @import "blocks/404";
 @import "blocks/about";
 @import "blocks/dashboard";
+@import "blocks/course-main";
 
 .theme-content {
     background: $body-bg;
@@ -19,10 +20,39 @@ body {
         .window-wrap {
             background: $white;
         }
+
+        .content-wrapper {
+            @media screen and (max-width: $mobile-large) {
+                padding: 0;
+            }
+        }
     }
 
     &.menu-is-open {
         overflow: hidden;
+    }
+
+    &.account-settings-page {
+        background: $white;
+
+        .theme-content,
+        .window-wrap {
+            background: $white;
+        }
+    }
+
+    &.view-in-course .course-content {
+        background-color: $white;
+    }
+}
+
+.content-wrapper {
+    @media screen and (max-width: $mobile-large) {
+        padding: 0 20px;
+    }
+
+    .page-content-container {
+        background-color: $white;
     }
 }
 
