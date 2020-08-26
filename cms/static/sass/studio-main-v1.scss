@@ -4,3 +4,17 @@
 .view-certificates .actual-course-title {
     word-break: break-word;
 }
+
+.xblock--drag-and-drop {
+    max-width: none !important;
+}
+
+[class*="view-"] .modal-lg.modal-editor.modal-type-drag-and-drop-v2 {
+    .modal-content {
+        height: 600px !important;
+    }
+
+    .xblock--drag-and-drop--editor {
+        overflow: hidden;
+    }
+}
