@@ -175,20 +175,22 @@ import urllib
     % if get_course_about_section(request, course, "overview"):
        ${get_course_about_section(request, course, "overview")}
     % endif
-    % if blocks.get('children'):
+    % if course_structure:
       <section class="course-program course-page-section" id="course-program">
         <h2 class="h2">Программа курса</h2>
         <ul class="course-program-list">
-        % for section in blocks.get('children'):
-          <li class="course-program-list__item">
-            <div class="course-program-list__head">${section['display_name']}</div>
-            <div class="course-program-list__content">
-              <ol>
-              % for subsection in section.get('children', []):
-                <li>${subsection['display_name']}</li>
-              % endfor
-              </ol>
-            </div>
+        % for section in course_structure:
+          % for section_name, subsections in section.items():
+            <li class="course-program-list__item">
+              <div class="course-program-list__head">${section_name}</div>
+              <div class="course-program-list__content">
+                <ol>
+                % for subsection in subsections:
+                  <li>${subsection}</li>
+                % endfor
+                </ol>
+              </div>
+          % endfor
         % endfor
         </ul>
       </section>
