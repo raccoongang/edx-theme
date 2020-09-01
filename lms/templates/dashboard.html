@@ -100,6 +100,8 @@ from student.models import CourseEnrollment
   % endif
 </%block>
 
+%if banner_account_activation_message or enrollment_message or enterprise_message or account_activation_messages:
+
 <div class="dashboard-notifications" tabindex="-1">
 
     %if banner_account_activation_message:
@@ -134,15 +136,16 @@ from student.models import CourseEnrollment
 
 </div>
 
+%endif
+
 <main id="main" aria-label="Content" tabindex="-1">
+    %if display_sidebar_account_activation_message:
+      <div class="sidebar-notification">
+        <%include file="${static.get_template_path('registration/account_activation_sidebar_notice.html')}" />
+      </div>
+    %endif
     <div class="dashboard holder" id="dashboard-main">
       <div class="side-container">
-        %if display_sidebar_account_activation_message:
-          <div class="sidebar-notification">
-            <%include file="${static.get_template_path('registration/account_activation_sidebar_notice.html')}" />
-          </div>
-        %endif
-
         % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
           <div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
             <form class="search-form">
@@ -263,11 +266,6 @@ from student.models import CourseEnrollment
                 <p>${_("You are not enrolled in any courses yet.")}</p>
                 % if empty_dashboard_message:
                   <p class="custom-message">${empty_dashboard_message | n, decode.utf8}</p>
-                %endif
-                % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-                  <a class="btn btn-primary" href="${marketing_link('COURSES')}">
-                    ${_("Explore courses")}
-                  </a>
                 %endif
               % else:
               <p>${_("Activate your account!")}</p>
