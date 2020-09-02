@@ -45,4 +45,11 @@ $(document).ready(function () {
     $("body").toggleClass("menu-is-open");
   });
 
+  // show/hide search on dashboard
+
+  $(".dashboard-search-trigger").on("click", function() {
+      $(this).toggleClass("active");
+      $(".dashboard-search-bar").slideToggle();
+  });
+
 });

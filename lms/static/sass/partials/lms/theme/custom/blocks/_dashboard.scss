@@ -76,7 +76,6 @@
 
 .dashboard {
     flex-direction: column;
-    margin-top: 50px;
 
     .side-container {
         order: 0;
@@ -88,17 +87,56 @@
         @media screen and (max-width: 1020px) {
             padding: 0;
         }
+    }
+
+    .dashboard-header-holder {
+        border-bottom: 1px solid rgba($black, .25);
+        max-width: 1540px;
+        margin: 0 auto 40px;
+        padding-bottom: 30px;
+    }
+
+    .dashboard-search-bar {
+        margin: 0 auto 30px;
+        max-width: 1500px;
+        overflow: hidden;
+        display: none;
+
+        .search-field-wrapper {
+            padding: 50px 0 20px;
+            border-bottom: 1px solid rgba($black, .25);
+        }
 
         .search-field {
-            height: 45px;
-            padding-right: 50px;
+            padding: 5px 0;
+            box-shadow: none;
+            border: none;
+            border-radius: 0;
+            background: none;
         }
 
         button.search-button,
         button.cancel-button {
-            height: 45px;
-            padding: 0 14px;
+            top: 50%;
+            margin-top: -3px;
+            color: rgba($black, .7);
+            padding: 0;
+            background: none;
+            box-shadow: none;
+
+            .fa {
+                color: rgba($black, .7);
+            }
+
+            &:hover {
+                background: none;
+                opacity: .7;
+            }
         }
+    }
+
+    .dashboard-search-results {
+        margin: 20px;
     }
 
     .main-container {
@@ -109,22 +147,52 @@
         .my-courses {
             .wrapper-header-courses {
                 max-width: 1540px;
-                margin: 0 auto 40px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: none;
+                padding: 0 20px;
+                box-sizing: border-box;
+
+                @media screen and (max-width: 767px) {
+                    padding: 0 0 15px;
+                }
 
                 h2.header-courses {
                     font-size: 24px !important;
                     font-weight: 700;
                     color: rgba($black, .7);
                     margin: 0;
-                    border-bottom: 1px solid rgba($black, .25);
-                    padding: 0 30px 30px;
 
                     @media screen and (max-width: 1020px) {
                         margin: 0;
                     }
+                }
 
-                    @media screen and (max-width: 767px) {
-                        padding: 0 0 15px;
+                .dashboard-search-trigger {
+                    background: none;
+                    box-shadow: none;
+                    border: none;
+                    text-shadow: none;
+                    padding: 0;
+
+                    .fa {
+                        color: rgba($black, .7);
+
+                        &.fa-chevron-up {
+                            display: none;
+                        }
+                    }
+
+                    &.active {
+                        .fa-search {
+                            display: none;
+                        }
+
+                        .fa-chevron-up {
+                            display: inline-block;
+                        }
                     }
                 }
             }
