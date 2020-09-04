@@ -6,7 +6,9 @@
 <%block name="bodyclass">info-page</%block>
 
 <div class="page-title-main">
-    <h1><%block name="pageheader">${page_header or _("Help Center")}</%block></h1>
+    <div class="inner">
+        <h1><%block name="pageheader">${page_header or _("Help Center")}</%block></h1>
+    </div>
 </div>
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="container about">

@@ -3,11 +3,31 @@
         background: $base-color;
         text-align: center;
         padding: 77px 0 82px;
+        color: #fff;
+
+        .inner {
+            max-width: 1600px;
+            padding: 0 30px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
 
         h1 {
-            font-weight: 700;
             font-size: 58px;
+        }
+
+        h2 {
+            font-size: 48px;
+        }
+
+        h1,
+        h2 {
+            font-weight: 700;
             color: #fff;
+
+            @media screen and (max-width: 991px) {
+                font-size: 42px;
+            }
         }
     }
 
@@ -43,6 +63,35 @@
 
             li {
                 margin: 5px 0;
+            }
+        }
+    }
+
+    &.tos-page {
+        .page-title-main {
+            text-align: left;
+            padding: 160px 0;
+
+            p {
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            .tos-link {
+                background: #b8a57a;
+                font-size: 16px;
+                color: $white;
+                border: 2px solid $white;
+                text-decoration: none;
+                padding: 16.5px 30px;
+                border-radius: 5px;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 30px;
+
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
     }
