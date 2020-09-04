@@ -1,0 +1,14 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Terms of Service")}</%block>
+<%block name="bodyclass">info-page tos-page</%block>
+
+<div class="page-title-main">
+    <div class="inner">
+        <h2>${_("Terms of Service")}</h2>
+        <p>${_("You can view our Terms of Service by clicking the button below, or by copying and pasting the following URL in your browser address field:")} http://www.washington.edu/online/terms/</p>
+        <a class="tos-link" href="http://www.washington.edu/online/terms/">${_("View our Terms of Service")}</a>
+    </div>
+</div>
