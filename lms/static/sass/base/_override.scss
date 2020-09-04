@@ -4732,18 +4732,16 @@ div.info-wrapper {
     width: 100%;
 }
 
-body.view-in-course .window-wrap {
-    min-width: auto;
-}
+body.view-in-course {
+    .window-wrap {
+        min-width: auto;
+    }
 
-body.view-in-course .wrapper-course-material,
-body.view-in-course .wrapper-preview-menu {
-    position: relative;
-    z-index: 2;
-}
-
-body.view-in-course .wrapper-preview-menu {
-    display: none;
+    .wrapper-course-material,
+    .wrapper-preview-menu {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .course-overview-bg {
