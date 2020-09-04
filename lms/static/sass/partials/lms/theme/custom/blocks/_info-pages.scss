@@ -1,0 +1,49 @@
+.info-page {
+    .page-title-main {
+        background: $base-color;
+        text-align: center;
+        padding: 77px 0 82px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 58px;
+            color: #fff;
+        }
+    }
+
+    .content-wrapper {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .container.about {
+        max-width: 1600px;
+        padding: 50px 30px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #333;
+
+        h2 {
+            margin: 40px 0 30px;
+            font-weight: 300;
+            font-size: 32px;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $base-color;
+        }
+
+        ul,
+        ol {
+            margin: 10px 0;
+
+            li {
+                margin: 5px 0;
+            }
+        }
+    }
+}
