@@ -1,0 +1,15 @@
+
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${page.title}</%block>
+<%block name="bodyclass">info-page</%block>
+
+<div class="page-title-main">
+  <h1>${page.title}</h1>
+</div>
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about">
+    ${page.text}
+  </section>
+</main>
