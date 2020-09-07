@@ -2046,6 +2046,27 @@ body section.wiki .wiki-wrapper>header {
     }
 }
 
+.register-custom {
+    height: calc(100vh - 135px);
+    display: flex;
+
+    @media screen and (max-width: 760px) {
+        height: calc(100vh - 116px);
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+#register-anchor {
+    max-width: 800px;
+}
+
 .view-login .introduction {
     display: none;
 }
