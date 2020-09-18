@@ -5,7 +5,7 @@ course_mode_class = course_mode if course_mode else ''
 %>
 
 <div class="certificate-wrapper">
-    <img class="main-bg" src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg.svg">
+    <img class="main-bg" src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg.png">
     <div class="certificate-body">
         <img class="certificate-logo" src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-logo.svg">
         <div class="ribbon">
@@ -13,12 +13,15 @@ course_mode_class = course_mode if course_mode else ''
                 <img src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/dot.png">
                 <b>${_("Certificate")}</b>
             </span>
-            <strong class="general-text">${_("This certificate is proudly presented to")}</strong>
+            <strong class="general-text">${_("This certificate is provided to")}</strong>
         </div>
         <div class="inner">
             <strong class="user-name">${accomplishment_copy_name or accomplishment_copy_username}</strong>
-            <p class="certificate-text">${accomplishment_copy_description_full}</p>
+            <p class="certificate-text">
+                ${_("successfully completed, received a passing grade, and was awarded this {platform_name} Certificate of Completion in").format(platform_name=platform_name)}
+            </p>
             <strong class="course-name">${accomplishment_copy_course_name}</strong>
+            <p class="course-duration">(1 година)</p>
         </div>
         <div class="certificate-bottom">
             <div class="date">
@@ -26,16 +29,38 @@ course_mode_class = course_mode if course_mode else ''
                 <span>${_("Date")}</span>
             </div>
             <div class="medal">
-                <img src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/medal.svg">
+                <img src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/stamp.png">
             </div>
             % if mode != 'base':
             <div class="signature">
+                <div class="signature-item">
+                    <strong>
+                        <img class="signatory-signature" alt="${_('T.S. Wojtiuk')}"
+                             src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/signature.png">
+                    </strong>
+                    <span class="signatire-name"><b>${_("T.S. Wojtiuk")}</b></span>
+                    <span class="signatire-title">${_("Head of online learning department")}</span>
+                </div>
                 % if certificate_data:
                 % for signatory in certificate_data.get('signatories', []):
+                % if signatory['name'] or signatory['signature_image_path']:
                 <div class="signature-item">
-                    <strong><img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}"></strong>
-                    <span>${signatory['name']}</span>
+                    <strong class="signature-image-wrapper">
+                        % if signatory['signature_image_path']:
+                        <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                        % endif
+                    </strong>
+                     % if signatory['name']:
+                    <span class="signatire-name"><b>${signatory['name']}</b></span>
+                    % endif
+                     % if signatory['name']:
+                    <span class="signatire-title">${signatory['title']}</span>
+                    % endif
+                     % if signatory['name']:
+                    <span class="signatire-organization">${signatory['organization']}</span>
+                    % endif
                 </div>
+                % endif
                 % endfor
                 % endif
             </div>
