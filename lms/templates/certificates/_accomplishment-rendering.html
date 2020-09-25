@@ -21,7 +21,9 @@ course_mode_class = course_mode if course_mode else ''
                 ${_("successfully completed, received a passing grade, and was awarded this {platform_name} Certificate of Completion in").format(platform_name=platform_name)}
             </p>
             <strong class="course-name">${accomplishment_copy_course_name}</strong>
-            <p class="course-duration">(1 година)</p>
+            % if course_duration:
+                <p class="course-duration">(${course_duration})</p>
+            % endif
         </div>
         <div class="certificate-bottom">
             <div class="date">
