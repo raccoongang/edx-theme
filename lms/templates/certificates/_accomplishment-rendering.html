@@ -44,26 +44,28 @@ course_mode_class = course_mode if course_mode else ''
                     <span class="signatire-title">${_("Head of online learning department")}</span>
                 </div>
                 % if certificate_data:
-                % for signatory in certificate_data.get('signatories', []):
-                % if signatory['name'] or signatory['signature_image_path']:
-                <div class="signature-item">
-                    <strong class="signature-image-wrapper">
-                        % if signatory['signature_image_path']:
-                        <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                    % for signatory in certificate_data.get('signatories', []):
+                        % if signatory.get('name') or signatory.get('signature_image_path'):
+                        <div class="signature-item">
+                            <strong class="signature-image-wrapper">
+                                % if signatory.get('signature_image_path'):
+                                    <img class="signatory-signature"
+                                         src="${static.url(signatory.get('signature_image_path'))}"
+                                         alt="${signatory.get('name')}">
+                                % endif
+                            </strong>
+                            % if signatory.get('name'):
+                                <span class="signatire-name"><b>${signatory.get('name')}</b></span>
+                            % endif
+                            % if signatory.get('title'):
+                                <span class="signatire-title">${signatory.get('title')}</span>
+                            % endif
+                            % if signatory.get('organization'):
+                                <span class="signatire-organization">${signatory.get('organization')}</span>
+                            % endif
+                        </div>
                         % endif
-                    </strong>
-                     % if signatory['name']:
-                    <span class="signatire-name"><b>${signatory['name']}</b></span>
-                    % endif
-                     % if signatory['name']:
-                    <span class="signatire-title">${signatory['title']}</span>
-                    % endif
-                     % if signatory['name']:
-                    <span class="signatire-organization">${signatory['organization']}</span>
-                    % endif
-                </div>
-                % endif
-                % endfor
+                    % endfor
                 % endif
             </div>
             % endif
