@@ -7,18 +7,18 @@ course_mode_class = course_mode if course_mode else ''
 <div class="certificate-wrapper">
     <img class="main-bg" src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-bg.png">
     <div class="certificate-body">
-        <img class="certificate-logo" src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-logo.svg">
+        <img class="certificate-logo" src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/certificate-logo.png">
         <div class="ribbon">
             <span class="ribbon-text">
                 <img src="/static/${settings.FEATURES.get('OP_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/dot.png">
                 <b>${_("Certificate")}</b>
             </span>
-            <strong class="general-text">${_("This certificate is provided to")}</strong>
+            <strong class="general-text">${_("which confirms that:")}</strong>
         </div>
         <div class="inner">
             <strong class="user-name">${accomplishment_copy_name or accomplishment_copy_username}</strong>
             <p class="certificate-text">
-                ${_("successfully completed, received a passing grade, and was awarded this {platform_name} Certificate of Completion in").format(platform_name=platform_name)}
+                ${_("successfully passed the course/webinar at LLC \"Educational Portal\" and received the appropriate number of ECTS points.")}
             </p>
             <strong class="course-name">${accomplishment_copy_course_name}</strong>
             % if course_duration:
