@@ -142,6 +142,10 @@
 	border-width: 30px 15px;
 	border-style: solid;
 	border-color: $ribbon-corners-color $ribbon-corners-color $ribbon-corners-color transparent;
+
+	.certificate-wrapper_presence-course & {
+		border-color: $ribbon-corners-color-presence-course $ribbon-corners-color-presence-course $ribbon-corners-color-presence-course transparent;
+	}
 }
 
 .ribbon:after {
@@ -151,6 +155,10 @@
 	border-width: 30px 15px;
 	border-style: solid;
 	border-color: $ribbon-corners-color transparent $ribbon-corners-color $ribbon-corners-color;
+
+	.certificate-wrapper_presence-course & {
+		border-color: $ribbon-corners-color-presence-course transparent $ribbon-corners-color-presence-course $ribbon-corners-color-presence-course;
+	}
 }
 
 .ribbon-text:before {
@@ -159,6 +167,10 @@
 	border-width: 0 45px 25px 0;
 	border-style: solid;
 	border-color: $ribbon-triangle-color $ribbon-triangle-color transparent transparent;
+
+	.certificate-wrapper_presence-course & {
+		border-color: $ribbon-triangle-color-presence-course $ribbon-triangle-color-presence-course transparent transparent;
+	}
 }
 
 .ribbon-text:after {
@@ -167,6 +179,10 @@
 	border-width: 25px 45px 0 0;
 	border-style: solid;
 	border-color: $ribbon-triangle-color transparent transparent transparent;
+
+	.certificate-wrapper_presence-course & {
+		border-color: $ribbon-triangle-color-presence-course transparent transparent transparent;
+	}
 }
 
 .general-text {
@@ -194,6 +210,10 @@
 	display: block;
 	padding-bottom: 14px;
 	margin-bottom: 17px;
+
+	.certificate-wrapper_presence-course & {
+		border-bottom: 2px solid $certificate-borders-color-presence-course;
+	}
 }
 
 .course-name {
@@ -234,6 +254,10 @@
 		font-size: 14px;
 		color: #636466;
 		margin-bottom: 2px;
+
+		.certificate-wrapper_presence-course & {
+			border-bottom: 2px solid $certificate-borders-color-presence-course;
+		}
 	}
 
 	span {
@@ -274,6 +298,10 @@
 		height: 25px;
 		line-height: 25px;
 		margin-bottom: 2px;
+
+		.certificate-wrapper_presence-course & {
+			border-bottom: 2px solid $certificate-borders-color-presence-course;
+		}
 	}
 
 	img {
@@ -313,3 +341,5 @@
 		}
 	}
 }
+
+
