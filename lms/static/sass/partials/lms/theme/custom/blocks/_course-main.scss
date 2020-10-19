@@ -1,9 +1,25 @@
+body.view-in-course {
+    .course-wrapper {
+        max-width: $container-width !important;
+
+        .course-content,
+        .courseware-results-wrapper {
+            width: calc(100% - 250px);
+        }
+    }
+
+    .course-license {
+        padding: 15px 5px 5px;
+        text-align: center;
+    }
+}
+
 body {
     .content-wrapper {
         .course-tabs {
             padding: 10px 30px 0;
             margin: 10px auto 20px;
-            max-width: 1600px;
+            max-width: $container-width;
 
             .nav-item,
             .tab {
@@ -62,7 +78,7 @@ body {
     .page-content-container,
     .course-content {
         background-color: $white;
-        max-width: 1600px;
+        max-width: $container-width;
         margin: 0 auto;
         padding: 0 15px;
         box-sizing: border-box;
@@ -101,11 +117,173 @@ body {
     .wiki-wrapper section.wiki .breadcrumbs-header {
         background-color: $white !important;
     }
-}
 
-#course-container .page-header .page-header-search .search-button, 
-#course-container .page-content .page-header-search .search-button {
-    color: $white;
+    .course-index {
+        padding: 30px;
+        width: 250px;
+
+        .wrapper-course-modes {
+            padding: 0 0 17px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+
+            > div {
+                display: block;
+                width: 100%;
+            }
+
+            .courseware-bookmarks-button {
+                margin-bottom: 20px;
+
+                .bookmarks-list-button {
+                    border-radius: 30px;
+                    border: 1px solid $grey;
+                    background: $footer-bg;
+                    color: $black;
+                    padding: 8px 25px;
+                    text-align: left;
+
+                    &:before {
+                        margin-right: 8px;
+                    }
+
+                    &:hover {
+                        background: $base-color;
+                        border-color: $base-color;
+                        color: $white;
+                    }
+                }
+            }
+
+            .courseware-search-bar .search-form .search-field-wrapper {
+                &:hover .search-field {
+                    padding: 20px 10px;
+                }
+
+                .search-field {
+                    border-radius: 0;
+                    padding: 10px;
+                    height: auto;
+                    box-shadow: none;
+                    transition: all .3s ease;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        padding: 20px 10px;
+                        border-color: #c8c8c8;
+                    }
+                }
+
+                .search-button,
+                .cancel-button {
+                    border-radius: 0;
+                    right: 5px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    &:hover {
+                        background: $black;
+                    }
+                }
+            }
+        }
+
+        .accordion .course-navigation {
+            .button-chapter {
+                background: none;
+                box-shadow: none;
+                position: relative;
+                border-bottom: 1px solid $footer-bg;
+
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    background: $base-color;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transition: all .3s ease;
+                }
+
+                &:hover:before {
+                    width: 100%;
+                }
+
+                &.active:not(.is-open):after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: $base-color;
+                }
+
+                .group-heading {
+                    padding-left: 20px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $black;
+
+                    &.active {
+                        color: rgba($black, .7);
+                    }
+
+                    .icon {
+                        left: 0;
+                        color: $black;
+                    }
+                }
+            }
+
+            .chapter-content-container {
+                padding: 10px 0;
+
+                .chapter-menu .menu-item {
+                    padding: 0;
+                    margin: 0;
+
+                    a {
+                        background: none !important;
+                        padding: 8px 0;
+
+                        p {
+                            margin: 5px 0;
+                        }
+
+                        p.accordion-display-name {
+                            font-weight: 400;
+                            color: $black;
+                        }
+
+                        p.subtitle {
+                            font-style: italic;
+                            color: rgba($black, .7);
+                        }
+
+                        &:hover p.accordion-display-name {
+                            color: $base-color;
+                        }
+                    }
+
+                    &.active p.accordion-display-name {
+                        color: $base-color;
+                    }
+
+                    &.graded .menu-icon {
+                        position: relative;
+                        color: rgba($black, .7);
+                        bottom: auto;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #course-container .page-header .page-header-search .input-group-btn .search-button {
@@ -114,6 +292,7 @@ body {
     &:hover,
     &:focus {
         color: $white;
+        background: $base-color;
     }
 }
 

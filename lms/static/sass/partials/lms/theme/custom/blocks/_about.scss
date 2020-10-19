@@ -15,7 +15,7 @@
     .about-page-container {
         display: flex;
         padding: 0 30px;
-        max-width: 1600px;
+        max-width: $container-width;
 
         @media screen and (max-width: $tablet-size) {
             flex-direction: column;
@@ -149,7 +149,7 @@
             border: 0;
             background: none;
             box-shadow: none;
-            max-width: 1600px;
+            max-width: $container-width;
             width: 100%;
             padding-left: 30px;
             padding-right: 30px;
