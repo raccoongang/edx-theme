@@ -12,6 +12,9 @@
 @import "blocks/course-main";
 @import "blocks/account";
 @import "blocks/info-pages";
+@import "blocks/wiki";
+@import "blocks/instructor";
+@import "blocks/progress";
 
 .theme-content {
     background: $body-bg;
@@ -63,7 +66,7 @@ body {
     padding: 85px 0;
 
     &__wrapper {
-        max-width: 1600px;
+        max-width: $container-width;
         padding: 0 30px;
         margin: 0 auto;
     }

@@ -3,7 +3,7 @@ header.global-header {
     box-shadow: none;
 
     .main-header {
-        max-width: 1600px;
+        max-width: $container-width;
         margin: 0 auto;
         padding: 0 30px;
         box-sizing: border-box;
@@ -346,7 +346,7 @@ body {
 
     .wrapper-preview-menu {
         .preview-menu {
-            max-width: 1600px;
+            max-width: $container-width;
             margin: 0 auto;
         }
 
