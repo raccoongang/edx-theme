@@ -5,6 +5,42 @@ body.view-in-course {
         .course-content,
         .courseware-results-wrapper {
             width: calc(100% - 250px);
+
+            .search-results {
+                .search-info {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .search-results-title {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .search-results-item .result-type {
+                    position: relative;
+                    right: auto;
+                    bottom: auto;
+
+                    &:before {
+                        content: "[";
+                    }
+
+                    &:after {
+                        content: "]";
+                    }
+                }
+            }
+
+            .search-load-next {
+                text-align: center;
+                color: $base-color;
+
+                &:hover {
+                    background: $base-color;
+                    color: $white;
+                }
+            }
         }
     }
 
@@ -150,7 +186,11 @@ body {
                     &:hover {
                         background: $base-color;
                         border-color: $base-color;
-                        color: $white;
+                        color: $white !important;
+                    }
+
+                    &:visited {
+                        color: $base-color;
                     }
                 }
             }
