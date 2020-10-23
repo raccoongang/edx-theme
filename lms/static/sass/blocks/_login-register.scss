@@ -19,6 +19,23 @@
     .action-primary {
         text-transform: none !important;
     }
+    
+    .checkbox-terms_of_service .label-optional {
+        display: none;
+    }
+    
+    .checkbox-honor_code {
+        margin-top: 0;
+
+        input:not(:required) {
+            display: none;
+            
+            & ~ label,
+            & ~ .tip {
+                display: none;
+            }
+        }
+    }
 }
 
 .view-register .register .form-actions.form-third-party-auth,
