@@ -80,7 +80,12 @@
 
                             &:hover {
                                 color: $footer-nav-link-color-hover;
-                                text-decoration: none;
+                                text-decoration: underline;
+                                text-decoration-style: dotted;
+                            }
+
+                            &:visited {
+                                color: $base-color;
                             }
                         }
                     }
@@ -88,7 +93,7 @@
             }
 
             .powered-by {
-                opacity: .5;
+                opacity: .7;
                 transition: all .2s ease;
 
                 &:hover {
@@ -108,7 +113,7 @@
             padding-top: 35px;
             margin-top: 35px;
             text-align: center;
-            color: rgba(38, 38, 38, .5);
+            color: $footer-nav-link-color;
             font-size: 10px;
         }
     }
