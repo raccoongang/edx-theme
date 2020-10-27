@@ -63,7 +63,6 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
         % if course:
         <div class="course-header">
-          <span class="provider">${course.display_org_with_default}:</span>
           <span class="course-number">${course.display_number_with_default}</span>
           <%
           display_name = course.display_name_with_default
