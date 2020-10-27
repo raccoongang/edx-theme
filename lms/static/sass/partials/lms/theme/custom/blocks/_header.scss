@@ -7,6 +7,7 @@ header.global-header {
         margin: 0 auto;
         padding: 0 30px;
         box-sizing: border-box;
+        justify-content: space-between;
 
         @media screen and (max-width: $tablet-size) {
             height: auto;
@@ -34,6 +35,8 @@ header.global-header {
     }
 
     .nav-links {
+        width: auto;
+
         @media screen and (max-width: $tablet-size) {
             display: block;
         }
@@ -244,38 +247,24 @@ header.global-header {
     }
 
     .course-header {
-        display: flex;
-        word-break: normal;
         color: rgba($white, .6);
         font-size: 16px;
         font-weight: 300;
         margin-left: 20px;
-        flex: none;
+        flex: auto !important;
         border-left: 1px solid rgba($black, .25);
-        padding: 8px 0 8px 20px;
-        max-width: 235px;
+        padding: 8px 20px;
         overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        text-align: left;
+        width: 100%;
 
         @media screen and (max-width: 1080px) {
             display: none;
         }
 
-        span {
-            display: block;
-            margin-right: 10px;
-
-            &.course-name {
-                max-width: 130px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-
-            &:last-child {
-                margin-right: 0;
-            }
+        .course-number {
+            font-weight: 400;
+            margin-right: 8px;
         }
     }
 }
