@@ -106,56 +106,7 @@
                     margin: 10px 0 8px;
                 }
             }
-            .course-sign-up-terms-tooltip{
-                position: relative;
 
-                .svg-icon{
-                    width: 16px;
-                    height: 16px;
-                    fill: none;
-                    cursor: pointer;
-                }
-
-                &__text{
-                    background-color: #fff;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    color: $violet-dark;
-                    position: absolute;
-                    bottom: 15px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    opacity: 0;
-                    visibility: hidden;
-                    z-index: -1;
-                    padding: 15px;
-                    box-sizing: border-box;
-                    width: 150px;
-                    transition: all 200ms ease;
-
-                    &:before{
-                        width: 0;
-                        height: 0;
-                        border-left: 5px solid transparent;
-                        border-right: 5px solid transparent;
-                        border-top: 7px solid #FFF;
-                        position: absolute;
-                        content: '';
-                        bottom: -7px;
-                        left: 0;
-                        right: 0;
-                        margin: 0 auto;
-                    }
-                }
-                &:hover{
-                    .course-sign-up-terms-tooltip__text{
-                        opacity: 1;
-                        visibility: visible;
-                        z-index: 10;
-                        bottom: 30px;
-                    }
-                }
-            }
             .course-sign-up-video-text{
 
                 span{
