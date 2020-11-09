@@ -11,21 +11,18 @@
 				}
 
 				.main-cta {
-					span.register,
-					span.add-to-cart {
-						padding: 12px 10px;
-
-						@media screen and (max-width: 767px) {
-							width: auto;
-							margin-bottom: 10px;
-						}
-					}
-
-					strong {
-						@media screen and (max-width: 767px) {
-							width: auto;
-							padding-left: 10px;
-							padding-right: 10px;
+					a,
+					span {
+						&.register,
+						&.add-to-cart,
+						> strong {
+							padding: 12px 10px;
+							
+							@media screen and (max-width: 767px) {
+								width: 100%;
+								padding: 10px;
+								margin: 5px 0;
+							}
 						}
 					}
 				}
