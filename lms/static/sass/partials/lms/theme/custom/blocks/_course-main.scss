@@ -1,6 +1,11 @@
 body.view-in-course {
     .course-wrapper {
         max-width: $container-width !important;
+        padding: 40px 0 !important;
+
+        main {
+            padding: 20px 30px;
+        }
 
         .course-content,
         .courseware-results-wrapper {
@@ -132,7 +137,8 @@ body {
     }
 
     .page-header {
-        padding: 20px 40px;
+        padding: 0 20px 20px;
+        border-bottom: none;
 
         .page-header-secondary {
             .btn-primary {
@@ -155,7 +161,7 @@ body {
     }
 
     .course-index {
-        padding: 30px;
+        padding: 0 30px;
         width: 250px;
 
         .wrapper-course-modes {
@@ -324,6 +330,113 @@ body {
             }
         }
     }
+}
+
+#main .xmodule_display.xmodule_SequenceModule {
+    .sequence-nav {
+        border-bottom: 2px solid $light-gray;
+        padding-bottom: 15px;
+        height: 45px;
+        margin-bottom: 70px;
+
+        .sequence-nav-button {
+            border: none;
+            padding-top: 0;
+            font-size: 14px;
+            position: relative;
+            height: 45px;
+
+            &:before {
+                @include course-btn-hover;
+            }
+
+            &:hover:before {
+                width: 100%;
+            }
+        }
+
+        ol {
+            border-left: 2px solid $light-gray;
+            border-right: 2px solid $light-gray;
+            box-sizing: border-box;
+
+            li {
+                padding: 0 15px;
+                border-right: 1px solid $light-gray;
+                border-top: none;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                button {
+                    border: none;
+                    padding-top: 0;
+                    overflow: visible;
+                    transition: all .2s ease;
+                    height: 45px;
+
+                    &:before {
+                        @include course-btn-hover;
+                    }
+
+                    &:hover {
+                        background: $light-gray2;
+
+                        &:before {
+                            width: 100%;
+                        }
+
+                        .fa {
+                            color: $base-color;
+                        }
+                    }
+
+                    &.active {
+                        background: $light-gray2;
+
+                        &:before {
+                            width: 100%;
+                        }
+
+                        .fa {
+                            color: $base-color;
+                        }
+                    }
+
+                    .sequence-tooltip {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sequence-bottom {
+        border-top: 2px solid $light-gray;
+        max-width: 330px;
+        padding: 17px 20px 0;
+        justify-content: space-between;
+
+        .sequence-nav-button {
+            border: none;
+            padding: 0;
+            font-size: 14px;
+
+            &:before {
+                @include course-btn-hover;
+                bottom: -8px;
+            }
+
+            &:hover:before{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.course-wrapper .course-content .xblock {
+    max-width: none !important;
 }
 
 #course-container .page-header .page-header-search .input-group-btn .search-button {
