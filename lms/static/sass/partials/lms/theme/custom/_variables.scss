@@ -84,6 +84,8 @@ $border-radius: 5px;
 $black: #000;
 $blue: #0075b4;
 $grey: #ccc;
+$light-gray: #ddd;
+$light-gray2: #efefef;
 
 // responsive
 
@@ -104,4 +106,15 @@ $mobile-large: 768px;
     &::-ms-input-placeholder {
         @content;
     }
+}
+
+@mixin course-btn-hover() {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: $base-color;
+    position: absolute;
+    left: 0;
+    bottom: -17px;
+    transition: all .2s ease;
 }
