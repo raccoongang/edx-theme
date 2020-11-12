@@ -2,6 +2,7 @@ body.view-in-course {
     .course-wrapper {
         max-width: $container-width !important;
         padding: 40px 0 !important;
+        table-layout: auto;
 
         main {
             padding: 20px 30px;
@@ -346,6 +347,7 @@ body {
             font-size: 14px;
             position: relative;
             height: 45px;
+            overflow: visible;
 
             &:before {
                 @include course-btn-hover;
@@ -423,13 +425,14 @@ body {
             border: none;
             padding: 0;
             font-size: 14px;
+            overflow: visible;
 
             &:before {
                 @include course-btn-hover;
                 bottom: -8px;
             }
 
-            &:hover:before{
+            &:hover:before {
                 width: 100%;
             }
         }
