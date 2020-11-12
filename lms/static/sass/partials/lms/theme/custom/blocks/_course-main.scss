@@ -61,6 +61,7 @@ body {
             padding: 10px 30px 0;
             margin: 10px auto 20px;
             max-width: $container-width;
+            overflow-x: auto;
 
             .nav-item,
             .tab {
@@ -459,3 +460,35 @@ body {
         padding: 18px 15px 15px;
     }
 }
+
+.course-updates {
+    .page-header {
+        border-bottom: 1px solid #e7e7e7;
+        font-size: 14px;
+    }
+
+    .updates-article {
+        font-size: 14px;
+        line-height: 1.5;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        ul,
+        ol {
+            margin-bottom: 10px;
+
+            li {
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
