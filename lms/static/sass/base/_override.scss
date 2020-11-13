@@ -4268,8 +4268,7 @@ body.view-in-course .static_tab_wrapper {
     margin: 0 3px;
     border: none;
     background: $color6;
-    border-radius: 0;
-    color: #fff;
+    color: $theme-btn-text-color;
 
     &:hover {
         background: $theme-header-btn-color;
@@ -4278,6 +4277,11 @@ body.view-in-course .static_tab_wrapper {
 
     .icon {
         display: none;
+    }
+
+    &.button-previous,
+    &.button-next {
+        border-radius: 46px;
     }
 }
 
@@ -5088,36 +5092,10 @@ body.view-in-course {
 }
 
 .xmodule_display.xmodule_SequenceModule nav.sequence-bottom {
-    justify-content: space-between;
-    margin-top: 0;
+    display: flex;
 
-    .sequence-nav-button {
-        background: $color6;
-        border-radius: 46px;
-        padding: 12px 25px;
-        display: flex;
-        align-items: center;
-        z-index: 10;
-
-        &:focus {
-            outline: none;
-
-            .icon {
-                color: $theme-header-btn-color;
-            }
-        }
-
-        .icon {
-            display: block;
-        }
-
-        &:hover {
-            background: $theme-header-btn-color;
-
-            .icon {
-                color: $theme-btn-text-color;
-            }
-        }
+    @media (min-width: $tablet-size) {
+        display: none;
     }
 }
 
