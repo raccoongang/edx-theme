@@ -6,40 +6,45 @@
         url("../fonts/ArtegraSans-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Artegra Sans";
-    src: url("../fonts/ArtegraSans-Regular.eot");
-    src: url("../fonts/ArtegraSans-Regular.eot?#iefix") format("embedded-opentype"),
+    src: local("Artegra Sans Regular"), local("Artegra-Sans-Regular"),
         url("../fonts/ArtegraSans-Regular.woff2") format("woff2"),
-        url("../fonts/ArtegraSans-Regular.woff") format("woff"),
-        url("../fonts/ArtegraSans-Regular.ttf") format("truetype"),
-        url("../fonts/ArtegraSans-Regular.svg#ArtegraSans-Regular") format("svg");
+        url("../fonts/ArtegraSans-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Artegra Sans";
-    src: url("../fonts/ArtegraSans-SemiBold.eot");
-    src: url("../fonts/ArtegraSans-SemiBold.eot?#iefix") format("embedded-opentype"),
+    src: local("Artegra Sans SemiBold"), local("Artegra-Sans-SemiBold"),
         url("../fonts/ArtegraSans-SemiBold.woff2") format("woff2"),
-        url("../fonts/ArtegraSans-SemiBold.woff") format("woff"),
-        url("../fonts/ArtegraSans-SemiBold.ttf") format("truetype"),
-        url("../fonts/ArtegraSans-SemiBold.svg#ArtegraSans-SemiBold") format("svg");
+        url("../fonts/ArtegraSans-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Artegra Sans";
-    src: url("../fonts/ArtegraSans-Bold.eot");
-    src: url("../fonts/ArtegraSans-Bold.eot?#iefix") format("embedded-opentype"),
+    src: local("Artegra Sans Bold"), local("Artegra-Sans-Bold"),
         url("../fonts/ArtegraSans-Bold.woff2") format("woff2"),
-        url("../fonts/ArtegraSans-Bold.woff") format("woff"),
-        url("../fonts/ArtegraSans-Bold.ttf") format("truetype"),
-        url("../fonts/ArtegraSans-Bold.svg#ArtegraSans-Bold") format("svg");
+        url("../fonts/ArtegraSans-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Artegra Sans";
+    src: local("Artegra Sans Black"), local("Artegra-Sans-Black"),
+        url("../fonts/ArtegraSans-Black.woff2") format("woff2"),
+        url("../fonts/ArtegraSans-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
