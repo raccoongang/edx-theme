@@ -4264,26 +4264,24 @@ body.view-in-course .static_tab_wrapper {
     border-bottom: none;
 }
 
-.xmodule_display.xmodule_SequenceModule {
-    .sequence-nav-button {
-        margin: 0 3px;
+.xmodule_display.xmodule_SequenceModule .sequence-nav-button {
+    margin: 0 3px;
+    border: none;
+    background: $color6;
+    color: $theme-btn-text-color;
+
+    &:hover {
+        background: $theme-header-btn-color;
         border: none;
-        background: $color6;
-        color: $theme-btn-text-color;
+    }
 
-        &:hover {
-            background: $theme-header-btn-color;
-            border: none;
-        }
+    .icon {
+        display: none;
+    }
 
-        .icon {
-            display: none;
-        }
-
-        &.button-previous,
-        &.button-next {
-            border-radius: 46px;
-        }
+    &.button-previous,
+    &.button-next {
+        border-radius: 46px;
     }
 }
 
@@ -5094,14 +5092,10 @@ body.view-in-course {
 }
 
 .xmodule_display.xmodule_SequenceModule nav.sequence-bottom {
-    display: none;
-    opacity: 0;
-    height: 0;
+    display: flex;
 
-    @media (max-width: $tablet-size) {
-        display: flex;
-        opacity: 1;
-        height: 45px;
+    @media (min-width: $tablet-size) {
+        display: none;
     }
 }
 
