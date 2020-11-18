@@ -464,37 +464,64 @@ body {
     }
 }
 
-.course-updates {
+.course-updates .updates-article,
+.section-update-message .welcome-message {
+    font-size: 14px;
+    line-height: 1.5;
+
     .page-header {
         border-bottom: 1px solid #e7e7e7;
         font-size: 14px;
     }
 
-    .updates-article {
-        font-size: 14px;
-        line-height: 1.5;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        margin: 20px 0;
+    }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: 700;
-            margin: 20px 0;
-        }
+    ul,
+    ol {
+        margin-bottom: 10px;
 
-        ul,
-        ol {
-            margin-bottom: 10px;
-
-            li {
-                margin: 5px 0;
-            }
+        li {
+            margin: 5px 0;
         }
     }
 }
 
 .course-tabs li a[href*="instructor_analytics"] {
     display: none !important;
+}
+
+.page-content .page-content-secondary.course-sidebar {
+    font-size: 14px;
+
+    h3 {
+        margin: 20px 0;
+    }
+
+    ul,
+    ol {
+        margin-bottom: 10px;
+
+        li {
+            margin: 5px 0;
+            font-size: 14px;
+
+            a {
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    opacity: .7;
+                    color: $base-color;
+                    border-bottom: 1px dotted $base-color;
+                }
+            }
+        }
+    }
 }
