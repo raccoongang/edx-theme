@@ -4268,8 +4268,7 @@ body.view-in-course .static_tab_wrapper {
     margin: 0 3px;
     border: none;
     background: $color6;
-    border-radius: 0;
-    color: #fff;
+    color: $theme-btn-text-color;
 
     &:hover {
         background: $theme-header-btn-color;
@@ -4278,6 +4277,11 @@ body.view-in-course .static_tab_wrapper {
 
     .icon {
         display: none;
+    }
+
+    &.button-previous,
+    &.button-next {
+        border-radius: 46px;
     }
 }
 
@@ -5088,36 +5092,10 @@ body.view-in-course {
 }
 
 .xmodule_display.xmodule_SequenceModule nav.sequence-bottom {
-    justify-content: space-between;
-    margin-top: 0;
+    display: flex;
 
-    .sequence-nav-button {
-        background: $color6;
-        border-radius: 46px;
-        padding: 12px 25px;
-        display: flex;
-        align-items: center;
-        z-index: 10;
-
-        &:focus {
-            outline: none;
-
-            .icon {
-                color: $theme-header-btn-color;
-            }
-        }
-
-        .icon {
-            display: block;
-        }
-
-        &:hover {
-            background: $theme-header-btn-color;
-
-            .icon {
-                color: $theme-btn-text-color;
-            }
-        }
+    @media (min-width: $tablet-size) {
+        display: none;
     }
 }
 
@@ -6673,4 +6651,159 @@ body.discussion-page {
 
 .xblock #seq_content .openassessment__steps .response__submission .list.list--fields.response__submission__content .response__submission__actions {
     display: none;
+}
+
+.wrapper-msg {
+    padding: 110px 0 130px;
+
+    &.urgency-low {
+        background: #e5e5e5;
+        box-shadow: none;
+    }
+
+    @media (max-width: $mobile-size) {
+        padding: 40px 0;
+    }
+
+    .is-dismissable {
+        .msg-content {
+            width: 100%;
+        }
+    }
+
+    .msg {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        max-width: 1090px;
+        min-width: initial;
+        box-sizing: border-box;
+
+        @media (max-width: $mobile-large) {
+            flex-direction: column;
+        }
+    }
+}
+
+.msg-content {
+    margin-right: 40px;
+
+    @media (max-width: $mobile-large) {
+        margin-right: 0;
+    }
+
+    &__title {
+        font-family: $default-font;
+        font-weight: 900;
+        font-size: 49px;
+        line-height: 56px;
+        color: $color8;
+        margin-bottom: 6px;
+
+        @media (max-width: $tablet-default) {
+            font-size: 40px;
+            line-height: 44px;
+        }
+
+        @media (max-width: $mobile-size) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+}
+
+.msg-body {
+    &__text {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 37px;
+        font-family: $default-font;
+        color: $color8;
+        max-width: 607px;
+        margin-bottom: 28px;
+
+        @media (max-width: $tablet-default) {
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        @media (max-width: $mobile-size) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        span {
+            font-family: $default-font;
+            color: $theme-header-btn-color;
+            font-weight: 700;
+            line-height: 30px;
+
+            @media (max-width: $mobile-size) {
+                line-height: 24px;
+            }
+        }
+    }
+
+    &__link {
+        margin-bottom: 25px;
+
+        a {
+            font: 700 15px/19px $default-font;
+            background-color: $theme-header-btn-color;
+            color: $theme-btn-text-color;
+            padding: 21px;
+            display: inline-block;
+            border-radius: 35px;
+
+            @media (max-width: $mobile-large) {
+                padding: 16px 22px;
+            }
+
+            &:hover,
+            &:focus {
+                color: $theme-btn-text-color;
+                background-color: $theme-header-link-color;
+            }
+        }
+    }
+
+    &__sub-text {
+        font: 400 16px/22px $default-font;
+        display: block;
+        color: $color8;
+
+        a {
+            color: $theme-header-btn-color;
+            font-family: $default-font;
+
+            &:focus,
+            &:visited {
+                color: $theme-header-btn-color !important;
+            }
+
+            &:hover {
+                color: $theme-header-btn-color !important;
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.msg-image {
+    flex-shrink: 0;
+    margin-top: 10px;
+
+    @media (max-width: $tablet-default) {
+        max-width: 250px;
+    }
+
+    @media (max-width: $tablet-default) {
+        max-width: 250px;
+    }
+
+    @media (max-width: $mobile-large) {
+        max-width: 290px;
+        order: -1;
+        margin: 0 auto 30px;
+    }
 }
