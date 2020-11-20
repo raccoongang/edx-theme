@@ -1,5 +1,8 @@
 <%namespace name='static' file='/static_content.html'/>
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+from django.utils.translation import ugettext as _
+from django.template import Template, Context
+%>
 
 <%
 # set doc language direction
@@ -20,9 +23,11 @@ course_mode_class = course_mode if course_mode else ''
     <%static:css group='style-certificates'/>
     <link rel="stylesheet" href="/static/${settings.FEATURES.get('BASE_SITE_THEME', settings.DEFAULT_SITE_THEME)}/css/certificate.css" type="text/css" media="all" />
     <link rel="icon" type="image/x-icon" href="${static.url(static.get_value('favicon_path', settings.FAVICON_PATH))}" />
+    ${Template("{% load gtm_tags %}{% gtm_head %}").render(Context(dict_=dict(request=request)))}
 </head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
+    ${Template("{% load gtm_tags %}{% gtm_body %}").render(Context(dict_=dict(request=request)))}
 
     <div class="wrapper-view" dir="${dir_rtl}">
 
