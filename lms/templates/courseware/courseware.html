@@ -107,6 +107,13 @@ from openedx.features.course_experience import course_home_page_title, COURSE_OU
 
 ${HTML(fragment.foot_html())}
 
+    <script>
+        $('.side-navigation-toggle').click(function () {
+            $('.course-nav-wrapper').slideToggle();
+            $('.side-navigation-toggle').toggleClass('toggle-hidden');
+        });
+    </script>
+
 </%block>
 
 <div class="message-banner" aria-live="polite"></div>
@@ -126,42 +133,40 @@ ${HTML(fragment.foot_html())}
 
 % if disable_accordion is UNDEFINED or not disable_accordion:
     <div class="course-index">
-
-      <div class="wrapper-course-modes">
-
-          <div class="courseware-bookmarks-button">
-              <a class="bookmarks-list-button" href="${reverse('openedx.course_bookmarks.home', args=[course.id])}">
-                  ${_('Bookmarks')}
-              </a>
-          </div>
-
-          % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
-            <div id="courseware-search-bar" class="search-bar courseware-search-bar" role="search" aria-label="Course">
-              <form class="search-form">
-                <label for="course-search-input" class="sr">${_('Course Search')}</label>
-                <div class="search-field-wrapper">
-                  <input id="course-search-input" type="text" class="search-field" placeholder="${_('Course Search')}..."/>
-                  <button type="submit" class="search-button"><i class="icon fa fa-search" aria-hidden="true"></i></button>
-                  <button type="button" class="cancel-button" title="${_('Clear search')}">
-                    <span class="icon fa fa-remove" aria-hidden="true"></span>
-                  </button>
+        <span class="side-navigation-toggle toggle-top">${_('Show course content navigation')}</span>
+        <div class="course-nav-wrapper">
+          <div class="wrapper-course-modes">
+              <div class="courseware-bookmarks-button">
+                  <a class="bookmarks-list-button" href="${reverse('openedx.course_bookmarks.home', args=[course.id])}">
+                      ${_('Bookmarks')}
+                  </a>
+              </div>
+              % if settings.FEATURES.get('ENABLE_COURSEWARE_SEARCH'):
+                <div id="courseware-search-bar" class="search-bar courseware-search-bar" role="search" aria-label="Course">
+                  <form class="search-form">
+                    <label for="course-search-input" class="sr">${_('Course Search')}</label>
+                    <div class="search-field-wrapper">
+                      <input id="course-search-input" type="text" class="search-field" placeholder="${_('Course Search')}..."/>
+                      <button type="submit" class="search-button"><i class="icon fa fa-search" aria-hidden="true"></i></button>
+                      <button type="button" class="cancel-button" title="${_('Clear search')}">
+                        <span class="icon fa fa-remove" aria-hidden="true"></span>
+                      </button>
+                    </div>
+                  </form>
                 </div>
-              </form>
-            </div>
-          % endif
-
-      </div>
-
-      <div class="accordion">
-        <nav class="course-navigation" aria-label="${_('Course')}">
-          % if accordion.strip():
-            ${HTML(accordion)}
-          % else:
-            <div class="chapter">${_("No content has been added to this course")}</div>
-          % endif
-        </nav>
-      </div>
-
+              % endif
+          </div>
+          <div class="accordion">
+            <nav class="course-navigation" aria-label="${_('Course')}">
+              % if accordion.strip():
+                ${HTML(accordion)}
+              % else:
+                <div class="chapter">${_("No content has been added to this course")}</div>
+              % endif
+            </nav>
+          </div>
+        </div>
+        <span class="side-navigation-toggle toggle-bottom toggle-hidden">${_('Hide course content navigation')}</span>
     </div>
 % endif
     <section class="course-content" id="course-content">

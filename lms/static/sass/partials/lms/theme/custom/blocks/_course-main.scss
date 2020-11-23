@@ -2,7 +2,8 @@ body.view-in-course {
     .course-wrapper {
         max-width: $container-width !important;
         padding: 40px 0 !important;
-        table-layout: auto;
+        display: flex;
+        flex-wrap: wrap;
 
         main {
             padding: 20px 30px;
@@ -10,7 +11,11 @@ body.view-in-course {
 
         .course-content,
         .courseware-results-wrapper {
-            width: calc(100% - 250px);
+            width: calc(100% - 310px);
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
 
             .search-results {
                 .search-info {
@@ -58,6 +63,12 @@ body.view-in-course {
 
 body {
     .content-wrapper {
+        margin: 20px auto 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 0 10px 10px !important;
+        }
+
         .course-tabs {
             padding: 10px 30px 0;
             margin: 10px auto 20px;
@@ -164,7 +175,43 @@ body {
 
     .course-index {
         padding: 0 30px;
-        width: 250px;
+        width: 310px;
+        box-sizing: border-box;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            border: none;
+        }
+
+        .side-navigation-toggle {
+            border-radius: 40px;
+            height: 49px;
+            width: 100%;
+            background: $gray;
+            color: rgba($black, .7);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-bottom: 15px;
+
+            &.toggle-hidden {
+                display: none;
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: none !important;
+            }
+        }
+
+        .course-nav-wrapper {
+            display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: block !important;
+            }
+        }
 
         .wrapper-course-modes {
             padding: 0 0 17px;
@@ -181,7 +228,7 @@ body {
 
                 .bookmarks-list-button {
                     border-radius: 30px;
-                    border: 1px solid $grey;
+                    border: 1px solid $gray;
                     background: $footer-bg;
                     color: $black;
                     padding: 8px 25px;
@@ -337,9 +384,15 @@ body {
 #main .xmodule_display.xmodule_SequenceModule {
     .sequence-nav {
         border-bottom: 2px solid $light-gray;
-        padding-bottom: 15px;
-        height: 45px;
+        padding-bottom: 15px !important;
+        height: auto !important;
         margin-bottom: 70px;
+
+        .sequence-list-wrapper {
+            @include media-breakpoint-down(md) {
+                overflow-y: hidden;
+            }
+        }
 
         .sequence-nav-button {
             border: none;
@@ -348,6 +401,16 @@ body {
             position: relative;
             height: 45px;
             overflow: visible;
+            background: none;
+            border-radius: 0;
+
+            &.button-previous {
+                border-right: 2px solid $light-gray;
+            }
+
+            &.button-next {
+                border-left: 2px solid $light-gray;
+            }
 
             &:before {
                 @include course-btn-hover;
@@ -359,14 +422,13 @@ body {
         }
 
         ol {
-            border-left: 2px solid $light-gray;
-            border-right: 2px solid $light-gray;
             box-sizing: border-box;
 
             li {
                 padding: 0 15px;
                 border-right: 1px solid $light-gray;
                 border-top: none;
+                min-width: 80px;
 
                 &:last-child {
                     border-right: none;
@@ -439,7 +501,7 @@ body {
     }
 }
 
-.course-wrapper .course-content .xblock {
+.course-wrapper .course-content #seq_content .xblock {
     max-width: none !important;
 }
 
