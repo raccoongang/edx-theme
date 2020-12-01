@@ -59,6 +59,33 @@ body.view-in-course {
         padding: 15px 5px 5px;
         text-align: center;
     }
+
+    .static_tab_wrapper {
+        font-size: 14px;
+        border: 1px solid $light-gray;
+        margin-bottom: 50px !important;
+
+        h3,
+        h4 {
+            color: $base-color;
+            font-weight: 300;
+            clear: both;
+        }
+
+        h3 {
+            font-size: 32px;
+            margin: 32px 0;
+        }
+
+        h4 {
+            font-size: 24px;
+            margin: 24px 0;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 body {
@@ -381,12 +408,30 @@ body {
     }
 }
 
+.wrap-instructor-info.studio-view {
+    width: 100%;
+    box-sizing: border-box;
+    display: block !important;
+    padding: 20px 0;
+    margin: 0 0 50px !important;
+    border-bottom: 1px dashed #eee;
+    overflow: hidden;
+}
+
+.xblock .unit-title {
+    color: $base-color;
+}
+
+.course-content .bookmark-button-wrapper {
+    margin: 20px 0;
+}
+
 #main .xmodule_display.xmodule_SequenceModule {
     .sequence-nav {
         border-bottom: 2px solid $light-gray;
         padding-bottom: 15px !important;
         height: auto !important;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
 
         .sequence-list-wrapper {
             @include media-breakpoint-down(md) {
@@ -521,9 +566,7 @@ body {
 }
 
 .wrapper-course-material .course-material .course-tabs .tab a {
-    @media screen and (max-width: 760px) {
-        padding: 18px 15px 15px;
-    }
+    padding: 15px;
 }
 
 .course-updates .updates-article,
