@@ -48,7 +48,29 @@
 .account-settings-sections .section {
 	margin: 0;
 
-	.account-settings-section-body .u-field .field select {
-		height: 48px;
+	.account-settings-section-body {
+		.u-field-social {
+			@media (max-width: 768px) {
+				width: 100%;
+				margin-right: 0;
+				box-sizing: border-box;
+			}
+		}
+
+		.u-field {
+			.field select {
+				height: 48px;
+			}
+
+			.social-field-linked .u-field-link {
+				padding: 11px 14px;
+			}
+
+			[class*="social-field-"] {
+				@media (max-width: 768px) {
+					margin: 0;
+				}
+			}
+		}
 	}
 }
