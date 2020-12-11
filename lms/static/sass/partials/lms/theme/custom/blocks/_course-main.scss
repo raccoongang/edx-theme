@@ -64,6 +64,7 @@ body.view-in-course {
         font-size: 14px;
         border: 1px solid $light-gray;
         margin-bottom: 50px !important;
+        max-width: 1600px !important;
 
         h3,
         h4 {
@@ -90,7 +91,7 @@ body.view-in-course {
 
 body {
     .content-wrapper {
-        margin: 20px auto 0;
+        margin: 20px auto 0 !important;
 
         @include media-breakpoint-down(sm) {
             padding: 0 10px 10px !important;
