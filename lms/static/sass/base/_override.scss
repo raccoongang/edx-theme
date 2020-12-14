@@ -4904,28 +4904,7 @@ body.view-in-course {
                     font: 600 16px/24px "Artegra Sans", sans-serif !important;
 
                     &.tooltip-info {
-                        position: relative;
-
-                        &:before,
-                        &:after {
-                            content: attr(data-tooltip-before);
-                            position: absolute;
-                            top: -40px;
-                            left: 50%;
-                            transform: translate(-50%, -10px);
-                            background-color: $color6;
-                            color: $theme-btn-white-text-color;
-                            padding: 0 5px;
-                            border-radius: 3px;
-                            opacity: 0;
-                            visibility: hidden;
-                            z-index: -1;
-                            transition: all 250ms ease;
-                        }
-
-                        &:after {
-                            content: attr(data-tooltip-after);
-                        }
+                        @extend %tooltip-info;
                     }
                 }
 
@@ -4933,13 +4912,11 @@ body.view-in-course {
                     span {
                         color: lighten($theme-header-btn-color, 5%);
 
-                        &.tooltip-info {
-                            &:before {
-                                opacity: 1;
-                                visibility: visible;
-                                z-index: 10;
-                                transform: translate(-50%, 0);
-                            }
+                        &.tooltip-info:before {
+                            opacity: 1;
+                            visibility: visible;
+                            z-index: 10;
+                            transform: translate(-50%, 0);
                         }
                     }
 
