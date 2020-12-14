@@ -110,5 +110,29 @@ course_mode_class = course_mode if course_mode else ''
             </div>
         </div>
     </div>
-
+    <div class="share-section">
+        <h2 class="share-section__title">${_("Share it")}:</h2>
+        <ul class="share-section-list">
+            <li class="share-section-list__item">
+                <button id="action-share-facebook"
+                    onclick="FaceBook.share({
+                    share_text: '${facebook_share_text | escapejs}',
+                    share_link: '${share_url}',
+                    picture_link: '${full_course_image_url}',
+                    description: '${_('Click the link to see my certificate.') | escapejs}'
+                    });">
+                    <svg class="svg-icon" viewBox="0 0 37 37">
+                        <use xlink:href="#facebook-share-certificate"></use>
+                    </svg>
+                </button>
+            </li>
+            <li class="share-section-list__item">
+                <button id="action-share-linkedin" title="${_('Add to LinkedIn Profile')}" data-course-id="${course_id}" data-certificate-mode="${course_mode}">
+                    <svg class="svg-icon" viewBox="0 0 37 37">
+                        <use xlink:href="#linked-in-share-certificate"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
 </main>
