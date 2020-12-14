@@ -119,10 +119,7 @@
                 border-color: $base-color-lighter;
 
                 .tooltip-info:before {
-                    opacity: 1;
-                    visibility: visible;
-                    z-index: 10;
-                    transform: translate(-50%, 0);
+                    @extend %tooltip-info-hover;
                 }
             }
 
@@ -134,17 +131,11 @@
             &.is-copied {
                 .tooltip-info {
                     &:before {
-                        opacity: 0;
-                        visibility: hidden;
-                        z-index: -1;
-                        transform: translate(-50%, -10px);
+                        @extend %tooltip-info-copied;
                     }
 
                     &:after {
-                        opacity: 1;
-                        visibility: visible;
-                        z-index: 10;
-                        transform: translate(-50%, 0);
+                        @extend %tooltip-info-hover;
                     }
                 }
 
