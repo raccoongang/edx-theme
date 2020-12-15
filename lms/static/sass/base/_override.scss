@@ -1545,26 +1545,9 @@ body.view-passwordreset {
 
         @media (max-width: $tablet-size) {
             max-width: 100%;
-            width: 50%;
-            margin: 0;
-
-            &:first-child {
-                margin-right: 20px;
-
-                @media (max-width: $xs) {
-                    margin-right: 0;
-                }
-            }
-        }
-
-        @media (max-width: $xs) {
             width: 100%;
-            margin: 0 0 30px;
+            margin: 0;
             text-align: center;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
 
         h3 {
@@ -1573,6 +1556,10 @@ body.view-passwordreset {
             letter-spacing: 1px;
             margin-bottom: 18px;
             font: 400 16px/22px $default-font;
+
+            @media (max-width: $tablet-size) {
+                text-align: center;
+            }
         }
 
         ul {
@@ -1809,7 +1796,8 @@ body.view-passwordreset {
 
     @media (max-width: $tablet-size) {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
         margin: 0 -15px;
 
         li {
@@ -5502,18 +5490,11 @@ body.menu-open {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
     @media (max-width: $tablet-size) {
         flex-direction: column;
         align-items: center;
-    }
-
-    .svg-icon {
-        margin-left: 11px;
-
-        @media (max-width: $tablet-size) {
-            margin-left: 0;
-        }
     }
 
     .footer-support {
@@ -5528,7 +5509,7 @@ body.menu-open {
         &__item {
             display: flex;
             align-items: center;
-            margin-right: 30px;
+            margin-right: 12px;
 
             &:last-child {
                 margin-right: 0;
@@ -5544,6 +5525,14 @@ body.menu-open {
             span {
                 font-family: $default-font;
             }
+        }
+
+        &__link {
+            margin-left: 9px;
+        }
+
+        &__platform {
+            line-height: 29px;
         }
     }
 
@@ -5599,6 +5588,7 @@ body footer .raccoon__logo {
 .svg-raccoon {
     width: 20px;
     height: 16px;
+    margin-left: 3px;
 }
 
 .svg-skillonomy {
