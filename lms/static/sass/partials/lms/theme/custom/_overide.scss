@@ -16,6 +16,7 @@
 @import "blocks/instructor";
 @import "blocks/progress";
 @import "blocks/profile";
+@import "blocks/discussion";
 
 .theme-content {
     background: $body-bg;
@@ -54,12 +55,18 @@ body {
 }
 
 .content-wrapper {
+    max-width: 1600px !important;
+
     @media screen and (max-width: $mobile-large) {
         padding: 0 20px;
     }
 
     .page-content-container {
         background-color: $white;
+    }
+
+    .index-page & {
+        max-width: none !important;
     }
 }
 
