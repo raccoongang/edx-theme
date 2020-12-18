@@ -65,7 +65,9 @@ body {
         background-color: $white;
     }
 
-    .index-page & {
+    .index-page &,
+    .info-page &,
+    .about-page & {
         max-width: none !important;
     }
 }
