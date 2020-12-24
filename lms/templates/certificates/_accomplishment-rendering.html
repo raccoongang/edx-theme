@@ -120,14 +120,14 @@ course_mode_class = course_mode if course_mode else ''
             <h2 class="share-section__title">${_("Share it")}:</h2>
             <ul class="share-section-list">
                 <li class="share-section-list__item">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=${ urllib.quote(request.build_absolute_uri(), safe='') }">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${ urllib.quote(request.build_absolute_uri(), safe='') }" target="_blank">
                         <svg class="svg-icon" viewBox="0 0 37 37">
                             <use xlink:href="#facebook-share-certificate"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="share-section-list__item">
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=${ urllib.quote(request.build_absolute_uri(), safe='') }">
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=${ urllib.quote(request.build_absolute_uri(), safe='') }" target="_blank">
                         <svg class="svg-icon" viewBox="0 0 37 37">
                             <use xlink:href="#linked-in-share-certificate"></use>
                         </svg>
