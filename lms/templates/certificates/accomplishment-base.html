@@ -1,5 +1,9 @@
 <%namespace name='static' file='/static_content.html'/>
-<%! from django.utils.translation import ugettext as _ %>
+<%!
+import urllib
+
+from django.utils.translation import ugettext as _
+%>
 
 <%
 # set doc language direction
@@ -14,6 +18,12 @@ course_mode_class = course_mode if course_mode else ''
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Facebook, Linkedin sharing meta data -->
+    <meta property='og:description' content='${document_title}'/>
+    <meta property='og:url' content="${ urllib.quote(request.build_absolute_uri(), safe='') }"/>
+    <!-- <meta property='og:title' content='${document_title}'/>-->
+    <!-- <meta property='og:image:secure' content="${ urllib.quote(request.build_absolute_uri(), safe='') }"/>-->
 
     <title>${document_title}</title>
 
