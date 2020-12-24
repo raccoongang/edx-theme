@@ -1,4 +1,8 @@
-<%! from django.utils.translation import ugettext as _, get_language %>
+<%!
+import urllib
+
+from django.utils.translation import ugettext as _, get_language
+%>
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
@@ -110,23 +114,27 @@ course_mode_class = course_mode if course_mode else ''
             </div>
         </div>
     </div>
-    <div class="share-section">
-        <h2 class="share-section__title">${_("Share it")}:</h2>
-        <ul class="share-section-list">
-            <li class="share-section-list__item">
-                <button>
-                    <svg class="svg-icon" viewBox="0 0 37 37">
-                        <use xlink:href="#facebook-share-certificate"></use>
-                    </svg>
-                </button>
-            </li>
-            <li class="share-section-list__item">
-                <button>
-                    <svg class="svg-icon" viewBox="0 0 37 37">
-                        <use xlink:href="#linked-in-share-certificate"></use>
-                    </svg>
-                </button>
-            </li>
-        </ul>
-    </div>
+
+    % if user.is_authenticated() and user.id == int(accomplishment_user_id) and not is_pdf:
+        <div class="share-section">
+            <h2 class="share-section__title">${_("Share it")}:</h2>
+            <ul class="share-section-list">
+                <li class="share-section-list__item">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${ urllib.quote(request.build_absolute_uri(), safe='') }">
+                        <svg class="svg-icon" viewBox="0 0 37 37">
+                            <use xlink:href="#facebook-share-certificate"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="share-section-list__item">
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=${ urllib.quote(request.build_absolute_uri(), safe='') }">
+                        <svg class="svg-icon" viewBox="0 0 37 37">
+                            <use xlink:href="#linked-in-share-certificate"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    % endif
+
 </main>
