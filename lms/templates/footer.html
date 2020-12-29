@@ -27,14 +27,14 @@
           </a>
         </div>
         <div class="footer-top__subscribe-text">
-          Хотите знать больше?
-          <span>Подпишитесь на наши новости</span>
+          ${_("Be in the know")}
+          <span>${_("Sign up to our newsletter")}</span>
         </div>
         <div class="footer-top__subscribe">
           <form id="footer-subscribe-form" method='post'>
             <div class="footer-subscribe-form">
               <input class="footer-subscribe-form__input" type="text" placeholder="email" name="email">
-              <button class="footer-subscribe-form__btn">Подписаться</button>
+              <button class="footer-subscribe-form__btn">${_("Subscribe")}</button>
             </div>
           </form>
           <span class="email-subscribe-alert hidden"></span>
@@ -71,7 +71,7 @@
                   <svg class="svg-icon" viewBox="0 0 24 24">
                     <use xlink:href="#fa-brands_telegram"></use>
                   </svg>
-                  <span>канал в telegram</span>
+                  <span>${_("telegram channel")}</span>
                 </a>
             </li>
             <li>
@@ -79,30 +79,29 @@
                   <svg class="svg-icon" viewBox="0 0 24 24">
                     <use xlink:href="#fa-brands_telegram"></use>
                   </svg>
-                  <span>чат в telegram</span>
+                  <span>${_("telegram chat")}</span>
                 </a>
+            </li>
+            <li>
+              <a href="https://t.me/mamaworks" target="_blank">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                  <use xlink:href="#fa-brands_telegram"></use>
+                </svg>
+                <span>${_("vacancies for MAMA graduates")}</span>
+              </a>
             </li>
           </ul>
         </div>
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
-              <li><a href="https://courses.mama-edu.com/about-us" target="_blank">О нас</a></li>
-              <li><a href="/courses" target="_blank">Все курсы</a></li>
+              <li><a href="https://courses.mama-edu.com/about-us" target="_blank">${_("About us")}</a></li>
+              <li><a href="/courses" target="_blank">${_("All courses")}</a></li>
               <li><a href="https://courses.mama-edu.com/teachers" target="_blank">${_("For teachers")}</a></li>
           </ol>
         </nav>
         <div class="footer-info">
           <div class="footer-info__item">
-            <h3>${_("For teachers and sponsors")}:</h3>
-            <ul>
-              <li><a href="mailto:bizdev@mama-edu.com"><span>bizdev@mama-edu.com</span></a></li>
-              <li><a href="tel:+380637047052">+38 063 704 70 52</a></li>
-              <li><a href="tel:+79697776250">+7 969 777 62 50</a></li>
-              <li><a href="https://t.me/bizdev_mama" target="_blank">@Bizdev_MAMA</a></li>
-            </ul>
-          </div>
-          <div class="footer-info__item">
-            <h3>${_("For students")}:</h3>
+            <h3>${_("Contacts")}:</h3>
             <ul>
               <li><a href="mailto:support@mama-edu.com"><span>support@mama-edu.com</span></a></li>
               <li>
@@ -136,16 +135,16 @@
         </div>
         <ul class="footer-support">
           <li class="footer-support__item">
-            <span>Платформа на</span>
-            <a target="_blank" href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer">
+            <span class="footer-support__platform">${_("Platform")}</span>
+            <a target="_blank" href="https://www.edx.org/?utm_medium=affiliate_partner&amp;utm_source=opensource-partner&amp;utm_content=open-edx-partner-footer-link&amp;utm_campaign=open-edx-footer" class="footer-support__link">
               <svg class="svg-icon svg-edx" viewBox="0 0 59 12">
                 <use xlink:href="#openedex-logo"></use>
               </svg>
             </a>
           </li>
           <li class="footer-support__item">
-            <span>Разработка</span>
-            <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
+            <span>${_("Developed by")}</span>
+            <a target="_blank" href="https://raccoongang.com" class="raccoon__logo footer-support__link">
               <span>Raccoon Gang</span>
               <svg class="svg-icon svg-raccoon" viewBox="0 0 20 16">
                 <use xlink:href="#racoon-footer-logo"></use>
@@ -153,8 +152,8 @@
             </a>
           </li>
           <li class="footer-support__item">
-            <span>совместно со</span>
-            <a target="_blank" href="https://skillonomy.org/">
+            <span>${_("and")}</span>
+            <a target="_blank" href="https://skillonomy.org/" class="footer-support__link">
               <svg class="svg-icon svg-skillonomy" viewBox="0 0 104 19">
                 <use xlink:href="#skillonomy_logo"></use>
               </svg>
