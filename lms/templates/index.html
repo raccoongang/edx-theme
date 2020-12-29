@@ -196,8 +196,9 @@ course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
             "course-v1:Lakeside+PRE1103+2029_T2",  // PRESENCE - Clinical Track
           ]
 
-          for (let el of $(".courses-listing")) {
+          for (let j = 0; j < $(".courses-listing").children.length; j++) {
 
+            const el = $(".courses-listing")[j];
             const firstCoursesHtml = [];
             const remainingCoursesHtml = [];
             let allCourses = [];
@@ -254,7 +255,7 @@ course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
           }
         }
 
-        setTimeout(reorderCourses, 3000);
+        setTimeout(reorderCourses, 1000);
 
       })
    </script>
