@@ -114,7 +114,6 @@
 
 					a {
 						color: $header-nav-link-color;
-						font-weight: 700;
 						display: inline-block;
 						line-height: 20px;
 						box-sizing: border-box;
@@ -207,7 +206,6 @@
 
 					a {
 						color: $header-nav-link-color;
-						font-weight: 700;
 						line-height: 18px;
 						padding: 9px 25px;
 						box-sizing: border-box;
@@ -439,13 +437,13 @@
 	// header buttons
 
 	.btn {
+        font-size: 18px;
 		transition: all 0.2s ease;
 		display: inline-block;
-		background: $theme-btn-bg !important;
+		background: transparent !important;
 		color: $theme-btn-text-color !important;
-		border: none !important;
-		text-transform: uppercase;
-		border-radius: 2px !important;
+		border: 3px solid $base-color !important;
+		border-radius: 0 !important;
 		text-align: center;
 
 		@media (max-width: $build-header-menu-tablet) {
@@ -464,11 +462,11 @@
 		}
 
 		&:focus:hover {
-			background: $theme-btn-bg-hover !important;
+			background: $theme-btn-bg !important;
 		}
 
 		&:hover {
-			background: $theme-btn-bg-hover !important;
+			background: $theme-btn-bg !important;
 		}
 	}
 }

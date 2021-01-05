@@ -395,6 +395,7 @@ section.tool-wrapper {
 	}
 
 	.wrapper-search-context .search-status-label {
+        color: $base-color2;
 		word-break: break-word;
 	}
 }
@@ -460,7 +461,7 @@ button.prerequisite-button .fa {
 .courses-container {
 	.courses .course {
 		background: $course-bg;
-		border-bottom-color: $courses-border-color;
+		border-bottom-color: transparent;
 
 		.course-info {
 			p,
