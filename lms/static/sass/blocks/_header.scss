@@ -1,7 +1,7 @@
 .global-header {
-	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.75);
+	box-shadow: none;
 	padding: 0;
-	border-bottom: none;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
 	position: relative;
 	overflow: visible;
 	background: $header-bg;
@@ -213,7 +213,7 @@
 						box-sizing: border-box;
 
 						&.menu-title {
-							color: #474747;
+							color: $base-color2;
 							position: relative;
 							top: 1px;
 
@@ -224,7 +224,7 @@
 						}
 
 						&.help-link {
-							color: #474747 !important;
+							color: $base-color2 !important;
 							text-transform: uppercase;
 							margin-left: 20px;
 
@@ -247,7 +247,7 @@
 					}
 
 					.fa {
-						color: #474747;
+						color: $base-color2;
 					}
 				}
 
@@ -314,7 +314,7 @@
 
 	.course-header {
 		margin-top: 0;
-		color: #313131;
+		color: #fff;
 		text-align: center;
 		padding-bottom: 20px;
 	}
@@ -526,6 +526,8 @@ div.mobile-menu {
 section.home {
 	> header,
 	.slider {
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		box-shadow: none;
 		min-height: 485px;
 		background: url('../images/background.jpg') no-repeat 50% 50%;
 		background-size: cover;
@@ -700,11 +702,11 @@ section.home {
 // line under courses "View this course as:"
 
 .wrapper-preview-menu {
-	background: #c8c8c8;
+	background: $base-onyx-color;
 	padding: 0;
 
 	label {
-		color: #3c3c3c !important;
+		color: $base-color2 !important;
 		text-shadow: none;
 		-webkit-font-smoothing: auto;
 		-moz-osx-font-smoothing: auto;

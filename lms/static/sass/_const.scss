@@ -1,17 +1,19 @@
-$base-color: #47bded;
-$base-color2: #44b759;
-$base-color2-hover: lighten($base-color2, 10%);
+$base-color: #3c99fb;
+$base-color2: #fff;
+$base-color2-hover: lighten($base-color, 10%);
+$base-color3: #000;
+$base-onyx-color: #373737;
 //body background
-$body-bg: #eee;
+$body-bg: #000;
 // logo
-$header-logo-height: 35px;
+$header-logo-height: 45px;
 $footer-logo-height: $header-logo-height;
 $certificate-logo-height: $header-logo-height;
 //links
 $links-color: $base-color;
 $links-color-hover: lighten($links-color, 10%);
 //settings for header
-$header-bg: #fff;
+$header-bg: #000;
 $header-nav-link-color: $base-color2;
 $header-nav-link-color-hover: lighten($header-nav-link-color, 20%);
 $dropdown-menu-link-color: $base-color;
@@ -38,11 +40,11 @@ $search-button-border: #fff;
 $search-button-color: #7b7b7b;
 $search-height: 43px;
 //settings for footer
-$footer-bg: #2a374a;
-$footer-nav-link-color: #fff;
+$footer-bg: #000;
+$footer-nav-link-color: $base-color2;
 $footer-nav-link-color-hover: rgba(255,255,255, .8);
 $footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #44b759;
+$footer-social-link-bg: $base-color2;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
 //btn
 $theme-btn-bg: $base-color;
@@ -54,10 +56,10 @@ $theme-btn-red-bg: #c2387d;
 $theme-btn-red-text-color: #ffe;
 $theme-btn-red-bg-hover: lighten($theme-btn-red-bg, 10%);
 //btn-white
-$theme-btn-white-bg: #fff;
+$theme-btn-white-bg: $base-color2;
 $theme-btn-white-border: $base-color;
 $theme-btn-white-text-color: $base-color;
-$theme-btn-white-text-color-hover: #fff;
+$theme-btn-white-text-color-hover: $base-color2;
 $theme-btn-white-bg-hover: $base-color;
 // link color
 $theme-link: $base-color;
@@ -70,14 +72,14 @@ $theme-input-icon: $base-color;
 $theme-user-link: $base-color;
 $theme-user-link-hover: lighten($theme-user-link, 20%);
 //settings fo courses on main page and search
-$courses-border-color: $base-color2;
+$courses-border-color: $base-color;
 $course-hover-bg: rgba(0, 0, 0, .5);
 $course-link-color: #1f1f1f;
-$course-bg: #fff;
+$course-bg: $base-onyx-color;
 //certificate
-$ribbon-corners-color: lighten($base-color, 5%);
-$ribbon-triangle-color: darken($base-color, 5%);
-$certificate-borders-color: lighten($base-color, 8%);
+$ribbon-corners-color: lighten($base-color3, 5%);
+$ribbon-triangle-color: darken($base-color3, 5%);
+$certificate-borders-color: lighten($base-color3, 8%);
 //our overrides for settings we want to change
 $img-path: "../images" !default;
 $font-path: "../fonts" !default;
