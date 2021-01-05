@@ -33,95 +33,25 @@
         </ol>
       </nav>
       <div class="footer-flex">
-        <p class="footer-support">
-          <span>${_("Built on")}</span>
-          <a target="_blank" href="${footer['openedx_link']['url']}">
-            <svg class="svg-edx"  viewBox="0 0 100 70">
-              <use xlink:href="#logo-edx" />
-            </svg>
-          </a>
-          <span>${_("by")}</span>
-          <a target="_blank" href="https://raccoongang.com" class="raccoon__logo">
-            <em>RACCOONGANG</em>
-            <svg class="svg-raccoon"  viewBox="0 0 100 100">
-              <use xlink:href="#logo-raccoon" />
-            </svg>
-          </a>
-        </p>
         <ul class="icon-list">
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-facebook" />
-              </svg>
+            <a href="https://www.amazon.com/Onyx-Global/e/B08HKT3JCM" target="_blank" class="icon-list_link">
+              <i class="fa fa-amazon"></i>
             </a>
           </li>
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-twitter" />
-              </svg>
+            <a href="https://www.instagram.com/onyx.university" target="_blank" class="icon-list_link">
+              <i class="fa fa-instagram"></i>
             </a>
           </li>
           <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-instagram" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-linkedin" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-youtube" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-odnoklassniki" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vimeo" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-vk" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-behance" />
-              </svg>
-            </a>
-          </li>
-          <li class="icon-list_item">
-            <a href="#" target="_blank" class="icon-list_link">
-              <svg class="icon-list_svg" viewBox="0 0 35 35">
-                <use xlink:href="#ico-google-plus" />
-              </svg>
+            <a href="https://onyx.black/" target="_blank" class="icon-list_link">
+              <i class="fa fa-group"></i>
             </a>
           </li>
         </ul>
         <div class="footer-logo-holder">
-          <a href="/"><img alt="organization logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/footer-logo.svg"></a>
+          <a href="/"><img alt="organization logo" src="/static/${settings.FEATURES.get('ONYX_BLACK_SITE_THEME', settings.DEFAULT_SITE_THEME)}/images/logo.jpg"></a>
         </div>
       </div>
     </div>

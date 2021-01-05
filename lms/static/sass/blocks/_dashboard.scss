@@ -10,6 +10,12 @@
 		}
 
 		.my-courses {
+			.wrapper-header-courses {
+				.header-courses {
+					color: $base-color2;
+				}
+			}
+
 			.course .details .wrapper-course-details .course-title a {
 				word-break: break-word;
 				color: #1f1f1f;
@@ -141,8 +147,8 @@
 		transition: all 0.2s ease;
 		display: inline-block;
 		background: $theme-btn-white-bg !important;
-		color: $base-color2 !important;
-		border: 1px solid $base-color2 !important;
+		color: $base-color !important;
+		border: 1px solid $base-color !important;
 		text-transform: uppercase;
 		border-radius: 3px !important;
 		height: auto;
