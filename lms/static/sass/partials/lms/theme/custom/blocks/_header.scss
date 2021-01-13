@@ -350,5 +350,17 @@ body {
             width: 242px;
             font-size: 14px !important;
         }
+
+        .preview-specific-student-notice {
+            color: $white;
+
+            p {
+                margin-bottom: 0;
+
+                & + p {
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 }
