@@ -5,6 +5,7 @@
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+  from django.utils import timezone
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -127,11 +128,17 @@
       ## which are not technically powered by OpenEdX.
       % if not hide_openedx_link:
       <div class="theme-footer_holder">
-        <div class="theme-footer-links">
-          <span>&copy; 2017 - 2020</span>
-          <a href="https://courses.mama-edu.com/policy" target="_blank">${_("Privacy policy")}</a>
-          <a href="https://courses.mama-edu.com/honor" target="_blank">${_("Terms of Use")}</a>
-          <a href="https://courses.mama-edu.com/public-oferta" target="_blank">${_("Public offer")}</a>
+        <div class="theme-footer-links-logos">
+          <div class="theme-footer-links">
+            <span>&copy; 2017 - ${timezone.now().strftime('%Y')}</span>
+            <a href="https://courses.mama-edu.com/policy" target="_blank">${_("Privacy policy")}</a>
+            <a href="https://courses.mama-edu.com/honor" target="_blank">${_("Terms of Use")}</a>
+            <a href="https://courses.mama-edu.com/public-oferta" target="_blank">${_("Public offer")}</a>
+          </div>
+          <div class="theme-footer-payments-logos">
+            <img class="theme-footer-payments-logos__visa" src="/static/${settings.DEFAULT_SITE_THEME}/images/visa_logo.png" alt="">
+            <img class="theme-footer-payments-logos__master" src="/static/${settings.DEFAULT_SITE_THEME}/images/mastercard-logo.svg" alt="">
+          </div>
         </div>
         <ul class="footer-support">
           <li class="footer-support__item">
