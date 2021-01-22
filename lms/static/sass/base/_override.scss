@@ -1499,7 +1499,7 @@ body.view-passwordreset {
     color: $theme-btn-text-color;
     display: flex;
     flex-direction: column;
-    margin: auto 20px auto 0;
+    margin: auto 40px auto 0;
 
     @media (max-width: $tablet-size) {
         margin: 0 0 30px;
@@ -1523,6 +1523,42 @@ body.view-passwordreset {
             text-decoration: underline;
             color: $theme-btn-white-text-color !important;
         }
+    }
+}
+
+.theme-footer-links-logos {
+    display: flex;
+    align-items: flex-end;
+
+    @media (max-width: $laptop-size) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.theme-footer-payments-logos {
+    display: flex;
+    align-items: center;
+
+    img {
+        display: block;
+    }
+
+    &__visa {
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    &__master {
+        height: 35px;
+    }
+
+    @media (max-width: $laptop-size) {
+        margin-top: 30px;
+    }
+
+    @media (max-width: $tablet-size) {
+        margin: 0 0 30px;
     }
 }
 
