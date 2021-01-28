@@ -1,0 +1,25 @@
+<%inherit file="main.html" />
+<%! from django.utils.translation import ugettext as _ %>
+<%! from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers %>
+
+<%block name="message">
+  <p>
+    Danke, dass Sie sich bei ${configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME)} registriert haben!
+    Sie erhalten in Kürze eine Mail, um Ihren Account zu aktivieren.
+    Bitte überprüfen Sie auch Ihren Spam Ordner
+  </p>
+  <p>Falls Sie Fragen haben, stehen wir Ihnen sehr gerne zur Verfügung!</p>
+  <p>Beste Grüße,</p>
+  <p>Ihr Learning Service Team</p>
+  <p>
+  ETC - Enterprise Training Center <br>
+  1030 Wien, Modecenterstrasse 22/Office 4 <br>
+  T: +43 1 533 1 777 - 0 <br>
+  mailto: LSS@etc.at <br>
+  http://www.etc.at
+  </p>
+  <p>
+  Kennzeichnung gem. § 14 UGB: <br>
+  ETC - Enterprise Training Center GmbH, Modecenterstrasse 22/Office 4, 1030 Vienna | Commercial Court Vienna, FN 430941m
+  </p>
+</%block>
