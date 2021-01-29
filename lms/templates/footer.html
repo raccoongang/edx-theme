@@ -5,6 +5,7 @@
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+  from datetime import date
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
@@ -25,7 +26,7 @@
           <img class="logo" src="/static/${settings.DEFAULT_SITE_THEME}/images/logo-small.svg" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </div>
         <div class="footer-nav">
-          <p>© 2020 ${_("University of Washington")} | ${_("Seattle, WA. All rights reserved.")}</p>
+          <p>&copy; ${"{year}".format(year=date.today().year)} ${_("University of Washington")} | ${_("Seattle, WA. All rights reserved.")}</p>
           <ul class="footer-links">
             <li><a href="/help">${_("Help Center")}</a></li>
             <li><a href="/contact">${_("Contact Us")}</a></li>
