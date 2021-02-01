@@ -34,5 +34,22 @@
 @import "viewall-top-btn/viewall-top-btn";
 @import "patch/patch";
 #header-wrapper > nav > div > ol.left.nav-global.list-inline.authenticated > li.item.nav-global-01.nav-global-01-xseries-style > a {
-color:#666;
+    color:#666;
+}
+// fix position of microsfot login button and login-form
+#login > div.login-providers > button {
+    margin-top: 24px;
+}
+.login-register .form-wrapper .login-providers,
+.financial-assistance-wrapper .financial-assistance-form .form-wrapper .login-providers {
+    width: 500px;
+    text-align: left;
+}
+
+#hinted-login-form > div {
+    margin-right: -30px;
+
+    & > p {
+        display: none;
+    }
 }

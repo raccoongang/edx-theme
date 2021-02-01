@@ -10,11 +10,12 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="outside-app">
-    <h1>${_("Page not found")}</h1>
-    <p>${Text(_('The page that you were looking for was not found. Go back to the {link_start}homepage{link_end} or let us know about any pages that may have been moved at {email}.')).format(
-        link_start=HTML('<a href="/">'),
-        link_end=HTML('</a>'),
-        email=HTML('<a href="mailto:{email}">{email}</a>').format(email=Text(static.get_tech_support_email_address()))
-      )}</p>
+        <h1>Diese Seite konnte nicht gefunden werden.</h1>
+        <p>Gründe dafür könnten sein, dass wir die betroffene Seite archiviert, verschoben oder umbenannt haben.
+            <br> <br>
+            Vielleicht können Sie die von Ihnen gesuchten Informationen auf der Startseite finden: <a href='https://etc.trainit.biz'>https://etc.trainit.biz</a>
+            <br> <br>
+            Oder dürfen wir Ihnen direkt behilflich sein? Schreiben Sie uns eine Nachricht, oder rufen Sie uns an. <br>
+            Hier geht's zu unseren Kontaktdetails: <a href='https://www.etc.at/services/rueckruf-service/'>https://www.etc.at/services/rueckruf-service/</a></p>
     </section>
 </main>
