@@ -1,20 +1,4 @@
 $(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
-        dots: true,
-        autoplay: true,
-        center: true,
-        loop: true,
-        margin: 15,
-        items: 2,
-        responsive: {
-            0: {
-                items: 1
-            },
-            901: {
-                items: 2
-            }
-        }
-    });
     // course page accordion
     $('.course-program-list__head').on('click', function() {
         var $answer = $(this).next();
