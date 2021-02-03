@@ -203,6 +203,40 @@ $(document).ready(function () {
             self.hasClass(_openClass) ? $content.html(long_content) : $content.html(short_content);
         });
     });
-
+    
+    // index partners slider
+    $('.js-course-partners-list').slick({
+        slidesPerRow: 5,
+        rows: 3,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 1080,
+                settings: {
+                    slidesPerRow: 4
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesPerRow: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesPerRow: 2
+                }
+            },
+            {
+                breakpoint: 414,
+                settings: {
+                    slidesPerRow: 1
+                }
+            }
+        ]
+    });
 });
 

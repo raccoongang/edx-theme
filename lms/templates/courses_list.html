@@ -25,21 +25,22 @@
         % endif
       </section>
 
-    %if partners:
-    <section class="course-partners course-page-section">
-        <h2 class="h2">Наши партнеры</h2>
-        <ul class="course-partners-list">
-          %for partner in partners:
-          <li class="course-partners-list__item">
-            <a href="${partner.url}" target="_blank">
-              <img class="course-partners-list__image" src="${partner.image.url}" alt="${partner.name}">
-            </a>
-          </li>
-          %endfor
-        </ul>
-      </section>
-    % endif
-
+      %if partners:
+      <section class="course-partners course-page-section">
+          <h2 class="h2">Наши партнеры</h2>
+          <div class="course-partners__container">
+            <ul class="course-partners-list js-course-partners-list">
+              %for partner in partners:
+              <li class="course-partners-list__item">
+                <a href="${partner.url}" target="_blank">
+                  <img class="course-partners-list__image" src="${partner.image.url}" alt="${partner.name}">
+                </a>
+              </li>
+              %endfor
+            </ul>
+          </div>
+        </section>
+      % endif
     % endif
   </section>
 </section>

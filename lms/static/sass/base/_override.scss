@@ -944,111 +944,53 @@ body.view-passwordreset {
 }
 
 .course-partners {
-    overflow: hidden;
+    clear: both;
     width: 100%;
+
+    &__container {
+        margin: 0 -60px;
+
+        @media (max-width: 1400px) {
+            margin: 0;
+        }
+    }
 }
 
 .course-partners-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     $self: &;
 
+    padding: 0 60px;
+    margin: 0;
+    list-style: none;
+
+    @media (max-width: $mobile-size) {
+        padding: 0 45px;
+    }
+
     &__item {
-        width: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid $theme-header-btn-color;
+        height: 120px;
         border-right: 1px solid $theme-header-btn-color;
         box-sizing: border-box;
 
+        &:last-child {
+            border-right: 0;
+        }
+
         a {
             display: block;
-            margin: 0 5px;
+            padding: 5px;
             width: 100%;
+            height: 100%;
+            box-sizing: border-box;
 
             &:hover {
                 opacity: .7;
             }
         }
 
-        &:nth-child(5n+5) {
-            border-right: 0;
-        }
-
-        &:nth-last-of-type(-n+5) {
-            border-bottom: 0;
-        }
-
-        @media (max-width: $laptop-size) {
-            width: 25%;
-
-            &:nth-child(5n+5) {
-                border-right: 1px solid $theme-header-btn-color;
-            }
-
-            &:nth-child(4n+4) {
-                border-right: 0;
-            }
-
-            &:nth-last-of-type(-n+5) {
-                border-bottom: 1px solid $theme-header-btn-color;
-            }
-
-            &:nth-last-of-type(-n+4) {
-                border-bottom: 0;
-            }
-        }
-
-        @media (max-width: $tablet-size) {
-            width: 33.3333%;
-
-            &:nth-child(4n+4) {
-                border-right: 1px solid $theme-header-btn-color;
-            }
-
-            &:nth-child(3n+3) {
-                border-right: 0;
-            }
-
-            &:nth-last-of-type(-n+5) {
-                border-bottom: 1px solid $theme-header-btn-color;
-            }
-
-            &:nth-last-of-type(-n+2) {
-                border-bottom: 0;
-            }
-        }
-
-        @media (max-width: $mobile-size) {
-            width: 50%;
-
-            &:nth-child(4n+4) {
-                border-right: 1px solid $theme-header-btn-color;
-            }
-
-            &:nth-child(3n+3) {
-                border-right: 1px solid $theme-header-btn-color;
-            }
-
-            &:nth-child(2n+2) {
-                border-right: 0;
-            }
-
-            &:nth-last-of-type(-n+2) {
-                border-bottom: 0;
-            }
-        }
-
-        &-increased #{$self}__image {
-            object-fit: cover;
-        }
-
-        &-decreased #{$self}__image {
-            width: 85%;
+        &:focus {
+            outline: none;
+            opacity: .7;
         }
     }
 
@@ -1058,7 +1000,49 @@ body.view-passwordreset {
         width: 100%;
         height: 100%;
         object-fit: contain;
-        margin: 5px auto;
+        margin: 0 auto;
+    }
+
+    .slick-slide > div {
+        border-bottom: 1px solid $theme-header-btn-color;
+        display: flex;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .slick-arrow {
+        width: 35px;
+        height: 35px;
+        box-shadow: none;
+
+        @media (max-width: $mobile-size) {
+            width: 25px;
+            height: 25px;
+        }
+
+        &:before {
+            display: none;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: transparent;
+            box-shadow: none;
+            opacity: .7;
+        }
+    }
+
+    .slick-prev {
+        background: url("../images/slick-prev.svg") no-repeat 100% 100% !important;
+        left: 0;
+    }
+
+    .slick-next {
+        background: url("../images/slick-next.svg") no-repeat 100% 100% !important;
+        right: 0;
     }
 }
 
