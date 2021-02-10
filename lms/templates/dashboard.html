@@ -30,6 +30,10 @@ from openedx.core.djangolib.markup import HTML, Text
 % endfor
 </%block>
 
+<%block name="headextra">
+  <script src="//code.jivosite.com/widget/3xCbNg5NbG" async></script>
+</%block>
+
 <%block name="js_extra">
   <script src="${static.url('js/commerce/credit.js')}"></script>
   <%static:js group='dashboard'/>
