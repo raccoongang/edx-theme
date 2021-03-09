@@ -183,7 +183,7 @@ from util.course import get_link_for_about_page, get_encoded_course_sharing_utm_
         % elif not entitlement and (show_email_settings or can_unenroll):
         <div class="actions-dropdown" id="actions-dropdown-${dashboard_index}" tabindex="-1">
           <ul class="actions-dropdown-list" id="actions-dropdown-list-${dashboard_index}" aria-label="${_('Available Actions')}" role="menu">
-            % if can_unenroll:
+            % if False and can_unenroll:
               <li class="actions-item" id="actions-item-unenroll-${dashboard_index}" role="menuitem">
                 <% course_refund_url = reverse('course_run_refund_status', args=[unicode(course_overview.id)]) %>
                     % if not is_course_blocked:
