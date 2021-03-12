@@ -8,6 +8,7 @@
 from django.urls import reverse
 from django.utils.translation import ugettext as _
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from microsite_reports.utils import microsite_report_access_allowed
 %>
 
 <%
@@ -63,6 +64,11 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
       <div class="mobile-nav-item nav-item nav-tab">
         ## Translators: This is short for "System administration".
         <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+      </div>
+    % endif
+    % if microsite_report_access_allowed(user.username, request.site.id):
+      <div class="mobile-nav-item nav-item nav-tab">
+        <a class="tab-nav-link" href="${reverse('microsite_reports:view_report_page')}">${_("RG Reports")}</a>
       </div>
     % endif
     % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
